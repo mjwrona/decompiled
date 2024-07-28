@@ -1,0 +1,37 @@
+<script id="vs-tab-template" type="text/html">
+    <div class="visualstudio-tab">
+        <!-- ko if: extensionsPerCategory() -->
+        <div class="category-list-container" data-bind="foreach: extensionsPerCategory()">
+            <!-- ko if: $parent.isCategoryVisible($data) -->
+            <div class="categorized-list gallery-item-cluster clearfix">
+                <h2 class="header-container" data-bind="visible: !$data.isDisabled" role="presentation">
+                    <div class="section-header gallery-element-focus-style-light name" data-bind="text: $parent.getCategoryHeaderText($data.categoryName), attr: {id: $parent.getCategoriesID($index())}" role="heading" aria-level="2"></div>
+                    <!-- ko if: $parent.isTrendingCategoryType($data.categoryName) -->
+                    <span class="drop-down" data-bind="component: {name: 'drop-down-control', params: $parent.getDropDownViewModelParams()}"></span>
+                    <!-- /ko -->
+                    <!-- ko if: $data.hasMoreExtensions && $parent.showSeeMore($data.categoryName) -->
+                    <a class="see-more" data-bind="attr: {href: $data.seeMoreLink, 'aria-label': $parent.getSeeMoreAriaLabel($data.categoryName)},event: {keypress: $parent.getkeyPressed($index())}, click: $parent.getClicked($data.categoryName)">
+                        <span data-bind="text: $parent.seeMoreString"></span>
+                        <span class="bowtie-icon bowtie-navigate-forward-circle"></span>
+                    </a>
+                    <!-- /ko -->
+                </h2>
+                <div class="item-list-container clearfix" data-bind='component: {name:"gallery-carousel", params: {viewModel: $parent.getCarouselViewModel($data)}}'></div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <i class="big-spinner bowtie-icon bowtie-spinner centered" data-bind="visible: _koShowSpinner, attr: {id: _spinnerID}"></i>
+        <!-- ko if: showCategories() -->
+        <div class="gallery-item-cluster categories clearfix">
+            <h2 class="header-container">
+                <div class="section-header gallery-element-focus-style-light name" data-bind="text: $data.categoriesString ,  click: $parent.getClicked($data.categoryName)"></div>
+            </h2>
+            <div class="tools-category item-list-container" data-bind='component: {name:"gallery-item-grid", params: $data.getCategoriesViewModelParams()}'></div>
+        </div>
+        <!-- /ko -->
+        <div data-bind="if: hasError">
+            <div class="error-control-section" data-bind="component: {name: 'error-control-template-vnext', params: errorControlViewModel}"></div>
+        </div>
+    </div>
+</script>

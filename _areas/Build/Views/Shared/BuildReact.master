@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_views/Shared/Masters/HubPage.master"
+    Inherits="Microsoft.TeamFoundation.Server.WebAccess.TfsViewMasterPage<dynamic>" %>
+
+<%@ import namespace="Microsoft.TeamFoundation.Framework.Server" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Controls" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Platform" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Presentation" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Build" %>
+<%@ Import Namespace="System.IO" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="DocumentBegin" runat="server">
+     <% 
+        Html.UseCSS("DistributedTasksLibrary");
+        Html.UseAreaCSS("BuildStyles");
+    %>
+    <asp:ContentPlaceHolder ID="DocumentBegin" runat="server" />
+</asp:Content>
+
+<asp:content contentplaceholderid="PageBegin" runat="server">
+    <%: Html.ScriptTag("signalR", StaticResources.ThirdParty.Scripts.GetLocation(String.Format("jquery.signalR-upd.2.2.0{0}.js", Html.DebugEnabled() ? "" : ".min"))) %>
+    <%: Html.ScriptTag("signalRHub", ViewData["SignalrHubUrl"] as String) %>
+</asp:content>
+
+<asp:Content ContentPlaceHolderID="HubBegin" runat="server">
+    <asp:ContentPlaceHolder ID="HubBegin" runat="server" />
+</asp:Content>
+
+<asp:content contentplaceholderid="HubTitleContent" runat="server">
+    <asp:ContentPlaceHolder ID="HubTitleContent" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="HubContent" runat="server">
+    <asp:ContentPlaceHolder ID="HubContent" runat="server" />
+</asp:content>
+
+<asp:Content ContentPlaceHolderID="HubEnd" runat="server">
+    <asp:ContentPlaceHolder ID="HubEnd" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="MainContentEnd" runat="server">
+    <asp:ContentPlaceHolder ID="MainContentEnd" runat="server" />
+</asp:Content>

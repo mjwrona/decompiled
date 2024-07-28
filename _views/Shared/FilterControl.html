@@ -1,0 +1,17 @@
+<script id="filter-control-template" type="text/html">
+    <table role="presentation">
+        <tr data-bind="foreach: filters" role="menubar">
+            <td role="presentation">
+                <div data-bind="attr: { id: $data.filterId }">
+                    <span data-bind="text: $data.filterName, visible: $parent.isFilterNameVisible($data.filterName)" class="filter-title"></span>
+                    <span class="filter-menu" data-bind="attr: { tabindex: $parent.isFilterMenuTabIndex($data.isCompleteFocus), 'aria-describedby': $data.ariaDescribedByIds, 'aria-labelledby': $data.ariaLabelledByIds, 'aria-label': $data.ariaLabel, 'aria-expanded': $data.isExpanded() }, css: {disabled: !($data.isEnabled() && $parent.isEnabled()) }" aria-haspopup="true" role="menuitem">
+                        <span data-bind="css: {dropdown: $data.isDropDown()}, attr: {tabindex: $parent.isDropDownTabIndex($data.isEnabled(), $data.isCompleteFocus)}">
+                            <span data-bind="attr: {title: $parent.getSelectedItemLabelForFilter($data.filterId)}, text: $parent.getSelectedItemLabelForFilter($data.filterId)" class="filter-value"></span>
+                            <span data-bind="visible: $parent.isDropDownVisible($data.isEnabled(), $data.isDropDown )" class="bowtie-icon bowtie-chevron-down dropdown"></span>
+                        </span>
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</script>

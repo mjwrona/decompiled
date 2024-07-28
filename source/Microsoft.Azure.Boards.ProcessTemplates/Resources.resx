@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProcessTemplateValidatorRequiredPluginMissing" xml:space="preserve">
+    <value>VS412453: Process template zip file doesn't contain required plugin {0}.</value>
+  </data>
+  <data name="ProcessTemplateInvalidXmlFile" xml:space="preserve">
+    <value>VS412452: File {1} contains an unsupported plug-in {0}.</value>
+  </data>
+  <data name="ProcessNameInvalid" xml:space="preserve">
+    <value>VS402378: You've specified an invalid process name. Process names can't be empty or greater than '{0}' characters, and can't contain the following characters '{1}'.</value>
+  </data>
+  <data name="ProcessTemplatePluginNotFound" xml:space="preserve">
+    <value>VS412451: Plugin {0} in file {1} is not supported.</value>
+  </data>
+  <data name="ProcessCannotDeleteWithActiveProjects" xml:space="preserve">
+    <value>VS1300700: The process cannot be deleted because it has at least one subscribed project. Delete the subscribed projects before deleting the process.</value>
+  </data>
+  <data name="ProcessNameNotSupported" xml:space="preserve">
+    <value>VS402382: Creating a process with name {0} is not supported. Please give a different name to your process.</value>
+  </data>
+  <data name="ProcessTemplateSchemaValidation" xml:space="preserve">
+    <value>VS412450: Xml schema validation error in {0}. {1}</value>
+  </data>
+  <data name="ProcessTemplateValidationEmbeddedImage" xml:space="preserve">
+    <value>VS412458: Process templates cannot contain base64 embedded data URI content.</value>
+  </data>
+  <data name="ProcessTemplateNotFoundByIntegerId" xml:space="preserve">
+    <value>VS402360: The process template with integer id {0} was not found.</value>
+  </data>
+  <data name="ProcessTemplateInvalidDownloadOnInherited" xml:space="preserve">
+    <value>VS402381: Export is currently supported for the Hosted XML process model only.</value>
+  </data>
+  <data name="ProcessTemplateBadlyFormattedMetadata" xml:space="preserve">
+    <value>VS402367: The given process template metadata is badly formatted.</value>
+  </data>
+  <data name="ProcessTemplateNotFoundById" xml:space="preserve">
+    <value>VS402359: The process template with id {0} was not found.</value>
+  </data>
+  <data name="ProcessTemplateNameConflict" xml:space="preserve">
+    <value>VS402358: There is an existing process template with name {0}.</value>
+  </data>
+  <data name="ProcessCannotDeleteDefault" xml:space="preserve">
+    <value>VS1300702: The process cannot be deleted because it is the default. To delete the process, you need to change the default process and try again.</value>
+  </data>
+  <data name="ProcessTemplateNameDisambugiated" xml:space="preserve">
+    <value>{0} (custom)</value>
+  </data>
+  <data name="ProcessTemplateInformedStateTransition" xml:space="preserve">
+    <value>VS402483: The process template {0} attempted to make an invalid state transition from {1} to {2}</value>
+  </data>
+  <data name="ProcessReferenceNameInvalid" xml:space="preserve">
+    <value>VS402377: You've specified an invalid process reference name. Reference names can't be empty or greater than '{0}' characters, and can't start with the reserved prefix 'System.' nor include the following characters '{1}'.</value>
+  </data>
+  <data name="ProcessTemplateValidatorInvalidPlugin" xml:space="preserve">
+    <value>VS412455: Process template metadata references unsupported or not registered plugin '{0}'</value>
+  </data>
+  <data name="ProcessLimitExceeded" xml:space="preserve">
+    <value>VS402486: The number of processes has exceeded the limit.</value>
+  </data>
+  <data name="ProcessTemplatesProvisioningPermissionDenied" xml:space="preserve">
+    <value>VS402363: You do not have permissions to provision changes to the process templates.</value>
+  </data>
+  <data name="UnableToFindMetadataResourceForProcess" xml:space="preserve">
+    <value>Unable to find {0} for {1} in process {2}. Please run the installation repair.</value>
+  </data>
+  <data name="DuplicateFile" xml:space="preserve">
+    <value>Duplicate file with name {0}</value>
+  </data>
+  <data name="CannotCreateProjectsWithDisableProcess" xml:space="preserve">
+    <value>VS403119: You cannot add a team project with process {0} as it is disabled. Either choose a different process, or enable process {0} and try again.</value>
+  </data>
+  <data name="ProcessProjectWithInvalidProcess" xml:space="preserve">
+    <value>VS403395: Can't find the process associated with team project '{0}'. Contact support to resolve this error.</value>
+  </data>
+  <data name="ProcessCannotBeDeleted" xml:space="preserve">
+    <value>VS1300700: The process cannot be deleted.</value>
+  </data>
+  <data name="ProcessTemplateInvalidOverride" xml:space="preserve">
+    <value>VS402357: You cannot override a {0} template of type {1} with version {2}.{3} with a {4} process template of type {5} with version {6}.{7}.</value>
+  </data>
+  <data name="ProcessTemplateInvalidVersion" xml:space="preserve">
+    <value>VS402452: The process template did not specify a version, or specified an invalid version</value>
+  </data>
+  <data name="PermissionDeniedOnProcess" xml:space="preserve">
+    <value>VS402356: You do not have the permissions required to perform the attempted operation on this process.</value>
+  </data>
+  <data name="ProcessTemplateValidatorTypeInvalid" xml:space="preserve">
+    <value>VS402400: The process template does not have a valid GUID type.</value>
+  </data>
+  <data name="ProcessNameNotUnique" xml:space="preserve">
+    <value>VS402370: Please rename your process, as the process reference name is already in use.</value>
+  </data>
+  <data name="ProcessRefNameNotUnique" xml:space="preserve">
+    <value>Reference name {0} is already in use. Please specify unique reference name for your process.</value>
+  </data>
+  <data name="ProcessTemplateNotFound" xml:space="preserve">
+    <value>VS402481: The process template was not found</value>
+  </data>
+  <data name="InvalidProcessTemplatePackage" xml:space="preserve">
+    <value>The format for process template package is invalid.</value>
+  </data>
+  <data name="ProcessTemplateValidatorMultipleTaskList" xml:space="preserve">
+    <value>VS412454: Plug-in {0} contains several taskList {1}, {2}. Only one taskList per plugin is allowed.</value>
+  </data>
+  <data name="ProcessTemplateEmptyName" xml:space="preserve">
+    <value>VS403671: The given process template has empty procress name.</value>
+  </data>
+  <data name="ProcessDisableException" xml:space="preserve">
+    <value>VS402379: You cannot make a disabled process the default process. Choose a different process or enable this process, and try again.</value>
+  </data>
+  <data name="ProcessTemplateDescriptionTooLarge" xml:space="preserve">
+    <value>VS402613: The process template's description contains {0} characters which exceeds the maximum length of 1024.</value>
+  </data>
+  <data name="ProcessTemplateUploadTooLarge" xml:space="preserve">
+    <value>VS402611: The uploaded process template file is too large ({0} bytes). Process template files should not exceed {1} bytes.</value>
+  </data>
+  <data name="ProcessTemplateTypeNotFound" xml:space="preserve">
+    <value>VS402362: No process template with type {0} was found.</value>
+  </data>
+  <data name="ProcessInvalidCultureException" xml:space="preserve">
+    <value>OEMCodePage {0} for Culture {1} not found.</value>
+  </data>
+  <data name="ProcessTemplateFileNotFound" xml:space="preserve">
+    <value>VS412457: Specified file '{0}' could not be found in the process package.</value>
+  </data>
+  <data name="ProjectsPerXmlProcessLimitExceeded" xml:space="preserve">
+    <value>VS403406: A hosted XML process has a limit of {1} team projects. The process '{2}' already has {0} team projects, and can’t be used. Please choose another process to create this team project.</value>
+  </data>
+  <data name="ProcessTemplateNotFoundByVersion" xml:space="preserve">
+    <value>VS402361: The process template of type {0}, with major version {1} and minor version {2} was not found.</value>
+  </data>
+  <data name="ProcessTemplateInvalidStateTransition" xml:space="preserve">
+    <value>VS402482: The process template made an invalid state transition</value>
+  </data>
+  <data name="ProcessInvalidInheritedProcessUpdateInput" xml:space="preserve">
+    <value>VS402373: No changes found, therefore no updates will be made.</value>
+  </data>
+</root>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Boards.Charts.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E621B3FC-C47D-4217-99C1-444E1D60383F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Boards.Charts</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Boards.Charts</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Agile.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Agile.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartsException.cs" />
+    <Compile Include="IBoardsChartService.cs" />
+    <Compile Include="BurndownChartDataPoint.cs" />
+    <Compile Include="BurndownChartInputs.cs" />
+    <Compile Include="ChartAreaColors.cs" />
+    <Compile Include="ChartBarColors.cs" />
+    <Compile Include="ChartCoreColors.cs" />
+    <Compile Include="ChartDataComponent.cs" />
+    <Compile Include="ChartInputs.cs" />
+    <Compile Include="CumulativeFlowDiagramDataPoint.cs" />
+    <Compile Include="CumulativeFlowDiagramInputs.cs" />
+    <Compile Include="DateTimeExtensionMethods.cs" />
+    <Compile Include="BoardsChartService.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="FieldValue.cs" />
+    <Compile Include="IChartColorStore.cs" />
+    <Compile Include="IChartDataComponent.cs" />
+    <Compile Include="IterationProperties.cs" />
+    <Compile Include="ThemedChartColorStore.cs" />
+    <Compile Include="VelocityChartDataPoint.cs" />
+    <Compile Include="VelocityChartInputs.cs" />
+    <Compile Include="ChartsResources.cs" />
+    <Compile Include="Utility\ChartUtils.cs" />
+    <Compile Include="Wiql\Condition.cs" />
+    <Compile Include="Wiql\GroupCondition.cs" />
+    <Compile Include="Wiql\GroupOperator.cs" />
+    <Compile Include="Wiql\MultiValueCondition.cs" />
+    <Compile Include="Wiql\MultiValueOperator.cs" />
+    <Compile Include="Wiql\SingleValueCondition.cs" />
+    <Compile Include="Wiql\SingleValueOperator.cs" />
+    <Compile Include="Wiql\WiqlQuery.cs" />
+    <Compile Include="Exceptions\BurndownWorkItemLimitExceededException.cs" />
+    <Compile Include="Exceptions\InvalidChartDimensionsException.cs" />
+    <Compile Include="Exceptions\NoIterationsSetForTeamException.cs" />
+    <Compile Include="Cache\BurndownChartSeries.cs" />
+    <Compile Include="Cache\ChartSeriesBase.cs" />
+    <Compile Include="Cache\CumulativeFlowChartSeries.cs" />
+    <Compile Include="Cache\IdentityChartCache.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ChartsResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

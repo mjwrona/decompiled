@@ -1,0 +1,17 @@
+<script id="gallery-vssubs-tile" type="text/html">
+    <div class="_main">
+        <div><span class="_name" data-bind="text: data.subscriptionName"></span></div>
+        <div class="_description">
+            <p data-bind="text: data.subscriptionDescription"></p>
+        </div>
+        <div class="_offer-cta">
+            <div class="_buttons-container" data-bind="foreach: data.buttons">
+                <a class="ux-button" data-bind="attr: {href: buttonLink, 'aria-label': buttonLabel}, click: $parent.tileClick(itemName)">
+                    <div class="button-quantity" data-bind="text: buttonQuantity"></div>
+                    <div class="button-cost" data-bind="text: buttonCost"></div>
+                </a>
+            </div>
+            <span class="_note" data-bind="html: data.note"></span>
+        </div>
+    </div>
+</script>

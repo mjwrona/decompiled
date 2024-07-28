@@ -1,0 +1,67 @@
+<script id="vscode-copy-command-template" type="text/html">
+    <div class="vscode-item-action">
+        <!--ko if: isOneClickInstallExperienceVisible -->
+        <a class="install-button-container" data-bind="attr: { href: actionLinkInstall}" tabindex="-1">
+            <button class="ux-button install" data-bind="text: actionInstallButtonText, click: onVSCodeInstallClick"></button>
+        </a>
+        <span class="installHelpText">
+            <a data-bind="attr: { href: installHelpLink, target: '_blank', rel: 'noreferrer noopener nofollow'}, css: brandingTheme, text: installHelpText"></a>
+            <i class="bowtie-icon bowtie-navigate-external"></i>
+        </span>
+        <div class="newExpVSCodeEditorDownload">
+            <span data-bind="text: newExpVSCodeEditorInstallText"></span>
+            <a class="vsCodeEditorDownloadLink" data-bind="attr: { href: vscodeEditorDownloadLink, target: '_blank', rel: 'noreferrer noopener nofollow', 'aria-label': vscodeDownloadDescription }, text: vscodeEditorDownloadText, css: brandingTheme, click: clickCopyCommandDownload()"></a>
+            <i class="bowtie-icon bowtie-navigate-external"></i>
+        </div>
+        <!--<div class="vscode-version">
+            <div class="vscode-version-info" data-bind="text: versionSupportedText"></div>
+            <a class="vscode-version-info-link" data-bind="attr: { href: versionLink, target: actionLinkNewTab ? '_blank' : '_self' }, text: findVersionText, css: brandingTheme, click: logVersionTelemetry"></a>
+        </div>-->
+        <!--<div class="vscode-copy">
+            <a class="vscode-copy-link" tabindex="0" data-toggle="modal" data-bind="click: function(event) { return openCopyModal() }, enterkey: function(event) { return openCopyModal() }, css: brandingTheme, text: clickHere"></a>
+            <div class="vscode-copy-info" data-bind="text: copyInfoText"></div>
+        </div>-->
+        <!--<div class="vscode-copy-insiders">
+            <a class="vscode-insiders-install" data-bind="attr: { href: insidersInstallLink}, text: clickHere, css: brandingTheme, click: logInstallInsidersTelemetry"></a>
+            <div class="vscode-insiders-install-info" data-bind="text: insidersInstallInfoText"></div>
+        </div>-->
+        <!--<div class="modal" id="modal-copy-command-container" tabindex="-1" role="dialog">
+            <div class="modal-copy-command">
+                <div class="copy-modal-header">
+                    <div class="vscode-install-title" data-bind="text: installTitle"></div>
+                    <div id="vscode-install-instructions" class="vscode-install-instructions" data-bind="html: installInstructions"></div>
+                    <div class="vscode-install-info-container">
+                        <div class="vscode-command-container">
+                            <input type="text" class="vscode-command-input" readonly="" aria-labelledby="vscode-install-instructions" data-bind="attr: { value: copyCommand, id:textAreaID, size: copyCommandLength }, click: selectTextOnClick"> -->
+                            <!-- ko if: iscopySupported || isFlashSupported -->
+                            <!--<button class="copy-to-clipboard-button" data-bind="attr: {title: copyButtonTooltip, id: copyButtonID, 'data-clipboard-target': iscopySupported ? null : textAreaID} , click: iscopySupported ? copyOnClick : null, text: copyButtonText, event:{keypress: copyOnEnter}"></button>
+                            <div class="copied-result-display" data-bind="text: displayCopyResultText"></div>-->
+                            <!-- /ko -->
+                        <!--</div>                        
+                    </div>
+                </div>
+                    <div class="copy-modal-footer">
+                        <button class="cancel-copy-modal-button" data-dismiss="modal" data-bind="text: cancelButtonText, click: closeCopyModal"></button>
+                    </div>
+                </div>
+        </div>-->
+        <!-- /ko -->
+        <!--ko ifnot: isOneClickInstallExperienceVisible -->
+        <div class="vscode-install-title" data-bind="text: installTitle"></div>
+        <div id="vscode-install-instructions" class="vscode-install-instructions" data-bind="html: installInstructions"></div>
+        <div class="vscode-install-info-container">
+            <div class="vscode-command-container">
+                <input type="text" class="vscode-command-input" readonly="" aria-labelledby="vscode-install-instructions" data-bind="attr: { value: copyCommand, id:textAreaID, size: copyCommandLength }, click: selectTextOnClick">
+                <!-- ko if: iscopySupported || isFlashSupported -->
+                <button class="copy-to-clipboard-button" data-bind="attr: {title: copyButtonTooltip, id: copyButtonID, 'data-clipboard-target': getDataClipBoardtarget()} , click: getCopyClick(), text: copyButtonText, event:{keypress: copyOnEnter}"></button>
+                <!-- /ko -->
+            </div>
+            <div class="copied-display-container">
+                <div class="copied-display-div" data-bind="attr: {  id: copiedAnimationID }, text: copiedAnimationText"></div>
+            </div>
+            <a class="vscode-moreinformation" target="_blank" data-bind="text: actionButtonText, attr: { href: actionLink}, css: brandingTheme, click: publishTelemetryEvent_MoreInfo">
+            </a>
+        </div>
+        <!-- /ko -->
+    </div>
+</script>

@@ -1,0 +1,132 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Azure.Documents.SubStatusCodes
+// Assembly: Microsoft.Azure.Cosmos.Direct, Version=3.29.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+// MVID: FFE3C00D-4333-4294-8947-B1C93A852E2F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Cosmos.Direct.dll
+
+namespace Microsoft.Azure.Documents
+{
+  internal enum SubStatusCodes
+  {
+    Unknown = 0,
+    WriteForbidden = 3,
+    TooManyRequests = 429, // 0x000001AD
+    NameCacheIsStale = 1000, // 0x000003E8
+    PartitionKeyMismatch = 1001, // 0x000003E9
+    PartitionKeyRangeGone = 1002, // 0x000003EA
+    ReadSessionNotAvailable = 1002, // 0x000003EA
+    OwnerResourceNotFound = 1003, // 0x000003EB
+    ConfigurationNameNotFound = 1004, // 0x000003EC
+    CrossPartitionQueryNotServable = 1004, // 0x000003EC
+    ConfigurationPropertyNotFound = 1005, // 0x000003ED
+    ProvisionLimitReached = 1005, // 0x000003ED
+    ConflictWithControlPlane = 1006, // 0x000003EE
+    CompletingSplit = 1007, // 0x000003EF
+    InsufficientBindablePartitions = 1007, // 0x000003EF
+    CompletingPartitionMigration = 1008, // 0x000003F0
+    DatabaseAccountNotFound = 1008, // 0x000003F0
+    RedundantCollectionPut = 1009, // 0x000003F1
+    SharedThroughputDatabaseQuotaExceeded = 1010, // 0x000003F2
+    SharedThroughputOfferGrowNotNeeded = 1011, // 0x000003F3
+    ComputeFederationNotFound = 1012, // 0x000003F4
+    CollectionCreateInProgress = 1013, // 0x000003F5
+    PartitionKeyQuotaOverLimit = 1014, // 0x000003F6
+    SharedThroughputDatabaseCollectionCountExceeded = 1019, // 0x000003FB
+    SharedThroughputDatabaseCountExceeded = 1020, // 0x000003FC
+    ComputeInternalError = 1021, // 0x000003FD
+    LeaseNotFound = 1022, // 0x000003FE
+    StoreNotReady = 1023, // 0x000003FF
+    ThroughputCapQuotaExceeded = 1028, // 0x00000404
+    InvalidThroughputCapValue = 1029, // 0x00000405
+    AuthTokenNotFoundInCache = 1030, // 0x00000406
+    PartitionMigratingCollectionDeleted = 1031, // 0x00000407
+    HttpListenerException = 1101, // 0x0000044D
+    SplitIsDisabled = 2001, // 0x000007D1
+    CollectionsInPartitionGotUpdated = 2002, // 0x000007D2
+    CanNotAcquirePKRangesLock = 2003, // 0x000007D3
+    ResourceNotFound = 2004, // 0x000007D4
+    CanNotAcquireOfferOwnerLock = 2005, // 0x000007D5
+    CanNotAcquireSnapshotOwnerLock = 2005, // 0x000007D5
+    MigrationIsDisabled = 2006, // 0x000007D6
+    CanNotAcquirePKRangeLock = 2007, // 0x000007D7
+    CanNotAcquirePartitionLock = 2008, // 0x000007D8
+    CanNotAcquireGlobalPartitionMigrationLock = 2009, // 0x000007D9
+    CanNotAcquireFederationPartitionMigrationLock = 2010, // 0x000007DA
+    StorageSplitConflictingWithNWayThroughputSplit = 2011, // 0x000007DB
+    MergeIsDisabled = 2012, // 0x000007DC
+    TombstoneRecordsNotFound = 2015, // 0x000007DF
+    InvalidAccountStatus = 2016, // 0x000007E0
+    OfferValidationFailed = 2017, // 0x000007E1
+    CanNotAquireMasterPartitionAccessLock = 2018, // 0x000007E2
+    ConfigurationNameNotEmpty = 3001, // 0x00000BB9
+    ConfigurationOperationCancelled = 3002, // 0x00000BBA
+    StoredProcedureConcurrency = 3084, // 0x00000C0C
+    RUBudgetExceeded = 3200, // 0x00000C80
+    AnotherOfferReplaceOperationIsInProgress = 3205, // 0x00000C85
+    DatabaseNameAlreadyExists = 3206, // 0x00000C86
+    ConfigurationNameAlreadyExists = 3207, // 0x00000C87
+    PrepareTimeLimitExceeded = 3207, // 0x00000C87
+    ClientTcpChannelFull = 3208, // 0x00000C88
+    BWTermCountLimitExceeded = 3209, // 0x00000C89
+    PartitionkeyHashCollisionForId = 3302, // 0x00000CE6
+    AadClientCredentialsGrantFailure = 4000, // 0x00000FA0
+    AadServiceUnavailable = 4001, // 0x00000FA1
+    KeyVaultAuthenticationFailure = 4002, // 0x00000FA2
+    KeyVaultKeyNotFound = 4003, // 0x00000FA3
+    KeyVaultServiceUnavailable = 4004, // 0x00000FA4
+    KeyVaultWrapUnwrapFailure = 4005, // 0x00000FA5
+    InvalidKeyVaultKeyURI = 4006, // 0x00000FA6
+    InvalidInputBytes = 4007, // 0x00000FA7
+    KeyVaultInternalServerError = 4008, // 0x00000FA8
+    KeyVaultDNSNotResolved = 4009, // 0x00000FA9
+    InvalidKeyVaultCertURI = 4010, // 0x00000FAA
+    InvalidKeyVaultKeyAndCertURI = 4011, // 0x00000FAB
+    CustomerKeyRotated = 4012, // 0x00000FAC
+    MissingRequestParameter = 4013, // 0x00000FAD
+    InvalidKeyVaultSecretURI = 4014, // 0x00000FAE
+    MissingAuthHeader = 5000, // 0x00001388
+    InvalidAuthHeaderFormat = 5001, // 0x00001389
+    AadAuthDisabled = 5002, // 0x0000138A
+    AadTokenInvalidFormat = 5003, // 0x0000138B
+    AadTokenInvalidSignature = 5004, // 0x0000138C
+    AadTokenNotYetValid = 5005, // 0x0000138D
+    AadTokenExpired = 5006, // 0x0000138E
+    AadTokenInvalidIssuer = 5007, // 0x0000138F
+    AadTokenInvalidAudience = 5008, // 0x00001390
+    AadTokenInvalidScope = 5009, // 0x00001391
+    FailedToGetAadToken = 5010, // 0x00001392
+    AadTokenMissingObjectIdentifier = 5011, // 0x00001393
+    SasTokenAuthDisabled = 5012, // 0x00001394
+    AadTokenInvalidSigningKey = 5200, // 0x00001450
+    AadTokenGroupExpansionError = 5201, // 0x00001451
+    LocalAuthDisabled = 5202, // 0x00001452
+    RbacOperationNotSupported = 5300, // 0x000014B4
+    RbacUnauthorizedMetadataRequest = 5301, // 0x000014B5
+    RbacUnauthorizedNameBasedDataRequest = 5302, // 0x000014B6
+    RbacUnauthorizedRidBasedDataRequest = 5303, // 0x000014B7
+    RbacRidCannotBeResolved = 5304, // 0x000014B8
+    RbacMissingUserId = 5305, // 0x000014B9
+    RbacMissingAction = 5306, // 0x000014BA
+    RbacRequestWasNotAuthorized = 5400, // 0x00001518
+    ListResourceFeedThrottled = 5500, // 0x0000157C
+    MutualTlsClientAuthFailed = 5600, // 0x000015E0
+    OperationPaused = 9001, // 0x00002329
+    TransportGenerated410 = 20001, // 0x00004E21
+    TimeoutGenerated410 = 20002, // 0x00004E22
+    TransportGenerated503 = 20003, // 0x00004E23
+    Client_CPUOverload = 20004, // 0x00004E24
+    Client_ThreadStarvation = 20005, // 0x00004E25
+    Channel_Closed = 20006, // 0x00004E26
+    MalformedContinuationToken = 20007, // 0x00004E27
+    Server_NameCacheIsStaleExceededRetryLimit = 21001, // 0x00005209
+    Server_PartitionKeyRangeGoneExceededRetryLimit = 21002, // 0x0000520A
+    Server_CompletingSplitExceededRetryLimit = 21003, // 0x0000520B
+    Server_CompletingPartitionMigrationExceededRetryLimit = 21004, // 0x0000520C
+    ServerGenerated410 = 21005, // 0x0000520D
+    Server_GlobalStrongWriteBarrierNotMet = 21006, // 0x0000520E
+    Server_ReadQuorumNotMet = 21007, // 0x0000520F
+    ServerGenerated503 = 21008, // 0x00005210
+    Server_NoValidStoreResponse = 21009, // 0x00005211
+    ScriptCompileError = 65535, // 0x0000FFFF
+  }
+}

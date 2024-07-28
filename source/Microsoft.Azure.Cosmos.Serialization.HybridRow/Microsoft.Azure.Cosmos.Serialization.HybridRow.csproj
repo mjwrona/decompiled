@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77523666-342C-4C85-BC95-1EFEE6DC576B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Cosmos.Serialization.HybridRow</AssemblyName>
+    <ApplicationVersion>1.1.0.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure.Cosmos.Serialization.HybridRow</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>lib\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>lib\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>lib\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="AssemblyVersionInfo.cs" />
+    <Compile Include="DefaultSpanResizer`1.cs" />
+    <Compile Include="Float128.cs" />
+    <Compile Include="HybridRowHeader.cs" />
+    <Compile Include="HybridRowVersion.cs" />
+    <Compile Include="ISpanResizer`1.cs" />
+    <Compile Include="MemorySpanResizer`1.cs" />
+    <Compile Include="MongoDbObjectId.cs" />
+    <Compile Include="NullValue.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="RowBuffer.cs" />
+    <Compile Include="RowCursor.cs" />
+    <Compile Include="RowCursorExtensions.cs" />
+    <Compile Include="RowOptions.cs" />
+    <Compile Include="SchemaId.cs" />
+    <Compile Include="UnixDateTime.cs" />
+    <Compile Include="RecordIO\Record.cs" />
+    <Compile Include="RecordIO\RecordIOFormatter.cs" />
+    <Compile Include="RecordIO\RecordIOParser.cs" />
+    <Compile Include="RecordIO\RecordIOStream.cs" />
+    <Compile Include="RecordIO\Segment.cs" />
+    <Compile Include="Layouts\Layout.cs" />
+    <Compile Include="Layouts\LayoutBit.cs" />
+    <Compile Include="Layouts\LayoutBuilder.cs" />
+    <Compile Include="Layouts\LayoutCode.cs" />
+    <Compile Include="Layouts\LayoutCodeTraits.cs" />
+    <Compile Include="Layouts\LayoutColumn.cs" />
+    <Compile Include="Layouts\LayoutCompilationException.cs" />
+    <Compile Include="Layouts\LayoutCompiler.cs" />
+    <Compile Include="Layouts\LayoutResolver.cs" />
+    <Compile Include="Layouts\LayoutResolverNamespace.cs" />
+    <Compile Include="Layouts\LayoutResolverSimple.cs" />
+    <Compile Include="Layouts\LayoutType.cs" />
+    <Compile Include="Layouts\ILayoutType.cs" />
+    <Compile Include="Layouts\LayoutType`1.cs" />
+    <Compile Include="Layouts\ILayoutUtf8SpanWritable.cs" />
+    <Compile Include="Layouts\ILayoutSpanWritable`1.cs" />
+    <Compile Include="Layouts\ILayoutSequenceWritable`1.cs" />
+    <Compile Include="Layouts\ILayoutUtf8SpanReadable.cs" />
+    <Compile Include="Layouts\ILayoutSpanReadable`1.cs" />
+    <Compile Include="Layouts\LayoutInt8.cs" />
+    <Compile Include="Layouts\LayoutInt16.cs" />
+    <Compile Include="Layouts\LayoutInt32.cs" />
+    <Compile Include="Layouts\LayoutInt64.cs" />
+    <Compile Include="Layouts\LayoutUInt8.cs" />
+    <Compile Include="Layouts\LayoutUInt16.cs" />
+    <Compile Include="Layouts\LayoutUInt32.cs" />
+    <Compile Include="Layouts\LayoutUInt64.cs" />
+    <Compile Include="Layouts\LayoutFloat32.cs" />
+    <Compile Include="Layouts\LayoutFloat64.cs" />
+    <Compile Include="Layouts\LayoutFloat128.cs" />
+    <Compile Include="Layouts\LayoutDecimal.cs" />
+    <Compile Include="Layouts\LayoutBoolean.cs" />
+    <Compile Include="Layouts\LayoutNull.cs" />
+    <Compile Include="Layouts\LayoutDateTime.cs" />
+    <Compile Include="Layouts\LayoutUnixDateTime.cs" />
+    <Compile Include="Layouts\LayoutGuid.cs" />
+    <Compile Include="Layouts\LayoutMongoDbObjectId.cs" />
+    <Compile Include="Layouts\LayoutUtf8.cs" />
+    <Compile Include="Layouts\LayoutBinary.cs" />
+    <Compile Include="Layouts\LayoutVarInt.cs" />
+    <Compile Include="Layouts\LayoutVarUInt.cs" />
+    <Compile Include="Layouts\LayoutScope.cs" />
+    <Compile Include="Layouts\LayoutEndScope.cs" />
+    <Compile Include="Layouts\LayoutPropertyScope.cs" />
+    <Compile Include="Layouts\LayoutObject.cs" />
+    <Compile Include="Layouts\LayoutUDT.cs" />
+    <Compile Include="Layouts\LayoutIndexedScope.cs" />
+    <Compile Include="Layouts\LayoutArray.cs" />
+    <Compile Include="Layouts\LayoutTypedArray.cs" />
+    <Compile Include="Layouts\LayoutTuple.cs" />
+    <Compile Include="Layouts\LayoutTypedTuple.cs" />
+    <Compile Include="Layouts\LayoutTagged.cs" />
+    <Compile Include="Layouts\LayoutTagged2.cs" />
+    <Compile Include="Layouts\LayoutNullable.cs" />
+    <Compile Include="Layouts\LayoutUniqueScope.cs" />
+    <Compile Include="Layouts\LayoutTypedSet.cs" />
+    <Compile Include="Layouts\LayoutTypedMap.cs" />
+    <Compile Include="Layouts\SamplingStringComparer.cs" />
+    <Compile Include="Layouts\SamplingUtf8StringComparer.cs" />
+    <Compile Include="Layouts\StringTokenizer.cs" />
+    <Compile Include="Layouts\StringToken.cs" />
+    <Compile Include="Layouts\SystemSchema.cs" />
+    <Compile Include="Layouts\TypeArgument.cs" />
+    <Compile Include="Layouts\TypeArgumentList.cs" />
+    <Compile Include="Layouts\UpdateOptions.cs" />
+    <Compile Include="IO\HybridRowSerializer.cs" />
+    <Compile Include="IO\IHybridRowSerializer`1.cs" />
+    <Compile Include="IO\IRowSerializable.cs" />
+    <Compile Include="IO\RowReader.cs" />
+    <Compile Include="IO\RowReaderExtensions.cs" />
+    <Compile Include="IO\RowWriter.cs" />
+    <Compile Include="Internal\MurmurHash3.cs" />
+    <Compile Include="Internal\Utf8StringJsonConverter.cs" />
+    <Compile Include="Schemas\SchemasHrSchema.cs" />
+    <Compile Include="Schemas\SegmentHybridRowSerializer.cs" />
+    <Compile Include="Schemas\RecordHybridRowSerializer.cs" />
+    <Compile Include="Schemas\NamespaceHybridRowSerializer.cs" />
+    <Compile Include="Schemas\SchemaHybridRowSerializer.cs" />
+    <Compile Include="Schemas\SchemaOptionsHybridRowSerializer.cs" />
+    <Compile Include="Schemas\PartitionKeyHybridRowSerializer.cs" />
+    <Compile Include="Schemas\PrimarySortKeyHybridRowSerializer.cs" />
+    <Compile Include="Schemas\StaticKeyHybridRowSerializer.cs" />
+    <Compile Include="Schemas\PropertyHybridRowSerializer.cs" />
+    <Compile Include="Schemas\PropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\PrimitivePropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\ScopePropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\ArrayPropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\ObjectPropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\UdtPropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\SetPropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\MapPropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\TuplePropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\TaggedPropertyTypeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\EnumSchemaHybridRowSerializer.cs" />
+    <Compile Include="Schemas\EnumValueHybridRowSerializer.cs" />
+    <Compile Include="Schemas\AllowEmptyKind.cs" />
+    <Compile Include="Schemas\ArrayHybridRowSerializer`2.cs" />
+    <Compile Include="Schemas\ArrayPropertyType.cs" />
+    <Compile Include="Schemas\EnumSchema.cs" />
+    <Compile Include="Schemas\EnumValue.cs" />
+    <Compile Include="Schemas\MapPropertyType.cs" />
+    <Compile Include="Schemas\Namespace.cs" />
+    <Compile Include="Schemas\NullableHybridRowSerializer`3.cs" />
+    <Compile Include="Schemas\ObjectPropertyType.cs" />
+    <Compile Include="Schemas\PartitionKey.cs" />
+    <Compile Include="Schemas\PrimarySortKey.cs" />
+    <Compile Include="Schemas\Int8HybridRowSerializer.cs" />
+    <Compile Include="Schemas\Int16HybridRowSerializer.cs" />
+    <Compile Include="Schemas\Int32HybridRowSerializer.cs" />
+    <Compile Include="Schemas\Int64HybridRowSerializer.cs" />
+    <Compile Include="Schemas\UInt8HybridRowSerializer.cs" />
+    <Compile Include="Schemas\UInt16HybridRowSerializer.cs" />
+    <Compile Include="Schemas\UInt32HybridRowSerializer.cs" />
+    <Compile Include="Schemas\UInt64HybridRowSerializer.cs" />
+    <Compile Include="Schemas\Float32HybridRowSerializer.cs" />
+    <Compile Include="Schemas\Float64HybridRowSerializer.cs" />
+    <Compile Include="Schemas\Float128HybridRowSerializer.cs" />
+    <Compile Include="Schemas\DecimalHybridRowSerializer.cs" />
+    <Compile Include="Schemas\BooleanHybridRowSerializer.cs" />
+    <Compile Include="Schemas\NullHybridRowSerializer.cs" />
+    <Compile Include="Schemas\DateTimeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\UnixDateTimeHybridRowSerializer.cs" />
+    <Compile Include="Schemas\GuidHybridRowSerializer.cs" />
+    <Compile Include="Schemas\MongoDbObjectIdHybridRowSerializer.cs" />
+    <Compile Include="Schemas\Utf8HybridRowSerializer.cs" />
+    <Compile Include="Schemas\BinaryHybridRowSerializer.cs" />
+    <Compile Include="Schemas\VarIntHybridRowSerializer.cs" />
+    <Compile Include="Schemas\VarUIntHybridRowSerializer.cs" />
+    <Compile Include="Schemas\PrimitivePropertyType.cs" />
+    <Compile Include="Schemas\Property.cs" />
+    <Compile Include="Schemas\PropertySchemaConverter.cs" />
+    <Compile Include="Schemas\PropertyType.cs" />
+    <Compile Include="Schemas\Schema.cs" />
+    <Compile Include="Schemas\SchemaException.cs" />
+    <Compile Include="Schemas\SchemaHash.cs" />
+    <Compile Include="Schemas\SchemaLanguageVersion.cs" />
+    <Compile Include="Schemas\SchemaOptions.cs" />
+    <Compile Include="Schemas\SchemaValidator.cs" />
+    <Compile Include="Schemas\ScopePropertyType.cs" />
+    <Compile Include="Schemas\SetPropertyType.cs" />
+    <Compile Include="Schemas\SortDirection.cs" />
+    <Compile Include="Schemas\StaticKey.cs" />
+    <Compile Include="Schemas\StorageKind.cs" />
+    <Compile Include="Schemas\StrictBooleanConverter.cs" />
+    <Compile Include="Schemas\StrictIntegerConverter.cs" />
+    <Compile Include="Schemas\TaggedPropertyType.cs" />
+    <Compile Include="Schemas\TuplePropertyType.cs" />
+    <Compile Include="Schemas\TypedArrayHybridRowSerializer`2.cs" />
+    <Compile Include="Schemas\TypedMapHybridRowSerializer`4.cs" />
+    <Compile Include="Schemas\TypedTupleHybridRowSerializer`4.cs" />
+    <Compile Include="Schemas\TypedTupleHybridRowSerializer`6.cs" />
+    <Compile Include="Schemas\TypedTupleHybridRowSerializer`8.cs" />
+    <Compile Include="Schemas\TypeKind.cs" />
+    <Compile Include="Schemas\UdtPropertyType.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

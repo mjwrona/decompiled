@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_views/Shared/Masters/HubPage.master" Inherits="Microsoft.TeamFoundation.Server.WebAccess.TfsViewMasterPage<dynamic>" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+<asp:Content ContentPlaceHolderID="DocumentBegin" runat="server">
+    <asp:ContentPlaceHolder ID="DocumentBegin" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="HeadBegin" runat="server">
+    <asp:ContentPlaceHolder ID="HeadBegin" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="PageBegin" runat="server">
+    <% Html.UseScriptModules("VSS/Controls/Menus"); %>
+    <asp:ContentPlaceHolder ID="PageBegin" runat="server" />
+</asp:Content>
+
+<asp:content contentplaceholderid="MainContentBegin" runat="server">
+    <asp:ContentPlaceHolder ID="MainContentBegin" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="HubBegin" runat="server">
+    <asp:ContentPlaceHolder ID="HubBegin" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="HubTitle" runat="server">
+    <asp:ContentPlaceHolder ID="HubTitle" runat="server">
+        <div class="hub-title" role="heading" aria-level="1">
+            <asp:ContentPlaceHolder ID="HubTitleContent" runat="server"><%: Html.ContentTitle() %></asp:ContentPlaceHolder>
+        </div>
+        <div class="hub-progress pageProgressIndicator"></div>
+    </asp:ContentPlaceHolder>
+</asp:content>
+
+<asp:content contentplaceholderid="HubContent" runat="server">
+    <asp:ContentPlaceHolder ID="HubPivot" runat="server">
+        <div class="hub-pivot" role="navigation">
+            <asp:ContentPlaceHolder ID="HubPivotContent" runat="server">
+                <div class="views">
+                    <asp:ContentPlaceHolder ID="HubPivotViews" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="filters">
+                    <asp:ContentPlaceHolder ID="HubPivotFilters" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+    </asp:ContentPlaceHolder>
+    <div class="hub-pivot-content" role="main">
+        <asp:ContentPlaceHolder ID="HubContent" runat="server" />
+    </div>
+</asp:content>
+
+<asp:content contentplaceholderid="HubEnd" runat="server">
+    <asp:ContentPlaceHolder ID="HubEnd" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="MainContentEnd" runat="server">
+    <asp:ContentPlaceHolder ID="MainContentEnd" runat="server" />
+</asp:content>
+
+<asp:Content ContentPlaceHolderID="PageEnd" runat="server">
+    <asp:ContentPlaceHolder ID="PageEnd" runat="server" />
+</asp:Content>

@@ -1,0 +1,8 @@
+<script id="searchbar-control-template" type="text/html">
+    <div class="searchbar" role="search">
+        <input class="search-input" maxlength="200" data-bind="value: searchTerm, valueUpdate: 'keyup', enable: isEnabled(), attr: { 'aria-label': placeHolder, placeholder : placeHolder}, enterkey: submitSearchTerm" autocomplete="off"/>
+        <span role="button" class="clearbutton bowtie-icon bowtie-math-multiply" data-bind="click: clearButtonClick(), visible: searchTerm().length > 0, spacekey: clearSearchTerm, enterkey: clearSearchTerm, attr: {title: clearSearchQuery}" aria-label="Clear Search" tabindex="0"></span>
+        <!-- EU Cookie Consent: Consider user consent on clicking the search button by setting data-mscc-ic attribute to true -->
+        <span role="button" class="searchbutton gallery-element-focus-style-moderate bowtie-icon bowtie-search" data-bind="click: searchButtonClick(), spacekey: submitSearchTerm, enterkey: submitSearchTerm, attr: {title: searchButtonTitle}" aria-label="Search" tabindex="0" data-mscc-ic="true"></span>
+    </div>
+</script>

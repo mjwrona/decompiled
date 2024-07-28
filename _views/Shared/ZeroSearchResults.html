@@ -1,0 +1,62 @@
+<script id="zero-results-template" type="text/html">
+    <div class="zero-results-control">
+        <div class="zero-results-header" aria-live="polite">
+            <img alt="" data-bind="attr: { src: _koNoResultsImagePath }" />
+            <div data-bind="text: _koNoMatchTitle"></div>
+        </div>
+
+        <div id="articles-container" data-bind="visible: _koRelevantArticles().length > 0">
+            <div class="zero-results-section-header articles-header">
+                <span class="bowtie-icon bowtie-file-content zero-results-section-icon"></span>
+                <span data-bind="text: _koRelevantArticlesTitle"></span>
+            </div>
+            <div class="relevant-articles-container" data-bind="foreach: _koRelevantArticles">
+                <div class="article">
+                    <a data-bind="attr: { href: $data.url }, text: $data.title, click: $parent._koArticleClick, enterkey: $parent._koArticleClick" target="_blank" rel="noreferrer noopener nofollow"></a>
+                    <div class="article-description" data-bind="text: $data.description"></div>
+                </div>
+            </div>
+            <div class="see-more-articles" data-bind="if: _koShouldShowSeeMore">
+                <div class="see-more">
+                    <a tabindex="0" data-bind="click: _koSeeMoreClick, enterkey: _koSeeMoreEnter">
+                        <span data-bind="text: _koSeeMoreText"></span>
+                        <span class="bowtie-icon bowtie-chevron-right-light"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="relevant-articles-container" id="extra-articles" data-bind="css: { showList: _koShowExtraList() === true }, foreach: _koExtraRelevantArticles">
+                <div class="article">
+                    <a data-bind="attr: { href: $data.url }, text: $data.title, click: $parent._koArticleClick, enterkey: $parent._koArticleClick" target="_blank" rel="noreferrer noopener nofollow"></a>
+                    <div class="article-description" data-bind="text: $data.description"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zero-results-section-header">
+            <span class="bowtie-icon bowtie-trigger zero-results-section-icon"></span>
+            <span data-bind="text: _koSuggestionsTitle"></span>
+        </div>
+        <ul class="suggestions-list" data-bind="foreach: _koSuggestions">
+            <li data-bind="html: $data"></li>
+        </ul>
+
+        <div class="zero-results-section-header">
+            <span class="bowtie-icon bowtie-feedback zero-results-section-icon"></span>
+            <span data-bind="text: _koFeedbackTitle"></span>
+        </div>
+        <div data-bind="visible: _koShowFeedbackForm">
+            <div class="feedback-box-label" data-bind="text: _koFeedbackFormLabel"></div>
+            <div class="feedback-box">
+                <textarea aria-required="true" class="feedback-input" maxlength="390" data-bind="value: _koUserFeedback, valueUpdate: 'keyup', attr: { 'aria-label': _koFeedbackPlaceholder, placeholder : _koFeedbackPlaceholder }" autocomplete="off"></textarea>
+            </div>
+            <div>
+                <button tabindex="0" class="submit-feedback-button" data-bind="disable: !_koUserFeedback, text: _koSubmitFeedbackButton, click: _koSubmitFeedback"></button>
+            </div>
+        </div>
+        <div class="post-feedback-message" data-bind="visible: _koShowPostFeedbackMessage">
+            <span class="bowtie-icon bowtie-status-success-outline"></span>
+            <span data-bind="text: _koPostFeedbackText"></span>
+        </div>
+        
+    </div>
+</script>

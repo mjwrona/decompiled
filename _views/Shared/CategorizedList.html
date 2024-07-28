@@ -1,0 +1,11 @@
+<script id="categorized-list-template" type="text/html">
+<div data-bind ="foreach: itemsByCategoryList">
+    <div class="categorized-list gallery-item-cluster clearfix" >
+        <div class="header-container">
+            <a class="section-header gallery-element-focus-style-light name" data-bind="attr: {href: categoryLink},text: categoryName, css: { disabled: !categoryLink }"></a>
+            <a class="see-more" data-bind="attr: {href: categoryLink}, visible:hasMoreExtension , text: categoryLinkTitle"></a>
+        </div>
+        <div class="item-list-container clearfix" data-bind="renderRegisteredTemplate: { templateName: categoryItemsTemplate, data: categoryItems }"></div>         
+    </div>
+</div>
+</script>

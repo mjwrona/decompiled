@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_views/Shared/Masters/HubPage.master"
+    Inherits="Microsoft.TeamFoundation.Server.WebAccess.TfsViewMasterPage<dynamic>" %>
+
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+
+<asp:content contentplaceholderid="DocumentBegin" runat="server">
+    <% 
+        Html.UseScriptModules("Presentation/Scripts/TFS/TFS.UI.Controls.Accessories");
+        Html.CacheStatefulSplitterSettings();
+    %>
+    <asp:ContentPlaceHolder ID="DocumentBegin" runat="server" />
+</asp:content>
+
+<asp:Content ContentPlaceHolderID="HeadBegin" runat="server">
+    <asp:ContentPlaceHolder ID="HeadBegin" runat="server" />
+</asp:Content>
+
+<asp:content contentplaceholderid="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="PageBegin" runat="server">
+    <asp:ContentPlaceHolder ID="PageBegin" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="MainContentBegin" runat="server">
+    <asp:ContentPlaceHolder ID="MainContentBegin" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="HubBegin" runat="server">
+    <asp:ContentPlaceHolder ID="HubBegin" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="HubTitle" runat="server">
+    <asp:ContentPlaceHolder ID="HubTitle" runat="server">
+        <div class="hub-title">
+            <asp:ContentPlaceHolder ID="HubTitleContent" runat="server"><%: Html.ContentTitle() %></asp:ContentPlaceHolder>
+        </div>
+        <div class="hub-progress pageProgressIndicator"></div>
+    </asp:ContentPlaceHolder>
+</asp:content>
+
+<asp:content contentplaceholderid="HubContent" runat="server">
+    <div class="splitter horizontal hub-splitter <%: Html.StatefulSplitterClasses() %>">
+        <%: Html.StatefulSplitterOptions() %>
+        <div class="leftPane" <%: Html.StatefulSplitterFixedSideStyles() %>>
+            <asp:ContentPlaceHolder ID="LeftHubContent" runat="server" />
+        </div>
+        <div class="handleBar"  <%: Html.StatefulSplitterFillSideStyles() %>></div>
+        <div class="rightPane"  <%: Html.StatefulSplitterFillSideStyles() %>>
+            <asp:ContentPlaceHolder ID="RightHubContent" runat="server" />
+        </div>
+    </div>
+</asp:content>
+
+<asp:content contentplaceholderid="HubEnd" runat="server">
+    <asp:ContentPlaceHolder ID="HubEnd" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="MainContentEnd" runat="server">
+    <asp:ContentPlaceHolder ID="MainContentEnd" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="PageEnd" runat="server">
+    <asp:ContentPlaceHolder ID="PageEnd" runat="server" />
+</asp:content>

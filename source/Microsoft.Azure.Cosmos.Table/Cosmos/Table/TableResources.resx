@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AmbiguousAuthScheme" xml:space="preserve">
+    <value>Ambiguous authentication scheme credentials provided Request contains authentication credentials for signed access and authenticated access</value>
+  </data>
+  <data name="InvalidSignedTimeRange" xml:space="preserve">
+    <value>Signed expiry time [{0}] has to be after signed start time [{1}]</value>
+  </data>
+  <data name="AtomFormatNotSupported" xml:space="preserve">
+    <value>Atom format is not supported.</value>
+  </data>
+  <data name="InvalidIPRange" xml:space="preserve">
+    <value>The startAddress must not exceed the endAddress.</value>
+  </data>
+  <data name="RowKeyTooLarge" xml:space="preserve">
+    <value>The 'RowKey' property exceeds the maximum allowed key size ({0} characters)</value>
+  </data>
+  <data name="InvalidAccountDuplicateService" xml:space="preserve">
+    <value>Invalid duplicate service. Error at index  {0} of {1}</value>
+  </data>
+  <data name="UnimplementedOperation" xml:space="preserve">
+    <value>The requested operation is not supported.</value>
+  </data>
+  <data name="SignedTimeRangeNotApplicable" xml:space="preserve">
+    <value>Signature not valid in the specified time frame: Start [{0}] - Expiry [{1}] - Current [{2}]</value>
+  </data>
+  <data name="PartitionKeyTooLarge" xml:space="preserve">
+    <value>The 'PartitionKey' property exceeds the maximum allowed key size ({0} characters)</value>
+  </data>
+  <data name="InvalidSignatureFields" xml:space="preserve">
+    <value>Signature fields not well formed.</value>
+  </data>
+  <data name="PropertyNameCurrentlyNotSupported" xml:space="preserve">
+    <value>The property name '{0}' is currently not supported.</value>
+  </data>
+  <data name="IPIsEmpty" xml:space="preserve">
+    <value>sip is optional but cannot be empty</value>
+  </data>
+  <data name="OutOfRangeInput" xml:space="preserve">
+    <value>The '{0}' parameter of value '{1}' is out of range.</value>
+  </data>
+  <data name="PropertyNameInvalid" xml:space="preserve">
+    <value>The property name '{0}' is invalid. See https://docs.microsoft.com/en-us/rest/api/storageservices/Understanding-the-Table-Service-Data-Model</value>
+  </data>
+  <data name="IPFromDifferentFamilies" xml:space="preserve">
+    <value>Cannot compare two addresses of different address families</value>
+  </data>
+  <data name="InvalidSignedProtocol" xml:space="preserve">
+    <value>Invalid signedProtocol {0}</value>
+  </data>
+  <data name="InvalidSASPermissionForTable" xml:space="preserve">
+    <value>Character {0} is an invalid permission for {1}</value>
+  </data>
+  <data name="InvalidCIDRNotation" xml:space="preserve">
+    <value>Invalid CIDR notation: {0}</value>
+  </data>
+  <data name="MissingOrInvalidHeader" xml:space="preserve">
+    <value>The header {0} is either missing or malformed.</value>
+  </data>
+  <data name="InvalidAccountSASServcie" xml:space="preserve">
+    <value>Unexpected character {0} in service</value>
+  </data>
+  <data name="InvalidSIPFormat" xml:space="preserve">
+    <value>Invalid sip format</value>
+  </data>
+  <data name="InvalidSignedProtocolHttpOnly" xml:space="preserve">
+    <value>Invalid signed protocol. Specifying only http is not allowed</value>
+  </data>
+  <data name="SipSupportSingleIPRange" xml:space="preserve">
+    <value>sip only supports one range</value>
+  </data>
+  <data name="MalformedBatchRequest" xml:space="preserve">
+    <value>The batch request body is malformed. Please see https://docs.microsoft.com/en-us/rest/api/storageservices/performing-entity-group-transactions</value>
+  </data>
+  <data name="PartitionKeyOrRowKeyEmpty" xml:space="preserve">
+    <value>PartitionKey/RowKey cannot be empty</value>
+  </data>
+  <data name="InvalidExtraPermission" xml:space="preserve">
+    <value>Unexpected character {0} in extra permission</value>
+  </data>
+  <data name="TableNameEmpty" xml:space="preserve">
+    <value>Table name cannot be empty.</value>
+  </data>
+  <data name="InvalidSignatureSize" xml:space="preserve">
+    <value>Signature size is invalid</value>
+  </data>
+  <data name="InvalidSASPermissionOrder" xml:space="preserve">
+    <value>Invalid order of permission. Error at index {0}  of {1}</value>
+  </data>
+  <data name="InvalidNetworkSuffix" xml:space="preserve">
+    <value>Invalid network prefix specified: {0}</value>
+  </data>
+  <data name="IPAuthorizationFailed" xml:space="preserve">
+    <value>This request is not authorized to perform this operation using this source IP {0}.</value>
+  </data>
+  <data name="InvalidSignedPermission" xml:space="preserve">
+    <value>Invalid signed permission. permission = {0}</value>
+  </data>
+  <data name="InvalidDuplicateExtraPermission" xml:space="preserve">
+    <value>Invalid duplicate extra permission. Error at index {0} of {1}</value>
+  </data>
+  <data name="MandatoryFieldEmpty" xml:space="preserve">
+    <value>{0} is mandatory. Cannot be empty</value>
+  </data>
+  <data name="OutOfRangeInputGeneric" xml:space="preserve">
+    <value>One of the request inputs is out of range.</value>
+  </data>
+  <data name="TableQueryFluentMethodNotAllowed" xml:space="preserve">
+    <value>Fluent methods may not be invoked on a Query created via CloudTable.CreateQuery&lt;T&gt;()</value>
+  </data>
+  <data name="MediaTypeNotSupported" xml:space="preserve">
+    <value>None of the provided media types are supported</value>
+  </data>
+  <data name="UnsupportedSASWithPkAndRK" xml:space="preserve">
+    <value>Shared access signature with PartitionKey or RowKey are not supported</value>
+  </data>
+  <data name="OperationTimedOut" xml:space="preserve">
+    <value>Operation could not be completed within the specified time.</value>
+  </data>
+  <data name="InvalidAccountResourceType" xml:space="preserve">
+    <value>Unexpected character {0} in signed resource type</value>
+  </data>
+  <data name="InvalidDottedQuadNotation" xml:space="preserve">
+    <value>IPv4 dotted-quad notation expected: {0}</value>
+  </data>
+  <data name="InvalidTableName" xml:space="preserve">
+    <value>Table name {0} is not supported</value>
+  </data>
+  <data name="VersionDontSupportSAS" xml:space="preserve">
+    <value>{0} is either not in the correct format or is not equal or later than version {1}</value>
+  </data>
+  <data name="MissingDependentParam" xml:space="preserve">
+    <value>{0} is required when {1} is provided.</value>
+  </data>
+  <data name="OptionalFieldCannotBeEmptyIfSpecified" xml:space="preserve">
+    <value>{0} is optional but cannot be empty</value>
+  </data>
+  <data name="InvalidIP" xml:space="preserve">
+    <value>Invalid ip specified: {0}</value>
+  </data>
+  <data name="SASNotSupportedForResourceType" xml:space="preserve">
+    <value>Shared access signature is not supported for this operation</value>
+  </data>
+  <data name="InvalidIPV4Format" xml:space="preserve">
+    <value>IPv4 format expected: {0}</value>
+  </data>
+</root>

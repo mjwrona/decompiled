@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ServiceEndpointProjectReferenceInformationNameInvalid" xml:space="preserve">
+    <value>Project information name is not valid for service endpoint.</value>
+  </data>
+  <data name="NullAuthorizationNotAllowed" xml:space="preserve">
+    <value>Service Connection Authorization cannot be null.</value>
+  </data>
+  <data name="OAuthConfiguration" xml:space="preserve">
+    <value>OAuth Configuration</value>
+  </data>
+  <data name="AdministratorRole" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="ServiceEndpointUrlChangeNotAllowed" xml:space="preserve">
+    <value>Service connection URL change requires all the confidential parameters to be provided. Please retry operation by providing value for parameter: {0}.</value>
+  </data>
+  <data name="UrlNotExpectedForOAuth2Endpoint" xml:space="preserve">
+    <value>Service connections with OAuth2 scheme use the URL of the linked configuration. Service connection URL {0} is not expected.</value>
+  </data>
+  <data name="ResponseSizeExceeded" xml:space="preserve">
+    <value>Response size exceeded the maximum limit of {0}</value>
+  </data>
+  <data name="MissingProperty" xml:space="preserve">
+    <value>"Expected property {0} in service connection definition"</value>
+  </data>
+  <data name="EndpointNotFound" xml:space="preserve">
+    <value>No service connection found with identifier {0}.</value>
+  </data>
+  <data name="BodyNotExpectedInRequest" xml:space="preserve">
+    <value>Only POST request can have a body. Invalid body {0}</value>
+  </data>
+  <data name="CannotUpdateEndpointDataKubernetesAzureSubscriptionType" xml:space="preserve">
+    <value>Updating the endpoint data is not allowed for Azure Subscription type Kubernetes endpoint. Updated field: '{0}', Old Value: '{1}', New Value: '{2}'.</value>
+  </data>
+  <data name="BitbucketRefreshTokenError" xml:space="preserve">
+    <value>Authorization parameter 'RefreshToken' must be supplied.</value>
+  </data>
+  <data name="KubernetesServiceAccountCreationError" xml:space="preserve">
+    <value>An error occurred while creating the service account. Internal error: {0}.</value>
+  </data>
+  <data name="CannotUpdateConfidentialAuthDataAzureContainerRegistry" xml:space="preserve">
+    <value>Updating the authorization data is not allowed for Azure Container Registry type Docker endpoint. Updated field: '{0}'. Please pass the value as null and try again.</value>
+  </data>
+  <data name="EndpointCreatorsGroup" xml:space="preserve">
+    <value>Endpoint Creators</value>
+  </data>
+  <data name="AzureServicePrincipalIsNotReady" xml:space="preserve">
+    <value>Azure service principal '{0}' on subscription ID '{1}' is not ready. Error: {2}</value>
+  </data>
+  <data name="EndpointUserRoleDescription" xml:space="preserve">
+    <value>User can use, but cannot manage the service connection. </value>
+  </data>
+  <data name="ProjectBuildAdminAccountName" xml:space="preserve">
+    <value>Build Administrators</value>
+  </data>
+  <data name="OAuthConfigurationExist" xml:space="preserve">
+    <value>OAuth configuration with name {0} already exists.</value>
+  </data>
+  <data name="EndpointFieldNotSpecified" xml:space="preserve">
+    <value>Service connection field not specified</value>
+  </data>
+  <data name="ServiceEndpointProjectReferenceInformationIdInvalid" xml:space="preserve">
+    <value>Project information Id is not valid for service endpoint.</value>
+  </data>
+  <data name="ExpectedValueForServicePrincipalIdOrSetCreationModeAutomatic" xml:space="preserve">
+    <value>'Service Principal Client Id' required for Manual CreationMode. You can also set CreationMode to Automatic for Automatic SPN creation.</value>
+  </data>
+  <data name="EndpontGroupCreationFailed" xml:space="preserve">
+    <value>Could not create {0} group. If group already exists within the project, please delete it and retry the operation.</value>
+  </data>
+  <data name="InvalidPublishProfileEndpointField" xml:space="preserve">
+    <value>Service connection field '{0}' is not expected in Azure Resource Manager connections using the Publish Profile authentication scheme.</value>
+  </data>
+  <data name="FailedToSetAzurePermissionError" xml:space="preserve">
+    <value>Failed to set Azure permission '{0}' for the service principal '{1}' on subscription ID '{2}'</value>
+  </data>
+  <data name="OAuth2NotSupportedForEndpointType" xml:space="preserve">
+    <value>OAuth2 is not supported for this service connection type {0}</value>
+  </data>
+  <data name="ServicePrincipalKeyRequiredForManualCreationMode" xml:space="preserve">
+    <value>Service Principal Client Key required for Manual CreationMode.</value>
+  </data>
+  <data name="InvalidEndpointInput" xml:space="preserve">
+    <value>Following fields in the service connection are not expected: {0}.
+Only fields that are defined in the service connection's contribution type as inputs can be specified.</value>
+  </data>
+  <data name="CannotUpdateEndpointDataDockerACRType" xml:space="preserve">
+    <value>Updating the endpoint data is not allowed for Azure Container Registry type Docker endpoint. Updated field: '{0}', Old Value: '{1}', New Value: '{2}'.</value>
+  </data>
+  <data name="EndpointFieldNotExpectedForSpnManualCreateEndpoint" xml:space="preserve">
+    <value>{0} field is not expected in service connection when creationMode is set to Manual.</value>
+  </data>
+  <data name="TryingToShareEndpointWithSameProject" xml:space="preserve">
+    <value>Cannot share an endpoint with the same project.</value>
+  </data>
+  <data name="EndpointOperationNotSupported" xml:space="preserve">
+    <value>Operation '{0}' is not supported for service connection type '{1}'.</value>
+  </data>
+  <data name="LibraryAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can use and manage the library items.</value>
+  </data>
+  <data name="AuthSchemeForOverrideNotFound" xml:space="preserve">
+    <value>Not a valid data source. The authenitcation scheme specified for override, specified in the data source is invalid</value>
+  </data>
+  <data name="DatasourceAuthSchemeOverridesDoNotMatchAuthSchemeInputs" xml:space="preserve">
+    <value>Not a valid data source. Inputs provided in data source do not match the inputs required by this authentication scheme</value>
+  </data>
+  <data name="InvalidScopeLevel" xml:space="preserve">
+    <value>The scope level {0} is not valid.</value>
+  </data>
+  <data name="RoleAssignmentHelpMessageForManagementGroup" xml:space="preserve">
+    <value>Ensure that the user has 'Owner' or 'User Access Administrator' permissions on the Management group.</value>
+  </data>
+  <data name="CollectionEndpointInvalidScheme" xml:space="preserve">
+    <value>Oauth2 based endpoints are not supported at collection level</value>
+  </data>
+  <data name="KubernetesCreateNamespaceJobNamespaceNotFound" xml:space="preserve">
+    <value>No property found with name {0} in service endpoint. Make sure that you pass this property and try again.</value>
+  </data>
+  <data name="CouldNotFindServicePrincipal" xml:space="preserve">
+    <value>Failed to find service principal for {0}.</value>
+  </data>
+  <data name="DataSourceNameAndUrlBothMentionedError" xml:space="preserve">
+    <value>Both data source name and data source URL cannot be present. Provide any one of them.</value>
+  </data>
+  <data name="InsufficientPrivilegesOverScope" xml:space="preserve">
+    <value>The client does not have permission to perform {0} over scope '{1}'.</value>
+  </data>
+  <data name="AzureKeyVaultSpnObjectNotFoundException" xml:space="preserve">
+    <value>{0} : The service principal does not have permissions to write to the access policies of the selected keyvault automatically. </value>
+  </data>
+  <data name="PaginationFieldsMissing" xml:space="preserve">
+    <value>One or more fields needed for pagination support are missing. Provide all of the required fields.</value>
+  </data>
+  <data name="EndpointReaderRoleDescription" xml:space="preserve">
+    <value>User can read the service connection.</value>
+  </data>
+  <data name="UpdateAuthorizationDataFailedError" xml:space="preserve">
+    <value>Failed to update the authorization data for service connection {0}.</value>
+  </data>
+  <data name="InvalidSpnOperation" xml:space="preserve">
+    <value>Operation '{0}' is invalid. Allowed operation values are Create, Update, Delete and AssignPermissions.</value>
+  </data>
+  <data name="InvalidMSIEndpointField" xml:space="preserve">
+    <value>Service connection field '{0}' is not expected in Azure Resource Manager connections using the Managed Service Identity authentication scheme.</value>
+  </data>
+  <data name="ServiceEndpointIdAndDetailsBothMissingError" xml:space="preserve">
+    <value>Neither service connection ID nor service connection details is present. Provide any one of them.</value>
+  </data>
+  <data name="CannotUpdateWorkloadIdentitySubject" xml:space="preserve">
+    <value>Cannot update Workload Identity Federation subject of this service connection to {0}. This field is automatically derived from the organization, project and endpoint names.</value>
+  </data>
+  <data name="CouldNotFetchPublishProfile" xml:space="preserve">
+    <value>Failed to fetch publish profile. Error: {0}</value>
+  </data>
+  <data name="KubernetesRoleBindingCreationError" xml:space="preserve">
+    <value>An error occurred while creating the role binding for the service account. Internal error: {0}.</value>
+  </data>
+  <data name="EndpointFieldNotExpectedForSpnAutoCreateEndpoint" xml:space="preserve">
+    <value>{0} field is not expected in service connection when creationMode is set to Automatic.</value>
+  </data>
+  <data name="InvalidAuthType" xml:space="preserve">
+    <value>Invalid Auth Type provided. Value should be either 'spnKey' or 'certificate'.</value>
+  </data>
+  <data name="InstallationAccessTokenCachingError" xml:space="preserve">
+    <value>Installation Access Token cache threw an unexpected error for endpoint {0} using installation {1}</value>
+  </data>
+  <data name="EndpointAdministratorsGroup" xml:space="preserve">
+    <value>Endpoint Administrators</value>
+  </data>
+  <data name="ProjectLevelEndpointAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to manage all the service connections.</value>
+  </data>
+  <data name="DataSourceNameAndUrlBothMissingError" xml:space="preserve">
+    <value>Neither data source name nor data source URL is present. Provide any one of them.</value>
+  </data>
+  <data name="ConversionBetweenAuthSchemesNotSupported" xml:space="preserve">
+    <value>Converting endpoint type {0} scheme from {1} to {2} is neither an upgrade or a downgrade and is not supported.</value>
+  </data>
+  <data name="BodySizeLimitExceeded" xml:space="preserve">
+    <value>Size of the POST body exceeds the size limit of {0} bytes.</value>
+  </data>
+  <data name="CreatorRole" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="OAuthConfigurationAccessDeniedForView" xml:space="preserve">
+    <value>You do not have permissions to access this OAuth configuration. An OAuth Configuration Administrator should add you to the Reader role.</value>
+  </data>
+  <data name="InvalidDataSourceBindingBothMentioned" xml:space="preserve">
+    <value>Both dataSourceName and endpointURL cannot be present in the same dataSourceBinding</value>
+  </data>
+  <data name="ServiceEndpointAccessDeniedForDeleteOperation" xml:space="preserve">
+    <value>You need to be a project level Administrator or organization/collection level Administrator of the service endpoint to perform this operation.</value>
+  </data>
+  <data name="DeploymentNotProperlyRegisteredWithBitbucket" xml:space="preserve">
+    <value>This deployment is not properly configured with a registered Bitbucket account. AuthConfigurationType: {0}, Error: {1}</value>
+  </data>
+  <data name="CannotUpdateWorkloadIdentityIssuer" xml:space="preserve">
+    <value>Cannot update Workload Identity Federation issuer of this service connection to {0}. This field is automatically set.</value>
+  </data>
+  <data name="ServiceEndpointInvalidOwner" xml:space="preserve">
+    <value>Only AgentCloud owner is supported for collection level endpoints.</value>
+  </data>
+  <data name="ProjectReferenceMissing" xml:space="preserve">
+    <value>Project reference must be set in the updated endpoint.</value>
+  </data>
+  <data name="EndpointAdministratorsRoleDescription" xml:space="preserve">
+    <value>Administrator can use and manage the service connection.</value>
+  </data>
+  <data name="InsufficientPrivilegesOverKeyVault" xml:space="preserve">
+    <value>The user does not have permission to perform Microsoft.KeyVault/vaults/accessPolicies/write over scope '{0}'. Of the built-in roles, the 'Contributor' and 'Key Vault Contributor' has permissions required to assign access policies to a key vault.</value>
+  </data>
+  <data name="GetAzureManagementGroupsFailed" xml:space="preserve">
+    <value>"Failed to fetch Azure management groups. Failure reason: {0}"</value>
+  </data>
+  <data name="SharingServiceConnectinNotAllowed" xml:space="preserve">
+    <value>Sharing of service conection is not allowed.</value>
+  </data>
+  <data name="EndpointAccessDeniedForAdminOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the service connection. You need to be an Administrator on this service connection.</value>
+  </data>
+  <data name="MultipleEndpointUpdateShouldBeFromSameProject" xml:space="preserve">
+    <value>All service connections which are getting updated should belong to same project.</value>
+  </data>
+  <data name="GitHubApplicationUninstalled" xml:space="preserve">
+    <value>Unable to generate authorization. Azure Pipelines application linked to this endpoint has been uninstalled from your GitHub account. </value>
+  </data>
+  <data name="EndpointCreatorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who can create service connections.</value>
+  </data>
+  <data name="UpgradeAuthorizationSchemeNotSupported" xml:space="preserve">
+    <value>Authorization scheme of endpoint {0} cannot be upgraded from {1} to {2}.</value>
+  </data>
+  <data name="EndpointAccessDeniedForUseOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the service connection. An Endpoint Administrator should add you to the Endpoint Readers group of this service connection.</value>
+  </data>
+  <data name="RefreshTokenError" xml:space="preserve">
+    <value>Refresh Token data source call failure. Error {0} Description {1}</value>
+  </data>
+  <data name="DataSourceDetailsMissingError" xml:space="preserve">
+    <value>Data source details not provided. </value>
+  </data>
+  <data name="ProjectReleaseManagerGroupName" xml:space="preserve">
+    <value>Release Managers</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="InsufficientPrivilegesOnSubscription" xml:space="preserve">
+    <value>The requesting user does not have sufficient permissions on the subscription.</value>
+  </data>
+  <data name="CouldNotCreateAADapp" xml:space="preserve">
+    <value>Failed to create an app in Microsoft Entra. Error: {0} </value>
+  </data>
+  <data name="InvalidUrlForProvidedEnvironment" xml:space="preserve">
+    <value>The specified URL {0} for parameter {1} is not valid. Correct URL for environment {2} is {3}</value>
+  </data>
+  <data name="InstallationIdNotFound" xml:space="preserve">
+    <value>The endpoint is not linked with a valid installation.</value>
+  </data>
+  <data name="AnotherOperationAlreadyInProgress" xml:space="preserve">
+    <value>Cannot perform this operation since another operation is already in progress with current status '{0}'. Try again later.</value>
+  </data>
+  <data name="UntrustedHost" xml:space="preserve">
+    <value>The task attempted to reach untrusted host: {0}</value>
+  </data>
+  <data name="CouldNotFetchPublishProfileHelpMessage" xml:space="preserve">
+    <value>Ensure that the user has permissions to download publish profile of '{0}' resource.</value>
+  </data>
+  <data name="ErrorGeneratingInstallationAccessToken" xml:space="preserve">
+    <value>Installation Access Token could not be generated for appType: {0}, installation id {1} for repository ids {2}</value>
+  </data>
+  <data name="EndpointDisabledError" xml:space="preserve">
+    <value>Service connection '{0}' is currently disabled. Administrators of this endpoint can re-enable it, if necessary.</value>
+  </data>
+  <data name="OAuthConfigurationUrlClientDetailsUpdateForbidden" xml:space="preserve">
+    <value>Only OAuth Configuration Name can be updated. URL, ClientId, Client Secret should be null.</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="EndpointTypeCannotBeUpdated" xml:space="preserve">
+    <value>Service connection type cannot be updated. Existing service connection type: {0}</value>
+  </data>
+  <data name="BitbucketNullRefreshTokenError" xml:space="preserve">
+    <value>Authorization parameter 'RefreshToken' cannot be null.</value>
+  </data>
+  <data name="GetAzureSubscriptionsFailed" xml:space="preserve">
+    <value>"Failed to fetch Azure subscriptions. Failure reason: {0}"</value>
+  </data>
+  <data name="LibraryUserRoleDescription" xml:space="preserve">
+    <value>User can use, but cannot manage the library items.</value>
+  </data>
+  <data name="InvalidAuthenticationScheme" xml:space="preserve">
+    <value>Authentication scheme couldn't be recognized '{0}'</value>
+  </data>
+  <data name="OAuthConfigurationAccessDeniedForAdminOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the OAuth configuration. An OAuth Configuration Administrator should add you to the Administrator role.</value>
+  </data>
+  <data name="ShouldStartWithEndpointOrConfigurationUrlError" xml:space="preserve">
+    <value>Only URLs starting with {{endpoint.url}} or {{configuration.Url}} can be called.</value>
+  </data>
+  <data name="OAuthConfigurationSecretsNotFound" xml:space="preserve">
+    <value>Client secrets not found for configuration Id: {0}</value>
+  </data>
+  <data name="EndpointAccessDeniedForCreate" xml:space="preserve">
+    <value>You do not have permission to create a service connection. You need to be a Creator for service connections in this project.</value>
+  </data>
+  <data name="KubernetesMissingSecretError" xml:space="preserve">
+    <value>Could not find any secrets associated with the Service Account.</value>
+  </data>
+  <data name="UnableToPopulateAzureStackData" xml:space="preserve">
+    <value>Unable to populate Azure Stack dependency data.</value>
+  </data>
+  <data name="KubernetesErrorFetchingClusterInvalidResponse" xml:space="preserve">
+    <value>An invalid response was sent from the server while fetching AKS cluster. Expected property "enableRBAC" not found.</value>
+  </data>
+  <data name="ServiceEndpointProjectReferenceNameNull" xml:space="preserve">
+    <value>Project reference name can not be left empty while sharing the service connection.</value>
+  </data>
+  <data name="OauthArgumentError" xml:space="preserve">
+    <value>Authorization parameter 'AccessToken' must be supplied to complete OAuth flow</value>
+  </data>
+  <data name="DeploymentNotProperlyRegisteredWithGitHub" xml:space="preserve">
+    <value>This deployment is not properly configured with a registered GitHub account. AuthConfigurationType: {0}, Error: {1}</value>
+  </data>
+  <data name="OperationNotAllowedForNonServicePrincipal" xml:space="preserve">
+    <value>Only service principal identity is allowed to perform this operation.</value>
+  </data>
+  <data name="FailedToRemoveAzurePermissionErrorOnManagementGroup" xml:space="preserve">
+    <value>Failed to remove Azure permission '{0}' for the service principal '{1}' on management group ID '{2}'.</value>
+  </data>
+  <data name="KubernetesNamespaceCreationError" xml:space="preserve">
+    <value>An error occurred while creating the namespace in the cluster. Internal error: {0}.</value>
+  </data>
+  <data name="FailedToSetAzurePermissionErrorOnMLWorkspace" xml:space="preserve">
+    <value>Failed to set Azure permission '{0}' for the service principal '{1}' on machine learning workspace ID '{2}'</value>
+  </data>
+  <data name="CannotUpdateNonConfidentialAuthDataKubernetesAzureSubscriptionType" xml:space="preserve">
+    <value>Updating the authorization data is not allowed for Azure Subscription type Kubernetes endpoint. Updated field: '{0}'. Please pass the current value and try again.</value>
+  </data>
+  <data name="BitbucketNotRegisteredError" xml:space="preserve">
+    <value>This deployment is not registered with a Bitbucket account.</value>
+  </data>
+  <data name="KubernetesAuthTypeDoesNotMatchWithAuthScheme" xml:space="preserve">
+    <value>Cannot create endpoint with {0} authentication scheme and {1} authorization type.</value>
+  </data>
+  <data name="RoleAssignmentHelpMessageForSubscription" xml:space="preserve">
+    <value>Ensure that the user has 'Owner' or 'User Access Administrator' permissions on the Subscription.</value>
+  </data>
+  <data name="ServiceEndpointNameAlreadyExists" xml:space="preserve">
+    <value>Service connection with name {0} already exists. Only a user having Administrator/User role permissions on service connection {0} can see it. </value>
+  </data>
+  <data name="FailedToRemoveAzurePermissionError" xml:space="preserve">
+    <value>Failed to remove Azure permission '{0}' for the service principal '{1}' on subscription ID '{2}'.</value>
+  </data>
+  <data name="FailedToLoadServiceEndpointTypeFromContribution" xml:space="preserve">
+    <value>Failed to load service endpoint type for contribution {0}</value>
+  </data>
+  <data name="FailedToSetAzurePermissionErrorOnManagementGroup" xml:space="preserve">
+    <value>Failed to set Azure permission '{0}' for the service principal '{1}' on management group ID '{2}'</value>
+  </data>
+  <data name="EndpointIdsIsEmptyError" xml:space="preserve">
+    <value>EndpointIds should have at least one element</value>
+  </data>
+  <data name="ServiceEndPointNotFound" xml:space="preserve">
+    <value>Service connection with ID {0} not found</value>
+  </data>
+  <data name="ServiceEndpointUrlChangeNotAllowedForAzureStack" xml:space="preserve">
+    <value>Service connection URL change is not allowed for Azure Stack.</value>
+  </data>
+  <data name="RoleAssignmentHelpMessageForMLWorkspace" xml:space="preserve">
+    <value>Ensure that the user has 'Owner' or 'User Access Administrator' permissions on the Workspace.</value>
+  </data>
+  <data name="InvalidEnvironmentProvided" xml:space="preserve">
+    <value>Invalid environment {0} provided. Possible environments are AzureCloud, AzureChinaCloud, AzureUSGovernment, AzureGermanCloud and AzureStack</value>
+  </data>
+  <data name="CannotUpdateNonConfidentialAuthDataAzureContainerRegistry" xml:space="preserve">
+    <value>Updating the authorization data is not allowed for Azure Container Registry type Docker endpoint. Updated field: '{0}'. Please pass the current value and try again.</value>
+  </data>
+  <data name="AtleastOneProjectReferenceRequired" xml:space="preserve">
+    <value>At least one project reference required to create an endpoint.</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>The URL specified for parameter {0} is not valid.</value>
+  </data>
+  <data name="DeploymentNotRegisteredWithBitbucket" xml:space="preserve">
+    <value>This deployment is not registered with a Bitbucket account. AuthConfigurationType: {0}, Error: {1}</value>
+  </data>
+  <data name="CouldNotDowngradeMissingRecoveryData" xml:space="preserve">
+    <value>Endpoint scheme could not be downgraded from {0} to {1} as no recovery data exist for this endpoint.</value>
+  </data>
+  <data name="ProjectReleaseAdminAccountName" xml:space="preserve">
+    <value>Release Administrators</value>
+  </data>
+  <data name="OutdatedServiceConnectionName" xml:space="preserve">
+    <value>{0} (outdated)</value>
+  </data>
+  <data name="InvalidEndpointType" xml:space="preserve">
+    <value>Service connection type couldn't be recognized '{0}'</value>
+  </data>
+  <data name="DeploymentNotRegisteredWithGitHub" xml:space="preserve">
+    <value>This deployment is not registered with a GitHub account. AuthConfigurationType: {0}, Error: {1}</value>
+  </data>
+  <data name="ServiceEndpointTypeNotFound" xml:space="preserve">
+    <value>Unable to find service connection type '{0}' using authentication scheme '{1}'.</value>
+  </data>
+  <data name="ResourceUrlMentionedError" xml:space="preserve">
+    <value>Resource URL is supported only when defined within a data source.</value>
+  </data>
+  <data name="InvalidScopeId" xml:space="preserve">
+    <value>The scope {0} is not valid.</value>
+  </data>
+  <data name="DataSourceNotFound" xml:space="preserve">
+    <value>"Data source with name {0} could not be found for the given service connection."</value>
+  </data>
+  <data name="KubernetesInvalidValueForPropertyEnableRbac" xml:space="preserve">
+    <value>An invalid response was sent from the server while fetching AKS cluster. Invalid value for property "enableRBAC" was sent. Expected: 'true'/'false', Found: '{0}'</value>
+  </data>
+  <data name="OAuthConfigurationNotFound" xml:space="preserve">
+    <value>OAuth configuration with ID {0} was not found.</value>
+  </data>
+  <data name="JiraConnectAppServiceEndpointUpdateNotAllowed" xml:space="preserve">
+    <value>This endpoint is created by service, you are not allowed to update this service endpoint.</value>
+  </data>
+  <data name="CannotUpgradeAuthorizationSchemeError" xml:space="preserve">
+    <value>The authorization scheme could not be upgraded to {0} because the service principal could not be configured automatically, and no valid configuration exists.</value>
+  </data>
+  <data name="InvalidDataSourceBindingEndpointIdInvalid" xml:space="preserve">
+    <value>endpointId should be a valid GUID if dataSourceName is present</value>
+  </data>
+  <data name="CouldNotCreateAADappHelpMessage" xml:space="preserve">
+    <value>Ensure that the user has permissions to create a Microsoft Entra Application.</value>
+  </data>
+  <data name="ServicePrincipalClientIDRequiredForManualCreationMode" xml:space="preserve">
+    <value>Service Principal Client ID required for Manual CreationMode.</value>
+  </data>
+  <data name="ContributorGroup" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="KubernetesGetServiceAccountError" xml:space="preserve">
+    <value>An error occurred while getting the service account. Internal error: {0}.</value>
+  </data>
+  <data name="ReaderRole" xml:space="preserve">
+    <value>Reader</value>
+  </data>
+  <data name="FailedToRemoveAzurePermissionErrorOnMLWorkspace" xml:space="preserve">
+    <value>Failed to remove Azure permission '{0}' for the service principal '{1}' on machine learning workspace ID '{2}'</value>
+  </data>
+  <data name="CallToUntrustedHostNotAllowed" xml:space="preserve">
+    <value>Trying to call {0} which is not listed as trusted host in service connection.</value>
+  </data>
+  <data name="KubernetesGetSecretError" xml:space="preserve">
+    <value>An error occurred while querying the service account secret credentials. Internal error: {0}.</value>
+  </data>
+  <data name="InsufficientPrivilegesOnAAD" xml:space="preserve">
+    <value>The requesting user does not have sufficient permissions in Microsoft Entra to manage the application with object ID '{0}'.</value>
+  </data>
+  <data name="FailedToObtainTokenForClient" xml:space="preserve">
+    <value>Failed to obtain the Json Web Token(JWT) for the client '{0}'</value>
+  </data>
+  <data name="LibraryItemAccessDeniedForCreate" xml:space="preserve">
+    <value>You do not have permission to create a {0} within library. You need to belong to Creator role within the library in order to do this.</value>
+  </data>
+  <data name="ServiceEndpointAccessDeniedForCollectionAdminOperation" xml:space="preserve">
+    <value>You need to be an organization/collection level Administrator of the service endpoint to perform this operation.</value>
+  </data>
+  <data name="UpdateCountExceeded" xml:space="preserve">
+    <value>Cannot update more than {0} service connections at once.</value>
+  </data>
+  <data name="KubernetesErrorFetchingCluster" xml:space="preserve">
+    <value>An error occured while fetching the AKS cluster. Internal error: {0}</value>
+  </data>
+  <data name="LibraryReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the library items.</value>
+  </data>
+  <data name="CreationOfNewEndpointsTemporarilySuspended" xml:space="preserve">
+    <value>Creation of new ARM service endpoints using Workload Identity federation scheme has been temporarily suspended for this host. Azure DevOps team is working on bringing this feature back.</value>
+  </data>
+  <data name="ServiceEndpointRequestVerbUnsupported" xml:space="preserve">
+    <value>Unsupported Request Verb: {0}. Only Get/Post are supported.</value>
+  </data>
+  <data name="EndpointCreatorRoleDescription" xml:space="preserve">
+    <value>User can create the service connection.</value>
+  </data>
+  <data name="LibraryCreatorRoleDescription" xml:space="preserve">
+    <value>Creator can create and view the library items.</value>
+  </data>
+  <data name="UpgradeCannotChangeProperties" xml:space="preserve">
+    <value>Properties cannot be changed during service connection upgrade. Property {0} does not match current endpoint value. Set it to the original value or do not provide at all.</value>
+  </data>
+  <data name="ServiceEndpointProjectReferenceInformationNotProvided" xml:space="preserve">
+    <value>Project information is not provided for service endpoint : {0}.</value>
+  </data>
+  <data name="CannotUpdateConfidentialAuthDataKubernetesAzureSubscriptionType" xml:space="preserve">
+    <value>Updating the authorization data is not allowed for Azure Subscription type Kubernetes endpoint. Updated field: '{0}'. Please pass the value as null and try again.</value>
+  </data>
+  <data name="AbsoluteUriNotAllowed" xml:space="preserve">
+    <value>Absolute URI is not allowed for the provided connected service</value>
+  </data>
+</root>

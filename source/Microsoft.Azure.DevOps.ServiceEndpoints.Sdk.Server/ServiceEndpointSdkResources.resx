@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InvalidAzureEndpointAuthorizer" xml:space="preserve">
+    <value>No Azure service connection authorizer found for authentication of type '{0}'</value>
+  </data>
+  <data name="OAuthConfiguration" xml:space="preserve">
+    <value>OAuth Configuration</value>
+  </data>
+  <data name="AdministratorRole" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="AuthorizationTokenFetchFailed" xml:space="preserve">
+    <value>Error fetching authorization token. Error: {0}, Description: {1}</value>
+  </data>
+  <data name="ProjectCollectionAdministratorsGroup" xml:space="preserve">
+    <value>Project Collection Administrators</value>
+  </data>
+  <data name="ResponseSizeExceeded" xml:space="preserve">
+    <value>Cannot query datasource with response size greater than 2 MB.</value>
+  </data>
+  <data name="InvalidEndpointAuthorizer" xml:space="preserve">
+    <value>No service connection authorizer found for service connection of type '{0}'</value>
+  </data>
+  <data name="EndpointNotFound" xml:space="preserve">
+    <value>No service connection found with identifier {0}.</value>
+  </data>
+  <data name="InvalidAzureManagementCertificate" xml:space="preserve">
+    <value>Invalid Azure Management certificate</value>
+  </data>
+  <data name="InvalidUrlLoopback" xml:space="preserve">
+    <value>The URL resolves to a loopback or localhost address. This address is not allowed for use in a Service Endpoint.</value>
+  </data>
+  <data name="ServiceEndpointInvalid" xml:space="preserve">
+    <value>Service connection is null or not well formed.</value>
+  </data>
+  <data name="AzdevAccessTokenStrongBoxLookupKeyIsInvalid" xml:space="preserve">
+    <value>Failed to get access token from strong box. Key is invalid.</value>
+  </data>
+  <data name="EndpointCreatorsGroup" xml:space="preserve">
+    <value>Endpoint Creators</value>
+  </data>
+  <data name="NoKubeConfig" xml:space="preserve">
+    <value>Could not extract KubeConfig</value>
+  </data>
+  <data name="StorageAccountNotFound" xml:space="preserve">
+    <value>Storage account details could not be queried</value>
+  </data>
+  <data name="ProjectBuildAdminAccountName" xml:space="preserve">
+    <value>Build Administrators</value>
+  </data>
+  <data name="OAuthConfigurationAccessDeniedForCreate" xml:space="preserve">
+    <value>You do not have permission to create OAuth Configuration. You need to belong to Creator role in order to create OAuth Configuration. "Project Collection Valid Users" belong to Creator role by default.</value>
+  </data>
+  <data name="GetAccessTokenUsingAzdevTokenError" xml:space="preserve">
+    <value>Failed to acquire access token.</value>
+  </data>
+  <data name="ErrorInSplitAuthorizationParameters" xml:space="preserve">
+    <value>Error in splitting authorization parameters in service connection {0}. Authentication Scheme- {1} Error Message - {2}</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingEnvironment" xml:space="preserve">
+    <value>Unable to fetch cluster credentials as the Azure environment is not provided.</value>
+  </data>
+  <data name="NoSubscriptionId" xml:space="preserve">
+    <value>Could not extract subscription ID from service connection</value>
+  </data>
+  <data name="InvalidEndpointId" xml:space="preserve">
+    <value>The value {0} provided for the service connection identifier is not within the permissible values for it.</value>
+  </data>
+  <data name="ExceptionMessage" xml:space="preserve">
+    <value>Exception message</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingAzureSpnKey" xml:space="preserve">
+    <value>Unable to extract Azure Service Principal Key.</value>
+  </data>
+  <data name="NoAzureOidcFederation" xml:space="preserve">
+    <value>Could not extract the OIDC federation information for the Azure Subscription.</value>
+  </data>
+  <data name="EndpontGroupCreationFailed" xml:space="preserve">
+    <value>Could not create {0} group. If group already exists within the project, please delete it and retry the operation.</value>
+  </data>
+  <data name="FailedToGenerateToken" xml:space="preserve">
+    <value>Unable to generate a personal access token for service identity '{0}' ('{1}'). Error: {2}.</value>
+  </data>
+  <data name="AuthenticationSchemeNotFoundInServiceEndpoint" xml:space="preserve">
+    <value>Authentication scheme: '{0}' not found in service connection type: '{1}'</value>
+  </data>
+  <data name="AuthorizationTokenFetchTimeout" xml:space="preserve">
+    <value>Fetching authorization token timed out. Timeout: {0} seconds.</value>
+  </data>
+  <data name="PopulateAzureStackSupportedForAzureStackeEnvironment" xml:space="preserve">
+    <value>Populate Azure Stack dependency data is supported only for Azure Stack environment.</value>
+  </data>
+  <data name="KubernetesNoUserDataFound" xml:space="preserve">
+    <value>No user credentials found for cluster {0} in KubeConfig content. Make sure that the credentials exist and try again.</value>
+  </data>
+  <data name="KubernetesErrorFetchingClusterCredentialsServerError" xml:space="preserve">
+    <value>Error while fetching cluster credentials. Make sure you have clusterAdmin permissions on the cluster. Error from external server: {0}</value>
+  </data>
+  <data name="AzdevAccessTokenCacheKeyLookupResultIsNullError" xml:space="preserve">
+    <value>Failed to get Azure DevOps Service access token, cache value is invalid.</value>
+  </data>
+  <data name="NoStorageAccessKeyFound" xml:space="preserve">
+    <value>Could not retrieve any access key associated with this storage account</value>
+  </data>
+  <data name="ServiceEndpointRequestFailedMessageWithoutPrefix" xml:space="preserve">
+    <value>Status Code: '{0}', Response from server: '{1}'</value>
+  </data>
+  <data name="LibraryAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can use and manage the library items.</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingSubscriptionName" xml:space="preserve">
+    <value>Unable to fetch cluster credentials as the Azure subscription name is not provided.</value>
+  </data>
+  <data name="AzdevAccessTokenKeyNotFoundError" xml:space="preserve">
+    <value>Azure DevOps Service token (AccessTokenKey) is invalid. Try to validate again.</value>
+  </data>
+  <data name="KubernetesKubeconfigFieldNotFound" xml:space="preserve">
+    <value>KubeConfig content does not contain {0} field. Make sure that the field exist and try again.</value>
+  </data>
+  <data name="KubernetesErrorFetchingClusterCredentialsEmptyKubeConfig" xml:space="preserve">
+    <value>Error while fetching cluster credentials. Server returned empty kubeconfig.</value>
+  </data>
+  <data name="AzdevIdTokenKeyNotFoundError" xml:space="preserve">
+    <value>Azure DevOps Service token (IdToken) is invalid. Try to validate again.</value>
+  </data>
+  <data name="NullSessionToken" xml:space="preserve">
+    <value>Unable to generate a personal access token for service identity '{0}' ('{1}') because of null result.</value>
+  </data>
+  <data name="KubernetesErrorFetchingClusterCredentialsInvalidResponse" xml:space="preserve">
+    <value>Error while fetching cluster credentials. Invalid response from the server.</value>
+  </data>
+  <data name="EndpointAdministratorsGroup" xml:space="preserve">
+    <value>Endpoint Administrators</value>
+  </data>
+  <data name="ProjectLevelEndpointAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to manage all the service connections.</value>
+  </data>
+  <data name="UnableToConnectToTheAzureStackEnvironment" xml:space="preserve">
+    <value>Unable to connect to the Azure Stack environment. Ignore the failure if the source is Azure DevOps.</value>
+  </data>
+  <data name="NoAzureServicePrincipal" xml:space="preserve">
+    <value>Could not extract the service principal information for the Azure Subscription.</value>
+  </data>
+  <data name="KubeConfigParseError" xml:space="preserve">
+    <value>An error occured while parsing the kubeconfig obtained from the server. Exception message: {0}</value>
+  </data>
+  <data name="BodySizeLimitExceeded" xml:space="preserve">
+    <value>Size of the POST body exceeds the size limit of {0} bytes.</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingSpnCreationMethod" xml:space="preserve">
+    <value>Failed to obtain Service Principal Creation Method.</value>
+  </data>
+  <data name="CreatorRole" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="FailedToObtainToken" xml:space="preserve">
+    <value>Failed to obtain the Json Web Token(JWT) using service principal client ID</value>
+  </data>
+  <data name="KubernetesInvalidKubeconfig" xml:space="preserve">
+    <value>Invalid Kubeconfig. {0}</value>
+  </data>
+  <data name="AuthenticationSchemeNotFound" xml:space="preserve">
+    <value>Authentication scheme: '{0}' not found</value>
+  </data>
+  <data name="ServiceEndpointRequestFailedGenericMessage" xml:space="preserve">
+    <value>Failed to query service connection API: '{0}'. Error Message: '{1}'</value>
+  </data>
+  <data name="SpecifiedAzureRMEndpointIsInvalid" xml:space="preserve">
+    <value>The specified Azure Resource Manager service connection URL is invalid</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingCloudUrl" xml:space="preserve">
+    <value>Unable to extract Cloud URL.</value>
+  </data>
+  <data name="NoUsernamePassword" xml:space="preserve">
+    <value>Could not extract Username and Password for service connection.</value>
+  </data>
+  <data name="UriParseError" xml:space="preserve">
+    <value>Invalid cast to HttpWebRequest</value>
+  </data>
+  <data name="InvalidAzureRmEndpointAuthorizer" xml:space="preserve">
+    <value>Invalid authentication scheme for Azure Resource Manager service connection: {0}</value>
+  </data>
+  <data name="KubernetesKubeconfigErrorWhileExtractingNode" xml:space="preserve">
+    <value>Exception occurred while getting node '{0}' from the kubeconfig.</value>
+  </data>
+  <data name="EndpointCreatorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who can create service connections.</value>
+  </data>
+  <data name="PopulateAzureStackSupportedForAzureRmEndpoints" xml:space="preserve">
+    <value>Service connection '{0}' with type '{1}' doesn't support Azure Stack. Populate Azure Stack is supported for Azure Resource Manager service connections.</value>
+  </data>
+  <data name="EndpointAccessDeniedForUseOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the service connection. An Endpoint Administrator should add you to the Endpoint Readers group of this service connection.</value>
+  </data>
+  <data name="AccessTokenStoreInvalid" xml:space="preserve">
+    <value>The specified access token store is invalid.</value>
+  </data>
+  <data name="AzdevAccessTokenCacheKeyLookupResultIsInvalidError" xml:space="preserve">
+    <value>Failed to get Azure DevOps service access token from property cache service, cache key is invalid.</value>
+  </data>
+  <data name="AzdevAccessTokenIsNullError" xml:space="preserve">
+    <value>Azure DevOps Service access token is invalid, token shouldn't be null.</value>
+  </data>
+  <data name="ProjectReleaseManagerGroupName" xml:space="preserve">
+    <value>Release Managers</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="InvalidCertificate" xml:space="preserve">
+    <value>Invalid certificate: Error: {0}</value>
+  </data>
+  <data name="FailedToObtainTokenUsingUserPrincipal" xml:space="preserve">
+    <value>Failed to obtain Json Web Token.</value>
+  </data>
+  <data name="UntrustedHost" xml:space="preserve">
+    <value>The task attempted to reach untrusted host: {0}</value>
+  </data>
+  <data name="NoClusterId" xml:space="preserve">
+    <value>Could not extract Kubernetes cluster ID from context</value>
+  </data>
+  <data name="NoAzureCertificate" xml:space="preserve">
+    <value>Could not extract the certificate for the Azure Subscription.</value>
+  </data>
+  <data name="WorkloadIdentityFederationDisabled" xml:space="preserve">
+    <value>Workload Identity federation for ARM service connections has been disabled for this organization.</value>
+  </data>
+  <data name="LibraryUserRoleDescription" xml:space="preserve">
+    <value>User can use, but cannot manage the library items.</value>
+  </data>
+  <data name="KubernetesKubeconfigNoFieldPresent" xml:space="preserve">
+    <value>The Kubeconfig does not contain the '{0}' field.</value>
+  </data>
+  <data name="RequestFailedAsUnableToConnectAzureStack" xml:space="preserve">
+    <value>Request '{0}' failed with status code {1} as unable to connect to Azure Stack environment. Ignore the failure if the source is Azure DevOps.</value>
+  </data>
+  <data name="FailedToSignIntoAadWithWorkloadIdentityFederation" xml:space="preserve">
+    <value>Microsoft Entra rejected the token issued by Azure DevOps with error code {0}.</value>
+  </data>
+  <data name="UnableToPopulateAzureStackData" xml:space="preserve">
+    <value>Unable to populate Azure Stack dependency data.</value>
+  </data>
+  <data name="ServiceEndpointRequestFailedMessage" xml:space="preserve">
+    <value>Failed to query service connection API: '{0}'. Status Code: '{1}', Response from server: '{2}'</value>
+  </data>
+  <data name="OperationNotAllowedForNonServicePrincipal" xml:space="preserve">
+    <value>Only service principal identity is allowed to perform this operation.</value>
+  </data>
+  <data name="AzdevNonceNotFoundError" xml:space="preserve">
+    <value>Azure DevOps Service token (Nonce) is invalid. Try to validate again.</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingSubscriptionId" xml:space="preserve">
+    <value>Unable to fetch cluster credentials as the Azure subscription ID is not provided.</value>
+  </data>
+  <data name="FailedToObtainAzureStackActiveDirectoryResourceId" xml:space="preserve">
+    <value>Failed to obtain active directory resource id</value>
+  </data>
+  <data name="ServiceEndPointNotFound" xml:space="preserve">
+    <value>Service connection with ID {0} not found</value>
+  </data>
+  <data name="NoStorageAccountDetails" xml:space="preserve">
+    <value>Could not extract Azure storage account details from service connection</value>
+  </data>
+  <data name="ResourceUrlNotSupported" xml:space="preserve">
+    <value>Resource URL is not supported for the service connection of type {0} and authentication scheme {1}.</value>
+  </data>
+  <data name="ProjectReleaseAdminAccountName" xml:space="preserve">
+    <value>Release Administrators</value>
+  </data>
+  <data name="InsufficientPermissions" xml:space="preserve">
+    <value>You don't have enough permissions required for "Post" request.</value>
+  </data>
+  <data name="InvalidUrlSpecialPurposeFormat" xml:space="preserve">
+    <value>The URL resolves to address "{0}", which is in a special purpose range that is not allowed in a Service Endpoint.</value>
+  </data>
+  <data name="AccessTokenKeyNotFoundInServiceEndpointAuthorizationParameters" xml:space="preserve">
+    <value>Access token key is not found in service connection authorization parameters.</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingAzureSpnId" xml:space="preserve">
+    <value>Unable to extract Azure Service Principal ID.</value>
+  </data>
+  <data name="InvalidScopeId" xml:space="preserve">
+    <value>The scope {0} is not valid.</value>
+  </data>
+  <data name="AuthorizationParameterNotFound" xml:space="preserve">
+    <value>Authorization parameter is not found in the service connection: {0}</value>
+  </data>
+  <data name="FailedToGenerateOidcToken" xml:space="preserve">
+    <value>Failed to generate an OIDC token for service principal {0}</value>
+  </data>
+  <data name="ContributorGroup" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="CouldNotParseKubeConfig" xml:space="preserve">
+    <value>Error while parsing KubeConfig: {0}</value>
+  </data>
+  <data name="ReaderRole" xml:space="preserve">
+    <value>Reader</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingTenantId" xml:space="preserve">
+    <value>Unable to fetch cluster credentials as the Azure tenant ID is not provided.</value>
+  </data>
+  <data name="Error_CallbackStateFormatIncorrect" xml:space="preserve">
+    <value>Callback State is not in expected format. State: {0}</value>
+  </data>
+  <data name="NoStorageAccountName" xml:space="preserve">
+    <value>Azure storage account name could not be extracted for fetching Storage Access Key</value>
+  </data>
+  <data name="VstsAccessTokenStrongBoxLookupValueIsInvalid" xml:space="preserve">
+    <value>Failed to get access token. Strong box value is invalid.</value>
+  </data>
+  <data name="LibraryItemAccessDeniedForCreate" xml:space="preserve">
+    <value>You do not have permission to create a {0} within library. You need to belong to Creator role within the library in order to do this.</value>
+  </data>
+  <data name="KubernetesCannotFetchClusterCredentialsMissingClusterId" xml:space="preserve">
+    <value>Unable to fetch cluster credentials as the cluster ID is not provided.</value>
+  </data>
+  <data name="KubernetesNoAuthorizationParameters" xml:space="preserve">
+    <value>No Kubernetes authorization parameters were found for the given kubeconfig.</value>
+  </data>
+  <data name="NoClientCertOrKey" xml:space="preserve">
+    <value>Could not extract client certificate or client key </value>
+  </data>
+  <data name="LibraryReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the library items.</value>
+  </data>
+  <data name="OAuthRedirectUrlIsInvalidError" xml:space="preserve">
+    <value>The OAuth redirect URL '{0}' is invalid. The URL is either null or not well formed.</value>
+  </data>
+  <data name="LibraryCreatorRoleDescription" xml:space="preserve">
+    <value>Creator can create and view the library items.</value>
+  </data>
+  <data name="AbsoluteUriNotAllowed" xml:space="preserve">
+    <value>Absolute URI is not allowed for the provided connected service</value>
+  </data>
+</root>

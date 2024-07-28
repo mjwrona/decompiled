@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_views/Shared/Masters/HubPagePivot.master"
+    Inherits="Microsoft.TeamFoundation.Server.WebAccess.TfsViewMasterPage<dynamic>" %>
+
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Controls" %>
+<%@ Import Namespace="TfsControls=Microsoft.TeamFoundation.Server.WebAccess.Controls" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Build" %>
+<%@ Implements Interface="Microsoft.TeamFoundation.Server.WebAccess.IChangesMRUNavigationContext" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+
+<asp:content ContentPlaceHolderID="PageBegin" runat="server">
+</asp:content>
+
+<asp:content ContentPlaceHolderID="DocumentBegin" runat="server">
+    <% 
+        Html.UseCSS("DistributedTasksLibrary");
+        Html.UseAreaCSS("BuildStyles");
+    %>
+     <asp:ContentPlaceHolder ID="DocumentBegin" runat="server" />    
+</asp:content>
+
+<asp:content ContentPlaceHolderID="HubBegin" runat="server">
+     <asp:ContentPlaceHolder ID="HubBegin" runat="server" />
+</asp:content>
+
+<asp:content contentplaceholderid="HubTitle" runat="server">
+    <asp:ContentPlaceHolder ID="HubTitle" runat="server" />
+</asp:content>
+
+<asp:Content ContentPlaceHolderID="HubContent" runat="server">
+    <asp:ContentPlaceHolder ID="HubContent" runat="server" />
+</asp:Content>
+
+<asp:content ContentPlaceHolderID="HubPivotViews" runat="server">
+<%
+    var hubPivots = new List<PivotView>();
+
+    hubPivots.Add(new PivotView(BuildServerResources.BuildSettingsTabTitle)
+    {
+        Id = "settings",
+        Link = Url.FragmentAction("settings")
+    });
+
+    if (TfsWebContext.IsFeatureAvailable(FeatureAvailabilityFlags.BuildAndReleaseResourceLimits))
+    {
+        hubPivots.Add(new PivotView(BuildServerResources.BuildAndReleaseResourceLimitsTabTitle)
+        {
+            Id = "resourceLimits",
+            Link = Url.FragmentAction("resourceLimits")
+        });
+    }
+
+    %>
+    <%: Html.PivotViews(hubPivots, new { @class = "buildvnext-admin-tabs" })%>
+</asp:content>

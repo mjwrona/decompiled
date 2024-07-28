@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.Azure.Boards.CssNodes.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10F14584-BD69-4A4B-A6EE-353580C03794}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Boards.CssNodes</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TeamFoundation\Server\GroupSecuritySubsystemServiceException.cs" />
+    <Compile Include="TeamFoundation\Server\AuthorizationSubsystemServiceException.cs" />
+    <Compile Include="TeamFoundation\Server\CommonStructureSubsystemServiceException.cs" />
+    <Compile Include="TeamFoundation\Server\CreateACENoObjectException.cs" />
+    <Compile Include="TeamFoundation\Server\CreateACENoActionException.cs" />
+    <Compile Include="TeamFoundation\Server\UnregisterProjectException.cs" />
+    <Compile Include="TeamFoundation\Server\RegisterProjectException.cs" />
+    <Compile Include="TeamFoundation\Server\InternalStoredProcedureException.cs" />
+    <Compile Include="TeamFoundation\Server\RegisterObjectExistsException.cs" />
+    <Compile Include="TeamFoundation\Server\RegisterObjectNoClassException.cs" />
+    <Compile Include="TeamFoundation\Server\RegisterObjectNoProjectException.cs" />
+    <Compile Include="TeamFoundation\Server\RegisterObjectProjectMismatchException.cs" />
+    <Compile Include="TeamFoundation\Server\RegisterObjectBadParentException.cs" />
+    <Compile Include="TeamFoundation\Server\BadClassIdActionIdPairException.cs" />
+    <Compile Include="TeamFoundation\Server\ClassIdDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\SecurityObjectDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\SecurityActionDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\BadParentObjectClassIdException.cs" />
+    <Compile Include="TeamFoundation\Server\CircularObjectInheritanceException.cs" />
+    <Compile Include="TeamFoundation\Server\DeleteACEException.cs" />
+    <Compile Include="TeamFoundation\Server\ActiveDirectoryAccessException.cs" />
+    <Compile Include="TeamFoundation\Server\InvalidDomainException.cs" />
+    <Compile Include="TeamFoundation\Server\NodeUriDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\NodeDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\ParentNodeUriDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\ParentNodeDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\NodePathDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\ReclassificationNodeUriDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\ReclassificationNodeDoesNotExistException.cs" />
+    <Compile Include="TeamFoundation\Server\NodeAlreadyExistsException.cs" />
+    <Compile Include="TeamFoundation\Server\CannotModifyRootNodeException.cs" />
+    <Compile Include="TeamFoundation\Server\MoveArgumentOutOfRangeException.cs" />
+    <Compile Include="TeamFoundation\Server\CircularNodeReferenceException.cs" />
+    <Compile Include="TeamFoundation\Server\CannotChangeTreesException.cs" />
+    <Compile Include="TeamFoundation\Server\MaximumDepthExceededException.cs" />
+    <Compile Include="TeamFoundation\Server\InvalidReclassificationException.cs" />
+    <Compile Include="TeamFoundation\Server\ReclassifiedToDifferentTreeException.cs" />
+    <Compile Include="TeamFoundation\Server\ReclassifiedToSubTreeException.cs" />
+    <Compile Include="TeamFoundation\Server\CannotAddDateToNonIterationException.cs" />
+    <Compile Include="TeamFoundation\Server\SyncSubsystemServiceException.cs" />
+    <Compile Include="TeamFoundation\Server\SyncAccessDeniedServiceException.cs" />
+    <Compile Include="TeamFoundation\Server\SyncBadBaselineRevServiceException.cs" />
+    <Compile Include="TeamFoundation\Server\SyncSupersededBaselineRevServiceException.cs" />
+    <Compile Include="Azure\Boards\CssNodes\ChangedNodeInfo.cs" />
+    <Compile Include="Azure\Boards\CssNodes\ChangedProjectInfo.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureProjectInfo.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureNodeInfo.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureProperty.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureProjectProperty.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureUtils.cs" />
+    <Compile Include="Azure\Boards\CssNodes\AuthorizationCssNodePermissions.cs" />
+    <Compile Include="Azure\Boards\CssNodes\AuthorizationIterationNodePermissions.cs" />
+    <Compile Include="Azure\Boards\CssNodes\AuthorizationSecurityConstants.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureNodeType.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureNode.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CommonStructureProjectState.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CssSecurityConstants.cs" />
+    <Compile Include="Azure\Boards\CssNodes\DeletedNodeInfo.cs" />
+    <Compile Include="Azure\Boards\CssNodes\CustomSqlError.cs" />
+    <Compile Include="Azure\Boards\CssNodes\IAuthorizationProvider.cs" />
+    <Compile Include="Azure\Boards\CssNodes\IAuthorizationProviderFactory.cs" />
+    <Compile Include="Azure\Boards\CssNodes\ICommonStructureServiceProvider.cs" />
+    <Compile Include="Azure\Boards\CssNodes\IIntegrationSecurityManager.cs" />
+    <Compile Include="Azure\Boards\CssNodes\LegacyEleadSecurityUtility.cs" />
+    <Compile Include="Azure\Boards\CssNodes\StructureChangedNotification.cs" />
+    <Compile Include="Azure\Boards\CssNodes\EleadSqlNotifications.cs" />
+    <Compile Include="Azure\Boards\CssNodes\Aux_.cs" />
+    <Compile Include="Azure\Boards\CssNodes\AccessControlEntry.cs" />
+    <Compile Include="Azure\Boards\CssNodes\IntegrationSecurityManager.cs" />
+    <Compile Include="Azure\Boards\CssNodes\ServerResources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

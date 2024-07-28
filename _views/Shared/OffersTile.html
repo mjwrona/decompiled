@@ -1,0 +1,21 @@
+<script id="vss-offer-tile-template" type="text/html">
+    <a class="gallery-item-card-container" data-bind="attr: { href: link}">
+        <div class="gallery-item-card offers-item" data-bind="css: itemClassName, attr: { title: offer.title }, click: function(data, event) {return $data.onClick(data, event)}">
+            <div class="cover">
+                <div class="icon-cell item-cell">
+                    <img class="item-icon wide" data-bind="attr: { src: offer.imageUrl }" />
+                </div>
+                <div class="core-info-cell">
+                    <div class="name" data-bind="text: offer.title"></div>
+                    <div class="subscriptionType" data-bind="text: subscriptionType, attr: { title: subscriptionType }"></div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="description" data-bind="text: offer.shortDescription, attr: { title: offer.shortDescription }"></div>
+                <span class="text-fadeout"></span>
+            </div>
+            <div class="learnmore-tag" data-bind="text: learnMoreText"></div>
+            <div class="price-tag" data-bind="text: pricingTag"></div>
+        </div>
+    </a>
+</script>

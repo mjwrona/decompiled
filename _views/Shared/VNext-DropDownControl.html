@@ -1,0 +1,21 @@
+<script id="drop-down-control" type="text/html">
+    <span class="drop-down-options">
+        <div role="button" aria-haspopup="true" class="trending-dropdown" data-bind="attr: {tabindex: '0', 'aria-expanded' : isExpanded}, 
+             click: dropDownClick(), 
+             enterkey: dropDownClick(), 
+             spacekey: dropDownClick()">      
+            <!-- EU Cookie Consent: Consider user consent on clicking anywhere in drop-dwon text by setting data-mscc-ic attribute to true -->
+            <span data-bind="attr: {title: chosenDropDownElement().elementLabel}, text: chosenDropDownElement().elementLabel" class="dropdown-text" data-mscc-ic="true"></span>
+            <span class="bowtie-icon bowtie-chevron-down dropdown-icon" data-mscc-ic="true"></span>
+        </div>
+        <div class="dropdown-menu-container" tabindex="-1">
+            <ul role="menu" class="dropdown-menu" tabindex="-1" data-bind='visible: menuVisible, foreach: dropDownElements'>
+                <li role="menuitem" class="trending-dropdown-menu-item" tabindex="-1" data-bind="text: $data.elementLabel, event: {
+                    click: $parent.optionChange($index()),
+                    focus: $parent.getFocus(),
+                    mouseover: $parent.mouseOver(),
+                    keydown:  $parent.keyPress($index())}, attr: {'aria-expanded' : $parent.isExpanded}"></li>
+            </ul>
+        </div>
+    </span>
+</script>

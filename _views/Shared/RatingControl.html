@@ -1,0 +1,25 @@
+<script id="rating-control-page-template" type="text/html">
+    <span class="rating-control" aria-hidden="true">
+        <!-- ko foreach: fullStarArray() -->
+        <img class="star full-star" alt="" data-bind="event: {click: $parent.fullStarClick($index()),
+                                                       mouseover: $parent.fullStarMouseOver($index()), 
+                                                       mouseout: $parent.fullStarMouseOut(),
+                                                       keypress: $parent.fullStarKeyPress($index())},
+                                                       attr: {tabindex: $parent.starTabIndex(), src: $parent.fullStarPath, 'aria-label': $index()+1+' star' }" />
+        <!-- /ko -->
+
+        <!-- ko if: isReadOnly-->
+        <!-- ko foreach: halfStarArray() -->
+        <img class="star half-star" alt="" data-bind="attr: {tabindex: $parent.starTabIndex(), src: $parent.halfStarPath}" />
+        <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko foreach: emptyStarArray() -->
+        <img class="star empty-star" alt="" data-bind="event: {click: $parent.emptyStarClick($index()),
+                                                        mouseover:$parent.emptyStarMouseOver($index()), 
+                                                        keypress: $parent.emptyStarKeyPress($index())},
+                                                        attr: {tabindex: $parent.starTabIndex(), src: $parent.emptyStarPath, 'aria-label': $index()+1+$parent.fixedFullStars()+' star'}" />
+        <!-- /ko -->
+    </span>
+
+</script>

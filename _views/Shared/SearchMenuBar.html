@@ -1,0 +1,13 @@
+<script id="search-menu-bar-template" type="text/html">
+    <div class="search-menu-bar-container">
+        <ul class="search-menu-bar-list">
+            <li class="search-result-element">
+                <span role="heading" class="results-found" data-bind="text: resultsFound"></span>
+            </li>
+            <li class="sort-options-element">
+                <select class="sort-options" data-bind="options: availableSortOptions,
+                       value: selectedSortOption"></select>
+            </li>
+        </ul>
+    </div>
+</script>

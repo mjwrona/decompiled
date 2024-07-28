@@ -1,0 +1,74 @@
+<script id="gallery-footer" type="text/html">
+    <div class="footerContainer" role="navigation">
+
+        <div class="linkList">
+            <div class="linkListTitle" data-bind="text: Header_Products"></div>
+            <ul class="links">
+                <li>
+                    <a href="https://visualstudio.microsoft.com/vs/" data-bind="text: VS_Header"></a>
+                </li>
+                <!-- ko if: showVSForMac -->
+                <li>
+                    <a href="https://www.visualstudio.com/vs/mac/" data-bind="text: VSForMac_Header"></a>
+                </li>
+                <li>
+                    <a href="https://code.visualstudio.com/" data-bind="text: VSCode_Header"></a>
+                </li>
+                <li>
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=698595" data-bind="text: VSTS_Header"></a>
+                </li>
+                <!-- /ko -->
+                <!-- ko ifnot: showVSForMac -->
+                <!-- ko ifnot: newBranding -->
+                <li>
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=698595" data-bind="text: VSTS_Header"></a>
+                </li>
+                <li>
+                    <a href="https://code.visualstudio.com/" data-bind="text: VSCode_Header"></a>
+                </li>
+                <!-- /ko -->
+                <!-- ko if: newBranding -->
+                <li>
+                    <a href="https://code.visualstudio.com/" data-bind="text: VSCode_Header"></a>
+                </li>
+                <li>
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=698595" data-bind="text: VSTS_Header"></a>
+                </li>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko ifnot: xamarinUniversityDisable -->
+                <li>
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=780867" data-bind="text: Xamarin"></a>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+
+        <div class="linkList">
+            <div class="linkListTitle" data-bind="text: Related_Sites"></div>
+            <ul class="links">
+                <li>
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=703827" data-bind="text: My_VS"></a>
+                </li>
+                <li>
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=703828" data-bind="text: Team"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="linkList">
+            <div class="linkListTitle" data-bind="text: Header_Support"></div>
+            <ul class="links">
+                <li>
+                    <a class="support-faq" href="https://aka.ms/vsmfaq" data-bind="text: Marketplace_FAQ, attr: {href: Marketplace_FAQ_URL ? Marketplace_FAQ_URL : 'https://aka.ms/vsmfaq'}"></a>
+                </li>
+                <li>
+                    <a class="vsmarketplace-feedback-github" href="https://aka.ms/vsmfeedback" data-bind="text: VSMarketplace_Feedback_GitHub"></a>
+                </li>
+                <li>
+                    <a class="accessibility" href="https://www.microsoft.com/en-us/accessibility/home" data-bind="text: Accessibility"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>

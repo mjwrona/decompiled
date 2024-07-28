@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Devops.Tags.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDD1BE3F-305D-4BB8-9F27-1542250DF310}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Devops.Tags.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Devops.Tags.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TaggingHelper.cs" />
+    <Compile Include="PluginTagProviderFactory.cs" />
+    <Compile Include="DuplicateTagProviderException.cs" />
+    <Compile Include="TaggingDefinitionsChangedEvent.cs" />
+    <Compile Include="TaggingFeatureFlags.cs" />
+    <Compile Include="TaggingSecurityHelper.cs" />
+    <Compile Include="TeamFoundationTaggingCacheService.cs" />
+    <Compile Include="TaggingService.cs" />
+    <Compile Include="DefaultTagProvider`1.cs" />
+    <Compile Include="TagArtifact`1.cs" />
+    <Compile Include="VersionedTagArtifact`1.cs" />
+    <Compile Include="ArtifactTagBase`2.cs" />
+    <Compile Include="TagHistoryEntryBase`2.cs" />
+    <Compile Include="ArtifactTagIds`1.cs" />
+    <Compile Include="TagIdsHistoryEntry`1.cs" />
+    <Compile Include="ArtifactTags`1.cs" />
+    <Compile Include="TagHistoryEntry`1.cs" />
+    <Compile Include="ArtifactTagUpdate`1.cs" />
+    <Compile Include="TagAssociationAction.cs" />
+    <Compile Include="TagException.cs" />
+    <Compile Include="DuplicateTagNameException.cs" />
+    <Compile Include="TagDefinitionNotFoundException.cs" />
+    <Compile Include="InvalidTagArtifactKindException.cs" />
+    <Compile Include="InvalidTagArtifactTypeException.cs" />
+    <Compile Include="TagDefinitionLimitExceededException.cs" />
+    <Compile Include="InvalidTagNameException.cs" />
+    <Compile Include="ITagProvider.cs" />
+    <Compile Include="ITagProvider`1.cs" />
+    <Compile Include="ITagSecurityProvider`1.cs" />
+    <Compile Include="ITagStorageProvider`1.cs" />
+    <Compile Include="ITeamFoundationTaggingService.cs" />
+    <Compile Include="PropertyServiceTagStorageProvider`1.cs" />
+    <Compile Include="TagDefinition.cs" />
+    <Compile Include="TagDefinitionComparer.cs" />
+    <Compile Include="TagDefinitionExtensions.cs" />
+    <Compile Include="TagProviderAttribute.cs" />
+    <Compile Include="TagsUtil.cs" />
+    <Compile Include="TeamFoundationTagProviderBase`1.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Models\TagDefinitionModel.cs" />
+    <Compile Include="Models\TagDefinitionModelComparer.cs" />
+    <Compile Include="Components\TaggingComponent.cs" />
+    <Compile Include="Components\TaggingComponent2.cs" />
+    <Compile Include="Components\TaggingComponent3.cs" />
+    <Compile Include="Components\TaggingComponent4.cs" />
+    <Compile Include="Components\TaggingComponent5.cs" />
+    <Compile Include="Components\TaggingComponent6.cs" />
+    <Compile Include="Components\TaggingComponent7.cs" />
+    <Compile Include="Components\TaggingComponent8.cs" />
+    <Compile Include="Components\TaggingComponent9.cs" />
+    <Compile Include="Components\TaggingComponent10.cs" />
+    <Compile Include="Components\TaggingComponent11.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

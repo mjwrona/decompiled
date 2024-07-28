@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Cosmos.Table.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB4727F7-2DD2-43DE-B2A5-06594F9B4F39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Cosmos.Table</AssemblyName>
+    <ApplicationVersion>1.0.7.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DocumentDB.Core">
+      <HintPath>lib\Microsoft.Azure.DocumentDB.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Documents\Interop\Common\Schema\DataType.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\JsonScanner.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\JsonTokenType.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\JsonToken.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\SchemaUtil.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\EdmSchemaMapping.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\ITableEntityReader.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\ITableEntityWriter.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\TableEntityReader.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\TableEntityWriterState.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\TableEntityReaderState.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\TableEntityWriter.cs" />
+    <Compile Include="Documents\Interop\Common\Schema\Edm\TableEntityWriterContext.cs" />
+    <Compile Include="Cosmos\ConsistencyLevel.cs" />
+    <Compile Include="Cosmos\IndexingMode.cs" />
+    <Compile Include="Cosmos\Table\CloudStorageAccount.cs" />
+    <Compile Include="Cosmos\Table\CloudStorageAccountExtensions.cs" />
+    <Compile Include="Cosmos\Table\CloudTable.cs" />
+    <Compile Include="Cosmos\Table\CloudTableClient.cs" />
+    <Compile Include="Cosmos\Table\CosmosExecutorConfiguration.cs" />
+    <Compile Include="Cosmos\Table\DynamicTableEntity.cs" />
+    <Compile Include="Cosmos\Table\EdmType.cs" />
+    <Compile Include="Cosmos\Table\EntityProperty.cs" />
+    <Compile Include="Cosmos\Table\EntityPropertyConverter.cs" />
+    <Compile Include="Cosmos\Table\EntityPropertyConverterOptions.cs" />
+    <Compile Include="Cosmos\Table\EntityReadFlags.cs" />
+    <Compile Include="Cosmos\Table\EntityResolver`1.cs" />
+    <Compile Include="Cosmos\Table\EntityUtilities.cs" />
+    <Compile Include="Cosmos\Table\IgnorePropertyAttribute.cs" />
+    <Compile Include="Cosmos\Table\ITableEntity.cs" />
+    <Compile Include="Cosmos\Table\LocationMode.cs" />
+    <Compile Include="Cosmos\Table\NoRetry.cs" />
+    <Compile Include="Cosmos\Table\OperationContext.cs" />
+    <Compile Include="Cosmos\Table\OrderByItem.cs" />
+    <Compile Include="Cosmos\Table\QueryComparisons.cs" />
+    <Compile Include="Cosmos\Table\RequestEventArgs.cs" />
+    <Compile Include="Cosmos\Table\RequestResult.cs" />
+    <Compile Include="Cosmos\Table\RestExecutorConfiguration.cs" />
+    <Compile Include="Cosmos\Table\ResultSegment`1.cs" />
+    <Compile Include="Cosmos\Table\ExponentialRetry.cs" />
+    <Compile Include="Cosmos\Table\IExtendedRetryPolicy.cs" />
+    <Compile Include="Cosmos\Table\IRetryPolicy.cs" />
+    <Compile Include="Cosmos\Table\LinearRetry.cs" />
+    <Compile Include="Cosmos\Table\RetryContext.cs" />
+    <Compile Include="Cosmos\Table\RetryInfo.cs" />
+    <Compile Include="Cosmos\Table\StorageCredentials.cs" />
+    <Compile Include="Cosmos\Table\StorageException.cs" />
+    <Compile Include="Cosmos\Table\StorageExtendedErrorInformation.cs" />
+    <Compile Include="Cosmos\Table\StorageLocation.cs" />
+    <Compile Include="Cosmos\Table\CorsHttpMethods.cs" />
+    <Compile Include="Cosmos\Table\CorsProperties.cs" />
+    <Compile Include="Cosmos\Table\CorsRule.cs" />
+    <Compile Include="Cosmos\Table\GeoReplicationStats.cs" />
+    <Compile Include="Cosmos\Table\GeoReplicationStatus.cs" />
+    <Compile Include="Cosmos\Table\IPAddressOrRange.cs" />
+    <Compile Include="Cosmos\Table\LoggingOperations.cs" />
+    <Compile Include="Cosmos\Table\LoggingProperties.cs" />
+    <Compile Include="Cosmos\Table\MetricsLevel.cs" />
+    <Compile Include="Cosmos\Table\MetricsProperties.cs" />
+    <Compile Include="Cosmos\Table\NullType.cs" />
+    <Compile Include="Cosmos\Table\ServiceProperties.cs" />
+    <Compile Include="Cosmos\Table\ServiceStats.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessAccountPermissions.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessAccountPolicy.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessAccountResourceTypes.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessAccountServices.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessProtocol.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessTablePermissions.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessTablePolicies.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessTablePolicy.cs" />
+    <Compile Include="Cosmos\Table\TablePermissions.cs" />
+    <Compile Include="Cosmos\Table\StorageUri.cs" />
+    <Compile Include="Cosmos\Table\TableBatchOperation.cs" />
+    <Compile Include="Cosmos\Table\TableBatchResult.cs" />
+    <Compile Include="Cosmos\Table\TableClientConfiguration.cs" />
+    <Compile Include="Cosmos\Table\TableContinuationToken.cs" />
+    <Compile Include="Cosmos\Table\TableEntity.cs" />
+    <Compile Include="Cosmos\Table\PlatformAgnosticReflectionExtensions.cs" />
+    <Compile Include="Cosmos\Table\TableEntityAdapter`1.cs" />
+    <Compile Include="Cosmos\Table\TableOperation.cs" />
+    <Compile Include="Cosmos\Table\TableOperationType.cs" />
+    <Compile Include="Cosmos\Table\TableOperators.cs" />
+    <Compile Include="Cosmos\Table\TablePayloadFormat.cs" />
+    <Compile Include="Cosmos\Table\TableQuery.cs" />
+    <Compile Include="Cosmos\Table\TableQuery`1.cs" />
+    <Compile Include="Cosmos\Table\TableQueryProvider.cs" />
+    <Compile Include="Cosmos\Table\TableQuerySegment`1.cs" />
+    <Compile Include="Cosmos\Table\TableRequestOptions.cs" />
+    <Compile Include="Cosmos\Table\TableResult.cs" />
+    <Compile Include="Cosmos\Table\TableResultSegment.cs" />
+    <Compile Include="Cosmos\Table\AssemblyRef.cs" />
+    <Compile Include="Cosmos\Table\CommonUtility.cs" />
+    <Compile Include="Cosmos\Table\CryptoUtility.cs" />
+    <Compile Include="Cosmos\Table\HttpWebUtility.cs" />
+    <Compile Include="Cosmos\Table\IExecutor.cs" />
+    <Compile Include="Cosmos\Table\Logger.cs" />
+    <Compile Include="Cosmos\Table\NameValidator.cs" />
+    <Compile Include="Cosmos\Table\NavigationHelper.cs" />
+    <Compile Include="Cosmos\Table\SasQueryBuilder.cs" />
+    <Compile Include="Cosmos\Table\SharedAccessSignatureHelper.cs" />
+    <Compile Include="Cosmos\Table\SR.cs" />
+    <Compile Include="Cosmos\Table\TableRestConstants.cs" />
+    <Compile Include="Cosmos\Table\UriQueryBuilder.cs" />
+    <Compile Include="Cosmos\Table\DynamicTableEntityExtensions.cs" />
+    <Compile Include="Cosmos\Table\TableSR.cs" />
+    <Compile Include="Cosmos\Table\EdmConverter.cs" />
+    <Compile Include="Cosmos\Table\EntityPropertyExtensions.cs" />
+    <Compile Include="Cosmos\Table\TableEntityValidationHelper.cs" />
+    <Compile Include="Cosmos\Table\TableException.cs" />
+    <Compile Include="Cosmos\Table\TableInvalidInputException.cs" />
+    <Compile Include="Cosmos\Table\TableResources.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableRestExecutor.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\AsyncStreamCopier`1.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\Exceptions.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\HttpResponseMessageUtils.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\RestUtility.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\StreamExtensions.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\TaskExtensions.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Utils\XMLReaderExtensions.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\ExecutionState`1.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\ExecutionStateUtils.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\Executor.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\ExecutorOperation.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\HttpClientFactory.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\HttpResponseParsers.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\RESTCommand`1.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\RESTCommandGeneratorUtils.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TableBatchOperationRESTCommandGenerator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TableOperationHttpResponseParsers.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TableOperationRESTCommandGenerator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TablePermissionsRESTCommandGenerator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TableQueryRESTCommandGenerator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TableServicePropertiesRESTCommandGenerator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\TableCommand\TableServiceStatsRESTCommandGenerator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\AccessPolicyResponseBase`1.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\CommandLocationMode.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\MultiBufferMemoryStream.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\NonCloseableStream.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\ResponseParsingBase`1.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\StorageExceptionTranslator.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\StorageExtendedErrorInformationRestHelper.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\StorageRequestMessage.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\TableAccessPolicyResponse.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\TableRequestMessageFactory.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\Auth\AuthenticationUtility.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\Auth\CanonicalizedString.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\Auth\ICanonicalizer.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\Auth\SharedKeyCanonicalizer.cs" />
+    <Compile Include="Cosmos\Table\RestExecutor\Common\Auth\StorageAuthenticationHttpHandler.cs" />
+    <Compile Include="Cosmos\Table\Extensions\CloudTableExtensions.cs" />
+    <Compile Include="Cosmos\Table\Extensions\DocumentHelpers.cs" />
+    <Compile Include="Cosmos\Table\Extensions\EntityHelpers.cs" />
+    <Compile Include="Cosmos\Table\Extensions\OperationContextExtensions.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionExecutor.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionExpressionParser.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionExpressionWriter.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionOperationHelper.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionQueryHelper.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionRetryPolicy.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionSettings.cs" />
+    <Compile Include="Cosmos\Table\Extensions\AppSettingsWrapper.cs" />
+    <Compile Include="Cosmos\Table\Extensions\TableExtensionConstants.cs" />
+    <Compile Include="Cosmos\Table\Extensions\Shared\ErrorTranslator.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ALinqExpressionVisitor.cs" />
+    <Compile Include="Cosmos\Table\Queryable\FXAssembly.cs" />
+    <Compile Include="Cosmos\Table\Queryable\AssemblyRef.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ClientConvert.cs" />
+    <Compile Include="Cosmos\Table\Queryable\CommonUtil.cs" />
+    <Compile Include="Cosmos\Table\Queryable\DataServiceALinqExpressionVisitor.cs" />
+    <Compile Include="Cosmos\Table\Queryable\EntityResolverQueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\Evaluator.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ExpressionNormalizer.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ExpressionParser.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ExpressionWriter.cs" />
+    <Compile Include="Cosmos\Table\Queryable\FilterQueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\InputBinder.cs" />
+    <Compile Include="Cosmos\Table\Queryable\InputReferenceExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\MemberAssignmentAnalysis.cs" />
+    <Compile Include="Cosmos\Table\Queryable\NavigationPropertySingletonExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\OperationContextQueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\PathBox.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ProjectionAnalyzer.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ProjectionQueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ProjectionRewriter.cs" />
+    <Compile Include="Cosmos\Table\Queryable\QueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ReferenceEqualityComparer.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ReferenceEqualityComparer`1.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ReflectionUtil.cs" />
+    <Compile Include="Cosmos\Table\Queryable\SequenceMethod.cs" />
+    <Compile Include="Cosmos\Table\Queryable\RequestOptionsQueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ResourceBinder.cs" />
+    <Compile Include="Cosmos\Table\Queryable\CountOption.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ResourceExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ResourceExpressionType.cs" />
+    <Compile Include="Cosmos\Table\Queryable\ResourceSetExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\TableQueryableExtensions.cs" />
+    <Compile Include="Cosmos\Table\Queryable\TakeQueryOptionExpression.cs" />
+    <Compile Include="Cosmos\Table\Queryable\TypeSystem.cs" />
+    <Compile Include="Cosmos\Table\Queryable\UriHelper.cs" />
+    <Compile Include="Cosmos\Table\Queryable\WebConvert.cs" />
+    <Compile Include="Cosmos\Table\Queryable\XmlConstants.cs" />
+    <Compile Include="Cosmos\Table\Protocol\TableConstants.cs" />
+    <Compile Include="Cosmos\Table\Protocol\TableErrorCodeStrings.cs" />
+    <Compile Include="Cosmos\Tables\ResourceModel\EtagHelper.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\DocumentCollectionBaseHelpers.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\DocumentEntityCollectionBaseHelpers.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\DocumentErrorTranslator.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\TableOperationWrapper.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\TableErrorResult.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\EntityTranslator.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\HexUtilities.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\InvalidEtagException.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\InvalidFilterException.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\ODataFilterTranslator.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\ODataV3Translator.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\QueryTranslator.cs" />
+    <Compile Include="Cosmos\Tables\SharedFiles\StorageErrorCodeStrings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cosmos\Table\TableResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

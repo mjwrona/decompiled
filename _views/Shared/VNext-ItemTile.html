@@ -1,0 +1,56 @@
+<script id="gallery-item-tile" type="text/html">
+    <a class="gallery-item-card-container" data-bind="attr: { href: item.link, target: linkTarget, tabindex : getTabIndex(), 'aria-label': getScreenReaderText() }, click: clickItem()">
+        <div class="gallery-item-cardHomePage" data-bind="attr: { title: item.title}">
+            <div class="cover">
+                <!-- ko if: showCertifiedBadge -->
+                <i class="active-user-info certified-badge-image" data-bind="attr: { title: certifiedBadgeText }, text: certifiedBadgeIcon" role="presentation"></i>
+                <!-- /ko -->
+                <div class="icon-cell" data-bind="template: { name: 'image-template', data: imageViewModel}, attr: { title: item.summary }"></div>
+                <div class="core-info-cell">
+                    <div class="name">
+                        <span class="item-title" data-bind="text: item.title, attr: { title: item.summary}"></span>
+                        <span class="text-fadeout" data-bind="style: {width: calculateWidthBasedOnSibling($element, 'item-title', 158, '30px')}"></span>
+                    </div>
+                    <!--ko ifnot: showInstallCount -->
+                    <div class="publisher" data-bind="text: item.author , attr: { title: item.author }"></div>
+                    <span class="text-fadeout"></span>
+                    <!-- /ko -->
+                    <!--ko if: showInstallCount -->
+                    <div class="core-info-second-row">
+                        <span class="installs" data-bind="visible: item.installCount && item.installCount !== '0'">
+                            <i class="bowtie-icon bowtie-install install-icon"></i>
+                            <span class="install-count" data-bind="text: item.installCount"></span>
+                        </span>
+                        <div class="publisher">
+                            <span data-bind="text: item.author , attr: { title: item.author }"></span>
+                            <span class="text-fadeout"></span>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <!--ko if: showDomain -->
+                    <div class="core-info-third-row">
+                        <i class="verified-domain-icon" data-bind="attr: { title: verifiedDomainText }, text: verifiedDomainIcon" role="presentation"></i>
+                        <div class="publisher-domain">
+                            <span data-bind="text: cleanedPublisherDomain, attr: { title: cleanedPublisherDomain }"></span>
+                            <span class="text-fadeout"></span>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="stats-and-offer">
+                <!-- ko if: showRatingReview -->
+                <div class="rating-and-price">
+                    <div role="img" class="rating" data-bind="component: {name: 'gallery-rating-control', params: ratingControlParams}, attr: { 'alt': averageRatingText, title: averageRatingText }"></div>
+                    <div class="pricing-tag" data-bind="text: item.costCategory, attr: { title: item.costCategory }"></div>
+                    <span class="text-fadeout"></span>
+                </div>
+                <!-- /ko -->
+                <!-- ko ifnot: showRatingReview -->
+                <div class="pricing-tag" data-bind="text: item.costCategory, attr: { title: item.costCategory }"></div>
+                <span class="text-fadeout"></span>
+                <!-- /ko -->
+            </div>
+        </div>
+    </a>
+</script>

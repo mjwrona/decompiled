@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Platform" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">
+            TFS Extension Content
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <%:Html.PageInit() %>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="PreMainContent" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="PostMainContent" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

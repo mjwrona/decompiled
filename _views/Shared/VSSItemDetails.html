@@ -1,0 +1,224 @@
+<script id="item-details-view-template" type="text/html">
+    <div class="item-details-control-root">
+        <!-- ko if: !showMinimalView -->
+        <div class="breadcrumb" role="navigation">
+            <div class="gallery-centered-content">
+                <span data-bind="template: { name: 'bread-crumb-template', data: breadCrumbViewModel}"></span>
+                <!--ko if: vscodeEditorDownloadLink-->
+                <span class="vsCodeDownloadLinkContainer">
+                    <span data-bind="text: vscodeIntroText"></span>
+                    <a class="vsCodeDownloadLink" data-bind="attr: { href: vscodeEditorDownloadLink, target: '_blank', rel: 'noreferrer noopener nofollow', 'aria-label': vscodeDownloadDescription }, text: vscodeEditorDownloadText, click: vsCodeDownloadClick()"></a>
+                </span>
+                <!--/ko -->
+            </div>
+        </div>
+        <div class="optIn-bar-container">
+            <div class="gallery-centered-content react-new-acquisition-container" role="complementary">
+                <div data-bind="galleryReactElem: acquisitionExperienceOptInBar"></div>
+            </div>
+        </div>        
+        <!-- /ko -->
+        <div class="ux-item-details" role="main">
+            <div class="ux-section-banner" id="section-banner" data-bind="style: { 'background-color': brandingColor }">
+                <div class="ux-section-core gallery-centered-content">
+                    <table role="presentation">
+                        <tr>
+                            <td class="item-img" data-bind="renderRegisteredTemplate: { templateName: 'new-image-template', data: imageViewModelOption() }"></td>
+                            <td class="item-header">
+                                <div class="item-header-content"  data-bind="css: brandingTheme">
+                                    <h1><span class="ux-item-name" data-bind="text: itemName"></span></h1>
+                                    <!-- ko if: isTitleTagPresent() && !isNewAcquisitionExperienceEnabled() -->
+                                    <span class="ux-item-titleTag" data-bind="text: titleTag, css: brandingTheme"></span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.showReportsLink -->
+                                    <span class="divider"> | </span>
+                                    <a class="ux-gallery-item-reports-link" data-bind="attr: { href: $data.reportsLink, target:'_blank'}, style: {color: brandingThemeColor}, click: _publishTelemetryEventDetailsPageReportsClicked">
+                                        <i class="bowtie-icon bowtie-file-content"></i>
+                                        <span data-bind="text: $data.reportsLinkDisplayName"></span>
+                                    </a>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.showGalleryItemEditLink -->
+                                    <span class="divider"> | </span>
+                                    <a class="ux-gallery-item-edit-link" data-bind="attr: { href: $data.galleryItemEditLink, target:'_blank'}, style: {color: brandingThemeColor}">
+                                        <i class="bowtie-icon bowtie-edit-outline"></i>
+                                        <span data-bind="text: $data.galleryItemEditLinkDisplayName"></span>
+                                    </a>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.galleryItemLink -->
+                                    <span class="ux-gallery-item-preview">
+                                        <a data-bind="text: $data.galleryItemLinkDisplayName, attr: { href: $data.galleryItemLink, target:'_blank'}"></a>
+                                    </span>
+                                    <!-- /ko -->
+                                    <div class="ux-item-second-row-wrapper">
+                                        <!--ko if: $data.publisherLink -->
+                                        <div class="ux-item-publisher">
+                                            <h2 role="presentation"><a class="ux-item-publisher-link item-banner-focussable-child-item" data-bind="text: $data.publisherDisplayName, attr: { href: $data.publisherLink, 'aria-label': $data.publisherPageLinkDescription }, style: {color: brandingThemeColor}"></a></h2>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!--ko if: !$data.publisherLink -->
+                                        <div class="ux-item-publisher">
+                                            <h2 role="presentation"><span class="ux-item-publisher-link" data-bind="text: $data.publisherDisplayName, style: {color: brandingThemeColor}"></span></h2>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: showVerifiedDomainIcon -->
+                                        <div class="ux-verified-domain-icon">
+                                            <div data-bind="galleryReactElem: verifiedDomainIconContainer"></div>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: showMarketplaceCertifiedBadge -->
+                                        <div class="ux-marketplace-certified-badge">
+                                            <div data-bind="galleryReactElem: marketplaceCertifiedBadge"></div>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: !showMinimalView -->
+                                        <!-- ko if: showInstalls -->
+                                        <span class="divider"> | </span>
+                                        <div class="ux-item-rating">
+                                            <div class="bowtie-icon bowtie-install"></div>
+                                            <!-- ko if: !isGetStartedType -->
+                                            <span class="installs-text" data-bind="text: installsText, attr: { title: installsHoverText}"></span>
+                                            <!-- /ko -->
+                                            <!-- ko if: isGetStartedType -->
+                                            <span class="clicks-text" data-bind="text: clicksText"></span>
+                                            <!-- /ko -->
+                                        </div>
+                                        <!-- /ko -->
+
+                                        <!-- ko if: showRatingReview && reviewResultsLoaded() -->
+                                        <a href='#review-details' class="ux-item-review-rating-wrapper" data-bind="attr: {'aria-label': $data.ratingsScreenReaderText }">
+                                            <span class="ux-item-review-rating" data-bind="attr: { title: bannerAverageRatingText }">
+                                                <span class="divider"> | </span>
+                                                <span class="ux-item-rating-control" data-bind="template: { name: 'rating-control-page-template', data: avgRatingDetailsOnBanner }"></span>
+                                                <span class="ux-item-rating-count"> (<span data-bind="{text: bannerTotalReviewCount }"></span>) </span>
+                                            </span>
+                                        </a>
+                                        <!-- /ko -->
+                                        <span class="divider"> | </span>
+                                        <span class="item-price-category" data-bind="text: itemPriceCategory"></span>
+                                        <div class="ux-vsippartner" data-bind="visible: isVSIPPartner">
+                                            <span class="divider"> | </span>
+                                            <img role="none" class="ux-item-vsippartner" data-bind="attr: { src: vsipPartnerImgPath }" />
+                                        </div>
+
+                                        <div class="ux-vsippartner" data-bind="visible: isVSCode">
+                                            <div class="ux-vsippartner" data-bind="visible: isSponsorTagAvailable">
+                                                <span class="divider"> | </span>
+                                                <a class="ux-gallery-item-sponsor-link" data-bind="css: brandingTheme,  attr: { href: $data.sponsorLink, target:'_blank', title:$data.sponsorLink }">
+                                                    <i role="presentation" aria-hidden="true" class="bowtie-icon bowtie-heart-fill" style="padding-right: 2px;" data-bind="style: {color: sponsorThemeColor}"></i>
+                                                    <span>Sponsor</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <!-- /ko -->
+                                </div>
+                                    <div class="ux-item-shortdesc" data-bind="text: itemDescription"></div>
+                                    <!-- ko if: !isUnpublished -->
+                                    <div class="ux-item-action">
+                                        <!-- ko if: !isVSCode && !isVSExtension && !isVSForMacExtension  -->
+                                        <!-- ko if: !showMinimalView -->
+                                        <!-- ko if: !isNewAcquisitionExperienceEnabled() -->
+                                        <!-- ko if: trialButtonVisible -->
+                                        <a class="trial-button-container" data-bind="attr: { 'data-toggle': $data.dataTogggle(trialLink), href: trialLink, target: $data.getTargetTrial(), rel: 'noreferrer noopener nofollow' }" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: trialButtonText, click: $data.clickActionButton()"></button>
+                                        </a>
+                                        <!-- /ko-->
+                                        <a class="install-button-container" data-bind="attr: { 'data-toggle': $data.dataTogggle(actionLink), href: actionLink, target: $data.getTargetAction(), rel: 'noreferrer noopener nofollow', title: actionButtonTitle }, css: {linkDisabled: actionButtonDisabled}, visible: actionButtonVisible" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: actionButtonText, css: {buttonDisabled: actionButtonDisabled, showDropdown: installForPaidUsersSupported}, click: $data.clickActionButton(), disable: actionButtonDisabled"></button>
+                                        </a>
+                                        <!-- ko if: installForPaidUsersSupported -->
+                                        <span role="button" aria-label="dropdown" aria-haspopup="true" class="action-button-dropdown bowtie-icon bowtie-chevron-down-light" data-bind="click: $data.clickActionButtonDropdownIcon(), onOpenDropdown: $data.clickActionButtonDropdownIcon(), css: brandingTheme" tabindex="0"></span>
+                                        <!-- /ko-->
+                                        <!-- /ko -->
+                                        <!-- ko if: isNewAcquisitionExperienceEnabled() -->
+                                        <a class="install-button-container" data-bind="attr:{href: acquisitionLink, target: $data.actionLinkNewTabOpen(), title: acquisitionButtonTitle, rel: 'noreferrer noopener nofollow'}" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: acquisitionButtonText, css: {buttonDisabled: acquisitionButtonDisabled}, click: $data.clickActionButton(), disable: acquisitionButtonDisabled"></button>
+                                        </a>
+                                        <span class="trial-info-container" data-bind="text: $data.helpText, visible: $data.helpTextVisible"></span>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if : showOfferPlans && !isNewAcquisitionExperienceEnabled()-->
+                                        <a href="#plan-details" class="ux-item-meter-pricing-wrapper item-banner-focussable-child-item" data-bind="click: $data.clickPricingBanner()">
+                                            <span class="ux-item-meter-start-plan" data-bind="text: startPlanInfoText, style: {color: brandingThemeColor}"></span>
+                                        </a>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if: isDownloadLinkPresent() -->
+                                        <!-- ko if: !showMinimalView -->
+                                        <!-- ko if: isVsExtensionWithConsolidatedVsixs -->
+                                            <div class="download-dropbutton-container">
+                                                <button class="ux-button install">
+                                                    Download <i class="download-dropbutton-arrow"></i>
+                                                    <ul class="download-dropdown-content" data-bind="foreach: $data.worksWith, click: $data.downloadPayloadForVSIDE()">
+                                                        <li>
+                                                            <span data-bind="text: vsVersionName"> </span>
+                                                        </li>
+                                                    </ul>
+                                                </button>
+                                            </div>
+                                        <!-- /ko -->
+                                        <!-- ko ifnot: isVsExtensionWithConsolidatedVsixs -->
+                                        <a class="download-button-container" data-bind="attr: { 'data-toggle': $data.dataTogggleDownload(downloadLink), href: downloadLink }, click: startDownload" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: downloadButtonText"></button>
+                                        </a>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if: isClickLinkPresent() -->
+                                        <a class="download-button-container" data-bind="attr: { href: downloadLink }, click: startDownload" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: clickButtonText"></button>
+                                        </a>
+                                        <!-- /ko -->
+                                        <!-- ko if: isVSCode -->
+                                            <!--ko if: isOneClickInstallExperienceVisible -->
+                                            <div class="one-click-install-container">
+                                                <div data-bind="galleryReactElem: installButtonContainer"></div>
+                                            </div>
+                                            <!-- /ko -->
+                                        <!-- ko ifnot: isOneClickInstallExperienceVisible -->
+                                            <div class="vscode-copy-command-wrapper" data-bind="renderRegisteredTemplate: { templateName: 'vscode-copy-command-template', data: VSCodeCopyCommandOptions() }">
+                                            </div>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if : !isNewAcquisitionExperienceEnabled() -->
+                                        <span data-bind="html: offersCost, visible: offersCost"></span>
+                                        <!-- /ko -->
+                                        <!-- ko if: isPreviewStringPresent() && !isNewAcquisitionExperienceEnabled() -->
+                                        <span class="ux-item-previewString" data-bind="text: previewString"></span>
+                                        <!-- /ko -->
+                                    </div>
+                                    <!--  /ko -->
+                                    <div class="ux-item-free-install" data-bind="visible: !isUnpublished && actionDescriptionHtml, html: actionDescriptionHtml"></div>
+                                    <div class="ux-item-offers-cost-text" data-bind="visible: offersCostText, html: offersCostText"></div>
+                                    <!-- ko if: isUnpublished -->
+                                    <div class="ux-item-unpublished-text" data-bind="visible: unpublishedText">
+                                        <span class="ux-item-unpublished-status-icon bowtie-icon bowtie-status-info"></span>
+                                        <span data-bind="text: unpublishedText"></span>
+                                    </div>
+                                    <!-- /ko -->
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="gallery-centered-content">
+                <div class="ux-section-details">
+                    <div data-bind="galleryReactElem: ItemDetailsComponent"></div>
+                </div>
+            </div>
+            <div class="modal install-page" data-backdrop="static" id="install-pop-up" data-keyboard="true" tabindex="-1" role="dialog" aria-labelledby="item-banner-container">
+                <div class="install-page-content gallery-centered-content">
+                    <div class="item-banner-container" id="item-banner-container" role="presentation">
+                        <div class="install-page-item-banner"></div>
+                    </div>
+                    <div class="acquire-item-workflow-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ko if: showQnAAndRnRContainer-->
+    <div class="gallery-centered-content react-qna-container" id="qna-details" role="complementary" data-bind="attr: {'aria-label': qnaHeadingText}">
+       <div data-bind="galleryReactElem: qnaAndRnRContainer"></div>
+    </div>
+    <!-- /ko -->
+</script>

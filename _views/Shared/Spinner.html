@@ -1,0 +1,27 @@
+<script id="spinner-template" type="text/html">
+    <table class="spinner-control-root">
+        <tr>
+            <td class="spinner-icon">
+                <i class="bowtie-icon bowtie-spinner"></i>
+            </td>
+            <!-- ko ifnot: $data && $data.toString() === '[object Object]' -->  
+            <td class="spinner-message" data-bind="text: $data"></td>
+             <!-- /ko -->
+        </tr>
+    </table>
+</script>
+
+<script id="spinner-template-accessible" type="text/html">
+    <!-- ko if: showSpinner() -->  
+    <table class="spinner-control-root">
+        <tr>
+            <td class="spinner-icon">
+                <i class="bowtie-icon bowtie-spinner"></i>
+            </td>
+            <!-- ko if: spinnerMessage  -->  
+            <td class="spinner-message" data-bind="text: spinnerMessage"></td>
+             <!-- /ko -->
+        </tr>
+    </table>
+    <!-- /ko -->
+</script>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Boards.ProcessTemplates.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92F32F92-F6C4-463F-9E01-44E6324C47C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Boards.ProcessTemplates</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Boards.ProcessTemplates</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\Server\Core\ProcessTemplates\Events\ProcessChangeType.cs" />
+    <Compile Include="Microsoft\TeamFoundation\Server\Core\ProcessTemplates\Events\ProcessChangedEvent.cs" />
+    <Compile Include="ProcessMetadataFilesComponent.cs" />
+    <Compile Include="ProcessMetadataFilesComponent2.cs" />
+    <Compile Include="ProcessTemplateComponent.cs" />
+    <Compile Include="ProcessTemplateComponent6.cs" />
+    <Compile Include="ProcessTemplateComponent7.cs" />
+    <Compile Include="ProcessTemplateComponent8.cs" />
+    <Compile Include="ProcessTemplateComponent9.cs" />
+    <Compile Include="ProcessTemplateComponent10.cs" />
+    <Compile Include="ProcessTemplateComponent11.cs" />
+    <Compile Include="ProcessMetadataFileEntry.cs" />
+    <Compile Include="ProcessExtensionData.cs" />
+    <Compile Include="ProcessDescriptorNotificationRecord.cs" />
+    <Compile Include="ProcessTemplateDescriptorEntry.cs" />
+    <Compile Include="ProcessPropertyEntry.cs" />
+    <Compile Include="ProcessTemplateValidatorResult.cs" />
+    <Compile Include="ProcessTemplateValidatorMessage.cs" />
+    <Compile Include="ITeamFoundationProcessService.cs" />
+    <Compile Include="ITeamFoundationProcessMetadataFilesService.cs" />
+    <Compile Include="IProcessTemplate.cs" />
+    <Compile Include="IProcessTemplatePackage.cs" />
+    <Compile Include="FileStreamWrapper.cs" />
+    <Compile Include="FileStreamDownloadState.cs" />
+    <Compile Include="LegacyProcessCacheService.cs" />
+    <Compile Include="ProcessDescriptor.cs" />
+    <Compile Include="ProcessServiceException.cs" />
+    <Compile Include="ProcessTemplateServiceException.cs" />
+    <Compile Include="ProcessRefNameConflictException.cs" />
+    <Compile Include="ProcessInvalidStateTransitionException.cs" />
+    <Compile Include="ProcessInvalidVersionException.cs" />
+    <Compile Include="ProcessInvalidPackageFormatException.cs" />
+    <Compile Include="ProcessInvalidMetadataException.cs" />
+    <Compile Include="ProcessTemplateEmptyNameException.cs" />
+    <Compile Include="ProcessInvalidCultureException.cs" />
+    <Compile Include="ProcessServicePermissionException.cs" />
+    <Compile Include="ProcessPermissionException.cs" />
+    <Compile Include="ProcessNotFoundException.cs" />
+    <Compile Include="ProcessNotFoundByTypeIdException.cs" />
+    <Compile Include="ProcessNameConflictException.cs" />
+    <Compile Include="ProjectPerXmlProcessLimitException.cs" />
+    <Compile Include="ProcessLimitExceededException.cs" />
+    <Compile Include="ProcessDescriptionLengthExceededException.cs" />
+    <Compile Include="UnableToFindMetadataResourceForProcess.cs" />
+    <Compile Include="ProcessReferenceNameInvalidException.cs" />
+    <Compile Include="ProcessNameInvalidException.cs" />
+    <Compile Include="ProcessNameNotSupportedException.cs" />
+    <Compile Include="ProcessNotFoundByIdException.cs" />
+    <Compile Include="ProcessInvalidDefaultOnDisabledException.cs" />
+    <Compile Include="CannotCreateProjectsWithDisableProcessException.cs" />
+    <Compile Include="ProcessTemplateInvalidDownloadOnInheritedException.cs" />
+    <Compile Include="ProcessProjectWithInvalidProcessException.cs" />
+    <Compile Include="ProcessInvalidInheritedProcessUpdateInputException.cs" />
+    <Compile Include="ProcessPackageFileTooLargeException.cs" />
+    <Compile Include="ProcessNotFoundByIntegerIdException.cs" />
+    <Compile Include="ProcessNotFoundByVersionException.cs" />
+    <Compile Include="ProcessInvalidOverrideException.cs" />
+    <Compile Include="ProcessInvalidOperationException.cs" />
+    <Compile Include="ProcessCannotDeleteDefault.cs" />
+    <Compile Include="ProcessCannotDeleteWithActiveProjects.cs" />
+    <Compile Include="ProcessCannotDeleteNonReady.cs" />
+    <Compile Include="ProcessProvisioningPermissionException.cs" />
+    <Compile Include="ProcessMetadataFile.cs" />
+    <Compile Include="ProcessMetadataFileIdCache.cs" />
+    <Compile Include="ProcessVersion.cs" />
+    <Compile Include="ProcessStatus.cs" />
+    <Compile Include="ProcessScope.cs" />
+    <Compile Include="ProcessConstants.cs" />
+    <Compile Include="ProcessDescriptorImpl.cs" />
+    <Compile Include="ProcessMetadataResourceType.cs" />
+    <Compile Include="ProcessDescriptorCacheService.cs" />
+    <Compile Include="ProjectProcessDescriptorMapping.cs" />
+    <Compile Include="TeamFoundationProcessService.cs" />
+    <Compile Include="TeamFoundationProcessMetadataFilesService.cs" />
+    <Compile Include="LegacyProcessPackage.cs" />
+    <Compile Include="ProcessTemplateValidatorException.cs" />
+    <Compile Include="ProcessTemplateFileNotFoundException.cs" />
+    <Compile Include="ProcessTemplateInvalidXmlException.cs" />
+    <Compile Include="ProcessTemplateValidatorInvalidPluginException.cs" />
+    <Compile Include="ProcessTemplateTypeInvalidException.cs" />
+    <Compile Include="ProcessTemplateSchemaValidationException.cs" />
+    <Compile Include="ProcessTemplateValidatorMultipleTaskListException.cs" />
+    <Compile Include="ProcessTemplatePluginNotFoundException.cs" />
+    <Compile Include="ProcessTemplateEmbeddedImageValidationException.cs" />
+    <Compile Include="ProcessTemplateValidatorRequiredPluginMissingExcep.cs" />
+    <Compile Include="IProcessTemplatePlugin.cs" />
+    <Compile Include="IProcessTemplateValidatorService.cs" />
+    <Compile Include="ProcessTemplateValidatorService.cs" />
+    <Compile Include="TemplateContextKeys.cs" />
+    <Compile Include="PluginNames.cs" />
+    <Compile Include="ZipArchiveProcessTemplatePackage.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Build.xml" />
+    <EmbeddedResource Include="GroupsAndPermissions.xml" />
+    <EmbeddedResource Include="Lab.xml" />
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="VersionControl.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

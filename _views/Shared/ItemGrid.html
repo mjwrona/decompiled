@@ -1,0 +1,5 @@
+<script id="item-grid-template" type="text/html">
+    <div class="item-grid-container" data-bind="foreach: itemArray">
+        <div data-bind="template: { name: $parent.itemDisplayTemplate, data: $data }"></div>
+    </div>
+</script>

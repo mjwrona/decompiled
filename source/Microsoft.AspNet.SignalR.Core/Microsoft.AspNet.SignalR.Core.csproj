@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.AspNet.SignalR.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{293D9D69-2E48-4DC6-A3F0-3F8C434EC2C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.AspNet.SignalR.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>2.4.2.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.AspNet.SignalR</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>lib\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>lib\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>lib\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizeAttribute.cs" />
+    <Compile Include="ConnectionConfiguration.cs" />
+    <Compile Include="ConnectionExtensions.cs" />
+    <Compile Include="ConnectionMessage.cs" />
+    <Compile Include="Cookie.cs" />
+    <Compile Include="DefaultDependencyResolver.cs" />
+    <Compile Include="DependencyResolverExtensions.cs" />
+    <Compile Include="GlobalHost.cs" />
+    <Compile Include="GroupManager.cs" />
+    <Compile Include="Hub.cs" />
+    <Compile Include="HubConfiguration.cs" />
+    <Compile Include="HubException.cs" />
+    <Compile Include="HubPipelineExtensions.cs" />
+    <Compile Include="Hub`1.cs" />
+    <Compile Include="IConnection.cs" />
+    <Compile Include="IConnectionGroupManager.cs" />
+    <Compile Include="IDependencyResolver.cs" />
+    <Compile Include="IGroupManager.cs" />
+    <Compile Include="IHubContext.cs" />
+    <Compile Include="IHubContext`1.cs" />
+    <Compile Include="IPersistentConnectionContext.cs" />
+    <Compile Include="IRequest.cs" />
+    <Compile Include="IUntrackedDisposable.cs" />
+    <Compile Include="IUserIdProvider.cs" />
+    <Compile Include="QueuingBehavior.cs" />
+    <Compile Include="OwinConstants.cs" />
+    <Compile Include="OwinEnvironmentExtensions.cs" />
+    <Compile Include="RequestExtensions.cs" />
+    <Compile Include="PersistentConnection.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="TaskAsyncHelper.cs" />
+    <Compile Include="TaskAwaiterHelper.cs" />
+    <Compile Include="Transports\ForeverFrameTransport.cs" />
+    <Compile Include="Transports\ForeverTransport.cs" />
+    <Compile Include="Transports\HttpRequestLifeTime.cs" />
+    <Compile Include="Transports\ITrackingConnection.cs" />
+    <Compile Include="Transports\ITransport.cs" />
+    <Compile Include="Transports\ITransportConnection.cs" />
+    <Compile Include="Transports\ITransportHeartbeat.cs" />
+    <Compile Include="Transports\ITransportManager.cs" />
+    <Compile Include="Transports\LongPollingTransport.cs" />
+    <Compile Include="Transports\PersistentResponse.cs" />
+    <Compile Include="Transports\ServerSentEventsTransport.cs" />
+    <Compile Include="Transports\TransportConnectionExtensions.cs" />
+    <Compile Include="Transports\TransportConnectionStates.cs" />
+    <Compile Include="Transports\TransportDisconnectBase.cs" />
+    <Compile Include="Transports\TransportHeartbeat.cs" />
+    <Compile Include="Transports\TransportManager.cs" />
+    <Compile Include="Transports\WebSocketTransport.cs" />
+    <Compile Include="Tracing\ITraceManager.cs" />
+    <Compile Include="Tracing\TraceManager.cs" />
+    <Compile Include="WebSockets\DefaultWebSocketHandler.cs" />
+    <Compile Include="WebSockets\WebSocketHandler.cs" />
+    <Compile Include="WebSockets\WebSocketMessage.cs" />
+    <Compile Include="WebSockets\WebSocketMessageReader.cs" />
+    <Compile Include="Owin\WebSocketConstants.cs" />
+    <Compile Include="Owin\OwinWebSocketHandler.cs" />
+    <Compile Include="Owin\ReadableStringCollectionWrapper.cs" />
+    <Compile Include="Owin\ServerRequest.cs" />
+    <Compile Include="Owin\ServerResponse.cs" />
+    <Compile Include="Owin\Middleware\HubDispatcherMiddleware.cs" />
+    <Compile Include="Owin\Middleware\PersistentConnectionMiddleware.cs" />
+    <Compile Include="Messaging\Command.cs" />
+    <Compile Include="Messaging\CommandType.cs" />
+    <Compile Include="Messaging\Cursor.cs" />
+    <Compile Include="Messaging\DefaultSubscription.cs" />
+    <Compile Include="Messaging\IMessageBus.cs" />
+    <Compile Include="Messaging\ISubscriber.cs" />
+    <Compile Include="Messaging\ISubscription.cs" />
+    <Compile Include="Messaging\LocalEventKeyInfo.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\MessageBroker.cs" />
+    <Compile Include="Messaging\MessageBus.cs" />
+    <Compile Include="Messaging\MessageBusExtensions.cs" />
+    <Compile Include="Messaging\MessageResult.cs" />
+    <Compile Include="Messaging\MessageStore`1.cs" />
+    <Compile Include="Messaging\MessageStoreResult`1.cs" />
+    <Compile Include="Messaging\ScaleoutConfiguration.cs" />
+    <Compile Include="Messaging\ScaleoutMapping.cs" />
+    <Compile Include="Messaging\ScaleoutMappingStore.cs" />
+    <Compile Include="Messaging\ScaleoutMessage.cs" />
+    <Compile Include="Messaging\ScaleoutMessageBus.cs" />
+    <Compile Include="Messaging\ScaleoutStore.cs" />
+    <Compile Include="Messaging\ScaleoutStream.cs" />
+    <Compile Include="Messaging\ScaleoutStreamManager.cs" />
+    <Compile Include="Messaging\ScaleoutSubscription.cs" />
+    <Compile Include="Messaging\Subscription.cs" />
+    <Compile Include="Messaging\Topic.cs" />
+    <Compile Include="Messaging\TopicLookup.cs" />
+    <Compile Include="Messaging\TopicState.cs" />
+    <Compile Include="Messaging\Volatile.cs" />
+    <Compile Include="Json\IJsonValue.cs" />
+    <Compile Include="Json\IJsonWritable.cs" />
+    <Compile Include="Json\JRawValue.cs" />
+    <Compile Include="Json\JsonSerializerExtensions.cs" />
+    <Compile Include="Json\JsonUtility.cs" />
+    <Compile Include="Json\SipHashBasedDictionaryConverter.cs" />
+    <Compile Include="Infrastructure\AckHandler.cs" />
+    <Compile Include="Infrastructure\AckSubscriber.cs" />
+    <Compile Include="Infrastructure\ArraySegmentTextReader.cs" />
+    <Compile Include="Infrastructure\BinaryMemoryPoolTextWriter.cs" />
+    <Compile Include="Infrastructure\CancellationTokenExtensions.cs" />
+    <Compile Include="Infrastructure\Connection.cs" />
+    <Compile Include="Infrastructure\ConnectionManager.cs" />
+    <Compile Include="Infrastructure\DataProtectionProviderProtectedData.cs" />
+    <Compile Include="Infrastructure\DefaultProtectedData.cs" />
+    <Compile Include="Infrastructure\DiffPair`1.cs" />
+    <Compile Include="Infrastructure\DiffSet`1.cs" />
+    <Compile Include="Infrastructure\DispatchingTaskCompletionSource`1.cs" />
+    <Compile Include="Infrastructure\DisposableAction.cs" />
+    <Compile Include="Infrastructure\Disposer.cs" />
+    <Compile Include="Infrastructure\ExceptionsExtensions.cs" />
+    <Compile Include="Infrastructure\IAckHandler.cs" />
+    <Compile Include="Infrastructure\IBinaryWriter.cs" />
+    <Compile Include="Infrastructure\IConnectionManager.cs" />
+    <Compile Include="Infrastructure\IMemoryPool.cs" />
+    <Compile Include="Infrastructure\InterlockedHelper.cs" />
+    <Compile Include="Infrastructure\IPerformanceCounter.cs" />
+    <Compile Include="Infrastructure\IPerformanceCounterManager.cs" />
+    <Compile Include="Infrastructure\IProtectedData.cs" />
+    <Compile Include="Infrastructure\IStringMinifier.cs" />
+    <Compile Include="Infrastructure\ListHelper`1.cs" />
+    <Compile Include="Infrastructure\MemoryPool.cs" />
+    <Compile Include="Infrastructure\MemoryPoolTextWriter.cs" />
+    <Compile Include="Infrastructure\MonoUtility.cs" />
+    <Compile Include="Infrastructure\NoOpPerformanceCounter.cs" />
+    <Compile Include="Infrastructure\PerformanceCounterAttribute.cs" />
+    <Compile Include="Infrastructure\PerformanceCounterManager.cs" />
+    <Compile Include="Infrastructure\PerformanceCounterWrapper.cs" />
+    <Compile Include="Infrastructure\PersistentConnectionContext.cs" />
+    <Compile Include="Infrastructure\PrefixHelper.cs" />
+    <Compile Include="Infrastructure\PrincipalUserIdProvider.cs" />
+    <Compile Include="Infrastructure\ProtocolResolver.cs" />
+    <Compile Include="Infrastructure\Purposes.cs" />
+    <Compile Include="Infrastructure\SafeCancellationTokenSource.cs" />
+    <Compile Include="Infrastructure\SafeSet`1.cs" />
+    <Compile Include="Infrastructure\SipHashBasedStringEqualityComparer.cs" />
+    <Compile Include="Infrastructure\StringMinifier.cs" />
+    <Compile Include="Infrastructure\TaskQueue.cs" />
+    <Compile Include="Infrastructure\ByteBuffer.cs" />
+    <Compile Include="Infrastructure\UrlDecoder.cs" />
+    <Compile Include="Hubs\CallerStateProxy.cs" />
+    <Compile Include="Hubs\ClientHubInvocation.cs" />
+    <Compile Include="Hubs\ClientProxy.cs" />
+    <Compile Include="Hubs\ConnectionIdProxy.cs" />
+    <Compile Include="Hubs\DefaultAssemblyLocator.cs" />
+    <Compile Include="Hubs\DefaultHubActivator.cs" />
+    <Compile Include="Hubs\DefaultJavaScriptProxyGenerator.cs" />
+    <Compile Include="Hubs\DynamicDictionary.cs" />
+    <Compile Include="Hubs\EmptyJavaScriptProxyGenerator.cs" />
+    <Compile Include="Hubs\EnumerableOfAssemblyLocator.cs" />
+    <Compile Include="Hubs\HubManagerExtensions.cs" />
+    <Compile Include="Hubs\HubTypeExtensions.cs" />
+    <Compile Include="Hubs\MethodExtensions.cs" />
+    <Compile Include="Hubs\GroupProxy.cs" />
+    <Compile Include="Hubs\HubBase.cs" />
+    <Compile Include="Hubs\HubCallerContext.cs" />
+    <Compile Include="Hubs\HubConnectionContext.cs" />
+    <Compile Include="Hubs\HubConnectionContextBase.cs" />
+    <Compile Include="Hubs\HubContext.cs" />
+    <Compile Include="Hubs\HubContext`1.cs" />
+    <Compile Include="Hubs\HubDispatcher.cs" />
+    <Compile Include="Hubs\HubInvocationProgress.cs" />
+    <Compile Include="Hubs\HubInvocationProgress`1.cs" />
+    <Compile Include="Hubs\HubMethodNameAttribute.cs" />
+    <Compile Include="Hubs\HubNameAttribute.cs" />
+    <Compile Include="Hubs\HubRequest.cs" />
+    <Compile Include="Hubs\HubRequestParser.cs" />
+    <Compile Include="Hubs\HubResponse.cs" />
+    <Compile Include="Hubs\IAssemblyLocator.cs" />
+    <Compile Include="Hubs\IClientProxy.cs" />
+    <Compile Include="Hubs\IHub.cs" />
+    <Compile Include="Hubs\IHubActivator.cs" />
+    <Compile Include="Hubs\IHubCallerConnectionContext`1.cs" />
+    <Compile Include="Hubs\IHubConnectionContext`1.cs" />
+    <Compile Include="Hubs\IHubRequestParser.cs" />
+    <Compile Include="Hubs\IJavaScriptMinifier.cs" />
+    <Compile Include="Hubs\IJavaScriptProxyGenerator.cs" />
+    <Compile Include="Hubs\DefaultHubManager.cs" />
+    <Compile Include="Hubs\DefaultParameterResolver.cs" />
+    <Compile Include="Hubs\Descriptor.cs" />
+    <Compile Include="Hubs\HubDescriptor.cs" />
+    <Compile Include="Hubs\MethodDescriptor.cs" />
+    <Compile Include="Hubs\NullMethodDescriptor.cs" />
+    <Compile Include="Hubs\ParameterDescriptor.cs" />
+    <Compile Include="Hubs\HubMethodDispatcher.cs" />
+    <Compile Include="Hubs\IHubDescriptorProvider.cs" />
+    <Compile Include="Hubs\IHubManager.cs" />
+    <Compile Include="Hubs\IMethodDescriptorProvider.cs" />
+    <Compile Include="Hubs\IParameterResolver.cs" />
+    <Compile Include="Hubs\ReflectedHubDescriptorProvider.cs" />
+    <Compile Include="Hubs\ReflectedMethodDescriptorProvider.cs" />
+    <Compile Include="Hubs\MultipleSignalProxy.cs" />
+    <Compile Include="Hubs\NullClientProxy.cs" />
+    <Compile Include="Hubs\NullJavaScriptMinifier.cs" />
+    <Compile Include="Hubs\AuthorizeModule.cs" />
+    <Compile Include="Hubs\IAuthorizeHubConnection.cs" />
+    <Compile Include="Hubs\IAuthorizeHubMethodInvocation.cs" />
+    <Compile Include="Hubs\NotAuthorizedException.cs" />
+    <Compile Include="Hubs\ExceptionContext.cs" />
+    <Compile Include="Hubs\HubInvokerContext.cs" />
+    <Compile Include="Hubs\HubOutgoingInvokerContext.cs" />
+    <Compile Include="Hubs\HubOutgoingInvokerContextExtensions.cs" />
+    <Compile Include="Hubs\HubPipeline.cs" />
+    <Compile Include="Hubs\HubPipelineModule.cs" />
+    <Compile Include="Hubs\IHubIncomingInvokerContext.cs" />
+    <Compile Include="Hubs\IHubOutgoingInvokerContext.cs" />
+    <Compile Include="Hubs\IHubPipeline.cs" />
+    <Compile Include="Hubs\IHubPipelineInvoker.cs" />
+    <Compile Include="Hubs\IHubPipelineModule.cs" />
+    <Compile Include="Hubs\ReflectionHelper.cs" />
+    <Compile Include="Hubs\SignalProxy.cs" />
+    <Compile Include="Hubs\StateChangeTracker.cs" />
+    <Compile Include="Hubs\StatefulSignalProxy.cs" />
+    <Compile Include="Hubs\TypedClientBuilder`1.cs" />
+    <Compile Include="Hubs\TypedHubCallerConnectionContext`1.cs" />
+    <Compile Include="Hubs\TypedHubConnectionContext`1.cs" />
+    <Compile Include="Hubs\UserProxy.cs" />
+    <Compile Include="Hosting\HostContext.cs" />
+    <Compile Include="Hosting\HostDependencyResolverExtensions.cs" />
+    <Compile Include="Hosting\INameValueCollection.cs" />
+    <Compile Include="Hosting\IResponse.cs" />
+    <Compile Include="Hosting\IWebSocket.cs" />
+    <Compile Include="Hosting\PersistentConnectionFactory.cs" />
+    <Compile Include="Hosting\ResponseExtensions.cs" />
+    <Compile Include="Configuration\ConfigurationExtensions.cs" />
+    <Compile Include="Configuration\DefaultConfigurationManager.cs" />
+    <Compile Include="Configuration\IConfigurationManager.cs" />
+    <Compile Include="System\Diagnostics\TraceSourceExtensions.cs" />
+    <Compile Include="Owin\ObsoleteOwinExtensions.cs" />
+    <Compile Include="Owin\OwinExtensions.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Scripts\hubs.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.DevOps.ServiceEndpoints.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7DAE47A-C917-49FC-8AF0-A2994D9AD641}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.DevOps.ServiceEndpoints.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.DevOps.ServiceEndpoints.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient.FirstParty">
+      <HintPath>lib\Microsoft.Azure.ActiveDirectory.GraphClient.FirstParty.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.Extensions">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Core.Server.Plugins">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Core.Server.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Bitbucket.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.Bitbucket.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzurePublishProfileHelper.cs" />
+    <Compile Include="WellKnownEndpointConstants.cs" />
+    <Compile Include="SpnEndpointStatusMessageSeverity.cs" />
+    <Compile Include="SpnEndpointState.cs" />
+    <Compile Include="SpnOperation.cs" />
+    <Compile Include="AzureServicePrincipalHelper.cs" />
+    <Compile Include="EndpointAuthorizationExtensions.cs" />
+    <Compile Include="InternalAuthConfigurationStore.cs" />
+    <Compile Include="AzurePipelinesOAuthApp.cs" />
+    <Compile Include="AzurePipelinesMarketplaceApp.cs" />
+    <Compile Include="AzureBoardsOAuthApp.cs" />
+    <Compile Include="AzureBoardsMarketplaceApp.cs" />
+    <Compile Include="BitbucketOAuthApp.cs" />
+    <Compile Include="BitbucketAzurePipelinesOAuthApp.cs" />
+    <Compile Include="BitbucketAzurePipelinesBackupOAuthApp.cs" />
+    <Compile Include="IServiceEndpointOperationsExtension.cs" />
+    <Compile Include="AzurePublishProfileEndpointJobData.cs" />
+    <Compile Include="KubernetesEndpointJobData.cs" />
+    <Compile Include="KubernetesHelper.cs" />
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="OAuthConfigurationExtensions.cs" />
+    <Compile Include="ConfigurationDetailsConstants.cs" />
+    <Compile Include="OAuthConfigurationSecretsHelper.cs" />
+    <Compile Include="OAuthConfigurationSecurityProvider.cs" />
+    <Compile Include="OAuthConfigurationValidator.cs" />
+    <Compile Include="PlatformAzureRmSubscriptionService.cs" />
+    <Compile Include="PlatformOAuthConfigurationService.cs" />
+    <Compile Include="PlatformServiceEndpointProxyService.cs" />
+    <Compile Include="PlatformServiceEndpointConstants.cs" />
+    <Compile Include="PlatformServiceEndpointService.cs" />
+    <Compile Include="PlatformServiceEndpointTypesService.cs" />
+    <Compile Include="PlatformVstsAadOAuthService.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="ServiceEndpointContributionExtensions.cs" />
+    <Compile Include="ServiceEndpointDetailsExtensions.cs" />
+    <Compile Include="ServiceEndpointExtensions.cs" />
+    <Compile Include="ServiceEndpointHelper.cs" />
+    <Compile Include="ServiceEndpointShareService.cs" />
+    <Compile Include="ServiceEndpointStrongBoxConstants.cs" />
+    <Compile Include="ServiceEndpointStrongBoxHelper.cs" />
+    <Compile Include="ServiceEndpointValidator.cs" />
+    <Compile Include="ServicePrincipalJobData.cs" />
+    <Compile Include="ServiceEndpointAuthorizationHelper.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="ServiceEndpointResources.cs" />
+    <Compile Include="Helpers\SecretsExpiration\SecretsExpirationHelper.cs" />
+    <Compile Include="Helpers\SecretsExpiration\SecretsExpirationProviderFactory.cs" />
+    <Compile Include="Helpers\SecretsExpiration\ISecretsExpirationProvider.cs" />
+    <Compile Include="Helpers\SecretsExpiration\SecretsExpirationProvider.cs" />
+    <Compile Include="DataAccess\OAuthConfigurationBinder.cs" />
+    <Compile Include="DataAccess\OAuthConfigurationConstants.cs" />
+    <Compile Include="DataAccess\OAuthConfigurationComponent.cs" />
+    <Compile Include="DataAccess\ServiceEndpointBinder.cs" />
+    <Compile Include="DataAccess\ServiceEndpointBinder2.cs" />
+    <Compile Include="DataAccess\ServiceEndpointBinder3.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent2.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent3.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent4.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent5.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent6.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent7.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent8.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent9.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent10.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent11.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent12.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent13.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent14.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent15.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent16.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent17.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent18.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent19.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent20.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent21.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent22.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent23.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent24.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent25.cs" />
+    <Compile Include="DataAccess\ServiceEndpointComponent26.cs" />
+    <Compile Include="DataAccess\EndpointOwner.cs" />
+    <Compile Include="DataAccess\ServiceEndpointOAuthConfigurationBinder.cs" />
+    <Compile Include="DataAccess\ServiceEndpointPartialBinder.cs" />
+    <Compile Include="DataAccess\ServiceEndpointsSqlComponentBase.cs" />
+    <Compile Include="DataAccess\ServiceEndpointProjectReferenceResult.cs" />
+    <Compile Include="DataAccess\ServiceEndpointProjectReferenceBinder.cs" />
+    <Compile Include="DataAccess\ServiceEndpointProjectReferenceBinder2.cs" />
+    <Compile Include="Controllers\AzureRmSubscriptionsController.cs" />
+    <Compile Include="Controllers\AzureRmManagementGroupsController.cs" />
+    <Compile Include="Controllers\OAuthConfigurationController.cs" />
+    <Compile Include="Controllers\ServiceEndpointExecutionHistoryController.cs" />
+    <Compile Include="Controllers\ServiceEndpointProxyController.cs" />
+    <Compile Include="Controllers\DeprecatedServiceEndpoints2Controller.cs" />
+    <Compile Include="Controllers\ServiceEndpoints4Controller.cs" />
+    <Compile Include="Controllers\ServiceEndpoints3Controller.cs" />
+    <Compile Include="Controllers\ServiceEndpointsApiController.cs" />
+    <Compile Include="Controllers\ServiceEndpointsProjectApiController.cs" />
+    <Compile Include="Controllers\ServiceEndpointsExceptionMapper.cs" />
+    <Compile Include="Controllers\TaskApiRouteParameters.cs" />
+    <Compile Include="Controllers\DeprecatedServiceEndpointsController.cs" />
+    <Compile Include="Controllers\ServiceEndpointShareController.cs" />
+    <Compile Include="Controllers\ServiceEndpointTypesController.cs" />
+    <Compile Include="Controllers\VstsAadOAuthController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServiceEndpointResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

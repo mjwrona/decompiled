@@ -1,0 +1,123 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Azure.Documents.NetUtil
+// Assembly: Microsoft.Azure.Cosmos.Direct, Version=3.29.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+// MVID: FFE3C00D-4333-4294-8947-B1C93A852E2F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Cosmos.Direct.dll
+
+using Microsoft.Azure.Cosmos.Core.Trace;
+using System;
+using System.Configuration;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+
+namespace Microsoft.Azure.Documents
+{
+  internal static class NetUtil
+  {
+    private static readonly byte[] paasV1Prefix = new byte[8]
+    {
+      (byte) 38,
+      (byte) 3,
+      (byte) 16,
+      (byte) 225,
+      (byte) 1,
+      (byte) 0,
+      (byte) 0,
+      (byte) 2
+    };
+    private static readonly byte[] paasV2Prefix = new byte[6]
+    {
+      (byte) 10,
+      (byte) 206,
+      (byte) 12,
+      (byte) 171,
+      (byte) 222,
+      (byte) 202
+    };
+
+    public static string GetNonLoopbackIpV4Address()
+    {
+      foreach (NetworkInterface networkInterface in NetworkInterface.GetAllNetworkInterfaces())
+      {
+        if (networkInterface.NetworkInterfaceType == NetworkInterfaceType.Ethernet && networkInterface.OperationalStatus == OperationalStatus.Up)
+        {
+          foreach (IPAddressInformation unicastAddress in networkInterface.GetIPProperties().UnicastAddresses)
+          {
+            if (unicastAddress.IsDnsEligible && unicastAddress.Address.AddressFamily == AddressFamily.InterNetwork)
+              return unicastAddress.Address.ToString();
+          }
+        }
+      }
+      string message = "ERROR: Could not locate any usable IPv4 address";
+      DefaultTrace.TraceCritical(message);
+      throw new ConfigurationErrorsException(message);
+    }
+
+    public static string GetLocalEmulatorIpV4Address()
+    {
+      string emulatorIpV4Address = (string) null;
+      foreach (NetworkInterface networkInterface in NetworkInterface.GetAllNetworkInterfaces())
+      {
+        if ((networkInterface.NetworkInterfaceType == NetworkInterfaceType.Ethernet || networkInterface.NetworkInterfaceType == NetworkInterfaceType.Wireless80211) && networkInterface.OperationalStatus == OperationalStatus.Up)
+        {
+          foreach (IPAddressInformation unicastAddress in networkInterface.GetIPProperties().UnicastAddresses)
+          {
+            if (unicastAddress.Address.AddressFamily == AddressFamily.InterNetwork)
+            {
+              if (unicastAddress.IsDnsEligible)
+                return unicastAddress.Address.ToString();
+              if (emulatorIpV4Address == null)
+                emulatorIpV4Address = unicastAddress.Address.ToString();
+            }
+          }
+        }
+      }
+      if (emulatorIpV4Address != null)
+        return emulatorIpV4Address;
+      string message = "ERROR: Could not locate any usable IPv4 address for local emulator";
+      DefaultTrace.TraceCritical(message);
+      throw new ConfigurationErrorsException(message);
+    }
+
+    public static bool GetIPv6ServiceTunnelAddress(
+      bool isEmulated,
+      out IPAddress ipv6LoopbackAddress)
+    {
+      if (isEmulated)
+      {
+        ipv6LoopbackAddress = IPAddress.IPv6Loopback;
+        return true;
+      }
+      foreach (NetworkInterface networkInterface in NetworkInterface.GetAllNetworkInterfaces())
+      {
+        foreach (UnicastIPAddressInformation unicastAddress in networkInterface.GetIPProperties().UnicastAddresses)
+        {
+          if (unicastAddress.Address.AddressFamily == AddressFamily.InterNetworkV6 && NetUtil.IsServiceTunneledIPAddress(unicastAddress.Address))
+          {
+            DefaultTrace.TraceInformation("Found VNET service tunnel destination: {0}", (object) unicastAddress.Address.ToString());
+            ipv6LoopbackAddress = unicastAddress.Address;
+            return true;
+          }
+          DefaultTrace.TraceInformation("{0} is skipped because it is not IPv6 or is not a service tunneled IP address.", (object) unicastAddress.Address.ToString());
+        }
+      }
+      DefaultTrace.TraceInformation("Cannot find the IPv6 address of the Loopback NetworkInterface.");
+      ipv6LoopbackAddress = (IPAddress) null;
+      return false;
+    }
+
+    private static bool IsServiceTunneledIPAddress(IPAddress ipAddress)
+    {
+      byte[] addressBytes = ipAddress.GetAddressBytes();
+      if ((long) BitConverter.ToUInt64(addressBytes, 0) == (long) BitConverter.ToUInt64(NetUtil.paasV1Prefix, 0))
+        return true;
+      for (int index = 0; index < NetUtil.paasV2Prefix.Length; ++index)
+      {
+        if ((int) NetUtil.paasV2Prefix[index] != (int) addressBytes[index])
+          return false;
+      }
+      return true;
+    }
+  }
+}

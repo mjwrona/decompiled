@@ -1,0 +1,320 @@
+<%@ Master Language="C#" Inherits="Microsoft.TeamFoundation.Server.WebAccess.Platform.PlatformViewMasterPage<dynamic>" %>
+
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Platform" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Routing" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<%@ Import Namespace="Microsoft.VisualStudio.Services.Gallery.Web" %>
+<%@ Import Namespace="Microsoft.VisualStudio.Services.Gallery.Web.Utility" %>
+<%@ Import Namespace="Microsoft.VisualStudio.Services.Gallery.Server" %>
+<%@ Import Namespace="Microsoft.VisualStudio.Services.Common" %>
+<%@ Import Namespace="Microsoft.VisualStudio.Services.Gallery.WebApi" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%  Html.RegisterFonts(); %>
+<asp:contentplaceholder id="DocumentBegin" runat="server" />
+<% Html.IncludeFeatureFlagState(GalleryFeatureFlags.ShowRatingAndReview); %>
+<% Html.IncludeFeatureFlagState(GalleryFeatureFlags.EnableQueriesBasedOnHiddenFlags); %>
+<% Html.IncludeFeatureFlagState(GalleryFeatureFlags.EnableStickyBannerOnDetailsPage); %>
+<% Html.IncludeFeatureFlagState(GalleryFeatureFlags.MarketplaceBrandingChanges); %>
+<html lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <% if (WebContext.IsHosted && this.ViewData["ABTesting"] != null &&
+              (!this.ViewData.ContainsKey(GalleryCookieConsentConstants.ConsentEnabled) ||
+               !(bool)(this.ViewData[GalleryCookieConsentConstants.ConsentEnabled]) ||
+               (bool)(this.ViewData[GalleryCookieConsentConstants.AnalyticsConsent])
+              )
+          )
+       { %>
+      <asp:ContentPlaceHolder ID="GoogleABTestingExperiment" runat="server">
+      </asp:ContentPlaceHolder>
+        <% if (this.ViewData["ABPageViewEvent"] != null) { %>
+        <script type="text/javascript" <%= Html.GenerateNonce(true) %>>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '<%: (this.ViewData["ABTesting"] as Dictionary<string, string>)["ABTestAccountID"] %>', {'cookieExpires': 12 * 30 * 24 * 60 * 60});
+            ga('send', 'pageview');
+
+        </script>
+        <% } %>
+    <% } %>
+
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">
+            <% if (WebContext.IsHosted)
+                { %>
+            <%: GalleryResources.PageTitle %>
+            <% }
+            else
+            { %>
+            <%: GalleryResources.OnPremGalleryPageTitle %>
+            <% } %>
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="MetaTagPlaceholder" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8" />
+    <link rel="SHORTCUT ICON" href="<%:Url.Content("~/favicon.ico") %>" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    
+    <%:Html.RenderCSSBundles() %>
+
+    <%: Html.CoreScripts() %>
+    <asp:ContentPlaceHolder ID="CSSOverride" runat="server" />
+
+    <% if (WebContext.IsHosted && this.ViewData["ABTesting"] != null)
+       { %>
+        <asp:ContentPlaceHolder ID="GoogleABTestingSetVariation" runat="server" />
+     <% } %>
+    
+    <!-- JSLL script -->
+    <% if (this.ViewData.ContainsKey(ViewDataConstants.EnableJsll) &&
+            (bool)(this.ViewData[ViewDataConstants.EnableJsll]))%>
+    <% { %>
+    <script type="text/javascript" <%= Html.GenerateNonce(true) %> >
+
+        <% if (!this.ViewData.ContainsKey(GalleryCookieConsentConstants.ConsentEnabled) ||
+               !(bool)(this.ViewData[GalleryCookieConsentConstants.ConsentEnabled]) ||
+               (bool)(this.ViewData[GalleryCookieConsentConstants.AnalyticsConsent])
+              ) %>
+        <% { %>
+                var haveConsent = true;
+        <% } %>
+        <% else %>
+        <% { %>
+                var haveConsent = false;
+        <% } %>
+
+        var jsll_config = {};
+        jsll_config.coreData = {};
+        jsll_config.cookiesToCollect = ["_mkto_trk"];
+
+        jsll_config.ix = {};
+        if(haveConsent){
+          jsll_config.ix.a = true;
+          jsll_config.ix.g = true;
+          jsll_config.syncMuid = true;
+        }
+        jsll_config.coreData.appId = "marketplace.visualstudio.com";
+
+        var js_callback = function() {
+          window.awa.init(jsll_config);
+        };
+
+        var jsll = document.createElement("script");
+        jsll.type = "text/javascript";
+        jsll.src = "//az725175.vo.msecnd.net/scripts/jsll-4.js";
+        document.getElementsByTagName("head")[0].appendChild(jsll);
+        jsll.onload = js_callback;
+        jsll.onreadystatechange = function() {
+          if (this.readyState === "complete") {
+            js_callback();
+          }
+        };
+    </script>
+    <% } %>
+    <!-- End JSLL script -->
+
+</head>
+<body class="platform gallery <%: Html.BodyClasses() %>">
+
+    <% if (this.ViewData.ContainsKey(GalleryCookieConsentConstants.ConsentEnabled) &&
+           (bool)(this.ViewData[GalleryCookieConsentConstants.ConsentEnabled])
+          )
+       { %>
+           <div id="cookie-banner"></div>
+    <% } %>
+
+    <% if(this.ViewData.ContainsKey(ViewDataConstants.EnableSurveyInfoBanner) &&
+            (bool)(this.ViewData[ViewDataConstants.EnableSurveyInfoBanner]))
+       { %>
+
+        <div id="survey-container" dir="ltr" role="alert">
+            <div id="survey-content-container">
+                    <!--<span id="survey-info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 44 44" width="100%" height="100%" fill="none" stroke="currentColor">
+                        <circle cx="22" cy="22" r="20" stroke-width="2"></circle>
+                        <line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line>
+                        <line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line>
+                    </svg>
+                </span> -->
+                <!--  used for icon  -->
+                <p id="survey-content-text">
+                    <%= Html.GetBannerText() %>
+                </p>
+            </div>
+        </div>
+    <%} %>
+
+    <% if (this.ViewData.ContainsKey(ViewDataConstants.EnableGTMForAllPages) && (bool)(this.ViewData[ViewDataConstants.EnableGTMForAllPages]) &&
+              (!this.ViewData.ContainsKey(GalleryCookieConsentConstants.ConsentEnabled) ||
+               !(bool)(this.ViewData[GalleryCookieConsentConstants.ConsentEnabled]) ||
+               (bool)(this.ViewData[GalleryCookieConsentConstants.AnalyticsConsent])
+              )
+          ) %>
+    <% { %>
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WT9XBK"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <script type="text/javascript" <%= Html.GenerateNonce(true) %>>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WT9XBK');</script>
+        <!-- End Google Tag Manager -->
+    <% } %>
+
+    <% if (WebContext.IsHosted &&
+            !(this.ViewData.ContainsKey(ViewDataConstants.DisableGreenID) && (bool)(this.ViewData[ViewDataConstants.DisableGreenID])))
+        { %>
+    <!-- GreenId -->
+    <iframe  style="color:rgb(0,0,0);  float:left; position:absolute; top:-200px; left:-200px; border:0px" src="https://fpt.microsoft.com/tags?session_id=<%: WebContext.Diagnostics.SessionId %>" height=100  width=100 aria-hidden="true"></iframe>
+    <!-- End GreenId -->
+    <% } %>
+
+    <asp:ContentPlaceHolder ID="BodyBegin" runat="server"></asp:ContentPlaceHolder>
+    <% if (this.ViewData[ViewDataConstants.ServerContext] != null)
+        { %>
+    <div class="connectedServerContext">
+        <%: Html.JsonIsland(this.ViewData[ViewDataConstants.ServerContext], new { @class = ViewDataConstants.ServerContext }) %>
+    </div>
+    <% } %>
+    <a href="#start-of-content" class="skip-main"><%: GalleryResources.SkipToContent %></a>  
+    <div class="page-content<%: WebContext.IsHosted ? "" : " onprem-gallery" %><%: (ViewData[ViewDataConstants.OnPremHomepage] as bool?) == true ? " onprem-homepage-gallery" : "" %>">
+        <div class="header-section">
+            <% if (WebContext.IsHosted) { %>
+            <div class="uxservices-header" role="banner">
+                <div id="ux-header">
+                <div class="upperBand">
+                    <div class="upperBandContent marketplace-header">
+                        <a href="<%: (ViewData["generalInfo"] != null && (ViewData["generalInfo"] as Dictionary<string, object>)["galleryUrl"] != null ) ? ((ViewData["generalInfo"] as Dictionary<string, object>)["galleryUrl"] as string): "/" %>" title="Marketplace" class="left" >  
+                            <div class="marketPlaceLogoLink bowtie-icon bowtie-brand-visualstudio vs-brand-icon menu-item-icon"></div>
+                            <div class="visualStudioLogoLink"><%: GalleryResources.HeaderVisualStudio %></div>
+                            <div id="marketPlaceLogoLink" class="marketPlaceLogoLink"><%: GalleryResources.HeaderMarketplace %></div>
+                        </a>
+                        <div class="right">
+                             <% if (WebContext.IsHosted && ViewData[ViewDataConstants.ServerContext] != null)
+                                    {
+                                        var serverHeaderTitle = Html.OnPremServerDisplayName();
+                                        if (!String.IsNullOrEmpty(serverHeaderTitle))
+                                        {
+                                %>
+                                <div class='onprem-connected-dropdown' tabindex='0'><span class='bowtie-icon bowtie-plug-connected-fill'></span><%:serverHeaderTitle%></div>
+                                <%  
+                                        }
+                                    }%>
+                            <div id="signIn">
+                                <% if(String.IsNullOrEmpty(Html.UserDisplayNameFromIdentityService())) { %>
+                                    <a href="<%: Html.SigninUrl() %>" class="scarabLink" style="float:left;margin-left:23px;padding-top:1px;color:#fff;font-weight:400;">
+                                        <%: GalleryResources.SignIn %>
+                                    </a>
+                                <% } else { %>
+                                    <div class="tooltip">
+                                        <a aria-label="<%: String.Format("{0}. {1}", Html.UserDisplayNameFromIdentityService(), GalleryResources.ProfilePageLinkScreenReaderText) %>" href="<%: Html.ProfileUrl() %>" class=":SignedOutProfileElement: createProfileLink" style="float:left;margin-left:23px;margin-right:0;max-width:530px;white-space:nowrap;overflow:hidden;padding-bottom:2px;padding-top:1px;color:#fff;"><%: Html.UserDisplayNameFromIdentityService() %>
+                                                <span class="tooltiptext" id="myTooltip">
+  	                                            User Id : <span id="userIdText"><%: Html.UserVsidFromIdentityService() %></span>
+                                                <button id="copy_button" style="background:none;border:none;width: 15%;position: absolute;top: -10px; color:white;">
+                                                  <span id="outInfo"><i role="presentation" aria-hidden="true" class="ms-Button-icon bowtie-icon bowtie-copy-to-clipboard icon-64"></i></span>
+                                                </button>
+                                                </span>
+                                        </a>
+                                        <a href="<%: Html.SignoutUrl() %>" class="scarabLink" style="float:left;margin-left:23px;padding-top:1px;color:#fff;">
+                                            <%: GalleryResources.SignOut %>
+                                        </a>
+                                    </div>
+                                    <script type="text/javascript" <%= Html.GenerateNonce(true) %>>
+                                        document.getElementById("myTooltip").addEventListener("click", function (e) {
+                                            e.stopPropagation();
+                                            e.preventDefault();
+                                        });
+
+                                        document.getElementById("copy_button").addEventListener("click", function (e) {
+                                            copy_tooltip();
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                        });
+                                        function copy_tooltip() {
+                                            var copyText = document.getElementById("userIdText").textContent;
+                                            var textArea = document.createElement("textarea");
+                                            textArea.value = copyText;
+                                            document.body.appendChild(textArea);
+                                            textArea.select();
+                                            document.execCommand("Copy");
+                                            textArea.remove();
+                                            var tooltip = document.getElementById("outInfo");
+                                            tooltip.innerHTML = "Copied!";
+
+                                            setTimeout(function () {
+                                                var tooltip = document.getElementById("copy_button");
+                                                tooltip.innerHTML =
+                                                    "<span id=\"outInfo\"><i role=\"presentation\" aria-hidden=\"true\" class=\"ms-Button-icon bowtie-icon bowtie-copy-to-clipboard icon-64\"></i></span>";
+                                            }, 1500);
+                                        }
+                                       
+                                    </script>
+                                    
+                                <% } %>
+                            </div>                            
+                            <div data-fragmentname="SearchBox" id="Fragment_SearchBox">
+                              <div class="SearchBox" role="search">
+                                <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+                                  <input id="HeaderSearchTextBox" aria-label="search" name="query" type="text" maxlength="200" autocomplete="off">
+                                  <input id="RefinementId" name="refinement" type="hidden" value="198">
+                                  <button class="bowtie-icon bowtie-search header-search-button" id="HeaderSearchButton" value="" type="submit"></button>
+                                </form>
+                                <a id="search-box" class="bowtie-icon bowtie-search metroSearchButton" tabindex="0" title="Search here" role="button"></a>
+                              </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            <% } else { %>
+            <table class="gallery-header" role="banner">
+                <tr>
+                    <td class="logo">
+                        <a alt="Visual Studio" class="logo-link" href="<%: WebContext.Host.RelativeUri.TrimEnd('/') %>">
+                            <div class="gallery-logo bowtie-icon bowtie-brand-vsts vsts-brand-icon menu-item-icon"></div>
+                            <div class="logo-text"><%: GalleryResources.HeaderProductNameOnPrem %></div>
+                        </a>
+                    </td>
+                    <td class="fill"></td>
+                    <td class="right-side">
+                        <%: Html.RenderSearchBox() %>
+                        <% if (WebContext.User != null) { %>
+                        <span><%: WebContext.User.Name %></span>
+                        <% } %>
+                    </td>
+                </tr>
+            </table>
+            <% } %>
+        </div>
+        <div class="skiptarget" id="start-of-content"></div>
+        <div id="gallery-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <div class="general-info">
+                <%: Html.RestApiJsonIsland(this.ViewData["generalInfo"], new { @class = "general-info-data" })%>
+            </div>
+        </div>
+        <%if (WebContext.IsHosted && Html.ShowFooter()) { %>
+        <div id="gallery-footer">
+            <% Html.RenderPartial("Footer"); %>
+        </div>
+        <% } %>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentEnd" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="PageEnd" runat="server" />
+    <div id="utils-accessibility-announce-polite" class="visually-hidden" aria-live="polite"></div>
+    <div id="utils-accessibility-announce-assertive" class="visually-hidden" aria-live="assertive"></div>
+</body>
+</html>

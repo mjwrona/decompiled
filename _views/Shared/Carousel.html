@@ -1,0 +1,19 @@
+<script id="carousel-template" type="text/html">
+       <div class="carousel-wrapper">    
+           <div class="carousel" role="listbox" aria-orientation="horizontal" data-bind='foreach: items, scroll: viewPortStartIndex'>
+               <!-- ko if: $parent.showItem($index()) -->
+               <div class="carousel-item" data-bind='enterkey: $parent.itemEnterPress(), template: { name: $parent.itemsDisplayTemplate }, attr:{tabindex: $parent.getTabIndexForItem($index())}'></div>
+               <!-- /ko -->
+           </div>
+        </div>
+        <div class="carousel-indicators" data-bind="foreach: indicators, event: { keydown: carouselIndicatorKeyHandler }">
+            <span class="indicator" role="button" tabindex="0" aria-label="indicator" data-bind="css: { active: $parent.getCss($index()) }, 
+                click: $parent.indicatorSelect($index()),
+                enterkey: $parent.indicatorSelect($index()),
+                spacekey: $parent.indicatorSelect($index())"></span>
+        </div>
+        <div class="carousel-nav" data-bind="if: ifNav()">
+            <a href="" title="next" class="carousel-next gallery-element-focus-style-light" data-bind="click: scrollRight, css: { disabled: caraousalNextDisabled() }"><i class="bowtie-icon bowtie-chevron-right"></i></a>
+            <a href="" title="previous" class="carousel-prev gallery-element-focus-style-light" data-bind="click: scrollLeft, css: { disabled: caraousalPrevDisabled() }"><i class="bowtie-icon bowtie-chevron-left"></i></a>
+        </div>
+</script>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Boards.WebApi.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94B35911-48E0-4210-A4C8-5C93C55A5AC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Boards.WebApi.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking">
+      <HintPath>lib\Microsoft.Azure.Boards.Linking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server">
+      <HintPath>lib\Microsoft.Azure.Devops.Tags.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.ProcessDefinitions.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.ProcessDefinitions.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TeamFoundation\WorkItemTracking\Web\WorkItemGetRequestProcessor.cs" />
+    <Compile Include="TeamFoundation\WorkItemTracking\Web\Common\WorkItemLinkComparer.cs" />
+    <Compile Include="TeamFoundation\WorkItemTracking\Web\Common\WorkItemResourceLinkComparer.cs" />
+    <Compile Include="TeamFoundation\WorkItemTracking\Web\Models\Factories\WorkItemFieldFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTrackingWebConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTrackingRestResources.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTrackingLocationIds.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemQueryClauseConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\LinkConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTypeFieldConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\QueryOptimizationHeaderConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessAuditConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\AdminProcessConstants.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTrackingWebTraceAreas.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTypeServiceExtensions.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTypeServiceHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemLinkFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\HistoryNotUpdatedForRevisionException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemIdRevisionNotFoundException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WitResourceNotFoundException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ConflictingParametersException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\RelationAlreadyExistsException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\QueryException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\IdentityRefNotAcceptedException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\PermissionDeniedException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\UnexpectedException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\InvalidBatchWorkItemUpdateJsonException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemTemplateLimitExceededException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\EmbeddedBase64ImageNotSupportedException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\FieldRuleModelValidationException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\InvalidDeleteWorkItemCallException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\RemoteLinkingUnauthorizedAccessException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\IProcessAdminService.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessAdminService.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProjectServiceHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessAdminServiceException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessServiceUpdateBlockedBecauseProcessIsUpdatin.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessServiceUpdateBlockedBecauseAProcessIsUpdati.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessServiceUpdateBlockedBecauseProcessIsDeletin.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessServiceInvalidTemplateException.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessServiceDeploymentTemplateUpdateBlockedExcep.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessDescriptorModel.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessModel.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessUpdateProgressModel.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessUpdateResultModel.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\LayoutGroup.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ProcessFieldUsageInfo.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Field.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\FieldProperties.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Default.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\IdentityDefault.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\UsageProperties.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\FieldUsage.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\WorkItemType.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\ResourceStrings.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\SocialWorkItem\Factories\MetadataLayoutModelsFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\SocialWorkItem\Factories\MetadataModelsFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Extensions\EnumExtensions.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\MailMessageFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemCommentVersionRefFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemQuerySortColumnFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemReferenceFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemRelationFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\ProcessRulesModelFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\ProcessRuleModelDictionary.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemRelationTypeFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WitFieldsHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WitUrlHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemTypeCategoryFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemTypeReferenceFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemTypeFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemIconFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemStateTransitionFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemTypeFieldInstanceFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemFieldReferenceFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\FieldDependentRuleFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemQueryResultFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemClassificationNodeFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemDeleteFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemDeleteReferenceFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\ProcessRuleModelFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\QueryHierarchyItemFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\WorkItemQueryClauseFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\QueryResponseOptions.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\ArtifactLinkFactories\WorkArtifactLinkFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Converters\ArtifactLinkFactories\ArtifactUriQueryResultFactory.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Helpers\WorkItemQueryControllerHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Helpers\WitUpdateHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Helpers\WorkItemClassificationNodeHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Helpers\WitDeleteHelper.cs" />
+    <Compile Include="Azure\Boards\WebApi\Common\Helpers\WitApiVersionHelpers.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Boards.Agile.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2C8E854-2CDF-43A7-908A-08FCCA6D2C0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Boards.Agile.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Boards.Agile.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgileCommonConstants.cs" />
+    <Compile Include="WebApiLinkConstants.cs" />
+    <Compile Include="BoardChartConstants.cs" />
+    <Compile Include="AgileBoardUserSettingConstants.cs" />
+    <Compile Include="DeliveryViewFilterProperty.cs" />
+    <Compile Include="Exceptions\BoardDoesNotExistException.cs" />
+    <Compile Include="Exceptions\DeletedBoardColumnIsNotEmptyException.cs" />
+    <Compile Include="Exceptions\BoardValidationFailureException.cs" />
+    <Compile Include="Exceptions\BoardUpdateFailureException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateBoardColumnsException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateBoardRowsException.cs" />
+    <Compile Include="Exceptions\ChartDoesNotExistException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateChartException.cs" />
+    <Compile Include="Exceptions\InvalidArgumentValueException.cs" />
+    <Compile Include="Exceptions\ChartUpdateFailureException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateCardSettingsException.cs" />
+    <Compile Include="Exceptions\CardSettingsValidationFailureException.cs" />
+    <Compile Include="Exceptions\CardSettingsUpdateFailureException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateCardRulesException.cs" />
+    <Compile Include="Exceptions\CardRulesValidationFailureException.cs" />
+    <Compile Include="Exceptions\CardRulesUpdateFailureException.cs" />
+    <Compile Include="Exceptions\FilterSettingsValidationFailureException.cs" />
+    <Compile Include="Exceptions\FilterSettingsUpdateFailureException.cs" />
+    <Compile Include="Exceptions\DeletedBoardRowIsNotEmptyException.cs" />
+    <Compile Include="Exceptions\BoardUserSettingsUpdateFailureException.cs" />
+    <Compile Include="Exceptions\BoardUserSettingsReadFailureException.cs" />
+    <Compile Include="Exceptions\BoardParentChildWIMapReadFailureException.cs" />
+    <Compile Include="Exceptions\BoardParentChildWIMapLimitExceededException.cs" />
+    <Compile Include="Exceptions\BoardValidatorExceptionBase.cs" />
+    <Compile Include="Exceptions\BoardValidatorInvalidCharException.cs" />
+    <Compile Include="Exceptions\BoardValidatorRowCountInvalidException.cs" />
+    <Compile Include="Exceptions\BoardValidatorRowNameLengthInvalidException.cs" />
+    <Compile Include="Exceptions\BoardValidatorDuplicateRowNameException.cs" />
+    <Compile Include="Exceptions\CurrentIterationDoesNotExistException.cs" />
+    <Compile Include="Exceptions\InvalidTeamSettingsException.cs" />
+    <Compile Include="Exceptions\IterationNotFoundException.cs" />
+    <Compile Include="Exceptions\TeamDaysOutOfRangeException.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

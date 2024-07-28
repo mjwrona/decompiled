@@ -1,0 +1,12 @@
+<script id="homepage-searchbox" type="text/html">
+    <div class="homepage-searchbox-wrapper" role="search">
+        <div class="homepage-searchbox-message">
+            <h1> <span data-bind="text:$data.homePageSearchHeader()"> </span> </h1>
+        </div>
+        <div class="homepage-searchbox-container">            
+            <input class="search-input" maxlength="200" data-bind="textInput: searchTerm, enable: isEnabled(), attr: { 'aria-label': placeHolder(), placeholder : placeHolder()}, hasFocus:isSelected(), event: {blur: onBlur, keydown: onKeyPress}, enterkey: submitSearchTerm" autocomplete="off" />
+            <!-- EU Cookie Consent: Consider user consent on clicking the search button by setting data-mscc-ic attribute to true -->
+            <span role="button" class="searchbutton gallery-element-focus-style-moderate bowtie-icon bowtie-search" data-bind="click: submitSearchTerm, spacekey: submitSearchTerm, enterkey: submitSearchTerm, attr: {title: searchButtonTitle, 'aria-label':searchButtonTitle}, event: { focus: searchBoxFocus, blur: searchBoxBlur }" tabindex="0" data-mscc-ic="true"></span>
+        </div>
+    </div>
+</script>

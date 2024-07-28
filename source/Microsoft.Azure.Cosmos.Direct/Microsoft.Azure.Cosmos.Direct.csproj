@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Cosmos.Direct.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6E2A9AD-CDA3-4EEB-849E-AA8BA70E93EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Cosmos.Direct</AssemblyName>
+    <ApplicationVersion>3.29.4.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>lib\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>lib\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>lib\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyKeys.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="AssemblyVersionInfo.cs" />
+    <Compile Include="Documents\BackoffRetryUtility`1.cs" />
+    <Compile Include="Documents\BufferProvider.cs" />
+    <Compile Include="Documents\CustomTypeExtensions.cs" />
+    <Compile Include="Documents\QueryRequestPerformanceActivity.cs" />
+    <Compile Include="Documents\NativeMethods.cs" />
+    <Compile Include="Documents\Platform.cs" />
+    <Compile Include="Documents\PlatformApis.cs" />
+    <Compile Include="Documents\RMResources.cs" />
+    <Compile Include="Documents\Schema.cs" />
+    <Compile Include="Documents\SchemaBuilderMode.cs" />
+    <Compile Include="Documents\SchemaDiscoveryPolicy.cs" />
+    <Compile Include="Documents\Attachment.cs" />
+    <Compile Include="Documents\BoundingBoxSpec.cs" />
+    <Compile Include="Documents\ByokConfig.cs" />
+    <Compile Include="Documents\ByokStatus.cs" />
+    <Compile Include="Documents\ClientEncryptionKey.cs" />
+    <Compile Include="Documents\ClientEncryptionIncludedPath.cs" />
+    <Compile Include="Documents\ClientEncryptionPolicy.cs" />
+    <Compile Include="Documents\KeyWrapMetadata.cs" />
+    <Compile Include="Documents\Document.cs" />
+    <Compile Include="Documents\UserDefinedType.cs" />
+    <Compile Include="Documents\Offer.cs" />
+    <Compile Include="Documents\OfferV2.cs" />
+    <Compile Include="Documents\OfferContentV2.cs" />
+    <Compile Include="Documents\OfferTypeResolver.cs" />
+    <Compile Include="Documents\Database.cs" />
+    <Compile Include="Documents\DocumentCollection.cs" />
+    <Compile Include="Documents\User.cs" />
+    <Compile Include="Documents\Permission.cs" />
+    <Compile Include="Documents\Conflict.cs" />
+    <Compile Include="Documents\Trigger.cs" />
+    <Compile Include="Documents\IndexingPolicy.cs" />
+    <Compile Include="Documents\IndexingMode.cs" />
+    <Compile Include="Documents\UniqueKeyPolicy.cs" />
+    <Compile Include="Documents\UniqueIndexReIndexContext.cs" />
+    <Compile Include="Documents\GeospatialConfig.cs" />
+    <Compile Include="Documents\GeospatialType.cs" />
+    <Compile Include="Documents\ConflictResolutionPolicy.cs" />
+    <Compile Include="Documents\ChangeFeedPolicy.cs" />
+    <Compile Include="Documents\CollectionBackupPolicy.cs" />
+    <Compile Include="Documents\CollectionBackupType.cs" />
+    <Compile Include="Documents\OperationKind.cs" />
+    <Compile Include="Documents\Snapshot.cs" />
+    <Compile Include="Documents\SnapshotContent.cs" />
+    <Compile Include="Documents\SnapshotKind.cs" />
+    <Compile Include="Documents\SnapshotState.cs" />
+    <Compile Include="Documents\SerializableNameValueCollection.cs" />
+    <Compile Include="Documents\StoredProcedure.cs" />
+    <Compile Include="Documents\UserDefinedFunction.cs" />
+    <Compile Include="Documents\ConflictResolutionMode.cs" />
+    <Compile Include="Documents\IncludedPath.cs" />
+    <Compile Include="Documents\ExcludedPath.cs" />
+    <Compile Include="Documents\CompositePathSortOrder.cs" />
+    <Compile Include="Documents\CompositePath.cs" />
+    <Compile Include="Documents\Index.cs" />
+    <Compile Include="Documents\IndexJsonConverter.cs" />
+    <Compile Include="Documents\IndexKind.cs" />
+    <Compile Include="Documents\RangeIndex.cs" />
+    <Compile Include="Documents\HashIndex.cs" />
+    <Compile Include="Documents\DataType.cs" />
+    <Compile Include="Documents\SpatialIndex.cs" />
+    <Compile Include="Documents\SpatialType.cs" />
+    <Compile Include="Documents\SpatialSpec.cs" />
+    <Compile Include="Documents\PermissionMode.cs" />
+    <Compile Include="Documents\TriggerType.cs" />
+    <Compile Include="Documents\UniqueKey.cs" />
+    <Compile Include="Documents\JsonSerializableList`1.cs" />
+    <Compile Include="Documents\StoreClientFactory.cs" />
+    <Compile Include="Documents\LocationNames.cs" />
+    <Compile Include="Documents\RegionProximityUtil.cs" />
+    <Compile Include="Documents\GeoLinkTypes.cs" />
+    <Compile Include="Documents\MaterializedViewDefinition.cs" />
+    <Compile Include="Documents\PartitionedSystemDocument.cs" />
+    <Compile Include="Documents\Rfc1123DateTimeCache.cs" />
+    <Compile Include="Documents\MaterializedViews.cs" />
+    <Compile Include="Documents\ValueStopwatch.cs" />
+    <Compile Include="Documents\Address.cs" />
+    <Compile Include="Documents\PartitionAddressInformation.cs" />
+    <Compile Include="Documents\PerProtocolPartitionAddressInformation.cs" />
+    <Compile Include="Documents\FeedResource`1.cs" />
+    <Compile Include="Documents\QueryResult.cs" />
+    <Compile Include="Documents\ApiType.cs" />
+    <Compile Include="Documents\AuthorizationTokenType.cs" />
+    <Compile Include="Documents\AuthorizationTokenTypeExtensions.cs" />
+    <Compile Include="Documents\BadRequestException.cs" />
+    <Compile Include="Documents\BitUtils.cs" />
+    <Compile Include="Documents\ClientSideRequestStatistics.cs" />
+    <Compile Include="Documents\IClientSideRequestStatistics.cs" />
+    <Compile Include="Documents\CloneableStream.cs" />
+    <Compile Include="Documents\ConcurrentPrng.cs" />
+    <Compile Include="Documents\NullSessionContainer.cs" />
+    <Compile Include="Documents\ConnectionStateListener.cs" />
+    <Compile Include="Documents\ConsistencyLevel.cs" />
+    <Compile Include="Documents\Constants.cs" />
+    <Compile Include="Documents\DocumentServiceRequest.cs" />
+    <Compile Include="Documents\DocumentServiceRequestContext.cs" />
+    <Compile Include="Documents\DocumentServiceRequestExtensions.cs" />
+    <Compile Include="Documents\DocumentServiceResponse.cs" />
+    <Compile Include="Documents\ExceptionExtensions.cs" />
+    <Compile Include="Documents\GoneException.cs" />
+    <Compile Include="Documents\Helpers.cs" />
+    <Compile Include="Documents\HexStringUtility.cs" />
+    <Compile Include="Documents\HttpClientExtension.cs" />
+    <Compile Include="Documents\SDKSupportedCapabilities.cs" />
+    <Compile Include="Documents\SDKSupportedCapabilitiesHelpers.cs" />
+    <Compile Include="Documents\HttpConstants.cs" />
+    <Compile Include="Documents\HttpUtility.cs" />
+    <Compile Include="Documents\DocumentClientException.cs" />
+    <Compile Include="Documents\Error.cs" />
+    <Compile Include="Documents\ICommunicationEventSource.cs" />
+    <Compile Include="Documents\InternalSchemaProperties.cs" />
+    <Compile Include="Documents\InternalServerErrorException.cs" />
+    <Compile Include="Documents\IStoreModel.cs" />
+    <Compile Include="Documents\IStoreModelExtension.cs" />
+    <Compile Include="Documents\ISessionContainer.cs" />
+    <Compile Include="Documents\ISessionToken.cs" />
+    <Compile Include="Documents\IStoreClientFactory.cs" />
+    <Compile Include="Documents\ITypeResolver`1.cs" />
+    <Compile Include="Documents\JsonSerializable.cs" />
+    <Compile Include="Documents\ReplicationPolicy.cs" />
+    <Compile Include="Documents\MediaIdHelper.cs" />
+    <Compile Include="Documents\MemoryStreamPool.cs" />
+    <Compile Include="Documents\OperationType.cs" />
+    <Compile Include="Documents\OperationTypeExtensions.cs" />
+    <Compile Include="Documents\NotFoundException.cs" />
+    <Compile Include="Documents\Paths.cs" />
+    <Compile Include="Documents\PathsHelper.cs" />
+    <Compile Include="Documents\AddressCacheToken.cs" />
+    <Compile Include="Documents\PartitionKey.cs" />
+    <Compile Include="Documents\PartitionKeyDefinition.cs" />
+    <Compile Include="Documents\PartitionKeyDefinitionVersion.cs" />
+    <Compile Include="Documents\PartitionKeyRange.cs" />
+    <Compile Include="Documents\PartitionKeyRangeIdentity.cs" />
+    <Compile Include="Documents\PartitionKeyRangeStatistics.cs" />
+    <Compile Include="Documents\PartitionKeyRangeStatus.cs" />
+    <Compile Include="Documents\PartitionKeyStatistics.cs" />
+    <Compile Include="Documents\PartitionKind.cs" />
+    <Compile Include="Documents\QueryPlanGenerationMode.cs" />
+    <Compile Include="Documents\ReadPolicy.cs" />
+    <Compile Include="Documents\RequestChargeTracker.cs" />
+    <Compile Include="Documents\RequestTimeoutException.cs" />
+    <Compile Include="Documents\ResourceId.cs" />
+    <Compile Include="Documents\ResourceIdBase64Decoder.cs" />
+    <Compile Include="Documents\Resource.cs" />
+    <Compile Include="Documents\ResourceType.cs" />
+    <Compile Include="Documents\ResourceTypeExtensions.cs" />
+    <Compile Include="Documents\IMasterServiceIdentityProvider.cs" />
+    <Compile Include="Documents\RuntimeConstants.cs" />
+    <Compile Include="Documents\SendingRequestEventArgs.cs" />
+    <Compile Include="Documents\ReceivedResponseEventArgs.cs" />
+    <Compile Include="Documents\SerializationFormattingPolicy.cs" />
+    <Compile Include="Documents\ServerStoreModel.cs" />
+    <Compile Include="Documents\IServiceIdentity.cs" />
+    <Compile Include="Documents\ServiceIdentity.cs" />
+    <Compile Include="Documents\ServiceInteropWrapper.cs" />
+    <Compile Include="Documents\StatusCodes.cs" />
+    <Compile Include="Documents\SubStatusCodes.cs" />
+    <Compile Include="Documents\StatusCodesExtensions.cs" />
+    <Compile Include="Documents\SubStatusCodesExtensions.cs" />
+    <Compile Include="Documents\StoreResponse.cs" />
+    <Compile Include="Documents\StoreResult.cs" />
+    <Compile Include="Documents\TimeoutHelper.cs" />
+    <Compile Include="Documents\TransportRequestStats.cs" />
+    <Compile Include="Documents\TriggerOperation.cs" />
+    <Compile Include="Documents\UInt128.cs" />
+    <Compile Include="Documents\Undefined.cs" />
+    <Compile Include="Documents\UnixDateTimeConverter.cs" />
+    <Compile Include="Documents\UrlUtility.cs" />
+    <Compile Include="Documents\UserAgentContainer.cs" />
+    <Compile Include="Documents\WFConstants.cs" />
+    <Compile Include="Documents\TaskFactoryExtensions.cs" />
+    <Compile Include="Documents\StreamExtension.cs" />
+    <Compile Include="Documents\AddressInformation.cs" />
+    <Compile Include="Documents\AddressEnumerator.cs" />
+    <Compile Include="Documents\AddressSelector.cs" />
+    <Compile Include="Documents\BarrierRequestHelper.cs" />
+    <Compile Include="Documents\ConsistencyReader.cs" />
+    <Compile Include="Documents\ConsistencyWriter.cs" />
+    <Compile Include="Documents\GoneAndRetryWithRetryPolicy.cs" />
+    <Compile Include="Documents\GoneAndRetryWithRequestRetryPolicy`1.cs" />
+    <Compile Include="Documents\RetryWithConfiguration.cs" />
+    <Compile Include="Documents\GoneAndRetryRequestRetryPolicyContext.cs" />
+    <Compile Include="Documents\GoneOnlyRequestRetryPolicy`1.cs" />
+    <Compile Include="Documents\GoneOnlyRequestRetryPolicyContext.cs" />
+    <Compile Include="Documents\IAddressEnumerator.cs" />
+    <Compile Include="Documents\IAuthorizationTokenProvider.cs" />
+    <Compile Include="Documents\IRetriableResponse.cs" />
+    <Compile Include="Documents\ShouldRetryResult.cs" />
+    <Compile Include="Documents\ShouldRetryResult`1.cs" />
+    <Compile Include="Documents\IRetryPolicy.cs" />
+    <Compile Include="Documents\IRetryPolicy`1.cs" />
+    <Compile Include="Documents\IRequestRetryPolicy`2.cs" />
+    <Compile Include="Documents\IRequestRetryPolicy`3.cs" />
+    <Compile Include="Documents\IServiceConfigurationReader.cs" />
+    <Compile Include="Documents\IStoreClient.cs" />
+    <Compile Include="Documents\QuorumReader.cs" />
+    <Compile Include="Documents\ReadFeedKeyType.cs" />
+    <Compile Include="Documents\ReadMode.cs" />
+    <Compile Include="Documents\RequestHelper.cs" />
+    <Compile Include="Documents\RequestRetryUtility.cs" />
+    <Compile Include="Documents\ReplicatedResourceClient.cs" />
+    <Compile Include="Documents\ResourceOperation.cs" />
+    <Compile Include="Documents\IAddressResolver.cs" />
+    <Compile Include="Documents\IAddressResolverExtension.cs" />
+    <Compile Include="Documents\ServiceUnavailableException.cs" />
+    <Compile Include="Documents\SessionTokenHelper.cs" />
+    <Compile Include="Documents\SessionTokenMismatchRetryPolicy.cs" />
+    <Compile Include="Documents\SimpleSessionToken.cs" />
+    <Compile Include="Documents\StoreClient.cs" />
+    <Compile Include="Documents\StoreReader.cs" />
+    <Compile Include="Documents\TransportClient.cs" />
+    <Compile Include="Documents\TransportAddressUri.cs" />
+    <Compile Include="Documents\TransportPerformanceCounters.cs" />
+    <Compile Include="Documents\VectorSessionToken.cs" />
+    <Compile Include="Documents\VersionUtility.cs" />
+    <Compile Include="Documents\ConflictException.cs" />
+    <Compile Include="Documents\ConnectionEvent.cs" />
+    <Compile Include="Documents\ContentSerializationFormat.cs" />
+    <Compile Include="Documents\EnumerationDirection.cs" />
+    <Compile Include="Documents\FanoutOperationState.cs" />
+    <Compile Include="Documents\ForbiddenException.cs" />
+    <Compile Include="Documents\HttpTransportClient.cs" />
+    <Compile Include="Documents\IConnectionStateListener.cs" />
+    <Compile Include="Documents\IndexingDirective.cs" />
+    <Compile Include="Documents\IndexingDirectiveStrings.cs" />
+    <Compile Include="Documents\InvalidPartitionException.cs" />
+    <Compile Include="Documents\LockedException.cs" />
+    <Compile Include="Documents\MathUtils.cs" />
+    <Compile Include="Documents\MethodNotAllowedException.cs" />
+    <Compile Include="Documents\MigrateCollectionDirective.cs" />
+    <Compile Include="Documents\NetUtil.cs" />
+    <Compile Include="Documents\PooledTimer.cs" />
+    <Compile Include="Documents\PortReuseMode.cs" />
+    <Compile Include="Documents\PreconditionFailedException.cs" />
+    <Compile Include="Documents\RemoteStorageType.cs" />
+    <Compile Include="Documents\RequestEntityTooLargeException.cs" />
+    <Compile Include="Documents\RequestedCollectionType.cs" />
+    <Compile Include="Documents\RequestRateTooLargeException.cs" />
+    <Compile Include="Documents\RetryWithException.cs" />
+    <Compile Include="Documents\ConnectionPool.cs" />
+    <Compile Include="Documents\ConnectionPoolManager.cs" />
+    <Compile Include="Documents\IConnection.cs" />
+    <Compile Include="Documents\IConnectionDispenser.cs" />
+    <Compile Include="Documents\RntbdConnection.cs" />
+    <Compile Include="Documents\RntbdConnectionDispenser.cs" />
+    <Compile Include="Documents\RntbdConnectionOpenTimers.cs" />
+    <Compile Include="Documents\RntbdConstants.cs" />
+    <Compile Include="Documents\RntbdResponseStateEnum.cs" />
+    <Compile Include="Documents\RntbdResponseState.cs" />
+    <Compile Include="Documents\RntbdTokenTypes.cs" />
+    <Compile Include="Documents\RntbdTokenValue.cs" />
+    <Compile Include="Documents\RntbdToken.cs" />
+    <Compile Include="Documents\RntbdTokenStream`1.cs" />
+    <Compile Include="Documents\RntbdTransportClient.cs" />
+    <Compile Include="Documents\StringSegment.cs" />
+    <Compile Include="Documents\SystemDocument.cs" />
+    <Compile Include="Documents\SystemDocumentType.cs" />
+    <Compile Include="Documents\TimerPool.cs" />
+    <Compile Include="Documents\TransportErrorCode.cs" />
+    <Compile Include="Documents\TransportException.cs" />
+    <Compile Include="Documents\TransportExceptionCounters.cs" />
+    <Compile Include="Documents\UnauthorizedException.cs" />
+    <Compile Include="Documents\WebExceptionUtility.cs" />
+    <Compile Include="Documents\SharedFiles\Routing\Int128.cs" />
+    <Compile Include="Documents\Rntbd\Channel.cs" />
+    <Compile Include="Documents\Rntbd\ChannelCallArguments.cs" />
+    <Compile Include="Documents\Rntbd\ChannelCommonArguments.cs" />
+    <Compile Include="Documents\Rntbd\ChannelDictionary.cs" />
+    <Compile Include="Documents\Rntbd\ChannelOpenArguments.cs" />
+    <Compile Include="Documents\Rntbd\ChannelOpenTimeline.cs" />
+    <Compile Include="Documents\Rntbd\ChannelProperties.cs" />
+    <Compile Include="Documents\Rntbd\Connection.cs" />
+    <Compile Include="Documents\Rntbd\CpuLoad.cs" />
+    <Compile Include="Documents\Rntbd\CpuLoadHistory.cs" />
+    <Compile Include="Documents\Rntbd\CpuMonitor.cs" />
+    <Compile Include="Documents\Rntbd\Dispatcher.cs" />
+    <Compile Include="Documents\Rntbd\IChannel.cs" />
+    <Compile Include="Documents\Rntbd\LbChannelState.cs" />
+    <Compile Include="Documents\Rntbd\LinuxSystemUtilizationReader.cs" />
+    <Compile Include="Documents\Rntbd\LoadBalancingChannel.cs" />
+    <Compile Include="Documents\Rntbd\LoadBalancingPartition.cs" />
+    <Compile Include="Documents\Rntbd\ServerKey.cs" />
+    <Compile Include="Documents\Rntbd\ServerProperties.cs" />
+    <Compile Include="Documents\Rntbd\SystemUsageHistory.cs" />
+    <Compile Include="Documents\Rntbd\SystemUsageLoad.cs" />
+    <Compile Include="Documents\Rntbd\SystemUsageMonitor.cs" />
+    <Compile Include="Documents\Rntbd\SystemUsageRecorder.cs" />
+    <Compile Include="Documents\Rntbd\SystemUtilizationReaderBase.cs" />
+    <Compile Include="Documents\Rntbd\ThreadInformation.cs" />
+    <Compile Include="Documents\Rntbd\TransportClient.cs" />
+    <Compile Include="Documents\Rntbd\TransportExceptions.cs" />
+    <Compile Include="Documents\Rntbd\TransportSerialization.cs" />
+    <Compile Include="Documents\Rntbd\UnsupportedSystemUtilizationReader.cs" />
+    <Compile Include="Documents\Rntbd\UserPortPool.cs" />
+    <Compile Include="Documents\Rntbd\WindowsSystemUtilizationReader.cs" />
+    <Compile Include="Documents\Collections\StoreResponseNameValueCollection.cs" />
+    <Compile Include="Documents\Collections\RequestNameValueCollection.cs" />
+    <Compile Include="Documents\Collections\DictionaryNameValueCollection.cs" />
+    <Compile Include="Documents\Collections\DictionaryNameValueCollectionFactory.cs" />
+    <Compile Include="Documents\Collections\INameValueCollection.cs" />
+    <Compile Include="Documents\Collections\INameValueCollectionFactory.cs" />
+    <Compile Include="Documents\Collections\NameValueCollectionWrapper.cs" />
+    <Compile Include="Documents\Collections\NameValueCollectionWrapperFactory.cs" />
+    <Compile Include="Documents\Common\DefaultTraceEx.cs" />
+    <Compile Include="Documents\Routing\BoolPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\InfinityPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\IPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\MaxNumber.cs" />
+    <Compile Include="Documents\Routing\MaxNumberPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\MaxString.cs" />
+    <Compile Include="Documents\Routing\MaxStringPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\MurmurHash3.cs" />
+    <Compile Include="Documents\Routing\MinNumber.cs" />
+    <Compile Include="Documents\Routing\MinNumberPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\MinString.cs" />
+    <Compile Include="Documents\Routing\MinStringPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\NullPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\NumberPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\PartitionIsMigratingException.cs" />
+    <Compile Include="Documents\Routing\PartitionKeyComponentType.cs" />
+    <Compile Include="Documents\Routing\PartitionKeyInternal.cs" />
+    <Compile Include="Documents\Routing\PartitionKeyInternalJsonConverter.cs" />
+    <Compile Include="Documents\Routing\PartitionKeyRangeGoneException.cs" />
+    <Compile Include="Documents\Routing\Range`1.cs" />
+    <Compile Include="Documents\Routing\StringPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\UndefinedPartitionKeyComponent.cs" />
+    <Compile Include="Documents\Routing\PartitionKeyRangeIsSplittingException.cs" />
+    <Compile Include="Documents\Client\RequestOptions.cs" />
+    <Compile Include="Documents\Client\AccessCondition.cs" />
+    <Compile Include="Documents\Client\AccessConditionType.cs" />
+    <Compile Include="Documents\Client\ResourceResponse`1.cs" />
+    <Compile Include="Documents\Client\ResourceResponseBase.cs" />
+    <Compile Include="Documents\Client\IResourceResponse`1.cs" />
+    <Compile Include="Documents\Client\IResourceResponseBase.cs" />
+    <Compile Include="Documents\Client\DocumentResponse`1.cs" />
+    <Compile Include="Documents\Client\IDocumentResponse`1.cs" />
+    <Compile Include="Documents\Client\Protocol.cs" />
+    <Compile Include="Cosmos\Core\Trace\DefaultTrace.cs" />
+    <Compile Include="Cosmos\Core\Trace\EtwTraceListener.cs" />
+    <Compile Include="Cosmos\Core\Trace\EtwNativeInterop.cs" />
+    <Compile Include="Cosmos\Rntbd\BytesDeserializer.cs" />
+    <Compile Include="Cosmos\Rntbd\BytesSerializer.cs" />
+    <Compile Include="Cosmos\Rntbd\RntbdStreamReader.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Documents\RMResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

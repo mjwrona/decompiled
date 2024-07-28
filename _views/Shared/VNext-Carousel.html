@@ -1,0 +1,31 @@
+<script id="gallery-carousel" type="text/html">
+    <div class="carousel-nav prev" data-bind="if: !isLeftScrollDisabled() || !isRightScrollDisabled() || isfetching()">
+        <a href="" role="button" class="carousel-prev gallery-element-focus-style-light" data-bind="click: scrollLeft, spacekey: scrollLeft, attr: { title: scrollLeftTitle, tabindex: getTabIndexForLeftNavigator(), 'aria-disabled': isLeftScrollDisabled(),  'aria-label': ariaLabelForLeftScroll }, css: { disabled: isLeftScrollDisabled }">
+            <i class="bowtie-icon bowtie-chevron-left"></i>
+        </a>
+    </div>
+    <div class="carousel-wrapperHomePage">
+        <ul class="carousel"  data-bind='foreach: items, event: { keydown: carouselKeyHandler }, attr: {id: carouselIdSelector}, style: {width: cssStyleWidth}'>
+            <!-- ko if: $index() < $parent.numberOfItemsToRender() -->
+            <li class="carousel-item" role="listitem" data-bind="component: {name: $parent.componentName, params: {item: $data, containerName: $parent.carouselIdSelector, removeTabFocus: $index() < $parent._viewPortStartIndex() || $index() >= $parent._viewPortStartIndex() + $parent._numberOfItemsToDisplay}}"></li>
+            <!-- /ko -->
+        </ul>
+        <!-- ko if: items().length == 0 -->
+        <div class="no-data-message">
+            <span data-bind="text:noDataAvailableMsg" id="no-data-message-container">  </span>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div data-bind="if: !isSpinnerDisabled()">
+        <div class="carousel-spinner"> </div>
+    </div>
+    <div class="carousel-indicators" data-bind="foreach: indicators">
+        <span class="indicator" data-bind="css: { active: $index() === $parent.selectedIndicatorIndex() }, click: $parent.selectIndicator($index())"></span>
+    </div>
+    <div class="carousel-nav next" data-bind="if: !isLeftScrollDisabled() || !isRightScrollDisabled() || isfetching()">
+        <a href="" role="button" class="carousel-next gallery-element-focus-style-light" data-bind="click: scrollRight, spacekey: scrollRight, hasFocus: rightArrowFocused, attr: { title: scrollRightTitle, tabindex:  getTabIndexForRightNavigator(), 'aria-disabled': isRightScrollDisabled(), 'aria-label': ariaLabelForRightScroll }, css: { disabled: isRightScrollDisabled }">
+            <i class="bowtie-icon bowtie-chevron-right"></i>
+        </a>
+    </div>
+    <span data-bind="template: { afterRender: componentLoaded() }" style="visibility: hidden"> </span>
+</script>

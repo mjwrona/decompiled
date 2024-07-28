@@ -1,0 +1,26 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Antlr4.Runtime.Tree.Xpath.XPathElement
+// Assembly: Microsoft.Azure.Cosmos.Client, Version=3.31.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+// MVID: 16FBD598-821A-4D2D-8F97-7046A72AA497
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Cosmos.Client.dll
+
+using System.Collections.Generic;
+
+namespace Antlr4.Runtime.Tree.Xpath
+{
+  internal abstract class XPathElement
+  {
+    protected internal string nodeName;
+    protected internal bool invert;
+
+    public XPathElement(string nodeName) => this.nodeName = nodeName;
+
+    public abstract ICollection<IParseTree> Evaluate(IParseTree t);
+
+    public override string ToString()
+    {
+      string str = this.invert ? "!" : string.Empty;
+      return this.GetType().Name + "[" + str + this.nodeName + "]";
+    }
+  }
+}

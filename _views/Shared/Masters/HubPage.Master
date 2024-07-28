@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_views/Shared/Main.Master" Inherits="Microsoft.TeamFoundation.Server.WebAccess.TfsViewMasterPage<dynamic>" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+
+<asp:Content ContentPlaceHolderID="DocumentBegin" runat="server">
+    <asp:ContentPlaceHolder ID="DocumentBegin" runat="server" />
+    
+    <% if (Html.IsStakeholderMsdnEligible())
+         {
+             Html.UseScriptModules("Presentation/Scripts/TFS/TFS.Licensing.Stakeholder");
+         }
+    %>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="HeadBegin" runat="server">
+    <asp:ContentPlaceHolder ID="HeadBegin" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="PageBegin" runat="server">
+    <asp:ContentPlaceHolder ID="PageBegin" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContentBegin" runat="server"></asp:ContentPlaceHolder>
+    <div class="hub-view <%: Html.HubViewClasses() %>">
+        <asp:ContentPlaceHolder ID="HubBegin" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="HubTitle" runat="server">
+           <asp:ContentPlaceHolder ID="HubBanner" runat="server" />
+            <div class="hub-title">
+                <asp:ContentPlaceHolder ID="HubTitleContent" runat="server"><%: Html.ContentTitle() %></asp:ContentPlaceHolder>
+            </div>
+            <div class="hub-progress pageProgressIndicator"></div>
+        </asp:ContentPlaceHolder>
+            <% if(Html.ShouldShowStakeholderWarningMessage()) { Html.StakeholderMessage(); } %>
+        <div class="hub-content">           
+            <asp:ContentPlaceHolder ID="HubContent" runat="server" />
+        </div>
+        <asp:ContentPlaceHolder ID="HubEnd" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="MainContentEnd" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="PageEnd" runat="server">
+    <asp:ContentPlaceHolder ID="PageEnd" runat="server" />
+</asp:Content>

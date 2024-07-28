@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" Inherits="Microsoft.TeamFoundation.Server.WebAccess.TfsViewMasterPage<dynamic>" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Routing" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Html" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Framework.Server" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess.Platform" %>
+<%@ Import Namespace="Microsoft.TeamFoundation.Server.WebAccess" %>
+<%@ Import Namespace="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.FeatureManagement" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<%
+    WebContext webContext = this.TfsWebContext;
+    PageContext pageContext = WebContextFactory.GetPageContext(Request.RequestContext);
+
+    Html.AddNewPlatformScriptExcludePaths();
+    Html.ViewContext.HttpContext.UseNewPlatformHost(true);
+    Html.AddBodyClass("new-platform-shim");
+    Html.AddBodyClass("fluent-icons-enabled");
+
+    var requestContext = ViewContext.RequestContext.TfsRequestContext();
+    bool useDropdownListComponent = requestContext.IsFeatureEnabled("VisualStudio.Services.WebPlatform.UseDropdownListComponent");
+    if (useDropdownListComponent) {
+        Html.AddBodyClass("dropdown-list-component-enabled");
+    }
+    
+    bool useRedesignedLinkComponent = requestContext.IsFeatureEnabled("VisualStudio.Services.WebPlatform.UseRedesignedLinkComponent");
+    if (useRedesignedLinkComponent) {
+        Html.AddBodyClass("redesigned-link-component-enabled");
+    }
+
+    Html.UseCommonCSS(
+        "jQueryUI-Modified",
+        "fabric",
+        "Core",
+        "Splitter",
+        "PivotView",
+        "Site",
+        "Areas"
+    );
+
+    Html.RegisterFonts();
+
+    Html.UseCommonScriptModules(
+        "Presentation/Scripts/TFS/TFS.Host.UI",
+        "Presentation/Scripts/TFS/TFS.UI.Controls.Accessories",
+        "VSS/Error",
+        "VSS/Controls/Splitter",
+        "VSS/Controls/Menus",
+        "VSS/Contributions/PageEvents"
+    );
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<asp:ContentPlaceHolder ID="DocumentBegin" runat="server" />
+<html lang="<%: System.Globalization.CultureInfo.CurrentUICulture.Name %>" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">
+            <%: Html.HtmlPageTitle() %>
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8" />
+    <meta name="msapplication-config" content="none"/>
+    <link id="page-icon" rel="SHORTCUT ICON" href="<%:StaticResources.Content.GetLocation("icons/favicon.ico") %>"/>
+    <%:Html.NewPlatformHeadContent() %>
+    <asp:ContentPlaceHolder ID="HeadBegin" runat="server" />
+    <%:Html.RenderCSSBundles() %>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body class="<%:webContext.NavigationContext.Area %> <%: Html.BodyClasses() %>">
+    <%:Html.JavaScript("document.body.addEventListener(\"fpsStarting\", function (ev) { ev.detail.cancellationReason = \"aspxNavigation\"; window.location.href = ev.detail.href; ev.preventDefault(); });") %>
+    <div data-componentregion="page" class="new-platform-page full-size"></div>
+    <%:Html.FeatureLicenseInfo() %>
+    <%:Html.TfsAntiForgeryToken() %>
+    <%:Html.BuiltinPlugins() %>
+    <%:Html.ScriptContributions() %>
+    <%:Html.PageInit() %>
+
+    <asp:ContentPlaceHolder ID="PageBegin" runat="server" />
+    <div class="main-container hidden">
+        <div class="main">
+            <noscript>
+                <div id="no-script-message">
+                    <div class="content">
+                        <ul class="section-container">
+                            <li class="error-details">
+                                <h1><%:PlatformResources.NoScriptHeader %></h1>
+                                <p> <%:PlatformResources.NoScriptMessage %> <a href="http://support.microsoft.com/gp/howtoscript">http://support.microsoft.com/gp/howtoscript</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </noscript>
+
+            <div class="content-section">
+                <%: Html.ScriptModulesWithCallback("var Events_Page = require(\"VSS/Events/Page\"); Events_Page.getService().fire(Events_Page.CommonPageEvents.InitialScriptsLoaded);") %>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="error-section" tabindex="0"></div>
+        </div>
+    </div>
+    <%:Html.JavaScript("window.__legacyContentLoaded = true; document.addEventListener(!!window.__useAadToken ? 'NWPContentLoaded' : 'DOMContentLoaded', function() { var main = document.querySelector('.main-container'), target = document.querySelector('.new-platform-page .region-content'); if (main && target) { main.parentElement.removeChild(main); target.appendChild(main); var main = document.querySelector('.main-container'), target = document.querySelector('.new-platform-page .region-content'); if (main && target) { main.parentElement.removeChild(main); target.appendChild(main); main.classList.remove('hidden'); }} });") %>
+    <%: Html.GatherWebPerformanceTimings(new {@class = "vss-web-perf-timings"}) %>
+    <asp:ContentPlaceHolder ID="PageEnd" runat="server" />
+
+</body>
+</html>

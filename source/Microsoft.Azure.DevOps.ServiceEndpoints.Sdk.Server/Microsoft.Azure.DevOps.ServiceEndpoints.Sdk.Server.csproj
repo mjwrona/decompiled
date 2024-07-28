@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{322EE0D9-0328-431F-A37A-35A438135E0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ben.Demystifier" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Identity.Client" />
+    <Reference Include="Microsoft.InformationProtection.X509">
+      <HintPath>lib\Microsoft.InformationProtection.X509.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="YamlDotNet" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\DistributedTask\ServiceEndpointProxyHttpClient.cs" />
+    <Compile Include="AuthConfigurationConverter.cs" />
+    <Compile Include="AuthConfigurationParameters.cs" />
+    <Compile Include="AuthenticationUtility.cs" />
+    <Compile Include="AuthorizationHeaderComparer.cs" />
+    <Compile Include="AzureEndpointAuthorizer.cs" />
+    <Compile Include="AzureServiceEndpointExtensions.cs" />
+    <Compile Include="AzureEndpointCertificateAuthorizer.cs" />
+    <Compile Include="AzureEndpointConstants.cs" />
+    <Compile Include="EndpointState.cs" />
+    <Compile Include="IOidcFederationClaims.cs" />
+    <Compile Include="OidcFederationClaims.cs" />
+    <Compile Include="AzureEndpointOidcFederationAuthorizer.cs" />
+    <Compile Include="IAzureOidcFederationTokenAssertionProvider.cs" />
+    <Compile Include="AzureOidcFederationTokenAssertionProvider.cs" />
+    <Compile Include="IAzureOidcFederationAadTokenProvider.cs" />
+    <Compile Include="AzureOidcFederationAadTokenProvider.cs" />
+    <Compile Include="AzureEndpointServicePrincipalAuthorizer.cs" />
+    <Compile Include="AzureEndpointUserPrincipalAuthorizer.cs" />
+    <Compile Include="AzureRMAuthorizationHelpers.cs" />
+    <Compile Include="AzureServicePrincipalTokenProvider.cs" />
+    <Compile Include="AzureServicePrincipalTokenProviderFactory.cs" />
+    <Compile Include="AzureStorageAuthorizer.cs" />
+    <Compile Include="CertificateHelper.cs" />
+    <Compile Include="CompositeAuthorizationTokenProvider.cs" />
+    <Compile Include="CustomerIntelligenceHelper.cs" />
+    <Compile Include="IAuthenticateChallengeProvider.cs" />
+    <Compile Include="GlobalContributedFeatureStateResolver.cs" />
+    <Compile Include="IAuthorizationTokenProvider.cs" />
+    <Compile Include="ILoggerProvider.cs" />
+    <Compile Include="IProxyCredentialsProvider.cs" />
+    <Compile Include="IWwwAuthenticateHeaderParser.cs" />
+    <Compile Include="LoggerProvider.cs" />
+    <Compile Include="LoggerProviderExtensions.cs" />
+    <Compile Include="EndpointAuthorizerFactory.cs" />
+    <Compile Include="EnvironmentProxyCredentialsProvider.cs" />
+    <Compile Include="AzureStorageAccessKeyFetchFailedException.cs" />
+    <Compile Include="AzureKubeConfigFetchFailedException.cs" />
+    <Compile Include="OAuthEndpointException.cs" />
+    <Compile Include="InvalidCacheException.cs" />
+    <Compile Include="FeatureFlag.cs" />
+    <Compile Include="FrameworkAzureRmSubscriptionService.cs" />
+    <Compile Include="FrameworkOAuthConfigurationService.cs" />
+    <Compile Include="FrameworkServiceEndpointProxyService.cs" />
+    <Compile Include="FrameworkServiceEndpointService.cs" />
+    <Compile Include="FrameworkServiceEndpointTypesService.cs" />
+    <Compile Include="FrameworkVstsAadOAuthService.cs" />
+    <Compile Include="GenericEndpointAuthorizer.cs" />
+    <Compile Include="IdentityExtensions.cs" />
+    <Compile Include="IdentityServiceExtensions.cs" />
+    <Compile Include="IHttpMessageHandlerFactory.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LoggerExtensions.cs" />
+    <Compile Include="InputDescriptorComparer.cs" />
+    <Compile Include="IAzureRmSubscriptionService2.cs" />
+    <Compile Include="InternalAuthConfigurationConstants.cs" />
+    <Compile Include="InternalEndpointAuthorizer.cs" />
+    <Compile Include="InternalServiceHelper.cs" />
+    <Compile Include="IOAuthConfigurationService2.cs" />
+    <Compile Include="IOAuthConfigurationSecretsHelper.cs" />
+    <Compile Include="IServiceEndpointProxyService2.cs" />
+    <Compile Include="IServiceEndpointService2.cs" />
+    <Compile Include="IServiceEndpointTypesService2.cs" />
+    <Compile Include="IVstsAadOAuthService2.cs" />
+    <Compile Include="IWebProxyProvider.cs" />
+    <Compile Include="JwtBasedOAuthAuthorizer.cs" />
+    <Compile Include="LibraryPermissions.cs" />
+    <Compile Include="LibrarySecurityProvider.cs" />
+    <Compile Include="LibraryGroupRoles.cs" />
+    <Compile Include="LibraryGroupRoleConstants.cs" />
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="ServiceEndpointExecutionData.cs" />
+    <Compile Include="ServiceEndpointExecutionRecord.cs" />
+    <Compile Include="ServiceEndpointExecutionRecordConverter.cs" />
+    <Compile Include="MsalAzureAccessTokenHelper.cs" />
+    <Compile Include="MustacheContextHelper.cs" />
+    <Compile Include="IServiceEndpointGuidMappingProvider.cs" />
+    <Compile Include="ServiceEndpointGuidMappingProvider.cs" />
+    <Compile Include="ServiceEndpointGuidMappingProviderCache.cs" />
+    <Compile Include="OAuthCallbackStateHelper.cs" />
+    <Compile Include="ProxyCredentialsProviderExtensions.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="ServiceEndpointDeletedEvent.cs" />
+    <Compile Include="ServiceEndpointExtensions.cs" />
+    <Compile Include="ServiceEndpointFeatureFlags.cs" />
+    <Compile Include="ServiceEndpointPartial.cs" />
+    <Compile Include="ServiceEndpointSecurity.cs" />
+    <Compile Include="ServiceEndpointPermissions.cs" />
+    <Compile Include="ServiceEndpointRoles.cs" />
+    <Compile Include="ServiceEndpointRoleNameConstants.cs" />
+    <Compile Include="CanonicalizedString.cs" />
+    <Compile Include="SharedKeyCanonicalizer.cs" />
+    <Compile Include="SystemWebProxyProvider.cs" />
+    <Compile Include="TaskWellKnownSecurityIds.cs" />
+    <Compile Include="TaskWellKnownIdentityDescriptors.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="UpgradeServiceEndpointSuccessCriteria.cs" />
+    <Compile Include="VstsAccessTokenHelper.cs" />
+    <Compile Include="UrlHelper.cs" />
+    <Compile Include="ServiceEndpointSdkResources.cs" />
+    <Compile Include="AzureContainerRegistry\AadToAcrRefreshTokenProvider.cs" />
+    <Compile Include="AzureContainerRegistry\AcrAccessTokenProvider.cs" />
+    <Compile Include="AzureContainerRegistry\AcrRequestEvaluator.cs" />
+    <Compile Include="AzureContainerRegistry\AuthenticateOptionsParser.cs" />
+    <Compile Include="AzureContainerRegistry\AuthenticateChallengeProvider.cs" />
+    <Compile Include="AzureContainerRegistry\AuthenticationChallenge.cs" />
+    <Compile Include="AzureContainerRegistry\IAuthenticateOptionsParser.cs" />
+    <Compile Include="AzureContainerRegistry\IRequestEvaluator.cs" />
+    <Compile Include="AzureContainerRegistry\WwwAuthenticateHeaderParser.cs" />
+    <Compile Include="DataAccess\CustomSqlError.cs" />
+    <Compile Include="DataAccess\ServiceEndpointExecutionRecordBinder.cs" />
+    <Compile Include="Kubernetes\KubernetesAuthorizationParameters.cs" />
+    <Compile Include="Kubernetes\KubernetesClientCertAuthParameters.cs" />
+    <Compile Include="Kubernetes\KubernetesTokenBasedAuthParameters.cs" />
+    <Compile Include="Kubernetes\KubernetesBasicAuthParameters.cs" />
+    <Compile Include="Kubernetes\KubernetesAuthorizationType.cs" />
+    <Compile Include="Kubernetes\KubernetesAuthorizer.cs" />
+    <Compile Include="Kubernetes\KubernetesEndpointConstants.cs" />
+    <Compile Include="Kubernetes\KubernetesEndpointState.cs" />
+    <Compile Include="Kubernetes\KubernetesEndpointOperation.cs" />
+    <Compile Include="Kubernetes\KubernetesData.cs" />
+    <Compile Include="Kubernetes\KubernetesHelper.cs" />
+    <Compile Include="Kubernetes\KubernetesHttpClient.cs" />
+    <Compile Include="Kubernetes\KubeConfigModel.cs" />
+    <Compile Include="Kubernetes\KubernetesResult`1.cs" />
+    <Compile Include="Jira\JiraData.cs" />
+    <Compile Include="Jira\JiraAuthentication.cs" />
+    <Compile Include="Jira\JiraAuthScheme.cs" />
+    <Compile Include="Jira\JiraConstants.cs" />
+    <Compile Include="Jira\JiraHttpClient.cs" />
+    <Compile Include="Jira\JiraHttpClientFactory.cs" />
+    <Compile Include="Jira\JiraHttpClientRequester.cs" />
+    <Compile Include="Jira\JiraHttpRequesterFactory.cs" />
+    <Compile Include="Jira\JiraJsonWebTokenHelper.cs" />
+    <Compile Include="Jira\JiraResult.cs" />
+    <Compile Include="Jira\JiraResult`1.cs" />
+    <Compile Include="Jira\JiraServiceEndpointExtensions.cs" />
+    <Compile Include="WebApiProxy\HttpRequestProxyFactory.cs" />
+    <Compile Include="WebApiProxy\HttpRequestProxy.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServiceEndpointSdkResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

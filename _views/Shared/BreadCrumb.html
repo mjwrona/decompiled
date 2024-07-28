@@ -1,0 +1,12 @@
+<script id="bread-crumb-template" type="text/html">
+    <span class="bread-crumb-container" data-bind="foreach: members, event: { keydown: breadcrumbKeyHandler}">
+        <!-- ko if: url -->
+        <a class="member" data-bind="text: text, attr: {href: url}"></a>
+        <!-- /ko -->
+        <!-- ko if: !url -->
+        <span class="member" data-bind="text: text"></span>
+        <!-- /ko -->  
+        <!-- Do not draw seprarator after the last member -->
+        <span class="separator" data-bind="if: $index() < $parent.members.length-1">></span>
+    </span>
+</script>

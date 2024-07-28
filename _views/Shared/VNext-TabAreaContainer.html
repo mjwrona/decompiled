@@ -1,0 +1,107 @@
+<div class="tab-area-container">
+    <div class="tabs-control-content rendering">
+        <i class="tab-collection-bigspinner bowtie-icon bowtie-spinner centered"> </i>
+        <div class="tab-collection-container" role="navigation">
+            <div class="tab-collection">
+                <ul class="tab-collection-left" role="tablist">
+                    <a class="tab VS gallery-element-focus-style-dark" role="tab"
+                       data-bind="attr: { href: $data.VS_Link, 'aria-controls': $data.getTabAriaControls($data.vsTabName), 'aria-selected': $data.getAriaSelected($data.vsTabName), tabindex: $data.getTabIndex($data.vsTabName)}, hasFocus: isVSTabFocused, click: $data.clickTab($data.vsTabName), event: { keydown: $data.keyDownTab($data.vsTabName) }, css: { tabactive: $data.currentTab() === $data.vsTabName }">
+                        <div class="header" data-bind="title: VS_Header, text: VS_Header"></div>
+                    </a>
+                    <!-- ko if: showVSForMac -->
+                    <a class="tab VSForMac gallery-element-focus-style-dark" role="tab"
+                       data-bind="attr: { href: $data.VSForMac_Link, 'aria-controls': $data.getTabAriaControls($data.vsForMacTabName), 'aria-selected': $data.currentTab() === $data.vsForMacTabName, tabindex: $data.getTabIndex($data.vsForMacTabName)}, hasFocus: isVSForMacTabFocused, click: $data.clickTab($data.vsForMacTabName), event: { keydown: $data.keyDownTab($data.vsForMacTabName) }, css: { tabactive: $data.currentTab() === $data.vsForMacTabName }">
+                        <div class="header" data-bind="title: VSForMac_Header, text: VSForMac_Header"></div>
+                    </a>
+                    <a class="tab VSCode gallery-element-focus-style-dark" role="tab"
+                       data-bind="attr: { href: $data.VSCode_Link, 'aria-controls': $data.getTabAriaControls($data.vsCodeTabName), 'aria-selected': $data.currentTab() === $data.vsCodeTabName, tabindex: $data.getTabIndex($data.vsCodeTabName)}, hasFocus: isVSCodeTabFocused, click: $data.clickTab($data.vsCodeTabName), event: { keydown: $data.keyDownTab($data.vsCodeTabName) }, css: { tabactive: $data.currentTab() === $data.vsCodeTabName }">
+                        <div class="header" data-bind="title: VSCode_Header, text: VSCode_Header"></div>
+                    </a>
+                    <a class="tab VSS gallery-element-focus-style-dark" role="tab"
+                       data-bind="attr: { href: $data.VSTS_Link, 'aria-controls': $data.getTabAriaControls($data.vstsTabName), 'aria-selected': $data.currentTab() === $data.vstsTabName, tabindex: $data.getTabIndex($data.vstsTabName) }, hasFocus: isVSTSTabFocused, click: $data.clickTab($data.vstsTabName), event: {  keydown: $data.keyDownTab($data.vstsTabName)}, css: { tabactive: $data.currentTab() === $data.vstsTabName }">
+                        <div class="header" data-bind="title: VSTS_Header, text: VSTS_Header"></div>
+                    </a>
+                    <!-- /ko -->
+                    <!-- ko ifnot: showVSForMac -->
+                        <!-- ko ifnot: newBranding -->
+                        <a class="tab VSS gallery-element-focus-style-dark" role="tab"
+                           data-bind="attr: { href: $data.VSTS_Link, 'aria-controls': $data.getTabAriaControls($data.vstsTabName), 'aria-selected': $data.currentTab() === $data.vstsTabName, tabindex: $data.getTabIndex($data.vstsTabName) }, hasFocus: isVSTSTabFocused, click: $data.clickTab($data.vstsTabName), event: {  keydown: $data.keyDownTab($data.vstsTabName)}, css: { tabactive: $data.currentTab() === $data.vstsTabName }">
+                        <div class="header" data-bind="title: VSTS_Header, text: VSTS_Header"></div>
+                        </a>
+                        <a class="tab VSCode gallery-element-focus-style-dark" role="tab"
+                           data-bind="attr: { href: $data.VSCode_Link, 'aria-controls': $data.getTabAriaControls($data.vsCodeTabName), 'aria-selected': $data.currentTab() === $data.vsCodeTabName, tabindex: $data.getTabIndex($data.vsCodeTabName)}, hasFocus: isVSCodeTabFocused, click: $data.clickTab($data.vsCodeTabName), event: { keydown: $data.keyDownTab($data.vsCodeTabName) }, css: { tabactive: $data.currentTab() === $data.vsCodeTabName }">
+                           <div class="header" data-bind="title: VSCode_Header, text: VSCode_Header"></div>
+                        </a>
+                        <!-- /ko -->
+                        <!-- ko if: newBranding -->
+                        <a class="tab VSCode gallery-element-focus-style-dark" role="tab"
+                           data-bind="attr: { href: $data.VSCode_Link, 'aria-controls': $data.getTabAriaControls($data.vsCodeTabName), 'aria-selected': $data.getAriaSelected($data.vsCodeTabName), tabindex: $data.getTabIndex($data.vsCodeTabName)}, hasFocus: isVSCodeTabFocused, click: $data.clickTab($data.vsCodeTabName), event: { keydown: $data.keyDownTab($data.vsCodeTabName) }, css: { tabactive: $data.currentTab() === $data.vsCodeTabName }">
+                           <div class="header" data-bind="title: VSCode_Header, text: VSCode_Header"></div>
+                        </a>                        
+                        <a class="tab VSS gallery-element-focus-style-dark" role="tab"
+                           data-bind="attr: { href: $data.VSTS_Link, 'aria-controls': $data.getTabAriaControls($data.vstsTabName), 'aria-selected': $data.getAriaSelected($data.vstsTabName), tabindex: $data.getTabIndex($data.vstsTabName) }, hasFocus: isVSTSTabFocused, click: $data.clickTab($data.vstsTabName), event: {  keydown: $data.keyDownTab($data.vstsTabName)}, css: { tabactive: $data.currentTab() === $data.vstsTabName }">
+                        <div class="header" data-bind="title: VSTS_Header, text: VSTS_Header"></div>
+                        </a>
+                        <!-- /ko -->                        
+                    <!-- /ko -->
+                    <a class="tab VSSubs gallery-element-focus-style-dark" role="tab"
+                       data-bind="attr: { href: $data.Subs_Link,  'aria-controls': $data.getTabAriaControls($data.vsSubsTabName), 'aria-selected': $data.getAriaSelected($data.vsSubsTabName), tabindex: $data.getTabIndex($data.vsSubsTabName)}, hasFocus: isVSSubsTabFocused, click: $data.clickTab($data.vsSubsTabName), event: { keydown: $data.keyDownTab($data.vsSubsTabName) }, css: { tabactive: $data.currentTab() === $data.vsSubsTabName }">
+                        <div class="header" data-bind="title: Subs_Header, text: Subs_Header"></div>
+                    </a>
+                </ul>
+                <div class="tab-collection-right">
+                    <a class="publish-extensions" target="_blank" data-bind="attr: { href: $data.getBuildYourOwnURL() }, click: $data.buildYourOwnClick(), text: BuildYourOwnText, visible: $data.currentTab() !== $data.vsSubsTabName" href="https://go.microsoft.com/fwlink/?LinkID=703826"></a>
+                    <!-- ko if: $data.showPublishExtensions -->
+                    <a class="publish-extensions" target="_blank" data-bind="attr: { href: $data.getPublishExtensionsUrl() }, click: $data.publishExtensionsClick(), text: PublishExtensionsText, visible: $data.currentTab() !== $data.vsSubsTabName"></a>
+                    <!-- /ko-->
+                </div>
+            </div>
+        </div>
+        <!-- ko if: $data.showVs2017Banner -->
+        <div class="vs-banner-bg" style="height:0px" data-bind="visible: $data.currentTab() === 'vs-tab'">
+            <div class="vs-banner-holder">
+                <div tabindex="0" class="mp-banner-search" data-bind="click: $data.clickToMarketplaceBanner(), enterkey: $data.clickToMarketplaceBanner()">
+                    <div class="vs-logo-holder"><img class="vs-logo" data-bind="attr: { src: $data.vsBannerLogoImage}" /></div>
+                    <div class="vs-announcement" data-bind="html: $data.bannerAnnouncement"></div>
+                </div>
+                <div class="mp-logo-holder"><img class="mp-logo" data-bind="attr: { src: $data.vsBannerMarketplaceImage}" /></div>
+                <div tabindex="0" class="explore-offers" data-bind="click: $data.clickToPartnerOffers(), enterkey: $data.clickToPartnerOffers()">
+                    <strong data-bind="text: $data.exploreOffers"></strong>
+                    <i class="bowtie-icon bowtie-navigate-forward-circle"></i>
+                </div>
+            </div>
+        </div>
+        <!-- /ko-->
+        <div class="tab-content" role="main">
+            <div class="searchbox-carousels-content">
+                <!-- ko -->
+                <div data-bind="component: {name: 'homepage-searchbox', params: {searchClickCallback: navigateToSearch, placeholderText: searchPlaceHolder, searchHeader: searchHeader,  isSelected: isSelected}},
+                    visible: $data.currentTab() !== 'vssubs-tab' && $data.isHosted"></div>
+                <!-- /ko -->
+
+                <div class="on-prem-page-title" data-bind="text: $data.OnPrem_Header, visible: !$data.isHosted"></div>
+
+                <!-- ko if: $data.wasActivated()["vs-tab"] === true -->
+                <div id="vs-tab-content" role="tabpanel" data-bind="component: {name: 'vs-tab-content', params: {galleryDataProvider: galleryDataProvider}},
+                    visible: $data.currentTab() === 'vs-tab', attr: { 'aria-hidden': $data.currentTab() !== 'vs-tab' }"></div>
+                <!-- /ko -->
+                <!-- ko if: $data.wasActivated()["vsformac-tab"] === true -->
+                <div id="vsformac-tab-content" role="tabpanel" data-bind="component: {name: 'vsformac-tab-content', params: {galleryDataProvider: galleryDataProvider}},
+                    visible: $data.currentTab() === 'vsformac-tab', attr: { 'aria-hidden': $data.currentTab() !== 'vsformac-tab' }"></div>
+                <!-- /ko -->
+                <!-- ko if: $data.wasActivated()["vsts-tab"] === true -->
+                <div id="vsts-tab-content" role="tabpanel" data-bind="component: {name: 'vsts-tab-content', params: {galleryDataProvider: galleryDataProvider}},
+                    visible: $data.currentTab() === 'vsts-tab', attr: { 'aria-hidden': $data.currentTab() !== 'vsts-tab' }"></div>
+                <!-- /ko -->
+                <!-- ko if: $data.wasActivated()["vscode-tab"] === true -->
+                <div id="vscode-tab-content" role="tabpanel" data-bind="component: {name: 'vscode-tab-content', params: {galleryDataProvider: galleryDataProvider}},
+                    visible: $data.currentTab() === 'vscode-tab', attr: { 'aria-hidden': $data.currentTab() !== 'vscode-tab' }"></div>
+                <!-- /ko -->
+                <!-- ko if: $data.wasActivated()["vssubs-tab"] === true -->
+                <div id="vssubs-tab-content" role="tabpanel" data-bind="component: {name: 'vssubs-tab-content', params: {galleryDataProvider: galleryDataProvider}},
+                    visible: $data.currentTab() === 'vssubs-tab', attr: { 'aria-hidden': $data.currentTab() !== 'vssubs-tab' }"></div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>

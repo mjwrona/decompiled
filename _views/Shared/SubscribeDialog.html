@@ -1,0 +1,22 @@
+<script id="subscribe-dialog-template" type="text/html">
+    <div class="unsubscribeconfirm" data-bind="ifnot: koShowConfirmationDialog()">
+        <div class="unsubscribeconfirmtext" data-bind="text: unsubscribeCompleteText"></div>
+    </div>
+    <div class="subscribedialog" data-bind="if: koShowConfirmationDialog()">
+        <div class="headercontainer" data-bind="text: unsubscribeConfirmText" ></div>
+        <hr>
+        <div class="unsubscribeinfocontainer" data-bind="text: unsubscribeInfoText"></div>
+        <div class="unsubscribecheckboxheader" data-bind="text:unsubscribeCheckBoxHeader"></div>
+            <div class="unsubscribecheckbox" data-bind="foreach: notificationsIdentifier">
+                <div>
+                    <input type="checkbox" data-bind="value: id, checked: $parent.checkedNotifications">
+                    <span data-bind="text: desc"></span>
+                </div>
+            </div>
+            <div class="buttoncontainer">
+                <a class="yesbuttonlink" data-bind="click: unsubscribeUser">
+                    <button data-bind="text: yesLinkText"></button>
+                </a>
+            </div>
+        </div>
+</script>

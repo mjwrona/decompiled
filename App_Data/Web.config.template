@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--
+        DevOps configuration settings.
+    -->
+  <!--
+        Refer http://support.microsoft.com/kb/833789. Required for Active Directory sync.
+    -->
+  <configSections>
+    <section name="system.directoryservices" type="System.DirectoryServices.SearchWaitHandler, System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </configSections>
+  <system.directoryservices>
+    <DirectorySearcher waitForPagedSearchData="true" />
+  </system.directoryservices>
+  <!-- Plugin directory path -->
+  <runtime>
+    <!-- Enable TLS 1.2 and future protocol revisions even though the application targets .NET 4.6 -->
+    <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSystemDefaultTlsVersions=false" />
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Azure.Cosmos.Client" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.31.2.0" newVersion="3.31.2.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Azure.Storage.Common" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-11.2.3.0" newVersion="11.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Azure.Storage.Blob" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-11.2.3.0" newVersion="11.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Azure.Storage.File" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-11.2.3.0" newVersion="11.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Diagnostics.DiagnosticSource" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-7.0.0.2" newVersion="7.0.0.2" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-13.0.0.0" newVersion="13.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Collections.Immutable" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="4.0.0.0-5.2.7.0" newVersion="5.2.7.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="4.0.0.0-5.2.7.0" newVersion="5.2.7.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http.WebHost" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="4.0.0.0-5.2.7.0" newVersion="5.2.7.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.OData" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.8.5.0" newVersion="5.8.5.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Edm" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.8.5.0" newVersion="5.8.5.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Spatial" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.8.5.0" newVersion="5.8.5.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Threading.Tasks.Extensions" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.2.0.1" newVersion="4.2.0.1" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="1.0.0.0-1.6.5135.21930" newVersion="1.6.5135.21930" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.9.0" newVersion="5.2.9.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Buffers" culture="neutral" publicKeyToken="cc7b13ffcd2ddd51" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.3.0" newVersion="4.0.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Memory" culture="neutral" publicKeyToken="cc7b13ffcd2ddd51" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.1.2" newVersion="4.0.1.2" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Numerics.Vectors" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" />
+        <bindingRedirect oldVersion="0.0.0.0-4.1.4.0" newVersion="4.1.4.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="RuntimeContracts" publicKeyToken="3d487639874b2199" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-0.5.0.0" newVersion="0.5.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.IdentityModel.Abstractions" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.34.0.0" newVersion="6.34.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.IdentityModel.JsonWebTokens" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-6.34.0.0" newVersion="6.34.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.IdentityModel.Logging" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-6.34.0.0" newVersion="6.34.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.IdentityModel.Protocols.SignedHttpRequest" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.34.0.0" newVersion="6.34.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.IdentityModel.Tokens" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-6.34.0.0" newVersion="6.34.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Azure.Documents.Client" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.9.2.0" newVersion="2.9.2.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin.Security" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Text.Json" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        <!-- Microsoft.Graph.Core is pulling 6.0.0.7 -->
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.7" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Text.Encodings.Web" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Reflection.Metadata" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.ApplicationInsights" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.21.0.429" newVersion="2.21.0.429" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Bcl.AsyncInterfaces" culture="neutral" publicKeyToken="cc7b13ffcd2ddd51" />
+        <bindingRedirect oldVersion="0.0.0.0-7.0.0.0" newVersion="7.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Threading.Channels" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-7.0.0.0" newVersion="7.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+    <UseRandomizedStringHashAlgorithm enabled="1" />
+  </runtime>
+  <system.net>
+    <defaultProxy useDefaultCredentials="true" />
+  </system.net>
+  <system.webServer>
+    <security>
+      <requestFiltering allowHighBitCharacters="true">
+        <hiddenSegments>
+          <remove segment="_tfs_resources" />
+          <add segment="_tfs_resources" />
+          <remove segment="web.config.sav" />
+          <add segment="web.config.sav" />
+        </hiddenSegments>
+        <requestLimits maxUrl="3000" maxQueryString="3000" maxAllowedContentLength="2000000000" />
+        <fileExtensions allowUnlisted="true">
+          <clear />
+        </fileExtensions>
+        <verbs>
+          <remove verb="GET" />
+          <remove verb="HEAD" />
+          <remove verb="POST" />
+          <remove verb="PATCH" />
+          <remove verb="PUT" />
+          <remove verb="DELETE" />
+          <remove verb="OPTIONS" />
+          <add verb="GET" allowed="true" />
+          <add verb="HEAD" allowed="true" />
+          <add verb="POST" allowed="true" />
+          <add verb="PATCH" allowed="true" />
+          <add verb="PUT" allowed="true" />
+          <add verb="DELETE" allowed="true" />
+          <add verb="OPTIONS" allowed="true" />
+        </verbs>
+      </requestFiltering>
+    </security>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="ScriptModule" />
+      <remove name="UrlRoutingModule" />
+      <remove name="WebDAVModule" />
+      <remove name="TfsDefaultCollectionRoutingModule" />
+      <remove name="UrlHostResolutionModule" />
+      <remove name="TeamFoundationModule" />
+      <remove name="WebAccessModule" />
+      <remove name="ErrorEventModule" />
+      <remove name="VssPerformanceModule" />
+      <remove name="VssfAuthenticationModule" />
+      <remove name="OAuth2AuthenticationModule" />
+      <remove name="VssfAuthenticationModule" />
+      <remove name="FrameworkBasicAuthenticationModule" />
+      <add name="ErrorEventModule" type="Microsoft.TeamFoundation.Framework.Server.ErrorEventModule" />
+      <add name="VssPerformanceModule" type="Microsoft.TeamFoundation.Framework.Server.VssPerformanceModule" preCondition="managedHandler" />
+      <add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="UrlRoutingModule" type="System.Web.Routing.UrlRoutingModule, System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="UrlHostResolutionModule" type="Microsoft.TeamFoundation.Framework.Server.UrlHostResolutionModule" preCondition="managedHandler" />
+      <add name="StaticContentDetectionModule" type="Microsoft.TeamFoundation.Framework.Server.StaticContentDetectionModule" preCondition="managedHandler" />
+      <add name="TfsDefaultCollectionRoutingModule" type="Microsoft.TeamFoundation.Server.Core.TfsDefaultCollectionRoutingModule" preCondition="managedHandler" />
+      <add name="VssfAuthenticationModule" type="Microsoft.TeamFoundation.Framework.Server.VssfAuthenticationModule" preCondition="managedHandler" />
+      <add name="OAuth2AuthenticationModule" type="Microsoft.TeamFoundation.Framework.Server.OAuth2AuthenticationModule" preCondition="managedHandler" />
+      <add name="FrameworkBasicAuthenticationModule" type="Microsoft.TeamFoundation.Framework.Server.FrameworkBasicAuthenticationModule" preCondition="managedHandler" />
+      <add name="TeamFoundationModule" type="Microsoft.TeamFoundation.Framework.Server.TeamFoundationModule" />
+      <add name="WebAccessModule" type="Microsoft.TeamFoundation.Server.WebAccess.WebAccessModule" />
+    </modules>
+    <handlers>
+      <!-- Handle mapping old asmx files to the proper handler classes -->
+      <remove name="ProxyDownloadHandler" />
+      <remove name="MethodologyDownloadHandler1" />
+      <remove name="MethodologyDownloadHandler2" />
+      <remove name="MethodologyUploadHandler1" />
+      <remove name="MethodologyUploadHandler2" />
+      <add verb="*" path="VersionControl/V1.0/item.asmx" name="ProxyDownloadHandler" type="Microsoft.TeamFoundation.Server.Core.DownloadHandler" />
+      <add verb="*" path="Services/v1.0/methodology.asmx" name="MethodologyDownloadHandler1" type="Microsoft.TeamFoundation.Integration.Server.MethodologyDownloadHandler" />
+      <add verb="*" path="Services/methodology.asmx" name="MethodologyDownloadHandler2" type="Microsoft.TeamFoundation.Integration.Server.MethodologyDownloadHandler" />
+      <add verb="*" path="Services/v1.0/methodologyUpload.asmx" name="MethodologyUploadHandler1" type="Microsoft.TeamFoundation.Integration.Server.MethodologyUploadHandler" />
+      <add verb="*" path="Services/methodologyUpload.asmx" name="MethodologyUploadHandler2" type="Microsoft.TeamFoundation.Integration.Server.MethodologyUploadHandler" />
+      <remove name="HttpRemotingHandlerFactory-soap-Integrated-4.0" />
+      <remove name="HttpRemotingHandlerFactory-soap-ISAPI-4.0_64bit" />
+      <remove name="HttpRemotingHandlerFactory-soap-ISAPI-4.0_32bit" />
+      <remove name="WebServiceHandlerFactory-Integrated" />
+      <remove name="ScriptHandlerFactory" />
+      <remove name="ScriptHandlerFactoryAppServices" />
+      <remove name="ScriptResource" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="UrlRoutingHandler" />
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="UrlRoutingHandler" preCondition="integratedMode" verb="*" path="UrlRouting.axd" type="System.Web.HttpForbiddenHandler, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </handlers>
+    <!-- Turn off dynamicCompressionBeforeCache since it causes chunked transfer-encoding responses from getting gzipped. -->
+    <urlCompression doDynamicCompression="true" dynamicCompressionBeforeCache="false" doStaticCompression="true" />
+    <httpProtocol>
+      <customHeaders>
+        <!--
+          P3P Compact Policy
+          This is required to allow the end-user's browser to automatically negotiate the acceptance of cookies.
+          Tokens references: http://compactprivacypolicy.org/compact_token_reference.htm
+        -->
+        <!-- Remove custom header before adding it, otherwise the site will not start if this header is defined in machine.config -->
+        <remove name="P3P" />
+        <add name="P3P" value="CP=&quot;CAO DSP COR ADMa DEV CONo TELo CUR PSA PSD TAI IVDo OUR SAMi BUS DEM NAV STA UNI COM INT PHY ONL FIN PUR LOC CNT&quot;" />
+        <!-- Make sure that git-lfs is using NTLM. -->
+        <remove name="Lfs-Authenticate" />
+        <add name="Lfs-Authenticate" value="NTLM" />
+        <!-- Prevent MIME sniffing - see http://quality/QF.web/Details.aspx?doc=be330ea8-e71b-469f-8092-00b41c5903f4 -->
+        <remove name="X-Content-Type-Options" />
+        <add name="X-Content-Type-Options" value="nosniff" />
+      </customHeaders>
+    </httpProtocol>
+    <staticContent>
+      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="365.00:00:00" />
+      <!--
+        The svg mime-type is defined in IIS 8 and future versions, earlier versions do not have this defined,
+        remove and add to ensure that this works whether mime type is defined or not
+      -->
+      <remove fileExtension=".svg" />
+      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+    </staticContent>
+  </system.webServer>
+  <system.web>
+    <!-- ASP.NET runtime settings.
+            Request timeout - This value specifies the maximum time a server request is
+                 allowed to run before it is terminated by ASP.NET
+            Request length - the maximum request size that ASP.NET will accept.
+            encoderType - plugs in TFS custom HttpEncoder that is based on AntiXSS library.
+        -->
+    <httpRuntime requestPathInvalidCharacters="&lt;,&gt;,*,%,\,?" targetFramework="4.8" executionTimeout="3600" maxRequestLength="2000000" maxQueryStringLength="3000" requestValidationMode="2.0" maxUrlLength="2048" relaxedUrlToFileSystemMapping="true" encoderType="System.Web.Security.AntiXss.AntiXssEncoder" />
+    <!--  DYNAMIC DEBUG COMPILATION
+          Set compilation debug="true" to enable ASPX debugging.  Otherwise, setting this value to
+          false will improve runtime performance of this application.
+          Set compilation debug="true" to insert debugging symbols (.pdb information)
+          into the compiled page. Because this creates a larger file that executes
+          more slowly, you should set this value to true only when debugging and to
+          false at all other times. For more information, refer to the documentation about
+          debugging ASP.NET files.
+        -->
+    <compilation defaultLanguage="c#" explicit="true" debug="false" batch="true" targetFramework="4.8">
+      <assemblies>
+        <add assembly="System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+      </assemblies>
+      <buildProviders>
+        <remove extension=".svc" />
+      </buildProviders>
+    </compilation>
+    <!--  CUSTOM ERROR MESSAGES
+            Set customErrors mode="On" or "RemoteOnly" to enable custom error messages,
+            "Off" to disable.  Add <error> tags for each of the errors you want to handle.
+
+            "On" Always display custom (friendly) messages.
+            "Off" Always display detailed ASP.NET error information.
+            "RemoteOnly" Display custom (friendly) messages only to users not running
+               on the local Web server. This setting is recommended for security purposes, so
+               that you do not display application detail information to remote clients.
+        -->
+    <customErrors mode="On" />
+    <!--  AUTHENTICATION
+            This section sets the authentication policies of the application. Possible modes
+            are "Windows", "Forms", "Passport" and "None"
+              "None" No authentication is performed.
+              "Windows" IIS performs authentication (Basic, Digest, or Integrated Windows)
+                  according to its settings for the application. Anonymous access must be
+                  disabled in IIS.
+              "Forms" You provide a custom form (Web page) for users to enter their credentials,
+                  and then you authenticate them in your application. A user credential token
+                  is stored in a cookie.
+              "Passport" Authentication is performed via a centralized authentication service
+                 provided by Microsoft that offers a single logon and core profile services
+                 for member sites.
+        -->
+    <authentication mode="Windows" />
+    <!-- Disable Identity Impersonation -->
+    <identity impersonate="false" />
+    <!--  AUTHORIZATION
+            This section sets the authorization policies of the application. You can allow
+            or deny access to application resources by user or role. Wildcards: "*" means
+            everyone, "?" means anonymous (unauthenticated) users.
+        -->
+    <authorization>
+      <allow users="*" />
+      <!-- Allow all users -->
+      <!--
+                  <allow     users="[comma separated list of users]"
+                             roles="[comma separated list of roles]"/>
+                  <deny      users="[comma separated list of users]"
+                             roles="[comma separated list of roles]"/>
+            -->
+    </authorization>
+    <!--  APPLICATION-LEVEL TRACE LOGGING
+            Application-level tracing enables trace log output for every page within an
+            application.  Set trace enabled="true" to enable application trace logging.
+            If pageOutput="true", the trace information will be displayed at the bottom
+            of each page.  Otherwise, you can view the application trace log by browsing
+            the "trace.axd" page from your web application root.
+        -->
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true" />
+    <!--  SESSION STATE SETTINGS
+            By default ASP.NET uses cookies to identify which requests belong to a
+            particular session. If cookies are not available, a session can be tracked
+            by adding a session identifier to the URL.
+            To disable cookies, set sessionState cookieless="true".
+        -->
+    <sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;Trusted_Connection=yes" cookieless="false" timeout="20" />
+    <!--  GLOBALIZATION
+            This section sets the globalization settings of the application.
+        -->
+    <globalization fileEncoding="utf-8" requestEncoding="utf-8" responseEncoding="utf-8" />
+    <webServices>
+      <protocols>
+        <remove name="HttpPost" />
+        <remove name="HttpGet" />
+      </protocols>
+      <soapExtensionTypes>
+        <add type="Microsoft.TeamFoundation.Server.Core.VssfSoapExtension, Microsoft.TeamFoundation.Server.Core" priority="1" group="0"/>
+      </soapExtensionTypes>
+    </webServices>
+    <!-- need to force the level as full trust since we may be installing
+             to a web site that runs at a lower trust level (like WSS) -->
+    <trust level="Full" originUrl="" />
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      </controls>
+      <namespaces>
+        <add namespace="System.Web.Mvc" />
+        <add namespace="System.Web.Mvc.Ajax" />
+        <add namespace="System.Web.Mvc.Html" />
+        <add namespace="System.Web.Routing" />
+        <add namespace="Microsoft.TeamFoundation.Server.WebAccess" />
+      </namespaces>
+    </pages>
+    <caching>
+      <outputCacheSettings>
+        <outputCacheProfiles>
+          <add name="JsResourceStrings" duration="3600" varyByParam="*" location="Client" />
+          <add name="BundleContent" duration="31536000" />
+          <add name="Default" duration="3600" varyByParam="*" location="Client" />
+          <add name="NoCache" duration="0" varyByParam="None" location="Any" noStore="true" />
+        </outputCacheProfiles>
+      </outputCacheSettings>
+    </caching>
+    <!-- [SuppressMessage("Microsoft.Security", "CS002:SecretInNextLine")] -->
+    <machineKey validationKey="@VIEW_STATE_VALIDATION_KEY@" decryptionKey="@VIEW_STATE_DECRYPTION_KEY@" validation="HMACSHA256" />
+  </system.web>
+  <system.codedom>
+    <compilers>
+      <!--
+            Use Roslyn compiler since it is much faster than builtin one.
+            See http://blogs.msdn.com/b/webdev/archive/2014/05/12/enabling-the-net-compiler-platform-roslyn-in-asp-net-applications.aspx
+        -->
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:6 /nowarn:1659;1699;1701;1702" />
+    </compilers>
+  </system.codedom>
+  <appSettings>
+    <!--
+          This switch tells ASP.NET to use the new asynchronous pipeline
+          which handles tasks properly.  This avoids potential issues such
+          as request deadlocking.
+      -->
+    <remove key="aspnet:UseTaskFriendlySynchronizationContext" />
+    <add key="sslOnly" value="@REDIRECT_HTTP_TO_HTTPS@" />
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
+    <remove key="aspnet:MaxConcurrentCompilations" />
+    <add key="aspnet:MaxConcurrentCompilations" value="0" />
+    <add key="applicationSettingsReader" value="Microsoft.TeamFoundation.Framework.Server.WebApplicationSettings, Microsoft.TeamFoundation.Framework.Server, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <add key="applicationDatabase" value="@CONFIGURATION_DB_CONNECTION_STRING@" />
+    <!-- This is necessary to use the WIT client from inside of the test management server -->
+    <add key="WorkItemTrackingCacheRoot" value="@CACHEROOT@" />
+    <!-- Application Tier file cache folder, used by the AT proxy and other components as a file system cache -->
+    <add key="dataDirectory" value="@FILE_CACHE_FOLDER@" />
+    <!--
+          This switch determines whether tracing is captured to a file
+          (true) or not (false). Pay attention to the trace switches in
+          the system.diagnostics section; those switches govern the types
+          and amount of information collected.
+      -->
+    <add key="traceWriter" value="false" />
+    <!--
+          This switch determines the directory where trace output is placed.
+          Trace files are named as Month-Day-Year.Hour-Minute based on the
+          time that they're created. If a file exists with the same name, it
+          is appended to; otherwise, a new file with that name will be created.
+          Note that Month, Day, Hour, and Minute are represented as two digit quantities (and
+          hours are expressed in 24-hour format. Year is expressed as a four
+          digit number. Environment variables will be expanded before the
+          file is created or opened (if it already exists).
+          Here are a few examples:
+                    Date/Time             File name
+               3/14/2005 12:48:05 PM    03142005.1248
+               10/7/2005 02:48:05 AM    10072005.0248
+                4/7/2005 10:37:05 PM    04072005.2237
+
+          Note that %TEMP% is usually %WINDIR%\Temp.
+      -->
+    <add key="traceDirectoryName" value="%TEMP%\\TFLogFiles" />
+    <!--
+          This is the guid that the application database was stamped with. It
+          allows us to verify that we are talking to the correct database.
+      -->
+    <add key="applicationId" value="00000000-0000-0000-0000-000000000000" />
+    <add key="staticContentVersion" value="Dev19.M235.2" />
+    <!--
+        The Web API version specifies the version\service level Web Access API
+        which includes AJAX/REST and any modal dialogs (e.g. column options).  Any
+        action where the controller is api (_api).
+
+        Note: If there is a conflict in the WebApiVersion when checking in you need to
+        coordinate with the person who made the other change.
+
+        Be sure to update the azure web.config as needed too
+      -->
+    <add key="WebApiVersion" value="5" />
+    <!-- Avoid the performance hit of OWIN automatic application startup since we do not use this model -->
+    <add key="owin:AutomaticAppStartup" value="false" />
+  </appSettings>
+</configuration>

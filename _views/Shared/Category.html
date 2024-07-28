@@ -1,0 +1,129 @@
+<script id="category-control-template" type="text/html">
+    <div class="category-container">
+        <div class="filters-container">
+            <div class="gallery-centered-content" role="navigation">
+                <!-- ko if: !isHosted -->
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="navigate-back-container">
+                                                <a data-bind="attr: { href: _koExtensionsUrl }">
+                                                    <div class="extension-url">
+                                                        <span class="bowtie-icon bowtie-arrow-left"></span>
+                                                        <span data-bind="text: extensionsLinkText"></span>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <div class="filter-control-container"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /ko -->
+                <!-- ko if: isHosted -->
+                <table>
+                    <tbody class="tab-collection">
+                        <tr class="tab-collection-left" role="tablist">
+                            <td class="tab VS gallery-element-focus-style-dark" role="tab"
+                                data-bind="click: $data.vsTabClick(), hasfocus: isVSTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vsTabName), 'aria-selected': $data.getAriaSelected($data.vsTabName), tabindex: $data.getTabIndex($data.vsTabName) }, event: { keydown: $data.vsTabKeyDown() }, css: { tabactive: $data.isTabActive($data.vsTabName) }">
+                                <div class="header" data-bind="title: VS_Header, text: VS_Header"></div>
+                            </td>
+                            <!-- ko if: showVSForMac -->
+                                <td class="tab VSForMac gallery-element-focus-style-dark" role="tab"
+                                data-bind="click: $data.vsformacTabClick(), hasfocus: isVSForMacTabFocused, attr: { 'aria-controls':  $data.getAriaControls($data.vsForMacTabName), 'aria-selected': $data.getAriaSelected($data.vsForMacTabName), tabindex: $data.getTabIndex($data.vsForMacTabName) }, event: { keydown: vsForMacTabKeyDown() }, css: { tabactive: $data.isTabActive($data.vsForMacTabName) }">
+                                    <div class="header" data-bind="title: VSForMac_Header, text: VSForMac_Header"></div>
+                                </td>
+                                <td class="tab VSCode gallery-element-focus-style-dark" role="tab"
+                                    data-bind="click: $data.vsCodeTabClick(), hasfocus: isVSCodeTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vsCodeTabName), 'aria-selected': $data.getAriaSelected($data.vsCodeTabName), tabindex: $data.getTabIndex($data.vsCodeTabName) }, event: { keydown: $data.vsCodeTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vsCodeTabName) }">
+                                    <div class="header" data-bind="title: VSCode_Header, text: VSCode_Header"></div>
+                                </td>
+                                <td class="tab VSS gallery-element-focus-style-dark" role="tab"
+                                    data-bind="click: $data.vstsTabClick(), hasfocus: isVSTSTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vstsTabName), 'aria-selected': $data.getAriaSelected($data.vstsTabName), tabindex: $data.getTabIndex($data.vstsTabName) }, event: { keydown: $data.vstsTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vstsTabName) }">
+                                    <div class="header" data-bind="title: VSTS_Header, text: VSTS_Header"></div>
+                                </td>
+                            <!-- /ko -->
+                            <!-- ko ifnot: showVSForMac -->
+                                <!-- ko ifnot: newBranding -->
+                                    <td class="tab VSS gallery-element-focus-style-dark" role="tab"
+                                        data-bind="click: $data.vstsTabClick(), hasfocus: isVSTSTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vstsTabName), 'aria-selected': $data.getAriaSelected($data.vstsTabName), tabindex: $data.getTabIndex($data.vstsTabName) }, event: { keydown: $data.vstsTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vstsTabName) }">
+                                        <div class="header" data-bind="title: VSTS_Header, text: VSTS_Header"></div>
+                                    </td>
+                                    <td class="tab VSCode gallery-element-focus-style-dark" role="tab"
+                                        data-bind="click: $data.vsCodeTabClick(), hasfocus: isVSCodeTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vsCodeTabName), 'aria-selected': $data.getAriaSelected($data.vsCodeTabName), tabindex: $data.getTabIndex($data.vsCodeTabName) }, event: { keydown: $data.vsCodeTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vsCodeTabName) }">
+                                        <div class="header" data-bind="title: VSCode_Header, text: VSCode_Header"></div>
+                                    </td>
+                                <!-- /ko -->
+                                <!-- ko if: newBranding -->
+                                    <td class="tab VSCode gallery-element-focus-style-dark" role="tab"
+                                        data-bind="click: $data.vsCodeTabClick(), hasfocus: isVSCodeTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vsCodeTabName), 'aria-selected': $data.getAriaSelected($data.vsCodeTabName), tabindex: $data.getTabIndex($data.vsCodeTabName) }, event: { keydown: $data.vsCodeTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vsCodeTabName) }">
+                                        <div class="header" data-bind="title: VSCode_Header, text: VSCode_Header"></div>
+                                    </td>
+                                    <td class="tab VSS gallery-element-focus-style-dark" role="tab"
+                                        data-bind="click: $data.vstsTabClick(), hasfocus: isVSTSTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vstsTabName), 'aria-selected': $data.getAriaSelected($data.vstsTabName), tabindex: $data.getTabIndex($data.vstsTabName) }, event: { keydown: $data.vstsTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vstsTabName) }">
+                                        <div class="header" data-bind="title: VSTS_Header, text: VSTS_Header"></div>
+                                    </td>
+                                <!-- /ko -->
+                            <!-- /ko -->
+                            <td class="tab VSSubs gallery-element-focus-style-dark" role="tab"
+                                data-bind="click: $data.vsSubTabClick(), hasfocus: isVSSubsTabFocused, attr: { 'aria-controls': $data.getAriaControls($data.vsSubsTabName), 'aria-selected': $data.getAriaSelected($data.vsSubsTabName), tabindex: $data.getTabIndex($data.vsSubsTabName)}, event: { keydown: $data.vsSubTabKeyDown() }, css: { tabactive:  $data.isTabActive($data.vsSubsTabName) }">
+                                <div class="header" data-bind="title: Subs_Header, text: Subs_Header"></div>
+                            </td>
+                        </tr>
+                        <tr class="tab-collection-right tab-right">
+                            <td class="gallery-element-focus-style-dark" tabindex="-1">
+                                <a id="publish-extensions" class="publish-extensions" target="_blank" data-bind="attr: { href: $data.getBuildYourOwnURL() }, click: $data.buildYourOwnLinkClick(), text: BuildYourOwnText" href="https://go.microsoft.com/fwlink/?LinkID=703826"></a>
+                                <!-- ko if: $data.showPublishExtensions -->
+                                <a class="publish-extensions" target="_blank" data-bind="attr: { href: $data.getPublishExtensionsUrl() }, click: $data.publishExtensionsClick(), text: PublishExtensionsText"></a>
+                                <!-- /ko -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /ko -->
+            </div>
+        </div>
+        <div id="page-content" class="category-items-container gallery-centered-content" role="main">
+            <!-- ko if: isHosted -->
+            <div class="searchbar-container" data-bind="visible: isHosted"></div>
+            <!-- /ko -->
+            <div class="categorized-list gallery-item-cluster clearfix" data-bind="attr: {id: categoryListId, role: categoryListRole}">
+                <div class="header-container">
+                    <div class="section-header gallery-element-focus-style-light name">
+                        <!-- ko if: !isHosted && _koSearchQueryOrCategoryHeader -->
+                        <span class="query-category" data-bind="text: _koSearchQueryOrCategoryHeader"></span>
+                        <!-- /ko -->
+                        <!-- ko if: _koResultsFoundText -->
+                        <span role="heading" aria-level="2" class="results-found" aria-live="assertive" data-bind="text: _koResultsFoundText, visible: isHosted"></span>
+                        <!-- /ko -->
+                    </div>
+                    <div class="filters-container" data-bind="visible: _koIsShowFilterControl">
+                        <div class="filter-control-container"></div>
+                    </div>
+                </div>
+                <div class="item-list-container clearfix"></div>
+                <div class="see-more-container"></div>
+                <div class="spinner-container">
+                    <i class="big-spinner bowtie-icon bowtie-spinner" data-bind="css: { centered: styleFirstSpinner }, visible: _koShowSpinner"></i>
+                </div>
+                <div class="no-results-text" data-bind="if: _koShowSuggestions">
+                    <div class="no-results-suggestion" data-bind="text: suggestionsText"></div>
+                    <ul class="suggestion-list" data-bind="foreach: suggestionsList">
+                        <li data-bind="html: $data"></li>
+                    </ul>
+                </div>
+                <div class="zero-results-container" data-bind="visible: _koShowNewZeroResultExperience">
+                    <div class="zero-results-control-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+</script>

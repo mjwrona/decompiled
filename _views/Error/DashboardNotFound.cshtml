@@ -1,0 +1,80 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@using Microsoft.TeamFoundation.Framework.Server
+@using Microsoft.TeamFoundation.Server.WebAccess
+@using Microsoft.TeamFoundation.Server.WebAccess.Presentation
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+                font-size: 14px;
+                height: 100%;
+                margin: 0;
+                background-color: #fff;
+            }
+
+            a {
+                color: #007ACC;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .header {
+                background-color: #0078d4;
+                color: #fff;
+                height: 40px;
+            }
+
+            .header .logo {
+                height: 20px;
+                margin: 9px 5px 0 9px;
+            }
+
+            .header .product-name {
+                vertical-align: top;
+                padding-top: 10px;
+                display: inline-block;
+            }
+
+            .content {
+                margin: 10%;
+                text-align: center;
+            }
+
+            .robot {
+                margin: 10px;
+                max-width: 200px;
+            }
+
+            .error-message {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <span>
+                <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABMklEQVR4Xu3UrUtDYRTH8eeMweCGccF/YNFNNmw2NZpMiyYVtKhgEIsvYQwmGGwTTIOlLQgWwe5AxffgWzBZLJsYRMTHb/DCZduzHbzVH3w4cOD8ynO5pl+stSnswTOKxKDJDE4pHfpzIcc+FljswyCDE3bTvQqlrUQYY5hFHgnHXRXzIvIeukshFxQlsIonaPKILZRxjLfgICgsOw6/cI0KljCK5O8NOhPHFJ1z+MAVLnGOC9yICHt94tiFQYnjTRMxMXhQRF8YPf+F4yji01qbgWdIZBQN4BkWrzhDHdtYxCSG4ff6sKWtNMdoKD6lFl6Qdv0cwqV5Rg0Eet9Y7ngUEakzCjB4wK2irIkJbndcr7yBAzREJMtMY91Rfo8Ryo76PVISK132g1jDHQ7hh+9+AMwVLZmudBWFAAAAAElFTkSuQmCC" />
+            </span>
+            <span class="product-name">@PlatformResources.TeamFoundationServiceName</span>
+        </div>
+        <div class="content">
+        <img class="robot" src=@StaticResources.Versioned.Content.GetLocation("general-robot-errorcode-404.png") />
+            <div class="error-summary">
+                <h3 class="error-message">@PresentationResources.DashboardNotFound</h3>
+                <div class="error-details">
+                    <p>@PresentationResources.DashboardNotFoundSystemNotBroken</p>
+                    <p>@PresentationResources.DashboardNotFoundDashboardMayHaveExisted</p>
+                    <a href=https://go.microsoft.com/fwlink/?linkid=872902 target=_blank>@PresentationResources.MSTeamsVSTSConfig_DashboardLinkText</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.ActiveDirectory.GraphClient.FirstParty.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4F14FAB-2433-4722-A533-2A02E85E7EB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.ActiveDirectory.GraphClient.FirstParty</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.ActiveDirectory.GraphClient</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlternativeSecurityIdentifierType.cs" />
+    <Compile Include="DirectoryFeature.cs" />
+    <Compile Include="GraphConnection.cs" />
+    <Compile Include="CredentialList.cs" />
+    <Compile Include="InvitationTicket.cs" />
+    <Compile Include="AppRole.cs" />
+    <Compile Include="OAuth2Permission.cs" />
+    <Compile Include="AppMetadata.cs" />
+    <Compile Include="AppMetadataEntry.cs" />
+    <Compile Include="DeviceKey.cs" />
+    <Compile Include="LicenseAssignment.cs" />
+    <Compile Include="ServicePrincipalAuthenticationPolicy.cs" />
+    <Compile Include="SelfServePasswordResetPolicy.cs" />
+    <Compile Include="KeyValue.cs" />
+    <Compile Include="LogonIdentifier.cs" />
+    <Compile Include="SearchableDeviceKey.cs" />
+    <Compile Include="SelfServePasswordResetData.cs" />
+    <Compile Include="IdentityInfo.cs" />
+    <Compile Include="GuestTenantDetail.cs" />
+    <Compile Include="GraphObject.cs" />
+    <Compile Include="DirectoryObject.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="ApplicationRef.cs" />
+    <Compile Include="AdministrativeUnit.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="DirectoryObjectReference.cs" />
+    <Compile Include="DirectoryRole.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Policy.cs" />
+    <Compile Include="ServiceInfo.cs" />
+    <Compile Include="ServicePrincipal.cs" />
+    <Compile Include="StubDirectoryObject.cs" />
+    <Compile Include="TenantDetail.cs" />
+    <Compile Include="EnabledFeature.cs" />
+    <Compile Include="LoginTenantBranding.cs" />
+    <Compile Include="ScopedRoleMembership.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="GraphProperty.cs" />
+    <Compile Include="LinkProperty.cs" />
+    <Compile Include="LinkNameMap.cs" />
+    <Compile Include="PropertyNameMap.cs" />
+    <Compile Include="AadJsonConverter.cs" />
+    <Compile Include="BatchRequestItem.cs" />
+    <Compile Include="BatchResponseItem.cs" />
+    <Compile Include="ChangeTrackingCollection`1.cs" />
+    <Compile Include="ConnectionWrapper.cs" />
+    <Compile Include="EntityAttribute.cs" />
+    <Compile Include="KeyAttribute.cs" />
+    <Compile Include="LinkAttribute.cs" />
+    <Compile Include="AssignedLicense.cs" />
+    <Compile Include="KeyCredential.cs" />
+    <Compile Include="PasswordCredential.cs" />
+    <Compile Include="RequiredResourceAccess.cs" />
+    <Compile Include="ResourceAccess.cs" />
+    <Compile Include="ProvisioningError.cs" />
+    <Compile Include="AlternativeSecurityId.cs" />
+    <Compile Include="AssignedPlan.cs" />
+    <Compile Include="ProvisionedPlan.cs" />
+    <Compile Include="VerifiedDomain.cs" />
+    <Compile Include="PasswordProfile.cs" />
+    <Compile Include="LicenseUnitsDetail.cs" />
+    <Compile Include="ServicePlanInfo.cs" />
+    <Compile Include="ExtensionProperty.cs" />
+    <Compile Include="AppRoleAssignment.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="DeviceConfiguration.cs" />
+    <Compile Include="DirectoryLinkChange.cs" />
+    <Compile Include="DirectoryRoleTemplate.cs" />
+    <Compile Include="OAuth2PermissionGrant.cs" />
+    <Compile Include="SubscribedSku.cs" />
+    <Compile Include="GraphMethodAttribute.cs" />
+    <Compile Include="GraphSettings.cs" />
+    <Compile Include="KeyCredentialsHelper.cs" />
+    <Compile Include="KeyType.cs" />
+    <Compile Include="KeyUsage.cs" />
+    <Compile Include="HttpVerb.cs" />
+    <Compile Include="PagedResults`1.cs" />
+    <Compile Include="QueryParameter.cs" />
+    <Compile Include="RequestOptions.cs" />
+    <Compile Include="SerializationHelper.cs" />
+    <Compile Include="GraphException.cs" />
+    <Compile Include="AuthenticationException.cs" />
+    <Compile Include="AuthorizationException.cs" />
+    <Compile Include="BadRequestException.cs" />
+    <Compile Include="DuplicateObjectException.cs" />
+    <Compile Include="ExpiredTokenException.cs" />
+    <Compile Include="ExtendedErrorValue.cs" />
+    <Compile Include="InvalidApiVersionException.cs" />
+    <Compile Include="InvalidHeaderException.cs" />
+    <Compile Include="InvalidServicePrincipalTypeException.cs" />
+    <Compile Include="InternalServerErrorException.cs" />
+    <Compile Include="NoApplicationAssociatedException.cs" />
+    <Compile Include="ObjectNotFoundException.cs" />
+    <Compile Include="ODataError.cs" />
+    <Compile Include="ODataErrorCodeMessage.cs" />
+    <Compile Include="ODataErrorMessage.cs" />
+    <Compile Include="PageNotAvailableException.cs" />
+    <Compile Include="PropertyValidationException.cs" />
+    <Compile Include="QuotaExceededException.cs" />
+    <Compile Include="RequestThrottledException.cs" />
+    <Compile Include="ServiceUnavailableException.cs" />
+    <Compile Include="UnsupportedQueryException.cs" />
+    <Compile Include="ExpressionHelper.cs" />
+    <Compile Include="FilterGenerator.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="ErrorHandling\ErrorCodes.cs" />
+    <Compile Include="ErrorHandling\ErrorResolver.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

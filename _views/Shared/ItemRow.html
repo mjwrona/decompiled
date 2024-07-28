@@ -1,0 +1,6 @@
+<script id="item-row-template" type="text/html">
+        <div class="item-row-container" data-bind="foreach: _itemArray, attr: { id: $data._itemRowId }, event: { keydown: _itemRowKeyHandler }" style="overflow: auto">
+            <div data-bind="template: { name: $parent._itemDisplayTemplate, data: $data }, css: 'row-item'"></div>
+        </div>
+        <span data-bind="template: { afterRender: _postRenderCallback }" style="visibility: hidden"> </span>
+</script>

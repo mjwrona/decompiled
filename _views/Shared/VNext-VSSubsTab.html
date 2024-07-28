@@ -1,0 +1,28 @@
+<script id="vssubs-tab-template" type="text/html">
+    <div class="visualstudio-subscription-tab">
+        <div class="offers-items gallery-item-cluster">
+            <h2 class="header-container">
+                <div class="section-header gallery-element-focus-style-light ">
+                    Visual Studio
+                </div>
+            </h2>
+            <!-- ko if: vsSubsTabData() -->
+            <div class="ux-subscriptions-grid" data-bind="template: { foreach: vsSubsTabData(),
+                                                                        afterRender: adjustTileHeight.bind($data) }">
+                <div class="ux-subscription-card" data-bind="css: $data.subscriptionTypeCss, component: {name: 'gallery-vssubs-tile', params: {data: $data}}"></div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <!-- ko if: showXamarinUniversity() && xuSubsTabData() -->
+        <div class="offers-items gallery-item-cluster">
+            <h2 class="header-container">
+                <div class="section-header gallery-element-focus-style-light" data-bind="text: _xamarinUniversityHeader"></div>
+            </h2>
+            <!-- ko if: xuSubsTabData() -->
+            <div class="ux-subscriptions-grid" data-bind="foreach: xuSubsTabData()">
+                <div class="ux-subscription-card" data-bind="css: $data.subscriptionTypeCss, component: {name: 'gallery-vssubs-tile', params: {data: $data}}"></div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+</script>

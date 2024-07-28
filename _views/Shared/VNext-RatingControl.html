@@ -1,0 +1,14 @@
+<script id="gallery-rating-control" type="text/html">
+    <div class="rating-control">
+        <!-- ko foreach: fullStarArray() -->
+
+        <img alt="" class="star full-star" data-bind="attr:{src: $parent.fullStarPath}" />
+        <!-- /ko -->
+        <!-- ko if: halfStarPresent -->
+        <img alt="" class="star half-star" data-bind="attr:{src: halfStarPath}" />
+        <!-- /ko -->
+        <!-- ko foreach: emptyStarArray() -->
+        <img alt="" class="star empty-star" data-bind="attr:{src: $parent.emptyStarPath}" />
+        <!-- /ko -->
+    </div>
+</script>

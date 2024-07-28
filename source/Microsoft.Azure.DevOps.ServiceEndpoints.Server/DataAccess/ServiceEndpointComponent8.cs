@@ -1,0 +1,81 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Azure.DevOps.ServiceEndpoints.Server.DataAccess.ServiceEndpointComponent8
+// Assembly: Microsoft.Azure.DevOps.ServiceEndpoints.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: B7D66E3F-07ED-4CF3-859D-36958D465656
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.DevOps.ServiceEndpoints.Server.dll
+
+using Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.DataAccess;
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi;
+using Microsoft.VisualStudio.Services.WebApi;
+using System;
+using System.Collections.Generic;
+using System.Data;
+
+namespace Microsoft.Azure.DevOps.ServiceEndpoints.Server.DataAccess
+{
+  internal class ServiceEndpointComponent8 : ServiceEndpointComponent7
+  {
+    internal override IList<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord> AddServiceEndpointExecutionHistory(
+      Guid scopeId,
+      ServiceEndpointExecutionRecordsInput input)
+    {
+      using (new ServiceEndpointsSqlComponentBase.SqlMethodScope((ServiceEndpointsSqlComponentBase) this, nameof (AddServiceEndpointExecutionHistory)))
+      {
+        this.PrepareStoredProcedure("Task.prc_AddServiceEndpointExecutionHistory");
+        this.BindDataspaceId(scopeId);
+        this.BindGuidTable("@endpointIdList", (IEnumerable<Guid>) input.EndpointIds);
+        this.BindString("@planType", input.Data.PlanType.Trim(), 128, false, SqlDbType.NVarChar);
+        ServiceEndpointExecutionOwner definition = input.Data.Definition;
+        this.BindNullableInt("@definitionId", definition != null ? definition.Id : 0, 0);
+        this.BindBinary("@definition", JsonUtility.Serialize((object) input.Data.Definition, false), int.MaxValue, SqlDbType.VarBinary);
+        ServiceEndpointExecutionOwner owner = input.Data.Owner;
+        this.BindNullableInt("@ownerId", owner != null ? owner.Id : 0, 0);
+        this.BindBinary("@owner", JsonUtility.Serialize((object) input.Data.Owner, false), int.MaxValue, SqlDbType.VarBinary);
+        DateTime? nullable = input.Data.StartTime;
+        if (nullable.HasValue)
+        {
+          nullable = input.Data.StartTime;
+          this.BindDateTime("@startTime", nullable.Value);
+        }
+        nullable = input.Data.FinishTime;
+        if (nullable.HasValue)
+        {
+          nullable = input.Data.FinishTime;
+          this.BindDateTime("@finishTime", nullable.Value);
+        }
+        ServiceEndpointExecutionResult? result = input.Data.Result;
+        if (result.HasValue)
+        {
+          result = input.Data.Result;
+          this.BindByte("@result", (byte) result.Value);
+        }
+        using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+        {
+          resultCollection.AddBinder<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>((ObjectBinder<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>) new ServiceEndpointExecutionRecordBinder());
+          return (IList<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>) resultCollection.GetCurrent<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>().Items;
+        }
+      }
+    }
+
+    internal override IList<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord> GetServiceEndpointExecutionHistory(
+      Guid scopeId,
+      Guid endpointId,
+      int maxCount,
+      long continuationToken)
+    {
+      using (new ServiceEndpointsSqlComponentBase.SqlMethodScope((ServiceEndpointsSqlComponentBase) this, nameof (GetServiceEndpointExecutionHistory)))
+      {
+        this.PrepareStoredProcedure("Task.prc_GetServiceEndpointExecutionHistory");
+        this.BindGuid("@endpointId", endpointId);
+        this.BindDataspaceId(scopeId);
+        this.BindInt("@maxCount", maxCount);
+        using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+        {
+          resultCollection.AddBinder<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>((ObjectBinder<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>) new ServiceEndpointExecutionRecordBinder());
+          return (IList<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>) resultCollection.GetCurrent<Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.ServiceEndpointExecutionRecord>().Items;
+        }
+      }
+    }
+  }
+}

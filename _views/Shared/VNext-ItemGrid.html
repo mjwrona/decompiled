@@ -1,0 +1,5 @@
+<script id="gallery-item-grid" type="text/html">
+    <div class="item-grid-container" data-bind="foreach: itemArray">
+        <div class="grid-item" data-bind="component: {name: $parent.componentName, params: {item: $data}}"></div>
+    </div>
+</script>

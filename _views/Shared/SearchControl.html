@@ -1,0 +1,16 @@
+<script id="search-control-template" type="text/html">
+    <div class="search-control-container">
+        <div class="search-control-input-textbox-container">
+            <input class="search-control-input-textbox" type="text" placeholder="search" data-bind="event: { change: onSearchStringChange }, value: SearchString, valueUpdate: 'afterkeydown'" />
+        </div>
+
+        <div class="search-control-item-grid-container">
+            <div class="item-grid"></div>
+        </div>
+
+
+        <div class="search-control-pagination-control-container gallery-centered-content" data-bind="with: paginationControlviewModel">
+            <div data-bind="template: { name: 'Pagination-control-template' }"></div>
+        </div>
+    </div>
+</script>
