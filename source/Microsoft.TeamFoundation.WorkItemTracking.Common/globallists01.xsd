@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified"
+    targetNamespace="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/globallists"
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/globallists"
+    xmlns:typelib="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/typelib">
+
+    <xs:import namespace="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/typelib"/>
+    
+    <!-- Root element -->
+    <xs:element name="GLOBALLISTS" type="typelib:GlobalListsDef" />
+</xs:schema>

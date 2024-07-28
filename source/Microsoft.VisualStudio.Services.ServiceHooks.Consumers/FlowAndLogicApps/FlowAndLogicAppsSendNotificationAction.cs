@@ -1,0 +1,91 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.ServiceHooks.Consumers.FlowAndLogicApps.FlowAndLogicAppsSendNotificationAction
+// Assembly: Microsoft.VisualStudio.Services.ServiceHooks.Consumers, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 5BEF54E7-7304-4071-B5F1-22428BB21801
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ServiceHooks.Consumers.dll
+
+using Microsoft.VisualStudio.Services.FormInput;
+using Microsoft.VisualStudio.Services.ServiceHooks.Common;
+using Microsoft.VisualStudio.Services.ServiceHooks.Consumers.WebHooks;
+using Microsoft.VisualStudio.Services.ServiceHooks.WebApi;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
+
+namespace Microsoft.VisualStudio.Services.ServiceHooks.Consumers.FlowAndLogicApps
+{
+  [Export(typeof (ConsumerActionImplementation))]
+  public class FlowAndLogicAppsSendNotificationAction : HttpRequestAction
+  {
+    private const string ConsumerActionId = "httpRequest";
+    private static readonly string[] s_supportedEventTypes = new string[6]
+    {
+      "build.complete",
+      "tfvc.checkin",
+      "workitem.created",
+      "workitem.updated",
+      "workitem.deleted",
+      "workitem.restored"
+    };
+    private static readonly IDictionary<string, string[]> s_supportedResourceVersions = (IDictionary<string, string[]>) new Dictionary<string, string[]>()
+    {
+      {
+        "build.complete",
+        new string[1]{ "2.0" }
+      },
+      {
+        "tfvc.checkin",
+        new string[1]{ "1.0" }
+      },
+      {
+        "workitem.created",
+        new string[2]{ "1.0", "3.1-preview.3" }
+      },
+      {
+        "workitem.updated",
+        new string[2]{ "1.0", "3.1-preview.3" }
+      },
+      {
+        "workitem.deleted",
+        new string[2]{ "1.0", "3.1-preview.3" }
+      },
+      {
+        "workitem.restored",
+        new string[2]{ "1.0", "3.1-preview.3" }
+      }
+    };
+    private static readonly InputDescriptor s_urlInptDescriptor = new InputDescriptor()
+    {
+      Name = FlowAndLogicAppsConsumerResources.HttpRequestAction_InputUrlName,
+      Description = FlowAndLogicAppsConsumerResources.HttpRequestAction_InputUrlDescription,
+      InputMode = InputMode.TextBox,
+      Id = "url",
+      IsConfidential = false,
+      Validation = new InputValidation()
+      {
+        DataType = InputDataType.Uri,
+        IsRequired = true
+      }
+    };
+
+    public override string Id => "httpRequest";
+
+    public override string ConsumerId => "bapiconnectors";
+
+    public override string Name => FlowAndLogicAppsConsumerResources.HttpRequestActionName;
+
+    public override string Description => FlowAndLogicAppsConsumerResources.HttpRequestActionDescription;
+
+    public override IList<InputDescriptor> InputDescriptors => (IList<InputDescriptor>) new List<InputDescriptor>()
+    {
+      FlowAndLogicAppsSendNotificationAction.s_urlInptDescriptor
+    };
+
+    public override string[] SupportedEventTypes => FlowAndLogicAppsSendNotificationAction.s_supportedEventTypes;
+
+    public override IDictionary<string, string[]> SupportedResourceVersions => FlowAndLogicAppsSendNotificationAction.s_supportedResourceVersions;
+
+    protected override EventMessages GetDefaultDetailedMessagesToSend(Notification notification) => EventMessages.Text;
+
+    protected override EventMessages GetDefaultMessagesToSend(Notification notification) => EventMessages.None;
+  }
+}

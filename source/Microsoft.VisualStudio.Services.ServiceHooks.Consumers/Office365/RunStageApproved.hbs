@@ -1,0 +1,24 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape message['text']}}}",
+    "themeColor": "{{{jsonEscape "#dadada"}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+        "title": null,
+        "text": null,
+        "markdown": true,
+        "facts": null,
+        "images": null,
+        "activityTitle": "{{{jsonEscape message.text}}}",
+        "activitySubtitle": "{{{jsonEscape message.markdown}}}",
+        {{#if resource.steps.assignedApprover.displayName}}
+            "activityText": "Approval required by {{{jsonEscape resource.steps.assignedApprover.displayName}}}",
+        {{/if}}
+        "activityImage": "{{{iconUrl "teams-release.png"}}}",
+        "activityImageType": "article"
+    }
+  ],
+    "potentialAction": []
+}

@@ -1,0 +1,1953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ValidatorLimitsTooManyFieldsTotal" xml:space="preserve">
+    <value>TF402563: You've defined a total of {0} fields for all work item types. Only {1} are allowed.</value>
+  </data>
+  <data name="ClassificationNodeTooManyRootNode" xml:space="preserve">
+    <value>VS403423: You've specified too many root classification nodes. There can only be one area node and one iteration node.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateLinkType" xml:space="preserve">
+    <value>TF401272: Query expression contains invalid predicate. LinkGroup can only use LinkType field, and LinkType field can only be used in LinkGroup.</value>
+  </data>
+  <data name="WholeBulkFailed" xml:space="preserve">
+    <value>TF401321: Whole Bulk failed.</value>
+  </data>
+  <data name="ValidatorInconsistentFieldDefinitionWithExistingTemplate" xml:space="preserve">
+    <value>TF402558: The definition of field {0} is inconsistent with the existing definition of the field in the following templates: {1}.</value>
+  </data>
+  <data name="ValidatorSystemPickListRedefined" xml:space="preserve">
+    <value>TF402602: The field {0} must have exactly these values: {1}</value>
+  </data>
+  <data name="WorkItemNonDeletableException" xml:space="preserve">
+    <value>VS402838: The work item {0} cannot be deleted. {1} work items cannot be deleted.</value>
+  </data>
+  <data name="BooleanFieldTypeMustHaveDefault" xml:space="preserve">
+    <value>VS402851: You must specify a default value of false for Boolean fields.</value>
+  </data>
+  <data name="Tags_DuplicateTagSequence" xml:space="preserve">
+    <value>TF400631: {0} sequence contains duplicate entries.</value>
+  </data>
+  <data name="NewFormIterationLabel" xml:space="preserve">
+    <value>Ite&amp;ration</value>
+  </data>
+  <data name="WorkItemFormLinksAndAttachments" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="InvalidLinkQueryInvalidType" xml:space="preserve">
+    <value>TF201059: {0} is not a valid type of query on links. Use MayContain, MustContain, or DoesNotContain.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateNullValue" xml:space="preserve">
+    <value>TF401285: Query expression contains invalid predicate. Predicate value cannot be null.</value>
+  </data>
+  <data name="Validation_MissingAttributeValue" xml:space="preserve">
+    <value>TF401107: The attribute '{0}' is missing from the element.</value>
+  </data>
+  <data name="WorkItemUnauthorizedAttachment" xml:space="preserve">
+    <value>VS402330: Unauthorized {0} access to the attachment under the areas {1}</value>
+  </data>
+  <data name="WorkItemStateHideInvalid" xml:space="preserve">
+    <value>VS403089: Cannot hide state '{0}' since it is the only one in its state category. Add another state in same state category before hiding this.</value>
+  </data>
+  <data name="WorkItemStateNotFound" xml:space="preserve">
+    <value>VS403087: You specified a state that does not exist.</value>
+  </data>
+  <data name="GitHubAppCannotFetchInstallation" xml:space="preserve">
+    <value>VS402670: Cannot fetch installation details for GitHub app installation '{0}'.</value>
+  </data>
+  <data name="QueryServerBusy" xml:space="preserve">
+    <value>VS402491: Server is busy. Please wait a moment and try again.</value>
+  </data>
+  <data name="WorkItemUnauthorizedDelete" xml:space="preserve">
+    <value>VS403145: Insufficient permissions to delete work item {0}.</value>
+  </data>
+  <data name="WorkItemFieldInvalidTreeName" xml:space="preserve">
+    <value>TF401347: Invalid tree name given for work item {0}, field '{1}'.</value>
+  </data>
+  <data name="QueryInvalidValueTypeForContainsOperator" xml:space="preserve">
+    <value>TF51609: The ""Contains"" operator only supports string types.</value>
+  </data>
+  <data name="CSS_NODE_MANAGE_TEST_SUITES" xml:space="preserve">
+    <value>Manage test suites</value>
+  </data>
+  <data name="Validation_WorkItemTypeIcons_Invalid_With_Message" xml:space="preserve">
+    <value>This element defines the properties for this team project. The value of the '{0}' property is invalid. {1}</value>
+  </data>
+  <data name="BooleanFieldTypeMustBeRequired" xml:space="preserve">
+    <value>VS403099: Boolean fields must have a required value. </value>
+  </data>
+  <data name="ValidatorCustomFieldInProtectedNamespace" xml:space="preserve">
+    <value>TF402542: The custom field refname {0} isn't valid as it uses disallowed namespace {1}.</value>
+  </data>
+  <data name="FormLayoutInfoNotAvailable" xml:space="preserve">
+    <value>VS403115:You cannot modify form layout information for work item types {0} in process {1} as these work item types are locked.</value>
+  </data>
+  <data name="WorkItemTemplateFieldValueTooLong" xml:space="preserve">
+    <value>The value of the work item template field {0} cannot be longer than {1} characters.</value>
+  </data>
+  <data name="UpdateDuplicateTempIdsInUpdateXmlException" xml:space="preserve">
+    <value>TF51635: There are duplicate temp IDs in the Update XML.</value>
+  </data>
+  <data name="WorkItemTemplateFieldsNotSpecified" xml:space="preserve">
+    <value>At least one field must be specified for the work item template.</value>
+  </data>
+  <data name="AllSpecifiedValuesMustMatch" xml:space="preserve">
+    <value>VS402630: In order to set the '{0}' field using bypass rules, the value specified for the '{1}' field must match.</value>
+  </data>
+  <data name="InvalidTreeNodeIdentifier" xml:space="preserve">
+    <value>A tree node identifier must be the path or id of an area or iteration.</value>
+  </data>
+  <data name="WorkItemTypeRefNameDoesNotExist" xml:space="preserve">
+    <value>VS402644: Could not find Work Item Type {0}.</value>
+  </data>
+  <data name="FieldUnknownIdentity" xml:space="preserve">
+    <value>The identity value '{0}' for field '{1}' is an unknown identity.</value>
+  </data>
+  <data name="WorkItemNotMovableLinkException" xml:space="preserve">
+    <value>VS403093: The work item {0} cannot be moved. Work items with links to {1} work items cannot be moved. Please remove the work item link(s) and try again.</value>
+  </data>
+  <data name="WorkItemTypeRuleOnFieldNotSupport" xml:space="preserve">
+    <value>VS403081: Rules are not supported on field {0}.</value>
+  </data>
+  <data name="ValidatorFeatureMissingMappingInConfig" xml:space="preserve">
+    <value>TF402548: Element {1} requires that  you map at least one state to metastate {0}.</value>
+  </data>
+  <data name="CSS_NODE_MANAGE_TEST_PLANS" xml:space="preserve">
+    <value>Manage test plans</value>
+  </data>
+  <data name="MustSpecifyMatchingValue" xml:space="preserve">
+    <value>VS402630: In order to set the '{0}' field using bypass rules, you must also specify a matching value for the '{1}' field.</value>
+  </data>
+  <data name="QueryInvalidValueLength" xml:space="preserve">
+    <value>TF237057: The string used in the query exceeds the maximum supported length of {1} characters for field {0}. This can be caused when Azure DevOps Server transforms wildcard characters and escape characters that were used in the query.</value>
+  </data>
+  <data name="ExternalConnectionOrRepoHasError" xml:space="preserve">
+    <value>The external connection '{0}' has an error and cannot be used to resolve urls, please contact your project administrator.</value>
+  </data>
+  <data name="QueryExpressionInvalidOptimizationLongText" xml:space="preserve">
+    <value>TF401273: Query expression contains invalid optimization. Long text query optimization can only be used for fields that support full text search and for Contains/FullTextContains/ContainsWords query operators.</value>
+  </data>
+  <data name="Validation_WorkItemTypeIcons_Type_Duplicate" xml:space="preserve">
+    <value>VS403290: Duplicate entry found for work item type '{0}'.</value>
+  </data>
+  <data name="QueryTooComplex" xml:space="preserve">
+    <value>TF400519: This query contains too many clauses. Please simplify the query and try again.</value>
+  </data>
+  <data name="FormLayoutGroupAlreadyExistsException" xml:space="preserve">
+    <value>VS403113: A group with label '{0}' already exists in page '{1}'.</value>
+  </data>
+  <data name="AllowExistingValueNotEditableOnField" xml:space="preserve">
+    <value>VS403330: The 'AllowExistingValue' property is not editable on field {0}.</value>
+  </data>
+  <data name="ValidatorLimitsTooManyCategories" xml:space="preserve">
+    <value>TF402560: You've defined {0} categories. Only {1} are allowed.</value>
+  </data>
+  <data name="CannotQueryOnTags" xml:space="preserve">
+    <value>TF400970: Querying on tags is not supported. Remove the tag field from the query criteria and try again.</value>
+  </data>
+  <data name="StateProposed" xml:space="preserve">
+    <value>Proposed</value>
+  </data>
+  <data name="CannotModifyFieldWithoutBypassingRules" xml:space="preserve">
+    <value>VS403182: The {0} field cannot be modified without bypassing rules.</value>
+  </data>
+  <data name="RepositoriesWithMappingToDifferentOrganization" xml:space="preserve">
+    <value>The following repositories are associated with a different organization, please remove them from this connection since they are unable to receive events from GitHub: {0}.</value>
+  </data>
+  <data name="WorkItemTemplateDuplicateFieldRefName" xml:space="preserve">
+    <value>Work item template contains multiple fields with the same field reference name: {0}.</value>
+  </data>
+  <data name="DefaultRuleInvalidIdentityAllowedValue" xml:space="preserve">
+    <value>VS403342: The value '{0}' is not an allowed value for field '{1}'. It should be a valid user.</value>
+  </data>
+  <data name="PickListCountExceeded" xml:space="preserve">
+    <value>VS402846: The number of picklists in the collection has reached the limit of {0}.</value>
+  </data>
+  <data name="MissingSeviceEndpointAuthorization" xml:space="preserve">
+    <value>Authorization parameters are not found in the service endpoint.</value>
+  </data>
+  <data name="WorkItemStateCustomizationNotSupported" xml:space="preserve">
+    <value>VS403082: You cannot edit an inherited state, but you can hide it.</value>
+  </data>
+  <data name="ResolveEntitiesError" xml:space="preserve">
+    <value>Error occurred when getting EntityIds for {0}.</value>
+  </data>
+  <data name="QueryNotFound" xml:space="preserve">
+    <value>TF401243: The query {0} does not exist, or you do not have permission to read it.</value>
+  </data>
+  <data name="InvitedUserEmailException" xml:space="preserve">
+    <value>User {0} has not yet accepted their invitation to join the organization and cannot be emailed.</value>
+  </data>
+  <data name="ValidatorNoWorkItemTrackingGroupInProcessTemplate" xml:space="preserve">
+    <value>TF402585: Required WorkItemTracking plug-in reference missing from the process template,</value>
+  </data>
+  <data name="CSS_NODE_WORK_ITEM_READ" xml:space="preserve">
+    <value>View work items in this node</value>
+  </data>
+  <data name="ActiveWorkItemsExist" xml:space="preserve">
+    <value>Can't delete work item type {0}. There are active work items associated to it.</value>
+  </data>
+  <data name="MyQueries" xml:space="preserve">
+    <value>My Queries</value>
+  </data>
+  <data name="ValidatorPortfolioBacklogMissingParent" xml:space="preserve">
+    <value>TF402589: Portfolio backlog {0} references undefined parent portfolio backlog {1}.</value>
+  </data>
+  <data name="ClassificationNodeCannotAddDateToNonIteration" xml:space="preserve">
+    <value>VS402377: You can't specify dates for classification node {0}. Only iteration nodes can have dates.</value>
+  </data>
+  <data name="BehaviorNameInUse" xml:space="preserve">
+    <value>VS403198: The name you specified is already in use. Choose a different name and try again.</value>
+  </data>
+  <data name="InvalidNodeIdException" xml:space="preserve">
+    <value>TF51541: The Area/Iteration ID is not recognized: {0}</value>
+  </data>
+  <data name="QueryInvalidLongTextException" xml:space="preserve">
+    <value>TF51598: An expression in the query XML contains unsupported long text.</value>
+  </data>
+  <data name="WorkItemStateNoStateInCategory" xml:space="preserve">
+    <value>VS403092: There must be at least one state in the {0} state category.</value>
+  </data>
+  <data name="GitHubBoardsRepositoriesAlreadyRegistered" xml:space="preserve">
+    <value>The following GitHub repositories are already connected to another Azure DevOps organization: {0}.</value>
+  </data>
+  <data name="InvalidPicklistTypeForField" xml:space="preserve">
+    <value>VS403062: The specified picklist is of type {0}, which does not match the field type {1}.</value>
+  </data>
+  <data name="ResourceLinkLengthInvalid" xml:space="preserve">
+    <value>VS402326: Invalid resource link on work item {0}.  Resource links require a nonnegative length</value>
+  </data>
+  <data name="ValidatorFeatureUniqueMappedStateInType" xml:space="preserve">
+    <value>TF402552: Element {2} requires that  for work item type {0} you map exactly one state to metastate {1} for the following states: {3}.</value>
+  </data>
+  <data name="FormLayoutGroupsLimitExceededException" xml:space="preserve">
+    <value>VS402843: Adding group: {0} to section: {1} exceeds limitation of {2} groups per section.</value>
+  </data>
+  <data name="TooManyRevisionsForWorkItemUpdateAPI" xml:space="preserve">
+    <value>Work item {0} has {1} revisions, but currently, when updating via the API, only work items with up to {2} revisions are supported.</value>
+  </data>
+  <data name="WorkItemTypeCustomizationBlocked" xml:space="preserve">
+    <value>VS402818: You cannot customize {0} work item type as system work item types are locked.</value>
+  </data>
+  <data name="WorkItemTrackingInvalidColorWithoutHash" xml:space="preserve">
+    <value>You've specified an invalid color '{0}'. First character should be a hash symbol.</value>
+  </data>
+  <data name="MultipleUpdatesToSameField" xml:space="preserve">
+    <value>VS403691: Update to work item {0} had two or more updates for field with reference name '{1}'. A field cannot be updated more than once in the same update.</value>
+  </data>
+  <data name="WorkItemNotFound" xml:space="preserve">
+    <value>TF401231: Work item {0} does not exist.</value>
+  </data>
+  <data name="TooManyNewTagsAdded" xml:space="preserve">
+    <value>TF401943: Updating work item with '{0}' tags failed because you exceeded limit of '{1}' tags allowed per work item.  Reduce the associated tags to below the limit and try again.</value>
+  </data>
+  <data name="ExternalConnectionUnreachableRepositories" xml:space="preserve">
+    <value>We are unable to connect to the following repositories: {0}, please verify they are selected in the Azure Boards GitHub app.</value>
+  </data>
+  <data name="ValidatorFeatureMissingField" xml:space="preserve">
+    <value>TF402545: Element {1} requires that you include field {0} in the definition of work item type {2}.</value>
+  </data>
+  <data name="ClassificationNodeReclassifiedToDifferentStructureType" xml:space="preserve">
+    <value>VS402382: The deleted classification node {0} and reclassification node {1} must be in the same hierarchy. Correct reclassification node and try again.</value>
+  </data>
+  <data name="ValidatorTooManyPortfolioBacklogs" xml:space="preserve">
+    <value>TF402595: Too many portfolio backlogs are defined. A maximum of 5 are allowed.</value>
+  </data>
+  <data name="ClassificationNodeReclassifiedToSubTree" xml:space="preserve">
+    <value>VS402383: You can't specify the reclassification node {1} to be hierarchically under the deleted classification node {0}. Correct reclassification node and try again.</value>
+  </data>
+  <data name="FieldLimitExceeded" xml:space="preserve">
+    <value>VS402807: The number of custom fields for this organization has exceeded the limit: {0}.</value>
+  </data>
+  <data name="GitHubExternalConnectionPermissionException" xml:space="preserve">
+    <value>VS403651: The connection does not exist or you do not have have permission to access it.</value>
+  </data>
+  <data name="QueryDepthTooLargeException" xml:space="preserve">
+    <value>TF51578: The depth of the query is greater than the maximum query depth allowed of {0}.</value>
+  </data>
+  <data name="FieldValueInvalidCharacters" xml:space="preserve">
+    <value>TF401325: Value for field '{0}' has invalid characters.</value>
+  </data>
+  <data name="ClassificationNodeReclassifiedToRootNode" xml:space="preserve">
+    <value>VS402384: Reclassification node {0} is root classification node. Use project node as reclassification node and try again.</value>
+  </data>
+  <data name="FormLayoutRemoveContributedPageException" xml:space="preserve">
+    <value>VS403225: Unable to remove contributed page {0}.</value>
+  </data>
+  <data name="QueryInvalidDateValueException" xml:space="preserve">
+    <value>TF51586: Unsupported date value in the expression value. Date value must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.</value>
+  </data>
+  <data name="WorkItemStateDefinitionAlreadyExists" xml:space="preserve">
+    <value>VS403091: You specified a state {0} that is already added.</value>
+  </data>
+  <data name="QueryMissingGroupsOrExpressionsException" xml:space="preserve">
+    <value>TF51612: The query does not contain any groups or expressions.</value>
+  </data>
+  <data name="QueryInvalidLongTextOperator" xml:space="preserve">
+    <value>TF51599: An expression in the query XML contains an unsupported long text operator.</value>
+  </data>
+  <data name="FormLayoutControlInputsExceededException" xml:space="preserve">
+    <value>VS403213: The number of custom control inputs provided {0} exceeds the maximum of {1}.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateArrayEmpty" xml:space="preserve">
+    <value>TF401281: Query expression contains invalid predicate. Array value must have at least one element.</value>
+  </data>
+  <data name="ControlContributionNotFoundException" xml:space="preserve">
+    <value>VS403120: Contribution "{0}" does not exist.</value>
+  </data>
+  <data name="Inputs" xml:space="preserve">
+    <value>Inputs</value>
+  </data>
+  <data name="WorkItemInvalidUpdateToIsDeletedFieldException" xml:space="preserve">
+    <value>VS402837: Update failed on work item {0}.  IsDeleted field can only be updated by deleting or restoring a work item.</value>
+  </data>
+  <data name="QueryExpressionInvalidSortFieldTableAlias" xml:space="preserve">
+    <value>TF401278: Query expression contains invalid sort field. Work item query and recursive query can only sort on source table.</value>
+  </data>
+  <data name="FormLayoutLabelInvalidException" xml:space="preserve">
+    <value>VS402827: The label '{0}' contains invalid characters.</value>
+  </data>
+  <data name="ProcessDefaultException" xml:space="preserve">
+    <value>VS402380: You cannot disable the default process. Make a different process the default and try again.</value>
+  </data>
+  <data name="ValidatorRulesOnFieldThatProhibitsRules" xml:space="preserve">
+    <value>TF402593: Field rules aren't supported for field {0}.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateIdentityFieldOperator" xml:space="preserve">
+    <value>TF401343: Query expression contains invalid predicate. Identity field does not support operator {0}.</value>
+  </data>
+  <data name="CannotFindTokenForWorkItem" xml:space="preserve">
+    <value>Cannot find token for work item '{0}'</value>
+  </data>
+  <data name="ValidatorImproperDefinitionOfProtectedField" xml:space="preserve">
+    <value>TF402556: For field {0} to be well defined, you must name it {1} and set its type to {2}. Provided Field Name is {3} and type is {4}</value>
+  </data>
+  <data name="WorkItemTrackingDescriptionInvalid" xml:space="preserve">
+    <value>VS402801:  You've specified an invalid description for {0}. Description can't be greater than {1} characters.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateIdentityFieldValueType" xml:space="preserve">
+    <value>TF401341: Query expression contains invalid predicate. Identity field cannot be compared to value type {0}.</value>
+  </data>
+  <data name="ValidatorMissingTypeFieldDefinition" xml:space="preserve">
+    <value>TF402574: ProcessConfiguration doesn't specify required TypeField {0}.</value>
+  </data>
+  <data name="ValidatorMultipleCategoriesDocuments" xml:space="preserve">
+    <value>TF402575: You can only include one Category definition file in your process template.  </value>
+  </data>
+  <data name="ValidatorFeatureMissingHardcodedCategory" xml:space="preserve">
+    <value>TF402546: Category {0} is missing from the categories file.</value>
+  </data>
+  <data name="AllowedValuesNotEditableOnField" xml:space="preserve">
+    <value>VS403329: Allowed values are not editable on field {0}.</value>
+  </data>
+  <data name="WorkItemTargetProjectWithIdDoesNotExist" xml:space="preserve">
+    <value>VS403071: The target project with Id {0} does not exist.</value>
+  </data>
+  <data name="ClassificationNodeInvalidStructureType" xml:space="preserve">
+    <value>VS402376: Classification node {0} has invalid structure type. Correct the structure type and try again.</value>
+  </data>
+  <data name="UnauthorizedBypassRules" xml:space="preserve">
+    <value>TF401322: You don't have bypass rules permission. Please contact your collection administrator to grant this permission for enabling this action.</value>
+  </data>
+  <data name="FormLayoutPageAlreadyExistsException" xml:space="preserve">
+    <value>VS403112: A page with label '{0}' already exists in the layout.</value>
+  </data>
+  <data name="UnableToUploadMetadataResourceForProcess" xml:space="preserve">
+    <value>Unable to upload {0} for {1} in process {2}. Exception Message: {3}. Please run the installation repair.</value>
+  </data>
+  <data name="WorkItemTemplateNotFound" xml:space="preserve">
+    <value>Work item template with id {0} could not be found.</value>
+  </data>
+  <data name="WorkItemLinksLimitExceeded" xml:space="preserve">
+    <value>TF237201: Cannot add a new link because one of the work items being linked will exceed the {0} link limit. Remove links from that item and try saving again. For more details, please refer to https://go.microsoft.com/fwlink/?linkid=858636. </value>
+  </data>
+  <data name="FormLayoutPagesLimitExceededException" xml:space="preserve">
+    <value>VS403110: Adding page: {0} to layout exceeds limitation of {1} pages per layout.</value>
+  </data>
+  <data name="WorkItemIterationPathDoesNotMatchTargetProject" xml:space="preserve">
+    <value>VS403095: Iteration path does not belong to target project.</value>
+  </data>
+  <data name="ValidatorParsingXmlFails" xml:space="preserve">
+    <value>TF402586: Error parsing file: {0}</value>
+  </data>
+  <data name="TooManyQueryItemsRequestedException" xml:space="preserve">
+    <value>The number of query items returned exceeds the size limit of {0}.</value>
+  </data>
+  <data name="WorkitemTrackingSoapAccessBlocked" xml:space="preserve">
+    <value>VS403466: Accessing Work Item Tracking from Visual Studio or by using Client Object Model is not supported. Please switch to browser based experiences or REST apis.</value>
+  </data>
+  <data name="QueryInvalidValueType" xml:space="preserve">
+    <value>TF51608: An expression operator in the query XML contains an unsupported value type.</value>
+  </data>
+  <data name="GitHubBoardsMustHaveRepoInConnectionExceptionMessage" xml:space="preserve">
+    <value>VS403652: Cannot create or update connection with no repositories. </value>
+  </data>
+  <data name="CannotDeleteOOBField" xml:space="preserve">
+    <value>VS403299: The out-of-box field {0} cannot be deleted.</value>
+  </data>
+  <data name="ProcessUpdateBlockedSystemTemplateOnPrem" xml:space="preserve">
+    <value>You can’t update a system process. &lt;a href="https://go.microsoft.com/fwlink/?LinkId=853613" target='_blank' rel='noopener noreferrer'&gt;Learn more&lt;/a&gt; about process customization.</value>
+  </data>
+  <data name="FormLayoutSectionDoesNotExistException" xml:space="preserve">
+    <value>VS402816: The section id {0} does not exists in work item type {1}</value>
+  </data>
+  <data name="XmlToInheritedFieldDefinitionNotFoundExceptionMessage" xml:space="preserve">
+    <value>Field {0} could not be found while upgrading this process to inherited. You must create at least one team project that uses this xml process, to upgrade this process to inherited.</value>
+  </data>
+  <data name="QueryInvalidExpressionOperatorException" xml:space="preserve">
+    <value>TF51595: An expression in the query XML is missing or contains an unsupported operator.</value>
+  </data>
+  <data name="FormLayoutRemoveContributedGroupException" xml:space="preserve">
+    <value>VS403227: You cannot remove a group added through an extension. You can hide the group to remove it from a single layout, or uninstall the extension to remove it from the layout of all work item types.</value>
+  </data>
+  <data name="GitHubMaximumRepoCountExceededError" xml:space="preserve">
+    <value>You have exceeded the maximum number of repositories for creating a connection. Please try selecting '{0}' repositories or less.</value>
+  </data>
+  <data name="ValidatorImproperDefinitionOfProtectedLinkType" xml:space="preserve">
+    <value>VS402609: For link type '{0}' to be well defined, you must set its ForwardName to '{1}', ReverseName to '{2}' and Topology to '{3}'.</value>
+  </data>
+  <data name="Proposed" xml:space="preserve">
+    <value>Proposed</value>
+  </data>
+  <data name="ControlContribution" xml:space="preserve">
+    <value>Control contribution</value>
+  </data>
+  <data name="CSS_NODE_WORK_ITEM_WRITE" xml:space="preserve">
+    <value>Edit work items in this node</value>
+  </data>
+  <data name="GetGitHubReadmeFileContentData_ApiError" xml:space="preserve">
+    <value>Unable to get GitHub readme file content from repository '{0}' for the source version/branch '{1}'. {2}</value>
+  </data>
+  <data name="RequiredNotEditableOnField" xml:space="preserve">
+    <value>VS403307: The 'required' property is not editable on field {0}.</value>
+  </data>
+  <data name="StateDoing" xml:space="preserve">
+    <value>Doing</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>Extension:</value>
+  </data>
+  <data name="WorkItemTargetTypeIsDisabled" xml:space="preserve">
+    <value>VS403074: Work item creation or migration to the target work item type '{0}' is blocked. Enable the work item type to unblock the operations.</value>
+  </data>
+  <data name="FieldType" xml:space="preserve">
+    <value>Field Type</value>
+  </data>
+  <data name="ParentWorkItemTypeDoesNotExist" xml:space="preserve">
+    <value>VS402810: Parent Work item type with reference name '{0}' could not be found in parent process '{1}'.</value>
+  </data>
+  <data name="NewFormStateLabel" xml:space="preserve">
+    <value>Stat&amp;e</value>
+  </data>
+  <data name="ResourceLinkTypeUnspecified" xml:space="preserve">
+    <value>TF401344: Unspecified resource link type for a resource link on work item {0}</value>
+  </data>
+  <data name="DuplicatedWorkItemType" xml:space="preserve">
+    <value>VS403463: Unable to process work item types set because it contains duplicates: {0}. Please rename or delete duplicated work item type and try again. Note: work item type names are case-insensitive</value>
+  </data>
+  <data name="InvalidProviderKey" xml:space="preserve">
+    <value>ProviderKey {0} is invalid or has not been provisioned.</value>
+  </data>
+  <data name="CacheMustBeCalledWithSystemDescriptor" xml:space="preserve">
+    <value>Cannot retrieve out-of-box XMLs for non-system process descriptor {0}.</value>
+  </data>
+  <data name="StateNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ValidatorLimitsTooManyRulesOnWIT" xml:space="preserve">
+    <value>TF402566: You've defined {1} field rules for work item type {0}. A maximum of {2} is allowed.</value>
+  </data>
+  <data name="ValidatorImproperDefinitionOfProtectedFieldOrFieldInDifferentLocale" xml:space="preserve">
+    <value>TF402556: For field {0} to be well defined, you must name it {1} and set its type to {2}. Provided Field Name is {3} and type is {4}. However, please note that Azure DevOps projects that are originally created with non-English locale process templates are not supported on Azure DevOps Services and can not be imported even after such renaming.</value>
+  </data>
+  <data name="DefaultIdNotFound" xml:space="preserve">
+    <value>VS403315: The default user is an unknown identity</value>
+  </data>
+  <data name="FieldTypeInvalid" xml:space="preserve">
+    <value>VS402802: You've specified an invalid type for the field.</value>
+  </data>
+  <data name="WorkItemTypeFieldUsedByProject" xml:space="preserve">
+    <value>VS403458: Field is currently in use by a project.</value>
+  </data>
+  <data name="ChangedByEmptyWithBypassRulesException" xml:space="preserve">
+    <value>VS403417: ChangedBy value cannot be empty when BypassRules is specified</value>
+  </data>
+  <data name="WorkItemUnauthorizedMove" xml:space="preserve">
+    <value>VS402836: Insufficient permissions to move work item {0} out of the source project.</value>
+  </data>
+  <data name="ValidatorPortfilioBacklogsMultipleChildren" xml:space="preserve">
+    <value>TF402588: Several portfolio backlogs {0} have defined {1} as their parent. A parent backlog may have only one child backlog.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateExpandFlag" xml:space="preserve">
+    <value>TF401279: Query expression contains invalid predicate. ExpandConstant flag is not support by operator {0}.</value>
+  </data>
+  <data name="CreateGitHubBranchRef_ApiError" xml:space="preserve">
+    <value>Unable to create the branch '{0}' in the GitHub repository '{1}' based on branch '{2}'. {3}</value>
+  </data>
+  <data name="InvalidCompletedCatagoryStateNamesForXMLProcess" xml:space="preserve">
+    <value>The XML process has invalid states names for completed catagory. Work item type: "{0}", State name "{1}".</value>
+  </data>
+  <data name="NoGitHubReposConfiguredForProject" xml:space="preserve">
+    <value>No GitHub repos configured for project {0}.</value>
+  </data>
+  <data name="AadIdentityResolutionError" xml:space="preserve">
+    <value>Unable to resolve identities against Microsoft Entra</value>
+  </data>
+  <data name="FieldAlreadyExistsOnPage" xml:space="preserve">
+    <value>VS402812: The field {0} already exists on page {1}</value>
+  </data>
+  <data name="MaxLongTextSizeExceeded" xml:space="preserve">
+    <value>TF401262: Value of long text field {0} exceeds the maximum allowed length of {1}.</value>
+  </data>
+  <data name="ComposedWorkItemTypeFieldIdIsNotPresent" xml:space="preserve">
+    <value>VS402994: The field id was not populated for process {0}, work item type reference name {1}, field reference name {2}.</value>
+  </data>
+  <data name="DataType" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+  <data name="NotInScopeAadIdentities" xml:space="preserve">
+    <value>The following identities are not in scope of this organization : {0}</value>
+  </data>
+  <data name="ValidatorWorkItemTypeRename" xml:space="preserve">
+    <value>TF402601: Work item type {0} will be renamed to {1} from {2}. Renaming the work item type will break all queries that reference {2} in a filter. Renaming the work item type will generate a work item revision record for all {0} work items. Please ensure you want to proceed with this change.</value>
+  </data>
+  <data name="ExternalConnectionGitHubAppUninstalled" xml:space="preserve">
+    <value>The Azure Boards GitHub App was uninstalled for this organization/user, please remove the connection and reinstall the Azure Boards GitHub app from the GitHub marketplace.</value>
+  </data>
+  <data name="WorkItemTemplateIdNotNull" xml:space="preserve">
+    <value>Work item template id should be Guid.Empty for creating a template.</value>
+  </data>
+  <data name="PickListNotReferencedByField" xml:space="preserve">
+    <value>VS403055: The field {0} is flagged as a picklist but does not reference any list</value>
+  </data>
+  <data name="ProcessInvalidProjectMigration" xml:space="preserve">
+    <value>VS402376: Changing the process of the team project '{0}' from process '{1}' to process '{2}' is not supported.</value>
+  </data>
+  <data name="ClassificationNodeTooManyAreaPaths" xml:space="preserve">
+    <value>You have reached the maximum number of {0} for allowed areas.</value>
+  </data>
+  <data name="Validation_StateColors_State_Duplicate" xml:space="preserve">
+    <value>VS403124: Duplicate entry found for state '{0}'.</value>
+  </data>
+  <data name="InsufficientPermissionToChangeProcessOfProjectExceptionMessage" xml:space="preserve">
+    <value>VS403461: The current user does not have permission to change the process of the project '{0}'.</value>
+  </data>
+  <data name="ValidatorPortfolioBacklogMultipleRoots" xml:space="preserve">
+    <value>TF402590: Several portfolio backlogs {0} don't define their parent. Only one portfolio backlog, the top backlog, may be unparented.  </value>
+  </data>
+  <data name="ExternalConnectionOAuthConfigurationDeleted" xml:space="preserve">
+    <value>The OAuth configuration for this connection was deleted, please remove the connection and configure again.</value>
+  </data>
+  <data name="UnsupportedGitHubEventType" xml:space="preserve">
+    <value>GitHub event {0} is not supported.</value>
+  </data>
+  <data name="QueryTooManyConcurrentUsers" xml:space="preserve">
+    <value>VS402490: Too many concurrent users running queries. Please wait a moment and try again.</value>
+  </data>
+  <data name="UnsupportedExternalEventSource" xml:space="preserve">
+    <value>Event came from an unsupported source.</value>
+  </data>
+  <data name="QueryInvalidDoubleValueException" xml:space="preserve">
+    <value>TF51587: Unsupported double value in the expression value.</value>
+  </data>
+  <data name="IconNotFound" xml:space="preserve">
+    <value>VS403331: Icon {0} not found.</value>
+  </data>
+  <data name="ClassificationNodeCannotCreateRootNodeAfterProjectCreation" xml:space="preserve">
+    <value>VS402379: You can't create root classification nodes in project {0}. Root classification nodes can only be created at project creation time.</value>
+  </data>
+  <data name="RuleError" xml:space="preserve">
+    <value>TF401320: Rule Error for field {0}. Error code: {1}.</value>
+  </data>
+  <data name="WorkItemDatesNotIncreasingException" xml:space="preserve">
+    <value>VS402625: Dates must be increasing with each revision.</value>
+  </data>
+  <data name="FieldUnknownPath" xml:space="preserve">
+    <value>The path value {0} for field {1} is an unknown path.</value>
+  </data>
+  <data name="FormLayoutAddContributedPageException" xml:space="preserve">
+    <value>VS403224: Unable to add contributed page {0}.</value>
+  </data>
+  <data name="UnrecognizedResourceLink" xml:space="preserve">
+    <value>Unrecognized Resource link: Link Name: {0} Link Uri: {1}</value>
+  </data>
+  <data name="WorkItemCommentNotFound" xml:space="preserve">
+    <value>Comment not found for work item {0} at revision {1}</value>
+  </data>
+  <data name="CSS_NODE_CREATE_CHILDREN" xml:space="preserve">
+    <value>Create child nodes</value>
+  </data>
+  <data name="CreateGitHubPullRequest_ApiError" xml:space="preserve">
+    <value>Unable to create the pull request from the branch '{0}' to the branch '{1}' in the GitHub repository '{2}'. {3}</value>
+  </data>
+  <data name="ExtensionId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="AddRepoToInstallation_ApiError" xml:space="preserve">
+    <value>Error occurred while adding repositories to the installation: {0}</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateExpandFlagWithIdentityField" xml:space="preserve">
+    <value>TF401342: Query expression contains invalid predicate. Identity field does not support ExpandConstant flag.</value>
+  </data>
+  <data name="QueryMaxWiqlTextLengthLimitExceeded" xml:space="preserve">
+    <value>VS403309: Query WIQL text length exceeded the limit. It should contain no more than {0} characters.</value>
+  </data>
+  <data name="InvalidFieldName" xml:space="preserve">
+    <value>TF51535: Cannot find field {0}.</value>
+  </data>
+  <data name="ValidatorNoUsageOfForOrNotAttributesInCopyDefaultRules" xml:space="preserve">
+    <value>VS402631: Usage of 'for' or 'not' attribute is not allowed on COPY/DEFAULT/EMPTY rules</value>
+  </data>
+  <data name="InvalidTeamFieldValue" xml:space="preserve">
+    <value>VS403407: Team Fields are not supported. ProcessConfiguration - the TypeField  where type="{0}" must have a refname="{1}"</value>
+  </data>
+  <data name="ValidatorMultipleUsesOfDisplayNameInFieldTable" xml:space="preserve">
+    <value>TF402578: Field {0} specifies friendly name {1} which is already in use by  field {2}. Friendly names must be unique across all field definitions.</value>
+  </data>
+  <data name="ProcessInvalidParent" xml:space="preserve">
+    <value>VS402372: Inherited processes must inherit from a system process: Agile, Scrum, or CMMI. Choose one of these processes and try again.</value>
+  </data>
+  <data name="CannotMigrateToDisabledProcess" xml:space="preserve">
+    <value>VS402376: You cannot migrate projects to a disabled process. Choose a different process or enable this process, and try again.</value>
+  </data>
+  <data name="ClassificationNodeCannotDeleteReclassifyNode" xml:space="preserve">
+    <value>VS402386: You can't delete reclassification node {0}. Correct reclassification node and try again.</value>
+  </data>
+  <data name="WorkItemUpdateBatchLimitExceeded" xml:space="preserve">
+    <value>VS401397: Bulk update of {0} work items exceeds batch limit of {1}</value>
+  </data>
+  <data name="ValidatorMissingFeatureElementInProcessConfiguration" xml:space="preserve">
+    <value>TF402571: Required element {0} is missing from Process Configuration.</value>
+  </data>
+  <data name="UndeletedQueryItemNotDeleted" xml:space="preserve">
+    <value>VS402332: Query Item to be undeleted was not in a deleted state</value>
+  </data>
+  <data name="UpdateGitHubFileContent_ApiError" xml:space="preserve">
+    <value>Unable to update the file content in the GitHub repository '{0}' for the branch '{1}' and file path '{2}'. {3}</value>
+  </data>
+  <data name="ProjectWorkItemTypeNotFound" xml:space="preserve">
+    <value>VS1640143: Work item type does not exist in project {0} or you do not have permission to access it.</value>
+  </data>
+  <data name="ValidatorLimitsTooManyValuesInValueList" xml:space="preserve">
+    <value>TF402569: You've defined {2} values for field {0} in work item type {1}. A maximum of {3} is allowed.</value>
+  </data>
+  <data name="RuleValidationErrors_MultipleAdditional" xml:space="preserve">
+    <value>{0} {1} additional errors occurred during validation of the work item. Please correct all errors and try again.</value>
+  </data>
+  <data name="QueryExpressionInvalidNullField" xml:space="preserve">
+    <value>TF401271: Query expression contains invalid field. Field cannot be null.</value>
+  </data>
+  <data name="WorkItemUpdateInvalidLinkEnds" xml:space="preserve">
+    <value>VS402347: The ends of the link between {0} and {1}, on work item {2}, are invalid.</value>
+  </data>
+  <data name="CSS_NODE_GENERIC_READ" xml:space="preserve">
+    <value>View permissions for this node</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateArrayTypeMismatch" xml:space="preserve">
+    <value>TF401284: Query expression contains invalid predicate. Elements of Array value must be of same type.</value>
+  </data>
+  <data name="WorkItemTypeReferenceNameInvalidLength" xml:space="preserve">
+    <value>VS402344: The work item type reference name, {0}, has an invalid length</value>
+  </data>
+  <data name="ProcessUpdateBlockedSystemTemplate" xml:space="preserve">
+    <value>You can’t update a system process. &lt;a href="https://go.microsoft.com/fwlink/?LinkId=534581" target='_blank' rel='noopener noreferrer'&gt;Learn more&lt;/a&gt; about process customization.</value>
+  </data>
+  <data name="ValidatorMultipleProcessConfigurationDocuments" xml:space="preserve">
+    <value>TF402576: You can only include one ProcessConfiguration definition file in your process template.  </value>
+  </data>
+  <data name="ClassificationNodeTooManyIterationPaths" xml:space="preserve">
+    <value>You have reached the maximum number of {0} for allowed iterations.</value>
+  </data>
+  <data name="WorkItemIdentityNotResovledById" xml:space="preserve">
+    <value>VS403425: Some identities {0} could not be resolved in the work item.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateIsEmpty" xml:space="preserve">
+    <value>VS403465:The ""IsEmpty"" or ""IsNotEmpty"" operator isn't supported for field [{0}]</value>
+  </data>
+  <data name="WorkItemTypeStateLimitExceeded" xml:space="preserve">
+    <value>VS403086: You have exceeded the limit of {0} states allowed per work item type.</value>
+  </data>
+  <data name="FieldHasNotBeenDeleted" xml:space="preserve">
+    <value>Field cannot be restored as it has not been deleted.</value>
+  </data>
+  <data name="IdentityEmailNotViewable" xml:space="preserve">
+    <value>VS403666: The email of the identity is not viewable.</value>
+  </data>
+  <data name="AddingRulesNotSupportedOnField" xml:space="preserve">
+    <value>VS403305: Adding rules on field {0} is not supported.</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>\Invalid Path</value>
+  </data>
+  <data name="WorkItemTargetTypeDoesNotExist" xml:space="preserve">
+    <value>VS403072: The target work item type {0} does not exist in the project {1}.</value>
+  </data>
+  <data name="ValidatorCannotReferenceAGlobalList" xml:space="preserve">
+    <value>TF402541: Work item type {0} isn't valid because it references global list {1}. Global lists aren't supported.</value>
+  </data>
+  <data name="NewFormReasonLabel" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="WorkItemTrackingMetadataError" xml:space="preserve">
+    <value>There was an error during metadata generation, function is {0}, error is: {1}.</value>
+  </data>
+  <data name="PickListItemCountExceeded" xml:space="preserve">
+    <value>VS402845: The picklist {0} exceeds the maximum number of values. {1} are present when only {2} are allowed.</value>
+  </data>
+  <data name="FormLayoutAddGroupToContributedPageException" xml:space="preserve">
+    <value>VS403223: Unable to add group {0} to contributed page {1}.</value>
+  </data>
+  <data name="ServiceEndpointNotFound" xml:space="preserve">
+    <value>Service endpoint with ID '{0}' does not exist or you don't have permission to read it.</value>
+  </data>
+  <data name="FormLayoutControlAlreadyExistInGroupException" xml:space="preserve">
+    <value>VS403111: The control {0} already exists in group '{1}'.</value>
+  </data>
+  <data name="WorkItemNoAutomaticTransition" xml:space="preserve">
+    <value>{0} {1} cannot be completed because it is already '{2}'.</value>
+  </data>
+  <data name="FieldAllowedValuesMismatch" xml:space="preserve">
+    <value>XML to Inherited Compatibility: The allowed values for type {0} field {1} do not match the allowed values for that field in inherited process customization. If you clone this XML process to an inherited process, the cloned inherited process will offer the inherited picklist allowed values for this field to every work item type of every inherited process.</value>
+  </data>
+  <data name="WorkItemStateDefinitionNotFound" xml:space="preserve">
+    <value>VS403087: The state {0} does not exist.</value>
+  </data>
+  <data name="WorkItemRulesDoNotSupportEmbeddedImages" xml:space="preserve">
+    <value>VS404440: Rules cannot contain embedded base64 images.</value>
+  </data>
+  <data name="ValidatorNoCustomLinkTypes" xml:space="preserve">
+    <value>TF402583: Custom link type {0} is invalid because custom link types aren't supported.</value>
+  </data>
+  <data name="ValidatorMultipleUsesOfDisplayNameAcrossTemplates" xml:space="preserve">
+    <value>TF402577: Field {0} specifies friendly name {1} which is already in use by  fields {2} in process templates {3}. Friendly names must be unique across all field definitions.</value>
+  </data>
+  <data name="ReadOnlyUnsupportedForField" xml:space="preserve">
+    <value>VS403308: The 'read only' property is not supported on field {0}.</value>
+  </data>
+  <data name="InvalidLinkSubQuery" xml:space="preserve">
+    <value>TF201060: The query on links element {0} is not valid. Use LeftQuery for the main query, LinkQuery for the link query, and RightQuery for the linked items query.</value>
+  </data>
+  <data name="InvalidPayload" xml:space="preserve">
+    <value>Unable to validate the payload for the event.</value>
+  </data>
+  <data name="ClassificationNodeCircularNodeReference" xml:space="preserve">
+    <value>VS402374: Classification node {0} can't be moved beneath itself. Correct parent node and try again.</value>
+  </data>
+  <data name="WorkItemTypeNotFound" xml:space="preserve">
+    <value>VS402323: Work item type {1} does not exist in project {0} or you do not have permission to access it.</value>
+  </data>
+  <data name="WorkItemTemplateFieldRefNameTooLong" xml:space="preserve">
+    <value>Work item template field reference name {0} cannot be longer than {1} characters.</value>
+  </data>
+  <data name="CannotResolveIdentityByDescriptor" xml:space="preserve">
+    <value>VS403428: Cannot resolve identity based on descriptor '{0}'</value>
+  </data>
+  <data name="ValidatorWorkItemTypeRefNameInProtectedNamespace" xml:space="preserve">
+    <value>TF402599: The work item type refname {0} isn't valid as it uses disallowed namespace {1}.</value>
+  </data>
+  <data name="WorkItemComponentFieldValueEmpty" xml:space="preserve">
+    <value>VS403435: The value of field {0} is empty for project {1}, workitem {2}</value>
+  </data>
+  <data name="ValidatorPathToProcessConfigurationNotFound" xml:space="preserve">
+    <value>TF402587: Required ProcessConfiguration file missing. </value>
+  </data>
+  <data name="PickListMetadataDoesNotExist" xml:space="preserve">
+    <value>VS403079: Could not find the picklist metadata for this collection.</value>
+  </data>
+  <data name="GetGitHubBranchRef_ApiError" xml:space="preserve">
+    <value>Unable to get the branch '{0}' of the GitHub repository '{1}'. {2}</value>
+  </data>
+  <data name="InvalidProjectProvidedInMigratingProjectList" xml:space="preserve">
+    <value>Invalid or Null Project provided in Migrating Project List</value>
+  </data>
+  <data name="InvalidNodeGuidException" xml:space="preserve">
+    <value>TF400438: The Area/Iteration GUID is not recognized: {0}</value>
+  </data>
+  <data name="GitHubBoardsConnectionDoesNotExist" xml:space="preserve">
+    <value>VS402656: The connection '{0}' does not exist or has already been removed.</value>
+  </data>
+  <data name="NewFormChangedByLabel" xml:space="preserve">
+    <value>Last Updated</value>
+  </data>
+  <data name="GitHubBoardsRepositoryAlreadyRegistered" xml:space="preserve">
+    <value>The GitHub repository '{0}' is already registered with an integration.</value>
+  </data>
+  <data name="WorkItemInlineImgPlaceHolderURL" xml:space="preserve">
+    <value>https://cdn.vsassets.io/content/notifications/placeholder-box.png</value>
+  </data>
+  <data name="NewFormTitleWatermark" xml:space="preserve">
+    <value>Enter title here</value>
+  </data>
+  <data name="ValidatorBannedRuleUsed" xml:space="preserve">
+    <value>TF402538: Field rule {0} isn't supported.</value>
+  </data>
+  <data name="InvalidResourceLinkTarget_ToolPart" xml:space="preserve">
+    <value>Invalid Resource Link Tool specified in artifact Target: '{0}'.</value>
+  </data>
+  <data name="IsRequired" xml:space="preserve">
+    <value>IsRequired</value>
+  </data>
+  <data name="QueryInvalidExpandConstantException" xml:space="preserve">
+    <value>TF51592: The ExpandConstant attribute is not supported. It must be a Boolean string "True" with a value of "1" for true or "False" with a value of "0" or "-1" for false.</value>
+  </data>
+  <data name="UnsupportedExternalEventHostType" xml:space="preserve">
+    <value>Event came from a supported event but for the wrong host type.</value>
+  </data>
+  <data name="StateDefaultReasonOut" xml:space="preserve">
+    <value>Moved out of state {0}</value>
+  </data>
+  <data name="WorkItemTargetTypeNotSupported" xml:space="preserve">
+    <value>VS403073: The target work item type {0} is not supported.</value>
+  </data>
+  <data name="ValidatorWorkItemTypeDelete" xml:space="preserve">
+    <value>TF402598: Work item type {0} will be deleted. All work items of that type will be destroyed.</value>
+  </data>
+  <data name="QueryMissingColumnNameForExpressionException" xml:space="preserve">
+    <value>TF51611: An expression in the query XML is missing a column name.</value>
+  </data>
+  <data name="ValidatorUnknownWorkItemTypeInCategory" xml:space="preserve">
+    <value>TF402596: Category {1} doesn't define work Item type {0}.</value>
+  </data>
+  <data name="WorkItemPageSizeExceeded" xml:space="preserve">
+    <value>VS403474: You requested {0} work items which exceeds the limit of {1}</value>
+  </data>
+  <data name="QueryHasTooManyAADGroupsToExpand" xml:space="preserve">
+    <value>VS403673: Query has too many Microsoft Entra groups used by 'In Group' clauses.</value>
+  </data>
+  <data name="PicklistProcessAndFieldProcessDoNotMatch" xml:space="preserve">
+    <value>VS403063: The picklist with process {0} does not match the field's process {1}.</value>
+  </data>
+  <data name="WorkItemNotMovableException" xml:space="preserve">
+    <value>VS403098: The work item {0} cannot be moved. {1} work items cannot be moved.</value>
+  </data>
+  <data name="WorkItemStateNameChangeNotAllowed" xml:space="preserve">
+    <value>VS403088: Existing state name change is not allowed. Please delete and add a new state.</value>
+  </data>
+  <data name="QueryInGroupTooLarge" xml:space="preserve">
+    <value>The query cannot be run because the field {0} cannot be compared to a group with over {1} members</value>
+  </data>
+  <data name="QueryInvalidFieldTypeException" xml:space="preserve">
+    <value>TF51596: The Field Type is not recognized.</value>
+  </data>
+  <data name="WorkItemTypeRuleDefaultStringValueInvalid" xml:space="preserve">
+    <value>VS402817: You've specified an invalid default value for field {0}. Default value cannot be greater than {1} characters.</value>
+  </data>
+  <data name="ClassificationNodeDuplicateName" xml:space="preserve">
+    <value>VS402371: Classification node name {0} is already in use by a different child of parent classification node {1}. Choose a different name and try again.</value>
+  </data>
+  <data name="ValidatorMissingRefNameOnWorkItemType" xml:space="preserve">
+    <value>TF402573: Work Item Type '{0}' doesn't specify required refname attribute.</value>
+  </data>
+  <data name="ValidatorRequiredFieldsNotOnLayout" xml:space="preserve">
+    <value>VS403104: Work item type {0} references the required field ‘{1}’ which is not included in all layouts.</value>
+  </data>
+  <data name="ProjectNotFound" xml:space="preserve">
+    <value>Project {0} not found or you don't have access</value>
+  </data>
+  <data name="ClassificationNodeMaximumDepthExceeded" xml:space="preserve">
+    <value>VS402375: Classification node {0} has exceeded maximum allowed depth of fourteen (14) levels.</value>
+  </data>
+  <data name="QueryResultSizeLimitExceeded" xml:space="preserve">
+    <value>VS402337: The number of work items returned exceeds the size limit of {0}. Change the query to return fewer items.</value>
+  </data>
+  <data name="ReadRulesPermissionErrorMessage" xml:space="preserve">
+    <value>The user is not authorized to read rules for field {0} in work item type {1}</value>
+  </data>
+  <data name="QueryDuplicateSortOrderColumnException" xml:space="preserve">
+    <value>TF223008: A column name is specified more than once in the query XML. Check the list of fields defined for ORDER BY, and remove duplicate instances of a field.</value>
+  </data>
+  <data name="StateToDo" xml:space="preserve">
+    <value>To do</value>
+  </data>
+  <data name="StateDone" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="GitHubBoardsCannotCreateConnection" xml:space="preserve">
+    <value>VS403674: Cannot create external connection, possibly because there's an existing connection conflicting. </value>
+  </data>
+  <data name="ValidatorNoUsageOfForOrNotAttributes" xml:space="preserve">
+    <value>TF402584: Field rule attributes "for" or "not" aren't supported.</value>
+  </data>
+  <data name="FieldNameorRefNameAlreadyExists" xml:space="preserve">
+    <value>VS402811: Field name or reference name you specified is already in use, choose a different name.</value>
+  </data>
+  <data name="ValidatorSchemaValidationFailure" xml:space="preserve">
+    <value>TF402594: File violates the schema with the following error: {0}</value>
+  </data>
+  <data name="QueryExpressionInvalidChildNode" xml:space="preserve">
+    <value>TF401276: Query expression is invalid. Query comparison node must have at least one child, and none of the children can be null.</value>
+  </data>
+  <data name="WorkItemFieldInvalidTreeId" xml:space="preserve">
+    <value>TF401346: Invalid Area/Iteration id given for work item {0}, field '{1}'.</value>
+  </data>
+  <data name="FormLayoutHtmlGroupInvalidControlException" xml:space="preserve">
+    <value>VS403105: You can only add one HTML control per group. Select a different group and try again.</value>
+  </data>
+  <data name="ValidatorWorkItemTypeRenameWhileExistingWorkItems" xml:space="preserve">
+    <value>VS403445: You cannot rename work item type {0} to {1} because there are existing work items of this type. Please delete all work items of type {0} and try again.</value>
+  </data>
+  <data name="ProcessWorkItemTypeNotFound" xml:space="preserve">
+    <value>VS1640142: Work item type not found or you do not have permission in the process {0}.</value>
+  </data>
+  <data name="InvalidAuthorizationScheme" xml:space="preserve">
+    <value>The authorization scheme type is not supported for the operation.</value>
+  </data>
+  <data name="DuplicateListItem" xml:space="preserve">
+    <value>VS403077: The item {0} is present more than once. Remove all but the first instance.</value>
+  </data>
+  <data name="InvalidLinkQueryRecursionID" xml:space="preserve">
+    <value>TF201058: The recursive query on links RecursionID {0} attribute value is not valid. It must be an integer.</value>
+  </data>
+  <data name="GitHubEnterpriseVersionUnableToBeVerified" xml:space="preserve">
+    <value>Unable to verify the GitHub Enterprise Server version.</value>
+  </data>
+  <data name="ResourceLinkTargetUnspecified" xml:space="preserve">
+    <value>VS402329: Resource link target left unspecifed for a resource link on work item {0}</value>
+  </data>
+  <data name="QueryInvalidBooleanValueException" xml:space="preserve">
+    <value>TF401258: Unsupported boolean value in the expression value.</value>
+  </data>
+  <data name="UpdateWorkItemMultipleTimes" xml:space="preserve">
+    <value>The same work item is being updated multiple times, work item id is {0}</value>
+  </data>
+  <data name="ServiceEndpointAuthSchemeNotSupported" xml:space="preserve">
+    <value>Service connection authorization scheme is invalid.</value>
+  </data>
+  <data name="InvalidWorkItemQueryTimeout" xml:space="preserve">
+    <value>TF400553: Work item query timeout must be set to greater than or equal to 0. A value of 0 indicates no limit.</value>
+  </data>
+  <data name="ValidatorMissingFileInPackage" xml:space="preserve">
+    <value>TF402572: Cannot find specified file in the process template package.</value>
+  </data>
+  <data name="DeleteFieldPermissionError" xml:space="preserve">
+    <value>TF50309: The following organization does not have sufficient permissions to complete the operation: {0}. The following permissions are needed to perform this operation: Team Project Collection Administrator.</value>
+  </data>
+  <data name="AdminPermissionRequired" xml:space="preserve">
+    <value>TF401322: Only admin can bypass permissions.</value>
+  </data>
+  <data name="WorkItemInvalidRestoreRequestException" xml:space="preserve">
+    <value>VS402841: Failed to restore the work item(s).</value>
+  </data>
+  <data name="WorkItemTemplateDescriptionTooLong" xml:space="preserve">
+    <value>Work item template description cannot be longer than {0} characters.</value>
+  </data>
+  <data name="DefaultValueNotEditableOnField" xml:space="preserve">
+    <value>VS403306: Default value is not editable on field {0}.</value>
+  </data>
+  <data name="ClassificationNodeReclassificationNodeDoesNotExist" xml:space="preserve">
+    <value>VS402381: Reclassification node {0} does not exist. Make sure reclassification node exists and try again.</value>
+  </data>
+  <data name="MissingContributionName" xml:space="preserve">
+    <value>Missing name - set the 'name' attribute for extension {0}</value>
+  </data>
+  <data name="WorkItemExtensions" xml:space="preserve">
+    <value>**********************Work Item Extensions**********************</value>
+  </data>
+  <data name="ExternalConnectionNoRepositories" xml:space="preserve">
+    <value>The connection has no repositories. Please add at least one repository or delete the connection.</value>
+  </data>
+  <data name="WorkItemTypeTwoStateRestriction" xml:space="preserve">
+    <value>VS403085: The work item type needs to have at least one state in the {0} or {1} state category and at least one state in the {2} state category.</value>
+  </data>
+  <data name="WorkItemTemplateTypeNameNullOrEmpty" xml:space="preserve">
+    <value>Work item type name must be specified for a work item template.</value>
+  </data>
+  <data name="ObjectDoesNotExistOrAccessIsDenied" xml:space="preserve">
+    <value>VS403207: The object does not exist or access is denied.</value>
+  </data>
+  <data name="ProcessWorkItemTypeFieldDoesNotExistException" xml:space="preserve">
+    <value>VS402645: The field {0} does not exists in work item type {1}</value>
+  </data>
+  <data name="ValidatorLinkTypeAttributeNotExist" xml:space="preserve">
+    <value>VS402606: Link type doesn't define attribute '{0}'.</value>
+  </data>
+  <data name="ValidatorNoCustomFormControls" xml:space="preserve">
+    <value>TF402582: Work item type {1} contains custom control {0} which is not supported.  </value>
+  </data>
+  <data name="Resolved" xml:space="preserve">
+    <value>Resolved</value>
+  </data>
+  <data name="ExternalConnectionFailedToPopulateMetadata" xml:space="preserve">
+    <value>VS403672: Unexpected error while retrieving the connection.</value>
+  </data>
+  <data name="LegacyProcessUpdateBlocked" xml:space="preserve">
+    <value>VS1640129: The collection you are targeting uses inheritance process model. This operation is not allowed on an inheritance process model based collection. Please refer to https://go.microsoft.com/fwlink/?linkid=849010 or contact your system administrator for help.</value>
+  </data>
+  <data name="OOBBehaviorNamePluralNameMismatch" xml:space="preserve">
+    <value>VS403147: The portfolio backlog with the category name "{0}" and the plural name "{1}" already exists in the out of box template with the plural name "{2}". Please change the XML template to use the matching plural name.</value>
+  </data>
+  <data name="FieldInvalidIntegerValue" xml:space="preserve">
+    <value>Value for field {0} must be an integer value</value>
+  </data>
+  <data name="QueryExpressionOperatorNotSupportedException" xml:space="preserve">
+    <value>TF51580: The Query Expression operator is not supported.</value>
+  </data>
+  <data name="WorkItemTrackingPicklistConversionFailedBadValues" xml:space="preserve">
+    <value>VS403467: Failed to convert XML field with refname '{0}' to a picklist. Please verify that the ALLOWEDVALUES or SUGGESTEDVALUES in XML contain only characters that would be supported in inherited process string picklists.</value>
+  </data>
+  <data name="ValidatorMultipleUsesOfWorkItemTypeRefName" xml:space="preserve">
+    <value>TF402581: You can only use the refname {0} for a single work item type.</value>
+  </data>
+  <data name="FieldInvalidDateTime" xml:space="preserve">
+    <value>TF401323: Invalid date time value in field '{0}'.</value>
+  </data>
+  <data name="WorkItemTargetProjectDoesNotExist" xml:space="preserve">
+    <value>VS402834: The target project {0} does not exist.</value>
+  </data>
+  <data name="ValidatorCannotDefineGlobalLists" xml:space="preserve">
+    <value>TF402540: Work item type {1} isn't valid because it specifies global list {0}.  Global lists aren't supported.</value>
+  </data>
+  <data name="WorkItemTrackingIconNotSupported" xml:space="preserve">
+    <value>VS403349: Work item type icons are not supported for this organization.</value>
+  </data>
+  <data name="FormLayoutLabelExceededLimitException" xml:space="preserve">
+    <value>VS402825: The label '{0}' exceeds the max allowed length of {1} characters.</value>
+  </data>
+  <data name="WorkItemTypeFieldDoesNotExist" xml:space="preserve">
+    <value>VS402806: Work item type '{0}' does not contain field with reference name '{1}'.</value>
+  </data>
+  <data name="GitHubBoardsBotLinkingErrorSuggestion" xml:space="preserve">
+    <value>Please check the IDs and try again using the AB# syntax. [Learn more](https://aka.ms/ablinks)</value>
+  </data>
+  <data name="WorkItemStateNameAlreadyInUse" xml:space="preserve">
+    <value>VS403083: You specified a state {0} that is already in use. Choose a different name.</value>
+  </data>
+  <data name="CreateGitHubFileContent_ApiError" xml:space="preserve">
+    <value>Unable to create the file content in the GitHub repository '{0}' for the branch '{1}' and file path '{2}'. {3}</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateLongText" xml:space="preserve">
+    <value>TF401275: Query expression contains invalid predicate. Long text operator can only be used with fields that support full text search, and long text fields can only be used with long text operators.</value>
+  </data>
+  <data name="ValidatorFeatureMissingAllowedValuesOnField" xml:space="preserve">
+    <value>TF402544: Field {1}, defined in work item type {0}, requires an ALLOWEDVALUES rule that contains values to support element {2} specified in ProcessConfiguration.</value>
+  </data>
+  <data name="WorkItemAreaPathDoesNotMatchTargetProject" xml:space="preserve">
+    <value>VS403097: Area path does not belong to target project.</value>
+  </data>
+  <data name="FormLayoutGroupDoesNotExistException" xml:space="preserve">
+    <value>VS402646: The group '{0}' does not exist in work item type {1}</value>
+  </data>
+  <data name="Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="ErrorSerializedExtensionPredicateTooLong" xml:space="preserve">
+    <value>Xml serialized work item type extension predicate cannot be larger than 4000 characters.</value>
+  </data>
+  <data name="ValidatorInconsistentFieldDefinitionInTemplate" xml:space="preserve">
+    <value>TF402557: Inconsistent definitions exist for field {0} in the following work item types: {1}. Ensure that all references to a field have the same RefName, Name, Type, and SyncNameChanges.</value>
+  </data>
+  <data name="FormLayoutControlDoesNotExistException" xml:space="preserve">
+    <value>VS402829: The control id {0} does not exists in work item type {1}.</value>
+  </data>
+  <data name="OrgNodeIdInvalid" xml:space="preserve">
+    <value>Service endpoint for GitHub organization NodeId '{0}' invalid or not found.</value>
+  </data>
+  <data name="UndeletedQueryItemParentNotFound" xml:space="preserve">
+    <value>VS402333: Parent of query item to be undeleted was not found.  It likely is currently deleted</value>
+  </data>
+  <data name="ValidatorFeatureUnknownCategoryForFeature" xml:space="preserve">
+    <value>TF402553: Element {0} references category {1} which isn't defined in the categories file.</value>
+  </data>
+  <data name="RulesNotFoundForWorkItemType" xml:space="preserve">
+    <value>VS403298: Rules could not be found for the '{0}' work item type in the '{1}' process.</value>
+  </data>
+  <data name="FieldRefNameMustDifferFromName" xml:space="preserve">
+    <value>The ReferenceName of a field cannot be the same as the name of the field.</value>
+  </data>
+  <data name="SystemDescriptionReadonly" xml:space="preserve">
+    <value>VS1640093: You cannot modify the description of a system field.</value>
+  </data>
+  <data name="WorkItemRemoteLinksLimitExceeded" xml:space="preserve">
+    <value>VS403471: Cannot add a new remote link because one of the work items being linked will exceed the {0} remote link limit. Remove remote links from that item and try saving again. For more details, please refer to https://go.microsoft.com/fwlink/?linkid=858636. </value>
+  </data>
+  <data name="WorkItemTemplateUnknownPath" xml:space="preserve">
+    <value>Unknown Path</value>
+  </data>
+  <data name="WorkItemTemplateUnknownUser" xml:space="preserve">
+    <value>Unknown User</value>
+  </data>
+  <data name="ValidatorUnsupportedIdentityFieldUsage" xml:space="preserve">
+    <value>VS402841: Field {0} in work item type {1} has syncnamechanges=false but has rules making it an identity field. Identity fields must have syncnamechanges=true. Please update your process template to include this change.</value>
+  </data>
+  <data name="ValidatorFeatureMissingTypeField" xml:space="preserve">
+    <value>TF402549: To support ProcessConfiguration element {3}, work item type {0} must define TypeField {1} (field refname {2}).</value>
+  </data>
+  <data name="WorkItemDestroyException" xml:space="preserve">
+    <value>VS402324: Failed to destroy work items. The work items do not exist or access is denied.</value>
+  </data>
+  <data name="ContributionId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="UndeletedQuerysParentHasTooManyChildren" xml:space="preserve">
+    <value>The query item can not be undeleted, it's parent has too many query items.</value>
+  </data>
+  <data name="QueryInvalidAsOfDate" xml:space="preserve">
+    <value>TF51583: Query contains an unsupported date for AsOfDate.</value>
+  </data>
+  <data name="UnknownProjectName" xml:space="preserve">
+    <value>UnknownProject</value>
+  </data>
+  <data name="QueryExpressionInvalidColumnTypeComparison" xml:space="preserve">
+    <value>TF401340: Query expression contains invalid predicate. You cannot compare fields of different data types.</value>
+  </data>
+  <data name="WorkItemTypeDoesNotExist" xml:space="preserve">
+    <value>VS402805: Cannot find work item type with reference name &amp;apos;{0}&amp;apos; in process named &amp;apos;{1}&amp;apos;.</value>
+  </data>
+  <data name="FormLayoutPageDoesNotExistException" xml:space="preserve">
+    <value>VS402815: The page '{0}' does not exists in work item type {1}</value>
+  </data>
+  <data name="StateDefaultReason" xml:space="preserve">
+    <value>Moved to state {0}</value>
+  </data>
+  <data name="WorkItemDateInFutureException" xml:space="preserve">
+    <value>VS402624: Specified dates cannot be in the future.</value>
+  </data>
+  <data name="FormLayoutPageInvalidOperationException" xml:space="preserve">
+    <value>VS403109: Sub tree operations on page is not supported.</value>
+  </data>
+  <data name="ValidatorLimitsTooManyItemsInAGlobalList" xml:space="preserve">
+    <value>TF402565: You've defined {1} items in global list {0}. A maximum of {2} is allowed.</value>
+  </data>
+  <data name="RecipientWorkItemAccessDenied" xml:space="preserve">
+    <value>One or more recipients do not have permission to read the included work item(s). Please update your recipient list and try again.</value>
+  </data>
+  <data name="FieldNotCustomizableException" xml:space="preserve">
+    <value>VS403107: You cannot add field {0} to the layout.</value>
+  </data>
+  <data name="InvalidFieldStatus" xml:space="preserve">
+    <value>TF401326: Invalid field status '{0}' for field '{1}'.</value>
+  </data>
+  <data name="GitHubGetCommits_ApiError" xml:space="preserve">
+    <value>Unable to get commits. {0}</value>
+  </data>
+  <data name="ResourceLinkNotFound" xml:space="preserve">
+    <value>TF401361: Resource link not found for work item {0}</value>
+  </data>
+  <data name="GitHubRepoNotConfiguredForProjectEvents" xml:space="preserve">
+    <value>Project {0} not configured for processing events from GitHub repo {1}.</value>
+  </data>
+  <data name="ClassificationNodeEmptyIdentifier" xml:space="preserve">
+    <value>VS402369: Classification node identifier can't be empty GUID. Correct the identifier and try again.</value>
+  </data>
+  <data name="PicklistPermissionException" xml:space="preserve">
+    <value>VS403229: You do not have the collection-level Edit Process permission, which is required to create, delete, or update picklists.</value>
+  </data>
+  <data name="WorkItemTemplateNameNullOrEmpty" xml:space="preserve">
+    <value>Work item template name cannot be null or empty string.</value>
+  </data>
+  <data name="BehaviorCreationInvalidParent" xml:space="preserve">
+    <value>VS403200: Invalid parent behavior '{0}'. Only new portfolio backlog behaviors are supported with parent behavior id '{1}'.</value>
+  </data>
+  <data name="ValidatorRenameOfFieldInExistingTemplatesError" xml:space="preserve">
+    <value>TF402591: Field with Reference Name {0} cannot be renamed to '{1}' from '{2}' in existing processes {3}.</value>
+  </data>
+  <data name="WorkItemTemplateWorkItemTypeNameTooLong" xml:space="preserve">
+    <value>Work item type name cannot be longer than {0} characters.</value>
+  </data>
+  <data name="ProcessWorkItemTypeInvalidPropertyUpdate" xml:space="preserve">
+    <value>VS402853: Work item type '{0}' description or color cannot be modified in inherited process.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateArrayOperator" xml:space="preserve">
+    <value>TF401280: Query expression contains invalid predicate. Array value can only be used with In operator or with Tags query.</value>
+  </data>
+  <data name="CannotDisableTestWorkItemTypeReason" xml:space="preserve">
+    <value>Disabling test work item types is not allowed.</value>
+  </data>
+  <data name="QueryAccessDenied" xml:space="preserve">
+    <value>TF401256: You do not have {1} permissions for query {0}.</value>
+  </data>
+  <data name="BehaviorReferenceNotExists" xml:space="preserve">
+    <value>The {0} work item type does not reference the {1} behavior.</value>
+  </data>
+  <data name="WorkItemInvalidDestroyRequestException" xml:space="preserve">
+    <value>VS402345: Failed to destroy the work item(s). The work item(s) with id(s) {0} are not present in the recycle bin or access is denied.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateEverContains" xml:space="preserve">
+    <value>TF401283: Query expression contains invalid predicate. Ever Contains operator can only be used with long text fields.</value>
+  </data>
+  <data name="TooManyRevisionsForHistoryAPI" xml:space="preserve">
+    <value>Work item {0} has {1} revisions, but currently only work items with up to {2} revisions are supported when reading history.</value>
+  </data>
+  <data name="InvalidHistoryFieldValue" xml:space="preserve">
+    <value>{0} is an invalid value for the History field. Change the field value and try again.</value>
+  </data>
+  <data name="PickListItemTooLong" xml:space="preserve">
+    <value>VS402847: A value in the picklist {0} exceeds the maximum length for a value, {1}.</value>
+  </data>
+  <data name="EditingOutOfBoxFieldIsNotSupported" xml:space="preserve">
+    <value>VS403304: Editing the properties of field {0} is not supported.</value>
+  </data>
+  <data name="InvalidConstantIdentity" xml:space="preserve">
+    <value>VS403668: A real identity {0} should not be composed as constant identity</value>
+  </data>
+  <data name="SenderWorkItemAccessDenied" xml:space="preserve">
+    <value>Sender does not have permission to read the included work item(s). Please contact your project administrator.</value>
+  </data>
+  <data name="WorkItemNotFoundOrAccessDenied" xml:space="preserve">
+    <value>TF401232: Work item {0} does not exist, or you do not have permissions to read it.</value>
+  </data>
+  <data name="WorkItemTrackingInvalidIconId" xml:space="preserve">
+    <value>VS403344: You've specified an invalid icon Id '{0}'.</value>
+  </data>
+  <data name="WorkItemTemplateFieldRefNameContainsWhiteSpace" xml:space="preserve">
+    <value>Work item template field {0} cannot have a field reference name containing spaces.</value>
+  </data>
+  <data name="PageContribution" xml:space="preserve">
+    <value>Page contribution</value>
+  </data>
+  <data name="Validation_StateColors_StateOrColor_Invalid" xml:space="preserve">
+    <value>VS403123: Invalid state or color value in pair '{0}'.</value>
+  </data>
+  <data name="FailedSetRecordValues" xml:space="preserve">
+    <value>System.NullReferenceException: Failed to Set Record Values. Target field: {0}. Value: {1}</value>
+  </data>
+  <data name="ValidatorFeatureInvalidMetastateMapping" xml:space="preserve">
+    <value>TF402543: Element {1} requires that you map exactly one workflow state to metastate {0}.</value>
+  </data>
+  <data name="TypeFilteringNotSupportedForDiscussions" xml:space="preserve">
+    <value>Filtering on types is not supported when limiting results to discussions</value>
+  </data>
+  <data name="NewFormAssignedToWatermark" xml:space="preserve">
+    <value>Unassigned</value>
+  </data>
+  <data name="WorkItemTemplateNameTooLong" xml:space="preserve">
+    <value>Work item template name cannot be longer than {0} characters.</value>
+  </data>
+  <data name="WorkItemTrackingCacheRefreshWaitTooLong" xml:space="preserve">
+    <value>TF401348: Cache is out of date, but an existing refresh took longer than {0} milliseconds. Cachetype {1}.</value>
+  </data>
+  <data name="GitHubBoardsConnectionAlreadyExist" xml:space="preserve">
+    <value>VS402655: The connection with name '{0}' already exists.</value>
+  </data>
+  <data name="PickListNameAlreadyInUse" xml:space="preserve">
+    <value>VS402848: The picklist name {0} is already in use.</value>
+  </data>
+  <data name="GitHubBoardsExceededReposNumberLimit" xml:space="preserve">
+    <value>VS403670: You cannot have more than {0} repositories in a connection.</value>
+  </data>
+  <data name="ValidatorMultipleUsesOfWorkItemTypeName" xml:space="preserve">
+    <value>TF402580: You can only use the name {0} for a single work item type.</value>
+  </data>
+  <data name="ValidatorFeatureUnknownMetastate" xml:space="preserve">
+    <value>TF402554: Element {1} specifies an unsupported metastate {0}. </value>
+  </data>
+  <data name="MacroDoesNotAcceptParameters" xml:space="preserve">
+    <value>Macro '@{0}' does not accept parameters</value>
+  </data>
+  <data name="WorkItemTrackingNameInvalid" xml:space="preserve">
+    <value>VS402800: The name '{0}' is invalid. Names cannot be empty, exceed {1} characters, be a number, or contain the following characters: {2}.</value>
+  </data>
+  <data name="CannotReferenceAbstractBehavior" xml:space="preserve">
+    <value>VS403196: The {0} behavior is abstract and cannot be referenced by a work item type.</value>
+  </data>
+  <data name="FormLayoutSystemControlDoesNotExistException" xml:space="preserve">
+    <value>VS403701: System control {0} do not exist.</value>
+  </data>
+  <data name="InvalidResourceLinkTarget" xml:space="preserve">
+    <value>Invalid Resource Link Target: '{0}'.</value>
+  </data>
+  <data name="IsEmptyDisabled" xml:space="preserve">
+    <value>The is empty operator is disabled</value>
+  </data>
+  <data name="InvalidProjectMigrationDueToCustomTypes" xml:space="preserve">
+    <value>VS403202: The team project '{0}' contains work items of one or more custom types ({1}) that exist in the '{2}' process but not the target process. Delete these work items or change their type to a type that exists in the target process.</value>
+  </data>
+  <data name="ExternalConnectionRepositoryIdAlreadyExist" xml:space="preserve">
+    <value>Error adding repository. The node id '{0}' already exists.</value>
+  </data>
+  <data name="WorkItemAreaPathInvalid" xml:space="preserve">
+    <value>TF401345: Area path for work item {0} is invalid</value>
+  </data>
+  <data name="WorkItemFormOtherGroups" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="PickListDoesNotExist" xml:space="preserve">
+    <value>VS402849: Could not find picklist with ID {0}.</value>
+  </data>
+  <data name="ProcessWorkItemTypeNameAlreadyInUse" xml:space="preserve">
+    <value>VS403066: The work item type name {0} you specified is already in use. Choose a different name and try again.</value>
+  </data>
+  <data name="ValidatorWorkItemTypeRefNameInvalid" xml:space="preserve">
+    <value>TF402600: The work item type refname {0} isn't valid as it either uses disallowed characters (must have only letters, no spaces, and at least one period (.)), or has a bad length (must be within 1-70 characters long).</value>
+  </data>
+  <data name="FormLayoutControlsLimitExceededException" xml:space="preserve">
+    <value>VS402842: Adding control: {0} to group: {1} exceeds limitation of {2} controls per group.</value>
+  </data>
+  <data name="GitHubEnterpriseVersionNotSupported" xml:space="preserve">
+    <value>GitHub Enterprise Server version '{0}' is not supported. Supported versions are '{1}' and later.</value>
+  </data>
+  <data name="QueryInvalidNumberOfValuesInExpressionException" xml:space="preserve">
+    <value>TF51600: An expression in the query XML contains an unsupported number of values.</value>
+  </data>
+  <data name="Validation_WorkItemTypeIcons_Type_Invalid" xml:space="preserve">
+    <value>VS403291: Invalid work item type in pair '{0}'.</value>
+  </data>
+  <data name="WorkItemTypeCategoryNotFound" xml:space="preserve">
+    <value>VS402325: Work item type category {1} does not exist in project {0} or you do not have access to it.</value>
+  </data>
+  <data name="ValidatorWorkItemTypeDeleteWhileExistingWorkItems" xml:space="preserve">
+    <value>TF403402: You cannot delete work item type {0} because there are existing work items of this type. Please delete all work items of type {0} and try again.</value>
+  </data>
+  <data name="WorkItemUnauthorizedProjectAttachment" xml:space="preserve">
+    <value>VS402330: Unauthorized {0} access to the attachment under the areas {1} of project {2}</value>
+  </data>
+  <data name="Tags_InvalidScope" xml:space="preserve">
+    <value>TF401013: Tag with id '{0}' is not scoped to the current project.</value>
+  </data>
+  <data name="WorkItemRuleInvalidValue" xml:space="preserve">
+    <value>VS402809: {0} is an invalid value for field type {1}. Change the field value and try again.</value>
+  </data>
+  <data name="CompletedCategoryNotHasOneState" xml:space="preserve">
+    <value>Work item type "{0}" not has only 1 state for completed category: {1}</value>
+  </data>
+  <data name="GetConstantRecordInvalidGuidString" xml:space="preserve">
+    <value>TF400926: When getting constant records using Azure DevOps identity ID, the supplied search value must be a valid GUID.</value>
+  </data>
+  <data name="ProcessOutOfBoxFieldsNotFound" xml:space="preserve">
+    <value>Unable to get list of out of box fields for process: {0}.</value>
+  </data>
+  <data name="WorkItemTemplateLimitExceeded" xml:space="preserve">
+    <value>Number of work item templates for the type have exceeded the limit of {0}.</value>
+  </data>
+  <data name="QueryExpressionInvalidSortFieldLinkType" xml:space="preserve">
+    <value>TF401274: Query expression contains invalid sort field. LinkTable can only sort on LinkType field, and LinkType field can only be used in LinkTable</value>
+  </data>
+  <data name="WorkItemTrackingInvalidColor" xml:space="preserve">
+    <value>VS403064: You've specified an invalid color '{0}'. Color should be a 6 character hexadecimal value.</value>
+  </data>
+  <data name="ValidatorRenameOfFieldInExistingTemplates" xml:space="preserve">
+    <value>TF402591: Field {0} will be renamed to '{1}' from '{2}' in existing processes {3}.</value>
+  </data>
+  <data name="Validation_ElementError" xml:space="preserve">
+    <value>The following element contains an error: {0}. {1}</value>
+  </data>
+  <data name="QueryInvalidExpandFlagException" xml:space="preserve">
+    <value>TF51593: An expression in the query XML contains unsupported expand flags.</value>
+  </data>
+  <data name="ErrorNoAreaWriteCommentAccess" xml:space="preserve">
+    <value>TF237135: The current user does not have permissions to save work item comments under the specified area path.</value>
+  </data>
+  <data name="DeploymentGroupLabel" xml:space="preserve">
+    <value>Deployment</value>
+  </data>
+  <data name="ValueContainsInvalidHTML" xml:space="preserve">
+    <value>VS403297: The value '{0}' is not valid because it contains unsupported HTML content.</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="GitHubConnectionNotFoundMessage" xml:space="preserve">
+    <value>There is no connection configured for the specified repository.</value>
+  </data>
+  <data name="ValidatorFieldDelete" xml:space="preserve">
+    <value>TF402555: Field {0} will be deleted.</value>
+  </data>
+  <data name="ValidatorFeatureStateMappedToMultipleMetastates" xml:space="preserve">
+    <value>TF402550: Element {1} includes more than one metastate mapping for workflow state {0}.</value>
+  </data>
+  <data name="QueryExpressionInvalidPredicateArrayNested" xml:space="preserve">
+    <value>TF401282: Query expression contains invalid predicate. Array value cannot have array value as element.</value>
+  </data>
+  <data name="WorkItemHasNoValidTransitionXml" xml:space="preserve">
+    <value>{0} {1} cannot be completed because there is no transition from '{2}'.</value>
+  </data>
+  <data name="UndeletedQueryHasSiblingWithSameName" xml:space="preserve">
+    <value>VS402334: A non-deleted sibling of the query item to be undeleted has the same name</value>
+  </data>
+  <data name="QueryCrossProjectPermissionException" xml:space="preserve">
+    <value>You do not have cross-project query permission. The {0} is required in this case. The {0} must not be null and the guid specified for parameter {0} must not be Guid.Empty.</value>
+  </data>
+  <data name="AdministratorAccessDenied" xml:space="preserve">
+    <value>VS402342: You do not have permission to preform project administrator actions</value>
+  </data>
+  <data name="InvalidListItemType" xml:space="preserve">
+    <value>VS403060: List item '{0}' is not of type {1}.</value>
+  </data>
+  <data name="FieldAlreadyExists" xml:space="preserve">
+    <value>VS402803: Field name '{0}' you specified is already in use, choose a different name.</value>
+  </data>
+  <data name="WorkItemStateOrderInvalid" xml:space="preserve">
+    <value>VS403085: You specified a state order that is invalid. State should follow state category order of {0}, {1}, {2}, {3}.</value>
+  </data>
+  <data name="CurrentProjectNotFound" xml:space="preserve">
+    <value>Current project is not found.</value>
+  </data>
+  <data name="DevelopmentGroupTitle" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="CSS_NODE_WORK_ITEM_SAVE_COMMENT" xml:space="preserve">
+    <value>Edit work item comments in this node</value>
+  </data>
+  <data name="WorkItemDeleteOrRestoreWithOtherUpdatesException" xml:space="preserve">
+    <value>VS402839: Delete/Restore failed because changes have been made to the work item {0}.</value>
+  </data>
+  <data name="NewFormAssignedToLabel" xml:space="preserve">
+    <value>Assi&amp;gned To</value>
+  </data>
+  <data name="FormLayoutAddHTMLControlToGroupException" xml:space="preserve">
+    <value>VS403106: HTML controls can not be added to an existing group</value>
+  </data>
+  <data name="WorkItemIdentityNotResovledByName" xml:space="preserve">
+    <value>VS403425: Some identities could not be resolved in the work item.</value>
+  </data>
+  <data name="DeleteCollectionLevelFieldPermissionError" xml:space="preserve">
+    <value>User {0} does not have 'Delete field from organization' permissions. Please contact your collection administrator to grant this permission for enabling this action.</value>
+  </data>
+  <data name="InvalidNodeNameException" xml:space="preserve">
+    <value>VS402485: The Area/Iteration name is not recognized: {0}</value>
+  </data>
+  <data name="MultipleBehaviorReferencesNotAllowed" xml:space="preserve">
+    <value>VS403194: The {0} work item type already references a behavior. Adding multiple behavior references to a work item type is currently not supported.</value>
+  </data>
+  <data name="NewFormAreaPathLabel" xml:space="preserve">
+    <value>&amp;Area</value>
+  </data>
+  <data name="QueryIDsInvalidColumnName" xml:space="preserve">
+    <value>TF51582: The column name you entered contains unsupported characters. Enter a column name using only alphanumeric characters.</value>
+  </data>
+  <data name="NullOrEmptyParameter" xml:space="preserve">
+    <value>{0} cannot be null or empty.</value>
+  </data>
+  <data name="UnsupportedGitHubItemType" xml:space="preserve">
+    <value>GitHub item type '{0}' is not supported.</value>
+  </data>
+  <data name="GitHubGetRepositories_ApiError" xml:space="preserve">
+    <value>Unable to get repositories. {0}</value>
+  </data>
+  <data name="GenericPickListNameAlreadyInUse" xml:space="preserve">
+    <value>VS402848: The picklist name is already in use.</value>
+  </data>
+  <data name="QueryItemCacheParentNotFoundException" xml:space="preserve">
+    <value>VS402480: Unable to find parent {1} of the query item {0} in the query cache using watermark {2}</value>
+  </data>
+  <data name="FailedToDeprovisionRepo" xml:space="preserve">
+    <value>VS402666: Failed to remove web hook for repository '{0}'. </value>
+  </data>
+  <data name="RuleValidationErrors_OneAdditional" xml:space="preserve">
+    <value>{0} One additional error occurred during validation of the work item. Please correct all errors and try again.</value>
+  </data>
+  <data name="ValidatorWarningUsingForNotAttributes" xml:space="preserve">
+    <value>VS402632: Warning: Field rule attributes “for” or “not” are defined in this process. Microsoft Entra groups are unsupported in these field rule attributes and will be ignored even if nested within an Azure DevOps Services group</value>
+  </data>
+  <data name="StateCommitted" xml:space="preserve">
+    <value>Committed</value>
+  </data>
+  <data name="RepoNotConfiguredForGitHubEvents" xml:space="preserve">
+    <value>Repository {0} not configured for processing events from GitHub.</value>
+  </data>
+  <data name="NotInScopeAadIdentity" xml:space="preserve">
+    <value>The identity '{0}' for field '{1}' is not in scope of this organization.</value>
+  </data>
+  <data name="ClassificationNodeDuplicateIdentifier" xml:space="preserve">
+    <value>VS402370: Classification node identifier {0} is already in use. Correct the identifier and try again.</value>
+  </data>
+  <data name="WorkItemTypeNameAlreadyExists" xml:space="preserve">
+    <value>VS402343: Work item type name already exists</value>
+  </data>
+  <data name="ProcessCannotBeCustomized" xml:space="preserve">
+    <value>VS402804: You cannot customize a system process. To begin customizing, you must first create an inherited process.</value>
+  </data>
+  <data name="PortfolioBehaviorSqlLimitExceeded" xml:space="preserve">
+    <value>VS403200: Portfolio backlogs limit exceeded. You can delete an existing backlog and then add a new one.</value>
+  </data>
+  <data name="Tags_AddedAndRemovedContainSameTag" xml:space="preserve">
+    <value>TF400632: Tag exists in both added and removed tags sequences.</value>
+  </data>
+  <data name="Tags_NonExistingTag" xml:space="preserve">
+    <value>TF400630: Tag with id '{0}' does not exist.</value>
+  </data>
+  <data name="ValidatorLimitsTooManySyncNameChangesFieldsInType" xml:space="preserve">
+    <value>TF402568: You've defined {1} fields with syncnamechanges="true" for work item type {0}. A maximum of {2} is allowed.</value>
+  </data>
+  <data name="GitHubBoardsBotLinkingErrorHeading" xml:space="preserve">
+    <value>❌ There was a problem linking to Azure Boards work item(s):</value>
+  </data>
+  <data name="FieldValue_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ValidatorFeatureMissingMappedStateInType" xml:space="preserve">
+    <value>TF402547: Element {2} requires that for work item type {0} you map at least one state to metastate {1}.</value>
+  </data>
+  <data name="ContributionControlCannotHaveControlTypeException" xml:space="preserve">
+    <value>VS403212: ControlType is not a supported property for contribution controls.</value>
+  </data>
+  <data name="Validation_WorkItemTypeIcons_Icon_Invalid" xml:space="preserve">
+    <value>VS403292: Invalid work item type icon in pair '{0}'.</value>
+  </data>
+  <data name="WorkItemTargetAreaPathNotProvided" xml:space="preserve">
+    <value>VS403096: Target area path was not provided when changing team project.</value>
+  </data>
+  <data name="ExternalConnectionIsInvalid" xml:space="preserve">
+    <value>VS403688: The external connection is not working, please remove and create a new one.</value>
+  </data>
+  <data name="RepoNotUniqueForGitHubEvent" xml:space="preserve">
+    <value>Repository name '{0}' with id '{1}' matches more than one repo in the collection - skip process GitHub event. </value>
+  </data>
+  <data name="BehaviorDoesNotExist" xml:space="preserve">
+    <value>VS403192: The {0} behavior does not exist in the {1} process.</value>
+  </data>
+  <data name="SharedQueries" xml:space="preserve">
+    <value>Shared Queries</value>
+  </data>
+  <data name="ValidatorMultipleUsesOfLinkTypeDisplayName" xml:space="preserve">
+    <value>VS402610: Name '{0}' is used multiple times on different link types: {1}. Name for link types must be unique.</value>
+  </data>
+  <data name="WorkItemTypeCategoriesNotFound" xml:space="preserve">
+    <value>VS402325: Work item type categories does not exist in project {0} or you do not have access to it.</value>
+  </data>
+  <data name="Tags_InvalidTagName" xml:space="preserve">
+    <value>TF400633: Tag name '{0}' is invalid.</value>
+  </data>
+  <data name="ValidatorLimitsTooManyGlobalLists" xml:space="preserve">
+    <value>TF402564: You've defined {0} global lists. Only {1} are allowed.</value>
+  </data>
+  <data name="DefaultRuleInvalidAllowedValue" xml:space="preserve">
+    <value>VS403221: The value '{0}' is not an allowed value for field '{1}'. Valid values are {2}.</value>
+  </data>
+  <data name="WorkItemResourceLinkLocationUnsafeUrl" xml:space="preserve">
+    <value>The URL specified has a potentially unsafe URL protocol.  Please specify a different URL. The URL specified is: {0}. URI schemes supported are: {1}.</value>
+  </data>
+  <data name="RulesNotFound" xml:space="preserve">
+    <value>TF401317: Cannot load rules for work item type {0}, project {1}.</value>
+  </data>
+  <data name="ExtensionMoreInformation" xml:space="preserve">
+    <value>Note: For more information on work item extensions use the following topic:</value>
+  </data>
+  <data name="QueryNotFoundUnderProject" xml:space="preserve">
+    <value>TF401243: The query {0} does not exist in current project, or you do not have permission to read it.</value>
+  </data>
+  <data name="AsOfWorkItemQueriesNotSupported" xml:space="preserve">
+    <value>VS402341: AsOf queries are not yet supported for link queries</value>
+  </data>
+  <data name="CSS_NODE_GENERIC_WRITE" xml:space="preserve">
+    <value>Edit this node</value>
+  </data>
+  <data name="WorkItemStringInvalidException" xml:space="preserve">
+    <value>VS403206: The string value specified is not supported.</value>
+  </data>
+  <data name="ValidatorLimitsTooManyStatesInWIT" xml:space="preserve">
+    <value>TF402567: You've defined {1} workflow states for work item type {0}. A maximum of {2} is allowed.</value>
+  </data>
+  <data name="OnlyRulesOrHelpTextsAllowed" xml:space="preserve">
+    <value>Only Rule or HelpText metadata types are supported.</value>
+  </data>
+  <data name="ValidatorLinkTypeDefinitionNotUnique" xml:space="preserve">
+    <value>VS402607: Link type '{0}' is defined multiple times. Remove the duplicate definition and try again.</value>
+  </data>
+  <data name="StateActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ValidatorLimitsTooManyWITs" xml:space="preserve">
+    <value>TF402570: You've defined {0} work item types. A maximum of {1} is allowed.</value>
+  </data>
+  <data name="FieldNotExistInWorkItemType" xml:space="preserve">
+    <value>Fields "{0}" do not exist in work item type "{1}"</value>
+  </data>
+  <data name="ValidatorCustomLinkTypeInProtectedNamespace" xml:space="preserve">
+    <value>VS402608: The link type reference name '{0}' isn't valid as it uses disallowed namespace '{1}'.</value>
+  </data>
+  <data name="WorkItemRestoreLinksUnrecoverableComment" xml:space="preserve">
+    <value>Work item links could not be restored (Rev {0}). Link conflicts were encountered.</value>
+  </data>
+  <data name="FormLayoutAddControlToContributedGroupException" xml:space="preserve">
+    <value>VS403222: You cannot add a field to a group added through an extension. Select a different group and try again.</value>
+  </data>
+  <data name="NewFormChangedDateLabel" xml:space="preserve">
+    <value>Last Updated Date</value>
+  </data>
+  <data name="BehaviorReferenceNameInUse" xml:space="preserve">
+    <value>VS403436: The reference name you specified is already in use. This may be an error with copying processes.</value>
+  </data>
+  <data name="WorkItemCommentUnsupportedAccessMessage" xml:space="preserve">
+    <value>This operation is not supported through ICommentService, please use WorkItemCommentService instead.</value>
+  </data>
+  <data name="ValidatorBlockedRulesOnFieldThatLimitsRules" xml:space="preserve">
+    <value>TF402539: Field {0} only allows the following field rules: {1}.</value>
+  </data>
+  <data name="ExternalConnectionFailedToAddRepository" xml:space="preserve">
+    <value>Failed to add repository.</value>
+  </data>
+  <data name="FormLayoutSectionInvalidControlException" xml:space="preserve">
+    <value>VS1640101: HTML control can only be placed in first section of the page</value>
+  </data>
+  <data name="WorkItemStateBlockCompletedCategoryChanges" xml:space="preserve">
+    <value>VS403093: Team Services currently does not support changes to 'Completed' category. Choose a different category.</value>
+  </data>
+  <data name="InvalidFieldId" xml:space="preserve">
+    <value>TF400645: Missing or unsupported field id {0}.</value>
+  </data>
+  <data name="FormLayoutStatusGroup" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StateClosed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="WorkItemNonDeletableLinkException" xml:space="preserve">
+    <value>VS402840: The work item {0} cannot be deleted. Work items with links to {1} work items cannot be deleted. Please remove the work item link(s) and try again.</value>
+  </data>
+  <data name="CannotReferenceBehaviorFromSystemWIT" xml:space="preserve">
+    <value>VS403195: The {0} work item type is a system type.  Behaviors can only be referenced from custom or derived work item types.</value>
+  </data>
+  <data name="CannotResolveIdentityByTfId" xml:space="preserve">
+    <value>VS403476: Cannot resolve identity based on teamfoundation id '{0}'</value>
+  </data>
+  <data name="WorkItemMaxAllowedAttachmentsLimitExceeded" xml:space="preserve">
+    <value>VS403313: The number of attachments exceeded the limit. One work item should contain no more than {0} attachments.</value>
+  </data>
+  <data name="ValidatorInvalidNumberOfAgileCommonConfigurationDocuments" xml:space="preserve">
+    <value>TF402603: You must have exactly one AgileConfiguration and one CommonConfiguration under PROCESSCONFIGURATION node in your process template.</value>
+  </data>
+  <data name="ValidatorFeatureStateMissingInType" xml:space="preserve">
+    <value>TF402551: Work item type {0} doesn't define workflow state {1}, which is required because ProcessConfiguration maps it to a metastate for element {2}.</value>
+  </data>
+  <data name="Tags_CannotHaveRemovedTagsForNewWorkItem" xml:space="preserve">
+    <value>TF400634: Cannot have removed tags for new workitem.</value>
+  </data>
+  <data name="WorkItemTargetIterationPathNotProvided" xml:space="preserve">
+    <value>VS403094: Target iteration path was not provided when changing team project.</value>
+  </data>
+  <data name="InvalidResourceLinkType" xml:space="preserve">
+    <value>Invalid Resource Link Type: '{0}'.</value>
+  </data>
+  <data name="ClassificationNodeUnexpectedSqlError" xml:space="preserve">
+    <value>VS402368: An unexpected SQL error has occurred. Try again. Error code: {0}.</value>
+  </data>
+  <data name="GitHubBoardsBotLinkingSuccessHeading" xml:space="preserve">
+    <value>✅ Successfully linked to Azure Boards work item(s):</value>
+  </data>
+  <data name="ValidatorInconsistentFieldDefinitionWithFieldTable" xml:space="preserve">
+    <value>TF402559: The definition for field {0} is inconsistent with an existing field. The type is {1} but should be {2}.</value>
+  </data>
+  <data name="InvalidLinkQuerySortOrder" xml:space="preserve">
+    <value>TF201057: The following sort order criteria for a query on links is not correctly formatted: {0}.</value>
+  </data>
+  <data name="ReadDependentFieldsNotAuthorizedError" xml:space="preserve">
+    <value>The user is not authorized to read dependent fields for the field {0}.</value>
+  </data>
+  <data name="LeadingNumbers" xml:space="preserve">
+    <value>VS403078: Values leading with numeric characters are not permitted. Remove the leading numeric characters.</value>
+  </data>
+  <data name="WorkItemRulePreventingTransition" xml:space="preserve">
+    <value>{0}: Cannot complete {1} {2} because it has validation errors. {3}</value>
+  </data>
+  <data name="DefaultValueCannotBeGroup" xml:space="preserve">
+    <value>VS403314: Default value cannot be a group, when group values are not allowed.</value>
+  </data>
+  <data name="InvalidLinkUpdate" xml:space="preserve">
+    <value>TF401323: Invalid link update. Either source or target id must be update's id.</value>
+  </data>
+  <data name="FormLayoutGroupHasChildrenException" xml:space="preserve">
+    <value>VS402820: Cannot remove group {0} that has children in work item type {1}</value>
+  </data>
+  <data name="GroupContribution" xml:space="preserve">
+    <value>Group contribution</value>
+  </data>
+  <data name="ValidatorLimitsTooManyCustomLinkTypes" xml:space="preserve">
+    <value>TF402561: You've defined {0} custom link types. Only {1} are allowed.</value>
+  </data>
+  <data name="QueryGroupOperatorNotSupportedException" xml:space="preserve">
+    <value>TF51581: The Query Group operator not is supported.</value>
+  </data>
+  <data name="RuleEvaluationFailed" xml:space="preserve">
+    <value>TF401319: Rule evaluation failed for field {0}.</value>
+  </data>
+  <data name="FormLayoutSectionInvalidException" xml:space="preserve">
+    <value>VS402830: The section id {0} is invalid.</value>
+  </data>
+  <data name="CreateStateDefinitionFailed" xml:space="preserve">
+    <value>Failed to create state definition.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ClassificationNodeParentNodeDoesNotExist" xml:space="preserve">
+    <value>VS402372: Parent classification node {0} doesn't exist. Make sure parent classification node exists and try again.</value>
+  </data>
+  <data name="QueryExpressionInvalidSortFieldDupe" xml:space="preserve">
+    <value>TF401277: {0} is specified more than once as sort field. Remove the duplicate instance of the field.</value>
+  </data>
+  <data name="FieldCouldNotBeFound" xml:space="preserve">
+    <value>VS1640094: Cannot find field {0}.</value>
+  </data>
+  <data name="GetGitHubReadmeFileContentData_FileNotFound" xml:space="preserve">
+    <value>GitHub readme not found in repository {0} at version/branch {1}.</value>
+  </data>
+  <data name="GitHubGetPullRequests_ApiError" xml:space="preserve">
+    <value>Unable to get pull requests. {0}</value>
+  </data>
+  <data name="FormLayoutAddContributedGroupException" xml:space="preserve">
+    <value>VS403226: Unable to add contributed group {0}.</value>
+  </data>
+  <data name="LinkTargetWorkItemNotSaved" xml:space="preserve">
+    <value>TF401318: Link target is a new work item ({0}) and it will not be saved.</value>
+  </data>
+  <data name="UnauthorizedSuppressNotifications" xml:space="preserve">
+    <value>VS403410: You don't have suppress notifications permission. Please contact your collection administrator to grant this permission for enabling this action.</value>
+  </data>
+  <data name="CannotDisableWorkItemType" xml:space="preserve">
+    <value>Work item type {0} cannot be disabled. {1}</value>
+  </data>
+  <data name="UpdateTooManySqlParameters" xml:space="preserve">
+    <value>TF51655: The update being performed generates a SQL batch with too many parameters.  Try a smaller update.</value>
+  </data>
+  <data name="WorkItemMaxCommentTextSizeExceeded" xml:space="preserve">
+    <value>VS403665: Comment text exceeds the maximum allowed length of {0}</value>
+  </data>
+  <data name="WorkItemTypeFieldLimitExceeded" xml:space="preserve">
+    <value>VS402808: You cannot add more than {0} fields to a work item type. Remove an existing field and then try again.</value>
+  </data>
+  <data name="FieldValueTooLong" xml:space="preserve">
+    <value>TF401324: Value for field '{0}' is too long.</value>
+  </data>
+  <data name="WorkItemTrackingNothingToUpdate" xml:space="preserve">
+    <value>VS402852: Nothing to update. You need to specify at least one change in the request body.</value>
+  </data>
+  <data name="QueryTimeoutException" xml:space="preserve">
+    <value>VS402335: The timeout period ({0} seconds) elapsed prior to completion of the query or the server is not responding.</value>
+  </data>
+  <data name="WorkItemLockingNotAllowedOrDisabled" xml:space="preserve">
+    <value>Work item field locking is disabled or not allowed. Locking is not allowed with process upload enabled.</value>
+  </data>
+  <data name="GitHubEnterpriseVersionMayNotBeSupported" xml:space="preserve">
+    <value>The current GitHub Enterprise Server version may not be supported. Supported versions are '{0}' and later.</value>
+  </data>
+  <data name="GitHubInstallationIdNotFound" xml:space="preserve">
+    <value>VS403672: GitHub installationId is not found in this service connection.</value>
+  </data>
+  <data name="InheritedWorkItemTypeAlreadyExists" xml:space="preserve">
+    <value>VS402806: Work item type inheriting from parent work item type '{0}' already exists in the process '{1}'. Refresh your client and try again.</value>
+  </data>
+  <data name="QueryHasTooManyAADGroupsToExpand_DiscloseCountAndLimit" xml:space="preserve">
+    <value>VS403673: Query has too many Microsoft Entra groups used by 'In Group' clauses. There are {0} unique Microsoft Entra groups and maximum allowed is {1}.</value>
+  </data>
+  <data name="BehaviorReferenceAlreadyExists" xml:space="preserve">
+    <value>VS403193: The {0} work item type already references the {1} behavior.</value>
+  </data>
+  <data name="CannotDeletePicklistReferencedByField" xml:space="preserve">
+    <value>VS403076: This picklist cannot be deleted because it is currently referenced by one or more fields.</value>
+  </data>
+  <data name="PortfolioBehaviorLimitExceeded" xml:space="preserve">
+    <value>VS403199: Each process supports {0} portfolio backlogs. You can delete an existing backlog and then add a new one.</value>
+  </data>
+  <data name="QueryMissingValueForContainsOperator" xml:space="preserve">
+    <value>The query does not contain a value for a long text expression.</value>
+  </data>
+  <data name="QueryInvalidEverContainsException" xml:space="preserve">
+    <value>TF51588: Unsupported Ever Contains operator in an expression in the Query XML.</value>
+  </data>
+  <data name="BehaviorNotReferencedByWorkItemType" xml:space="preserve">
+    <value>VS403197: The {0} work item type does not reference the {1} behavior.</value>
+  </data>
+  <data name="CSS_NODE_DELETE" xml:space="preserve">
+    <value>Delete this node</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ValidatorMultipleUsesOfDisplayNameInTemplate" xml:space="preserve">
+    <value>TF402579: Name {0} is used multiple times on different fields across the following work item types: {1}. Name for fields must be unique across the project collection.</value>
+  </data>
+  <data name="CannotConvertFieldTypeToPicklist" xml:space="preserve">
+    <value>VS1640131: The field data type of {0} does not allow it to be converted to a picklist.</value>
+  </data>
+  <data name="Validation_ProcessProperty_KeyValueDelimeter_NotFound" xml:space="preserve">
+    <value>VS403122: No '=' operator found between key value pair '{0}'.</value>
+  </data>
+  <data name="QueryInvalidNumberValueException" xml:space="preserve">
+    <value>TF51601: An expression value in the query XML contains an unsupported number value.</value>
+  </data>
+  <data name="ClassificationNodeCannotChangeStructureType" xml:space="preserve">
+    <value>VS402373: Classification node {0} is in a different hierarchy than the requested parent node {1}.  You can't move a node into a different hierarchy.</value>
+  </data>
+  <data name="WorkItemType" xml:space="preserve">
+    <value>Work Item Type</value>
+  </data>
+  <data name="ClassificationNodeDuplicateDeletedNode" xml:space="preserve">
+    <value>VS402385: Deleted classification node {0} has been specified multiple times. Remove duplicate occurrence and try again.</value>
+  </data>
+  <data name="ProcessWorkItemTypesLimitExceeded" xml:space="preserve">
+    <value>VS403065: You cannot add more than {0} work item types to a process. Delete an existing work item type and then try again.</value>
+  </data>
+  <data name="ProjectMigrateMissingWits" xml:space="preserve">
+    <value>VS402396: You are unable to change the process of the team project '{0}' from process '{1}' to process '{2}'. The process '{1}' includes the work item type(s) {3}, but the process '{2}' doesn't contain work item type(s) with that name. To resolve the error either add custom work item type(s) called {3} to the process '{2}', or permanently delete all work items of the type(s) {3} from team project '{0}'.</value>
+  </data>
+  <data name="WorkItemQueriesOnly" xml:space="preserve">
+    <value>must be a query type that gives a work item response</value>
+  </data>
+  <data name="ParentQueriesNotSupported" xml:space="preserve">
+    <value>VS403709: The 'Parent' field is not supported in the filter.</value>
+  </data>
+  <data name="WorkItemTypeNotChangeable" xml:space="preserve">
+    <value>Work item type {0} cannot be changed.</value>
+  </data>
+  <data name="ExternalConnectionInvalidCredentials" xml:space="preserve">
+    <value>Your credentials are invalid, please remove the connection and create a new one.</value>
+  </data>
+  <data name="WorkItemUnauthorizedRestore" xml:space="preserve">
+    <value>VS403146: Insufficient permissions to restore work item {0}.</value>
+  </data>
+  <data name="ClassificationNodeCannotModifyRootNode" xml:space="preserve">
+    <value>VS402380: You can't modify root classification node {0}. Root classification nodes can't be modified after being created.</value>
+  </data>
+  <data name="validateNarrowBreakSpaceForConstants" xml:space="preserve">
+    <value>String contains Narrow No-Break Space: {0}</value>
+  </data>
+  <data name="ValidatorUnusedCustomCategories" xml:space="preserve">
+    <value>TF402597: Custom category {0} isn't supported because ProcessConfiguration doesn't reference it. Only custom categories that are used to configure features are supported.  </value>
+  </data>
+  <data name="WorkItemUnauthorizedHistoricalDataAccessException" xml:space="preserve">
+    <value>VS403455: Unauthorized access to historical data of work items. Please retry without specifying asOf.</value>
+  </data>
+  <data name="TrendQueryResultSizeLimitExceeded" xml:space="preserve">
+    <value>VS402395: The daily number of work items returned exceeds the trend chart size limit of {0}. Change the query to return fewer items.</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="GetDefaultGitHubRepositoryBranch_ApiError" xml:space="preserve">
+    <value>Unable to get default branch of GitHub repository '{0}'. {1}</value>
+  </data>
+  <data name="InvalidListRuleError" xml:space="preserve">
+    <value>The field '{0}' contains the value '{1}' that is not in the list of supported values</value>
+  </data>
+  <data name="QueryExpandConstantFlagNotValidWithOperatorException" xml:space="preserve">
+    <value>TF51579: The expand constant flag cannot use the equals and not equals operators.</value>
+  </data>
+  <data name="FormLayoutInvalidSystemControlException" xml:space="preserve">
+    <value>VS403700: Given field {0} is not a valid system control. Please refer to documentation for valid system control fields.</value>
+  </data>
+  <data name="SystemCategoryRefnameHasBeenChangedInXmlProcess" xml:space="preserve">
+    <value>A system category, {0}, in the inherited process model has had it's refname (Reference Name) changed in your xml process. You must change the refname back to the original refname to migrate to the inherited process model . Please consult the documentation for details.</value>
+  </data>
+  <data name="FieldAmbiguousIdentity" xml:space="preserve">
+    <value>The value '{0}' for field '{1}' is ambiguous with '{2}'. Provide a unique name for this field.</value>
+  </data>
+  <data name="CannotSetAllowGroupsOnOOBField" xml:space="preserve">
+    <value>VS403319: Allow assigning to groups cannot be set on out-of-box field {0}.</value>
+  </data>
+  <data name="ReadAllowedValuesNotAuthorizedError" xml:space="preserve">
+    <value>The user is not authorized to read allowed values for the field {0}.</value>
+  </data>
+  <data name="ValidatorLimitsTooManyFieldsInWIT" xml:space="preserve">
+    <value>TF402562: You've defined {1} fields for work item type {0}. Only {2} are allowed.</value>
+  </data>
+</root>

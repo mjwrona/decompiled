@@ -1,0 +1,51 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}: {{{jsonEscape resource.fields['System.Title']}}} created by {{{emailEscapeForSubject resource.fields['System.CreatedBy'].uniqueName}}}",
+    "themeColor": "{{{jsonEscape data.workItemColor}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "facts":  [
+{{#if resource.fields.['System.History']}}
+                {
+                    "name": "Discussion",
+                    "value": "{{{jsonEscape resource.fields['System.History']}}}"
+                },
+{{/if}}
+            ],
+            "images": null,
+            "activityTitle": "[{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}]({{{jsonEscape data.DisplayUrl}}}): {{{jsonEscape resource.fields['System.Title']}}}",
+            "activityText": "{{#joinLines " | " 2 "Made other changes" "Made field changes"}}
+{{#if resource.fields.['System.CreatedBy']}}
+                    Created by {{{emailEscape resource.fields['System.CreatedBy'].uniqueName}}}
+{{/if}}
+{{#if resource.fields.['System.AssignedTo']}}
+                    Assigned to {{{emailEscape resource.fields.['System.AssignedTo'].uniqueName}}}
+{{/if}}
+{{#if resource.fields.['Microsoft.VSTS.Common.Priority']}}
+                    Set priority to {{jsonEscape resource.fields.['Microsoft.VSTS.Common.Priority'] }}
+{{/if}}
+{{#if resource.fields.['System.History']}}
+                    Added a comment
+{{/if}}
+{{#if resource.fields.['System.AreaPath']}}
+                    Changed Area Path
+{{/if}}
+{{#if resource.fields.['System.IterationPath']}}
+                    Changed Iteration Path
+{{/if}}
+{{/joinLines}}",
+{{#if data.workItemIconUrl}}
+            "activityImage": "{{{jsonEscape data.workItemIconUrl}}}",
+            "activityImageType": "article"
+{{else}}
+            "activityImage": "{{{encodedAvatar resource.fields['System.ChangedBy'].id}}}"
+{{/if}}
+        }
+    ],
+    "potentialAction": []
+}

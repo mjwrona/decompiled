@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_PackageVersionRequired" xml:space="preserve">
+    <value>The package version is required.</value>
+  </data>
+  <data name="Error_NuGetApiKeyRequired" xml:space="preserve">
+    <value>The request to the server did not include the header X-NuGet-ApiKey, but it is required even though credentials were provided. If using NuGet.exe, use the -ApiKey option to set this to an arbitrary value, for example "-ApiKey AzureDevOps"</value>
+  </data>
+  <data name="Error_ValueCannotBeNull" xml:space="preserve">
+    <value>Value '{0}' cannot be null.</value>
+  </data>
+  <data name="Error_NuGetServiceReadOnly" xml:space="preserve">
+    <value>The NuGet service is currently read-only for maintenance. Please try again later. </value>
+  </data>
+  <data name="Error_PackageVersionTooLong" xml:space="preserve">
+    <value>The package version is too long. The maximum length is {0} characters.</value>
+  </data>
+  <data name="Error_NuspecNotFound" xml:space="preserve">
+    <value>Package must contain a nuspec</value>
+  </data>
+  <data name="Error_PackageSubresourceDoesntExistDidYouMean" xml:space="preserve">
+    <value>The resource {0} for package '{1}' doesn't exist. Did you mean {2}?</value>
+  </data>
+  <data name="Error_UpstreamRegistrationInvalid" xml:space="preserve">
+    <value>The upstream registration document is invalid.</value>
+  </data>
+  <data name="Error_PackageDependencyVersionFormatNoGroup" xml:space="preserve">
+    <value>The version range for the dependency '{0}' isn't formatted correctly.</value>
+  </data>
+  <data name="Error_InvalidMultipartRequest" xml:space="preserve">
+    <value>The multipart request was malformed, potentially due to a network error.</value>
+  </data>
+  <data name="Error_PackageTooLarge" xml:space="preserve">
+    <value>Package is too large. Size limit is {0} bytes.</value>
+  </data>
+  <data name="Error_ArgumentRequired" xml:space="preserve">
+    <value>Required argument ({0}) is missing.</value>
+  </data>
+  <data name="Error_InvalidBatchOperation" xml:space="preserve">
+    <value>Invalid batch operation received: {0}</value>
+  </data>
+  <data name="Error_PackageIdTooLong" xml:space="preserve">
+    <value>The package ID is too long.  The maximum length is {0} characters.</value>
+  </data>
+  <data name="Error_GetDownloadUriFailed" xml:space="preserve">
+    <value>Couldn't get a download URI for {0}.</value>
+  </data>
+  <data name="Error_PushCantUseBothBlobAndDrop" xml:space="preserve">
+    <value>Use either the 'blob' property or the 'dropName' property, but not both.</value>
+  </data>
+  <data name="Error_FailedToFinalizeDrop" xml:space="preserve">
+    <value>Failed to finalize drop before adding it as a package.</value>
+  </data>
+  <data name="Error_UpstreamFailure" xml:space="preserve">
+    <value>Failed to retrieve data from the upstream package source '{0}': {1}</value>
+  </data>
+  <data name="Error_InvalidStorageId" xml:space="preserve">
+    <value>Storage id '{0}' is invalid.</value>
+  </data>
+  <data name="Error_PackageNotFound" xml:space="preserve">
+    <value>Can't find the package '{0}' in feed '{1}'.</value>
+  </data>
+  <data name="Error_FailedToCreateDrop" xml:space="preserve">
+    <value>Drop service returned an error while creating the drop.</value>
+  </data>
+  <data name="Error_InvalidViewSubOperation" xml:space="preserve">
+    <value>Invalid view suboperation.</value>
+  </data>
+  <data name="Error_FeedAlreadyContainsPackageDeleted" xml:space="preserve">
+    <value>The version {0} of {1} has been deleted. It cannot be restored or pushed.</value>
+  </data>
+  <data name="Error_ODataOrderByNotSupported" xml:space="preserve">
+    <value>The provided OData $orderby is not supported by the service.</value>
+  </data>
+  <data name="Error_NotSupportedOnPrem" xml:space="preserve">
+    <value>This feature is not supported in an on premises context</value>
+  </data>
+  <data name="Error_PackageIdRequired" xml:space="preserve">
+    <value>The package ID is required.</value>
+  </data>
+  <data name="Error_PackageDependencyVersionFormat" xml:space="preserve">
+    <value>The version range for the dependency '{0}' in the group {1} isn't formatted correctly.</value>
+  </data>
+  <data name="Error_PackageTooManyVersions" xml:space="preserve">
+    <value>Package {0} has more than the supported number of non-deleted versions ({1} versions). Please delete some versions using the PACKAGE hub or the REST APIs. See the docs for more info: https://go.microsoft.com/fwlink/?linkid=869583</value>
+  </data>
+  <data name="DeprecatedServiceEntry_WithReplacement" xml:space="preserve">
+    <value>This entry is deprecated and will be removed in a future release. Do not reference it in new code. Instead, use the entry for '{0}'.</value>
+  </data>
+  <data name="Error_InvalidPackageMetadataInVersion" xml:space="preserve">
+    <value>The package version had build metadata.  We do not support versions with build metadata</value>
+  </data>
+  <data name="Error_InvalidUpstreamUrl" xml:space="preserve">
+    <value>The package name or version specified resulted in an invalid upstream URL</value>
+  </data>
+  <data name="Error_FailedToCreateDropWithStatusCode" xml:space="preserve">
+    <value>The creation of drop failed with status code '{0}'.</value>
+  </data>
+  <data name="Error_IngestIncorrectPackageIdentity" xml:space="preserve">
+    <value>Expected to ingest the package '{0}' but got '{1}'</value>
+  </data>
+  <data name="Error_MissingNuspecElement" xml:space="preserve">
+    <value>The package's embedded .nuspec file is missing the '{0}' element, or the element does not contain a value.</value>
+  </data>
+  <data name="Error_InvalidBlobId" xml:space="preserve">
+    <value>The provided blob ID is invalid.</value>
+  </data>
+  <data name="Error_UpstreamInvalidServiceIndex" xml:space="preserve">
+    <value>The NuGet service index on the upstream was invalid</value>
+  </data>
+  <data name="Error_PackageVersionNotFound" xml:space="preserve">
+    <value>Can't find the package '{0}' with version '{1}' in feed '{2}'.</value>
+  </data>
+  <data name="Error_V2PushRequiresPackagePart" xml:space="preserve">
+    <value>Expected a single 'application/octet-stream' part.</value>
+  </data>
+  <data name="Error_NoStreamForBlobBackedPackage" xml:space="preserve">
+    <value>Could not find the stream for a blob backed package.</value>
+  </data>
+  <data name="Error_PushValidBlobIdAndBlockHashesAreRequired" xml:space="preserve">
+    <value>The 'blob' property must contain a valid blob ID and the list of block hashes for the blob.</value>
+  </data>
+  <data name="Error_CouldNotFindNuspec" xml:space="preserve">
+    <value>Can't find a .nuspec file in the package. The .nuspec file must exist within the root directory.</value>
+  </data>
+  <data name="Error_UpstreamIngestion_CannotSkipIngestion" xml:space="preserve">
+    <value>For security reasons, an upstream package cannot be ingested from a browser. Please use an official NuGet client.</value>
+  </data>
+  <data name="Error_BlockListDoesntMatchBlobId" xml:space="preserve">
+    <value>The block hashes don't match the blob ID.</value>
+  </data>
+  <data name="Error_CantPromoteToImplicitView" xml:space="preserve">
+    <value>Explicit promotion of packages to implicit views is not allowed.</value>
+  </data>
+  <data name="Warning_NuGetWarningVSTSActivityIdSuffix" xml:space="preserve">
+    <value> (DevOps Activity ID: {0})</value>
+  </data>
+  <data name="Error_PackageSubresourceDoesntExist" xml:space="preserve">
+    <value>The resource {0} for package '{1}' doesn't exist.</value>
+  </data>
+  <data name="Error_PushCantUseBothBlobAndBlobId" xml:space="preserve">
+    <value>Use either the 'blob' property or the 'blobId' property, but not both.</value>
+  </data>
+  <data name="Error_UnreadableNuspec" xml:space="preserve">
+    <value>The package's embedded .nuspec file is unreadable.</value>
+  </data>
+  <data name="DeprecatedServiceEntry_UseLocationService" xml:space="preserve">
+    <value>This entry is deprecated and will be removed in a future release. Do not reference it in new code. Instead, use the Location Service to obtain the appropriate URL.</value>
+  </data>
+  <data name="Warning_NuGetWarningTFSActivityIdSuffix" xml:space="preserve">
+    <value> (DevOps Activity ID: {0})</value>
+  </data>
+  <data name="Error_IncorrectBlobsFoundForPackage" xml:space="preserve">
+    <value>The following blobs were found: {0}</value>
+  </data>
+  <data name="Error_NoBlobsForPackageFound" xml:space="preserve">
+    <value>No blobs for this package were found.</value>
+  </data>
+  <data name="Error_PackageIdInvalid" xml:space="preserve">
+    <value>The package ID is invalid. It can only contain ASCII alphanumerics, periods, hyphens, and underscores.</value>
+  </data>
+  <data name="Error_ODataFilterNotSupported" xml:space="preserve">
+    <value>The provided OData $filter is not supported by the service.</value>
+  </data>
+  <data name="Error_ArgumentOutOfRange" xml:space="preserve">
+    <value>The argument '{0}' was out of range of valid values.</value>
+  </data>
+  <data name="Error_UpstreamReturnedNotFound" xml:space="preserve">
+    <value>The upstream URL '{0}' returned a "Not Found" response</value>
+  </data>
+  <data name="Error_UpstreamsEmpty" xml:space="preserve">
+    <value>Expected a valid upstream, but found none.</value>
+  </data>
+  <data name="Error_CannotPerformOperationOnReadOnlyFeed" xml:space="preserve">
+    <value>Cannot perform the requested operation because the feed '{0}' is read-only.</value>
+  </data>
+  <data name="Error_MustCallInOrder" xml:space="preserve">
+    <value>Must call '{0}' before calling '{1}'</value>
+  </data>
+  <data name="Error_NuspecTooLarge" xml:space="preserve">
+    <value>The package's embedded .nuspec file is {0} bytes, which is not supported by the service. The maximum size is {1} bytes.</value>
+  </data>
+  <data name="EmptyVersionNotAllowed" xml:space="preserve">
+    <value>Empty package versions are not allowed.</value>
+  </data>
+  <data name="Error_InvalidPackageWithArgument" xml:space="preserve">
+    <value>The package is invalid: {0}</value>
+  </data>
+  <data name="Error_NupkgIngestionNotSupportedForDirectDownload" xml:space="preserve">
+    <value>The requested package has not been saved into this feed. To be able to use the download API, first request the package using a NuGet client.</value>
+  </data>
+  <data name="Error_DependencyIdNotSpecified" xml:space="preserve">
+    <value>A dependency element is missing the 'id' attribute.</value>
+  </data>
+  <data name="Error_CanOnlyExtractIconOrLicense" xml:space="preserve">
+    <value>Only the package's embedded icon or license may be extracted from the nupkg.</value>
+  </data>
+  <data name="Error_IngestionInvalidVersion" xml:space="preserve">
+    <value>The package's version isn't formatted correctly.</value>
+  </data>
+  <data name="Error_PushRequestMissingBlob" xml:space="preserve">
+    <value>The 'blob' property is required.</value>
+  </data>
+</root>

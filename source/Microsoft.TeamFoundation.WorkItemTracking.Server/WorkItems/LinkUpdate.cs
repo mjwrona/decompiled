@@ -1,0 +1,26 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItems.LinkUpdate
+// Assembly: Microsoft.TeamFoundation.WorkItemTracking.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: B0AE48DA-B6D2-466C-91D8-D0BF0F05DE87
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.WorkItemTracking.Server.dll
+
+using Microsoft.TeamFoundation.WorkItemTracking.Common;
+using System;
+using System.Globalization;
+
+namespace Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItems
+{
+  [System.Diagnostics.DebuggerDisplay("DebuggerDisplay,nq")]
+  public abstract class LinkUpdate
+  {
+    public int SourceWorkItemId { get; set; }
+
+    public string CorrelationId { get; set; }
+
+    public LinkUpdateType UpdateType { get; set; }
+
+    public string Comment { get; set; }
+
+    protected virtual string DebuggerDisplay => string.Format((IFormatProvider) CultureInfo.InvariantCulture, "SourceWorkItemId = {0}, CorrelationId = {1}, LinkUpdateType = {2}, Comment = {3}", (object) this.SourceWorkItemId, (object) this.CorrelationId, (object) this.UpdateType, (object) this.Comment);
+  }
+}

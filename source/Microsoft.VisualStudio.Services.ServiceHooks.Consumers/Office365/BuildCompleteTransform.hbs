@@ -1,0 +1,18 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "Build {{{jsonEscape resource.buildNumber}}} - {{{jsonEscape resource.result}}}",
+    "themeColor": "{{{jsonEscape data.color}}}",
+    "title": null,
+    "text": null,
+    "sections": [{
+        "title": null,
+        "markdown": true,
+        "images": null,
+        "activityTitle": "[{{{jsonEscape resource.definition.name}}} / {{{jsonEscape resource.buildNumber}}}]({{{jsonEscape resource._links.web.href}}}) ({{{jsonEscape data.text}}})",
+        "activitySubtitle": "Trigger: {{{jsonEscape resource.reason}}} for {{{jsonEscape resource.requestedBy.['displayName']}}}",
+        "text": "Build for ![Repo Icon]({{{iconUrl "teams-pushrepo.png"}}}) [{{{jsonEscape resource.repository.name}}}]({{{resource.repository.url}}}) ![Branch Icon]({{{iconUrl "teams-branch.png"}}}) [{{{stringReplace resource.sourceBranch "refs/heads/" ""}}}]({{{resource.repository.url}}}{{{jsonEscape "/#version=GB"}}}{{{stringReplace resource.sourceBranch "refs/heads/" ""}}}), finished {{{jsonEscape resource.finishTime}}} UTC",
+        "activityImage": "{{{iconUrl data.iconFileName}}}",
+        "activityImageType": "article"
+        }],
+    "potentialAction": []
+}

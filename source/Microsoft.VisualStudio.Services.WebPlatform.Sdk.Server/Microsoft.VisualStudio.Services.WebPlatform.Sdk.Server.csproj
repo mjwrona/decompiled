@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B33DE057-7D40-46E4-8371-133BDC78EE83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserNotSupportedException.cs" />
+    <Compile Include="WebPlatformConstants.cs" />
+    <Compile Include="WebPlatformTraceLayers.cs" />
+    <Compile Include="WebPlatformFeatureFlags.cs" />
+    <Compile Include="WebAccessMobileConstants.cs" />
+    <Compile Include="WebPlatformSecurityConstants.cs" />
+    <Compile Include="ContentSecurityPolicyFeatureFlags.cs" />
+    <Compile Include="ContributionConstraintPhases.cs" />
+    <Compile Include="XssProtectionFeatureFlags.cs" />
+    <Compile Include="PermissionsPolicyFeatureFlags.cs" />
+    <Compile Include="WebPlatformDataProviderConstants.cs" />
+    <Compile Include="WebPlatformSettings.cs" />
+    <Compile Include="IContentSecurityPolicyHeaderManagementService.cs" />
+    <Compile Include="ContentSecurityPolicyHeaderManagementService.cs" />
+    <Compile Include="ContentSecurityPolicyManagementService.cs" />
+    <Compile Include="SecurityHeadersAttribute.cs" />
+    <Compile Include="PublicPageRequestRestrictionsAttribute.cs" />
+    <Compile Include="PublicAllRequestRestrictionsAttribute.cs" />
+    <Compile Include="ContributedPageController.cs" />
+    <Compile Include="ContributedPageActionResult.cs" />
+    <Compile Include="IPlatformController.cs" />
+    <Compile Include="ClientTraceEventsController.cs" />
+    <Compile Include="CustomerIntelligenceEventsController.cs" />
+    <Compile Include="WebSdkMvcControllerBase.cs" />
+    <Compile Include="IWebSdkMetadata.cs" />
+    <Compile Include="WebSdkMetadata.cs" />
+    <Compile Include="WebSdkMetadataDictionary`2.cs" />
+    <Compile Include="WebSdkMetadataHelpers.cs" />
+    <Compile Include="WebSdkDataProviderBase.cs" />
+    <Compile Include="ErrorAction.cs" />
+    <Compile Include="ErrorContext.cs" />
+    <Compile Include="ErrorManager.cs" />
+    <Compile Include="AuthorizationExceptionHandler.cs" />
+    <Compile Include="BadRequestErrorHandler.cs" />
+    <Compile Include="BrowserNotSupportedHandler.cs" />
+    <Compile Include="DataImportHandler.cs" />
+    <Compile Include="InternalExceptionHandler.cs" />
+    <Compile Include="MisconfiguredRouteExceptionHandler.cs" />
+    <Compile Include="NotFoundExceptionHandler.cs" />
+    <Compile Include="ReparentingHandler.cs" />
+    <Compile Include="ServiceUnavailableHandler.cs" />
+    <Compile Include="TooManyRequestsExceptionHandler.cs" />
+    <Compile Include="IErrorPageHandler.cs" />
+    <Compile Include="LinkUtilities.cs" />
+    <Compile Include="PermissionsPolicyManagementService.cs" />
+    <Compile Include="IClientContributionProviderService.cs" />
+    <Compile Include="ClientContributionProviderService.cs" />
+    <Compile Include="IContributedPageHeadDataService.cs" />
+    <Compile Include="MetaTag.cs" />
+    <Compile Include="ContributedPageHeadDataService.cs" />
+    <Compile Include="IClientThemeProviderService.cs" />
+    <Compile Include="ClientThemeProviderService.cs" />
+    <Compile Include="IClientSettingsProviderService.cs" />
+    <Compile Include="ClientSettingsProviderService.cs" />
+    <Compile Include="IClientFeatureProviderService.cs" />
+    <Compile Include="ClientFeatureProviderService.cs" />
+    <Compile Include="IClientMenuItemProviderService.cs" />
+    <Compile Include="ClientMenuItemProviderService.cs" />
+    <Compile Include="IClientRouteProviderService.cs" />
+    <Compile Include="ClientRouteProviderService.cs" />
+    <Compile Include="IClientIdentityDetailsProviderService.cs" />
+    <Compile Include="IdentityDetails.cs" />
+    <Compile Include="ClientIdentityDetailsProviderService.cs" />
+    <Compile Include="IClientSecurityProviderService.cs" />
+    <Compile Include="ClientSecurityProviderService.cs" />
+    <Compile Include="SharedPermissionCollection.cs" />
+    <Compile Include="IContentSecurityPolicyNonceManagementService.cs" />
+    <Compile Include="ContentSecurityPolicyNonceManagementService.cs" />
+    <Compile Include="MvcControllerTimerFilterAttribute.cs" />
+    <Compile Include="PublicAccessHelpers.cs" />
+    <Compile Include="ByPassTfsActivityLogFilterAttribute.cs" />
+    <Compile Include="TfsActivityLogFilterAttribute.cs" />
+    <Compile Include="CdnFallbackAttribute.cs" />
+    <Compile Include="ContributionNodeExtensions.cs" />
+    <Compile Include="IPerformanceInsightsService.cs" />
+    <Compile Include="PerformanceInsight.cs" />
+    <Compile Include="PerformanceInsightsService.cs" />
+    <Compile Include="IThemingService.cs" />
+    <Compile Include="ClientTheme.cs" />
+    <Compile Include="ThemingService.cs" />
+    <Compile Include="IWebDiagnosticsService.cs" />
+    <Compile Include="WebDiagnosticsService.cs" />
+    <Compile Include="VssfMvcAuthorizationFilterAttribute.cs" />
+    <Compile Include="WebPerformanceTimer.cs" />
+    <Compile Include="WebPerformanceTimerAttribute.cs" />
+    <Compile Include="IClientLocationProviderService.cs" />
+    <Compile Include="ClientLocationProviderService.cs" />
+    <Compile Include="WebPlatformHelpers.cs" />
+    <Compile Include="XssProtectionManagementService.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="WebFrameworkResources.cs" />
+    <Compile Include="Error\ErrorUtilities.cs" />
+    <Compile Include="Error\Content\ResourceConstants.cs" />
+    <Compile Include="Contributions\ContributedComponent.cs" />
+    <Compile Include="Contributions\ContributedCommand.cs" />
+    <Compile Include="Contributions\IconProps.cs" />
+    <Compile Include="Contributions\ContributedMenuItem.cs" />
+    <Compile Include="Contributions\ContentProviderHelper.cs" />
+    <Compile Include="Contributions\ContributionManagementService.cs" />
+    <Compile Include="Contributions\IContentService.cs" />
+    <Compile Include="Contributions\ContributedSite.cs" />
+    <Compile Include="Contributions\ContributionHierarchyQueryController.cs" />
+    <Compile Include="Contributions\ContributionHierarchyController.cs" />
+    <Compile Include="Contributions\ContributionHierarchyControllerBase.cs" />
+    <Compile Include="Contributions\IContributionManagementService.cs" />
+    <Compile Include="Contributions\IContributionTransformer.cs" />
+    <Compile Include="Contributions\ISharedDataProvider.cs" />
+    <Compile Include="Contributions\SharedDataProvider.cs" />
+    <Compile Include="Contributions\IContributionTemplateService.cs" />
+    <Compile Include="Contributions\ContributionTemplateService.cs" />
+    <Compile Include="Contributions\IContributedRequestHandler.cs" />
+    <Compile Include="Contributions\IPreRequestContributedRequestHandler.cs" />
+    <Compile Include="Contributions\INavigationElementRequestHandler.cs" />
+    <Compile Include="Contributions\IPreExecuteContributedRequestHandler.cs" />
+    <Compile Include="Contributions\IPostExecuteContributedRequestHandler.cs" />
+    <Compile Include="Contributions\INavigationElementUrlRequestHandler.cs" />
+    <Compile Include="Contributions\ContributedTheme.cs" />
+    <Compile Include="Contributions\IContributionNavigationService.cs" />
+    <Compile Include="Contributions\ContentLoadFlags.cs" />
+    <Compile Include="Contributions\LoaderPriority.cs" />
+    <Compile Include="Contributions\ContributedContent.cs" />
+    <Compile Include="Contributions\ContentSource.cs" />
+    <Compile Include="Contributions\NavigationFlags.cs" />
+    <Compile Include="Contributions\ContributedNavigation.cs" />
+    <Compile Include="Contributions\IRouteParameterResolver.cs" />
+    <Compile Include="Contributions\IRouteParametersFilter.cs" />
+    <Compile Include="Contributions\RouteParameterValue.cs" />
+    <Compile Include="Contributions\RouteValueConstants.cs" />
+    <Compile Include="Contributions\RouteParameter.cs" />
+    <Compile Include="Contributions\IParameterizedRoute.cs" />
+    <Compile Include="Contributions\IContributedRoute.cs" />
+    <Compile Include="Contributions\RouteTemplate.cs" />
+    <Compile Include="Contributions\ContributionProxyRoute.cs" />
+    <Compile Include="Contributions\ContributedRoute.cs" />
+    <Compile Include="Contributions\AggregatedRoute.cs" />
+    <Compile Include="Contributions\IContributedRouteConstraintProvider.cs" />
+    <Compile Include="Contributions\DataProviderSourcePageData.cs" />
+    <Compile Include="Contributions\WellKnownContributionType.cs" />
+    <Compile Include="Contributions\IContributionRoutingService.cs" />
+    <Compile Include="Contributions\ContributedRequestHandler`1.cs" />
+    <Compile Include="Contributions\MisconfiguredRouteException.cs" />
+    <Compile Include="Contributions\Configuration\IDisabledContributionConfigurationHelper.cs" />
+    <Compile Include="Contributions\Configuration\DisabledContributionConfigurationHelper.cs" />
+    <Compile Include="Configuration\IDeviceTypeService.cs" />
+    <Compile Include="Configuration\DeviceTypeService.cs" />
+    <Compile Include="Configuration\IMsalConfigHelper.cs" />
+    <Compile Include="Configuration\MsalConfig.cs" />
+    <Compile Include="Configuration\MsalConfigHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Error\Content\Images\Error_401.png" />
+    <EmbeddedResource Include="Error\Content\Images\Error_404.png" />
+    <EmbeddedResource Include="Error\Content\Images\Error_429.png" />
+    <EmbeddedResource Include="Error\Content\Images\Error_default.png" />
+    <EmbeddedResource Include="Error\Content\Styles\Error.css" />
+    <EmbeddedResource Include="WebFrameworkResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

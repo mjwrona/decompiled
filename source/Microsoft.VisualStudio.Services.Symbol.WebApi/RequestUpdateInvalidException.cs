@@ -1,0 +1,44 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Symbol.WebApi.RequestUpdateInvalidException
+// Assembly: Microsoft.VisualStudio.Services.Symbol.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 52CDDA61-EF2D-4AD8-A25B-09A8F04FE8C6
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Symbol.WebApi.dll
+
+using System;
+
+namespace Microsoft.VisualStudio.Services.Symbol.WebApi
+{
+  [Serializable]
+  public class RequestUpdateInvalidException : SymbolException
+  {
+    public RequestUpdateInvalidException(string message, Exception ex)
+      : base(message, ex)
+    {
+    }
+
+    public RequestUpdateInvalidException(string message)
+      : this(message, (Exception) null)
+    {
+    }
+
+    public static RequestUpdateInvalidException Create(
+      string requestId,
+      RequestStatus currentStatus,
+      RequestStatus requestedStatus)
+    {
+      return new RequestUpdateInvalidException(RequestUpdateInvalidException.MakeMessage(requestId, currentStatus, requestedStatus));
+    }
+
+    public static RequestUpdateInvalidException Create(string requestId, string message) => new RequestUpdateInvalidException(RequestUpdateInvalidException.MakeMessage(requestId, message));
+
+    private static string MakeMessage(
+      string requestId,
+      RequestStatus currentStatus,
+      RequestStatus requestedStatus)
+    {
+      return Resources.RequestUpdateInvalidStatusExceptionMessage((object) requestId, (object) currentStatus, (object) requestedStatus);
+    }
+
+    private static string MakeMessage(string requestId, string message) => Resources.RequestUpdateInvalidExceptionMessage((object) requestId, (object) message);
+  }
+}

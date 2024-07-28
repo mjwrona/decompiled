@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ServiceHooks.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3763B189-CB2D-4A8E-9E44-035C372AE8C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ServiceHooks.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ServiceHooks.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Consumers">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.Consumers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IServiceHooksComponent.cs" />
+    <Compile Include="ServiceHooksComponent.cs" />
+    <Compile Include="ServiceHooksComponent2.cs" />
+    <Compile Include="ServiceHooksComponent3.cs" />
+    <Compile Include="ServiceHooksComponent4.cs" />
+    <Compile Include="ServiceHooksComponent5.cs" />
+    <Compile Include="ServiceHooksComponent6.cs" />
+    <Compile Include="ServiceHooksComponent7.cs" />
+    <Compile Include="ServiceHooksComponent8.cs" />
+    <Compile Include="NotificationResultSummaryBinder.cs" />
+    <Compile Include="ServiceHooksStatsBinder.cs" />
+    <Compile Include="NotificationBinder.cs" />
+    <Compile Include="NotificationDetailsBinder.cs" />
+    <Compile Include="NotificationWithDetailsBinder.cs" />
+    <Compile Include="SubscriptionBinder.cs" />
+    <Compile Include="SubscriptionBinder2.cs" />
+    <Compile Include="SubscriptionBinder3.cs" />
+    <Compile Include="SubscriptionBinder4.cs" />
+    <Compile Include="SubscriptionBinder5.cs" />
+    <Compile Include="SubscriptionBinder7.cs" />
+    <Compile Include="SubscriptionBinder8.cs" />
+    <Compile Include="SubscriptionInputBinder.cs" />
+    <Compile Include="ActionTaskRunException.cs" />
+    <Compile Include="ConsumerExtensions.cs" />
+    <Compile Include="SubscriptionExtensions.cs" />
+    <Compile Include="ServiceHooksStats.cs" />
+    <Compile Include="ServiceHooksAccountToCollectionMigrationConstants.cs" />
+    <Compile Include="ServiceHooksCustomerIntelligenceInfo.cs" />
+    <Compile Include="ServiceHooksEventId.cs" />
+    <Compile Include="ServiceHooksResources.cs" />
+    <Compile Include="ServiceHooksService.cs" />
+    <Compile Include="WebApi\HooksSvcConsumerActionsController.cs" />
+    <Compile Include="WebApi\HooksSvcConsumersController.cs" />
+    <Compile Include="WebApi\HooksSvcEventsController.cs" />
+    <Compile Include="WebApi\HooksSvcInputValuesQueryController.cs" />
+    <Compile Include="WebApi\HooksSvcTestNotificationsController.cs" />
+    <Compile Include="WebApi\ServiceHooksSvcControllerBase.cs" />
+    <Compile Include="WebApi\HooksSvcNotificationsController.cs" />
+    <Compile Include="WebApi\HooksSvcSubscriptionsController.cs" />
+    <Compile Include="WebApi\HooksSvcNotificationsQueryController.cs" />
+    <Compile Include="WebApi\HooksSvcSubscriptionsQueryController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServiceHooksResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

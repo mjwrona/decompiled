@@ -1,0 +1,19 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Maven.Server.UpstreamEntriesAreInvalid
+// Assembly: Microsoft.VisualStudio.Services.Maven.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 3AEBE02E-FDD2-41D8-89F7-5C54445DBFA7
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Maven.Server.dll
+
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.BlobPrototype;
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.DataContracts;
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.UpstreamCache.V2;
+
+namespace Microsoft.VisualStudio.Services.Maven.Server
+{
+  internal class UpstreamEntriesAreInvalid : IUpstreamEntriesValidChecker
+  {
+    public bool IsUpstreamInfoValid(IFeedRequest request, IMetadataDocument metadataDocument) => false;
+
+    public string GetErrorMessage(IFeedRequest request, IMetadataDocument metadataDocument) => "Doing a forced upstream check for feed " + request.Feed.FullyQualifiedName;
+  }
+}

@@ -1,0 +1,18 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.TokenRevocation.TokenRevocationResourceIds
+// Assembly: Microsoft.VisualStudio.Services.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 7B264323-C592-4F23-AB6B-55AEDC85864F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.WebApi.dll
+
+using System;
+
+namespace Microsoft.VisualStudio.Services.TokenRevocation
+{
+  public static class TokenRevocationResourceIds
+  {
+    public const string AreaName = "TokenRevocation";
+    public const string AreaId = "{3C25A612-6355-4A43-80FE-75AEBE07E981}";
+    public const string RulesResourceName = "Rules";
+    public static readonly Guid RulesLocationId = new Guid("03923358-D412-40BA-A63F-36A1836C7706");
+  }
+}

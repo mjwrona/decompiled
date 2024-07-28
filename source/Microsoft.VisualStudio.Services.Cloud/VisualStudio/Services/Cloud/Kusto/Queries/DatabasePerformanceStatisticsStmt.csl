@@ -1,0 +1,7 @@
+﻿DatabasePerformanceStatistics
+| where PeriodStart between (dateFrom .. dateTo)
+| extend DatabaseFullName = iff(Listener != "", strcat(Listener, ";", DatabaseName), strcat(ServerName, ";", DatabaseName)) 
+| where DatabaseFullName in (databases)
+| where IsReadOnly == 0
+| where ServiceObjective != ""
+| where ServiceObjective !contains "Enterprise"

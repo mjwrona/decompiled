@@ -1,0 +1,24 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Nest.ChainTransform
+// Assembly: Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d
+// MVID: CCE7C15C-052B-4528-A6A5-137560B7864B
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Nest.dll
+
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Nest
+{
+  public class ChainTransform : TransformBase, IChainTransform, ITransform
+  {
+    public ChainTransform()
+    {
+    }
+
+    public ChainTransform(IEnumerable<TransformContainer> transforms) => this.Transforms = transforms != null ? (ICollection<TransformContainer>) transforms.ToList<TransformContainer>() : (ICollection<TransformContainer>) null;
+
+    public ICollection<TransformContainer> Transforms { get; set; }
+
+    internal override void WrapInContainer(ITransformContainer container) => container.Chain = (IChainTransform) this;
+  }
+}

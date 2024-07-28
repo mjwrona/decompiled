@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_DeleteBeforeRestoringToFeed" xml:space="preserve">
+    <value>This package was not found in the Recycle Bin. If you have recently deleted this package, please wait a moment and try again. Package Details: {0}</value>
+  </data>
+  <data name="Error_ValueNotFoundForProperty" xml:space="preserve">
+    <value>Value not found for property '{0}'</value>
+  </data>
+  <data name="Error_CannotAddViewFeedViewDoesntExist" xml:space="preserve">
+    <value>Package was not added to any view. Cannot add viewId '{0}' because corresponding view does not exist.</value>
+  </data>
+  <data name="Error_VersionIntegerTooLarge" xml:space="preserve">
+    <value>An integer in the package version was too large</value>
+  </data>
+  <data name="Error_FailedToCompleteChangeProcessing" xml:space="preserve">
+    <value>Failed to complete change processing for the feed {0}; Result = {1}; ResultMessage = {2}</value>
+  </data>
+  <data name="Error_InvalidCommitEntryType" xml:space="preserve">
+    <value>Invalid commit log entry type.</value>
+  </data>
+  <data name="Error_ValueCannotBeNull" xml:space="preserve">
+    <value>Value '{0}' cannot be null.</value>
+  </data>
+  <data name="Error_PackageVersionNotFoundInRecycleBin" xml:space="preserve">
+    <value>The package version {0} is not in the recycle bin.</value>
+  </data>
+  <data name="Error_UnexpectedMigrationState" xml:space="preserve">
+    <value>All the feeds are expected to be in {0}</value>
+  </data>
+  <data name="Error_PackageFileNotFoundInUpstream" xml:space="preserve">
+    <value>Cannot find the file {0} in package '{1}' in upstream source '{2}' for feed '{3}'</value>
+  </data>
+  <data name="Error_UnknownStorageType" xml:space="preserve">
+    <value>Unknown storage type.</value>
+  </data>
+  <data name="Error_PackagingServiceReadOnly" xml:space="preserve">
+    <value>The Packaging service is currently read-only for maintenance. Please try again later. </value>
+  </data>
+  <data name="Error_RequiredJobIdNotFound" xml:space="preserve">
+    <value>Couldn't get the required job id for feed {0}, protocol: {1}, jobType: Name = {2}, Id = {3}</value>
+  </data>
+  <data name="Error_ReadOnlyRequired" xml:space="preserve">
+    <value>Packaging service should be in read-only mode before starting CP jobs for DR</value>
+  </data>
+  <data name="Error_UnexpectedMediaType" xml:space="preserve">
+    <value>The Content-Type header is required, and only these media types are supported: {0}.</value>
+  </data>
+  <data name="Error_InternalUpstreamSourceNotFound" xml:space="preserve">
+    <value>The upstream source {0} cannot be found; please ask an owner to remove invalid/deleted upstream sources from this feed.</value>
+  </data>
+  <data name="Error_ShouldInflateButNoZlibHeader" xml:space="preserve">
+    <value>Stream should be inflated but no zlib header was detected.</value>
+  </data>
+  <data name="Error_NoAuthFoundInServiceConnection" xml:space="preserve">
+    <value>No authorization found within service connection. Either details are missing or the authorized user does not have permissions to view details.</value>
+  </data>
+  <data name="Error_PackageVersionNotFoundInFeedWithId" xml:space="preserve">
+    <value>Can't find the package '{0}' with version '{1}' in the feed with ID '{2}'.</value>
+  </data>
+  <data name="Error_UnexpectedUpstreamPackage" xml:space="preserve">
+    <value>Unexpected upstream package encountered on feed: {0}. The package {1} must be ingested first through a protocol API.</value>
+  </data>
+  <data name="Error_PackageVersionDeleted" xml:space="preserve">
+    <value>The package '{0}' with version '{1}' in feed '{2}' has been deleted.</value>
+  </data>
+  <data name="Error_SourceChainNotFoundInMap" xml:space="preserve">
+    <value>Source chain '{0}' was not found in the document's SourceChainMap '{1}'.</value>
+  </data>
+  <data name="Error_CannotCreateUnknownTypeCommitLogEntry" xml:space="preserve">
+    <value>Cannot create a commit log entry of 'Unknown' type.</value>
+  </data>
+  <data name="Error_ExpectedEndOfArrayViews" xml:space="preserve">
+    <value>Expected end of array when reading views.</value>
+  </data>
+  <data name="Error_ExpectedLastTokenEndOfObject" xml:space="preserve">
+    <value>Expected last token to be end of object.</value>
+  </data>
+  <data name="Error_CollectionIDMismatch" xml:space="preserve">
+    <value>Collection ID mismatch. Tried to apply migration state changes to '{0}' but this migration state writer is configured only for '{1}' https://go.microsoft.com/fwlink/?linkid=2135543"</value>
+  </data>
+  <data name="Error_InvalidMultipartRequest" xml:space="preserve">
+    <value>The multipart request was malformed, potentially due to a network error.</value>
+  </data>
+  <data name="Error_ArgumentRequired" xml:space="preserve">
+    <value>Required argument ({0}) is missing.</value>
+  </data>
+  <data name="Error_UpstreamFailedToRefresh" xml:space="preserve">
+    <value>Failed to refresh upstream packages for feed '{0}', package '{1}'</value>
+  </data>
+  <data name="Error_PackageTooSmall" xml:space="preserve">
+    <value>The package is too small to be a valid package.</value>
+  </data>
+  <data name="Error_InvalidZipArchive" xml:space="preserve">
+    <value>The package is not a valid ZIP archive.</value>
+  </data>
+  <data name="Error_PackageFileNotFoundTryIngesting" xml:space="preserve">
+    <value>Cannot find the file {2} in package '{1}' in feed '{0}'. The file {3} exists in at least one upstream of this feed. Download {3} to ingest it into this feed and try again.</value>
+  </data>
+  <data name="Error_InvalidBatchOperation" xml:space="preserve">
+    <value>Invalid batch operation received: {0}</value>
+  </data>
+  <data name="Error_JobWritesBlocked" xml:space="preserve">
+    <value>The Packaging service is currently in a state to explicitly block the background operations.</value>
+  </data>
+  <data name="UpgradeAggregationsNotSupportedOnHosted" xml:space="preserve">
+    <value>Upgrade aggregations is not supported on hosted environments.</value>
+  </data>
+  <data name="Error_InternalUpstreamToBaseFeedNotPermitted" xml:space="preserve">
+    <value>Upstream access is only permitted through a feed view.</value>
+  </data>
+  <data name="Error_IncorrectPackageIdentityDirectPush" xml:space="preserve">
+    <value>Expected to receive a package with identity `{0}`, but the package contents indicate that its identity is `{1}`. Check that the correct files are being uploaded.</value>
+  </data>
+  <data name="DataImportUnsupportedOnPrem" xml:space="preserve">
+    <value>Data import is not supported in on-premises environments.</value>
+  </data>
+  <data name="Error_NoCurrentStateForNonAddOperation" xml:space="preserve">
+    <value>There is no current state for this entry but this is not an add operation</value>
+  </data>
+  <data name="Error_MigrationNotFound" xml:space="preserve">
+    <value>No migration found for {0}</value>
+  </data>
+  <data name="Error_PackageNotFoundInUpstreams" xml:space="preserve">
+    <value>Cannot find the package '{0}' in upstream sources '{1}' for feed '{2}'</value>
+  </data>
+  <data name="Error_UpstreamFailure" xml:space="preserve">
+    <value>Failed to retrieve data from the upstream package source '{0}': {1}</value>
+  </data>
+  <data name="Error_NoMatchingHandlerForType" xml:space="preserve">
+    <value>No matching handler was found for type '{0}'</value>
+  </data>
+  <data name="Error_PackageInnerFileNotFound" xml:space="preserve">
+    <value>The file '{0}' was not found inside the file '{1}' in package {2}</value>
+  </data>
+  <data name="Error_PackageBlockedDueToSecurityIncidentAllVersions" xml:space="preserve">
+    <value>Due to a security incident involving the package, access to all versions of '{0}' has been blocked</value>
+  </data>
+  <data name="Error_HandlerForTypeWouldBeHidden" xml:space="preserve">
+    <value>Handler for type {0} would be hidden by existing handler for {1}. Handlers accept all types assignable to the named type and are matched in order.</value>
+  </data>
+  <data name="Error_UnexpectedCommitLogOperation" xml:space="preserve">
+    <value>Unexpected commit log operation.</value>
+  </data>
+  <data name="Error_ExpectedStartOfArrayViews" xml:space="preserve">
+    <value>Expected start of array when reading views.</value>
+  </data>
+  <data name="Error_PackageVersionExceedsMaximumLength" xml:space="preserve">
+    <value>The package version '{0}' exceeds the maximum length. Try shortening your pre-release moniker if you have one. Limiting the amount of period separated numbers might also be helpful.</value>
+  </data>
+  <data name="Error_DeletedPackageJobDisabled" xml:space="preserve">
+    <value>The Deleted Package processing job is disabled.</value>
+  </data>
+  <data name="Error_MultipleHandlersMatching" xml:space="preserve">
+    <value>Multiple handlers matched.</value>
+  </data>
+  <data name="Error_PackageNotFound" xml:space="preserve">
+    <value>Cannot find the package '{0}' in feed '{1}'</value>
+  </data>
+  <data name="Error_PackageNotFoundInUpstream" xml:space="preserve">
+    <value>Cannot find the package '{0}' in upstream sources for feed '{1}'</value>
+  </data>
+  <data name="Error_UnrecognizedMigrationEnum" xml:space="preserve">
+    <value>Unrecognized value {0}</value>
+  </data>
+  <data name="Error_NotAValidIntegerRange" xml:space="preserve">
+    <value>Not a valid range.</value>
+  </data>
+  <data name="Error_ViewsPatchOperationNotSupported" xml:space="preserve">
+    <value>Operation '{0}' is not supported on views.</value>
+  </data>
+  <data name="Error_FeedAlreadyContainsPackageDeleted" xml:space="preserve">
+    <value>The version {0} of {1} has been deleted. It cannot be restored or pushed.</value>
+  </data>
+  <data name="Error_InstructionNameNotSupported" xml:space="preserve">
+    <value>Instruction {0} not supported.</value>
+  </data>
+  <data name="Error_CannotDeleteDropItem" xml:space="preserve">
+    <value>Unable to delete the drop item '{0}'</value>
+  </data>
+  <data name="Error_CannotExtractFromNonLocalContent" xml:space="preserve">
+    <value>Cannot extract file {0} in package {1} because it has not been saved to the feed {2}. Try again after saving {0} in {1} to the feed. Storage ID `{3}`</value>
+  </data>
+  <data name="Error_NoDirectDownloadNotSingleFile" xml:space="preserve">
+    <value>The file {0} in package {1} in feed {2} cannot be retrieved this way because its storage does not represent one single file. Storage ID `{3}`</value>
+  </data>
+  <data name="Error_CommitDeserializerCannotDetermineIdentity" xml:space="preserve">
+    <value>Could not determine package identity for operation, at {0}</value>
+  </data>
+  <data name="Error_DisplayNameTooLong" xml:space="preserve">
+    <value>The package's display name '{0}' is too long. The maximum length is {1}.</value>
+  </data>
+  <data name="Error_UnknownProtocol" xml:space="preserve">
+    <value>'{0}' is not a recognized packaging protocol</value>
+  </data>
+  <data name="Error_ExpectedStartOfObject" xml:space="preserve">
+    <value>Expected start of object when reading metadata entry.</value>
+  </data>
+  <data name="Error_PackageNotFoundInUpstreamNoFeed" xml:space="preserve">
+    <value>Could not find the package '{0}' in the upstream source '{1}'. The source returned a Not Found response for the URI '{2}'.</value>
+  </data>
+  <data name="Error_PrematureEndOfUploadStream" xml:space="preserve">
+    <value>Expected to receive {0} bytes of package content, but the request body ended after {1} bytes</value>
+  </data>
+  <data name="Error_PackageFileNotFoundTryIngestingInnerFile" xml:space="preserve">
+    <value>Cannot find the inner file {4} in file {2} in package '{1}' in feed '{0}'. The file {3} exists in at least one upstream of this feed. Download {3} to ingest it into this feed and try again.</value>
+  </data>
+  <data name="Error_NoContentProviderForId" xml:space="preserve">
+    <value>No content provider handled the storage ID `{0}`</value>
+  </data>
+  <data name="Error_ViewNotWidelyVisible" xml:space="preserve">
+    <value>Upstream access is only permitted through a feed view that has been shared widely enough for your organization. View: '{0}' has visibility: '{1}'</value>
+  </data>
+  <data name="Error_PackageTooManyVersions" xml:space="preserve">
+    <value>Package {0} has more than the supported number of non-deleted versions ({1} versions). Please delete some versions using the Artifacts hub or the REST APIs. See the documentation for more info: https://go.microsoft.com/fwlink/?linkid=869583</value>
+  </data>
+  <data name="Error_AuthForPossibleUpstreamRefresh" xml:space="preserve">
+    <value>No local versions of package '{0}'; please provide authentication to access versions from upstream that have not yet been saved to your feed.</value>
+  </data>
+  <data name="Error_PackageScopeUpstreamStatusNotImplemented" xml:space="preserve">
+    <value>Package-scoped upstream status not implemented</value>
+  </data>
+  <data name="Error_FailedToApplyMigrationStateChange" xml:space="preserve">
+    <value>Could not apply migration state changes.</value>
+  </data>
+  <data name="Error_StorageIdMustBeString" xml:space="preserve">
+    <value>Storage ID must be specified as a string.</value>
+  </data>
+  <data name="Error_PropertiesExpectedInsideMetadata" xml:space="preserve">
+    <value>Only properties are expected inside metadata entries.</value>
+  </data>
+  <data name="Error_AuthForVersionIngestion" xml:space="preserve">
+    <value>Please provide authentication to save package '{0}', version '{1}' from upstream.</value>
+  </data>
+  <data name="Error_SourceChainIndexOutOfBounds" xml:space="preserve">
+    <value>The SourceChainIndex {0} is out of bounds, the document contains the following source chains: {1}</value>
+  </data>
+  <data name="Error_NoServiceConnectionFound" xml:space="preserve">
+    <value>No service endpoint was found for the projectId and endpointId provided. Service endpoint may not be of type artifacts-upstream or the authorized user does not have access.</value>
+  </data>
+  <data name="Error_DeleteBeforePermanentDeletion" xml:space="preserve">
+    <value>Package needs to be deleted before permanent deletion. Package Details: {0}</value>
+  </data>
+  <data name="Error_NormalizedVersionTooLong" xml:space="preserve">
+    <value>The package's normalized version '{0}' is too long. The maximum length is {1}.</value>
+  </data>
+  <data name="Error_UnknownOperationType" xml:space="preserve">
+    <value>The operation type {0} was not recognized.</value>
+  </data>
+  <data name="Error_PackageFileNotFoundInUpstreams" xml:space="preserve">
+    <value>Cannot find the file {0} in package '{1}' in upstream sources '{2}' for feed '{3}'</value>
+  </data>
+  <data name="Error_InternalUpstreamSourceDeleted" xml:space="preserve">
+    <value>The upstream source {0} cannot be found, please ask an owner of feed {1} to remove invalid/deleted upstream sources from this feed.</value>
+  </data>
+  <data name="Error_UpstreamDisabled" xml:space="preserve">
+    <value>Upstream is disabled on feed '{0}'.</value>
+  </data>
+  <data name="Error_FileLimitExceeded" xml:space="preserve">
+    <value>File is too large to publish. The size limit is {0}.</value>
+  </data>
+  <data name="Error_LockNameTooLong" xml:space="preserve">
+    <value>Lock name cannot be longer than 260 characters: {0}</value>
+  </data>
+  <data name="Warning_PackagingClientWarningTFSActivityIdSuffix" xml:space="preserve">
+    <value> (DevOps Activity ID: {0})</value>
+  </data>
+  <data name="Error_PropertyNotFound" xml:space="preserve">
+    <value>The expected property '{0}' not found.</value>
+  </data>
+  <data name="Error_NoDataGeneratedFromRequest" xml:space="preserve">
+    <value>No {0} generated from request {1} by handler {2}</value>
+  </data>
+  <data name="Error_NoDirectDownloadNotSingleFileInnerFile" xml:space="preserve">
+    <value>The inner file {0} in file {1} in package {2} in feed {3} cannot be retrieved this way because its storage does not represent one single file. Storage ID `{4}`</value>
+  </data>
+  <data name="Error_NoAuthTokenFoundInServiceConnection" xml:space="preserve">
+    <value>No apiToken parameter found in authorization in service connection with Id: {0}.</value>
+  </data>
+  <data name="Error_InvalidVersion" xml:space="preserve">
+    <value>The version {0} is invalid.</value>
+  </data>
+  <data name="Error_CommitDeserializerUnknownOperation" xml:space="preserve">
+    <value>Unknown commit operation {0}, at {1}</value>
+  </data>
+  <data name="Error_InvalidProtocolOperation" xml:space="preserve">
+    <value>{0} does not represent a valid Protocol Operation.</value>
+  </data>
+  <data name="Error_ExpectedStartOfArrayOrObject" xml:space="preserve">
+    <value>Expected start of array or start of object when reading metadata</value>
+  </data>
+  <data name="Error_DisplayVersionTooLong" xml:space="preserve">
+    <value>The package's display version '{0}' is too long. The maximum length is  {1}</value>
+  </data>
+  <data name="Error_PackageVersionNotFound" xml:space="preserve">
+    <value>Can't find the package '{0}' with version '{1}' in feed '{2}'.</value>
+  </data>
+  <data name="Error_FeedIsReadOnly" xml:space="preserve">
+    <value>This feed is currently read-only.</value>
+  </data>
+  <data name="Error_NoDirectDownloadForDropBackedPackage" xml:space="preserve">
+    <value>This package is backed by an Azure DevOps Drop, and there is no direct download representation. You must use the Colossal Package plugin (currently only supported for NuGet) to download.</value>
+  </data>
+  <data name="Error_UpstreamSourceNotSupported" xml:space="preserve">
+    <value>The given upstream source is not supported.</value>
+  </data>
+  <data name="Error_ExpiredUrl" xml:space="preserve">
+    <value>Url to return is expired, near expired, or cannot discover expiry: {0}, expiryTime: {1}, now: {2}</value>
+  </data>
+  <data name="Error_CommitDeserializerNestedBatch" xml:space="preserve">
+    <value>Cannot deserialize a batch commit inside a batch commit, at {0}</value>
+  </data>
+  <data name="Error_DeletionNotSupportedOnPatch" xml:space="preserve">
+    <value>Package deletion is only supported on HTTP DELETE.</value>
+  </data>
+  <data name="Error_CantPromoteToImplicitView" xml:space="preserve">
+    <value>Explicit promotion of packages to implicit views is not allowed.</value>
+  </data>
+  <data name="Error_MissingDocumentProperties" xml:space="preserve">
+    <value>The following properties weren't found in the metadata document: {0}</value>
+  </data>
+  <data name="Error_PackageFileNotFound" xml:space="preserve">
+    <value>Cannot find the file {2} in package '{1}' in feed '{0}'</value>
+  </data>
+  <data name="Error_CiDataExpectingSpecificHostType" xml:space="preserve">
+    <value>Function is expecting a host type {0}</value>
+  </data>
+  <data name="Error_NoMoreRetries" xml:space="preserve">
+    <value>Did not obtain an acceptable result after exhausting all retries.</value>
+  </data>
+  <data name="Error_NoMatchingHandlerForTypeInMigration" xml:space="preserve">
+    <value>No matching handler found for migration {0}.
+Type information:
+{1}</value>
+  </data>
+  <data name="Error_UpstreamProjectDoesNotExist" xml:space="preserve">
+    <value>The upstream source {0} can't be found because the upstream feed's project with id '{1}' is deleted or has had its permissions changed.</value>
+  </data>
+  <data name="Error_UpstreamSourceEmpty" xml:space="preserve">
+    <value>Upstream source is empty.</value>
+  </data>
+  <data name="Error_InvalidCommitOperationDataMessage" xml:space="preserve">
+    <value>Invalid CommitOperatiionData.</value>
+  </data>
+  <data name="Error_InvalidTracingWrapperUsage" xml:space="preserve">
+    <value>Invalid usage of tracing wrappers. Tracing wrappers should be initialized with a backing client using a constructor</value>
+  </data>
+  <data name="Error_FailedToMigrateDataForFeed" xml:space="preserve">
+    <value>Failed to migrate the data for the feed {0}; Result = {1}; ResultMessage = {2}</value>
+  </data>
+  <data name="Error_InvalidZipCompressionMethod" xml:space="preserve">
+    <value>The package is not a valid ZIP archive. The supported compression methods are only Deflated and Stored.</value>
+  </data>
+  <data name="TraceError_FailedToRefreshUpstreamMetadataForFeedAndPackage" xml:space="preserve">
+    <value>Failed to refresh upstream metadata for the feed '{0}', package '{1}'. The metadata remained unchanged after attempting to refresh.</value>
+  </data>
+  <data name="Error_ExpectedStartOfArray" xml:space="preserve">
+    <value>Expected start of array when reading metadata.</value>
+  </data>
+  <data name="Job_UpstreamRefresh" xml:space="preserve">
+    <value>Queued jobs for {1} feed(s) that had upstreams enabled and at least one {0} upstream, out of {2} total</value>
+  </data>
+  <data name="Error_UnexpectedMigrationFailure" xml:space="preserve">
+    <value>Unexpected migration failure. ResultMessage: {0}</value>
+  </data>
+  <data name="Error_ServiceReadOnly" xml:space="preserve">
+    <value>The service is currently read-only for maintenance. Please try again later.</value>
+  </data>
+  <data name="Error_FailedToAddReferenceToPackageContent" xml:space="preserve">
+    <value>Failed to add a reference to {0} for package '{1}'.</value>
+  </data>
+  <data name="Error_InvalidViewSuboperation" xml:space="preserve">
+    <value>Invalid view suboperation.</value>
+  </data>
+  <data name="Error_MissingCommitLogEntry" xml:space="preserve">
+    <value>The feed {0} is corrupt. The commit {1} is referenced by {2}, but it does not exist.</value>
+  </data>
+  <data name="Error_FeedAlreadyContainsPackageFile" xml:space="preserve">
+    <value>The feed '{0}' already contains file '{1}' in package '{2}'.</value>
+  </data>
+  <data name="Warning_UpstreamContentDeletionDisabled" xml:space="preserve">
+    <value>Upstream cache content removal has been disabled.</value>
+  </data>
+  <data name="Error_PackageFileNotFoundInUpstreamNoFeed" xml:space="preserve">
+    <value>Could not find the file '{0}' for package '{1}' in the upstream source '{2}'. The source returned a Not Found response for the URI '{3}'.</value>
+  </data>
+  <data name="Error_BlockedUpstream" xml:space="preserve">
+    <value>The upstream source with ID {0}, name {1} and location {2} has been blocked by the system to protect Azure DevOps or a third party. The upstream must be removed to continue using this feed.</value>
+  </data>
+  <data name="Error_UnexpectedJobState" xml:space="preserve">
+    <value>For CP migration catchup, the job should be in {0} state. But found {1}</value>
+  </data>
+  <data name="Error_ValueNotFound" xml:space="preserve">
+    <value>Couldn't read next value.</value>
+  </data>
+  <data name="Error_CannotMixFilesFromDifferentUpstreams" xml:space="preserve">
+    <value>The package version {0} is being provided from upstream {1}, but one or more files in this version have already been ingested from upstream {2}. Azure Artifacts will not mix files in the same package version from different upstreams.</value>
+  </data>
+  <data name="Error_CannotPerformOperationOnReadOnlyFeed" xml:space="preserve">
+    <value>Cannot perform the requested operation because the feed '{0}' is read-only.</value>
+  </data>
+  <data name="Error_InputNotAPropertyExpression" xml:space="preserve">
+    <value>Input is not a property expression.</value>
+  </data>
+  <data name="Error_IncorrectPackageIdentityUpstream" xml:space="preserve">
+    <value>Expected to receive a package with identity `{0}`, but the package contents indicate that its identity is `{1}`. The data in the upstream may be corrupt.</value>
+  </data>
+  <data name="Error_CannotRestorePermanentlyDeletedPackage" xml:space="preserve">
+    <value>The package version has been permanently deleted and can no longer be restored. Package Details: {0}</value>
+  </data>
+  <data name="Error_MustCallInOrder" xml:space="preserve">
+    <value>Must call '{0}' before calling '{1}'</value>
+  </data>
+  <data name="Error_TokenNotAProperty" xml:space="preserve">
+    <value>Expected a property token but found {0} instead.</value>
+  </data>
+  <data name="Error_MissingSourceChainMap" xml:space="preserve">
+    <value>Expected a SourceChainMap in the MetadataDocument but found none.</value>
+  </data>
+  <data name="Error_CannotExtractFromNonLocalContentInnerFile" xml:space="preserve">
+    <value>Cannot extract inner file {0} from file {1} in package {2} because {1} has not been saved to the feed {3}. Try again after saving {1} in {2} to the feed. Storage ID `{4}`</value>
+  </data>
+  <data name="Error_AuthTokenWasNull" xml:space="preserve">
+    <value>No authentication token was found for service connection with Id:{0}</value>
+  </data>
+  <data name="Error_CommitIdMustBeString" xml:space="preserve">
+    <value>Commit ID must be specified as a string.</value>
+  </data>
+  <data name="Error_FeedAlreadyContainsPackage" xml:space="preserve">
+    <value>The feed already contains '{0}'.</value>
+  </data>
+  <data name="Warning_PackagingClientWarningVSTSActivityIdSuffix" xml:space="preserve">
+    <value> (DevOps Activity ID: {0})</value>
+  </data>
+  <data name="EmptyVersionNotAllowed" xml:space="preserve">
+    <value>Empty package versions are not allowed.</value>
+  </data>
+  <data name="Error_NormalizedNameTooLong" xml:space="preserve">
+    <value>The package's normalized name '{0}' is too long. The maximum length is {1}.</value>
+  </data>
+  <data name="Error_PackageBlockedDueToSecurityIncident" xml:space="preserve">
+    <value>Due to a security incident involving the package, access to '{0}' has been blocked.</value>
+  </data>
+  <data name="Error_UpstreamJobFeedRequestDifferentFromRefreshInformationFeed" xml:space="preserve">
+    <value>FeedId for job's feedRequest does not match FeedId in the UpstreamPackagesToRefreshInformation - Job FeedId = {0}, RefreshInformation FeedId = {1}.</value>
+  </data>
+  <data name="Error_AggregationNotFoundInMigration" xml:space="preserve">
+    <value>No {0}  aggregation in migration {1}</value>
+  </data>
+  <data name="Error_ViewsOperationValueMustBeAString" xml:space="preserve">
+    <value>Views patch value must be an string.</value>
+  </data>
+  <data name="Error_CommitLogTimestampMustBeUtc" xml:space="preserve">
+    <value>Commit log timestamps must be UTC.</value>
+  </data>
+  <data name="Error_FailedToAddReferencesToPackageContent" xml:space="preserve">
+    <value>Failed to add references: {0}.</value>
+  </data>
+  <data name="Error_InvalidPackageCorruptZip" xml:space="preserve">
+    <value>The package does not appear to be a valid ZIP archive (could not find a valid end of central directory record)</value>
+  </data>
+  <data name="Error_NoContentIdInWrappedItem" xml:space="preserve">
+    <value>Wrapped content does not have content id.</value>
+  </data>
+  <data name="Error_CannotPublishExistsOnUpstream" xml:space="preserve">
+    <value>'{0}' cannot be published to the feed because it exists in at least one of the feed's upstream sources. Publishing this copy would prevent you from using '{0}' from '{1}'. For more information, see https://go.microsoft.com/fwlink/?linkid=864880</value>
+  </data>
+  <data name="Error_BatchRequestTooLarge" xml:space="preserve">
+    <value>Batch request for {0} {1} is not allowed. Accepted range is between {2} to {3}.</value>
+  </data>
+  <data name="Error_NotSupportedViewsPath" xml:space="preserve">
+    <value>The path '{0}' is incorrect or not supported. The only supported path is '/views/-'.</value>
+  </data>
+  <data name="Error_V2DoesntCache" xml:space="preserve">
+    <value>This feed doesn't support caching packages, but will save them instead.</value>
+  </data>
+  <data name="Error_UpstreamSourceTypeNotSupported" xml:space="preserve">
+    <value>The given upstream source '{0}' with type '{1}' is not supported.</value>
+  </data>
+  <data name="Error_ServiceConnectionDisabled" xml:space="preserve">
+    <value>The referenced service endpoint is currently disabled. Administrators of this endpoint can re-enable it, if necessary.</value>
+  </data>
+  <data name="Error_PropertyNotReadable" xml:space="preserve">
+    <value>Cannot read property {0}</value>
+  </data>
+  <data name="Error_CommitDeserializerCannotDetermineOperation" xml:space="preserve">
+    <value>Could not determine operation type, at {0}</value>
+  </data>
+</root>

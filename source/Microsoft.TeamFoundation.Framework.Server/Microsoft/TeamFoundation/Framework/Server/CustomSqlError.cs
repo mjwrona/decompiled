@@ -1,0 +1,134 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Framework.Server.CustomSqlError
+// Assembly: Microsoft.TeamFoundation.Framework.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 07453D77-2935-488F-B470-3D01F1673D9B
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Framework.Server.dll
+
+namespace Microsoft.TeamFoundation.Framework.Server
+{
+  public static class CustomSqlError
+  {
+    public const int SqlServerDefaultUserMessage = 50000;
+    public const int TransactionRequired = 800000;
+    public const int GenericDatabaseUpdateFailure = 800001;
+    public const int ContentIncomplete = 500029;
+    public const int ResourceIdAlreadyExists = 500233;
+    public const int FileIdNotFound = 500121;
+    public const int DuplicateLocationMappingOnDefinition = 800002;
+    public const int LocationServiceUrlNullOnNewAccessMapping = 800003;
+    public const int IllegalDeleteSelfReferenceServiceDefinition = 800004;
+    public const int ServiceDefinitionWithNoLocations = 800006;
+    public const int ServiceDefinitionAlreadyExists = 800007;
+    public const int LocationMappingDoesNotExist = 800008;
+    public const int SecurityNamespaceAlreadyExists = 800009;
+    public const int InvalidLOBParameter = 800010;
+    public const int PropertyInvalidKind = 800011;
+    public const int PropertyInvalidRepeatedValues = 800012;
+    public const int PropertyUnsupportedMixedRequest = 800013;
+    public const int PropertyArtitfactSpecIncompatibleWithKind = 800014;
+    public const int PropertyMonikerSpecIncompatibleWithKind = 800015;
+    public const int PropertyInvalidSameOnOffKindFlags = 800017;
+    public const int CatalogResourceAlreadyExists = 800016;
+    public const int CannotStopJob = 800018;
+    public const int JobDidntPause = 800019;
+    public const int CatalogIllegalNodeDelete = 800020;
+    public const int DuplicateJobId = 800021;
+    public const int DuplicateJobSchedule = 800022;
+    public const int EventTypeDoesNotExist = 800023;
+    public const int CannotPauseJob = 800024;
+    public const int CannotResumeJob = 800025;
+    public const int HostDoesNotExist = 800026;
+    public const int HostAlreadyExists = 800027;
+    public const int HostMustBeTopLevel = 800028;
+    public const int HostStatusChangeInvalid = 800029;
+    public const int HostStatusChangeInvalidParent = 800030;
+    public const int HostCannotBeDeleted = 800031;
+    public const int RemoveAccessMappingIsDefault = 800033;
+    public const int ServicingStepGroupIsNotDefined = 800034;
+    public const int ServicingStepGroupAlreadyExists = 800035;
+    public const int ServicingStepGroupInUse = 800036;
+    public const int ServicingOperationAlreadyExists = 800037;
+    public const int HostProcessNotFound = 800039;
+    public const int DependentCatalogNodeDoesNotExist = 800040;
+    public const int AccessMappingDoesNotExist = 800041;
+    public const int SecurityNamespaceDoesNotExist = 800043;
+    public const int PropertyKindAlreadyExists = 800044;
+    public const int AccessPointConflicts = 800045;
+    public const int CatalogNodeDoesNotExist = 800046;
+    public const int SubscriptionNotFound = 800047;
+    public const int MessageQueueAlreadyExists = 800048;
+    public const int MessageQueueNotFound = 800049;
+    public const int DatabaseNameCouldNotBeDetermined = 800050;
+    public const int UnusedDatabaseRecordAlreadyExist = 800051;
+    public const int InvalidRegistryPath = 800052;
+    public const int RegistryServiceUninitialized = 800053;
+    public const int DuplicateFileName = 800056;
+    public const int FileAlreadyUploaded = 800057;
+    public const int InvalidLobParameter = 800058;
+    public const int UnknownMigrationOwner = 800059;
+    public const int InvalidEventData = 800060;
+    public const int FailedToAcquireServicingLock = 800070;
+    public const int DatabaseNotFound = 800074;
+    public const int DatabasePoolNotFound = 800075;
+    public const int DatabasePoolAlreadyExists = 800076;
+    public const int DatabasePoolCannotBeDeleted = 800077;
+    public const int DatabasePoolMaxDatabaseLimit = 800078;
+    public const int DatabasePartitionNotFoundForHost = 800079;
+    public const int FileCleanupInProgress = 800080;
+    public const int DatabasePartitionCannotBeDeleted = 800081;
+    public const int SourceDatabaseIdMismatch = 800082;
+    public const int DatabaseAlreadyRegistered = 800083;
+    public const int DatabasePartitionIdNotFound = 800084;
+    public const int TagNameAlreadyExists = 800085;
+    public const int InvalidTagName = 800086;
+    public const int ContainerItemExists = 800087;
+    public const int ContainerItemDoesNotExists = 800088;
+    public const int ContainerItemCopyTargetChildOfSource = 800089;
+    public const int ContainerItemCopySourcePendingUpload = 800090;
+    public const int ContainerItemCopyDuplicateTargets = 800091;
+    public const int ContainerAlreadyExists = 800092;
+    public const int ContainerContentIdCollision = 800109;
+    public const int KpiAlreadyExists = 800093;
+    public const int KpiNotFound = 800094;
+    public const int CounterNotPopulated = 800095;
+    public const int StrongBoxDrawerAlreadyExists = 800096;
+    public const int CannotChangeParentDefinition = 800097;
+    public const int JobDefinitionUpdatesDisallowed = 800098;
+    public const int DatabaseCredentialNotFound = 800099;
+    public const int StaleDatabaseCredential = 800100;
+    public const int DataMigrationAlreadyExists = 800101;
+    public const int DatabasePropertiesStale = 800102;
+    public const int HostMoveRequestAlreadyExists = 800103;
+    public const int NoDataspaceProvidedWhenIsolated = 800107;
+    public const int NoDataspaceExists = 800108;
+    public const int ProxyAlreadyAddedToSite = 800105;
+    public const int DuplicateFileIdDataspace = 800106;
+    public const int IndexRebuildInProgress = 800110;
+    public const int ForeignKeysInUse = 800111;
+    public const int DatabasePartitionCannotBeCreated = 800112;
+    public const int DatabasePartitionIdInUse = 800113;
+    public const int HostHasUndrainedActiveRequests = 800114;
+    public const int StrongBoxDrawerSigningKeyRotated = 800115;
+    public const int StrongBoxDrawerNotFoundById = 800116;
+    public const int HostCannotBeDeletedBecauseItHasChildren = 800303;
+    public const int LeaseLost = 800304;
+    public const int IncorrectNumberOfDatabasesFound = 800305;
+    public const int HostManagementCannotRunInsideTransaction = 800306;
+    public const int ZeroDataspaceId = 800307;
+    public const int HostMigrationRequestAlreadyExists = 800308;
+    public const int CannotStartDeletingHost = 800309;
+    public const int RoleInstanceSynchronizationAlreadyExists = 800310;
+    public const int ScaleUnitDataTransferAlreadyExists = 800311;
+    public const int CannotUpdateSecurityTemplateEntryAtInstallTime = 800401;
+    public const int MAX_SQL_ERROR = 800401;
+    public const int GenericWrapperCode = 50000;
+    public const int AccountHostMappingNotFound = 1040013;
+    public const int MultiplePrimaryResolutionEntries = 1110001;
+    public const int ResolutionEntryAlreadyExists = 1110002;
+    public const int MultiplePrimaryNameResolutionEntries = 1110003;
+    public const int NameResolutionEntryAlreadyExists = 1110004;
+    public const int InputListExceedsSizeLimit = 1110006;
+    public const int LogAuditEventNotInTransaction = 1110007;
+    public const int PartitionMarkedAsDeleted = 1110008;
+  }
+}

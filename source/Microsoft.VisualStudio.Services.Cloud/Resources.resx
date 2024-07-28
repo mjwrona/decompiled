@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="YouAreBeingThrottledLearnMoreText" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="ThrottleNotificationEmailSubjectLineTarpitForAdmin" xml:space="preserve">
+    <value>User requests are being delayed</value>
+  </data>
+  <data name="TenantAccessDeniedError" xml:space="preserve">
+    <value>The requesting identity '{0}' does not have permission to access the tenant '{1}'</value>
+  </data>
+  <data name="ServiceBusPublisherAlreadyExists" xml:space="preserve">
+    <value>The topic {0} already exists in namespace {1} for message bus {2}.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyDetailsBlockedConcurrentForAdmin" xml:space="preserve">
+    <value>On &lt;b&gt;{0}&lt;/b&gt; at &lt;b&gt;{1}&lt;/b&gt; we detected that the number of concurrent requests from the user account &lt;b&gt;{3}&lt;/b&gt; on the organization &lt;b&gt;{2}&lt;/b&gt; exceeded one of our limits.  Since this user has no contact email address, this notification has been sent to all project collection administrators. To maintain service availability for other users, we began blocking some of the user's requests. Their requests will be blocked until their number of concurrent requests returns below our limits. </value>
+  </data>
+  <data name="DeletionBatchNotFoundError" xml:space="preserve">
+    <value>No deletion batch found with batchId {0}.</value>
+  </data>
+  <data name="SubscriptionNameCannotBeGenerated" xml:space="preserve">
+    <value>A subscription name cannot be generated. Subscription name generation is only supported in Azure environments.</value>
+  </data>
+  <data name="ConcurrencyTimeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="InvalidDataImportConnectionString" xml:space="preserve">
+    <value>VS403366: A problem occurred while attempting to connect to your database. Please verify that your connection string is correct and that all required IP addresses for Azure DevOps Services have been provided exceptions for your machine's firewall.
+List of Azure DevOps Services IPs:
+{0}
+Provided Connection string: {1}
+Exception details returned from your instance of SQL: {2}</value>
+  </data>
+  <data name="ThrottleNotificationEmailSubjectLineTarpit" xml:space="preserve">
+    <value>{0}, your requests are being delayed</value>
+  </data>
+  <data name="InvalidFieldValue" xml:space="preserve">
+    <value>Invalid {0} value: {1}</value>
+  </data>
+  <data name="DuplicateResourceExtensionNamespaceIds" xml:space="preserve">
+    <value>Failed to initialize resource {0} due to a different resource already registering namespaces with the following Ids : {1}.</value>
+  </data>
+  <data name="PolicyNamesAndDeafultValuesCountMismatch" xml:space="preserve">
+    <value>The number of policy names specified does not match the number of default values specfied. Policy names count {0}, default values count: {1}.</value>
+  </data>
+  <data name="DataMigrationTargetExtraBlobError" xml:space="preserve">
+    <value>The blob '{0}' in container '{1}' exists on the target but not the source. You may need to clean up the target storage account before re-attempting migration.</value>
+  </data>
+  <data name="DocDbInvalidId" xml:space="preserve">
+    <value>Documents stored in Cosmos DB must have a unique non-empty string identity less than '255' characters</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyStatusTarpitForAdmin" xml:space="preserve">
+    <value>User requests for the user account {0} are being delayed.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyDetailsTarpit" xml:space="preserve">
+    <value>On &lt;b&gt;{0}&lt;/b&gt; at &lt;b&gt;{1}&lt;/b&gt; we detected that your resource consumption on &lt;b&gt;{2}&lt;/b&gt; exceeded one of our limits. To maintain service availability for other users, we began delaying some of your requests. Your requests will continue being delayed until your resource consumption returns below our limits.</value>
+  </data>
+  <data name="ServiceBusNamespaceNotRegistered" xml:space="preserve">
+    <value>Could not find a service bus namespace registered with name {0}.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyStatusBlock" xml:space="preserve">
+    <value>Your requests are being blocked.</value>
+  </data>
+  <data name="ShortResourceWindow" xml:space="preserve">
+    <value>Short</value>
+  </data>
+  <data name="KustoQueryExecutionTimeoutExceptionMessage" xml:space="preserve">
+    <value>VS800078: The query timed out. If there is a time range in the query, please try narrowing the time range to reduce the amount of data processed.</value>
+  </data>
+  <data name="HostMigrateRequestAlreadyExistsException" xml:space="preserve">
+    <value>A migration request for host with id '{0}', TargetInstanceName: '{1}' and Priority: '{2}' already exists.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyUsagePage" xml:space="preserve">
+    <value>You can audit your request history by visiting the usage page for your organization. </value>
+  </data>
+  <data name="KustoConfigurationExceptionMessage" xml:space="preserve">
+    <value>VS800070: The query service is misconfigured and cannot process any request at the moment.</value>
+  </data>
+  <data name="ServiceBusForwardedTopicFullException" xml:space="preserve">
+    <value>The forwarded topic {0} does not have space for more subscriptions. Please add more topics.</value>
+  </data>
+  <data name="AnonymousRequestRejectedNoUserAgent" xml:space="preserve">
+    <value>Anonymous access without a valid user agent is forbidden.</value>
+  </data>
+  <data name="EventIdResolutionError" xml:space="preserve">
+    <value>The event id '{0}' could not be resolved to its numeric value.</value>
+  </data>
+  <data name="MessageBusSubscriberAlert" xml:space="preserve">
+    <value>Name: {0}
+Last Receive Time: {1}
+Active Message Count: {2}
+State: {3}</value>
+  </data>
+  <data name="AadGuestInvitationFailed" xml:space="preserve">
+    <value>Microsoft Entra guest invitation failed.</value>
+  </data>
+  <data name="InvalidSubscriptionNameEmptyName" xml:space="preserve">
+    <value>The message bus subscription name is invalid because it is empty or whitespace.</value>
+  </data>
+  <data name="InvalidQueryParameter" xml:space="preserve">
+    <value>Invalid query parameter: {0}</value>
+  </data>
+  <data name="RequestBlockedAnonymous" xml:space="preserve">
+    <value>Anonymous usage from IP address {1} has exceeded our rate limits and is being blocked. Anonymous access from this IP address will be unblocked within the next {0}. You can also consider logging in to get unblocked. Logged in users have higher limits. Learn more: https://go.microsoft.com/fwlink/?LinkId={2}.</value>
+  </data>
+  <data name="InvalidSortColumn" xml:space="preserve">
+    <value>Invalid sort column: {0}</value>
+  </data>
+  <data name="DeletionBatchInvalidTransitionError" xml:space="preserve">
+    <value>Invalid JobStatus transition for deletion batch {0}.</value>
+  </data>
+  <data name="ResourceExtensionDoesNotExist" xml:space="preserve">
+    <value>A resource extension with name '{0}' does not exist.</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>The organization name supplied contains one or more characters that are not allowed.</value>
+  </data>
+  <data name="InvalidSortColumnExpression" xml:space="preserve">
+    <value>Invalid sort column expression: {0}</value>
+  </data>
+  <data name="EmptyPolicyNames" xml:space="preserve">
+    <value>Expected to find policy names specified, but didn't find any.</value>
+  </data>
+  <data name="FailureRetrieveRoleMembers" xml:space="preserve">
+    <value>Failed to retrieve the role members for {0}.</value>
+  </data>
+  <data name="RequestBlockedPublicUser" xml:space="preserve">
+    <value>Usage by {1} has exceeded one of our rate limits and is being blocked. {1} will be unblocked within {0}. Learn more: https://go.microsoft.com/fwlink/?LinkId={2}.</value>
+  </data>
+  <data name="DataMigrationAlreadyExistsException" xml:space="preserve">
+    <value>A migration for HostId '{0}' already exists. {1}</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyDetailsTarpitForAdmin" xml:space="preserve">
+    <value>On &lt;b&gt;{0}&lt;/b&gt; at &lt;b&gt;{1}&lt;/b&gt; we detected that resource consumption by the user account &lt;b&gt;{3}&lt;/b&gt; on the organization &lt;b&gt;{2}&lt;/b&gt; exceeded one of our limits.  Since this user has no contact email address, this notification has been sent to all project collection administrators. To maintain service availability for other users, we began delaying some of the user's requests. Requests will continue being delayed until their resource consumption returns below our limits.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyStatusTarpit" xml:space="preserve">
+    <value>Your requests are being delayed.</value>
+  </data>
+  <data name="DataMigrationDisabledException" xml:space="preserve">
+    <value>Data migration has not been enabled on this deployment.</value>
+  </data>
+  <data name="ATHealthTraceMessage" xml:space="preserve">
+    <value>The client should retry later. Reason: {0} Request url: {1}</value>
+  </data>
+  <data name="EmptyDefaultValues" xml:space="preserve">
+    <value>Expected to find default values specified, but didn't find any.</value>
+  </data>
+  <data name="InvalidAadUserState" xml:space="preserve">
+    <value>Invalid Microsoft Entra user state: {0}</value>
+  </data>
+  <data name="YouAreBeingThrottledAnonymousFormat" xml:space="preserve">
+    <value>Anonymous usage from IP Address {0} has exceeded one of our rate limits. Requests are currently being delayed and may be blocked if usage continues to be high. Consider logging in - logged in users have higher limits. {1}.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyDetailsBlockedConsumption" xml:space="preserve">
+    <value>On &lt;b&gt;{0}&lt;/b&gt; at &lt;b&gt;{1}&lt;/b&gt; we detected that your resource consumption on &lt;b&gt;{2}&lt;/b&gt; exceeded one of our limits for an extended period. To maintain service availability for other users, we began blocking some of your requests.</value>
+  </data>
+  <data name="GitHubDirectoryGetUserFailed" xml:space="preserve">
+    <value>Get GitHub user failed with user {0}: {1}, error message: {2}.</value>
+  </data>
+  <data name="ThrottleNotificationEmailSubjectLineBlock" xml:space="preserve">
+    <value>{0}, your requests are being blocked</value>
+  </data>
+  <data name="YouAreBeingThrottledPublicUserFormat" xml:space="preserve">
+    <value>Your usage has exceeded one of our rate limits. Requests are currently being delayed and may be blocked if usage continues to be high. {0}.</value>
+  </data>
+  <data name="YouAreBeingThrottledDocumentationLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkId=823950</value>
+  </data>
+  <data name="YouAreBeingThrottledFormat" xml:space="preserve">
+    <value>Your usage has exceeded our rate limiting thresholds. To maintain service availability for other users we're delaying your requests. View your {0} on this organization. Please visit our {1} to learn more.</value>
+  </data>
+  <data name="DataImportAlreadyExistsException" xml:space="preserve">
+    <value>A data import with Id '{0}' already exists.</value>
+  </data>
+  <data name="AadGloballyBeenThrottled" xml:space="preserve">
+    <value>Current api {0} has been globally throttled. Please retry after {1:O}</value>
+  </data>
+  <data name="DeletionBatchCanNoLongerBeModifiedError" xml:space="preserve">
+    <value>The resources in deletion batch {0} cannot be modified. The deletion batch has already had a job queued or run against it.</value>
+  </data>
+  <data name="ServiceBusManagementCredentialsNotFound" xml:space="preserve">
+    <value>Could not find the management credentials for Service bus.</value>
+  </data>
+  <data name="DataMigrationCannotDeleteHostException" xml:space="preserve">
+    <value>The host '{0}' cannot be deleted because it is being referenced by SPS.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyDetailsBlockedConcurrent" xml:space="preserve">
+    <value>On &lt;b&gt;{0}&lt;/b&gt; at &lt;b&gt;{1}&lt;/b&gt; we detected that your number of concurrent requests on &lt;b&gt;{2}&lt;/b&gt; exceeded one of our limits. To maintain service availability for other users, we began blocking some of your requests. Your requests will be blocked until your number of concurrent requests returns below our limits.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyDetailsBlockedConsumptionForAdmin" xml:space="preserve">
+    <value>On &lt;b&gt;{0}&lt;/b&gt; at &lt;b&gt;{1}&lt;/b&gt; we detected that resource consumption by the user account &lt;b&gt;{3}&lt;/b&gt; on the organization &lt;b&gt;{2}&lt;/b&gt; exceeded one of our limits for an extended period.  Since this user has no contact email address, this notification has been sent to all project collection administrators. To maintain service availability for other users, we began blocking some of the user's requests.</value>
+  </data>
+  <data name="AadSpecialTenantBeenThrottled" xml:space="preserve">
+    <value>Current tenantid {0} for {1} has been throttled. Please retry after {2:O}</value>
+  </data>
+  <data name="DataImportDoesNotExistException" xml:space="preserve">
+    <value>A data import with Id '{0}' does not exist.</value>
+  </data>
+  <data name="ThrottleNotificationEmailSubjectLineBlockForAdmin" xml:space="preserve">
+    <value>User requests are being blocked</value>
+  </data>
+  <data name="YouAreBeingThrottledUsageLinkText" xml:space="preserve">
+    <value>usage</value>
+  </data>
+  <data name="ATHealthRequestFilterException" xml:space="preserve">
+    <value>The server is busy, please try the low priority request again later.</value>
+  </data>
+  <data name="TimeOutDuringDataImportConnection" xml:space="preserve">
+    <value>VS403367: A timeout occurred while attempting to connect your database. Please verify that your connection string is correct and that all required IP addresses for Azure DevOps Services have been provided exceptions for your machine's firewall.
+List of Azure DevOps Services IPs: 
+{0}
+Provided Connection string: {1}</value>
+  </data>
+  <data name="TenantAdminRolesNotFound" xml:space="preserve">
+    <value>No active administrator roles are found for these Azure RoleTemplateIds {0}.</value>
+  </data>
+  <data name="GitHubRequestIsForbidden" xml:space="preserve">
+    <value>GitHub authorization failed: {0}. Try sign in AzureDevOps with a GitHub identity.</value>
+  </data>
+  <data name="KustoQueryFailedExceptionMessage" xml:space="preserve">
+    <value>VS800071: The request failed. Try again in a few minutes.</value>
+  </data>
+  <data name="HostMoveRequestAlreadyExistsException" xml:space="preserve">
+    <value>A move request for host with id '{0}' already exists.</value>
+  </data>
+  <data name="DCGeographyUK" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="DCGeographyUS" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="DCGeographyIN" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="DCGeographyCA" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="DCGeographyBR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="DCGeographyAP" xml:space="preserve">
+    <value>Asia Pacific</value>
+  </data>
+  <data name="DCGeographyAU" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="DCGeographyFR" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="DCGeographyEU" xml:space="preserve">
+    <value>Europe</value>
+  </data>
+  <data name="InvalidSASTokenRequest_InvalidExpiration" xml:space="preserve">
+    <value>Invalid SAS token request. The Expiration field is not valid.</value>
+  </data>
+  <data name="RequestBlockedPublicUserHtml" xml:space="preserve">
+    <value>Usage by {1} has exceeded one of our rate limits and is being blocked. {1} will be unblocked within &lt;strong&gt;{0}&lt;/strong&gt;. &lt;a href="https://go.microsoft.com/fwlink/?LinkId={2}"&gt;Learn more.&lt;/a&gt;</value>
+  </data>
+  <data name="DeletionBatchJobAlreadyInProgressError" xml:space="preserve">
+    <value>Batch deletion job for deletion batch {0} is already in progress.</value>
+  </data>
+  <data name="InvalidSASTokenRequest_InvalidUriFormat" xml:space="preserve">
+    <value>Invalid SAS token request. The ResourceUri field is not valid.</value>
+  </data>
+  <data name="FailureRetrieveDirectoryRoles" xml:space="preserve">
+    <value>Failed to retrieve the directory roles.</value>
+  </data>
+  <data name="DCRegionSEAU" xml:space="preserve">
+    <value>Australia Southeast</value>
+  </data>
+  <data name="DCRegionSCUS" xml:space="preserve">
+    <value>South Central US</value>
+  </data>
+  <data name="DCRegionWCUS" xml:space="preserve">
+    <value>West Central US</value>
+  </data>
+  <data name="DCRegionWUS2" xml:space="preserve">
+    <value>West US 2</value>
+  </data>
+  <data name="DCRegionNCUS" xml:space="preserve">
+    <value>North Central US</value>
+  </data>
+  <data name="DCRegionEUS2" xml:space="preserve">
+    <value>East US 2</value>
+  </data>
+  <data name="DCRegionPN" xml:space="preserve">
+    <value>Central India</value>
+  </data>
+  <data name="DCRegionMA" xml:space="preserve">
+    <value>South India</value>
+  </data>
+  <data name="DCRegionBM" xml:space="preserve">
+    <value>West India</value>
+  </data>
+  <data name="DCRegionCC" xml:space="preserve">
+    <value>Canada Central</value>
+  </data>
+  <data name="DCRegionCE" xml:space="preserve">
+    <value>Canada East</value>
+  </data>
+  <data name="DCRegionEA" xml:space="preserve">
+    <value>East Asia</value>
+  </data>
+  <data name="ContentViolationServiceNotEnabled" xml:space="preserve">
+    <value>Content violation service is not enabled.</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyUsagePageForAdmin" xml:space="preserve">
+    <value>You can review the request history for the user account {0}.</value>
+  </data>
+  <data name="OnlineBlobCopyDisabledException" xml:space="preserve">
+    <value>Online blob copy has not been enabled on this deployment.</value>
+  </data>
+  <data name="GitHubUserAuthenticationRetrievalFailed" xml:space="preserve">
+    <value>Fail to retrieve GitHub user authentication AccessToken. {0}.</value>
+  </data>
+  <data name="RequestBlockedAnonymousHtml" xml:space="preserve">
+    <value>Anonymous usage from IP address {1} has exceeded our rate limits and is being blocked. Anonymous access from this IP address will be unblocked within the next &lt;strong&gt;{0}&lt;/strong&gt;. You can also consider logging in to get unblocked. Logged in users have higher limits. &lt;a href=" https://go.microsoft.com/fwlink/?LinkId={2}"&gt;Learn more&lt;/a&gt;.</value>
+  </data>
+  <data name="YouAreBeingThrottledDocumentationLinkText" xml:space="preserve">
+    <value>documentation</value>
+  </data>
+  <data name="LongResourceWindow" xml:space="preserve">
+    <value>Long</value>
+  </data>
+  <data name="ThrottleNotificationEmailBodyStatusBlockForAdmin" xml:space="preserve">
+    <value>User requests for the user account {0} are being blocked.</value>
+  </data>
+  <data name="DataMigrationTargetBlobNotMatchSourceBlobError" xml:space="preserve">
+    <value>The blob '{0}' in container '{1}' differs in content between the source and target. You may need to clean up the target storage account before re-attempting migration.</value>
+  </data>
+  <data name="ConcurrentResource" xml:space="preserve">
+    <value>Concurrent</value>
+  </data>
+  <data name="NoRegistryValue" xml:space="preserve">
+    <value>No registry value for key: {0}</value>
+  </data>
+  <data name="DataImportBlobsCopiedExceededThreshold" xml:space="preserve">
+    <value>VS403241: The files copied exceeded the allowed amount. Total Copied:{0} bytes, Max Allowed:{1} bytes.</value>
+  </data>
+  <data name="DCRegionSEA" xml:space="preserve">
+    <value>Southeast Asia</value>
+  </data>
+  <data name="DCRegionSBR" xml:space="preserve">
+    <value>Brazil South</value>
+  </data>
+  <data name="DCRegionUKW" xml:space="preserve">
+    <value>UK West</value>
+  </data>
+  <data name="DCRegionUKS" xml:space="preserve">
+    <value>UK South</value>
+  </data>
+  <data name="DCRegionWEU" xml:space="preserve">
+    <value>West Europe</value>
+  </data>
+  <data name="DCRegionWJP" xml:space="preserve">
+    <value>Japan West</value>
+  </data>
+  <data name="DCRegionWUS" xml:space="preserve">
+    <value>West US</value>
+  </data>
+  <data name="DCRegionNEU" xml:space="preserve">
+    <value>North Europe</value>
+  </data>
+  <data name="DCRegionCUS" xml:space="preserve">
+    <value>Central US</value>
+  </data>
+  <data name="DCRegionEUS" xml:space="preserve">
+    <value>East US</value>
+  </data>
+  <data name="DCRegionEJP" xml:space="preserve">
+    <value>Japan East</value>
+  </data>
+  <data name="DCRegionEAU" xml:space="preserve">
+    <value>Australia East</value>
+  </data>
+  <data name="EventIdNotSuppliedError" xml:space="preserve">
+    <value>The EventIdValue ('id' attribute) must be provided. It can be numeric or a code constant.</value>
+  </data>
+  <data name="DeletionBatchAlreadySucceededError" xml:space="preserve">
+    <value>Batch deletion job for deletion batch {0} already succeeded and can not be re-queued.</value>
+  </data>
+  <data name="MessageBusSubscriberAlertHeader" xml:space="preserve">
+    <value>Topic: {0}</value>
+  </data>
+  <data name="AadGroupTooBigToTraverseDescendants" xml:space="preserve">
+    <value>This group was found to be too big to expand completely. The group has more than {0} descendant objects (users, groups, contacts etc). The expansion was halted after traversing {1} user and group objects.</value>
+  </data>
+  <data name="GitHubDirectorySearchUsersFailed" xml:space="preserve">
+    <value>Search GitHub users failed with query keyword {0}, error message: {1}.</value>
+  </data>
+  <data name="InvalidPathTwoDotError" xml:space="preserve">
+    <value>The following path is not valid: {0}. Paths cannot contain duplicate periods.</value>
+  </data>
+  <data name="InvalidSubscriptionNameInvalidCharacters" xml:space="preserve">
+    <value>The message bus subscription name is invalid because in contains invalid characters. Allowed characters are letters, digits, '_', '.' and '-'.</value>
+  </data>
+  <data name="DocDBSecretsServiceRequestContextHostMessage" xml:space="preserve">
+    <value>The DocDb secrets service was expecting a request context from service host '{0}' but instead got one from service host '{1}'. A service must be passed request contexts from the same host that it was created with.</value>
+  </data>
+  <data name="GitHubDirectoryGetUserAvatarFailed" xml:space="preserve">
+    <value>Get GitHub user avatar failed with user id: {0}, error message: {1}.</value>
+  </data>
+  <data name="ServiceBusDefaultRuleGroupNotFound" xml:space="preserve">
+    <value>Could not find the default ACS rule group for Service bus realm {0}</value>
+  </data>
+</root>

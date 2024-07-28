@@ -1,0 +1,73 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.revision.fields.['System.WorkItemType']}}} {{{jsonEscape resource.workItemId}}}: {{{jsonEscape resource.revision.fields.['System.Title']}}} updated by {{{emailEscapeForSubject resource.revision.fields['System.ChangedBy'].uniqueName}}}",
+    "themeColor": "{{{jsonEscape data.workItemColor}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "markdown": true,
+            "facts": [
+{{#if resource.fields.['System.History']}}
+                {
+                    "name": "Discussion",
+                    "value": "{{{jsonEscape resource.fields.['System.History'].newValue}}}"
+                },
+{{else}}
+    {{#if data.commentUpdated}}
+                {
+                    "name": "Discussion",
+                    "value": "{{{jsonEscape data.commentUpdated}}}"
+                },
+    {{/if}}
+{{/if}}
+            ],
+            "images": null,
+            "activityTitle": "[{{{jsonEscape resource.revision.fields.['System.WorkItemType']}}} {{{jsonEscape resource.workItemId}}}]({{{jsonEscape data.DisplayUrl}}}): {{{jsonEscape resource.revision.fields.['System.Title']}}}",
+            "activitySubtitle": "",
+            "activityText": "{{#joinLines " | " 2 "Made other changes" "Made field changes"}}
+{{#if resource.revisedBy}}
+                    Updated by {{{emailEscape resource.revision.fields['System.ChangedBy'].uniqueName}}}
+{{/if}}
+{{#if resource.fields.['System.AssignedTo']}}
+{{#if resource.fields.['System.AssignedTo'].newValue}}
+                    Assigned to {{{emailEscape resource.fields.['System.AssignedTo'].newValue }}}
+{{else}}
+                    Changed to Unassigned
+{{/if}}
+{{/if}}
+{{#if resource.fields.['System.Title']}}
+                    Changed the title
+{{/if}}
+{{#if resource.fields.['System.State']}}
+                    Changed state to {{{jsonEscape resource.fields.['System.State'].newValue }}}
+{{/if}}
+{{#if resource.fields.['System.History']}}
+                    Added a comment
+{{else}}
+    {{#if data.commentUpdated}}
+                    Updated a comment
+    {{else}}
+        {{#if data.commentDeleted}}
+                    Deleted a comment
+        {{/if}}
+    {{/if}}
+{{/if}}
+{{#if resource.fields.['System.AreaPath']}}
+                    Changed Area Path
+{{/if}}
+{{#if resource.fields.['System.IterationPath']}}
+                    Changed Iteration Path
+{{/if}}
+{{/joinLines}}",
+{{#if data.workItemIconUrl}}
+            "activityImage": "{{{jsonEscape data.workItemIconUrl}}}",
+            "activityImageType": "article"
+{{else}}
+            "activityImage": "{{{encodedAvatar resource.fields['System.ChangedBy'].id}}}"
+{{/if}}
+        }
+    ],
+    "potentialAction": []
+}

@@ -1,0 +1,59 @@
+{
+    "id": "644D4D86-7DDF-42F7-9689-AE9344057BA4",
+    "name": "Deploy to a Kubernetes cluster",
+    "category": "Deployment",
+    "iconTaskId": "CBC316A2-586F-4DEF-BE79-488A1F503564",
+    "description": "Deploy, configure, update your containerized applications to a Kubernetes cluster.",
+    "environment": {
+        "name": "",
+        "rank": 1,
+        "deployPhases": [
+            {
+                "name": "",
+                "rank": 1,
+                "phaseType": 1,
+                "controlOptions": {},
+                "deploymentInput": {
+                    "queueId": 1,
+                    "runOptions": {},
+                    "demands": []
+                },
+                "workflowTasks": [
+                    {
+                        "TaskId": "CBC316A2-586F-4DEF-BE79-488A1F503564",
+                        "Version": "0.*",
+                        "Inputs": {
+                        },
+                        "Enabled": true,
+                        "AlwaysRun": false,
+                        "ContinueOnError": false
+                    }
+                ]
+            }
+        ],
+        "preDeployApprovals": {
+            "approvals": [
+                {
+                    "isAutomated": true,
+                    "rank": 1
+                }
+            ],
+            "approvalOptions": null
+        },
+        "postDeployApprovals": {
+            "approvals": [
+                {
+                    "isAutomated": true,
+                    "rank": 1
+                }
+            ],
+            "approvalOptions": null
+        },
+        "runOptions": {},
+        "executionPolicy": {
+            "concurrencyCount": 1,
+            "queueDepthCount": 0
+        },
+        "variables": {}
+    }
+}

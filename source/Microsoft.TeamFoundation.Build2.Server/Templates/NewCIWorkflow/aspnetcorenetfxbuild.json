@@ -1,0 +1,164 @@
+{
+  "id": "AspNetCoreNetFxBuild",
+  "name": "ASP.NET Core (.NET Framework)",
+  "category": "Build",
+  "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+  "iconTaskId": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+  "description": "Build an ASP.NET Core web application that targets the full .NET Framework.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "displayName": "Use NuGet 4.4.1",
+                            "task": {
+                                "id": "2c65196a-54fd-4a02-9be8-d9d1837b7c5d",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": "4.4.1",
+                                "checkLatest": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "displayName": "NuGet restore",
+                            "inputs": {
+                                "command": "restore",
+                                "solution": "$(Parameters.solution)",
+                                "selectOrConfig": "select",
+                                "includeNuGetOrg": "true"
+                            },
+                            "task": {
+                                "id": "333b11bd-d341-40d9-afcf-b32d5ce6f23b",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "displayName": "Build solution",
+                            "inputs": {
+                                "solution": "$(Parameters.solution)",
+                                "msbuildArgs": "/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation=\"$(build.artifactstagingdirectory)\\WebApp.zip\" /p:DeployIisAppPath=\"Default Web Site\"",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)",
+                                "clean": "false",
+                                "restoreNugetPackages": "false"
+                            },
+                            "task": {
+                                "id": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "displayName": "Test Assemblies",
+                            "inputs": {
+                                "testAssemblyVer2": "**\\$(BuildConfiguration)\\*test*.dll\n!**\\obj\\**",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)"
+                            },
+                            "task": {
+                                "id": "ef087383-ee5e-42c7-9a53-ab56c98420f9",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": true,
+                            "displayName": "Publish symbols path",
+                            "inputs": {
+                                "SearchPattern": "**\\bin\\**\\*.pdb",
+                                "SymbolsArtifactName": "Symbols_$(BuildConfiguration)",
+                                "SymbolServerType": "TeamServices",
+                                "PublishSymbols": "false"
+                            },
+                            "task": {
+                                "id": "0675668a-7bba-4ccb-901d-5ad6554ca653",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "displayName": "Publish Artifact",
+                            "inputs": {
+                                "PathtoPublish": "$(build.artifactstagingdirectory)",
+                                "ArtifactName": "$(Parameters.ArtifactName)",
+                                "ArtifactType": "Container",
+                                "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "release",
+                "allowOverride": true
+            },
+            "BuildPlatform": {
+                "value": "any cpu",
+                "allowOverride": true
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "solution",
+                    "label": "{PathToSolutionLabel}",
+                    "defaultValue": "**\\*.sln",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{PathToSolutionMarkdown}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "ArtifactName",
+                    "label": "{ArtifactNameLabel}",
+                    "defaultValue": "drop",
+                    "required": true,
+                    "type": "string",
+                    "helpMarkDown": "{ArtifactLabelMarkdown}",
+                    "visibleRule": "",
+                    "groupName": ""
+                }
+            ]
+        }
+    }
+}

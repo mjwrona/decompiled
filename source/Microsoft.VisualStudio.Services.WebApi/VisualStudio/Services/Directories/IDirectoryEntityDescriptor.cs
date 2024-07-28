@@ -1,0 +1,29 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Directories.IDirectoryEntityDescriptor
+// Assembly: Microsoft.VisualStudio.Services.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 7B264323-C592-4F23-AB6B-55AEDC85864F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.WebApi.dll
+
+namespace Microsoft.VisualStudio.Services.Directories
+{
+  public interface IDirectoryEntityDescriptor
+  {
+    string EntityType { get; }
+
+    string EntityOrigin { get; }
+
+    string OriginDirectory { get; }
+
+    string OriginId { get; }
+
+    string LocalDirectory { get; }
+
+    string LocalId { get; }
+
+    string PrincipalName { get; }
+
+    string DisplayName { get; }
+
+    object this[string propertyName] { get; }
+  }
+}

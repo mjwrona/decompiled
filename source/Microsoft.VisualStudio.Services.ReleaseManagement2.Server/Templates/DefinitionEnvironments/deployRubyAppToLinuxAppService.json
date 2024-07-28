@@ -1,0 +1,178 @@
+﻿{
+  "id": "720b37ef-cefb-40fb-829e-160cea406012",
+  "name": "Deploy a Ruby on Rails app to Azure App Service​",
+  "category": "Deployment",
+  "iconTaskId": "630C472C-CDE7-4CD8-BA13-E00CA5FF180B",
+  "description": "Deploy a Ruby on Rails application to an Azure Web App on Linux​.",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+            "version": "4.*",
+            "Name": "Deploy Azure App Service",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "WebAppKind": "$(Parameters.WebAppKind)",
+              "DeployToSlotOrASEFlag": "false",
+              "ResourceGroupName": "",
+              "DockerNamespace": "$(Parameters.DockerNamespace)",
+              "DockerRepository": "$(Parameters.DockerRepository)",
+              "StartupCommand": "$(Parameters.StartupCommand)",
+              "RuntimeStack": "ruby|2.3",
+              "BuiltinLinuxPackage": "$(System.DefaultWorkingDirectory)/**/*.zip",
+              "WebAppUri": "",
+              "UseWebDeploy": "false",
+              "SetParametersFile": "",
+              "RemoveAdditionalFilesFlag": "false",
+              "ExcludeFilesFromAppDataFlag": "false",
+              "TakeAppOfflineFlag": "true",
+              "AdditionalArguments": "",
+              "RenameFilesFlag": "true",
+              "ScriptType": "Inline Script",
+              "InlineScript": "BUNDLE_INSTALL_LOCATION=\"/tmp/bundle\"\nSITE_CONFIG_DIR=\"/home/site/config\"\nRBENV_VERSION = $(ls /usr/local/.rbenv/versions | grep 2.3 | tail -n 1)\neval \"$(rbenv init -)\"\nrbenv global $RBENV_VERSION\nbundle clean --force\nmkdir -p $BUNDLE_INSTALL_LOCATION\nbundle config --global path $BUNDLE_INSTALL_LOCATION\nbundle install --no-deployment\ntar -zcf /tmp/gems.tgz -C $BUNDLE_INSTALL_LOCATION .\nmkdir -p $SITE_CONFIG_DIR\nmv -f /tmp/gems.tgz $SITE_CONFIG_DIR\nbundle exec rake --trace assets:precompile",
+              "AppSettings": "-RAILS_SERVE_STATIC_FILES true"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "webApp": "Web App on Windows",
+            "webAppLinux": "Web App on Linux",
+            "webAppContainer": "Web App for Containers (Linux)",
+            "functionApp": "Function App on Windows",
+            "functionAppLinux": "Function App on Linux",
+            "functionAppContainer": "Function App for Containers (Linux)",
+            "apiApp": "API App",
+            "mobileApp": "Mobile App"
+          },
+          "properties": {
+            "EditableOptions": "false"
+          },
+          "name": "WebAppKind",
+          "label": "{WebAppKindLabel}",
+          "defaultValue": "webAppLinux",
+          "type": "pickList",
+          "helpMarkDown": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "WebAppName",
+          "label": "{WebAppNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{WebAppNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DockerNamespace",
+          "label": "{DockerNamespaceLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DockerNamespaceMarkdown}",
+          "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DockerRepository",
+          "label": "{DockerRepositoryLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DockerRepositoryMarkdown}",
+          "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+          "groupName": ""
+        },
+        {
+          "name": "StartupCommand",
+          "type": "string",
+          "label": "{StartupCommandLabel}",
+          "defaultValue": "",
+          "required": false,
+          "visibleRule": "WebAppKind = webAppLinux || WebAppKind = webAppContainer || WebAppkind = functionAppContainer || WebAppKind = functionAppLinux",
+          "helpMarkDown": "{StartupCommandMarkdown}",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureRMWebAppNamesByAppType",
+          "parameters": {
+            "WebAppKind": "$(WebAppKind)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "WebAppName"
+        }
+      ]
+    }
+  }
+}

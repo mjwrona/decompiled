@@ -1,0 +1,174 @@
+﻿{
+  "id": "8C3657D8-593A-4518-80BB-05BB1A9E9222",
+  "name": "Canary Deployment Strategy on Linux Virtual Machines",
+  "category": "Deployment",
+  "iconTaskId": "4dda660c-b643-4598-a4a2-61080d0002d9",
+  "description": "Deploy using canary strategy to deployment group containing linux virtual machine",
+  "environment": {
+    "name": "dev",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "deploymentInput": {
+          "healthPercent": 0,
+          "deploymentHealthOption": "Custom",
+          "tags": [
+            "canary"
+          ],
+          "skipArtifactsDownload": false,
+          "artifactsDownloadInput": {
+            "downloadInputs": []
+          },
+          "queueId": 1,
+          "demands": [],
+          "enableAccessToken": false,
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "name": "Deploy Canary",
+        "phaseType": 4,
+        "rank": 1,
+        "workflowTasks": [
+          {
+            "taskId": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+            "version": "3.*",
+            "name": "Execute Deploy Script",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "targetType": "inline",
+              "filePath": "",
+              "arguments": "",
+              "script": "echo \"Congratulations! You are all set to deploy using canary deployment strategy.\nNext steps:\n1. In the deployment group job phases, select the deployment group that will be targeted in the run.\n2. Make sure that in the targeted deployment group, canary VMs are tagged as 'canary' and non-canary VMs are tagged as 'prod'.\n\n\nOptionally, connect directly to any Git repository or service including VSTS (Git or TFVC), GitHub or your private repository. \nAutomatically trigger your pipeline from changes to your code.\n\n\nFor more details:  https://aka.ms/AA89uc3\"\n",
+              "workingDirectory": "",
+              "failOnStderr": "false",
+              "noProfile": "true",
+              "noRc": "true"
+            }
+          }
+        ]
+      },
+      {
+        "deploymentInput": {
+          "parallelExecution": {
+            "parallelExecutionType": 0
+          },
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "rank": 2,
+        "phaseType": 2,
+        "name": "Wait for Manual resumption",
+        "refName": null,
+        "workflowTasks": [
+          {
+            "environment": {},
+            "taskId": "bcb64569-d51a-4af0-9c01-ea5d05b3b622",
+            "version": "8.*",
+            "name": "Manual Intervention",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "instructions": "Resume this run if canary deployment is stable. Also make sure that at least one Virtual machine in the Deployment Group is tagged as 'prod' for 'Deploy Prod' job to be successful.",
+              "emailRecipients": "",
+              "onTimeout": "reject"
+            }
+          }
+        ]
+      },
+      {
+        "deploymentInput": {
+          "healthPercent": 0,
+          "deploymentHealthOption": "Custom",
+          "tags": [
+            "prod"
+          ],
+          "skipArtifactsDownload": false,
+          "artifactsDownloadInput": {
+            "downloadInputs": []
+          },
+          "queueId": 1,
+          "demands": [],
+          "enableAccessToken": false,
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "rank": 3,
+        "phaseType": 4,
+        "name": "Deploy Prod",
+        "refName": null,
+        "workflowTasks": [
+          {
+            "environment": {},
+            "taskId": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+            "version": "3.*",
+            "name": "Execute Deploy Script",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "targetType": "inline",
+              "filePath": "",
+              "arguments": "",
+              "script": "echo \"Congratulations! You are all set to deploy using canary deployment strategy.\nNext steps:\n1. In the deployment group job phases, select the deployment group that will be targeted in the run.\n2. Make sure that in the targeted deployment group, canary VMs are tagged as 'canary' and non-canary VMs are tagged as 'prod'.\n\n\nOptionally, connect directly to any Git repository or service including VSTS (Git or TFVC), GitHub or your private repository. \nAutomatically trigger your pipeline from changes to your code.\n\n\nFor more details:  https://aka.ms/AA89uc3\"\n",
+              "workingDirectory": "",
+              "failOnStderr": "false",
+              "noProfile": "true",
+              "noRc": "true"
+            }
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "variables": {}
+  }
+}

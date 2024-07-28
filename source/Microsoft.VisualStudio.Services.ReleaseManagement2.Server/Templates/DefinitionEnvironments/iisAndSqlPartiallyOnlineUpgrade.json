@@ -1,0 +1,194 @@
+{
+  "id": "D978C201-13AB-4F81-81C9-A83F52E9A251",
+  "name": "IIS website and SQL database partially online upgrade",
+  "category": "Deployment",
+  "description": "Deployment Group: Upgrade ASP.NET or ASP.NET Core based websites. Upgrade a SQL database using SQL scripts executed when the web application is online followed by SQL scripts executed when the web application is offline.",
+  "iconTaskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "IIS Deployment with webapp online",
+        "rank": 1,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "OneTargetAtATime",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "e94f1750-a6a8-11e6-be69-bdf37a7b15d8",
+            "version": "1.*",
+            "Name": "Azure Network Load Balancer - Disconnect",
+            "inputs": {
+              "Action": "Disconnect"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+            "version": "0.*",
+            "Name": "IIS Web App Deploy",
+            "inputs": {
+              "Package": "$(System.DefaultWorkingDirectory)\\**\\*.zip"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "e94f1750-a6a8-11e6-be69-bdf37a7b15d8",
+            "version": "1.*",
+            "Name": "Azure Network Load Balancer - Connect",
+            "inputs": {
+              "Action": "Connect"
+            },
+            "Enabled": true,
+            "AlwaysRun": true,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "SQL upgrade with webapp online",
+        "rank": 2,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "4B506F7F-720F-47BB-BF21-029BAC6A690D",
+            "version": "0.*",
+            "Name": "SQL DB Deploy",
+            "inputs": {
+              "TaskType": "sqlQuery",
+              "ExecuteInTransaction": true
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "Stop IIS Website",
+        "rank": 3,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": [],
+          "skipArtifactsDownload": true
+        },
+        "workflowTasks": [
+          {
+            "taskId": "1b2aec60-dc49-11e6-9b76-63056e018cac",
+            "version": "0.*",
+            "Name": "Stop website",
+            "inputs": {
+              "IISDeploymentType": "IISWebsite",
+              "ActionIISWebsite": "StopWebsite"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "SQL upgrade with webapp offline",
+        "rank": 4,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": [],
+          "skipArtifactsDownload": true
+        },
+        "workflowTasks": [
+          {
+            "taskId": "4B506F7F-720F-47BB-BF21-029BAC6A690D",
+            "version": "0.*",
+            "Name": "SQL DB Deploy",
+            "inputs": {
+              "TaskType": "sqlQuery",
+              "ExecuteInTransaction": true
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "Start IIS Website",
+        "rank": 5,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": [],
+          "skipArtifactsDownload": true
+        },
+        "workflowTasks": [
+          {
+            "taskId": "1b2aec60-dc49-11e6-9b76-63056e018cac",
+            "version": "0.*",
+            "Name": "Start website",
+            "inputs": {
+              "IISDeploymentType": "IISWebsite",
+              "ActionIISWebsite": "StartWebsite"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {}
+  }
+}

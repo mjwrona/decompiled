@@ -1,0 +1,52 @@
+﻿IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSEXECROLE')
+BEGIN
+    CREATE ROLE TFSEXECROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSBUILDEXECROLE')
+BEGIN
+    CREATE ROLE TFSBUILDEXECROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSADMINROLE')
+BEGIN
+    CREATE ROLE TFSADMINROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSREADERROLE')
+BEGIN
+    CREATE ROLE TFSREADERROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'VSODIAGROLE')
+BEGIN
+      CREATE ROLE VSODIAGROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+        SELECT  *
+        FROM    sys.database_principals
+        WHERE   name = 'VssfAdmin'
+)
+BEGIN
+CREATE USER VssfAdmin WITHOUT LOGIN WITH DEFAULT_SCHEMA = dbo
+END
+
+EXEC sp_addrolemember 'db_owner', 'TFSEXECROLE'
+EXEC sp_addrolemember 'db_datareader', 'TFSREADERROLE'
+EXEC sp_addrolemember 'db_datareader', 'VSODIAGROLE'
+EXEC sp_addrolemember 'db_owner', 'VssfAdmin'
+
+GRANT VIEW DATABASE STATE TO VSODIAGROLE
+GRANT SHOWPLAN TO VSODIAGROLE
+GRANT VIEW DEFINITION TO VSODIAGROLE

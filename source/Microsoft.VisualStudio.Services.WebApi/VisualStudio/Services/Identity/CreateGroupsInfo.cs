@@ -1,0 +1,32 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Identity.CreateGroupsInfo
+// Assembly: Microsoft.VisualStudio.Services.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 7B264323-C592-4F23-AB6B-55AEDC85864F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.WebApi.dll
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Microsoft.VisualStudio.Services.Identity
+{
+  [DataContract]
+  public class CreateGroupsInfo
+  {
+    public CreateGroupsInfo()
+    {
+    }
+
+    public CreateGroupsInfo(Guid scopeId, IList<Microsoft.VisualStudio.Services.Identity.Identity> groups)
+    {
+      this.ScopeId = scopeId;
+      this.Groups = new List<Microsoft.VisualStudio.Services.Identity.Identity>((IEnumerable<Microsoft.VisualStudio.Services.Identity.Identity>) groups);
+    }
+
+    [DataMember]
+    public Guid ScopeId { get; private set; }
+
+    [DataMember]
+    public List<Microsoft.VisualStudio.Services.Identity.Identity> Groups { get; private set; }
+  }
+}

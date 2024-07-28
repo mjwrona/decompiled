@@ -1,0 +1,67 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.DataAccess.TaskTrackingComponent44
+// Assembly: Microsoft.TeamFoundation.DistributedTask.Orchestration.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 07FD5059-3D25-415E-AA3A-5372051D7E71
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll
+
+using Microsoft.TeamFoundation.DistributedTask.WebApi;
+using Microsoft.TeamFoundation.Framework.Server;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
+namespace Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.DataAccess
+{
+  internal class TaskTrackingComponent44 : TaskTrackingComponent43
+  {
+    public override IList<TaskOrchestrationPlan> GetRunningPlansByDefinition(
+      Guid scopeIdentifier,
+      int definitionId,
+      IList<string> timelineRecordTypes,
+      int maxPlans)
+    {
+      using (new TaskSqlComponentBase.SqlMethodScope((TaskSqlComponentBase) this, nameof (GetRunningPlansByDefinition)))
+      {
+        this.PrepareStoredProcedure("Task.prc_GetRunningPlansByDefinition");
+        this.BindDataspaceId(scopeIdentifier);
+        this.BindInt("@definitionId", definitionId);
+        this.BindTaskStringTable("@recordTypes", timelineRecordTypes.Distinct<string>((IEqualityComparer<string>) StringComparer.Ordinal));
+        this.BindInt("@maxPlans", maxPlans);
+        using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+        {
+          resultCollection.AddBinder<TaskOrchestrationPlan>(this.GetPlanBinder());
+          resultCollection.AddBinder<Timeline>((ObjectBinder<Timeline>) new TimelineBinder());
+          resultCollection.AddBinder<TimelineRecord>(this.GetTimelineRecordBinder());
+          List<TaskOrchestrationPlan> items = resultCollection.GetCurrent<TaskOrchestrationPlan>().Items;
+          resultCollection.NextResult();
+          Dictionary<Guid, Timeline> dictionary = resultCollection.GetCurrent<Timeline>().Items.ToDictionary<Timeline, Guid>((System.Func<Timeline, Guid>) (t => t.Id));
+          foreach (TaskOrchestrationPlan orchestrationPlan1 in items)
+          {
+            Timeline timeline1;
+            if (dictionary.TryGetValue(orchestrationPlan1.Timeline.Id, out timeline1))
+            {
+              orchestrationPlan1.Timeline = (TimelineReference) timeline1;
+            }
+            else
+            {
+              TaskOrchestrationPlan orchestrationPlan2 = orchestrationPlan1;
+              Timeline timeline2 = new Timeline(orchestrationPlan1.Timeline.Id);
+              timeline2.ChangeId = orchestrationPlan1.Timeline.ChangeId;
+              timeline2.Location = orchestrationPlan1.Timeline.Location;
+              orchestrationPlan2.Timeline = (TimelineReference) timeline2;
+            }
+          }
+          resultCollection.NextResult();
+          foreach (TimelineRecord timelineRecord in resultCollection.GetCurrent<TimelineRecord>().Items)
+          {
+            Timeline timeline;
+            if (dictionary.TryGetValue(timelineRecord.TimelineId.Value, out timeline))
+              timeline.Records.Add(timelineRecord);
+          }
+          return (IList<TaskOrchestrationPlan>) items;
+        }
+      }
+    }
+  }
+}

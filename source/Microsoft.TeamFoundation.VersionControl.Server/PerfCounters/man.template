@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{26D13FCF-8DBC-4DF5-AEED-B23523816423}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.VersionControl.Server.dll" providerName="MicrosoftTeamFoundationVersionControlServer" providerType="userMode" symbol="MicrosoftTeamFoundationVersionControlServer" callback="custom">
+        <counterSet guid="{54D63646-CC80-405E-A883-2F9982A3F8DC}" name="TFS Version Control" description="Counters for Version Control in Azure DevOps Server" instances="globalAggregate" symbol="TFSVersionControl" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Current File Uploads" description="Current File Uploads indicates the number of files currently being uploaded to the Version Control service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.CurrentFileUploads" />
+          <counter id="2" name="Current File Uploads/Sec" description="Current File Uploads/Sec is the rate that files are being uploaded to the Version Control service." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.CurrentFileUploadsPerSec" />
+          <counter id="3" name="Current File Downloads" description="Current File Downloads indicates the number of files currently being downloaded from the Version Control service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.CurrentFileDownloads" />
+          <counter id="4" name="Current File Downloads/Sec" description="Current File Downloads/Sec is the rate that files are being downloaded from the Version Control service" type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.CurrentFileDownloadsPerSec" />
+          <counter id="5" name="Current Server Requests" description="Current Server Requests indicates the number of currently active requests being processed by the Version Control service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.CurrentServerRequests" />
+          <counter id="6" name="Current Requests/Sec" description="Current Requests/Sec is the rate at which requests are being processed by the Version Control Service." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.CurrentServerRequestsPerSec" />
+          <counter id="7" baseID="8" name="Average Response Time" description="Average Response Time is the time, on average, that the Version Control service took to process a single request." type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.AverageResponseTime" />
+          <counter id="8" name="Average Response TimeBase" description="Base for the Average Response Time, see Average Response Time." type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.VersionControl.Server.PerformanceCounters.AverageResponseTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

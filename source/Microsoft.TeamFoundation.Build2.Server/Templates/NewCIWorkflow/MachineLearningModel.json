@@ -1,0 +1,169 @@
+{
+  "id": "MachineLearningModel",
+  "name": "Machine Learning Model",
+  "description": "Build and deploy a ML model using Azure Machine Learning CLI.",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "2CA8FE15-42EA-4B26-80F1-E0738EC17E89",
+  "template": {
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "process": {
+      "type": 1,
+      "phases": [
+        {
+          "steps": [
+            {
+              "displayName": "Install Azure CLI ML Extension",
+              "task": {
+                "id": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                "versionSpec": "1.*",
+                "definitionType": "task"
+              },
+              "inputs": {
+                "connectedServiceNameARM": "$(Parameters.connectedServiceNameARM)",
+                "scriptLocation": "inlineScript",
+                "scriptPath": "",
+                "inlineScript": "# Install the Azure ML CLI extension (Learn more: https://aka.ms/aml-cli).\naz extension add -n azure-cli-ml",
+                "args": "",
+                "addSpnToEnvironment": "false",
+                "useGlobalConfig": "false",
+                "cwd": "",
+                "failOnStandardError": "false"
+              },
+              "enabled": true,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "condition": "succeeded()",
+              "alwaysRun": false
+            },
+            {
+              "displayName": "Setup",
+              "task": {
+                "id": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                "versionSpec": "1.*",
+                "definitionType": "task"
+              },
+              "inputs": {
+                "connectedServiceNameARM": "$(Parameters.connectedServiceNameARM)",
+                "scriptLocation": "inlineScript",
+                "scriptPath": "",
+                "inlineScript": "# Attach a workspace configuration to a folder to enable CLI contextual awareness (Learn more: https://aka.ms/aml-cli-resource).\naz ml folder attach -w $(workspaceName) -g $(resourceGroupName)",
+                "args": "",
+                "addSpnToEnvironment": "false",
+                "useGlobalConfig": "false",
+                "cwd": "",
+                "failOnStandardError": "false"
+              },
+              "enabled": true,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "condition": "succeeded()",
+              "alwaysRun": false
+            },
+            {
+              "displayName": "Train Model",
+              "task": {
+                "id": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                "versionSpec": "1.*",
+                "definitionType": "task"
+              },
+              "inputs": {
+                "connectedServiceNameARM": "$(Parameters.connectedServiceNameARM)",
+                "scriptLocation": "inlineScript",
+                "scriptPath": "",
+                "inlineScript": "# Start a run of the experiment (Learn more: https://aka.ms/aml-cli-run).\n{ az ml run submit-script -c $(runConfig) -t runmetadata.json; } &&\n# Register a model with Azure Machine Learning (Learn more: https://aka.ms/aml-cli-model).\n{ az ml model register -n $(modelName) --asset-path $(modelAssetPath) -f runmetadata.json -t modelmetadata.json; }",
+                "args": "",
+                "addSpnToEnvironment": "false",
+                "useGlobalConfig": "false",
+                "cwd": "",
+                "failOnStandardError": "false"
+              },
+              "enabled": true,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "condition": "succeeded()",
+              "alwaysRun": false
+            },
+            {
+              "displayName": "Deploy Model",
+              "task": {
+                "id": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                "versionSpec": "1.*",
+                "definitionType": "task"
+              },
+              "inputs": {
+                "connectedServiceNameARM": "$(Parameters.connectedServiceNameARM)",
+                "scriptLocation": "inlineScript",
+                "scriptPath": "",
+                "inlineScript": "# Deploy the registered model to AKS (Learn more: https://aka.ms/aml-cli-model).\naz ml model deploy -n $(serviceName) --overwrite -f modelmetadata.json --ic $(inferenceConfigFile) --dc $(deploymentConfigFile) --ct $(aksComputeName)",
+                "args": "",
+                "addSpnToEnvironment": "false",
+                "useGlobalConfig": "false",
+                "cwd": "",
+                "failOnStandardError": "false"
+              },
+              "enabled": true,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "condition": "succeeded()",
+              "alwaysRun": false
+            }
+          ]
+        }
+      ]
+    },
+    "options": [],
+    "variables": {
+      "aksComputeName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "deploymentConfigFile": {
+        "value": "deploymentConfig.yml"
+      },
+      "inferenceConfigFile": {
+        "value": "inferenceConfig.yml"
+      },
+      "modelAssetPath": {
+        "value": "",
+        "allowOverride": true
+      },
+      "modelName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "resourceGroupName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "runConfig": {
+        "value": "",
+        "allowOverride": true
+      },
+      "serviceName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "workspaceName": {
+        "value": "",
+        "allowOverride": true
+      }
+    },
+    "triggers": [],
+    "processParameters": {
+      "inputs": [
+        {
+          "name": "connectedServiceNameARM",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceDescription}",
+          "properties": {
+            "EndpointFilterRule": "ScopeLevel != ManagementGroup"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "id": "77c28ae4-df38-4cfb-accb-3fd088dd609b",
+  "name": "IIS website and SQL database deployment",
+  "category": "Deployment",
+  "description": "Deployment Group: Deploy ASP.NET or ASP.NET Core web applications to an IIS Website and SQL database.",
+  "iconTaskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "IIS Deployment",
+        "rank": 1,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "1b2aec60-dc49-11e6-9b76-63056e018cac",
+            "version": "0.*",
+            "Name": "IIS Web App Manage",
+            "inputs": {
+              "IISDeploymentType": "$(Parameters.IISDeploymentType)",
+              "ActionIISWebsite": "$(Parameters.ActionIISWebsite)",
+              "StartStopWebsiteName": "$(Parameters.WebsiteName)",
+              "AddBinding": "$(Parameters.AddBinding)",
+              "WebsiteName": "$(Parameters.WebsiteName)",
+              "Port": "",
+              "Bindings": "$(Parameters.Bindings)",
+              "AppPoolNameForWebsite": "$(Parameters.AppPoolNameForWebsite)",
+              "ParentWebsiteNameForVD": "$(Parameters.WebsiteName)",
+              "VirtualPathForVD": "$(Parameters.VirtualPathForApplication)",
+              "ParentWebsiteNameForApplication": "$(Parameters.WebsiteName)",
+              "VirtualPathForApplication": "$(Parameters.VirtualPathForApplication)",
+              "AppPoolName": "$(Parameters.AppPoolName)",
+              "CreateOrUpdateAppPoolForWebsite": "$(Parameters.CreateOrUpdateAppPoolForWebsite)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+            "version": "0.*",
+            "Name": "IIS Web App Deploy",
+            "inputs": {
+              "WebSiteName": "$(Parameters.WebsiteName)",
+              "Package": "$(System.DefaultWorkingDirectory)\\**\\*.zip",
+              "XmlVariableSubstitution": true
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "SQL Deployment",
+        "rank": 2,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "4B506F7F-720F-47BB-BF21-029BAC6A690D",
+            "version": "0.*",
+            "Name": "SQL DB Deploy",
+            "inputs": {
+              "DacpacFile": "$(System.DefaultWorkingDirectory)\\**\\*.dacpac",
+              "TaskType": "$(Parameters.TaskType)",
+              "SqlFile": "$(Parameters.SqlFile)",
+              "InlineSql": "$(Parameters.InlineSql)",
+              "TargetMethod": "$(Parameters.TargetMethod)",
+              "DatabaseName": "$(Parameters.DatabaseName)",
+              "ConnectionString": "$(Parameters.ConnectionString)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {
+            "IISWebsite": "IIS Website",
+            "IISWebApplication": "IIS Web Application",
+            "IISVirtualDirectory": "IIS Virtual Directory",
+            "IISApplicationPool": "IIS Application Pool"
+          },
+          "properties": {},
+          "name": "IISDeploymentType",
+          "label": "{IISDeploymentTypeLabel}",
+          "defaultValue": "IISWebsite",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{IISDeploymentTypeMarkdown}",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "CreateOrUpdateWebsite": "Create Or Update",
+            "StartWebsite": "Start",
+            "StopWebsite": "Stop"
+          },
+          "properties": {},
+          "name": "ActionIISWebsite",
+          "label": "{ActionIISWebsiteLabel}",
+          "defaultValue": "CreateOrUpdateWebsite",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ActionIISWebsiteMarkdown}",
+          "visibleRule": "IISDeploymentType = IISWebsite",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "WebsiteName",
+          "label": "{WebsiteNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{WebsiteNameMarkdown}",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "AddBinding",
+          "label": "{AddBindingLabel}",
+          "defaultValue": "True",
+          "type": "boolean",
+          "helpMarkDown": "{AddBindingMarkdown}",
+          "visibleRule": "IISDeploymentType = IISWebsite && ActionIISWebsite = CreateOrUpdateWebsite",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "resizable": "true",
+            "editorExtension": "ms.vss-services-azure.iis-multiple-binding",
+            "displayFormat": "{{#bindings}}{{protocol}}/{{ipAddress}}:{{port}}:{{hostname}}\n{{/bindings}}"
+          },
+          "name": "Bindings",
+          "label": "{BindingsLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "multiLine",
+          "helpMarkDown": "{BindingsMarkdown}",
+          "visibleRule": "IISDeploymentType = IISWebsite && ActionIISWebsite = CreateOrUpdateWebsite && AddBinding = true",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "CreateOrUpdateAppPoolForWebsite",
+          "label": "{CreateOrUpdateAppPoolForWebsiteLabel}",
+          "defaultValue": "true",
+          "type": "boolean",
+          "helpMarkDown": "{CreateOrUpdateAppPoolForWebsiteMarkdown}",
+          "visibleRule": "IISDeploymentType = IISWebsite && ActionIISWebsite = CreateOrUpdateWebsite",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "AppPoolName",
+          "label": "{AppPoolNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{AppPoolNameMarkdown}",
+          "visibleRule": "IISDeploymentType = IISApplicationPool",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "AppPoolNameForWebsite",
+          "label": "{AppPoolNameForWebsiteLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{AppPoolNameForWebsiteMarkdown}",
+          "visibleRule": "IISDeploymentType = IISWebsite && ActionIISWebsite = CreateOrUpdateWebsite && CreateOrUpdateAppPoolForWebsite = true",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "VirtualPathForApplication",
+          "label": "{VirtualPathForApplicationLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{VirtualPathForApplicationMarkdown}",
+          "visibleRule": "IISDeploymentType = IISWebApplication || IISDeploymentType = IISVirtualDirectory",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "dacpac": "Sql Dacpac",
+            "sqlQuery": "Sql Query File",
+            "sqlInline": "Inline Sql"
+          },
+          "properties": {},
+          "name": "TaskType",
+          "label": "{TaskTypeLabel}",
+          "defaultValue": "dacpac",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{TaskTypeMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "server": "Server",
+            "connectionString": "Connection String",
+            "publishProfile": "Publish Profile"
+          },
+          "properties": {},
+          "name": "TargetMethod",
+          "label": "{TargetMethodLabel}",
+          "defaultValue": "server",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{TargetMethodMarkdown}",
+          "visibleRule": "TaskType = dacpac",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "SqlFile",
+          "label": "{SqlFileLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{SqlFileMarkdown}",
+          "visibleRule": "TaskType = sqlQuery",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "resizable": "true",
+            "rows": "10"
+          },
+          "name": "InlineSql",
+          "label": "{InlineSqlLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "multiLine",
+          "helpMarkDown": "{InlineSqlMarkdown}",
+          "visibleRule": "TaskType = sqlInline",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DatabaseName",
+          "label": "{DatabaseNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DatabaseNameMarkdown}",
+          "visibleRule": "TargetMethod = server || TaskType = sqlQuery || TaskType = sqlInline",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectionString",
+          "label": "{ConnectionStringLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "multiLine",
+          "helpMarkDown": "{ConnectionStringMarkdown}",
+          "visibleRule": "TaskType = dacpac && TargetMethod = connectionString",
+          "groupName": ""
+        }
+      ]
+    }
+  }
+}

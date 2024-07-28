@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SymmetricSecurityKeyNotFound" xml:space="preserve">
+    <value>The supplied Signing Credential is not a SymmetricSigningCredential and does not match the Signature Algorithm.</value>
+  </data>
+  <data name="InvalidClockSkewException" xml:space="preserve">
+    <value>The value supplied for ClockSkewInSeconds is invalid. It must be a positive integer.</value>
+  </data>
+  <data name="InvalidSignatureAlgorithm" xml:space="preserve">
+    <value>The signature algorithm in the JsonWebToken header is invalid.</value>
+  </data>
+  <data name="SigningTokenExpired" xml:space="preserve">
+    <value>The supplied signing token has expired.</value>
+  </data>
+  <data name="InvalidValidToValueException" xml:space="preserve">
+    <value>The ValidTo value is not valid.</value>
+  </data>
+  <data name="ActorValidationException" xml:space="preserve">
+    <value>The ActorToken within the JsonWebToken is invalid.</value>
+  </data>
+  <data name="ValidFromAfterValidToException" xml:space="preserve">
+    <value>The time represented by the ValidFrom value come after the time represented by the ValidTo value.</value>
+  </data>
+  <data name="TokenNotYetValidException" xml:space="preserve">
+    <value>The token is not yet valid.</value>
+  </data>
+  <data name="SerializationException" xml:space="preserve">
+    <value>Failed to serialize the JsonWebToken object.</value>
+  </data>
+  <data name="SigningTokenKeyTooSmall" xml:space="preserve">
+    <value>The key size of the supplied signing token is too small. It must be at least 2048 bits.</value>
+  </data>
+  <data name="InvalidValidFromValueException" xml:space="preserve">
+    <value>The ValidFrom value in not valid.</value>
+  </data>
+  <data name="SignatureValidationException" xml:space="preserve">
+    <value>The signature is not valid.</value>
+  </data>
+  <data name="SignatureNotFound" xml:space="preserve">
+    <value>The JsonWebToken is not signed, or the signature has not been found.</value>
+  </data>
+  <data name="DigestUnsupportedException" xml:space="preserve">
+    <value>JsonWebTokens support only the {0} Digest, but the signing credentials specify {1}.</value>
+  </data>
+  <data name="TokenExpiredException" xml:space="preserve">
+    <value>The token is expired.</value>
+  </data>
+  <data name="TokenScopeNotAuthorizedException" xml:space="preserve">
+    <value>The token scope is not valid.</value>
+  </data>
+  <data name="InvalidAudienceException" xml:space="preserve">
+    <value>The audience of the token is invalid.</value>
+  </data>
+  <data name="EncodedTokenDataMalformed" xml:space="preserve">
+    <value>The encoded data in the JsonWebToken is malformed.</value>
+  </data>
+  <data name="SignatureAlgorithmUnsupportedException" xml:space="preserve">
+    <value>JsonWebTokens do not support the supplied signature algorithm: {0}.</value>
+  </data>
+  <data name="ProviderTypeUnsupported" xml:space="preserve">
+    <value>JsonWebTokens do not support crypto provider of type {0}.</value>
+  </data>
+  <data name="SigningTokenNoPrivateKey" xml:space="preserve">
+    <value>The signing token has no private key and cannot be used for signing.</value>
+  </data>
+  <data name="InvalidIssuerException" xml:space="preserve">
+    <value>The issuer of the JsonWebToken is not valid.</value>
+  </data>
+  <data name="DeserializationException" xml:space="preserve">
+    <value>Failed to deserialize the JsonWebToken object.</value>
+  </data>
+</root>

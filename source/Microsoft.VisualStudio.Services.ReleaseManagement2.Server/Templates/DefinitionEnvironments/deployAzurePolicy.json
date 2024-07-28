@@ -1,0 +1,149 @@
+{
+  "id": "40F28CF8-EC2D-4EB9-BE51-A03C60F72146",
+  "name": "Azure Policy Deployment",
+  "category": "Deployment",
+  "iconTaskId": "72A1931B-EFFB-4D2E-8FD8-F8472A07CB62",
+  "description": "Create and assign Azure Policy to your management group or Azure subscription.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "variables": {
+      "managementGroupName": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "subscriptionId": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "policyName": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "policyDisplayName": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "policyDescription": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "policyRule": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "policyParameters": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "assignmentName": {
+        "value": "", 
+        "allowOverride": "true"
+      },
+      "assignmentDisplayName": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "assignmentDescription": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "policySetName": {
+        "value": "", 
+        "allowOverride": true
+      },
+      "resourceGroupName": {
+        "value": "", 
+        "allowOverride": true
+      }
+    },
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "72A1931B-EFFB-4D2E-8FD8-F8472A07CB62",
+            "version": "3.*",
+            "Name": "Create Azure Policy",
+            "inputs": {
+              "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+              "ConnectedServiceName": "",
+              "ConnectedServiceNameARM": "$(Parameters.ConnectedServiceNameARM)",
+              "ScriptType": "InlineScript",
+              "Inline": "# Input variables: set these values in the variables section of the release pipeline\n\n#   policyName          - [required] Policy definition name\n#   policyDisplayName   - [optional] Policy definition display name\n#   policyDescription   - [optional] Policy definition description\n#   subscriptionId      - [optional] Id of subscription the definition will be available in\n#   managementGroupName - [optional] Name of management group the definition will be available in\n#   policyRule          - [required] Policy definition rule in JSON string format or path to a file containing JSON policy definition rule\n#   policyParameters    - [optional] Policy parameter values in JSON string format\n\n# Notes:\n#   Refer to https://docs.microsoft.com/en-us/azure/azure-policy/ for documentation on the Powershell cmdlets and the JSON input formats\n#   File path value for $(PolicyRule) may be a fully qualified path or a path relative to $(System.DefaultWorkingDirectory)\n\n$policyName = \"$(policyName)\"\n$policyDisplayName = \"$(policyDisplayName)\"\n$policyDescription = \"$(policyDescription)\"\n$subscriptionId = \"$(subscriptionId)\"\n$managementGroupName = \"$(managementGroupName)\"\n$policyRule = \"$(policyRule)\"\n$policyParameters = \"$(policyParameters)\"\n\nif (!$policyName)\n{\n    throw \"Unable to create policy definition: required input variable value `$(PolicyName) was not provided\"\n}\n\nif (!$policyRule)\n{\n    throw \"Unable to create policy definition: required input variable value `$(PolicyRule) was not provided\"\n}\n\nif ($subscriptionId -and $managementGroupName)\n{\n    throw \"Unable to create policy definition: `$(SubscriptionId) '$subscriptionId' and `$(ManagementGroupName) '$managementGroupName' were both provided. Either may be provided, but not both.\"\n}\n\n$azureRMModule = (Get-Module -Name AzureRM)\nif ($managementGroupName -and (-not $azureRMModule -or $azureRMModule.version -lt 6.4))\n{\n    throw \"For creating policy as management group, Azure PS installed version should be equal to or greater than 6.4\"\n}\n\n$cmdletParameters = @{Name=$policyName; Policy=$policyRule; Mode='Indexed'}\nif ($policyDisplayName)\n{\n    $cmdletParameters += @{DisplayName=$policyDisplayName}\n}\n\nif ($policyDescription)\n{\n    $cmdletParameters += @{Description=$policyDescription}\n}\n\nif ($subscriptionId)\n{\n    $cmdletParameters += @{SubscriptionId=$subscriptionId}\n}\n\nif ($managementGroupName)\n{\n    $cmdletParameters += @{ManagementGroupName=$managementGroupName}\n}\n\nif ($policyParameters)\n{\n    $cmdletParameters += @{Parameter=$policyParameters}\n}\n\n&New-AzPolicyDefinition @cmdletParameters",
+              "TargetAzurePs": "LatestVersion"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "72A1931B-EFFB-4D2E-8FD8-F8472A07CB62",
+            "version": "3.*",
+            "Name": "Assign Azure Policy",
+            "inputs": {
+              "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+              "ConnectedServiceName": "",
+              "ConnectedServiceNameARM": "$(Parameters.ConnectedServiceNameARM)",
+              "ScriptType": "InlineScript",
+              "Inline":"# Input variables: set these values in the variables section of the release pipeline\n\n#   AssignmentName        - [required] Policy assignment name\n#   AssignmentDisplayName - [optional] Policy assignment display name\n#   AssignmentDescription - [optional] Policy assignment description\n#   PolicyName            - [optional] Name of policy definition to assign\n#   PolicySetName         - [optional] Name of policy set definition to assign\n#   ResourceGroupName     - [optional] Name of resource group the policy [set] definition will be applied to\n#   SubscriptionId        - [optional] Id of subscription the policy [set] definition will be applied to\n#   ManagementGroupName   - [optional] Name of management group the policy [set] definition will be applied to\n#  PolicyParameters      - [optional] Policy parameter values in JSON string format\n\n# Notes:\n#   Refer to https://docs.microsoft.com/en-us/azure/azure-policy/ for documentation on the Powershell cmdlets and the JSON input formats\n\n$assignmentName = \"$(AssignmentName)\"\n$assignmentDisplayName = \"$(AssignmentDisplayName)\"\n$assignmentDescription = \"$(AssignmentDescription)\"\n$policyName = \"$(PolicyName)\"\n$policySetName = \"$(PolicySetName)\"\n$resourceGroupName = \"$(ResourceGroupName)\"\n$subscriptionId = \"$(SubscriptionId)\"\n$managementGroupName = \"$(managementGroupName)\"\n$policyParameters = \"$(PolicyParameters)\"\n\nif (!$assignmentName)\n{\n    throw \"Unable to create policy assignment: required input variable value `$(AssignmentName) was not provided\"\n}\n\nif (!$policyName -and !$policySetName)\n{\n    throw \"Unable to create policy assignment: neither `$(PolicyName) nor `$(PolicySetName) was provided. One or the other must be provided.\"\n}\n\nif ($policyName -and $policySetName)\n{\n    throw \"Unable to create policy assignment: `$(PolicyName) '$policyName' and `$(PolicySetName) '$policySetName' were both provided. Either may be provided, but not both.\"\n}\n\nif ($subscriptionId -and $managementGroupName)\n{\n    throw \"Unable to create policy assignment: `$(SubscriptionId) '$subscriptionId' and `$(ManagementGroupName) '$managementGroupName' were both provided. Either may be provided, but not both.\"\n}\n\nif ($managementGroupName -and $resourceGroupName)\n{\n    throw \"Unable to create policy assignment: `$(ManagementGroupName) '$managementGroupName' and `$(ResourceGroupName) '$resourceGroupName' were both provided. Either may be provided, but not both.\"\n}\n\nif ($managementGroupName)\n{\n    $scope = \"/providers/Microsoft.Management/managementGroups/$managementGroupName\"\n    $searchParameters = @{ManagementGroupName=$managementGroupName}\n}\nelse\n{\n    if (!$subscriptionId)\n    {\n        $subscription = Get-AzContext | Select-Object -Property Subscription\n        $subscriptionId = $subscription.Id\n    }\n\n    $scope = \"/subscriptions/$subscriptionId\"\n    $searchParameters = @{SubscriptionId=$subscriptionId}\n    \n    if ($resourceGroupName)\n    {\n        $scope += \"/resourceGroups/$resourceGroupName\"\n    }\n}\n\n$cmdletParameters = @{Name=$assignmentName; Scope=$scope}\nif ($assignmentDisplayName)\n{\n    $cmdletParameters += @{DisplayName=$assignmentDisplayName}\n}\n\nif ($assignmentDescription)\n{\n    $cmdletParameters += @{Description=$assignmentDescription}\n}\n\nif ($policyName)\n{\n    $policyDefinition = Get-AzPolicyDefinition @searchParameters | Where-Object { $_.Name -eq $policyName }\n    if (!$policyDefinition)\n    {\n        throw \"Unable to create policy assignment: policy definition $policyName does not exist\"\n    }\n\n    $cmdletParameters += @{PolicyDefinition=$policyDefinition}\n}\n\nif ($policySetName)\n{\n    $policySetDefinition = Get-AzPolicySetDefinition @searchParameters | Where-Object { $_.Name -eq $policySetName }\n    if (!$policySetDefinition)\n    {\n        throw \"Unable to create policy assignment: policy set definition $policySetName does not exist\"\n    }\n\n    $cmdletParameters += @{PolicySetDefinition=$policySetDefinition}\n}\n\nif ($policyParameters)\n{\n    $cmdletParameters += @{PolicyParameter=$policyParameters}\n}\n\n&New-AzPolicyAssignment @cmdletParameters",
+              "TargetAzurePs": "LatestVersion"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "processParameters": {
+      "inputs": [
+          {
+              "name": "ConnectedServiceNameARM",
+              "type": "connectedService:AzureRM",
+              "label": "{ConnectedServiceNameARMLabel}",
+              "defaultValue": "",
+              "required": true,
+              "helpMarkDown": "{ConnectedServiceNameARMMarkdown}",
+              "properties": {
+                "EndpointFilterRule": "ScopeLevel != AzureMLWorkspace"
+              }
+          }
+      ]
+    }
+  }
+}

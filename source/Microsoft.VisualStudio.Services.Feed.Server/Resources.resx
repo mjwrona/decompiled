@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_UpstreamFeedNotAllowedForPublicFeed" xml:space="preserve">
+    <value>Upstream sources are not allowed on public feeds.</value>
+  </data>
+  <data name="NpmAuditBanner" xml:space="preserve">
+    <value>New! Use npm audit and npm audit fix locally to identify and update vulnerable dependencies, and your changes will be reflected on your Azure Artifacts feed.</value>
+  </data>
+  <data name="Error_InternalUpstreamsHostCouldNotBeResolved" xml:space="preserve">
+    <value>The host '{0}' does not exist or you do not have permissions to it.</value>
+  </data>
+  <data name="Error_InternalUpstreamConfigurationShouldOnlyReceiveOneLocationSet" xml:space="preserve">
+    <value>Either the Location value or the ID's should be sent to configure an upstream not both.</value>
+  </data>
+  <data name="Error_UpstreamSourceNameIsInvalid" xml:space="preserve">
+    <value>The upstream source name '{0}' isn't allowed. {1}</value>
+  </data>
+  <data name="AuditAddedFormat" xml:space="preserve">
+    <value>added {0}</value>
+  </data>
+  <data name="FeedPermissions" xml:space="preserve">
+    <value>Feed Permissions</value>
+  </data>
+  <data name="Error_FeedNameIsReserved" xml:space="preserve">
+    <value>The name '{0}' is a reserved name and not allowed.</value>
+  </data>
+  <data name="Error_ReservedName" xml:space="preserve">
+    <value>Name is reserved.</value>
+  </data>
+  <data name="Error_FeedUpstreamConflictsEnabledWithoutUpstreamEnabled" xml:space="preserve">
+    <value>Upstream name conflicts are only allowed if public upstream is also enabled in the feed. Value for upstream enabled: {0}, value for allowing upstream name conflicts: {1}.</value>
+  </data>
+  <data name="Error_UpstreamSourceLocationNotParseable" xml:space="preserve">
+    <value>Please provide a uri for the upstream source location. The location '{0}' is not a valid uri.</value>
+  </data>
+  <data name="ServiceEndpointNotSupportedText" xml:space="preserve">
+    <value>Setting service endpoints on upstreams is not supported for this feed.</value>
+  </data>
+  <data name="Error_PackagingOperationNotFound" xml:space="preserve">
+    <value>The packaging operation for the requested protocol type could not be found. Protocol Type: {0}</value>
+  </data>
+  <data name="Error_ImplicitViewCannotBeRenamed" xml:space="preserve">
+    <value>Implicit views cannot be renamed.</value>
+  </data>
+  <data name="PackageNotificationsChangeTypePublish" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="UpgradedFeedBannerLink" xml:space="preserve">
+    <value>Get Started.</value>
+  </data>
+  <data name="Error_RecycleBinUpdateOnlySupportsRestoreToFeed" xml:space="preserve">
+    <value>The only supported operation when patching a package version in the recycle bin is to set '/isDeleted' to false.</value>
+  </data>
+  <data name="Error_RecycleBinPatchOnlySupportsRestoreFeed" xml:space="preserve">
+    <value>The only supported operation when patching a feed in the recycle bin is [{"op"="replace", "path"="/isDeleted", "value"=false}].</value>
+  </data>
+  <data name="Error_InvalidUpstreamProtocolValue" xml:space="preserve">
+    <value>The protocol property of the upstream must have one of the following values: {0}</value>
+  </data>
+  <data name="Error_UpstreamSourceNameLocationMismatch" xml:space="preserve">
+    <value>To reuse an upstream source in multiple protocols, names and locations of {0} and {1} must match.</value>
+  </data>
+  <data name="Error_NullParameter" xml:space="preserve">
+    <value>Parameter '{0}' cannot be null.</value>
+  </data>
+  <data name="PackageNotificationsChangeTypePromote" xml:space="preserve">
+    <value>Promote</value>
+  </data>
+  <data name="ServiceEndpointNotFoundText" xml:space="preserve">
+    <value>The upstream's service endpoint could not be found.</value>
+  </data>
+  <data name="Error_PublicFeedsCannotHaveCustomPublicUpstreams" xml:space="preserve">
+    <value>Custom upstreams are unavailable to public feeds.</value>
+  </data>
+  <data name="Error_InvalidUpstreamSourceType" xml:space="preserve">
+    <value>An invalid upstream source type was received: {0}</value>
+  </data>
+  <data name="Error_BatchDataIsRequired" xml:space="preserve">
+    <value>The requested batch operation requires additional data that was not provided.</value>
+  </data>
+  <data name="UpgradedFeedBanner" xml:space="preserve">
+    <value>Using packages from nuget.org? You can now use the nuget.org upstream source with this feed.</value>
+  </data>
+  <data name="Error_UpstreamSourceLocationNotHttp" xml:space="preserve">
+    <value>The upstream source location '{0}' is not an http or https address</value>
+  </data>
+  <data name="Error_UpstreamToSameFeedIsDisallowed" xml:space="preserve">
+    <value>Configuring an upstream to the same feed is disallowed.</value>
+  </data>
+  <data name="Error_InternalUpstreamContainsIncorrectFeed" xml:space="preserve">
+    <value>The received feed string ({0}) could not be parsed, it should have the format '{{feedName}}@{{viewName}}'.</value>
+  </data>
+  <data name="AuditRemovedFormat" xml:space="preserve">
+    <value>removed {0}</value>
+  </data>
+  <data name="PackageNotificationsFeed" xml:space="preserve">
+    <value>Feed</value>
+  </data>
+  <data name="Error_FeedNameContainsWhitespace" xml:space="preserve">
+    <value>The name '{0}' isn't allowed. A feed name cannot contain whitespace.</value>
+  </data>
+  <data name="AuditNoAdditionalDetails" xml:space="preserve">
+    <value>no additional details available</value>
+  </data>
+  <data name="Error_FeedMustNotHaveUpstreamV2Capability" xml:space="preserve">
+    <value>Feeds using version 2 of upstreams can not clear cached packages.</value>
+  </data>
+  <data name="Error_UpstreamSourceIdIsInvalid" xml:space="preserve">
+    <value>The upstream source id '{0}' isn't allowed.</value>
+  </data>
+  <data name="Error_NormalizedMatchRequiresProtocol" xml:space="preserve">
+    <value>The query parameter 'normalizedPackageName' must be used in conjunction with 'protocolType'.</value>
+  </data>
+  <data name="Error_ProjectScopedUpstreamsNotEnabled" xml:space="preserve">
+    <value>The project-scoped upstreams feature is not enabled.</value>
+  </data>
+  <data name="Error_ProvenanceSourceInvalid" xml:space="preserve">
+    <value>Provenance source invalid.</value>
+  </data>
+  <data name="Error_FeedViewNameContainsWhitespace" xml:space="preserve">
+    <value>The name '{0}' isn't allowed. Verify that the name does not contain whitespace characters.</value>
+  </data>
+  <data name="Error_InternalCrossCollectionUpstreamsNotEnabled" xml:space="preserve">
+    <value>Configuration of internal upstream sources is not enabled for use in this organization.</value>
+  </data>
+  <data name="Error_ProjectScopedFeedsNotEnabledForThisResource" xml:space="preserve">
+    <value>Project-scoped access is not yet available for this resource.</value>
+  </data>
+  <data name="UpgradeNotSupported" xml:space="preserve">
+    <value>The attempted change in feed capabilities is not supported.</value>
+  </data>
+  <data name="Error_ProjectScopedFeedsNotEnabled" xml:space="preserve">
+    <value>The project-scoped feeds feature is not enabled.</value>
+  </data>
+  <data name="UpstreamFailureMessage" xml:space="preserve">
+    <value>Issues detected with this feed's upstream sources. Manual action may be needed to resolve the issue(s).</value>
+  </data>
+  <data name="FeedIsBeingUpgraded" xml:space="preserve">
+    <value>This feed is being upgraded to support new features. You may experience errors during this process.</value>
+  </data>
+  <data name="Error_FeedIdNotFoundInRecycleBinMessage" xml:space="preserve">
+    <value>The feed with ID '{0}' doesn't exist in the recycle bin.</value>
+  </data>
+  <data name="Error_PackageRetentionCountUnsorted" xml:space="preserve">
+    <value>Package versions must be sorted from youngest to oldest publish date. Version {0} was out of order.</value>
+  </data>
+  <data name="Error_FeedNameExceedsMaximumLength" xml:space="preserve">
+    <value>The name '{0}' isn't allowed. It exceeds the maximum length of {1} characters.</value>
+  </data>
+  <data name="UpstreamFailureMessageLinkText" xml:space="preserve">
+    <value>See upstream status details.</value>
+  </data>
+  <data name="AuditToFormat" xml:space="preserve">
+    <value>modified {0} to {1}</value>
+  </data>
+  <data name="Error_CannotHaveBothNormalizedNameAndDirectUpstreamSourceId" xml:space="preserve">
+    <value>Query parameter 'normalizedPackageName' conflicts with 'directUpstreamSourceId'.</value>
+  </data>
+  <data name="Error_TooManyUpstreamSourcesForProtocol" xml:space="preserve">
+    <value>Too many upstream sources provided for {0} protocol. You may provide up to {1} upstream sources per protocol.</value>
+  </data>
+  <data name="Error_ProvenanceValueTooLong" xml:space="preserve">
+    <value>Provenance value exceeds maximum length.</value>
+  </data>
+  <data name="Error_PassedProjectDoesNotMatchFeedProject" xml:space="preserve">
+    <value>Current feed's project Id does not match projectId passed into the method.</value>
+  </data>
+  <data name="Error_UpstreamSourceLocationUnavailable" xml:space="preserve">
+    <value>The upstream source location '{0}' is unavailable.</value>
+  </data>
+  <data name="Error_PackageDetailsDataProviderErrorNotFoundWithSameVersionCase" xml:space="preserve">
+    <value>There are multiple package with same verion and different casing, but there is no exact match.</value>
+  </data>
+  <data name="FeedViewVisibility" xml:space="preserve">
+    <value>Feed View Visibility</value>
+  </data>
+  <data name="UpstreamServiceEndpointProjectMissing" xml:space="preserve">
+    <value>The upstream {0} Service Connection project information is unset.</value>
+  </data>
+  <data name="ServiceEndpointUnset" xml:space="preserve">
+    <value>The service endpoint url is invalid or empty.</value>
+  </data>
+  <data name="Error_NameContainsIllegalCharacters" xml:space="preserve">
+    <value>Name contains illegal characters.</value>
+  </data>
+  <data name="Error_FeedViewNameIsInvalid" xml:space="preserve">
+    <value>The name '{0}' isn't allowed. Verify that the name only contains alphanumeric characters. {1}</value>
+  </data>
+  <data name="Error_IncompleteInternalUpstreamSourceFields" xml:space="preserve">
+    <value>An internal upstream source must have all of the following values filled out: Collection ID, Feed ID, and View ID.</value>
+  </data>
+  <data name="Error_PackageBadgeNotFound" xml:space="preserve">
+    <value>The badge is not available.</value>
+  </data>
+  <data name="Error_ImplicitViewCannotBeDeleted" xml:space="preserve">
+    <value>Implicit views cannot be deleted.</value>
+  </data>
+  <data name="Error_PackageVersionProvenanceNotFound" xml:space="preserve">
+    <value>Provenance not found for package '{0}' and version '{1}' in feed '{2}'.</value>
+  </data>
+  <data name="UpstreamSourcesLimitReached" xml:space="preserve">
+    <value>No more {0} upstream sources can be added to this feed because the maximum number of upstream sources has been reached.</value>
+  </data>
+  <data name="InvalidServiceEndpointConfig" xml:space="preserve">
+    <value>Upstream source locator {0} and Service Connection locator {1} do not match.</value>
+  </data>
+  <data name="Error_InternalUpstreamsNotEnabledForNonAad" xml:space="preserve">
+    <value>The current organization is not backed by Microsoft Entra. Configuration of the upstream source '{0}' is not permitted.</value>
+  </data>
+  <data name="Error_ProvenanceInvalidKey" xml:space="preserve">
+    <value>Provenance data contains an invalid key.</value>
+  </data>
+  <data name="Error_FeedNameIsInvalid" xml:space="preserve">
+    <value>The name '{0}' isn't allowed. {1}</value>
+  </data>
+  <data name="Error_InternalUpstreamLocationFormatIsIncorrect" xml:space="preserve">
+    <value>The format of the location ({0}) is incorrect, it should be 'azure-feed://{{accountName}}/{{feedName}}@{{viewName}}'.</value>
+  </data>
+  <data name="Error_NormalizedNameNotSupported" xml:space="preserve">
+    <value>'normalizedPackageName' is not supported for the current parameter set, please provide 'packageNameQuery' instead.</value>
+  </data>
+  <data name="PackageNotificationsChangeTypeUnlist" xml:space="preserve">
+    <value>Unlist</value>
+  </data>
+  <data name="Error_NamePrefixInvalid" xml:space="preserve">
+    <value>Name cannot start with an '_' or '.' character.</value>
+  </data>
+  <data name="Error_UpstreamSourceNameContainsInvalidWhitespace" xml:space="preserve">
+    <value>The upstream source name '{0}' isn't allowed. Aside from the space character, an upstream source name cannot contain other whitespace.</value>
+  </data>
+  <data name="Error_FeedIdMismatch" xml:space="preserve">
+    <value>The feed id '{0}' in the payload does not match. Verify that the id in the payload matches the feed's GUID.</value>
+  </data>
+  <data name="Error_FailedToLoadPackagingProtocolExtension" xml:space="preserve">
+    <value>Failed to load the packaging protocol extension for the protocol {0}</value>
+  </data>
+  <data name="Error_FeedDescriptionExcedesMaximumLength" xml:space="preserve">
+    <value>The feed description '{0}' isn't allowed. It exceeds the maximum length of {1} characters.</value>
+  </data>
+  <data name="Error_FeedNameIsGuid" xml:space="preserve">
+    <value>The name '{0}' is a GUID and is not allowed.</value>
+  </data>
+  <data name="Error_NameReserved" xml:space="preserve">
+    <value>Name is reserved.</value>
+  </data>
+  <data name="PackageNotificationsChangeTypeRelist" xml:space="preserve">
+    <value>Relist</value>
+  </data>
+  <data name="PackageNotificationsPackageName" xml:space="preserve">
+    <value>Package Name</value>
+  </data>
+  <data name="Error_InvalidUpstreamSourceLocation" xml:space="preserve">
+    <value>Feed '{0}' does not contain an upstream source with location '{1}'.</value>
+  </data>
+  <data name="Error_UpstreamConfigurationFeedLocatorNotAllowedOnPrem" xml:space="preserve">
+    <value>Configuration of an upstream source using a feed locator is not supported, use IDs instead.</value>
+  </data>
+  <data name="Error_PackageRetentionInvalidPolicy" xml:space="preserve">
+    <value>The package retention policy provided was missing or invalid.</value>
+  </data>
+  <data name="Error_InvalidUpstream" xml:space="preserve">
+    <value>The source at '{0}' cannot be configured as an upstream because it does not exist or you do not have permissions to it.</value>
+  </data>
+  <data name="Error_UpstreamSourceNameWrongLength" xml:space="preserve">
+    <value>The upstream source name '{0}' isn't allowed. Please provide a name for the upstream source up to {1} characters long.</value>
+  </data>
+  <data name="Error_CannotHaveBothNormalizedNameAndNameQuery" xml:space="preserve">
+    <value>Query parameter 'normalizedPackageName' conflicts with 'packageNameQuery'.</value>
+  </data>
+  <data name="Error_DescriptionAndAllVersionsIncompatible" xml:space="preserve">
+    <value>Including description is not supported while including all versions.</value>
+  </data>
+  <data name="Error_BuildCouldNotBeResolved" xml:space="preserve">
+    <value>The build '{1}' does not exist in the project '{0}' or you do not have permision to it.</value>
+  </data>
+  <data name="Error_ProvenanceTooManyKeys" xml:space="preserve">
+    <value>Provenance data contains too many keys.</value>
+  </data>
+  <data name="Error_NameSuffixInvalid" xml:space="preserve">
+    <value>Name cannot end with a '.' character.</value>
+  </data>
+  <data name="PackageNotificationsChangeType" xml:space="preserve">
+    <value>Change Type</value>
+  </data>
+  <data name="Error_InternalUpstreamsProjectCouldNotBeResolved" xml:space="preserve">
+    <value>The project '{1}' does not exist in the organization '{0}' or you don't have permission to it.</value>
+  </data>
+  <data name="Error_UpstreamSourceLocationInvalid" xml:space="preserve">
+    <value>The upstream source location '{0}' is not a valid package registry URL. Consult the documentation of the source you're trying to use to determine the right package registry URL for that source.</value>
+  </data>
+  <data name="PackageNotificationsPackageVersion" xml:space="preserve">
+    <value>Package Version</value>
+  </data>
+  <data name="Error_PublicFeedsCannotHavePrivateFeedAsUpstream" xml:space="preserve">
+    <value>Public feeds cannot have private feeds as an upstream.</value>
+  </data>
+  <data name="Error_InternalUpstreamContainsIncorrectScheme" xml:space="preserve">
+    <value>The scheme ({0}) is incorrect, it should be 'azure-feed'.</value>
+  </data>
+  <data name="Error_CrossCollectionUPackUpstreamInvalid" xml:space="preserve">
+    <value>The source at '{0}' cannot be configured as an upstream because cross-collection upstreams for Universal Packages are currently not supported.</value>
+  </data>
+  <data name="PackageNotificationsChangeTypeDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="AuditFeedPermissionModified" xml:space="preserve">
+    <value>Permissions for {0} were set to {1}</value>
+  </data>
+  <data name="Error_MismatchedFeedProjectId" xml:space="preserve">
+    <value>Feed in project '{0}' does not match expected project '{1}'</value>
+  </data>
+  <data name="Error_PackageDetailsDataProviderErrorNamesAndGuid" xml:space="preserve">
+    <value>Don't mix display names and guids</value>
+  </data>
+  <data name="Error_InternalUpstreamsNotEnabled" xml:space="preserve">
+    <value>Configuration of internal upstream sources is disabled.</value>
+  </data>
+  <data name="RetentionPolicy" xml:space="preserve">
+    <value>Retention Policy</value>
+  </data>
+  <data name="AuditModifedFormat" xml:space="preserve">
+    <value>modified {0}</value>
+  </data>
+  <data name="Error_UpstreamSourceNotAllowed" xml:space="preserve">
+    <value>The upstream source is not allowed.</value>
+  </data>
+  <data name="Error_UpstreamFeedNotAllowedForProjectScopedFeed" xml:space="preserve">
+    <value>Upstream sources are not allowed on project -scoped feeds.</value>
+  </data>
+  <data name="Error_ImplicitViewCannotBeCreated" xml:space="preserve">
+    <value>Implicit views cannot be manually created.</value>
+  </data>
+  <data name="Error_NameInvalid" xml:space="preserve">
+    <value>Invalid name.</value>
+  </data>
+  <data name="Error_FeedViewNameIsInvalidReserved" xml:space="preserve">
+    <value>The name '{0}' isn't allowed. Verify that the name is not part of the following reserved names: '{1}'.</value>
+  </data>
+  <data name="Error_UpstreamSourceLocationNotDistinct" xml:space="preserve">
+    <value>Please provide a distinct location for each upstream source. The location '{0}' was provided multiple times.</value>
+  </data>
+  <data name="AuditFromFormat" xml:space="preserve">
+    <value>modified {0} from {1}</value>
+  </data>
+  <data name="Error_PackageDetailsDataProviderErrorUnknownProtocol" xml:space="preserve">
+    <value>Unknown protocol.</value>
+  </data>
+  <data name="Error_NonPrivateViewsNotSupportedForProjectScopedFeeds" xml:space="preserve">
+    <value>Only private views are supported for project-scoped feeds.</value>
+  </data>
+  <data name="Error_PackageDetailsDataProviderErrorNotFoundWithSamePackageCase" xml:space="preserve">
+    <value>There are multiple package with same package name and different casing, but there is no exact match.</value>
+  </data>
+  <data name="Error_FeedInvalidOrMissing" xml:space="preserve">
+    <value>Your request was malformed or missing required fields.</value>
+  </data>
+  <data name="ManuallyUpgradeFeedBannerLink" xml:space="preserve">
+    <value>Learn more and get started.</value>
+  </data>
+  <data name="AuditModifiedFromToFormat" xml:space="preserve">
+    <value>modified {0} from {1} to {2}</value>
+  </data>
+  <data name="Error_UpstreamSourceNameNotDistinct" xml:space="preserve">
+    <value>Please provide a distinct name for each upstream source. The name '{0}' was provided multiple times.</value>
+  </data>
+  <data name="ManuallyUpgradeFeedBanner" xml:space="preserve">
+    <value>To use new features, including the nuget.org upstream source, with this feed, you'll need to upgrade the feed.</value>
+  </data>
+  <data name="Error_UnknownBatchOperation" xml:space="preserve">
+    <value>The requested batch operation is not supported.</value>
+  </data>
+  <data name="Error_UpstreamSourceNameSurroundingWhitespace" xml:space="preserve">
+    <value>The upstream source name '{0}' isn't allowed. An upstream source name cannot begin or end with whitespace.</value>
+  </data>
+  <data name="Error_NameLengthInvalid" xml:space="preserve">
+    <value>Invalid name length. The name must be between 1 and {0} characters long.</value>
+  </data>
+</root>

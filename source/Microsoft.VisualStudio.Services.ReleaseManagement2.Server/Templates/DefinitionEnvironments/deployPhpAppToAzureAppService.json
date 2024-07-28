@@ -1,0 +1,311 @@
+﻿{
+  "id": "F6A07A4F-1E1F-41C0-ABAB-EEE4B3C9117E",
+  "name": "Deploy a PHP app to Azure App Service and Azure MySQL​",
+  "category": "Deployment",
+  "iconTaskId": "497D490F-EEA7-4F2B-AB94-48D9C1ACDCB1",
+  "description": "Deploy a PHP application to an Azure Web App and database to Azure Database for MySQL.",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "f045e430-8704-11e6-968f-e717e6411619",
+            "version": "0.*",
+            "Name": "Install Composer Extension",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "Action": "Install Extensions",
+              "ExtensionsList": "ComposerExtension"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+            "version": "4.*",
+            "Name": "Deploy Azure App Service",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "WebAppKind": "$(Parameters.WebAppKind)",
+              "DeployToSlotOrASEFlag": "false",
+              "ResourceGroupName": "",
+              "DockerNamespace": "$(Parameters.DockerNamespace)",
+              "DockerRepository": "$(Parameters.DockerRepository)",
+              "StartupCommand": "$(Parameters.StartupCommand)",
+              "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+              "WebAppUri": "",
+              "UseWebDeploy": "false",
+              "SetParametersFile": "",
+              "RemoveAdditionalFilesFlag": "false",
+              "ExcludeFilesFromAppDataFlag": "false",
+              "TakeAppOfflineFlag": "true",
+              "AdditionalArguments": "",
+              "RenameFilesFlag": "true",
+              "ScriptType": "Inline Script",
+              "InlineScript": "if exist \"composer.json\" (\n    echo found composer.json\n) else (\n    echo composer.json not found. Skipping composer install\n    EXIT /b 0\n)\necho Search for composer extension\nwhere composer\nif %ERRORLEVEL% NEQ 0 (\n   echo Cannot find composer extension. Ensure that it exists before deployment >&2\n  EXIT /b 1 \n)\necho found composer\ncall composer install -vvv\nif %ERRORLEVEL% NEQ 0 (\n    echo composer install failed. >&2\n    EXIT /b 1 \n)\necho Done composer install"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "bd1bed02-f04e-11e7-8c3f-9a214cf093ae",
+            "version": "1.*",
+            "Name": "Azure MySQL DB Deploy",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "ServerName": "$(Parameters.ServerName)",
+              "DatabaseName": "$(Parameters.DatabaseName)",
+              "SqlUsername": "$(Parameters.SqlUsername)",
+              "SqlPassword": "$(Parameters.SqlPassword)",
+              "TaskNameSelector": "$(Parameters.TaskNameSelector)",
+              "SqlFile": "$(Parameters.SqlFile)",
+              "SqlInline": "$(Parameters.SqlInline)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "webApp": "Web App on Windows",
+            "webAppLinux": "Web App on Linux",
+            "webAppContainer": "Web App for Containers (Linux)",
+            "functionApp": "Function App on Windows",
+            "functionAppLinux": "Function App on Linux",
+            "functionAppContainer": "Function App for Containers (Linux)",
+            "apiApp": "API App",
+            "mobileApp": "Mobile App"
+          },
+          "properties": {
+            "EditableOptions": "false"
+          },
+          "name": "WebAppKind",
+          "label": "{WebAppKindLabel}",
+          "defaultValue": "webApp",
+          "type": "pickList",
+          "helpMarkDown": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "WebAppName",
+          "label": "{WebAppNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{WebAppNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DockerNamespace",
+          "label": "{DockerNamespaceLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DockerNamespaceMarkdown}",
+          "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DockerRepository",
+          "label": "{DockerRepositoryLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DockerRepositoryMarkdown}",
+          "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+          "groupName": ""
+        },
+        {
+          "name": "StartupCommand",
+          "type": "string",
+          "label": "{StartupCommandLabel}",
+          "defaultValue": "",
+          "required": false,
+          "visibleRule": "WebAppKind = webAppLinux || WebAppKind = webAppContainer || WebAppkind = functionAppContainer || WebAppKind = functionAppLinux",
+          "helpMarkDown": "{StartupCommandMarkdown}",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {},
+          "properties": { "EditableOptions": "True" },
+          "name": "ServerName",
+          "label": "{ServerNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ServerNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {},
+          "properties": {},
+          "name": "DatabaseName",
+          "label": "{DatabaseNameLabel}",
+          "defaultValue": "",
+          "type": "string",
+          "helpMarkDown": "{DatabaseNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {},
+          "properties": {},
+          "name": "SqlUsername",
+          "label": "{SqlUsernameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{SqlUsernameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {},
+          "properties": {},
+          "name": "SqlPassword",
+          "label": "{SqlPasswordLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{SqlPasswordMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {
+            "SqlTaskFile": "MySQL Script File",
+            "InlineSqlTask": "Inline MySQL Script"
+          },
+          "properties": {},
+          "name": "TaskNameSelector",
+          "label": "{TaskNameSelectorLabel}",
+          "defaultValue": "SqlTaskFile",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{TaskNameSelectorMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {},
+          "properties": {},
+          "name": "SqlFile",
+          "label": "{SqlFileLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "filePath",
+          "helpMarkDown": "{SqlFileMarkdown}​",
+          "visibleRule": "TaskNameSelector = SqlTaskFile",
+          "groupName": ""
+        },
+        {
+          "aliases": [],
+          "options": {},
+          "properties": {
+            "resizable": "true",
+            "rows": "10"
+          },
+          "name": "SqlInline",
+          "label": "{SqlInlineLabel}",
+          "defaultValue": " ",
+          "required": true,
+          "type": "multiLine",
+          "helpMarkDown": "{SqlInlineMarkdown}",
+          "visibleRule": "TaskNameSelector = InlineSqlTask",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureRMWebAppNamesByAppType",
+          "parameters": {
+            "WebAppKind": "$(WebAppKind)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "WebAppName"
+        },
+        {
+          "dataSourceName": "AzureMysqlServers",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "ServerName",
+          "resultTemplate": "{ \"Value\" : \"{{{properties.fullyQualifiedDomainName}}}\", \"DisplayValue\" : \"{{{properties.fullyQualifiedDomainName}}}\" }"
+        }
+      ]
+    }
+  }
+}

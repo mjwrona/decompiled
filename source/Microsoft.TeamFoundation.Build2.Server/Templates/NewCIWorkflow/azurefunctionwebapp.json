@@ -1,0 +1,133 @@
+{
+    "id": "AzureFunctionWebApp",
+    "name": "Azure Functions for .Net",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "iconTaskId": "501DD25D-1785-43E4-B4E5-A5C78CCC0573",
+    "description": "Build and package a .NET based Azure Functions application to be deployed on Azure Functions.",
+    "template": {
+      "process": {
+        "type": 1,
+        "phases": [
+          {
+            "steps": [
+              {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Build project",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                  "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+                  "versionSpec": "2.*",
+                  "definitionType": "task"
+                },
+                "inputs": {
+                  "command": "build",
+                  "publishWebProjects": "true",
+                  "projects": "**/*.csproj",
+                  "custom": "",
+                  "arguments": "--output publish_output --configuration Release",
+                  "publishTestResults": "true",
+                  "zipAfterPublish": "true",
+                  "modifyOutputPath": "true",
+                  "selectOrConfig": "select",
+                  "feedRestore": "",
+                  "includeNuGetOrg": "true",
+                  "nugetConfigPath": "",
+                  "externalEndpoints": "",
+                  "noCache": "false",
+                  "packagesDirectory": "",
+                  "verbosityRestore": "Detailed",
+                  "searchPatternPush": "$(Build.ArtifactStagingDirectory)/*.nupkg",
+                  "nuGetFeedType": "internal",
+                  "feedPublish": "",
+                  "publishPackageMetadata": "true",
+                  "externalEndpoint": "",
+                  "searchPatternPack": "**/*.csproj",
+                  "configurationToPack": "$(BuildConfiguration)",
+                  "outputDir": "$(Build.ArtifactStagingDirectory)",
+                  "nobuild": "false",
+                  "versioningScheme": "off",
+                  "versionEnvVar": "",
+                  "requestedMajorVersion": "1",
+                  "requestedMinorVersion": "0",
+                  "requestedPatchVersion": "0",
+                  "buildProperties": "",
+                  "verbosityPack": "Detailed",
+                  "workingDirectory": ""
+                }
+              },
+              {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Archive files",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                  "id": "d8b84976-e99a-4b86-b885-4849694435b0",
+                  "versionSpec": "2.*",
+                  "definitionType": "task"
+                },
+                "inputs": {
+                  "rootFolderOrFile": "publish_output/",
+                  "includeRootFolder": "false",
+                  "archiveType": "zip",
+                  "tarCompression": "gz",
+                  "archiveFile": "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip",
+                  "replaceExistingArchive": "true",
+                  "verbose": "false",
+                  "quiet": "false"
+                }
+              },
+              {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Publish Artifact: drop",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                  "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                  "versionSpec": "1.*",
+                  "definitionType": "task"
+                },
+                "inputs": {
+                  "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+                  "ArtifactName": "drop",
+                  "ArtifactType": "Container",
+                  "TargetPath": "",
+                  "Parallel": "false",
+                  "ParallelCount": "8"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "enabled": true,
+          "definition": {
+            "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+          },
+          "inputs": {}
+        }
+      ],
+      "variables": {
+        "system.debug": {
+          "value": "false",
+          "allowOverride": true
+        }
+      },
+      "properties": {},
+      "tags": [],
+      "triggers": [],
+      "processParameters": {}
+    }
+  }

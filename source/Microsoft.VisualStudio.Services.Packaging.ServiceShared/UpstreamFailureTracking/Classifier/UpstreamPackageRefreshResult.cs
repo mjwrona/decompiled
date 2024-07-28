@@ -1,0 +1,42 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Packaging.ServiceShared.UpstreamFailureTracking.Classifier.UpstreamPackageRefreshResult
+// Assembly: Microsoft.VisualStudio.Services.Packaging.ServiceShared, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 4EF1F7D3-C7DF-4C8F-8AAB-58F76976F85D
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll
+
+using Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi.Types;
+using System.Collections.Generic;
+
+namespace Microsoft.VisualStudio.Services.Packaging.ServiceShared.UpstreamFailureTracking.Classifier
+{
+  public class UpstreamPackageRefreshResult
+  {
+    public UpstreamPackageRefreshResult(
+      IEnumerable<RefreshPackageResult> results,
+      UpstreamStatusCategory upstreamStatusCategory)
+    {
+      this.Category = upstreamStatusCategory;
+      this.Results = results;
+      this.RefreshScope = UpstreamRefreshScope.Full;
+    }
+
+    public UpstreamPackageRefreshResult(
+      RefreshPackageResult result,
+      UpstreamStatusCategory upstreamStatusCategory,
+      UpstreamRefreshScope scope)
+    {
+      this.Category = upstreamStatusCategory;
+      this.Results = (IEnumerable<RefreshPackageResult>) new List<RefreshPackageResult>()
+      {
+        result
+      };
+      this.RefreshScope = scope;
+    }
+
+    public UpstreamStatusCategory Category { get; }
+
+    public IEnumerable<RefreshPackageResult> Results { get; }
+
+    public UpstreamRefreshScope RefreshScope { get; }
+  }
+}

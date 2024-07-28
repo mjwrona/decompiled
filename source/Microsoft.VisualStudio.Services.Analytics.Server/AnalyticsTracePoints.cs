@@ -1,0 +1,128 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Analytics.AnalyticsTracePoints
+// Assembly: Microsoft.VisualStudio.Services.Analytics.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 9C06769D-4EB9-467A-8965-10A4FD97C7AD
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Analytics.Server.dll
+
+namespace Microsoft.VisualStudio.Services.Analytics
+{
+  public static class AnalyticsTracePoints
+  {
+    public const int TracepointStart = 12010000;
+    public const int StageRecordsContent = 12010001;
+    public const int StageShouldThrottle = 12010002;
+    public const int StageIgnoringParseError = 12010003;
+    public const int TransformBatchInfo = 12010004;
+    public const int TransformBatchError = 12010005;
+    public const int FailTransformBatchError = 12010006;
+    public const int NoProjectFoundError = 12010102;
+    public const int NoStorageAdapterFound = 12010103;
+    public const int WatermarkInfo = 12010105;
+    public const int ArhivalSuccessInfo = 12010106;
+    public const int StorageAdaptersInitializationError = 12010107;
+    public const int GetTestRunOptimzationCallFailed = 12010108;
+    public const int GetContentType = 12011001;
+    public const int CreateModel = 12011002;
+    public const int ReturnCachedContentType = 12011003;
+    public const int GetContentTypeFailed = 12011004;
+    public const int CreateModelEnter = 12011005;
+    public const int CreateModelLeave = 12011006;
+    public const int ProcessChangedEnter = 12011007;
+    public const int ProcessChangedLeave = 12011008;
+    public const int InvalidateProcessEnter = 12011009;
+    public const int InvalidateProcessLeave = 12011010;
+    public const int CreatEdmModelEnter = 12011011;
+    public const int CreatEdmModelLeave = 12011012;
+    public const int GetContextTypeEnter = 12011013;
+    public const int GetContextTypeLeave = 12011014;
+    public const int CreateEfModelEnter = 12011015;
+    public const int CreateEfModelLeave = 12011016;
+    public const int QueryEntitySetEnter = 12012001;
+    public const int QueryEntitySetLeave = 12012002;
+    public const int CreateAnalyticsContextEnter = 12012003;
+    public const int CreateAnalyticsContextLeave = 12012004;
+    public const int ReturnTrimmedProjects = 12012005;
+    public const int HandleExtensionEvents = 12012006;
+    public const int PermissionValidatorException = 12012007;
+    public const int PermissionValidatorInitializeNavigationToSkipValidationEnter = 12012008;
+    public const int PermissionValidatorInitializeNavigationToSkipValidationExit = 12012009;
+    public const int PermissionValidatorEnter = 12012010;
+    public const int PermissionValidatorExit = 12012011;
+    public const int DidPropertyExist = 12012012;
+    public const int UpdateTfsAnalyticsStateFailed = 12012013;
+    public const int PermissionValidatorVisibleCrossProjectEnter = 12012014;
+    public const int PermissionValidatorVisibleCrossProjectExit = 12012015;
+    public const int ODataQueryDataQualityFailure = 12012016;
+    public const int ODataQueryEntitiesQueried = 12012017;
+    public const int ODataQueryModelTablesQueried = 12012018;
+    public const int PrepareODataHttpResponseMessageEnter = 12013001;
+    public const int PrepareODataHttpResponseMessageLeave = 12013002;
+    public const int GetODataEnter = 12013003;
+    public const int GetODataLeave = 12013004;
+    public const int PrepareQueryableEnter = 12013005;
+    public const int PrepareQueryableLeave = 12013006;
+    public const int MaterializeQueryEnter = 12013007;
+    public const int MaterializeQueryLeave = 12013008;
+    public const int ODataSerializeEnter = 12013009;
+    public const int ODataSerializeLeave = 12013010;
+    public const int ApplyQueryableEnter = 12013011;
+    public const int ApplyQueryableLeave = 12013012;
+    public const int ValidateMaxSizeEnter = 12013013;
+    public const int ValidateMaxSizeLeave = 12013014;
+    public const int ApplyPagingEnter = 12013015;
+    public const int ApplyPagingLeave = 12013016;
+    public const int NumberOfRecordsSent = 12013017;
+    public const int ApplyCurrentProjectFilterEnter = 12013020;
+    public const int ApplyCurrentProjectFilterLeave = 12013021;
+    public const int MakeQuerableAsNoTracking = 12013022;
+    public const int ODataMetadataXmlHash = 12013023;
+    public const int ODataMetadataXmlHashError = 12013024;
+    public const int QueryableText = 12013025;
+    public const int QueryableElementType = 12013026;
+    public const int ODataBatchRequestEnter = 12013027;
+    public const int ODataBatchRequestLeave = 12013028;
+    public const int ODataModelVersion = 12013029;
+    public const int ODataQueryText = 12013030;
+    public const int ODataEuiiViolations = 12013031;
+    public const int ODataWidgetBuiltinMismatch = 12013032;
+    public const int ODataWidgetBuiltinCheckFailed = 12013033;
+    public const int CalculateRangeEnter = 12013034;
+    public const int CalculateRangeLeave = 12013035;
+    public const int ODataEuiiValidationSkipped = 12013036;
+    public const int ODataWidgetWhilistingSkipped = 12013037;
+    public const int GetByPathODataEnter = 12013038;
+    public const int GetByPathODataLeave = 12013039;
+    public const int PageOptimizationMultiplier = 12013040;
+    public const int ODataBatchSubRequestUrl = 12013041;
+    public const int DataQualityCheckError = 12014001;
+    public const int DataQualityHandleModelReadinessResult = 12014002;
+    public const int DataQualityLatestDataQualityResultsCache = 12014003;
+    public const int DatabaseMaintenanceJob = 12015001;
+    public const int ClusteredColumnStoreOverlapsCheck = 12015002;
+    public const int PartitionToSpitCheck = 12015003;
+    public const int DatabaseMaintenanceForkJob = 12015004;
+    public const int ODATAOffsetException = 12016004;
+    public const int ODATACommandLoggingException = 12016005;
+    public const int SkipAlreadySetProjectPermission = 12017001;
+    public const int SetProjectPermission = 12017002;
+    public const int GroupScopeNotFound = 12017003;
+    public const int SecurityACLTokenUnexpectedShape = 12017004;
+    public const int SetProjectPermissionFailed = 12017005;
+    public const int PermissionValidationFailed = 12017006;
+    public const int MovePermissionsEnter = 12018001;
+    public const int MovePermissionsLeave = 12018002;
+    public const int MovePermissionsCollectionAlreadyProcessed = 12018003;
+    public const int MovePermissionsProjectAlreadyProcessed = 12018004;
+    public const int MovePermissionsProjectName = 12018005;
+    public const int MovePermissionsNoExplicitProjectValidUser = 12018006;
+    public const int MovePermissionsUnSet = 12018007;
+    public const int MovePermissionsUpdatedProjectCount = 12018008;
+    public const int AnalyticsViewsFavoritesUpdateFailure = 12019001;
+    public const int AnalyticsViewsSchemaGenerationFailure = 12019002;
+    public const int AnalyticsViewsODataMetadataReadFailure = 12019003;
+    public const int TerminateLongRunningQueriesJob = 12019101;
+    public const int AnalyticsInstallServiceBusBroadcast = 12020001;
+    public const int AnalyticsPrepartitionDatabaseException = 12020002;
+    public const int Telemetry = 12099999;
+  }
+}

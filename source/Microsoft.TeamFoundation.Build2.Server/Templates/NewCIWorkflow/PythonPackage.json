@@ -1,0 +1,199 @@
+{
+    "id": "PythonPackage",
+    "name": "Python package",
+    "description": "Create and test a Python package on multiple Python versions.",
+    "category": "Build",
+    "defaultHostedQueue": "Azure Pipelines",
+    "iconTaskId": "33C63B11-352B-45A2-BA1B-54CB568A29CA",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "name": "Build and Test",
+                    "refName": "Phase_1",
+                    "condition": "succeeded()",
+                    "target": {
+                        "executionOptions": {
+                            "multipliers": [
+                                "python.version"
+                            ],
+                            "maxConcurrency": 1,
+                            "continueOnError": false,
+                            "type": 1
+                        },
+                        "allowScriptsAuthAccessOption": false,
+                        "type": 1
+                    },
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "33c63b11-352b-45a2-ba1b-54cb568a29ca",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": "$(python.version)",
+                                "addToPath": "true",
+                                "architecture": "x64"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "displayName": "Install dependencies",
+                            "task": {
+                                "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "script": "python -m pip install --upgrade pip && pip install -r requirements.txt",
+                                "failOnStderr": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "enabled": false,
+                            "continueOnError": true,
+                            "alwaysRun": false,
+                            "displayName": "Flake8",
+                            "timeoutInMinutes": 0,
+                            "condition": "succeeded()",
+                            "task": {
+                                "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "script": "pip install flake8 && flake8",
+                                "failOnStderr": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "displayName": "pytest",
+                            "task": {
+                                "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "script": "pip install pytest && pytest tests --doctest-modules --junitxml=junit/test-results.xml",
+                                "failOnStderr": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "0b0f01ed-7dde-43ff-9cbb-e48954daf9b1",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "testResultsFiles": "**/test-results.xml",
+                                "testRunTitle": "Python $(python.version)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Publish",
+                    "refName": "Phase_2",
+                    "condition": "succeeded()",
+                    "target": {
+                        "executionOptions": {
+                            "type": 0
+                        },
+                        "allowScriptsAuthAccessOption": false,
+                        "type": 1
+                    },
+                    "dependencies": [
+                        {
+                            "scope": "Phase_1",
+                            "event": "Completed"
+                        }
+                    ],
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "33c63b11-352b-45a2-ba1b-54cb568a29ca",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": ">= 3.6",
+                                "addToPath": "true",
+                                "architecture": "x64"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "displayName": "Build sdist",
+                            "task": {
+                                "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "script": "python setup.py sdist",
+                                "failOnStderr": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "PathtoPublish": "dist",
+                                "ArtifactName": "dist",
+                                "ArtifactType": "Container"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "enabled": false,
+                "definition": {
+                    "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+                },
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "python.version": {
+                "value": "2.7, 3.5, 3.6, 3.7"
+            },
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+        }
+    }
+}

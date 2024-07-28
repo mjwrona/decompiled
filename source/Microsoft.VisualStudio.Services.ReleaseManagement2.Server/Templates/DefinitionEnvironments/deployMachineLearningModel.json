@@ -1,0 +1,144 @@
+{
+  "id": "83f9ed68-e1a0-4cbc-8f4d-4548e1eb832b",
+  "name": "Machine Learning Model",
+  "category": "Deployment",
+  "iconTaskId": "2CA8FE15-42EA-4B26-80F1-E0738EC17E89",
+  "description": "Deploy a ML model using Azure Machine Learning CLI.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "variables": {
+      "aksComputeName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "amlModelName": {
+        "value": "$(Release.Artifacts.{amlModelArtifactAlias}.DefinitionName)",
+        "allowOverride": true
+      },
+      "amlModelVersion": {
+        "value": "$(Release.Artifacts.{amlModelArtifactAlias}.BuildId)",
+        "allowOverride": true
+      },
+      "amlRepoArtifactAlias": {
+        "value": "",
+        "allowOverride": true
+      },
+      "deploymentConfigFile": {
+        "value": "deploymentConfig.yml"
+      },
+      "inferenceConfigFile": {
+        "value": "inferenceConfig.yml"
+      },
+      "resourceGroupName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "serviceName": {
+        "value": "",
+        "allowOverride": true
+      },
+      "workspaceName": {
+        "value": "",
+        "allowOverride": true
+      }
+    },
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+            "version": "1.*",
+            "name": "Install Azure CLI ML Extension",
+            "definitionType": "task",
+            "inputs": {
+              "connectedServiceNameARM": "$(Parameters.connectedServiceNameARM)",
+              "scriptLocation": "inlineScript",
+              "scriptPath": "",
+              "inlineScript": "# Install the Azure ML CLI extension (Learn more: https://aka.ms/aml-cli).\naz extension add -n azure-cli-ml",
+              "args": "",
+              "addSpnToEnvironment": "false",
+              "useGlobalConfig": "false",
+              "cwd": "$(System.DefaultWorkingDirectory)/$(amlRepoArtifactAlias)",
+              "failOnStandardError": "false"
+            },
+            "enabled": true,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "alwaysRun": false
+          },
+          {
+            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+            "version": "1.*",
+            "name": "Deploy Model",
+            "definitionType": "task",
+            "inputs": {
+              "connectedServiceNameARM": "$(Parameters.connectedServiceNameARM)",
+              "scriptLocation": "inlineScript",
+              "scriptPath": "",
+              "inlineScript": "# Deploy the registered model to AKS (Learn more: https://aka.ms/aml-template).\naz ml model deploy -n $(serviceName) --overwrite -m $(amlModelName):$(amlModelVersion) --ic $(inferenceConfigFile) --dc $(deploymentConfigFile) --ct $(aksComputeName) -w $(workspaceName) -g $(resourceGroupName)",
+              "args": "",
+              "addSpnToEnvironment": "false",
+              "useGlobalConfig": "false",
+              "cwd": "$(System.DefaultWorkingDirectory)/$(amlRepoArtifactAlias)",
+              "failOnStandardError": "false"
+            },
+            "enabled": true,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "alwaysRun": false
+          }
+        ]
+      }
+    ],
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "processParameters": {
+      "inputs": [
+        {
+          "name": "connectedServiceNameARM",
+          "type": "connectedService:AzureRM",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "properties": {
+            "EndpointFilterRule": "ScopeLevel != ManagementGroup"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+    "id": "a8379991-ecd7-452f-aac5-9a1252f997b7",
+    "name": "Deploy an application to a Kubernetes cluster by using its Helm chart.",
+    "category": "Deployment",
+    "iconTaskId": "AFA7D54D-537B-4DC8-B60A-E0EEEA2C9A87",
+    "description": "Run 'helm init' command. This will install Tiller to the target Kubernetes cluster. It will also set up any necessary local configuration on the agent.",
+    "environment": {
+        "name": "",
+        "rank": 1,
+        "deployPhases": [
+            {
+                "name": "",
+                "rank": 1,
+                "phaseType": 1,
+                "controlOptions": {},
+                "deploymentInput": {
+                    "queueId": 1,
+                    "runOptions": {},
+                    "demands": []
+                },
+                "workflowTasks": [
+                  {
+                    "taskId": "068d5909-43e6-48c5-9e01-7c8a94816220",
+                    "version": "0.*",
+                    "name": "Install Helm 2.9.1",
+                    "refName": "",
+                    "enabled": true,
+                    "alwaysRun": false,
+                    "continueOnError": false,
+                    "timeoutInMinutes": 0,
+                    "definitionType": "task",
+                    "overrideInputs": {},
+                    "condition": "succeeded()",
+                    "inputs": {
+                      "helmVersion": "2.9.1",
+                      "installKubeCtl": "true",
+                      "kubectlVersion": "1.10.3",
+                      "checkLatestKubeCtl": "false"
+                    }
+                  },
+                  {
+                    "taskId": "AFA7D54D-537B-4DC8-B60A-E0EEEA2C9A87",
+                    "version": "0.*",
+                    "Name": "helm init",
+                    "inputs": {
+                      "connectionType": "$(Parameters.connectionType)",
+                      "azureSubscriptionEndpoint": "$(Parameters.azureSubscriptionEndpoint)",
+                      "azureResourceGroup": "$(Parameters.azureResourceGroup)",
+                      "kubernetesCluster": "$(Parameters.kubernetesCluster)",
+                      "kubernetesServiceEndpoint": "$(Parameters.kubernetesServiceEndpoint)",
+                      "namespace": "",
+                      "command": "init",
+                      "chartType": "Name",
+                      "chartName": "",
+                      "chartPath": "",
+                      "version": "",
+                      "releaseName": "",
+                      "overrideValues": "",
+                      "valueFile": "",
+                      "destination": "$(Build.ArtifactStagingDirectory)",
+                      "canaryimage": "false",
+                      "upgradetiller": "false",
+                      "updatedependency": "false",
+                      "save": "true",
+                      "install": "true",
+                      "recreate": "false",
+                      "resetValues": "false",
+                      "force": "false",
+                      "waitForExecution": "true",
+                      "arguments": "",
+                      "tillernamespace": ""
+                    },
+                    "Enabled": true,
+                    "AlwaysRun": false,
+                    "ContinueOnError": false
+                  },
+                  {
+                    "taskId": "AFA7D54D-537B-4DC8-B60A-E0EEEA2C9A87",
+                    "version": "0.*",
+                    "Name": "helm upgrade",
+                    "inputs": {
+                      "connectionType": "$(Parameters.connectionType)",
+                      "azureSubscriptionEndpoint": "$(Parameters.azureSubscriptionEndpoint)",
+                      "azureResourceGroup": "$(Parameters.azureResourceGroup)",
+                      "kubernetesCluster": "$(Parameters.kubernetesCluster)",
+                      "kubernetesServiceEndpoint": "$(Parameters.kubernetesServiceEndpoint)",
+                      "namespace": "",
+                      "command": "upgrade",
+                      "chartType": "FilePath",
+                      "chartName": "",
+                      "chartPath": "",
+                      "version": "",
+                      "releaseName": "azuredevops",
+                      "overrideValues": "",
+                      "valueFile": "",
+                      "destination": "",
+                      "canaryimage": "false",
+                      "upgradetiller": "false",
+                      "updatedependency": "false",
+                      "save": "true",
+                      "install": "true",
+                      "recreate": "false",
+                      "resetValues": "false",
+                      "force": "false",
+                      "waitForExecution": "true",
+                      "arguments": "",
+                      "tillernamespace": ""
+                    },
+                    "Enabled": true,
+                    "AlwaysRun": false,
+                    "ContinueOnError": false
+                  }
+                ]
+            }
+        ],
+        "preDeployApprovals": {
+            "approvals": [
+                {
+                    "isAutomated": true,
+                    "rank": 1
+                }
+            ],
+            "approvalOptions": null
+        },
+        "postDeployApprovals": {
+            "approvals": [
+                {
+                    "isAutomated": true,
+                    "rank": 1
+                }
+            ],
+            "approvalOptions": null
+        },
+        "runOptions": {},
+      "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+      },
+      "processParameters": {
+        "inputs": [
+          {
+            "options": {
+              "Azure Resource Manager": "Azure Resource Manager",
+              "Kubernetes Service Connection": "Kubernetes Service Connection"
+            },
+            "properties": {
+              "EditableOptions": "false"
+            },
+            "name": "connectionType",
+            "label": "{ConnectionTypeLabel}",
+            "defaultValue": "Azure Resource Manager",
+            "type": "pickList",
+            "helpMarkDown": "",
+            "groupName": ""
+          },
+          {
+            "options": {},
+            "properties": {},
+            "name": "azureSubscriptionEndpoint",
+            "label": "{AzureSubscriptionEndpointLabel}",
+            "defaultValue": "",
+            "required": true,
+            "type": "connectedService:AzureRM",
+            "helpMarkDown": "{AzureSubscriptionEndpointMarkdown}",
+            "visibleRule": "connectionType = Azure Resource Manager",
+            "groupName": ""
+          },
+          {
+            "options": {},
+            "properties": {
+              "EditableOptions": "True"
+            },
+            "name": "azureResourceGroup",
+            "label": "{AzureResourceGroupLabel}",
+            "defaultValue": "",
+            "required": true,
+            "type": "pickList",
+            "helpMarkDown": "{AzureResourceGroupMarkdown}",
+            "visibleRule": "connectionType = Azure Resource Manager",
+            "groupName": ""
+          },
+          {
+            "options": {},
+            "properties": {
+              "EditableOptions": "True"
+            },
+            "name": "kubernetesCluster",
+            "label": "{KubernetesClusterLabel}",
+            "defaultValue": "",
+            "required": true,
+            "type": "pickList",
+            "helpMarkDown": "{KubernetesClusterMarkdown}",
+            "visibleRule": "connectionType = Azure Resource Manager",
+            "groupName": ""
+          },
+          {
+            "options": {},
+            "properties": {},
+            "name": "kubernetesServiceEndpoint",
+            "label": "{KubernetesServiceEndpointLabel}",
+            "defaultValue": "",
+            "required": true,
+            "type": "connectedService:kubernetes",
+            "helpMarkDown": "{KubernetesServiceEndpointMarkdown}",
+            "visibleRule": "connectionType = Kubernetes Service Connection",
+            "groupName": ""
+          }
+        ],
+        "dataSourceBindings": [
+          {
+            "target": "kubernetesCluster",
+            "endpointId": "$(azureSubscriptionEndpoint)",
+            "endpointUrl": "{{{endpoint.url}}}/subscriptions/{{{endpoint.subscriptionId}}}/resourceGroups/$(azureResourceGroup)/providers/Microsoft.ContainerService/managedClusters?api-version=2017-08-31",
+            "resultSelector": "jsonpath:$.value[*]",
+            "resultTemplate": "{{{name}}}"
+          },
+          {
+              "target": "azureResourceGroup",
+              "endpointId": "$(azureSubscriptionEndpoint)",
+              "endpointUrl":"{{{endpoint.url}}}/subscriptions/{{{endpoint.subscriptionId}}}/providers/Microsoft.ContainerService/managedClusters?api-version=2017-08-31",
+              "resultSelector": "jsonpath:$.value[*]",
+              "resultTemplate": "{{{ #extractResource id resourcegroups}}}"
+          }
+        ]
+      },
+      "variables": {}
+    }
+}

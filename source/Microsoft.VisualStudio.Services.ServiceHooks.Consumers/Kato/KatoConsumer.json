@@ -1,0 +1,50 @@
+﻿{
+    "id": "kato",
+    "name": "Kato",
+    "description": "Kato provides a messaging service for modern organizations",
+    "imageUrl": "",
+    "informationUrl": "https://go.microsoft.com/fwlink/?LinkID=393614",
+    "inputDescriptors": [
+        {
+            "id": "roomToken",
+            "name": "Room token",
+            "description": "The token for interacting with a room using the Kato API",
+            "inputMode": "textbox",
+            "isConfidential": true,
+            "validation" : {
+                "isRequired": true,
+                "dataType": "string",
+                "pattern" : "^([a-zA-Z0-9]|-|_|\\.|!|\\^|\\*|~|'|\\(|\\))+$",
+                "maxLength": 300
+            }
+        },
+        {
+            "id": "roomName",
+            "name": "Room name",
+            "description": "Room name as seen in Kato",
+            "inputMode": "textbox",
+            "isConfidential": false,
+            "useInDefaultDescription": true,
+            "validation" : {
+                "isRequired": false,
+                "dataType": "string"
+            }
+        }
+    ],
+    "actions": [
+        {
+            "id": "postEventToRoom",
+            "name": "Post event to room",
+            "description": "Posts an event to a Kato room",
+            "supportedEventTypes": [
+                "*"
+            ],
+            "publishEvent": {
+                "url": "https://api.kato.im/rooms/{{uriEscape roomToken}}/vso",
+                "resourceDetailsToSend": "none",
+                "messagesToSend": "none",
+                "detailedMessagesToSend": "markdown"
+            },
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+﻿{
+  "id": "gradle",
+  "name": "Gradle",
+  "category": "Build",
+  "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+  "iconTaskId": "8D8EEBD8-2B94-4C97-85AF-839254CC6DA4",
+  "description": "Build and test a Java project with Gradle.",
+  "template":{
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "build": [
+      {
+        "enabled": true,
+        "task": {
+          "id": "8D8EEBD8-2B94-4C97-85AF-839254CC6DA4",
+          "versionSpec": "1.*"
+        }
+      },
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "inputs": {
+          "SourceFolder": "$(build.sourcesdirectory)",
+          "Contents": "**/*.jar",
+          "TargetFolder": "$(build.artifactstagingdirectory)"
+        },
+        "task": {
+          "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+          "versionSpec": "2.*"
+        }
+      },
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "inputs": {
+          "PathtoPublish": "$(build.artifactstagingdirectory)",
+          "ArtifactName": "drop",
+          "ArtifactType": "Container"
+        },
+        "task": {
+          "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+          "versionSpec": "1.*"
+        }
+      }
+    ],
+    "options": [],
+      "variables": {
+        "system.debug": {
+          "value": "false",
+          "allowOverride": true
+        }
+      },
+    "triggers": []
+  }
+}

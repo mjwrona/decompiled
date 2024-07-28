@@ -1,0 +1,21 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape message['text']}}}",
+    "themeColor": "{{{jsonEscape "#dadada"}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+        "title": null,
+        "text": null,
+        "markdown": true,
+        "facts": null,
+        "images": null,
+        "activityTitle": "{{{jsonEscape message['html']}}}",
+        "activityText": "Pipeline <a href=\"{{{jsonEscape resource.run.pipeline['url']}}}\">{{{jsonEscape resource.run.pipeline['name']}}}</a> state changed {{#if resource.run['finishedDate']}} at {{{jsonEscape resource.run['finishedDate']}}}{{/if}}",
+        "activityImage": "{{{iconUrl "teams-release.png"}}}",
+        "activityImageType": "article"
+    }
+  ],
+    "potentialAction": []
+}

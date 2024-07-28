@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71185163-E02D-43FB-91E7-5BB983D3774A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elasticsearch.Net" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common.Arriba">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.Arriba.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.ReSearch.Core">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.ReSearch.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.WorkItemFieldCache" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElasticSearch\QueryBuilders\QueryStringBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\QueryStringGenerationHelper.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\TermLevelQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Highlight\AndExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Highlight\RawQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Highlight\IHighlightQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Highlight\OrExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Highlight\QueryStringBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Highlight\TermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\CodeTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\CodeElementFilterExpressionBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\MissingFieldExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\ProjectRepoExpressionQueryBuilderBase.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\ProjectTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\RepositoryTermExpressionQueryBuilderBase.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\BoardTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\RepositoryChildContractTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\RepositoryTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\SettingTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\TermsExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\PackageTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\WikiTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\WorkItemTermExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\AndExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\EmptyExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\NotExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\OrExpressionQueryBuilder.cs" />
+    <Compile Include="ElasticSearch\QueryBuilders\Expression\TermExpressionQueryBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearchBasePlatform.cs" />
+    <Compile Include="Implementations\SearchPlatformExtensions.cs" />
+    <Compile Include="Implementations\ElasticSearchPlatform.cs" />
+    <Compile Include="Implementations\ElasticSearchPlatformBackupOperations.cs" />
+    <Compile Include="Implementations\ElasticSearchQueryClient.cs" />
+    <Compile Include="Implementations\IElasticClientExtensions.cs" />
+    <Compile Include="Implementations\ISearchResponseExtensions.cs" />
+    <Compile Include="Implementations\IResponseExtensions.cs" />
+    <Compile Include="Implementations\ElasticSearchIndex.cs" />
+    <Compile Include="Implementations\ElasticSearch\ElasticSearchClientWrapper.cs" />
+    <Compile Include="Implementations\ElasticSearch\ElasticsearchClusterManagementService.cs" />
+    <Compile Include="Implementations\ElasticSearch\IndexRoutingLookupTable.cs" />
+    <Compile Include="Implementations\ElasticSearch\IndexSetting.cs" />
+    <Compile Include="Implementations\ElasticSearch\IRoutingLookupService.cs" />
+    <Compile Include="Implementations\ElasticSearch\RoutingLookupService.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\FileFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\BoardFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\RepositoryFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\PackageFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\CodeFilterBuilderV3.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WikiFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\ProjectRepoFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WorkItemFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\BoolQueryBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\CodeHighlightBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\PackageHighlightBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WikiHighlightBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WorkItemHighlightBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\ProjectHighlightBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\CodeFilterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\ParentChildQueryBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\ProjectRepoQueryFields.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\DefaultRescoreBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\ProjectRescoreBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\RepositoryRescoreBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\RescoreBuilderBase.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\EntitySortBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\PackageSortBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WikiSortBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\ProjectRepoSortBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WorkItemSortBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\CodeSortBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\EntityRescoreProvider.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\IEntityRescoreBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\WikiRescoreBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\DefaultPhraseSuggesterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\IEntitySearchSuggestBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\EntitySearchPhraseSuggesterBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Relevance\FunctionDecayQueryBuilder`2.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Relevance\IRelevanceQueryBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Relevance\TermBoostQueryBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Expression\WorkItem\ExpressionBuilderUtils.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\CodePayloadAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\NoPayloadCodeAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\RepositoryAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\PackageAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\CollectionPackageAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\WikiAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\ProjectRepoAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\WorkItemAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\CodeAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\QueryBuilders\Aggregation\IAggregationBuilder.cs" />
+    <Compile Include="Implementations\ElasticSearch\Profilers\BasicProfiler.cs" />
+    <Compile Include="Implementations\ElasticSearch\Profilers\CodeRepoScopedProfiler.cs" />
+    <Compile Include="Implementations\ElasticSearch\Profilers\IProfiler.cs" />
+    <Compile Include="Implementations\ElasticSearch\Profilers\ProfilerFactory.cs" />
+    <Compile Include="Implementations\ElasticSearch\Profilers\ProfilerType.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\SettingEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\PackageEntityCountIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\CollectionPackageEntityCountIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\CollectionPackageEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\RepositoryEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\ProjectRepoEntityIndexProviderBase`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\PackageEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\PackageVersionContractComparer.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\WikiEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\WorkItemEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\BoardEntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\WorkItemFragment.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\EntityProvider.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\EntityIndexProvider`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\ISearchEntityQueryBuilder`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\ISearchEntityResponseInterpreter.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\ISearchEntityResponseInterpreter`1.cs" />
+    <Compile Include="Implementations\ElasticSearch\EntityProviders\ProjectEntityIndexProvider`1.cs" />
+    <Compile Include="Definitions\AliasIdentity.cs" />
+    <Compile Include="Definitions\BulkScriptUpdateByQueryRequest`1.cs" />
+    <Compile Include="Definitions\BulkGetByQueryRequest.cs" />
+    <Compile Include="Definitions\BulkUpdateRequest`1.cs" />
+    <Compile Include="Definitions\BulkScriptUpdateRequest`1.cs" />
+    <Compile Include="Definitions\BulkUpdateByQueryRequest.cs" />
+    <Compile Include="Definitions\BulkDeleteByQueryRequest`1.cs" />
+    <Compile Include="Definitions\BulkDeleteRequest`1.cs" />
+    <Compile Include="Definitions\Constants.cs" />
+    <Compile Include="Definitions\FailedItem.cs" />
+    <Compile Include="Definitions\ISearchClusterManagementService.cs" />
+    <Compile Include="Definitions\ISearchPlatformFactory.cs" />
+    <Compile Include="Definitions\ElasticSearchPlatformSettings.cs" />
+    <Compile Include="Definitions\HealthStatus.cs" />
+    <Compile Include="Definitions\IndexIdentity.cs" />
+    <Compile Include="Definitions\ISearchIndex.cs" />
+    <Compile Include="Definitions\SuggestOption.cs" />
+    <Compile Include="Definitions\IPlatformQueryBuilder.cs" />
+    <Compile Include="Definitions\Alias.cs" />
+    <Compile Include="Definitions\IndexOperationsResponse.cs" />
+    <Compile Include="Definitions\SearchHit.cs" />
+    <Compile Include="Definitions\ISearchPlatform.cs" />
+    <Compile Include="Definitions\ISearchBackupPlatform.cs" />
+    <Compile Include="Definitions\SearchPlatformFactory.cs" />
+    <Compile Include="Definitions\BulkIndexSyncRequest`1.cs" />
+    <Compile Include="Definitions\Relevance\CodeRelevanceRulesProvider.cs" />
+    <Compile Include="Definitions\Relevance\WikiRelevanceRulesProvider.cs" />
+    <Compile Include="Definitions\Relevance\WorkItemRelevanceRulesProvider.cs" />
+    <Compile Include="Definitions\Relevance\FileExtensionType.cs" />
+    <Compile Include="Definitions\Relevance\RelevanceUtility.cs" />
+    <Compile Include="Definitions\Relevance\Rules\FieldBoostRule.cs" />
+    <Compile Include="Definitions\Relevance\Rules\FunctionDecayRule`2.cs" />
+    <Compile Include="Definitions\Relevance\Rules\Target.cs" />
+    <Compile Include="Definitions\Relevance\Rules\RelevanceRule.cs" />
+    <Compile Include="Definitions\Relevance\Rules\TermBoostRule.cs" />
+    <Compile Include="Definitions\Relevance\RulesProviders\EntityRelevanceRulesProvider.cs" />
+    <Compile Include="Definitions\Relevance\RulesProviders\IRelevanceRulesProvider.cs" />
+    <Compile Include="Definitions\Relevance\RulesProviders\RelevanceRuleProviderBase.cs" />
+    <Compile Include="Definitions\Relevance\Engine\RelevanceEngine.cs" />
+    <Compile Include="Definitions\QueryBuilders\ElasticsearchQueryBuilder.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchField.cs" />
+    <Compile Include="Definitions\Entities\ISearchQueryClient.cs" />
+    <Compile Include="Definitions\Entities\AbstractSearchDocumentContract.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchGetDocumentsResponse`1.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\ContentMetadataType.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchGetDocumentsRequest.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchSuggestPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchSuggestPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\ResultsCountPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\ResultsCountPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\EntitySearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\HtmlTextAnalyzer.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\IcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\EnglishIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\FrenchIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\GermanIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\TurkishIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\SpanishIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\ItalianIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\RussianIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\SwedishIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\FinnishIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\ArabicIcuCollationKeyword.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\IcuCollationKeywordPropertyProvider.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\IcuCollationKeywordProperty.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemContract.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemIndexAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\EnglishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\FrenchAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\GermanAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\ItalianAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\RussianAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\SpanishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\TurkishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\SwedishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\CjkAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\FinnishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\ArabicAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemIndexAnalyzersProvider.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemIndexAttributes.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemIndexedField.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemSearchHit.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\WorkItem\WorkItemSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiContract.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiDocument.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiFilePathHelper.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiIndexAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\EnglishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\FrenchAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\GermanAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\ItalianAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\RussianAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\SpanishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\TurkishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\SwedishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\CjkAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\FinnishAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\ArabicAnalyzers.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiIndexAnalyzersProvider.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiIndexAttributes.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiSearchHit.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\Wiki\WikiSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\CustomAggregation.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ActivityTuple.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectContract.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectIndexAttributes.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectRepoContractBase.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectRepoContractFactory.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\RepositorySearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\RepositorySearchHit.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectSearchHit.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectSearchInnerHit.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\ProjectSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\ProjectRepo\RepositoryContract.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageViewInfo.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageIndexAttributes.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageVersionContract.cs" />
+    <Compile Include="Definitions\Entities\Package\SortableVersionBuilder.cs" />
+    <Compile Include="Definitions\Entities\Package\InvalidVersionException.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageSearchHit.cs" />
+    <Compile Include="Definitions\Entities\Package\PackageFeed.cs" />
+    <Compile Include="Definitions\Entities\Setting\SettingIndexAttributes.cs" />
+    <Compile Include="Definitions\Entities\Setting\SettingSearchHit.cs" />
+    <Compile Include="Definitions\Entities\Setting\SettingSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\Setting\SettingSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\Setting\SettingConstants.cs" />
+    <Compile Include="Definitions\Entities\Setting\SettingContract.cs" />
+    <Compile Include="Definitions\Entities\Code\CodeContractField.cs" />
+    <Compile Include="Definitions\Entities\Code\CodeSearchFieldExtensions.cs" />
+    <Compile Include="Definitions\Entities\Code\DedupeFileContractV5.cs" />
+    <Compile Include="Definitions\Entities\Code\DedupeFileContractV4.cs" />
+    <Compile Include="Definitions\Entities\Code\FastWildcardTokenFilter.cs" />
+    <Compile Include="Definitions\Entities\Code\NoPayloadContractUtils.cs" />
+    <Compile Include="Definitions\Entities\Code\SourceNoDedupeFileContractV5.cs" />
+    <Compile Include="Definitions\Entities\Code\CodeFileContract.cs" />
+    <Compile Include="Definitions\Entities\Code\CodeSearchFilters.cs" />
+    <Compile Include="Definitions\Entities\Code\CodeSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\Code\CodeSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\Code\DedupeFileContractBase.cs" />
+    <Compile Include="Definitions\Entities\Code\DedupeFileContractV3.cs" />
+    <Compile Include="Definitions\Entities\Code\FileGroup.cs" />
+    <Compile Include="Definitions\Entities\Code\SourceNoDedupeFileContractBase.cs" />
+    <Compile Include="Definitions\Entities\Code\SourceNoDedupeFileContractV3.cs" />
+    <Compile Include="Definitions\Entities\Code\SourceNoDedupeFileContractV4.cs" />
+    <Compile Include="Definitions\Entities\Board\BoardSearchPlatformRequest.cs" />
+    <Compile Include="Definitions\Entities\Board\BoardSearchPlatformResponse.cs" />
+    <Compile Include="Definitions\Entities\Board\BoardSearchHit.cs" />
+    <Compile Include="Definitions\Entities\Board\BoardRecord.cs" />
+    <Compile Include="Definitions\Entities\Board\BoardVersionContract.cs" />
+    <Compile Include="Definitions\Entities\Board\BoardIndexAttributes.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ReleaseManagement2.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F3E3B80-9C45-4EF4-AA25-274209EBE9DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ReleaseManagement2.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ReleaseManagement.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>lib\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Authorization.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Authorization.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Checks.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Checks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.TaskCheck.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.TaskCheck.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>lib\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Common">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.DeploymentTracking.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.DeploymentTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement.Project.Plugins">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement.Project.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement2.Artifact.Extensions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement2.Artifact.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement2.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement2.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement2.Data">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement2.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SignalR">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SignalR.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalValidatorCalls.cs" />
+    <Compile Include="EventsHelper.cs" />
+    <Compile Include="DeploymentBadgeHelper.cs" />
+    <Compile Include="OrchestratorCalls.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="ReleaseManagementException.cs" />
+    <Compile Include="PipelineArtifactTypeNotSupportedException.cs" />
+    <Compile Include="InvalidArtifactDataException.cs" />
+    <Compile Include="InvalidGitHubEventDataException.cs" />
+    <Compile Include="ReleaseManagementWebContext.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="blankResources.cs" />
+    <Compile Include="deployservicetoazureResources.cs" />
+    <Compile Include="deploytoservicefabricclusterResources.cs" />
+    <Compile Include="deployUsingBlueGreenStrategyToAzureLinuxVMResource.cs" />
+    <Compile Include="deployUsingBlueGreenStrategyToAzureWindowsVMResour.cs" />
+    <Compile Include="deployUsingCanaryStrategyToAzureLinuxVMResources.cs" />
+    <Compile Include="deployUsingCanaryStrategyToAzureWindowsVMResources.cs" />
+    <Compile Include="deployUsingRollingStrategyToAzureLinuxVMResources.cs" />
+    <Compile Include="deployUsingRollingStrategyToAzureWindowsVMResource.cs" />
+    <Compile Include="deployComposeToServiceFabricClusterResources.cs" />
+    <Compile Include="deployAzureAppServiceResources.cs" />
+    <Compile Include="deployAzureAppServiceWithSlotResources.cs" />
+    <Compile Include="deployAppServiceWithTestResources.cs" />
+    <Compile Include="deployIISBehindNlbResources.cs" />
+    <Compile Include="deployIISWebsiteResources.cs" />
+    <Compile Include="deployPhpAppToAzureAppServiceResources.cs" />
+    <Compile Include="deployPythonAppToAzureAppServiceResources.cs" />
+    <Compile Include="deployNodeAppToAzureAppServiceResources.cs" />
+    <Compile Include="kubernetesApplyResources.cs" />
+    <Compile Include="OnDemandTestingTemplateResources.cs" />
+    <Compile Include="deployAzureVmssResources.cs" />
+    <Compile Include="manageAndDeployIISWebsiteResources.cs" />
+    <Compile Include="iisAndSqlOfflineUpgradeResources.cs" />
+    <Compile Include="iisAndSqlOnlineUpgradeResources.cs" />
+    <Compile Include="iisAndSqlPartiallyOnlineUpgradeResources.cs" />
+    <Compile Include="deployAzureAppServiceWithMonitoringResources.cs" />
+    <Compile Include="deployJavaAppToAzureAppServiceResources.cs" />
+    <Compile Include="deployGoAppToAzureAppServiceResources.cs" />
+    <Compile Include="deployRubyAppToLinuxAppServiceResources.cs" />
+    <Compile Include="deployHelmChartToKubernetesClusterResources.cs" />
+    <Compile Include="deployFunctionAppToAzureAppServiceResources.cs" />
+    <Compile Include="deployFunctionAppToAzureAppServiceWithSlotResource.cs" />
+    <Compile Include="deployAzurePolicyResources.cs" />
+    <Compile Include="deployMachineLearningModelResources.cs" />
+    <Compile Include="Web\ReleaseManagementWebModule.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Security\MachineGroupPermissions.cs" />
+    <Compile Include="Security\AgentPoolPermissions.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityArgumentType.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityAttribute.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityPermissionAttribute.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityProcessor.cs" />
+    <Compile Include="Security\ResourceAccessException.cs" />
+    <Compile Include="License\MissingLicenseException.cs" />
+    <Compile Include="License\ServerLicenseHelper.cs" />
+    <Compile Include="License\StakeholderLicenseHandlerAttribute.cs" />
+    <Compile Include="Converters\ReleaseConverter.cs" />
+    <Compile Include="Converters\ReleaseDefinitionSummaryConverter.cs" />
+    <Compile Include="Comparer\ReleaseChangeComparer.cs" />
+    <Compile Include="Comparer\ReleaseWorkItemComparer.cs" />
+    <Compile Include="EnvironmentTemplates\EnvironmentTemplateExtensionsRetriever.cs" />
+    <Compile Include="Constants\ReleasePropertyConstants.cs" />
+    <Compile Include="Constants\ServiceProcessorConstants.cs" />
+    <Compile Include="Constants\ReleaseWebHookConstants.cs" />
+    <Compile Include="Constants\ArtifactTypeConstants.cs" />
+    <Compile Include="Constants\ControllerApiVersionConstants.cs" />
+    <Compile Include="Constants\JobExtensionConstants.cs" />
+    <Compile Include="Constants\LocalizedGroupNames.cs" />
+    <Compile Include="Constants\DeleteProjectResourcesJobConstants.cs" />
+    <Compile Include="Builders\IReleaseBuilder.cs" />
+    <Compile Include="Builders\ReleaseBuilderBase.cs" />
+    <Compile Include="Builders\YamlReleaseBuilder.cs" />
+    <Compile Include="Builders\ReleaseBuilder.cs" />
+    <Compile Include="Hub\IReleaseHubClient.cs" />
+    <Compile Include="Hub\ReleaseHub.cs" />
+    <Compile Include="Yaml\ResourceExtensions.cs" />
+    <Compile Include="Yaml\YamlHelper.cs" />
+    <Compile Include="Yaml\YamlLoadResult.cs" />
+    <Compile Include="Validations\ServiceEndpointPermissionValidator.cs" />
+    <Compile Include="Validations\VariablesView.cs" />
+    <Compile Include="Validations\VariablesViewExtension.cs" />
+    <Compile Include="Validations\ArtifactValidations.cs" />
+    <Compile Include="Validations\DefinitionEnvironmentTemplateValidations.cs" />
+    <Compile Include="Validations\DeploymentAuthorizationValidations.cs" />
+    <Compile Include="Validations\DeployTimeVariableValidations.cs" />
+    <Compile Include="Validations\ReleaseDefinitionVariableGroupValidations.cs" />
+    <Compile Include="Validations\ReleaseDefinitionApproverValidations.cs" />
+    <Compile Include="Validations\ReleaseDefinitionEnvironmentSecurityValidations.cs" />
+    <Compile Include="Validations\ReleaseDefinitionsSecureFileValidations.cs" />
+    <Compile Include="Validations\ReleaseDefinitionValidations.cs" />
+    <Compile Include="Validations\ReleaseEnvironmentSecurityValidations.cs" />
+    <Compile Include="Validations\ReleaseEnvironmentValidations.cs" />
+    <Compile Include="Validations\ReleaseValidations.cs" />
+    <Compile Include="Validations\YamlPipelineValidator.cs" />
+    <Compile Include="Utilities\ActionRequestsProcessorHelper.cs" />
+    <Compile Include="Utilities\ArtifactTriggerHelper.cs" />
+    <Compile Include="Utilities\ManualInterventionIdentityHandler.cs" />
+    <Compile Include="Utilities\ReleaseAndRDSecretHandler.cs" />
+    <Compile Include="Utilities\ServiceEndpointVariablesHelper.cs" />
+    <Compile Include="Utilities\ActionContextUtility.cs" />
+    <Compile Include="Utilities\AgentQueueUtility.cs" />
+    <Compile Include="Utilities\ApprovalQueryParameters.cs" />
+    <Compile Include="Utilities\ApprovalFilterHelper.cs" />
+    <Compile Include="Utilities\ApprovalsValidator.cs" />
+    <Compile Include="Utilities\ArtifactUtility.cs" />
+    <Compile Include="Utilities\PublishCommitStatusHelper.cs" />
+    <Compile Include="Utilities\QueueReleaseValidator.cs" />
+    <Compile Include="Utilities\ReleaseManagementArtifactPropertyKinds.cs" />
+    <Compile Include="Utilities\FavoritesHelper.cs" />
+    <Compile Include="Utilities\FolderValidator.cs" />
+    <Compile Include="Utilities\HandlePropertySelectorsAttribute.cs" />
+    <Compile Include="Utilities\ServiceEndpointHelper.cs" />
+    <Compile Include="Utilities\StartReleaseValidator.cs" />
+    <Compile Include="Utilities\TaskGroupHelper.cs" />
+    <Compile Include="Utilities\ModelValidationHelper.cs" />
+    <Compile Include="Utilities\PropertySelectorsHelper.cs" />
+    <Compile Include="Utilities\QueueJobUtility.cs" />
+    <Compile Include="Utilities\DeploymentIdentityHandler.cs" />
+    <Compile Include="Utilities\SummaryMailHelper.cs" />
+    <Compile Include="Utilities\DeploymentsHelper.cs" />
+    <Compile Include="Utilities\ReleaseEnvironmentStepIdentityHandler.cs" />
+    <Compile Include="Utilities\IdentityHelper.cs" />
+    <Compile Include="Utilities\ReleaseDefinitionIdentityRetriever.cs" />
+    <Compile Include="Utilities\ReleaseDefinitionEnvironmentsSnapshotMerger.cs" />
+    <Compile Include="Utilities\ReleaseIdentityHandler.cs" />
+    <Compile Include="Utilities\ReleaseWorkItemsCommitsHelper.cs" />
+    <Compile Include="Utilities\ReleaseNameFormatter.cs" />
+    <Compile Include="Utilities\ReleaseWebHookHelper.cs" />
+    <Compile Include="Utilities\SummaryMailHtmlGenerator.cs" />
+    <Compile Include="Services\InputValuesDictionaryExtension.cs" />
+    <Compile Include="Services\IReleaseManagementEventService.cs" />
+    <Compile Include="Services\PullRequestReleaseService.cs" />
+    <Compile Include="Services\ReleaseDefinitionOperations.cs" />
+    <Compile Include="Services\ReleaseManagementProjectJobService.cs" />
+    <Compile Include="Services\ReleaseGatesService.cs" />
+    <Compile Include="Services\ReleaseManagementEventDispatcher.cs" />
+    <Compile Include="Services\ReleaseManagementEventService.cs" />
+    <Compile Include="Services\ActionRequestService.cs" />
+    <Compile Include="Services\RMAnalyticsService.cs" />
+    <Compile Include="Services\ReleaseAttachmentsService.cs" />
+    <Compile Include="Services\DataAccessLayer.cs" />
+    <Compile Include="Services\DeploymentResourceService.cs" />
+    <Compile Include="Services\RedeployTriggerDeploymentGroupEventService.cs" />
+    <Compile Include="Services\FolderService.cs" />
+    <Compile Include="Services\ManualInterventionsService.cs" />
+    <Compile Include="Services\MetricsService.cs" />
+    <Compile Include="Services\ReleaseArtifactTypeService.cs" />
+    <Compile Include="Services\ReleaseCommitsWorkItemsServiceBase.cs" />
+    <Compile Include="Services\ReleaseSettingsService.cs" />
+    <Compile Include="Services\ReleaseWorkItemComparer.cs" />
+    <Compile Include="Services\ServerExecutionStatusUpdater.cs" />
+    <Compile Include="Services\RetentionService.cs" />
+    <Compile Include="Services\DeploymentsService.cs" />
+    <Compile Include="Services\TagsService.cs" />
+    <Compile Include="Services\IReleaseEventDispatcherService.cs" />
+    <Compile Include="Services\ReleaseChangesService.cs" />
+    <Compile Include="Services\ReleaseDefinitionHistoryService.cs" />
+    <Compile Include="Services\ReleaseEventDispatcherService.cs" />
+    <Compile Include="Services\SummaryMailService.cs" />
+    <Compile Include="Services\ReleaseTasksServiceWireup.cs" />
+    <Compile Include="Services\IReleaseTasksServiceWireUp.cs" />
+    <Compile Include="Services\ReleaseTasksService.cs" />
+    <Compile Include="Services\ReleaseWorkItemsService.cs" />
+    <Compile Include="Services\ProjectService.cs" />
+    <Compile Include="Services\ReleaseHistoryService.cs" />
+    <Compile Include="Services\ApprovalsService.cs" />
+    <Compile Include="Services\ArtifactTypeDefinitionService.cs" />
+    <Compile Include="Services\ArtifactTypeInputValuesQueryService.cs" />
+    <Compile Include="Services\ArtifactVersionsService.cs" />
+    <Compile Include="Services\AutomationEngineNotification.cs" />
+    <Compile Include="Services\ConsumerService.cs" />
+    <Compile Include="Services\DefinitionEnvironmentTemplatesService.cs" />
+    <Compile Include="Services\ReleaseDefinitionsService.cs" />
+    <Compile Include="Services\AgentArtifactsService.cs" />
+    <Compile Include="Services\ReleaseLogsService.cs" />
+    <Compile Include="Services\ReleaseManagement2ServiceBase.cs" />
+    <Compile Include="Services\ArtifactTypeServiceBase.cs" />
+    <Compile Include="Services\ReleaseSecretsService.cs" />
+    <Compile Include="Services\ReleasesService.cs" />
+    <Compile Include="Services\ReleaseDefinitionEnvironmentsService.cs" />
+    <Compile Include="Processors\CheckConfigurationEvaluator.cs" />
+    <Compile Include="Processors\CheckToGateConverter.cs" />
+    <Compile Include="Processors\PhaseConditionResult.cs" />
+    <Compile Include="Processors\IEnvironmentOrchestrator.cs" />
+    <Compile Include="Processors\ReleaseAttachmentsProcessor.cs" />
+    <Compile Include="Processors\RedeployTriggerActionResolver.cs" />
+    <Compile Include="Processors\ApprovalsProcessor.cs" />
+    <Compile Include="Processors\DeployPhaseExecutionState.cs" />
+    <Compile Include="Processors\DeployPhaseOrchestrator.cs" />
+    <Compile Include="Processors\DeployPhaseRunner.cs" />
+    <Compile Include="Processors\DeployPhaseRunStatus.cs" />
+    <Compile Include="Processors\ExpressionManager.cs" />
+    <Compile Include="Processors\GreenlightingRunner.cs" />
+    <Compile Include="Processors\OrchestratorServiceProcessorV2.cs" />
+    <Compile Include="Processors\PhaseConditionConstants.cs" />
+    <Compile Include="Processors\PhaseConditionEvaluator.cs" />
+    <Compile Include="Processors\EmailReleaseNotification.cs" />
+    <Compile Include="Processors\IReleaseNotification.cs" />
+    <Compile Include="Processors\ReleaseLogsProcessor.cs" />
+    <Compile Include="Processors\ReleaseConditionEvaluator.cs" />
+    <Compile Include="Processors\ReleaseEnvironmentStatusResolver.cs" />
+    <Compile Include="Processors\ReleaseManagementHandledException.cs" />
+    <Compile Include="Processors\ReleaseProcessor.cs" />
+    <Compile Include="Processors\ReleaseStatusResolver.cs" />
+    <Compile Include="Processors\Processor\Builders\ReleaseEnvironmentStepBuilder.cs" />
+    <Compile Include="Extensions\ReleaseEnvironmentData.cs" />
+    <Compile Include="Extensions\ReleaseReasonExtension.cs" />
+    <Compile Include="Extensions\ServiceEndpointTasksReference.cs" />
+    <Compile Include="Extensions\ArtifactSourceExtensions.cs" />
+    <Compile Include="Extensions\AutoTriggerIssueExtension.cs" />
+    <Compile Include="Extensions\ReleaseExtensions.cs" />
+    <Compile Include="Extensions\ReleaseWorkflowExtensions.cs" />
+    <Compile Include="Extensions\ApprovalStatusExtension.cs" />
+    <Compile Include="Extensions\ArtifactExtensions.cs" />
+    <Compile Include="Extensions\DeploymentMetricsExtensions.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionApprovalsExtensions.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionRevisionExtensions.cs" />
+    <Compile Include="Extensions\DataspaceService.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionApprovalStepExtensions.cs" />
+    <Compile Include="Extensions\ReleaseContractExtensions.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionEnvironmentsSnapshotExtensions.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionExtensions.cs" />
+    <Compile Include="Extensions\ReleaseEnvironmentContractExtensions.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionEnvironmentTemplateExtensions.cs" />
+    <Compile Include="Extensions\DeploymentExtensions.cs" />
+    <Compile Include="Extensions\ReleaseRevisionExtensions.cs" />
+    <Compile Include="Extensions\ReleaseStartMetadataExtensions.cs" />
+    <Compile Include="Extensions\TeamFoundationRequestContextExtensions.cs" />
+    <Compile Include="Extensions\TimelineRecordExtensions.cs" />
+    <Compile Include="Extensions\EnvironmentStatusExtensions.cs" />
+    <Compile Include="Extensions\ReleaseEnvironmentStepExtensions.cs" />
+    <Compile Include="DistributedTask\AgentPoolBasedOrchestrator.cs" />
+    <Compile Include="DistributedTask\AgentSpecificationExtensions.cs" />
+    <Compile Include="DistributedTask\ArtifactExtensions.cs" />
+    <Compile Include="DistributedTask\ArtifactTaskMapper.cs" />
+    <Compile Include="DistributedTask\ArtifactUriCreator.cs" />
+    <Compile Include="DistributedTask\AutomationEngineInput.cs" />
+    <Compile Include="DistributedTask\AutomationEngineInputConstants.cs" />
+    <Compile Include="DistributedTask\DeploymentOrchestrator.cs" />
+    <Compile Include="DistributedTask\DistributedTaskHubServiceExtensions.cs" />
+    <Compile Include="DistributedTask\DistributedTaskOrchestrator.cs" />
+    <Compile Include="DistributedTask\DistributedTaskOrchestratorExtensions.cs" />
+    <Compile Include="DistributedTask\GreenlightingConstants.cs" />
+    <Compile Include="DistributedTask\GreenlightingOrchestrator.cs" />
+    <Compile Include="DistributedTask\IAutomationEngineNotification.cs" />
+    <Compile Include="DistributedTask\IDistributedTaskOrchestrator.cs" />
+    <Compile Include="DistributedTask\LazyTimelineRecordContext.cs" />
+    <Compile Include="DistributedTask\MachinePoolBasedOrchestrator.cs" />
+    <Compile Include="DistributedTask\OrchestrationStatusArgs.cs" />
+    <Compile Include="DistributedTask\OutputVariablesUtility.cs" />
+    <Compile Include="DistributedTask\PipelineOrchestrator.cs" />
+    <Compile Include="DistributedTask\ReleaseArtifact.cs" />
+    <Compile Include="DistributedTask\ReleaseArtifactCreator.cs" />
+    <Compile Include="DistributedTask\ReleaseArtifactExtensions.cs" />
+    <Compile Include="DistributedTask\ReleaseDeployPhaseExtensions.cs" />
+    <Compile Include="DistributedTask\RunDeploymentPlanInputConstants.cs" />
+    <Compile Include="DistributedTask\ServerExecutionOrchestrator.cs" />
+    <Compile Include="DistributedTask\DistributedTaskExtensions.cs" />
+    <Compile Include="DistributedTask\TimelineRecordContext.cs" />
+    <Compile Include="Controllers\OrgPipelineReleaseSettingsController.cs" />
+    <Compile Include="Controllers\ReceiveExternalEventController.cs" />
+    <Compile Include="Controllers\FlightAssignmentsController.cs" />
+    <Compile Include="Controllers\ReleaseGatesController.cs" />
+    <Compile Include="Controllers\PipelineReleaseSettingsController.cs" />
+    <Compile Include="Controllers\RMFolders2Controller.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironments7Controller.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironments6Controller.cs" />
+    <Compile Include="Controllers\ReleaseManagementPublicControllerBase.cs" />
+    <Compile Include="Controllers\RmReleases7Controller.cs" />
+    <Compile Include="Controllers\RmReleases8Controller.cs" />
+    <Compile Include="Controllers\RmReleases9Controller.cs" />
+    <Compile Include="Controllers\ReleaseAttachmentsController.cs" />
+    <Compile Include="Controllers\RmApprovals4Controller.cs" />
+    <Compile Include="Controllers\RmApprovals3Controller.cs" />
+    <Compile Include="Controllers\RmAutoTriggerIssuesController.cs" />
+    <Compile Include="Controllers\RmDefinitionEnvironmentTemplates3Controller.cs" />
+    <Compile Include="Controllers\RmDefinitionEnvironmentTemplates4Controller.cs" />
+    <Compile Include="Controllers\RmDefinitions4Controller.cs" />
+    <Compile Include="Controllers\RmDefinitions5Controller.cs" />
+    <Compile Include="Controllers\RmDeployments2Controller.cs" />
+    <Compile Include="Controllers\RmIssuesController.cs" />
+    <Compile Include="Controllers\DeploymentResourceController.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironments5Controller.cs" />
+    <Compile Include="Controllers\RmReleases6Controller.cs" />
+    <Compile Include="Controllers\RMTagsController.cs" />
+    <Compile Include="Controllers\RMReleaseDefinitionEnvironmentController.cs" />
+    <Compile Include="Controllers\RMFoldersController.cs" />
+    <Compile Include="Controllers\ReleaseDefinitionEnvironmentBadgeController.cs" />
+    <Compile Include="Controllers\ArtifactSourceBranchesController.cs" />
+    <Compile Include="Controllers\CompatExtensions.cs" />
+    <Compile Include="Controllers\MetricsController.cs" />
+    <Compile Include="Controllers\ReleaseSettingsController.cs" />
+    <Compile Include="Controllers\ReleaseHistoryController.cs" />
+    <Compile Include="Controllers\ReleaseLogs2Controller.cs" />
+    <Compile Include="Controllers\RmApprovals2Controller.cs" />
+    <Compile Include="Controllers\RmDefinitionEnvironmentTemplates2Controller.cs" />
+    <Compile Include="Controllers\RmDefinitions3Controller.cs" />
+    <Compile Include="Controllers\RmFavoritesController.cs" />
+    <Compile Include="Controllers\RmManualInterventionsController.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironments2Controller.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironments3Controller.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironments4Controller.cs" />
+    <Compile Include="Controllers\RmReleaseEnvironmentsController.cs" />
+    <Compile Include="Controllers\RmReleases2Controller.cs" />
+    <Compile Include="Controllers\RmReleases3Controller.cs" />
+    <Compile Include="Controllers\RmReleases4Controller.cs" />
+    <Compile Include="Controllers\RmReleases5Controller.cs" />
+    <Compile Include="Controllers\RmTasks2Controller.cs" />
+    <Compile Include="Controllers\RmDeploymentsController.cs" />
+    <Compile Include="Controllers\RmTasksController.cs" />
+    <Compile Include="Controllers\RmDefinitionEnvironmentTemplatesController.cs" />
+    <Compile Include="Controllers\ArtifactTypeInputValuesQueryController.cs" />
+    <Compile Include="Controllers\RmAgentArtifactsController.cs" />
+    <Compile Include="Controllers\ArtifactVersionsController.cs" />
+    <Compile Include="Controllers\RmArtifactTypeDefinitionController.cs" />
+    <Compile Include="Controllers\ReleaseLogsController.cs" />
+    <Compile Include="Controllers\RmApprovalsController.cs" />
+    <Compile Include="Controllers\RmConsumersController.cs" />
+    <Compile Include="Controllers\ReleaseDefinitionHistoryController.cs" />
+    <Compile Include="Controllers\RmDefinitionsController.cs" />
+    <Compile Include="Controllers\RmDefinitions2Controller.cs" />
+    <Compile Include="Controllers\RmReleaseChangesController.cs" />
+    <Compile Include="Controllers\RmReleasesController.cs" />
+    <Compile Include="Controllers\ReleaseManagementProjectControllerBase.cs" />
+    <Compile Include="Controllers\RmThrottlingQueueController.cs" />
+    <Compile Include="Controllers\RmWorkItemsController.cs" />
+    <Compile Include="Controllers\RMSummaryMailController.cs" />
+    <Compile Include="Controllers\ReleaseProjectsController.cs" />
+    <Compile Include="Controllers\ReleaseDefinitionHistory2Controller.cs" />
+    <Compile Include="Controllers\ReleaseAreaControllers\RmAgentArtifacts2Controller.cs" />
+    <Compile Include="Artifacts\ArtifactTypesRetriever.cs" />
+    <Compile Include="Analytics\CustomerIntelligenceHelper.cs" />
+    <Compile Include="Analytics\IRmTelemetryLogger.cs" />
+    <Compile Include="Analytics\RmCustomerIntelligenceConstants.cs" />
+    <Compile Include="Analytics\RmHostedTelemetryLogger.cs" />
+    <Compile Include="Analytics\RmOnPremTelemetryLogger.cs" />
+    <Compile Include="Analytics\RmTelemetryFactory.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="blankResources.resx" />
+    <EmbeddedResource Include="deployAppServiceWithTestResources.resx" />
+    <EmbeddedResource Include="deployAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployAzureAppServiceWithMonitoringResources.resx" />
+    <EmbeddedResource Include="deployAzureAppServiceWithSlotResources.resx" />
+    <EmbeddedResource Include="deployAzurePolicyResources.resx" />
+    <EmbeddedResource Include="deployAzureVmssResources.resx" />
+    <EmbeddedResource Include="deployComposeToServiceFabricClusterResources.resx" />
+    <EmbeddedResource Include="deployFunctionAppToAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployFunctionAppToAzureAppServiceWithSlotResources.resx" />
+    <EmbeddedResource Include="deployGoAppToAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployHelmChartToKubernetesClusterResources.resx" />
+    <EmbeddedResource Include="deployIISBehindNlbResources.resx" />
+    <EmbeddedResource Include="deployIISWebsiteResources.resx" />
+    <EmbeddedResource Include="deployJavaAppToAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployMachineLearningModelResources.resx" />
+    <EmbeddedResource Include="deployNodeAppToAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployPhpAppToAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployPythonAppToAzureAppServiceResources.resx" />
+    <EmbeddedResource Include="deployRubyAppToLinuxAppServiceResources.resx" />
+    <EmbeddedResource Include="deployservicetoazureResources.resx" />
+    <EmbeddedResource Include="deploytoservicefabricclusterResources.resx" />
+    <EmbeddedResource Include="deployUsingBlueGreenStrategyToAzureLinuxVMResources.resx" />
+    <EmbeddedResource Include="deployUsingBlueGreenStrategyToAzureWindowsVMResources.resx" />
+    <EmbeddedResource Include="deployUsingCanaryStrategyToAzureLinuxVMResources.resx" />
+    <EmbeddedResource Include="deployUsingCanaryStrategyToAzureWindowsVMResources.resx" />
+    <EmbeddedResource Include="deployUsingRollingStrategyToAzureLinuxVMResources.resx" />
+    <EmbeddedResource Include="deployUsingRollingStrategyToAzureWindowsVMResources.resx" />
+    <EmbeddedResource Include="iisAndSqlOfflineUpgradeResources.resx" />
+    <EmbeddedResource Include="iisAndSqlOnlineUpgradeResources.resx" />
+    <EmbeddedResource Include="iisAndSqlPartiallyOnlineUpgradeResources.resx" />
+    <EmbeddedResource Include="kubernetesApplyResources.resx" />
+    <EmbeddedResource Include="manageAndDeployIISWebsiteResources.resx" />
+    <EmbeddedResource Include="OnDemandTestingTemplateResources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\blank.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployAppServiceWithTest.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployAzureAppServiceWithMonitoring.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployAzureAppServiceWithSlot.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployAzurePolicy.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployAzureVmss.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployComposeToServiceFabricCluster.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployFunctionAppToAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployFunctionAppToAzureAppServiceWithSlot.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployGoAppToAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployHelmChartToKubernetesCluster.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployIISBehindNlb.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployIISWebsite.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployJavaAppToAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployMachineLearningModel.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployNodeAppToAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployPhpAppToAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployPythonAppToAzureAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployRubyAppToLinuxAppService.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployservicetoazure.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deploytoservicefabriccluster.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployUsingBlueGreenStrategyToAzureLinuxVM.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployUsingBlueGreenStrategyToAzureWindowsVM.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployUsingCanaryStrategyToAzureLinuxVM.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployUsingCanaryStrategyToAzureWindowsVM.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployUsingRollingStrategyToAzureLinuxVM.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\deployUsingRollingStrategyToAzureWindowsVM.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\iisAndSqlOfflineUpgrade.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\iisAndSqlOnlineUpgrade.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\iisAndSqlPartiallyOnlineUpgrade.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\kubernetesApply.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\manageAndDeployIISWebsite.json" />
+    <EmbeddedResource Include="Templates\DefinitionEnvironments\OnDemandTestingTemplate.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

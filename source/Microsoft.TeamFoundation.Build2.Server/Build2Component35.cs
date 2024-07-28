@@ -1,0 +1,475 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Build2.Server.Build2Component35
+// Assembly: Microsoft.TeamFoundation.Build2.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 680FF5F5-CB5D-4078-8EFA-56C292BFDBB7
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Build2.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.VisualStudio.Services.WebApi;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Microsoft.TeamFoundation.Build2.Server
+{
+  internal class Build2Component35 : Build2Component34
+  {
+    public override BuildDefinition AddDefinition(
+      BuildDefinition definition,
+      Guid requestedBy,
+      BuildProcessResources authorizedResources = null)
+    {
+      this.TraceEnter(0, nameof (AddDefinition));
+      this.PrepareStoredProcedure("Build.prc_AddDefinition");
+      string parameterValue1 = (string) null;
+      string parameterValue2 = (string) null;
+      string parameterValue3 = (string) null;
+      if (definition.Repository != null)
+      {
+        parameterValue1 = definition.Repository.Type;
+        parameterValue2 = definition.Repository.Id;
+        parameterValue3 = definition.Repository.DefaultBranch;
+      }
+      this.BindInt("@dataspaceId", this.GetDataspaceId(definition.ProjectId));
+      this.BindString("@definitionName", DBHelper.ServerPathToDBPath(definition.Name), 260, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindNullableInt32("@queueId", definition.Queue != null ? new int?(definition.Queue.Id) : new int?());
+      this.BindByte("@queueStatus", (byte) definition.QueueStatus);
+      this.BindByte("@quality", (byte) ((int) definition.DefinitionQuality ?? 1));
+      this.BindString("@repositoryType", parameterValue1, 40, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@repositoryIdentifier", parameterValue2, 400, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindString("@defaultBranch", parameterValue3, 400, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindInt("@triggerTypes", (int) definition.Triggers.Aggregate<BuildTrigger, DefinitionTriggerType>(DefinitionTriggerType.None, (Func<DefinitionTriggerType, BuildTrigger, DefinitionTriggerType>) ((x, y) => x | y.TriggerType)));
+      this.BindNullableInt32("@parentDefinitionId", definition.ParentDefinition != null ? new int?(definition.ParentDefinition.Id) : new int?());
+      this.BindString("@options", this.ToString<List<BuildOption>>(definition.Options), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@repository", JsonUtility.ToString((object) definition.Repository), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@triggers", this.ToString<List<BuildTrigger>>(definition.Triggers), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@process", JsonUtility.ToString((object) definition.Process), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      BuildProcess process = definition.Process;
+      this.BindInt("@processType", process != null ? process.Type : 1);
+      this.BindString("@variables", this.ToString<Dictionary<string, BuildDefinitionVariable>>(definition.Variables), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@demands", this.ToString<List<Demand>>(definition.Demands), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@retentionPolicy", (string) null, -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@description", definition.Description, 260, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@buildNumberFormat", definition.BuildNumberFormat, 260, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindByte("@jobAuthorizationScope", (byte) definition.JobAuthorizationScope);
+      this.BindNullableInt("@jobTimeout", definition.JobTimeoutInMinutes, 0);
+      this.BindInt("@jobCancelTimeout", definition.JobCancelTimeoutInMinutes);
+      this.BindBoolean("@badgeEnabled", definition.BadgeEnabled);
+      this.BindString("@comment", definition.Comment, 2048, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindGuid("@requestedBy", requestedBy);
+      this.BindGuid("@writerId", this.Author);
+      this.BindString("@path", DBHelper.UserToDBPath(definition.Path), 400, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindString("@processParameters", JsonUtility.ToString((object) definition.ProcessParameters), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+      {
+        resultCollection.AddBinder<BuildDefinition>(this.GetBuildDefinitionBinder());
+        BuildDefinition buildDefinition = resultCollection.GetCurrent<BuildDefinition>().FirstOrDefault<BuildDefinition>();
+        this.TraceLeave(0, nameof (AddDefinition));
+        return buildDefinition;
+      }
+    }
+
+    public override async Task<BuildDefinition> GetDefinitionAsync(
+      Guid projectId,
+      int definitionId,
+      int? definitionVersion,
+      bool includeDeleted = false,
+      DateTime? minMetricsTime = null,
+      bool includeLatestBuilds = false)
+    {
+      Build2Component35 build2Component35 = this;
+      build2Component35.TraceEnter(0, nameof (GetDefinitionAsync));
+      build2Component35.PrepareStoredProcedure("Build.prc_GetDefinition");
+      build2Component35.BindInt("@dataspaceId", build2Component35.GetDataspaceId(projectId));
+      build2Component35.BindInt("@definitionId", definitionId);
+      build2Component35.BindNullableInt32("@definitionVersion", definitionVersion);
+      build2Component35.BindBoolean("@includeDeleted", includeDeleted);
+      build2Component35.BindNullableUtcDateTime2("@minMetricsTime", minMetricsTime);
+      build2Component35.BindBoolean("@includeLatestBuilds", includeLatestBuilds);
+      BuildDefinition definitionAsync;
+      using (ResultCollection rc = new ResultCollection((IDataReader) await build2Component35.ExecuteReaderAsync(), build2Component35.ProcedureName, build2Component35.RequestContext))
+      {
+        rc.AddBinder<BuildDefinition>(build2Component35.GetBuildDefinitionBinder());
+        rc.AddBinder<BuildDefinitionMetric>(build2Component35.GetBuildDefinitionMetricBinder());
+        rc.AddBinder<DefinitionTagData>(build2Component35.GetDefinitionTagDataBinder());
+        rc.AddBinder<BuildData>(build2Component35.GetBuildDataBinder());
+        rc.AddBinder<BuildTagData>(build2Component35.GetBuildTagDataBinder());
+        rc.AddBinder<BuildOrchestrationData>(build2Component35.GetBuildOrchestrationDataBinder());
+        BuildDefinition definition = rc.GetCurrent<BuildDefinition>().FirstOrDefault<BuildDefinition>();
+        rc.NextResult();
+        foreach (BuildDefinitionMetric definitionMetric in rc.GetCurrent<BuildDefinitionMetric>())
+          definition.Metrics.Add(definitionMetric.Metric);
+        if (includeLatestBuilds)
+          build2Component35.BindLatestBuilds(rc, definition);
+        build2Component35.TraceLeave(0, nameof (GetDefinitionAsync));
+        definitionAsync = definition;
+      }
+      return definitionAsync;
+    }
+
+    public override List<BuildDefinition> GetDefinitionHistory(Guid projectId, int definitionId)
+    {
+      this.TraceEnter(0, nameof (GetDefinitionHistory));
+      this.PrepareStoredProcedure("Build.prc_GetDefinitionHistory");
+      this.BindInt("@dataspaceId", this.GetDataspaceId(projectId));
+      this.BindInt("@definitionId", definitionId);
+      using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+      {
+        resultCollection.AddBinder<BuildDefinition>(this.GetBuildDefinitionBinder());
+        resultCollection.AddBinder<DefinitionTagData>(this.GetDefinitionTagDataBinder());
+        List<BuildDefinition> items = resultCollection.GetCurrent<BuildDefinition>().Items;
+        Dictionary<int?, BuildDefinition> dictionary = items.ToDictionary<BuildDefinition, int?>((System.Func<BuildDefinition, int?>) (x => x.Revision));
+        resultCollection.NextResult();
+        foreach (DefinitionTagData definitionTagData in resultCollection.GetCurrent<DefinitionTagData>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(new int?(definitionTagData.DefinitionVersion), out buildDefinition))
+            buildDefinition.Tags.Add(definitionTagData.Tag);
+        }
+        this.TraceLeave(0, nameof (GetDefinitionHistory));
+        return items;
+      }
+    }
+
+    public override List<BuildDefinition> GetDefinitions(
+      Guid projectId,
+      string name,
+      DefinitionTriggerType triggerFilter,
+      string repositoryId,
+      string repositoryType,
+      DefinitionQueryOrder queryOrder,
+      int maxDefinitions,
+      DateTime? minLastModifiedTime,
+      DateTime? maxLastModifiedTime,
+      string lastDefinitionName,
+      DateTime? minMetricsTime,
+      string path,
+      DateTime? builtAfter,
+      DateTime? notBuiltAfter,
+      DefinitionQueryOptions options,
+      IEnumerable<string> tagFilters,
+      bool includeLatestBuilds,
+      Guid? taskIdFilter = null,
+      int? processType = null)
+    {
+      this.TraceEnter(0, nameof (GetDefinitions));
+      this.PrepareStoredProcedure("Build.prc_GetDefinitions");
+      this.BindInt("@dataspaceId", this.GetDataspaceId(projectId));
+      this.BindString("@definitionName", DBHelper.DBPathToServerPath(name), 260, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindInt("@triggerFilter", (int) triggerFilter);
+      this.BindString("@repositoryId", repositoryId, 400, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@repositoryType", repositoryType, 40, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindInt("@queryOrder", (int) queryOrder);
+      this.BindInt("@maxDefinitions", maxDefinitions);
+      this.BindNullableUtcDateTime2("@minLastModifiedTime", minLastModifiedTime);
+      this.BindNullableUtcDateTime2("@maxLastModifiedTime", maxLastModifiedTime);
+      this.BindString("@lastDefinitionName", DBHelper.DBPathToServerPath(lastDefinitionName), 260, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindNullableUtcDateTime2("@minMetricsTime", minMetricsTime);
+      this.BindString("@path", DBHelper.UserToDBPath(path), 400, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindNullableUtcDateTime2("@builtAfter", builtAfter);
+      this.BindNullableUtcDateTime2("@notBuiltAfter", notBuiltAfter);
+      this.BindInt("@queryOptions", (int) options);
+      this.BindStringTable("@tagFilters", tagFilters);
+      this.BindBoolean("@includeLatestBuilds", includeLatestBuilds);
+      this.BindNullableGuid("@taskIdFilter", taskIdFilter);
+      using (ResultCollection rc = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+      {
+        rc.AddBinder<BuildDefinition>(this.GetBuildDefinitionBinder());
+        rc.AddBinder<BuildDefinitionMetric>(this.GetBuildDefinitionMetricBinder());
+        rc.AddBinder<DefinitionTagData>(this.GetDefinitionTagDataBinder());
+        rc.AddBinder<BuildData>(this.GetBuildDataBinder());
+        rc.AddBinder<BuildTagData>(this.GetBuildTagDataBinder());
+        rc.AddBinder<BuildOrchestrationData>(this.GetBuildOrchestrationDataBinder());
+        List<BuildDefinition> items = rc.GetCurrent<BuildDefinition>().Items;
+        Dictionary<int, BuildDefinition> dictionary = items.ToDictionary<BuildDefinition, int>((System.Func<BuildDefinition, int>) (x => x.Id));
+        rc.NextResult();
+        foreach (BuildDefinitionMetric definitionMetric in rc.GetCurrent<BuildDefinitionMetric>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(definitionMetric.DefinitionId, out buildDefinition))
+            buildDefinition.Metrics.Add(definitionMetric.Metric);
+        }
+        rc.NextResult();
+        foreach (DefinitionTagData definitionTagData in rc.GetCurrent<DefinitionTagData>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(definitionTagData.DefinitionId, out buildDefinition))
+            buildDefinition.Tags.Add(definitionTagData.Tag);
+        }
+        if (includeLatestBuilds)
+          this.BindLatestBuilds(rc, dictionary);
+        this.TraceLeave(0, nameof (GetDefinitions));
+        return items;
+      }
+    }
+
+    public override List<BuildDefinition> GetDefinitionsByIds(
+      Guid projectId,
+      List<int> definitionIds,
+      bool includeDeleted,
+      DateTime? minMetricsTime,
+      bool includeLatestBuilds,
+      bool includeDrafts = false)
+    {
+      this.TraceEnter(0, nameof (GetDefinitionsByIds));
+      this.PrepareStoredProcedure("Build.prc_GetDefinitionsByIds");
+      this.BindInt("@dataspaceId", this.GetDataspaceId(projectId));
+      this.BindUniqueInt32Table("@definitionIdTable", (IEnumerable<int>) definitionIds);
+      this.BindBoolean("@includeDeleted", includeDeleted);
+      this.BindNullableUtcDateTime2("@minMetricsTime", minMetricsTime);
+      this.BindBoolean("@includeLatestBuilds", includeLatestBuilds);
+      using (ResultCollection rc = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+      {
+        rc.AddBinder<BuildDefinition>(this.GetBuildDefinitionBinder());
+        rc.AddBinder<BuildDefinitionMetric>(this.GetBuildDefinitionMetricBinder());
+        rc.AddBinder<DefinitionTagData>(this.GetDefinitionTagDataBinder());
+        rc.AddBinder<BuildData>(this.GetBuildDataBinder());
+        rc.AddBinder<BuildTagData>(this.GetBuildTagDataBinder());
+        rc.AddBinder<BuildOrchestrationData>(this.GetBuildOrchestrationDataBinder());
+        List<BuildDefinition> items = rc.GetCurrent<BuildDefinition>().Items;
+        Dictionary<int, BuildDefinition> dictionary = rc.GetCurrent<BuildDefinition>().Items.ToDictionary<BuildDefinition, int>((System.Func<BuildDefinition, int>) (x => x.Id));
+        rc.NextResult();
+        foreach (BuildDefinitionMetric definitionMetric in rc.GetCurrent<BuildDefinitionMetric>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(definitionMetric.DefinitionId, out buildDefinition))
+            buildDefinition.Metrics.Add(definitionMetric.Metric);
+        }
+        rc.NextResult();
+        foreach (DefinitionTagData definitionTagData in rc.GetCurrent<DefinitionTagData>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(definitionTagData.DefinitionId, out buildDefinition))
+            buildDefinition.Tags.Add(definitionTagData.Tag);
+        }
+        if (includeLatestBuilds)
+          this.BindLatestBuilds(rc, dictionary);
+        this.TraceLeave(0, nameof (GetDefinitionsByIds));
+        return items;
+      }
+    }
+
+    public override async Task<List<BuildDefinition>> GetDefinitionsByIdsAsync(
+      Guid projectId,
+      List<int> definitionIds,
+      bool includeDeleted,
+      DateTime? minMetricsTime,
+      bool includeLatestBuilds,
+      bool includeDrafts = false)
+    {
+      Build2Component35 component = this;
+      component.TraceEnter(0, nameof (GetDefinitionsByIdsAsync));
+      component.PrepareStoredProcedure("Build.prc_GetDefinitionsByIds");
+      component.BindInt("@dataspaceId", component.GetDataspaceId(projectId));
+      component.BindUniqueInt32Table("@definitionIdTable", (IEnumerable<int>) definitionIds);
+      component.BindBoolean("@includeDeleted", includeDeleted);
+      component.BindNullableUtcDateTime2("@minMetricsTime", minMetricsTime);
+      component.BindBoolean("@includeLatestBuilds", includeLatestBuilds);
+      List<BuildDefinition> definitionsByIdsAsync;
+      using (ResultCollection rc = new ResultCollection((IDataReader) await component.ExecuteReaderAsync(), component.ProcedureName, component.RequestContext))
+      {
+        rc.AddBinder<BuildDefinition>(component.GetBuildDefinitionBinder());
+        rc.AddBinder<BuildDefinitionMetric>(component.GetBuildDefinitionMetricBinder());
+        rc.AddBinder<DefinitionTagData>(component.GetDefinitionTagDataBinder());
+        rc.AddBinder<BuildData>(component.GetBuildDataBinder());
+        rc.AddBinder<BuildTagData>(component.GetBuildTagDataBinder());
+        rc.AddBinder<BuildOrchestrationData>(component.GetBuildOrchestrationDataBinder());
+        List<BuildDefinition> items = rc.GetCurrent<BuildDefinition>().Items;
+        Dictionary<int, BuildDefinition> dictionary = rc.GetCurrent<BuildDefinition>().Items.ToDictionary<BuildDefinition, int>((System.Func<BuildDefinition, int>) (x => x.Id));
+        rc.NextResult();
+        foreach (BuildDefinitionMetric definitionMetric in rc.GetCurrent<BuildDefinitionMetric>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(definitionMetric.DefinitionId, out buildDefinition))
+            buildDefinition.Metrics.Add(definitionMetric.Metric);
+        }
+        rc.NextResult();
+        foreach (DefinitionTagData definitionTagData in rc.GetCurrent<DefinitionTagData>())
+        {
+          BuildDefinition buildDefinition;
+          if (dictionary.TryGetValue(definitionTagData.DefinitionId, out buildDefinition))
+            buildDefinition.Tags.Add(definitionTagData.Tag);
+        }
+        if (includeLatestBuilds)
+          component.BindLatestBuilds(rc, dictionary);
+        component.TraceLeave(0, nameof (GetDefinitionsByIdsAsync));
+        definitionsByIdsAsync = items;
+      }
+      return definitionsByIdsAsync;
+    }
+
+    public override List<BuildData> UpdateBuilds(
+      Guid projectId,
+      IEnumerable<BuildData> builds,
+      Guid changedBy,
+      out IList<BuildData> oldBuilds,
+      out IDictionary<int, BuildDefinition> definitionsById)
+    {
+      using (this.TraceScope(method: nameof (UpdateBuilds)))
+      {
+        this.PrepareStoredProcedure("Build.prc_UpdateBuilds");
+        this.BindInt("@dataspaceId", this.GetDataspaceId(projectId));
+        this.BindBuildUpdateTable("@buildUpdateTable", builds);
+        this.BindGuid("@requestedBy", changedBy);
+        List<BuildData> items1;
+        using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+        {
+          resultCollection.AddBinder<BuildData>(this.GetBuildDataBinder());
+          resultCollection.AddBinder<BuildData>(this.GetBuildDataBinder());
+          resultCollection.AddBinder<BuildDefinition>(this.GetBuildDefinitionBinder());
+          resultCollection.AddBinder<BuildTagData>(this.GetBuildTagDataBinder());
+          resultCollection.AddBinder<BuildOrchestrationData>(this.GetBuildOrchestrationDataBinder());
+          oldBuilds = (IList<BuildData>) resultCollection.GetCurrent<BuildData>().Items;
+          resultCollection.NextResult();
+          items1 = resultCollection.GetCurrent<BuildData>().Items;
+          Dictionary<int, BuildData> dictionary = items1.ToDictionary<BuildData, int>((System.Func<BuildData, int>) (b => b.Id));
+          resultCollection.NextResult();
+          List<BuildDefinition> items2 = resultCollection.GetCurrent<BuildDefinition>().Items;
+          definitionsById = (IDictionary<int, BuildDefinition>) items2.ToDictionary<BuildDefinition, int>((System.Func<BuildDefinition, int>) (d => d.Id));
+          resultCollection.NextResult();
+          foreach (BuildTagData buildTagData in resultCollection.GetCurrent<BuildTagData>())
+          {
+            BuildData buildData;
+            if (dictionary.TryGetValue(buildTagData.BuildId, out buildData))
+              buildData.Tags.Add(buildTagData.Tag);
+          }
+          resultCollection.NextResult();
+          foreach (BuildOrchestrationData orchestrationData in resultCollection.GetCurrent<BuildOrchestrationData>())
+          {
+            BuildData buildData;
+            if (dictionary.TryGetValue(orchestrationData.BuildId, out buildData))
+            {
+              int? orchestrationType = orchestrationData.Plan.OrchestrationType;
+              int num = 1;
+              if (orchestrationType.GetValueOrDefault() == num & orchestrationType.HasValue)
+                buildData.OrchestrationPlan = orchestrationData.Plan;
+              buildData.Plans.Add(orchestrationData.Plan);
+            }
+          }
+        }
+        return items1;
+      }
+    }
+
+    public override async Task<UpdateBuildsResult> UpdateBuildsAsync(
+      Guid projectId,
+      IEnumerable<BuildData> builds,
+      Guid changedBy)
+    {
+      Build2Component35 build2Component35 = this;
+      UpdateBuildsResult updateBuildsResult;
+      using (build2Component35.TraceScope(method: nameof (UpdateBuildsAsync)))
+      {
+        build2Component35.PrepareStoredProcedure("Build.prc_UpdateBuilds");
+        build2Component35.BindInt("@dataspaceId", build2Component35.GetDataspaceId(projectId));
+        build2Component35.BindBuildUpdateTable("@buildUpdateTable", builds);
+        build2Component35.BindGuid("@requestedBy", changedBy);
+        UpdateBuildsResult result = new UpdateBuildsResult();
+        using (ResultCollection resultCollection = new ResultCollection((IDataReader) await build2Component35.ExecuteReaderAsync(), build2Component35.ProcedureName, build2Component35.RequestContext))
+        {
+          resultCollection.AddBinder<BuildData>(build2Component35.GetBuildDataBinder());
+          resultCollection.AddBinder<BuildData>(build2Component35.GetBuildDataBinder());
+          resultCollection.AddBinder<BuildDefinition>(build2Component35.GetBuildDefinitionBinder());
+          resultCollection.AddBinder<BuildTagData>(build2Component35.GetBuildTagDataBinder());
+          resultCollection.AddBinder<BuildOrchestrationData>(build2Component35.GetBuildOrchestrationDataBinder());
+          result.OldBuilds = (IList<BuildData>) resultCollection.GetCurrent<BuildData>().Items;
+          resultCollection.NextResult();
+          result.NewBuilds = (IList<BuildData>) resultCollection.GetCurrent<BuildData>().Items;
+          Dictionary<int, BuildData> dictionary = result.NewBuilds.ToDictionary<BuildData, int>((System.Func<BuildData, int>) (b => b.Id));
+          resultCollection.NextResult();
+          result.DefinitionsById = (IDictionary<int, BuildDefinition>) resultCollection.GetCurrent<BuildDefinition>().Items.ToDictionary<BuildDefinition, int>((System.Func<BuildDefinition, int>) (d => d.Id));
+          resultCollection.NextResult();
+          foreach (BuildTagData buildTagData in resultCollection.GetCurrent<BuildTagData>())
+          {
+            BuildData buildData;
+            if (dictionary.TryGetValue(buildTagData.BuildId, out buildData))
+              buildData.Tags.Add(buildTagData.Tag);
+          }
+          resultCollection.NextResult();
+          foreach (BuildOrchestrationData orchestrationData in resultCollection.GetCurrent<BuildOrchestrationData>())
+          {
+            BuildData buildData;
+            if (dictionary.TryGetValue(orchestrationData.BuildId, out buildData))
+            {
+              int? orchestrationType = orchestrationData.Plan.OrchestrationType;
+              int num = 1;
+              if (orchestrationType.GetValueOrDefault() == num & orchestrationType.HasValue)
+                buildData.OrchestrationPlan = orchestrationData.Plan;
+              buildData.Plans.Add(orchestrationData.Plan);
+            }
+          }
+        }
+        updateBuildsResult = result;
+      }
+      return updateBuildsResult;
+    }
+
+    public override BuildDefinition UpdateDefinition(
+      BuildDefinition definition,
+      Guid requestedBy,
+      string originalSecurityToken,
+      string newSecurityToken)
+    {
+      this.TraceEnter(0, nameof (UpdateDefinition));
+      this.PrepareStoredProcedure("Build.prc_UpdateDefinition");
+      string parameterValue1 = (string) null;
+      string parameterValue2 = (string) null;
+      string parameterValue3 = (string) null;
+      if (definition.Repository != null)
+      {
+        parameterValue1 = definition.Repository.Type;
+        parameterValue2 = definition.Repository.Id;
+        parameterValue3 = definition.Repository.DefaultBranch;
+      }
+      this.BindInt("@dataspaceId", this.GetDataspaceId(definition.ProjectId));
+      this.BindInt("@definitionId", definition.Id);
+      this.BindInt("@definitionVersion", definition.Revision.Value);
+      this.BindString("@definitionName", DBHelper.ServerPathToDBPath(definition.Name), 260, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindNullableInt32("@queueId", definition.Queue != null ? new int?(definition.Queue.Id) : new int?());
+      this.BindByte("@queueStatus", (byte) definition.QueueStatus);
+      this.BindString("@repositoryType", parameterValue1, 40, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@repositoryIdentifier", parameterValue2, 400, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindString("@defaultBranch", parameterValue3, 400, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindInt("@triggerTypes", (int) definition.Triggers.Aggregate<BuildTrigger, DefinitionTriggerType>(DefinitionTriggerType.None, (Func<DefinitionTriggerType, BuildTrigger, DefinitionTriggerType>) ((x, y) => x | y.TriggerType)));
+      this.BindString("@options", this.ToString<List<BuildOption>>(definition.Options), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@repository", JsonUtility.ToString((object) definition.Repository), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@triggers", this.ToString<List<BuildTrigger>>(definition.Triggers), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@process", JsonUtility.ToString((object) definition.Process), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      BuildProcess process = definition.Process;
+      this.BindInt("@processType", process != null ? process.Type : 1);
+      this.BindString("@variables", this.ToString<Dictionary<string, BuildDefinitionVariable>>(definition.Variables), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@demands", this.ToString<List<Demand>>(definition.Demands), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@retentionPolicy", (string) null, -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@description", definition.Description, 260, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindString("@buildNumberFormat", definition.BuildNumberFormat, 260, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindByte("@jobAuthorizationScope", (byte) definition.JobAuthorizationScope);
+      this.BindNullableInt("@jobTimeout", definition.JobTimeoutInMinutes, 0);
+      this.BindInt("@jobCancelTimeout", definition.JobCancelTimeoutInMinutes);
+      this.BindBoolean("@badgeEnabled", definition.BadgeEnabled);
+      this.BindString("@comment", definition.Comment, 2048, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      this.BindGuid("@requestedBy", requestedBy);
+      this.BindGuid("@writerId", this.Author);
+      this.BindString("@path", DBHelper.UserToDBPath(definition.Path), 400, BindStringBehavior.Unchanged, SqlDbType.NVarChar);
+      this.BindString("@originalSecurityToken", originalSecurityToken, 435, false, SqlDbType.NVarChar);
+      this.BindString("@newSecurityToken", newSecurityToken, 435, false, SqlDbType.NVarChar);
+      this.BindString("@processParameters", JsonUtility.ToString((object) definition.ProcessParameters), -1, BindStringBehavior.EmptyStringToNull, SqlDbType.NVarChar);
+      using (ResultCollection resultCollection = new ResultCollection((IDataReader) this.ExecuteReader(), this.ProcedureName, this.RequestContext))
+      {
+        resultCollection.AddBinder<BuildDefinition>(this.GetBuildDefinitionBinder());
+        resultCollection.AddBinder<DefinitionTagData>(this.GetDefinitionTagDataBinder());
+        BuildDefinition buildDefinition = resultCollection.GetCurrent<BuildDefinition>().FirstOrDefault<BuildDefinition>();
+        resultCollection.NextResult();
+        foreach (DefinitionTagData definitionTagData in resultCollection.GetCurrent<DefinitionTagData>())
+          buildDefinition.Tags.Add(definitionTagData.Tag);
+        this.TraceLeave(0, nameof (UpdateDefinition));
+        return buildDefinition;
+      }
+    }
+
+    protected override ObjectBinder<BuildDefinition> GetBuildDefinitionBinder() => (ObjectBinder<BuildDefinition>) new BuildDefinitionBinder12(this.RequestContext, (BuildSqlComponentBase) this);
+
+    protected override ObjectBinder<BuildData> GetBuildDataBinder() => (ObjectBinder<BuildData>) new BuildDataBinder13(this.RequestContext, (BuildSqlComponentBase) this);
+  }
+}

@@ -1,0 +1,218 @@
+﻿{
+  "id": "Xcode",
+  "name": "Xcode",
+  "category": "Build",
+  "defaultHostedQueue": "Hosted macOS",
+  "description": "Build, test, archive, or package an Xcode workspace on macOS.",
+  "iconTaskId": "1E78DC1B-9132-4B18-9C75-0E7ECC634B74",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": false,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "d2eff759-736d-4b7b-8554-7ba0960d49d6",
+                                "versionSpec": "2.*"
+                            },
+                            "inputs": {
+                                "certPwd": "$(P12password)"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "0f9f66ca-250e-40fd-9678-309bcd439d5e",
+                                "versionSpec": "1.*"
+                            },
+                            "inputs": {
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "1e78dc1b-9132-4b18-9c75-0e7ecc634b74",
+                                "versionSpec": "5.*"
+                            },
+                            "inputs": {
+                                "actions": "test",
+                                "configuration": "$(TestConfiguration)",
+                                "sdk": "$(TestSDK)",
+                                "xcWorkspacePath": "$(Parameters.xcWorkspacePath)",
+                                "scheme": "$(Parameters.scheme)",
+                                "xcodeVersion": "$(Parameters.xcodeVersion)",
+                                "xcodeDeveloperDir": "$(Parameters.xcodeDeveloperDir)",
+                                "signingOption": "default",
+                                "packageApp": "false",
+                                "destinationPlatformOption": "iOS",
+                                "publishJUnitResults": "true"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "1e78dc1b-9132-4b18-9c75-0e7ecc634b74",
+                                "versionSpec": "5.*"
+                            },
+                            "inputs": {
+                                "actions": "build",
+                                "configuration": "$(Configuration)",
+                                "sdk": "$(SDK)",
+                                "xcWorkspacePath": "$(Parameters.xcWorkspacePath)",
+                                "scheme": "$(Parameters.scheme)",
+                                "xcodeVersion": "$(Parameters.xcodeVersion)",
+                                "xcodeDeveloperDir": "$(Parameters.xcodeDeveloperDir)",
+                                "exportPath": "output/$(SDK)/$(Configuration)",
+                                "publishJUnitResults": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": true,
+                            "task": {
+                                "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                                "versionSpec": "2.*"
+                            },
+                            "inputs": {
+                                "SourceFolder": "$(system.defaultworkingdirectory)",
+                                "Contents": "**/*.ipa",
+                                "TargetFolder": "$(build.artifactstagingdirectory)",
+                                "CleanTargetFolder": "false",
+                                "OverWrite": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": true,
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            },
+                            "inputs": {
+                                "PathtoPublish": "$(build.artifactstagingdirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "app": "**/*.ipa"
+                            },
+                            "task": {
+                                "id": "ad5cd22a-be4e-48bb-adce-181a32432da5",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "app": "**/*.ipa"
+                            },
+                            "task": {
+                                "id": "b832bec5-8c27-4fef-9fb8-6bec8524ad8a",
+                                "versionSpec": "2.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "Configuration": {
+                "value": "Release",
+                "allowOverride": true
+            },
+            "SDK": {
+                "value": "iphoneos",
+                "allowOverride": true
+            },
+            "TestSDK": {
+                "value": "iphonesimulator",
+                "allowOverride": true
+            },
+            "TestConfiguration": {
+                "value": "Debug",
+                "allowOverride": true
+            },
+            "P12password": {
+                "isSecret": true,
+                "value": null
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "name": "xcWorkspacePath",
+                    "defaultValue": "**/*.xcodeproj/project.xcworkspace",
+                    "label": "{WorkspacePathLabel}",
+                    "required": "false",
+                    "type": "filePath",
+                    "helpMarkdown": "{WorkspacePathDescription}"
+                },
+                {
+                    "name": "scheme",
+                    "defaultValue": "",
+                    "label": "{SchemeLabel}",
+                    "required": "false",
+                    "type": "string",
+                    "helpMarkdown": "{SchemeDescription}"
+                },
+                {
+                    "name": "xcodeVersion",
+                    "type": "pickList",
+                    "label": "{XcodeVersionLabel}",
+                    "required": false,
+                    "helpMarkDown": "{XcodeVersionDescription}",
+                    "defaultValue": "default",
+                    ".comment": "// If you're adding an option below, add it to the Xcode task as well. If you're removing an option, remove it from the next major version of the task.",
+                    "options": {
+                        "default": "Default",
+                        "8": "Xcode 8",
+                        "9": "Xcode 9",
+                        "10": "Xcode 10",
+                        "specifyPath": "Specify path"
+                    }
+                },
+                {
+                    "name": "xcodeDeveloperDir",
+                    "type": "string",
+                    "label": "{XcodeDeveloperDirLabel}",
+                    "required": false,
+                    "helpMarkDown": "{XcodeDeveloperDirDescription}",
+                    "visibleRule": "xcodeVersion == specifyPath"
+                }
+            ]
+        }
+    }
+}

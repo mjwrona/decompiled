@@ -1,0 +1,207 @@
+{
+  "id": "AzureFunctionsForNodeJS",
+  "name": "Azure Functions for Node JS",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "501DD25D-1785-43E4-B4E5-A5C78CCC0573",
+  "description": "Build and package a NodeJS based Azure Functions application to be deployed on Azure Functions.",
+  "template": {
+    "process": {
+      "type": 1,
+      "phases": [
+        {
+          "steps": [
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Build extensions",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+                    "versionSpec": "3.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "targetType": "inline",
+                    "filePath": "",
+                    "arguments": "",
+                    "script": "if [ -f extensions.csproj ]\nthen\n    dotnet build extensions.csproj --output ./bin\nfi",
+                    "workingDirectory": "",
+                    "failOnStderr": "false",
+                    "noProfile": "true",
+                    "noRc": "true"
+                }
+            },
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Use Node version 10.14.1",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "31c75bbb-bcdf-4706-8d7c-4da6a1959bc2",
+                    "versionSpec": "0.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "versionSpec": "10.14.1",
+                    "checkLatest": "false"
+                }
+            },
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Install Application Dependencies",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+                    "versionSpec": "1.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "command": "install",
+                    "workingDir": "$(System.DefaultWorkingDirectory)",
+                    "verbose": "false",
+                    "customCommand": "",
+                    "customRegistry": "useNpmrc",
+                    "customFeed": "",
+                    "customEndpoint": "",
+                    "publishRegistry": "useExternalRegistry",
+                    "publishFeed": "",
+                    "publishPackageMetadata": "true",
+                    "publishEndpoint": ""
+                }
+            },
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Run 'build' script",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+                    "versionSpec": "1.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "command": "custom",
+                    "workingDir": "$(System.DefaultWorkingDirectory)",
+                    "verbose": "false",
+                    "customCommand": "run build --if-present",
+                    "customRegistry": "useNpmrc",
+                    "customFeed": "",
+                    "customEndpoint": "",
+                    "publishRegistry": "useExternalRegistry",
+                    "publishFeed": "",
+                    "publishPackageMetadata": "true",
+                    "publishEndpoint": ""
+                }
+            },
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Remove extraneous packages",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+                    "versionSpec": "1.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "command": "custom",
+                    "workingDir": "$(System.DefaultWorkingDirectory)",
+                    "verbose": "false",
+                    "customCommand": "prune --production",
+                    "customRegistry": "useNpmrc",
+                    "customFeed": "",
+                    "customEndpoint": "",
+                    "publishRegistry": "useExternalRegistry",
+                    "publishFeed": "",
+                    "publishPackageMetadata": "true",
+                    "publishEndpoint": ""
+                }
+            },
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Archive files",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "d8b84976-e99a-4b86-b885-4849694435b0",
+                    "versionSpec": "2.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "rootFolderOrFile": "$(System.DefaultWorkingDirectory)",
+                    "includeRootFolder": "false",
+                    "archiveType": "zip",
+                    "tarCompression": "gz",
+                    "archiveFile": "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip",
+                    "replaceExistingArchive": "true",
+                    "verbose": "false",
+                    "quiet": "false"
+                }
+            },
+            {
+                "environment": {},
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "Publish Artifact: drop",
+                "timeoutInMinutes": 0,
+                "condition": "succeeded()",
+                "task": {
+                    "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                    "versionSpec": "1.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+                    "ArtifactName": "drop",
+                    "ArtifactType": "Container",
+                    "TargetPath": "",
+                    "Parallel": "false",
+                    "ParallelCount": "8"
+                }
+            }
+          ]
+        }
+      ]
+    },
+    "options": [
+      {
+        "enabled": true,
+        "definition": {
+          "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+        },
+        "inputs": {}
+      }
+    ],
+    "variables": {
+      "system.debug": {
+        "value": "false",
+        "allowOverride": true
+      }
+    },
+    "properties": {},
+    "tags": [],
+    "triggers": [],
+    "processParameters": {}
+  }
+}

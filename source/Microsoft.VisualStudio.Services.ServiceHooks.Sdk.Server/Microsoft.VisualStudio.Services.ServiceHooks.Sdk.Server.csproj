@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ServiceHooks.Sdk.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D4056E0-11A3-474D-9797-50E3E9D351F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ServiceHooks.Sdk.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Bitbucket.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.Bitbucket.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Consumers">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.Consumers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TeamFoundation\ServiceHooks\Sdk\Server\PipelineEventType.cs" />
+    <Compile Include="TeamFoundation\ServiceHooks\Sdk\Server\PipelineEventConstants.cs" />
+    <Compile Include="TeamFoundation\ServiceHooks\Sdk\Server\PipelineEventProperties.cs" />
+    <Compile Include="TeamFoundation\ServiceHooks\Sdk\Server\PipelineExternalEventLogger.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\AzureContainerRegistryServiceHooksConstants.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\AzureContainerRegistryServiceHooksTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\AzureContainerRegistryServiceHookSubtopics.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherConsumerActionsController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherConsumersController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherExternalEventsController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksInputValuesQueryController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherNotificationsController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherNotificationsQueryController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherPublisherEventTypesController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherInputValuesQueryController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherPublishersController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherPublishersQueryController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublisherControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\SubscriptionDiagnosticsController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherSubscriptionsController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherSubscriptionsQueryController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\HooksPublisherTestNotificationsController.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\DockerHubServiceHooksConstants.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\DockerHubServiceHooksTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksLinksUtility.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ConsumerExtensions.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\EventDataExtensions.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\PublisherExtensions.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\SubscriptionExtensions.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\GitHubServiceHooksConstants.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\GitHubServiceHooksTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\BitbucketServiceHooksConstants.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\BitbucketServiceHooksTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\GitHubServiceHookSubtopics.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\JenkinsServiceHooksConstants.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\JenkinsServiceHooksTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksEventService.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\SHNotificationNonretryableFailureException.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IServiceHooksExtensionManagement.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ContextDataKeys.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\InputForm.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IRemotableServiceHooksPublisher.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IServiceHooksPublisherEventRegistration.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IRealEventDataProvider.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IFrameworkServiceHooksEventRegistration.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IFrameworkServiceHooksPublisherInputsResultFilter.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\IServiceHooksPublisherService.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\PublishingUtils.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksExternalPublisher.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksClientService.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublisher.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublisherResources.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublisherService.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublisherEventData.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ContributedServiceHooksPublisher.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksSdkConstants.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksChannelMetadata.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksSdkTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\ServiceHooks\Sdk\Server\TfsGitServiceHooksTracePoints.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublishing\FallbackPublishers\RmServiceHooksPublisher.json" />
+    <EmbeddedResource Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublishing\FallbackPublishers\TfsServiceHooksPublisher.json" />
+    <EmbeddedResource Include="VisualStudio\Services\ServiceHooks\Sdk\Server\ServiceHooksPublishing\ServiceHooksPublisherResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

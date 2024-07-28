@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.SignalR.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{260BC272-91F8-4F43-9355-78EBC2803DB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.SignalR</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.SignalR</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImpromptuInterface">
+      <HintPath>lib\ImpromptuInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>lib\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>lib\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>lib\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>lib\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>lib\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>lib\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ISignalRApplicationExtension.cs" />
+    <Compile Include="IVssSignalRHubGroupService.cs" />
+    <Compile Include="RouteDirectionConstraint.cs" />
+    <Compile Include="SignalRConstants.cs" />
+    <Compile Include="HttpContextKeys.cs" />
+    <Compile Include="IGroupManagerExtensions.cs" />
+    <Compile Include="IHubConnectionContextExtensions.cs" />
+    <Compile Include="IHubContextExtensions.cs" />
+    <Compile Include="IAppBuilderExtensions.cs" />
+    <Compile Include="IVssSignalRConfigurationService.cs" />
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="SignalRDefaultSettings.cs" />
+    <Compile Include="SignalRHubProxyPerformanceCounters.cs" />
+    <Compile Include="VssCorsPolicyProvider.cs" />
+    <Compile Include="IVssMessageBusProvider.cs" />
+    <Compile Include="VssMessageBusProvider.cs" />
+    <Compile Include="VssSignalRFeatures.cs" />
+    <Compile Include="VssSignalRHub.cs" />
+    <Compile Include="VssSignalRHubCacheData.cs" />
+    <Compile Include="VssSignalRHubGroupCache.cs" />
+    <Compile Include="VssSignalRConfigurationService.cs" />
+    <Compile Include="VssSignalRHubGroupService.cs" />
+    <Compile Include="VssSignalRHubGroup.cs" />
+    <Compile Include="VssSignalRHubGroupConnection.cs" />
+    <Compile Include="VssSignalRHubGroupId.cs" />
+    <Compile Include="VssSignalRMiddleware.cs" />
+    <Compile Include="VssSignalRStartup.cs" />
+    <Compile Include="VssSignalRUtility.cs" />
+    <Compile Include="RequestExtensions.cs" />
+    <Compile Include="VssUserIdProvider.cs" />
+    <Compile Include="Tracing\IVssSignalRTraceForwarder.cs" />
+    <Compile Include="Tracing\DefaultTraceForwarder.cs" />
+    <Compile Include="Tracing\VssSignalRTraceListener.cs" />
+    <Compile Include="Tracing\VssSignalRTraceConstants.cs" />
+    <Compile Include="Hubs\HubTypeExtensions.cs" />
+    <Compile Include="Hubs\CustomerIntelligenceInfo.cs" />
+    <Compile Include="Hubs\VssHubDescriptorProvider.cs" />
+    <Compile Include="Hubs\IVssHub.cs" />
+    <Compile Include="Hubs\VssHub.cs" />
+    <Compile Include="Hubs\VssHub`1.cs" />
+    <Compile Include="Hubs\VssHubPipelineModule.cs" />
+    <Compile Include="ObjectModel\SignalRStartResponse.cs" />
+    <Compile Include="ObjectModel\SignalRNegotiateResponse.cs" />
+    <Compile Include="Messaging\IVssMessageBus.cs" />
+    <Compile Include="Messaging\VssMessageBusBase.cs" />
+    <Compile Include="Messaging\VssScaleoutConfiguration.cs" />
+    <Compile Include="Messaging\VssMessageBus.cs" />
+    <Compile Include="Messaging\VssMessageBusConfiguration.cs" />
+    <Compile Include="DataAccess\VssSignalRConnectionIdBinder.cs" />
+    <Compile Include="DataAccess\VssSignalRCustomSqlError.cs" />
+    <Compile Include="DataAccess\VssSignalRHubComponent.cs" />
+    <Compile Include="DataAccess\VssSignalRHubComponent2.cs" />
+    <Compile Include="DataAccess\VssSignalRHubComponent3.cs" />
+    <Compile Include="DataAccess\VssSignalRHubComponent4.cs" />
+    <Compile Include="DataAccess\VssSignalRHubGroupBinder.cs" />
+    <Compile Include="DataAccess\VssSignalRHubGroupConnectionBinder.cs" />
+    <Compile Include="DataAccess\VssSignalRSqlNotificationEventIds.cs" />
+    <Compile Include="Contracts\UrlSigningStartResponse.cs" />
+    <Compile Include="Contracts\UrlSigningProtocolResponse.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PerfCounters\man.template" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

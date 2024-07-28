@@ -1,0 +1,190 @@
+﻿{
+    "id": "AzureIaaS",
+    "name": "Load test using Azure IaaS virtual machines",
+    "category": "Deployment",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "description": "Create a rig on Azure IaaS virtual machines to run load tests using VSTS cloud-based load testing service.",
+    "iconTaskId": "9e9db38a-b40b-4c13-b7f0-31031c894c22",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "continueOnError": true,
+                            "timeoutInMinutes": 0,
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceName",
+                                "ConnectedServiceName": "$(Parameters.connectedServiceName)",
+                                "ConnectedServiceNameClassic": "",
+                                "action": "Start",
+                                "actionClassic": "Select Resource Group",
+                                "resourceGroupName": "$(resourceGroupName)",
+                                "location": "East US"
+                            },
+                            "task": {
+                                "id": "94a74903-f93f-4075-884f-dc11f34058b4",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "timeoutInMinutes": 0,
+                            "task": {
+                                "id": "94a74903-f93f-4075-884f-dc11f34058b4",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceName",
+                                "ConnectedServiceName": "$(Parameters.connectedServiceName)",
+                                "action": "Create Or Update Resource Group",
+                                "actionClassic": "Select Resource Group",
+                                "resourceGroupName": "$(resourceGroupName)",
+                                "csmFile": "$(Parameters.csmFile)",
+                                "location": "East US",
+                                "overrideParameters": "-VSTSAccountName $(VSTSAccountName) -vstsPersonalAccessToken (ConvertTo-SecureString -String '$(VSTSPersonalAccessToken)' -AsPlainText -Force) -agentCount $(agentCount) -adminPassword (ConvertTo-SecureString -String '$(adminPassword)' -AsPlainText -Force) -adminUsername $(adminUserName)"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": true,
+                            "timeoutInMinutes": 0,
+                            "task": {
+                                "id": "9e9db38a-b40b-4c13-b7f0-31031c894c22",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "MachineType": "2",
+                                "TestSettings": "$(Parameters.TestSettings)",
+                                "TestDrop": "$(Parameters.TestDrop)",
+                                "LoadTest": "$(Parameters.LoadTest)"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "timeoutInMinutes": 0,
+                            "task": {
+                                "id": "94a74903-f93f-4075-884f-dc11f34058b4",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceName",
+                                "ConnectedServiceName": "$(Parameters.connectedServiceName)",
+                                "action": "Stop",
+                                "actionClassic": "Select Resource Group",
+                                "resourceGroupName": "$(resourceGroupName)",
+                                "location": "East US"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "resourceGroupName": {
+                "value": ""
+            },
+            "VSTSAccountName": {
+                "value": ""
+            },
+            "VSTSPersonalAccessToken": {
+                "value": ""
+            },
+            "agentCount": {
+                "value": "1"
+            },
+            "adminPassword": {
+                "value": ""
+            },
+            "adminUserName": {
+                "value": ""
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "connectedServiceName",
+                    "label": "{AzureSubscriptionLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "connectedService:AzureRM",
+                    "helpMarkDown": "{AzureSubscriptionDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "csmFile",
+                    "label": "{AzureTemplateLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{AzureTemplateDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "LoadTest",
+                    "label": "{LoadTestLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "string",
+                    "helpMarkDown": "{LoadTestDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "TestDrop",
+                    "label": "{TestDropLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{TestDropDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "TestSettings",
+                    "label": "{TestSettingsLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{TestSettingsDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.Query.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A828394-D747-4BC6-9535-190229829C31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Query</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Query</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Markdig.Signed" />
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common.Arriba">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.Arriba.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Indexer">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Indexer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.ReSearch.Core">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.ReSearch.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.DataAccess" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.WorkItemFieldCache" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.WorkItemRecentHistoryCache">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.WorkItemRecentHistoryCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Search\Common\AbstractCountHandler.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Search\WebServer\IWorkItemSecurityChecksService.cs" />
+    <Compile Include="CodeForwarderHelpers.cs" />
+    <Compile Include="CodeSearchQueryTransformerV4.cs" />
+    <Compile Include="QueryForwarderHelpers.cs" />
+    <Compile Include="SettingSearchQueryTransformer.cs" />
+    <Compile Include="SettingSearchQueryTagger.cs" />
+    <Compile Include="SettingSearchRequestForwarder.cs" />
+    <Compile Include="RegexCorrectorForTrigram.cs" />
+    <Compile Include="CodeSearchQueryTransformerBase.cs" />
+    <Compile Include="CodeSearchQueryTransformerV2.cs" />
+    <Compile Include="CodeSearchQueryTransformerV3.cs" />
+    <Compile Include="EntitySearchPhraseSuggesterHelper.cs" />
+    <Compile Include="EntitySearchQueryTagger.cs" />
+    <Compile Include="IdentityHelper.cs" />
+    <Compile Include="IRegexQueryExpressionConstructor.cs" />
+    <Compile Include="IScrollSearchQueryForwarder`2.cs" />
+    <Compile Include="ISearchQueryTransformer.cs" />
+    <Compile Include="PackageCountRequestForwarder.cs" />
+    <Compile Include="CollectionPackageCountRequestForwarder.cs" />
+    <Compile Include="RegexQueryExpressionConstructor.cs" />
+    <Compile Include="RegexAutomaton.cs" />
+    <Compile Include="ProjectRepoSearchQueryTaggerBase.cs" />
+    <Compile Include="IWorkItemFieldNameResolver.cs" />
+    <Compile Include="PackageSearchRequestForwarder.cs" />
+    <Compile Include="BoardSearchRequestForwarder.cs" />
+    <Compile Include="BoardSearchQueryTagger.cs" />
+    <Compile Include="BoardSearchQueryTransformer.cs" />
+    <Compile Include="CollectionPackageSearchRequestForwarder.cs" />
+    <Compile Include="PackageSearchQueryTagger.cs" />
+    <Compile Include="PackageSearchQueryTaggerConstants.cs" />
+    <Compile Include="PackageSearchQueryTransformer.cs" />
+    <Compile Include="ScrollCodeSearchQueryForwarder.cs" />
+    <Compile Include="ScrollEntitySearchQueryForwarder`2.cs" />
+    <Compile Include="SuggesterSearchTextHelper.cs" />
+    <Compile Include="WikiCountRequestForwarder.cs" />
+    <Compile Include="SearchQueryTransformerFactory.cs" />
+    <Compile Include="WikiSearchQueryForwarder.cs" />
+    <Compile Include="WikiSearchQueryTagger.cs" />
+    <Compile Include="WikiSearchQueryTransformer.cs" />
+    <Compile Include="WorkItemAlternateFieldNames.cs" />
+    <Compile Include="WorkItemQueryInlineFiltersExtractor.cs" />
+    <Compile Include="WorkItemSearchQueryTagger.cs" />
+    <Compile Include="WorkItemSearchQueryTransformer.cs" />
+    <Compile Include="WorkItemSearchQueryForwarder.cs" />
+    <Compile Include="EntitySearchQueryForwarder`2.cs" />
+    <Compile Include="CodeSearchQueryTagger.cs" />
+    <Compile Include="IIndexMapper.cs" />
+    <Compile Include="ISearchQueryForwarder`2.cs" />
+    <Compile Include="CodeCountRequestForwarder.cs" />
+    <Compile Include="ICountRequestForwarder.cs" />
+    <Compile Include="CountRequestForwarderBase.cs" />
+    <Compile Include="WorkItemCountRequestForwarder.cs" />
+    <Compile Include="IndexMapper.cs" />
+    <Compile Include="CodeSearchQueryForwarder.cs" />
+    <Compile Include="CodeSearchQueryTransformer.cs" />
+    <Compile Include="ISearchRequestForwarder`2.cs" />
+    <Compile Include="EntitySearchRequestForwarder`2.cs" />
+    <Compile Include="SecurityChecksCache\CodeSecurityChecksCache.cs" />
+    <Compile Include="SecurityChecksCache\ICodeSecurityChecksCache.cs" />
+    <Compile Include="SecurityChecksCache\RepoHash.cs" />
+    <Compile Include="SecurityChecksCache\ISecurityChecksCache`1.cs" />
+    <Compile Include="SecurityChecksCache\SecurityChecksCacheBase`1.cs" />
+    <Compile Include="SecurityChecksCache\WorkItemSecurityChecksCache.cs" />
+    <Compile Include="SecurityChecksCache\WorkItemSecuritySet.cs" />
+    <Compile Include="SecurityChecksCache\PackageSecurityChecksCache.cs" />
+    <Compile Include="SecurityChecksCache\PackageSecuritySet.cs" />
+    <Compile Include="SecurityScopeFilterService\ISearchSecurityScopeFilterExpressionBuilder.cs" />
+    <Compile Include="SecurityScopeFilterService\WikiSearchSecurityScopeFilterExpressionBuilder.cs" />
+    <Compile Include="SecurityScopeFilterService\PackageSearchSecurityScopeFilterExpressionBuilder.cs" />
+    <Compile Include="SecurityChecksService\GitRepoSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\IWikiSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\WikiSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\WorkItemSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\ProjectAdminIdentity.cs" />
+    <Compile Include="SecurityChecksService\ICodeSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\ISecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\CodeSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\ByteArrayComparer.cs" />
+    <Compile Include="SecurityChecksService\TfvcPathExtensions.cs" />
+    <Compile Include="SecurityChecksService\PackageSecurityChecksService.cs" />
+    <Compile Include="SecurityChecksService\IPackageSecurityChecksService.cs" />
+    <Compile Include="Correctors\CodeNormalizationTermCorrectorV4.cs" />
+    <Compile Include="Correctors\CodeFilterAliasCorrectorV2.cs" />
+    <Compile Include="Correctors\CodeNormalizationTermCorrectorV3.cs" />
+    <Compile Include="Correctors\CodeSearchUnsupportedCharacterTermCorrectorV2.cs" />
+    <Compile Include="Correctors\DoubleQuotesCorrectorForExpressionType.cs" />
+    <Compile Include="Correctors\DoubleQuotesCorrectorForExpressionValue.cs" />
+    <Compile Include="Correctors\PackageInlineFieldCorrector.cs" />
+    <Compile Include="Correctors\CodeSearchUnsupportedCharacterTermCorrector.cs" />
+    <Compile Include="Correctors\DoubleQuotesCorrector.cs" />
+    <Compile Include="Correctors\FileMetadataExtensionTermCorrectorV2.cs" />
+    <Compile Include="Correctors\MeCorrector.cs" />
+    <Compile Include="Correctors\CodeNormalizationTermCorrectorV2.cs" />
+    <Compile Include="Correctors\TermExpressionValueCorrector.cs" />
+    <Compile Include="Correctors\TodayCorrector.cs" />
+    <Compile Include="Correctors\UnrecognizedTypeTermCorrectorV2.cs" />
+    <Compile Include="Correctors\WikiInlineFieldCorrector.cs" />
+    <Compile Include="Correctors\WikiNormalizationTermCorrector.cs" />
+    <Compile Include="Correctors\WorkItemSearchUnsupportedCharacterTermCorrector.cs" />
+    <Compile Include="Correctors\PostfixWildcardTermCorrector.cs" />
+    <Compile Include="Correctors\WorkitemWildcardTermCorrector.cs" />
+    <Compile Include="Correctors\WorkItemFieldNameCorrector.cs" />
+    <Compile Include="Correctors\CodeFilterAliasCorrector.cs" />
+    <Compile Include="Correctors\EmptyExpressionCorrector.cs" />
+    <Compile Include="Correctors\FileExtensionTermCorrector.cs" />
+    <Compile Include="Correctors\CodeNormalizationTermCorrector.cs" />
+    <Compile Include="Correctors\PhraseWildcardCorrector.cs" />
+    <Compile Include="Correctors\FileMetadataExtensionTermCorrector.cs" />
+    <Compile Include="Correctors\UnrecognizedTypeTermCorrector.cs" />
+    <Compile Include="Correctors\UnsupportedCharTermCorrector.cs" />
+    <Compile Include="Correctors\WildcardTermCorrector.cs" />
+    <Compile Include="Correctors\Relevance\CurrentUserCorrector.cs" />
+    <Compile Include="Correctors\Relevance\IRelevanceRuleCorrector.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

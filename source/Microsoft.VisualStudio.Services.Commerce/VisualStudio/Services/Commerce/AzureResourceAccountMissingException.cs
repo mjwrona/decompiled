@@ -1,0 +1,25 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Commerce.AzureResourceAccountMissingException
+// Assembly: Microsoft.VisualStudio.Services.Commerce, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: E1A903DA-646E-45AC-891B-7946BA20E824
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Commerce.dll
+
+using Microsoft.VisualStudio.Services.Common;
+using System;
+
+namespace Microsoft.VisualStudio.Services.Commerce
+{
+  [Serializable]
+  public class AzureResourceAccountMissingException : VssServiceException
+  {
+    public AzureResourceAccountMissingException(Guid accountId)
+      : base(HostingResources.AccountDoesNotExist((object) accountId))
+    {
+    }
+
+    public AzureResourceAccountMissingException(string resourceName)
+      : base(HostingResources.AccountDoesNotExist((object) resourceName))
+    {
+    }
+  }
+}

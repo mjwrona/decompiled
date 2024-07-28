@@ -1,0 +1,189 @@
+﻿{
+  "id": "B601165E-008F-4B6D-8DA4-E4BCE9BDC8A6",
+  "name": "Blue-Green Deployment Strategy on Linux Virtual Machines",
+  "category": "Deployment",
+  "iconTaskId": "4dda660c-b643-4598-a4a2-61080d0002d9",
+  "description": "Deploy using Blue-Green strategy to deployment group containing linux virtual machine",
+  "environment": {
+    "name": "dev",
+    "rank": 1,
+    "variables": {
+      "patToken": {
+        "value": "$(Parameters.PATToken)",
+        "isSecret": true,
+        "allowOverride": true
+      },
+      "deploymentGroupId": {
+        "value": "$(Parameters.DeploymentGroupId)",
+        "isSecret": false,
+        "allowOverride": true
+      }
+    },
+    "deployPhases": [
+      {
+        "deploymentInput": {
+          "healthPercent": 0,
+          "deploymentHealthOption": "Custom",
+          "tags": [
+            "green"
+          ],
+          "skipArtifactsDownload": false,
+          "artifactsDownloadInput": {
+            "downloadInputs": []
+          },
+          "queueId": 1,
+          "demands": [],
+          "enableAccessToken": false,
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "rank": 1,
+        "phaseType": 4,
+        "name": "Deploy Green",
+        "refName": null,
+        "workflowTasks": [
+          {
+            "environment": {},
+            "taskId": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+            "version": "3.*",
+            "name": "Execute Deploy Script",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "targetType": "inline",
+              "filePath": "",
+              "arguments": "",
+              "script": "echo \"Congratulations! You are all set to deploy using Blue-Green deployment strategy.\nNext steps:\n1. In the deployment group job phases, select the deployment group that will be targeted in the run.\n2. In variables tab, fill the values for pat token and deployment group id. \n2. Make sure that in the targeted deployment group, standby VMs are tagged as 'green' and live VMs are tagged as 'blue'. The deployment group should have at least one green VM and one blue VM.\n\n\nOptionally, connect directly to any Git repository or service including VSTS (Git or TFVC), GitHub or your private repository and automatically trigger your pipeline from changes to your code. \n\n\nFor more details:  https://aka.ms/AA89uc4\"\n",
+              "workingDirectory": "",
+              "failOnStderr": "false",
+              "noProfile": "true",
+              "noRc": "true"
+            }
+          }
+        ]
+      },
+      {
+        "deploymentInput": {
+          "parallelExecution": {
+            "parallelExecutionType": 0
+          },
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "rank": 2,
+        "phaseType": 2,
+        "name": "Wait for Manual resumption",
+        "refName": null,
+        "workflowTasks": [
+          {
+            "environment": {},
+            "taskId": "bcb64569-d51a-4af0-9c01-ea5d05b3b622",
+            "version": "8.*",
+            "name": "Manual Intervention",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "instructions": "Resume this run if deployment to green environment is stable and tested successfully. During this pause you may also redirect the traffic to the green environment. ",
+              "emailRecipients": "",
+              "onTimeout": "reject"
+            }
+          }
+        ]
+      },
+      {
+        "deploymentInput": {
+          "parallelExecution": {
+            "parallelExecutionType": 0
+          },
+          "agentSpecification": {
+            "identifier": "windows-2019"
+          },
+          "skipArtifactsDownload": false,
+          "artifactsDownloadInput": {
+            "downloadInputs": []
+          },
+          "queueId": 1,
+          "demands": [],
+          "enableAccessToken": false,
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "rank": 3,
+        "phaseType": 1,
+        "name": "Swap Blue-Green Tags on VMs",
+        "refName": null,
+        "workflowTasks": [
+          {
+            "environment": {},
+            "taskId": "e213ff0f-5d5c-4791-802d-52ea3e7be1f1",
+            "version": "2.*",
+            "name": "PowerShell Script",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "targetType": "inline",
+              "filePath": "",
+              "arguments": "",
+              "script": "$blueTag = 'blue'\n$greenTag = 'green'\n$deploymentGroupId='$(deploymentGroupId)'\n\n$PAT = ':$(patToken)'\n$base64AuthInfo = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($PAT))\n\nfunction GetVMsForTag {\nParam([string]$tag)\n\n\t$uri = $env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI + $env:SYSTEM_TEAMPROJECT + '/_apis/distributedtask/deploymentgroups/' + $deploymentGroupId + '/targets?tags=' + $tag\n\n\treturn  Invoke-RestMethod -Uri $uri -Method Get -Headers @{Authorization=('Basic {0}' -f $base64AuthInfo)}\n}\n\nfunction GetVMJsonWithSwitchedTags {\nParam([PSCustomObject]$vmResources, [string]$oldtag, [string]$newtag)\n\n\t$allVMs = New-Object Collections.Generic.List[PSCustomObject]\n\n\tforeach ($vmResource in $vmResources)\n\t{\n\t\t$vm=@{}\n\t\t$vm.id = $vmResource.id\n\t\t\n\t\t$tags = @()\n\t\t$tags += $newtag\n\t\tforeach ($tag in $vmResource.tags)\n\t\t{ \n\t\t\tif ($tag -ne $oldtag)\n\t\t\t{\n\t\t\t\t$tags += $tag\n\t\t\t}\n\t\t}\n\t\t$vm.tags = $tags\n\n\t\t$allVMs.Add($vm)\n\t}\n\t\n\treturn  ConvertTo-Json $allVMs \n}\n\nfunction SwitchTags {\nParam([PSCustomObject]$vmResources, [string]$oldtag, [string]$newtag)\n\t\n\t$body = GetVMJsonWithSwitchedTags -vmResources $vmResources -oldtag $oldtag -newtag $newtag\n\n\t$uri = $env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI + $env:SYSTEM_TEAMPROJECT + '/_apis/distributedtask/deploymentgroups/' + $deploymentGroupId + '/targets?api-version=5.1-preview.1'\n\n\tInvoke-RestMethod -Uri $uri -Method Patch -Body $body -ContentType 'application/json' -Headers @{Authorization=('Basic {0}' -f $base64AuthInfo)}\n}\n\n$greenVMs = GetVMsForTag -tag $greenTag\n$blueVMs = GetVMsForTag -tag $blueTag\n\nif ($greenVMs.count -gt 0)\n{\n\tSwitchTags -vmResources $greenVMs.value -oldtag $greenTag -newtag $blueTag\n}\nelse\n{\n\tWrite-Output 'No green tagged VM(s) found'\n}\n\nif ($blueVMs.count -gt 0)\n{\n\tSwitchTags -vmResources $blueVMs.value -oldtag $blueTag -newtag $greenTag\n}\nelse\n{\n\tWrite-Output 'No blue tagged VM(s) found'\n}",
+              "errorActionPreference": "stop",
+              "failOnStderr": "false",
+              "ignoreLASTEXITCODE": "false",
+              "pwsh": "false",
+              "workingDirectory": ""
+            }
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    }
+  }
+}

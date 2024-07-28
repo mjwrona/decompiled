@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_VersionHasLeadingOrTrailingWhitespace" xml:space="preserve">
+    <value>The package version provided is invalid. Versions cannot contain leading or trailing whitespace.</value>
+  </data>
+  <data name="Error_MissingMultipartFormData" xml:space="preserve">
+    <value>The multipart request is missing form data.</value>
+  </data>
+  <data name="Error_InvalidSignatureTooLong" xml:space="preserve">
+    <value>The provided signature is invalid. Valid signatures must not exceed the maximum size of {0} bytes.</value>
+  </data>
+  <data name="Error_InvalidPythonVersionForSourceDist" xml:space="preserve">
+    <value>Python version for filetype sdist must be {0}.</value>
+  </data>
+  <data name="Error_ContentMediaTypeNotApplicationOctetStream" xml:space="preserve">
+    <value>The 'content' part must specify a Content-Type of 'application/octet-stream'.</value>
+  </data>
+  <data name="Error_UnsupportedMarkdownVariant" xml:space="preserve">
+    <value>Markdown variant '{0}' is unsupported. Supported variants are: {1}.</value>
+  </data>
+  <data name="Error_MissingGpgSignatureFilename" xml:space="preserve">
+    <value>The 'gpg_signature' part must specify a filename in the Content-Disposition header.</value>
+  </data>
+  <data name="Error_NonIngestableDistributionType" xml:space="preserve">
+    <value>The distribution type: '{0}' is not allowed to be published.</value>
+  </data>
+  <data name="Error_MissingMultipartFileData" xml:space="preserve">
+    <value>The multipart request is missing file data.</value>
+  </data>
+  <data name="Error_InvalidSha256Digest" xml:space="preserve">
+    <value>The provided SHA256 digest should be a hex-encoded valid SHA256 message digest.</value>
+  </data>
+  <data name="Error_InvalidSignatureNotArmored" xml:space="preserve">
+    <value>The provided signature is invalid. Signatures must be ASCII-armored.</value>
+  </data>
+  <data name="Error_InvalidDescriptionContentType" xml:space="preserve">
+    <value>The package description content type is invalid. It should conform to the format described in PEP 566.</value>
+  </data>
+  <data name="Error_NonIngestableExtension" xml:space="preserve">
+    <value>The file extension: '{0}' for distribution type: '{1}' does not match the allowed extensions: {2}</value>
+  </data>
+  <data name="Error_MissingContentPart" xml:space="preserve">
+    <value>The request must contain a part named 'content'.</value>
+  </data>
+  <data name="Error_InvalidPlatformPartOfWheelFilename" xml:space="preserve">
+    <value>The input file name '{0}' contains an invalid platform part: '{1}'. See the platform section of PEP 425 (and PEP 513 for Linux distributions) for more information.</value>
+  </data>
+  <data name="Error_UpstreamFailure" xml:space="preserve">
+    <value>Failed to retrieve data from the upstream package source '{0}': {1}</value>
+  </data>
+  <data name="Error_InvalidProjectUrl" xml:space="preserve">
+    <value>The Project-URL '{0}' is invalid. A Project-URL is a string containing a browsable URL for the project and a label for it, separated by a comma.</value>
+  </data>
+  <data name="Error_NotSupportedOnPrem" xml:space="preserve">
+    <value>This feature is not supported in an on premises context</value>
+  </data>
+  <data name="Error_InternalUpstreamDoesNotHaveFileRequested" xml:space="preserve">
+    <value>The package file requested {0} from package version {1} does not exisit in the upstream feed with id  {2} .</value>
+  </data>
+  <data name="Error_UnsupportedDescriptionContentTypeCharset" xml:space="preserve">
+    <value>Description content type charset '{0}' is unsupported. Supported charsets are: {1}.</value>
+  </data>
+  <data name="Error_UnsupportedMetadataVersion" xml:space="preserve">
+    <value>Metadata version '{0}' is unsupported. Supported versions are: {1}.</value>
+  </data>
+  <data name="Error_InvalidBlake2Digest" xml:space="preserve">
+    <value>The provided Blake2 digest should be a hex-encoded valid Blake2 message digest.</value>
+  </data>
+  <data name="Error_MissingContentFilename" xml:space="preserve">
+    <value>The 'content' part must specify a filename in the Content-Disposition header.</value>
+  </data>
+  <data name="Error_UnsupportedProtocolVersion" xml:space="preserve">
+    <value>Upload protocol version '{0}' is unsupported. Supported versions are: {1}.</value>
+  </data>
+  <data name="Error_MissingContentValidationDigests" xml:space="preserve">
+    <value>The request must contain either an MD5 or SHA256 digest.</value>
+  </data>
+  <data name="Error_DescriptionExceedsMaximumLength" xml:space="preserve">
+    <value>The package description exceeds the maximum length of {0} bytes.</value>
+  </data>
+  <data name="Error_ApiEndpointNotSupported" xml:space="preserve">
+    <value>This functionality is currently not available.</value>
+  </data>
+  <data name="Error_UpstreamDoesNotHaveFileRequested" xml:space="preserve">
+    <value>The package file requested {0} from package version {1} does not exisit in the upstream source {2} . </value>
+  </data>
+  <data name="Error_InvalidPyPiPackageVersion" xml:space="preserve">
+    <value>The package version provided is invalid. Versions should conform to the format described in PEP 440 and be under 128 characters.</value>
+  </data>
+  <data name="Error_UnknownMarkerVariable" xml:space="preserve">
+    <value>Unknown marker variable {0} at position {1}</value>
+  </data>
+  <data name="Error_InvalidPyPiPackageName" xml:space="preserve">
+    <value>The package name provided is invalid. Names should conform to the format described in PEP 508 and be under 256 characters.</value>
+  </data>
+  <data name="Error_RequirementParseTookTooLong" xml:space="preserve">
+    <value>A requirement specification took too long to parse. Reduce the complexity of requirement specifications and try again.</value>
+  </data>
+  <data name="Error_InvalidUrl" xml:space="preserve">
+    <value>The URL '{0}' is invalid.</value>
+  </data>
+  <data name="Error_InvalidProjectUrlLabel" xml:space="preserve">
+    <value>The label '{0}' in the Project-URL list should be a non blank string of at most 32 characters.</value>
+  </data>
+  <data name="Error_SortableVersionExceedsMaximumLength" xml:space="preserve">
+    <value>The package version '{0}' exceeds the maximum length. Try shortening your version segments. Limiting the amount of period separated numbers might also be helpful.</value>
+  </data>
+  <data name="Error_PackageContainsInvalidRequirement" xml:space="preserve">
+    <value>The package contains an invalid dependency: {0}</value>
+  </data>
+  <data name="Error_UnsupportedDescriptionContentType" xml:space="preserve">
+    <value>Description content type '{0}' is unsupported. Supported types are: {1}.</value>
+  </data>
+  <data name="Error_UpstreamIngestion_CannotSkipIngestion" xml:space="preserve">
+    <value>For security reasons, an upstream package cannot be ingested from a browser. Please use an official Python client.</value>
+  </data>
+  <data name="Error_RequirementParseErrorUnexpectedEOF" xml:space="preserve">
+    <value>Could not parse requirement specification: Unexpected end-of-input at position {0}</value>
+  </data>
+  <data name="Error_RequirementParseError" xml:space="preserve">
+    <value>Could not parse requirement specification: Unexpected character '{0}' at position {1}</value>
+  </data>
+  <data name="Error_MissingIngestionMetadata" xml:space="preserve">
+    <value>The request is missing data required for ingestion: {0}.</value>
+  </data>
+  <data name="Error_InvalidFilename" xml:space="preserve">
+    <value>The input file name '{0}' is invalid. Distribution file names should start with the distribution package name and should not contain '\' or '/' characters. Wheels should conform to the file name convention rules in PEP 427.</value>
+  </data>
+  <data name="Error_InvalidRequiresExternal" xml:space="preserve">
+    <value>The Requires-External spec '{0}' is invalid.</value>
+  </data>
+  <data name="Error_EmailParseTookTooLong" xml:space="preserve">
+    <value>The email '{0}' took too long to parse. Reduce the complexity of the email and try again.</value>
+  </data>
+  <data name="Error_MissingMetadataFile" xml:space="preserve">
+    <value>Packages with file extension '{0}' must contain a metadata file named {1} in the correct location.</value>
+  </data>
+  <data name="Error_ExtrasNotAllowedInDistributionSpecs" xml:space="preserve">
+    <value>Packages with extra names in {0} are not allowed.</value>
+  </data>
+  <data name="Error_UpstreamReturnedNotFound" xml:space="preserve">
+    <value>The upstream URL '{0}' returned a "Not Found" response</value>
+  </data>
+  <data name="Error_OnlyOneSourceDistribution" xml:space="preserve">
+    <value>There is already a source distribution for this package version: {0}. Only one source distribution is allowed per version. See PEP 527 for more information.</value>
+  </data>
+  <data name="Error_InvalidSummary" xml:space="preserve">
+    <value>The package summary provided is invalid. Summaries should be less than 512 characters long and should not contain new lines.</value>
+  </data>
+  <data name="Error_UrlsNotAllowedInRequirementSpecs" xml:space="preserve">
+    <value>Packages with direct (URL) references in {0} are not allowed.</value>
+  </data>
+  <data name="Error_InvalidEmailAddress" xml:space="preserve">
+    <value>The email '{0}' is invalid.</value>
+  </data>
+  <data name="Error_PushRequestMissingBlob" xml:space="preserve">
+    <value>The 'blob' property is required.</value>
+  </data>
+  <data name="Error_InvalidContentDigest" xml:space="preserve">
+    <value>The value for {0} in the request does not match the content's digest. Expected: {1}</value>
+  </data>
+</root>

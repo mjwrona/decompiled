@@ -1,0 +1,149 @@
+{
+  "id": "19a0913c-252b-4829-a1f7-35a61350a786",
+  "name": "Azure Cloud Service deployment",
+  "category": "Deployment",
+  "iconTaskId": "2CA8FE15-42EA-4B26-80F1-E0738EC17E89",
+  "description": "Deploy an Azure Cloud Service.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": [],
+        },
+        "workflowTasks": [
+          {
+            "TaskId": "2ca8fe15-42ea-4b26-80f1-e0738ec17e89",
+            "Version": "1.*",
+            "Name": "Azure Deployment: $(System.DefaultWorkingDirectory)\\**\\*.cspkg",
+            "Inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "StorageAccount": "$(Parameters.StorageAccount)",
+              "ServiceName": "$(Parameters.ServiceName)",
+              "ServiceLocation": "$(Parameters.ServiceLocation)",
+              "CsPkg": "$(System.DefaultWorkingDirectory)\\**\\*.cspkg",
+              "CsCfg": "$(System.DefaultWorkingDirectory)\\**\\*.cscfg",
+              "Slot": "Production",
+              "AllowUpgrade": "true"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:Azure:Certificate,UsernamePassword",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "StorageAccount",
+          "label": "{StorageAccountLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{StorageAccountMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "ServiceName",
+          "label": "{ServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "ServiceLocation",
+          "label": "{ServiceLocationLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ServiceLocationMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureStorageServiceNames",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "StorageAccount"
+        },
+        {
+          "dataSourceName": "AzureHostedServiceNames",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "ServiceName"
+        },
+        {
+          "dataSourceName": "AzureLocations",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "ServiceLocation"
+        }
+      ]
+    }
+  }
+}

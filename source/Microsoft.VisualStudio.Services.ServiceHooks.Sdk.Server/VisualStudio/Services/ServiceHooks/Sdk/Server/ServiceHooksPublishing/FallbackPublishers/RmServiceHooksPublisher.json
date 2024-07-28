@@ -1,0 +1,420 @@
+﻿{
+  "id": "rm",
+  "url": "http://rpotts.me.tfsallin.net:12011/DefaultCollection/_apis/hooks/publishers/rm",
+  "name": "Release Management",
+  "description": "Publishes Release Management events",
+  "serviceInstanceType":  "0000000D-0000-8888-8000-000000000000",
+  "supportedEvents": [
+    {
+      "publisherId": "rm",
+      "id": "release.approval.completed",
+      "name": "Approval completed",
+      "description": "A deployment approval has been completed",
+      "supportedResourceVersions": [ "3.0-preview.1" ],
+      "inputDescriptors": [
+        {
+          "id": "releaseDefinitionId",
+          "name": "Release Pipeline Name",
+          "description": "Filter events to include only completed deployments for the specified pipeline",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseEnvironmentId",
+          "name": "Stage Name",
+          "description": "Filter events to include only completed deployments for the specified stage",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "dependencyInputIds": [ "releaseDefinitionId" ],
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseApprovalType",
+          "name": "Approval Type",
+          "description": "Filter events to include only deployments requesting an approval of the specified type",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "values": {
+            "defaultValue": "",
+            "possibleValues": [
+              {
+                "value": "",
+                "displayValue": "[Any]"
+              },
+              {
+                "value": "1",
+                "displayValue": "Pre-deployment"
+              },
+              {
+                "value": "2",
+                "displayValue": "Post-deployment"
+              }
+            ],
+            "isLimitedToPossibleValues": true
+          }
+        },
+        {
+          "id": "releaseApprovalStatus",
+          "name": "Approval Status",
+          "description": "Filter events to include only deployments with an approval of the specified status",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "values": {
+            "defaultValue": "",
+            "possibleValues": [
+              {
+                "value": "",
+                "displayValue": "[Any]"
+              },
+              {
+                "value": "2",
+                "displayValue": "Approved"
+              },
+              {
+                "value": "7",
+                "displayValue": "Canceled"
+              },
+              {
+                "value": "1",
+                "displayValue": "Pending"
+              },
+              {
+                "value": "6",
+                "displayValue": "Reassigned"
+              },
+              {
+                "value": "4",
+                "displayValue": "Rejected"
+              },
+              {
+                "value": "8",
+                "displayValue": "Skipped"
+              }
+            ],
+            "isLimitedToPossibleValues": true
+          }
+        },
+        {
+          "id": "releaseApprovalIsAutomated",
+          "name": "Approver Type",
+          "description": "Filter events to include only deployments requesting an approver of the specified type",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "values": {
+            "defaultValue": "",
+            "possibleValues": [
+              {
+                "value": "",
+                "displayValue": "[Any]"
+              },
+              {
+                "value": "true",
+                "displayValue": "Automated"
+              },
+              {
+                "value": "false",
+                "displayValue": "Manual"
+              }
+            ],
+            "isLimitedToPossibleValues": true
+          }
+        }
+      ]
+    },
+    {
+      "publisherId": "rm",
+      "id": "release.approval.pending",
+      "name": "Approval requested",
+      "description": "A deployment approval has been requested",
+      "supportedResourceVersions": [ "3.0-preview.1" ],
+      "inputDescriptors": [
+        {
+          "id": "releaseDefinitionId",
+          "name": "Release Pipeline Name",
+          "description": "Filter events to include only completed deployments for the specified pipeline",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseEnvironmentId",
+          "name": "Stage Name",
+          "description": "Filter events to include only completed deployments for the specified stage",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "dependencyInputIds": [ "releaseDefinitionId" ],
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseApprovalType",
+          "name": "Approval Type",
+          "description": "Filter events to include only deployments requesting an approval of the specified type",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "values": {
+            "defaultValue": "",
+            "possibleValues": [
+              {
+                "value": "",
+                "displayValue": "[Any]"
+              },
+              {
+                "value": "1",
+                "displayValue": "Pre-deployment"
+              },
+              {
+                "value": "2",
+                "displayValue": "Post-deployment"
+              }
+            ],
+            "isLimitedToPossibleValues": true
+          }
+        },
+        {
+          "id": "releaseApprovalIsAutomated",
+          "name": "Approver Type",
+          "description": "Filter events to include only deployments requesting an approver of the specified type",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "values": {
+            "defaultValue": "",
+            "possibleValues": [
+              {
+                "value": "",
+                "displayValue": "[Any]"
+              },
+              {
+                "value": "true",
+                "displayValue": "Automated"
+              },
+              {
+                "value": "false",
+                "displayValue": "Manual"
+              }
+            ],
+            "isLimitedToPossibleValues": true
+          }
+        }
+      ]
+    },
+    {
+      "publisherId": "rm",
+      "id": "release.deployment.completed",
+      "name": "Deployment completed",
+      "description": "A deployment completed",
+      "supportedResourceVersions": [ "3.0-preview.1" ],
+      "inputDescriptors": [
+        {
+          "id": "releaseDefinitionId",
+          "name": "Release Pipeline Name",
+          "description": "Filter events to include only completed deployments for the specified pipeline",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseEnvironmentId",
+          "name": "Stage Name",
+          "description": "Filter events to include only completed deployments for the specified stage",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "dependencyInputIds": [ "releaseDefinitionId" ],
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseEnvironmentStatus",
+          "name": "Status",
+          "description": "Filter events to include only completed deployments with the specified status",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "values": {
+            "defaultValue": "",
+            "possibleValues": [
+              {
+                "value": "",
+                "displayValue": "[Any]"
+              },
+              {
+                "value": "8",
+                "displayValue": "Canceled"
+              },
+              {
+                "value": "2",
+                "displayValue": "In progress"
+              },
+              {
+                "value": "1",
+                "displayValue": "Not started"
+              },
+              {
+                "value": "32",
+                "displayValue": "Queued"
+              },
+              {
+                "value": "16",
+                "displayValue": "Rejected"
+              },
+              {
+                "value": "4",
+                "displayValue": "Succeeded"
+              }
+            ],
+            "isLimitedToPossibleValues": true
+          }
+        }
+      ]
+    },
+    {
+      "publisherId": "rm",
+      "id": "release.deployment.started",
+      "name": "Deployment started",
+      "description": "A deployment was started",
+      "supportedResourceVersions": [ "3.0-preview.1" ],
+      "inputDescriptors": [
+        {
+          "id": "releaseDefinitionId",
+          "name": "Release Pipeline Name",
+          "description": "Filter events to include only completed deployments for the specified pipeline",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseEnvironmentId",
+          "name": "Stage Name",
+          "description": "Filter events to include only completed deployments for the specified stage",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "dependencyInputIds": [ "releaseDefinitionId" ],
+          "hasDynamicValueInformation": true
+        }
+      ]
+    },
+    {
+      "publisherId": "rm",
+      "id": "release.abandoned",
+      "name": "Release abandoned",
+      "description": "A release was abandoned",
+      "supportedResourceVersions": [ "3.0-preview.1" ],
+      "inputDescriptors": [
+        {
+          "id": "releaseDefinitionId",
+          "name": "Release Pipeline Name",
+          "description": "Filter events to include only completed deployments for the specified pipeline",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "hasDynamicValueInformation": true
+        }
+      ]
+    },
+    {
+      "publisherId": "rm",
+      "id": "release.created",
+      "name": "Release created",
+      "description": "A release was created",
+      "supportedResourceVersions": [ "3.0-preview.1" ],
+      "inputDescriptors": [
+        {
+          "id": "releaseDefinitionId",
+          "name": "Release Pipeline Name",
+          "description": "Filter events to include only completed deployments for the specified pipeline",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "hasDynamicValueInformation": true
+        },
+        {
+          "id": "releaseEnvironmentId",
+          "name": "Stage Name",
+          "description": "Filter events to include only completed deployments for the specified stage",
+          "inputMode": "combo",
+          "isConfidential": false,
+          "useInDefaultDescription": false,
+          "groupName": null,
+          "valueHint": null,
+          "validation": { "dataType": "string" },
+          "dependencyInputIds": [ "releaseDefinitionId" ],
+          "hasDynamicValueInformation": true
+        }
+      ]
+    }
+  ],
+  "inputDescriptors": [
+    {
+      "id": "projectId",
+      "name": "Project",
+      "description": "Team Project to restrict events to",
+      "inputMode": "none",
+      "isConfidential": false,
+      "useInDefaultDescription": false,
+      "groupName": null,
+      "valueHint": null,
+      "validation": { "dataType": "guid" }
+    },
+    {
+      "id": "subscriberId",
+      "name": "Subscriber",
+      "description": "Subscriber id of the group the subscription is associated with",
+      "inputMode": "none",
+      "validation": { "dataType": "guid" }
+    }
+  ]
+}

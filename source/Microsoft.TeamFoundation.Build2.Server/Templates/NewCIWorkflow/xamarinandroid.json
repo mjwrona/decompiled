@@ -1,0 +1,158 @@
+﻿{
+  "id": "XamarinAndroid",
+  "name": "Xamarin.Android",
+  "category": "Build",
+  "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+  "description": "Build an Android app and Xamarin.UITest assembly. Test on real devices with App Center.",
+  "iconTaskId": "27EDD013-36FD-43AA-96A3-7D73E1E35285",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "displayName": "Use NuGet 4.4.1",
+                            "task": {
+                                "id": "2c65196a-54fd-4a02-9be8-d9d1837b7c5d",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": "4.4.1",
+                                "checkLatest": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "command": "restore",
+                                "solution": "$(Parameters.restorePkgSolution)",
+                                "selectOrConfig": "select",
+                                "includeNuGetOrg": "true"
+                            },
+                            "task": {
+                                "id": "333b11bd-d341-40d9-afcf-b32d5ce6f23b",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "project": "**/*Droid*.csproj",
+                                "outputDir": "$(build.binariesdirectory)/$(BuildConfiguration)",
+                                "configuration": "$(BuildConfiguration)"
+                            },
+                            "task": {
+                                "id": "27EDD013-36FD-43AA-96A3-7D73E1E35285",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "inputs": {
+                                "solution": "**/*test*.csproj",
+                                "configuration": "$(BuildConfiguration)",
+                                "msbuildArguments": "/p:OutputPath=\"$(build.binariesdirectory)/$(BuildConfiguration)/test-assembly\"",
+                                "restoreNugetPackages": "false"
+                            },
+                            "task": {
+                                "id": "c6c4c611-aa2e-4a33-b606-5eaba2196824",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "files": "$(Parameters.appFiles)",
+                                "apksign": "false",
+                                "zipalign": "true"
+                            },
+                            "task": {
+                                "id": "80F3F6A0-82A6-4A22-BA7A-E5B8C541B9B9",
+                                "versionSpec": "3.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "PathtoPublish": "$(build.binariesdirectory)/$(BuildConfiguration)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "app": "$(Parameters.appFiles)"
+                            },
+                            "task": {
+                                "id": "ad5cd22a-be4e-48bb-adce-181a32432da5",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "app": "$(Parameters.appFiles)"
+                            },
+                            "task": {
+                                "id": "b832bec5-8c27-4fef-9fb8-6bec8524ad8a",
+                                "versionSpec": "2.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "Release"
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "name": "restorePkgSolution",
+                    "label": "{SolutionLabel}",
+                    "defaultValue": "**\\*.sln",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{SolutionDescription}"
+                },
+                {
+                    "name": "appFiles",
+                    "label": "{AppFileLabel}",
+                    "defaultValue": "$(build.binariesdirectory)/$(BuildConfiguration)/*.apk",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{AppFileDecription}"
+                }
+            ]
+        }
+    }
+}

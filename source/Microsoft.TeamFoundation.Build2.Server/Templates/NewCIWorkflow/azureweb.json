@@ -1,0 +1,209 @@
+﻿{
+    "id": "AzureWeb",
+    "name": "Azure Web App for ASP.NET",
+    "description": "Build, package, test, and deploy an ASP.NET Azure Web App.",
+    "category": "Deployment",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "iconTaskId": "497D490F-EEA7-4F2B-AB94-48D9C1ACDCB1",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "displayName": "Use NuGet 4.4.1",
+                            "task": {
+                                "id": "2c65196a-54fd-4a02-9be8-d9d1837b7c5d",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": "4.4.1",
+                                "checkLatest": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "command": "restore",
+                                "solution": "$(Parameters.solution)",
+                                "selectOrConfig": "select",
+                                "includeNuGetOrg": "true"
+                            },
+                            "task": {
+                                "id": "333b11bd-d341-40d9-afcf-b32d5ce6f23b",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "solution": "$(Parameters.solution)",
+                                "msbuildArgs": "/p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:publishUrl=\"$(Agent.TempDirectory)\\WebAppContent\\\\\"",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)",
+                                "restoreNugetPackages": "false"
+                            },
+                            "task": {
+                                "id": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "displayName": "Archive Files",
+                            "inputs": {
+                                "rootFolderOrFile": "$(Agent.TempDirectory)\\WebAppContent",
+                                "includeRootFolder": "false",
+                                "archiveType": "zip",
+                                "archiveFile": "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip",
+                                "replaceExistingArchive": "true"
+                            },
+                            "task": {
+                                "id": "d8b84976-e99a-4b86-b885-4849694435b0",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "testAssemblyVer2": "**\\$(BuildConfiguration)\\*test*.dll\n!**\\obj\\**",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)"
+                            },
+                            "task": {
+                                "id": "ef087383-ee5e-42c7-9a53-ab56c98420f9",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "package": "$(build.artifactstagingdirectory)/**/*.zip",
+                                "azureSubscription": "$(Parameters.connectedServiceName)",
+                                "appName": "$(Parameters.WebAppName)"
+                            },
+                            "task": {
+                                "id": "18BDE28A-8172-45CB-B204-5CEF1393DBB1",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": true,
+                            "inputs": {
+                                "SearchPattern": "**\\bin\\**\\*.pdb",
+                                "SymbolsArtifactName": "Symbols_$(BuildConfiguration)",
+                                "SymbolServerType": "TeamServices",
+                                "PublishSymbols": "false"
+                            },
+                            "task": {
+                                "id": "0675668a-7bba-4ccb-901d-5ad6554ca653",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "PathtoPublish": "$(build.artifactstagingdirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container",
+                                "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "release",
+                "allowOverride": true
+            },
+            "BuildPlatform": {
+                "value": "any cpu",
+                "allowOverride": true
+            }
+        },
+        "triggers": [
+            {
+                "triggerType": "continuousIntegration",
+                "batchChanges": false,
+                "branchFilters": []
+            }
+        ],
+        "processParameters": {
+            "inputs": [
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "solution",
+                    "label": "{SolutionLabel}",
+                    "defaultValue": "**\\*.sln",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{SolutionDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "connectedServiceName",
+                    "label": "{SubscriptionLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "connectedService:AzureRM",
+                    "helpMarkDown": "{SubscriptionDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {
+                        "EditableOptions": "True"
+                    },
+                    "name": "WebAppName",
+                    "label": "{WebAppLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "pickList",
+                    "helpMarkDown": "{WebAppDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                }
+            ],
+            "dataSourceBindings": [
+                {
+                    "dataSourceName": "AzureRMWebAppNames",
+                    "parameters": {},
+                    "endpointId": "$(connectedServiceName)",
+                    "target": "WebAppName"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddIncidentAction_IcMCertificateDescription" xml:space="preserve">
+    <value>The certificate required for allowing Azure DevOps to add incidents into IcM dashboards. It is required to authenticate against the connector API to be able to add incidents to IcM database.</value>
+  </data>
+  <data name="ErrorWhileCreatingIcMClient" xml:space="preserve">
+    <value>Error occured while creating IcM client. {0}</value>
+  </data>
+  <data name="ErrorWhileBuildingResponse" xml:space="preserve">
+    <value>Could not fetch proper response. {0}</value>
+  </data>
+  <data name="AddIncidentAction_RequestMessageFormat" xml:space="preserve">
+    <value>Creating an incident for deployment of {0} on {1}</value>
+  </data>
+  <data name="AddIncidentAction_OwningTeamIdInputDescription" xml:space="preserve">
+    <value>Public id of the team to which the incident is directly assigned, overulling the routing rules. If the id is invalid the routing rules are followed. The team's public ID can be found by doing the following: &gt; In IcM user experience, click Administration &gt; Manage Teams &gt; Select desired team for direct routing &gt; In the team details tab, locate Public Id</value>
+  </data>
+  <data name="AddIncidentAction_SeverityInputName" xml:space="preserve">
+    <value>Severity</value>
+  </data>
+  <data name="AddIncidentAction_ResponseMessageFormat" xml:space="preserve">
+    <value>Incident was created successfully. Incident id : {0}.</value>
+  </data>
+  <data name="AddIncidentAction_OwningTeamIdInputName" xml:space="preserve">
+    <value>Owning Team Id</value>
+  </data>
+  <data name="AddIncidentActionDescription" xml:space="preserve">
+    <value>Create an incident in IcM. &lt;a href=https://dev.azure.com/mseng/AzureDevOps/_wiki/wikis/AzureDevOps.wiki?pagePath=%2FTeam%20Pages%2FRM%20and%20Deployment%2FService%20Hooks%2FIcM%20Service%20Hook&amp;pageId=11447&amp;wikiVersion=GBwikiMaster" target="_blank"&gt; Learn more&lt;/a&gt;</value>
+  </data>
+  <data name="AddIncidentAction_IcMPrivateKeyInputName" xml:space="preserve">
+    <value>Private Key</value>
+  </data>
+  <data name="AddIncidentAction_IcMConnectorIdInputName" xml:space="preserve">
+    <value>Connector Id</value>
+  </data>
+  <data name="AddIncidentAction_IncidentDescriptionInputDescription" xml:space="preserve">
+    <value>Custom description for the incident. If left unspecified, description to describe the release and status​. </value>
+  </data>
+  <data name="AddIncidentAction_IcMCertificateInputName" xml:space="preserve">
+    <value>Certificate (&lt;a href="https://icmdocs.azurewebsites.net/developers/ObtainingACertificate.html" target="_blank"&gt;Obtain a certificate for IcM&lt;/a&gt;)</value>
+  </data>
+  <data name="AddIncidentAction_IcMConnectorIdDescription" xml:space="preserve">
+    <value>The IcM provided connector id (GUID) obtained while onboarding the connector.</value>
+  </data>
+  <data name="AddIncidentAction_RoutingIdInputName" xml:space="preserve">
+    <value>Routing Id</value>
+  </data>
+  <data name="DefaultDeploymentCompletedDescriptionIfDeploymentIsNotThere" xml:space="preserve">
+    <value>Deployment has completed.</value>
+  </data>
+  <data name="ConsumerName" xml:space="preserve">
+    <value>IcM</value>
+  </data>
+  <data name="ErrorWhileAddingIncident" xml:space="preserve">
+    <value>Could not create incident in IcM. Error: {0}</value>
+  </data>
+  <data name="AddIncidentAction_IncidentDescriptionInputName" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="InvalidCertificateOrPrivateKeyFormat" xml:space="preserve">
+    <value>Unable to fetch proper certificate. Please give inputs including the headers and footers. {0}</value>
+  </data>
+  <data name="IcMTextLinkFormat" xml:space="preserve">
+    <value>&lt;a href="{0}" target="_blank"&gt;{1}&lt;/a&gt;</value>
+  </data>
+  <data name="AddIncidentAction_IcMPrivateKeyDescription" xml:space="preserve">
+    <value>The private key of the certificate</value>
+  </data>
+  <data name="AddIncidentActionName" xml:space="preserve">
+    <value>Add incident to IcM</value>
+  </data>
+  <data name="ConsumerDescription" xml:space="preserve">
+    <value>IcM is the one incident management system for all Microsoft services. It provides tools for managing live site and on call rotations.</value>
+  </data>
+  <data name="DefaultRequestMessageForDeploymentCompletedIfDeploymentIsNotThere" xml:space="preserve">
+    <value>Creating an incident for deployment completed event</value>
+  </data>
+  <data name="AddIncidentAction_DeployementCompletedEventIncidentTitle" xml:space="preserve">
+    <value>Deployment completed. Status: {0}  </value>
+  </data>
+  <data name="AddIncidentAction_RoutingIdInputDescription" xml:space="preserve">
+    <value>Allows you to configure which team in which service receives your incident based on the Routing Rules defined. If the Routing Id does not match any existing rule, it will get assigned to your default team (the team specified in your default routing rule). The routing rules can be found by doing the following: &gt; In IcM user experience, click Administration &gt; Routing rules</value>
+  </data>
+  <data name="AddIncidentAction_IcMEnvironmentDescription" xml:space="preserve">
+    <value>The environment in which the incident is to be injected.</value>
+  </data>
+  <data name="AddIncidentAction_SeverityInputDescription" xml:space="preserve">
+    <value>Severity of the incident</value>
+  </data>
+  <data name="AddIncidentAction_IncidentDescriptionFormat" xml:space="preserve">
+    <value>Deployment of {0} on {1} {2}.</value>
+  </data>
+  <data name="AddIncidentAction_IcMEnvironmentName" xml:space="preserve">
+    <value>IcM environment</value>
+  </data>
+</root>

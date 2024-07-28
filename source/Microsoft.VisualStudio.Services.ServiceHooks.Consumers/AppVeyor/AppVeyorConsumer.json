@@ -1,0 +1,49 @@
+﻿{
+  "id": "appVeyor",
+  "name": "AppVeyor",
+  "description": "Continuous Integration service for Windows developers that securely builds and tests code in parallel and then deploys successful bits to on-premises or cloud environments",
+  "externalConfiguration": {
+    "createSubscriptionUrl": "http://appveyor.com"
+  },
+  "imageUrl": "",
+  "informationUrl": "https://go.microsoft.com/fwlink/?LinkID=396758",
+  "inputDescriptors": [ ],
+  "actions": [
+    {
+      "id": "triggerBuild",
+      "name": "Trigger a AppVeyor build",
+      "description": "Trigger a AppVeyor build <a href='https://go.microsoft.com/fwlink/?LinkID=396758'>Learn more</a>",
+      "supportedEventTypes": [
+        "git.push"
+      ],
+      "inputDescriptors": [
+        {
+          "id": "webHookId",
+          "name": "Webhook ID",
+          "description": "The Webhook ID that uniquely identifies a project in AppVeyor database",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "validation": {
+            "dataType": "string",
+            "isRequired": true
+          }
+        },
+        {
+          "id": "projectName",
+          "name": "Project name",
+          "description": "Project name",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "useInDefaultDescription": true,
+          "validation": {
+            "dataType": "string",
+            "isRequired": false
+          }
+        }
+      ],
+      "publishEvent": {
+        "url": "https://ci.appveyor.com/api/vso/webhook?id={{uriEscape webHookId}}"
+      },
+    }
+  ]
+}

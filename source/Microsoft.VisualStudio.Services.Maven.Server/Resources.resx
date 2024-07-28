@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_MavenInvalidFilename" xml:space="preserve">
+    <value>Could not parse Maven filename - '{0}'</value>
+  </data>
+  <data name="Error_MavenInvalidFilePath" xml:space="preserve">
+    <value>Could not parse Maven filepath - {0}</value>
+  </data>
+  <data name="Error_PomFileSizeLimitExceeded" xml:space="preserve">
+    <value>pom.xml file is too large; the limit is {0} bytes</value>
+  </data>
+  <data name="Error_PackageAddOrUpdateMustHaveBody" xml:space="preserve">
+    <value>The request must contain a body when publishing or updating a package</value>
+  </data>
+  <data name="Error_InvalidCommitEntryType" xml:space="preserve">
+    <value>Invalid commit log entry type.</value>
+  </data>
+  <data name="Error_ArgumentNullOrEmpty" xml:space="preserve">
+    <value>Argument '{0}' is null or empty</value>
+  </data>
+  <data name="Error_OperationApplierNotFound" xml:space="preserve">
+    <value>The specified applier could not be found for the operation: {0}</value>
+  </data>
+  <data name="Error_ArtifactFileExsists" xml:space="preserve">
+    <value>Artifact '{0}' already has a file with name '{1}' published</value>
+  </data>
+  <data name="Error_InvalidBatchOperation" xml:space="preserve">
+    <value>Invalid batch operation received: {0}</value>
+  </data>
+  <data name="Error_UpstreamFailure" xml:space="preserve">
+    <value>Failed to retrieve data from the upstream package source '{0}': {1}</value>
+  </data>
+  <data name="Error_FilePathContainsInvalidCharacters" xml:space="preserve">
+    <value>File path '{0}' has invalid characters</value>
+  </data>
+  <data name="Error_NonUniqueSnapshotVersion" xml:space="preserve">
+    <value>Artifacts with non unique snapshot version are not supported</value>
+  </data>
+  <data name="Error_VersionTooLong" xml:space="preserve">
+    <value>The package version is too long</value>
+  </data>
+  <data name="Info_RepositoryLandingPage" xml:space="preserve">
+    <value>Feed '{0}' root of {1} repository</value>
+  </data>
+  <data name="Error_ArtifactIdLevelAndGroupIdLevelMetadataFilePathMustHaveSameName" xml:space="preserve">
+    <value>Ambiguous artifactId-level and groupId-level metadata file paths must have the same file name. Instead they have different file names '{0}' and '{1}'</value>
+  </data>
+  <data name="Error_FilePathHasTooFewComponents" xml:space="preserve">
+    <value>File path '{0}' contains too few components</value>
+  </data>
+  <data name="Error_XmlUnexpectedNode" xml:space="preserve">
+    <value>Unexpected node type {0} at ({1}, {2})</value>
+  </data>
+  <data name="Error_SnapshotLiteralNotSupported" xml:space="preserve">
+    <value>Invalid artifact file name '{0}'. File name specifies "snapshot" for version. Non-unique snapshot versions are not supported. Use unique (timestamped) snapshot versions instead</value>
+  </data>
+  <data name="Error_ArtifactHasNoVersions" xml:space="preserve">
+    <value>Artifact '{0}' has no versions available in feed '{1}'</value>
+  </data>
+  <data name="Error_PackageVersionAlreadyDeleted" xml:space="preserve">
+    <value>The package {0} has already been deleted</value>
+  </data>
+  <data name="Error_UpstreamReturnedUnauthorized" xml:space="preserve">
+    <value>The upstream URL '{0}' returned a "Unauthorized" response</value>
+  </data>
+  <data name="Error_NoProtocolDefined" xml:space="preserve">
+    <value>No protocol defined for operation data.</value>
+  </data>
+  <data name="Error_BlobStorePublishFailed" xml:space="preserve">
+    <value>Failed to publish file '{0}' to blobstore</value>
+  </data>
+  <data name="Error_GuidVersionsNotAllowed" xml:space="preserve">
+    <value>GUIDs are not allowed for Maven package versions</value>
+  </data>
+  <data name="Error_SnapshotMetadataFilePathMustSpecifySnapshotVersion" xml:space="preserve">
+    <value>Snapshot metadata file path must specify a version that ends with SNAPSHOT. It specifies '{0}' instead</value>
+  </data>
+  <data name="Error_FileNameMustSpecifyVersionAfterArtifactId" xml:space="preserve">
+    <value>Invalid artifact file name '{0}'. File name must have version specified after artifact Id</value>
+  </data>
+  <data name="Error_ArtifactFullNameNotValid" xml:space="preserve">
+    <value>Artifact FullName '{0}' has to consist of 'GroupId:ArtifactId'</value>
+  </data>
+  <data name="Error_UpstreamDoesNotHaveFileRequested" xml:space="preserve">
+    <value>The package file requested {0} does not exist in the upstream source {1} .</value>
+  </data>
+  <data name="Error_ArtifactVersionNotFound" xml:space="preserve">
+    <value>Artifact {0} with version {1} not found.</value>
+  </data>
+  <data name="Error_UnknownOperationType" xml:space="preserve">
+    <value>The operation type {0} was not recognized</value>
+  </data>
+  <data name="Error_UpstreamIngestion_CannotSkipIngestion" xml:space="preserve">
+    <value>For security reasons, an upstream package cannot be ingested from a browser. Please use an official Maven client.</value>
+  </data>
+  <data name="Error_PomMissingRootElement" xml:space="preserve">
+    <value>pom.xml is missing a root element ('{0}')</value>
+  </data>
+  <data name="Error_MavenServiceReadonly" xml:space="preserve">
+    <value>Maven service is in read-only state</value>
+  </data>
+  <data name="Error_RequestHasTooManyFiles" xml:space="preserve">
+    <value>More than one file found in one request</value>
+  </data>
+  <data name="Error_UpstreamReturnedNotFound" xml:space="preserve">
+    <value>The upstream URL '{0}' returned a "Not Found" response</value>
+  </data>
+  <data name="Error_DeleteUnsupportedOnViews" xml:space="preserve">
+    <value>The feed {0} has a view. The delete operation is not supported on views.</value>
+  </data>
+  <data name="Error_FilePathHasEmptyComponents" xml:space="preserve">
+    <value>File path '{0}' has empty components</value>
+  </data>
+  <data name="Error_VersionListIsReservedName" xml:space="preserve">
+    <value>Version 'versionList' is reserved by system</value>
+  </data>
+  <data name="Info_MetadataLandingPage" xml:space="preserve">
+    <value>Feed '{0}' root of {1} metadata</value>
+  </data>
+  <data name="Error_SnapshotSuffixNotAllowedInGroupIdOrArtifactId" xml:space="preserve">
+    <value>Invalid groupId or artifactId: '{0}'. groupId and artifactId are not allowed to end with "snapshot"</value>
+  </data>
+  <data name="Error_FileNotFound" xml:space="preserve">
+    <value>File '{0}' not found on feed '{1}'</value>
+  </data>
+  <data name="Error_ArtifactFileNameChecksumExtensionMissing" xml:space="preserve">
+    <value>FileName '{0}' refers to a checksum file but is missing the actual extension</value>
+  </data>
+  <data name="Error_ArtifactFileNotFound" xml:space="preserve">
+    <value>Unable to locate file '{0}' for '{1}' artifact</value>
+  </data>
+  <data name="Info_DepenencyOptional" xml:space="preserve">
+    <value>{0} (optional)</value>
+  </data>
+  <data name="Error_FileNameDoesNotStartWithArtifactId" xml:space="preserve">
+    <value>File name '{0}' does not start with artifactId '{1}'</value>
+  </data>
+  <data name="Error_ArtifactNotFound" xml:space="preserve">
+    <value>Artifact '{0}' not found in feed with id '{1}'</value>
+  </data>
+  <data name="Error_InvalidMavenHashAlgorithm" xml:space="preserve">
+    <value>Invalid Maven hash algorithm specification.</value>
+  </data>
+  <data name="Error_MetadataFilePathsMustEndWithMavenMetadata" xml:space="preserve">
+    <value>Metadata file path has to end with maven-metadata.xml or maven-metadata.xml checksum. It ends with '{0}' instead</value>
+  </data>
+  <data name="Error_ArtifactFileChecksumMissing" xml:space="preserve">
+    <value>Unable to locate checksum '{0}' for artifact '{1}'</value>
+  </data>
+  <data name="Error_ArtifactFileMissing" xml:space="preserve">
+    <value>Unable to locate file with name '{0}' for artifact '{1}'</value>
+  </data>
+</root>

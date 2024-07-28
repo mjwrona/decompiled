@@ -1,0 +1,284 @@
+{
+  "id": "AFCEA9C0-36FE-4807-940E-FFE040091524",
+  "name": "Azure App Service deployment with continuous monitoring",
+  "description": "Deploy your Web applications to Azure App Service and enable continuous monitoring using Application Insights.",
+  "category": "Deployment",
+  "iconTaskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "Agent job",
+        "rank": 1,
+        "phaseType": "1",
+        "workflowTasks": [
+          {
+            "taskId": "f045e430-8704-11e6-968f-e717e6411619",
+            "version": "0.*",
+            "name": "Enable Continuous Monitoring",
+            "enabled": true,
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "Action": "Enable Continuous Monitoring",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "AppInsightsResourceGroupName": "$(Parameters.AppInsightsResourceGroupName)",
+              "ApplicationInsightsResourceName": "$(Parameters.ApplicationInsightsResourceName)"
+            }
+          },
+          {
+            "taskId": "46E4BE58-730B-4389-8A2F-EA10B3E5E815",
+            "version": "2.*",
+            "name": "Configure Application Insights Alerts",
+            "enabled": true,
+            "inputs": {
+              "connectedServiceNameARM": "$(Parameters.ConnectedServiceName)",
+              "scriptType": "ps",
+              "scriptLocation": "inlineScript",
+              "inlineScript": "$subscription = az account show --query \"id\";$subscription.Trim(\"`\"\");$resource=\"/subscriptions/$subscription/resourcegroups/\"+\"$(Parameters.AppInsightsResourceGroupName)\"+\"/providers/microsoft.insights/components/\" + \"$(Parameters.ApplicationInsightsResourceName)\";az monitor metrics alert create -n 'Availability_$(Release.DefinitionName)' -g $(Parameters.AppInsightsResourceGroupName) --scopes $resource --condition 'avg availabilityResults/availabilityPercentage < 99' --description \"created from Azure DevOps\";az monitor metrics alert create -n 'FailedRequests_$(Release.DefinitionName)' -g $(Parameters.AppInsightsResourceGroupName) --scopes $resource --condition 'count requests/failed > 5' --description \"created from Azure DevOps\";az monitor metrics alert create -n 'ServerResponseTime_$(Release.DefinitionName)' -g $(Parameters.AppInsightsResourceGroupName) --scopes $resource --condition 'avg requests/duration > 5' --description \"created from Azure DevOps\";az monitor metrics alert create -n 'ServerExceptions_$(Release.DefinitionName)' -g $(Parameters.AppInsightsResourceGroupName) --scopes $resource --condition 'count exceptions/server > 5' --description \"created from Azure DevOps\";",
+              "failOnStandardError": true
+            }
+          },
+          {
+            "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+            "version": "4.*",
+            "name": "Azure App Service Deploy",
+            "enabled": true,
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "WebAppKind": "$(Parameters.WebAppKind)",
+              "DeployToSlotOrASEFlag": "false",
+              "ResourceGroupName": "",
+              "DockerNamespace": "$(Parameters.DockerNamespace)",
+              "DockerRepository": "$(Parameters.DockerRepository)",
+              "StartupCommand": "$(Parameters.StartupCommand)",
+              "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+              "WebAppUri": "",
+              "UseWebDeploy": "false",
+              "SetParametersFile": "",
+              "RemoveAdditionalFilesFlag": "false",
+              "ExcludeFilesFromAppDataFlag": "true",
+              "TakeAppOfflineFlag": "true",
+              "AdditionalArguments": "",
+              "RenameFilesFlag": "true",
+              "GenerateWebConfig": "false",
+              "WebConfigParameters": "",
+              "ScriptType": "",
+              "InlineScript": "",
+              "DockerImageTag": "$(Build.BuildId)"
+            }
+          }
+        ]
+      }
+    ],
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "webApp": "Web App on Windows",
+            "webAppLinux": "Web App on Linux",
+            "webAppContainer": "Web App for Containers (Linux)",
+            "functionApp": "Function App on Windows",
+            "functionAppLinux": "Function App on Linux",
+            "functionAppContainer": "Function App for Containers (Linux)",
+            "apiApp": "API App",
+            "mobileApp": "Mobile App"
+          },
+          "properties": {
+            "EditableOptions": "false"
+          },
+          "name": "WebAppKind",
+          "label": "{WebAppKindLabel}",
+          "defaultValue": "webApp",
+          "type": "pickList",
+          "helpMarkDown": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "WebAppName",
+          "label": "{WebAppNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{WebAppNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DockerNamespace",
+          "label": "{DockerNamespaceLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DockerNamespaceMarkdown}",
+          "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DockerRepository",
+          "label": "{DockerRepositoryLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DockerRepositoryMarkdown}",
+          "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+          "groupName": ""
+        },
+        {
+          "name": "StartupCommand",
+          "type": "string",
+          "label": "{StartupCommandLabel}",
+          "defaultValue": "",
+          "required": false,
+          "visibleRule": "WebAppKind = webAppLinux || WebAppKind = webAppContainer || WebAppkind = functionAppContainer || WebAppKind = functionAppLinux",
+          "helpMarkDown": "{StartupCommandMarkdown}",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "AppInsightsResourceGroupName",
+          "label": "{AppInsightsResourceGroupNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{AppInsightsResourceGroupNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "False",
+            "EnableManage": "True",
+            "ManageLink": "https://ms.portal.azure.com/#create/Microsoft.AppInsights",
+            "ManageIcon": "Add",
+            "ManageButtonName": "New"
+          },
+          "name": "ApplicationInsightsResourceName",
+          "label": "{ApplicationInsightsResourceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ApplicationInsightsResourceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureRMWebAppNamesByAppType",
+          "parameters": {
+            "WebAppKind": "$(WebAppKind)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "WebAppName"
+        },
+        {
+          "dataSourceName": "AzureResourceGroups",
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "AppInsightsResourceGroupName"
+        },
+        {
+          "dataSourceName": "AzureRMApplicationInsightsResources",
+          "parameters": {
+            "AppInsightsResourceGroupName": "$(AppInsightsResourceGroupName)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "ApplicationInsightsResourceName"
+        }
+      ]
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "rank": 1,
+          "isAutomated": true,
+          "isNotificationOn": false,
+          "id": 0
+        }
+      ],
+      "approvalOptions": {
+        "requiredApproverCount": null,
+        "releaseCreatorCanBeApprover": false,
+        "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+        "enforceIdentityRevalidation": false,
+        "timeoutInMinutes": 0,
+        "executionOrder": "afterSuccessfulGates"
+      }
+    },
+    "postDeploymentGates": {
+      "id": 0,
+      "gatesOptions": {
+        "isEnabled": true,
+        "timeout": 1440,
+        "samplingInterval": 5,
+        "stabilizationTime": 5,
+        "minimumSuccessDuration": 0
+      },
+      "gates": [
+        {
+          "tasks": [
+            {
+              "taskId": "99a72e7f-25e4-4576-bf38-22a42b995ed8",
+              "version": "1.*",
+              "name": "Query Azure Monitor alerts",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {
+
+              },
+              "condition": "succeeded()",
+              "inputs": {
+                "connectedServiceNameARM": "",
+                "ResourceGroupName": "",
+                "ResourceType": "Microsoft.Insights/components",
+                "resourceName": "",
+                "alertRules": "Availability_$(Release.DefinitionName),FailedRequests_$(Release.DefinitionName),ServerResponseTime_$(Release.DefinitionName),ServerExceptions_$(Release.DefinitionName)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

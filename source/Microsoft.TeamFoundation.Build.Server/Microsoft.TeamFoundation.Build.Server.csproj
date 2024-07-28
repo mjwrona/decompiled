@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Build.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D520785F-FD48-4652-8282-5B5411F032A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Build.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Build</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking">
+      <HintPath>lib\Microsoft.Azure.Boards.Linking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Git.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Server\AdministrationException.cs" />
+    <Compile Include="Server\BuildAgentAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildAgentDoesNotExistException.cs" />
+    <Compile Include="Server\BuildAgentUpdateException.cs" />
+    <Compile Include="Server\BuildAgentDeletionException.cs" />
+    <Compile Include="Server\BuildControllerAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildControllerDeletionException.cs" />
+    <Compile Include="Server\BuildControllerDoesNotExistException.cs" />
+    <Compile Include="Server\BuildControllerUpdateException.cs" />
+    <Compile Include="Server\BuildServiceHostUpdateException.cs" />
+    <Compile Include="Server\BuildServiceHostAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildServiceHostOwnershipException.cs" />
+    <Compile Include="Server\BuildServiceHostDoesNotExistException.cs" />
+    <Compile Include="Server\BuildServiceHostDeletionException.cs" />
+    <Compile Include="Server\InvalidQueueRequestException.cs" />
+    <Compile Include="Server\InvalidBuildAgentReservationException.cs" />
+    <Compile Include="Server\QueuedBuildDoesNotExistException.cs" />
+    <Compile Include="Server\QueuedBuildUpdateException.cs" />
+    <Compile Include="Server\InvalidSharedResourceRequestException.cs" />
+    <Compile Include="Server\SharedResourceAlreadyRequestedException.cs" />
+    <Compile Include="Server\SharedResourceAlreadyAcquiredException.cs" />
+    <Compile Include="Server\BuildNotDeletedException.cs" />
+    <Compile Include="Server\DuplicateProcessTemplateException.cs" />
+    <Compile Include="Server\MultipleDefaultProcessTemplatesException.cs" />
+    <Compile Include="Server\MultipleUpgradeProcessTemplatesException.cs" />
+    <Compile Include="Server\ProcessTemplateNotFoundException.cs" />
+    <Compile Include="Server\AgentReservation.cs" />
+    <Compile Include="Server\BuildAgent.cs" />
+    <Compile Include="Server\BuildAgentSpec.cs" />
+    <Compile Include="Server\BuildAgentUpdateOptions.cs" />
+    <Compile Include="Server\BuildController.cs" />
+    <Compile Include="Server\BuildControllerSpec.cs" />
+    <Compile Include="Server\BuildControllerUpdateOptions.cs" />
+    <Compile Include="Server\BuildDefinition.cs" />
+    <Compile Include="Server\BuildDefinitionExtensions.cs" />
+    <Compile Include="Server\BuildDefinitionSourceProvider.cs" />
+    <Compile Include="Server\NameValueField.cs" />
+    <Compile Include="Server\BuildDefinitionSourceProviderExtensions.cs" />
+    <Compile Include="Server\BuildDefinitionSpec.cs" />
+    <Compile Include="Server\BuildDeletionResult.cs" />
+    <Compile Include="Server\BuildDeployment.cs" />
+    <Compile Include="Server\BuildSummary.cs" />
+    <Compile Include="Server\ChangesetDisplayInformation.cs" />
+    <Compile Include="Server\RequestedForDisplayInformation.cs" />
+    <Compile Include="Server\BuildDeploymentSpec.cs" />
+    <Compile Include="Server\BuildDetail.cs" />
+    <Compile Include="Server\BuildDetailSpec.cs" />
+    <Compile Include="Server\BuildUpdateOptions.cs" />
+    <Compile Include="Server\BuildQuality.cs" />
+    <Compile Include="Server\BuildQueueSpec.cs" />
+    <Compile Include="Server\BuildRequest.cs" />
+    <Compile Include="Server\BuildServiceHost.cs" />
+    <Compile Include="Server\BuildServiceHostUpdateOptions.cs" />
+    <Compile Include="Server\BuildTeamProjectPermission.cs" />
+    <Compile Include="Server\AgentReservationData.cs" />
+    <Compile Include="Server\ArtifactHelper.cs" />
+    <Compile Include="Server\BuildCommand.cs" />
+    <Compile Include="Server\BuildDefinitionCache.cs" />
+    <Compile Include="Server\BuildInformationMerger.cs" />
+    <Compile Include="Server\CommandQueryBuilds.cs" />
+    <Compile Include="Server\CommandQueryBuildsBase.cs" />
+    <Compile Include="Server\CommandQueryBuildsByUri.cs" />
+    <Compile Include="Server\CommandQueryChangedBuilds.cs" />
+    <Compile Include="Server\CommandQueryQueuedBuilds.cs" />
+    <Compile Include="Server\CommandQueryQueuedBuildsById.cs" />
+    <Compile Include="Server\GatedCheckInKey.cs" />
+    <Compile Include="Server\ITeamFoundationBuildService.cs" />
+    <Compile Include="Server\PropertiesMerger.cs" />
+    <Compile Include="Server\SharedResourceData.cs" />
+    <Compile Include="Server\StartBuildData.cs" />
+    <Compile Include="Server\SymbolStoreData.cs" />
+    <Compile Include="Server\TeamFoundationBuildResourceService.cs" />
+    <Compile Include="Server\TeamFoundationBuildService.cs" />
+    <Compile Include="Server\TeamFoundationDeploymentService.cs" />
+    <Compile Include="Server\DeploymentConstants.cs" />
+    <Compile Include="Server\VersionHelper.cs" />
+    <Compile Include="Server\WebServiceVersion.cs" />
+    <Compile Include="Server\TemplateVersion.cs" />
+    <Compile Include="Server\WorkflowCancellationData.cs" />
+    <Compile Include="Server\IBuildAgentService.cs" />
+    <Compile Include="Server\IBuildControllerService.cs" />
+    <Compile Include="Server\IBuildAgentNotifyService.cs" />
+    <Compile Include="Server\WorkflowExecutionError.cs" />
+    <Compile Include="Server\IHostService.cs" />
+    <Compile Include="Server\ISharedResourceNotifyService.cs" />
+    <Compile Include="Server\DeploymentEnvironmentMetadata.cs" />
+    <Compile Include="Server\DeploymentEnvironment.cs" />
+    <Compile Include="Server\DeploymentEnvironmentCreationData.cs" />
+    <Compile Include="Server\AgentStatus.cs" />
+    <Compile Include="Server\BuildAgentUpdate.cs" />
+    <Compile Include="Server\BuildControllerUpdate.cs" />
+    <Compile Include="Server\BuildPhaseStatus.cs" />
+    <Compile Include="Server\BuildQueryOrder.cs" />
+    <Compile Include="Server\BuildReason.cs" />
+    <Compile Include="Server\BuildServiceHostUpdate.cs" />
+    <Compile Include="Server\BuildStatus.cs" />
+    <Compile Include="Server\BuildUpdate.cs" />
+    <Compile Include="Server\DefinitionTriggerType.cs" />
+    <Compile Include="Server\ControllerStatus.cs" />
+    <Compile Include="Server\DefinitionFilterType.cs" />
+    <Compile Include="Server\DefinitionQueueStatus.cs" />
+    <Compile Include="Server\DeleteOptions.cs" />
+    <Compile Include="Server\GetOption.cs" />
+    <Compile Include="Server\InformationEditOptions.cs" />
+    <Compile Include="Server\ProcessTemplateType.cs" />
+    <Compile Include="Server\QueryOptions.cs" />
+    <Compile Include="Server\QueuedBuildUpdate.cs" />
+    <Compile Include="Server\QueueOptions.cs" />
+    <Compile Include="Server\QueuePriority.cs" />
+    <Compile Include="Server\QueueStatus.cs" />
+    <Compile Include="Server\QueryDeletedOption.cs" />
+    <Compile Include="Server\ScheduleDays.cs" />
+    <Compile Include="Server\ServiceHostStatus.cs" />
+    <Compile Include="Server\TagComparison.cs" />
+    <Compile Include="Server\WorkspaceMappingType.cs" />
+    <Compile Include="Server\QueuedBuildRetryOption.cs" />
+    <Compile Include="Server\DeploymentEnvironmentKind.cs" />
+    <Compile Include="Server\BuildServerException.cs" />
+    <Compile Include="Server\SecurityException.cs" />
+    <Compile Include="Server\AccessDeniedException.cs" />
+    <Compile Include="Server\BuildDefinitionAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildDefinitionDisabledException.cs" />
+    <Compile Include="Server\BuildDefinitionDoesNotExistException.cs" />
+    <Compile Include="Server\BuildControllerNotFoundException.cs" />
+    <Compile Include="Server\BuildDefinitionUpdateException.cs" />
+    <Compile Include="Server\BuildDeploymentAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildGroupAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildGroupDoesNotExistException.cs" />
+    <Compile Include="Server\BuildNumberAlreadyExistsException.cs" />
+    <Compile Include="Server\BuildQualityDoesNotExistException.cs" />
+    <Compile Include="Server\BuildReasonNotSupportedException.cs" />
+    <Compile Include="Server\CannotDeleteDefinitionBuildExistsException.cs" />
+    <Compile Include="Server\CannotStopBuildException.cs" />
+    <Compile Include="Server\StopBuildTimeoutException.cs" />
+    <Compile Include="Server\CannotDeleteInProgressBuildException.cs" />
+    <Compile Include="Server\CannotDeleteRetainedBuildException.cs" />
+    <Compile Include="Server\CoverageServiceRestartFailureDuringDeleteException.cs" />
+    <Compile Include="Server\GatedCheckInTicketValidationException.cs" />
+    <Compile Include="Server\InvalidBuildGroupItemUpdateException.cs" />
+    <Compile Include="Server\InvalidBuildRequestException.cs" />
+    <Compile Include="Server\InvalidBuildUriException.cs" />
+    <Compile Include="Server\InformationChangeRequestException.cs" />
+    <Compile Include="Server\InformationAddRequestCycleException.cs" />
+    <Compile Include="Server\DuplicateBuildUpdateRequestException.cs" />
+    <Compile Include="Server\DuplicateInformationChangeRequestException.cs" />
+    <Compile Include="Server\InformationNodeDoesNotExistException.cs" />
+    <Compile Include="Server\InformationParentNodeDoesNotExistException.cs" />
+    <Compile Include="Server\InvalidPlatformFlavorException.cs" />
+    <Compile Include="Server\ProcessTemplateDeletedException.cs" />
+    <Compile Include="Server\CannotStartBuildException.cs" />
+    <Compile Include="Server\DeploymentEnvironmentNotFoundException.cs" />
+    <Compile Include="Server\ConnectedServiceNotFoundException.cs" />
+    <Compile Include="Server\CannotRedeployException.cs" />
+    <Compile Include="Server\InvalidGitRepoUriException.cs" />
+    <Compile Include="Server\InvalidGitUriException.cs" />
+    <Compile Include="Server\XamlBuildDisabledException.cs" />
+    <Compile Include="Server\Failure.cs" />
+    <Compile Include="Server\TeamFoundationBuildHost.cs" />
+    <Compile Include="Server\BuildSqlColumnBinderExtensions.cs" />
+    <Compile Include="Server\ServiceVersion.cs" />
+    <Compile Include="Server\BuildSqlResourceComponent.cs" />
+    <Compile Include="Server\BuildWebServiceBase.cs" />
+    <Compile Include="Server\DatabaseCategories.cs" />
+    <Compile Include="Server\BuildSqlError.cs" />
+    <Compile Include="Server\DBHelper.cs" />
+    <Compile Include="Server\DeployWebServiceBase.cs" />
+    <Compile Include="Server\BuildDefinitionDictionary.cs" />
+    <Compile Include="Server\BuildDetailDictionary.cs" />
+    <Compile Include="Server\AgentReservationDictionary.cs" />
+    <Compile Include="Server\BuildAgentDictionary.cs" />
+    <Compile Include="Server\BuildControllerDictionary.cs" />
+    <Compile Include="Server\BuildServiceHostDictionary.cs" />
+    <Compile Include="Server\EnumHelper.cs" />
+    <Compile Include="Server\Extensions.cs" />
+    <Compile Include="Server\BuildIdentityResolver.cs" />
+    <Compile Include="Server\IProjectServiceExtensions.cs" />
+    <Compile Include="Server\IVssRequestContextExtensions.cs" />
+    <Compile Include="Server\BuildSqlNotificationEventClasses.cs" />
+    <Compile Include="Server\BuildWellKnownJobIds.cs" />
+    <Compile Include="Server\SecurityManager.cs" />
+    <Compile Include="Server\SoapNamespaces.cs" />
+    <Compile Include="Server\TeamProject.cs" />
+    <Compile Include="Server\TFVCPathHelper.cs" />
+    <Compile Include="Server\TraceArea.cs" />
+    <Compile Include="Server\TraceLayer.cs" />
+    <Compile Include="Server\Tracepoints.cs" />
+    <Compile Include="Server\WebServiceSchemas.cs" />
+    <Compile Include="Server\GatedCheckInTicketService.cs" />
+    <Compile Include="Server\TeamFoundationBuildResourceServiceExtensions.cs" />
+    <Compile Include="Server\IBuild2Converter.cs" />
+    <Compile Include="Server\IBuildProjectInstaller.cs" />
+    <Compile Include="Server\IBuildQueueExtension.cs" />
+    <Compile Include="Server\IGatedCheckInEvaluator.cs" />
+    <Compile Include="Server\InformationField.cs" />
+    <Compile Include="Server\BuildInformationNode.cs" />
+    <Compile Include="Server\InformationChangeRequest.cs" />
+    <Compile Include="Server\InformationAddRequest.cs" />
+    <Compile Include="Server\InformationEditRequest.cs" />
+    <Compile Include="Server\InformationDeleteRequest.cs" />
+    <Compile Include="Server\Integration2.cs" />
+    <Compile Include="Server\BisEvents.cs" />
+    <Compile Include="Server\BisQuery.cs" />
+    <Compile Include="Server\BuildArtifactProvider.cs" />
+    <Compile Include="Server\BuildCompletionEvent.cs" />
+    <Compile Include="Server\BuildCompletionEvent2.cs" />
+    <Compile Include="Server\BuildDefinitionChangedEvent.cs" />
+    <Compile Include="Server\BuildDefinitionChangingEvent.cs" />
+    <Compile Include="Server\BuildDefinitionUpgradeCompletionEvent.cs" />
+    <Compile Include="Server\BuildDeletedEvent.cs" />
+    <Compile Include="Server\BuildResourceChangedEvent.cs" />
+    <Compile Include="Server\BuildStatusChangeEvent.cs" />
+    <Compile Include="Server\Change.cs" />
+    <Compile Include="Server\ChangedEvent.cs" />
+    <Compile Include="Server\ChangedType.cs" />
+    <Compile Include="Server\PropertyChange.cs" />
+    <Compile Include="Server\PropertyChange`1.cs" />
+    <Compile Include="Server\EventHelper.cs" />
+    <Compile Include="Server\IProjectNameConverter.cs" />
+    <Compile Include="Server\IProjectGuidConverter.cs" />
+    <Compile Include="Server\IPropertyProvider.cs" />
+    <Compile Include="Server\IPropertyProviderSpec.cs" />
+    <Compile Include="Server\IUpdatePropertyProvider.cs" />
+    <Compile Include="Server\ValidationContext.cs" />
+    <Compile Include="Server\IValidatable.cs" />
+    <Compile Include="Server\BuildCompletionNotificationEvent.cs" />
+    <Compile Include="Server\BuildStartedNotificationEvent.cs" />
+    <Compile Include="Server\BuildQualityChangedNotificationEvent.cs" />
+    <Compile Include="Server\BuildsQueuedNotificationEvent.cs" />
+    <Compile Include="Server\ProcessTemplate.cs" />
+    <Compile Include="Server\ProcessParameterHelper.cs" />
+    <Compile Include="Server\BuildAgentQueryResult.cs" />
+    <Compile Include="Server\BuildControllerQueryResult.cs" />
+    <Compile Include="Server\BuildServiceHostQueryResult.cs" />
+    <Compile Include="Server\BuildDefinitionQueryResult.cs" />
+    <Compile Include="Server\BuildQueryResult.cs" />
+    <Compile Include="Server\BuildQueueQueryResult.cs" />
+    <Compile Include="Server\QueuedBuild.cs" />
+    <Compile Include="Server\QueuedBuildUpdateOptions.cs" />
+    <Compile Include="Server\MSBuildArgsHelper.cs" />
+    <Compile Include="Server\ServiceHooksHelper.cs" />
+    <Compile Include="Server\RetentionPolicy.cs" />
+    <Compile Include="Server\Schedule.cs" />
+    <Compile Include="Server\SharedResource.cs" />
+    <Compile Include="Server\SharedResourceRequest.cs" />
+    <Compile Include="Server\TfGitConverter.cs" />
+    <Compile Include="Server\Validation.cs" />
+    <Compile Include="Server\AdministrationWebService4.cs" />
+    <Compile Include="Server\AgentReservationWebService4.cs" />
+    <Compile Include="Server\BuildDeploymentWebService.cs" />
+    <Compile Include="Server\BuildQueueWebService4.cs" />
+    <Compile Include="Server\BuildWebService4.cs" />
+    <Compile Include="Server\SharedResourceWebService4.cs" />
+    <Compile Include="Server\WorkspaceTemplate.cs" />
+    <Compile Include="Server\WorkspaceMapping.cs" />
+    <Compile Include="Server\AdministrationResources.cs" />
+    <Compile Include="Server\ResourceStrings.cs" />
+    <Compile Include="Server\ServiceProxies\BuildAgentNotifyServiceProxy2010.cs" />
+    <Compile Include="Server\ServiceProxies\BuildAgentServiceProxy2010.cs" />
+    <Compile Include="Server\ServiceProxies\BuildControllerServiceProxy2010.cs" />
+    <Compile Include="Server\ServiceProxies\HostServiceProxy2010.cs" />
+    <Compile Include="Server\ServiceProxies\SharedResourceNotifyServiceProxy2010.cs" />
+    <Compile Include="Server\ServiceProxies\BuildAgentService.cs" />
+    <Compile Include="Server\ServiceProxies\BuildControllerService.cs" />
+    <Compile Include="Server\ServiceProxies\HostService.cs" />
+    <Compile Include="Server\ServiceProxies\SharedResourceNotifyService.cs" />
+    <Compile Include="Server\RestControllers\AzureDeploymentEnvironmentsController.cs" />
+    <Compile Include="Server\RestControllers\AzureSubscriptionsController.cs" />
+    <Compile Include="Server\Rest\AzureDeploymentDefinitionsController.cs" />
+    <Compile Include="Server\Rest\SubscriptionCertificate.cs" />
+    <Compile Include="Server\Rest\AzureDeploymentsController.cs" />
+    <Compile Include="Server\Rest\BuildApiController.cs" />
+    <Compile Include="Server\Rest\BuildsController.cs" />
+    <Compile Include="Server\Rest\DetailsController.cs" />
+    <Compile Include="Server\Rest\DataContractHelpers.cs" />
+    <Compile Include="Server\Rest\QualitiesController.cs" />
+    <Compile Include="Server\Rest\QueuesController.cs" />
+    <Compile Include="Server\Rest\DefinitionsController.cs" />
+    <Compile Include="Server\Rest\BuildRequestsController.cs" />
+    <Compile Include="Server\Events\BuildCompletedEvent.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent2.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent3.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent4.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent5.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent6.cs" />
+    <Compile Include="Server\DataAccess\AdministrationComponent7.cs" />
+    <Compile Include="Server\DataAccess\AffectedBuildDefinitionTable.cs" />
+    <Compile Include="Server\DataAccess\AffectedBuildDefinitionTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildObjectBinder`1.cs" />
+    <Compile Include="Server\DataAccess\AgentReservationBinder.cs" />
+    <Compile Include="Server\DataAccess\AgentReservationDataBinder.cs" />
+    <Compile Include="Server\DataAccess\WorkflowCancellationDataBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildAgentBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildControllerBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDeletionOptionsBinder.cs" />
+    <Compile Include="Server\DataAccess\StringBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDetailBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationRow.cs" />
+    <Compile Include="Server\DataAccess\BuildQualityBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildUpdateOptionsBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildServiceHostBinder.cs" />
+    <Compile Include="Server\DataAccess\GatedCheckInKeyBinder.cs" />
+    <Compile Include="Server\DataAccess\ProcessTemplateBinder.cs" />
+    <Compile Include="Server\DataAccess\QueuedBuildBinder.cs" />
+    <Compile Include="Server\DataAccess\RetentionPolicyBinder.cs" />
+    <Compile Include="Server\DataAccess\ScheduleBinder.cs" />
+    <Compile Include="Server\DataAccess\ServiceHostOwnershipBinder.cs" />
+    <Compile Include="Server\DataAccess\SharedResourceBinder.cs" />
+    <Compile Include="Server\DataAccess\SharedResourceRequestBinder.cs" />
+    <Compile Include="Server\DataAccess\SharedResourceDataBinder.cs" />
+    <Compile Include="Server\DataAccess\StartBuildDataBinder.cs" />
+    <Compile Include="Server\DataAccess\SymbolStoreDataBinder.cs" />
+    <Compile Include="Server\DataAccess\WorkspaceMappingBinder.cs" />
+    <Compile Include="Server\DataAccess\WorkspaceTemplateBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildServiceHostBinder2.cs" />
+    <Compile Include="Server\DataAccess\ProcessTemplateBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildDetailBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionSourceProviderBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildControllerBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionIdProjectBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionSourceProviderBinder2.cs" />
+    <Compile Include="Server\DataAccess\ProcessTemplateBinder3.cs" />
+    <Compile Include="Server\DataAccess\RetentionPolicyBinder2.cs" />
+    <Compile Include="Server\DataAccess\ScheduleBinder2.cs" />
+    <Compile Include="Server\DataAccess\WorkspaceMappingBinder2.cs" />
+    <Compile Include="Server\DataAccess\WorkspaceTemplateBinder2.cs" />
+    <Compile Include="Server\DataAccess\Int32PairBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildAgentTable.cs" />
+    <Compile Include="Server\DataAccess\BuildAgentUpdateTable.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent2.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent3.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent4.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent5.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent6.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent7.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent8.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent9.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent10.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent11.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent12.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent13.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent14.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent15.cs" />
+    <Compile Include="Server\DataAccess\BuildComponent17.cs" />
+    <Compile Include="Server\DataAccess\BuildControllerTable.cs" />
+    <Compile Include="Server\DataAccess\BuildControllerTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildControllerUpdateTable.cs" />
+    <Compile Include="Server\DataAccess\BuildControllerUpdateTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionRetentionPolicyTable.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionScheduleTable.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionSourceProviderTable.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionTable.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionWorkspaceTable.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionWorkspaceTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildDefinitionWorkspaceTable3.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentComponent.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentComponent2.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentComponent3.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentComponent4.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentRequestForBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentChangesetBinder.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentBinder3.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentRequestForBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildDeploymentChangesetBinder2.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationComponent.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationComponent2.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationComponent3.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationComponent4.cs" />
+    <Compile Include="Server\DataAccess\BuildInformationComponent5.cs" />
+    <Compile Include="Server\DataAccess\BuildProcessTemplateTable.cs" />
+    <Compile Include="Server\DataAccess\BuildProcessTemplateTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildProcessTemplateTable3.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent2.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent3.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent4.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent5.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent6.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent7.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent8.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent9.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent10.cs" />
+    <Compile Include="Server\DataAccess\BuildQueueComponent11.cs" />
+    <Compile Include="Server\DataAccess\BuildRequestTable.cs" />
+    <Compile Include="Server\DataAccess\BuildRequestTable2.cs" />
+    <Compile Include="Server\DataAccess\BuildRequestTable3.cs" />
+    <Compile Include="Server\DataAccess\BuildUpdateTable.cs" />
+    <Compile Include="Server\DataAccess\BuildUpdateTableV2.cs" />
+    <Compile Include="Server\DataAccess\BuildUpdateTableV3.cs" />
+    <Compile Include="Server\DataAccess\DeploymentEnvironmentComponent.cs" />
+    <Compile Include="Server\DataAccess\DeploymentEnvironmentComponent2.cs" />
+    <Compile Include="Server\DataAccess\DeploymentEnvironmentComponent3.cs" />
+    <Compile Include="Server\DataAccess\DeploymentEnvironmentComponent4.cs" />
+    <Compile Include="Server\DataAccess\QueuedBuildUpdateTable.cs" />
+    <Compile Include="Server\DataAccess\ResolveBuildUrisTable.cs" />
+    <Compile Include="Server\Compatibility\AdministrationWebService.cs" />
+    <Compile Include="Server\Compatibility\AgentReservation2010.cs" />
+    <Compile Include="Server\Compatibility\AgentReservationWebService.cs" />
+    <Compile Include="Server\Compatibility\BuildAgent2010Binder.cs" />
+    <Compile Include="Server\Compatibility\BuildController2010Binder.cs" />
+    <Compile Include="Server\Compatibility\BuildController2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\BuildDefinition2010Binder.cs" />
+    <Compile Include="Server\Compatibility\BuildDefinition2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\BuildDetail2010Binder.cs" />
+    <Compile Include="Server\Compatibility\BuildInformationNode2010Binder.cs" />
+    <Compile Include="Server\Compatibility\BuildServiceHost2010Binder.cs" />
+    <Compile Include="Server\Compatibility\ProcessTemplate2010Binder.cs" />
+    <Compile Include="Server\Compatibility\ProcessTemplate2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\RetentionPolicy2010Binder.cs" />
+    <Compile Include="Server\Compatibility\RetentionPolicy2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\Schedule2010Binder.cs" />
+    <Compile Include="Server\Compatibility\Schedule2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceMapping2010Binder.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceMapping2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceTemplate2010Binder.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceTemplate2010Binder2.cs" />
+    <Compile Include="Server\Compatibility\BuildData.cs" />
+    <Compile Include="Server\Compatibility\Agent2008Status.cs" />
+    <Compile Include="Server\Compatibility\BuildAgent2008.cs" />
+    <Compile Include="Server\Compatibility\BuildAgent2010.cs" />
+    <Compile Include="Server\Compatibility\BuildAgentSpec2008.cs" />
+    <Compile Include="Server\Compatibility\BuildAgentSpec2010.cs" />
+    <Compile Include="Server\Compatibility\BuildAgentUpdateOptions2010.cs" />
+    <Compile Include="Server\Compatibility\BuildControllerWebService.cs" />
+    <Compile Include="Server\Compatibility\BuildController2010.cs" />
+    <Compile Include="Server\Compatibility\BuildControllerSpec2010.cs" />
+    <Compile Include="Server\Compatibility\BuildControllerUpdateOptions2010.cs" />
+    <Compile Include="Server\Compatibility\BuildDefinition2010.cs" />
+    <Compile Include="Server\Compatibility\BuildDefinitionSpec2010.cs" />
+    <Compile Include="Server\Compatibility\BuildDeletionResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildDetail2010.cs" />
+    <Compile Include="Server\Compatibility\BuildDetailSpec2010.cs" />
+    <Compile Include="Server\Compatibility\BuildUpdateOptions2010.cs" />
+    <Compile Include="Server\Compatibility\BuildGroupItem2010.cs" />
+    <Compile Include="Server\Compatibility\BuildGroupItemSpec2010.cs" />
+    <Compile Include="Server\Compatibility\BuildInformation2010Component.cs" />
+    <Compile Include="Server\Compatibility\BuildInformation2010Component2.cs" />
+    <Compile Include="Server\Compatibility\BuildInformation2010Component3.cs" />
+    <Compile Include="Server\Compatibility\BuildInformation2010Component4.cs" />
+    <Compile Include="Server\Compatibility\BuildInformation2010Component5.cs" />
+    <Compile Include="Server\Compatibility\BuildInfo.cs" />
+    <Compile Include="Server\Compatibility\BuildInformationMerger2010.cs" />
+    <Compile Include="Server\Compatibility\BuildParameters.cs" />
+    <Compile Include="Server\Compatibility\BuildQueueSpec2008.cs" />
+    <Compile Include="Server\Compatibility\BuildQueueSpec2010.cs" />
+    <Compile Include="Server\Compatibility\BuildQueueWebService.cs" />
+    <Compile Include="Server\Compatibility\BuildRequest2008.cs" />
+    <Compile Include="Server\Compatibility\BuildRequest2010.cs" />
+    <Compile Include="Server\Compatibility\BuildService.cs" />
+    <Compile Include="Server\Compatibility\BuildServiceHost2010.cs" />
+    <Compile Include="Server\Compatibility\BuildServiceHostMessageTranslator.cs" />
+    <Compile Include="Server\Compatibility\BuildServiceHostUpdateOptions2010.cs" />
+    <Compile Include="Server\Compatibility\BuildStepStatus.cs" />
+    <Compile Include="Server\Compatibility\BuildStepData.cs" />
+    <Compile Include="Server\Compatibility\BuildStoreWebService.cs" />
+    <Compile Include="Server\Compatibility\BuildTeamProjectPermission2010.cs" />
+    <Compile Include="Server\Compatibility\BuildWebService.cs" />
+    <Compile Include="Server\Compatibility\ChangeSetData.cs" />
+    <Compile Include="Server\Compatibility\CodeCoverageData.cs" />
+    <Compile Include="Server\Compatibility\CodeCoverageStatus.cs" />
+    <Compile Include="Server\Compatibility\CommandQueryBuilds2010.cs" />
+    <Compile Include="Server\Compatibility\CommandQueryBuildsBase2010.cs" />
+    <Compile Include="Server\Compatibility\CommandQueryBuildsByUri2010.cs" />
+    <Compile Include="Server\Compatibility\CompatibilityComponent.cs" />
+    <Compile Include="Server\Compatibility\CompatibilityComponent2.cs" />
+    <Compile Include="Server\Compatibility\CompatibilityComponent3.cs" />
+    <Compile Include="Server\Compatibility\CompatibilityComponent4.cs" />
+    <Compile Include="Server\Compatibility\CompilationSummaryData.cs" />
+    <Compile Include="Server\Compatibility\AgentStatus2010.cs" />
+    <Compile Include="Server\Compatibility\BuildAgentUpdate2010.cs" />
+    <Compile Include="Server\Compatibility\BuildControllerUpdate2010.cs" />
+    <Compile Include="Server\Compatibility\BuildPhaseStatus2010.cs" />
+    <Compile Include="Server\Compatibility\BuildQueryOrder2010.cs" />
+    <Compile Include="Server\Compatibility\BuildReason2010.cs" />
+    <Compile Include="Server\Compatibility\BuildServiceHostUpdate2010.cs" />
+    <Compile Include="Server\Compatibility\BuildStatus2010.cs" />
+    <Compile Include="Server\Compatibility\BuildUpdate2010.cs" />
+    <Compile Include="Server\Compatibility\ContinuousIntegrationType.cs" />
+    <Compile Include="Server\Compatibility\ControllerStatus2010.cs" />
+    <Compile Include="Server\Compatibility\DeleteOptions2010.cs" />
+    <Compile Include="Server\Compatibility\GetOption2010.cs" />
+    <Compile Include="Server\Compatibility\InformationEditOptions2010.cs" />
+    <Compile Include="Server\Compatibility\ProcessTemplateType2010.cs" />
+    <Compile Include="Server\Compatibility\QueryOptions2010.cs" />
+    <Compile Include="Server\Compatibility\QueuedBuildUpdate2010.cs" />
+    <Compile Include="Server\Compatibility\QueueOptions2010.cs" />
+    <Compile Include="Server\Compatibility\QueuePriority2010.cs" />
+    <Compile Include="Server\Compatibility\QueueStatus2010.cs" />
+    <Compile Include="Server\Compatibility\QueryDeletedOption2010.cs" />
+    <Compile Include="Server\Compatibility\ScheduleDays2010.cs" />
+    <Compile Include="Server\Compatibility\TagComparison2010.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceMappingType2010.cs" />
+    <Compile Include="Server\Compatibility\Failure2010.cs" />
+    <Compile Include="Server\Compatibility\InformationField2010.cs" />
+    <Compile Include="Server\Compatibility\BuildInformationNode2010.cs" />
+    <Compile Include="Server\Compatibility\InformationChangeRequest2010.cs" />
+    <Compile Include="Server\Compatibility\InformationAddRequest2010.cs" />
+    <Compile Include="Server\Compatibility\InformationEditRequest2010.cs" />
+    <Compile Include="Server\Compatibility\InformationDeleteRequest2010.cs" />
+    <Compile Include="Server\Compatibility\Integration.cs" />
+    <Compile Include="Server\Compatibility\PlatformFlavorData.cs" />
+    <Compile Include="Server\Compatibility\ProcessTemplate2010.cs" />
+    <Compile Include="Server\Compatibility\ProjectData.cs" />
+    <Compile Include="Server\Compatibility\BuildGroupQueryResult.cs" />
+    <Compile Include="Server\Compatibility\BuildQueryResult2008.cs" />
+    <Compile Include="Server\Compatibility\BuildQueueQueryResult2008.cs" />
+    <Compile Include="Server\Compatibility\QueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildAdministrationQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildAgentQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildControllerQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildServiceHostQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildDefinitionQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\BuildQueueQueryResult2010.cs" />
+    <Compile Include="Server\Compatibility\QueuedBuild2008.cs" />
+    <Compile Include="Server\Compatibility\QueuedBuild2010.cs" />
+    <Compile Include="Server\Compatibility\QueuedBuildUpdateOptions2010.cs" />
+    <Compile Include="Server\Compatibility\RetentionPolicy2010.cs" />
+    <Compile Include="Server\Compatibility\RosarioHelper.cs" />
+    <Compile Include="Server\Compatibility\Schedule2010.cs" />
+    <Compile Include="Server\Compatibility\SharedResourceWebService.cs" />
+    <Compile Include="Server\Compatibility\TestResultData.cs" />
+    <Compile Include="Server\Compatibility\WhidbeyHelper.cs" />
+    <Compile Include="Server\Compatibility\WorkItemData.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceTemplate2010.cs" />
+    <Compile Include="Server\Compatibility\WorkspaceMapping2010.cs" />
+    <Compile Include="Machine\BuildServiceClientCredentials.cs" />
+    <Compile Include="Machine\BuildServiceClientSecurityTokenManager.cs" />
+    <Compile Include="Machine\CommunicationHelpers.cs" />
+    <Compile Include="Machine\ServiceProxies\ClientCertificateChoiceCache.cs" />
+    <Compile Include="Machine\ServiceProxies\CollectionIdentifierBehavior.cs" />
+    <Compile Include="Machine\ServiceProxies\ServiceProxy`1.cs" />
+    <Compile Include="Hosted\Server\MachinePoolStatistics.cs" />
+    <Compile Include="Workflow\Server\BuildEvent.cs" />
+    <Compile Include="Workflow\Server\WorkflowExecutionError.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdministrationResources.resx" />
+    <EmbeddedResource Include="ResourceStrings.resx" />
+    <EmbeddedResource Include="Server\Resources\AzureContinuousDeployment\11.xaml" />
+    <EmbeddedResource Include="Server\Resources\DefaultTemplate\11\1.xaml" />
+    <EmbeddedResource Include="Server\Resources\GitContinuousDeploymentTemplate\12.xaml" />
+    <EmbeddedResource Include="Server\Resources\GitTemplate.xaml" />
+    <EmbeddedResource Include="Server\Resources\GitTemplate\12.xaml" />
+    <EmbeddedResource Include="Server\Resources\GitUpgradeTemplate.xaml" />
+    <EmbeddedResource Include="Server\Resources\TfvcContinuousDeploymentTemplate\12.xaml" />
+    <EmbeddedResource Include="Server\Resources\TfvcTemplate\12.xaml" />
+    <EmbeddedResource Include="Server\Resources\UpgradeTemplate.xaml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

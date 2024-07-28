@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProxyConfig" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CacheLimitPolicyType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="FixedSizeBasedPolicy" type="xs:int" minOccurs="0" maxOccurs="1" />
+        <xs:element name="PercentageBasedPolicy" type="xs:double" minOccurs="0" maxOccurs="1" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServerType">
+    <xs:sequence>
+      <xs:element name="Uri" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServersType">
+    <xs:sequence>
+      <xs:element name="Server" type="ServerType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name ="ProxyConfigurationType">
+    <xs:all>
+      <xs:element name="Servers" type="ServersType" minOccurs="1" maxOccurs="1">
+      </xs:element>
+      <xs:element name="CacheRoot" type="xs:string" minOccurs="1" maxOccurs="1">
+      </xs:element>
+      <xs:element name="CacheDirectoryDepthLimit" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="CacheLimitPolicy" type="CacheLimitPolicyType" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="CacheDeletionPercent" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="StatisticsPersistTime" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="ReaderChunkSize" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="WriterChunkSize" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="ApplicationTierReadTimeout" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="LastWriteTimeUpdateWindow" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="DeletionAgeThreshold" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+      <xs:element name="Crc" type="xs:int" minOccurs="0" maxOccurs="1">
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="ProxyConfiguration" type="ProxyConfigurationType">
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,188 @@
+﻿{
+  "id": "XamariniOS",
+  "name": "Xamarin.iOS",
+  "category": "Build",
+  "defaultHostedQueue": "Hosted macOS",
+  "description": "Build a Xamarin.iOS app and Xamarin.UITest assembly. Test on real devices with App Center.",
+  "iconTaskId": "0F077E3A-AF59-496D-81BC-AD971B7464E0",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": false,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "d2eff759-736d-4b7b-8554-7ba0960d49d6",
+                                "versionSpec": "2.*"
+                            },
+                            "inputs": {
+                                "certPwd": "$(P12password)"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "task": {
+                                "id": "0f9f66ca-250e-40fd-9678-309bcd439d5e",
+                                "versionSpec": "1.*"
+                            },
+                            "inputs": {
+                            }
+                        },
+                        {
+                        "enabled": true,
+                        "displayName": "Use NuGet 4.5",
+                        "task": {
+                            "id": "2c65196a-54fd-4a02-9be8-d9d1837b7c5d",
+                            "versionSpec": "0.*"
+                        },
+                        "inputs": {
+                            "versionSpec": "4.5",
+                            "checkLatest": "false"
+                        }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "command": "restore",
+                                "solution": "$(Parameters.solution)",
+                                "selectOrConfig": "select",
+                                "includeNuGetOrg": "true"
+                            },
+                            "task": {
+                                "id": "333b11bd-d341-40d9-afcf-b32d5ce6f23b",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "displayName": "Select Xamarin SDK version",
+                            "task": {
+                                "id": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+                                "versionSpec": "3.*"
+                            },
+                            "inputs": {
+                                "targetType": "inline",
+                                "script": "# To manually select a Xamarin SDK version on the Hosted macOS agent, run this script with the SDK version you want to target\n# https://go.microsoft.com/fwlink/?linkid=871629 \n\nsudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_4_1"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "solution": "$(Parameters.solution)",
+                                "configuration": "$(BuildConfiguration)",
+                                "forSimulator": "true",
+                                "runNugetRestore": "false",
+                                "buildTool": "msbuild"
+                            },
+                            "task": {
+                                "id": "0F077E3A-AF59-496D-81BC-AD971B7464E0",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "SourceFolder": "$(system.defaultworkingdirectory)",
+                                "Contents": "**/*.ipa",
+                                "TargetFolder": "$(build.artifactstagingdirectory)"
+                            },
+                            "task": {
+                                "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "PathtoPublish": "$(build.artifactstagingdirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "app": "$(Parameters.appFiles)"
+                            },
+                            "task": {
+                                "id": "ad5cd22a-be4e-48bb-adce-181a32432da5",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": false,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "app": "$(Parameters.appFiles)"
+                            },
+                            "task": {
+                                "id": "b832bec5-8c27-4fef-9fb8-6bec8524ad8a",
+                                "versionSpec": "2.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "Release",
+                "allowOverride": true,
+                "isSecret": false
+            },
+            "P12password": {
+                "isSecret": true,
+                "value": null
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "name": "solution",
+                    "label": "{SolutionLabel}",
+                    "defaultValue": "**/*.sln",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{SolutionDescription}"
+                },
+                {
+                    "name": "appFiles",
+                    "label": "{AppFileLabel}",
+                    "defaultValue": "**/*.ipa",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{AppFileDescription}"
+                }
+            ]
+        }
+    }
+}

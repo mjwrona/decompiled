@@ -1,0 +1,130 @@
+{
+  "id": "NodeJSWithGulp",
+  "name": "Node.js With gulp",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "FE47E961-9FA8-4106-8639-368C022D43AD",
+  "description": "Build a Node.js application using the gulp task runner.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "timeoutInMinutes": 0,
+                            "displayName": "npm install",
+                            "order": 0,
+                            "inputs": {
+                                "command": "install"
+                            },
+                            "task": {
+                                "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+                                "versionSpec": "1.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "timeoutInMinutes": 0,
+                            "displayName": "Run gulp task",
+                            "order": 1,
+                            "inputs": {
+                                "gulpFile": "gulpfile.js",
+                                "targets": "",
+                                "arguments": "",
+                                "cwd": "",
+                                "gulpjs": "node_modules/gulp/bin/gulp.js",
+                                "publishJUnitResults": "true",
+                                "testResultsFiles": "**/TEST-*.xml",
+                                "testRunTitle": "",
+                                "enableCodeCoverage": "false",
+                                "testFramework": "Mocha",
+                                "srcFiles": "",
+                                "testFiles": "test/*.js"
+                            },
+                            "task": {
+                                "id": "b82cfbe4-34f9-40f5-889e-c8842ca9dd9d",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "continueOnError": false,
+                            "alwaysRun": false,
+                            "timeoutInMinutes": 0,
+                            "displayName": "Archive files",
+                            "order": 2,
+                            "inputs": {
+                                "rootFolderOrFile": "$(System.DefaultWorkingDirectory)",
+                                "includeRootFolder": "false",
+                                "archiveType": "zip",
+                                "tarCompression": "gz",
+                                "archiveFile": "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip",
+                                "replaceExistingArchive": "true"
+                            },
+                            "task": {
+                                "id": "d8b84976-e99a-4b86-b885-4849694435b0",
+                                "versionSpec": "2.*",
+                                "definitionType": "task"
+                            }
+                        },
+                        {
+                            "displayName": "Publish artifacts: drop",
+                            "enabled": true,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "alwaysRun": false,
+                            "inputs": {
+                                "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container",
+                                "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)",
+                                "Parallel": "false",
+                                "ParallelCount": "8"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "definitionType": "task",
+                                "versionSpec": "1.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+    },
+
+  "options": [
+    {
+      "definition": {
+        "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+      },
+      "enabled": true,
+      "inputs": {
+      }
+    }
+  ],
+    "variables": {
+      "system.debug": {
+        "value": "false",
+        "allowOverride": true
+      },
+      "BuildConfiguration": {
+        "value": "release",
+        "allowOverride": true
+      },
+      "BuildPlatform": {
+        "value": "any cpu",
+        "allowOverride": true
+      }
+    },
+    "triggers": [ ]
+}

@@ -1,0 +1,49 @@
+﻿{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "name": "Empty job",
+  "category": "Empty",
+  "description": "Start with an empty stage and add your own release steps.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "deployPhases": [
+            {
+                "name": "",
+                "rank": 1,
+                "phaseType": 1,
+                "controlOptions": {},
+                "deploymentInput": {
+                    "queueId": 1,
+                    "runOptions": { },
+                    "demands": [ ]
+                },
+                "workflowTasks": []
+            }
+        ],
+    "deployStep": {
+      "tasks": [ ]
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }],
+      "approvalOptions": null
+    },
+    "runOptions": { },
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "variables": { }
+  }
+}

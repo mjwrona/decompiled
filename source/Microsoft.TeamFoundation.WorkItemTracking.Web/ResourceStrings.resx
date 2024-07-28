@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReportingWorkItemLinksUrlCreationFailed" xml:space="preserve">
+    <value>VS402621: Failed to create reporting work item links resource URL.</value>
+  </data>
+  <data name="ProcessImportExportController_ErrorsLink" xml:space="preserve">
+    <value>https://msdn.microsoft.com/en-us/Library/vs/alm/Work/import-process/resolve-errors</value>
+  </data>
+  <data name="MissingPatchDocument" xml:space="preserve">
+    <value>You must pass a valid patch document in the body of the request.</value>
+  </data>
+  <data name="WorkItemIconUrlCreationFailed" xml:space="preserve">
+    <value>VS403327: Failed to create work item icon resource URL.</value>
+  </data>
+  <data name="RulesFromParseError" xml:space="preserve">
+    <value>The rulesFrom url doesn't match with the route template.</value>
+  </data>
+  <data name="WorkItemPatchDocument_OperationNotSuppported" xml:space="preserve">
+    <value>VS403356: {0} operation is not supported for work items</value>
+  </data>
+  <data name="ProcessNotFound" xml:space="preserve">
+    <value>VS403065: The process with Id {0} was not found.</value>
+  </data>
+  <data name="WorkItemsHubUrlCreationFailed" xml:space="preserve">
+    <value>Failed to create work items hub url</value>
+  </data>
+  <data name="WorkItemStateTransitionInvalidAction" xml:space="preserve">
+    <value>This action {0} is not supported with the state transition of work items. </value>
+  </data>
+  <data name="WorkItemRuleNotSupported" xml:space="preserve">
+    <value>You have specified a rule '{0}' that is not supported</value>
+  </data>
+  <data name="QueryUpdateFolderConflict" xml:space="preserve">
+    <value>Folders do not support WIQL.</value>
+  </data>
+  <data name="Mentioned" xml:space="preserve">
+    <value>Mentioned</value>
+  </data>
+  <data name="ReportingWorkItemRevisionsUrlCreationFailed" xml:space="preserve">
+    <value>VS402620: Failed to create reporting work item revisions resource URL.</value>
+  </data>
+  <data name="UnknownVariableType" xml:space="preserve">
+    <value>Queries with an @project clause can only be executed on the project specific WIQL endpoint.</value>
+  </data>
+  <data name="AssignedToMe" xml:space="preserve">
+    <value>Assigned to me</value>
+  </data>
+  <data name="RulesTooManyConditions" xml:space="preserve">
+    <value>VS1640111: Rules cannot have more than {0} conditions.</value>
+  </data>
+  <data name="DuplicateRuleFriendlyName" xml:space="preserve">
+    <value>VS1640124: Another rule already exists with the name '{0}'. Please choose a different name.</value>
+  </data>
+  <data name="WorkItemNotFoundAtTime" xml:space="preserve">
+    <value>The work item {0} does not exist at time {1}.</value>
+  </data>
+  <data name="FieldTypeDisabled" xml:space="preserve">
+    <value>VS402851: You cannot create a field of type {0} as it is unsupported.</value>
+  </data>
+  <data name="MissingQueryParameters" xml:space="preserve">
+    <value>The query object passed in the body of the request is missing one of the parameters. Parameter name: {0} or {1}.</value>
+  </data>
+  <data name="ParameterExceededThreshold" xml:space="preserve">
+    <value>The parameter {0} exceeded the threshold {1} of work items to delete.</value>
+  </data>
+  <data name="WorkItemNotFound" xml:space="preserve">
+    <value>Work item {0} does not exist, or you do not have permissions to read it.</value>
+  </data>
+  <data name="RuleActionConflictsWithAction" xml:space="preserve">
+    <value>VS1640115: The action {0} cannot be used with the action {1} when applied to the same field under the same conditions.</value>
+  </data>
+  <data name="XMLMigrationNotSupported" xml:space="preserve">
+    <value>This API does not support migration to/from XML processes</value>
+  </data>
+  <data name="UnsupportedBatchOperation" xml:space="preserve">
+    <value>Unsupported Batch operation.</value>
+  </data>
+  <data name="QueriesBatchLimitExceeded" xml:space="preserve">
+    <value>The number of the requested queries exceeds the limit. Batch limit is {0} and actual requested number of queries is {1}.</value>
+  </data>
+  <data name="HistoryNotUpdatedForRevision" xml:space="preserve">
+    <value>The history field was not updated for revision {0} of work item {1}. (This update has no comments associated with it)</value>
+  </data>
+  <data name="ConditionTypeRequiresOtherCondition" xml:space="preserve">
+    <value>VS1640109: The condition {0} must be used with a condition on a state or transition.</value>
+  </data>
+  <data name="InvalidOrMissingResourceId" xml:space="preserve">
+    <value>You must specify a valid resource Id when updating or removing a resource link.</value>
+  </data>
+  <data name="NullFieldObject" xml:space="preserve">
+    <value>The request is missing a field object.</value>
+  </data>
+  <data name="FeatureNotSupportedForInheritedProcessMessage" xml:space="preserve">
+    <value>Invalid operation for an inherited process.</value>
+  </data>
+  <data name="DuplicateRuleAction" xml:space="preserve">
+    <value>VS1640113: It is not allowed to have multiple rules with the same action type using the same conditions. The rules [{0}] have the action type '{1}' using the same conditions. Change the conditions of the rule to fix this error.</value>
+  </data>
+  <data name="WorkItemTooManyRules" xml:space="preserve">
+    <value>VS1640118: Each work item type cannot have more than {0} rules.</value>
+  </data>
+  <data name="QueryArtifactLinksExceedingLimit" xml:space="preserve">
+    <value>TF401353: Number of Artifact link uris specified exceeds the limit of {0}. Reduce the queried items to below the limit and try again.</value>
+  </data>
+  <data name="MissingWorkItemTypeParameter" xml:space="preserve">
+    <value>The request passed a work item type object that is missing a parameter. Parameter name:  {0}.</value>
+  </data>
+  <data name="UnrecognizedPropertyValue" xml:space="preserve">
+    <value>VS1640105: Unrecognized value '{1}' for property {0}.</value>
+  </data>
+  <data name="InvalidRelationResourceSize" xml:space="preserve">
+    <value>Please specify a valid integer for resourceSize.</value>
+  </data>
+  <data name="LocationServiceException" xml:space="preserve">
+    <value>Unable to fetch resource url from location service</value>
+  </data>
+  <data name="ExternalConnectionNoWritePermissions" xml:space="preserve">
+    <value>No write permission to manage external connection.</value>
+  </data>
+  <data name="FieldNotAllowedInConditions" xml:space="preserve">
+    <value>VS1640112: The field {0} cannot be used in a condition.</value>
+  </data>
+  <data name="CannotUpdateSystemRule" xml:space="preserve">
+    <value>VS1640127: System rules cannot be updated.</value>
+  </data>
+  <data name="NullRuleActionListItem" xml:space="preserve">
+    <value>One or more action list items are null.</value>
+  </data>
+  <data name="NullOrEmptyRule" xml:space="preserve">
+    <value>VS403209: Rule type cannot be null or empty.</value>
+  </data>
+  <data name="DefaultIdNotFound" xml:space="preserve">
+    <value>The default user is an unknown identity</value>
+  </data>
+  <data name="ProcessTemplateIdIsNotValid" xml:space="preserve">
+    <value>VS402550: Failed to extract template type from process template. </value>
+  </data>
+  <data name="WorkItemPatchDocument_IndexOutOfRange" xml:space="preserve">
+    <value>VS403354: Index out of range for path {0}.</value>
+  </data>
+  <data name="RuleActionNotAllowedOverSystemRule" xml:space="preserve">
+    <value>VS1640117: This rule conflicts with a system default rule with the same conditions.</value>
+  </data>
+  <data name="QueryInvalidParent" xml:space="preserve">
+    <value>You may not create a child of a query item. The path {0} is not a folder.</value>
+  </data>
+  <data name="Following" xml:space="preserve">
+    <value>Following</value>
+  </data>
+  <data name="GetCdnUrlFailed" xml:space="preserve">
+    <value>VS403322: Failed to get CDN URL for icon {0}.</value>
+  </data>
+  <data name="RulesFromNotSupported" xml:space="preserve">
+    <value>Current implementation supports only one item in rulesFrom.</value>
+  </data>
+  <data name="InvalidAsOfParameter" xml:space="preserve">
+    <value>Please specify a date between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM for the asOf parameter.</value>
+  </data>
+  <data name="RuleStringContainsInvalidChars" xml:space="preserve">
+    <value>VS1640120: Rule name contains invalid characters.</value>
+  </data>
+  <data name="TargetFieldNotCompatibleWithFieldType" xml:space="preserve">
+    <value>A value of type {0} is not valid for field {1}.</value>
+  </data>
+  <data name="IdsOutOfRange" xml:space="preserve">
+    <value>You must pass in a set of valid work item Ids to the Ids parameter.  The following Ids are not valid: {0}.</value>
+  </data>
+  <data name="Templates_InvalidPath" xml:space="preserve">
+    <value>'{0}' are not valid template Ids.</value>
+  </data>
+  <data name="FoldersCannotBeQueried" xml:space="preserve">
+    <value>Querying folders is not supported.</value>
+  </data>
+  <data name="WorkItemUpdateBatchFailed" xml:space="preserve">
+    <value>This operation has failed due to at least one failure in the batch request.</value>
+  </data>
+  <data name="MissingRequiredPropertyFor" xml:space="preserve">
+    <value>VS1640104: Missing required property {0} for {1}.</value>
+  </data>
+  <data name="RestoreWorkItemUnsupportedPayload" xml:space="preserve">
+    <value>Only payload with IsDeleted=false is supported for restoring a field.</value>
+  </data>
+  <data name="ProcessTemplateNameConflict" xml:space="preserve">
+    <value>VS402358: There is an existing process template with name {0}.</value>
+  </data>
+  <data name="CannotDeleteSystemRule" xml:space="preserve">
+    <value>VS1640125: System rules cannot be deleted.</value>
+  </data>
+  <data name="WorkItemRevisionNotFound" xml:space="preserve">
+    <value>The work item {0} does not exist or there is no revision {1} for it.</value>
+  </data>
+  <data name="MissingFieldParameter" xml:space="preserve">
+    <value>The request passed a field object that is missing a parameter. Parameter name:  {0}.</value>
+  </data>
+  <data name="PredefinedQueriesUrlCreationFailed" xml:space="preserve">
+    <value>Failed to create predefined queries url</value>
+  </data>
+  <data name="FieldRefNameMismatch" xml:space="preserve">
+    <value>The field reference name in the request URI needs to be the same as the field reference name in the body. This request uses '{0}' in the request URI, but '{1}' in the body. Update either the URI or the body to fix this error.</value>
+  </data>
+  <data name="MyActivity" xml:space="preserve">
+    <value>My activity</value>
+  </data>
+  <data name="RuleActionDisallowsOtherActions" xml:space="preserve">
+    <value>VS1640114: The action {0} cannot be used with any other actions using the same conditions.</value>
+  </data>
+  <data name="InvalidIsDefaultValue" xml:space="preserve">
+    <value>Invalid value for IsDefault. IsDefault can only be set to 'true'. Make a different work item type the default to make this value 'false'.</value>
+  </data>
+  <data name="InvalidPicklistId" xml:space="preserve">
+    <value>VS403064: Picklist not found. Check that the id is correct and try again.</value>
+  </data>
+  <data name="InvalidWiql" xml:space="preserve">
+    <value>The query object must provide valid WIQL.</value>
+  </data>
+  <data name="NullQueryParameter" xml:space="preserve">
+    <value>You must pass a query object in the body of the request.</value>
+  </data>
+  <data name="UnhideStateUsingDeleteState" xml:space="preserve">
+    <value>Use DELETE to unhide a state.</value>
+  </data>
+  <data name="NullOrEmptyRuleValue" xml:space="preserve">
+    <value>VS403210: Rule value cannot be null or empty.</value>
+  </data>
+  <data name="AttachmentContentInvalid" xml:space="preserve">
+    <value>Unable to retrieve the attachment content from the request.</value>
+  </data>
+  <data name="FieldMismatch" xml:space="preserve">
+    <value>One or more dependent field values ({0}) are missing. Ensure your client is up to date.</value>
+  </data>
+  <data name="FieldUrlCreationFailed" xml:space="preserve">
+    <value>TF401363: Failed to create field resource URL.</value>
+  </data>
+  <data name="CannotAddDuplicateRule" xml:space="preserve">
+    <value>VS1640126: Rule cannot be added because a duplicate of this rule exists with Id '{0}'.</value>
+  </data>
+  <data name="WorkItemStateCategoryInvalid" xml:space="preserve">
+    <value>VS403067: Invalid State Category {0}. Supported are Proposed, InProgress, Resolved, Completed, Removed.</value>
+  </data>
+  <data name="MigrationAcrossOOBTypesNotSupported" xml:space="preserve">
+    <value>This API does not support migration between processes across different OOB types</value>
+  </data>
+  <data name="ExpandParameterConflict" xml:space="preserve">
+    <value>The expand parameter can not be used with the fields parameter.</value>
+  </data>
+  <data name="WorkItemForNotRuleActionInvalid" xml:space="preserve">
+    <value>VS403703: Membership rules are only permitted one action per rule. Given rule has {0} actions.</value>
+  </data>
+  <data name="WorkItemPatchDocument_TestFailed" xml:space="preserve">
+    <value>VS403351: Test Operation for path {0} failed, value {1} was not equal to test value {2}.</value>
+  </data>
+  <data name="ProjectNotFound" xml:space="preserve">
+    <value>You must specify a valid project in the resource URL.</value>
+  </data>
+  <data name="IncorrectAttachmentContentLength" xml:space="preserve">
+    <value>Content-Range values don't match the length of the file content. </value>
+  </data>
+  <data name="WorkItemRuleConditionInvalid" xml:space="preserve">
+    <value>VS1640102: The rule condition {0} is invalid.</value>
+  </data>
+  <data name="NullWorkItemTypeObject" xml:space="preserve">
+    <value>You must pass a WorkItemType object in the body of the request.</value>
+  </data>
+  <data name="TwoConditionsRequireEitherPattern" xml:space="preserve">
+    <value>VS1640107: The combination of conditions {0} is not supported. When specifying two conditions, exactly one of them must match [{1}] or [{2}].</value>
+  </data>
+  <data name="NameAndPathInconsistent" xml:space="preserve">
+    <value>VS403723: Must provide a consistent name and path for the work item '{0}'.  The last segment of the path should match the name of the item. Name: '{1}'  Path: '{2}'</value>
+  </data>
+  <data name="WorkItemRuleActionInvalid" xml:space="preserve">
+    <value>VS1640101: The rule action {0} is invalid.</value>
+  </data>
+  <data name="InvalidQueryId" xml:space="preserve">
+    <value>Invalid query Id {0}.</value>
+  </data>
+  <data name="WorkItemPatchDocument_InvalidPath" xml:space="preserve">
+    <value>VS403343: The path {0} is not supported for work items.</value>
+  </data>
+  <data name="MissingWiqlParameter" xml:space="preserve">
+    <value>You must pass a wiql object in the body of the request.</value>
+  </data>
+  <data name="ExternalConnectionNoReadPermissions" xml:space="preserve">
+    <value>No read permission to access external connection.</value>
+  </data>
+  <data name="WorkItemInvalidHideFieldRuleMultipleActions" xml:space="preserve">
+    <value>VS403705: HideTargetField action can be the only action in a rule. Given rule has {0} actions.</value>
+  </data>
+  <data name="AsOfParameterConflict" xml:space="preserve">
+    <value>The asOf parameter can only be used with the fields parameter.</value>
+  </data>
+  <data name="MissingRequiredProperty" xml:space="preserve">
+    <value>VS1640103: Missing required property {0}.</value>
+  </data>
+  <data name="UnsupportedContentTypeForAttachmentUpload" xml:space="preserve">
+    <value>Only binary content is supported for chunked attachment upload</value>
+  </data>
+  <data name="WorkItemInvalidHideFieldRuleCondition" xml:space="preserve">
+    <value>VS403704: HideTargetField action can only have membership condition. Given rule has {0} conditions.</value>
+  </data>
+  <data name="IncorrectContentRangeForAttachmentUpload" xml:space="preserve">
+    <value>Content-Range specified in the attachment upload request is not valid.</value>
+  </data>
+  <data name="WorkItemPatchDoesNotSupportReplacingAttachedFile" xml:space="preserve">
+    <value>VS403649: Work item patch does not support replacing attached file or its content</value>
+  </data>
+  <data name="RevisionNotFound" xml:space="preserve">
+    <value>Revision number {1} for work item {0} does not exist.</value>
+  </data>
+  <data name="DuplicateValueChangeRules" xml:space="preserve">
+    <value>VS1640116: It is not allowed to have multiple rules which set the value of the same field using the same conditions. The rules {0} using the same conditions either sets the value of field {1} or conflicts with one another. Change the conditions of the rule to fix this error.</value>
+  </data>
+  <data name="WorkItemRevisionUrlCreationFailed" xml:space="preserve">
+    <value>TF401330: Failed to create work item revision resource URL.</value>
+  </data>
+  <data name="Templates_ArgumentNull" xml:space="preserve">
+    <value>The {0} parameter cannot be null or empty.</value>
+  </data>
+  <data name="ClassificationNodeRequred" xml:space="preserve">
+    <value>VS403300: You must specify a classification node in the body of your request.</value>
+  </data>
+  <data name="WorkItemPatchDocument_CannotChangeRelationType" xml:space="preserve">
+    <value>VS403358: You cannot change the type of a relation.</value>
+  </data>
+  <data name="WorkItemHideFieldRuleNotSupported" xml:space="preserve">
+    <value>VS403706: Hide field rule is not supported.</value>
+  </data>
+  <data name="WorkItemPatchDoesNotSupportPatchingTopLevelProperties" xml:space="preserve">
+    <value>Work item patch does not support patching the top level property at path {0}.</value>
+  </data>
+  <data name="BatchRequiresAtLeastOneOperation" xml:space="preserve">
+    <value>Batch requires at least one operation.</value>
+  </data>
+  <data name="NullOrEmptyAttachment" xml:space="preserve">
+    <value>Attachment cannot be null or empty.</value>
+  </data>
+  <data name="RuleIdMismatchInRequestBody" xml:space="preserve">
+    <value>VS1640128: The rule Id '{0}' given in the request URI does not match the rule Id '{1}' in the request body. The rule Id cannot be updated, so either specify the same Id, or remove it from the request body.</value>
+  </data>
+  <data name="ConditionsOnDateTimeValue" xml:space="preserve">
+    <value>VS1640123: Conditions on date/time fields that rely on a value are not supported.</value>
+  </data>
+  <data name="QueryGetBatchFailed" xml:space="preserve">
+    <value>This operation has failed due to at least one failure in the batch request.</value>
+  </data>
+  <data name="WorkItemUrlNotWellFormed" xml:space="preserve">
+    <value>The work item url was not well formed: '{0}'</value>
+  </data>
+  <data name="CannotAddDuplicateRuleWithName" xml:space="preserve">
+    <value>VS1640126: Rule cannot be added because a duplicate of this rule exists with name '{0}'.</value>
+  </data>
+  <data name="UpdateWorkItemUnsupportedPayload" xml:space="preserve">
+    <value>Only one of the options for work item field update payload can be set.</value>
+  </data>
+  <data name="Templates_MissingPath" xml:space="preserve">
+    <value>All operations require a path.</value>
+  </data>
+  <data name="InvalidEventSource" xml:space="preserve">
+    <value>Invalid event source : '{0}'.</value>
+  </data>
+  <data name="InvalidRelationType" xml:space="preserve">
+    <value>Unknown relation type {0}.</value>
+  </data>
+  <data name="WorkItemPatchDocument_DuplicateWorkItemId" xml:space="preserve">
+    <value>VS403357: Work items in the batch are expected to be unique, but found work item with ID {0} in more than one request.</value>
+  </data>
+  <data name="ProcessImportExportController_Status_FailedProject" xml:space="preserve">
+    <value>Project {0} failed after {1} steps</value>
+  </data>
+  <data name="ProcessTemplateNameIsNotValid" xml:space="preserve">
+    <value>VS402551: Failed to extract template name from process template.</value>
+  </data>
+  <data name="InvalidBehaviorPropertyName" xml:space="preserve">
+    <value>The following Behavior Properties are not allowed: {0}</value>
+  </data>
+  <data name="InconsistentParametersForBatchRequest" xml:space="preserve">
+    <value>The {0} parameter needs to be consistent on all requests in the batch.</value>
+  </data>
+  <data name="NullOrEmptyParameter" xml:space="preserve">
+    <value>You must provide a value for the {0} parameter.</value>
+  </data>
+  <data name="WorkItemTrackingTypeTemplateNotFound" xml:space="preserve">
+    <value>The workitem type could not be found. Make sure you specify the correct project and type names.</value>
+  </data>
+  <data name="RequestBodyMustBeIsPicklistTrue" xml:space="preserve">
+    <value>VS1640130: The request body must contain 'isPicklist = true'.</value>
+  </data>
+  <data name="WorkItemUrlCreationFailed" xml:space="preserve">
+    <value>TF401352: Failed to create work item resource URL.</value>
+  </data>
+  <data name="ActionTypeRequiresConditions" xml:space="preserve">
+    <value>VS1640110: The action {0} must be used with at least one condition.</value>
+  </data>
+  <data name="WorkItemPatchDocument_TestNotSupportedForRelations" xml:space="preserve">
+    <value>VS403352: The test operation is not supported for relations.</value>
+  </data>
+  <data name="FieldNotAllowedInActions" xml:space="preserve">
+    <value>VS1640121: The field {0} cannot be used in an action.</value>
+  </data>
+  <data name="WorkItemAttachmentUrlCreationFailed" xml:space="preserve">
+    <value>Failed to create work item attachment resource URL.</value>
+  </data>
+  <data name="MissingFieldOnQuery" xml:space="preserve">
+    <value>WIQL queries do not support the Select * operation.  You must specify at least one field in the select statement.</value>
+  </data>
+  <data name="EnterpriseWithUrlNotFound" xml:space="preserve">
+    <value>The enterprise with url was not found: '{0}'</value>
+  </data>
+  <data name="QueryParameterOutOfRangeWithRangeValues" xml:space="preserve">
+    <value>A query parameter specified in the request URI is outside the permissible range: Parameter Name: {0}, Acceptable Range: {1} to {2}</value>
+  </data>
+  <data name="InvalidRelationUrl" xml:space="preserve">
+    <value>Linking to a work item requires the full url.</value>
+  </data>
+  <data name="DisallowValueUsedIncorrectly" xml:space="preserve">
+    <value>VS1640132: The disallowvalue action must only be used with the System.State field, and must be paired with a whenwas condition also involving the System.State field, or a condition involving group membership.</value>
+  </data>
+  <data name="MissingQueryParameter" xml:space="preserve">
+    <value>The query object passed in the body of the request is missing a parameter. Parameter name: {0}.</value>
+  </data>
+  <data name="InvalidPickListType" xml:space="preserve">
+    <value>VS403054: The picklist type specified is invalid.</value>
+  </data>
+  <data name="UnknownFieldReferenceName" xml:space="preserve">
+    <value>VS1640122: Unknown field '{0}' given in property {1}.</value>
+  </data>
+  <data name="DefaultValueCannotBeGroup" xml:space="preserve">
+    <value>Default value cannot be a group when group values are not allowed.</value>
+  </data>
+  <data name="UpdateNotFound" xml:space="preserve">
+    <value>The update for this work item does not exist.</value>
+  </data>
+  <data name="WorkItemPatchDoesNotSupportEmptyPath" xml:space="preserve">
+    <value>Work item patch does not support patching the entire work item.</value>
+  </data>
+  <data name="WorkItemUpdatesUrlCreationFailed" xml:space="preserve">
+    <value>TF401351: Failed to create work item updates resource URL.</value>
+  </data>
+  <data name="InvalidGetWorkItemTypeExpandValue" xml:space="preserve">
+    <value>Invalid value for $expand, Allowed values are {0}</value>
+  </data>
+  <data name="IdMismatch" xml:space="preserve">
+    <value>The provided id {0} you are trying to update is different than the Id {1} in the request.</value>
+  </data>
+  <data name="ThreeConditionsRequirePattern" xml:space="preserve">
+    <value>VS1640108: The combination of conditions {0} is not supported. When specifying three conditions, exactly one of them must match [{1}].</value>
+  </data>
+  <data name="QueryParameterOutOfRange" xml:space="preserve">
+    <value>A query parameter specified in the request URI is outside the permissible range: {0}</value>
+  </data>
+  <data name="ProjectUsesSameProcess" xml:space="preserve">
+    <value>The project already uses the supplied target process. Please give a different target process.</value>
+  </data>
+  <data name="UnsupportedAttachmentUploadType" xml:space="preserve">
+    <value>This uploadType {0} is not supported with the {1} operation. </value>
+  </data>
+  <data name="WorkItemForNotRuleConditionInvalid" xml:space="preserve">
+    <value>VS403702: Membership rules are only permitted one condition per rule. Given rule has {0} conditions.</value>
+  </data>
+  <data name="RemoteLinkFeatureDisabled" xml:space="preserve">
+    <value>The feature is disabled. Contact your Azure DevOps administrator.</value>
+  </data>
+  <data name="RuleName" xml:space="preserve">
+    <value>Rule name</value>
+  </data>
+  <data name="Templates_InvalidOperation" xml:space="preserve">
+    <value>'{0}' is invalid, Only 'remove' operations are allowed.</value>
+  </data>
+  <data name="RuleStringTooLong" xml:space="preserve">
+    <value>VS1640119: {0} cannot exceed {1} characters. The current length is {2}.</value>
+  </data>
+  <data name="ReclassificationIdRequired" xml:space="preserve">
+    <value>VS402391: Reclassification Id must be given during classification node deletion</value>
+  </data>
+  <data name="TwoConditionsRequirePattern" xml:space="preserve">
+    <value>VS1640106: The combination of conditions {0} is not supported. When specifying two conditions, exactly one of them must match [{1}].</value>
+  </data>
+  <data name="ClassificationNodeUrlCreationFailed" xml:space="preserve">
+    <value>TF402331: Failed to create classification node resource URL</value>
+  </data>
+</root>

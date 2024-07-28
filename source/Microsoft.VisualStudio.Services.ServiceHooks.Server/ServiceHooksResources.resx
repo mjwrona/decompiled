@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_NoActionsForConsumerId" xml:space="preserve">
+    <value>No actions are associated with the specified consumer identifier.</value>
+  </data>
+  <data name="InputIdentifierUnknown" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Error_MissingConfigurationSettingTemplate" xml:space="preserve">
+    <value>Missing '{0}' configuration value.</value>
+  </data>
+  <data name="Error_CannotResetAndIncrementProbationRetries" xml:space="preserve">
+    <value>Cannot both reset and increment the number of probation retries in a single operation.</value>
+  </data>
+  <data name="InputValueMissing" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Error_MissingSubscriptionInputElementTemplate" xml:space="preserve">
+    <value>Subscription input '{0}' is missing required element '{1}'.</value>
+  </data>
+  <data name="Error_MissingSubscriptionBySpecifiedIdTemplate" xml:space="preserve">
+    <value>The subscription with identifier '{0}' was missing.</value>
+  </data>
+  <data name="Error_DetailExPlusActivityIdFormat" xml:space="preserve">
+    <value>{0} (activity Id is {1})</value>
+  </data>
+  <data name="Error_PublisherInputValueCannotBeNull" xml:space="preserve">
+    <value>Publisher input value for id '{0}' cannot be null.</value>
+  </data>
+  <data name="NoCustomEventDescription" xml:space="preserve">
+    <value>Not Provided</value>
+  </data>
+  <data name="Error_MaskedConsumerInputValueFormat" xml:space="preserve">
+    <value>Subscription input "{0}" for consumer "{1}" and action "{2}" can not be masked</value>
+  </data>
+  <data name="Error_DetailActivityIdFormat" xml:space="preserve">
+    <value>Activity Id is {0}</value>
+  </data>
+  <data name="Error_MissingSubscriptionQueryCriteria" xml:space="preserve">
+    <value>Missing subscription query criteria.</value>
+  </data>
+  <data name="Error_UnexpectedResourceVersionFormat" xml:space="preserve">
+    <value>Resource version '{0}' cannot be set for this action.</value>
+  </data>
+  <data name="Error_InvalidConsumerActionIdForConsumerId" xml:space="preserve">
+    <value>The specified action identifier does not correspond to an action of the consumer.</value>
+  </data>
+  <data name="Error_MissingRequiredConsumerInputFormat" xml:space="preserve">
+    <value>No value was supplied for consumer input "{0}" ({1}) which is a required input for consumer "{2}" action "{3}"</value>
+  </data>
+  <data name="AccountMigrationInProgress" xml:space="preserve">
+    <value>Service Hooks service is unavailable</value>
+  </data>
+  <data name="Error_InvalidConsumerId" xml:space="preserve">
+    <value>Consumer by the specified identifier was not found.</value>
+  </data>
+  <data name="Error_CouldNotSendNotification" xml:space="preserve">
+    <value>The Service Hooks service was unable to send the notification to the target consumer.</value>
+  </data>
+  <data name="Error_UnknownConsumerInputFormat" xml:space="preserve">
+    <value>Unknown subscription input "{0}" for consumer "{1}" and action "{2}"</value>
+  </data>
+  <data name="Error_PublisherInputsNotQueryable" xml:space="preserve">
+    <value>Subscription input values at the "publisher" scope can only be queried from a publisher's endpoint.</value>
+  </data>
+  <data name="Error_UnknownKpiMetricNameTemplate" xml:space="preserve">
+    <value>Unknown KPI metric name: {0}</value>
+  </data>
+  <data name="Error_UnsupportedResourceVersionFormat" xml:space="preserve">
+    <value>Resource version '{0}' is not supported for this action.</value>
+  </data>
+  <data name="Error_InvalidSubscriptionIdOnSubscriptionInputTemplate" xml:space="preserve">
+    <value>The subscription input with identifier '{0}' has a subscription identifier '{1}' that is invalid.</value>
+  </data>
+  <data name="ProjectIdOrSubscriberIdRequired" xml:space="preserve">
+    <value>A project id or subscriber id is required.</value>
+  </data>
+  <data name="Truncated" xml:space="preserve">
+    <value>Resource details not shown in history due to size limitation</value>
+  </data>
+  <data name="Error_ConfidentialInputValuesRequired" xml:space="preserve">
+    <value>Confidential input values must be provided to make this change. ({0})</value>
+  </data>
+</root>

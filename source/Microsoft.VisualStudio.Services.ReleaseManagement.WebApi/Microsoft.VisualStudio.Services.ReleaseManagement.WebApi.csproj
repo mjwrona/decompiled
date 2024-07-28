@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82422FAF-BF41-424D-AD60-E02F4D286C42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ReleaseManagement.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ReleaseManagement.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\ReleaseManagement\Artifact\Extensions\WellKnownArtifactInputs.cs" />
+    <Compile Include="ApprovalFilters.cs" />
+    <Compile Include="ApprovalStatus.cs" />
+    <Compile Include="ApprovalType.cs" />
+    <Compile Include="ArtifactDefinitionConstants.cs" />
+    <Compile Include="ArtifactDownloadInputConstants.cs" />
+    <Compile Include="ArtifactSourceTrigger.cs" />
+    <Compile Include="ArtifactTypes.cs" />
+    <Compile Include="AuthorizationHeaderFor.cs" />
+    <Compile Include="AutoTriggerIssue.cs" />
+    <Compile Include="AutoTriggerIssueJsonConverter.cs" />
+    <Compile Include="BuildVersionConstants.cs" />
+    <Compile Include="ComplianceSettings.cs" />
+    <Compile Include="ConfigurationVariableValue.cs" />
+    <Compile Include="ContainerImageTrigger.cs" />
+    <Compile Include="ContinuousDeploymentTriggerIssue.cs" />
+    <Compile Include="ApprovalExecutionOrder.cs" />
+    <Compile Include="ArtifactDownloadInputBase.cs" />
+    <Compile Include="ArtifactFilter.cs" />
+    <Compile Include="ArtifactsDownloadInput.cs" />
+    <Compile Include="BuildArtifactDownloadInput.cs" />
+    <Compile Include="CodeRepositoryReference.cs" />
+    <Compile Include="CustomArtifactDownloadInput.cs" />
+    <Compile Include="EnvironmentTrigger.cs" />
+    <Compile Include="EnvironmentTriggerContent.cs" />
+    <Compile Include="GitArtifactDownloadInput.cs" />
+    <Compile Include="GitHubArtifactDownloadInput.cs" />
+    <Compile Include="JenkinsArtifactDownloadInput.cs" />
+    <Compile Include="Metric.cs" />
+    <Compile Include="PullRequestConfiguration.cs" />
+    <Compile Include="PullRequestFilter.cs" />
+    <Compile Include="PullRequestSystemType.cs" />
+    <Compile Include="TagFilter.cs" />
+    <Compile Include="TfvcArtifactDownloadInput.cs" />
+    <Compile Include="DefinitionEnvironmentReference.cs" />
+    <Compile Include="Deployment.cs" />
+    <Compile Include="DeploymentAttempt.cs" />
+    <Compile Include="DeploymentAuthorizationInfo.cs" />
+    <Compile Include="OAuthParameters.cs" />
+    <Compile Include="DeploymentAuthorizationOwner.cs" />
+    <Compile Include="DeploymentHealthOptionConstants.cs" />
+    <Compile Include="DeploymentOperationStatus.cs" />
+    <Compile Include="DeploymentQueryParameters.cs" />
+    <Compile Include="DeploymentReason.cs" />
+    <Compile Include="DeploymentsQueryType.cs" />
+    <Compile Include="DeploymentStatus.cs" />
+    <Compile Include="DeployPhaseJsonConverter.cs" />
+    <Compile Include="DeployPhaseStatus.cs" />
+    <Compile Include="DeployPhaseTypes.cs" />
+    <Compile Include="EmailRecipients.cs" />
+    <Compile Include="EnvironmentOptions.cs" />
+    <Compile Include="EnvironmentStatus.cs" />
+    <Compile Include="EnvironmentStatusOld.cs" />
+    <Compile Include="EnvironmentTemplateContributionDefinition.cs" />
+    <Compile Include="EnvironmentTriggerType.cs" />
+    <Compile Include="RedeploymentDeploymentGroupTargetFilter.cs" />
+    <Compile Include="FavoriteItem.cs" />
+    <Compile Include="FavoriteItemKeys.cs" />
+    <Compile Include="FavoriteItemTypes.cs" />
+    <Compile Include="FavoriteItemNames.cs" />
+    <Compile Include="FavoritesScopeNames.cs" />
+    <Compile Include="Folder.cs" />
+    <Compile Include="FolderPathQueryOrder.cs" />
+    <Compile Include="GateConstants.cs" />
+    <Compile Include="GateUpdateMetadata.cs" />
+    <Compile Include="IgnoredGate.cs" />
+    <Compile Include="Issue.cs" />
+    <Compile Include="IssueSource.cs" />
+    <Compile Include="SenderType.cs" />
+    <Compile Include="MailMessage.cs" />
+    <Compile Include="ManualIntervention.cs" />
+    <Compile Include="ManualInterventionStatus.cs" />
+    <Compile Include="ManualInterventionUpdateMetadata.cs" />
+    <Compile Include="PackageTrigger.cs" />
+    <Compile Include="IPagedCollection`1.cs" />
+    <Compile Include="PageableCollection`1.cs" />
+    <Compile Include="ParallelExecutionInputJsonConverter.cs" />
+    <Compile Include="PipelineProcessJsonConverter.cs" />
+    <Compile Include="PipelineProcessTypes.cs" />
+    <Compile Include="PullRequestTrigger.cs" />
+    <Compile Include="Queue.cs" />
+    <Compile Include="QueuedReleaseData.cs" />
+    <Compile Include="RedeployTriggerAction.cs" />
+    <Compile Include="Release.cs" />
+    <Compile Include="ReleaseApproval.cs" />
+    <Compile Include="ReleaseApprovalHistory.cs" />
+    <Compile Include="ReleaseDefinition.cs" />
+    <Compile Include="ReleaseDefinitionSource.cs" />
+    <Compile Include="ReleaseDefinitionUndeleteParameter.cs" />
+    <Compile Include="ReleaseDeployPhaseJsonConverter.cs" />
+    <Compile Include="ReleaseEnvironment.cs" />
+    <Compile Include="ReleaseEnvironmentUpdateMetadata.cs" />
+    <Compile Include="ReleaseManagementApiConstants.cs" />
+    <Compile Include="ReleaseManagementResourceIds.cs" />
+    <Compile Include="ReleaseManagementSecuredObject.cs" />
+    <Compile Include="ReleaseManagementSecuredString.cs" />
+    <Compile Include="ReleaseManagementSecuredStringConvertor.cs" />
+    <Compile Include="ReleaseQueryOrder.cs" />
+    <Compile Include="ReleaseReason.cs" />
+    <Compile Include="ReleaseReference.cs" />
+    <Compile Include="ReleaseSchedule.cs" />
+    <Compile Include="ReleaseSettings.cs" />
+    <Compile Include="ReleaseStartEnvironmentMetadata.cs" />
+    <Compile Include="ReleaseStartMetadata.cs" />
+    <Compile Include="ReleaseStatus.cs" />
+    <Compile Include="ReleaseStatusOld.cs" />
+    <Compile Include="ReleaseTask.cs" />
+    <Compile Include="ReleaseTaskAttachment.cs" />
+    <Compile Include="ReleaseTriggerBase.cs" />
+    <Compile Include="ReleaseTriggerJsonConverter.cs" />
+    <Compile Include="ReleaseTriggerType.cs" />
+    <Compile Include="ReleaseUpdateMetadata.cs" />
+    <Compile Include="RetentionSettings.cs" />
+    <Compile Include="RunOptionsConstants.cs" />
+    <Compile Include="ScheduleDays.cs" />
+    <Compile Include="ScheduledReleaseTrigger.cs" />
+    <Compile Include="SecuredObject.cs" />
+    <Compile Include="SourceRepoTrigger.cs" />
+    <Compile Include="SummaryMailSection.cs" />
+    <Compile Include="TaskStatus.cs" />
+    <Compile Include="TimeZone.cs" />
+    <Compile Include="TimeZoneList.cs" />
+    <Compile Include="VariableGroupUtility.cs" />
+    <Compile Include="WellKnownArtifactVariables.cs" />
+    <Compile Include="WellKnownBuildArtifactVariables.cs" />
+    <Compile Include="WellKnownExtendedReleaseVariables.cs" />
+    <Compile Include="WellKnownMetrics.cs" />
+    <Compile Include="WellKnownPullRequestVariables.cs" />
+    <Compile Include="WellKnownReleaseVariables.cs" />
+    <Compile Include="YamlFileSourceConstants.cs" />
+    <Compile Include="YamlFileSourceTypes.cs" />
+    <Compile Include="ReleaseManagementInputValue.cs" />
+    <Compile Include="Utility\ReferenceLinksExtensions.cs" />
+    <Compile Include="Utility\ShallowReferenceConverter.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityPermissions.cs" />
+    <Compile Include="Security\ReleaseManagementUISecurityPermissions.cs" />
+    <Compile Include="Security\SecurityConstants.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Clients\ReleaseHttpClientBase.cs" />
+    <Compile Include="Clients\RMHttpClient.cs" />
+    <Compile Include="Clients\ReleaseCompatHttpClientBase.cs" />
+    <Compile Include="Clients\ReleaseHttpClient.cs" />
+    <Compile Include="Clients\ReleaseHttpClient2.cs" />
+    <Compile Include="Exceptions\ReleaseStepNotFoundException.cs" />
+    <Compile Include="Exceptions\ApprovalUpdateException.cs" />
+    <Compile Include="Exceptions\DeploymentStatusAlreadyUpdatedException.cs" />
+    <Compile Include="Exceptions\QueueNotFoundException.cs" />
+    <Compile Include="Exceptions\QueueReleaseNotAllowedException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionAlreadyExistsException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionAlreadyUpdatedException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionDeletionNotAllowedException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionNotFoundException.cs" />
+    <Compile Include="Exceptions\ReleaseDeletionNotAllowedException.cs" />
+    <Compile Include="Exceptions\ReleaseNotActiveException.cs" />
+    <Compile Include="Exceptions\ReleaseNotFoundException.cs" />
+    <Compile Include="Exceptions\ReleaseEnvironmentNotFoundException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionSnapshotRevisionNotMatchedExcepti.cs" />
+    <Compile Include="Exceptions\TaskGroupMissingException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionDisabledException.cs" />
+    <Compile Include="Exceptions\ReleaseDefinitionRevisionNotFoundException.cs" />
+    <Compile Include="Events\DeploymentApprovalCompletedEvent.cs" />
+    <Compile Include="Events\DeploymentApprovalPendingEvent.cs" />
+    <Compile Include="Events\DeploymentCompletedEvent.cs" />
+    <Compile Include="Events\DeploymentEvent.cs" />
+    <Compile Include="Events\DeploymentManualInterventionPendingEvent.cs" />
+    <Compile Include="Events\DeploymentStartedEvent.cs" />
+    <Compile Include="Events\EventConstants.cs" />
+    <Compile Include="Events\RealtimeReleaseDefinitionEvent.cs" />
+    <Compile Include="Events\RealtimeReleaseEvent.cs" />
+    <Compile Include="Events\ReleaseAbandonedEvent.cs" />
+    <Compile Include="Events\ReleaseApprovalPendingEvent.cs" />
+    <Compile Include="Events\ReleaseCreatedEvent.cs" />
+    <Compile Include="Events\ReleaseDefinitionsDeletedEvent.cs" />
+    <Compile Include="Events\ReleaseEnvironmentCompletedEvent.cs" />
+    <Compile Include="Events\ReleaseEvent.cs" />
+    <Compile Include="Events\ReleaseEventRoles.cs" />
+    <Compile Include="Events\ReleasesDeletedEvent.cs" />
+    <Compile Include="Events\ReleaseNotCreatedEvent.cs" />
+    <Compile Include="Events\ReleaseTaskLogUpdatedEvent.cs" />
+    <Compile Include="Events\ReleaseTasksUpdatedEvent.cs" />
+    <Compile Include="Events\ReleaseUpdatedEvent.cs" />
+    <Compile Include="Events\ReleaseEnvironmentStatusUpdatedEvent.cs" />
+    <Compile Include="Events\TaskOrchestrationPlanGroupsStartedEvent.cs" />
+    <Compile Include="Contracts\ApprovalOptions.cs" />
+    <Compile Include="Contracts\AgentArtifactDefinition.cs" />
+    <Compile Include="Contracts\AgentArtifactType.cs" />
+    <Compile Include="Contracts\AgentBasedDeployPhase.cs" />
+    <Compile Include="Contracts\AgentDeploymentInput.cs" />
+    <Compile Include="Contracts\AgentSpecification.cs" />
+    <Compile Include="Contracts\Artifact.cs" />
+    <Compile Include="Contracts\ArtifactContributionDefinition.cs" />
+    <Compile Include="Contracts\ArtifactJsonConverter.cs" />
+    <Compile Include="Contracts\ArtifactInstanceData.cs" />
+    <Compile Include="Contracts\ArtifactMetadata.cs" />
+    <Compile Include="Contracts\ArtifactProvider.cs" />
+    <Compile Include="Contracts\ArtifactTriggerConfiguration.cs" />
+    <Compile Include="Contracts\ArtifactSourceId.cs" />
+    <Compile Include="Contracts\ArtifactSourceIdsQueryResult.cs" />
+    <Compile Include="Contracts\ArtifactSourceReference.cs" />
+    <Compile Include="Contracts\ArtifactTypeDefinition.cs" />
+    <Compile Include="Contracts\ArtifactVersion.cs" />
+    <Compile Include="Contracts\ArtifactVersionQueryResult.cs" />
+    <Compile Include="Contracts\AuditAction.cs" />
+    <Compile Include="Contracts\AzureKeyVaultVariableGroupProviderData.cs" />
+    <Compile Include="Contracts\AzureKeyVaultVariableValue.cs" />
+    <Compile Include="Contracts\BaseDeploymentInput.cs" />
+    <Compile Include="Contracts\BuildVersion.cs" />
+    <Compile Include="Contracts\SourcePullRequestVersion.cs" />
+    <Compile Include="Contracts\Change.cs" />
+    <Compile Include="Contracts\CheckConfigurationReference.cs" />
+    <Compile Include="Contracts\Consumer.cs" />
+    <Compile Include="Contracts\ControlOptions.cs" />
+    <Compile Include="Contracts\DataSourceBinding.cs" />
+    <Compile Include="Contracts\Demand.cs" />
+    <Compile Include="Contracts\DemandEquals.cs" />
+    <Compile Include="Contracts\DemandExists.cs" />
+    <Compile Include="Contracts\DemandJsonConverter.cs" />
+    <Compile Include="Contracts\DemandMinimumVersion.cs" />
+    <Compile Include="Contracts\DeploymentExpands.cs" />
+    <Compile Include="Contracts\DeploymentInput.cs" />
+    <Compile Include="Contracts\DeploymentJob.cs" />
+    <Compile Include="Contracts\DeployPhase.cs" />
+    <Compile Include="Contracts\DesignerPipelineProcess.cs" />
+    <Compile Include="Contracts\EnumConverter.cs" />
+    <Compile Include="Contracts\EnvironmentExecutionPolicy.cs" />
+    <Compile Include="Contracts\EnvironmentRetentionPolicy.cs" />
+    <Compile Include="Contracts\ExecutionInput.cs" />
+    <Compile Include="Contracts\ExecutionPoliciesConstants.cs" />
+    <Compile Include="Contracts\GatesDeploymentInput.cs" />
+    <Compile Include="Contracts\GatesDeployPhase.cs" />
+    <Compile Include="Contracts\GateStatus.cs" />
+    <Compile Include="Contracts\IAgentArtifactDetails.cs" />
+    <Compile Include="Contracts\MachineGroupBasedDeployPhase.cs" />
+    <Compile Include="Contracts\MachineGroupDeploymentInput.cs" />
+    <Compile Include="Contracts\MailSectionType.cs" />
+    <Compile Include="Contracts\MappingDetails.cs" />
+    <Compile Include="Contracts\MultiConfigInput.cs" />
+    <Compile Include="Contracts\MultiMachineInput.cs" />
+    <Compile Include="Contracts\NoneExecutionInput.cs" />
+    <Compile Include="Contracts\OrgPipelineReleaseSettings.cs" />
+    <Compile Include="Contracts\OrgPipelineReleaseSettingsUpdateParameters.cs" />
+    <Compile Include="Contracts\ParallelExecutionInputBase.cs" />
+    <Compile Include="Contracts\ParallelExecutionTypes.cs" />
+    <Compile Include="Contracts\PipelineProcess.cs" />
+    <Compile Include="Contracts\ProjectPipelineReleaseSettings.cs" />
+    <Compile Include="Contracts\ProjectPipelineReleaseSettingsUpdateParameters.cs" />
+    <Compile Include="Contracts\ProjectReference.cs" />
+    <Compile Include="Contracts\PropertySelector.cs" />
+    <Compile Include="Contracts\PropertySelectorType.cs" />
+    <Compile Include="Contracts\ReleaseArtifact.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionApprovals.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionApprovalStep.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionDeployStep.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionEnvironment.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionEnvironmentStep.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionEnvironmentSummary.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionEnvironmentTemplate.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionExpands.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionGate.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionGatesOptions.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionGatesStep.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionQueryOrder.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionShallowReference.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionRevision.cs" />
+    <Compile Include="Contracts\ReleaseDefinitionSummary.cs" />
+    <Compile Include="Contracts\ReleaseDeployPhase.cs" />
+    <Compile Include="Contracts\IReleaseHubClient.cs" />
+    <Compile Include="Contracts\ReleaseEnvironmentExpands.cs" />
+    <Compile Include="Contracts\ReleaseEnvironmentShallowReference.cs" />
+    <Compile Include="Contracts\ReleaseExpands.cs" />
+    <Compile Include="Contracts\ReleaseGates.cs" />
+    <Compile Include="Contracts\ReleaseGatesPhase.cs" />
+    <Compile Include="Contracts\ReleaseRevision.cs" />
+    <Compile Include="Contracts\ReleaseShallowReference.cs" />
+    <Compile Include="Contracts\ReleaseWorkItemRef.cs" />
+    <Compile Include="Contracts\RetentionPolicy.cs" />
+    <Compile Include="Contracts\RunOnServerDeployPhase.cs" />
+    <Compile Include="Contracts\RunPlanData.cs" />
+    <Compile Include="Contracts\ServerDeploymentInput.cs" />
+    <Compile Include="Contracts\ShallowReference.cs" />
+    <Compile Include="Contracts\SingleReleaseExpands.cs" />
+    <Compile Include="Contracts\SourceIdInput.cs" />
+    <Compile Include="Contracts\TaskOrchestrationPlanGroupReference.cs" />
+    <Compile Include="Contracts\VariableGroup.cs" />
+    <Compile Include="Contracts\VariableGroupJsonConverter.cs" />
+    <Compile Include="Contracts\VariableGroupProjectReference.cs" />
+    <Compile Include="Contracts\VariableGroupActionFilter.cs" />
+    <Compile Include="Contracts\VariableGroupProviderData.cs" />
+    <Compile Include="Contracts\VariableGroupType.cs" />
+    <Compile Include="Contracts\VariableValue.cs" />
+    <Compile Include="Contracts\WorkflowTask.cs" />
+    <Compile Include="Contracts\WorkflowTaskReference.cs" />
+    <Compile Include="Contracts\YamlFileSource.cs" />
+    <Compile Include="Contracts\YamlPipelineProcess.cs" />
+    <Compile Include="Contracts\YamlPipelineProcessResources.cs" />
+    <Compile Include="Contracts\ResourceReference.cs" />
+    <Compile Include="Contracts\AgentPoolQueueReference.cs" />
+    <Compile Include="Contracts\ServiceEndpointReference.cs" />
+    <Compile Include="Contracts\YamlSourceReference.cs" />
+    <Compile Include="Contracts\Conditions\Condition.cs" />
+    <Compile Include="Contracts\Conditions\ConditionConstants.cs" />
+    <Compile Include="Contracts\Conditions\ConditionType.cs" />
+    <Compile Include="Contracts\Conditions\ReleaseCondition.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

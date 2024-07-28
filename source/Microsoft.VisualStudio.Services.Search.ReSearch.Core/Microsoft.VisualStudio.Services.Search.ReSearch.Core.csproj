@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.ReSearch.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC08E2F2-7474-40C4-8945-3E4AEE66045E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.ReSearch.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack" />
+    <Reference Include="Markdig.Signed" />
+    <Reference Include="Microsoft.CodeAnalysis" />
+    <Reference Include="Microsoft.CodeAnalysis.CSharp" />
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.Storage.FileSystem.Definitions" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\IDocumentFieldWriter`1.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\SourceCode\CodeTokenUse.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\SourceCode\Pivot.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\SourceCode\CodeSymbol.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\Text\RegexTextTokenizer.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\Text\TextToken.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\Text\TextTokenWithField.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\Text\TextTokenizer.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreItem.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreItemEncoder.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreItemEncoder`1.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreReader.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreReader`1.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreReader`2.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\BasicMetaDataStoreWriter`2.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\CodeMetaDataStoreItem.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\WikiMetaDataStoreItem.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\WikiMetaDataStoreItemEncoder.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\WorkItemMetaDataStoreItemEncoder.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\WorkItemMetaDataStoreItemEncoder`1.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Compression\Compressor.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Compression\NativeMethods.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Index\IndexException.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\IO\IoHelper.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\IO\IReader.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\IO\IWriter.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Memory\ByteArrayHelper.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Memory\ByteArray.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Memory\ArrayTooLargeException.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Memory\DynamicByteArray.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Memory\ByteView.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Parsing\ParsedData.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Parsing\IParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Parsing\ParserType.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Parsing\ParserUtils.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Utils\DocumentType.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Utils\TextEncodingEntry.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Utils\TextEncoding.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\Extensions.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\ContentParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\CAndCppParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\MarkdownTextExtracter.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\MarkDownParsedContent.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\MarkdownTextExtracterLegacy.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\MarkDownTextParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\RoslynParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\CSharpParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\DummyParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\TextParser.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Parsers\VBParser.cs" />
+    <Compile Include="ReSearch\Core\Parsers\MD\MarkDownParsedContentWriter.cs" />
+    <Compile Include="ReSearch\Core\Parsers\ContentWriters\IParsedContent.cs" />
+    <Compile Include="ReSearch\Core\Parsers\ContentWriters\IParsedContentWriter.cs" />
+    <Compile Include="ReSearch\Core\Parsers\ContentWriters\CodeParsedContent.cs" />
+    <Compile Include="ReSearch\Core\Parsers\ContentWriters\ParsedContentWriterV3.cs" />
+    <Compile Include="ReSearch\Core\Parsers\ContentWriters\ParsedContentWriterV4.cs" />
+    <Compile Include="ReSearch\Core\Stores\TreeStore\FileSystemMetaDataStoreProvider.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\HashedBlob.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\HashedBlobReader.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\HashedBlobWriter.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\ObjectStoreConstants.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\ObjectStoreException.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\ObjectStoreExceptionUtil.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\ObjectStoreHelpers.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\Extensions\LooseFileStorageEndpoint.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\Extensions\LooseFileStorageEndpointHelpers.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\Extensions\LooseFileStorageEndpointIo.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\Extensions\WorkItemLooseFileStorageEndpoint.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\Extensions\WorkItemLooseFileStorageEndpointHelpers.cs" />
+    <Compile Include="ReSearch\Core\Stores\StorageEndpoint\Extensions\WorkItemLooseFileStorageEndpointIo.cs" />
+    <Compile Include="ReSearch\Core\Core\Utils\UTF8Flags.cs" />
+    <Compile Include="ReSearch\Core\Core\Stores\BackingStoreCollections\WorkItemLocalStorageEndpointCollection.cs" />
+    <Compile Include="ReSearch\Core\Core\Stores\BackingStoreCollections\LocalStorageEndpointCollection.cs" />
+    <Compile Include="Crawler\Entities\DiscussionEntity.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

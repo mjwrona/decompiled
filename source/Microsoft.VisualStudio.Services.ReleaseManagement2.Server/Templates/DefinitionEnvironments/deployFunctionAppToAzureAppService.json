@@ -1,0 +1,121 @@
+﻿{
+  "id": "F40A8445-2070-42D1-8F46-015DDE336AA7",
+  "name": "Deploy a function app to Azure Functions​",
+  "category": "Deployment",
+  "iconTaskId": "537FDB7A-A601-4537-AA70-92645A2B5CE4",
+  "description": "Deploy your serverless application to Azure Function App.",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "501DD25D-1785-43E4-B4E5-A5C78CCC0573",
+            "version": "1.*",
+            "Name": "Deploy Azure Function App",
+            "inputs": {
+              "azureSubscription": "$(Parameters.AzureSubscription)",
+              "appType": "$(Parameters.AppType)",
+              "appName": "$(Parameters.AppName)"
+              
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "AzureSubscription",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "functionApp": "Function App on Windows",
+            "functionAppLinux": "Function App on Linux"
+          },
+          "properties": {
+            "EditableOptions": "false"
+          },
+          "name": "AppType",
+          "label": "{WebAppKindLabel}",
+          "defaultValue": "",
+          "type": "pickList",
+          "helpMarkDown": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "AppName",
+          "label": "{WebAppNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{WebAppNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureFunctionAppNamesByAppType",
+          "parameters": {
+            "WebAppKind": "$(AppType)"
+          },
+          "endpointId": "$(AzureSubscription)",
+          "target": "AppName"
+        }
+      ]
+    }
+  }
+}

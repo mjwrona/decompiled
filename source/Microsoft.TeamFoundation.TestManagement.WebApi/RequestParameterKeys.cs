@@ -1,0 +1,18 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.TestManagement.WebApi.RequestParameterKeys
+// Assembly: Microsoft.TeamFoundation.TestManagement.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 10F0A812-3ECA-42B4-865D-429941F99EBE
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.TestManagement.WebApi.dll
+
+namespace Microsoft.TeamFoundation.TestManagement.WebApi
+{
+  public static class RequestParameterKeys
+  {
+    public const string AttachmentId = "attachmentId";
+    public const string Project = "project";
+    public const string StoredIn = "storedIn";
+    public const string TestResultId = "testResultId";
+    public const string TestRunId = "testRunId";
+    public const string SessionId = "sessionId";
+  }
+}

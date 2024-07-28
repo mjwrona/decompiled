@@ -1,0 +1,23 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.WorkItemTracking.Common.DataStore.PsUserRightsMask
+// Assembly: Microsoft.TeamFoundation.WorkItemTracking.Common, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: E674B254-26A0-4D88-8FF3-86800090789C
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Common.dll
+
+using System;
+using System.ComponentModel;
+
+namespace Microsoft.TeamFoundation.WorkItemTracking.Common.DataStore
+{
+  [Flags]
+  [EditorBrowsable(EditorBrowsableState.Never)]
+  public enum PsUserRightsMask
+  {
+    UserRightsNone = 0,
+    UserRightsRead = 1,
+    UserRightsWrite = 2,
+    UserRightsReadWrite = UserRightsWrite | UserRightsRead, // 0x00000003
+    UserRightsAdmin = 4,
+    UserRightsAll = UserRightsAdmin | UserRightsReadWrite, // 0x00000007
+  }
+}

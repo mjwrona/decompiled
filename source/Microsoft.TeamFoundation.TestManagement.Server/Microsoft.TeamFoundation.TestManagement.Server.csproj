@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.TestManagement.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEA25CA9-8DC8-4DA8-A343-106D69CCF3E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.TestManagement.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.TestManagement</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking">
+      <HintPath>lib\Microsoft.Azure.Boards.Linking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Settings">
+      <HintPath>lib\Microsoft.Azure.Boards.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.WebApi.Common">
+      <HintPath>lib\Microsoft.Azure.Boards.WebApi.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service">
+      <HintPath>lib\Microsoft.Azure.Devops.Teams.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Work.RemoteServices">
+      <HintPath>lib\Microsoft.Azure.Devops.Work.RemoteServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Charting.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Charting.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Reporting.DataServices">
+      <HintPath>lib\Microsoft.TeamFoundation.Reporting.DataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.Shared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Server\AttachmentDownloadHandler.cs" />
+    <Compile Include="Server\AttachmentUploadHandler.cs" />
+    <Compile Include="Server\CachedTestersUpdateData.cs" />
+    <Compile Include="Server\CachedConfigurtionsUpdateData.cs" />
+    <Compile Include="Server\ITestManagementTestPlanConfigurationsCacheService.cs" />
+    <Compile Include="Server\ITestManagementTestPlanAssignedTestersCacheService.cs" />
+    <Compile Include="Server\TestPlanConfigurationsCacheService.cs" />
+    <Compile Include="Server\TestPlanAssignedTestersCacheService.cs" />
+    <Compile Include="Server\TestSuiteCacheService.cs" />
+    <Compile Include="Server\CommonStructureNodeInfoExtensions.cs" />
+    <Compile Include="Server\TestManagementFeatureFlags.cs" />
+    <Compile Include="Server\TestPlanningDatabase.cs" />
+    <Compile Include="Server\TfsTestManagementHost.cs" />
+    <Compile Include="Server\TfsTestManagementRequestContext.cs" />
+    <Compile Include="Server\ResultsByBuild4Controller.cs" />
+    <Compile Include="Server\ResultsByRelease4Controller.cs" />
+    <Compile Include="Server\Runs5Controller.cs" />
+    <Compile Include="Server\TestHistory5Controller.cs" />
+    <Compile Include="Server\ResultGroupsByBuild5Controller.cs" />
+    <Compile Include="Server\ResultGroupsByRelease5Controller.cs" />
+    <Compile Include="Server\TestResultsReportsForBuild5Controller.cs" />
+    <Compile Include="Server\TestResultsReportsForRelease5Controller.cs" />
+    <Compile Include="Server\ResultsMetaData5Controller.cs" />
+    <Compile Include="Server\ResultDetailsForBuild5_1Controller.cs" />
+    <Compile Include="Server\ResultDetailsForRelease5_1Controller.cs" />
+    <Compile Include="Server\ResultsMetaData5_1Controller.cs" />
+    <Compile Include="Server\Runs5_1Controller.cs" />
+    <Compile Include="Server\TestHistory5_1Controller.cs" />
+    <Compile Include="Server\TestResultsReportsForBuild5_1Controller.cs" />
+    <Compile Include="Server\TestResultsReportsForRelease5_1Controller.cs" />
+    <Compile Include="Server\Constants.cs" />
+    <Compile Include="Server\TestCaseExportService.cs" />
+    <Compile Include="Server\TestManagementProjectSettingsHelper.cs" />
+    <Compile Include="Server\SuiteEntry5Controller.cs" />
+    <Compile Include="Server\Suites5Controller.cs" />
+    <Compile Include="Server\TestSuiteClone5Controller.cs" />
+    <Compile Include="Server\TestPlanClone5Controller.cs" />
+    <Compile Include="Server\Points5Controller.cs" />
+    <Compile Include="Server\TestCases5Controller.cs" />
+    <Compile Include="Server\SuiteTestCase5Controller.cs" />
+    <Compile Include="Server\TestCaseClone6Controller.cs" />
+    <Compile Include="Server\SuiteTestCase6_1Controller.cs" />
+    <Compile Include="Server\TestPointHistoryRecord.cs" />
+    <Compile Include="Server\TestPointHistoryWatermark.cs" />
+    <Compile Include="Server\TesterInfo.cs" />
+    <Compile Include="Server\TestPointRecord.cs" />
+    <Compile Include="Server\TestPointWatermark.cs" />
+    <Compile Include="Server\TestPlanRecord.cs" />
+    <Compile Include="Server\TestSuiteRecord.cs" />
+    <Compile Include="Server\TestPointOutcomeHelper.cs" />
+    <Compile Include="Server\TestPointOutcomeUpdateFromTestResultRequest.cs" />
+    <Compile Include="Server\TestPointOutcomeUpdateRequestConverter.cs" />
+    <Compile Include="Server\ServerTestSuiteHelper.cs" />
+    <Compile Include="Server\ResultDocumentController.cs" />
+    <Compile Include="Server\TestLinkedWorkItemsQueryController.cs" />
+    <Compile Include="Server\ResultGroupsByBuild4Controller.cs" />
+    <Compile Include="Server\ResultGroupsByRelease4Controller.cs" />
+    <Compile Include="Server\Suites4Controller.cs" />
+    <Compile Include="Server\IPlannedTestsObjectHelper.cs" />
+    <Compile Include="Server\TestEnvironmentsHelper.cs" />
+    <Compile Include="Server\TfsRestApiHelper.cs" />
+    <Compile Include="Server\AttachmentPage.cs" />
+    <Compile Include="Server\TestManagementWebService.cs" />
+    <Compile Include="Server\BugFieldMapping.cs" />
+    <Compile Include="Server\TestCaseHelper.cs" />
+    <Compile Include="Server\TestCaseAndOwner.cs" />
+    <Compile Include="Server\UpdatePointStateAndTester.cs" />
+    <Compile Include="Server\TestCaseAndConfiguration.cs" />
+    <Compile Include="Server\SuiteTestCases.cs" />
+    <Compile Include="Server\SuiteRepopulateInfo.cs" />
+    <Compile Include="Server\TestPlanningDatabase44.cs" />
+    <Compile Include="Server\TestPlanningDatabase80.cs" />
+    <Compile Include="Server\TestAuthoringWiqlHelper.cs" />
+    <Compile Include="Server\TestPlanningDatabase10.cs" />
+    <Compile Include="Server\TestPlanningDatabase47.cs" />
+    <Compile Include="Server\TestPlanningDatabase52.cs" />
+    <Compile Include="Server\Compat2011QU1Helper.cs" />
+    <Compile Include="Server\Compat2013UpdateHelper.cs" />
+    <Compile Include="Server\TestManagementWebService3.cs" />
+    <Compile Include="Server\CatalogServiceHelper.cs" />
+    <Compile Include="Server\DataCollectorInformation.cs" />
+    <Compile Include="Server\MachineRole.cs" />
+    <Compile Include="Server\TestController.cs" />
+    <Compile Include="Server\TestEnvironment.cs" />
+    <Compile Include="Server\TestPlanHubData.cs" />
+    <Compile Include="Server\TestPlanningDatabase16.cs" />
+    <Compile Include="Server\TestPlanningDatabase63.cs" />
+    <Compile Include="Server\TestPlanningDatabase65.cs" />
+    <Compile Include="Server\Attachments3Controller.cs" />
+    <Compile Include="Server\TfsRunsHelper.cs" />
+    <Compile Include="Server\SharedStepController.cs" />
+    <Compile Include="Server\SharedParameterController.cs" />
+    <Compile Include="Server\TestCasesController.cs" />
+    <Compile Include="Server\TestConfigurations2Controller.cs" />
+    <Compile Include="Server\TestResultsControllerBase.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementTestPlanService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementTestPlanService.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementProjectService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementProjectService.cs" />
+    <Compile Include="Server\ITestOutcomeUpdateRequest.cs" />
+    <Compile Include="Server\TestOutcomeUpdateRequest.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementOutcomeService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementOutcomeService.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementPointService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementPointService.cs" />
+    <Compile Include="Server\TestPointDataContractConverter.cs" />
+    <Compile Include="Server\PlannedTestResultsHelper.cs" />
+    <Compile Include="Server\TfsTestRunDataContractConverter.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementSuiteService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementSuiteService.cs" />
+    <Compile Include="Server\TfsTestManagementService.cs" />
+    <Compile Include="Server\IWitHelper.cs" />
+    <Compile Include="Server\WITHelper.cs" />
+    <Compile Include="Server\ContractHelper.cs" />
+    <Compile Include="Server\TestResultHistoryController.cs" />
+    <Compile Include="Server\TestResultParameter3Controller.cs" />
+    <Compile Include="Server\TestResultAction3Controller.cs" />
+    <Compile Include="Server\ResultsIterations3Controller.cs" />
+    <Compile Include="Server\Results3Controller.cs" />
+    <Compile Include="Server\Results3R3Controller.cs" />
+    <Compile Include="Server\ResultDetailsForReleaseController.cs" />
+    <Compile Include="Server\TestResultsReportsForReleaseController.cs" />
+    <Compile Include="Server\CloneController.cs" />
+    <Compile Include="Server\SessionHelper.cs" />
+    <Compile Include="Server\ResultsIterations1Controller.cs" />
+    <Compile Include="Server\ResultsIterationsController.cs" />
+    <Compile Include="Server\SessionsController.cs" />
+    <Compile Include="Server\SuiteEntryController.cs" />
+    <Compile Include="Server\TestManagementTeamController.cs" />
+    <Compile Include="Server\TestResultParameter1Controller.cs" />
+    <Compile Include="Server\TestResultAction1Controller.cs" />
+    <Compile Include="Server\TestResultParameterController.cs" />
+    <Compile Include="Server\TestResultActionController.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementSuiteEntriesService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementSuiteEntriesService.cs" />
+    <Compile Include="Server\FeedbackHelper.cs" />
+    <Compile Include="Server\SessionBookmark.cs" />
+    <Compile Include="Server\SessionNote.cs" />
+    <Compile Include="Server\TestPlanningDatabase12.cs" />
+    <Compile Include="Server\TestPlanningDatabase13.cs" />
+    <Compile Include="Server\TestPlanningDatabase15.cs" />
+    <Compile Include="Server\TestPlanningDatabase43.cs" />
+    <Compile Include="Server\ITeamFoundationTestManagementSessionService.cs" />
+    <Compile Include="Server\TeamFoundationTestManagementSessionService.cs" />
+    <Compile Include="Server\TcmServiceHelper.cs" />
+    <Compile Include="Server\TestArtifactsAssociatedItemsModel.cs" />
+    <Compile Include="Server\CommonStructureServiceHelper.cs" />
+    <Compile Include="Server\ProjectData.cs" />
+    <Compile Include="Server\StateTypeEnumAndStateString.cs" />
+    <Compile Include="Server\TcmToWorkItemQueryTranslator.cs" />
+    <Compile Include="Server\TestSuiteQueryTranslator.cs" />
+    <Compile Include="Server\TestPointQueryTranslator.cs" />
+    <Compile Include="Server\TestPlanToWorkItemQueryTranslator.cs" />
+    <Compile Include="Server\TestPlanningWiqlConstants.cs" />
+    <Compile Include="Server\PlanWitHelper.cs" />
+    <Compile Include="Server\WorkItemFieldDataHelper.cs" />
+    <Compile Include="Server\TestPlanWorkItem.cs" />
+    <Compile Include="Server\LastResultDetails.cs" />
+    <Compile Include="Server\ProcessConfigurationHelper.cs" />
+    <Compile Include="Server\TestManagementProcessConfig.cs" />
+    <Compile Include="Server\AttachmentsController.cs" />
+    <Compile Include="Server\CodeCoverageController.cs" />
+    <Compile Include="Server\TestConfigurationsController.cs" />
+    <Compile Include="Server\TestVariablesController.cs" />
+    <Compile Include="Server\ITestExtensibilityHelper.cs" />
+    <Compile Include="Server\TestExtensibilityController.cs" />
+    <Compile Include="Server\TestExtensibilityHelper.cs" />
+    <Compile Include="Server\TestPlansHelper.cs" />
+    <Compile Include="Server\PointsHelper.cs" />
+    <Compile Include="Server\QueryHelper.cs" />
+    <Compile Include="Server\PlannedTestsObjectHelper.cs" />
+    <Compile Include="Server\SuiteAndTestCaseHelper.cs" />
+    <Compile Include="Server\SuitesHelper.cs" />
+    <Compile Include="Server\SuiteTestCaseHelper.cs" />
+    <Compile Include="Server\TestHubUserSettingsHelper.cs" />
+    <Compile Include="Server\TestManagementUserSettingsHelper.cs" />
+    <Compile Include="Server\LicenseCheckHelper.cs" />
+    <Compile Include="Server\LinkedWorkItemsToResultController.cs" />
+    <Compile Include="Server\Plans1Controller.cs" />
+    <Compile Include="Server\PlansController.cs" />
+    <Compile Include="Server\Points1Controller.cs" />
+    <Compile Include="Server\PointsController.cs" />
+    <Compile Include="Server\Results1Controller.cs" />
+    <Compile Include="Server\Results2R4Controller.cs" />
+    <Compile Include="Server\Results2Controller.cs" />
+    <Compile Include="Server\ResultsController.cs" />
+    <Compile Include="Server\ResultRestentionSettingsController.cs" />
+    <Compile Include="Server\ResultRetentionSettingsHelper.cs" />
+    <Compile Include="Server\RunLogsController.cs" />
+    <Compile Include="Server\Runs1Controller.cs" />
+    <Compile Include="Server\Suites1Controller.cs" />
+    <Compile Include="Server\SuitesController.cs" />
+    <Compile Include="Server\Runs2Controller.cs" />
+    <Compile Include="Server\RunsController.cs" />
+    <Compile Include="Server\TestManagementController.cs" />
+    <Compile Include="Server\ResultDetailsForBuildController.cs" />
+    <Compile Include="Server\TestLinkedWorkItemsController.cs" />
+    <Compile Include="Server\TestsSummaryByRequirementController.cs" />
+    <Compile Include="Server\TestResultTrendForBuildController.cs" />
+    <Compile Include="Server\TestResultTrendForReleaseController.cs" />
+    <Compile Include="Server\TestResultsReportsForBuildController.cs" />
+    <Compile Include="Server\TestSettingsController.cs" />
+    <Compile Include="Server\Runs4Controller.cs" />
+    <Compile Include="Server\Results4Controller.cs" />
+    <Compile Include="Server\Results5Controller.cs" />
+    <Compile Include="Server\Results5_1Controller.cs" />
+    <Compile Include="Server\Attachments5Controller.cs" />
+    <Compile Include="Server\TestRunHelper.cs" />
+    <Compile Include="Server\ArtifactHandler.cs" />
+    <Compile Include="Server\CssCache.cs" />
+    <Compile Include="Server\Replicator.cs" />
+    <Compile Include="Server\SecurityManager.cs" />
+    <Compile Include="Server\TeamProject.cs" />
+    <Compile Include="Server\TestPlanningDatabase2.cs" />
+    <Compile Include="Server\TestPlanningDatabase3.cs" />
+    <Compile Include="Server\TestPlanningDatabase4.cs" />
+    <Compile Include="Server\TestPlanningDatabase5.cs" />
+    <Compile Include="Server\TestPlanningDatabase6.cs" />
+    <Compile Include="Server\TestPlanningDatabase7.cs" />
+    <Compile Include="Server\TestPlanningDatabase8.cs" />
+    <Compile Include="Server\TestPlanningDatabase9.cs" />
+    <Compile Include="Server\TestPlanningDatabase11.cs" />
+    <Compile Include="Server\TestPlanningDatabase14.cs" />
+    <Compile Include="Server\TestPlanningDatabase17.cs" />
+    <Compile Include="Server\TestPlanningDatabase18.cs" />
+    <Compile Include="Server\TestPlanningDatabase19.cs" />
+    <Compile Include="Server\TestPlanningDatabase20.cs" />
+    <Compile Include="Server\TestPlanningDatabase21.cs" />
+    <Compile Include="Server\TestPlanningDatabase22.cs" />
+    <Compile Include="Server\TestPlanningDatabase23.cs" />
+    <Compile Include="Server\TestPlanningDatabase24.cs" />
+    <Compile Include="Server\TestPlanningDatabase25.cs" />
+    <Compile Include="Server\TestPlanningDatabase26.cs" />
+    <Compile Include="Server\TestPlanningDatabase27.cs" />
+    <Compile Include="Server\TestPlanningDatabase28.cs" />
+    <Compile Include="Server\TestPlanningDatabase29.cs" />
+    <Compile Include="Server\TestPlanningDatabase30.cs" />
+    <Compile Include="Server\TestPlanningDatabase31.cs" />
+    <Compile Include="Server\TestPlanningDatabase32.cs" />
+    <Compile Include="Server\TestPlanningDatabase33.cs" />
+    <Compile Include="Server\TestPlanningDatabase34.cs" />
+    <Compile Include="Server\TestPlanningDatabase35.cs" />
+    <Compile Include="Server\TestPlanningDatabase36.cs" />
+    <Compile Include="Server\TestPlanningDatabase37.cs" />
+    <Compile Include="Server\TestPlanningDatabase38.cs" />
+    <Compile Include="Server\TestPlanningDatabase39.cs" />
+    <Compile Include="Server\TestPlanningDatabase40.cs" />
+    <Compile Include="Server\TestPlanningDatabase41.cs" />
+    <Compile Include="Server\TestPlanningDatabase41_1.cs" />
+    <Compile Include="Server\TestPlanningDatabase42.cs" />
+    <Compile Include="Server\TestPlanningDatabase45.cs" />
+    <Compile Include="Server\TestPlanningDatabase46.cs" />
+    <Compile Include="Server\TestPlanningDatabase48.cs" />
+    <Compile Include="Server\TestPlanningDatabase49.cs" />
+    <Compile Include="Server\TestPlanningDatabase50.cs" />
+    <Compile Include="Server\TestPlanningDatabase51.cs" />
+    <Compile Include="Server\TestPlanningDatabase53.cs" />
+    <Compile Include="Server\TestPlanningDatabase54.cs" />
+    <Compile Include="Server\TestPlanningDatabase55.cs" />
+    <Compile Include="Server\TestPlanningDatabase56.cs" />
+    <Compile Include="Server\TestPlanningDatabase57.cs" />
+    <Compile Include="Server\TestPlanningDatabase58.cs" />
+    <Compile Include="Server\TestPlanningDatabase59.cs" />
+    <Compile Include="Server\TestPlanningDatabase60.cs" />
+    <Compile Include="Server\TestPlanningDatabase61.cs" />
+    <Compile Include="Server\TestPlanningDatabase62.cs" />
+    <Compile Include="Server\TestPlanningDatabase64.cs" />
+    <Compile Include="Server\TestPlanningDatabase66.cs" />
+    <Compile Include="Server\TestPlanningDatabase67.cs" />
+    <Compile Include="Server\TestPlanningDatabase68.cs" />
+    <Compile Include="Server\TestPlanningDatabase69.cs" />
+    <Compile Include="Server\TestPlanningDatabase70.cs" />
+    <Compile Include="Server\TestPlanningDatabase71.cs" />
+    <Compile Include="Server\TestPlanningDatabase72.cs" />
+    <Compile Include="Server\TestPlanningDatabase73.cs" />
+    <Compile Include="Server\TestPlanningDatabase74.cs" />
+    <Compile Include="Server\TestPlanningDatabase75.cs" />
+    <Compile Include="Server\TestPlanningDatabase76.cs" />
+    <Compile Include="Server\TestPlanningDatabase77.cs" />
+    <Compile Include="Server\TestPlanningDatabase78.cs" />
+    <Compile Include="Server\TestPlanningDatabase79.cs" />
+    <Compile Include="Server\TestPlanningDatabase81.cs" />
+    <Compile Include="Server\TestPlanningDatabase82.cs" />
+    <Compile Include="Server\TestPlanningDatabase83.cs" />
+    <Compile Include="Server\TestPlanningDatabase84.cs" />
+    <Compile Include="Server\TestPlanningDatabase85.cs" />
+    <Compile Include="Server\TestPlanningDatabase86.cs" />
+    <Compile Include="Server\TestPlanningDatabase87.cs" />
+    <Compile Include="Server\TestPlanningDatabase88.cs" />
+    <Compile Include="Server\TestPlanningDatabase89.cs" />
+    <Compile Include="Server\TestPlanningDatabase90.cs" />
+    <Compile Include="Server\TestPlanningDatabase91.cs" />
+    <Compile Include="Server\TestPlanningDatabase92.cs" />
+    <Compile Include="Server\TestPlanningDatabase93.cs" />
+    <Compile Include="Server\TestPlanningDatabase94.cs" />
+    <Compile Include="Server\TestPlanningDatabase95.cs" />
+    <Compile Include="Server\TestPlanningDatabase96.cs" />
+    <Compile Include="Server\TestPlanningDatabase97.cs" />
+    <Compile Include="Server\TestPlanningDatabase98.cs" />
+    <Compile Include="Server\TestPlanningDatabase99.cs" />
+    <Compile Include="Server\TestPlanningDatabase100.cs" />
+    <Compile Include="Server\TestPlanningDatabase101.cs" />
+    <Compile Include="Server\TestPlanningDatabase102.cs" />
+    <Compile Include="Server\BaseTestManagementWebService.cs" />
+    <Compile Include="Server\TestManagementWebService2.cs" />
+    <Compile Include="Server\TestManagementWebService4.cs" />
+    <Compile Include="Server\ImpactedPoint.cs" />
+    <Compile Include="Server\LockHelper.cs" />
+    <Compile Include="Server\SkinnyPlan.cs" />
+    <Compile Include="Server\SkinnyStat.cs" />
+    <Compile Include="Server\SuitePointCount.cs" />
+    <Compile Include="Server\SuiteTestCaseCount.cs" />
+    <Compile Include="Server\TestExternalLink.cs" />
+    <Compile Include="Server\TestPlan.cs" />
+    <Compile Include="Server\TestPlanChangedNotification.cs" />
+    <Compile Include="Server\TestPlanningDynamicSqlBatchStatements.cs" />
+    <Compile Include="Server\TestPointUpdate.cs" />
+    <Compile Include="Server\TestPointStatisticObjectComparer.cs" />
+    <Compile Include="Server\TestPoint.cs" />
+    <Compile Include="Server\TestPointChangedNotification.cs" />
+    <Compile Include="Server\TestPointStatistic.cs" />
+    <Compile Include="Server\TestPointStatisticsByPivotType.cs" />
+    <Compile Include="Server\TestPointStatisticPivotItem.cs" />
+    <Compile Include="Server\RequirementCloner.cs" />
+    <Compile Include="Server\RetryHelper.cs" />
+    <Compile Include="Server\TestResultPage.cs" />
+    <Compile Include="Server\Session.cs" />
+    <Compile Include="Server\TestRunArtifactInfoExtensions.cs" />
+    <Compile Include="Server\Sqm.cs" />
+    <Compile Include="Server\SuiteCloner.cs" />
+    <Compile Include="Server\CloneOptions.cs" />
+    <Compile Include="Server\CloneTestCaseOptions.cs" />
+    <Compile Include="Server\CloneOperationInformation.cs" />
+    <Compile Include="Server\CloneConstants.cs" />
+    <Compile Include="Server\TestCaseCloneConstants.cs" />
+    <Compile Include="Server\CloneOperationState.cs" />
+    <Compile Include="Server\ResultObjectType.cs" />
+    <Compile Include="Server\ServerTestSuite.cs" />
+    <Compile Include="Server\TestSuiteChangedNotification.cs" />
+    <Compile Include="Server\SyncType.cs" />
+    <Compile Include="Server\SuiteAuditHelper.cs" />
+    <Compile Include="Server\SuiteIdAndType.cs" />
+    <Compile Include="Server\ServerSuite.cs" />
+    <Compile Include="Server\ServerSuiteEntry.cs" />
+    <Compile Include="Server\PointAssignment.cs" />
+    <Compile Include="Server\SuiteSecurityHelper.cs" />
+    <Compile Include="Server\TestPointAssignment.cs" />
+    <Compile Include="Server\TestSuiteEntry.cs" />
+    <Compile Include="Server\TestSuiteWorkItem.cs" />
+    <Compile Include="Server\TcmArgumentValidator.cs" />
+    <Compile Include="Server\TestCaseCloner.cs" />
+    <Compile Include="Server\TestCaseClonerConstants.cs" />
+    <Compile Include="Server\BuildDefinitionUpgrader.cs" />
+    <Compile Include="Server\MigrateQueryTextOfQBS.cs" />
+    <Compile Include="Server\ProjectMigrationDetails.cs" />
+    <Compile Include="Server\MigrateTcmDataToWit.cs" />
+    <Compile Include="Server\MigrationLogger.cs" />
+    <Compile Include="Server\TestPlanMigrator.cs" />
+    <Compile Include="Server\WITConstants.cs" />
+    <Compile Include="Server\WITCreator.cs" />
+    <Compile Include="Server\WorkItemSaveFieldDataHelper.cs" />
+    <Compile Include="Server\WorkItemSaveLinkDataHelper.cs" />
+    <Compile Include="Server\TCMWorkItemBase.cs" />
+    <Compile Include="Server\WorkItemUpdateContext.cs" />
+    <Compile Include="Server\WorkItemUpdateData.cs" />
+    <Compile Include="Server\CoreWorkItemUpdateFields.cs" />
+    <Compile Include="Server\WitOperationType.cs" />
+    <Compile Include="Server\WitToTcmExceptionConverter.cs" />
+    <Compile Include="Server\TCMServiceMigration\TestFailureTypeHelper.cs" />
+    <Compile Include="Server\TCMServiceMigration\TestResolutionStateHelper.cs" />
+    <Compile Include="Server\TCMServiceMigration\TestFailureTypeController.cs" />
+    <Compile Include="Server\TCMServiceMigration\TestResolutionStateController.cs" />
+    <Compile Include="Server\TCMServiceMigration\TestSettings2Controller.cs" />
+    <Compile Include="Server\TCMServiceMigration\TCMServiceMigrationHelper.cs" />
+    <Compile Include="Server\TCMServiceMigration\TCMServiceMigrationController.cs" />
+    <Compile Include="Server\Legacy\ILegacyTCMServiceHelper.cs" />
+    <Compile Include="Server\Legacy\LegacyTCMServiceHelper.cs" />
+    <Compile Include="Server\Legacy\LegacyResultsHelper.cs" />
+    <Compile Include="Server\Legacy\AfnStripsHelper.cs" />
+    <Compile Include="Server\RestControllers\Helpers\ITestCaseExportService.cs" />
+    <Compile Include="Server\Charting\TestAuthoringCapabilityProvider.cs" />
+    <Compile Include="Server\Charting\TestAuthoringChartsProvider.cs" />
+    <Compile Include="Server\Charting\TestAuthoringDataTransformPipeline`1.cs" />
+    <Compile Include="Server\Charting\TestAuthoringProviderInterpreter.cs" />
+    <Compile Include="Server\Charting\TestExecutionCapabilityProvider.cs" />
+    <Compile Include="Server\Charting\TestExecutionDataTransformPipeline`1.cs" />
+    <Compile Include="Server\Charting\TestExecutionProviderInterpreter.cs" />
+    <Compile Include="Server\Charting\TestRunCapabilityProvider.cs" />
+    <Compile Include="Server\Charting\TestRunChartsProvider.cs" />
+    <Compile Include="Server\Charting\TestRunDataTransformPipeline`1.cs" />
+    <Compile Include="Server\Charting\TestRunProviderInterpreter.cs" />
+    <Compile Include="Server\Charting\TestReportsDataTransformPipeline.cs" />
+    <Compile Include="Server\Charting\TestReportsHelper.cs" />
+    <Compile Include="Server\Charting\TestReportsSecurityProvider.cs" />
+    <Compile Include="Server\Charting\TestReportsChartsProvider.cs" />
+    <Compile Include="Server\TestPlanning\RevisedTestPlansHelper.cs" />
+    <Compile Include="Server\TestPlanning\RevisedTestEntityCountHelper.cs" />
+    <Compile Include="Server\TestPlanning\SuitePointCountQueryParameters.cs" />
+    <Compile Include="Server\TestPlanning\SuitePointCountQueryParameters2.cs" />
+    <Compile Include="Server\TestPlanning\RevisedTestSuitesHelper.cs" />
+    <Compile Include="Server\TestPlanning\RevisedPointsHelper.cs" />
+    <Compile Include="Server\TestPlanning\TestCaseExportController.cs" />
+    <Compile Include="Server\TestPlanning\TestConfigurationAdapter.cs" />
+    <Compile Include="Server\TestPlanning\TestSuiteEntryAdapter.cs" />
+    <Compile Include="Server\TestPlanning\TestVariableAdapter.cs" />
+    <Compile Include="Server\TestPlanning\TestEntityCountController.cs" />
+    <Compile Include="Server\TestPlanning\TestConfigurations3Controller.cs" />
+    <Compile Include="Server\TestPlanning\TestVariables3Controller.cs" />
+    <Compile Include="Server\TestPlanning\Plans3Controller.cs" />
+    <Compile Include="Server\TcmService\PlannedResultsTCMServiceHelper.cs" />
+    <Compile Include="Server\Suites\CleanupSuitesJobData.cs" />
+    <Compile Include="Client\UpgradeMigrationState.cs" />
+    <Compile Include="Client\DatabaseConstants.cs" />
+    <Compile Include="Client\AuditAction.cs" />
+    <Compile Include="Server2010\TestResultAttachment.cs" />
+    <Compile Include="Server2010\TestResultAttachmentIdentity.cs" />
+    <Compile Include="Server2010\BugFieldMapping.cs" />
+    <Compile Include="Server2010\BuildConfiguration.cs" />
+    <Compile Include="Server2010\Compat2010Helper.cs" />
+    <Compile Include="Server2010\CoverageStatistics.cs" />
+    <Compile Include="Server2010\Coverage.cs" />
+    <Compile Include="Server2010\BuildCoverage.cs" />
+    <Compile Include="Server2010\TestRunCoverage.cs" />
+    <Compile Include="Server2010\ModuleCoverage.cs" />
+    <Compile Include="Server2010\FunctionCoverage.cs" />
+    <Compile Include="Server2010\CoverageChangeType.cs" />
+    <Compile Include="Server2010\CoverageChange.cs" />
+    <Compile Include="Server2010\DataCollectorInformation.cs" />
+    <Compile Include="Server2010\DefaultAfnStripBinding.cs" />
+    <Compile Include="Server2010\IdAndRev.cs" />
+    <Compile Include="Server2010\TestCaseResultIdAndRev.cs" />
+    <Compile Include="Server2010\ImpactedPoint.cs" />
+    <Compile Include="Server2010\MachineRole.cs" />
+    <Compile Include="Server2010\ResultsStoreQuery.cs" />
+    <Compile Include="Server2010\ServerTestSuite.cs" />
+    <Compile Include="Server2010\SkinnyPlan.cs" />
+    <Compile Include="Server2010\SkinnyStat.cs" />
+    <Compile Include="Server2010\SuiteIdAndType.cs" />
+    <Compile Include="Server2010\SuitePointCount.cs" />
+    <Compile Include="Server2010\TestActionResult.cs" />
+    <Compile Include="Server2010\TestIterationResult.cs" />
+    <Compile Include="Server2010\TestStepResult.cs" />
+    <Compile Include="Server2010\SharedStepResult.cs" />
+    <Compile Include="Server2010\TestCaseAndOwner.cs" />
+    <Compile Include="Server2010\TestCaseResult.cs" />
+    <Compile Include="Server2010\ResultUpdateRequest.cs" />
+    <Compile Include="Server2010\ResultUpdateResponse.cs" />
+    <Compile Include="Server2010\TestCaseResultIdentifier.cs" />
+    <Compile Include="Server2010\TestConfiguration.cs" />
+    <Compile Include="Server2010\NameValuePair.cs" />
+    <Compile Include="Server2010\TestController.cs" />
+    <Compile Include="Server2010\TestEnvironment.cs" />
+    <Compile Include="Server2010\TestExternalLink.cs" />
+    <Compile Include="Server2010\TestMessageLogEntry.cs" />
+    <Compile Include="Server2010\TestPlan.cs" />
+    <Compile Include="Server2010\TestPoint.cs" />
+    <Compile Include="Server2010\TestPointAssignment.cs" />
+    <Compile Include="Server2010\TestPointStatistic.cs" />
+    <Compile Include="Server2010\TestResolutionState.cs" />
+    <Compile Include="Server2010\TestResolutionStateStatistic.cs" />
+    <Compile Include="Server2010\TestResult.cs" />
+    <Compile Include="Server2010\TestResultParameter.cs" />
+    <Compile Include="Server2010\TestResultsService.cs" />
+    <Compile Include="Server2010\TestResultsServiceEx.cs" />
+    <Compile Include="Server2010\TestRun.cs" />
+    <Compile Include="Server2010\TestRunStatistic.cs" />
+    <Compile Include="Server2010\TestSettings.cs" />
+    <Compile Include="Server2010\TestSettingsMachineRole.cs" />
+    <Compile Include="Server2010\TestSuiteEntry.cs" />
+    <Compile Include="Server2010\TestVariable.cs" />
+    <Compile Include="Server2010\UpdatedProperties.cs" />
+    <Compile Include="Server2010\BlockedPointProperties.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="postupd_MigrateTestPlansOnPrem.sql" />
+    <EmbeddedResource Include="preupd_MigrateTestPlansOnPrem.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,37 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.DistributedTask.Pipelines.Artifacts.BuildProviders.WebHookProvider
+// Assembly: Microsoft.TeamFoundation.DistributedTask.Orchestration.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 07FD5059-3D25-415E-AA3A-5372051D7E71
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll
+
+using Microsoft.TeamFoundation.DistributedTask.Orchestration.Server;
+using Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.Artifacts;
+using Microsoft.TeamFoundation.DistributedTask.WebApi;
+using Microsoft.TeamFoundation.Framework.Server;
+using System;
+
+namespace Microsoft.TeamFoundation.DistributedTask.Pipelines.Artifacts.BuildProviders
+{
+  internal class WebHookProvider : IWebHookProvider
+  {
+    public void Validate(
+      IVssRequestContext requestContext,
+      Guid projectId,
+      WebhookResource webhook,
+      ServiceEndpoint endpoint)
+    {
+      string typeId = webhook.Properties.Get<string>(WebhookPropertyNames.Type);
+      if (string.IsNullOrEmpty(typeId))
+        webhook.Properties.Set<string>(WebhookPropertyNames.Type, "IncomingWebhook");
+      else if (requestContext.GetService<IArtifactService>().GetArtifactType(requestContext, typeId) == null)
+        throw new ResourceValidationException(TaskResources.CannotFindBuildResourceExtension((object) typeId), BuildPropertyNames.Type);
+      if (webhook.Endpoint == null)
+        throw new ResourceValidationException(TaskResources.WebHookResourceConnectionInputRequired(), "Endpoint");
+      if (endpoint == null)
+        throw new ResourceValidationException(TaskResources.WebHookResourceValidConnectionInputRequired((object) webhook.Endpoint.Name), "Endpoint");
+      if (!string.Equals(webhook.Properties.Get<string>(WebhookPropertyNames.Type), "IncomingWebhook", StringComparison.OrdinalIgnoreCase))
+        return;
+      webhook.Properties.Set<string>(WebhookPropertyNames.WebhookName, endpoint.Authorization.Parameters[WebhookPropertyNames.WebhookName]);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Nest.IBulkOperation
+// Assembly: Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d
+// MVID: CCE7C15C-052B-4528-A6A5-137560B7864B
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Nest.dll
+
+using Elasticsearch.Net.Utf8Json;
+using System;
+using System.Runtime.Serialization;
+
+namespace Nest
+{
+  [InterfaceDataContract]
+  public interface IBulkOperation
+  {
+    Type ClrType { get; }
+
+    [DataMember(Name = "_id")]
+    Id Id { get; set; }
+
+    [DataMember(Name = "_index")]
+    IndexName Index { get; set; }
+
+    string Operation { get; }
+
+    [DataMember(Name = "retry_on_conflict")]
+    int? RetriesOnConflict { get; set; }
+
+    [DataMember(Name = "routing")]
+    Routing Routing { get; set; }
+
+    [DataMember(Name = "version")]
+    long? Version { get; set; }
+
+    [DataMember(Name = "version_type")]
+    Elasticsearch.Net.VersionType? VersionType { get; set; }
+
+    object GetBody();
+
+    Id GetIdForOperation(Inferrer inferrer);
+
+    Routing GetRoutingForOperation(Inferrer settingsInferrer);
+  }
+}

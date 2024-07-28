@@ -1,0 +1,55 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Search.WebServer.AdvancedCodeSearchV2Controller
+// Assembly: Microsoft.VisualStudio.Services.Search.WebServer, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 1112A012-BB03-4D21-B53E-3AFB00CCC7AD
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.WebServer.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.TeamFoundation.Server.Types;
+using Microsoft.VisualStudio.Services.Search.Query;
+using Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry;
+using Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.Implementations;
+using Microsoft.VisualStudio.Services.Search.WebApi.Contracts.Code;
+using Microsoft.VisualStudio.Services.Search.WebApi.Legacy;
+using Microsoft.VisualStudio.Services.WebApi;
+using System.Web.Http;
+
+namespace Microsoft.VisualStudio.Services.Search.WebServer
+{
+  [ClientInternalUseOnly(true)]
+  [VersionedApiControllerCustomName(Area = "search", ResourceName = "advancedCodeSearchResults")]
+  [SearchDemandExtension("ms", "vss-code-search")]
+  public class AdvancedCodeSearchV2Controller : CodeSearchV2ControllerBase
+  {
+    public AdvancedCodeSearchV2Controller()
+    {
+    }
+
+    internal AdvancedCodeSearchV2Controller(
+      IIndexMapper indexMapper,
+      ISearchQueryForwarder<SearchQuery, CodeQueryResponse> codeSearchQueryForwarder)
+      : base(indexMapper, codeSearchQueryForwarder)
+    {
+    }
+
+    [HttpPost]
+    [ClientLocationId("6BC8D206-9A7E-4CFB-83E1-C9A81E7BF166")]
+    [PublicProjectRequestRestrictions]
+    public CodeSearchResponse FetchAdvancedCodeSearchResults(CodeSearchRequest request)
+    {
+      Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.Tracer.SetLogicalContext((IDiagnosticContext) new TfsDiagnosticContext(this.TfsRequestContext));
+      Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.Tracer.TraceEnter(1080044, "REST-API", "REST-API", nameof (FetchAdvancedCodeSearchResults));
+      try
+      {
+        if (request != null && request.IncludeSnippet)
+          this.TfsRequestContext.Items["includeSnippetInCodeSearchKey"] = (object) true;
+        return this.HandleCodeSearchResults(request, this.ProjectInfo);
+      }
+      finally
+      {
+        Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.Tracer.TraceLeave(1080045, "REST-API", "REST-API", nameof (FetchAdvancedCodeSearchResults));
+        Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.Tracer.ClearLogicalContext();
+      }
+    }
+  }
+}

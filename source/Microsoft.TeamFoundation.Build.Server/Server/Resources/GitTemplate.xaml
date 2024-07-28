@@ -1,0 +1,110 @@
+﻿<Activity x:Class="TfsBuild.Process"
+  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:mt="clr-namespace:Microsoft.TeamFoundation;assembly=Microsoft.TeamFoundation.Common"
+  xmlns:mtbc="clr-namespace:Microsoft.TeamFoundation.Build.Client;assembly=Microsoft.TeamFoundation.Build.Client"
+  xmlns:mtbco="clr-namespace:Microsoft.TeamFoundation.Build.Common;assembly=Microsoft.TeamFoundation.Build.Common"
+  xmlns:mtbw="clr-namespace:Microsoft.TeamFoundation.Build.Workflow;assembly=Microsoft.TeamFoundation.Build.Workflow"
+  xmlns:mtbwa="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Activities;assembly=Microsoft.TeamFoundation.Build.Workflow"
+  xmlns:mtba="clr-namespace:Microsoft.TeamFoundation.Build.Activities;assembly=Microsoft.TeamFoundation.Build.Activities"
+  xmlns:mtbac="clr-namespace:Microsoft.TeamFoundation.Build.Activities.Core;assembly=Microsoft.TeamFoundation.Build.Activities"
+  xmlns:mtbag="clr-namespace:Microsoft.TeamFoundation.Build.Activities.Git;assembly=Microsoft.TeamFoundation.Build.Activities"
+  xmlns:mtbwt="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Tracking;assembly=Microsoft.TeamFoundation.Build.Workflow"
+  xmlns:mttbb="clr-namespace:Microsoft.TeamFoundation.TestImpact.BuildIntegration.BuildActivities;assembly=Microsoft.TeamFoundation.TestImpact.BuildIntegration"
+  xmlns:mtvc="clr-namespace:Microsoft.TeamFoundation.VersionControl.Client;assembly=Microsoft.TeamFoundation.VersionControl.Client"
+  xmlns:mtvco="clr-namespace:Microsoft.TeamFoundation.VersionControl.Common;assembly=Microsoft.TeamFoundation.VersionControl.Common"
+  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+  xmlns:s="clr-namespace:System;assembly=mscorlib"
+  xmlns:sad="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+  xmlns:sad1="clr-namespace:System.Activities.Debugger;assembly=System.Activities"
+  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+  xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+  xmlns:this="clr-namespace:TfsBuild;"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  >
+  <x:Members>
+    <x:Property Name="SolutionToBuild" Type="InArgument(x:String)" />
+    <x:Property Name="ConfigurationToBuild" Type="InArgument(x:String)" />
+    <x:Property Name="PlatformToBuild" Type="InArgument(x:String)" />
+    <x:Property Name="TestSpec" Type="InArgument(mtbwa:AgileTestPlatformSpec)" />
+    <x:Property Name="BuildNumberFormat" Type="InArgument(x:String)" />
+    <x:Property Name="CleanRepository" Type="InArgument(x:Boolean)" />
+    <x:Property Name="AgentSettings" Type="InArgument(mtbwa:AgentSettings)" />
+    <x:Property Name="MSBuildArguments" Type="InArgument(x:String)" />
+    <x:Property Name="MSBuildPlatform" Type="InArgument(mtbwa:ToolPlatform)" />
+    <x:Property Name="MSBuildMultiProc" Type="InArgument(x:Boolean)" />
+    <x:Property Name="Verbosity" Type="InArgument(mtbw:BuildVerbosity)" />
+    <x:Property Name="Metadata" Type="mtbw:ProcessParameterMetadataCollection" />
+    <x:Property Name="SupportedReasons" Type="mtbc:BuildReason" />
+    <x:Property Name="BuildProcessVersion" Type="x:String" />
+  </x:Members>
+  <this:Process.SolutionToBuild>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process.SolutionToBuild>
+  <this:Process.ConfigurationToBuild>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process.ConfigurationToBuild>
+  <this:Process.PlatformToBuild>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process.PlatformToBuild>
+  <this:Process.TestSpec>[New Microsoft.TeamFoundation.Build.Workflow.Activities.AgileTestPlatformSpec("**\*test*.dll")]</this:Process.TestSpec>
+  <this:Process.BuildNumberFormat>["$(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)"]</this:Process.BuildNumberFormat>
+  <this:Process.CleanRepository>[True]</this:Process.CleanRepository>
+  <this:Process.MSBuildArguments>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process.MSBuildArguments>
+  <this:Process.MSBuildMultiProc>[True]</this:Process.MSBuildMultiProc>
+  <this:Process.MSBuildPlatform>[Microsoft.TeamFoundation.Build.Workflow.Activities.ToolPlatform.Auto]</this:Process.MSBuildPlatform>
+  <this:Process.AgentSettings>[New Microsoft.TeamFoundation.Build.Workflow.Activities.AgentSettings() With {.MaxWaitTime = New System.TimeSpan(4, 0, 0), .MaxExecutionTime = New System.TimeSpan(0, 0, 0), .TagComparison = Microsoft.TeamFoundation.Build.Workflow.Activities.TagComparison.MatchExactly }]</this:Process.AgentSettings>
+  <this:Process.Verbosity>[Microsoft.TeamFoundation.Build.Workflow.BuildVerbosity.Normal]</this:Process.Verbosity>
+  <this:Process.Metadata>
+    <mtbw:ProcessParameterMetadataCollection>
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#100 Git" DisplayName="1. Clean repository" Description="Set this to true to start with a clean repository on each build." ParameterName="CleanRepository" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#200 Build" DisplayName="1. Solution to build" Description="Relative path to the solution/project file you want to build." ParameterName="SolutionToBuild" Required="True"/>
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#200 Build" DisplayName="2. Configuration to build" Description="Specify the configuration you want to build (i.e. Debug)." ParameterName="ConfigurationToBuild" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#200 Build" DisplayName="3. Platform to build" Description="Specify the platform you want to build (i.e. x86)." ParameterName="PlatformToBuild" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#250 Test" DisplayName="1. Automated test" Description="Specify which tests to run for this build." ParameterName="TestSpec" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#300 Advanced" DisplayName="Build number format" Description="Specify the format for the number of this build." ParameterName="BuildNumberFormat" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#300 Advanced" DisplayName="Database logging verbosity" Description="Specify the amount of information that you want to log to the database during the build. Diagnostic outputs will already be collected in files on the drop location." ParameterName="Verbosity" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#300 Advanced" DisplayName="MSBuild arguments" Description="Specify additional MSBuild arguments." ParameterName="MSBuildArguments" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#300 Advanced" DisplayName="MSBuild multi-proc" Description="Use more than one processor per build." ParameterName="MSBuildMultiProc" />
+      <mtbw:ProcessParameterMetadata BrowsableWhen="EditingDefinition" Category="#300 Advanced" DisplayName="MSBuild Platform" Description="Specify the MSBuild platform to use. Defaults to the OS." ParameterName="MSBuildPlatform" />
+    </mtbw:ProcessParameterMetadataCollection>
+  </this:Process.Metadata>
+  <this:Process.SupportedReasons>Manual, IndividualCI, BatchedCI, Schedule, ScheduleForced, UserCreated</this:Process.SupportedReasons>
+  <this:Process.BuildProcessVersion>11.0</this:Process.BuildProcessVersion>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence DisplayName="Overall build process">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="ProjectsToBuild" />
+      <Variable x:TypeArguments="s:String[]" Name="ConfigurationsToBuild" />
+      <Variable x:TypeArguments="mtbco:BuildParameter[]" Name="TestSpecs" />
+    </Sequence.Variables>
+    <mtbac:SetBuildNumber DisplayName="Update build number" BuildNumberFormat="[BuildNumberFormat]" />
+    <mtbwa:AgentScope DisplayName="Run on agent" MaxExecutionTime="[AgentSettings.MaxExecutionTime]" MaxWaitTime="[AgentSettings.MaxWaitTime]" ReservationSpec="[AgentSettings.GetAgentReservationSpec()]">
+      <mtbac:InitializeEnvironment DisplayName="Initialize environment"/>
+      <mtbag:GitPull DisplayName="Pull sources from Git repo" CleanRepository="[CleanRepository]" />
+      <TryCatch DisplayName="Try" mtbwt:BuildTrackingParticipant.Importance="Low">
+        <TryCatch.Try>
+          <Sequence DisplayName="Compile and Test">
+            <Assign x:TypeArguments="s:String[]" Value="[{ New PlatformConfiguration(PlatformToBuild, ConfigurationToBuild).ToString() }]" To="[ConfigurationsToBuild]" mtbwt:BuildTrackingParticipant.Importance="None" />
+            <Assign x:TypeArguments="s:String[]" Value="[{ SolutionToBuild }]" To="[ProjectsToBuild]" mtbwt:BuildTrackingParticipant.Importance="None" />
+            <mtba:RunMSBuild DisplayName="Run MSBuild for solution"
+                              CommandLineArguments="[String.Format(&quot;/p:SkipInvalidConfigurations=true {0}&quot;, MSBuildArguments)]"
+                              ConfigurationsToBuild="[ConfigurationsToBuild]"
+                              MSBuildMultiProc="[MSBuildMultiProc]"
+                              ProjectsToBuild="[ProjectsToBuild]"
+                              ToolPlatform="[MSBuildPlatform.ToString()]" />
+            <Assign x:TypeArguments="mtbco:BuildParameter[]" Value="[{ TestSpec.CreateBuildParameter() }]" To="[TestSpecs]" mtbwt:BuildTrackingParticipant.Importance="None" />
+            <mtba:RunAgileTestRunner DisplayName="Run VS Test Runner" 
+                              TestSpecs="[TestSpecs]"
+                              ConfigurationsToTest="[ConfigurationsToBuild]" />
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Finally>
+          <mtbac:DropBinaries DisplayName="Copy binaries to drop"/>
+        </TryCatch.Finally>
+      </TryCatch>
+    </mtbwa:AgentScope>
+  </Sequence>
+</Activity>

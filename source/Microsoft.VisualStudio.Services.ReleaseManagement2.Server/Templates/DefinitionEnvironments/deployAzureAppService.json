@@ -1,0 +1,179 @@
+{
+    "id": "F6A07A4F-1E1F-41C0-ABAB-EEE4B3C9117F",
+    "name": "Azure App Service deployment",
+    "category": "Deployment",
+    "iconTaskId": "497D490F-EEA7-4F2B-AB94-48D9C1ACDCB1",
+    "description": "Deploy your application to Azure App Service. Choose from Web App on Windows, Linux, containers, Function Apps, or WebJobs.",
+    "environment": {
+        "name": "Production",
+        "rank": 1,
+        "deployPhases": [
+            {
+                "name": "Run on agent",
+                "rank": 1,
+                "phaseType": 1,
+                "controlOptions": {},
+                "deploymentInput": {
+                    "queueId": 1,
+                    "runOptions": {},
+                    "demands": []
+                },
+                "workflowTasks": [
+                    {
+                        "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+                        "version": "4.*",
+                        "Name": "Deploy Azure App Service",
+                      "inputs": {
+                        "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+                        "WebAppName": "$(Parameters.WebAppName)",
+                        "WebAppKind": "$(Parameters.WebAppKind)",
+                        "DeployToSlotOrASEFlag": "false",
+                        "ResourceGroupName": "",
+                        "DockerNamespace": "$(Parameters.DockerNamespace)",
+                        "DockerRepository": "$(Parameters.DockerRepository)",
+                        "StartupCommand": "$(Parameters.StartupCommand)",
+                        "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+                        "WebAppUri": "",
+                        "UseWebDeploy": "false",
+                        "SetParametersFile": "",
+                        "RemoveAdditionalFilesFlag": "false",
+                        "ExcludeFilesFromAppDataFlag": "false",
+                        "TakeAppOfflineFlag": "true",
+                        "AdditionalArguments": "",
+                        "RenameFilesFlag": "true",
+                        "GenerateWebConfig": "false",
+                        "WebConfigParameters": "",
+                        "ScriptType": "",
+                        "InlineScript": "",
+                        "DockerImageTag": "$(Build.BuildId)"
+                      },
+                        "Enabled": true,
+                        "AlwaysRun": false,
+                        "ContinueOnError": false
+                    }
+                ]
+            }
+        ],
+        "deployStep": {
+            "tasks": []
+        },
+        "preDeployApprovals": {
+            "approvals": [
+                {
+                    "isAutomated": true,
+                    "rank": 1
+                }
+            ],
+            "approvalOptions": null
+        },
+        "postDeployApprovals": {
+            "approvals": [
+                {
+                    "isAutomated": true,
+                    "rank": 1
+                }
+            ],
+            "approvalOptions": null
+        },
+        "runOptions": {},
+        "executionPolicy": {
+            "concurrencyCount": 1,
+            "queueDepthCount": 0
+        },
+        "processParameters": {
+          "inputs": [
+            {
+              "options": {},
+              "properties": {},
+              "name": "ConnectedServiceName",
+              "label": "{ConnectedServiceNameLabel}",
+              "defaultValue": "",
+              "required": true,
+              "type": "connectedService:AzureRM",
+              "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+              "visibleRule": "",
+              "groupName": ""
+            },
+            {
+              "options": {
+                "webApp": "Web App on Windows",
+                "webAppLinux": "Web App on Linux",
+                "webAppContainer": "Web App for Containers (Linux)",
+                "functionApp": "Function App on Windows",
+                "functionAppLinux": "Function App on Linux",
+                "functionAppContainer": "Function App for Containers (Linux)",
+                "apiApp": "API App",
+                "mobileApp": "Mobile App"
+              },
+              "properties": {
+                "EditableOptions": "false"
+              },
+              "name": "WebAppKind",
+              "label": "{WebAppKindLabel}",
+              "defaultValue": "webApp",
+              "type": "pickList",
+              "helpMarkDown": "",
+              "groupName": ""
+            },
+            {
+              "options": {},
+              "properties": {
+                "EditableOptions": "True"
+              },
+              "name": "WebAppName",
+              "label": "{WebAppNameLabel}",
+              "defaultValue": "",
+              "required": true,
+              "type": "pickList",
+              "helpMarkDown": "{WebAppNameMarkdown}",
+              "visibleRule": "",
+              "groupName": ""
+            },
+            {
+              "options": {},
+              "properties": {},
+              "name": "DockerNamespace",
+              "label": "{DockerNamespaceLabel}",
+              "defaultValue": "",
+              "required": true,
+              "type": "string",
+              "helpMarkDown": "{DockerNamespaceMarkdown}",
+              "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+              "groupName": ""
+            },
+            {
+              "options": {},
+              "properties": {},
+              "name": "DockerRepository",
+              "label": "{DockerRepositoryLabel}",
+              "defaultValue": "",
+              "required": true,
+              "type": "string",
+              "helpMarkDown": "{DockerRepositoryMarkdown}",
+              "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+              "groupName": ""
+            },
+            {
+              "name": "StartupCommand",
+              "type": "string",
+              "label": "{StartupCommandLabel}",
+              "defaultValue": "",
+              "required": false,
+              "visibleRule": "WebAppKind = webAppLinux || WebAppKind = webAppContainer || WebAppkind = functionAppContainer || WebAppKind = functionAppLinux",
+              "helpMarkDown": "{StartupCommandMarkdown}",
+              "groupName": ""
+            }
+          ],
+          "dataSourceBindings": [
+            {
+              "dataSourceName": "AzureRMWebAppNamesByAppType",
+              "parameters": {
+                "WebAppKind": "$(WebAppKind)"
+              },
+              "endpointId": "$(ConnectedServiceName)",
+              "target": "WebAppName"
+            }
+          ]
+        }
+    }
+}

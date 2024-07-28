@@ -1,0 +1,32 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Packaging.ServiceShared.BlobStore.IPackagingDedupStore
+// Assembly: Microsoft.VisualStudio.Services.Packaging.ServiceShared, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 4EF1F7D3-C7DF-4C8F-8AAB-58F76976F85D
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll
+
+using BuildXL.Cache.ContentStore.Hashing;
+using Microsoft.VisualStudio.Services.BlobStore.Common;
+using Microsoft.VisualStudio.Services.BlobStore.WebApi;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Microsoft.VisualStudio.Services.Packaging.ServiceShared.BlobStore
+{
+  public interface IPackagingDedupStore
+  {
+    Task TouchRootAsync(DedupIdentifier dedupId);
+
+    Task PutRootAsync(DedupIdentifier dedupId, IdBlobReference rootRef);
+
+    Task DeleteRootAsync(DedupIdentifier dedupId, IdBlobReference rootRef);
+
+    Task<long> GetNodeAsync(NodeDedupIdentifier rootId);
+
+    Task<(Manifest Manifest, ulong Size)> DownloadManifestAsync(DedupIdentifier dedupId);
+
+    bool IsContentValid(
+      HashSet<DedupNode> proofNodes,
+      DedupIdentifier rootId,
+      IDictionary<DedupIdentifier, ulong> fileEntries);
+  }
+}

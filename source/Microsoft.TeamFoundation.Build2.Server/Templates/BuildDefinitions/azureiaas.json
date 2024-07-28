@@ -1,0 +1,104 @@
+﻿{
+  "id": "AzureIaaS",
+  "name": "Load test using Azure IaaS virtual machines",
+  "description": "Create a rig on Azure IaaS virtual machines to run load tests using VSTS cloud-based load testing service.",
+  "category": "Deployment",
+  "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+  "iconTaskId": "9e9db38a-b40b-4c13-b7f0-31031c894c22",
+  "template":{
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "build": [
+    {
+      "enabled": true,
+      "continueOnError": true,
+      "timeoutInMinutes": 0,
+      "inputs": {
+        "ConnectedServiceNameSelector": "ConnectedServiceName",
+        "ConnectedServiceName": "",
+        "ConnectedServiceNameClassic": "",
+        "action": "Start",
+        "actionClassic": "Select Resource Group",
+        "resourceGroupName": "$(resourceGroupName)",
+        "location": "East US",
+      },
+	  "task": {
+        "id": "94a74903-f93f-4075-884f-dc11f34058b4",
+        "versionSpec": "1.*",
+        "definitionType": "task"
+      }
+    },
+	{
+      "enabled": true,
+      "timeoutInMinutes": 0,
+      "task": {
+        "id": "94a74903-f93f-4075-884f-dc11f34058b4",
+        "versionSpec": "1.*",
+        "definitionType": "task"
+      },
+      "inputs": {
+        "ConnectedServiceNameSelector": "ConnectedServiceName",
+        "action": "Create Or Update Resource Group",
+        "actionClassic": "Select Resource Group",
+        "resourceGroupName": "$(resourceGroupName)",
+        "location": "East US",
+        "overrideParameters": "-VSTSAccountName $(VSTSAccountName) -vstsPersonalAccessToken (ConvertTo-SecureString -String '$(VSTSPersonalAccessToken)' -AsPlainText -Force) -agentCount $(agentCount) -adminPassword (ConvertTo-SecureString -String '$(adminPassword)' -AsPlainText -Force) -adminUsername $(adminUserName)",
+      }
+    },
+    {
+      "enabled": true,
+      "continueOnError": true,
+      "timeoutInMinutes": 0,
+      "task": {
+        "id": "9e9db38a-b40b-4c13-b7f0-31031c894c22",
+        "versionSpec": "1.*",
+        "definitionType": "task"
+      },
+      "inputs": {
+        "MachineType": "2"
+      }
+    },
+	{
+      "enabled": true,
+      "timeoutInMinutes": 0,
+      "task": {
+        "id": "94a74903-f93f-4075-884f-dc11f34058b4",
+        "versionSpec": "1.*",
+        "definitionType": "task"
+      },
+      "inputs": {
+        "ConnectedServiceNameSelector": "ConnectedServiceName",
+        "action": "Stop",
+        "actionClassic": "Select Resource Group",
+        "resourceGroupName": "$(resourceGroupName)",
+        "location": "East US"
+      }
+    }
+    ],
+    "options": [],
+      "variables": {
+    "system.debug": {
+      "value": "false",
+      "allowOverride": true
+    },
+    "resourceGroupName": {
+      "value": ""
+    },
+    "VSTSAccountName": {
+      "value": ""
+    },
+    "VSTSPersonalAccessToken": {
+      "value": ""
+    },
+    "agentCount": {
+      "value": "1"
+    },
+    "adminPassword": {
+      "value": ""
+    },
+    "adminUserName": {
+      "value": ""
+    }
+  },
+    "triggers": []
+  }
+}

@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Server.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4A26D8F-52A1-4C1D-BCDA-C9BC0D77568B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking" />
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates" />
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server" />
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.GraphProfile.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.GraphProfile.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Favorites.Server" />
+    <Reference Include="Microsoft.VisualStudio.Services.Favorites.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Identity" />
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Telemetry" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Server\Core\RegistrationProvider.cs" />
+    <Compile Include="Server\Core\InvalidRegistryException.cs" />
+    <Compile Include="Server\Core\SecuredRegistrationManager.cs" />
+    <Compile Include="Server\Core\TeamFoundationForwardLinkService.cs" />
+    <Compile Include="Server\Core\CatalogData.cs" />
+    <Compile Include="Server\Core\TeamFoundationCatalogHelper.cs" />
+    <Compile Include="Server\Core\CatalogNode.cs" />
+    <Compile Include="Server\Core\CatalogPathSpec.cs" />
+    <Compile Include="Server\Core\CatalogNodeDependency.cs" />
+    <Compile Include="Server\Core\CatalogDependencyGroup.cs" />
+    <Compile Include="Server\Core\CatalogPath.cs" />
+    <Compile Include="Server\Core\CatalogResource.cs" />
+    <Compile Include="Server\Core\CatalogServiceReference.cs" />
+    <Compile Include="Server\Core\CatalogResourceType.cs" />
+    <Compile Include="Server\Core\CatalogTransactionContext.cs" />
+    <Compile Include="Server\Core\TeamFoundationCatalogServiceException.cs" />
+    <Compile Include="Server\Core\CatalogResourceTypeDoesNotExistException.cs" />
+    <Compile Include="Server\Core\CatalogNodeDoesNotExistException.cs" />
+    <Compile Include="Server\Core\CatalogResourceDoesNotExistException.cs" />
+    <Compile Include="Server\Core\InvalidCatalogNodePathException.cs" />
+    <Compile Include="Server\Core\InvalidCatalogSaveNodeException.cs" />
+    <Compile Include="Server\Core\InvalidCatalogSaveResourceException.cs" />
+    <Compile Include="Server\Core\InvalidCatalogNodeMoveException.cs" />
+    <Compile Include="Server\Core\InvalidCatalogDeleteNodeException.cs" />
+    <Compile Include="Server\Core\DeprecatedCatalogMethodException.cs" />
+    <Compile Include="Server\Core\ITeamFoundationCatalogService.cs" />
+    <Compile Include="Server\Core\CatalogResourceTypeConstraints.cs" />
+    <Compile Include="Server\Core\PropertyConstraint.cs" />
+    <Compile Include="Server\Core\PropertyValueExclusivity.cs" />
+    <Compile Include="Server\Core\PropertyExistence.cs" />
+    <Compile Include="Server\Core\ServiceReferenceConstraint.cs" />
+    <Compile Include="Server\Core\DependencyConstraint.cs" />
+    <Compile Include="Server\Core\ExistencePerRootConstraint.cs" />
+    <Compile Include="Server\Core\ExistencePerParentTypeConstraint.cs" />
+    <Compile Include="Server\Core\DeleteConstraints.cs" />
+    <Compile Include="Server\Core\ParentChildConstraints.cs" />
+    <Compile Include="Server\Core\CatalogRuleRegistrar.cs" />
+    <Compile Include="Server\Core\ValidateNodeDelegate.cs" />
+    <Compile Include="Server\Core\ValidateResourceDelegate.cs" />
+    <Compile Include="Server\Core\ValidateDeleteDelegate.cs" />
+    <Compile Include="Server\Core\NodeValidationSpec.cs" />
+    <Compile Include="Server\Core\ResourceValidationSpec.cs" />
+    <Compile Include="Server\Core\DeleteValidationSpec.cs" />
+    <Compile Include="Server\Core\CatalogRuleValidationUtility.cs" />
+    <Compile Include="Server\Core\CatalogValidator.cs" />
+    <Compile Include="Server\Core\FrameworkConstraints.cs" />
+    <Compile Include="Server\Core\ICatalogResourceTypeRuleSet.cs" />
+    <Compile Include="Server\Core\ParentChildConstraintValidator.cs" />
+    <Compile Include="Server\Core\ILegacyTeamFoundationCatalogService.cs" />
+    <Compile Include="Server\Core\TeamFoundationCatalogService.cs" />
+    <Compile Include="Server\Core\AadFeatureFlags.cs" />
+    <Compile Include="Server\Core\RegistryKeys.cs" />
+    <Compile Include="Server\Core\TeamFoundationVirtualCatalogService.cs" />
+    <Compile Include="Server\Core\VirtualCatalogServiceHelper.cs" />
+    <Compile Include="Server\Core\CollectionCatalogRules.cs" />
+    <Compile Include="Server\Core\DetachedCollectionHelper.cs" />
+    <Compile Include="Server\Core\IdentityMappingEntry.cs" />
+    <Compile Include="Server\Core\IdentityMappingCollection.cs" />
+    <Compile Include="Server\Core\IdentityMappingFile.cs" />
+    <Compile Include="Server\Core\IdentityMappingValidator.cs" />
+    <Compile Include="Server\Core\ITeamProjectCollectionPropertiesService.cs" />
+    <Compile Include="Server\Core\VirtualTeamProjectCollectionPropertiesService.cs" />
+    <Compile Include="Server\Core\TeamProjectCollectionPropertiesService.cs" />
+    <Compile Include="Server\Core\TeamProjectCollectionPropertiesServiceBase.cs" />
+    <Compile Include="Server\Core\TfsTeamProjectCollectionProperties.cs" />
+    <Compile Include="Server\Core\IInternalTeamProjectCollectionService.cs" />
+    <Compile Include="Server\Core\TeamProjectCollectionService.cs" />
+    <Compile Include="Server\Core\TeamProjectCollectionServicingActivity.cs" />
+    <Compile Include="Server\Core\ProjectCollectionsController.cs" />
+    <Compile Include="Server\Core\LegacyProjectCollectionsController.cs" />
+    <Compile Include="Server\Core\ProjectCollectionsUtility.cs" />
+    <Compile Include="Server\Core\CatalogComponent.cs" />
+    <Compile Include="Server\Core\CatalogComponent2.cs" />
+    <Compile Include="Server\Core\CatalogComponent3.cs" />
+    <Compile Include="Server\Core\CatalogComponent4.cs" />
+    <Compile Include="Server\Core\CatalogComponent5.cs" />
+    <Compile Include="Server\Core\CatalogComponent6.cs" />
+    <Compile Include="Server\Core\CatalogResourceTypeColumns.cs" />
+    <Compile Include="Server\Core\CatalogResourceColumns.cs" />
+    <Compile Include="Server\Core\CatalogServiceReferenceColumns.cs" />
+    <Compile Include="Server\Core\CatalogNodeColumns.cs" />
+    <Compile Include="Server\Core\CatalogNodeDependencyColumns.cs" />
+    <Compile Include="Server\Core\ConnectedServiceComponent.cs" />
+    <Compile Include="Server\Core\ServiceMetadataBinder.cs" />
+    <Compile Include="Server\Core\ProxyComponent.cs" />
+    <Compile Include="Server\Core\ProxyComponent2.cs" />
+    <Compile Include="Server\Core\ProxyComponent3.cs" />
+    <Compile Include="Server\Core\ProxyBinder.cs" />
+    <Compile Include="Server\Core\ProxyBinder2.cs" />
+    <Compile Include="Server\Core\ProxyBinderOld.cs" />
+    <Compile Include="Server\Core\IZlibInflateStream.cs" />
+    <Compile Include="Server\Core\DetachedHostedCollectionComponent.cs" />
+    <Compile Include="Server\Core\EmailEventComponent.cs" />
+    <Compile Include="Server\Core\EmailEventComponent2.cs" />
+    <Compile Include="Server\Core\EmailEventComponent3.cs" />
+    <Compile Include="Server\Core\EmailEventComponent4.cs" />
+    <Compile Include="Server\Core\EmailEventComponent5.cs" />
+    <Compile Include="Server\Core\EmailEventComponent6.cs" />
+    <Compile Include="Server\Core\EmailEventComponent7.cs" />
+    <Compile Include="Server\Core\EmailEventComponent8.cs" />
+    <Compile Include="Server\Core\EmailConfirmationQueueBinder.cs" />
+    <Compile Include="Server\Core\JobReportingComponent.cs" />
+    <Compile Include="Server\Core\JobReportingComponent2.cs" />
+    <Compile Include="Server\Core\JobReportingResultsOverTimeColumns.cs" />
+    <Compile Include="Server\Core\JobReportingQueuePositionsCountColumns.cs" />
+    <Compile Include="Server\Core\JobReportingQueuePositionsColumns.cs" />
+    <Compile Include="Server\Core\JobReportingHistoryQueueTimeColumns.cs" />
+    <Compile Include="Server\Core\JobReportingResultTypeCountColumns.cs" />
+    <Compile Include="Server\Core\JobReportingJobCountsAndRunTimeColumns.cs" />
+    <Compile Include="Server\Core\JobReportingQueryHistoryColumns.cs" />
+    <Compile Include="Server\Core\RegistrationComponent.cs" />
+    <Compile Include="Server\Core\RegistrationComponent2.cs" />
+    <Compile Include="Server\Core\OutboundLinkTypeColumns.cs" />
+    <Compile Include="Server\Core\RegisteredToolColumns.cs" />
+    <Compile Include="Server\Core\SqlSerializer`1.cs" />
+    <Compile Include="Server\Core\SQLServerPropertiesComponent.cs" />
+    <Compile Include="Server\Core\TeamFoundationMetadataAttribute.cs" />
+    <Compile Include="Server\Core\ConnectedServiceKind.cs" />
+    <Compile Include="Server\Core\ConnectedServiceMetadata.cs" />
+    <Compile Include="Server\Core\ConnectedService.cs" />
+    <Compile Include="Server\Core\ConnectedServiceCreationData.cs" />
+    <Compile Include="Server\Core\ConnectedServiceConstants.cs" />
+    <Compile Include="Server\Core\TeamFoundationConnectedServicesService.cs" />
+    <Compile Include="Server\Core\ConnectedServiceDeletedEvent.cs" />
+    <Compile Include="Server\Core\SoapSerializableException.cs" />
+    <Compile Include="Server\Core\LegacyAccessCheckException.cs" />
+    <Compile Include="Server\Core\TfsDefaultCollectionRoutingModule.cs" />
+    <Compile Include="Server\Core\IAadGroupHelper.cs" />
+    <Compile Include="Server\Core\FavoritesServiceShim.cs" />
+    <Compile Include="Server\Core\IdentityFavoriteKey.cs" />
+    <Compile Include="Server\Core\LicensingHelpers.cs" />
+    <Compile Include="Server\Core\PreferredEmailConfirmationEntry.cs" />
+    <Compile Include="Server\Core\ITimedOrchestrationRegion.cs" />
+    <Compile Include="Server\Core\ProgressTimerExtensions.cs" />
+    <Compile Include="Server\Core\PlatformProjectPropertyService.cs" />
+    <Compile Include="Server\Core\ProjectInfoExtensions.cs" />
+    <Compile Include="Server\Core\ITeamFoundationProxyService.cs" />
+    <Compile Include="Server\Core\TcmAttachmentsDownloadHandler.cs" />
+    <Compile Include="Server\Core\RequestParameterKeys.cs" />
+    <Compile Include="Server\Core\RequestParameterValues.cs" />
+    <Compile Include="Server\Core\TeamFoundationErrorHandler.cs" />
+    <Compile Include="Server\Core\VssfSoapExtension.cs" />
+    <Compile Include="Server\Core\TeamFoundationServiceExceptionExtensions.cs" />
+    <Compile Include="Server\Core\ProductTrialState.cs" />
+    <Compile Include="Server\Core\TfsEdition.cs" />
+    <Compile Include="Server\Core\TeamFoundationTrialService.cs" />
+    <Compile Include="Server\Core\SubscriptionProjectParser.cs" />
+    <Compile Include="Server\Core\ProcessTemplatePluginValidatorException.cs" />
+    <Compile Include="Server\Core\ChangedProjects.cs" />
+    <Compile Include="Server\Core\IProjectWorkflowService.cs" />
+    <Compile Include="Server\Core\ProjectCacheService.cs" />
+    <Compile Include="Server\Core\ProjectCatalog.cs" />
+    <Compile Include="Server\Core\ProjectComponent.cs" />
+    <Compile Include="Server\Core\ProjectComponent2.cs" />
+    <Compile Include="Server\Core\ProjectComponent3.cs" />
+    <Compile Include="Server\Core\ProjectComponent4.cs" />
+    <Compile Include="Server\Core\ProjectComponent5.cs" />
+    <Compile Include="Server\Core\ProjectComponent6.cs" />
+    <Compile Include="Server\Core\ProjectComponent7.cs" />
+    <Compile Include="Server\Core\ProjectComponent8.cs" />
+    <Compile Include="Server\Core\ProjectComponent9.cs" />
+    <Compile Include="Server\Core\ProjectComponent10.cs" />
+    <Compile Include="Server\Core\ProjectComponent11.cs" />
+    <Compile Include="Server\Core\ProjectComponent12.cs" />
+    <Compile Include="Server\Core\ProjectComponent13.cs" />
+    <Compile Include="Server\Core\ProjectComponent14.cs" />
+    <Compile Include="Server\Core\ProjectComponent15.cs" />
+    <Compile Include="Server\Core\SequenceIdColumns.cs" />
+    <Compile Include="Server\Core\ProjectInfoColumns.cs" />
+    <Compile Include="Server\Core\ProjectInfoColumns2.cs" />
+    <Compile Include="Server\Core\ProjectInfoColumns3.cs" />
+    <Compile Include="Server\Core\ProjectInfoColumns4.cs" />
+    <Compile Include="Server\Core\ProjectWatermarkColumns.cs" />
+    <Compile Include="Server\Core\ProjectWatermarkColumns2.cs" />
+    <Compile Include="Server\Core\ProjectPropertyColumns.cs" />
+    <Compile Include="Server\Core\ProjectIdPropertyColumns.cs" />
+    <Compile Include="Server\Core\ProjectNameColumns.cs" />
+    <Compile Include="Server\Core\ProjectIdNameColumns.cs" />
+    <Compile Include="Server\Core\ProjectHistoryColumns.cs" />
+    <Compile Include="Server\Core\ProjectHistoryColumns2.cs" />
+    <Compile Include="Server\Core\ProjectHistoryColumns3.cs" />
+    <Compile Include="Server\Core\ProjectHistoryColumns4.cs" />
+    <Compile Include="Server\Core\ProjectOperationColumns.cs" />
+    <Compile Include="Server\Core\ProjectRevisionColumns.cs" />
+    <Compile Include="Server\Core\ProjectInfoDiff.cs" />
+    <Compile Include="Server\Core\DiffSpec.cs" />
+    <Compile Include="Server\Core\DiffItem.cs" />
+    <Compile Include="Server\Core\DiffSingle.cs" />
+    <Compile Include="Server\Core\DiffComposite.cs" />
+    <Compile Include="Server\Core\ProjectSqlError.cs" />
+    <Compile Include="Server\Core\ProjectNotifications.cs" />
+    <Compile Include="Server\Core\ProjectNameReservationType.cs" />
+    <Compile Include="Server\Core\PreProjectNameReservationNotification.cs" />
+    <Compile Include="Server\Core\PreProjectDeletionNotification.cs" />
+    <Compile Include="Server\Core\ProjectWorkflowService.cs" />
+    <Compile Include="Server\Core\ProjectRevision.cs" />
+    <Compile Include="Server\Core\MicrosoftAadHelpers.cs" />
+    <Compile Include="Server\Core\DataChangedEvent.cs" />
+    <Compile Include="Server\Core\MultipleIdentitiesFoundException.cs" />
+    <Compile Include="Server\Core\DeleteSelfException.cs" />
+    <Compile Include="Server\Core\ProjectNotFoundException.cs" />
+    <Compile Include="Server\Core\DeprecatedIdentityMethodException.cs" />
+    <Compile Include="Server\Core\FrameworkIdentityDetachHandler.cs" />
+    <Compile Include="Server\Core\GroupHelpers.cs" />
+    <Compile Include="Server\Core\IdentityUtil.cs" />
+    <Compile Include="Server\Core\ITeamFoundationIdentityService.cs" />
+    <Compile Include="Server\Core\PreGroupDeletionNotification.cs" />
+    <Compile Include="Server\Core\TeamFoundationFilteredIdentitiesList.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentity.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentityService.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentityPropertiesUpdateEvent.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentityGroupAdminAddedEvent.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentityGroupAdminRemovedEvent.cs" />
+    <Compile Include="Server\Core\IdentityEmailChangedNotification.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentitySearchResult.cs" />
+    <Compile Include="Server\Core\RelationshipIdentityFilter.cs" />
+    <Compile Include="Server\Core\TeamFoundationIdentityDisplayNameComparer.cs" />
+    <Compile Include="Server\Core\ProjectAdminCacheService.cs" />
+    <Compile Include="Server\Core\IdentityMru.cs" />
+    <Compile Include="Server\Core\IdentityEqualityDisplayNameComparer.cs" />
+    <Compile Include="Server\Core\IdentityMruFilter.cs" />
+    <Compile Include="Server\Core\IdentityMruConstants.cs" />
+    <Compile Include="Server\Core\IdentityMruView.cs" />
+    <Compile Include="Server\Core\IdentityMruController.cs" />
+    <Compile Include="Server\Core\ITeamFoundationApplicationHostProperties.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingHistory.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingHistoryQueueTime.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingResultTypeCount.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingJobNameCache.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingQueuePositionCount.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingQueuePositions.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingResultsOverTime.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingJobCountsAndRunTime.cs" />
+    <Compile Include="Server\Core\TeamFoundationJobReportingService.cs" />
+    <Compile Include="Server\Core\DemandFeatureAttribute.cs" />
+    <Compile Include="Server\Core\ITeamFoundationLicensingService.cs" />
+    <Compile Include="Server\Core\ILicensePackage.cs" />
+    <Compile Include="Server\Core\ILicenseFeature.cs" />
+    <Compile Include="Server\Core\ILicenseType.cs" />
+    <Compile Include="Server\Core\LicensePackage.cs" />
+    <Compile Include="Server\Core\LicenseFeature.cs" />
+    <Compile Include="Server\Core\LicenseType.cs" />
+    <Compile Include="Server\Core\LicensePackageService.cs" />
+    <Compile Include="Server\Core\MissingLicenseException.cs" />
+    <Compile Include="Server\Core\TeamFoundationHostedLicensingService.cs" />
+    <Compile Include="Server\Core\TeamFoundationLicensingServiceBase.cs" />
+    <Compile Include="Server\Core\TeamFoundationOnPremLicensingService.cs" />
+    <Compile Include="Server\Core\TracePoints.cs" />
+    <Compile Include="Server\Core\ProcessTemplatePermissionsData.cs" />
+    <Compile Include="Server\Core\ActionToPermissionConverter.cs" />
+    <Compile Include="Server\Core\PlatformProjectService.cs" />
+    <Compile Include="Server\Core\TeamProjectCatalogConstants.cs" />
+    <Compile Include="Server\Core\TeamProjectTelemetryEvents.cs" />
+    <Compile Include="Server\Core\TeamProjectTelemetryProperties.cs" />
+    <Compile Include="Server\Core\CIConstants.cs" />
+    <Compile Include="Server\Core\ProjectCreateRegistryConstants.cs" />
+    <Compile Include="Server\Core\TeamProjectKpiUtil.cs" />
+    <Compile Include="Server\Core\LegacyProjectsController.cs" />
+    <Compile Include="Server\Core\ProjectApiConstants.cs" />
+    <Compile Include="Server\Core\ProjectApiExtensions.cs" />
+    <Compile Include="Server\Core\LegacyProjects2Controller.cs" />
+    <Compile Include="Server\Core\ProjectsController.cs" />
+    <Compile Include="Server\Core\Projects2Controller.cs" />
+    <Compile Include="Server\Core\ProjectsUtility.cs" />
+    <Compile Include="Server\Core\FileHttpHandler.cs" />
+    <Compile Include="Server\Core\DownloadHandler.cs" />
+    <Compile Include="Server\Core\FileRepositoryProperties.cs" />
+    <Compile Include="Server\Core\GenericDownloadHandler.cs" />
+    <Compile Include="Server\Core\RestApiDownloadState.cs" />
+    <Compile Include="Server\Core\TeamFoundationFileRepositoryService.cs" />
+    <Compile Include="Server\Core\TeamFoundationProxyService.cs" />
+    <Compile Include="Server\Core\RealTimeNotificationMessage.cs" />
+    <Compile Include="Server\Core\RealTimeNotificationMessageProperty.cs" />
+    <Compile Include="Server\Core\IRealTimeNotificationDispatcher.cs" />
+    <Compile Include="Server\Core\TeamFoundationRealTimeNotificationService.cs" />
+    <Compile Include="Server\Core\ServerCoreApiConstants.cs" />
+    <Compile Include="Server\Core\ServerCoreApiController.cs" />
+    <Compile Include="Server\Core\ServerCoreApiExtensions.cs" />
+    <Compile Include="Server\Core\TaggingTagsController.cs" />
+    <Compile Include="Server\Core\TeamFoundationApplication.cs" />
+    <Compile Include="Server\Core\TeamFoundationPage.cs" />
+    <Compile Include="Server\Core\TeamFoundationControl.cs" />
+    <Compile Include="Server\Core\TeamLimitExceededException.cs" />
+    <Compile Include="Server\Core\CannotDeleteDefaultTeamException.cs" />
+    <Compile Include="Server\Core\TeamNotificationManager.cs" />
+    <Compile Include="Server\Core\TempTeamToProjectMappingComponent.cs" />
+    <Compile Include="Server\Core\TempTeamToProjectMappingComponent2.cs" />
+    <Compile Include="Server\Core\TeamIdColumns.cs" />
+    <Compile Include="Server\Core\TeamsUtility.cs" />
+    <Compile Include="Server\Core\ITeamFoundationTemporaryDataService.cs" />
+    <Compile Include="Server\Core\TeamFoundationTemporaryDataService.cs" />
+    <Compile Include="Server\Core\TemporaryDataInternalReference.cs" />
+    <Compile Include="Server\Core\ServiceTemporaryDataDTO.cs" />
+    <Compile Include="Server\Core\TemporaryDataNotFoundException.cs" />
+    <Compile Include="Server\Core\TemporaryDataTooLargeException.cs" />
+    <Compile Include="Server\Core\DuplicateTemporaryDataIdException.cs" />
+    <Compile Include="Server\Core\TemporaryDataUnknownPropertyException.cs" />
+    <Compile Include="Server\Core\TemporaryDataConstants.cs" />
+    <Compile Include="Server\Core\TemporaryDataCIConstants.cs" />
+    <Compile Include="Server\Core\TemporaryDataController.cs" />
+    <Compile Include="Server\Core\ServiceConstants.cs" />
+    <Compile Include="Server\Core\TfsServicingOperationConstants.cs" />
+    <Compile Include="Server\Core\ProjectServicingItemConstants.cs" />
+    <Compile Include="Server\Core\ProjectServicingTokenConstants.cs" />
+    <Compile Include="Server\Core\TfsCollectionServicingTokenConstants.cs" />
+    <Compile Include="Server\Core\TfsExtenedAttributeKeys.cs" />
+    <Compile Include="Server\Core\ProcessTemplatePluginNames.cs" />
+    <Compile Include="Server\Core\CustomerIntelligenceConstants.cs" />
+    <Compile Include="Server\Core\TfsRouteConstants.cs" />
+    <Compile Include="Server\Core\LicensingRegistryConstants.cs" />
+    <Compile Include="Server\Core\WebServicesConstants.cs" />
+    <Compile Include="Server\Core\DatabaseNamingConstants.cs" />
+    <Compile Include="Server\Core\ThreadPoolThrottle.cs" />
+    <Compile Include="Server\Core\WatchDog.cs" />
+    <Compile Include="Server\Core\VisualStudioLinkingUtility.cs" />
+    <Compile Include="Server\Core\Resources.cs" />
+    <Compile Include="Server\Core\Telemetry\TeamFoundationTelemetryHelper.cs" />
+    <Compile Include="Server\Core\Telemetry\TeamFoundationTelemetryService.cs" />
+    <Compile Include="Server\Core\Telemetry\TelemetryPropertyName.cs" />
+    <Compile Include="Server\Core\ProxyControllers\ProxyController.cs" />
+    <Compile Include="Server\Core\ProxyControllers\Proxy2Controller.cs" />
+    <Compile Include="Server\Core\Location\AccessMapping.cs" />
+    <Compile Include="Server\Core\Location\LocationCompatUtil.cs" />
+    <Compile Include="Server\Core\Location\LocationServiceData.cs" />
+    <Compile Include="Server\Core\Location\ConnectionData.cs" />
+    <Compile Include="Server\Core\Location\ServerCapabilities.cs" />
+    <Compile Include="Server\Core\Location\ServiceTypeFilter.cs" />
+    <Compile Include="Server\Core\Location\LocationMapping.cs" />
+    <Compile Include="Server\Core\Location\ServiceDefinition.cs" />
+    <Compile Include="Server\Core\Location\TeamFoundationConnectionService.cs" />
+    <Compile Include="Server\Core\JobReportingService\TeamFoundationJobReportingProcessCache.cs" />
+    <Compile Include="Server\Core\IdentityProperties\TeamFavoriteMigrator.cs" />
+    <Compile Include="Server\Core\IdentityProperties\TeamFavoriteOrderHelper.cs" />
+    <Compile Include="Server\Core\IdentityProperties\TracePoint.cs" />
+    <Compile Include="Server\Core\WebServer\ProcessUrlHelper.cs" />
+    <Compile Include="Server\Core\WebServer\ProcessApi\ProcessController.cs" />
+    <Compile Include="Server\Core\Team\TeamChangeType.cs" />
+    <Compile Include="Server\Core\Team\TeamChangedEvent.cs" />
+    <Compile Include="Server\Core\Team\Teams2Controller.cs" />
+    <Compile Include="Server\Core\Team\CategorizedTeamsController.cs" />
+    <Compile Include="Server\Core\Team\Teams3Controller.cs" />
+    <Compile Include="Server\Core\Team\TeamsControllerBase.cs" />
+    <Compile Include="Server\Core\Team\TeamService.cs" />
+    <Compile Include="Server\Core\Team\TeamMembersController.cs" />
+    <Compile Include="Server\Core\Team\TeamMembers41Controller.cs" />
+    <Compile Include="Server\Core\Team\TeamsController.cs" />
+    <Compile Include="Server\Core\WebServices\AccessControlListDetails.cs" />
+    <Compile Include="Server\Core\WebServices\AccessControlEntryDetails.cs" />
+    <Compile Include="Server\Core\WebServices\AceExtendedInformation.cs" />
+    <Compile Include="Server\Core\WebServices\FrameworkHttpHandler.cs" />
+    <Compile Include="Server\Core\WebServices\TeamFoundationWebService.cs" />
+    <Compile Include="Server\Core\WebServices\AdministrationWebService.cs" />
+    <Compile Include="Server\Core\WebServices\CatalogWebService.cs" />
+    <Compile Include="Server\Core\WebServices\ConnectedServicesWebService.cs" />
+    <Compile Include="Server\Core\WebServices\EventWebService.cs" />
+    <Compile Include="Server\Core\WebServices\FileHandlerWebService.cs" />
+    <Compile Include="Server\Core\WebServices\FrameworkWebService.cs" />
+    <Compile Include="Server\Core\WebServices\IdentityManagementWebService.cs" />
+    <Compile Include="Server\Core\WebServices\IdentityManagementWebService2.cs" />
+    <Compile Include="Server\Core\WebServices\JobWebService.cs" />
+    <Compile Include="Server\Core\WebServices\LocationWebService.cs" />
+    <Compile Include="Server\Core\WebServices\MessageQueueWebService.cs" />
+    <Compile Include="Server\Core\WebServices\MessageQueueWebService2.cs" />
+    <Compile Include="Server\Core\WebServices\ProcessTemplateWebService.cs" />
+    <Compile Include="Server\Core\WebServices\FrameworkTemplateHeader.cs" />
+    <Compile Include="Server\Core\WebServices\PropertyWebService.cs" />
+    <Compile Include="Server\Core\WebServices\Registration.cs" />
+    <Compile Include="Server\Core\WebServices\RegistryWebService.cs" />
+    <Compile Include="Server\Core\WebServices\SecurityWebService.cs" />
+    <Compile Include="Server\Core\WebServices\StrongBoxWebService.cs" />
+    <Compile Include="Server\Core\WebServices\TeamProjectCollectionWebService.cs" />
+    <Compile Include="Server\Core\Security\BCryptAlgorithmHandleCache2.cs" />
+    <Compile Include="Server\Core\Security\BCryptHashAlgorithm2.cs" />
+    <Compile Include="Server\Core\Security\BCryptNative2.cs" />
+    <Compile Include="Server\Core\Security\SafeBCryptAlgorithmHandle2.cs" />
+    <Compile Include="Server\Core\Security\SafeBCryptHashHandle2.cs" />
+    <Compile Include="Server\Core\Security\SafeBCryptKeyHandle2.cs" />
+    <Compile Include="Server\Core\Security\SHA1Cng2.cs" />
+    <Compile Include="Server\Core\Project\ProjectAvatarController.cs" />
+    <Compile Include="Server\Core\Project\ProjectPropertiesController.cs" />
+    <Compile Include="Server\Core\Project\ProjectsPropertiesController.cs" />
+    <Compile Include="Server\Core\Project\ProjectHistory2Controller.cs" />
+    <Compile Include="Server\Core\Project\ProjectHistoryCompatController.cs" />
+    <Compile Include="Server\Core\Project\ProjectHistoryController.cs" />
+    <Compile Include="Server\Core\Project\WebServer\ProjectsContinuationToken.cs" />
+    <Compile Include="Server\Core\Project\WebServer\ProjectsContinuationTokenExtensions.cs" />
+    <Compile Include="Server\Core\Rest\ConnectedServicesController.cs" />
+    <Compile Include="Server\Core\ConnectedServices\ConnectedServiceEndpointHelper.cs" />
+    <Compile Include="Server\Core\CollectionManagement\WebServer\ProjectCollectionApiExtensions.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ApplicationInstance.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\CatalogBulkData.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\CatalogObject.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\CatalogObjectCollection`1.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\DependencyCollection`1.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\CatalogObjectContext.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\CatalogObjectEqualityComparer.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\OrganizationalRoot.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\InfrastructureRoot.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ProjectCollection.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\TeamProject.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ResourceFolder.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\GenericLink.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\Machine.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\TeamWebApplication.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ServerInstance.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\SqlAnalysisInstance.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\SqlReportingInstance.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ServerDatabase.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\SharePointWebApplication.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\TfsRelativeWebSite.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\SharePointSiteCreationLocation.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ProjectPortal.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ProcessGuidanceSite.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\WarehouseDatabase.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\SqlAnalysisDatabase.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ReportingConfiguration.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ReportingServer.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ReportingFolder.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\TeamSystemWebAccess.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\TestController.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\TestEnvironment.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\DataCollector.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\ReportingFolderExtensionMethods.cs" />
+    <Compile Include="Server\Core\Catalog\Objects\SharePointSiteCreationLocationExtensionMethods.cs" />
+    <Compile Include="Server\Core\Audit\ProjectAuditData.cs" />
+    <Compile Include="Framework\Server\CatalogSecurityNamespaceExtension.cs" />
+    <Compile Include="Framework\Server\CollectionDoesNotExistException.cs" />
+    <Compile Include="Framework\Server\CollectionMisconfiguredException.cs" />
+    <Compile Include="Framework\Server\VirtualPathsConflictException.cs" />
+    <Compile Include="Framework\Server\CollectionPropertyException.cs" />
+    <Compile Include="Framework\Server\VirtualPathMappingException.cs" />
+    <Compile Include="Framework\Server\CannotUpdateDefaultCollectionException.cs" />
+    <Compile Include="Framework\Server\AttachCollectionException.cs" />
+    <Compile Include="Framework\Server\DetachCollectionException.cs" />
+    <Compile Include="Framework\Server\RepairNotPermittedException.cs" />
+    <Compile Include="Framework\Server\FavoriteItem.cs" />
+    <Compile Include="Framework\Server\FavoriteViewScopeInformation.cs" />
+    <Compile Include="Framework\Server\IdentityFavorites.cs" />
+    <Compile Include="Framework\Server\Catalog\Objects\CatalogObject.cs" />
+    <Compile Include="Framework\Server\Catalog\Objects\CatalogObjectContext.cs" />
+    <Compile Include="Framework\Server\Catalog\Objects\OrganizationalRoot.cs" />
+    <Compile Include="Framework\Server\Catalog\Objects\SharePointWebApplication.cs" />
+    <Compile Include="Common\Diagnostics.cs" />
+    <Compile Include="Integration\Server\BranchMovedEvent.cs" />
+    <Compile Include="Integration\Server\TeamProjectCatalogCustomRules.cs" />
+    <Compile Include="Integration\Server\Classification.cs" />
+    <Compile Include="Integration\Server\CommonStructureService.cs" />
+    <Compile Include="Integration\Server\Classification3.cs" />
+    <Compile Include="Integration\Server\Classification4.cs" />
+    <Compile Include="Integration\Server\CommonStructureServiceConstants.cs" />
+    <Compile Include="Integration\Server\ICommonStructureService.cs" />
+    <Compile Include="Integration\Server\InternalCommonStructureUtils.cs" />
+    <Compile Include="Integration\Server\NodeCreatedEvent.cs" />
+    <Compile Include="Integration\Server\NodeRenamedEvent.cs" />
+    <Compile Include="Integration\Server\DeletedNode.cs" />
+    <Compile Include="Integration\Server\NodesDeletedEvent.cs" />
+    <Compile Include="Integration\Server\StructureComponent.cs" />
+    <Compile Include="Integration\Server\StructureComponent2.cs" />
+    <Compile Include="Integration\Server\StructureComponent3.cs" />
+    <Compile Include="Integration\Server\StructureComponent4.cs" />
+    <Compile Include="Integration\Server\StructureComponent5.cs" />
+    <Compile Include="Integration\Server\IntegrationHost.cs" />
+    <Compile Include="Integration\Server\IntegrationSqlResourceComponent.cs" />
+    <Compile Include="Integration\Server\IntegrationWebService.cs" />
+    <Compile Include="Integration\Server\ServerExceptionUtilities.cs" />
+    <Compile Include="Integration\Server\SoapExceptionServerUtilities.cs" />
+    <Compile Include="Integration\Server\ProjectMaintenance.cs" />
+    <Compile Include="Integration\Server\AuthorizationComponent.cs" />
+    <Compile Include="Integration\Server\AuthorizationComponent2.cs" />
+    <Compile Include="Integration\Server\ChangeIdColumn.cs" />
+    <Compile Include="Integration\Server\ChangedAclsColumns.cs" />
+    <Compile Include="Integration\Server\SecurityObjectColumns.cs" />
+    <Compile Include="Integration\Server\SecurityTokenColumns.cs" />
+    <Compile Include="Integration\Server\SecurityChange.cs" />
+    <Compile Include="Integration\Server\AuthorizationProvider.cs" />
+    <Compile Include="Integration\Server\AuthorizationSecurityClass.cs" />
+    <Compile Include="Integration\Server\SecurityObject.cs" />
+    <Compile Include="Integration\Server\AuthorizationService.cs" />
+    <Compile Include="Integration\Server\AuthorizationService3.cs" />
+    <Compile Include="Integration\Server\AuthorizationService4.cs" />
+    <Compile Include="Integration\Server\AuthorizationService5.cs" />
+    <Compile Include="Integration\Server\AuthorizationService6.cs" />
+    <Compile Include="Integration\Server\AuthorizationService7.cs" />
+    <Compile Include="Integration\Server\CommandGetIdentityChanges.cs" />
+    <Compile Include="Integration\Server\GroupSecurityService.cs" />
+    <Compile Include="Integration\Server\GroupSecurityService2.cs" />
+    <Compile Include="Integration\Server\SecuredAuthorizationManager.cs" />
+    <Compile Include="Integration\Server\SearchFactor.cs" />
+    <Compile Include="Integration\Server\QueryMembership.cs" />
+    <Compile Include="Integration\Server\ApplicationGroupProperty.cs" />
+    <Compile Include="Integration\Server\AuthorizationNamespacePermissions.cs" />
+    <Compile Include="Integration\Server\AuthorizationProjectPermissions.cs" />
+    <Compile Include="Integration\Server\AuthorizationSecurityClasses.cs" />
+    <Compile Include="Integration\Server\Identity.cs" />
+    <Compile Include="Integration\Server\SecurityValidation.cs" />
+    <Compile Include="Integration\Server\TeamFoundationGroupSecurityService.cs" />
+    <Compile Include="Integration\Server\ServerStatus.cs" />
+    <Compile Include="Integration\Server\DataChanged.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Directories\DirectoryService\TeamFoundationDirectoryServiceExtensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="stmt_QueryInvalidCharacters.sql" />
+    <EmbeddedResource Include="V1ProjectMapping.xslt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

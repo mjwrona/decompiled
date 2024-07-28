@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Commerce.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10B63FE6-A3E4-4014-8C25-B39D3A8E665B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Commerce</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Cosmos.Table">
+      <HintPath>lib\Microsoft.Azure.Cosmos.Table.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Queue">
+      <HintPath>lib\Microsoft.Azure.Storage.Queue.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>lib\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>lib\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CloudConnected.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CloudConnected.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Commerce.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Commerce.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VisualStudio\Services\Commerce\CommerceAuditUtilities.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DailyBillingHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AssignmentBillingHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureTableQuerySegment`1.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureTableQuerySegmentExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingEventsManipulationBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingEventType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingEventsManipulator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DeniedBillingMeters.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionQuantity.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DualWritesHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionAccountComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UsageEventAggregateComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionResourceComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceEventComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommercePackageComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountResourceComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionResourceComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CheckNameAvailabilityResultComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OperationComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CsmSubscriptionResourceComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CompareUtils.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommercePropertyStore.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AgreementProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAzureSubscriptionInfo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAzureResourceProvider.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAzureResourceType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAzureSubscriptionPolicies.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAzureSubscriptionGeoLocation.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionResponseWrapper`1.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureQuotaIdNames.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionAttributes.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureQuotaId.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureLocationPlacement.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureLocationPlacementNames.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureLocationPlacementSettings.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceBillingAccountInfo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceBillingContextInfo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceBillingPaymentInstrument.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceBillingSystemType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OperationType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceMigrationRequest.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeterResetEventsManipulation.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmResourceIdentifier.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResourceAccountExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionAccountExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmContractExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCacheExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionMigrationExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RequestContextExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourcesMoveRequestExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TableOperationExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CaptureExternalOperationIdHeaderAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureBillableEventContract.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InfrastructureHostHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourcesMoveRequestInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PurchaseEventsManipulation.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IBillingMessageHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingMessageHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCommons.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceConstants.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DualWrites.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterIds.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommercePackageSettings.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReportingEventProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeterData.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OutputItems.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IntrinsicSettingsItems.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceTypes.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\HttpHeaders.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IdType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IntrinsicSettingsOperationType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeteringPermissions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionManagementPermissions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CollectionBasedPermission.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReportingPermissions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReportingViews.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSecurity.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingSource.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCustomerIntelligenceFeature.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCustomerIntelligenceProperty.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TrialCustomerIntelligenceSource.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingPipelineSecurity.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingPipelineServicePermissions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAdapterConstants.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ConnectedServerConstants.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceWellKnownServiceHostTags.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSubscribersCustomerIntelligenceFeature.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSubscribersCustomerIntelligenceProperty.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeterResetEventProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCustomerIntelligenceEntryPoint.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CustomerIntelligenceEventType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CustomerIntelligenceEventOrigin.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeterResetEventType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RiskEvaluationResult.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceNameResolveMethod.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterFriendlyName.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceFormatterLogger.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceTracePoints.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CollectionHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceUtil.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceValidators.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResourceAccount.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UserRoles.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureAuthorizationResponseValue.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureAuthorizationResponseWrapper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Permission.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRoleDefinitionResponseProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRoleDefinitionResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRoleDefinitionResponseWrapper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRoleAssignmentResponseWrapper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRoleAssignmentValue.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRoleAssignmentProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionRegistrationStatus.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRateCard.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureMeterResource.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionInfo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferPriceList.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionAccount.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MetricCategory.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AgreementResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Meter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RatingRequest.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Features.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\EstimatedPrice.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\EstimatedPrices.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PriceRule.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UnitPrice.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UnitPrices.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Product.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RatingResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CheckAccountOwnershipInput.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountList.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureRegionList.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountTenantList.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountInfo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountInfoList.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\QueryAccountsByOwnershipInput.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\QueryAccountsByOwnershipWithTenantInput.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CreateAccountInput.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CsmUtilities.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\EventServiceNotificationPublisher.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionDoesNotExistException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionNotLinkedToAccountException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UserContextNullReferenceException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResourceAccountDoesNotExistException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterNotFound.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResourceAccountMissingException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountAlreadyLinkedException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountHasThirdPartyExtensionsException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionDisabledException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountServiceFailureException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UnsupportedRegionException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountToBeCreatedAlreadyExistsException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResponseException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureUnauthorizedAccessException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UnexpectedServiceException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountMigrationInProgressException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RiskEvaluationRejectException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\FilterAttributeHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CaptureRdfeOperationIdAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CsmControllerExceptionHandlerAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SetCsmV2ResponseHeadersAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TraceExceptionsAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TraceRequestAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TraceDetailsFilterAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TraceResponseAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\XmlFormatterAttribute.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CustomerIntelligence.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\KpiHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceKpi.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\INotificationPublisher.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IntrinsicSettingsManager.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeterResetEvents.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DowngradedResource.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceIntrinsicSettings.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtendedUsageMeterCollection.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\KeyValuePair.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ParallelUsageDataAggregator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\HydrationHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PopulateOfferMeterPriceJobData.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UsageDataAggregator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureStorageFallback`1.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCustomSqlError.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceInvalidQuantitySqlException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceInvalidResourceSqlException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceInvalidSubscriptionSqlException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceResourceUpdateFailedSqlException.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IResourceHydrationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\HydrationConstants.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\HydrationOperationType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceHydrationMessage.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TeamFoundationResourceHydrationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IArmAdapterServiceConfigurationHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAdapterServiceConfigurationHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ServiceSettings.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IAccountDetailsService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformInfrastructureOrganizationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IResourceMigrationDriver.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformSourceResourceMigrationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountResourceRequestInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ConnectedServerControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CsmControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionResourceControllerInternalBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionResourceGroupControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionResourceControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionResourceRequestInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\NameAvailabilityControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceGroupsControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionResourceControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MarketplaceOffer2Controller.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PurchaseRequestControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReportingEventsControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MarketplaceOfferController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CloudServicesController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceEventsController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommercePackageControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountResourceGroupControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceOperationsControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceMigrationControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionEventsControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountResourceControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Meters2ControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterPriceControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RegionControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MetersControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MonitoringController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PassthroughController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IResourceOutputBuilder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceOutputBuilder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourcesController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceTypesController.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UsageEventsControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ArmAdapterService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogOfferResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogErrorDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogProductDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogMarketingMaterial.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogMarketingUrl.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogMarketingLogo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogMarketingLink.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogMarketingServicePlan.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CatalogMarketingServicePlanFeatures.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ParametersLink.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Provider.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DependsOn.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Dependency.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResponseProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionTemplateDeploymentResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsResponseValue.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsResponseAuthorization.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsResponseLocalizedValue.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsHttpRequest.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsStatusMessage.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InsightsStatusMessageError.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\EmbeddedInsightsMessageError.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceGroupRequest.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\TemplateLink.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Parameter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Parameters.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DebugSetting.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RequestProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ExtensionTemplateDeploymentRequest.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceRequest.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSpendingLimit.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceBillingSubscriptionInfo.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionRegistrationResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceType.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureErrorBehavior.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureStoreService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IArmAdapterService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IAzureBillingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IAzureStoreService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IAzureResourceHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\InfoFields.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingUsageEventProperties.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillingUsageEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UsageAggregatesResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\BillableEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IOfferMeterPriceCachedAccessService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterCachedAccessService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCacheBase`1.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IOfferMeterCachedAccessService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IOfferSubscriptionCachedAccessService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterCacheContainer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterPriceCacheContainer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterPriceCachedAccessService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterPriceMemoryCacheService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionCachedAccessService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceGroupResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResourceHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceRedisCacheProvider.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ICommerceDistributedCacheProvider.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ICommerceMemoryCache`1.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IOfferSubscriptionMemoryCacheService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IOfferMeterMemoryCacheService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IOfferMeterPriceMemoryCacheService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceHostManagementService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IBillingPipelineService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ICommercePackageSynchronizationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionCacheContainer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterMemoryCacheService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionMemoryCacheService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IResourceTaggingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformBillingPipelineService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformMeteringService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformTargetResourceMigrationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IPricingServiceInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReportingStoreEntityNames.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureReportingEventStore.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureReportingEventStoreContext.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureReportingWatermark.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IReportingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformReportingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IReportingView.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceMigrationDriverFactory.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SpsToCommerceOfferSubscriptionMigrationDriver.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountDetailsService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceTaggingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IConnectedServerService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformConnectedServerService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ConnectedServerPublicKeyExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IPermissionCheckerService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ICommerceCache.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IResourceQuantityUpdaterService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\offermeterOfferMeterExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\LegacyMeteringObjectConverters.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PermissionCheckerService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformOfferSubscriptionService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformOfferMeterServiceInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformCommercePackageSynchronizationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformOfferMeterService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformSubscriptionService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceCache.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DatamarketPublishingPricePopulator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IPricingPopulator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\PlatformPricingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ResourceQuantityUpdaterService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AggregationInterval.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AggregationTotal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureAccountCommerceEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IAzureBillableEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureBillableEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReQueuePartitionStore.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureReportingEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzurePublisherCommerceEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ErrorReportingTable.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ErrorReportingQueue.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureBillingQueue.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureBillableEvent2.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureUsageEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\UsageStoreEntityNames.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureUsageEventStore.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\IUsageEventsStore.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReportingExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\GenericDecimalBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AccountIdBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureBillableEventBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureResourceAccountBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionAccountBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AzureSubscriptionBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent2.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent3.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent4.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent5.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent6.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent7.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent8.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent9.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent10.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent11.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent12.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent13.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent14.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent15.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent16.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceMeteringComponent17.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent2.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent3.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent4.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent5.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent6.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent7.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent8.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent9.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent10.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent11.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent12.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent13.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent14.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent15.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent16.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent17.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent18.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent19.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent20.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent21.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent22.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent23.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\CommerceSqlComponent24.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\AggregateUsageEventResult.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionQuantityBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\ReadOnlyOfferMeter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterAzurePlanBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterPriceBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferMeterBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionInternal.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeteredResource.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\MeteredResourceNameComparer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\OfferSubscriptionBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\RaiseEventBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\DowngradesBinder.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\LegacyMeterConfigurations.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\SubscriptionResourceUsage.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\HostingResources.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\WebApi\ResourceMigrationHttpClient.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\WebApi\ResourceMigrationHttpClientBase.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\WebApi\CommerceToSpsResourceMigrationHttpClient.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\AzCommMigratorService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\IMigratorService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Managers\MigrationPayloadManager.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Utilities\AllowListValidator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Utilities\CommerceAllowListMeterIds.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Utilities\CommerceDevfabricMeterIds.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Utilities\MigrationConstants.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Utilities\MigrationUtilities.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Extensions\ResourceAccountExtension.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Extensions\ResourceUsageExtension.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Migration\Extensions\SubscriptionExtension.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\StepPerformers\CommerceMigrationStepPerformer.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\CommunicatorHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\JobHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\MeterResetJobCompletedEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\OfferSubscriptionManipulator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\CommerceCertificateHelper.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\SingleQueryUsageDataAggregator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailBaseFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\TrialEmailNotification\ExtensionTrialExpiredEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\TrialEmailNotification\ExtensionTrialExpiryInSevenDaysEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\TrialEmailNotification\ExtensionTrialStartEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\TrialEmailNotification\TrialEmailBaseFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseRenewalNotificationFormatter\BundlePurchaseRenewalEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\PurchaseRequestEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\PurchaseRequestEmailFormatterForLinkedAccounts.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\PurchaseRequestEmailFormatterForUnlinkedAccounts.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\XamarinUniversityPurchaseEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\HockeyAppPurchaseEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\ExtensionPurchaseEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\PurchaseEmailNotification\BundlePurchaseEmailFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Models\EmailFormatters\CommerceEmailBaseFormatter.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Extensions\OfferSubscriptionExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Extensions\OfferSubscriptionInternalExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Common\Extensions\PurchasableOfferMeterExtensions.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\PurchaseRequestEmailCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\PurchaseNotificationBundleCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\PurchaseNotificationCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\PurchaseNotificationExtensionCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\PurchaseRenewalNotificationCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\TrialNotificationCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\TrialStartNotificationCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\TrialExpiringNotificationCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Communicators\TrialExpiredNotificationCommunicator.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\CommerceNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\PurchaseExtensionNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\PurchaseNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\PurchaseRequestNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\TrialNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\TrialExpiredNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\TrialExpiringNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\TrialStartNotification.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\CommerceNotificationEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\ExtensionPurchaseEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Notifications\ExtensionTrialEvent.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\DefaultAccessLevelService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\IDefaultAccessLevelService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\IEnterpriseBillingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\IOrganizationBillingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\EnterpriseBillingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\OrganizationBillingService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\RiskEvaluationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\IRiskEvaluationService.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationRequestPayload.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationEventDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationOfferDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationBillingDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationOrderItem.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationCatalogDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationDeviceDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationAccountDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationSubscriptionDetails.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationPaymentInstrument.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\RiskEvaluationResponse.cs" />
+    <Compile Include="VisualStudio\Services\Commerce\Service\Risk\Contract\Link.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\ResourceProviderConstants.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\ResourceAggregationType.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\LocalizationHelper.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\ResourceProviderUtility.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceError.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricAvailability.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricBatchResponse.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricBatchResponses.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricDefinition.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricDefinitionDimension.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricDefinitionDimensions.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricDefinitions.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricDimension.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricDimensions.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricResponse.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricResponses.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricSample.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricSet.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceMetricSets.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceNotificationEvent.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceOperationResource.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourcePostMetricBatchRequest.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourcePostResponse.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceUsageMetric.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\ResourceUsageMetrics.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\OData\ResourceMetric.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\OData\ResourceMetricRollup.cs" />
+    <Compile Include="WindowsAzure\Management\Monitoring\ResourceProvider\DataContracts\OData\ResourceMetricValue.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\EntityId.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\EntityState.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\EntityProperty.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\EntityEvent.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\OperationResult.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\CloudServiceSettings.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\UsageMeter.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\UsageMeterCollection.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\OutputItem.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\OutputItemList.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\ErrorData.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\OperationStatus.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\ResourceInput.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\ResourceOutput.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\ResourceOutputCollection.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\CloudServiceOutput.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\SsoToken.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\ResourceState.cs" />
+    <Compile Include="WindowsAzure\CloudServiceManagement\ResourceProviderCommunication\ResourceNameAvailabilityResponse.cs" />
+    <Compile Include="WindowsAzure\ResourceGroup\ResourceHydration\ProvisioningOperation.cs" />
+    <Compile Include="WindowsAzure\ResourceGroup\ResourceHydration\ResourceHydrationClient.cs" />
+    <Compile Include="WindowsAzure\ResourceGroup\ResourceHydration\ResourceHydrationRequest.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,270 @@
+{
+  "id": "7A9C00E2-A688-4757-91A1-690ADC0DF88C",
+  "name": "Azure Virtual Machine Scale Set deployment",
+  "category": "Deployment",
+  "iconTaskId": "4dda660c-b643-4598-a4a2-61080d0002d9",
+  "description": "Deploy immutable images to an Azure Virtual Machine scale set.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "TaskId": "845fd4f4-642d-4694-8514-047948a5a556",
+            "Version": "0.*",
+            "Name": "Build immutable machine image",
+            "Inputs": {
+              "templateType": "$(Parameters.templateType)",
+              "customTemplateLocation": "$(Parameters.customTemplateLocation)",
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "location": "$(Parameters.location)",
+              "storageAccountName": "$(Parameters.storageAccountName)",
+              "azureResourceGroup": "$(Parameters.azureResourceGroup)",
+              "packagePath": "$(Parameters.packagePath)",
+              "deployScriptPath": "$(Parameters.deployScriptPath)",
+              "imageUri": "imageUrlVariable"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "TaskId": "4dda660c-b643-4598-a4a2-61080d0002d9",
+            "Version": "0.*",
+            "Name": "Azure VMSS: update with immutable machine image",
+            "Inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "vmssName": "$(Parameters.vmssName)",
+              "imageUrl": "$(imageUrlVariable)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {
+      "imageUrlVariable": {}
+    },
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {
+            "builtin": "Auto generated",
+            "custom": "User provided"
+          },
+          "properties": {},
+          "name": "templateType",
+          "label": "{TemplateTypeLabel}",
+          "defaultValue": "builtin",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{TemplateTypeMarkdown}",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "location",
+          "label": "{LocationLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{LocationMarkdown}",
+          "visibleRule": "templateType = builtin",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "storageAccountName",
+          "label": "{StorageAccountNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{StorageAccountNameMarkdown}",
+          "visibleRule": "templateType = builtin",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "azureResourceGroup",
+          "label": "{AzureResourceGroupLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{AzureResourceGroupMarkdown}",
+          "visibleRule": "templateType = builtin",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "packagePath",
+          "label": "{PackagePathLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "filePath",
+          "helpMarkDown": "{PackagePathMarkdown}",
+          "visibleRule": "templateType = builtin",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "deployScriptPath",
+          "label": "{DeployScriptPathLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DeployScriptPathMarkdown}",
+          "visibleRule": "templateType = builtin",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "customTemplateLocation",
+          "label": "{CustomTemplateLocationLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "filePath",
+          "helpMarkDown": "{CustomTemplateLocationMarkdown}",
+          "visibleRule": "templateType = custom",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "vmssName",
+          "label": "{VmssNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{VmssNameMarkdown}",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureLocations2",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "location",
+          "resultTemplate": "{ \"Value\" : \"{{{name}}}\", \"DisplayValue\" : \"{{{displayName}}}\" }"
+        },
+        {
+          "dataSourceName": "AzureRMStorageAccountByLocation",
+          "parameters": {
+            "location": "$(location)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "storageAccountName"
+        },
+        {
+          "dataSourceName": "AzureRMStorageAccountIdByName",
+          "parameters": {
+            "storageAccountName": "$(storageAccountName)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "azureResourceGroup",
+          "resultTemplate": "{\"Value\":\"{{{ #extractResource resourceGroups}}}\",\"DisplayValue\":\"{{{ #extractResource resourceGroups}}}\"}"
+        },
+        {
+          "dataSourceName": "AzureVirtualMachineScaleSetNames",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "vmssName"
+        },
+        {
+          "dataSourceName": "AzureLocations2",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "location",
+          "resultTemplate": "{ \"Value\" : \"{{{name}}}\", \"DisplayValue\" : \"{{{displayName}}}\" }"
+        },
+        {
+          "dataSourceName": "AzureLocations2",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "location",
+          "resultTemplate": "{ \"Value\" : \"{{{name}}}\", \"DisplayValue\" : \"{{{displayName}}}\" }"
+        },
+        {
+          "dataSourceName": "AzureRMStorageAccountByLocation",
+          "parameters": {
+            "location": "$(location)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "storageAccountName"
+        },
+        {
+          "dataSourceName": "AzureRMStorageAccountIdByName",
+          "parameters": {
+            "storageAccountName": "$(storageAccountName)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "azureResourceGroup",
+          "resultTemplate": "{\"Value\":\"{{{ #extractResource resourceGroups}}}\",\"DisplayValue\":\"{{{ #extractResource resourceGroups}}}\"}"
+        },
+        {
+          "dataSourceName": "AzureVirtualMachineScaleSetNames",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "vmssName"
+        }
+      ]
+    }
+  }
+}

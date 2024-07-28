@@ -1,0 +1,148 @@
+﻿{
+    "id": "Xcode",
+    "name": "Xcode",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted macOS Preview",
+    "description": "Build, test, archive, or package an Xcode workspace on macOS.",
+    "iconTaskId": "1E78DC1B-9132-4B18-9C75-0E7ECC634B74",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "build": [
+            {
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "task": {
+                    "id": "1e78dc1b-9132-4b18-9c75-0e7ecc634b74",
+                    "versionSpec": "2.*"
+                },
+                "inputs": {
+                    "actions": "test",
+                    "configuration": "$(TestConfiguration)",
+                    "sdk": "$(TestSDK)",
+                    "xcWorkspacePath": "*.xcodeproj/project.xcworkspace",
+                    "scheme": "",
+                    "packageApp": "true",
+                    "signMethod": "file",
+                    "iosSigningIdentity": "",
+                    "unlockDefaultKeychain": "false",
+                    "defaultKeychainPassword": "",
+                    "provProfileUuid": "",
+                    "p12": "",
+                    "p12pwd": "",
+                    "provProfile": "",
+                    "removeProfile": "false",
+                    "args": "",
+                    "cwd": "",
+                    "outputPattern": "$(agent.builddirectory)/output/$(TestSDK)/$(TestConfiguration)",
+                    "xcodeDeveloperDir": "",
+                    "useXctool": "true",
+                    "xctoolReporter": "junit:test-results.xml",
+                    "publishJUnitResults": "true"
+                }
+            },
+            {
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "task": {
+                    "id": "1e78dc1b-9132-4b18-9c75-0e7ecc634b74",
+                    "versionSpec": "2.*"
+                },
+                "inputs": {
+                    "actions": "build",
+                    "configuration": "$(Configuration)",
+                    "sdk": "$(SDK)",
+                    "xcWorkspacePath": "*.xcodeproj/project.xcworkspace",
+                    "scheme": "",
+                    "packageApp": "true",
+                    "signMethod": "file",
+                    "iosSigningIdentity": "",
+                    "unlockDefaultKeychain": "false",
+                    "defaultKeychainPassword": "",
+                    "provProfileUuid": "",
+                    "p12": "",
+                    "p12pwd": "",
+                    "provProfile": "",
+                    "removeProfile": "false",
+                    "exportPath": "$(agent.builddirectory)/output/$(SDK)/$(Configuration)",
+                    "args": "",
+                    "cwd": "",
+                    "outputPattern": "$(agent.builddirectory)/output/$(SDK)/$(Configuration)",
+                    "xcodeDeveloperDir": "",
+                    "useXctool": "false",
+                    "xctoolReporter": "",
+                    "publishJUnitResults": "false"
+                }
+            },
+            {
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": true,
+                "task": {
+                    "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                    "versionSpec": "2.*"
+                },
+                "inputs": {
+                    "SourceFolder": "$(agent.builddirectory)/output/$(SDK)/$(Configuration)",
+                    "Contents": "**/*.ipa",
+                    "TargetFolder": "$(build.artifactstagingdirectory)",
+                    "CleanTargetFolder": "false",
+                    "OverWrite": "false"
+                }
+            },
+            {
+                "enabled": false,
+                "displayName": "Enable this task to deploy the application to App Center. To create an App Center account and learn more, see https://appcenter.ms/. ",
+                "inputs": {
+                    "app": "$(agent.builddirectory)/output/$(SDK)/$(Configuration)/**/*.ipa",
+                    "symbolsType": "Apple",
+                    "dsymPath": "$(agent.builddirectory)/output/$(SDK)/$(Configuration)/**/*.dSYM"
+                },
+                "task": {
+                    "id": "b832bec5-8c27-4fef-9fb8-6bec8524ad8a",
+                    "versionSpec": "2.*"
+                }
+            },
+            {
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": true,
+                "task": {
+                    "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                    "versionSpec": "1.*"
+                },
+                "inputs": {
+                    "PathtoPublish": "$(build.artifactstagingdirectory)",
+                    "ArtifactName": "drop",
+                    "ArtifactType": "Container",
+                    "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)"
+                }
+            }
+        ],
+        "options": [],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "Configuration": {
+                "value": "Release",
+                "allowOverride": true
+            },
+            "SDK": {
+                "value": "iphoneos",
+                "allowOverride": true
+            },
+            "TestSDK": {
+                "value": "iphonesimulator",
+                "allowOverride": true
+            },
+            "TestConfiguration": {
+                "value": "Debug",
+                "allowOverride": true
+            }
+        },
+        "triggers": []
+    }
+}

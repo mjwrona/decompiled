@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Social.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01AE2364-EA9F-4109-A1A8-76F17ECAE6E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Social.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Framework.Extensions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Framework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Social.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Social.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Social\Server\SocialActivityArtifactAggregationJob.cs" />
+    <Compile Include="Social\Server\GeneratedVersionInfo.cs" />
+    <Compile Include="Social\Server\SocialEngagementServerResource.cs" />
+    <Compile Include="SocialEngagement\Server\ISocialSdkSocialEngagementProvider.cs" />
+    <Compile Include="SocialEngagement\Server\AggregationType.cs" />
+    <Compile Include="SocialServer\Server\ISocialActivityAggregationProvider.cs" />
+    <Compile Include="SocialServer\Server\PartitionRecord.cs" />
+    <Compile Include="SocialServer\Server\AggregatedArtifactsRecord.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityAggregatedArtifact.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityAggregatedMetric.cs" />
+    <Compile Include="SocialServer\Server\ActivityTypeProviderNotFoundException.cs" />
+    <Compile Include="SocialServer\Server\ProviderAlreadyPresentException.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityAggregationGetActivityException.cs" />
+    <Compile Include="SocialServer\Server\AggregatedArtifactsUpdateJob.cs" />
+    <Compile Include="SocialServer\Server\IArtifactsAggregator.cs" />
+    <Compile Include="SocialServer\Server\ArtifactsAggregator.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityAggregationJob.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityNewPartitionCreationJob.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityDeletionJob.cs" />
+    <Compile Include="SocialServer\Server\IInMemorySocialAggregation.cs" />
+    <Compile Include="SocialServer\Server\TracePoints.cs" />
+    <Compile Include="SocialServer\Server\Telemetry.cs" />
+    <Compile Include="SocialServer\Server\TelemetryLayers.cs" />
+    <Compile Include="SocialServer\Server\CiKeys.cs" />
+    <Compile Include="SocialServer\Server\CiValues.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityAggregationServiceConstants.cs" />
+    <Compile Include="SocialServer\Server\ISocialSdkSocialActivityProvider.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityRecord.cs" />
+    <Compile Include="SocialServer\Server\RegistryHelper.cs" />
+    <Compile Include="SocialServer\Server\SocialEngAggregateMetricController.cs" />
+    <Compile Include="SocialServer\Server\ISocialActivityProviderService.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityProviderService.cs" />
+    <Compile Include="SocialServer\Server\ISocialSdkEngagementProviderService.cs" />
+    <Compile Include="SocialServer\Server\SocialSdkEngagementProviderService.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityCacheService.cs" />
+    <Compile Include="SocialServer\Server\ISocialActivityAggregationService.cs" />
+    <Compile Include="SocialServer\Server\SocialActivityAggregationService.cs" />
+    <Compile Include="SocialServer\Server\ISocialEngService.cs" />
+    <Compile Include="SocialServer\Server\SocialEngagementService.cs" />
+    <Compile Include="SocialServer\Server\SocialEngagementAggregatesCleanupJob.cs" />
+    <Compile Include="SocialServer\Server\SocialEngUsersController.cs" />
+    <Compile Include="SocialServer\Server\SocialEngProviderController.cs" />
+    <Compile Include="SocialServer\Server\SocialEngController.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialActivityDatabaseWideComponent.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialEngagementAggregateAndImpressionCountBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialEngagementAggregateAndImpressionCount.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialEngagementStatisticsBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialEngagementRecordBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\CustomSqlError.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialEngagementSdkSqlResourceComponent.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialActivityRecordBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\PartitionRecordBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialActivityAggregatedArtifactBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialActivityAggregatedMetricBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\AggregatedArtifactsRecordBinder.cs" />
+    <Compile Include="SocialServer\Server\DataAccess\SocialActivityAggregationComponent.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SocialEngagementServerResource.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

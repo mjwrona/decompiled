@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Identity.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12B2286C-645A-404F-AEA1-371F3CDB4458}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Identity</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Identity</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserSyncQueueEntry.cs" />
+    <Compile Include="UserSyncComponent.cs" />
+    <Compile Include="IdentityRepairChangeTableValuedParameters.cs" />
+    <Compile Include="GdprHistoricalIdentity.cs" />
+    <Compile Include="GdprSyncMigrationHelper.cs" />
+    <Compile Include="GroupAuditRecord.cs" />
+    <Compile Include="IAadUserTypeExtension.cs" />
+    <Compile Include="IdentityRepairChange.cs" />
+    <Compile Include="IdentityUpnRepairChange.cs" />
+    <Compile Include="IdentityOidRepairChange.cs" />
+    <Compile Include="IdentityPuidRepairChange.cs" />
+    <Compile Include="IdentityFederatedProviderData.cs" />
+    <Compile Include="IIdentityIdTranslationService.cs" />
+    <Compile Include="MsaIdentityHelper.cs" />
+    <Compile Include="SocialTypeMapper.cs" />
+    <Compile Include="IdentityManagementComponent.cs" />
+    <Compile Include="IdentityManagementComponent2.cs" />
+    <Compile Include="IdentityManagementComponent3.cs" />
+    <Compile Include="IdentityManagementComponent4.cs" />
+    <Compile Include="IdentityManagementComponent5.cs" />
+    <Compile Include="IdentityManagementComponent6.cs" />
+    <Compile Include="IdentityManagementComponent7.cs" />
+    <Compile Include="IdentityManagementComponent8.cs" />
+    <Compile Include="IdentityManagementComponent9.cs" />
+    <Compile Include="IdentityManagementComponent10.cs" />
+    <Compile Include="IdentityManagementComponent11.cs" />
+    <Compile Include="IdentityManagementComponent12.cs" />
+    <Compile Include="IdentityManagementComponent13.cs" />
+    <Compile Include="IdentityManagementComponent14.cs" />
+    <Compile Include="IdentityManagementComponent15.cs" />
+    <Compile Include="IdentityManagementComponent16.cs" />
+    <Compile Include="SyncQueueData.cs" />
+    <Compile Include="CommandGetIdentityChanges.cs" />
+    <Compile Include="GroupComponent.cs" />
+    <Compile Include="GroupComponent2.cs" />
+    <Compile Include="GroupComponent3.cs" />
+    <Compile Include="GroupComponent4.cs" />
+    <Compile Include="GroupComponent5.cs" />
+    <Compile Include="GroupComponent6.cs" />
+    <Compile Include="GroupComponent7.cs" />
+    <Compile Include="GroupComponent8.cs" />
+    <Compile Include="GroupComponent9.cs" />
+    <Compile Include="GroupComponent10.cs" />
+    <Compile Include="GroupComponent11.cs" />
+    <Compile Include="GroupComponent12.cs" />
+    <Compile Include="GroupComponent13.cs" />
+    <Compile Include="GroupComponent14.cs" />
+    <Compile Include="GroupComponent15.cs" />
+    <Compile Include="GroupComponent16.cs" />
+    <Compile Include="GroupComponent17.cs" />
+    <Compile Include="GroupComponent18.cs" />
+    <Compile Include="GroupComponent19.cs" />
+    <Compile Include="GroupComponent20.cs" />
+    <Compile Include="GroupComponent21.cs" />
+    <Compile Include="GroupComponent22.cs" />
+    <Compile Include="GroupComponent23.cs" />
+    <Compile Include="IdentityDescriptorChangeComponent.cs" />
+    <Compile Include="IdentityDescriptorChangeBinder.cs" />
+    <Compile Include="IdentityKeyMapComponent.cs" />
+    <Compile Include="IdentityManagementComponent17.cs" />
+    <Compile Include="IdentityManagementComponent18.cs" />
+    <Compile Include="IdentityManagementComponent19.cs" />
+    <Compile Include="IdentityManagementComponent20.cs" />
+    <Compile Include="IdentityManagementComponent21.cs" />
+    <Compile Include="IdentityManagementComponent22.cs" />
+    <Compile Include="IdentityManagementComponent23.cs" />
+    <Compile Include="IdentityManagementComponent24.cs" />
+    <Compile Include="IdentityManagementComponent25.cs" />
+    <Compile Include="IdentityManagementComponent26.cs" />
+    <Compile Include="IdentityManagementComponent27.cs" />
+    <Compile Include="IdentityManagementComponent28.cs" />
+    <Compile Include="IdentityManagementComponent29.cs" />
+    <Compile Include="IdentityBindingConfig.cs" />
+    <Compile Include="IdentityManagementComponent30.cs" />
+    <Compile Include="IdentityManagementComponent31.cs" />
+    <Compile Include="IdentityManagementComponent32.cs" />
+    <Compile Include="IdentityManagementComponent33.cs" />
+    <Compile Include="IdentityManagementComponent34.cs" />
+    <Compile Include="IdentityManagementComponent35.cs" />
+    <Compile Include="IdentityManagementStatisticsComponent.cs" />
+    <Compile Include="IdentityManagementStatisticsComponent2.cs" />
+    <Compile Include="IdentityMapComponent.cs" />
+    <Compile Include="IdentityIdMapping.cs" />
+    <Compile Include="IdentityIdMappingColumns.cs" />
+    <Compile Include="IdentityMapComponent2.cs" />
+    <Compile Include="IdentityMapComponent3.cs" />
+    <Compile Include="IdentityMapComponent4.cs" />
+    <Compile Include="IdentityMapComponent5.cs" />
+    <Compile Include="IdentityMapComponent6.cs" />
+    <Compile Include="IdentityIdTranslationComponent.cs" />
+    <Compile Include="IdentityIdTranslationBinder.cs" />
+    <Compile Include="ReadGroupMembershipsComponentBase.cs" />
+    <Compile Include="ReadGroupMembershipsComponent.cs" />
+    <Compile Include="ReadGroupMembershipComponent2.cs" />
+    <Compile Include="ReadGroupMembershipComponent3.cs" />
+    <Compile Include="ReadGroupMembershipComponent4.cs" />
+    <Compile Include="ReadGroupMembershipComponent5.cs" />
+    <Compile Include="ReadGroupMembershipComponent6.cs" />
+    <Compile Include="GroupMembershipTableValuedParameterExtensions.cs" />
+    <Compile Include="GroupScopeTableValuedParameterExtensions.cs" />
+    <Compile Include="GroupTableValuedParameterExtensions.cs" />
+    <Compile Include="GroupUpdateTableValuedParameterExtensions.cs" />
+    <Compile Include="IdentityDescriptorTableValuedParametersExtensions.cs" />
+    <Compile Include="IdentityExtensionTableValuedParameters.cs" />
+    <Compile Include="IdentityExtensionTableValuedParametersBinder.cs" />
+    <Compile Include="IdentityExtensionTableValuedParametersBinder2.cs" />
+    <Compile Include="IdentityExtensionTableValuedParametersBinder3.cs" />
+    <Compile Include="IdentityKeyMapTableValuedParameters.cs" />
+    <Compile Include="IdentityIdTranslationTableValuedParameterExtension.cs" />
+    <Compile Include="IdentityMembershipTableValuedParameterExtensions.cs" />
+    <Compile Include="IdentityQueueTableValuedParameterExtensions.cs" />
+    <Compile Include="IdentityTableValuedParameterExtensions.cs" />
+    <Compile Include="IdentityTableValuedParametersBinder.cs" />
+    <Compile Include="GroupMembershipCycleRecord.cs" />
+    <Compile Include="IdentityAttachValidationHelper.cs" />
+    <Compile Include="IdentityChangeHandler.cs" />
+    <Compile Include="IdentityChangeInfo.cs" />
+    <Compile Include="IdentityDescriptorChange.cs" />
+    <Compile Include="IdentityIdMapper.cs" />
+    <Compile Include="IdentityIdTranslationService.cs" />
+    <Compile Include="IdentityIdTranslatorPerfCounters.cs" />
+    <Compile Include="IdentityMembershipTransferService.cs" />
+    <Compile Include="IdentityMembershipTransferComponent.cs" />
+    <Compile Include="IdentitiesToTransferColumns.cs" />
+    <Compile Include="IdentityCacheWarmer.cs" />
+    <Compile Include="IdentitiesPage.cs" />
+    <Compile Include="IUpdateIdentitiesInDatabaseExtension.cs" />
+    <Compile Include="PlatformIdentityServiceWrapper.cs" />
+    <Compile Include="ScopePagingContext.cs" />
+    <Compile Include="IdentityPropertyKpis.cs" />
+    <Compile Include="IdentitySelfService.cs" />
+    <Compile Include="IdentityStatisticsService.cs" />
+    <Compile Include="IdentitySyncHelper.cs" />
+    <Compile Include="IdentitySynchronizer.cs" />
+    <Compile Include="IdentityTranslationHelper.cs" />
+    <Compile Include="IdentityIdTranslatorDictionaryExtensions.cs" />
+    <Compile Include="IdentityTypeMapper.cs" />
+    <Compile Include="IIdentitySelfService.cs" />
+    <Compile Include="IIdentityTenantCache.cs" />
+    <Compile Include="IPagedScopedIdentityReader.cs" />
+    <Compile Include="IPlatformIdentityCache.cs" />
+    <Compile Include="IRemoveMemberFromGroupExtension.cs" />
+    <Compile Include="IReadIdentitiesFromDatabaseExtension.cs" />
+    <Compile Include="PlatformIdentityCacheWarmer.cs" />
+    <Compile Include="PlatformIdentityIdentifierConversionService.cs" />
+    <Compile Include="PlatformIdentityService.cs" />
+    <Compile Include="PlatformIdentityCache.cs" />
+    <Compile Include="PlatformIdentityStore.cs" />
+    <Compile Include="IdentityDatabaseTypes.cs" />
+    <Compile Include="IdentityExtendedPropertyKeys.cs" />
+    <Compile Include="IdentityStoreUtilities.cs" />
+    <Compile Include="IdentityAttachHandler.cs" />
+    <Compile Include="IdentityUpgradeHandler.cs" />
+    <Compile Include="IdentityMoveHandler.cs" />
+    <Compile Include="IdentityDetachHandler.cs" />
+    <Compile Include="IdentityTenantCache.cs" />
+    <Compile Include="PlatformPropertyCacheService.cs" />
+    <Compile Include="ScopeIdMapper.cs" />
+    <Compile Include="SqlComponentIdentityIdentifierRepository.cs" />
+    <Compile Include="CuidState.cs" />
+    <Compile Include="SecurityNamespaceIds.cs" />
+    <Compile Include="SystemGraphPermissions.cs" />
+    <Compile Include="GroupAvatarValidator.cs" />
+    <Compile Include="ReadGroupMembership3ConfigHelper.cs" />
+    <Compile Include="SqlReadReplicaHelper.cs" />
+    <Compile Include="GroupMembershipReadReplicaHelper.cs" />
+    <Compile Include="IdentityScopeHelper.cs" />
+    <Compile Include="PlatformIdentitySearchHelper.cs" />
+    <Compile Include="IdentityPermissionHelper.cs" />
+    <Compile Include="AadGroupToIdentityUtils.cs" />
+    <Compile Include="PagingHelper.cs" />
+    <Compile Include="IdentityConversionHelper.cs" />
+    <Compile Include="IdentityConversionPayload.cs" />
+    <Compile Include="IBindPendingCoversionHelper.cs" />
+    <Compile Include="BindPendingConversionHelper.cs" />
+    <Compile Include="AadBindPendingConversionHelper.cs" />
+    <Compile Include="MsaBindPendingConversionHelper.cs" />
+    <Compile Include="WellKnownGroupsInfo.cs" />
+    <Compile Include="PlatformClaimsUpdateService.cs" />
+    <Compile Include="ChangedIdentities_BackCompat.cs" />
+    <Compile Include="ChangedIdentitiesContext_BackCompat.cs" />
+    <Compile Include="IdentityDescriptor_BackCompat.cs" />
+    <Compile Include="IdentityDescriptorBackCompatExtensions.cs" />
+    <Compile Include="IdentityScope_BackCompat.cs" />
+    <Compile Include="Identity_BackCompat.cs" />
+    <Compile Include="IdentitiesControllerBase.cs" />
+    <Compile Include="RestrictDeploymentIdentitiesAccessAttribute.cs" />
+    <Compile Include="IdentitySwapController.cs" />
+    <Compile Include="IdentityDescriptorsController.cs" />
+    <Compile Include="GroupsController.cs" />
+    <Compile Include="GroupsController_BackCompatController.cs" />
+    <Compile Include="FrameworkIdentitiesController.cs" />
+    <Compile Include="IdentitiesControllerLoggingNameGenerator.cs" />
+    <Compile Include="IdentityRightsController.cs" />
+    <Compile Include="IdentityIdType.cs" />
+    <Compile Include="IdentitySequenceIdController.cs" />
+    <Compile Include="IdentitySelfController.cs" />
+    <Compile Include="IdentitiesController.cs" />
+    <Compile Include="IdentitiesController_BackCompatController.cs" />
+    <Compile Include="IdentitiesDebugController.cs" />
+    <Compile Include="IdentitiesDebugController_BackCompatController.cs" />
+    <Compile Include="IdentityBatchController.cs" />
+    <Compile Include="IdentityBatchController_BackCompatController.cs" />
+    <Compile Include="IdentitySnapshotController.cs" />
+    <Compile Include="IdentityUsersController.cs" />
+    <Compile Include="MemberOf2Controller.cs" />
+    <Compile Include="MemberOfController.cs" />
+    <Compile Include="MembersController.cs" />
+    <Compile Include="MemberOfController_BackCompatController.cs" />
+    <Compile Include="MembersController_BackCompatController.cs" />
+    <Compile Include="PropertyCacheController.cs" />
+    <Compile Include="ClaimsController.cs" />
+    <Compile Include="ScopesBaseController.cs" />
+    <Compile Include="ScopesController.cs" />
+    <Compile Include="ScopesController_BackCompatController.cs" />
+    <Compile Include="Scopes2Controller.cs" />
+    <Compile Include="SignedInTokenController.cs" />
+    <Compile Include="SignoutTokenController.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="HostingResources.cs" />
+    <Compile Include="Mru\PlatformIdentityIdMruService.cs" />
+    <Compile Include="Mru\MruIdentities2Controller.cs" />
+    <Compile Include="Mru\MruIdentitiesController.cs" />
+    <Compile Include="Internal\IdentityRightsTransferHelper.cs" />
+    <Compile Include="RestServices\IdentityTenantController.cs" />
+    <Compile Include="SqlComponent\NullObjectBinder`1.cs" />
+    <Compile Include="SqlComponent\ResultCollectionWithNullObjectBinder`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Graph\IGraphMembershipChangeHandler.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Resources\stmt_GetCyclicGroupMemberships.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

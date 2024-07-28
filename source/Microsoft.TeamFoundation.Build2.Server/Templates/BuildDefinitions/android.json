@@ -1,0 +1,80 @@
+﻿{
+    "id": "android",
+    "name": "Android",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "iconTaskId": "DF857559-8715-46EB-A74E-AC98B9178AA0",
+    "description": "Build, test, sign, and align an Android APK.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "build": [
+            {
+                "enabled": true,
+                "task": {
+                    "id": "8D8EEBD8-2B94-4C97-85AF-839254CC6DA4",
+                    "versionSpec": "2.*"
+                }
+            },
+            {
+                "enabled": true,
+                "inputs": {
+                    "files": "**/*.apk",
+                    "apksign": "false",
+                    "zipalign": "false"
+                },
+                "task": {
+                    "id": "80F3F6A0-82A6-4A22-BA7A-E5B8C541B9B9",
+                    "versionSpec": "3.*"
+                }
+            },
+            {
+                "enabled": true,
+                "alwaysRun": true,
+                "inputs": {
+                    "SourceFolder": "$(build.sourcesdirectory)",
+                    "Contents": "**/*.apk",
+                    "TargetFolder": "$(build.artifactstagingdirectory)"
+                },
+                "task": {
+                    "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                    "versionSpec": "2.*"
+                }
+            },
+            {
+                "enabled": false,
+                "displayName": "Enable this task to deploy the application to App Center. To create an App Center account and learn more, see https://appcenter.ms/. ",
+                "inputs": {
+                    "app": "**/*.apk",
+                    "symbolsType": "AndroidJava",
+                    "symbolsPath": "**/local/obj",
+                    "mappingTxtPath": "**/mapping.txt"
+                },
+                "task": {
+                    "id": "b832bec5-8c27-4fef-9fb8-6bec8524ad8a",
+                    "versionSpec": "2.*"
+                }
+            },
+            {
+                "enabled": true,
+                "alwaysRun": true,
+                "inputs": {
+                    "PathtoPublish": "$(build.artifactstagingdirectory)",
+                    "ArtifactName": "drop",
+                    "ArtifactType": "Container"
+                },
+                "task": {
+                    "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                    "versionSpec": "1.*"
+                }
+            }
+        ],
+        "options": [],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            }
+        },
+        "triggers": []
+    }
+}

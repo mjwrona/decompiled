@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EventSubscriptionNotFound" xml:space="preserve">
+    <value>TF50355: Subscription not found.</value>
+  </data>
+  <data name="EventConditionExpectedBoolean" xml:space="preserve">
+    <value>Expected a boolean operator, found {0}.</value>
+  </data>
+  <data name="SubscriptionPendingDeletion" xml:space="preserve">
+    <value>Subscription is marked for deletion</value>
+  </data>
+  <data name="EventConditionDynamicPredicateThrewException" xml:space="preserve">
+    <value>Dynamic event predicate named '{0}' threw an exception.</value>
+  </data>
+  <data name="EmailNotificationViewLink" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="SubscriptionDoesNotSupportOperation" xml:space="preserve">
+    <value>Subscription '{0}' does not support the '{1}' operation</value>
+  </data>
+  <data name="SubscriptionJailedByNotificationsVolume" xml:space="preserve">
+    <value>This subscription was disabled due to the high volume of notifications it generated</value>
+  </data>
+  <data name="EventConditionDynamicPredicateNotFound" xml:space="preserve">
+    <value>Could not find dynamic event predicate named '{0}'.</value>
+  </data>
+  <data name="InvalidNotificationKey" xml:space="preserve">
+    <value>At least one critria must be specified in the NotificationKey</value>
+  </data>
+  <data name="ArtifactIsRequired" xml:space="preserve">
+    <value>Artifact information is required</value>
+  </data>
+  <data name="SubscriptionReasonSystem" xml:space="preserve">
+    <value>We sent you this notification due to a system subscription.</value>
+  </data>
+  <data name="MalformedArtifact" xml:space="preserve">
+    <value>Artifact is malformed</value>
+  </data>
+  <data name="RequiredEmailAddressErrorMessage" xml:space="preserve">
+    <value>Required email address was not specified.</value>
+  </data>
+  <data name="InvalidSubscriptionFilter" xml:space="preserve">
+    <value>Invalid subscription filter</value>
+  </data>
+  <data name="IgnoreSubscriptionsMustHaveInclusionsOrConditions" xml:space="preserve">
+    <value>Subscriptions with an ignore filter must have at least one inclusion role or a filter criteria.</value>
+  </data>
+  <data name="InvalidArtifactType" xml:space="preserve">
+    <value>Artifact type '{0}' is not valid.  Valid artifact types are: {1}</value>
+  </data>
+  <data name="EventConditionFieldNotFound" xml:space="preserve">
+    <value>TF50299: The value named '{0}' was not found when evaluating a condition.</value>
+  </data>
+  <data name="ErrorLoadSubscriptionAdapterByMatcher" xml:space="preserve">
+    <value>Unable to find a subscription adapter for MatcherType '{0}' and EventType '{1}'</value>
+  </data>
+  <data name="MatcherEventTypeCombinationNotSupported" xml:space="preserve">
+    <value>Matcher '{0}' is not compatible with EventType '{1}'</value>
+  </data>
+  <data name="NotificationStatisticInvalidDate" xml:space="preserve">
+    <value>Invalid or null date specified.</value>
+  </data>
+  <data name="NotificationStatisticInvalidType" xml:space="preserve">
+    <value>Invalid statistic type specified.</value>
+  </data>
+  <data name="NotificationStatisticInvalidPath" xml:space="preserve">
+    <value>Path missing or not valid for the specified statistic type.</value>
+  </data>
+  <data name="SubscriptionChannelMustBeSpecified" xml:space="preserve">
+    <value>Subscription Channel must be specified</value>
+  </data>
+  <data name="SystemSubscriptionNotOptOutable" xml:space="preserve">
+    <value>System subscriptions cannot be opt'ed out of.</value>
+  </data>
+  <data name="EventSubscriptionInvalidUri" xml:space="preserve">
+    <value>TF50216: The subscription URI {0} is not valid.</value>
+  </data>
+  <data name="UnauthorizedFollow" xml:space="preserve">
+    <value>Identity '{0}' cannot follow artifact '{1} {2}'.  It either does not exist or you do not have access to it.</value>
+  </data>
+  <data name="NotificationStatisticInvalidHitCount" xml:space="preserve">
+    <value>Invalid hit count specified (value must be greater than zero).</value>
+  </data>
+  <data name="SubscriptionNotOptOutable" xml:space="preserve">
+    <value>A subscription configured to deliver notifications to a specific email address cannot be opt'ed out of.</value>
+  </data>
+  <data name="ErrorLoadSubscriptionAdapterByFilter" xml:space="preserve">
+    <value>Unable to find a subscription adapter for FilterType '{0}'</value>
+  </data>
+  <data name="UnsupportedUpdateDeliveryPreference" xml:space="preserve">
+    <value>Subscriber does not support updating delivery preference</value>
+  </data>
+  <data name="SubscriptionWarning" xml:space="preserve">
+    <value>One or more subscriptions could not be saved due to either the filter expression taking too long to evaluate or the number of recipients exceeding 100.</value>
+  </data>
+  <data name="BlockSubscriptionsNoOptOut" xml:space="preserve">
+    <value>Block subscriptions do not support admin or user opt in or out - id '{0}'.</value>
+  </data>
+  <data name="CantSubscribeToChannel" xml:space="preserve">
+    <value>Custom subscriptions are not supported for the '{0}' channel.</value>
+  </data>
+  <data name="MustacheTemplateInvalidArgumentsMessage" xml:space="preserve">
+    <value>'target' and 'templateId' may not both be null</value>
+  </data>
+  <data name="InvalidEventData" xml:space="preserve">
+    <value>TF400473:One or more of the provided events do not contain a valid event type.</value>
+  </data>
+  <data name="MustacheContributedTemplateUndefinedMessage" xml:space="preserve">
+    <value>No template definition was specified for contribution {0}</value>
+  </data>
+  <data name="BlockFilterNotSupportException" xml:space="preserve">
+    <value>Block filter is not supported.</value>
+  </data>
+  <data name="NotificationXslNotFound" xml:space="preserve">
+    <value>The XSL style sheet for event type {0} could not be found.</value>
+  </data>
+  <data name="IdentityInactiveException" xml:space="preserve">
+    <value>A subscription identity is inactive '{0}' or '{1}'.</value>
+  </data>
+  <data name="ErrorLoadFilterMatcher" xml:space="preserve">
+    <value>Unable to find FilterMatcher for matcher {0}</value>
+  </data>
+  <data name="InvalidConsumerProperty" xml:space="preserve">
+    <value>The supplied ConsumerProperties are not valid for this consumer, supported properties are: {0}</value>
+  </data>
+  <data name="MustacheTemplateInvalidPartialReference" xml:space="preserve">
+    <value>Invalid partial reference: {0}</value>
+  </data>
+  <data name="IgnoreSubscriptionMustBeEveryoneGroup" xml:space="preserve">
+    <value>Ignore subscriptions must be for Project Collection Valid Users Group</value>
+  </data>
+  <data name="UnauthorizedSubscriberDeliveryPreferenceUpdate" xml:space="preserve">
+    <value>You are not authorized to view/update the delivery preferences for {0}</value>
+  </data>
+  <data name="StatusChangeAuditMessage" xml:space="preserve">
+    <value>The status was changed from {0} to {1}.</value>
+  </data>
+  <data name="SubscriptionUnsubscribeActionName" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
+  <data name="InvalidUpdateTracingParametersDeliveryResultsNotSupported" xml:space="preserve">
+    <value>This subscription does not support tracing delivery results</value>
+  </data>
+  <data name="InvalidSubscriptionExpression" xml:space="preserve">
+    <value>Failed to parse expression '{0}'</value>
+  </data>
+  <data name="EventConditionExpected" xml:space="preserve">
+    <value>Expected {0}.</value>
+  </data>
+  <data name="UnsupportedDeliveryPreference" xml:space="preserve">
+    <value>Subscriber does hot support delivery preference {0}</value>
+  </data>
+  <data name="UnauthorizedSuspend" xml:space="preserve">
+    <value>You are not authorized to perform the suspend notifications operation, please contact an admin to perform this operation</value>
+  </data>
+  <data name="DisablingSubscription" xml:space="preserve">
+    <value>Exception '{0}' - '{1}'</value>
+  </data>
+  <data name="EventBacklogDelay" xml:space="preserve">
+    <value>Metric {0} EventTypeName '{1}' Exceeded threshold value of ({2}), Current Value is ({3})</value>
+  </data>
+  <data name="SubscriptionFieldNotSupported" xml:space="preserve">
+    <value>'{0}' is not allowed for this type of subscription</value>
+  </data>
+  <data name="IgnoreSubscriptionOwnerMustBeAdmin" xml:space="preserve">
+    <value>Ignore subscription owner must be a collection administrator</value>
+  </data>
+  <data name="CouldNotReadIdentityForActee" xml:space="preserve">
+    <value>No identity read for role {0} ID {1}</value>
+  </data>
+  <data name="SubscriptionOptOutError" xml:space="preserve">
+    <value>Only team or group subscriptions can be opt'ed out of.</value>
+  </data>
+  <data name="CouldNotDeserializeRoleBasedExpression" xml:space="preserve">
+    <value>Could not deserialize role based expression - status {0} expression '{1}'</value>
+  </data>
+  <data name="NotitifcationBacklogDelay" xml:space="preserve">
+    <value>Metric {0} Scope '{1}' Exceeded threshold value of ({2}), Current Value is ({3})</value>
+  </data>
+  <data name="InvalidUpdateTracingParametersEmpty" xml:space="preserve">
+    <value>One or more members of UpdateSubscripitonDiagnosticsParameters must be set</value>
+  </data>
+  <data name="EventTypeDoesNotExistException" xml:space="preserve">
+    <value>Event type {0} does not exist.</value>
+  </data>
+  <data name="ArtifactTypeOrUri" xml:space="preserve">
+    <value>Artifact Uri specified, artifact type and name will be ignored</value>
+  </data>
+  <data name="SubscriptionOnlySupportsStatusUpdate" xml:space="preserve">
+    <value>Subscription '{0}' only supports status changes for the caller</value>
+  </data>
+  <data name="BlockUserOptOutAuditMessage" xml:space="preserve">
+    <value>The BlockUserOptOut property was changed from {0} to {1}.</value>
+  </data>
+  <data name="ArtifactUnfollowActionName" xml:space="preserve">
+    <value>Unfollow</value>
+  </data>
+  <data name="SubscriptionProjectInvalidException" xml:space="preserve">
+    <value>The project {0} is invalid.</value>
+  </data>
+  <data name="SubscriptionFilterMustBeSpecified" xml:space="preserve">
+    <value>Subscription Filter must be specified</value>
+  </data>
+  <data name="SubscriptionReasonGroup" xml:space="preserve">
+    <value>We sent you this notification on behalf of {0}.</value>
+  </data>
+  <data name="FieldCannotBeUpdated" xml:space="preserve">
+    <value>Field '{0}' for subscription '{1}' cannot be updated</value>
+  </data>
+  <data name="ProjectMacroDisplayString" xml:space="preserve">
+    <value>[Current Project]</value>
+  </data>
+  <data name="RoleExpansionExceeded" xml:space="preserve">
+    <value>Group {0} size {1} exceeds MaxTeamMembersForRoleExpansion {2}</value>
+  </data>
+  <data name="NoEmailFormatterAssociatedWithType" xml:space="preserve">
+    <value>There is no email formatter associated with type {0}</value>
+  </data>
+  <data name="SubscriptionReasonDefault" xml:space="preserve">
+    <value>We sent you this notification due to a default subscription.</value>
+  </data>
+  <data name="AllowedFieldUpdatesForContributedSubscription" xml:space="preserve">
+    <value>Only organization settings, user settings, and status can be updated for this type of subscription.</value>
+  </data>
+  <data name="ErrorSubscriberInvalid" xml:space="preserve">
+    <value>The subscriber for this subscription '{0}' is invalid.</value>
+  </data>
+  <data name="UnauthorizedChangeStatusSubscription" xml:space="preserve">
+    <value>You are not authorized to update the status for this subscription.</value>
+  </data>
+  <data name="MustSpecifySubscriptionId" xml:space="preserve">
+    <value>Subscription Id must be specified for patch operation</value>
+  </data>
+  <data name="UnauthorizedAdminSettings" xml:space="preserve">
+    <value>You are not authorized to update organization settings.</value>
+  </data>
+  <data name="InvalidEventSerializerAttributeSerializerType" xml:space="preserve">
+    <value>The EventSerializerAttribute SerializerType property is invalid.</value>
+  </data>
+  <data name="EventConditionUnexpectedEndOfLine" xml:space="preserve">
+    <value>Unexpected end of line marker in string literal value.</value>
+  </data>
+  <data name="EventConditionUnexpectedEndOfFile" xml:space="preserve">
+    <value>Unexpected end of file in string literal value.</value>
+  </data>
+  <data name="FollowingArtifact" xml:space="preserve">
+    <value>Following '{0}' artifact '{1}'</value>
+  </data>
+  <data name="UnauthorizedUpdateSubscription" xml:space="preserve">
+    <value>You are not authorized to update subscription.</value>
+  </data>
+  <data name="InvalidRoleBasedExpression" xml:space="preserve">
+    <value>Role based expression is invalid - '{0}'</value>
+  </data>
+  <data name="UnauthorizedPublishEvent" xml:space="preserve">
+    <value>The request to publish this event could not be authorized.</value>
+  </data>
+  <data name="NotificationEventHasToBeXml" xml:space="preserve">
+    <value>The event data for the current event type {0} cannot be converted into XmlDocument</value>
+  </data>
+  <data name="EventProcessingUnhealthy" xml:space="preserve">
+    <value>Notification Event Processing is unhealty, time since last processed event: {0}ms</value>
+  </data>
+  <data name="EventSubscriptionInvalidEmail" xml:space="preserve">
+    <value>TF50219: The e-mail address {0} is not valid.</value>
+  </data>
+  <data name="UnauthorizedEvaluateSubscription" xml:space="preserve">
+    <value>You are not authorized to run evaluate subscription.</value>
+  </data>
+  <data name="ErrorEventDoesntSupportUserSubscriptions" xml:space="preserve">
+    <value>EventType '{0}' does not support user subscripitions.</value>
+  </data>
+  <data name="SubscriptionOptOutNotSupported" xml:space="preserve">
+    <value>The current component version {0} does not support subscription opt out.</value>
+  </data>
+  <data name="SubscriptionMemberMissingPermissionsException" xml:space="preserve">
+    <value>Subscription identity {0} is missing the required permissions to manage the subscription.</value>
+  </data>
+  <data name="UnauthorizedCreateSubscription" xml:space="preserve">
+    <value>You are not authorized to create a subscription.</value>
+  </data>
+  <data name="EventTransformTeplateNotFound" xml:space="preserve">
+    <value>Could not find valid transform template for event type {0}</value>
+  </data>
+  <data name="EventConditionSyntaxError" xml:space="preserve">
+    <value>Syntax error near '{0}'.</value>
+  </data>
+  <data name="InvalidValueException" xml:space="preserve">
+    <value>Value '{0}' is not valid for field '{1}'</value>
+  </data>
+  <data name="SubscriptionOptOutUnAuth" xml:space="preserve">
+    <value>Only Admins can opt out on behalf of other users.</value>
+  </data>
+  <data name="SubscriptionStatusDefaultMessage" xml:space="preserve">
+    <value>Subscription status code '{0}'</value>
+  </data>
+  <data name="NotificationFields" xml:space="preserve">
+    <value>{0} Ch: {1}</value>
+  </data>
+  <data name="EventConditionExpectedInt" xml:space="preserve">
+    <value>Expected an integer after an arithmetic operator.</value>
+  </data>
+  <data name="NotificationEmailFormatError" xml:space="preserve">
+    <value>An error occurred while formatting the event document (Detailed Message: {0}).
+Original Event Document:
+{1}</value>
+  </data>
+  <data name="DisableSubscriptionBlockedByAdmin" xml:space="preserve">
+    <value>Disabling Subscription '{0}' had been blocked by an administrator.</value>
+  </data>
+  <data name="SubscriptionReasonPersonal" xml:space="preserve">
+    <value>We sent you this notification due to a configured subscription.</value>
+  </data>
+  <data name="InvalidIdentityException" xml:space="preserve">
+    <value>'{0}' is not a valid identity id</value>
+  </data>
+  <data name="TemplateCriteriaNotMetException" xml:space="preserve">
+    <value>No template was found that met the criteria for the given event (of type {0}).</value>
+  </data>
+  <data name="SubscriptionTraceErrorLoggerInvalid" xml:space="preserve">
+    <value>Could not start subscription tracing for subscription id {0} because the logger '{1}' is invalid.</value>
+  </data>
+  <data name="SubscriptionTraceErrorBadSource" xml:space="preserve">
+    <value>Could not start subscription tracing because the subscription id '{0}' is ivalid.</value>
+  </data>
+  <data name="TemplateNotFoundException" xml:space="preserve">
+    <value>Could not find template with id {0}</value>
+  </data>
+  <data name="ContributedShouldBeGroup" xml:space="preserve">
+    <value>Subscription '{0}' is contributed and should be marked as a group subscription as well.</value>
+  </data>
+  <data name="MatcherNotsupportedException" xml:space="preserve">
+    <value>Matcher '{0}' is not supported.</value>
+  </data>
+  <data name="ErrorEventTypeNotSupported" xml:space="preserve">
+    <value>EventType '{0}' is not supported.</value>
+  </data>
+  <data name="DefaultSubscriptionMustHaveInclusions" xml:space="preserve">
+    <value>Subscriptions with a default filter must have at least one inclusion role.</value>
+  </data>
+  <data name="InvalidQueryFlag" xml:space="preserve">
+    <value>AlwaysReturnBasicInformation flag is not supported when querying for a certain target</value>
+  </data>
+  <data name="SubscriptionReasonFollows" xml:space="preserve">
+    <value>We sent you this notification because you are following this {0}.</value>
+  </data>
+  <data name="UnauthorizedUnfollow" xml:space="preserve">
+    <value>Identity '{0}' cannot unfollow artifact with subscription id '{1}'. It either does not exist or you do not have access to it.</value>
+  </data>
+  <data name="EventSubscriptionInvalidEmailEmpty" xml:space="preserve">
+    <value>A subscription for e-mail delivery requires a valid e-mail address.</value>
+  </data>
+  <data name="ContributedEventNameNotSupported" xml:space="preserve">
+    <value>Contributed event name is not supported for legacy API '{0}'</value>
+  </data>
+  <data name="MustProvideAtLeastOneCondition" xml:space="preserve">
+    <value>At least one valid subscription query condition must be specified.</value>
+  </data>
+  <data name="LegacyEventNameNotSupported" xml:space="preserve">
+    <value>Legacy event name is not supported for new API '{0}'</value>
+  </data>
+  <data name="SubscriptionIdCannotBeEmpty" xml:space="preserve">
+    <value>Subscription ID cannot be empty.</value>
+  </data>
+  <data name="ErrorLastModifiedByInvalid" xml:space="preserve">
+    <value>The user that last modified this subscription '{0}' is invalid.</value>
+  </data>
+  <data name="TypeHasNoDefaultConstructor" xml:space="preserve">
+    <value>'{0}' does not have a default constructor.</value>
+  </data>
+  <data name="MeMacroDisplayString" xml:space="preserve">
+    <value>[Me]</value>
+  </data>
+  <data name="NotificationDeliveryUnhealthy" xml:space="preserve">
+    <value>Notification Delivery Job Unhealthy, time since last Notification Delivery: {0}ms</value>
+  </data>
+  <data name="FilterTypeCantBeChanged" xml:space="preserve">
+    <value>Cannot update filter type for subscription '{0}' from '{1}' to '{2}'</value>
+  </data>
+</root>

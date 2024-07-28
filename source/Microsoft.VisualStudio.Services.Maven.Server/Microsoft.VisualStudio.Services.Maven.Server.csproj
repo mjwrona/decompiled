@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Maven.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{769D1CC4-5FDD-48C1-BB83-872D80397B06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Maven.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Maven.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Maven.Client.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Maven.Client.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Maven.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Maven.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.ServiceShared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.Maven">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.Maven.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MavenCommitHandlerFactory.cs" />
+    <Compile Include="CommitOperationCommitHandler.cs" />
+    <Compile Include="SnapshotCleanupOperationCommitHandler.cs" />
+    <Compile Include="MavenFeedIndexAggregation.cs" />
+    <Compile Include="MavenUpstreamVersionListAggregation.cs" />
+    <Compile Include="MavenMetadataAggregation.cs" />
+    <Compile Include="IMavenMetadataDocumentService.cs" />
+    <Compile Include="IMavenMetadataAggregationAccessor.cs" />
+    <Compile Include="MavenMetadataAggregationAccessor.cs" />
+    <Compile Include="IMavenPluginMetadataStore.cs" />
+    <Compile Include="IWritableMavenPluginMetadataStore.cs" />
+    <Compile Include="IMavenPluginMetadataStoreAggregationAccessor.cs" />
+    <Compile Include="MavenPluginMetadataAggregation.cs" />
+    <Compile Include="MavenPluginMetadataAggregationAccessor.cs" />
+    <Compile Include="MavenPluginMetadataStoreByItemStore.cs" />
+    <Compile Include="MavenProblemPackagesAggregation.cs" />
+    <Compile Include="MavenStorageIdCacheAggregation.cs" />
+    <Compile Include="IMavenStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="MavenStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="MavenCommitLogFacadeBootstrapper.cs" />
+    <Compile Include="MavenNameConverter.cs" />
+    <Compile Include="MavenPackageNameRequestConverterBootstrapper.cs" />
+    <Compile Include="MavenRawPackageRequestToIdentityConverter.cs" />
+    <Compile Include="MavenRawPackageRequestToIdentityConverterBootstrap.cs" />
+    <Compile Include="MavenRawPackageRequestToRequestConverterBootstrapp.cs" />
+    <Compile Include="MavenRawPackageRequestWithDataConverterBootstrappe`1.cs" />
+    <Compile Include="MavenBatchRawRequestValidatingConverter.cs" />
+    <Compile Include="MavenFilePathToRequestContextDataConveter.cs" />
+    <Compile Include="MavenMetadataEntryToPackageConverter.cs" />
+    <Compile Include="MavenBatchRawRequest.cs" />
+    <Compile Include="MavenPackageFileResponse.cs" />
+    <Compile Include="MavenRawPackageNameRequest.cs" />
+    <Compile Include="MavenRawPackageNameRequest`1.cs" />
+    <Compile Include="MavenRawPackageRequest.cs" />
+    <Compile Include="MavenRawPackageRequest`1.cs" />
+    <Compile Include="MavenWriteBootstrapper`2.cs" />
+    <Compile Include="MavenPackageFileInfo.cs" />
+    <Compile Include="Protocol.cs" />
+    <Compile Include="MavenByBlobMetadataServiceFactoryBootstrapper.cs" />
+    <Compile Include="MavenMetadataDocumentSerializerFactory.cs" />
+    <Compile Include="AggregationDefinitions.cs" />
+    <Compile Include="MavenMigrationNames.cs" />
+    <Compile Include="MavenMigrationDefinitionsProviderBootstrapper.cs" />
+    <Compile Include="MavenDeleteOpGeneratorBootstrapper.cs" />
+    <Compile Include="MavenDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="MavenGetPackageVersionMetadataHandlerBootstrapper.cs" />
+    <Compile Include="MavenGetPackageVersionMetadataFromRecycleBinHandle.cs" />
+    <Compile Include="ThrowIfNotInRecycleBinHandler`1.cs" />
+    <Compile Include="MavenBatchUpdateBootstrapper.cs" />
+    <Compile Include="MavenBatchValidatingOpGeneratingHandlerBootstrappe.cs" />
+    <Compile Include="MavenPermanentDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="MavenPermanentDeleteValidatingOpGeneratingHandler.cs" />
+    <Compile Include="MavenPermanentDeleteValidatingOpGeneratingHandlerB.cs" />
+    <Compile Include="MavenRestoreToFeedRequestHandlerBootstrapper.cs" />
+    <Compile Include="MavenRestoreToFeedValidatingOpGeneratingHandlerBoo.cs" />
+    <Compile Include="MavenRestoreToFeedOpGeneratingHandler.cs" />
+    <Compile Include="MavenUpdateRequestHandlerBootstrapper.cs" />
+    <Compile Include="MavenUpdateValidatingOpGeneratingHandlerBootstrapp.cs" />
+    <Compile Include="MavenResolveRawFileRequestConverter.cs" />
+    <Compile Include="MavenResolveRawFileRequestConverterBootstrapper.cs" />
+    <Compile Include="PackagingRegistration.cs" />
+    <Compile Include="MavenGetPackageFileContentHandler.cs" />
+    <Compile Include="MavenGetPackageFileContentHandlerBootstrapper.cs" />
+    <Compile Include="AddFileRequestToMavenPackageFileResponse.cs" />
+    <Compile Include="UpstreamEntriesAreInvalid.cs" />
+    <Compile Include="LogThatWeForcedMavenCentralRetrieval.cs" />
+    <Compile Include="MavenGetPackageFileMetadataHandler.cs" />
+    <Compile Include="MavenGetPackageFileMetadataHandlerBootstrapper.cs" />
+    <Compile Include="MavenPackageMetricsFactory.cs" />
+    <Compile Include="MavenPackageMetricsHandler.cs" />
+    <Compile Include="IMavenPackageMetadataCacheService.cs" />
+    <Compile Include="MavenPackageMetadataCacheService.cs" />
+    <Compile Include="MavenRawFileRequest.cs" />
+    <Compile Include="MavenFileRequest.cs" />
+    <Compile Include="MavenArtifactFileRequest.cs" />
+    <Compile Include="MavenVersionsService.cs" />
+    <Compile Include="MavenDeleteCiDataFacadeHandler.cs" />
+    <Compile Include="MavenDownloadCiDataFacadeHandler.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Utilities\HtmlMathMlEntities.cs" />
+    <Compile Include="Utilities\MavenPreprocessingXDocumentLoader.cs" />
+    <Compile Include="Utilities\IMavenXmlExtensions.cs" />
+    <Compile Include="Utilities\MavenChecksumUtility.cs" />
+    <Compile Include="Utilities\MavenCommitLogUtils.cs" />
+    <Compile Include="Utilities\MavenFileNameUtility.cs" />
+    <Compile Include="Utilities\MavenHashAlgorithm.cs" />
+    <Compile Include="Utilities\MavenHashAlgorithmInfo.cs" />
+    <Compile Include="Utilities\MavenHttpResponseUtility.cs" />
+    <Compile Include="Utilities\MavenContentResponseMessageGenerator.cs" />
+    <Compile Include="Utilities\MavenIdentityUtility.cs" />
+    <Compile Include="Utilities\MavenPackageExtensionsUtility.cs" />
+    <Compile Include="Utilities\MavenPackageFileUtility.cs" />
+    <Compile Include="Utilities\MavenMetadataEntryExtensions.cs" />
+    <Compile Include="Utilities\MavenPomDependencyUtility.cs" />
+    <Compile Include="Utilities\MavenPomPropertiesUtility.cs" />
+    <Compile Include="Utilities\MavenPomUtility.cs" />
+    <Compile Include="Utilities\MavenSecurityHelper.cs" />
+    <Compile Include="Utilities\MavenUrlUtility.cs" />
+    <Compile Include="Utilities\NoCloseStreamWrapper.cs" />
+    <Compile Include="Upstreams\DownloadAndIngestMavenFileFromUpstreamHandler.cs" />
+    <Compile Include="Upstreams\IngestRawMavenFileIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="Upstreams\CrossCollectionUpstreamMavenClient.cs" />
+    <Compile Include="Upstreams\SameCollectionUpstreamMavenClient.cs" />
+    <Compile Include="Upstreams\IUpstreamMavenClient.cs" />
+    <Compile Include="Upstreams\MavenRefreshListTrimmingJobQueuerBootstrapper.cs" />
+    <Compile Include="Upstreams\PublicUpstreamMavenClient.cs" />
+    <Compile Include="Upstreams\MavenCollectionPackageUpstreamRefreshJobQueuerBoot.cs" />
+    <Compile Include="Upstreams\MavenUpstreamsConstants.cs" />
+    <Compile Include="Upstreams\MavenUpstreamFetchingMetadataServiceBootstrapper.cs" />
+    <Compile Include="Upstreams\ThrowNotFoundOnInvalidPackageNameValidator.cs" />
+    <Compile Include="Upstreams\MavenUpstreamMetadataManagerExistingLocalMetadataB.cs" />
+    <Compile Include="Upstreams\MavenUpstreamOnlyMetadataStore.cs" />
+    <Compile Include="Upstreams\MavenUpstreamMetadataManagerFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\MavenXmlMetadataToVersionListConverter.cs" />
+    <Compile Include="Upstreams\UpstreamMavenClientFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\UpstreamMavenClientFactory.cs" />
+    <Compile Include="Telemetry\MavenUpdatePackageCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\MavenUploadPackageCiDataFacadeHandler.cs" />
+    <Compile Include="HttpHandlers\MavenPublishHttpHandler.cs" />
+    <Compile Include="HttpHandlers\MavenPublishRouteHandler.cs" />
+    <Compile Include="Version\MavenVersionParser.cs" />
+    <Compile Include="Version\Items\MavenVersionInteger.cs" />
+    <Compile Include="Version\Items\MavenVersionList.cs" />
+    <Compile Include="Version\Items\MavenVersionString.cs" />
+    <Compile Include="Version\Helpers\IMavenVersionItem.cs" />
+    <Compile Include="Version\Helpers\MavenSortableVersionConverter.cs" />
+    <Compile Include="Version\Helpers\MavenVersionIterator.cs" />
+    <Compile Include="Version\Helpers\MavenVersionSeparators.cs" />
+    <Compile Include="Migration\MavenMigrationKickerJobBootstrapper.cs" />
+    <Compile Include="Migration\MavenMigrationJobHandlerFactoryBootstrapper.cs" />
+    <Compile Include="Migration\MavenUpgradeAggregationsBootstrapper.cs" />
+    <Compile Include="Metadata\MavenPackageFileByNameComparer.cs" />
+    <Compile Include="Metadata\MavenPackageFileNew.cs" />
+    <Compile Include="Models\IMavenMetadataEntry.cs" />
+    <Compile Include="Models\IMavenMetadataEntryWritable.cs" />
+    <Compile Include="Models\MavenMetadataEntry.cs" />
+    <Compile Include="Models\MavenPackageFile.cs" />
+    <Compile Include="Models\MavenFileInfo.cs" />
+    <Compile Include="Models\MavenPackageFileBlobInfo.cs" />
+    <Compile Include="Models\MavenPluginServiceItem.cs" />
+    <Compile Include="Models\MavenSnapshotInstanceId.cs" />
+    <Compile Include="Models\LongDateConverter.cs" />
+    <Compile Include="Models\MavenIdentityResolver.cs" />
+    <Compile Include="Models\MavenPackageIdentity.cs" />
+    <Compile Include="Models\MavenPackageName.cs" />
+    <Compile Include="Models\MavenPackageVersion.cs" />
+    <Compile Include="Models\Xml\MavenArtifactMetadata.cs" />
+    <Compile Include="Models\Xml\MavenArtifactMetadataVersioning.cs" />
+    <Compile Include="Models\Xml\MavenPluginList.cs" />
+    <Compile Include="Models\Xml\MavenPluginItem.cs" />
+    <Compile Include="Models\Xml\MavenSnapshotMetadata.cs" />
+    <Compile Include="Models\Xml\MavenSnapshotMetadataVersioning.cs" />
+    <Compile Include="Models\Xml\MavenSnapshotMetadataVersions.cs" />
+    <Compile Include="Models\Xml\MavenSnapshotMetadataLatest.cs" />
+    <Compile Include="Models\Xml\MavenXml.cs" />
+    <Compile Include="Models\Xml\MavenXmlMetadataBase`1.cs" />
+    <Compile Include="Models\Xml\Helpers\MavenSnapshotMetadataFiles`1.cs" />
+    <Compile Include="Models\Xml\Helpers\MavenSnapshotMetadataFile.cs" />
+    <Compile Include="Constants\MavenFeatureFlagConstants.cs" />
+    <Compile Include="Constants\MavenServerConstants.cs" />
+    <Compile Include="Constants\MavenPluginConstants.cs" />
+    <Compile Include="Constants\MavenTracerPoints.cs" />
+    <Compile Include="JobManagement\MavenChangeProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="JobManagement\MavenMigrationProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="JobManagement\MavenFeedChangeProcessingJobHandlerFactoryBootstra.cs" />
+    <Compile Include="DeleteProcessingJob\MavenPackageRequestWithMetadata.cs" />
+    <Compile Include="DeleteProcessingJob\MavenGetExtraAssetsBlobRefIdsHandler.cs" />
+    <Compile Include="Ingestion\MavenCommitOperationDataFromStorablePackageInfoHan.cs" />
+    <Compile Include="Ingestion\MavenCommitOperationDataFromRequestHandlerBootstra.cs" />
+    <Compile Include="Ingestion\MavenPackageIngesterBootstrapper.cs" />
+    <Compile Include="Ingestion\MavenStoredPackageGenerator.cs" />
+    <Compile Include="Ingestion\MavenStreamStorablePackageInfo.cs" />
+    <Compile Include="Ingestion\Validation\MavenPackageVersionValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\PomFileValidatorHandler.cs" />
+    <Compile Include="Exceptions\ArtifactsWithNonUniqueSnapshotVersionNotSupportedE.cs" />
+    <Compile Include="Exceptions\UnrecognizedMavenFilePathException.cs" />
+    <Compile Include="Exceptions\MavenArtifactVersionFileExistsException.cs" />
+    <Compile Include="Exceptions\MavenFileExtensionException.cs" />
+    <Compile Include="Exceptions\MavenFileNotFoundException.cs" />
+    <Compile Include="Exceptions\MavenPackageDeletedException.cs" />
+    <Compile Include="Exceptions\MavenPomParsingException.cs" />
+    <Compile Include="Exceptions\MavenPomSizeLimitExceededException.cs" />
+    <Compile Include="Exceptions\MavenServiceCanceledDueToClientException.cs" />
+    <Compile Include="Exceptions\Helpers\MavenBaseException`1.cs" />
+    <Compile Include="Exceptions\Helpers\MavenExceptionMappings.cs" />
+    <Compile Include="Converters\MavenFileRequestToMavenArtifactFileRequestConverte.cs" />
+    <Compile Include="Converters\MavenFileRequestToPackageFileRequestConverter.cs" />
+    <Compile Include="Converters\MavenFromFileNameRefCalculatingConverter.cs" />
+    <Compile Include="Converters\MavenPackageFilesNewToLegacyConverter.cs" />
+    <Compile Include="Converters\MavenPackageFilesToBlobReferenceIdentifiersConvert.cs" />
+    <Compile Include="Converters\MavenPackageFilesLegacyToNewConverter.cs" />
+    <Compile Include="Controllers\MavenPackagesBatchController.cs" />
+    <Compile Include="Controllers\MavenRecycleBinController.cs" />
+    <Compile Include="Controllers\MavenRecycleBinPackagesBatchController.cs" />
+    <Compile Include="Controllers\MavenUpstreamingController.cs" />
+    <Compile Include="Controllers\MavenVersionsController.cs" />
+    <Compile Include="Controllers\MavenBaseController.cs" />
+    <Compile Include="Controllers\MavenController.cs" />
+    <Compile Include="Controllers\MavenMetadataController.cs" />
+    <Compile Include="Controllers\JsonResult.cs" />
+    <Compile Include="Controllers\Internal\MavenVersionsInternalController.cs" />
+    <Compile Include="Controllers\Api\MavenContentController.cs" />
+    <Compile Include="CommitLog\Operations\MavenAddReqToOpHandlerBootstrapper.cs" />
+    <Compile Include="CommitLog\Operations\MavenOperations.cs" />
+    <Compile Include="Implementations\IMavenArtifactFilePath.cs" />
+    <Compile Include="Implementations\IMavenFilePath.cs" />
+    <Compile Include="Implementations\MavenFilePath.cs" />
+    <Compile Include="Implementations\IMavenArtifactIdLevelMetadataFilePath.cs" />
+    <Compile Include="Implementations\IMavenFullyQualifiedFilePath.cs" />
+    <Compile Include="Implementations\IMavenGroupIdLevelMetadataFilePath.cs" />
+    <Compile Include="Implementations\IMavenMetadataFilePath.cs" />
+    <Compile Include="Implementations\IMavenVersionLevelMetadataFilePath.cs" />
+    <Compile Include="Implementations\MavenItemStore.cs" />
+    <Compile Include="Implementations\MavenSnapshotCleanupOperationDataGeneratingHandler.cs" />
+    <Compile Include="Implementations\MavenSnapshotRotationLimitsHandler.cs" />
+    <Compile Include="Implementations\MavenSnapshotRotationLimitsWriteHandler.cs" />
+    <Compile Include="Implementations\MavenJobConstants.cs" />
+    <Compile Include="Implementations\SnapshotCleanupJobQueuerBootstrapper.cs" />
+    <Compile Include="Implementations\MavenMetadataHandlerBootstrapper.cs" />
+    <Compile Include="Implementations\Extensions\MavenPackageExtensions.cs" />
+    <Compile Include="Implementations\Services\MavenPluginService.cs" />
+    <Compile Include="Implementations\Internal\MavenArtifactFilePath.cs" />
+    <Compile Include="Implementations\Internal\AmbiguousMavenMetadataFilePath.cs" />
+    <Compile Include="Implementations\Internal\MavenArtifactIdLevelMetadataFilePath.cs" />
+    <Compile Include="Implementations\Internal\MavenGroupIdLevelMetadataFilePath.cs" />
+    <Compile Include="Implementations\Internal\MavenMetadataFilePath.cs" />
+    <Compile Include="Implementations\Internal\MavenVersionLevelMetadataFilePath.cs" />
+    <Compile Include="Implementations\CommitLog\Services\MavenCommitLogService.cs" />
+    <Compile Include="Implementations\CommitLog\Operations\MavenCommitOperation.cs" />
+    <Compile Include="Implementations\CommitLog\Operations\MavenViewOperation.cs" />
+    <Compile Include="Implementations\CommitLog\Operations\MavenDeleteOperation.cs" />
+    <Compile Include="Implementations\CommitLog\Operations\MavenPermanentDeleteOperation.cs" />
+    <Compile Include="Implementations\CommitLog\Operations\MavenRestoreToFeedOperation.cs" />
+    <Compile Include="Implementations\CommitLog\Operations\MavenSnapshotCleanupOperation.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenCommitOperationData.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenOperationDeserializer.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenOperationSerializer.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\IMavenPermanentDeleteOperationData.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenPermanentDeleteOperationData.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenRestoreToFeedOperationData.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenSerializationKeys.cs" />
+    <Compile Include="Implementations\CommitLog\OperationData\MavenSnapshotCleanupOperationData.cs" />
+    <Compile Include="Contracts\IMavenCommitLogService.cs" />
+    <Compile Include="Contracts\IUnsafeMavenCommitLogService.cs" />
+    <Compile Include="Contracts\IMavenCommitOperationData.cs" />
+    <Compile Include="Contracts\IMavenRestoreToFeedOperationData.cs" />
+    <Compile Include="Contracts\IMavenSnapshotCleanupOperationData.cs" />
+    <Compile Include="Contracts\SnapshotRotationLimits.cs" />
+    <Compile Include="Contracts\IMavenXml.cs" />
+    <Compile Include="Contracts\IMavenPackageVersionService.cs" />
+    <Compile Include="Contracts\IMavenPluginService.cs" />
+    <Compile Include="Contracts\IMavenPackageVersionServiceFacade.cs" />
+    <Compile Include="Contracts\MavenVersionsServiceFacade.cs" />
+    <Compile Include="ChangeProcessing\MavenExceptionMarkerFactory.cs" />
+    <Compile Include="Attributes\MavenNoRedirectPublicProjectRequestRestrictionsAtt.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\IMavenVersionListWithSizeService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\IMavenVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\MavenVersionListWithSizeAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\MavenVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="Aggregations\MavenAggregationResolver.cs" />
+    <Compile Include="Aggregations\PackageMetadata\OperationAppliersNew\MavenAddMetadataOpApplier.cs" />
+    <Compile Include="Aggregations\PackageMetadata\OperationAppliersNew\MavenMetadataDocumentOpApplierFactory.cs" />
+    <Compile Include="Aggregations\PackageMetadata\OperationAppliersNew\MavenMetadataOpApplierFactory.cs" />
+    <Compile Include="Aggregations\PackageMetadata\OperationAppliersNew\MavenSnapshotCleanupOpApplier.cs" />
+    <Compile Include="Aggregations\PackageMetadata\OperationAppliersNew\MavenUpdateUpstreamMetadataWithFilesOpApplier.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="htmlmathml.json" />
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

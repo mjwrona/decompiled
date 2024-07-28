@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{AC73B687-E4CE-42A7-ABD8-14F3A279398D}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.VisualStudio.Services.SignalR.dll" providerName="MicrosoftVisualStudioServicesSignalR" providerType="userMode" symbol="MicrosoftVisualStudioServicesSignalR" callback="custom">
+        <counterSet guid="{C25B5492-4E77-4A5F-B0CA-D57B4B1D8ADE}" name="TFS Services:SignalR" description="Performance stats for SignalR consumers" instances="multipleAggregate" symbol="TFSServicesSignalRHubStats" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_HubStats" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Hub Method Invocations/Sec" description="Hub method invocations/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_HubMethodInvocationsPerSec" />
+          <counter id="2" name="Hub Method Invocations Total" description="Total hub method invocations" type="perf_counter_large_rawcount" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_HubMethodInvocationsTotal" />
+          <counter id="3" name="Skipped Hub Method Invocations/Sec" description="Skipped hub method invocations/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_SkippedHubMethodInvocationsPerSec" />
+          <counter id="4" name="Skipped Hub Method Invocations Total" description="Total skipped hub method invocations" type="perf_counter_large_rawcount" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_SkippedHubMethodInvocationsTotal" />
+          <counter id="5" name="Hub Method Resolution Total" description="Total hub method resolutions" type="perf_counter_large_rawcount" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_HubMethodResolutionsTotal" />
+          <counter id="6" name="Skipped Hub Method Resolution Total" description="Total hub method resolutions skipped" type="perf_counter_large_rawcount" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_SkippedHubMethodResolutionsTotal" />
+          <counter id="7" name="Hub Method Resolution/Sec" description="Hub method resolutions/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_HubMethodResolutionsPerSec" />
+          <counter id="8" name="Skipped Hub Method Resolution/Sec" description="Skipped Hub method resolutions/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_SignalR_SkippedHubMethodResolutionsPerSec" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

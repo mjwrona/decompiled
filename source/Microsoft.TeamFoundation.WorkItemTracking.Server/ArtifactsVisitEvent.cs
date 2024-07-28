@@ -1,0 +1,77 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.WorkItemTracking.Server.ArtifactsVisitEvent
+// Assembly: Microsoft.TeamFoundation.WorkItemTracking.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: B0AE48DA-B6D2-466C-91D8-D0BF0F05DE87
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.WorkItemTracking.Server.dll
+
+using System;
+using System.Collections.Generic;
+
+namespace Microsoft.TeamFoundation.WorkItemTracking.Server
+{
+  public class ArtifactsVisitEvent
+  {
+    public ArtifactsVisitEvent(
+      Guid artifactKind,
+      Guid identityId,
+      Guid artifactId,
+      DateTime activityDate,
+      Guid projectId)
+      : this(artifactKind, identityId, artifactId.ToString(), activityDate, projectId)
+    {
+    }
+
+    public ArtifactsVisitEvent(
+      Guid artifactKind,
+      Guid identityId,
+      string artifactId,
+      DateTime activityDate,
+      Guid projectId)
+    {
+      this.ArtifactKind = artifactKind;
+      this.IdentityId = identityId;
+      this.ArtifactId = artifactId;
+      this.ActivityDate = activityDate;
+      this.ProjectId = projectId;
+    }
+
+    public ArtifactsVisitEvent(
+      Guid artifactKind,
+      Guid identityId,
+      Guid artifactId,
+      DateTime activityDate,
+      Guid projectId,
+      IDictionary<string, string> activityDetails)
+      : this(artifactKind, identityId, artifactId.ToString(), activityDate, projectId, activityDetails)
+    {
+    }
+
+    public ArtifactsVisitEvent(
+      Guid artifactKind,
+      Guid identityId,
+      string artifactId,
+      DateTime activityDate,
+      Guid projectId,
+      IDictionary<string, string> activityDetails)
+    {
+      this.ArtifactKind = artifactKind;
+      this.IdentityId = identityId;
+      this.ArtifactId = artifactId;
+      this.ActivityDate = activityDate;
+      this.ProjectId = projectId;
+      this.ActivityDetails = activityDetails;
+    }
+
+    public Guid ArtifactKind { get; }
+
+    public Guid IdentityId { get; }
+
+    public string ArtifactId { get; }
+
+    public DateTime ActivityDate { get; }
+
+    public Guid ProjectId { get; }
+
+    public IDictionary<string, string> ActivityDetails { get; set; }
+  }
+}

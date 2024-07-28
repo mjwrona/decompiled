@@ -1,0 +1,40 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.ReleaseManagement.Server.Processors.EmailReleaseNotification
+// Assembly: Microsoft.VisualStudio.Services.ReleaseManagement2.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 134B1041-BFA6-49C6-8C6D-CA5ADF31AF54
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ReleaseManagement2.Server.dll
+
+namespace Microsoft.VisualStudio.Services.ReleaseManagement.Server.Processors
+{
+  internal class EmailReleaseNotification : IReleaseNotification
+  {
+    public void SendNotification(
+      int releaseId,
+      string releaseName,
+      string releaseDefinitionName,
+      string stageTypeName,
+      string environmentName,
+      int releaseStepId,
+      int stepTypeId,
+      bool isAutomated)
+    {
+    }
+
+    public void SendFailureNotifications(int releaseId, bool rollback)
+    {
+    }
+
+    public void SendPendingReleaseStepsCancellationNotifications(int releaseId, string releaseName)
+    {
+    }
+
+    public void SendManualInterventionNotification(
+      int releaseId,
+      int releaseStepId,
+      int recipientId,
+      int recipientType,
+      string details)
+    {
+    }
+  }
+}

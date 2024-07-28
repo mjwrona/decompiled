@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PipelineNotSupported" xml:space="preserve">
+    <value>Pipeline orchestrations are not supported.</value>
+  </data>
+  <data name="NoEndpointAuthorizationPresent" xml:space="preserve">
+    <value>No service connection authorization was present while preparing artifact details.</value>
+  </data>
+  <data name="InvalidTaskBuildConfigExceptionFormatWarning" xml:space="preserve">
+    <value>Invalid Task Build Config Exception Format {0}</value>
+  </data>
+  <data name="TaskServiceBusExecutionFailure" xml:space="preserve">
+    <value>Task {0} failed to publish to message bus {1} configured on service connection {2}. Error: {3}.</value>
+  </data>
+  <data name="SecurityTokenNotFound" xml:space="preserve">
+    <value>No security token was found for artifact {0} using extension {1}.</value>
+  </data>
+  <data name="BuildResourceTypeRequired" xml:space="preserve">
+    <value>Build Resource type input is required.</value>
+  </data>
+  <data name="WebHookResourceValidConnectionInputRequired" xml:space="preserve">
+    <value>Cannot find a valid service connection for {0}. Either the service conneciton don&amp;apos;t exist or its not authorized.</value>
+  </data>
+  <data name="PlanNotFound" xml:space="preserve">
+    <value>No plan found for identifier {0}.</value>
+  </data>
+  <data name="InvalidTypeOnlyStringTypeSupported" xml:space="preserve">
+    <value>Kind '{0}' not supported. Only strings are supported for the  function.</value>
+  </data>
+  <data name="MissingProperty" xml:space="preserve">
+    <value>Expected property {0} in artifact type definition</value>
+  </data>
+  <data name="EndpointNotFound" xml:space="preserve">
+    <value>No service connection found with identifier {0}.</value>
+  </data>
+  <data name="PipelineResourceStageMustBeNonEmpty" xml:space="preserve">
+    <value>Pipeline stages must be non-empty</value>
+  </data>
+  <data name="RepoAlreadyExists" xml:space="preserve">
+    <value>A repository already exists with alias {0}</value>
+  </data>
+  <data name="VariableGroupTypeNotSupported" xml:space="preserve">
+    <value>Variable group type {0} is not supported.</value>
+  </data>
+  <data name="CannotLoadArtifactTypeDefinition" xml:space="preserve">
+    <value>Cannot load artifact type definition for type {0}</value>
+  </data>
+  <data name="TimelineRecordInvalid" xml:space="preserve">
+    <value>The timeline record {0} is not valid. Name and Type are required fields.</value>
+  </data>
+  <data name="HubExtensionNotFound" xml:space="preserve">
+    <value>No task hub extension was found for hub {0}.</value>
+  </data>
+  <data name="NoArtifactVersionsForBranchAvailable" xml:space="preserve">
+    <value>No artifact versions are available for branch: {0}</value>
+  </data>
+  <data name="YamlFileCount" xml:space="preserve">
+    <value>A YAML pipeline may not exceed {0} file references.</value>
+  </data>
+  <data name="PlanOrchestrationTerminated" xml:space="preserve">
+    <value>Orchestration plan {0} is not in a runnable state.</value>
+  </data>
+  <data name="TimelineUpdateFailure" xml:space="preserve">
+    <value>Unable to update the timeline {0} because it is in completed state.</value>
+  </data>
+  <data name="CancellingHttpRequestException" xml:space="preserve">
+    <value>An error was encountered while cancelling request. Exception: {0}</value>
+  </data>
+  <data name="HubExists" xml:space="preserve">
+    <value>A hub is already registered with name {0}.</value>
+  </data>
+  <data name="HttpMethodNotRecognized" xml:space="preserve">
+    <value>The Http Method: {0} is not supported.</value>
+  </data>
+  <data name="ArtifactTypeNotFound" xml:space="preserve">
+    <value>No artifact type found corresponding to ID {0}. Make sure that the artifact type extension is available and try again.</value>
+  </data>
+  <data name="AzureKeyVaultTaskName" xml:space="preserve">
+    <value>Download secrets: {0}</value>
+  </data>
+  <data name="CreateNewPlansForbidden" xml:space="preserve">
+    <value>Creation of new pipeline runs is limited due to the high load. Please try again later.</value>
+  </data>
+  <data name="AzureKeyVaultServiceEndpointIdMustBeValidGuid" xml:space="preserve">
+    <value>Azure Key Vault provider's service connection ID must be non-empty and a valid Guid.</value>
+  </data>
+  <data name="PipelineResourceSourceInputRequired" xml:space="preserve">
+    <value>Pipeline Source input is required</value>
+  </data>
+  <data name="PlanSecurityDeleteError" xml:space="preserve">
+    <value>Access denied: {0} does not have delete permissions for orchestration plan {1}.</value>
+  </data>
+  <data name="VisibilityRuleEvaluationFailure" xml:space="preserve">
+    <value>Failed to evaluate visibity rule '{0}'</value>
+  </data>
+  <data name="CannotCalculateWebHookSignature" xml:space="preserve">
+    <value>Cannot calculate checksum of the webhook payload.</value>
+  </data>
+  <data name="PipelineResourceTagMustBeNonEmpty" xml:space="preserve">
+    <value>Pipeline tags must be non-empty</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="TagFilterIsNotSupported" xml:space="preserve">
+    <value>Tag filters in pipeline resource {0} is not supported.</value>
+  </data>
+  <data name="PackageResourceTypeInputRequired" xml:space="preserve">
+    <value>Package Type input is required</value>
+  </data>
+  <data name="KeyNotFoundForDocker" xml:space="preserve">
+    <value>'{0}' key is not defined for Docker hub container resource: {1}</value>
+  </data>
+  <data name="NoRepoFoundByName" xml:space="preserve">
+    <value>No repository found by name {0}</value>
+  </data>
+  <data name="CannotFindCurrentPipelineId" xml:space="preserve">
+    <value>Cannot find pipeline ID of the current pipeline</value>
+  </data>
+  <data name="NoArtifactTypeError" xml:space="preserve">
+    <value>No artifact type was provided. The artifact cannot be browsed.</value>
+  </data>
+  <data name="StageFilterIsNotSupported" xml:space="preserve">
+    <value>Stage filters in pipeline resource {0} is not supported.</value>
+  </data>
+  <data name="PackageResourceConnectionInputRequired" xml:space="preserve">
+    <value>Package resource connection input is required</value>
+  </data>
+  <data name="UnableToAcquireLease" xml:space="preserve">
+    <value>Unable to acquire lease: {0}</value>
+  </data>
+  <data name="ServiceEndpointLinkedToTask" xml:space="preserve">
+    <value>Service connection '{0}' is used by task(s) '{1}' </value>
+  </data>
+  <data name="UnableToDetermineTargetPool" xml:space="preserve">
+    <value>Unable to determine target Agent Pool for Plan {0}</value>
+  </data>
+  <data name="TaskEndpointInDisabledState" xml:space="preserve">
+    <value>Service connection(s) used by task(s) are disabled. Please update the service connection(s) and retry operation or consult project collection administrator. Details: &amp;apos;{0}&amp;apos;</value>
+  </data>
+  <data name="LogWithNoContentLengthError" xml:space="preserve">
+    <value>ContentLength header must be specified to create a log.</value>
+  </data>
+  <data name="TimelineRecordNotFound" xml:space="preserve">
+    <value>No timeline record found for plan {0} and timeline {1} with identifier {2}.</value>
+  </data>
+  <data name="InvalidTaskOverrideFormatWarning" xml:space="preserve">
+    <value>Invalid Task Override Format {0}</value>
+  </data>
+  <data name="CannotFindPackageResource" xml:space="preserve">
+    <value>Cannot find a package resource for alias {0}.</value>
+  </data>
+  <data name="DockerHubEndpointNotFound" xml:space="preserve">
+    <value>Service connection : {0} should be of type Docker registry and registry type should be Docker Hub but it is of type : {1}</value>
+  </data>
+  <data name="TaskRequestMessageTypeNotSupported" xml:space="preserve">
+    <value>This kind of message type: {0}, is not yet supported</value>
+  </data>
+  <data name="BuildResourceConnectionInputRequired" xml:space="preserve">
+    <value>Build resource connection input is required</value>
+  </data>
+  <data name="PlanAlreadyStarted" xml:space="preserve">
+    <value>Orchestration plan {0} version {1} has already been started for hub {2}.</value>
+  </data>
+  <data name="TaskServiceBusPublishFailed" xml:space="preserve">
+    <value>Task {0} failed to publish to message bus {1} configured on service connection {2}.</value>
+  </data>
+  <data name="ServiceExtensionNotFound" xml:space="preserve">
+    <value>Could not load service with name : {0}</value>
+  </data>
+  <data name="NoSpecificVersionValueAvailableForSpecificVersionType" xml:space="preserve">
+    <value>No specific version value is available for specificVersionType default version type</value>
+  </data>
+  <data name="FailedToObtainJobAuthorization" xml:space="preserve">
+    <value>Unable to obtain an authenticated token for running job {0} with plan type {1} and identifier {2}.</value>
+  </data>
+  <data name="AmbigousServiceEndpointUsed" xml:space="preserve">
+    <value>Ambigous service endpoint: {0} is used. There are more than one endpoint with same name.</value>
+  </data>
+  <data name="CouldNotParseApiResponse" xml:space="preserve">
+    <value>Error parsing API response into a JSON object.</value>
+  </data>
+  <data name="DataSourceBindingMissing" xml:space="preserve">
+    <value>No data source binding is available for input type {0}.</value>
+  </data>
+  <data name="PhaseProviderExtensionNotFound" xml:space="preserve">
+    <value>No phase provider extension could be found for provider name {0}.</value>
+  </data>
+  <data name="PlanGroupNotFound" xml:space="preserve">
+    <value>No plan group found with identifier {0}.</value>
+  </data>
+  <data name="NoArtifactVersionsForBranchAndTagsAvailable" xml:space="preserve">
+    <value>No artifact versions are available for branch: {0} and tags: {1}</value>
+  </data>
+  <data name="FailedToGetACRLocation" xml:space="preserve">
+    <value>Failed to get ACR location information for ACR container: {0}. Error: {1}</value>
+  </data>
+  <data name="EndpointUsedInTaskNotFound" xml:space="preserve">
+    <value>Service connection(s) linked with task(s) doesn't exist. Details: '{0}'</value>
+  </data>
+  <data name="InvalidLicenseHub" xml:space="preserve">
+    <value>This operation is not supported on {0} hub as it is not a licensing hub.</value>
+  </data>
+  <data name="InvalidOrchestrationId" xml:space="preserve">
+    <value>The orchestration ID {0} is not valid.</value>
+  </data>
+  <data name="WebHookPayloadHashDoesNotMatch" xml:space="preserve">
+    <value>Payload hash does not match. Try disabling and re-enabling the CD trigger for this artifact. Received Event payload: {0}</value>
+  </data>
+  <data name="BuildDefinitionNotFound" xml:space="preserve">
+    <value>Unable to resolve definition {0} in project {1}.</value>
+  </data>
+  <data name="EvaluationOfExpressionFailed" xml:space="preserve">
+    <value>Evaluation of expression '{0}' failed.</value>
+  </data>
+  <data name="AzureKeyVaultLastRefreshedOnMustBeValid" xml:space="preserve">
+    <value>Azure Key Vault provider's "last refreshed on" must be a valid DateTime value.</value>
+  </data>
+  <data name="UnsupportedTaskCountForServerJob" xml:space="preserve">
+    <value>Container is not valid for orchestration as job should contain exactly one task.</value>
+  </data>
+  <data name="NoYamlSupport" xml:space="preserve">
+    <value>The repository type {0} does not support YAML templates</value>
+  </data>
+  <data name="TimelineNotFound" xml:space="preserve">
+    <value>No timeline found for plan {0} with identifier {1}.</value>
+  </data>
+  <data name="UnableToResolvePipelineVersion" xml:space="preserve">
+    <value>Unable to resolve version {0} for pipeline {1}. This could be due to inaccessible pipeline or no version is
+available.</value>
+  </data>
+  <data name="ArtifactTypeDuplicateIdentifier" xml:space="preserve">
+    <value>Duplicate artifactType {0} found in the artifact extension list. Remove the duplicate artifact type and try again.</value>
+  </data>
+  <data name="ArtifactDataSourceBindingNotFound" xml:space="preserve">
+    <value>VS403960: Data source binding {0} for artifact extension {1} has not been defined.</value>
+  </data>
+  <data name="ProcessingHttpRequestException" xml:space="preserve">
+    <value>An error was encountered while processing request. Exception: {0}</value>
+  </data>
+  <data name="InvalidServiceEndpointId" xml:space="preserve">
+    <value>VS402923: Service connection ID is invalid. Expected a GUID. Actual: {0}</value>
+  </data>
+  <data name="NoVersionFound" xml:space="preserve">
+    <value>No version was found for the pipeline. Make sure that the version exists</value>
+  </data>
+  <data name="WaitForCompletionInvalid" xml:space="preserve">
+    <value>Wait for completion can only be true or false. Current value: {0}</value>
+  </data>
+  <data name="PlanLogNotFound" xml:space="preserve">
+    <value>No log found with identifier {0} for plan {1}.</value>
+  </data>
+  <data name="WebHookIdNotFound" xml:space="preserve">
+    <value>Cannot find webhook for the given webHookId {0}. Try enabling CD trigger for this artifact.</value>
+  </data>
+  <data name="InvalidAzureKeyVaultVariableGroupProviderData" xml:space="preserve">
+    <value>Either variable group is not an Azure Key Vault variable group or invalid provider data in Azure Key Vault variable group.</value>
+  </data>
+  <data name="CustomArtifactTriggerFeatureNotEnabled" xml:space="preserve">
+    <value>Custom artifact trigger feature is not enabled.</value>
+  </data>
+  <data name="CannotFindPackageResourceExtension" xml:space="preserve">
+    <value>No artifact extension found for the type {0}</value>
+  </data>
+  <data name="ExternalCustomerThrottling" xml:space="preserve">
+    <value>This pipeline is currently being throttled.</value>
+  </data>
+  <data name="CannotFindTaskReference" xml:space="preserve">
+    <value>Cannot find a task reference for the resource {0}.</value>
+  </data>
+  <data name="EndpointAccessDeniedForUseOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the service connection. An Endpoint Administrator should add you to the Endpoint Readers group of this service connection.</value>
+  </data>
+  <data name="SystemPipelineDecorators" xml:space="preserve">
+    <value>System Pipeline Decorator(s)</value>
+  </data>
+  <data name="GitHubPATSupportedForPackageResources" xml:space="preserve">
+    <value>Only GitHub type service connections with PAT authentication scheme are supported for GitHub packages.</value>
+  </data>
+  <data name="ConflictingSelfRepositoryPRTriggers" xml:space="preserve">
+    <value>PR triggers for 'self' repository can be defined either at the root level or in the resources section of the YAML file, but not both.</value>
+  </data>
+  <data name="InvalidContainer" xml:space="preserve">
+    <value>Container is not valid for {0} orchestration.</value>
+  </data>
+  <data name="EndpointMissingInfo" xml:space="preserve">
+    <value>Endpoint {0} is missing Url or Personal Access Token.</value>
+  </data>
+  <data name="MultipleHubResolversNotSupported" xml:space="preserve">
+    <value>Only one default task hub resolver may be specified per application. Found {0}.</value>
+  </data>
+  <data name="PlanSecurityWriteError" xml:space="preserve">
+    <value>Access denied: {0} does not have write permissions for orchestration plan {1}.</value>
+  </data>
+  <data name="HttpRequestTimeoutError" xml:space="preserve">
+    <value>The request timed out after {0} seconds as no response was received.</value>
+  </data>
+  <data name="TimelineExists" xml:space="preserve">
+    <value>A timeline already exists for plan {0} with identifier {1}.</value>
+  </data>
+  <data name="FailedToGetDockerTagAndDigest" xml:space="preserve">
+    <value>Failed to get tag and digest information for Docker hub container: {0}. Error: {1}</value>
+  </data>
+  <data name="NoEndpointPresent" xml:space="preserve">
+    <value>No service connection was present while preparing artifact details.</value>
+  </data>
+  <data name="TaskExecutionDefinitionInvalid" xml:space="preserve">
+    <value>Task execution section of task definition for ID: {0} is either missing or not valid.</value>
+  </data>
+  <data name="OverScopedRepositoryLimit" xml:space="preserve">
+    <value>Tokens may be scoped to a maximum of {0} repositories. Reference fewer repositories in YAML or disable Scoped Tokens.</value>
+  </data>
+  <data name="UrlCannotBeEmpty" xml:space="preserve">
+    <value>URL for HttpRequest cannot be empty.</value>
+  </data>
+  <data name="BuildResourceContainsInvalidInput" xml:space="preserve">
+    <value>Build resource {0} input '{1}' is not a valid input.</value>
+  </data>
+  <data name="PipelineResourceInvalidConnectionInput" xml:space="preserve">
+    <value>Cannot find a valid service connection for {0}. Either the service conneciton don't exist or its not authorized.</value>
+  </data>
+  <data name="PlanSecurityReadError" xml:space="preserve">
+    <value>Access denied: {0} does not have read permissions for orchestration plan {1}.</value>
+  </data>
+  <data name="ServerExecutionFailure" xml:space="preserve">
+    <value>Failure occurred while sending Http Request: {0}.</value>
+  </data>
+  <data name="HttpRequestExpressionNotValid" xml:space="preserve">
+    <value>Http request expression '{0}' is not valid. Error: {1}</value>
+  </data>
+  <data name="UnableToCompleteOperationSecurely" xml:space="preserve">
+    <value>Internal Error: Unable to complete operation securely.</value>
+  </data>
+  <data name="PackageResourceNameInputRequired" xml:space="preserve">
+    <value>Package Name input is required</value>
+  </data>
+  <data name="PipelineResourceMustBeValid" xml:space="preserve">
+    <value>Pipeline Resource {0} Input Must be Valid.</value>
+  </data>
+  <data name="UnableToPopulateAzureStackData" xml:space="preserve">
+    <value>Unable to populate Azure Stack dependency data.</value>
+  </data>
+  <data name="JobNotFound" xml:space="preserve">
+    <value>No job found with identifier '{0}' for plan '{1}'.</value>
+  </data>
+  <data name="PhaseNotFound" xml:space="preserve">
+    <value>No job could be found with name {0} in plan {1}.</value>
+  </data>
+  <data name="ConflictingSelfRepositoryCITriggers" xml:space="preserve">
+    <value>CI triggers for 'self' repository can be defined either at the root level or in the resources section of the YAML file, but not both.</value>
+  </data>
+  <data name="CannotUseNonBuildTypeArtifact" xml:space="preserve">
+    <value>Only build type artifact can be used under build resource. {0} is not a build type artifact.</value>
+  </data>
+  <data name="PackageResourceProjectInputRequired" xml:space="preserve">
+    <value>Package Project input is required</value>
+  </data>
+  <data name="HttpHandlerUnableToProcessError" xml:space="preserve">
+    <value>Unable to process messages with count : {0} and message types as: {1}</value>
+  </data>
+  <data name="WebHookResourceConnectionInputRequired" xml:space="preserve">
+    <value>Build resource connection input is required</value>
+  </data>
+  <data name="TaskDefinitionNotFound" xml:space="preserve">
+    <value>Could not find a task definition matching task, task.Id: {0}, task.Version: {1}</value>
+  </data>
+  <data name="SpecifyRepoAlias" xml:space="preserve">
+    <value>The repository must specify an alias</value>
+  </data>
+  <data name="TaskInputValidationReason" xml:space="preserve">
+    <value>Task input doesn't satisfy '{0}'.</value>
+  </data>
+  <data name="ServiceEndPointNotFound" xml:space="preserve">
+    <value>Service connection with ID {0} not found</value>
+  </data>
+  <data name="TaskEndpointInDirtyState" xml:space="preserve">
+    <value>Service connection(s) used by task(s) is dirty. Please update the service connection(s) and retry operation. Details: '{0}'</value>
+  </data>
+  <data name="AgentLastWordsMessage" xml:space="preserve">
+    <value>This job was abandoned. We have detected that logs from the agent may have not finished uploading. We have included our in-memory record of all log lines uploaded before we lost contact with the agent:</value>
+  </data>
+  <data name="InvalidWebHookId" xml:space="preserve">
+    <value>Invalid webHookId {0}</value>
+  </data>
+  <data name="YamlFrontMatterNotClosed" xml:space="preserve">
+    <value>Unexpected end of file '{0}'. The file started with '---' to indicate a preamble data section. The end of the file was reached without finding a corresponding closing '---'.</value>
+  </data>
+  <data name="ArtifactTypeNotBrowsableError" xml:space="preserve">
+    <value>This artifact cannot be browsed.</value>
+  </data>
+  <data name="TimelineRecordAttemptInvalid" xml:space="preserve">
+    <value>Unable to create new attempt for plan {0} record {1}. The current attempt is {2} but the specified attempt is {3} which is not valid.</value>
+  </data>
+  <data name="EncryptionKeyNotFound" xml:space="preserve">
+    <value>Encryption Key should have been present in the drawer: {0} with lookup key: {1}</value>
+  </data>
+  <data name="ShouldBeASubdomainOfEndpointUrl" xml:space="preserve">
+    <value>Service connection URL of HttpRequest execution should either be $(endpoint.url) or a subdomain of it.</value>
+  </data>
+  <data name="CannotFindWebHookExtension" xml:space="preserve">
+    <value>Cannot find webHook extension</value>
+  </data>
+  <data name="SpecificArtifactVersionNotAvailable" xml:space="preserve">
+    <value>Specific artifact version: {0} is not available</value>
+  </data>
+  <data name="CannotFetchArtifactTypeDefinition" xml:space="preserve">
+    <value>Error occurred while loading the artifact type {0}. Try resending this event.</value>
+  </data>
+  <data name="BuildResourceSourceInputRequired" xml:space="preserve">
+    <value>Build resource source input is required</value>
+  </data>
+  <data name="HubNotFound" xml:space="preserve">
+    <value>No hub is registered with name {0}.</value>
+  </data>
+  <data name="InvalidScopeId" xml:space="preserve">
+    <value>The scope {0} is not valid.</value>
+  </data>
+  <data name="ResponseParsingIsCurrentlyDisabled" xml:space="preserve">
+    <value>Response parsing is currently disabled.</value>
+  </data>
+  <data name="InternalCustomerThrottling" xml:space="preserve">
+    <value>This pipeline is currently being throttled to mitigate incident {0}.</value>
+  </data>
+  <data name="PipelineResourceProjectInputRequired" xml:space="preserve">
+    <value>Pipeline Project input is required</value>
+  </data>
+  <data name="QueueNotFound" xml:space="preserve">
+    <value>No pool found with ID {0}.</value>
+  </data>
+  <data name="TaskInputRequired" xml:space="preserve">
+    <value>Task {0} did not specify a value for required input {1}.</value>
+  </data>
+  <data name="EndpointOfTypeNotFound" xml:space="preserve">
+    <value>Service connection of type: {0} and name: {1} not found.</value>
+  </data>
+  <data name="NoArtifactVersionsAvailable" xml:space="preserve">
+    <value>No artifact versions are available</value>
+  </data>
+  <data name="InvalidPipelineRetryNotCompleted" xml:space="preserve">
+    <value>Unable to retry pipeline {0} because it is not currently in the completed state.</value>
+  </data>
+  <data name="YamlFrontMatterNotValid" xml:space="preserve">
+    <value>Error parsing preamble data section from file '{0}'. {1}</value>
+  </data>
+  <data name="TaskInputInvalidRegExOptions" xml:space="preserve">
+    <value>Provider regex options '{0}' are invalid. Supported flags - multiline 'm', ignoreCase 'i'. Eg: 'mi', 'i', 'im'</value>
+  </data>
+  <data name="TimeoutFormatNotValid" xml:space="preserve">
+    <value>The Timeout values '{0}' are not valid for job events '{1}' in the task execution section for Id: '{2}'. Specify valid timeout in 'hh:mm:ss' format such as '01:40:00' and try again.</value>
+  </data>
+  <data name="BuildResourceValidConnectionInputRequired" xml:space="preserve">
+    <value>Cannot find a valid service connection for {0}. Either the service conneciton don't exist or its not authorized.</value>
+  </data>
+  <data name="NoArtifactVersionsForTagsAvailable" xml:space="preserve">
+    <value>No artifact versions are available for tags: {0}</value>
+  </data>
+  <data name="UnableToResolveLatestPipelineVersion" xml:space="preserve">
+    <value>Unable to resolve latest version for pipeline {0}. This could be due to inaccessible pipeline or no version is
+available.</value>
+  </data>
+  <data name="AmbiguousBuildDefinitionsFound" xml:space="preserve">
+    <value>Definition {0} matched multiple potential definitions in project {1}. Specify a more specific value.</value>
+  </data>
+  <data name="FailedToGetACRTagAndDigest" xml:space="preserve">
+    <value>Failed to get tag and digest information for ACR container: {0}. Error: {1}</value>
+  </data>
+  <data name="LogWithNoContentError" xml:space="preserve">
+    <value>Content must be provided to create a log.</value>
+  </data>
+  <data name="SaveJobOutputVariablesError" xml:space="preserve">
+    <value>Failed to save output variables for job '{0}'. Error: {1}.</value>
+  </data>
+  <data name="DownloadArtifact" xml:space="preserve">
+    <value>Download artifact {0}</value>
+  </data>
+  <data name="InvalidPipelineRetryDidNotFail" xml:space="preserve">
+    <value>Unable to retry pipeline {0} because the previous attempt did not fail.</value>
+  </data>
+  <data name="UnsupportedRollbackContainers" xml:space="preserve">
+    <value>Rollback is supported only at the top-level container.</value>
+  </data>
+  <data name="CannotFindBuildResourceExtension" xml:space="preserve">
+    <value>No artifact extension found for the type {0}</value>
+  </data>
+  <data name="KeyNotFoundForACR" xml:space="preserve">
+    <value>'{0}' key is not defined for ACR container resource: {1}</value>
+  </data>
+  <data name="EndpointNotFoundForRepo" xml:space="preserve">
+    <value>Repository {0} references endpoint {1} which does not exist or is not authorized for use</value>
+  </data>
+  <data name="UrlIsNotCorrect" xml:space="preserve">
+    <value>URL {0} for HttpRequest is not correct.</value>
+  </data>
+  <data name="CannotFindBuildResource" xml:space="preserve">
+    <value>Cannot find a build resource for alias {0}.</value>
+  </data>
+  <data name="TaskBuildConfigExceptionInfo" xml:space="preserve">
+    <value>Task Build Config Exception {0}</value>
+  </data>
+  <data name="TaskOverrideInfo" xml:space="preserve">
+    <value>Task Override Found {0}</value>
+  </data>
+  <data name="ServiceEndpointDisabled" xml:space="preserve">
+    <value>Service connection '{0}' is currently disabled. Administrators of this endpoint can re-enable it, if necessary.</value>
+  </data>
+  <data name="InvalidTypeForIsNullOrEmptyFunction" xml:space="preserve">
+    <value>Kind '{0}' not supported. Only strings are supported for the isNullOrEmpty function.</value>
+  </data>
+  <data name="AzureKeyVaultKeyVaultNameMustBeValid" xml:space="preserve">
+    <value>Azure Key Vault provider's vault name must be non-empty.</value>
+  </data>
+  <data name="HttpRequestResponseSizeExceeded" xml:space="preserve">
+    <value>Cannot parse http response with size greater than 2 MB.</value>
+  </data>
+</root>

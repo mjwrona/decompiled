@@ -1,0 +1,29 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}: {{{jsonEscape resource.fields['System.Title']}}} restored by {{{emailEscapeForSubject resource.fields['System.ChangedBy'].uniqueName}}}",
+    "themeColor": "{{{jsonEscape data.workItemColor}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+            "activityTitle": "[{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}]({{{data.DisplayUrl}}}):  {{{jsonEscape resource.fields['System.Title']}}}",
+            "activitySubtitle": "",
+            "activityText": "{{#joinLines " | " 3 "Made other changes" "Made field changes"}}
+{{#if resource.fields.['System.ChangedBy']}}
+                    Restored by {{{emailEscape resource.fields['System.ChangedBy'].uniqueName}}}
+{{/if}}
+{{#if resource.fields.['System.AssignedTo']}}
+                    Assigned to {{{emailEscape resource.fields.['System.AssignedTo'].uniqueName}}}
+{{/if}}
+{{#if resource.fields.['System.State']}}
+                    State: {{{jsonEscape resource.fields.['System.State']}}}
+{{/if}}
+{{/joinLines}}",
+            "activityImage": "{{{encodedAvatar resource.fields['System.ChangedBy'].id}}}"
+        }
+    ]
+}

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PipelineNotValidWithErrors" xml:space="preserve">
+    <value>The pipeline is not valid. {0}</value>
+  </data>
+  <data name="ActionStepReferenceInvalid" xml:space="preserve">
+    <value>Job {0}: Step {1} action reference is invalid. {2}</value>
+  </data>
+  <data name="SecureFileNotFoundForInput" xml:space="preserve">
+    <value>Job {0}: Step {1} input {2} references secure file {3} which could not be found. The secure file does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="AmbiguousQueueSpecification" xml:space="preserve">
+    <value>The pool name {0} is ambiguous.</value>
+  </data>
+  <data name="TaskVersionMissing" xml:space="preserve">
+    <value>A task is missing. The pipeline references a task called '{2}' with version '{3}'. This indicates that the specific task version can not be found. (job '{0}', step '{1}'.)</value>
+  </data>
+  <data name="StageNamesMustBeUnique" xml:space="preserve">
+    <value>The stage name {0} appears more than once. Stage names must be unique within a pipeline.</value>
+  </data>
+  <data name="PhaseNameInvalid" xml:space="preserve">
+    <value>Job {0} has an invalid name. Valid names may only contain alphanumeric characters and '_' and may not start with a number.</value>
+  </data>
+  <data name="StepNameInvalid" xml:space="preserve">
+    <value>Job {0}: Step {1} has an invalid name. Valid names may only contain alphanumeric characters and '_' and may not start with a number.</value>
+  </data>
+  <data name="AzureKeyVaultTaskName" xml:space="preserve">
+    <value>Download secrets: {0}</value>
+  </data>
+  <data name="InvalidRollingOption" xml:space="preserve">
+    <value>{0} is not supported as rolling option.</value>
+  </data>
+  <data name="UnsupportedTargetType" xml:space="preserve">
+    <value>Job {0}: Target {1} is not supported.</value>
+  </data>
+  <data name="PhaseJobSlicingExpansionExceedLimit" xml:space="preserve">
+    <value>The slicing expansion resulted in {0} jobs which exceeds the maximum allowable job count of {1}.</value>
+  </data>
+  <data name="AmbiguousSecureFileSpecification" xml:space="preserve">
+    <value>The secure file name {0} is ambiguous.</value>
+  </data>
+  <data name="CheckoutMustBeTheFirstStep" xml:space="preserve">
+    <value>Checkout should be the first step in the job.</value>
+  </data>
+  <data name="TaskInvalidForGivenTarget" xml:space="preserve">
+    <value>Job {0}: Step {1} references task '{2}' at version '{3}' which is not valid for the given job target.</value>
+  </data>
+  <data name="StageNotValidNoStartingPhase" xml:space="preserve">
+    <value>Stage {0} must contain at least one job with no dependencies.</value>
+  </data>
+  <data name="TimeoutExceedsMMSMaximum" xml:space="preserve">
+    <value>Job '{0}' has a defined timeout value of {1} minutes, which exceeds the account job timeout maximum for Hosted pools of {2} minutes.</value>
+  </data>
+  <data name="PhaseJobNumberDoesNotExist" xml:space="preserve">
+    <value>Job {0} uses a maximum parallelism of {1}. The job {2} does not exist with the specified parallelism settings.</value>
+  </data>
+  <data name="PhaseTargetRequired" xml:space="preserve">
+    <value>Job {0}: Target is required.</value>
+  </data>
+  <data name="RepositoryResourceNotFound" xml:space="preserve">
+    <value>The checkout step references the repository '{0}' which is not defined by the pipeline</value>
+  </data>
+  <data name="StagePhaseNamesMustBeUnique" xml:space="preserve">
+    <value>Stage {0} job {1} appears more than once. Job names must be unique within a stage.</value>
+  </data>
+  <data name="CheckoutMultipleRepositoriesCannotIncludeNone" xml:space="preserve">
+    <value>When using multiple checkouts in a job, the 'checkout: none' task is not allowed.</value>
+  </data>
+  <data name="JobNameWhenNoNameIsProvided" xml:space="preserve">
+    <value>Job{0}</value>
+  </data>
+  <data name="EnvironmentRequired" xml:space="preserve">
+    <value>Job {0}: Environment is required.</value>
+  </data>
+  <data name="InvalidRetryStageNotComplete" xml:space="preserve">
+    <value>Unable to retry the pipeline because stage {0} is currently in progress.</value>
+  </data>
+  <data name="InvalidRetryStageNeverRun" xml:space="preserve">
+    <value>Unable to retry stage {0} because it has never been run.</value>
+  </data>
+  <data name="PhaseGraphCycleDetected" xml:space="preserve">
+    <value>Job {0} depends on job {1} which creates a cycle in the dependency graph.</value>
+  </data>
+  <data name="StepTaskReferenceInvalid" xml:space="preserve">
+    <value>Job {0}: Step {1} has an invalid task definition reference. A valid task definition reference must specify either an ID or a name and a version specification with a major version specified.</value>
+  </data>
+  <data name="PhaseNamesMustBeUnique" xml:space="preserve">
+    <value>The job name {0} appears more than once. Job names must be unique within a pipeline.</value>
+  </data>
+  <data name="ContainerEndpointNotFound" xml:space="preserve">
+    <value>Container {0} references service connection {1} which does not exist or is not authorized for use.</value>
+  </data>
+  <data name="ServiceEndpointNotFound" xml:space="preserve">
+    <value>A service connection with name {0} could not be found. The service connection does not exist, has been disabled or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="ContainerResourceInvalidRegistryEndpointType" xml:space="preserve">
+    <value>Expected 'dockerregistry' service connection type for image registry referenced by {0}, but got {1} for service connection {2}.</value>
+  </data>
+  <data name="QueueNotFoundByName" xml:space="preserve">
+    <value>Could not find a pool with name {0}. The pool does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="PipelineNotValidNoStartingStage" xml:space="preserve">
+    <value>The pipeline must contain at least one stage with no dependencies.</value>
+  </data>
+  <data name="PipelineNotValidNoStartingPhase" xml:space="preserve">
+    <value>The pipeline must contain at least one job with no dependencies.</value>
+  </data>
+  <data name="TaskTemplateNotSupported" xml:space="preserve">
+    <value>Task template {0} at version {1} is not supported.</value>
+  </data>
+  <data name="TaskUsingRestrictedNodeVersion" xml:space="preserve">
+    <value>Job {0}: Step '{1}' references task '{2}' at version '{3}' contains an execution handler that relies on NodeJS version '{4}' which is restricted by your administrator.</value>
+  </data>
+  <data name="ExpressionInvalid" xml:space="preserve">
+    <value>'{0}' is not a valid expression. Expressions must be enclosed with '$[' and ']'.</value>
+  </data>
+  <data name="TaskInvalidForServerTarget" xml:space="preserve">
+    <value>'{0}' is a server job, but contains task '{1}' which can only run on agents.</value>
+  </data>
+  <data name="PhaseVariableGroupNotSupported" xml:space="preserve">
+    <value>Job {0}: Variable group reference {1} is not supported.</value>
+  </data>
+  <data name="FailedInsertStepToPhase" xml:space="preserve">
+    <value>Failed to insert {0} steps to phase</value>
+  </data>
+  <data name="TaskBuildConfigException" xml:space="preserve">
+    <value>Task {0} has build config {2} exception at version {1}</value>
+  </data>
+  <data name="TemplateStoreNotProvided" xml:space="preserve">
+    <value>Unable to resolve task template {0} because no implementation was provided for {1}.</value>
+  </data>
+  <data name="TaskMissing" xml:space="preserve">
+    <value>A task is missing. The pipeline references a task called '{2}'. This usually indicates the task isn't installed, and you may be able to install it from the Marketplace: https://marketplace.visualstudio.com. (Task version {3}, job '{0}', step '{1}'.)</value>
+  </data>
+  <data name="StepTaskInputInvalid" xml:space="preserve">
+    <value>Job {0}: Step {1} input '{2}' with value '{3}' does not satisfy '{4}': {5}</value>
+  </data>
+  <data name="StagePhaseNameInvalid" xml:space="preserve">
+    <value>Stage {0} job {1} has an invalid name. Valid names may only contain alphanumeric characters and '_' and may not start with a number.</value>
+  </data>
+  <data name="VariableGroupNotFound" xml:space="preserve">
+    <value>Variable group {0} was not found or is not authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="StageNameInvalid" xml:space="preserve">
+    <value>Stage {0} has an invalid name. Valid names may only contain alphanumeric characters and '_' and may not start with a number.</value>
+  </data>
+  <data name="CheckoutStepRepositoryNotSupported" xml:space="preserve">
+    <value>Checkout of repository '{0}' is not supported. Only 'self', 'none', or a repository alias are supported.</value>
+  </data>
+  <data name="RepositoryResourceEndpointFoundExplicit" xml:space="preserve">
+    <value>Repository '{0}' references service connection '{1}' which does not exist or is not authorized for use.</value>
+  </data>
+  <data name="QueueNotDefined" xml:space="preserve">
+    <value>Either a pool ID or name is required.</value>
+  </data>
+  <data name="PhaseMatrixConfigurationDoesNotExist" xml:space="preserve">
+    <value>Job {0} does not specify a matrix configuration named {1}.</value>
+  </data>
+  <data name="StepNotSupported" xml:space="preserve">
+    <value>Only task steps and group steps are supported.</value>
+  </data>
+  <data name="AmbiguousServiceEndpointSpecification" xml:space="preserve">
+    <value>The service connection name {0} is ambiguous.</value>
+  </data>
+  <data name="StageNameWhenNoNameIsProvided" xml:space="preserve">
+    <value>Stage{0}</value>
+  </data>
+  <data name="StepInputEndpointTypeMismatch" xml:space="preserve">
+    <value>Job {0}: Step {1} input {2} expects a service connection of type {3} but the provided service connection {4} is of type {5}.</value>
+  </data>
+  <data name="PhaseJobMatrixExpansionExceedLimit" xml:space="preserve">
+    <value>The matrix expansion resulted in {0} jobs which exceeds the maximum allowable job count of {1}.</value>
+  </data>
+  <data name="RepositoryResourceNotFoundExplicit" xml:space="preserve">
+    <value>Job '{0}' references the repository '{1}' which is not defined by the pipeline</value>
+  </data>
+  <data name="AmbiguousTaskSpecification" xml:space="preserve">
+    <value>The task name {0} is ambiguous. Specify one of the following identifiers to resolve the ambiguity: {1}</value>
+  </data>
+  <data name="PoolResourceNotFoundExplicit" xml:space="preserve">
+    <value>Job '{0}' references the pool '{1}' which does not exist or is not authorized for use.</value>
+  </data>
+  <data name="ServiceConnectionUsedInVariableGroupNotValid" xml:space="preserve">
+    <value>Service connection : {0} used in variable group : {1} is not valid. Either service connection does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="CancelTimeoutExceedsMMSMaximum" xml:space="preserve">
+    <value>Job '{0}' has a defined cancel timeout value of {1} minutes, which exceeds the account job timeout maximum for Hosted pools of {2} minutes.</value>
+  </data>
+  <data name="StageVariableGroupNotSupported" xml:space="preserve">
+    <value>Stage {0}: Variable group reference {1} is not supported.</value>
+  </data>
+  <data name="PhaseDependencyNotFound" xml:space="preserve">
+    <value>Job {0} depends on unknown job {1}.</value>
+  </data>
+  <data name="InvalidValidationOptionNoImplementation" xml:space="preserve">
+    <value>The validation option {0} was specified but no implementation was provided for {1}.</value>
+  </data>
+  <data name="StepNamesMustBeUnique" xml:space="preserve">
+    <value>Job {0}: The step name {1} appears more than once. Step names must be unique within a job.</value>
+  </data>
+  <data name="InvalidTypeForLengthFunction" xml:space="preserve">
+    <value>Kind '{0}' not supported. Only arrays, strings, dictionaries, or collections are supported for the length function.</value>
+  </data>
+  <data name="TaskOverride" xml:space="preserve">
+    <value>Task {0} has overriden version {1} with version {2}</value>
+  </data>
+  <data name="VariableGroupNotFoundForPhase" xml:space="preserve">
+    <value>Job {0}: Variable group {1} could not be found. The variable group does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz</value>
+  </data>
+  <data name="VariableGroupNotFoundForStage" xml:space="preserve">
+    <value>Stage {0}: Variable group {1} could not be found. The variable group does not exist or has not been authorized for use.</value>
+  </data>
+  <data name="RepositoryNotSpecified" xml:space="preserve">
+    <value>The checkout step does not specify a repository</value>
+  </data>
+  <data name="StageDependencyNotFound" xml:space="preserve">
+    <value>Stage {0} depends on unknown stage {1}.</value>
+  </data>
+  <data name="EnvironmentNotFound" xml:space="preserve">
+    <value>Job {0}: Environment {1} could not be found. The environment does not exist or has not been authorized for use.</value>
+  </data>
+  <data name="SecureFileNotFound" xml:space="preserve">
+    <value>A secure file with name {0} could not be found. The secure file does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="InvalidAbsoluteRollingValue" xml:space="preserve">
+    <value>Absolute rolling value should be greater than zero.</value>
+  </data>
+  <data name="AmbiguousVariableGroupSpecification" xml:space="preserve">
+    <value>The variable group name {0} is ambiguous.</value>
+  </data>
+  <data name="RegexFailed" xml:space="preserve">
+    <value>Regular expression failed evaluating '{0}' : {1}</value>
+  </data>
+  <data name="StagePhaseGraphCycleDetected" xml:space="preserve">
+    <value>Stage {0} job {1} depends on job {2} which creates a cycle in the dependency graph.</value>
+  </data>
+  <data name="TaskStepReferenceInvalid" xml:space="preserve">
+    <value>Job {0}: Step {1} task reference is invalid. {2}</value>
+  </data>
+  <data name="StageGroupInvalid" xml:space="preserve">
+    <value>The group property of stage {0} is invalid. Valid names must not contain invalid NTFS characters, nor the following characters: '%', '+', and must be shorter than {1} characters.</value>
+  </data>
+  <data name="StepConditionIsNotValid" xml:space="preserve">
+    <value>Job {0}: Step {1} specifies condition {2} which is not valid. Reason: {3}</value>
+  </data>
+  <data name="StageGraphCycleDetected" xml:space="preserve">
+    <value>Stage {0} depends on stage {1} which creates a cycle in the dependency graph.</value>
+  </data>
+  <data name="QueueNotFound" xml:space="preserve">
+    <value>Could not find a pool with ID {0}. The pool does not exist or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="ContainerResourceNotFound" xml:space="preserve">
+    <value>A container resource with name {0} could not be found. The container resource does not exist. If you intended to specify an image, use NAME:TAG or NAME@DIGEST. For example, ubuntu:latest</value>
+  </data>
+  <data name="PipelineNotValid" xml:space="preserve">
+    <value>The pipeline is not valid.</value>
+  </data>
+  <data name="InvalidPercentageRollingValue" xml:space="preserve">
+    <value>Percentage rolling value should be with in 1 to 100.</value>
+  </data>
+  <data name="EnvironmentResourceNotFound" xml:space="preserve">
+    <value>Job {0}: Resource {1} does not exist in environment {2}.</value>
+  </data>
+  <data name="DemandExpansionInvalid" xml:space="preserve">
+    <value>Demand '{0}' is not valid when '{1}' evaluates to '{2}'.</value>
+  </data>
+  <data name="InvalidRegexOptions" xml:space="preserve">
+    <value>Provider regex options '{0}' are invalid. Supported combination of flags: `{1}`. Eg: 'IgnoreCase, Multiline', 'Multiline'</value>
+  </data>
+  <data name="ServiceEndpointNotFoundForInput" xml:space="preserve">
+    <value>Job {0}: Step {1} input {2} references service connection {3} which could not be found. The service connection does not exist, has been disabled or has not been authorized for use. For authorization details, refer to https://aka.ms/yamlauthz.</value>
+  </data>
+  <data name="StepActionReferenceInvalid" xml:space="preserve">
+    <value>Job {0}: Step {1} has an invalid action definition reference. A valid action definition reference can be either a container resource or a repository resource.</value>
+  </data>
+  <data name="PhaseJobNameInvalidForSlicing" xml:space="preserve">
+    <value>The job name {0} is not valid for the specified execution options. Valid jobs names include JobN or N, where N is a value from 1 to maximum parallelism.</value>
+  </data>
+  <data name="StepInputEndpointAuthSchemeMismatch" xml:space="preserve">
+    <value>Job {0}: Step {1} input {2} expects a service connection of type {3} with authentication scheme {4} but the provided service connection {5} is of type {6} using authentication scheme {7}.</value>
+  </data>
+  <data name="StagePhaseDependencyNotFound" xml:space="preserve">
+    <value>Stage {0} job {1} depends on unknown job {2}.</value>
+  </data>
+  <data name="ServiceEndpointDisabled" xml:space="preserve">
+    <value>Job {0}: Step {1} input {2} references service connection {3} which is disabled. The endpoint administrators can re-enable this service connection, if needed.</value>
+  </data>
+</root>

@@ -1,0 +1,233 @@
+{
+    "id": "ASPNetWithContainers",
+    "name": "ASP.NET with containers",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "iconTaskId": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+    "description": "Build and push an ASP.NET application with container support.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "displayName": "Use NuGet 4.4.1",
+                            "task": {
+                                "id": "2c65196a-54fd-4a02-9be8-d9d1837b7c5d",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": "4.4.1",
+                                "checkLatest": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "command": "restore",
+                                "solution": "$(Parameters.solution)",
+                                "selectOrConfig": "select",
+                                "includeNuGetOrg": "true"
+                            },
+                            "task": {
+                                "id": "333b11bd-d341-40d9-afcf-b32d5ce6f23b",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "solution": "$(Parameters.solution)",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)",
+                                "restoreNugetPackages": "false"
+                            },
+                            "task": {
+                                "id": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "containerregistrytype": "Azure Container Registry",
+                                "dockerRegistryEndpoint": "",
+                                "azureSubscriptionEndpoint": "$(Parameters.azureSubscriptionEndpoint)",
+                                "azureContainerRegistry": "$(Parameters.azureContainerRegistry)",
+                                "dockerComposeFile": "$(Parameters.dockerComposeFile)",
+                                "additionalDockerComposeFiles": "docker-compose.ci.yml",
+                                "dockerComposeFileArgs": "DOCKER_BUILD_SOURCE=",
+                                "projectName": "$(Build.Repository.Name)",
+                                "qualifyImageNames": "true",
+                                "action": "Build services",
+                                "additionalImageTags": "$(Build.BuildId)",
+                                "includeSourceTags": "false",
+                                "includeLatestTag": "false",
+                                "buildImages": "true"
+                            },
+                            "task": {
+                                "id": "6975E2D1-96D3-4AFC-8A41-498B5D34EA19",
+                                "versionSpec": "0.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "containerregistrytype": "Azure Container Registry",
+                                "dockerRegistryEndpoint": "",
+                                "azureSubscriptionEndpoint": "$(Parameters.azureSubscriptionEndpoint)",
+                                "azureContainerRegistry": "$(Parameters.azureContainerRegistry)",
+                                "dockerComposeFile": "$(Parameters.dockerComposeFile)",
+                                "additionalDockerComposeFiles": "docker-compose.ci.yml",
+                                "dockerComposeFileArgs": "DOCKER_BUILD_SOURCE=",
+                                "projectName": "$(Build.Repository.Name)",
+                                "qualifyImageNames": "true",
+                                "action": "Push services",
+                                "additionalImageTags": "$(Build.BuildId)",
+                                "includeSourceTags": "false",
+                                "includeLatestTag": "false"
+                            },
+                            "task": {
+                                "id": "6975E2D1-96D3-4AFC-8A41-498B5D34EA19",
+                                "versionSpec": "0.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "containerregistrytype": "Azure Container Registry",
+                                "dockerRegistryEndpoint": "",
+                                "azureSubscriptionEndpoint": "$(Parameters.azureSubscriptionEndpoint)",
+                                "azureContainerRegistry": "$(Parameters.azureContainerRegistry)",
+                                "dockerComposeFile": "$(Parameters.dockerComposeFile)",
+                                "additionalDockerComposeFiles": "docker-compose.ci.yml",
+                                "dockerComposeFileArgs": "DOCKER_BUILD_SOURCE=",
+                                "projectName": "$(Build.Repository.Name)",
+                                "qualifyImageNames": "true",
+                                "action": "Lock services",
+                                "outputDockerComposeFile": "$(Build.ArtifactStagingDirectory)/docker-compose.yml"
+                            },
+                            "task": {
+                                "id": "6975E2D1-96D3-4AFC-8A41-498B5D34EA19",
+                                "versionSpec": "0.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "SourceFolder": "",
+                                "Contents": "**/docker-compose.env.yml\n**/docker-compose.env.*.yml",
+                                "TargetFolder": "$(Build.ArtifactStagingDirectory)",
+                                "CleanTargetFolder": "false",
+                                "OverWrite": "false",
+                                "flattenFolders": "false"
+                            },
+                            "task": {
+                                "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+                                "ArtifactName": "docker-compose",
+                                "ArtifactType": "Container",
+                                "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [],
+        "triggers": [
+            {
+                "triggerType": "continuousIntegration",
+                "batchChanges": false,
+                "branchFilters": []
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "Release",
+                "allowOverride": true
+            },
+            "BuildPlatform": {
+                "value": "Any CPU",
+                "allowOverride": false
+            }
+        },
+        "processParameters": {
+            "inputs": [
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "solution",
+                    "label": "{SolutionLabel}",
+                    "defaultValue": "**\\*.sln",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{SolutionDescription}"
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "dockerComposeFile",
+                    "label": "{DockerFileLabel}",
+                    "defaultValue": "**/docker-compose.yml",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{DockerFileDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "azureSubscriptionEndpoint",
+                    "label": "{SubscriptionLabel}",
+                    "defaultValue": "",
+                    "type": "connectedService:AzureRM",
+                    "helpMarkDown": "{SubscriptionDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "azureContainerRegistry",
+                    "label": "{RegistryLabel}",
+                    "defaultValue": "",
+                    "type": "pickList",
+                    "helpMarkDown": "{RegistryDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                }
+            ],
+            "dataSourceBindings": [
+                {
+                    "dataSourceName": "AzureRMContainerRegistries",
+                    "parameters": {
+
+                    },
+                    "endpointId": "$(azureSubscriptionEndpoint)",
+                    "target": "azureContainerRegistry",
+                    "resultTemplate": "{\"Value\":\"{\\\"loginServer\\\":\\\"{{{properties.loginServer}}}\\\", \\\"id\\\" : \\\"{{{id}}}\\\"}\",\"DisplayValue\":\"{{{name}}}\"}"
+                }
+            ]
+        }
+    }
+}

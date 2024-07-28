@@ -1,0 +1,55 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Packaging.ServiceShared.PublicRepositories.PublicRepositoryInterestTrackerServiceFacade
+// Assembly: Microsoft.VisualStudio.Services.Packaging.ServiceShared, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 4EF1F7D3-C7DF-4C8F-8AAB-58F76976F85D
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.VisualStudio.Services.Feed.Common;
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.DataContracts;
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.PackageMetadata;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+
+#nullable enable
+namespace Microsoft.VisualStudio.Services.Packaging.ServiceShared.PublicRepositories
+{
+  public class PublicRepositoryInterestTrackerServiceFacade : 
+    IPublicRepositoryInterestTrackerServiceFacade
+  {
+    public PublicRepositoryInterestTrackerServiceFacade(
+      IVssRequestContext requestContext,
+      IPublicRepositoryInterestTrackerService interestTrackerService)
+    {
+      // ISSUE: reference to a compiler-generated field
+      this.\u003CrequestContext\u003EP = requestContext;
+      // ISSUE: reference to a compiler-generated field
+      this.\u003CinterestTrackerService\u003EP = interestTrackerService;
+      // ISSUE: explicit constructor call
+      base.\u002Ector();
+    }
+
+    public async Task RegisterInterestAsync(
+      CollectionId downstreamCollectionId,
+      IFeedRequest downstreamFeedRequest,
+      IPackageName packageName,
+      WellKnownUpstreamSource source)
+    {
+      // ISSUE: reference to a compiler-generated field
+      // ISSUE: reference to a compiler-generated field
+      await this.\u003CinterestTrackerService\u003EP.RegisterInterestAsync(this.\u003CrequestContext\u003EP, downstreamCollectionId, downstreamFeedRequest, packageName, source);
+    }
+
+    public IEnumerable<FeedInterestedInPackage> GetFeedsInterestedInPackage(
+      IPackageName packageName,
+      WellKnownUpstreamSource source)
+    {
+      // ISSUE: reference to a compiler-generated field
+      // ISSUE: reference to a compiler-generated field
+      return this.\u003CinterestTrackerService\u003EP.GetFeedsInterestedInPackage(this.\u003CrequestContext\u003EP, packageName, source);
+    }
+
+    public IEnumerable<string> GetAllPackagesWithInterestedFeeds(WellKnownUpstreamSource source) => this.\u003CinterestTrackerService\u003EP.GetAllPackagesWithInterestedFeeds(this.\u003CrequestContext\u003EP, source);
+  }
+}

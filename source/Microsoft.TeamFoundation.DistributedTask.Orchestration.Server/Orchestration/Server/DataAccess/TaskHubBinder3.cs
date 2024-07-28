@@ -1,0 +1,23 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.DataAccess.TaskHubBinder3
+// Assembly: Microsoft.TeamFoundation.DistributedTask.Orchestration.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 07FD5059-3D25-415E-AA3A-5372051D7E71
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using System.Data;
+
+namespace Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.DataAccess
+{
+  internal class TaskHubBinder3 : ObjectBinder<TaskHub>
+  {
+    private SqlColumnBinder m_name = new SqlColumnBinder("Name");
+    private SqlColumnBinder m_dataspaceCategory = new SqlColumnBinder("DataspaceCategory");
+
+    protected override TaskHub Bind() => new TaskHub()
+    {
+      Name = this.m_name.GetString((IDataReader) this.Reader, false),
+      DataspaceCategory = this.m_dataspaceCategory.GetString((IDataReader) this.Reader, false)
+    };
+  }
+}

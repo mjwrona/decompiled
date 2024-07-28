@@ -1,0 +1,97 @@
+﻿{
+    "id": "XamariniOS",
+    "name": "Xamarin.iOS",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted macOS Preview",
+    "description": "Build a Xamarin.iOS app and Xamarin.UITest assembly. Test on real devices with App Center.",
+    "iconTaskId": "0F077E3A-AF59-496D-81BC-AD971B7464E0",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "build": [
+            {
+                "enabled": true,
+                "inputs": {
+                    "configuration": "$(BuildConfiguration)",
+                    "mdtoolLocation": "",
+                    "forSimulator": "true"
+                },
+                "task": {
+                    "id": "0F077E3A-AF59-496D-81BC-AD971B7464E0",
+                    "versionSpec": "1.*"
+                }
+            },
+            {
+                "enabled": false,
+                "inputs": {
+                    "app": "**/*.ipa",
+                    "dsym": "*.dSYM",
+                    "teamApiKey": "",
+                    "user": "",
+                    "devices": "",
+                    "series": "master",
+                    "testDir": "",
+                    "parallelization": "none",
+                    "locale": "en_US",
+                    "testCloudLocation": "**/packages/**/tools/test-cloud.exe",
+                    "optionalArgs": ""
+                },
+                "task": {
+                    "id": "049918CB-1488-48EB-85E8-C318ECCAAA74",
+                    "versionSpec": "1.*"
+                }
+            },
+            {
+                "enabled": true,
+                "alwaysRun": true,
+                "inputs": {
+                    "SourceFolder": "$(build.sourcesdirectory)",
+                    "Contents": "**/*.ipa",
+                    "TargetFolder": "$(build.artifactstagingdirectory)"
+                },
+                "task": {
+                    "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                    "versionSpec": "2.*"
+                }
+            },
+            {
+                "enabled": false,
+                "displayName": "Enable this task to deploy the application to App Center. To create an App Center account and learn more, see https://appcenter.ms/. ",
+                "inputs": {
+                    "app": "**/*.ipa",
+                    "symbolsType": "Apple",
+                    "dsymPath": "**/*.dSYM"
+                },
+                "task": {
+                    "id": "b832bec5-8c27-4fef-9fb8-6bec8524ad8a",
+                    "versionSpec": "2.*"
+                }
+            },
+            {
+                "enabled": true,
+                "alwaysRun": true,
+                "inputs": {
+                    "PathtoPublish": "$(build.artifactstagingdirectory)",
+                    "ArtifactName": "drop",
+                    "ArtifactType": "Container"
+                },
+                "task": {
+                    "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                    "versionSpec": "1.*"
+                }
+            }
+        ],
+        "options": [],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "Release",
+                "allowOverride": true,
+                "isSecret": false
+            }
+        },
+        "triggers": []
+    }
+}

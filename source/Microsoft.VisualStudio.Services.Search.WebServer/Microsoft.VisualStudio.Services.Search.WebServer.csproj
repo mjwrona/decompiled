@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.WebServer.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06171E21-9155-469D-A128-66F003BFBE66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.WebServer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.WebServer</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Cosmos.Table" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common.Arriba">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.Arriba.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Index" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Indexer">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Indexer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Query">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Query.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.DataAccess" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.WorkItemFieldCache" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.WorkItemRecentHistoryCache">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.WorkItemRecentHistoryCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Web.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedCodeSearchV2Controller.cs" />
+    <Compile Include="BranchService.cs" />
+    <Compile Include="AdvancedCodeSearchController.cs" />
+    <Compile Include="CustomRepositoryBranchStatusController.cs" />
+    <Compile Include="CustomRepositoryStatusController.cs" />
+    <Compile Include="RepositoryStatusController.cs" />
+    <Compile Include="CodeSearchPaginationController.cs" />
+    <Compile Include="CodeSearchV2Controller.cs" />
+    <Compile Include="CodeSearchV2ControllerBase.cs" />
+    <Compile Include="BoardSearchV2Controller.cs" />
+    <Compile Include="BoardSearchControllerBase.cs" />
+    <Compile Include="CodeIndexingStatusDetails.cs" />
+    <Compile Include="CollectionIndexingStatus.cs" />
+    <Compile Include="IndexingStatusDetails.cs" />
+    <Compile Include="PackageIndexingStatusProvider.cs" />
+    <Compile Include="WikiIndexingStatusProvider.cs" />
+    <Compile Include="WorkItemIndexingStatusProvider.cs" />
+    <Compile Include="CodeSearchControllerBase.cs" />
+    <Compile Include="SearchDemandExtensionAttribute.cs" />
+    <Compile Include="IBranchService.cs" />
+    <Compile Include="CodeIndexingStatusProvider.cs" />
+    <Compile Include="IndexingStatusProvider.cs" />
+    <Compile Include="IIndexingStatusService.cs" />
+    <Compile Include="IndexingStatusService.cs" />
+    <Compile Include="TenantWikiSearchController.cs" />
+    <Compile Include="SettingSearchControllerBase.cs" />
+    <Compile Include="SettingSearchV2Controller.cs" />
+    <Compile Include="TFVCRepositoryStatusController.cs" />
+    <Compile Include="WikiCountHandler.cs" />
+    <Compile Include="CollectionPackageCountHandler.cs" />
+    <Compile Include="WikiSearchControllerBase.cs" />
+    <Compile Include="WikiSearchV2Controller.cs" />
+    <Compile Include="WorkItemSearchFieldsController.cs" />
+    <Compile Include="CountController.cs" />
+    <Compile Include="PackageCountController.cs" />
+    <Compile Include="WorkItemSearchController.cs" />
+    <Compile Include="WorkItemCountHandler.cs" />
+    <Compile Include="CodeCountHandler.cs" />
+    <Compile Include="CountHandlerFactory.cs" />
+    <Compile Include="AbstractSearchCountHandler.cs" />
+    <Compile Include="WikiSearchController.cs" />
+    <Compile Include="SearchExtensionEventsController.cs" />
+    <Compile Include="TenantCodeSearchController.cs" />
+    <Compile Include="CustomTenantController.cs" />
+    <Compile Include="CustomProjectController.cs" />
+    <Compile Include="CustomCodeController.cs" />
+    <Compile Include="CustomRepositoryController.cs" />
+    <Compile Include="RestApiResourceProvider.cs" />
+    <Compile Include="SearchApiController.cs" />
+    <Compile Include="CodeSearchController.cs" />
+    <Compile Include="SearchControllerBase.cs" />
+    <Compile Include="SearchV2ControllerBase.cs" />
+    <Compile Include="SecurityChecksController.cs" />
+    <Compile Include="WorkItemSearchControllerBase.cs" />
+    <Compile Include="PackageSearchControllerBase.cs" />
+    <Compile Include="WorkItemInstantSearchV2Controller.cs" />
+    <Compile Include="WorkItemSearchV2Controller.cs" />
+    <Compile Include="PackageSearchV2Controller.cs" />
+    <Compile Include="SDStalenessHandler\WorkItem.cs" />
+    <Compile Include="SDStalenessHandler\AzureWorkItemStore.cs" />
+    <Compile Include="SDStalenessHandler\CustomRepositoryBranchStalenessProvider.cs" />
+    <Compile Include="SDStalenessHandler\RetryHandler.cs" />
+    <Compile Include="SDStalenessHandler\SourceControlFactory.cs" />
+    <Compile Include="SDStalenessHandler\SourceControlConstants.cs" />
+    <Compile Include="SDStalenessHandler\WorkItemTableConstants.cs" />
+    <Compile Include="SDStalenessHandler\KeyVaultProvider.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

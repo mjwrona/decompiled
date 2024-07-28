@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.SourceControl.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8478C924-1B68-435B-94A7-70D5187F9C24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.SourceControl.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.SourceControl.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GitHttpClientBase.cs" />
+    <Compile Include="TfvcHttpClientBase.cs" />
+    <Compile Include="GitWebApiConstants.cs" />
+    <Compile Include="GitStatusState.cs" />
+    <Compile Include="GitMetrics.cs" />
+    <Compile Include="PullRequestStatus.cs" />
+    <Compile Include="GitConstants.cs" />
+    <Compile Include="PullRequestAsyncStatus.cs" />
+    <Compile Include="PullRequestMergeFailureType.cs" />
+    <Compile Include="GitPathActions.cs" />
+    <Compile Include="GitAsyncOperationType.cs" />
+    <Compile Include="GitAsyncOperationStatus.cs" />
+    <Compile Include="GitConflictSourceType.cs" />
+    <Compile Include="GitServiceEventTypes.cs" />
+    <Compile Include="GitLinkConstants.cs" />
+    <Compile Include="PullRequestDiscussionThreadPropertyNames.cs" />
+    <Compile Include="CodeReviewDiscussionIdentityConstants.cs" />
+    <Compile Include="GitHelpers.cs" />
+    <Compile Include="GitHttpClient.cs" />
+    <Compile Include="GitCompatHttpClientBase.cs" />
+    <Compile Include="GitUtils.cs" />
+    <Compile Include="GitRepositoryPermissions.cs" />
+    <Compile Include="GitPermissionScope.cs" />
+    <Compile Include="GitPermissionsUtil.cs" />
+    <Compile Include="PullRequestTimeRangeType.cs" />
+    <Compile Include="RestLinkConstants.cs" />
+    <Compile Include="RestConstants.cs" />
+    <Compile Include="TfvcCompatHttpClientBase.cs" />
+    <Compile Include="TfvcConstants.cs" />
+    <Compile Include="TfvcServiceEventTypes.cs" />
+    <Compile Include="TfvcLinkConstants.cs" />
+    <Compile Include="TfvcHttpClient.cs" />
+    <Compile Include="ThrottledGitHttpClient.cs" />
+    <Compile Include="VersionControlSecuredObject.cs" />
+    <Compile Include="VersionControlSecuredObjectExtensions.cs" />
+    <Compile Include="SecuredDictionary`2.cs" />
+    <Compile Include="AssociatedWorkItem.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="CommentType.cs" />
+    <Compile Include="CommentThread.cs" />
+    <Compile Include="CommentThreadStatus.cs" />
+    <Compile Include="CommentThreadContext.cs" />
+    <Compile Include="CommentPosition.cs" />
+    <Compile Include="GitStatusContext.cs" />
+    <Compile Include="GitStatus.cs" />
+    <Compile Include="GitLastChangeTreeItems.cs" />
+    <Compile Include="GitLastChangeItem.cs" />
+    <Compile Include="ItemContentType.cs" />
+    <Compile Include="ItemContent.cs" />
+    <Compile Include="Change`1.cs" />
+    <Compile Include="ChangeCountDictionary.cs" />
+    <Compile Include="ChangeList`1.cs" />
+    <Compile Include="ChangeListHelpers.cs" />
+    <Compile Include="ChangeListSearchCriteria.cs" />
+    <Compile Include="CheckinNote.cs" />
+    <Compile Include="FileContentMetadata.cs" />
+    <Compile Include="BillableCommitter.cs" />
+    <Compile Include="BillableCommitterDetail.cs" />
+    <Compile Include="BillablePusher.cs" />
+    <Compile Include="AdvSecEnablementStatus.cs" />
+    <Compile Include="AdvSecEnablementUpdate.cs" />
+    <Compile Include="GitForkRef.cs" />
+    <Compile Include="GitBlobRef.cs" />
+    <Compile Include="GitBranchStats.cs" />
+    <Compile Include="GitChange.cs" />
+    <Compile Include="GitRepositoriesCollection.cs" />
+    <Compile Include="GitRefsCollection.cs" />
+    <Compile Include="GitItemsCollection.cs" />
+    <Compile Include="GitPathToItemsCollection.cs" />
+    <Compile Include="GitFilePathsCollection.cs" />
+    <Compile Include="GitCommit.cs" />
+    <Compile Include="GitCommitToCreate.cs" />
+    <Compile Include="GitCommitChanges.cs" />
+    <Compile Include="GitCommitDiffs.cs" />
+    <Compile Include="GitCommitRef.cs" />
+    <Compile Include="GitDeletedRepository.cs" />
+    <Compile Include="GitHistoryQueryResults.cs" />
+    <Compile Include="GitItem.cs" />
+    <Compile Include="GitItemDescriptor.cs" />
+    <Compile Include="GitItemRequestData.cs" />
+    <Compile Include="UpdateRefsRequest.cs" />
+    <Compile Include="IncludedGitCommit.cs" />
+    <Compile Include="GitRefUpdateMode.cs" />
+    <Compile Include="GitRefUpdateStatus.cs" />
+    <Compile Include="GitRefUpdateStatusExtensions.cs" />
+    <Compile Include="GitRefUpdateResultSet.cs" />
+    <Compile Include="GitRepositoryStats.cs" />
+    <Compile Include="GitRepositoryRef.cs" />
+    <Compile Include="GitRepositoryCreateOptions.cs" />
+    <Compile Include="GitObject.cs" />
+    <Compile Include="GitObjectType.cs" />
+    <Compile Include="GitPathAction.cs" />
+    <Compile Include="GitPush.cs" />
+    <Compile Include="GitPushEventData.cs" />
+    <Compile Include="GitPushRef.cs" />
+    <Compile Include="GitPushSearchCriteria.cs" />
+    <Compile Include="GitQueryBranchStatsCriteria.cs" />
+    <Compile Include="GitQueryCommitsCriteria.cs" />
+    <Compile Include="GitHistoryMode.cs" />
+    <Compile Include="GitQueryRefsCriteria.cs" />
+    <Compile Include="GitRecycleBinRepositoryDetails.cs" />
+    <Compile Include="GitRef.cs" />
+    <Compile Include="GitRefFavorite.cs" />
+    <Compile Include="GitRefUpdate.cs" />
+    <Compile Include="GitRefUpdateResult.cs" />
+    <Compile Include="GitAnnotatedTag.cs" />
+    <Compile Include="GitTreeEntryRef.cs" />
+    <Compile Include="GitRepository.cs" />
+    <Compile Include="GitTreeRef.cs" />
+    <Compile Include="GitUserDate.cs" />
+    <Compile Include="GitVersionDescriptor.cs" />
+    <Compile Include="GitBaseVersionDescriptor.cs" />
+    <Compile Include="GitTargetVersionDescriptor.cs" />
+    <Compile Include="GitVersionType.cs" />
+    <Compile Include="GitVersionOptions.cs" />
+    <Compile Include="IdentityRefWithVote.cs" />
+    <Compile Include="GitSuggestion.cs" />
+    <Compile Include="VstsInfo.cs" />
+    <Compile Include="GitTreeDiffEntry.cs" />
+    <Compile Include="GitTreeDiff.cs" />
+    <Compile Include="GitTreeDiffResponse.cs" />
+    <Compile Include="GitPolicyConfigurationResponse.cs" />
+    <Compile Include="GitRefSearchType.cs" />
+    <Compile Include="GitAsyncRefOperation.cs" />
+    <Compile Include="GitAsyncRefOperationDetail.cs" />
+    <Compile Include="GitCherryPick.cs" />
+    <Compile Include="GitAsyncRefOperationParameters.cs" />
+    <Compile Include="GitAsyncRefOperationSource.cs" />
+    <Compile Include="GitAsyncRefOperationFailureStatus.cs" />
+    <Compile Include="GitRevert.cs" />
+    <Compile Include="GitImportRequest.cs" />
+    <Compile Include="GitImportRequestParameters.cs" />
+    <Compile Include="GitImportStatusDetail.cs" />
+    <Compile Include="GitImportGitSource.cs" />
+    <Compile Include="GitImportTfvcSource.cs" />
+    <Compile Include="GitImportFailedEvent.cs" />
+    <Compile Include="GitImportSucceededEvent.cs" />
+    <Compile Include="ImportRepositoryValidation.cs" />
+    <Compile Include="AsyncRefOperationCommitLevelEventNotification.cs" />
+    <Compile Include="AsyncRefOperationCompletedNotification.cs" />
+    <Compile Include="AsyncRefOperationConflictNotification.cs" />
+    <Compile Include="AsyncGitOperationNotification.cs" />
+    <Compile Include="AsyncRefOperationProgressNotification.cs" />
+    <Compile Include="AsyncRefOperationGeneralFailureNotification.cs" />
+    <Compile Include="AsyncRefOperationTimeoutNotification.cs" />
+    <Compile Include="GitPullRequest.cs" />
+    <Compile Include="GitPullRequestChange.cs" />
+    <Compile Include="GitPullRequestCommentThread.cs" />
+    <Compile Include="GitPullRequestCommentThreadContext.cs" />
+    <Compile Include="CommentIterationContext.cs" />
+    <Compile Include="CommentTrackingCriteria.cs" />
+    <Compile Include="GitPullRequestCompletionOptions.cs" />
+    <Compile Include="GitPullRequestMergeOptions.cs" />
+    <Compile Include="GitPullRequestMergeStrategy.cs" />
+    <Compile Include="PullRequestTabExtensionConfig.cs" />
+    <Compile Include="GitPullRequestQueryType.cs" />
+    <Compile Include="GitPullRequestQueryInput.cs" />
+    <Compile Include="GitPullRequestQuery.cs" />
+    <Compile Include="GitPullRequestSearchCriteria.cs" />
+    <Compile Include="GitPullRequestIteration.cs" />
+    <Compile Include="IterationReason.cs" />
+    <Compile Include="GitPullRequestIterationChanges.cs" />
+    <Compile Include="GitPullRequestReviewFileContentInfo.cs" />
+    <Compile Include="GitPullRequestReviewFileType.cs" />
+    <Compile Include="GitPullRequestStatus.cs" />
+    <Compile Include="AutoCompleteUpdatedEvent.cs" />
+    <Compile Include="BranchUpdatedEvent.cs" />
+    <Compile Include="CompletionErrorsEvent.cs" />
+    <Compile Include="DiscussionsUpdatedEvent.cs" />
+    <Compile Include="IsDraftUpdatedEvent.cs" />
+    <Compile Include="LabelsUpdatedEvent.cs" />
+    <Compile Include="MergeCompletedEvent.cs" />
+    <Compile Include="PolicyEvaluationUpdatedEvent.cs" />
+    <Compile Include="PullRequestCreatedEvent.cs" />
+    <Compile Include="RealTimePullRequestEvent.cs" />
+    <Compile Include="RetargetEvent.cs" />
+    <Compile Include="ReviewersUpdatedEvent.cs" />
+    <Compile Include="ReviewersVotesResetEvent.cs" />
+    <Compile Include="ReviewerVoteUpdatedEvent.cs" />
+    <Compile Include="StatusAddedEvent.cs" />
+    <Compile Include="StatusesDeletedEvent.cs" />
+    <Compile Include="StatusUpdatedEvent.cs" />
+    <Compile Include="TitleDescriptionUpdatedEvent.cs" />
+    <Compile Include="GitConflictDirectoryFile.cs" />
+    <Compile Include="GitConflictFileDirectory.cs" />
+    <Compile Include="GitMergeOriginRef.cs" />
+    <Compile Include="GitResolution.cs" />
+    <Compile Include="GitConflictDeleteEdit.cs" />
+    <Compile Include="GitConflictEditDelete.cs" />
+    <Compile Include="GitConflictEditEdit.cs" />
+    <Compile Include="GitConflictRenameRename.cs" />
+    <Compile Include="GitConflictAddRename.cs" />
+    <Compile Include="GitConflictDeleteRename.cs" />
+    <Compile Include="GitConflictRename2to1.cs" />
+    <Compile Include="GitConflictRename1to2.cs" />
+    <Compile Include="GitConflictRenameDelete.cs" />
+    <Compile Include="GitConflictRenameAdd.cs" />
+    <Compile Include="GitConflictAddAdd.cs" />
+    <Compile Include="GitConflictUpdateResult.cs" />
+    <Compile Include="GitConflictUpdateStatus.cs" />
+    <Compile Include="GitResolutionMergeContent.cs" />
+    <Compile Include="GitResolutionMergeType.cs" />
+    <Compile Include="GitResolutionPathConflict.cs" />
+    <Compile Include="GitResolutionPathConflictAction.cs" />
+    <Compile Include="GitResolutionRename1to2.cs" />
+    <Compile Include="GitResolutionRename1to2Action.cs" />
+    <Compile Include="GitResolutionPickOneAction.cs" />
+    <Compile Include="GitResolutionWhichAction.cs" />
+    <Compile Include="GitResolutionStatus.cs" />
+    <Compile Include="GitConflictType.cs" />
+    <Compile Include="GitResolutionError.cs" />
+    <Compile Include="GitConflict.cs" />
+    <Compile Include="GitConflictJsonConverter.cs" />
+    <Compile Include="HistoryEntry`1.cs" />
+    <Compile Include="HistoryQueryResults`1.cs" />
+    <Compile Include="ItemDetailsOptions.cs" />
+    <Compile Include="ItemModel.cs" />
+    <Compile Include="GitTemplate.cs" />
+    <Compile Include="TfvcBranch.cs" />
+    <Compile Include="TfvcBranchMapping.cs" />
+    <Compile Include="TfvcBranchRef.cs" />
+    <Compile Include="TfvcShallowBranchRef.cs" />
+    <Compile Include="TfvcChange.cs" />
+    <Compile Include="TfvcChangeset.cs" />
+    <Compile Include="TfvcChangesetRef.cs" />
+    <Compile Include="TfvcChangesetSearchCriteria.cs" />
+    <Compile Include="TfvcChangesetsRequestData.cs" />
+    <Compile Include="TfvcCheckinEventData.cs" />
+    <Compile Include="TfvcItemsCollection.cs" />
+    <Compile Include="TfvcBranchesCollection.cs" />
+    <Compile Include="TfvcBranchRefsCollection.cs" />
+    <Compile Include="TfvcChangesetsCollection.cs" />
+    <Compile Include="TfvcItemDescriptorsCollection.cs" />
+    <Compile Include="TfvcHistoryEntry.cs" />
+    <Compile Include="TfvcItem.cs" />
+    <Compile Include="TfvcItemPreviousHash.cs" />
+    <Compile Include="TfvcItemDescriptor.cs" />
+    <Compile Include="TfvcItemRequestData.cs" />
+    <Compile Include="TfvcLabel.cs" />
+    <Compile Include="TfvcLabelRef.cs" />
+    <Compile Include="TfvcLabelRequestData.cs" />
+    <Compile Include="TfvcMappingFilter.cs" />
+    <Compile Include="TfvcMergeSource.cs" />
+    <Compile Include="TfvcPolicyFailureInfo.cs" />
+    <Compile Include="TfvcPolicyOverrideInfo.cs" />
+    <Compile Include="TfvcShelveset.cs" />
+    <Compile Include="TfvcShelvesetRef.cs" />
+    <Compile Include="TfvcShelvesetRequestData.cs" />
+    <Compile Include="TfvcStatistics.cs" />
+    <Compile Include="TfvcVersionType.cs" />
+    <Compile Include="TfvcVersionOption.cs" />
+    <Compile Include="TfvcVersionDescriptor.cs" />
+    <Compile Include="SupportedIdeType.cs" />
+    <Compile Include="SupportedIde.cs" />
+    <Compile Include="ShareNotificationContext.cs" />
+    <Compile Include="VersionControlChangeType.cs" />
+    <Compile Include="VersionControlProjectInfo.cs" />
+    <Compile Include="VersionControlRecursionType.cs" />
+    <Compile Include="GitLfsDeleteLockRequest.cs" />
+    <Compile Include="GitLfsLock.cs" />
+    <Compile Include="GitLfsLockCollection.cs" />
+    <Compile Include="GitLfsLockOwner.cs" />
+    <Compile Include="GitLfsLockResponse.cs" />
+    <Compile Include="GitLfsErrorResponse.cs" />
+    <Compile Include="GitLfsVerifyLockRequest.cs" />
+    <Compile Include="GitForkSyncRequest.cs" />
+    <Compile Include="GitForkSyncRequestParameters.cs" />
+    <Compile Include="SourceToTargetRef.cs" />
+    <Compile Include="GlobalGitRepositoryKey.cs" />
+    <Compile Include="GitForkOperationStatusDetail.cs" />
+    <Compile Include="GitForkTeamProjectReference.cs" />
+    <Compile Include="FileDiff.cs" />
+    <Compile Include="LineDiffBlock.cs" />
+    <Compile Include="LineDiffBlockChangeType.cs" />
+    <Compile Include="FileDiffParams.cs" />
+    <Compile Include="FileDiffsCriteria.cs" />
+    <Compile Include="GitMergeOperationStatusDetail.cs" />
+    <Compile Include="GitMerge.cs" />
+    <Compile Include="GitMergeParameters.cs" />
+    <Compile Include="Legacy\AssociatedWorkItem.cs" />
+    <Compile Include="Legacy\AuthorCounts.cs" />
+    <Compile Include="Legacy\Change.cs" />
+    <Compile Include="Legacy\ChangeList.cs" />
+    <Compile Include="Legacy\ChangeListHelpers.cs" />
+    <Compile Include="Legacy\ChangeQueryResults.cs" />
+    <Compile Include="Legacy\CheckinNote.cs" />
+    <Compile Include="Legacy\Entity.cs" />
+    <Compile Include="Legacy\FileContent.cs" />
+    <Compile Include="Legacy\FileContentMetadata.cs" />
+    <Compile Include="Legacy\FileCharDiffBlock.cs" />
+    <Compile Include="Legacy\FileDiff.cs" />
+    <Compile Include="Legacy\FileDiffBlockChangeType.cs" />
+    <Compile Include="Legacy\FileDiffBlock.cs" />
+    <Compile Include="Legacy\FileDiffParameters.cs" />
+    <Compile Include="Legacy\GitAnnotateBatchResult.cs" />
+    <Compile Include="Legacy\GitAnnotateResult.cs" />
+    <Compile Include="Legacy\GitBranchDiff.cs" />
+    <Compile Include="Legacy\GitChange.cs" />
+    <Compile Include="Legacy\GitCommit.cs" />
+    <Compile Include="Legacy\GitHistoryQueryResults.cs" />
+    <Compile Include="Legacy\GitIdentityReference.cs" />
+    <Compile Include="Legacy\GitItemMetadata.cs" />
+    <Compile Include="Legacy\GitItem.cs" />
+    <Compile Include="Legacy\GitSubmoduleItem.cs" />
+    <Compile Include="Legacy\GitObjectId.cs" />
+    <Compile Include="Legacy\GitObjectReference.cs" />
+    <Compile Include="Legacy\GitObjectType.cs" />
+    <Compile Include="Legacy\HistoryEntry.cs" />
+    <Compile Include="Legacy\HistoryQueryResults.cs" />
+    <Compile Include="Legacy\ItemDetailsOptions.cs" />
+    <Compile Include="Legacy\ItemModel.cs" />
+    <Compile Include="Legacy\TeamIdentityReference.cs" />
+    <Compile Include="Legacy\TfsAnnotateDiffParameters.cs" />
+    <Compile Include="Legacy\TfsChange.cs" />
+    <Compile Include="Legacy\TfsChangeList.cs" />
+    <Compile Include="Legacy\TfsHistoryEntry.cs" />
+    <Compile Include="Legacy\TfsIdentityReference.cs" />
+    <Compile Include="Legacy\TfsItem.cs" />
+    <Compile Include="Legacy\TfsPolicyFailureInfo.cs" />
+    <Compile Include="Legacy\TfsPolicyOverrideInfo.cs" />
+    <Compile Include="Legacy\VersionControlChangeType.cs" />
+    <Compile Include="Legacy\VersionControlRecursionType.cs" />
+    <Compile Include="Internal\GitLimitedRefCriteria.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

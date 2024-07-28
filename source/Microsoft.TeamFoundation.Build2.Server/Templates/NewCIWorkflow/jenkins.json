@@ -1,0 +1,101 @@
+﻿{
+    "id": "jenkins",
+    "name": "Jenkins",
+    "category": "Build",
+    "defaultHostedQueue": "Azure Pipelines",
+    "iconTaskId": "c24b86d4-4256-4925-9a29-246f81aa64a7",
+    "description": "Queue a Jenkins job and download its artifacts.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "jobName": "$(Parameters.jobName)",
+                                "serverEndpoint": "$(Parameters.serverEndpoint)"
+                            },
+                            "task": {
+                                "id": "c24b86d4-4256-4925-9a29-246f81aa64a7",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "saveTo": "$(Build.ArtifactStagingDirectory)",
+                                "jobName": "$(Parameters.jobName)",
+                                "serverEndpoint": "$(Parameters.serverEndpoint)"
+                            },
+                            "task": {
+                                "id": "86c37a92-59a7-444b-93c7-220fcf91e29c",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "jobName",
+                    "label": "{JobNameLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "string",
+                    "helpMarkDown": "{JobNameDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "serverEndpoint",
+                    "label": "{ServiceEndPointLabel}",
+                    "defaultValue": "",
+                    "required": true,
+                    "type": "connectedService:Jenkins",
+                    "helpMarkDown": "{ServiceEndPointDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                }
+            ]
+        }
+    }
+}

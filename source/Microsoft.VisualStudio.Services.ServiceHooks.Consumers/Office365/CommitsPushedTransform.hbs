@@ -1,0 +1,26 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{#if resource.commits[1]}}Commits{{else}}A commit{{/if}} pushed by {{{jsonEscape resource.pushedBy.displayName}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+{{{#resource}}}
+                {
+                    "title": null,
+                    "text": "",
+                    "markdown": true,
+                    "images": null,
+{{#if commits[0]}}
+                    "activityTitle": "{{{jsonEscape pushedBy.displayName}}} pushed {{#if commits[1]}}[commits]({{{repository.remoteUrl}}}?_a=history){{else}}a [commit]({{{repository.remoteUrl}}}/commit/{{{commits[0].commitId}}}){{/if}} to [{{{repository.project.name}}}]({{{jsonEscape ../resourceContainers.project.baseUrl}}}{{{repository.project.name}}}){{#if refUpdates[0]}} : [{{{stringReplace refUpdates[0].name "refs/heads/" ""}}}]({{{repository.remoteUrl}}}{{{jsonEscape "/#version=GB"}}}{{{stringReplace refUpdates[0].name "refs/heads/" ""}}}){{/if}}",
+{{else}}
+                    "activityTitle": "{{{jsonEscape ../message.markdown}}}",
+{{/if}}
+                    "activitySubtitle": "Repository: [{{{repository.name}}}]({{{repository.remoteUrl}}})",
+                    "activityText": "{{{jsonEscape commits[0].comment}}}",
+                    "activityImage": "{{{iconUrl "teams-brand-git.png"}}}",
+                    "activityImageType": "article"
+                }
+{{{/resource}}}
+    ],
+    "potentialAction": []
+}

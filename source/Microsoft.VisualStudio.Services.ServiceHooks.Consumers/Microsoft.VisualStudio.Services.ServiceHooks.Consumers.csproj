@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ServiceHooks.Consumers.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD59C3DE-50F6-4FC5-85F8-0DBF9AB4A73D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ServiceHooks.Consumers</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ServiceHooks.Consumers</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack" />
+    <Reference Include="Microsoft.Azure.NotificationHubs" />
+    <Reference Include="Microsoft.Azure.Storage.Common" />
+    <Reference Include="Microsoft.Azure.Storage.Queue" />
+    <Reference Include="Microsoft.AzureAd.Icm.Types">
+      <HintPath>lib\Microsoft.AzureAd.Icm.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AzureAd.Icm.WebService.Client">
+      <HintPath>lib\Microsoft.AzureAd.Icm.WebService.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ServiceBus" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\ServiceHooks\ServiceHooksConsumerResources.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\ServiceHooks\Sdk\Server\SubscriptionInputValueStrongBoxHelper.cs" />
+    <Compile Include="ServiceHooksConsumerService.cs" />
+    <Compile Include="ServiceHooksConsumerTracePoints.cs" />
+    <Compile Include="Zendesk\CreatePrivateCommentAction.cs" />
+    <Compile Include="Zendesk\ZendeskConsumer.cs" />
+    <Compile Include="Zendesk\ZendeskConsumerResources.cs" />
+    <Compile Include="Zapier\ZapierConsumer.cs" />
+    <Compile Include="Zapier\ZapierConsumerResources.cs" />
+    <Compile Include="Zapier\ZapierSendNotificationAction.cs" />
+    <Compile Include="WebHooks\HttpRequestAction.cs" />
+    <Compile Include="WebHooks\WebHooksConsumer.cs" />
+    <Compile Include="WebHooks\WebHooksConsumerResources.cs" />
+    <Compile Include="Vso\SimulateACRPushAction.cs" />
+    <Compile Include="Vso\SimulateBuildCompletionAction.cs" />
+    <Compile Include="Vso\SimulateCodePushAction.cs" />
+    <Compile Include="Vso\SimulateCommentAction.cs" />
+    <Compile Include="Vso\SimulateDockerPushAction.cs" />
+    <Compile Include="Vso\SimulatePullRequestAction.cs" />
+    <Compile Include="Vso\VsoConsumer.cs" />
+    <Compile Include="Vso\VsoConsumerResources.cs" />
+    <Compile Include="UserVoice\SendLinkedWorkItemEventAction.cs" />
+    <Compile Include="UserVoice\UserVoiceConsumer.cs" />
+    <Compile Include="UserVoice\UserVoiceConsumerResources.cs" />
+    <Compile Include="Trello\ListCreateAction.cs" />
+    <Compile Include="Trello\CardCreateAction.cs" />
+    <Compile Include="Trello\TrelloActionBase.cs" />
+    <Compile Include="Trello\TrelloConsumer.cs" />
+    <Compile Include="Trello\TrelloConsumerResources.cs" />
+    <Compile Include="Slack\SlackConsumerResources.cs" />
+    <Compile Include="Slack\SlackConsumer.cs" />
+    <Compile Include="Slack\PostMessageToChannelAction.cs" />
+    <Compile Include="Office365\Office365Consumer.cs" />
+    <Compile Include="Office365\Office365ConsumerResources.cs" />
+    <Compile Include="Office365\PostMessageToGroupAction.cs" />
+    <Compile Include="Office365\PostMessageToTeamAction.cs" />
+    <Compile Include="Office365\TeamsNotificationHelper.cs" />
+    <Compile Include="Office365\TeamsConsumer.cs" />
+    <Compile Include="Office365\TeamsConsumerResources.cs" />
+    <Compile Include="MyGet\MyGetConsumer.cs" />
+    <Compile Include="MyGet\MyGetConsumerResources.cs" />
+    <Compile Include="MyGet\PublishPackageAction.cs" />
+    <Compile Include="MyGet\TriggerBuildAction.cs" />
+    <Compile Include="MobileCenter\MobileCenterConsumer.cs" />
+    <Compile Include="MobileCenter\MobileCenterConsumerResources.cs" />
+    <Compile Include="MobileCenter\MobileCenterSendNotificationAction.cs" />
+    <Compile Include="Kato\KatoConsumer.cs" />
+    <Compile Include="Kato\KatoConsumerResources.cs" />
+    <Compile Include="Kato\PostEventToRoomAction.cs" />
+    <Compile Include="Jenkins\JenkinsConsumer.cs" />
+    <Compile Include="Jenkins\JenkinsIntegrationLevel.cs" />
+    <Compile Include="Jenkins\JenkinsConsumerResources.cs" />
+    <Compile Include="Jenkins\TriggerGenericBuildAction.cs" />
+    <Compile Include="Jenkins\TriggerGitBuildAction.cs" />
+    <Compile Include="Hubot\PostMessageToQueueAction.cs" />
+    <Compile Include="Hubot\HubotConsumer.cs" />
+    <Compile Include="Hubot\HubotConsumerResources.cs" />
+    <Compile Include="Hubot\PostMessageAction.cs" />
+    <Compile Include="HockeyApp\HockeyAppConsumer.cs" />
+    <Compile Include="HockeyApp\HockeyAppConsumerResources.cs" />
+    <Compile Include="HockeyApp\HockeyAppSendNotificationAction.cs" />
+    <Compile Include="HipChat\HipChatConsumer.cs" />
+    <Compile Include="HipChat\HipChatConsumerResources.cs" />
+    <Compile Include="HipChat\PostMessageToRoomAction.cs" />
+    <Compile Include="Grafana\AddAnnotationAction.cs" />
+    <Compile Include="Grafana\GrafanaConsumer.cs" />
+    <Compile Include="Grafana\GrafanaConsumerResources.cs" />
+    <Compile Include="Flowdock\FlowdockConsumer.cs" />
+    <Compile Include="Flowdock\FlowdockConsumerResources.cs" />
+    <Compile Include="Flowdock\PostMessageToChatAction.cs" />
+    <Compile Include="Flowdock\PostMessageToTeamInboxAction.cs" />
+    <Compile Include="FlowAndLogicApps\FlowAndLogicAppsConsumer.cs" />
+    <Compile Include="FlowAndLogicApps\FlowAndLogicAppsConsumerResources.cs" />
+    <Compile Include="FlowAndLogicApps\FlowAndLogicAppsSendNotificationAction.cs" />
+    <Compile Include="DataDriven\DataDrivenConsumer.cs" />
+    <Compile Include="DataDriven\DataDrivenConsumerAction`1.cs" />
+    <Compile Include="DataDriven\DataDrivenConsumerActionConfig.cs" />
+    <Compile Include="DataDriven\DataDrivenConsumerConfig.cs" />
+    <Compile Include="DataDriven\DataDrivenConsumerResourceManager.cs" />
+    <Compile Include="DataDriven\DataDrivenConsumerResources.cs" />
+    <Compile Include="DataDriven\DataDrivenHttpActionConfig.cs" />
+    <Compile Include="DataDriven\ExtensionConsumer.cs" />
+    <Compile Include="DataDriven\ExtensionConsumerAction.cs" />
+    <Compile Include="DataDriven\PublishEventHttpActionConfig.cs" />
+    <Compile Include="DataDriven\PublishEventTransformConfig.cs" />
+    <Compile Include="Campfire\CampfireConsumer.cs" />
+    <Compile Include="Campfire\CampfireConsumerResources.cs" />
+    <Compile Include="Campfire\PostMessageToRoomAction.cs" />
+    <Compile Include="Bamboo\BambooConsumer.cs" />
+    <Compile Include="Bamboo\BambooConsumerResources.cs" />
+    <Compile Include="Bamboo\QueueBuildAction.cs" />
+    <Compile Include="Azure\AzureConsumerResources.cs" />
+    <Compile Include="Azure\AzureServiceBusConsumer.cs" />
+    <Compile Include="Azure\AzureStorageConsumer.cs" />
+    <Compile Include="Azure\BrokeredMessageExtensions.cs" />
+    <Compile Include="Azure\AppServiceDeployWebAppAction.cs" />
+    <Compile Include="Azure\ServiceBusActionBase.cs" />
+    <Compile Include="Azure\ServiceBusActionTaskBase.cs" />
+    <Compile Include="Azure\NotificationHubNamespaceManagerWrapper.cs" />
+    <Compile Include="Azure\TopicClientWrapper.cs" />
+    <Compile Include="Azure\MessagingFactoryWrapper.cs" />
+    <Compile Include="Azure\QueueClientWrapper.cs" />
+    <Compile Include="Azure\ServiceBusNamespaceManagerWrapper.cs" />
+    <Compile Include="Azure\ServiceBusNotificationHubSendAction.cs" />
+    <Compile Include="Azure\ServiceBusNotificationHubSendActionTask.cs" />
+    <Compile Include="Azure\ServiceBusQueueSendAction.cs" />
+    <Compile Include="Azure\ServiceBusQueueSendActionTask.cs" />
+    <Compile Include="Azure\ServiceBusTopicSendAction.cs" />
+    <Compile Include="Azure\ServiceBusTopicSendActionTask.cs" />
+    <Compile Include="Azure\StorageQueueEnqueueAction.cs" />
+    <Compile Include="Azure\StorageQueueEnqueueActionTask.cs" />
+    <Compile Include="Azure\AzureAppServiceConsumer.cs" />
+    <Compile Include="Azuqua\AzuquaConsumer.cs" />
+    <Compile Include="Azuqua\AzuquaConsumerResources.cs" />
+    <Compile Include="Azuqua\PostEventToFloAction.cs" />
+    <Compile Include="WorkplaceMessagingApps\AzChatOpsActionTask.cs" />
+    <Compile Include="WorkplaceMessagingApps\WorkplaceMessagingAppsConsumer.cs" />
+    <Compile Include="WorkplaceMessagingApps\WorkplaceMessagingAppsConsumerResources.cs" />
+    <Compile Include="WorkplaceMessagingApps\WorkplaceMessagingAppsSendNotificationAction.cs" />
+    <Compile Include="IcM\IcMConsumer.cs" />
+    <Compile Include="IcM\AddIncidentAction.cs" />
+    <Compile Include="IcM\IcMConsumerResources.cs" />
+    <Compile Include="Datadog\DatadogConsumer.cs" />
+    <Compile Include="Datadog\DatadogConsumerResources.cs" />
+    <Compile Include="Datadog\PostEventInDataDogAction.cs" />
+    <Compile Include="Common\ReleaseHelper.cs" />
+    <Compile Include="Common\ServiceHooksHttpRequestMessage.cs" />
+    <Compile Include="Common\CommonConsumerResources.cs" />
+    <Compile Include="Common\CommonConsumerSettings.cs" />
+    <Compile Include="Common\EventTransformer.cs" />
+    <Compile Include="Common\EventTransformerConsumerActionImplementation.cs" />
+    <Compile Include="Common\HttpExtensions.cs" />
+    <Compile Include="Common\JsonExtensions.cs" />
+    <Compile Include="Common\NoopActionTask.cs" />
+    <Compile Include="Common\Templating\IAvatarService.cs" />
+    <Compile Include="Common\Templating\AvatarService.cs" />
+    <Compile Include="Common\Templating\TemplateModelBuilderFactory.cs" />
+    <Compile Include="Common\Templating\ITemplateModelBuilder.cs" />
+    <Compile Include="Common\Templating\ITemplateEngine.cs" />
+    <Compile Include="Common\Templating\TemplateEngineConstants.cs" />
+    <Compile Include="Common\Templating\TemplateEngineFactory.cs" />
+    <Compile Include="Common\Templating\TemplateRunner.cs" />
+    <Compile Include="Common\Templating\ModelBuilders\JsonFriendlyModelBuilder.cs" />
+    <Compile Include="Common\Templating\ModelBuilders\WorkItemModelBuilder.cs" />
+    <Compile Include="Common\Templating\Engines\MustacheTemplateEngine.cs" />
+    <Compile Include="Common\Templating\Engines\JsonPathTemplateEngine.cs" />
+    <Compile Include="Common\Templating\Engines\WorkItemMustacheTemplateHelpers.cs" />
+    <Compile Include="AppVeyor\AppVeyorConsumer.cs" />
+    <Compile Include="AppVeyor\AppVeyorConsumerResources.cs" />
+    <Compile Include="AppVeyor\TriggerBuildAction.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppVeyor\AppVeyorConsumer.json" />
+    <EmbeddedResource Include="AppVeyor\AppVeyorConsumerResources.resx" />
+    <EmbeddedResource Include="Azuqua\AzuquaConsumer.json" />
+    <EmbeddedResource Include="Azuqua\AzuquaConsumerResources.resx" />
+    <EmbeddedResource Include="Azure\AzureConsumerResources.resx" />
+    <EmbeddedResource Include="Bamboo\BambooConsumerResources.resx" />
+    <EmbeddedResource Include="Campfire\CampfireConsumerResources.resx" />
+    <EmbeddedResource Include="Common\CommonConsumerResources.resx" />
+    <EmbeddedResource Include="Datadog\DatadogConsumerResources.resx" />
+    <EmbeddedResource Include="DataDriven\DataDrivenConsumerResources.resx" />
+    <EmbeddedResource Include="FlowAndLogicApps\FlowAndLogicAppsConsumerResources.resx" />
+    <EmbeddedResource Include="Flowdock\FlowdockConsumerResources.resx" />
+    <EmbeddedResource Include="Grafana\GrafanaConsumerResources.resx" />
+    <EmbeddedResource Include="HipChat\HipChatConsumerResources.resx" />
+    <EmbeddedResource Include="HockeyApp\HockeyAppConsumerResources.resx" />
+    <EmbeddedResource Include="Hubot\HubotConsumerResources.resx" />
+    <EmbeddedResource Include="IcM\IcMConsumerResources.resx" />
+    <EmbeddedResource Include="Jenkins\JenkinsConsumerResources.resx" />
+    <EmbeddedResource Include="Kato\KatoConsumer.json" />
+    <EmbeddedResource Include="Kato\KatoConsumerResources.resx" />
+    <EmbeddedResource Include="MobileCenter\MobileCenterConsumerResources.resx" />
+    <EmbeddedResource Include="MyGet\MyGetConsumer.json" />
+    <EmbeddedResource Include="MyGet\MyGetConsumerResources.resx" />
+    <EmbeddedResource Include="Office365\BuildCompleteTransform.hbs" />
+    <EmbeddedResource Include="Office365\CodeCheckedInTransform.hbs" />
+    <EmbeddedResource Include="Office365\CommitsPushedTransform.hbs" />
+    <EmbeddedResource Include="Office365\DeploymentApprovalCompletedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\DeploymentApprovalPendingTemplate.hbs" />
+    <EmbeddedResource Include="Office365\DeploymentCompletedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\DeploymentStartedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\MessagePostedTransform.hbs" />
+    <EmbeddedResource Include="Office365\Office365Consumer.json" />
+    <EmbeddedResource Include="Office365\Office365ConsumerResources.resx" />
+    <EmbeddedResource Include="Office365\PullRequestCreatedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\PullRequestMergedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\PullRequestUpdatedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\ReleaseAbandonedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\ReleaseCreatedTemplate.hbs" />
+    <EmbeddedResource Include="Office365\RunStageApproved.hbs" />
+    <EmbeddedResource Include="Office365\RunStageWaitingApproval.hbs" />
+    <EmbeddedResource Include="Office365\RunStateChange.hbs" />
+    <EmbeddedResource Include="Office365\TeamsConsumer.json" />
+    <EmbeddedResource Include="Office365\TeamsConsumerResources.resx" />
+    <EmbeddedResource Include="Office365\WorkItemCommentedTransform.hbs" />
+    <EmbeddedResource Include="Office365\WorkItemCreatedTransform.hbs" />
+    <EmbeddedResource Include="Office365\WorkItemDeletedTransform.hbs" />
+    <EmbeddedResource Include="Office365\WorkItemRestoredTransform.hbs" />
+    <EmbeddedResource Include="Office365\WorkItemUpdatedTransform.hbs" />
+    <EmbeddedResource Include="ServiceHooksConsumerResources.resx" />
+    <EmbeddedResource Include="Slack\SlackConsumerResources.resx" />
+    <EmbeddedResource Include="Trello\TrelloConsumerResources.resx" />
+    <EmbeddedResource Include="UserVoice\UserVoiceConsumerResources.resx" />
+    <EmbeddedResource Include="Vso\VsoConsumerResources.resx" />
+    <EmbeddedResource Include="WebHooks\WebHooksConsumerResources.resx" />
+    <EmbeddedResource Include="WorkplaceMessagingApps\WorkplaceMessagingAppsConsumerResources.resx" />
+    <EmbeddedResource Include="Zapier\ZapierConsumerResources.resx" />
+    <EmbeddedResource Include="Zendesk\ZendeskConsumerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

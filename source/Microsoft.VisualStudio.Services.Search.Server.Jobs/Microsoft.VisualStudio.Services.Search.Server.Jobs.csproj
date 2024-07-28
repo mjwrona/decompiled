@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Search.Server.Jobs.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D42F8A7D-6880-42A9-80B8-4A5C15233D0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Server.Jobs</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Policy.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common.Arriba">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.Arriba.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Indexer">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Indexer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platform">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.ReSearch.Core">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.ReSearch.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.DataAccess">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.EventHandler">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.EventHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.Jobs.Api">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.Jobs.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.Jobs.Definitions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.Jobs.Definitions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.Store">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.Store.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.Actions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.Analyzers">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.Analyzers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.Data">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.DataProviders">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManager.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManagerAPI">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.HealthManagerAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi.Legacy">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.WebApi.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>lib\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Server\Jobs\ClassificationNodeSecurityAcesUpdater.cs" />
+    <Compile Include="Server\Jobs\FeedSecurityAcesUpdater.cs" />
+    <Compile Include="Server\Jobs\SecurityAcesUpdaterBase.cs" />
+    <Compile Include="Server\Jobs\ThresholdViolationIdentifier.cs" />
+    <Compile Include="Server\Jobs\CoreIndexingExecutionContextExtensions.cs" />
+    <Compile Include="Server\Jobs\IndexingUnitExtensions.cs" />
+    <Compile Include="Server\Jobs\ElasticsearchIndexOptimizeJob.cs" />
+    <Compile Include="Server\Jobs\DayOfWeekExtension.cs" />
+    <Compile Include="Server\Jobs\CodeGitRepoSyncAnalyzer.cs" />
+    <Compile Include="Server\Jobs\GitRepoSyncAnalyzerFactory.cs" />
+    <Compile Include="Server\Jobs\WikiRepoSyncAnalyzer.cs" />
+    <Compile Include="Server\Jobs\GitRepoSyncAnalyzer.cs" />
+    <Compile Include="Server\Jobs\RepositoryPushNotificationValidator.cs" />
+    <Compile Include="Server\Jobs\RepositorySecurityAcesUpdater.cs" />
+    <Compile Include="Server\Jobs\IndexMetadataStateAnalyser.cs" />
+    <Compile Include="Server\Jobs\IndexMetadataStateAnalyserFactory.cs" />
+    <Compile Include="Server\Jobs\CodeIndexMetadataStateAnalyser.cs" />
+    <Compile Include="Server\Jobs\WorkItemIndexMetadataStateAnalyser.cs" />
+    <Compile Include="Server\Jobs\WikiIndexMetadataStateAnalyser.cs" />
+    <Compile Include="Server\Jobs\FailureRecordService.cs" />
+    <Compile Include="Server\Jobs\IFailureRecordService.cs" />
+    <Compile Include="Server\Jobs\IFileMetaDataStoreService.cs" />
+    <Compile Include="Server\Jobs\FileMetaDataStoreService.cs" />
+    <Compile Include="Server\Jobs\CommonUtils.cs" />
+    <Compile Include="Server\Jobs\AbstractElasticsearchJobs.cs" />
+    <Compile Include="Server\Jobs\AbstractIndexingDelayAnalyzerJob.cs" />
+    <Compile Include="Server\Jobs\AbstractPeriodicCatchUpJob.cs" />
+    <Compile Include="Server\Jobs\BoardPeriodicReindexingJob.cs" />
+    <Compile Include="Server\Jobs\CodeIndexingDelayAnalyzerJob.cs" />
+    <Compile Include="Server\Jobs\ISearchServiceJobExtension.cs" />
+    <Compile Include="Server\Jobs\AbstractPeriodicMaintenanceJob.cs" />
+    <Compile Include="Server\Jobs\PackageAccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\PackageAccountReindexerJob.cs" />
+    <Compile Include="Server\Jobs\PopulateShardDetailsJob.cs" />
+    <Compile Include="Server\Jobs\PeriodicMaintenanceJob.cs" />
+    <Compile Include="Server\Jobs\SettingIndexUpdateJob.cs" />
+    <Compile Include="Server\Jobs\TriggerAndMonitorReindexingJob.cs" />
+    <Compile Include="Server\Jobs\AbstractShardSizeReductionJob.cs" />
+    <Compile Include="Server\Jobs\CollectionRenameRepairJob.cs" />
+    <Compile Include="Server\Jobs\AbstractAccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\SearchConfigureFinalizeJob.cs" />
+    <Compile Include="Server\Jobs\SearchCleanupComponent.cs" />
+    <Compile Include="Server\Jobs\AbstractSearchServiceIndexingJob.cs" />
+    <Compile Include="Server\Jobs\CodeIndexShardSizeReductionJob.cs" />
+    <Compile Include="Server\Jobs\AccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\CodeRepairJob.cs" />
+    <Compile Include="Server\Jobs\ScopedIndexingUnitCodeIndexingJob.cs" />
+    <Compile Include="Server\Jobs\CollectionCodeIndexingJob.cs" />
+    <Compile Include="Server\Jobs\ProjectCodeIndexingJob.cs" />
+    <Compile Include="Server\Jobs\RepositoryCodeIndexingJob.cs" />
+    <Compile Include="Server\Jobs\PeriodicCatchUpJob.cs" />
+    <Compile Include="Server\Jobs\TemporaryIndexingUnitCodeIndexingJob.cs" />
+    <Compile Include="Server\Jobs\AbstractHealthStatusJob.cs" />
+    <Compile Include="Server\Jobs\AccountHealthStatusJob.cs" />
+    <Compile Include="Server\Jobs\ElasticsearchIndexSettingsUpdaterJob.cs" />
+    <Compile Include="Server\Jobs\ProjectRepoAccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\CollectionProjectRepoIndexingJob.cs" />
+    <Compile Include="Server\Jobs\PeriodicProjectRepoRefreshJob.cs" />
+    <Compile Include="Server\Jobs\CollectionPackageIndexingJob.cs" />
+    <Compile Include="Server\Jobs\CollectionBoardIndexingJob.cs" />
+    <Compile Include="Server\Jobs\PeriodicPackageCatchUpJob.cs" />
+    <Compile Include="Server\Jobs\CollectionWikiIndexingJob.cs" />
+    <Compile Include="Server\Jobs\PeriodicWikiCatchUpJob.cs" />
+    <Compile Include="Server\Jobs\ProjectWikiIndexingJob.cs" />
+    <Compile Include="Server\Jobs\RepositoryWikiIndexingJob.cs" />
+    <Compile Include="Server\Jobs\WikiAccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\WorkItemAccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\BoardAccountFaultInJob.cs" />
+    <Compile Include="Server\Jobs\CollectionWorkItemIndexingJob.cs" />
+    <Compile Include="Server\Jobs\PeriodicWorkItemRefreshJob.cs" />
+    <Compile Include="Server\Jobs\ProjectWorkItemIndexingJob.cs" />
+    <Compile Include="Server\Jobs\GitRepositoryCodeUpdateMetadataOperation.cs" />
+    <Compile Include="Server\Jobs\UpdateIndexingUnitPropertiesOperation.cs" />
+    <Compile Include="Server\Jobs\UpdateMetadataOperation.cs" />
+    <Compile Include="Server\Jobs\UpdateSearchUrlInIndexingPropertiesOperation.cs" />
+    <Compile Include="Server\Jobs\MissedDeleteAndRenameNotificationHandlerTask.cs" />
+    <Compile Include="Server\Jobs\IIndexingPatchTask.cs" />
+    <Compile Include="Server\Jobs\AbstractIndexingPatchOperation.cs" />
+    <Compile Include="Server\Jobs\IndexingUnitDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\AbstractIndexingOperation.cs" />
+    <Compile Include="Server\Jobs\TfvcRepositoryUpdateMetadataOperation.cs" />
+    <Compile Include="Server\Jobs\CodeGitRepoResetBranchInfoOperation.cs" />
+    <Compile Include="Server\Jobs\FailedItemsPatchProvider.cs" />
+    <Compile Include="Server\Jobs\IIndexPatchProvider.cs" />
+    <Compile Include="Server\Jobs\IndexPatchProviderFactory.cs" />
+    <Compile Include="Server\Jobs\ReIndexCppFilesPatchProvider.cs" />
+    <Compile Include="Server\Jobs\ReIndexPatchProvider.cs" />
+    <Compile Include="Server\Jobs\RepositoryHealPatchProvider.cs" />
+    <Compile Include="Server\Jobs\AbstractCodeFailedItemsPatchDescriptionCreator.cs" />
+    <Compile Include="Server\Jobs\FailedItemsPatchDescriptionCreatorFactory.cs" />
+    <Compile Include="Server\Jobs\TfvcFailedItemsPatchDescriptionCreator.cs" />
+    <Compile Include="Server\Jobs\GitFailedItemsPatchDescriptionCreator.cs" />
+    <Compile Include="Server\Jobs\IFailedItemsPatchDescriptionCreator.cs" />
+    <Compile Include="Server\Jobs\CollectionCodeReindexingValidator.cs" />
+    <Compile Include="Server\Jobs\ReindexingValidatorBase.cs" />
+    <Compile Include="Server\Jobs\IndexingStalenessAnalyzer\CodeIndexingStalenessAnalyzer.cs" />
+    <Compile Include="Server\Jobs\IndexingStalenessAnalyzer\CodeIndexingStalenessAnalyzerFactory.cs" />
+    <Compile Include="Server\Jobs\IndexingStalenessAnalyzer\GitCodeIndexingStalenessAnalyzer.cs" />
+    <Compile Include="Server\Jobs\IndexingStalenessAnalyzer\ICodeIndexingStalenessAnalyzerFactory.cs" />
+    <Compile Include="Server\Jobs\IndexingStalenessAnalyzer\TfvcCodeIndexingStalenessAnalyzer.cs" />
+    <Compile Include="Server\Jobs\JobData\CodeRepairJobDataModel.cs" />
+    <Compile Include="Server\Jobs\JobData\CustomRepositoryIndexerJobData.cs" />
+    <Compile Include="Server\Jobs\JobData\JobDataConstants.cs" />
+    <Compile Include="Server\Jobs\JobData\JobResultData.cs" />
+    <Compile Include="Server\Jobs\Pipeline\CorePipeline`2.cs" />
+    <Compile Include="Server\Jobs\RepoSync\SearchGitRepoSettingsForPolicy.cs" />
+    <Compile Include="Server\Jobs\RepoSync\GitRepositoryScopeItem.cs" />
+    <Compile Include="Server\Jobs\RepoSync\SearchGitRepoSettingsProvider.cs" />
+    <Compile Include="Server\Jobs\Operations\CollectionExtensionBeginUninstallOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\CollectionExtensionFinalizeUninstallOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\CollectionBulkIndexOperationBase.cs" />
+    <Compile Include="Server\Jobs\Operations\RepositoryDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\ProjectDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\BasicRoutingAssignmentOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\CollectionFinalizeOperationBase.cs" />
+    <Compile Include="Server\Jobs\Operations\EntityFinalizerBase.cs" />
+    <Compile Include="Server\Jobs\Operations\ProjectUpdateFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\ProjectUpdateFieldOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\RepositoryUpdateFieldOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\ICollectionMetadataCrawler.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\WorkItemFieldCacheRefreshTask.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\TeamProjectAdministratorRefreshTask.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemFinalizeHelper.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemAreaNodeSecurityAcesSyncOperatio.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\MissedClassificationNodeChangeNotificationHandlerT.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\FailedWorkItemProcessorTask.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemDestroyOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemUpdateFieldValues.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\MissingWorkItemProjectHandlerTask.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\MissedWorkItemUpdateNotificationHandlerTask.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ClassificationNodeSecurityHashRefreshTask.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemMetadataCrawlOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemBulkIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\CollectionWorkItemPatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemRenameOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemUpdateClassificationNodeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemSyncAllClassificationNodesOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemPatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemIndexingOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\ProjectWorkItemDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\WorkItem\WorkItemProjectUtils.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\CollectionWikiBulkIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\CollectionWikiFinalizeHelper.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\CollectionWikiFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\CollectionWikiMetadataCrawler.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\CollectionWikiMetadataCrawlOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\CollectionWikiPatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\FailedWikiProcessorTask.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiProjectUpdateFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiProjectUpdateFieldOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiProjectPatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiProjectUtils.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiEntityRoutingAssignmentOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiRepoScopesAndVersionsUpdateTask.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiRepositoryBulkIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiRepositoryPatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Wiki\WikiRepositoryRenameOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Board\CollectionBoardIndexFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Board\CollectionBoardBulkIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Board\CollectionBoardMetadataCrawlOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Board\CollectionBoardFinalizeHelper.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageIndexFinalizeOperationHelper.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageUpdateFeedsOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageUpdateIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageCleanupFeedsOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageIndexFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\FeedIndexingUnitHelper.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackagePatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Package\CollectionPackageFeedSecurityAcesSyncOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeDuplicateDocumentsDeletionOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\RepositoryCodeDuplicateDocumentsDeletionOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\TfvcRepositoryUpdateFieldOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionBulkIndexTypes.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCustomCodeMetadataCrawler.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeMetadataCrawlOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodePatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeFinalizeHelper.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeBulkIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeBulkIndexOperationType.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeGitRepositoryAcesSyncOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\AbstractCollectionCodeMetadataCrawler.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionCodeMetadataCrawlerFactory.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionTfvcCodeMetadataCrawler.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CollectionGitCodeMetadataCrawler.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CodeProjectPatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CodeProjectUtils.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CodeProjectRenameOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\DeleteOrphanGitFilesOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\DeleteOrphanTfvcFilesOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitBranchDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitRepositoryCodeIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\DeleteOrphanFilesOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\RepositoryCodeIndexingOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CustomRepositoryIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\RepositoryCodePatchOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\TfvcChangesetIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\TfvcRepositoryReIndexingOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\TfvcRepositoryCodeBulkIndexOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitRepositoryReIndexingOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitRepoRenameOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CodeEntityRoutingAssignmentOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CodeRepositoryUpdateFieldOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CodeTemporaryIndexingUnitDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitBranchUpdatesHandlerTask.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\CompleteGitBranchDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\ScopedIndexingUnitBranchDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitRepoRenameFinalizeOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\ScopedIndexingUnitDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\GitRepositoryCodeCustomBulkIndexingOperation.cs" />
+    <Compile Include="Server\Jobs\Operations\Code\WikiRepositoryUpdateFieldOperation.cs" />
+    <Compile Include="Server\Jobs\V2Jobs\Operations\Code\CustomRepositoryDeleteOperation.cs" />
+    <Compile Include="Server\Jobs\V2Jobs\Operations\Code\Repository\TfvcDestroyOperation.cs" />
+    <Compile Include="Server\Pipeline\CodeIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\CorePipelineFlowHandler.cs" />
+    <Compile Include="Server\Pipeline\CorePipelinePluginsFactory.cs" />
+    <Compile Include="Server\Pipeline\CorePipelineService.cs" />
+    <Compile Include="Server\Pipeline\FirstPartyPipeline`2.cs" />
+    <Compile Include="Server\Pipeline\CodeIndexingPipelineContext.cs" />
+    <Compile Include="Server\Pipeline\FirstPartyPipelineContext`2.cs" />
+    <Compile Include="Server\Pipeline\ICorePipelineFlowHandlerCreator.cs" />
+    <Compile Include="Server\Pipeline\ICorePipelineService.cs" />
+    <Compile Include="Server\Pipeline\CorePipelineResultData.cs" />
+    <Compile Include="Server\Pipeline\CorePipelineResult.cs" />
+    <Compile Include="Server\Pipeline\IOperationMapper.cs" />
+    <Compile Include="Server\Pipeline\OperationResult.cs" />
+    <Compile Include="Server\Pipeline\OperationStatus.cs" />
+    <Compile Include="Server\Pipeline\DiffDataCrawler.cs" />
+    <Compile Include="Server\Pipeline\DiffMetadataCrawler.cs" />
+    <Compile Include="Server\Pipeline\FileGroupPipeline.cs" />
+    <Compile Include="Server\Pipeline\FileGroupPipelineForPatch.cs" />
+    <Compile Include="Server\Pipeline\SingleStageFileGroupIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\GitRepositoryIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\PackageIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\TfvcRepositoryContinuousIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\TfvcRepositoryIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\WorkItemIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\BoardIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\SettingIndexingPipeline.cs" />
+    <Compile Include="Server\Pipeline\GitIndexPipelineFlowHandler.cs" />
+    <Compile Include="Server\Pipeline\TfvcIndexPipelineFlowHandler.cs" />
+    <Compile Include="Server\Pipeline\TimeBoxedTfvcCIPipelineFlowHandler.cs" />
+    <Compile Include="Server\Pipeline\RepositoryCodePatchPipelineFlowHandler.cs" />
+    <Compile Include="Server\Pipeline\CustomRepositoryPipelineFlowHandler.cs" />
+    <Compile Include="Server\Pipeline\CodePipelineFailureHandler.cs" />
+    <Compile Include="Server\Pipeline\IndexerBasePipelineFailureHandler.cs" />
+    <Compile Include="Server\Pipeline\WikiPipelineFailureHandler.cs" />
+    <Compile Include="Server\Pipeline\WorkItemPipelineFailureHandler.cs" />
+    <Compile Include="Server\Pipeline\IndexerPipelineFlowHandlerCreator.cs" />
+    <Compile Include="Server\Pipeline\CodeOperationMapper.cs" />
+    <Compile Include="Server\Pipeline\PackageOperationMapper.cs" />
+    <Compile Include="Server\Pipeline\WikiOperationMapper.cs" />
+    <Compile Include="Server\Pipeline\WorkItemOperationMapper.cs" />
+    <Compile Include="Server\Pipeline\BoardOperationMapper.cs" />
+    <Compile Include="V2Jobs\Common\AccountCodeBulkIndexer.cs" />
+    <Compile Include="V2Jobs\Common\AccountPackageBulkIndexer.cs" />
+    <Compile Include="V2Jobs\Common\AccountWikiBulkIndexer.cs" />
+    <Compile Include="V2Jobs\Common\AccountWorkItemBulkIndexer.cs" />
+    <Compile Include="V2Jobs\Common\IndexOperations.cs" />
+    <Compile Include="V2Jobs\Common\IndexOperationsMetadata.cs" />
+    <Compile Include="V2Jobs\Common\IRunnable`1.cs" />
+    <Compile Include="V2Jobs\Common\Wiki\WikiDeleteMetadata.cs" />
+    <Compile Include="V2Jobs\Common\Wiki\WikiDeleter.cs" />
+    <Compile Include="V2Jobs\Common\Git\TempAndFileMetaDataStoreDeleter.cs" />
+    <Compile Include="V2Jobs\Common\Git\GitBranchDeleterFactory.cs" />
+    <Compile Include="V2Jobs\Common\Git\LargeRepoAccountGitBranchDeleter.cs" />
+    <Compile Include="V2Jobs\Common\Git\NormalRepoGitBranchDeleter.cs" />
+    <Compile Include="V2Jobs\Common\Git\ScopedIndexingUnitLevelGitBranchDeleter.cs" />
+    <Compile Include="V2Jobs\Common\Git\GitBranchDeleter.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="stmt_ResetSearchIndexingState.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,84 @@
+﻿{
+  "id": "9A177ED8-EFCD-461B-BFD2-3FEC7EF0BABD",
+  "name": "Rolling Deployment Strategy on Linux Virtual Machines",
+  "category": "Deployment",
+  "iconTaskId": "4dda660c-b643-4598-a4a2-61080d0002d9",
+  "description": "Deploy using Rolling strategy to deployment group containing linux virtual machine",
+  "environment": {
+    "name": "dev",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "deploymentInput": {
+          "healthPercent": 0,
+          "deploymentHealthOption": "Custom",
+          "tags": [],
+          "skipArtifactsDownload": true,
+          "artifactsDownloadInput": {
+            "downloadInputs": []
+          },
+          "queueId": 1,
+          "demands": [],
+          "enableAccessToken": false,
+          "timeoutInMinutes": 0,
+          "jobCancelTimeoutInMinutes": 1,
+          "condition": "succeeded()",
+          "overrideInputs": {}
+        },
+        "name": "Deploy",
+        "phaseType": 4,
+        "rank": 1,
+        "workflowTasks": [
+          {
+            "taskId": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+            "version": "3.*",
+            "name": "Execute Deploy Script",
+            "refName": "",
+            "enabled": true,
+            "alwaysRun": false,
+            "continueOnError": false,
+            "timeoutInMinutes": 0,
+            "definitionType": "task",
+            "overrideInputs": {},
+            "condition": "succeeded()",
+            "inputs": {
+              "targetType": "inline",
+              "filePath": "",
+              "arguments": "",
+              "script": "echo \"Congratulations! You are all set to deploy using rolling deployment strategy.\nNext steps:\nIn the deployment group job phase,\n 1. Select the deployment group that will be targetted in the run.\n 2. Select the number of targets you want to deploy in parallel.\n\n\nOptionally, connect directly to any Git repository or service including VSTS (Git or TFVC), GitHub or your private repository.\nAutomatically trigger your pipeline from changes to your code.\n\n\nFor more details:  https://aka.ms/AA8a1sr\"\n",
+              "workingDirectory": "",
+              "failOnStderr": "false"
+            }
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+      "concurrencyCount": 1,
+      "queueDepthCount": 0
+    },
+    "variables": {}
+  }
+}

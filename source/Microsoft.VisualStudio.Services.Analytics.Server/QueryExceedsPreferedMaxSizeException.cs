@@ -1,0 +1,24 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Analytics.QueryExceedsPreferedMaxSizeException
+// Assembly: Microsoft.VisualStudio.Services.Analytics.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 9C06769D-4EB9-467A-8965-10A4FD97C7AD
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Analytics.Server.dll
+
+using Microsoft.VisualStudio.Services.Common;
+using System;
+
+namespace Microsoft.VisualStudio.Services.Analytics
+{
+  public class QueryExceedsPreferedMaxSizeException : VssServiceException
+  {
+    public QueryExceedsPreferedMaxSizeException(int count, int limit)
+      : this(count, limit, (Exception) null)
+    {
+    }
+
+    public QueryExceedsPreferedMaxSizeException(int count, int limit, Exception innerException)
+      : base(AnalyticsResources.QUERY_EXCEEDS_PREFERED_MAX_SIZE((object) count, (object) limit), innerException)
+    {
+    }
+  }
+}

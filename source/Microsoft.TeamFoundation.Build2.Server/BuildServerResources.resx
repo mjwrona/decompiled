@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DefinitionNotFound" xml:space="preserve">
+    <value>Build pipeline {0} was not found.</value>
+  </data>
+  <data name="BuildQueueMustNotBeSpecifiedForXamlBuild" xml:space="preserve">
+    <value>An agent pool must not be supplied when queueing a build of type XAML.</value>
+  </data>
+  <data name="BuildStatusTextInProgress" xml:space="preserve">
+    <value>Build started</value>
+  </data>
+  <data name="QueueExists" xml:space="preserve">
+    <value>Agent pool {0} already exists.</value>
+  </data>
+  <data name="InvalidGuidValue" xml:space="preserve">
+    <value>The value {0} is not a guid.</value>
+  </data>
+  <data name="InvalidInputForGetChangesAndWorkItemsBetweenBuilds" xml:space="preserve">
+    <value>fromBuildId or toBuildId is null. Supply a valid value and try again.</value>
+  </data>
+  <data name="ClassicPipelinesDisabled" xml:space="preserve">
+    <value>The classic pipelines are disabled for this project / organization.</value>
+  </data>
+  <data name="FolderExists" xml:space="preserve">
+    <value>Folder {0} already exists for project {1}.</value>
+  </data>
+  <data name="MetaTaskDefinitionsNotFound" xml:space="preserve">
+    <value>Please update build pipeline and remove missing task groups with display names: {0}</value>
+  </data>
+  <data name="RestApiInvalidLogLocation" xml:space="preserve">
+    <value>This API is only applicable to logs stored in the file container.</value>
+  </data>
+  <data name="PartiallySucceeded" xml:space="preserve">
+    <value>partially succeeded</value>
+  </data>
+  <data name="GitHubFileContentErrorAtCommitOrBranch" xml:space="preserve">
+    <value>Unable to get the file content from the GitHub repository '{0}' for the source version/branch '{1}' and file path '{2}'. {3}</value>
+  </data>
+  <data name="DefinitionDisabled" xml:space="preserve">
+    <value>Build pipeline {0} is disabled for project {1}.</value>
+  </data>
+  <data name="DurationMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="BuildStatusTextCancelling" xml:space="preserve">
+    <value>Build cancelling...</value>
+  </data>
+  <data name="EnforceSettableVarErrorMessage" xml:space="preserve">
+    <value>See https://aka.ms/AzPipelines/SettingVariablesAtQueueTime - You can't set the following variables ({0}). If you want to be able to set these variables, then edit the pipeline and select Settable at queue time on the variables tab of the pipeline editor.</value>
+  </data>
+  <data name="CouldNotRetrieveSourceVersionDisplayUrl" xml:space="preserve">
+    <value>Could not retrieve web URL for source version {1} associated with build {0}.</value>
+  </data>
+  <data name="GitHubPathContentErrorAtCommitOrBranch" xml:space="preserve">
+    <value>Unable to get the path contents from the GitHub repository '{0}' for the source version/branch '{1}' and path '{2}'. It is possible the specified path is a file. {3}</value>
+  </data>
+  <data name="ArtifactTypeNotSupported" xml:space="preserve">
+    <value>The artifact type {0} is not supported.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>failed</value>
+  </data>
+  <data name="SourceOrTargetBuildNotFound" xml:space="preserve">
+    <value>Either build with ID '{0}' or '{1}' not found</value>
+  </data>
+  <data name="GitHubUnknownPullRequestId" xml:space="preserve">
+    <value>Could not get pull request {1} for repository {0}. Failed with message: {2}</value>
+  </data>
+  <data name="ForkBuildBlockedDueToYamlProcess" xml:space="preserve">
+    <value>YAML builds are not allowed when building pull requests from forks.</value>
+  </data>
+  <data name="DefinitionBadgeNone" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="DemandsNotSatisfied" xml:space="preserve">
+    <value>No registered agents were found in the selected pool with the following capabilities: {0}. Use a different pool. For more information, refer to https://go.microsoft.com/fwlink/?linkid=859777.</value>
+  </data>
+  <data name="UnableToDetermineRepository" xml:space="preserve">
+    <value>Unable to determine repository.</value>
+  </data>
+  <data name="BuiltAfterFilterNotSupportedForDefinitionIds" xml:space="preserve">
+    <value>Built after filter is not supported when pipeline IDs are specified.</value>
+  </data>
+  <data name="DefinitionBadgeNoBuilds" xml:space="preserve">
+    <value>never built</value>
+  </data>
+  <data name="RepositoryDoesNotExist" xml:space="preserve">
+    <value>The specified repository '{0}' does not exist</value>
+  </data>
+  <data name="DefinitionNotMatched" xml:space="preserve">
+    <value>Build pipeline '{0}' does not match build pipeline '{1}'</value>
+  </data>
+  <data name="BuildEventNotFound" xml:space="preserve">
+    <value>Build event for build with ID {0} and type {1} not found.</value>
+  </data>
+  <data name="MissingLeasesToFetchParameter" xml:space="preserve">
+    <value>The leasesToFetch parameter should not be null or empty.</value>
+  </data>
+  <data name="WrongProjectSpecifiedForDefinition" xml:space="preserve">
+    <value>The request specifies project ID {0} but the supplied pipeline specifies project ID {1}.</value>
+  </data>
+  <data name="NotSupportedOnXamlBuildDefinition" xml:space="preserve">
+    <value>This operation is not supported for XAML build pipelines.</value>
+  </data>
+  <data name="DefinitionContinuationTokenNoQueryOrder" xml:space="preserve">
+    <value>Continuation token timestamp without query order is ambiguous.</value>
+  </data>
+  <data name="InvalidIntegerValue" xml:space="preserve">
+    <value>The value {0} is not an integer.</value>
+  </data>
+  <data name="BuildDurationTextInProgress" xml:space="preserve">
+    <value>Running for {0} ({1})</value>
+  </data>
+  <data name="WrongIdSpecifiedForDefinitionFolder" xml:space="preserve">
+    <value>The request specifies pipeline folder ID {0} but the supplied pipeline folder has ID {1}.</value>
+  </data>
+  <data name="DefinitionBadgeSucceeded" xml:space="preserve">
+    <value>succeeded</value>
+  </data>
+  <data name="BuildOrchestrationExists" xml:space="preserve">
+    <value>Build orchestration already exists for build run {0} in project {1}.</value>
+  </data>
+  <data name="GitHubRepositoryNoTreeFound" xml:space="preserve">
+    <value>The GitHub repository '{0}' on branch '{1}' for commit '{2}' could not return a repository tree.</value>
+  </data>
+  <data name="ArtifactNotFoundForBuild" xml:space="preserve">
+    <value>Artifact {0} was not found for build {1}.</value>
+  </data>
+  <data name="GatedCheckinPhaseDisplayName" xml:space="preserve">
+    <value>Gated Checkin Job</value>
+  </data>
+  <data name="AccessDeniedForDefinition" xml:space="preserve">
+    <value>TF215106: Access denied. {0} needs {1} permissions for build pipeline {2} in team project {3} to perform the action. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>canceled</value>
+  </data>
+  <data name="SecureFilesAccessDenied" xml:space="preserve">
+    <value>The user doesn't have access to the secure file(s) added to this pipeline or they are not found. Names/IDs: {0}</value>
+  </data>
+  <data name="DraftBuildNumberSuffix" xml:space="preserve">
+    <value>DRAFT</value>
+  </data>
+  <data name="WrongProjectSpecifiedForBuild" xml:space="preserve">
+    <value>The request specifies project ID {0} but the supplied build specifies project ID {1}.</value>
+  </data>
+  <data name="YamlRequiresOneJob" xml:space="preserve">
+    <value>Each job within a YAML pipeline requires at least one step. The job '{0}' does not contain a step.</value>
+  </data>
+  <data name="BuildNotFound" xml:space="preserve">
+    <value>The requested build {0} could not be found.</value>
+  </data>
+  <data name="CannotDeleteFolderDueToHiddenDefinitions" xml:space="preserve">
+    <value>Cannot delete folder '{0}' because it contains hidden definitions.</value>
+  </data>
+  <data name="FolderNotFound" xml:space="preserve">
+    <value>Folder {0} was not found.</value>
+  </data>
+  <data name="BuildResultTextCanceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="InvalidBuildParametersJson" xml:space="preserve">
+    <value>The parameters JSON property value '{0}' is semantically incorrect. This field must be a stringified JSON dictionary.</value>
+  </data>
+  <data name="UnableToDetermineRepoAccessToken" xml:space="preserve">
+    <value>Unable to determine the access token for the repository '{0}'.</value>
+  </data>
+  <data name="DuplicateDeleteBuildSpecs" xml:space="preserve">
+    <value>Multiple delete specifications were supplied for build {0}.</value>
+  </data>
+  <data name="ErrorResolvingVersionFromBranch" xml:space="preserve">
+    <value>An error occurred while attempting to resolve a specific version from the source branch '{0}'. {1}</value>
+  </data>
+  <data name="BuildStatusInvalidChange" xml:space="preserve">
+    <value>Could not update the build status for build {0} from {1} to {2}.</value>
+  </data>
+  <data name="TriggerNotSupportedForRepository" xml:space="preserve">
+    <value>The trigger type {0} is not valid for the {1} repository type.</value>
+  </data>
+  <data name="BuildHasNoRepository" xml:space="preserve">
+    <value>The build {0} does not have any associated repository information.</value>
+  </data>
+  <data name="AmbiguousTaskName" xml:space="preserve">
+    <value>Unable to resolve a task for the name '{0}'. The name is ambiguous.</value>
+  </data>
+  <data name="CannotRestoreDeletedDraftWithoutRestoringParent" xml:space="preserve">
+    <value>The pipeline to be restored is a draft and the parent is also deleted. You must restore the parent before restoring the draft.</value>
+  </data>
+  <data name="BuildCompleted_Canceled" xml:space="preserve">
+    <value>{0} Build {1} has been canceled</value>
+  </data>
+  <data name="VariableGroupsAccessDenied" xml:space="preserve">
+    <value>The user doesn't have access to the variable groups added to this pipeline or they are not found. IDs: {0}</value>
+  </data>
+  <data name="BuildStatusTextNotStarted" xml:space="preserve">
+    <value>Build not started</value>
+  </data>
+  <data name="BuildControllerMustNotBeSpecifiedForBuild" xml:space="preserve">
+    <value>A controller must not be supplied when queueing a build of type Build.</value>
+  </data>
+  <data name="DefinitionBadgePartiallySucceeded" xml:space="preserve">
+    <value>partially succeeded</value>
+  </data>
+  <data name="InvalidDefinitionTriggerSource" xml:space="preserve">
+    <value>Pipeline {0} is an invalid build completion trigger. It is either a draft pipeline or does not exist. </value>
+  </data>
+  <data name="ImmutableSourceBranch" xml:space="preserve">
+    <value>Build branches are immutable. User requests are not allowed to change source branch!</value>
+  </data>
+  <data name="InvalidCommitId" xml:space="preserve">
+    <value>The value specified for SourceVersion is not a valid commit ID.</value>
+  </data>
+  <data name="GitHubCreateFileAtBranchError" xml:space="preserve">
+    <value>Unable to create a file in the GitHub repository '{0}' for the branch '{1}' and file path '{2}'. {3}</value>
+  </data>
+  <data name="BuildResultTextPartiallySucceeded" xml:space="preserve">
+    <value>Partially succeeded</value>
+  </data>
+  <data name="ScheduleJobName" xml:space="preserve">
+    <value>Scheduled Build Job</value>
+  </data>
+  <data name="RepositoryDoesNotReferenceServiceEndpoint" xml:space="preserve">
+    <value>The repository does not reference a service connection.</value>
+  </data>
+  <data name="WrongStageCount" xml:space="preserve">
+    <value>Build has {0} stage(s), but should have 1.</value>
+  </data>
+  <data name="MultiAgentNotSupportedForGatedCheckin" xml:space="preserve">
+    <value>VS403434: Your check-in is gated by the '{0}' build pipeline is using multi-agent setting. Multi-agent execution is not supported for gated check-in.</value>
+  </data>
+  <data name="RemoveLeaseAccessDeniedException" xml:space="preserve">
+    <value>User {0} does not have permission to remove retention lease created by {1} for pipeline run {2} of pipeline {3}.</value>
+  </data>
+  <data name="AbusiveUserRequestError" xml:space="preserve">
+    <value>VS403468: This build triggered an abuse detection mechanism and has been blocked.</value>
+  </data>
+  <data name="YamlRequiresBranchSpecification" xml:space="preserve">
+    <value>A YAML build requires a branch specification.</value>
+  </data>
+  <data name="InvalidBuildIdsQuery" xml:space="preserve">
+    <value>The buildIds filter may not be used with other filter parameters.</value>
+  </data>
+  <data name="MultipleTriggersNotAllowed" xml:space="preserve">
+    <value>Only one trigger of type {0} is allowed but multiple were specified.</value>
+  </data>
+  <data name="DirectoryNotFoundInRepoAtCommitOrBranch" xml:space="preserve">
+    <value>Directory {0} not found in repository {1} at version/branch {2}.</value>
+  </data>
+  <data name="OrchestrationTypeNotSupported" xml:space="preserve">
+    <value>The orchestration type {0} is not supported.</value>
+  </data>
+  <data name="FileExceedsMaxLength" xml:space="preserve">
+    <value>File '{0}' exceeds max length of {1} kilobytes.</value>
+  </data>
+  <data name="AccessDeniedForBuild" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions for {2} in team project {3} to perform the action.</value>
+  </data>
+  <data name="MetricQueryDuplicateNames" xml:space="preserve">
+    <value>The metrics to update must have unique names</value>
+  </data>
+  <data name="RetentionLeaseNotFound" xml:space="preserve">
+    <value>The requested retention lease {0} could not be found.</value>
+  </data>
+  <data name="ErrorWhileDeletingSubscription" xml:space="preserve">
+    <value>An error was encountered while deleting the existing subscription: {0}</value>
+  </data>
+  <data name="NoCapableAgentsOnline" xml:space="preserve">
+    <value>There are agents that are capable of running the build, but they are not online. If the agent is configured to run as a service, ensure that the "VSTS Agent ({agent name})" service is running.</value>
+  </data>
+  <data name="MissingRequestContent" xml:space="preserve">
+    <value>This request expects an object in the request body, but nothing was supplied.</value>
+  </data>
+  <data name="BuildCompleted_Successful" xml:space="preserve">
+    <value>{0} Build {1} succeeded</value>
+  </data>
+  <data name="DropArtifactRootIdNotFound" xml:space="preserve">
+    <value>RootId is not present in DropArtifact resource properties.</value>
+  </data>
+  <data name="DefinitionRestoredBecauseRetainedByRelease" xml:space="preserve">
+    <value>Definition has been restored because the following builds are retained by a release: {0}.</value>
+  </data>
+  <data name="RepositoryInfoNotSupportedForDefinitionIds" xml:space="preserve">
+    <value>Repository query is not supported when pipeline IDs are specified.</value>
+  </data>
+  <data name="PipelineRetentionWorkerJobName" xml:space="preserve">
+    <value>Pipeline Retention Worker Job</value>
+  </data>
+  <data name="UnexpectedError" xml:space="preserve">
+    <value>TF42063: An unexpected error has occurred</value>
+  </data>
+  <data name="InvalidRequestContent" xml:space="preserve">
+    <value>This request expects an object in the request body, but the supplied data could not be deserialized.</value>
+  </data>
+  <data name="CannotUpdateTriggeredByBuildException" xml:space="preserve">
+    <value>Information about the triggering build cannot be updated.</value>
+  </data>
+  <data name="EditPipelineQueueConfigurationPermission" xml:space="preserve">
+    <value>Edit pipeline queue configuration</value>
+  </data>
+  <data name="WrongProjectSpecifiedForFolder" xml:space="preserve">
+    <value>The request specifies project ID {0} but the supplied folder specifies project ID {1}.</value>
+  </data>
+  <data name="FailedToProcessCheckin" xml:space="preserve">
+    <value>TF215041: Failed to process tfvc checkin with changeset {0}.</value>
+  </data>
+  <data name="RetentionPolicyFinishTimeDeletedReason" xml:space="preserve">
+    <value>The build was deleted by the retention policy because it finished more than {0} days ago.</value>
+  </data>
+  <data name="DeleteDefinitionJobName" xml:space="preserve">
+    <value>Delete Pipeline Job</value>
+  </data>
+  <data name="DefinitionTypeNotSupported" xml:space="preserve">
+    <value>Pipeline type {0} is not supported.</value>
+  </data>
+  <data name="RetentionLeaseUpdateIsNull" xml:space="preserve">
+    <value>The retention lease update is null.</value>
+  </data>
+  <data name="UseDTQueueAPIs" xml:space="preserve">
+    <value>Use Queue APIs from the DistributedTask client.</value>
+  </data>
+  <data name="GitHubCheckSkippedCommentHasSkipCIKeyword" xml:space="preserve">
+    <value>A commit message included a [skip command](https://go.microsoft.com/fwlink/?linkid=2083685).</value>
+  </data>
+  <data name="GitHubReadRepositoryRefFailure" xml:space="preserve">
+    <value>Could not read GitHub repository '{0}' on ref '{1}': {2}</value>
+  </data>
+  <data name="DryRunYamlOverrideNotPermitted" xml:space="preserve">
+    <value>User not permitted to queue dry run for build pipeline {0} with modified YAML. Permissions needed: {1}</value>
+  </data>
+  <data name="TimelineNotFound" xml:space="preserve">
+    <value>Timeline {0} was not found.</value>
+  </data>
+  <data name="InvalidFolder" xml:space="preserve">
+    <value>Folder with path {0} exceeded the 400 character limit.</value>
+  </data>
+  <data name="UpdateBuildsMultipleProjectsNotSupported" xml:space="preserve">
+    <value>Cannot update builds across multiple projects.</value>
+  </data>
+  <data name="PollingExceptionOccurred" xml:space="preserve">
+    <value>An exception occurred while polling the repository.  Error: {0}.</value>
+  </data>
+  <data name="SkippingAllStages" xml:space="preserve">
+    <value>Requested to skip all stages which is not valid. At least one stage must be allowed to run.</value>
+  </data>
+  <data name="GitHubCheckSkippedNoMatchingPathFilter" xml:space="preserve">
+    <value>No pipeline [path filters](https://go.microsoft.com/fwlink/?linkid=2084226) matched the file changes.</value>
+  </data>
+  <data name="ReportFormatNotSupported" xml:space="preserve">
+    <value>The specified report format {0} is not supported.</value>
+  </data>
+  <data name="CycleDetectedInProvidedBuildCompletionTriggers" xml:space="preserve">
+    <value>The specified build completion triggers would result in a cyclic build trigger relationship.</value>
+  </data>
+  <data name="ProjectIsNotWellFormed" xml:space="preserve">
+    <value>The project is still being created.  Please wait for the operation to complete and try again.</value>
+  </data>
+  <data name="ArtifactExists" xml:space="preserve">
+    <value>Artifact {0} already exists for build {1}.</value>
+  </data>
+  <data name="EmailTitleSuffixForTestResults" xml:space="preserve">
+    <value> - {0} tests passed</value>
+  </data>
+  <data name="RepositoryNotFound" xml:space="preserve">
+    <value>Repository resource {0} not found for definition {1}{2}</value>
+  </data>
+  <data name="BuildControllerNotFound" xml:space="preserve">
+    <value>Controller {0} was not found.</value>
+  </data>
+  <data name="ProjectRequired" xml:space="preserve">
+    <value>No project was specified.</value>
+  </data>
+  <data name="ProjectCollectionBuildService" xml:space="preserve">
+    <value>Project Collection Build Service ({0})</value>
+  </data>
+  <data name="DeleteTeamProjectsBuildDeletedReason" xml:space="preserve">
+    <value>The build was deleted because team project {0} was deleted.</value>
+  </data>
+  <data name="GitHubCreatePullRequestError" xml:space="preserve">
+    <value>Unable to create the pull request from the branch {1} to the branch {2} in the GitHub repository '{0}'. {3}</value>
+  </data>
+  <data name="RetryNotSupportedForReason" xml:space="preserve">
+    <value>The retry operation is not supported for pipelines with reason {0}.</value>
+  </data>
+  <data name="NoCapableAgentsExist" xml:space="preserve">
+    <value>There are no agents that are capable of running build {0} for pipeline {1} in project {2}.</value>
+  </data>
+  <data name="WrongIdSpecifiedForDefinition" xml:space="preserve">
+    <value>The request specifies pipeline ID {0} but the supplied pipeline has ID {1}.</value>
+  </data>
+  <data name="DefinitionTemplateCannotBeModified" xml:space="preserve">
+    <value>Build pipeline template {0} cannot be modified.</value>
+  </data>
+  <data name="MustSpecifyAtLeastOneRetentionProperty" xml:space="preserve">
+    <value>The request did not include any retention setting.</value>
+  </data>
+  <data name="BuildStatusTextCompleted" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="GatedCheckInValidatorNotFound" xml:space="preserve">
+    <value>Could not find a validator for the gated check-in ticket.</value>
+  </data>
+  <data name="PipelineForkBuildBlocked" xml:space="preserve">
+    <value>No secret variables, service connections, or secure files are allowed when building pull requests from forks.</value>
+  </data>
+  <data name="ErrorWhileFindingSubscription" xml:space="preserve">
+    <value>An error was encountered while finding the existing subscription: {0}</value>
+  </data>
+  <data name="InvalidStatusResultFilterCombination" xml:space="preserve">
+    <value>The status filter {0} is not valid when combined with the result filter {1}.</value>
+  </data>
+  <data name="GitHubUnknownRepository" xml:space="preserve">
+    <value>The GitHub repository '{0}' could not be found: {1}</value>
+  </data>
+  <data name="GitHubCheckSkippedNoMatchingTriggers" xml:space="preserve">
+    <value>No pipeline [triggers](https://go.microsoft.com/fwlink/?linkid=2084226) matched the change.</value>
+  </data>
+  <data name="ContributionDoesntTargetTemplate" xml:space="preserve">
+    <value>Contribution {0} does not target any build template, property {1} is invalid.</value>
+  </data>
+  <data name="InvalidAuthScopeErrorMessage" xml:space="preserve">
+    <value>To get sources from a different team project, on the Options tab you must set the build job authorization scope to ‘Project collection’ and ensure that the 'Limit job authorization scope to current project' pipeline setting is disabled.</value>
+  </data>
+  <data name="RetryNotSupportedForPausedDefinition" xml:space="preserve">
+    <value>The retry operation is not supported for pipeline {0} in project {1} because it is paused. Re-enable the pipeline and try again.</value>
+  </data>
+  <data name="UnableToResolveVersionFromRef" xml:space="preserve">
+    <value>Unable to resolve the reference '{0}' to a specific version. Verify the reference exists in the source repository.</value>
+  </data>
+  <data name="BuildResultTextFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="AccessDeniedForProject" xml:space="preserve">
+    <value>TF215002: Access denied. {0} needs {1} permissions for team project {2} to perform the action. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="WrongIdSpecifiedForBuild" xml:space="preserve">
+    <value>The request specifies build ID {0} but the supplied build has ID {1}.</value>
+  </data>
+  <data name="AccessDeniedForFolder" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions for path {2} in team project {3} to perform the action. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="InvalidContinuationToken" xml:space="preserve">
+    <value>The continuation token is invalid.</value>
+  </data>
+  <data name="InvalidBuildStep" xml:space="preserve">
+    <value>One or more of the tasks in the build does not have an associated task definition. Check if the task was uninstalled or has failed a licensing check.</value>
+  </data>
+  <data name="GitHubCheckSkippedNoMatchingBranchFilter" xml:space="preserve">
+    <value>No pipeline [branch filters](https://go.microsoft.com/fwlink/?linkid=2084226) matched the modified branch.</value>
+  </data>
+  <data name="BuildDefinitionInputInvalid" xml:space="preserve">
+    <value>Input '{0}' with value '{1}' didn't satisfy '{2}': '{3}'</value>
+  </data>
+  <data name="InvalidTriggerSettingsSourceType" xml:space="preserve">
+    <value>The trigger settings source {0} is not valid with process type {1}.</value>
+  </data>
+  <data name="BuildJobName" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="ProcessTypeNotSupported" xml:space="preserve">
+    <value>The process type {0} is not supported.</value>
+  </data>
+  <data name="NumericFolderNameNotAllowed" xml:space="preserve">
+    <value>A folder name must contain at least one non-numeric character.</value>
+  </data>
+  <data name="InvalidYamlOverride" xml:space="preserve">
+    <value>The Yaml specified in the body was sent in an invalid format.</value>
+  </data>
+  <data name="MultipleBuildStagesNotAllowedInYaml" xml:space="preserve">
+    <value>Multiple build stages are not supported in YAML.</value>
+  </data>
+  <data name="CleanupJobName" xml:space="preserve">
+    <value>Delete Artifacts</value>
+  </data>
+  <data name="BuildLogNotFound" xml:space="preserve">
+    <value>Log not found for build {0}.</value>
+  </data>
+  <data name="AgentsNotRegistered" xml:space="preserve">
+    <value>No registered agents were found in the selected pool. Use a different pool. For more information, refer to https://go.microsoft.com/fwlink/?linkid=859777.</value>
+  </data>
+  <data name="BuildStatusTextPostPoned" xml:space="preserve">
+    <value>Build postponed</value>
+  </data>
+  <data name="DurationDays" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="GitHubFileContentError" xml:space="preserve">
+    <value>Unable to get the file content from the GitHub repository '{0}' for the source version '{1}' in branch {2} and file path '{3}'. {4}</value>
+  </data>
+  <data name="BuildRequestValidationFailed" xml:space="preserve">
+    <value>Could not queue the build because there were validation errors or warnings.</value>
+  </data>
+  <data name="BuildCompleted_PartiallySuccessful" xml:space="preserve">
+    <value>{0} Build {1} partially succeeded</value>
+  </data>
+  <data name="BuildResultTextSucceeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="DurationSeconds" xml:space="preserve">
+    <value>{0} seconds</value>
+  </data>
+  <data name="GitHubFileAlreadyExists" xml:space="preserve">
+    <value>The file {0} already exists in the branch {1} of the GitHub repository {2}.</value>
+  </data>
+  <data name="GatedCheckinRequiresSinglePhase" xml:space="preserve">
+    <value>VS403427: Your check-in is gated by the '{0}' build pipeline which has more than one job. To support gated check-in, the build pipeline must have only one agent job.</value>
+  </data>
+  <data name="AmbigiousBuiltAfterFilter" xml:space="preserve">
+    <value>Both built after and not built after cannot be specified.</value>
+  </data>
+  <data name="EnforceSettableVarWarningMessage" xml:space="preserve">
+    <value>See https://aka.ms/AzPipelines/SettingVariablesAtQueueTime - You won't be able to set the following variables ({0}) at runtime soon. If you want to be able to set these variables, then edit the pipeline and select Settable at queue time on the variables tab of the pipeline editor.</value>
+  </data>
+  <data name="FileNotFoundInRepo" xml:space="preserve">
+    <value>File {0} not found in repository {1} branch {2} version {3}.</value>
+  </data>
+  <data name="YamlConfigurationPipelineRequired" xml:space="preserve">
+    <value>This operation is only valid for a pipeline with a YAML configuration.</value>
+  </data>
+  <data name="DefinitionBadgeLeftText" xml:space="preserve">
+    <value>Azure Pipelines</value>
+  </data>
+  <data name="MissingTasksForDefinition" xml:space="preserve">
+    <value>Tasks with IDs {0} can't be found for a build pipeline {1}.</value>
+  </data>
+  <data name="MultipliedBuildJobValueSeparator" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="FailedToDeserializeBuildParameters" xml:space="preserve">
+    <value>Failed to deserialize the build parameters. This field must be a stringified JSON dictionary.</value>
+  </data>
+  <data name="GitHubBranchNotFound" xml:space="preserve">
+    <value>The branch {0} was not found in the GitHub repository {1}.</value>
+  </data>
+  <data name="BuildNumberFormatInvalidCharacters" xml:space="preserve">
+    <value>TF209010: The build number format {0} contains invalid character(s), is too long, or ends with '.'. The maximum length of a build number is 255 characters. Characters which are not allowed include '"', '/', ':', '&lt;', '&gt;', '\', '|', '?', '@', and '*'.</value>
+  </data>
+  <data name="InvalidDefinitionProperty" xml:space="preserve">
+    <value>You are attempting to save a build pipeline with the following property set: {0}. Remove this property before saving it.</value>
+  </data>
+  <data name="ServiceIdentityName" xml:space="preserve">
+    <value>Elastic Build</value>
+  </data>
+  <data name="YamlIsBroken" xml:space="preserve">
+    <value> cause yaml with repository info is broken and failed to parse</value>
+  </data>
+  <data name="DaysToBuildInvalid" xml:space="preserve">
+    <value>At least one day to build must be selected on the scheduled trigger.</value>
+  </data>
+  <data name="GitHubRepoIdIsInvalid" xml:space="preserve">
+    <value>Repository ID for a GitHub repository should be in the form: OwnerName/Repository.</value>
+  </data>
+  <data name="ContainerNotFoundException" xml:space="preserve">
+    <value>Container does not exist in the file container service at location {0}</value>
+  </data>
+  <data name="ReportStreamNotSupported" xml:space="preserve">
+    <value>Requested stream {0} is not supported for reports.</value>
+  </data>
+  <data name="YamlLoadError" xml:space="preserve">
+    <value>An error occurred while loading the YAML build pipeline. {0}</value>
+  </data>
+  <data name="PollingJobName" xml:space="preserve">
+    <value>Polling Build Job</value>
+  </data>
+  <data name="CannotDeleteRetainedBuild" xml:space="preserve">
+    <value>TF900561: The following build cannot be deleted because there is a retention lease on it: {0}. Remove any leases to allow deletion of this build.</value>
+  </data>
+  <data name="DockerProcess_BuildStep" xml:space="preserve">
+    <value>Run docker build</value>
+  </data>
+  <data name="GitHubCreateBranchError" xml:space="preserve">
+    <value>Unable to create the branch {0} in the GitHub repository '{1}' based on the branch '{2}'. {3}</value>
+  </data>
+  <data name="MetricAggregationTypeNotSupported" xml:space="preserve">
+    <value>MetricAggregationType {0} is not supported. Choose from the list of WellKnownMetricAggregationTypes.</value>
+  </data>
+  <data name="ErrorWhileCreatingSubscription" xml:space="preserve">
+    <value>An error was encountered while creating the existing subscription: {0}</value>
+  </data>
+  <data name="UnsupportedBuildCompletionTriggerChain" xml:space="preserve">
+    <value>The build completion trigger chain for pipeline {0} exceeds the supported threshold.</value>
+  </data>
+  <data name="BuildNumberFormatInvalidOutput" xml:space="preserve">
+    <value>The build number format string {0} generated a build number {1} which contains invalid character(s), is too long, or ends with '.'. The maximum length of a build number is 255 characters. Characters which are not allowed include '"', '/', ':', '&lt;', '&gt;', '\', '|', '?', '@', and '*'.</value>
+  </data>
+  <data name="RepositoryTypeMissing" xml:space="preserve">
+    <value>Repository type is missing/invalid.</value>
+  </data>
+  <data name="GitHubBranchAlreadyExists" xml:space="preserve">
+    <value>The branch {0} already exists in the GitHub repository {1}.</value>
+  </data>
+  <data name="EndpointsAccessDenied" xml:space="preserve">
+    <value>The user doesn't have access to the service connection(s) added to this pipeline or they are not found. Names/IDs: {0}</value>
+  </data>
+  <data name="YamlRequiresOnePhase" xml:space="preserve">
+    <value>A YAML pipeline requires exactly one job.</value>
+  </data>
+  <data name="YamlRequiresOneStage" xml:space="preserve">
+    <value>No stages were found in the YAML. One stage is required.</value>
+  </data>
+  <data name="BuildInvalidState" xml:space="preserve">
+    <value>The build is in an invalid state. Expected NotStarted or Cancelling but the actual status is {0}.</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>succeeded</value>
+  </data>
+  <data name="DurationHours" xml:space="preserve">
+    <value>{0} hours</value>
+  </data>
+  <data name="GitHubRepositoryNoCommitFound" xml:space="preserve">
+    <value>The GitHub repository '{0}' on branch '{1}' could not find the latest commit.</value>
+  </data>
+  <data name="DefinitionBadgeNoDefinition" xml:space="preserve">
+    <value>set up now</value>
+  </data>
+  <data name="DefinitionBadgeFailed" xml:space="preserve">
+    <value>failed</value>
+  </data>
+  <data name="TaskNotFound" xml:space="preserve">
+    <value>Unable to find a task with name '{0}'.</value>
+  </data>
+  <data name="BuildCompletionEmailTitle" xml:space="preserve">
+    <value>{0} Build {1} {2}</value>
+  </data>
+  <data name="InvalidRepositoryParameters" xml:space="preserve">
+    <value>Both the repositoryId and repositoryType parameters must be supplied.</value>
+  </data>
+  <data name="CannotDeleteDefinitionWithRetainedBuilds" xml:space="preserve">
+    <value>One or more builds associated with the requested pipeline(s) are retained by a release. The pipeline(s) and builds will not be deleted.</value>
+  </data>
+  <data name="FailedToQueueABuild" xml:space="preserve">
+    <value>Failed to queue a build for build pipeline {0} with build reason {1}.</value>
+  </data>
+  <data name="RepositoryBranchMissing" xml:space="preserve">
+    <value>Branch name is missing for the given repository</value>
+  </data>
+  <data name="GatedCheckinRequiresAgentPhase" xml:space="preserve">
+    <value>VS403433: Your check-in is gated by the '{0}' build pipeline which does not have an agent job. The build pipeline must have exactly one agent job.</value>
+  </data>
+  <data name="InvalidVersionFormat" xml:space="preserve">
+    <value>Invalid version format for task '{0}' and version '{1}'. Expected format 'N'. For example, 1</value>
+  </data>
+  <data name="UpdateDefinition_ServicingContextCannotAuthorizeResources" xml:space="preserve">
+    <value>A servicing context must not auto-authorize resources on a build definition.</value>
+  </data>
+  <data name="GitHubUpdateFileContentError" xml:space="preserve">
+    <value>Unable to update file content for the GitHub repository '{0}' in branch {1} and file path '{2}'. {3}</value>
+  </data>
+  <data name="BuildDefinitionTemplateSerializationError" xml:space="preserve">
+    <value>The template.json at path {0} could not be serialized.</value>
+  </data>
+  <data name="BuildCompleted_Unknown" xml:space="preserve">
+    <value>{0} Build {1} completed (Status: {2})</value>
+  </data>
+  <data name="InvalidStageToSkip" xml:space="preserve">
+    <value>'{0}' is not a valid stage to skip.</value>
+  </data>
+  <data name="InvalidTimelineRecordStateChange" xml:space="preserve">
+    <value>Updating the stage state to {0} is not supported</value>
+  </data>
+  <data name="BuildResultTextUnknown" xml:space="preserve">
+    <value>Status unknown</value>
+  </data>
+  <data name="QueueNotFound" xml:space="preserve">
+    <value>Agent pool {0} was not found.</value>
+  </data>
+  <data name="DropArtifactManifestNotFound" xml:space="preserve">
+    <value>The request manifest ID {0} does not exist.</value>
+  </data>
+  <data name="BuildCompleted_Failed" xml:space="preserve">
+    <value>{0} Build {1} failed</value>
+  </data>
+  <data name="InvalidStatusFilterFinishTimeCombination" xml:space="preserve">
+    <value>The status filter {0} is not valid when a minimum or maximum finish time is specified.</value>
+  </data>
+  <data name="VariableNameIsReserved" xml:space="preserve">
+    <value>The variable name {0} is reserved by the system.</value>
+  </data>
+  <data name="InvalidSettingsSourceType" xml:space="preserve">
+    <value>Invalid settings source {0}.</value>
+  </data>
+  <data name="DefinitionContinuationTokenNotSupportedForXaml" xml:space="preserve">
+    <value>Continuation token is not supported for XAML build pipelines.</value>
+  </data>
+  <data name="BuildSpecifiedMultipleTimes" xml:space="preserve">
+    <value>Build ID {0} is specified more than once.</value>
+  </data>
+  <data name="BuildDeletedReasonManual" xml:space="preserve">
+    <value>The build was manually deleted.</value>
+  </data>
+  <data name="InvalidDraftDefinition" xml:space="preserve">
+    <value>A draft pipeline cannot have triggers.</value>
+  </data>
+  <data name="RepositoryDoesNotProvideApiUrl" xml:space="preserve">
+    <value>The repository does not provide a valid API URL</value>
+  </data>
+  <data name="InvalidMaxBuildsPerDefinition" xml:space="preserve">
+    <value>The definitionIDs parameter is required if maxBuildsPerDefinition is specified.</value>
+  </data>
+  <data name="CannotUpdateFolderDueToLackOfPermissions" xml:space="preserve">
+    <value>Cannot update folder '{0}' because you don't have permissions to edit or view some of contained definitions.</value>
+  </data>
+  <data name="AmbiguousDefinitionName" xml:space="preserve">
+    <value>{0} is an ambiguous pipeline name. Include the full folder path in your request.</value>
+  </data>
+  <data name="DefinitionTriggerAlreadyExistsException" xml:space="preserve">
+    <value>Pipeline {0} is already a build completion trigger.</value>
+  </data>
+  <data name="MustIncludeDefinitionIdWithRunId" xml:space="preserve">
+    <value>The request did not include a pipeline definition id along with the pipeline run id.</value>
+  </data>
+  <data name="ContinuationTokenNotSupportedForDefinitionIds" xml:space="preserve">
+    <value>Continuation token is not supported when pipeline IDs are specified.</value>
+  </data>
+  <data name="BuildCanceledReason" xml:space="preserve">
+    <value>The build was canceled by {0}.</value>
+  </data>
+  <data name="UnrecognizedPhaseTarget" xml:space="preserve">
+    <value>Unrecognized phase target type: {0}.</value>
+  </data>
+  <data name="DefinitionBadgeCanceled" xml:space="preserve">
+    <value>canceled</value>
+  </data>
+  <data name="NoQueueSpecified" xml:space="preserve">
+    <value>No pool was specified.</value>
+  </data>
+  <data name="AccessDeniedForPrivilege" xml:space="preserve">
+    <value>TF277005: Access denied. {0} needs the {1} privilege to perform this action. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="MultipliedBuildJobFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="CouldNotRecreateSubscription" xml:space="preserve">
+    <value>Could not recreate the subscription.  {0}</value>
+  </data>
+  <data name="InvalidBuildEventStatusUpdate" xml:space="preserve">
+    <value>Invalid status update for build with ID {0} and type {1} to status {2}</value>
+  </data>
+  <data name="DefinitionTemplateNotFound" xml:space="preserve">
+    <value>Pipeline template {0} was not found.</value>
+  </data>
+  <data name="RequestPropertyInvalid" xml:space="preserve">
+    <value>The request property {0} with value {1} is not valid.</value>
+  </data>
+  <data name="DuplicateBuildOption" xml:space="preserve">
+    <value>Build option {0} is specified more than once. Each option can be specified at most once.</value>
+  </data>
+  <data name="BuildExists" xml:space="preserve">
+    <value>Build {0} already exists for build pipeline {1} in project {2}.</value>
+  </data>
+  <data name="DefinitionExists" xml:space="preserve">
+    <value>Build pipeline {0} already exists for project {1}.</value>
+  </data>
+  <data name="ResourcesQueryRequiresType" xml:space="preserve">
+    <value>The type parameter is required when querying for resources by id.</value>
+  </data>
+  <data name="MustSpecifyAtLeastOneRetentionLeaseProperty" xml:space="preserve">
+    <value>The request did not include any retention lease identification information.</value>
+  </data>
+  <data name="FolderPathNotSupported" xml:space="preserve">
+    <value>Folder path {0} is not supported for the current operation</value>
+  </data>
+  <data name="ProjectBuildService" xml:space="preserve">
+    <value>{0} Build Service ({1})</value>
+  </data>
+  <data name="BuildRepositoryTypeNotSupported" xml:space="preserve">
+    <value>The repository type {0} is not supported.</value>
+  </data>
+  <data name="BuildReasonNotSupported" xml:space="preserve">
+    <value>Build reason {0} is not supported at this API version.</value>
+  </data>
+  <data name="BuildCanceledBeforeStarted" xml:space="preserve">
+    <value>The build was canceled before it was started.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="BuildEventPermissionError" xml:space="preserve">
+    <value>BuildEventService requires a system request context</value>
+  </data>
+  <data name="BuildDurationTextCompleted" xml:space="preserve">
+    <value>Ran for {0} ({1}), completed {2} ago</value>
+  </data>
+</root>

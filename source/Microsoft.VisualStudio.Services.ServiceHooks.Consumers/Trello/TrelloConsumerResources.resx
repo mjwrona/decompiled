@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ListCreateAction_InputListNameDescription" xml:space="preserve">
+    <value>Name for the new list. Supports templates. Defaults to the text description of the event.</value>
+  </data>
+  <data name="CardCreateAction_InputLabelsDescription" xml:space="preserve">
+    <value>A comma-separated list of label colors to apply to the created card. Valid label color names are red, orange, yellow, green, blue, and purple.</value>
+  </data>
+  <data name="ListCreateAction_InputBoardDescription" xml:space="preserve">
+    <value>The name of the board on which the Trello list will be created.</value>
+  </data>
+  <data name="QueryExceptionFormat" xml:space="preserve">
+    <value>Trello query failed with exception '{0}'</value>
+  </data>
+  <data name="ListCreateAction_DescriptionFormat" xml:space="preserve">
+    <value>Board {0}</value>
+  </data>
+  <data name="ListCreateAction_InputAddToBottomName" xml:space="preserve">
+    <value>Create at bottom of board</value>
+  </data>
+  <data name="CardCreateAction_InputAddToTopDescription" xml:space="preserve">
+    <value>Indicates if the card should be created at the top of the Trello list, instead of the bottom.</value>
+  </data>
+  <data name="CardCreateAction_InputCardDescriptionName" xml:space="preserve">
+    <value>Card description {0}</value>
+  </data>
+  <data name="Consumer_InputUserTokenName" xml:space="preserve">
+    <value>User token (need one? &lt;a href='https://go.microsoft.com/fwlink/?LinkID=390580'&gt;Get it now&lt;/a&gt;)</value>
+  </data>
+  <data name="ListCreateAction_InputListNameName" xml:space="preserve">
+    <value>List name {0}</value>
+  </data>
+  <data name="Consumer_InputUserTokenDescription" xml:space="preserve">
+    <value>Your user token provided by Trello.  Click the link in the action description above to learn how to obtain this token.</value>
+  </data>
+  <data name="ListCreateActionName" xml:space="preserve">
+    <value>Create a list</value>
+  </data>
+  <data name="CardCreateActionName" xml:space="preserve">
+    <value>Create a card</value>
+  </data>
+  <data name="CardCreateAction_InputBoardDescription" xml:space="preserve">
+    <value>The name of the board on which the Trello card will be created.</value>
+  </data>
+  <data name="CardCreateAction_InputCardDescriptionDescription" xml:space="preserve">
+    <value>Description for the new card. Supports templates. Defaults to the detailed markdown description of the event.</value>
+  </data>
+  <data name="CardCreateAction_InputAddToTopName" xml:space="preserve">
+    <value>Create at top of list</value>
+  </data>
+  <data name="CardCreateAction_InputCardNameName" xml:space="preserve">
+    <value>Card name {0}</value>
+  </data>
+  <data name="CardCreateAction_InputListName" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="ConsumerName" xml:space="preserve">
+    <value>Trello</value>
+  </data>
+  <data name="SuppliedTokenNotAuthorized" xml:space="preserve">
+    <value>The supplied token is not authorized to query Trello</value>
+  </data>
+  <data name="CardCreateAction_InputListDescription" xml:space="preserve">
+    <value>The name of the list on which the Trello card will be created.</value>
+  </data>
+  <data name="ListCreateAction_InputBoardName" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="CardCreateAction_InputLabelsName" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="ConsumerDescription" xml:space="preserve">
+    <value>Provides integration with Trello</value>
+  </data>
+  <data name="QueryResponseFailureFormat" xml:space="preserve">
+    <value>Trello query failed with response '{0}'</value>
+  </data>
+  <data name="ListCreateAction_InputAddToBottomDescription" xml:space="preserve">
+    <value>Indicates if the list should be created at the bottom of the board, instead of the top.</value>
+  </data>
+  <data name="ListCreateActionDescription" xml:space="preserve">
+    <value>This action creates a list on an existing board in Trello. A list is used to organize cards on a board and typically represents a state. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=390530'&gt;Learn More&lt;/a&gt;</value>
+  </data>
+  <data name="CardCreateActionDescription" xml:space="preserve">
+    <value>This action creates a card on an existing list in Trello. A card can represent a task, issue, event, or just about anything. A card's state is typically determined by what list it is on. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=390530'&gt;Learn More&lt;/a&gt;</value>
+  </data>
+  <data name="CardCreateAction_InputBoardName" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="CardCreateAction_InputCardNameDescription" xml:space="preserve">
+    <value>Name for the new card. Supports templates. Defaults to the text description of the event.</value>
+  </data>
+  <data name="CardCreateAction_DescriptionFormat" xml:space="preserve">
+    <value>List {0}, Board {1}</value>
+  </data>
+</root>

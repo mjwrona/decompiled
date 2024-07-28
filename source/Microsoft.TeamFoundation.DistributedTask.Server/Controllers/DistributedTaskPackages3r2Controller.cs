@@ -1,0 +1,30 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.DistributedTask.Server.Controllers.DistributedTaskPackages3r2Controller
+// Assembly: Microsoft.TeamFoundation.DistributedTask.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: EDA28B25-3B93-49F7-A194-C85AAF98B83A
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Server.dll
+
+using Microsoft.TeamFoundation.DistributedTask.WebApi;
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.VisualStudio.Services.WebApi;
+using System.Collections.Generic;
+using System.Web.Http;
+
+namespace Microsoft.TeamFoundation.DistributedTask.Server.Controllers
+{
+  [ControllerApiVersion(3.0)]
+  [ClientInternalUseOnly(false)]
+  [VersionedApiControllerCustomName(Area = "distributedtask", ResourceName = "packages", ResourceVersion = 2)]
+  public class DistributedTaskPackages3r2Controller : DistributedTaskApiController
+  {
+    [HttpGet]
+    public PackageMetadata GetPackage(string packageType, string platform, string version)
+    {
+      PackageVersion version1 = new PackageVersion(version);
+      return this.TfsRequestContext.GetService<IPackageMetadataService>().GetPackage(this.TfsRequestContext, packageType, platform, (string) version1) ?? throw new PackageNotFoundException(TaskResources.PackageNotFoundWithVersion((object) packageType, (object) platform, (object) version));
+    }
+
+    [HttpGet]
+    public IList<PackageMetadata> GetPackages(string packageType, string platform = null, [FromUri(Name = "$top")] int? top = null) => this.TfsRequestContext.GetService<IPackageMetadataService>().GetPackages(this.TfsRequestContext, packageType, platform, top);
+  }
+}

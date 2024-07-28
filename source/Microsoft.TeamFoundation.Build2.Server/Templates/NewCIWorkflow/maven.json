@@ -1,0 +1,84 @@
+﻿{
+  "id": "maven",
+  "name": "Maven",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "AC4EE482-65DA-4485-A532-7B085873E532",
+  "description": "Build and test a Java project with Apache Maven.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "mavenPOMFile": "$(Parameters.mavenPOMFile)"
+                            },
+                            "task": {
+                                "id": "AC4EE482-65DA-4485-A532-7B085873E532",
+                                "versionSpec": "3.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "SourceFolder": "$(system.defaultworkingdirectory)",
+                                "Contents": "**/*.jar",
+                                "TargetFolder": "$(build.artifactstagingdirectory)"
+                            },
+                            "task": {
+                                "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "PathtoPublish": "$(build.artifactstagingdirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            }
+        },
+        "triggers": [],
+        "processParameters": {
+            "inputs": [
+                {
+                    "name": "mavenPOMFile",
+                    "label": "{PomFileLabel}",
+                    "defaultValue": "pom.xml",
+                    "required": true,
+                    "type": "filePath"
+                }
+            ]
+        }
+    }
+}

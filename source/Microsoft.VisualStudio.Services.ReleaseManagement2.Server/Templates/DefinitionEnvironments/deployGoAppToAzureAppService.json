@@ -1,0 +1,127 @@
+{
+  "id": "9590f337-2945-4e69-afff-08cb4668f621",
+  "name": "Deploy a Go app to Azure App Service",
+  "category": "Deployment",
+  "iconTaskId": "334727F4-9495-4F9D-A391-FC621D671474",
+  "description": "Deploy a Go application to an Azure Web App.",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "f045e430-8704-11e6-968f-e717e6411619",
+            "version": "0.*",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "Action": "Stop Azure App Service"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+            "version": "4.*",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "WebAppKind": "webApp",
+              "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+              "GenerateWebConfig": "true",
+              "WebConfigParameters": "-GoExeFileName \"$(System.TeamProject).exe\" -appType Go"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "f045e430-8704-11e6-968f-e717e6411619",
+            "version": "0.*",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "WebAppName": "$(Parameters.WebAppName)",
+              "Action": "Start Azure App Service"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "WebAppName",
+          "label": "{WebAppNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{WebAppNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureRMWebAppNamesByAppType",
+          "parameters": {
+            "WebAppKind": "app"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "WebAppName"
+        }
+      ]
+    }
+  }
+}

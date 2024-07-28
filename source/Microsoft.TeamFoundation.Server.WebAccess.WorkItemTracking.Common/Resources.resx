@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmailSingleWorkItemsPrependFormat" xml:space="preserve">
+    <value>{0} ({1}) sent you a work item {2}. &lt;br /&gt;&lt;br /&gt; </value>
+  </data>
+  <data name="BoardValidator_ColumnOrderMustNotNegative" xml:space="preserve">
+    <value>Error on column {0}: Board column order cannot be negative</value>
+  </data>
+  <data name="TeamAreas_AreaPathOnly" xml:space="preserve">
+    <value>Project '{0}' is configured to use a team field which is not supported by the @TeamAreas macro. Update your query with a different area path value and run again.</value>
+  </data>
+  <data name="Validation_BacklogWorkItemNotMappedCompletedState" xml:space="preserve">
+    <value>TF401098: This element defines the states for work items that appear on your backlog. The state configuration is incorrect. Each work item on this backlog must have one state with the type 'Complete'. The following work item type does not have any state with the type 'Complete': {0}.</value>
+  </data>
+  <data name="UnexpectedWorkItemFieldValue" xml:space="preserve">
+    <value>Unexpected work item field value.</value>
+  </data>
+  <data name="SharedParametersFeatureName" xml:space="preserve">
+    <value>Shared Parameters</value>
+  </data>
+  <data name="ProvisionErrorWorkItemTypeMissing" xml:space="preserve">
+    <value>VS402389: WorkItemType '{0}' does not exist</value>
+  </data>
+  <data name="DestroyWorkItemsAuthorizationFailed" xml:space="preserve">
+    <value>TF26208: The item does not exist, or you do not have permission to it.</value>
+  </data>
+  <data name="Validation_TeamMembersOutOfRange" xml:space="preserve">
+    <value>The following are not members of the team: {0}</value>
+  </data>
+  <data name="Tags_DuplicateTagSequence" xml:space="preserve">
+    <value>TF400631: {0} sequence contains duplicate entries.</value>
+  </data>
+  <data name="AgileSettingsMissing" xml:space="preserve">
+    <value>TF400627: Agile configuration is missing</value>
+  </data>
+  <data name="Validation_CapacityMissingUserId" xml:space="preserve">
+    <value>Missing user ID. Team capacity is not valid.</value>
+  </data>
+  <data name="Validation_PortfolioCountExceeded" xml:space="preserve">
+    <value>TF401093: This element defines the portfolio backlogs for this team project. You have more than five portfolio backlogs defined. You can define up to five portfolio backlogs. Remove one or more PortfolioBacklog element(s) from the PortfolioBacklogs.</value>
+  </data>
+  <data name="Validation_MissingAttributeValue" xml:space="preserve">
+    <value>TF401107: The attribute '{0}' is missing from the element.</value>
+  </data>
+  <data name="PropertyName_Invalid" xml:space="preserve">
+    <value>The given property name is not valid.</value>
+  </data>
+  <data name="GetTeamSettings_TeamIsNull" xml:space="preserve">
+    <value>Teams in the enumeration should not be null.</value>
+  </data>
+  <data name="Validation_RequestorInvalid" xml:space="preserve">
+    <value>TF400532: The value of this element is set to: {0}. You must set the value to a field that exists on all work item types defined in the element: {1}.</value>
+  </data>
+  <data name="FeedbackFeatureName" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="WorkInProgressLimits_AccessDenied" xml:space="preserve">
+    <value>TF400957: You do not have the permissions required to change the limits to work in progress. Only team members and project administrators have permissions to change work in progress limits for a team.</value>
+  </data>
+  <data name="Validation_InvalidType_Number" xml:space="preserve">
+    <value>TF400523: The value of this element is set to: {0}. The value of this element must be set to a field with one of the following types: Integer or Double.</value>
+  </data>
+  <data name="Validation_TeamFieldIsAreaPathForHosted" xml:space="preserve">
+    <value>TF400538: The process configuration uses the field “{0}” as the Team Field. However Azure DevOps Services only supports the field “System.AreaPath” as the team field. Please update your ProcessConfiguration.xml file. Don’t forget to create area paths for your team, and update the team configurations to use these new area paths. See https://go.microsoft.com/fwlink/?linkid=845327 for more information.</value>
+  </data>
+  <data name="TeamIterationsCollection_CreateAlreadyExists" xml:space="preserve">
+    <value>TF400495: A team iteration cannot be created for the specified iteration node. A team iteration already exists for that node.</value>
+  </data>
+  <data name="FEWarningMessage" xml:space="preserve">
+    <value>[Warning] {0}</value>
+  </data>
+  <data name="CommonSettingsInvalid" xml:space="preserve">
+    <value>TF400628: Common configuration is invalid</value>
+  </data>
+  <data name="UnsavedWorkItemsQuery" xml:space="preserve">
+    <value>Unsaved work items</value>
+  </data>
+  <data name="CurrentIteration_TeamRequired" xml:space="preserve">
+    <value>The @CurrentIteration macro must have a team selected.</value>
+  </data>
+  <data name="TeamIterationsCollection_DeleteInvalidIteration" xml:space="preserve">
+    <value>TF400492: The specified iteration cannot be removed. The iteration is not part of the team project collection.</value>
+  </data>
+  <data name="Settings_MissingBacklogIteration" xml:space="preserve">
+    <value>TF400498: You have not specified a backlog iteration path.</value>
+  </data>
+  <data name="BoardValidator_DescriptionTooLong" xml:space="preserve">
+    <value>Error on column {0}: Board column description length must be 2000 characters or less.</value>
+  </data>
+  <data name="BoardValidator_FirstColumnMustBeIncoming" xml:space="preserve">
+    <value>First column in the board must have ColumnType = Incoming</value>
+  </data>
+  <data name="TeamAreas_TeamHasNoAreaPaths" xml:space="preserve">
+    <value>'{0}' does not own any area paths</value>
+  </data>
+  <data name="ExpectedWorkItemTypeNotPresentInTargetProcess" xml:space="preserve">
+    <value>The inherited process you are trying to move this project to does not contain at least one of the expected work item types:
+{0}
+All work item types must be present in the target process.</value>
+  </data>
+  <data name="Validation_BacklogColumnInvalid" xml:space="preserve">
+    <value>TF400529: This element defines the columns that appear on the backlog. You must set all values to fields that exist in at least one of the work item types belonging to the category. The following fields do not exist in any of the work item types: {0}.</value>
+  </data>
+  <data name="QueryFilterInvalidMacroNoProject" xml:space="preserve">
+    <value>The macro '{0}' is not supported without a project context.</value>
+  </data>
+  <data name="ProvisionErrorActionAlreadyExists" xml:space="preserve">
+    <value>TF400625: The action '{0}' already exists in the work item type '{1}'</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ResultListDefaultTreePathColumnWidth" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="BoardValidator_AllowedMappingMustNotBeNull" xml:space="preserve">
+    <value>Board must have allowed state mapping defined.</value>
+  </data>
+  <data name="Validation_WorkItemColor_Duplicate" xml:space="preserve">
+    <value>TF401091: This element defines the color for the work item types for this team project. Multiple 'WorkItemColor' elements are specified for the work item type: '{0}'. Each work item type can only have one color. Update the WorkItemColors to list each work item type only once.</value>
+  </data>
+  <data name="Validation_TestPlanStatesInvalid" xml:space="preserve">
+    <value>TF400588: This element defines the states for test plan work items. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="Validation_ReleaseStatesInvalid" xml:space="preserve">
+    <value>TF400540: This element defines the states for work items that represent Releases. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="BoardValidator_ColumnsCountInvalid" xml:space="preserve">
+    <value>Board must have one incoming,  one outgoing column, and no more than 100 columns.</value>
+  </data>
+  <data name="Settings_InvalidDefaultIteration" xml:space="preserve">
+    <value>TF400480: The default iteration path that you specified not valid.</value>
+  </data>
+  <data name="UnexpectedNode" xml:space="preserve">
+    <value>Unexpected node: {0}</value>
+  </data>
+  <data name="DateRange_OverlapError" xml:space="preserve">
+    <value>There are overlapping date ranges: {0} and {1}.</value>
+  </data>
+  <data name="CodeReviewFeatureName" xml:space="preserve">
+    <value>Code Review</value>
+  </data>
+  <data name="Validation_InvalidUserId" xml:space="preserve">
+    <value>The following are not valid user ids: {0}</value>
+  </data>
+  <data name="TempQueryUrlText" xml:space="preserve">
+    <value>Open as query</value>
+  </data>
+  <data name="BugCategoryOverlapWithMultipleCategories_Error" xml:space="preserve">
+    <value>VS402453: There are work item type(s) in the Bug category that overlap with both Requirement category and Task category.</value>
+  </data>
+  <data name="ProvisionErrorWorkItemTypeIsAlreadyModified" xml:space="preserve">
+    <value>TF400622: Work item type '{0}' is already modified</value>
+  </data>
+  <data name="DateRange_StringFormat" xml:space="preserve">
+    <value>[{0}, {1}]</value>
+  </data>
+  <data name="ProcessSettingsInvalid" xml:space="preserve">
+    <value>TF401106: Project process configuration is invalid</value>
+  </data>
+  <data name="Validation_StageSignoffTaskStatesInvalid" xml:space="preserve">
+    <value>TF400544: This element defines the states for work items that represent Releases Stage Signoff. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="ProvisionWarningActionNotInProcessTemplate" xml:space="preserve">
+    <value>TF400611: Unable to add the action '{0}' to the work item type '{1}' because it is missing in the process template</value>
+  </data>
+  <data name="Validation_ProductBacklogStatesInvalid" xml:space="preserve">
+    <value>TF400530: This element defines the states for work items that appear on your product backlog. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="TeamIterationsCollection_CreateForNonIteration" xml:space="preserve">
+    <value>TF400493: A team iteration cannot be created for a tree node that is not an iteration node.</value>
+  </data>
+  <data name="Validation_TestSuiteWorkItem_StatesMissing" xml:space="preserve">
+    <value>TF400586: This element defines the states for test suite work items. Each state defined in the work item types in test suite category must exist in the configuration. The following states must be present in the configuration: {0}.</value>
+  </data>
+  <data name="IterationPathNotFound" xml:space="preserve">
+    <value>VS1530019: Cannot find iteration with path '{0}'. The iteration might have been deleted, or it might not be selected for your team.</value>
+  </data>
+  <data name="CurrentIterationArgumentMustBeAString" xml:space="preserve">
+    <value>@CurrentIteration argument must be a string</value>
+  </data>
+  <data name="Warning_FailedToInsertTabForWorkItemType" xml:space="preserve">
+    <value>{0}: Unable to insert tab to work item type '{1}' in category '{2}'.</value>
+  </data>
+  <data name="TestPlanAndSuiteCustomizationFeatureName" xml:space="preserve">
+    <value>Test Plan and Test Suite</value>
+  </data>
+  <data name="BoardValidator_TeamIdMustNotBeEmpty" xml:space="preserve">
+    <value>Board Team Id must not be empty Guid.</value>
+  </data>
+  <data name="Validation_BugWorkItem_MissingInitialState" xml:space="preserve">
+    <value>TF400507: Each work item type must support an initial state value that matches one of the states defined in: {0}. The following work item types have initial states that do not include any states defined in the bug state configuration: {1}.</value>
+  </data>
+  <data name="PortfolioBacklogsFeatureName" xml:space="preserve">
+    <value>Portfolio Backlogs</value>
+  </data>
+  <data name="Validation_Propety_Duplicate" xml:space="preserve">
+    <value>This element defines the properties for this team project. Multiple 'Property' elements are specified with the name: '{0}'. Each property should be present only once. Update the Properties to list each name only once.</value>
+  </data>
+  <data name="Validation_TestPlanWorkItem_StatesMissing" xml:space="preserve">
+    <value>TF400586: This element defines the states for test plan work items. Each state defined in the work item types in test plan category must exist in the configuration. The following states must be present in the configuration: {0}.</value>
+  </data>
+  <data name="Validation_TestSuiteStatesNotComplete" xml:space="preserve">
+    <value>TF400589: This element defines the states for test suite work items. All of the following state types must be present in the configuration: proposed, inprogress, complete.</value>
+  </data>
+  <data name="ProvisionErrorCannotChangeSyncNameChanges" xml:space="preserve">
+    <value>TF400619: The SyncNameChanges of field '{0}' in work item type '{1}' conflicts with the SyncNameChanges of the existing field</value>
+  </data>
+  <data name="ProvisionErrorCategoryFriendlyNameConflict" xml:space="preserve">
+    <value>TF400624: The friendly name of category '{0}' conflicts with category '{1}'</value>
+  </data>
+  <data name="Validation_StageSignoffTaskWorkItem_MissingInitialState" xml:space="preserve">
+    <value>TF400545: Each work item type must support an initial state value that matches one of the states defined in: {0}. The following work item types have initial states that do not include any states defined in the release stage signoff state configuration: {1}.</value>
+  </data>
+  <data name="Validation_ActivityFieldNotFound" xml:space="preserve">
+    <value>TF400502: The value of this element is set to: {0}. You must set the value to a field that exists in the work item types that are defined in: {1}.</value>
+  </data>
+  <data name="BoardExistsException_Message" xml:space="preserve">
+    <value>TF401068: A board already exists for this team</value>
+  </data>
+  <data name="MalformedTeamName" xml:space="preserve">
+    <value>'{0}' is not of the form '[project]\team'</value>
+  </data>
+  <data name="Validation_TestSuiteWorkItem_InvalidInitialStateMapping" xml:space="preserve">
+    <value>TF400507: Each work item type in test suite category must support an initial state value that is mapped to 'InProgress' state type in: {0}. The following work item types have initial states that do not map to 'InProgress' state type: {1}.</value>
+  </data>
+  <data name="Validation_AddPanelColumnsRepeated" xml:space="preserve">
+    <value>TF400505: This element defines the fields that appear on your product backlog add panel. The following fields are defined more than once: {0}.</value>
+  </data>
+  <data name="BoardValidator_RowNameLengthInvalid" xml:space="preserve">
+    <value>Error on row {0}: The row name must be less than 256 characters.</value>
+  </data>
+  <data name="ResultListDefaultDoubleColumnWidth" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="ProvisionWarningWorkItemTypeTransactionMissing" xml:space="preserve">
+    <value>TF400610: Cannot add the action '{0}' to the work item type '{1}' because the transition from state '{2}' to '{3}' does not exist</value>
+  </data>
+  <data name="Validation_BugStatesInvalid" xml:space="preserve">
+    <value>TF400506: This element defines the states for work items that represent Bugs or Defects. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="BoardValidator_CannotRecreateOutgoingColumn" xml:space="preserve">
+    <value>You cannot delete and recreate outgoing column.</value>
+  </data>
+  <data name="DefaultTasksHubName" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="ResultListDefaultTagsColumnWidth" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="CannotPromoteXMLBackedProjectToOobProcess" xml:space="preserve">
+    <value>You cannot move an XML backed project to an out of box process, you must move it to an inherited process that you have cloned.</value>
+  </data>
+  <data name="Validation_FeedbackResponseStatesNotComplete" xml:space="preserve">
+    <value>TF400589: This element defines the states for feedback response work items. All of the following state types must be present in the configuration: active, closed.</value>
+  </data>
+  <data name="ProvisionWarningWorkItemTypeWillBeOverwritten" xml:space="preserve">
+    <value>TF400608: Work item type '{0}' will be overwritten.</value>
+  </data>
+  <data name="QueryIdNotAdhocQuery" xml:space="preserve">
+    <value>VS402354: Query id does not correspond to an ad hoc query.</value>
+  </data>
+  <data name="Validation_UniqueBacklogName" xml:space="preserve">
+    <value>TF401095: The value for the attribute '{0}' has already been defined on the element: '{1}'. The value must be unique within the all elements that use the this attribute. To fix this, make sure that each element has an unique value for the attribute '{0}'.</value>
+  </data>
+  <data name="EmailMultipleWorkItemsPrependFormat" xml:space="preserve">
+    <value>{0} ({1}) sent you work items {2}. &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="PromoteInvalidTemplate" xml:space="preserve">
+    <value>The template '{0}' specified is not out of box template and cannot be promoted.</value>
+  </data>
+  <data name="Validation_BugsBehavior_Invalid" xml:space="preserve">
+    <value>This element defines the properties for this team project. The value for the property with name '{0}' can only be 'Off', 'AsRequirements', or 'AsTasks'.</value>
+  </data>
+  <data name="CurrentIteration_OffsetDisabled" xml:space="preserve">
+    <value>The ability of the @CurrentIteration macro to accept an offset is disabled.</value>
+  </data>
+  <data name="Validation_InvalidPortfolioHierarchy" xml:space="preserve">
+    <value>TF401096: This element defines the hierarchy relationship between portfolio backlogs and must define a linear hierarchy from bottom to top. The specified hierarchy is invalid. The hierarchy must have one PortfolioBacklogs at the top, with an empty 'parent' attribute. All other PortfolioBacklog elements must define their 'parent' attribute to be the category name of another PortfolioBacklog element. To define a linear hiearchy, the value of the 'parent' attribute must be unique across all PortfolioBacklog elements.</value>
+  </data>
+  <data name="Validation_RemainingWorkInvalid" xml:space="preserve">
+    <value>TF400531: The value of this element is set to: {0}. You must set the value to a field that exists on at least one work item type defined in the element: {1}.</value>
+  </data>
+  <data name="TeamFieldInUse" xml:space="preserve">
+    <value>You cannot move an XML backed projects which use TeamFields. Please update your XML process to remove usage of TeamField before attempting to move again.</value>
+  </data>
+  <data name="WorkItemLinkTypeEndNotFound" xml:space="preserve">
+    <value>Work item link type end '{0}' does not exist.</value>
+  </data>
+  <data name="CurrentIteration_TeamDisabled" xml:space="preserve">
+    <value>The ability of the @CurrentIteration macro to accept a team is disabled.</value>
+  </data>
+  <data name="Validation_States_Required" xml:space="preserve">
+    <value>TF400534: No states are defined. You must define at least one state for work items that appear on your product backlog.</value>
+  </data>
+  <data name="RecycleBin" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="AreaIdToTeamMappings_UseAreaPathAsTeamFieldReference" xml:space="preserve">
+    <value>The project must use area path as team field reference.</value>
+  </data>
+  <data name="BoardValidator_DefaultRowMustNotHaveColor" xml:space="preserve">
+    <value>Default row must not have a color.</value>
+  </data>
+  <data name="BoardValidator_CannotRecreateIncomingColumn" xml:space="preserve">
+    <value>You cannot delete and recreate incoming column.</value>
+  </data>
+  <data name="BoardValidator_WorkItemTypeNameInStateMappingIsNotValid" xml:space="preserve">
+    <value>Work item type {0} in state mapping is not valid workitem type defined for this column, check process configuration</value>
+  </data>
+  <data name="Validation_FormatMissingPlaceholder" xml:space="preserve">
+    <value>TF400520: One or more characters are missing from the following attribute: {0}. The attribute must contain the following characters as part of the literal string: "{{0}}". For example, if you want the display to show the number of hours, the string must contain "{{0}} hours."</value>
+  </data>
+  <data name="BoardValidator_ItemLimitInvalid" xml:space="preserve">
+    <value>Error on column {0}: Board column item limit must be between 0 and 999.</value>
+  </data>
+  <data name="BoardValidator_BoardCategoryRefNameInvalid" xml:space="preserve">
+    <value>Board CategoryReferenceName {0} does not exist in backlog configuration.</value>
+  </data>
+  <data name="Validation_ReleaseWorkItem_MissingInitialState" xml:space="preserve">
+    <value>TF400541: Each work item type must support an initial state value that matches one of the states defined in: {0}. The following work item types have initial states that do not include any states defined in the release state configuration: {1}.</value>
+  </data>
+  <data name="Settings_InvalidDefaultIterationMacro" xml:space="preserve">
+    <value>TF400474: The iteration macro is invalid.</value>
+  </data>
+  <data name="WorkItemUpdateForceRollback" xml:space="preserve">
+    <value>TF237165: Azure DevOps could not update the work item because of a validation error on the server. This may happen because the work item type has been modified or destroyed, or you do not have permission to update the work item.</value>
+  </data>
+  <data name="Validation_StateColors_Invalid_With_Message" xml:space="preserve">
+    <value>This element defines the properties for this team project. The value of the '{0}' property is invalid. {1}</value>
+  </data>
+  <data name="Validation_BacklogWorkItemMappedToTooManyCompletedStates" xml:space="preserve">
+    <value>TF401099: This element defines the states for work items that appear on your backlog. The state configuration is incorrect. Each work item on this backlog must have one state with the type 'Complete'. The following work item type has multiple states with the type 'Complete': {0}.</value>
+  </data>
+  <data name="ProcessSettingsMissing" xml:space="preserve">
+    <value>TF401105: Project process configuration is missing</value>
+  </data>
+  <data name="BoardValidator_LastColumnMustBeOutgoing" xml:space="preserve">
+    <value>Last column in the board must have ColumnType = Outgoing.</value>
+  </data>
+  <data name="CurrentIterationOffsetMustBeAnInteger" xml:space="preserve">
+    <value>@CurrentIteration offset must be an integer</value>
+  </data>
+  <data name="MissingGroupingLast" xml:space="preserve">
+    <value>Missing grouping in last row.</value>
+  </data>
+  <data name="Settings_IncompleteBacklogVisibilities" xml:space="preserve">
+    <value>VS402487: You must specify the visibility of all backlog levels.</value>
+  </data>
+  <data name="BoardValidator_ColumnNameContainsInvalidChar" xml:space="preserve">
+    <value>Error on column {0}: Board column name contains unsupported characters. For more information about valid naming conventions for columns, see the topic “Kanban naming restrictions” on the Microsoft website (https://go.microsoft.com/fwlink/?LinkId=77936).</value>
+  </data>
+  <data name="CurrentIterationOnlyAccepts1Argument" xml:space="preserve">
+    <value>@CurrentIteration only accepts 1 argument</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveDoDOnIncomingOutgoing" xml:space="preserve">
+    <value>Incoming / outgoing board column must not have description.</value>
+  </data>
+  <data name="Validation_AddPanelColumnsInvalid" xml:space="preserve">
+    <value>TF400504: This element defines the fields that appear on the add panel for your product backlog. Each field must exist in at least one of the work item types of the work item category. The following fields do not exist in any of those work item types: {0}.</value>
+  </data>
+  <data name="JobCurrentlyRunning" xml:space="preserve">
+    <value>Job currently running.</value>
+  </data>
+  <data name="BoardValidator_CannotGetBacklogConfig" xml:space="preserve">
+    <value>Board setting is invalid, cannot get backlog configuration to validate board columns.</value>
+  </data>
+  <data name="InvalidProjectContext" xml:space="preserve">
+    <value>'{0}' does not participate in any backlog level.</value>
+  </data>
+  <data name="EmailWithNote" xml:space="preserve">
+    <value> with a note</value>
+  </data>
+  <data name="Validation_ReleaseStageWorkItem_MissingInitialState" xml:space="preserve">
+    <value>TF400543: Each work item type must support an initial state value that matches one of the states defined in: {0}. The following work item types have initial states that do not include any states defined in the release stage state configuration: {1}.</value>
+  </data>
+  <data name="Settings_ValidDisplayStateRequired" xml:space="preserve">
+    <value>TF400489: You must specify at least one valid display state in the settings.</value>
+  </data>
+  <data name="BoardValidator_IncomingOutgoingMustHaveZeroItemLimit" xml:space="preserve">
+    <value>Board incoming / outgoing column must not have item limit.</value>
+  </data>
+  <data name="ProvisionKanbanBoard_BacklogSettingChanged" xml:space="preserve">
+    <value>VS402353: Another user has modified the team settings. Refresh the page to get the latest changes and retry the operation.</value>
+  </data>
+  <data name="BacklogNotFoundException" xml:space="preserve">
+    <value>Backlog '{0}' not found.</value>
+  </data>
+  <data name="BoardValidator_MustHaveOneDefaultRow" xml:space="preserve">
+    <value>There must be only one default row (empty guid).</value>
+  </data>
+  <data name="Validation_FeedbackRequestStatesNotComplete" xml:space="preserve">
+    <value>TF400586: This element defines the states for feedback request work items. All of the following state types must be present in the configuration: active, closed.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveDuplicateColumnName" xml:space="preserve">
+    <value>Error on column {0}: Column name is a duplicate of another column’s name.</value>
+  </data>
+  <data name="Validation_ActivityFieldNotDefined" xml:space="preserve">
+    <value>TF400501: The value of this element is set to: {0}. You must set the value to a field that exists in the work item types that are defined in: {1}. These work item types must also have the following field defined:  {2}. The field does not exist in the following work item types: {3}.</value>
+  </data>
+  <data name="MissingGroupingFirst" xml:space="preserve">
+    <value>Missing grouping in first row.</value>
+  </data>
+  <data name="Validation_ParentCannotBeChild" xml:space="preserve">
+    <value>TF400527: The work item type in this element has already been defined in the following element: {0}. You cannot define a work item type in both places. You must remove the following work item type from one of these elements: {1}.</value>
+  </data>
+  <data name="Validation_ReleaseStageStatesInvalid" xml:space="preserve">
+    <value>TF400542: This element defines the states for work items that represent Release Stages. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="Validation_FeedbackWorkItem_MissingInitialState" xml:space="preserve">
+    <value>TF400516: Each work item type must support an initial state value that matches one of the states defined in: {0}. The following work item types have initial states that do not include any states defined in the feedback state configuration: {1}.</value>
+  </data>
+  <data name="Validation_StateColors_Invalid" xml:space="preserve">
+    <value>VS403114: This element defines the properties for this team project. The value of the '{0}' property is invalid. State and color pairs are joined by comma.</value>
+  </data>
+  <data name="Validation_StateColors_Invalid_States" xml:space="preserve">
+    <value>VS403153: States '{0}' do not exist for any work item type.</value>
+  </data>
+  <data name="Validation_IntersectingBacklogs" xml:space="preserve">
+    <value>TF401094: This element defines a backlog for this team project. This PortfolioBacklog element and the following PortfolioBacklog element use the same work item type: '{0}'. The following work item type is used in both places: '{1}'. A work item type cannot be used in multiple PortfolioBacklogs. If you have defined the same work item category for both PortfolioBacklog elements, you need to change the work item category for one of the PortfolioBacklog elements. If the work item type is defined in both work item categories, either you need to change the work item category for the PortfolioBacklog or you need to update the work item categories to contain distinct work item types.</value>
+  </data>
+  <data name="Settings_InvalidBacklogIteration" xml:space="preserve">
+    <value>TF400497: The backlog iteration path that you specified is no longer valid.</value>
+  </data>
+  <data name="BoardNotFoundException_Message" xml:space="preserve">
+    <value>TF401199: A board could not be found or created for this team</value>
+  </data>
+  <data name="Validation_HiddenBacklogs_Invalid" xml:space="preserve">
+    <value>This element defines the properties for this team project. The value for the property with name '{0}' must be a semicolon-delimited list of valid backlog category reference names.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveDuplicateRowName" xml:space="preserve">
+    <value>Error on row {0}: Another row has the same name. Row names must be unique.</value>
+  </data>
+  <data name="EmailNotes" xml:space="preserve">
+    <value>Note:&lt;br/&gt;{0}</value>
+  </data>
+  <data name="Validation_InvalidCategoryName" xml:space="preserve">
+    <value>TF400522: The following value is not a valid work item category: {0}. You must specify a valid category.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveIncomingOutgoingIntheMiddle" xml:space="preserve">
+    <value>All columns except first and last must have ColumnType = InProgerss </value>
+  </data>
+  <data name="QueryFilterInvalidMacroNoTeam" xml:space="preserve">
+    <value>VS402612: The macro '{0}' is not supported without a team context.</value>
+  </data>
+  <data name="ProvisionErrorCannotHaveSameFriendlyName" xml:space="preserve">
+    <value>TF400620: The friendly name of field '{0}' in work item type '{1}' conflicts with the friendly name of an existing field</value>
+  </data>
+  <data name="Settings_NumberOfIterationsExceedsLimit" xml:space="preserve">
+    <value>VS403228: This team is subscribed to {0} iterations. A team cannot be subscribed to more than {1} iterations. Please reduce the number of iterations to which your team has subscribed to {1} or fewer.</value>
+  </data>
+  <data name="TeamConfigurationHelper_MissingTeam" xml:space="preserve">
+    <value>TF400487: Team with ID of '{0}' could not be found.</value>
+  </data>
+  <data name="Settings_MissingTeamFieldSettings" xml:space="preserve">
+    <value>TF400499: You have not set your team field.</value>
+  </data>
+  <data name="Validation_Weekends_Duplicate" xml:space="preserve">
+    <value>This element defines the weekends for this team project.  Multiple 'DayOfWeek' elements are specified with the name: '{0}'. Each day should be present only once. Update Weekends to list each day only once.</value>
+  </data>
+  <data name="UnknownWorkItemField" xml:space="preserve">
+    <value>Unknown work item field '{0}'.</value>
+  </data>
+  <data name="BoardValidator_ColumnIdMustExist" xml:space="preserve">
+    <value>Error on column {0}: Board column Id cannot be found in existing board. To create a new column, set Id to null.</value>
+  </data>
+  <data name="TeamAreas_Disabled" xml:space="preserve">
+    <value>Usage of the @TeamAreas macro is disabled</value>
+  </data>
+  <data name="FeedbackRequest_Error_WrongApplicationStartInfoConfiguration" xml:space="preserve">
+    <value>TF400330: The application start information field for feedback request is not configured correctly. Contact your Azure DevOps Server administrator to correct the configuration.</value>
+  </data>
+  <data name="ReleasePipelineFeatureName" xml:space="preserve">
+    <value>Release Management</value>
+  </data>
+  <data name="UnexpectedWorkItemUpdateResult" xml:space="preserve">
+    <value>Unexpected work item update result.</value>
+  </data>
+  <data name="Validation_IterationNotSet" xml:space="preserve">
+    <value>VS403721: The specified team, '{0}\{1}', hasn't scheduled an iteration for '@CurrentIteration{2}'. Either &lt;a href="https://go.microsoft.com/fwlink/?linkid=865408"&gt;change the team selection&lt;/a&gt; or &lt;a href="{3}"&gt;configure iterations for the team&lt;/a&gt;.</value>
+  </data>
+  <data name="Settings_NumberOfAreaPathsExceedsLimit" xml:space="preserve">
+    <value>VS403228: This team is subscribed to {0} area paths. A team cannot be subscribed to more than {1} area paths. Please reduce the number of area paths to which your team has subscribed to {1} or fewer.</value>
+  </data>
+  <data name="BacklogParentNotFound" xml:space="preserve">
+    <value>Parent Backlog level not found for {0}</value>
+  </data>
+  <data name="ProjectToPromoteCouldNotBeFound" xml:space="preserve">
+    <value>Project to promote could not be found.</value>
+  </data>
+  <data name="TeamAreas_StringTeamParameter" xml:space="preserve">
+    <value>Team parameter for @TeamAreas must be a string</value>
+  </data>
+  <data name="ProvisionErrorWorkItemTypeIsAlreadyInProject" xml:space="preserve">
+    <value>TF400623: Work item type '{0}' already exists in the team project</value>
+  </data>
+  <data name="Validation_BacklogMissingCompletedState" xml:space="preserve">
+    <value>TF401097: This element defines the states for work items that appear on your backlog. This element must have at least one state with the type 'Complete'.</value>
+  </data>
+  <data name="FollowedWorkItemsQuery" xml:space="preserve">
+    <value>Followed work items</value>
+  </data>
+  <data name="DuplicateWorkItemUpdateEntry" xml:space="preserve">
+    <value>Cannot update the same work item multiple times in the same package.</value>
+  </data>
+  <data name="WorkItemUpdateWorkItemMissingOrUpdated" xml:space="preserve">
+    <value>TF237079: Azure DevOps could not update the work item because it was already updated by another user, it does not exist, or you do not have permission to update it.</value>
+  </data>
+  <data name="FillMultipleTeamCapacityDaysOff_CapacityDataNotFound" xml:space="preserve">
+    <value>TeamCapacity data was not found but this iteration contains capacity days off information. TeamId:{0}, IterationId: {1}</value>
+  </data>
+  <data name="InvalidBacklogWorkItemType" xml:space="preserve">
+    <value>'{0}' does not participate in any backlog level.</value>
+  </data>
+  <data name="Validation_FieldTypeDuplicated" xml:space="preserve">
+    <value>TF400519: The value of this element is set to: {0}. You must set the value to a value that is not already in use by any of the following definitions: {1}.</value>
+  </data>
+  <data name="Validation_InvalidType_DateTime" xml:space="preserve">
+    <value>TF400950: The value of this element is set to: {0}. The value of this element must be set to a field with the following type: DateTime.</value>
+  </data>
+  <data name="EmailWorkItemQueryPrependFormat" xml:space="preserve">
+    <value>{0} ({1}) shared a work item query {2}. &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="ErrorIdsAndRevsLengthMustMatch" xml:space="preserve">
+    <value>The ids and revisions collections must have the same length.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveDuplicateColumnOrder" xml:space="preserve">
+    <value>Error on column {0}: Board must not have duplicate column order.</value>
+  </data>
+  <data name="Validation_FeedbackRequestStatesInvalid" xml:space="preserve">
+    <value>TF400585: This element defines the states for feedback request work items. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="BoardValidator_StateIsNotValid" xml:space="preserve">
+    <value>Error on column {0}: State '{1}' is not valid for column type '{2}' and work item type '{3}'.</value>
+  </data>
+  <data name="FeedbackRequest_Error_WrongApplicationLaunchInstructionConfiguration" xml:space="preserve">
+    <value>TF400329: The application launch instructions field for feedback request is not configured correctly. Contact your Azure DevOps Server administrator to correct the configuration.</value>
+  </data>
+  <data name="BoardValidator_RowInvalidNonDefaultName" xml:space="preserve">
+    <value>Row name must be specified.</value>
+  </data>
+  <data name="Validation_InvalidField_SystemField" xml:space="preserve">
+    <value>TF401253: The value of this element is set to: {0}. The value of this element cannot be a System field.</value>
+  </data>
+  <data name="TeamIterationsCollection_CreateTopLevelIterationError" xml:space="preserve">
+    <value>TF400494: A team iteration cannot be created for the top-level iteration node.</value>
+  </data>
+  <data name="CannotPromoteXMLBackedProjectToXmlProcess" xml:space="preserve">
+    <value>You cannot move an XML backed project to an XML process, you can only move to an inherited process that you have cloned.</value>
+  </data>
+  <data name="Settings_UnrecognizedBacklogVisibilities" xml:space="preserve">
+    <value>VS402488: One or more of the backlog levels specified in the backlog visibilities is not valid.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveDuplicateColumnId" xml:space="preserve">
+    <value>Error on column {0}: Column Id is a duplicate of another column’s Id.</value>
+  </data>
+  <data name="ResultListDefaultIntegerColumnWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="ProvisionErrorPlanningToolsValidation" xml:space="preserve">
+    <value>TF400654: Unable to configure Planning Tools. {0}</value>
+  </data>
+  <data name="BugsOnTaskBoardFeatureName" xml:space="preserve">
+    <value>Bugs On TaskBoard</value>
+  </data>
+  <data name="MissingGroupingIndices" xml:space="preserve">
+    <value>Missing grouping indices.</value>
+  </data>
+  <data name="ProvisionWarningWorkItemTypeExists" xml:space="preserve">
+    <value>TF400612: The existing work item type '{0}' is reused. If the feature '{1}' is not behaving correctly, you can destroy the existing work item type and rerun feature enablement.</value>
+  </data>
+  <data name="Validation_BacklogColumnsRepeated" xml:space="preserve">
+    <value>TF400528: This element defines the columns that appear on your product or iteration backlog. The following fields are defined more than once: {0}.</value>
+  </data>
+  <data name="ResultListDefaultColumnWidth" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="BoardValidator_IncomingOutgoingCannotBeSplit" xml:space="preserve">
+    <value>Error on column {0}: Board incoming / outgoing column cannot be split</value>
+  </data>
+  <data name="ResultListDefaultDateTimeColumnWidth" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="Validation_WorkItemMissingInitialState" xml:space="preserve">
+    <value>TF400536: This element defines the states for work items that appear on your backlog. The initial state value for each work item type must match one of the states defined in this element. The following work item types have an initial state that is not included in the defined states: '{0}'.</value>
+  </data>
+  <data name="AssignedToMeQuery" xml:space="preserve">
+    <value>Assigned to me</value>
+  </data>
+  <data name="KanbanBoardDoneFieldLocalName" xml:space="preserve">
+    <value>Column Done {0}</value>
+  </data>
+  <data name="BoardValidator_RowsCountInvalid" xml:space="preserve">
+    <value>Board cannot have more than 50 rows.</value>
+  </data>
+  <data name="TeamAreas_Usages" xml:space="preserve">
+    <value>Usage: @TeamAreas('[project]\\team')</value>
+  </data>
+  <data name="Validation_FeedbackResponseStatesInvalid" xml:space="preserve">
+    <value>TF400588: This element defines the states for feedback response work items. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="Validation_MissingElement" xml:space="preserve">
+    <value>TF400526: Element is missing. The XML is not valid.</value>
+  </data>
+  <data name="Validation_InvalidWorkItemCountLimit" xml:space="preserve">
+    <value>TF400524: If a value is specified for Work Item Count Limit, it must either be greater than zero, or set to -1 to disable the count limit</value>
+  </data>
+  <data name="BoardValidator_StateMappingMustNotBeNull" xml:space="preserve">
+    <value>Error on column {0}: Board column must have state mappings for requirement work items.</value>
+  </data>
+  <data name="Tags_InvalidScope" xml:space="preserve">
+    <value>TF401013: Tag with id '{0}' is not scoped to the current project.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveEmptyGuidForColumnId" xml:space="preserve">
+    <value>Error on column {0}: Board column Id cannot be empty Guid. To create a new column set Id to null.</value>
+  </data>
+  <data name="PlanningToolsFeatureName" xml:space="preserve">
+    <value>Planning Tools</value>
+  </data>
+  <data name="ErrorWorkItemNotExistOrNoAccess" xml:space="preserve">
+    <value>TF26198: The work item does not exist, or you do not have permission to access it.</value>
+  </data>
+  <data name="Validation_ElementError" xml:space="preserve">
+    <value>The following element contains an error: {0}. {1}</value>
+  </data>
+  <data name="BoardValidator_MustDefineAllWITStateMapping" xml:space="preserve">
+    <value>Error on column {0}: Board column must define state mapping for all work item types in the '{1}' backlog.</value>
+  </data>
+  <data name="Validation_AddPanelColumnsInvalidType" xml:space="preserve">
+    <value>TF401255: This element defines the fields that appear on the add panel for your product backlog. Fields must be one of the following types:  {0}. The following fields are not the correct type: {1}.</value>
+  </data>
+  <data name="PluralNameInvalid" xml:space="preserve">
+    <value>TF401103: The following plural name contains invalid characters: {0}. The following characters are not valid: @ ~ ;  ' + = , &lt; &gt; | / \ ? : &amp; $ * " # [ ]</value>
+  </data>
+  <data name="UnableToProcessValueNode" xml:space="preserve">
+    <value>This Work Item Query value node could not be processed. Please review the syntax: {0}</value>
+  </data>
+  <data name="ResultListDefaultParentColumnWidth" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="SharedParametersLinkTypeForwardName" xml:space="preserve">
+    <value>Referenced By</value>
+  </data>
+  <data name="Validation_StateColors_StateColorMap_Invalid" xml:space="preserve">
+    <value>VS403125: State color map was null or incomplete.</value>
+  </data>
+  <data name="Settings_ErrorMissingSprintIterations" xml:space="preserve">
+    <value>TF400496: Your team has not configured its schedule and iterations.</value>
+  </data>
+  <data name="BoardValidator_MustNotSetIsDeletedTrue" xml:space="preserve">
+    <value>Board column IsDeleted should never be set to True.</value>
+  </data>
+  <data name="Validation_InvalidBacklogColumnWidths" xml:space="preserve">
+    <value>TF400521: The value must be an integer value greater than zero for the following sub-element: {0}. The value for the following field is less than zero: {1}.</value>
+  </data>
+  <data name="Settings_AllBacklogsHidden" xml:space="preserve">
+    <value>VS402489: You cannot hide all backlog levels.</value>
+  </data>
+  <data name="TeamDaysOffAreOutsideTheBoundsOfTheIteration" xml:space="preserve">
+    <value>The team days off are outside the bounds of the iteration. Iteration Start {0}, End {1}.</value>
+  </data>
+  <data name="NullRefInQuickCheckIsValidProcessForXMLBackedProjectPromote" xml:space="preserve">
+    <value>{0} is null in QuickCheckIsValidProcessForXMLBackedProjectPromote, processTemplateTypeId: {1}, ProjectId: {2}.</value>
+  </data>
+  <data name="ResultListDefaultTitleColumnWidth" type="System.Int32, mscorlib">
+    <value>450</value>
+  </data>
+  <data name="SharedParametersLinkTypeReverseName" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="QueryEditorInvalidOperatorForSpecialValue" xml:space="preserve">
+    <value>TF207009: The special value {0} can only be used with the equals ({1}) operator.</value>
+  </data>
+  <data name="CapacityNotSet" xml:space="preserve">
+    <value>VS403439: There is no capacity set for the user with id {0} in the iteration with id {1}</value>
+  </data>
+  <data name="Validation_FieldReused" xml:space="preserve">
+    <value>TF400518: The value of this element is set to: {0}. You must set the value to a field that is not already in use by any of the following definitions: {1}.</value>
+  </data>
+  <data name="Tags_AddedAndRemovedContainSameTag" xml:space="preserve">
+    <value>TF400632: Tag exists in both added and removed tags sequences.</value>
+  </data>
+  <data name="Tags_NonExistingTag" xml:space="preserve">
+    <value>TF400630: Tag with id '{0}' does not exist.</value>
+  </data>
+  <data name="ResultListDefaultLinkTypeColumnWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ResultListDefaultIdColumnWidth" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="MyWorkFeatureName" xml:space="preserve">
+    <value>My Work</value>
+  </data>
+  <data name="BoardValidator_RowNameContainsInvalidChar" xml:space="preserve">
+    <value>Error on row {0}: Row name contains unsupported characters. For more information about valid naming conventions for rows, see the topic “Kanban naming restrictions” on the Microsoft website (https://go.microsoft.com/fwlink/?LinkId=77936).</value>
+  </data>
+  <data name="BoardFieldLocalName" xml:space="preserve">
+    <value>Column {0}</value>
+  </data>
+  <data name="Validation_StateReused" xml:space="preserve">
+    <value>TF400533: The value of this element is set to: {0}. You must set the value to a state that is not already in use by any of the following definitions: {1}.</value>
+  </data>
+  <data name="WorkItemLinkTypeNotFound" xml:space="preserve">
+    <value>Work item link type '{0}' does not exist.</value>
+  </data>
+  <data name="Validation_TestPlanStatesNotComplete" xml:space="preserve">
+    <value>TF400589: This element defines the states for test plan work items. All of the following state types must be present in the configuration: inprogress, complete.</value>
+  </data>
+  <data name="ProvisionErrorWorkItemCategoryTypeMissing" xml:space="preserve">
+    <value>TF400613: The work item type '{1}' specified in category '{0}' does not exist</value>
+  </data>
+  <data name="Validation_ActivityFieldNotString" xml:space="preserve">
+    <value>TF400503: The value of this element is set to: {0}. You must set the value to a field of type String.</value>
+  </data>
+  <data name="Validation_InvalidTeamFieldLength" xml:space="preserve">
+    <value>TF401157: The team field value is too long.</value>
+  </data>
+  <data name="WorkItemsCreatedByMeQuery" xml:space="preserve">
+    <value>Work items created by me</value>
+  </data>
+  <data name="ProvisionErrorCannotChangeReportingType" xml:space="preserve">
+    <value>TF400618: The reporting type of field '{0}' in work item type '{1}' conflicts with the reporting type of the existing field</value>
+  </data>
+  <data name="KanbanBoardLaneFieldLocalName" xml:space="preserve">
+    <value>Lane {0}</value>
+  </data>
+  <data name="FeedbackRequest_Error_WrongApplicationTypeConfiguration" xml:space="preserve">
+    <value>TF400328: The application types for feedback request are not configured correctly. Contact your Azure DevOps Server administrator to correct the configuration.</value>
+  </data>
+  <data name="ProvisionErrorCannotOverwriteProcessConfiguration" xml:space="preserve">
+    <value>TF401104: Cannot overwrite process configuration</value>
+  </data>
+  <data name="FEErrorMessage" xml:space="preserve">
+    <value>[Error] {0}</value>
+  </data>
+  <data name="BoardValidator_ColumnNameLengthInvalid" xml:space="preserve">
+    <value>Error on column {0}: Board column name cannot be null or empty and length must be 255 or less.</value>
+  </data>
+  <data name="IterationNotFound" xml:space="preserve">
+    <value>VS1530019: Cannot find iteration with id '{0}'. The iteration might have been deleted, or it might not be selected for your team.</value>
+  </data>
+  <data name="CannotSetProcessConfigurationFromOlderClient" xml:space="preserve">
+    <value>TF401102: To update the project configuration in this version of Azure DevOps Server, you need to use the new project configuration format. To update the project configuration, install the latest Team Explorer and run the command 'witadmin importprocessconfig'.</value>
+  </data>
+  <data name="CommonSettingsMissing" xml:space="preserve">
+    <value>TF400626: Common configuration is missing</value>
+  </data>
+  <data name="ProvisionErrorCannotHaveSameLinkReferenceName" xml:space="preserve">
+    <value>TF400621: The reference name of field '{0}' in work item type '{1}' is already in use by a link type</value>
+  </data>
+  <data name="Tags_CannotHaveRemovedTagsForNewWorkItem" xml:space="preserve">
+    <value>TF400634: Cannot have removed tags for new workitem.</value>
+  </data>
+  <data name="ProvisionWarningActionStateMissing" xml:space="preserve">
+    <value>TF400609: Cannot add the action '{0}' to the work item type '{1}' because the state '{2}' does not exist.</value>
+  </data>
+  <data name="BugsOnTaskBoardFieldMissingWarning" xml:space="preserve">
+    <value>VS402404: {0}: {1} does not have the {2} field defined. Some charts will not include these work item types.</value>
+  </data>
+  <data name="Validation_TestPlanWorkItem_InvalidInitialStateMapping" xml:space="preserve">
+    <value>TF400507: Each work item type in test plan category must support an initial state value that is mapped to 'InProgress' state type in: {0}. The following work item types have initial states that do not map to 'InProgress' state type: {1}.</value>
+  </data>
+  <data name="Validation_Property_Unknown" xml:space="preserve">
+    <value>This element defines the properties for this team project.  The property name {0} is invalid. Allowed property names are : {1}.</value>
+  </data>
+  <data name="ResultListDefaultStringColumnWidth" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="CannotSetProjectProcessConfigurationFromOlderClient" xml:space="preserve">
+    <value>VS402351: To update process configuration on this version of Azure DevOps Server, you need Team Explorer 2015 or later. Install a compatible version of Team Explorer and retry the operation.</value>
+  </data>
+  <data name="CanNotGroup" xml:space="preserve">
+    <value>Cannot group these clauses.</value>
+  </data>
+  <data name="Validation_TeamFieldInvalidType" xml:space="preserve">
+    <value>TF400535: The value of this element is set to: {0}. You must either set the value to System.AreaPath, or to a field of type String that is not a member of the System namespace.</value>
+  </data>
+  <data name="BugsOnBacklogEffortFieldMissingWarning" xml:space="preserve">
+    <value>VS402346: {0}: One or more work item types in {1} do not have the effort field defined. Forecast and velocity chart will not include these work item types.</value>
+  </data>
+  <data name="ProvisionErrorCategoryMissing" xml:space="preserve">
+    <value>TF400614: Category '{0}' does not exist</value>
+  </data>
+  <data name="StoryboardFeatureName" xml:space="preserve">
+    <value>Storyboarding</value>
+  </data>
+  <data name="Validation_BulkTeamCapacity_MaximumPairs" xml:space="preserve">
+    <value>VS403102: Request exceeded the maximum iteration capacities paging size of {0}</value>
+  </data>
+  <data name="Validation_Columns_Required" xml:space="preserve">
+    <value>TF400508: No columns are defined. You must define at least one column.</value>
+  </data>
+  <data name="BoardValidator_MustNotHaveDuplicateRowId" xml:space="preserve">
+    <value>Error on row {0}: Another row has the same Id. Row Ids must be unique.</value>
+  </data>
+  <data name="Validation_FeedbackStatesNotComplete" xml:space="preserve">
+    <value>TF400515: This element defines the states for work items that appear when providing or responding to feedback.  All of the following state types must be present in the configuration: requested, received, reviewed, declined.</value>
+  </data>
+  <data name="Validation_DuplicateWorkItemFlow_Invalid" xml:space="preserve">
+    <value>VS402650: This element defines the properties for this team project. The value for the property with name '{0}' must be a valid JSON encoded configuration.</value>
+  </data>
+  <data name="TeamAreas_AllowedOperators" xml:space="preserve">
+    <value>@TeamAreas may only be used with 'In', 'Not In', '=' and '&lt;&gt;' operators</value>
+  </data>
+  <data name="Validation_TestSuiteStatesInvalid" xml:space="preserve">
+    <value>TF400588: This element defines the states for test suite work items. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="Validation_Property_NotBool" xml:space="preserve">
+    <value>This element defines the properties for this team project. The value for the property with name '{0}' can only be 'true' or 'false'.</value>
+  </data>
+  <data name="BugBehaviorFeatureName" xml:space="preserve">
+    <value>Bug Behavior</value>
+  </data>
+  <data name="JobAlreadyQueued" xml:space="preserve">
+    <value>Job already queued.</value>
+  </data>
+  <data name="ProvisionErrorCannotOverwriteAgileConfiguration" xml:space="preserve">
+    <value>TF400616: Cannot overwrite agile configuration</value>
+  </data>
+  <data name="Validation_DisplayStatesInvalid" xml:space="preserve">
+    <value>TF400587: This element defines the states for work items that appear on your backlog. Each state must exist in at least one of the work item types belong to category defined in: '{0}'. The following state does not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="BoardValidator_WITExtensionMustNotBeNull" xml:space="preserve">
+    <value>Board WIT Extension Id must not be null.</value>
+  </data>
+  <data name="Validation_FeedbackStatesInvalid" xml:space="preserve">
+    <value>TF400590: This element defines the states for work items that appear when providing or responding to feedback. Each state must exist in at least one of the work item types that are defined in: {0}. The following states do not exist in any of the work item types: {1}.</value>
+  </data>
+  <data name="BugsOnBackLogFeatureName" xml:space="preserve">
+    <value>Bugs On Backlog</value>
+  </data>
+  <data name="ProvisionWarning_PlanningTools_CMMIFieldFix" xml:space="preserve">
+    <value>The process template references the following work item field: {1} (of: {0}). This field does not exist in this team project. Some features require a field to represent the size of the backlog item. The following field will be used to represent size: {2}.</value>
+  </data>
+  <data name="BoardChangedException_Message" xml:space="preserve">
+    <value>TF401014: Another user has modified the board. Please refresh the page to get the latest changes.</value>
+  </data>
+  <data name="Settings_MissingProjectSettings" xml:space="preserve">
+    <value>TF400572: The Project Process Settings must be configured for this feature to be used.</value>
+  </data>
+  <data name="ProvisionErrorCannotChangeFieldType" xml:space="preserve">
+    <value>TF400617: The type of field '{0}' in work item type '{1}' conflicts with the type of the existing field</value>
+  </data>
+  <data name="BoardValidator_BoardIdEmpty" xml:space="preserve">
+    <value>Board Id must not be empty Guid.</value>
+  </data>
+  <data name="ProvisionWarningWorkItemCategoryWillBeOverwritten" xml:space="preserve">
+    <value>TF400607: Category '{0}' will be overwritten.</value>
+  </data>
+  <data name="QueryFilterInvalidMacro" xml:space="preserve">
+    <value>TF20036: The macro '{0}' is not recognized. Available macros include @Me, @Project, @Today and @CurrentIteration. </value>
+  </data>
+  <data name="WorkItemCategories_Configuration_Error" xml:space="preserve">
+    <value>VS402390: Configure features wizard was not able to make the required changes to the work item categories. You will need to update the categories manually.</value>
+  </data>
+  <data name="OnlyOneActivityPerMemberIsSupported" xml:space="preserve">
+    <value>Only one activity per team member is supported.</value>
+  </data>
+  <data name="ProvisionErrorCannotOverwriteCommonConfiguration" xml:space="preserve">
+    <value>TF400615: Cannot overwrite common configuration</value>
+  </data>
+  <data name="Validation_FieldRequiredOnAllWits" xml:space="preserve">
+    <value>TF400517: The value of this element is set to: {0}. You must set the value to a field that exists in all of the work item types that are defined in {1}. The field does not exist in the following work item types: {2}.</value>
+  </data>
+</root>

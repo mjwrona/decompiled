@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionDescription_BusQueueFormat" xml:space="preserve">
+    <value>Queue {0}</value>
+  </data>
+  <data name="ServiceBusAction_BypassSerializerInputDescription" xml:space="preserve">
+    <value>If checked, messages will be sent to Service Bus as non-serialized strings instead of as .NET serialized strings. This setting should be checked when the receiver is a non-.NET client, such as a client utilizing the Azure Client Library for Node.</value>
+  </data>
+  <data name="Response_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendAction_Response_Ok_Template" xml:space="preserve">
+    <value>OK. Notification result: TrackingId={0};State={1}</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_VisibilityTimeoutInputName" xml:space="preserve">
+    <value>Message visibility timeout (in seconds)</value>
+  </data>
+  <data name="ServiceBusTopicSendActionName" xml:space="preserve">
+    <value>Send a message to a Service Bus Topic</value>
+  </data>
+  <data name="Response_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="AppServiceDeployWebAppTokenName" xml:space="preserve">
+    <value>Azure App Service Deployment ({0})</value>
+  </data>
+  <data name="ServiceBusQueueSendActionName" xml:space="preserve">
+    <value>Send a message to a Service Bus Queue</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendActionDescription" xml:space="preserve">
+    <value>This action sends a generic, template notification to the specified Azure Notification Hub. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=392636'&gt;Learn More&lt;/a&gt;</value>
+  </data>
+  <data name="ServiceBusConsumerName" xml:space="preserve">
+    <value>Azure Service Bus</value>
+  </data>
+  <data name="ServiceBus_Response_Error_EndpointNotFound" xml:space="preserve">
+    <value>Error: endpoint not found in service bus namespace</value>
+  </data>
+  <data name="ServiceBusAction_BypassSerializerInputName" xml:space="preserve">
+    <value>Send as non-serialized string</value>
+  </data>
+  <data name="ActionDescription_BusTopicFormat" xml:space="preserve">
+    <value>Topic {0}</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_AccountKeyInputName" xml:space="preserve">
+    <value>Storage account key</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_QueueNameInputDescription" xml:space="preserve">
+    <value>The lowercase-only name of the queue to be used within Azure storage.  A queue by this name will be created if it does not already exist.</value>
+  </data>
+  <data name="ServiceBusQueueSendAction_QueueNameInputDescription" xml:space="preserve">
+    <value>The name of the queue to send the message to. The name can contain only letters, numbers, periods, hyphens, forward slashes, and underscores. The name must start and end with a letter or number. If the queue does not exists, it will be created if the specified connection string has the necessary permissions.</value>
+  </data>
+  <data name="ServiceBusAction_QueryError_SuppliedConnectionStringNotAuthorized" xml:space="preserve">
+    <value>The supplied SAS connection string is not authorized to query the Azure Service Bus namespace</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendAction_NotificationHubNameInputDescription" xml:space="preserve">
+    <value>The name of the notification hub to send the notification to. The name can contain only letters, numbers, periods, hyphens, forward slashes, and underscores. The name must start and end with a letter or number. The hub should already exist.</value>
+  </data>
+  <data name="ActionDescription_BusHubFormat" xml:space="preserve">
+    <value>Hub {0}</value>
+  </data>
+  <data name="ServiceBus_Response_Error_Timeout" xml:space="preserve">
+    <value>Error: service bus operation timed out</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendAction_TagsExpressionInputDescription" xml:space="preserve">
+    <value>A tag expression is any boolean expression constructed using the logical operators AND (&amp;&amp;), OR (||), NOT (!), and round parentheses. For example: (A || B) &amp;&amp; !C. If an expression uses only ORs, it can contain at most 20 tags. Other expressions are limited to 6 tags. Note that a single tag is a valid expression. Each tag in expression can be any string, up to 120 characters, containing alphanumeric and the following non-alphanumeric characters: ‘_’, ‘@’, ‘#’, ‘.’, ‘:’, ‘-’.</value>
+  </data>
+  <data name="AppServiceDeployWebAppTestTokenName" xml:space="preserve">
+    <value>Azure App Service Deployment ({0}) - Test</value>
+  </data>
+  <data name="ServiceBusQueueSendAction_QueueNameInputName" xml:space="preserve">
+    <value>Queue name</value>
+  </data>
+  <data name="AppServiceConsumerName" xml:space="preserve">
+    <value>Azure App Service</value>
+  </data>
+  <data name="ActionDescription_StorageQueueFormat" xml:space="preserve">
+    <value>Account {0}, Queue {1}</value>
+  </data>
+  <data name="ServiceBusQueueSendActionDescription" xml:space="preserve">
+    <value>This action sends a JSON string representation of the event to the specified Azure Service Bus queue. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=392636'&gt;Learn More&lt;/a&gt;</value>
+  </data>
+  <data name="ServiceBus_Response_Error_Management_Unauthorized" xml:space="preserve">
+    <value>Error:  Unauthorized access. The specified shared access signature (SAS) does not have Manage permissions, which is required to create new queues or topics.</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendAction_NotificationHubNameInputName" xml:space="preserve">
+    <value>Notification Hub name</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_MessageTtlInputName" xml:space="preserve">
+    <value>Message time-to-live (in seconds)</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_AccountNameInputName" xml:space="preserve">
+    <value>Storage account name</value>
+  </data>
+  <data name="ServiceBusTopicSendAction_TopicNameInputDescription" xml:space="preserve">
+    <value>The name of the topic to send the message to. The name can contain only letters, numbers, periods, hyphens, forward slashes, and underscores. The name must start and end with a letter or number. If the topic does not exists, it will be created if the specified connection string has the necessary permissions.</value>
+  </data>
+  <data name="StorageConsumerName" xml:space="preserve">
+    <value>Azure Storage</value>
+  </data>
+  <data name="AppServiceDeployWebAppActionDescription" xml:space="preserve">
+    <value>Deploy a web app in Azure App Service</value>
+  </data>
+  <data name="ServiceBusQueueMessageTooLong" xml:space="preserve">
+    <value>The event notification being sent to the ServiceBus is larger than supported; please adjust your subscription to send only the necessary data (perhaps only brief messages).</value>
+  </data>
+  <data name="ServiceBusConsumer_ConnectionStringInputDescription" xml:space="preserve">
+    <value>The SAS (shared access signature) connection string to use to connect with Azure Service Bus. This connection string is available in the Azure Portal.</value>
+  </data>
+  <data name="ServiceBusConsumer_ConnectionStringInputName" xml:space="preserve">
+    <value>SAS connection string</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_MessageTtlInputDescription" xml:space="preserve">
+    <value>Specifies the time-to-live interval for the queue message, in seconds. The maximum time-to-live allowed is 7 days, or 604,800 seconds.</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_VisibilityTimeoutInputDescription" xml:space="preserve">
+    <value>Specifies the visibility timeout value, in seconds, for the enqueued message, relative to server time. The value must be larger than or equal to 0, and cannot be larger than 7 days, or 604,800 seconds. The visibility timeout must be set to a value smaller than the message's time-to-live value.</value>
+  </data>
+  <data name="StorageConsumerDescription" xml:space="preserve">
+    <value>Microsoft Azure Storage is a service for storing large numbers of messages that can be accessed from anywhere in the world. It is useful for creating a backlog of work to process asynchronously.</value>
+  </data>
+  <data name="ServiceBusTopicSendAction_TopicNameInputName" xml:space="preserve">
+    <value>Topic name</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendActionName" xml:space="preserve">
+    <value>Send a message to a Notification Hub</value>
+  </data>
+  <data name="ServiceBusAction_QueryError_ExceptionFormat" xml:space="preserve">
+    <value>Azure Service Bus query failed with exception '{0}'</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_AccountKeyInputDescription" xml:space="preserve">
+    <value>The key associated with your Azure storage account.</value>
+  </data>
+  <data name="ServiceBus_Response_Error_Unauthorized" xml:space="preserve">
+    <value>Error:  Unauthorized access. The specified shared access signature (SAS) does not have permissions to perform the operation.</value>
+  </data>
+  <data name="StorageQueueEnqueueActionDescription" xml:space="preserve">
+    <value>This action inserts a JSON string representation of the event to the specified Azure storage queue. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=390532'&gt;Learn More&lt;/a&gt;</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendAction_TagsExpressionInputPatternErrorMessage" xml:space="preserve">
+    <value>Each tag in expression can be any string, up to 120 characters, containing alphanumeric and the following non-alphanumeric characters: ‘_’, ‘@’, ‘#’, ‘.’, ‘:’, ‘-’.</value>
+  </data>
+  <data name="StorageQueueEnqueueActionName" xml:space="preserve">
+    <value>Insert a message in a Storage Queue</value>
+  </data>
+  <data name="ServiceBusConsumerDescription" xml:space="preserve">
+    <value>Microsoft Azure Service Bus provides a hosted, secure, and widely available infrastructure for widespread communication, large-scale event distribution, naming, and service publishing.</value>
+  </data>
+  <data name="ServiceBusNotificationHubSendAction_TagsExpressionInputName" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_QueueNameInputName" xml:space="preserve">
+    <value>Queue name</value>
+  </data>
+  <data name="ServiceBusAction_QueryError_MessagingExceptionFormat" xml:space="preserve">
+    <value>Azure Service Bus query failed with response '{0}'</value>
+  </data>
+  <data name="AppServiceDeployWebAppActionName" xml:space="preserve">
+    <value>Deploy web app</value>
+  </data>
+  <data name="AppServiceConsumerDescription" xml:space="preserve">
+    <value>Azure App Service is a single service that includes all of the existing capabilities from Azure Websites, Azure Mobile Services, and Azure Biztalk Services, while adding new capabilities. &lt;a href="https://azure.microsoft.com/documentation/services/app-service/"&gt;Learn more&lt;/a&gt; about how App Service relates to these existing services.</value>
+  </data>
+  <data name="StorageQueueEnqueueAction_AccountNameInputDescription" xml:space="preserve">
+    <value>The name associated with your Azure storage account (e.g. https://STORAGE_ACCOUNT_NAME.queue.core.windows.net).</value>
+  </data>
+  <data name="ServiceBusTopicSendActionDescription" xml:space="preserve">
+    <value>This action sends a JSON string representation of the event to the specified Azure Service Bus topic. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=392636'&gt;Learn More&lt;/a&gt;</value>
+  </data>
+  <data name="ServiceBusAction_QueryError_SuppliedConnectionStringNotWellFormed" xml:space="preserve">
+    <value>The supplied SAS connection string is not valid ({0})</value>
+  </data>
+</root>

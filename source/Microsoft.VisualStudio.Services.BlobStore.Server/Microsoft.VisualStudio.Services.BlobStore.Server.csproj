@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.BlobStore.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9554AB97-2954-46CB-982A-AA9FD7147179}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.BlobStore.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.BlobStore.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Cosmos.Table">
+      <HintPath>lib\Microsoft.Azure.Cosmos.Table.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Blob">
+      <HintPath>lib\Microsoft.Azure.Storage.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>lib\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime">
+      <HintPath>lib\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.Shared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.AzureStorage">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.AzureStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.OnPrem">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.OnPrem.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.BlobStitcher.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.BlobStitcher.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.DedupStorage">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.DedupStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Azure">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Dataflow">
+      <HintPath>lib\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>lib\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_003C_003Ez__ReadOnlyArray`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\BlobStore\UploadFileUtils.cs" />
+    <Compile Include="AdminPlatformBlobStore.cs" />
+    <Compile Include="AdminDedupStoreService.cs" />
+    <Compile Include="Blob2UrlController.cs" />
+    <Compile Include="MultiDomainBlobUrlHandler.cs" />
+    <Compile Include="BlobBatchController.cs" />
+    <Compile Include="MultiDomainBlobBatchHandler.cs" />
+    <Compile Include="TraceInfo.cs" />
+    <Compile Include="Blob2Controller.cs" />
+    <Compile Include="MultiDomainBlobHandler.cs" />
+    <Compile Include="BlobControllerBase.cs" />
+    <Compile Include="BlobReferenceExtensions.cs" />
+    <Compile Include="IBlobStoreBlobEdgeCachingService.cs" />
+    <Compile Include="BlobStoreBlobEdgeCachingService.cs" />
+    <Compile Include="BlobStoreLogSettingsJob.cs" />
+    <Compile Include="BlobStoreRootFixUpJob.cs" />
+    <Compile Include="BlobStoreSecurityUtils.cs" />
+    <Compile Include="BlobStoreServiceBase.cs" />
+    <Compile Include="StrongBoxChangeHandlerMapping.cs" />
+    <Compile Include="BlockCacheService.cs" />
+    <Compile Include="ChunkController.cs" />
+    <Compile Include="MultiDomainChunkHandler.cs" />
+    <Compile Include="ChunkDedupLogicalSizeJob.cs" />
+    <Compile Include="ChunkDedupPhysicalSizeJob.cs" />
+    <Compile Include="ChunkLogicalSizeJobHelper.cs" />
+    <Compile Include="AFDClientToolProvider.cs" />
+    <Compile Include="ClientToolController.cs" />
+    <Compile Include="ClientToolReleaseConstants.cs" />
+    <Compile Include="ClientToolReleaseQueryService.cs" />
+    <Compile Include="ClientToolReleaseRegistryUtil.cs" />
+    <Compile Include="IClientToolReleaseQueryService.cs" />
+    <Compile Include="IRuntimeIdentifierResolver.cs" />
+    <Compile Include="RuntimeIdentifierResolver.cs" />
+    <Compile Include="IClientSettingService.cs" />
+    <Compile Include="ClientSettingService.cs" />
+    <Compile Include="ClientSettingsController.cs" />
+    <Compile Include="CompressionHelpers.cs" />
+    <Compile Include="DedupUsageJobInfo.cs" />
+    <Compile Include="DedupDataJobInfo.cs" />
+    <Compile Include="ParentDedupDataJobInfo.cs" />
+    <Compile Include="DedupPhysicalStorageData.cs" />
+    <Compile Include="DedupLogicalDataJobResult.cs" />
+    <Compile Include="DedupLogicalDataJobPartitionedInfo.cs" />
+    <Compile Include="DedupLogicalDataJobAggregatedInfo.cs" />
+    <Compile Include="IDedupLogicalDataJobResult.cs" />
+    <Compile Include="DedupUrlsBatch5Controller.cs" />
+    <Compile Include="MultiDomainDedupUrlsBatchHandler.cs" />
+    <Compile Include="DeleteDanglingPipelineArtifactRootsJob.cs" />
+    <Compile Include="DeleteDanglingPipelineArtifactRootsInfo.cs" />
+    <Compile Include="DeleteDanglingPipelineArtifactRootsJobResult.cs" />
+    <Compile Include="DeleteDanglingPipelineArtifactRootsAggregateInfo.cs" />
+    <Compile Include="DedupStoreService.cs" />
+    <Compile Include="DedupInfoRestoringRetriever.cs" />
+    <Compile Include="DedupRestoringVisitor.cs" />
+    <Compile Include="DedupTreeRestoreJobParameter.cs" />
+    <Compile Include="DedupTreeRestoreJob.cs" />
+    <Compile Include="DedupUrls5Controller.cs" />
+    <Compile Include="DedupUrlsController.cs" />
+    <Compile Include="MultiDomainDedupUrlsHandler.cs" />
+    <Compile Include="DeletionJobInfo.cs" />
+    <Compile Include="DeleteExpiredBlobsJob.cs" />
+    <Compile Include="DeleteRetentionConfigurationJob.cs" />
+    <Compile Include="DeleteRetentionConfigurationJobInfo.cs" />
+    <Compile Include="AggregatedDeleteRetentionConfigurationJobInfo.cs" />
+    <Compile Include="BlobstoreEventGridClient.cs" />
+    <Compile Include="IBlobstoreEventGridClient.cs" />
+    <Compile Include="IReferenceAuditResultExporter.cs" />
+    <Compile Include="ReferenceAuditEntry.cs" />
+    <Compile Include="ReferenceAuditEventGridResultExporter.cs" />
+    <Compile Include="SessionService.cs" />
+    <Compile Include="ReferenceAuditJob.cs" />
+    <Compile Include="SymbolAuditJob.cs" />
+    <Compile Include="ReferenceAuditResultExporterExtensions.cs" />
+    <Compile Include="ReferenceAuditJobRunner.cs" />
+    <Compile Include="ReferenceAuditJobInfo.cs" />
+    <Compile Include="ReferenceCrawlStatus.cs" />
+    <Compile Include="ReferenceAuditJobAggregateInfo.cs" />
+    <Compile Include="IAdminDedupStore.cs" />
+    <Compile Include="FileStorageSizeJob.cs" />
+    <Compile Include="FileStorageJobMode.cs" />
+    <Compile Include="FileStorageJobBase.cs" />
+    <Compile Include="FileStorageJobInfo.cs" />
+    <Compile Include="ParentFileStorageJobInfo.cs" />
+    <Compile Include="IDomainJobInfo.cs" />
+    <Compile Include="IFileStorageSizeJobInfo.cs" />
+    <Compile Include="FileStorageSizeJobResult.cs" />
+    <Compile Include="FileStorageSizeJobHelper.cs" />
+    <Compile Include="HardDeleteRootsJob.cs" />
+    <Compile Include="DeleteRootsJobInfo.cs" />
+    <Compile Include="DeleteRootsJobResult.cs" />
+    <Compile Include="FileBlobProvider.cs" />
+    <Compile Include="BlockData.cs" />
+    <Compile Include="BlockBlobBase.cs" />
+    <Compile Include="BlockBlob.cs" />
+    <Compile Include="InMemoryBlobProvider.cs" />
+    <Compile Include="DBOperation.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="DeletionJobResult.cs" />
+    <Compile Include="EchoController.cs" />
+    <Compile Include="BlockUploadStatus.cs" />
+    <Compile Include="BlockCacheType.cs" />
+    <Compile Include="IBlockCacheServiceConstants.cs" />
+    <Compile Include="IBlockCacheService.cs" />
+    <Compile Include="IBlobKeepUntilCacheService.cs" />
+    <Compile Include="IDedupKeepUntilCacheService.cs" />
+    <Compile Include="IKeepUntilCacheService`1.cs" />
+    <Compile Include="IReceiptSecretProvider.cs" />
+    <Compile Include="BlobKeepUntilCacheService.cs" />
+    <Compile Include="DedupKeepUntilCacheService.cs" />
+    <Compile Include="KeepUntilCacheService`1.cs" />
+    <Compile Include="MultiDomainBlob2Controller.cs" />
+    <Compile Include="MultiDomainBlob2UrlController.cs" />
+    <Compile Include="MultiDomainBlobBatchController.cs" />
+    <Compile Include="MultiDomainReferenceBatchController.cs" />
+    <Compile Include="MultiDomainChunkController.cs" />
+    <Compile Include="MultiDomainDedupUrlsBatchController.cs" />
+    <Compile Include="MultiDomainDedupUrlsController.cs" />
+    <Compile Include="MultiDomainNodeController.cs" />
+    <Compile Include="MultiDomainRootController.cs" />
+    <Compile Include="KeepUntilCacheServiceExtensions.cs" />
+    <Compile Include="NodeController.cs" />
+    <Compile Include="MultiDomainNodeHandler.cs" />
+    <Compile Include="InMemoryReceiptSecretProvider.cs" />
+    <Compile Include="PlatformBlobStore.cs" />
+    <Compile Include="ReceiptSecretConstants.cs" />
+    <Compile Include="ReceiptSecretProvider.cs" />
+    <Compile Include="ReceiptSecretProviderBase.cs" />
+    <Compile Include="ReferenceBatchController.cs" />
+    <Compile Include="MultiDomainReferenceBatchHandler.cs" />
+    <Compile Include="FilePhysicalDataUsageJobInfo.cs" />
+    <Compile Include="FileStorageDataJobInfo.cs" />
+    <Compile Include="ParentFileStorageDataJobInfo.cs" />
+    <Compile Include="PhysicalDataJobResult.cs" />
+    <Compile Include="SymbolAuditResultDiagnosticBlobExporter.cs" />
+    <Compile Include="IMetricsQueryClientFactory.cs" />
+    <Compile Include="MetricsQueryClientFactory.cs" />
+    <Compile Include="TelemetryController.cs" />
+    <Compile Include="StorageMetricsTransactionPopulatorJob.cs" />
+    <Compile Include="StorageMetricsTransactionHelper.cs" />
+    <Compile Include="MetricsRowEntity.cs" />
+    <Compile Include="AzureMonitorStorageMetrics.cs" />
+    <Compile Include="ValidationController.cs" />
+    <Compile Include="RootController.cs" />
+    <Compile Include="MultiDomainRootHandler.cs" />
+    <Compile Include="SoftDeleteRetentionAccountingJob.cs" />
+    <Compile Include="SoftDeletedRetentionJobPartitionedInfo.cs" />
+    <Compile Include="SoftDeletedRetentionJobAggregatedInfo.cs" />
+    <Compile Include="SoftDeletedRetentionJobResult.cs" />
+    <Compile Include="ISoftDeleteRetentionResult.cs" />
+    <Compile Include="StorageVolumeMeterJob.cs" />
+    <Compile Include="StorageVolumeMeterJobResult.cs" />
+    <Compile Include="DRCleanupJob.cs" />
+    <Compile Include="DedupCleanupJobInfo.cs" />
+    <Compile Include="StorageRetentionInfo.cs" />
+    <Compile Include="DedupDeletionStage.cs" />
+    <Compile Include="DeleteRetentionOperationMode.cs" />
+    <Compile Include="BlobIdsForPartition.cs" />
+    <Compile Include="DedupUploadQueue.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Common\IUsageInfoService.cs" />
+    <Compile Include="Common\UsageInfoService.cs" />
+    <Compile Include="Common\ISessionService.cs" />
+    <Compile Include="DedupUtility\IBottomUpDedupProcessor.cs" />
+    <Compile Include="DedupUtility\BottomUpDedupProcessorFactory.cs" />
+    <Compile Include="DedupUtility\SerializedBottomUpDedupProcessor.cs" />
+    <Compile Include="DedupUtility\ParallelizedBottomUpDedupProcessor.cs" />
+    <Compile Include="DedupUtility\DedupProcessor.cs" />
+    <Compile Include="DedupUtility\DedupVisitor.cs" />
+    <Compile Include="DedupUtility\Tracker.cs" />
+    <Compile Include="DedupUtility\DedupLink.cs" />
+    <Compile Include="DedupUtility\DedupInfoLink.cs" />
+    <Compile Include="DedupUtility\IDedupProcessor.cs" />
+    <Compile Include="DedupUtility\IDedupInfoRetriever.cs" />
+    <Compile Include="DedupUtility\IDedupRestorer.cs" />
+    <Compile Include="DedupUtility\IDedupMetadataModifier.cs" />
+    <Compile Include="DedupUtility\IBottomUpConcurrencyEvaluator.cs" />
+    <Compile Include="DedupUtility\ContextBasedConcurrencyEvaluator.cs" />
+    <Compile Include="DedupUtility\FixedConcurrencyEvaluator.cs" />
+    <Compile Include="DedupValidation\TwoLevelDedupProcessingCache.cs" />
+    <Compile Include="DedupValidation\L1HitRateCounter.cs" />
+    <Compile Include="DedupValidation\L2HitRateCounter.cs" />
+    <Compile Include="DedupValidation\CompositeHitRateCounter.cs" />
+    <Compile Include="DedupValidation\HitRateCounterBase.cs" />
+    <Compile Include="DedupValidation\CacheStats.cs" />
+    <Compile Include="DedupValidation\DedupProcessingCacheService.cs" />
+    <Compile Include="DedupValidation\DedupRedisCache.cs" />
+    <Compile Include="DedupValidation\CacheBuffer.cs" />
+    <Compile Include="DedupValidation\IDedupProcessingCache.cs" />
+    <Compile Include="DedupValidation\NullDedupProcessingCache.cs" />
+    <Compile Include="DedupValidation\DedupValidator.cs" />
+    <Compile Include="DedupValidation\RootsValidator.cs" />
+    <Compile Include="Domain\AdminHostDomainStoreService.cs" />
+    <Compile Include="Domain\DomainDedupStoreProvider.cs" />
+    <Compile Include="Domain\HostDomainController.cs" />
+    <Compile Include="Domain\HostDomainStoreService.cs" />
+    <Compile Include="Domain\HostDomainTableEntity.cs" />
+    <Compile Include="Domain\IAdminDomainStoreService.cs" />
+    <Compile Include="Domain\IHostDomainProvider.cs" />
+    <Compile Include="Domain\IAdminHostDomainProvider.cs" />
+    <Compile Include="Domain\RegistryHostDomainProvider.cs" />
+    <Compile Include="Egress\EgressCheckpoint.cs" />
+    <Compile Include="Egress\EgressComputeJob.cs" />
+    <Compile Include="Egress\EgressComputeParentJobResult.cs" />
+    <Compile Include="Egress\EgressParser.cs" />
+    <Compile Include="Egress\CloudAnalyticsClientAdapter.cs" />
+    <Compile Include="Egress\LogRecordAdapter.cs" />
+    <Compile Include="Egress\EgressParserResult.cs" />
+    <Compile Include="Egress\EgressWorkerResult.cs" />
+    <Compile Include="Egress\EgressWorker.cs" />
+    <Compile Include="Egress\EgressConstants.cs" />
+    <Compile Include="Egress\IStorageAccountAdapter.cs" />
+    <Compile Include="Egress\ICloudAnalyticsClientAdapter.cs" />
+    <Compile Include="Egress\IEgressWorkerUtilities.cs" />
+    <Compile Include="ServerSideDedup\UploadResult.cs" />
+    <Compile Include="ServerSideDedup\IServerDeduplicationService.cs" />
+    <Compile Include="ServerSideDedup\ServerDeduplicationService.cs" />
+    <Compile Include="ServerSideDedup\ServerSideDedupAttribute.cs" />
+    <Compile Include="StorageLogStats\IStorageAccountAdapter.cs" />
+    <Compile Include="StorageLogStats\StorageAccountAdapter.cs" />
+    <Compile Include="StorageLogStats\AggregatedStorageLogStatsResult.cs" />
+    <Compile Include="StorageLogStats\OperationAggregate.cs" />
+    <Compile Include="StorageLogStats\StorageLogRecord.cs" />
+    <Compile Include="StorageLogStats\StorageLogStatsJob.cs" />
+    <Compile Include="StorageLogStats\StorageLogStatsProcessor.cs" />
+    <Compile Include="StorageLogStats\IStorageLogStatsProcessor.cs" />
+    <Compile Include="StorageLogExport\StorageLogExportJob.cs" />
+    <Compile Include="StorageLogExport\StorageLogExporter.cs" />
+    <Compile Include="Billing\StorageMetric.cs" />
+    <Compile Include="Billing\FeedMetric.cs" />
+    <Compile Include="Billing\DataContracts.cs" />
+    <Compile Include="Billing\UsageInfoController.cs" />
+    <Compile Include="Billing\UsageInfoServiceExtensions.cs" />
+    <Compile Include="Billing\PackagingBreakdown\ChunkPackagingStorageBreakdownService.cs" />
+    <Compile Include="Billing\PackagingBreakdown\ChunkVolumeByFeedAggregatedResult.cs" />
+    <Compile Include="Billing\PackagingBreakdown\ChunkVolumeByFeedAggregatorJob.cs" />
+    <Compile Include="Billing\PackagingBreakdown\ChunkVolumeByFeedResult.cs" />
+    <Compile Include="Billing\PackagingBreakdown\FileVolumeByFeedAggregatedResult.cs" />
+    <Compile Include="Billing\PackagingBreakdown\FileVolumeByFeedAggregatorJob.cs" />
+    <Compile Include="Billing\PackagingBreakdown\FilePackagingStorageBreakdownService.cs" />
+    <Compile Include="Billing\PackagingBreakdown\FileVolumeByFeedCheckpoint.cs" />
+    <Compile Include="Billing\PackagingBreakdown\PackagingStorageBreakdownServiceBase.cs" />
+    <Compile Include="Billing\PackagingBreakdown\FileVolumeByFeedResult.cs" />
+    <Compile Include="BlockCache\DeploymentLocalBlockCacheService.cs" />
+    <Compile Include="BlockCache\LocalBlockCacheService.cs" />
+    <Compile Include="BlockCache\NoBlockCacheService.cs" />
+    <Compile Include="BlockCache\RedisBlockCacheService.cs" />
+    <Compile Include="Copy\DedupCopyController.cs" />
+    <Compile Include="Copy\DedupContentCopier.cs" />
+    <Compile Include="Copy\DedupContentCopyJob.cs" />
+    <Compile Include="Copy\DedupContentCopyRequest.cs" />
+    <Compile Include="DataExport\PackagingReferenceExporter.cs" />
+    <Compile Include="DataExport\ReferenceExporterBase.cs" />
+    <Compile Include="DataExport\ReferenceExporterPluginRegistration.cs" />
+    <Compile Include="DataExport\SymbolReferenceExporter.cs" />
+    <Compile Include="DataExport\DiagnosticsExportService.cs" />
+    <Compile Include="DataExport\IDiagnosticsExportService.cs" />
+    <Compile Include="DedupBlobControllers\DedupBlobTracepoints.cs" />
+    <Compile Include="DedupBlobControllers\DedupPartsController.cs" />
+    <Compile Include="DedupBlobControllers\DedupSessionsController.cs" />
+    <Compile Include="DedupBlobControllers\MultiDomainDedupBlobController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,280 @@
+{
+  "id": "353a5b96-852c-4479-94bd-b83abaac998d",
+  "name": "IIS website and SQL database deployment to Azure Virtual Machines",
+  "category": "Deployment",
+  "description": "Deployment Group: Deploy ASP.NET or ASP.NET Core web applications to an IIS website and SQL database to Azure virtual machines in a load-balanced set.",
+  "iconTaskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "IIS Deployment",
+        "rank": 1,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "e94f1750-a6a8-11e6-be69-bdf37a7b15d8",
+            "version": "1.*",
+            "Name": "Azure Network Load Balancer - Disconnect",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "ResourceGroupName": "$(Parameters.ResourceGroupName)",
+              "LoadBalancer": "$(Parameters.LoadBalancer)",
+              "Action": "Disconnect"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+            "version": "0.*",
+            "Name": "IIS Web App Deploy",
+            "inputs": {
+              "WebSiteName": "$(Parameters.WebSiteName)",
+              "Package": "$(System.DefaultWorkingDirectory)\\**\\*.zip"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "e94f1750-a6a8-11e6-be69-bdf37a7b15d8",
+            "version": "1.*",
+            "Name": "Azure Network Load Balancer - Connect",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+              "ResourceGroupName": "$(Parameters.ResourceGroupName)",
+              "LoadBalancer": "$(Parameters.LoadBalancer)",
+              "Action": "Connect"
+            },
+            "Enabled": true,
+            "AlwaysRun": true,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "SQL Deployment",
+        "rank": 2,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "4B506F7F-720F-47BB-BF21-029BAC6A690D",
+            "version": "0.*",
+            "Name": "SQL DB Deploy",
+            "inputs": {
+              "DacpacFile": "$(System.DefaultWorkingDirectory)\\**\\*.dacpac",
+              "TaskType": "$(Parameters.TaskType)",
+              "SqlFile": "$(Parameters.SqlFile)",
+              "InlineSql": "$(Parameters.InlineSql)",
+              "TargetMethod": "$(Parameters.TargetMethod)",
+              "DatabaseName": "$(Parameters.DatabaseName)",
+              "ConnectionString": "$(Parameters.ConnectionString)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectedServiceName",
+          "label": "{ConnectedServiceNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{ConnectedServiceNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "ResourceGroupName",
+          "label": "{ResourceGroupNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ResourceGroupNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "LoadBalancer",
+          "label": "{LoadBalancerLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{LoadBalancerMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "WebSiteName",
+          "label": "{WebSiteNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{WebSiteNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "dacpac": "Sql Dacpac",
+            "sqlQuery": "Sql Query File",
+            "sqlInline": "Inline Sql"
+          },
+          "properties": {},
+          "name": "TaskType",
+          "label": "{TaskTypeLabel}",
+          "defaultValue": "dacpac",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{TaskTypeMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "server": "Server",
+            "connectionString": "Connection String",
+            "publishProfile": "Publish Profile"
+          },
+          "properties": {},
+          "name": "TargetMethod",
+          "label": "{TargetMethodLabel}",
+          "defaultValue": "server",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{TargetMethodMarkdown}",
+          "visibleRule": "TaskType = dacpac",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "SqlFile",
+          "label": "{SqlFileLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{SqlFileMarkdown}",
+          "visibleRule": "TaskType = sqlQuery",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "resizable": "true",
+            "rows": "10"
+          },
+          "name": "InlineSql",
+          "label": "{InlineSqlLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "multiLine",
+          "helpMarkDown": "{InlineSqlMarkdown}",
+          "visibleRule": "TaskType = sqlInline",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DatabaseName",
+          "label": "{DatabaseNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{DatabaseNameMarkdown}",
+          "visibleRule": "TargetMethod = server || TaskType = sqlQuery || TaskType = sqlInline",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "ConnectionString",
+          "label": "{ConnectionStringLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "multiLine",
+          "helpMarkDown": "{ConnectionStringMarkdown}",
+          "visibleRule": "TaskType = dacpac && TargetMethod = connectionString",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureResourceGroups",
+          "parameters": {},
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "ResourceGroupName"
+        },
+        {
+          "dataSourceName": "AzureRMLoadBalancers",
+          "parameters": {
+            "ResourceGroupName": "$(ResourceGroupName)"
+          },
+          "endpointId": "$(ConnectedServiceName)",
+          "target": "LoadBalancer"
+        }
+      ]
+    }
+  }
+}

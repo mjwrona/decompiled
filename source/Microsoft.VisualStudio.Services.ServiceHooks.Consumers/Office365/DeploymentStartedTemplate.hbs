@@ -1,0 +1,26 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "Deployment started for release {{{jsonEscape resource.environment.release['name']}}}  to environment {{{jsonEscape resource.environment['name']}}}.",
+    "themeColor": "{{{jsonEscape "#dadada"}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+{{#if data.environmentSummaryUri}}
+            "activityTitle": "Deployment of release [{{{jsonEscape resource.environment.release.name}}}]({{{jsonEscape resource.environment.release._links.web.href}}}) on [{{{jsonEscape resource.environment.name}}}]({{{jsonEscape data.environmentSummaryUri}}}) started",
+            "activitySubtitle": "[{{{jsonEscape resource.environment.release.name}}}]({{{jsonEscape resource.environment.release._links.web.href}}}) deployment on [{{{jsonEscape resource.environment.releaseDefinition.name}}}]({{{jsonEscape resource.environment.releaseDefinition._links.web.href}}}) : [{{{jsonEscape resource.environment.name}}}]({{{jsonEscape data.environmentSummaryUri}}}) started",
+{{else}} {{!-- {{For compat with RM deployment. The else block can be removed in M145.}} --}}
+            "activityTitle": "Deployment of release [{{{jsonEscape resource.environment.release.name}}}]({{{jsonEscape resource.environment.release._links.web.href}}}) on {{{jsonEscape resource.environment.name}}} started",
+            "activitySubtitle": "[{{{jsonEscape resource.environment.release.name}}}]({{{jsonEscape resource.environment.release._links.web.href}}}) deployment on [{{{jsonEscape resource.environment.releaseDefinition.name}}}]({{{jsonEscape resource.environment.releaseDefinition._links.web.href}}}) : {{{jsonEscape resource.environment.name}}} started",
+{{/if}}
+            "activityText": "{{{jsonEscape resource.release.description}}}",
+            "activityImage": "{{{iconUrl "teams-deployment-in-progress.png"}}}",
+            "activityImageType": "article"
+        }
+    ],
+    "potentialAction": []
+}

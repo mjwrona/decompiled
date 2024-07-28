@@ -1,0 +1,97 @@
+{
+    "id": "container",
+    "name": "Docker container",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "description": "Build a Docker image and push it to a container registry.",
+    "iconTaskId": "E28912F1-0114-4464-802A-A3A35437FD16",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "build": [{
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Build an image",
+            "timeoutInMinutes": 0,
+            "task": {
+                "id": "E28912F1-0114-4464-802A-A3A35437FD16",
+                "versionSpec": "0.*",
+                "definitionType": "task"
+            },
+            "inputs": {
+                "dockerRegistryEndpoint": "",
+                "action": "Build an image",
+                "dockerFile": "**/Dockerfile",
+                "buildArguments": "",
+                "defaultContext": "true",
+                "context": "",
+                "imageName": "$(Build.Repository.Name):$(Build.BuildId)",
+                "qualifyImageName": "true",
+                "additionalImageTags": "",
+                "includeSourceTags": "false",
+                "includeLatestTag": "false",
+                "imageDigestFile": "",
+                "containerName": "",
+                "ports": "",
+                "volumes": "",
+                "envVars": "",
+                "workDir": "",
+                "entrypoint": "",
+                "containerCommand": "",
+                "detached": "true",
+                "restartPolicy": "no",
+                "restartMaxRetries": "",
+                "customCommand": "",
+                "dockerHostEndpoint": "",
+                "cwd": "$(System.DefaultWorkingDirectory)"
+            }
+        },
+        {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Push an image",
+            "timeoutInMinutes": 0,
+            "task": {
+                "id": "E28912F1-0114-4464-802A-A3A35437FD16",
+                "versionSpec": "0.*",
+                "definitionType": "task"
+            },
+            "inputs": {
+                "dockerRegistryEndpoint": "",
+                "action": "Push an image",
+                "dockerFile": "**/Dockerfile",
+                "buildArguments": "",
+                "defaultContext": "true",
+                "context": "",
+                "imageName": "$(Build.Repository.Name):$(Build.BuildId)",
+                "qualifyImageName": "true",
+                "additionalImageTags": "",
+                "includeSourceTags": "false",
+                "includeLatestTag": "false",
+                "imageDigestFile": "",
+                "containerName": "",
+                "ports": "",
+                "volumes": "",
+                "envVars": "",
+                "workDir": "",
+                "entrypoint": "",
+                "containerCommand": "",
+                "detached": "true",
+                "restartPolicy": "no",
+                "restartMaxRetries": "",
+                "customCommand": "",
+                "dockerHostEndpoint": "",
+                "cwd": "$(System.DefaultWorkingDirectory)"
+            }
+        }],
+        "options": [ ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            }
+        },
+        "triggers": [ ]
+    }
+}

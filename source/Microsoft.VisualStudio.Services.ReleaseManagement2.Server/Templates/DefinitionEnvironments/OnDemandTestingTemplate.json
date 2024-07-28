@@ -1,0 +1,113 @@
+﻿{
+    "Id": "d71806bb-e40f-4b12-87da-ad76f3edea34",
+    "Name": "Run automated tests from Test Manager",
+    "iconTaskId": "ef087383-ee5e-42c7-9a53-ab56c98420f9",
+    "category": "Deployment",
+    "description": "Trigger automated test cases from test plans and suites in Test hub.",
+  "environment": {
+    "Name": "QAEnv",
+    "Rank": 1,
+    "Variables": {},
+    "PreDeployApprovals": {
+      "Approvals": [{
+          "Rank": 1,
+          "IsAutomated": true,
+          "IsNotificationOn": false,
+          "Id": 0
+        }]
+    },
+    "DeployStep": {
+      "Tasks": [],
+      "Id": 0
+    },
+    "PostDeployApprovals": {
+      "Approvals": [{
+          "Rank": 1,
+          "IsAutomated": true,
+          "IsNotificationOn": false,
+          "Id": 0
+        }]
+    },
+    "DeployPhases": [{
+        "DeploymentInput": {
+          "ParallelExecution": {
+            "ParallelExecutionType": 0
+          },
+          "SkipArtifactsDownload": false,
+          "TimeoutInMinutes": 0,
+          "QueueId": 1,
+          "Demands": [],
+          "EnableAccessToken": false
+        },
+        "Rank": 1,
+        "PhaseType": 1,
+        "Name": "Run on agent",
+        "WorkflowTasks": [{
+            "TaskId": "ef087383-ee5e-42c7-9a53-ab56c98420f9",
+            "Version": "2.*",
+            "Name": "Test run for Test plans",
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": true,
+            "TimeoutInMinutes": 0,
+            "DefinitionType": "task",
+            "Inputs": {
+              "testSelector": "testRun",
+              "testAssemblyVer2": "**\\*test*.dll\n!**\\obj\\**",
+              "testPlan": "1",
+              "testSuite": "",
+              "testConfiguration": "1",
+              "tcmTestRun": "$(test.RunId)",
+              "searchFolder": "$(System.DefaultWorkingDirectory)",
+              "testFiltercriteria": "",
+              "runOnlyImpactedTests": "false",
+              "runAllTestsAfterXBuilds": "50",
+              "uiTests": "false",
+              "vstestLocationMethod": "version",
+              "vsTestVersion": "15.0",
+              "vstestLocation": "",
+              "runSettingsFile": "",
+              "overrideTestrunParameters": "",
+              "runInParallel": "false",
+              "runTestsInIsolation": "false",
+              "pathtoCustomTestAdapters": "",
+              "codeCoverageEnabled": "false",
+              "testRunTitle": "",
+              "platform": "",
+              "configuration": "",
+              "publishRunAttachments": "true"
+            }
+          }]
+      }],
+    "EnvironmentOptions": {
+      "EmailNotificationType": "OnlyOnFailure",
+      "EmailRecipients": "release.environment.owner;release.creator",
+      "SkipArtifactsDownload": false,
+      "TimeoutInMinutes": 0,
+      "EnableAccessToken": false,
+      "PublishDeploymentStatus": false
+    },
+    "Demands": [],
+    "Conditions": [{
+        "Name": "ReleaseStarted",
+        "ConditionType": 1,
+        "Value": ""
+      }],
+    "ExecutionPolicy": {
+      "ConcurrencyCount": 1,
+      "QueueDepthCount": 0
+    },
+    "Schedules": [],
+    "RetentionPolicy": {
+      "DaysToKeep": 30,
+      "ReleasesToKeep": 3,
+      "RetainBuild": true
+    },
+    "properties": {
+      "OnDemandTestingTemplateId": {
+        "$type": "System.String",
+        "$value": "d71806bb-e40f-4b12-87da-ad76f3edea34"
+      }
+    }
+  }
+}

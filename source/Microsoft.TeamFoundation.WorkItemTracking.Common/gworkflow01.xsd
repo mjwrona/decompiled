@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/globalworkflow"
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/globalworkflow"
+    xmlns:typelib="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typelib">
+    
+    <xs:import namespace="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typelib"/>
+
+    <!-- Root element -->
+    <xs:element name="GLOBALWORKFLOW">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="GLOBALLISTS" type="typelib:GlobalListsDef" minOccurs="0"/>
+                <xs:element name="FIELDS" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FIELD" type="FieldDefinition" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <!-- Field definition -->
+    <xs:complexType name="FieldDefinition">
+        <xs:complexContent>
+            <xs:extension base="typelib:FieldDefinitionBase">
+                <xs:sequence minOccurs="0">
+                    <xs:group ref="typelib:PlainRules" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

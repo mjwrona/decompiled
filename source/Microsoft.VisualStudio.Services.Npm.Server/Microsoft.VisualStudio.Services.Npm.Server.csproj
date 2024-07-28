@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Npm.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3523C93E-BE62-459B-9F01-337205B99EDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Npm.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Npm.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.BclPolyfills">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Npm.Client.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Npm.Client.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Npm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Npm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.ServiceShared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.Npm">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.Npm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NpmProblemPackagesAggregation.cs" />
+    <Compile Include="NpmUpstreamVersionListAggregation.cs" />
+    <Compile Include="NpmIdentityResolver.cs" />
+    <Compile Include="Protocol.cs" />
+    <Compile Include="NpmPackageName.cs" />
+    <Compile Include="PackagingRegistration.cs" />
+    <Compile Include="NpmWriteBootstrapper`3.cs" />
+    <Compile Include="NpmVersionsService.cs" />
+    <Compile Include="RawFeedId.cs" />
+    <Compile Include="SecuredDictionary`2.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Readme\NpmReadmeUtils.cs" />
+    <Compile Include="Content\INpmContentUtils.cs" />
+    <Compile Include="PackageIndex\NpmProtocolMetadata.cs" />
+    <Compile Include="PackageIndex\NpmSortableVersionBuilder.cs" />
+    <Compile Include="PackageExtraction\IPackageExtractor.cs" />
+    <Compile Include="PackageExtraction\PackageExtractor.cs" />
+    <Compile Include="PackageExtraction\FullPathTarEntryFactory.cs" />
+    <Compile Include="Registry\SameCollectionUpstreamNpmClient.cs" />
+    <Compile Include="Registry\UpstreamNpmClientBase.cs" />
+    <Compile Include="Registry\JPropertyCollection.cs" />
+    <Compile Include="Registry\NpmRegistration.cs" />
+    <Compile Include="Registry\NpmUpstreamRegistryResponse.cs" />
+    <Compile Include="Registry\PackageVersionInternalMetadata.cs" />
+    <Compile Include="Registry\CrossCollectionUpstreamNpmClient.cs" />
+    <Compile Include="Registry\IUpstreamNpmClient.cs" />
+    <Compile Include="Registry\IUpstreamNpmClientFactory.cs" />
+    <Compile Include="Registry\PublicUpstreamNpmClient.cs" />
+    <Compile Include="Registry\UpstreamProvider.cs" />
+    <Compile Include="Utils\BintrayErrorSerializer.cs" />
+    <Compile Include="Utils\BintrayError.cs" />
+    <Compile Include="Utils\DistTagsUtils.cs" />
+    <Compile Include="Utils\IJsonErrorLogger.cs" />
+    <Compile Include="Utils\TracerBlockJsonErrorLogger.cs" />
+    <Compile Include="Utils\RawJsonErrorLogger.cs" />
+    <Compile Include="Utils\JsonErrorLogger.cs" />
+    <Compile Include="Utils\NpmElementalFeedValidator.cs" />
+    <Compile Include="Utils\NpmBlobUtils.cs" />
+    <Compile Include="Utils\NpmSecurityHelper.cs" />
+    <Compile Include="Utils\NpmUpstreamUtils.cs" />
+    <Compile Include="Utils\NpmUriBuilder.cs" />
+    <Compile Include="Utils\NpmVersionUtils.cs" />
+    <Compile Include="Utils\PackageJsonUtils.cs" />
+    <Compile Include="Utils\IPackageMetadataSerializer.cs" />
+    <Compile Include="Utils\PackageMetadataSerializer.cs" />
+    <Compile Include="Utils\IUnknownUpstreamResponseSerializer.cs" />
+    <Compile Include="Utils\IUnknownUpstreamResponse.cs" />
+    <Compile Include="Utils\UnknownUpstreamResponseSerializer.cs" />
+    <Compile Include="ItemStore\NpmItemStore.cs" />
+    <Compile Include="PackageIngestion\UpstreamPackageContent.cs" />
+    <Compile Include="PackageIngestion\UpstreamPackageInfo.cs" />
+    <Compile Include="PackageIngestion\SpecialPackageNames.cs" />
+    <Compile Include="PackageIngestion\IngestionValidationUtils.cs" />
+    <Compile Include="PackageIngestion\INpmPackageIngestionService.cs" />
+    <Compile Include="PackageIngestion\NpmPackageIngestionService.cs" />
+    <Compile Include="Operations\NpmMetadataOpApplierFactory.cs" />
+    <Compile Include="Operations\UpdateSharedMetadataMetadataOpApplier.cs" />
+    <Compile Include="Operations\NpmDeprecateMetadataOpApplier.cs" />
+    <Compile Include="Operations\NpmAddMetadataOpApplier.cs" />
+    <Compile Include="NpmPackageMetadata\INpmMetadataEntry.cs" />
+    <Compile Include="Metadata\INpmMetadataEntryWriteable.cs" />
+    <Compile Include="Metadata\NpmByBlobMetadataServiceFactoryBootstrapper.cs" />
+    <Compile Include="Metadata\NpmMetadataDocumentSerializerFactory.cs" />
+    <Compile Include="Metadata\NpmMetadataEntry.cs" />
+    <Compile Include="Metadata\NpmMetadataHandlerBootstrapper.cs" />
+    <Compile Include="HttpHandlers\NpmPublishHttpHandler.cs" />
+    <Compile Include="HttpHandlers\NpmPublishRouteHandler.cs" />
+    <Compile Include="Exceptions\InvalidUpstreamSourceException.cs" />
+    <Compile Include="Exceptions\InvalidUpstreamSourceProtocolException.cs" />
+    <Compile Include="Exceptions\NpmExceptionMappings.cs" />
+    <Compile Include="Exceptions\NpmUpstreamCachingDisabledException.cs" />
+    <Compile Include="Exceptions\InvalidUpstreamPackageWithSuccessfulFallbackExcept.cs" />
+    <Compile Include="Exceptions\GetDownloadUriFailedException.cs" />
+    <Compile Include="Exceptions\NpmExceptionFilterAttribute.cs" />
+    <Compile Include="Internal\NpmContentInternalController.cs" />
+    <Compile Include="Internal\NpmInternalRegistryController.cs" />
+    <Compile Include="Internal\NpmVersionsInternalController.cs" />
+    <Compile Include="Internal\NpmRegistryController.cs" />
+    <Compile Include="Upstreams\INpmUpstreamMetadataDocumentParser.cs" />
+    <Compile Include="Upstreams\NpmMetadataDocumentRequestCache.cs" />
+    <Compile Include="Upstreams\IngestRawPackageIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="Upstreams\IngestPackageIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="Upstreams\DownloadAndIngestTarGzFromUpstreamHandler.cs" />
+    <Compile Include="Upstreams\NpmPackageNameMetadataRefreshStrategy.cs" />
+    <Compile Include="Upstreams\NpmRefreshListTrimmingJobQueuerBootstrapper.cs" />
+    <Compile Include="Upstreams\NpmUpstreamFetchingMetadataServiceBootstrapper.cs" />
+    <Compile Include="Upstreams\ThrowNotFoundOnInvalidPackageNameValidator.cs" />
+    <Compile Include="Upstreams\NpmCollectionPackageUpstreamRefreshJobQueuerBootst.cs" />
+    <Compile Include="Upstreams\NpmUpstreamMetadataDocumentParser.cs" />
+    <Compile Include="Upstreams\NpmUpstreamMetadataManagerExistingLocalMetadataBoo.cs" />
+    <Compile Include="Upstreams\NpmUpstreamMetadataServiceCacheFactory.cs" />
+    <Compile Include="Upstreams\NpmUpstreamMetadataServiceFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\NpmUpstreamMetadataManagerFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\NpmUpstreamOnlyMetadataStore.cs" />
+    <Compile Include="Upstreams\NpmUpstreamsConstants.cs" />
+    <Compile Include="Upstreams\NpmManualUpstreamIngestionBootstrapper.cs" />
+    <Compile Include="Upstreams\UpstreamNpmClientFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\UpstreamNpmClientFactory.cs" />
+    <Compile Include="PackageDownload\NpmDownloadPackageFileHandlerBootstrapper.cs" />
+    <Compile Include="PackageDownload\INpmPackageMetadataCacheService.cs" />
+    <Compile Include="PackageDownload\NpmPackageStorageIdCacheService.cs" />
+    <Compile Include="Telemetry\NpmDownloadPackageCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\RemoveDistTagCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\SetDistTagCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\NpmDeprecateVersionsCiDataHandler.cs" />
+    <Compile Include="Telemetry\NpmUpdatePackageVersionCiDataHandler.cs" />
+    <Compile Include="Telemetry\GetPackageCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\NpmDeleteCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\NpmCiDataFactory.cs" />
+    <Compile Include="Telemetry\NpmPackagingTelemetryBuilder.cs" />
+    <Compile Include="NonProtocolApis\GetPackageVersion\GetPackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\GetPackageVersion\NpmMetadataEntryToPackageConverter.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\NpmBatchValidatingOpGeneratingHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\NpmPackagesBatchBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\NpmRecycleBinBatchValidatingOpGeneratingHandlerBoo.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\NpmRecycleBinPackagesBatchBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersion\DeprecateValidatingHandler`1.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersion\UpdatePackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersion\UpdatePackageVersionValidatingHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\RestoreToFeed\NpmRestoreToFeedHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\RestoreToFeed\NpmRestoreToFeedValidatingOpGeneratingHandlerBoots.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\NpmPermanentDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\NpmPermanentDeleteValidatingOpGeneratingHandler.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\NpmDeleteOpGeneratorBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\IdentityResolverForDeleteHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\IdentityResolverForDeleteHandler.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\RevisionAndVersions.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\NpmRevisionAndVersionProviderBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\NpmRevisionAndVersionsProviderHandler.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\DeleteResultFromCommitEntryHandler.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\NpmDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="Migration\NpmUpgradeAggregationsBootstrapper.cs" />
+    <Compile Include="Migration\NpmAggregationDefinitions.cs" />
+    <Compile Include="Migration\NpmMigrationNames.cs" />
+    <Compile Include="Migration\NpmMigrationDefinitionsProviderBootstrapper.cs" />
+    <Compile Include="Migration\NpmMigrationKickerJobBootstrapper.cs" />
+    <Compile Include="Migration\NpmMigrationJobHandlerFactoryBootstrapper.cs" />
+    <Compile Include="JobManagement\NpmMetadataDiffCommitPduNotificationDetector.cs" />
+    <Compile Include="JobManagement\NpmChangeProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="JobManagement\NpmFeedChangeProcessingJobHandlerFactoryBootstrapp.cs" />
+    <Compile Include="JobManagement\NpmMigrationProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="DistTag\DistTagProviderBootstrapper.cs" />
+    <Compile Include="DistTag\DistTagProvider.cs" />
+    <Compile Include="DistTag\RemoveDistTagRequestHandlerBootstrapper.cs" />
+    <Compile Include="DistTag\SetDistTagRequestHandlerBootstrapper.cs" />
+    <Compile Include="DistTag\SetDistTagValidatingOpGeneratingHandler.cs" />
+    <Compile Include="DistTag\RemoveDistTagValidatingOpGeneratingHandler.cs" />
+    <Compile Include="Controllers\NpmUpstreamingController.cs" />
+    <Compile Include="Controllers\DecodeGzippedRequestBodiesAttribute.cs" />
+    <Compile Include="Controllers\NpmContentController.cs" />
+    <Compile Include="Controllers\NpmReadmeController.cs" />
+    <Compile Include="Controllers\NpmPackagesBatchController.cs" />
+    <Compile Include="Controllers\NpmRecycleBinController.cs" />
+    <Compile Include="Controllers\NpmRecycleBinPackagesBatchController.cs" />
+    <Compile Include="Controllers\NpmApiController.cs" />
+    <Compile Include="Controllers\NpmUnpublishController.cs" />
+    <Compile Include="Controllers\NpmDownloadController.cs" />
+    <Compile Include="Controllers\NpmDownloadFromUpstreamController.cs" />
+    <Compile Include="Controllers\NpmDistTagController.cs" />
+    <Compile Include="Controllers\NpmVersionsController.cs" />
+    <Compile Include="Constants\NpmJobConstants.cs" />
+    <Compile Include="Constants\FeatureFlagConstants.cs" />
+    <Compile Include="Constants\NpmConstants.cs" />
+    <Compile Include="Constants\NpmFileConstants.cs" />
+    <Compile Include="Constants\NpmMetadataConstants.cs" />
+    <Compile Include="Constants\NpmTracePoints.cs" />
+    <Compile Include="CommitLog\NpmUpgradeOperationData.cs" />
+    <Compile Include="CommitLog\NpmCommitLogFacadeBootstrapper.cs" />
+    <Compile Include="CommitLog\INpmCommitLogService.cs" />
+    <Compile Include="CommitLog\IUnsafeNpmCommitLogService.cs" />
+    <Compile Include="CommitLog\INpmAddOperationData.cs" />
+    <Compile Include="CommitLog\NpmAddOperationData.cs" />
+    <Compile Include="CommitLog\NpmCommitLogService.cs" />
+    <Compile Include="CommitLog\NpmDistTagRemoveOperationData.cs" />
+    <Compile Include="CommitLog\NpmDistTagSetOperationData.cs" />
+    <Compile Include="CommitLog\NpmOperationDeserializer.cs" />
+    <Compile Include="CommitLog\NpmOperationSerializer.cs" />
+    <Compile Include="CommitLog\NpmMetadataDiffOperationData.cs" />
+    <Compile Include="CommitLog\NpmDeprecateOperationData.cs" />
+    <Compile Include="CommitLog\INpmPermanentDeleteOperationData.cs" />
+    <Compile Include="CommitLog\NpmPermanentDeleteOperationData.cs" />
+    <Compile Include="CommitLog\NpmCommitLogItemBackCompat.cs" />
+    <Compile Include="CommitLog\NpmPackageIdentity.cs" />
+    <Compile Include="CommitLog\Constants\NpmCommitLogSerializationConstants.cs" />
+    <Compile Include="CommitLog\AdditionalObjects\PackageFileMetadata.cs" />
+    <Compile Include="CommitLog\AdditionalObjects\PackageJsonOptions.cs" />
+    <Compile Include="CommitLog\AdditionalObjects\PackageManifest.cs" />
+    <Compile Include="CommitLog\Operations\NpmOperations.cs" />
+    <Compile Include="CommitLog\Operations\NpmBatchOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmClearUpstreamCacheOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmMetadataDiffOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmDeprecateOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmPermanentDeleteOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmRestoreToFeedOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmViewOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmUnpublishOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmAddOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmUpgradeOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmDistTagRemoveOperation.cs" />
+    <Compile Include="CommitLog\Operations\NpmDistTagSetOperation.cs" />
+    <Compile Include="CodeOnly\GetPackageRegistrationHandler.cs" />
+    <Compile Include="CodeOnly\NpmFindPackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="CodeOnly\LegacyNpmSpecificBlockedPackageIdentitiesHandler.cs" />
+    <Compile Include="CodeOnly\RawNpmPackageName.cs" />
+    <Compile Include="CodeOnly\RawNpmPackageNameWithFileRequest.cs" />
+    <Compile Include="CodeOnly\NpmPackageIngestionServiceFacade.cs" />
+    <Compile Include="CodeOnly\INpmIngestionService.cs" />
+    <Compile Include="CodeOnly\NpmPackageRequestWithMetadata.cs" />
+    <Compile Include="CodeOnly\NpmGetExtraAssetsBlobRefIdsHandler.cs" />
+    <Compile Include="CodeOnly\NpmUriBuilderFacade.cs" />
+    <Compile Include="CodeOnly\GetDistTagsHandlerBootstrapper.cs" />
+    <Compile Include="CodeOnly\GetPackageRegistrationHandlerBootstrapper.cs" />
+    <Compile Include="CodeOnly\INpmUriBuilder.cs" />
+    <Compile Include="CodeOnly\NpmSharedPackageMetadata.cs" />
+    <Compile Include="CodeOnly\NpmLocalAndUpstreamSharedPackageMetadata.cs" />
+    <Compile Include="CodeOnly\UpdateDocument\UpdatePackageDocumentHandlerFactory.cs" />
+    <Compile Include="CodeOnly\UpdateDocument\PackageIngestionHandler.cs" />
+    <Compile Include="CodeOnly\UpdateDocument\PackageMetadataRequest.cs" />
+    <Compile Include="CodeOnly\UpdateDocument\PackageMetadataRequestToOpValidatingHandler.cs" />
+    <Compile Include="CodeOnly\UpdateDocument\UpdateVersionsHandlerBootstrapper.cs" />
+    <Compile Include="CodeOnly\Parsing\NpmRawPackageNameRequestToNameConverter.cs" />
+    <Compile Include="CodeOnly\Parsing\NpmRawPackageNameRequestToRequestConverterBootstra.cs" />
+    <Compile Include="CodeOnly\Parsing\NpmRawPackageRequestToRequestConverterBootstrapper.cs" />
+    <Compile Include="CodeOnly\Parsing\NpmRawPackageRequestWithDataConverterBootstrapper`1.cs" />
+    <Compile Include="CodeOnly\Parsing\RawNpmPackageNameWithFileRequestConverter.cs" />
+    <Compile Include="CodeOnly\Parsing\NpmPackageIdentityParsingConverter.cs" />
+    <Compile Include="CodeOnly\Parsing\NpmPackageIdentityParsingConverterBootstrapper.cs" />
+    <Compile Include="CodeOnly\Readme\GetReadmeBlobIdentifierHandler.cs" />
+    <Compile Include="CodeOnly\Readme\GetReadmeHandlerBootstrapper.cs" />
+    <Compile Include="CodeOnly\Readme\GetReadmeHandler.cs" />
+    <Compile Include="ChangeProcessing\NpmExceptionMarkerFactory.cs" />
+    <Compile Include="BlobPrototype\NpmMetadataDocumentOpApplierFactory.cs" />
+    <Compile Include="BlobPrototype\NpmMetadataDiffOpApplier.cs" />
+    <Compile Include="BlobPrototype\NpmDistTagRemoveOpApplier.cs" />
+    <Compile Include="BlobPrototype\NpmSetDistTagOpApplier.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\INpmVersionListWithSizeService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\INpmVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\NpmVersionListWithSizeAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\NpmVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="Aggregations\NpmAggregationResolver.cs" />
+    <Compile Include="Aggregations\StorageIdCache\NpmStorageIdCacheAggregation.cs" />
+    <Compile Include="Aggregations\StorageIdCache\INpmStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="Aggregations\StorageIdCache\NpmStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="Aggregations\PackageNames\NpmNamesAggregation.cs" />
+    <Compile Include="Aggregations\PackageNames\NpmPackageNamesServiceBootstrapper.cs" />
+    <Compile Include="Aggregations\PackageNames\INpmNamesAggregationAccessor.cs" />
+    <Compile Include="Aggregations\PackageNames\INpmNamesService.cs" />
+    <Compile Include="Aggregations\PackageNames\NpmNamesAggregationAccessor.cs" />
+    <Compile Include="Aggregations\PackageMetadata\NpmPackageMetadataAggregation.cs" />
+    <Compile Include="Aggregations\PackageMetadata\INpmMetadataService.cs" />
+    <Compile Include="Aggregations\PackageMetadata\INpmPackageMetadataAggregationAccessor.cs" />
+    <Compile Include="Aggregations\PackageMetadata\NpmPackageMetadataAggregationAccessor.cs" />
+    <Compile Include="Aggregations\ItemStoreMetadata\NpmItemStoreMetadataAggregation.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmFeedIndexAggregation.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmFeedIndexCommitHandlerFactory.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmMetadataDiffCommitHandler.cs" />
+    <Compile Include="Aggregations\FeedIndex\ClearUpstreamCacheCommitHandler.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmUpgradeCommitHandler.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmDeprecateCommitHandler.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmDistTagRemoveCommitHandler.cs" />
+    <Compile Include="Aggregations\FeedIndex\NpmDistTagSetCommitHandler.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

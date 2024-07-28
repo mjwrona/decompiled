@@ -1,0 +1,125 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Build2.Server.BuildFeatures
+// Assembly: Microsoft.TeamFoundation.Build2.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 680FF5F5-CB5D-4078-8EFA-56C292BFDBB7
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Build2.Server.dll
+
+namespace Microsoft.TeamFoundation.Build2.Server
+{
+  internal static class BuildFeatures
+  {
+    public const string AllowAsyncEventExecution = "Build2.AllowAsyncEventExecution";
+    public const string AllowNumericFolderNames = "Build2.Service.AllowNumericFolderNames";
+    public const string DisallowToEditFolderWithoutPermissions = "Build2.Service.DisallowToEditFolderWithoutPermissions";
+    public const string BitbucketWizard = "Build2.BitbucketWizard";
+    public const string BlockUsersFlaggedByGitHub = "Build2.BlockUsersFlaggedByGitHub";
+    public const string BuildDataCache = "Build2.BuildDataCache";
+    public const string BuildGHERepoUriFromEndpoint = "Build2.BuildGHERepoUriFromEndpoint";
+    public const string BypassPermissionCheckWhenOverridingDefaultQueue = "Build2.BypassPermissionCheckWhenOverridingDefaultQueue";
+    public const string CacheBuildDefinitions = "Build2.Service.CacheBuildDefinitions";
+    public const string CacheRepositoryNameAndUrl = "Build2.Service.CacheRepositoryNameAndUrl";
+    public const string CheckSuitesRetention = "Build2.Service.CheckSuitesRetention";
+    public const string DataProvidersCanReturnEmptyIdentities = "Build2.DataProvidersCanReturnEmptyIdentities";
+    public const string DefaultBuildAuthorizationScope = "Build2.DefaultBuildAuthorizationScope";
+    public const string DeleteBranchLeasesOnBranchDelete = "Build2.DeleteBranchLeasesOnBranchDelete";
+    public const string DeliverChecksFromSeparateJob = "Build2.DeliverChecksFromSeparateJob";
+    public const string DisableBuildDefinitionRepositoryNameAndUrlLookup = "Build2.DisableBuildDefinitionRepositoryNameAndUrlLookup";
+    public const string DisableGitPushCIHandlerJob = "Build2.DisableGitPushCIHandlerJob";
+    public const string DisablePrescriptiveSecretsBlocking = "Build2.DisablePrescriptiveSecretsBlocking";
+    public const string DisablePushYamlDefinition = "Build2.DisablePushYamlDefinition";
+    public const string DisableQueueYamlBuild = "Build2.DisableQueueYamlBuild";
+    public const string DisableReportStatusForTheJobs = "Build2.DisableReportStatusForTheJobs";
+    public const string DisableSecretScanToBlockSave = "Build2.DisableSecretScanToBlockSave";
+    public const string DisableYamlDemandsLatestAgent = "Build2.DisableYamlDemandsLatestAgent";
+    public const string DisallowYamlPipelinesWithoutValidPoolInExternalProvider = "Build2.DisallowYamlPipelinesWithoutValidPoolInExternalProvider";
+    public const string DockerProcess = "Build2.DockerProcess";
+    public const string DontTriggerBuildsWithoutFilesChanged = "Build2.DontTriggerBuildsWithoutFilesChanged";
+    public const string EnableBuildCompletionTriggers = "WebAccess.Build.CIWorkflow.BuildCompletion";
+    public const string EnableGitPushCITriggerXProj = "Build2.GitCITriggerXProj";
+    public const string EnablePipelineTraceabilityForPipelineRun = "Pipelines.Traceability.EnableTraceabilityForPipelineRun";
+    public const string EnableReleaseOrphanedContainersJob = "Build2.EnableReleaseOrphanedContainersJob";
+    public const string RunReleaseOrphanedContainersJobInWhatIfMode = "Build2.RunReleaseOrphanedContainersJobInWhatIfMode";
+    public const string EnableRetentionSampleJob = "Build2.EnableRetentionSampleJob";
+    public const string BlockGetRetentionHistoryAPICalls = "Build2.BlockGetRetentionHistoryAPICalls";
+    public const string FetchTagsOffByDefault = "Build2.FetchTagsOffByDefault";
+    public const string FilePathArtifactsAndSymbolsDeleteFeature = "Build2.Retention.FilePathArtifactsAndSymbolsDelete";
+    public const string FilterOutDefinitionsReferencingBitBucketRepos = "Build2.MultiRepoPushTriggers.FilterOutDefinitionsReferencingBitBucketRepos";
+    public const string FilterOutDefinitionsReferencingGithubRepos = "Build2.MultiRepoPushTriggers.FilterOutDefinitionsReferencingGithubRepos";
+    public const string FireBuildEventAsync = "Build2.FireBuildEventAsync";
+    public const string GetFilesChangedByPullRequest = "Build2.GetFilesChangedByPullRequest";
+    public const string GithubAppDefaultAccessMappingsForStageStateChangedEvents = "Build2.GithubAppDefaultAccessMappingsForStageStateChangedEvents";
+    public const string GithubAppDefaultAccessMappingsForRunStateChangedEvents = "Build2.GithubAppDefaultAccessMappingsForRunStateChangedEvents";
+    public const string GitHubDiscoverYamlDefinition = "Build2.GitHubDiscoverYamlDefinition";
+    public const string GitHubPostCompletedCheckRun = "Build2.GitHubPostCompletedCheckRun";
+    public const string GitHubRequireCommentsForNonTeamAndNonContributors = "Build2.GitHubRequireCommentsForNonTeamAndNonContributors";
+    public const string AllowCentralizedPipelineControls = "Build2.AllowCentralizedPipelineControls";
+    public const string GithubSkipBuildCheckEventsToSeparateJob = "Build2.GithubEnableSkipBuildCheckEventsToSeparateJob";
+    public const string GitHubUseGitTreesApi = "Build2.GitHubUseGitTreesApi";
+    public const string IgnoreSourceIdCheckForBatchTriggers = "Build2.IgnoreSourceIdCheckForBatchTriggers";
+    public const string LatestBuildResultCache = "Build2.LatestBuildResultCache";
+    public const string LegacyBuildRetentionPolicyJobEnabled = "Build2.LegacyBuildRetentionPolicyJobEnabled";
+    public const string LegacyRetentionPolicyUIEnabled = "Build2.LegacyRetentionPolicyUIEnabled";
+    public const string MaxConcurrentBuildsPerBranch = "Build2.MaxConcurrentBuildsPerBranch";
+    public const string NewDefaultQueue = "Build2.NewDefaultQueue";
+    public const string OptOutAuditKeepForever = "Build2.OptOutAuditKeepForever";
+    public const string OptOutAuditRetainedByRelease = "Build2.OptOutAuditRetainedByRelease";
+    public const string OrphanedJobCancelBuildsPerProject = "Build2.OrphanedJobCancelBuildsPerProject";
+    public const string OverrideDeprecatedDefaultQueues = "Build2.OverrideDeprecatedDefaultQueues";
+    public const string PipelinesExtendedRetention = "Pipelines.ExtendedRetention";
+    public const string PipelinesSimplifiedRetention = "Pipelines.SimplifiedRetention";
+    public const string ProcessBuildEventPublisherJobWithCancellationToken = "Build2.ProcessBuildEventPublisherJobWithCancellationToken";
+    public const string ProcessCheckEventsAsync = "Build2.ProcessCheckEventsAsync";
+    public const string ProcessWebhookBuildStatusInSeparateJob = "Build2.ProcessWebhookBuildStatusInSeparateJob";
+    public const string PublisherJobTimeout = "Build2.PublisherJobTimeout";
+    public const string PublishJobStateChangedNotification = "Build2.PublishJobStateChangedNotification";
+    public const string QueueBuildEventBublisherJobAfterFinish = "Build2.QueueBuildEventBublisherJobAfterFinish";
+    public const string ReportUnreachableExternalRepo = "Build2.ReportUnreachableExternalRepo";
+    public const string ResolveDefaultResourceVersion = "Build2.ResolveDefaultResourceVersion";
+    public const string RestrictJustInTimeProcessToCurrentRun = "Build2.RestrictJustInTimeProcessToCurrentRun";
+    public const string RestrictPipelineWithModernScopes = "Build2.RestrictPipelineWithModernScopes";
+    public const string RetainPipelineResources = "Build2.RetainPipelineResources";
+    public const string RetentionTemporaryBranchesIgnoreMinimumToKeep = "Build2.Retention.TemporaryBranchesIgnoreMinimumToKeep";
+    public const string RetrieveBuildsAndDefinitionsInOneBatchForTheCheckEvents = "Build2.RetrieveBuildsAndDefinitionsInOneBatchForTheCheckEvents";
+    public const string RetrieveDefinitionsInOneBatchForBuildCompletedTriggerListener = "Build2.RetrieveDefinitionsInOneBatchForBuildCompletedTriggerListener";
+    public const string RetryOnUnauthorizedGithubResponse = "Build2.GitHubCheckRunUpdater.RetryOnUnauthorizedResponse";
+    public const string ScheduledBuildsAllowWaitBeforeStart = "Build2.ScheduledBuildsAllowWaitBeforeStart";
+    public const string ScheduledBuildsPartiallySucceeded = "Build2.ScheduledBuildsPartiallySucceeded";
+    public const string SendStagesUpdated = "Build2.SendStagesUpdated";
+    public const string ServiceHooksFilterBuildNotifications = "Build2.ServiceHooksFilterBuildNotifications";
+    public const string SetBuildResources = "Build2.SetBuildResources";
+    public const string SetContainerResources = "Build2.SetContainerResources";
+    public const string SetPackageResources = "Build2.SetPackageResources";
+    public const string SetPipelineResources = "Build2.SetPipelineResources";
+    public const string SetTimeoutOnCommonStuckJobs = "Build2.SetTimeoutOnCommonStuckJobs";
+    public const string SkipNotificationEventListenerDataAssignment = "Build2.SkipNotificationEventListenerDataAssignment";
+    public const string SkipRemoteAzureReposInPopulateDefinitionsToRepo = "Build2.SkipRemoteAzureReposInPopulateDefinitionsToRepo";
+    public const string SkipSlowNotificationEventListenerCalls = "Build2.SkipSlowNotificationEventListenerCalls";
+    public const string ThrowOnRateLimitErrors = "Build2.ThrowOnRateLimitErrors";
+    public const string UseBuildIdCustomClaim = "Build2.UseBuildIdCustomClaim";
+    public const string UseGitHubRepoId = "Build2.UseGitHubRepoId";
+    public const string UseNewGetBuilds = "Build2.Service.UseNewGetBuilds";
+    public const string WebAccessBuildDiagnosticLogs = "WebAccess.Build.DiagnosticLog";
+    public const string UseAsyncForReportBuildStatus = "Build2.UseAsyncForReportBuildStatus";
+    public const string UseJobsForExternalEventsNotifications = "Build2.UseJobsForExternalEventsNotifications";
+    public const string HandleVariablesWithSameNameInRun = "Build2.HandleVariablesWithSameNameInRun";
+    public const string UseBuildCompletionEventListenerJob = "Build2.UseBuildCompletionEventListenerJob";
+    public const string UseServiceConnectionHistoryRegistrationJob = "Build2.UseServiceConnectionHistoryRegistrationJob";
+    public const string AddRepositoryInfoToPipelineNotifications = "Build2.AddRepositoryInfoToPipelineNotifications";
+    public const string RequestGithubCommitForServiceHooksEvents = "Build2.RequestGithubCommitForServiceHooksEvents";
+    public const string RequestBitbucketCommitForServiceHooksEvents = "Build2.RequestBitbucketCommitForServiceHooksEvents";
+    public const string RequestGitHubEnterpriseCommitForServiceHooksEvents = "Build2.RequestGitHubEnterpriseCommitForServiceHooksEvents";
+    public const string ValidateAndUpdateExternalSources = "Build2.ValidateAndUpdateExternalSources";
+    public const string OptimizePipelineNotifications = "Build2.OptimizePipelineNotifications";
+    public const string SendPipelineNotificationOnRetry = "Build2.SendPipelineNotificationOnRetry";
+    public const string RecreateGitHubSubscriptionsFromAllReferences = "Build2.RecreateGitHubSubscriptionsFromAllReferences";
+    public const string RecreateBitBucketSubscriptionsFromAllReferences = "Build2.RecreateBitBucketSubscriptionsFromAllReferences";
+    public const string ScheduleJobsInBatches = "Build2.ScheduleJobsInBatches";
+    public const string DisableBranchUpdatesForUserRequests = "Build2.DisableBranchUpdatesForUserRequests";
+    public const string SkipValidationsForDisableBuildDefinition = "Build2.Service.SkipValidationsForDisableBuildDefinition";
+    public const string UseGitHubConditionalGetRepositoryBranches = "Build2.UseGitHubConditional.GetRepositoryBranches";
+    public const string AbortPoisonedBuildJobEnabled = "Build2.AbortPoisonedBuildJobEnabled";
+    public const string DisableImpliedYAMLCiTrigger = "Build2.DisableImpliedYAMLCiTrigger";
+    public const string EnableSecurityFixForCheckEventSerializer = "Build2.EnableSecurityFixForCheckEventSerializer";
+    public const string UseImprovedLogsZipFetch = "Build2.UseImprovedLogsZipFetch";
+  }
+}

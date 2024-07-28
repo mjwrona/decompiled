@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Analytics.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C44B124-0182-4435-884B-DD26E90E5B1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Analytics.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Analytics</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Functions">
+      <HintPath>lib\EntityFramework.Functions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.AspNet.OData">
+      <HintPath>lib\Microsoft.TeamFoundation.AspNet.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.OData.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.OData.Edm">
+      <HintPath>lib\Microsoft.TeamFoundation.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Analytics.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Analytics.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Analytics.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Analytics.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>lib\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiControllerExtension.cs" />
+    <Compile Include="IArchivalService.cs" />
+    <Compile Include="ArchivalService.cs" />
+    <Compile Include="ModelReadyConstants.cs" />
+    <Compile Include="AnalyticsMetadataController.cs" />
+    <Compile Include="ODataQueryFinishedEventArgs.cs" />
+    <Compile Include="ValidateRequestFromCollectionAdminAttribute.cs" />
+    <Compile Include="BuildOutcome.cs" />
+    <Compile Include="ODataEndOfRequestTelemetryHandler.cs" />
+    <Compile Include="IAnalyticsSecurityService.cs" />
+    <Compile Include="AnalyticsSecurityService.cs" />
+    <Compile Include="TestOutcome.cs" />
+    <Compile Include="SourceWorkflow.cs" />
+    <Compile Include="TestRunType.cs" />
+    <Compile Include="AnalyticsPermissionComponent.cs" />
+    <Compile Include="AnalyticsPermissionACLColumns.cs" />
+    <Compile Include="AnalyticsPermissionAcl.cs" />
+    <Compile Include="AnalyticsPermissionMover.cs" />
+    <Compile Include="IVssRequestContextExtension.cs" />
+    <Compile Include="AnalyticsPermission.cs" />
+    <Compile Include="AnalyticsTracePoints.cs" />
+    <Compile Include="ArtifactPropertyKinds.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="LocalizationMessageKeys.cs" />
+    <Compile Include="StreamPriority.cs" />
+    <Compile Include="TableOperations.cs" />
+    <Compile Include="TableOperationScope.cs" />
+    <Compile Include="TransformPriority.cs" />
+    <Compile Include="TransformTableNames.cs" />
+    <Compile Include="MLModelNames.cs" />
+    <Compile Include="ServiceNameConstants.cs" />
+    <Compile Include="ErrorCodes.cs" />
+    <Compile Include="FeatureFlags.cs" />
+    <Compile Include="PipelineType.cs" />
+    <Compile Include="TimelineRecordType.cs" />
+    <Compile Include="SourceControlSource.cs" />
+    <Compile Include="UserSource.cs" />
+    <Compile Include="UserType.cs" />
+    <Compile Include="DataQualityComponent.cs" />
+    <Compile Include="DataQualityComponent2.cs" />
+    <Compile Include="DataQualityComponent10.cs" />
+    <Compile Include="DataQualityComponent11.cs" />
+    <Compile Include="DataQualityComponent15.cs" />
+    <Compile Include="DataQualityColumns.cs" />
+    <Compile Include="DataQualityColumns2.cs" />
+    <Compile Include="DataQualityResult.cs" />
+    <Compile Include="CleanupDataQualityColumns.cs" />
+    <Compile Include="CleanupDataQualityResult.cs" />
+    <Compile Include="EntitySetNotFoundException.cs" />
+    <Compile Include="EntityNotFoundException.cs" />
+    <Compile Include="AnalyticsAccessCheckException.cs" />
+    <Compile Include="AnalyticsNotEnabledException.cs" />
+    <Compile Include="AnalyticsPausedException.cs" />
+    <Compile Include="AnalyticsDeletingException.cs" />
+    <Compile Include="AnalyticsTransformFailedException.cs" />
+    <Compile Include="FailedToSplitPartitionsException.cs" />
+    <Compile Include="InvalidMaxSizeException.cs" />
+    <Compile Include="QueryExceedsPreferedMaxSizeException.cs" />
+    <Compile Include="ModelSyncingException.cs" />
+    <Compile Include="ModelNotReadyException.cs" />
+    <Compile Include="NumbersOfRecordsDontMatchForTableException.cs" />
+    <Compile Include="UnsupportedODataModelVersionException.cs" />
+    <Compile Include="ViewSchemaMissingMashupFunctionParameterException.cs" />
+    <Compile Include="ViewSchemaTranslateNonPrimitivePropertyException.cs" />
+    <Compile Include="ViewSchemaMultipleSelectPathSegmentsException.cs" />
+    <Compile Include="ODataIntegerOverflowException.cs" />
+    <Compile Include="ODataUnsupportedFeatureException.cs" />
+    <Compile Include="AnalyticsViewsMissingRequiredFieldException.cs" />
+    <Compile Include="AnalyticsViewsInvalidFilterOperatorException.cs" />
+    <Compile Include="AnalyticsViewsInvalidViewTypeException.cs" />
+    <Compile Include="AnalyticsViewsInvalidViewVisibilityException.cs" />
+    <Compile Include="QueryExceedsMaxWidthException.cs" />
+    <Compile Include="QueryExceedsThresholdTimeException.cs" />
+    <Compile Include="AnalyticsStateInvalidTransitionException.cs" />
+    <Compile Include="AnalyticsStateInvalidStateException.cs" />
+    <Compile Include="AnalyticsStagingUnavailableException.cs" />
+    <Compile Include="AnalyticsContextTypesCacheService.cs" />
+    <Compile Include="AnalyticsMetadataComponent.cs" />
+    <Compile Include="AnalyticsMetadataComponent2.cs" />
+    <Compile Include="AnalyticsMetadataComponent3.cs" />
+    <Compile Include="AnalyticsMetadataComponent4.cs" />
+    <Compile Include="AnalyticsMetadataComponent5.cs" />
+    <Compile Include="AnalyticsMetadataComponent6.cs" />
+    <Compile Include="AnalyticsMetadataComponent7.cs" />
+    <Compile Include="AnalyticsMetadataComponent8.cs" />
+    <Compile Include="AnalyticsMetadataComponent9.cs" />
+    <Compile Include="AnalyticsMetadataComponent10.cs" />
+    <Compile Include="IAnalyticsMetadataService.cs" />
+    <Compile Include="AnalyticsMetadataService.cs" />
+    <Compile Include="AnalyticsController.cs" />
+    <Compile Include="StageComponent.cs" />
+    <Compile Include="StageComponent3.cs" />
+    <Compile Include="StageComponent10.cs" />
+    <Compile Include="StageComponent12.cs" />
+    <Compile Include="StageComponent18.cs" />
+    <Compile Include="StageComponent19.cs" />
+    <Compile Include="StageComponent21.cs" />
+    <Compile Include="StageComponent23.cs" />
+    <Compile Include="StageComponent25.cs" />
+    <Compile Include="StageComponent26.cs" />
+    <Compile Include="StageComponent29.cs" />
+    <Compile Include="StageComponent32.cs" />
+    <Compile Include="StageComponent33.cs" />
+    <Compile Include="StageComponent43.cs" />
+    <Compile Include="StageComponent47.cs" />
+    <Compile Include="StageComponent56.cs" />
+    <Compile Include="StageComponent57.cs" />
+    <Compile Include="StageExportBinder.cs" />
+    <Compile Include="StageExportResult.cs" />
+    <Compile Include="StreamInfoColumns.cs" />
+    <Compile Include="StreamInfo.cs" />
+    <Compile Include="CleanupStreamColumns.cs" />
+    <Compile Include="CleanupStreamResult.cs" />
+    <Compile Include="StageFieldMetaData.cs" />
+    <Compile Include="StageSqlTableType.cs" />
+    <Compile Include="StageVersion.cs" />
+    <Compile Include="StageTypeDefinitions.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="DBOperation.cs" />
+    <Compile Include="AnalyticsComponent.cs" />
+    <Compile Include="IAnalyticsService.cs" />
+    <Compile Include="AnalyticsService.cs" />
+    <Compile Include="ValidateViewAnalyticsPermissionAttribute.cs" />
+    <Compile Include="ValidateRequestFromServicePrincipalAttribute.cs" />
+    <Compile Include="IAnalyticsViewsAccessService.cs" />
+    <Compile Include="AnalyticsViewsAccessService.cs" />
+    <Compile Include="AnalyticsViewsSecurityNamespace.cs" />
+    <Compile Include="AnalyticsViewQueryFragment.cs" />
+    <Compile Include="AnalyticsViewsQueryParsingUtilities.cs" />
+    <Compile Include="WorkItemDefaultViews.cs" />
+    <Compile Include="WorkItemsDefinitions.cs" />
+    <Compile Include="AnalyticsViewsEdmModelService.cs" />
+    <Compile Include="LinkNames.cs" />
+    <Compile Include="TemplateFunctionPatterns.cs" />
+    <Compile Include="AnalyticsViewsControllerBase.cs" />
+    <Compile Include="AnalyticsViewsController.cs" />
+    <Compile Include="ValidateAnalyticsEnabledAndModelReadyAttributeAttr.cs" />
+    <Compile Include="QueryExtension.cs" />
+    <Compile Include="ViewExtension.cs" />
+    <Compile Include="AnalyticsViewsService.cs" />
+    <Compile Include="AnalyticsViewsUriBuilder.cs" />
+    <Compile Include="IBacklogsService.cs" />
+    <Compile Include="BacklogsService.cs" />
+    <Compile Include="CollectionDateTimeService.cs" />
+    <Compile Include="ICollectionDateTimeService.cs" />
+    <Compile Include="IAnalyticsViewsEdmModelService.cs" />
+    <Compile Include="WorkItemsDefinitionToQueryTemplate.cs" />
+    <Compile Include="ConstantAliasNodeVisitor.cs" />
+    <Compile Include="IODataJsonSchemaGenerator.cs" />
+    <Compile Include="ODataJsonSchemaGeneratorData.cs" />
+    <Compile Include="ODataJsonSchemaGenerator.cs" />
+    <Compile Include="DefaultViewsFactoryOptions.cs" />
+    <Compile Include="IDefaultViewsFactory.cs" />
+    <Compile Include="FactoryOptions.cs" />
+    <Compile Include="IFactory.cs" />
+    <Compile Include="NoOpFactory.cs" />
+    <Compile Include="DefaultViewsFactory.cs" />
+    <Compile Include="WorkItemsViewType.cs" />
+    <Compile Include="WorkItemHistoricalInterval.cs" />
+    <Compile Include="WorkItemViewOptions.cs" />
+    <Compile Include="WorkItemDefaultViewsFactory.cs" />
+    <Compile Include="NoOpODataQueryExpanderFactory.cs" />
+    <Compile Include="IODataQueryFactory.cs" />
+    <Compile Include="ODataQueryExpanderFactory.cs" />
+    <Compile Include="IODataQueryExpanderFactory.cs" />
+    <Compile Include="WorkItemTypeODataQueryFactory.cs" />
+    <Compile Include="IAnalyticsViewsService.cs" />
+    <Compile Include="ODataJsonSchemaGeneratorFactory.cs" />
+    <Compile Include="ODataJsonSchemaPropertySegmentTranslator.cs" />
+    <Compile Include="ODataJsonSchemaSelectItemTranslator.cs" />
+    <Compile Include="WorkItemsViewODataJsonSchemaGeneratorData.cs" />
+    <Compile Include="WorkItemsViewODataJsonSchemaGenerator.cs" />
+    <Compile Include="HistoricalTranslatorData.cs" />
+    <Compile Include="WorkItemsViewODataJsonSchemaSelectItemTranslatorDa.cs" />
+    <Compile Include="WorkItemsViewODataJsonSchemaSelectItemTranslator.cs" />
+    <Compile Include="IWorkItemTypeFieldsService.cs" />
+    <Compile Include="FieldInfo.cs" />
+    <Compile Include="GetWorkItemTypeFieldsOptions.cs" />
+    <Compile Include="WorkItemTypeFieldsService.cs" />
+    <Compile Include="WorkItemTypesService.cs" />
+    <Compile Include="IWorkItemTypesService.cs" />
+    <Compile Include="AnalyticsViewAndQueryBinder.cs" />
+    <Compile Include="AnalyticsViewBinder.cs" />
+    <Compile Include="AnalyticsViewsSqlComponent.cs" />
+    <Compile Include="AnalyticsResources.cs" />
+    <Compile Include="OData\ODataDataQualityTelemetryHandler.cs" />
+    <Compile Include="OData\AnalyticsModelBuilder.cs" />
+    <Compile Include="OData\ApplyPathCollector.cs" />
+    <Compile Include="OData\ModelCreationProcessFields.cs" />
+    <Compile Include="OData\Annotations\EdmDirectValueAnnotationAttribute.cs" />
+    <Compile Include="OData\Annotations\QueryShapeAllowAnyAllAnnotationAttribute.cs" />
+    <Compile Include="OData\Annotations\QueryShapeAllowFlattenAnnotationAttributeAttribute.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsSkipTokenHandler.cs" />
+    <Compile Include="OData\Infrastructure\ApplyClauseExtensions.cs" />
+    <Compile Include="OData\Infrastructure\ForceAssumeJoinPredicateDependsOnFilterStrategy.cs" />
+    <Compile Include="OData\Infrastructure\ODataPathExtensions.cs" />
+    <Compile Include="OData\Infrastructure\UseHashJoinForBurndownQuery.cs" />
+    <Compile Include="OData\Infrastructure\UseLoopJoinForRollupQuery.cs" />
+    <Compile Include="OData\Infrastructure\UseNoHitViewsForRollupQuery.cs" />
+    <Compile Include="OData\Infrastructure\UseHashJoinForFilterHint.cs" />
+    <Compile Include="OData\Infrastructure\MyValidator.cs" />
+    <Compile Include="OData\Infrastructure\BoundMethodDefinition.cs" />
+    <Compile Include="OData\Infrastructure\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="OData\Infrastructure\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataBatchPayloadRewriter.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataRequestMessage.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataUriResolver.cs" />
+    <Compile Include="OData\Infrastructure\EuiiValidator.cs" />
+    <Compile Include="OData\Infrastructure\ForcePartitionFilterStrategy.cs" />
+    <Compile Include="OData\Infrastructure\IODataEnumerable.cs" />
+    <Compile Include="OData\Infrastructure\IODataQueryShapeProvider.cs" />
+    <Compile Include="OData\Infrastructure\ManyToManyCountRewrite.cs" />
+    <Compile Include="OData\Infrastructure\ModelTableMapping.cs" />
+    <Compile Include="OData\Infrastructure\ODataBuiltinWhitelistValidator.cs" />
+    <Compile Include="OData\Infrastructure\EntityMemberInfoToTableMapper.cs" />
+    <Compile Include="OData\Infrastructure\ODataEnumerable`1.cs" />
+    <Compile Include="OData\Infrastructure\ODataEnumerator`1.cs" />
+    <Compile Include="OData\Infrastructure\ExpressionQueriedEntityExtractor.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryComputeUsageValidator.cs" />
+    <Compile Include="OData\Infrastructure\ODataWideSelectValidator.cs" />
+    <Compile Include="OData\Infrastructure\ODataWorkItemDescendantsExpandValidator.cs" />
+    <Compile Include="OData\Infrastructure\PredictRewrite.cs" />
+    <Compile Include="OData\Infrastructure\TestResultHintStrategy.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataFormattingAttribute.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsUrlHelper.cs" />
+    <Compile Include="OData\Infrastructure\CollectionDateTime.cs" />
+    <Compile Include="OData\Infrastructure\EuiiAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataDefaults.cs" />
+    <Compile Include="OData\Infrastructure\AnnotatedODataResourceSerializer.cs" />
+    <Compile Include="OData\Infrastructure\EdmModelExtensions.cs" />
+    <Compile Include="OData\Infrastructure\IODataValidator.cs" />
+    <Compile Include="OData\Infrastructure\ModelVersionExtension.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryWarnings.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryClassifier.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryCountDistinctValidator.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryParentDepthValidator.cs" />
+    <Compile Include="OData\Infrastructure\ODataQuerySnapshotValidator.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryWarningsValidator.cs" />
+    <Compile Include="OData\Infrastructure\MashupFlavor.cs" />
+    <Compile Include="OData\Infrastructure\UserAgentClassifier.cs" />
+    <Compile Include="OData\Infrastructure\VersionedModifierAttribute.cs" />
+    <Compile Include="OData\Infrastructure\DatabaseHideAttribute.cs" />
+    <Compile Include="OData\Infrastructure\DatabaseRenameAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ODataHideAttribute.cs" />
+    <Compile Include="OData\Infrastructure\VersionedRenameAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ODataRenameAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ODataHideByServiceVersionAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ODataRenameByServiceVersionAttribute.cs" />
+    <Compile Include="OData\Infrastructure\BoundFunctionAttribute.cs" />
+    <Compile Include="OData\Infrastructure\CurrentProjectFilter.cs" />
+    <Compile Include="OData\Infrastructure\EdmTypeUtils.cs" />
+    <Compile Include="OData\Infrastructure\ApplySupportedAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataPathHandler.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataRoutingConvention.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataSerializerProvider.cs" />
+    <Compile Include="OData\Infrastructure\FastODataPrimitiveSerializer.cs" />
+    <Compile Include="OData\Infrastructure\FastODataResourceSerializer.cs" />
+    <Compile Include="OData\Infrastructure\FilterFunctionsAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\EdmVocabularyAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ExpressionHelpers.cs" />
+    <Compile Include="OData\Infrastructure\HintStrategyFactory.cs" />
+    <Compile Include="OData\Infrastructure\HttpConfigurationExtensions.cs" />
+    <Compile Include="OData\Infrastructure\DisplayNameAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\HttpRequestMessageExtensions.cs" />
+    <Compile Include="OData\Infrastructure\IHintStrategy.cs" />
+    <Compile Include="OData\Infrastructure\MetadataModel.cs" />
+    <Compile Include="OData\Infrastructure\IsReportingViewAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ODataQuerySizeOptions.cs" />
+    <Compile Include="OData\Infrastructure\PermissionsValidator.cs" />
+    <Compile Include="OData\Infrastructure\QueryNodeFilterCollector.cs" />
+    <Compile Include="OData\Infrastructure\PathAndModifiedSingleValueNode.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsQueryNodeVisitor`1.cs" />
+    <Compile Include="OData\Infrastructure\QueryType.cs" />
+    <Compile Include="OData\Infrastructure\SnapshotHintStrategy.cs" />
+    <Compile Include="OData\Infrastructure\SuppressDataMemberCheckAttribute.cs" />
+    <Compile Include="OData\Infrastructure\SuppressDateConsistencyCheckAttribute.cs" />
+    <Compile Include="OData\Infrastructure\SuppressDisplayNameAttribute.cs" />
+    <Compile Include="OData\Infrastructure\ODataQuery.cs" />
+    <Compile Include="OData\Infrastructure\ODataQueryOptionHelpers.cs" />
+    <Compile Include="OData\Infrastructure\ODataSerializerTraceWrapper.cs" />
+    <Compile Include="OData\Infrastructure\ProcessFieldInfo.cs" />
+    <Compile Include="OData\Infrastructure\QueryableExtensions.cs" />
+    <Compile Include="OData\Infrastructure\ReferenceNameAttribute.cs" />
+    <Compile Include="OData\Infrastructure\WrappedExceptionErrorSerializer.cs" />
+    <Compile Include="OData\Infrastructure\AnalyticsODataBatchHandler.cs" />
+    <Compile Include="OData\Infrastructure\BatchSupportedAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\BatchSupportAnnotationAttribute.cs" />
+    <Compile Include="OData\Infrastructure\Expressions\CombineBinaryOperatorNodesNodeRewriter.cs" />
+    <Compile Include="OData\Infrastructure\Expressions\NodeEqualityComparer.cs" />
+    <Compile Include="OData\Infrastructure\Expressions\ODataQueryShapeFormatter.cs" />
+    <Compile Include="OData\Infrastructure\Expressions\QueryNodeRewriter.cs" />
+    <Compile Include="OData\Infrastructure\Expressions\ReplaceWithAbstractTokensNodeRewriter.cs" />
+    <Compile Include="Feature\AnalyticsSpaceRequirementsController.cs" />
+    <Compile Include="Feature\AnalyticsFeatureStateController.cs" />
+    <Compile Include="Job\IAnalyticsJobService.cs" />
+    <Compile Include="Job\AnalyticsJobService.cs" />
+    <Compile Include="OnPrem\IAnalyticsStateService.cs" />
+    <Compile Include="OnPrem\AnalyticsStateService.cs" />
+    <Compile Include="OnPrem\SpaceRequirements.cs" />
+    <Compile Include="Telemetry\IAnalyticsOnPremTelemetryService.cs" />
+    <Compile Include="Telemetry\AnalyticsOnPremTelemetryService.cs" />
+    <Compile Include="Telemetry\ITelemetryLogger.cs" />
+    <Compile Include="Telemetry\TelemetryLogger.cs" />
+    <Compile Include="Telemetry\EngagementTelemetryPublisherBase.cs" />
+    <Compile Include="Telemetry\ODataEngagementPublisher.cs" />
+    <Compile Include="Telemetry\MetadataEngagementPublisher.cs" />
+    <Compile Include="Telemetry\ViewsEngagementPublisher.cs" />
+    <Compile Include="DatabaseMaintenance\IDatabaseMaintenanceService.cs" />
+    <Compile Include="DatabaseMaintenance\DatabaseMaintenanceService.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreFragmentationStatistics.cs" />
+    <Compile Include="DatabaseMaintenance\DatabaseMaintenanceComponent.cs" />
+    <Compile Include="DatabaseMaintenance\DatabaseMaintenanceComponent13.cs" />
+    <Compile Include="DatabaseMaintenance\DatabaseMaintenanceComponent14.cs" />
+    <Compile Include="DatabaseMaintenance\DatabaseMaintenanceComponent15.cs" />
+    <Compile Include="DatabaseMaintenance\Partition.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreFragmentationStatisticRow.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreMaintenanceResult.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreReorganizeResult.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreOverlapStatistics.cs" />
+    <Compile Include="DatabaseMaintenance\PartitionToSplit.cs" />
+    <Compile Include="DatabaseMaintenance\PartitionToSplitBinder.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreOverlapStatisticsBinder.cs" />
+    <Compile Include="DatabaseMaintenance\ColumnStoreFragmentationStatisticRowBinder.cs" />
+    <Compile Include="DatabaseMaintenance\PartitionBinder.cs" />
+    <Compile Include="ExtensionEvents\AnalyticsHandleExtensionEventsController.cs" />
+    <Compile Include="Staging\StageEnvelope.cs" />
+    <Compile Include="Staging\StageEnvelopeJsonDeserializer.cs" />
+    <Compile Include="Staging\StageShardInvalidController.cs" />
+    <Compile Include="Staging\StageController.cs" />
+    <Compile Include="Staging\IStageService.cs" />
+    <Compile Include="Staging\StageService.cs" />
+    <Compile Include="Transform\TransformBatch.cs" />
+    <Compile Include="Transform\TransformComponent.cs" />
+    <Compile Include="Transform\TransformComponent2.cs" />
+    <Compile Include="Transform\TransformComponent3.cs" />
+    <Compile Include="Transform\TransformComponent4.cs" />
+    <Compile Include="Transform\TransformComponent5.cs" />
+    <Compile Include="Transform\TransformComponent6.cs" />
+    <Compile Include="Transform\TransformComponent7.cs" />
+    <Compile Include="Transform\TransformComponent9.cs" />
+    <Compile Include="Transform\TransformComponent10.cs" />
+    <Compile Include="Transform\TransformComponent11.cs" />
+    <Compile Include="Transform\TransformComponent19.cs" />
+    <Compile Include="Transform\TransformComponent21.cs" />
+    <Compile Include="Transform\TransformComponent28.cs" />
+    <Compile Include="Transform\TransformComponent29.cs" />
+    <Compile Include="Transform\TransformComponent30.cs" />
+    <Compile Include="Transform\TransformComponent47.cs" />
+    <Compile Include="Transform\TransformComponent49.cs" />
+    <Compile Include="Transform\SyncDateColumns.cs" />
+    <Compile Include="Transform\ProviderSyncData.cs" />
+    <Compile Include="Transform\TransformNextColumns.cs" />
+    <Compile Include="Transform\TransformNextColumns4.cs" />
+    <Compile Include="Transform\TransformBatchColumns.cs" />
+    <Compile Include="Transform\CleanupDeletedTableColumns.cs" />
+    <Compile Include="Transform\CleanupDeletedTableResult.cs" />
+    <Compile Include="Transform\TransformDefinition.cs" />
+    <Compile Include="Transform\TriggeredTransformDefinition.cs" />
+    <Compile Include="Transform\TimedTransformDefinition.cs" />
+    <Compile Include="Transform\TransformDefinitions.cs" />
+    <Compile Include="Transform\TransformResult.cs" />
+    <Compile Include="Transform\PreTransformAction.cs" />
+    <Compile Include="Transform\ITransformService.cs" />
+    <Compile Include="Transform\TransformService.cs" />
+    <Compile Include="Views\Security\ValidateExecAnalyticsViewsPermissionAttribute.cs" />
+    <Compile Include="Cleanup\AnalyticsCleanupComponent.cs" />
+    <Compile Include="Cleanup\AnalyticsCleanupComponent2.cs" />
+    <Compile Include="Cleanup\IAnalyticsCleanupService.cs" />
+    <Compile Include="Cleanup\AnalyticsCleanupService.cs" />
+    <Compile Include="Common\IReadOnlySet`1.cs" />
+    <Compile Include="Common\ReadOnlySet`1.cs" />
+    <Compile Include="DataQuality\DataQualityCacheService.cs" />
+    <Compile Include="DataQuality\DataQualityDefinitions.cs" />
+    <Compile Include="DataQuality\DataQualityCriterias.cs" />
+    <Compile Include="DataQuality\DataQualityDefinition.cs" />
+    <Compile Include="DataQuality\IDataQualityService.cs" />
+    <Compile Include="DataQuality\DataQualityService.cs" />
+    <Compile Include="ML\MLComponent.cs" />
+    <Compile Include="ML\TagColumns.cs" />
+    <Compile Include="ML\IMLService.cs" />
+    <Compile Include="ML\MLService.cs" />
+    <Compile Include="MetaData\IAzureInstanceMetadataService.cs" />
+    <Compile Include="MetaData\AzureInstanceMetadataService.cs" />
+    <Compile Include="MetaData\AzureInstanceMetadata.cs" />
+    <Compile Include="MetaData\AzureInstanceComputeMetadata.cs" />
+    <Compile Include="Model\GitHubAccount.cs" />
+    <Compile Include="Model\GitHubAccountType.cs" />
+    <Compile Include="Model\GitHubBranch.cs" />
+    <Compile Include="Model\GitHubContributorActivity.cs" />
+    <Compile Include="Model\GitHubCommit.cs" />
+    <Compile Include="Model\GitHubContributorActivityArtifactType.cs" />
+    <Compile Include="Model\GitHubContributorActivityType.cs" />
+    <Compile Include="Model\GitHubPullRequest.cs" />
+    <Compile Include="Model\GitHubPullRequestReviewerActivity.cs" />
+    <Compile Include="Model\GitHubPullRequestReviewActivityType.cs" />
+    <Compile Include="Model\GitHubPullRequestReviewerType.cs" />
+    <Compile Include="Model\GitHubPullRequestSnapshot.cs" />
+    <Compile Include="Model\GitHubPullRequestReviewVoteType.cs" />
+    <Compile Include="Model\GitHubRepository.cs" />
+    <Compile Include="Model\GitHubTeam.cs" />
+    <Compile Include="Model\GitHubUser.cs" />
+    <Compile Include="Model\ParallelPipelineJobsSnapshot.cs" />
+    <Compile Include="Model\PipelineActivityType.cs" />
+    <Compile Include="Model\PipelineProcessType.cs" />
+    <Compile Include="Model\PipelineRunOutcome.cs" />
+    <Compile Include="Model\PipelineRunReason.cs" />
+    <Compile Include="Model\PipelineRunTaskOutcome.cs" />
+    <Compile Include="Model\TaskAgentPoolSizeSnapshot.cs" />
+    <Compile Include="Model\TaskAgentRequestSnapshot.cs" />
+    <Compile Include="Model\TestPointCommon.cs" />
+    <Compile Include="Model\UserType.cs" />
+    <Compile Include="Model\TestPointHistorySnapshot.cs" />
+    <Compile Include="Model\PredictModel.cs" />
+    <Compile Include="Model\PipelineJob.cs" />
+    <Compile Include="Model\BuildTaskOutcome.cs" />
+    <Compile Include="Model\PipelineRunActivityResult.cs" />
+    <Compile Include="Model\OperationOutcome.cs" />
+    <Compile Include="Model\PipelineRun.cs" />
+    <Compile Include="Model\Pipeline.cs" />
+    <Compile Include="Model\BoardColumnSplit.cs" />
+    <Compile Include="Model\SourceWorkflow.cs" />
+    <Compile Include="Model\TestSuiteType.cs" />
+    <Compile Include="Model\TestResultState.cs" />
+    <Compile Include="Model\TestPoint.cs" />
+    <Compile Include="Model\TestSuite.cs" />
+    <Compile Include="Model\TestConfiguration.cs" />
+    <Compile Include="Model\TestResultDaily.cs" />
+    <Compile Include="Model\PipelineTask.cs" />
+    <Compile Include="Model\TestRunType.cs" />
+    <Compile Include="Model\Branch.cs" />
+    <Compile Include="Model\TestOutcome.cs" />
+    <Compile Include="Model\TestResult.cs" />
+    <Compile Include="Model\Test.cs" />
+    <Compile Include="Model\TestRun.cs" />
+    <Compile Include="Model\Process.cs" />
+    <Compile Include="Model\WorkItemCustom01.cs" />
+    <Compile Include="Model\WorkItemCustom02.cs" />
+    <Compile Include="Model\WorkItemCustom03.cs" />
+    <Compile Include="Model\WorkItemCustom04.cs" />
+    <Compile Include="Model\WorkItemCustom05.cs" />
+    <Compile Include="Model\WorkItemCustom06.cs" />
+    <Compile Include="Model\WorkItemCustom07.cs" />
+    <Compile Include="Model\WorkItemCustom08.cs" />
+    <Compile Include="Model\WorkItemCustom09.cs" />
+    <Compile Include="Model\WorkItemCustom10.cs" />
+    <Compile Include="Model\WorkItemCustom11.cs" />
+    <Compile Include="Model\WorkItemCustom12.cs" />
+    <Compile Include="Model\WorkItemCustom13.cs" />
+    <Compile Include="Model\WorkItemCustom14.cs" />
+    <Compile Include="Model\WorkItemCustom15.cs" />
+    <Compile Include="Model\WorkItemCustom16.cs" />
+    <Compile Include="Model\WorkItemCustom17.cs" />
+    <Compile Include="Model\WorkItemCustom18.cs" />
+    <Compile Include="Model\WorkItemCustom19.cs" />
+    <Compile Include="Model\WorkItemCustom20.cs" />
+    <Compile Include="Model\WorkItemPrimitive.cs" />
+    <Compile Include="Model\Period.cs" />
+    <Compile Include="Model\Area.cs" />
+    <Compile Include="Model\BoardLocation.cs" />
+    <Compile Include="Model\ICurrentProjectScoped.cs" />
+    <Compile Include="Model\IIncremental.cs" />
+    <Compile Include="Model\CalendarDate.cs" />
+    <Compile Include="Model\IContinuation`1.cs" />
+    <Compile Include="Model\IPartitionScoped.cs" />
+    <Compile Include="Model\ICurrentProjectScopeByName.cs" />
+    <Compile Include="Model\IProjectScopeByName.cs" />
+    <Compile Include="Model\IProjectNavigate.cs" />
+    <Compile Include="Model\IHistoricalWorkItem.cs" />
+    <Compile Include="Model\ICurrentProjectNavigate.cs" />
+    <Compile Include="Model\IProjectScoped.cs" />
+    <Compile Include="Model\ITeamScoped.cs" />
+    <Compile Include="Model\Iteration.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\ProjectVisibility.cs" />
+    <Compile Include="Model\IComponentContext.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="Model\Team.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\WorkItem.cs" />
+    <Compile Include="Model\WorkItemCommon.cs" />
+    <Compile Include="Model\WorkItemBoardSnapshot.cs" />
+    <Compile Include="Model\WorkItemLink.cs" />
+    <Compile Include="Model\WorkItemRevision.cs" />
+    <Compile Include="Model\WorkItemSnapshot.cs" />
+    <Compile Include="Model\WorkItemTypeField.cs" />
+    <Compile Include="Model\ISnapshot.cs" />
+    <Compile Include="Model\AnalyticsContext.cs" />
+    <Compile Include="Model\CommitToDeployment.cs" />
+    <Compile Include="Model\PipelineEnvironment.cs" />
+    <Compile Include="Model\Infrastructure\SqlHints.cs" />
+    <Compile Include="Model\Infrastructure\ApproxDistinctFunction.cs" />
+    <Compile Include="Model\Infrastructure\DatabaseHideNavigationPropertyConvention.cs" />
+    <Compile Include="Model\Infrastructure\DisableProjectFilteringAttribute.cs" />
+    <Compile Include="Model\Infrastructure\PredictFunctions.cs" />
+    <Compile Include="Model\Infrastructure\WindowFunctions.cs" />
+    <Compile Include="Model\Infrastructure\SqlFunctions.cs" />
+    <Compile Include="Model\Infrastructure\VisibleCrossProjectAttribute.cs" />
+    <Compile Include="Model\Infrastructure\DatabaseRenamePropertyConvention.cs" />
+    <Compile Include="Model\Infrastructure\IdentityPropertyAnnotation.cs" />
+    <Compile Include="Model\Infrastructure\DatabaseRenameEntityConvention.cs" />
+    <Compile Include="Model\Infrastructure\AnalyticsModelContainerConvention.cs" />
+    <Compile Include="Model\Infrastructure\ClrTypeAnnotation.cs" />
+    <Compile Include="Model\Infrastructure\DbExpressionHelpers.cs" />
+    <Compile Include="Model\Infrastructure\ProjectScopeQueryInterceptor.cs" />
+    <Compile Include="Model\Infrastructure\NavigationRequiresPermissionCheckAttribute.cs" />
+    <Compile Include="Model\Infrastructure\DatabaseHidePropertyConvention.cs" />
+    <Compile Include="Model\Infrastructure\SqlOptions.cs" />
+    <Compile Include="Model\Infrastructure\ManyToManyJoinInterceptor.cs" />
+    <Compile Include="Model\Infrastructure\SqlResourceComponentInterceptor.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

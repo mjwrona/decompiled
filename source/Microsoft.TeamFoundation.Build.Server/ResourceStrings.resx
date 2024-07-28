@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="numberOfAlertsGenerated" xml:space="preserve">
+    <value>{0} Alerts were generated.</value>
+  </data>
+  <data name="DefinitionNotFound" xml:space="preserve">
+    <value>Pipeline with definitionId {0} could not be found.</value>
+  </data>
+  <data name="AddingDefinitionsDeprecated" xml:space="preserve">
+    <value>Adding build pipelines is not supported from this client. Please use a client compatible with Team Foundation Server 2010 and try again.</value>
+  </data>
+  <data name="AzureConnectedServiceDescription" xml:space="preserve">
+    <value>Connection to an Azure subscription.</value>
+  </data>
+  <data name="RetentionPolicyInvalidStatus" xml:space="preserve">
+    <value>TF215103: The build status {0} is not valid for a retention policy.</value>
+  </data>
+  <data name="BuildTooManyWaitingInQueue" xml:space="preserve">
+    <value>There are too many builds waiting in the queue for machine pool {0}. The current count is {1}, but this could change without another warning.</value>
+  </data>
+  <data name="ScheduleJobInvalidArtifactUri" xml:space="preserve">
+    <value>Build job {0} contains invalid data (it contains an invalid artifact URI, {1}).</value>
+  </data>
+  <data name="BuildMachineRequestInProgressException" xml:space="preserve">
+    <value>The build machine request {2} is currently in progress for role instance {1} in pool {0}.</value>
+  </data>
+  <data name="IllFormattedId" xml:space="preserve">
+    <value>The ID '{0}' is not a positive integer.</value>
+  </data>
+  <data name="GatedCheckInTicketInvalidOwner" xml:space="preserve">
+    <value>The gated check-in ticket is not valid for user {0}.</value>
+  </data>
+  <data name="MessageQueueDescription" xml:space="preserve">
+    <value>Automatically created by the build system for build server {0}.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_LabTestPassed" xml:space="preserve">
+    <value>Lab Test Passed</value>
+  </data>
+  <data name="MissingDescription" xml:space="preserve">
+    <value>TF215059: You must specify a description.</value>
+  </data>
+  <data name="ServiceHostStartupTimedOut" xml:space="preserve">
+    <value>Build failed to start within the allotted timeout. This could be due to the Custom Assemblies path for this Build Controller including too many assemblies or issues connecting to the server.</value>
+  </data>
+  <data name="AzureContinuousDeploymentTemplateNotFound" xml:space="preserve">
+    <value>Unable to find AzureContinuousDeployment.11.xaml in {0} see https://go.microsoft.com/fwlink/?LinkId=254710</value>
+  </data>
+  <data name="AzureConnectedServiceFriendlyName" xml:space="preserve">
+    <value>Azure Subscription: {0}</value>
+  </data>
+  <data name="MissingController" xml:space="preserve">
+    <value>TF215099: You must specify a build controller.</value>
+  </data>
+  <data name="TfsBuildProjTargetImportUpdateComment" xml:space="preserve">
+    <value>The build server automatically updated the TfsBuild.proj file for compatibility support. {0}</value>
+  </data>
+  <data name="CannotSetBatchSizeInvalidType" xml:space="preserve">
+    <value>TF900552: The batch size cannot be set unless the {0} continuous integration type is being used.</value>
+  </data>
+  <data name="UpgradeTemplateDescription" xml:space="preserve">
+    <value>This is the upgrade Build Process Template for TFVC-based team projects.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_UATPassed" xml:space="preserve">
+    <value>UAT Passed</value>
+  </data>
+  <data name="BuildDefinitionCacheUpdateError" xml:space="preserve">
+    <value>An error occurred while attempting to update the build pipeline cache. Continuous integration and gated check-in evaluation may be incorrect until the issue is resolved.</value>
+  </data>
+  <data name="GatedCheckInTicketInvalidDefinition" xml:space="preserve">
+    <value>The requested build pipeline is not valid for the gated check-in ticket.</value>
+  </data>
+  <data name="UnknownPlaceHolder" xml:space="preserve">
+    <value>&lt;Unknown&gt;</value>
+  </data>
+  <data name="BuildStepTopLevelCompilationMessage" xml:space="preserve">
+    <value>Compiling sources for {0}/{1}.</value>
+  </data>
+  <data name="InvalidContinuousIntegrationType" xml:space="preserve">
+    <value>The continuous integration type {0} is not valid for a build pipeline.</value>
+  </data>
+  <data name="CannotSetQuietPeriodInvalidType" xml:space="preserve">
+    <value>TF215038: The quiet period cannot be set unless the {0} continuous integration type is being used.</value>
+  </data>
+  <data name="BuildProcessTemplateNotFoundForWebApi" xml:space="preserve">
+    <value>Build process template with Id {0} could not be found.</value>
+  </data>
+  <data name="DuplicateWorkspaceMappingDefinition" xml:space="preserve">
+    <value>TF215040: The path {0} can only be mapped one time in a given workspace.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_UnderInvestigation" xml:space="preserve">
+    <value>Under Investigation</value>
+  </data>
+  <data name="BuildDefinitionAddedEmailTitle" xml:space="preserve">
+    <value>{0} Build pipeline '{1}' added</value>
+  </data>
+  <data name="BuildDefinitionDeletedEmailTitle" xml:space="preserve">
+    <value>{0} Build pipeline '{1}' deleted</value>
+  </data>
+  <data name="BuildFailedAlert" xml:space="preserve">
+    <value>Build {0} failed in pool {1}</value>
+  </data>
+  <data name="InvalidRepoUri" xml:space="preserve">
+    <value>The specified repository URI "{0}" is not valid.</value>
+  </data>
+  <data name="BuildDeploymentAlreadyExists" xml:space="preserve">
+    <value>Build deployment already exists for deployment build ID {0} and source build ID {1}.</value>
+  </data>
+  <data name="BuildStatusChangeEmailTitle" xml:space="preserve">
+    <value>{0} Build {1} quality changed to {2}</value>
+  </data>
+  <data name="MissingDefinition" xml:space="preserve">
+    <value>TF215057: You must specify a build pipeline.</value>
+  </data>
+  <data name="AgentHostShutdownForcefullyError" xml:space="preserve">
+    <value>The build failed because the build server that hosts build agent {0} lost communication with Azure DevOps Server.</value>
+  </data>
+  <data name="ElasticMessageQueueDescription" xml:space="preserve">
+    <value>Automatically created by the server for role instance {1} in the {0} machine pool.</value>
+  </data>
+  <data name="UpdatingDefinitionsDeprecated" xml:space="preserve">
+    <value>Updating build pipelines is not supported from this client. Please use a client compatible with Team Foundation Server 2010 and try again.</value>
+  </data>
+  <data name="FailedToExtractArtifactSpecFromUri" xml:space="preserve">
+    <value>The passed in Uri could not be parsed.</value>
+  </data>
+  <data name="ArtifactUrlHelp" xml:space="preserve">
+    <value>TF215008: Expected to receive either the 'artifactMoniker' argument or a 'definitionPath' and 'buildNumber' combination.</value>
+  </data>
+  <data name="TooLongSinceLastCheck" xml:space="preserve">
+    <value>It has been too long since the last registered check, or the registry cache is not up to date. Now: {0}. LastCheckFromNormalReg: {1}. NewLastCheck: {2}.</value>
+  </data>
+  <data name="HostedXamlRetired" xml:space="preserve">
+    <value>We deprecated the hosted XAML build controller on July 1st, 2017. We recommend that you migrate to our new build system. However, if you still need to run XAML builds during the migration, then you must set up a private XAML build controller now. Learn more:https://go.microsoft.com/fwlink/?LinkId=816827.</value>
+  </data>
+  <data name="TfvcContinuousDeploymentTemplate12Description" xml:space="preserve">
+    <value>This is the build continuous deployment process template for Team Foundation Version Control based team projects for version 12.</value>
+  </data>
+  <data name="BuildRequestCustomGetVersionIgnored" xml:space="preserve">
+    <value>TF215030: A source control version cannot be specified unless using the {0} GetOption.</value>
+  </data>
+  <data name="BuildAccountDoesNotHavePermission" xml:space="preserve">
+    <value>The service account {0} does not have permission to manage or view build resources.</value>
+  </data>
+  <data name="BuildNotFound" xml:space="preserve">
+    <value>Requested Build {0} could not be found</value>
+  </data>
+  <data name="BuildGroupAlreadyExists" xml:space="preserve">
+    <value>TF215020: The build group {0} already exists.</value>
+  </data>
+  <data name="InvalidDescription" xml:space="preserve">
+    <value>TF215043: The description is too long. The maximum allowed length for a description is 2048 characters.</value>
+  </data>
+  <data name="BuildAccountDoesNotHaveUsageLeft" xml:space="preserve">
+    <value>Your organization has no build minutes remaining.  Retry your build after {0} or visit {1} for more information.</value>
+  </data>
+  <data name="BuildStepProjectCompilationMessage" xml:space="preserve">
+    <value>Building project "{0}".</value>
+  </data>
+  <data name="BuildDefinitionDisabled" xml:space="preserve">
+    <value>TF215079: The build pipeline {0} is disabled. Enable the build pipeline and try again.</value>
+  </data>
+  <data name="TemplateMissingFromFileContainer" xml:space="preserve">
+    <value>No items were found for container id '{0}'.  Exactly one was expected ({1}).</value>
+  </data>
+  <data name="CoverageServiceRestartFailureDuringDelete" xml:space="preserve">
+    <value>TF215068: Failed to restart the code coverage analysis service on the Azure DevOps Server while deleting the test run. Any associated code coverage data will be out of date temporarily. Restart the service manually to update the code coverage data.</value>
+  </data>
+  <data name="CannotUseProjectRootAsCustomAssemblyPath" xml:space="preserve">
+    <value>The Hosted Build Controller's Custom Assembly Path '{0}' is invalid. You must specify a sub-path within a project in order to queue builds against this Build Controller.</value>
+  </data>
+  <data name="BuildCompleted_Canceled" xml:space="preserve">
+    <value>{0} Build {1} has been canceled</value>
+  </data>
+  <data name="BuildContainerDropMustUseVirtual" xml:space="preserve">
+    <value>TF400968: Build pipeline {0} cannot copy build output to the server using a build controller that is on-premises. To copy build output to the server, your pipeline must use the Hosted Build Controller.</value>
+  </data>
+  <data name="BuildGroupItemCannotMoveAcrossTeamProjects" xml:space="preserve">
+    <value>TF215022: The group item {0} cannot be moved across team projects.</value>
+  </data>
+  <data name="AzureTemplateDescription" xml:space="preserve">
+    <value>This is the custom Azure Continuous Deployment Build Process Template for Tfvc-based team projects.</value>
+  </data>
+  <data name="InvalidCustomAssemblyPath" xml:space="preserve">
+    <value>The custom assembly path $/ is invalid. You must specify a path within a team project.</value>
+  </data>
+  <data name="ScheduleJobName" xml:space="preserve">
+    <value>Build Scheduling</value>
+  </data>
+  <data name="BuildRequestCustomGetVersionRequired" xml:space="preserve">
+    <value>TF215029: Specify a source control version when using the {0} GetOption.</value>
+  </data>
+  <data name="CannotRedeployBuildNotSucceeded" xml:space="preserve">
+    <value>Cannot redeploy a build with status other than succeeded.</value>
+  </data>
+  <data name="ScheduleJobInvalidDefinitionUri" xml:space="preserve">
+    <value>Build job {0} contains invalid data (it contains an invalid pipeline URI).</value>
+  </data>
+  <data name="BuildDefinitionCanOnlyBeSpecifiedOnce" xml:space="preserve">
+    <value>The build pipeline {0} was specified more than once. Each build pipeline may only be specified once.</value>
+  </data>
+  <data name="BuildDefinitionUpgradeCompletionEmailTitle" xml:space="preserve">
+    <value>{0} Build pipeline {1} upgraded</value>
+  </data>
+  <data name="GitTemplateDescription" xml:space="preserve">
+    <value>This is the default Build Process Template for Git-based team projects.</value>
+  </data>
+  <data name="BuildDefinitionAlreadyExists" xml:space="preserve">
+    <value>TF215015: The build pipeline {0} already exists. Specify a different build pipeline and try again.</value>
+  </data>
+  <data name="RetentionPolicyErrors" xml:space="preserve">
+    <value>One or more errors were encountered while processing retention policies for pipeline {0}.
+{1}</value>
+  </data>
+  <data name="InvalidSharedResourceRequestedBy" xml:space="preserve">
+    <value>The value {0} is not valid for the requested by parameter. Valid values include build agent and build controller uniform resource identifiers.</value>
+  </data>
+  <data name="CannotBatchWith2010" xml:space="preserve">
+    <value>TF900557: You cannot use gated check-in with merged submissions on a 2010 build server.  Upgrade build server {0} or disable submission merging.</value>
+  </data>
+  <data name="RequestLogs_DropLocationNotSpecified" xml:space="preserve">
+    <value>No diagnostic activity logs are copied because the drop location of build {0} is not specified.</value>
+  </data>
+  <data name="BuildResourceAddedEmailTitle" xml:space="preserve">
+    <value>{0} Build resource '{1}' added</value>
+  </data>
+  <data name="InvalidIdentityName" xml:space="preserve">
+    <value>TF215044: The identity name {0} is too long. The maximum allowed length for an identity is 512 characters.</value>
+  </data>
+  <data name="FailedToUpgradeBuildType" xml:space="preserve">
+    <value>TF215042: Failed to upgrade the build type for path {0}.</value>
+  </data>
+  <data name="UpgradeNoControllers" xml:space="preserve">
+    <value>The build type {0} has been upgraded to a build pipeline without configuring a build controller. You must configure a build controller before using the build pipeline.</value>
+  </data>
+  <data name="BuildProcessTemplateNotFound" xml:space="preserve">
+    <value>The expected build process template '{0}' for artifact URI '{1}' was not found in the file container service.</value>
+  </data>
+  <data name="BuildRequestReasonReserved" xml:space="preserve">
+    <value>The build reason {0} is reserved for system use only.</value>
+  </data>
+  <data name="GatedCheckInTicketExpired" xml:space="preserve">
+    <value>The gated check-in ticket has expired.</value>
+  </data>
+  <data name="BuildCompleted_Successful" xml:space="preserve">
+    <value>{0} Build {1} succeeded</value>
+  </data>
+  <data name="BuildGroupDoesNotExist" xml:space="preserve">
+    <value>TF215021: The build group {0} does not exist.</value>
+  </data>
+  <data name="FailedToProcessChangeset" xml:space="preserve">
+    <value>TF215041: Failed to process changeset {0}.</value>
+  </data>
+  <data name="ProcessingChangesetDeprecated" xml:space="preserve">
+    <value>Processing changesets is no longer supported.</value>
+  </data>
+  <data name="BuildResourceChangedEmailTitle" xml:space="preserve">
+    <value>{0} Build resource '{1}' changed</value>
+  </data>
+  <data name="UnexpectedError" xml:space="preserve">
+    <value>TF42063: An unexpected error has occurred.</value>
+  </data>
+  <data name="IncompatibleController" xml:space="preserve">
+    <value>TF900558: This build process template cannot be run on build server {0}.  Upgrade this build server to a newer version.</value>
+  </data>
+  <data name="BuildContainerDropDisabled" xml:space="preserve">
+    <value>Copying build output to the server has been disabled.</value>
+  </data>
+  <data name="InvalidTeamProject" xml:space="preserve">
+    <value>TF215072: The input is not valid. The values of the teamProject and buildData.TeamProject parameters do not match.</value>
+  </data>
+  <data name="NoValidRepoFound" xml:space="preserve">
+    <value>The team project {0} contains no Git repositories.</value>
+  </data>
+  <data name="SubscriptionIdNotAGuid" xml:space="preserve">
+    <value>The specified subscription ID '{0}' is not a Guid.</value>
+  </data>
+  <data name="ScheduleLimitExceeded" xml:space="preserve">
+    <value>TF215082: You cannot specify more than one schedule for a build pipeline.</value>
+  </data>
+  <data name="ApplicationStartKeyError" xml:space="preserve">
+    <value>TF215094: The key for issuing gated check-in tickets could not be created. Submitting gated check-ins will require the user to have '{0}' permissions on the target build pipeline.</value>
+  </data>
+  <data name="BuildDefinitionDoesNotExist" xml:space="preserve">
+    <value>TF215016: The build pipeline {0} does not exist. Specify a valid build pipeline and try again.</value>
+  </data>
+  <data name="InvalidPlatformFlavorSpecified" xml:space="preserve">
+    <value>TF215071: The configuration {1} does not exist for platform {0}.</value>
+  </data>
+  <data name="InvalidBuildContainerDropLocation" xml:space="preserve">
+    <value>The drop location {0} is invalid. The build pipeline is configured to copy drops to '{1}', which is not a parent folder of this drop location.</value>
+  </data>
+  <data name="BuildElasticServiceHostName" xml:space="preserve">
+    <value>Cloud Build Services</value>
+  </data>
+  <data name="InvalidGitUri" xml:space="preserve">
+    <value>The specified Git URI "{0}" is not valid.</value>
+  </data>
+  <data name="GitTemplate12Description" xml:space="preserve">
+    <value>This is the Build Process Template for Git-based team projects for v12.</value>
+  </data>
+  <data name="SourceProviderLimitExceeded" xml:space="preserve">
+    <value>TF401043: You cannot specify more than one source provider for a build pipeline.</value>
+  </data>
+  <data name="DuplicateRetentionPolicyDefinition" xml:space="preserve">
+    <value>TF215039: A retention policy for build status {0} and build reason {1} has already been defined.</value>
+  </data>
+  <data name="MissingDefaultDropLocation" xml:space="preserve">
+    <value>TF215056: You must specify a default build drop location.</value>
+  </data>
+  <data name="InformationParentNodeDoesNotExist" xml:space="preserve">
+    <value>TF215051: The information node {0} does not exist in build {1}. You must specify a valid node for the parent.</value>
+  </data>
+  <data name="ServiceAccountMissingPermissions" xml:space="preserve">
+    <value>Service account {0} does not have permission to view or update builds.</value>
+  </data>
+  <data name="BuildWaitedInQueueTooLong" xml:space="preserve">
+    <value>The build request {0} in machine pool {1} waited too long in queue. </value>
+  </data>
+  <data name="BuildControllerNotFound" xml:space="preserve">
+    <value>Build controller with Id {0} could not be found.</value>
+  </data>
+  <data name="ResourceUrlCreationFailed" xml:space="preserve">
+    <value>Failed to create resource URL.</value>
+  </data>
+  <data name="DateTimeOutOfRange" xml:space="preserve">
+    <value>TF215084: The date {0} is not in a valid range and will be truncated. The valid range for dates is January 1, 1753, at 00:00:00 to December 31, 9999, at 23:59:59.</value>
+  </data>
+  <data name="BuildAgentNotFound" xml:space="preserve">
+    <value>Build agent with Id {0} could not be found.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_InitialTestPassed" xml:space="preserve">
+    <value>Initial Test Passed</value>
+  </data>
+  <data name="BuildTimeoutAlert" xml:space="preserve">
+    <value>Build request {0} in machine pool {1} timed out and its host instance was forcefully reimaged.</value>
+  </data>
+  <data name="BuildGroupItemNameRequired" xml:space="preserve">
+    <value>TF215024: The build path {0} must specify an item name.</value>
+  </data>
+  <data name="FatalErrorDeployingBuildTemplate" xml:space="preserve">
+    <value>Fatal error deploying build process template '{0}' to the container with artifact URI of '{1}'.</value>
+  </data>
+  <data name="BuildDefinitionNameInvalid" xml:space="preserve">
+    <value>The build pipeline name {0} contains invalid characters. Specify a different name and try again.</value>
+  </data>
+  <data name="AccessDeniedForBuildDefinition" xml:space="preserve">
+    <value>TF215106: Access denied. {0} needs {1} permissions for build pipeline {2} in team project {3} to perform the action. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="InvalidQuality" xml:space="preserve">
+    <value>TF215045: The build quality is too long. The maximum allowed length for a build quality is 256 characters.</value>
+  </data>
+  <data name="CannotDeleteInProgressBuild" xml:space="preserve">
+    <value>TF215034: Build {0} is currently in progress and cannot be deleted.</value>
+  </data>
+  <data name="GitContinuousDeploymentTemplate12Description" xml:space="preserve">
+    <value>This is the Build Continuous Deployment Process Template for Git-based team projects for v12.</value>
+  </data>
+  <data name="BuildQualityDoesNotExist" xml:space="preserve">
+    <value>TF215026: The build quality {0} does not exist for team project {1}.</value>
+  </data>
+  <data name="IntermediateLogsNotSupported" xml:space="preserve">
+    <value>TF900556: You cannot request logs from a 2010 build server.  Upgrade build controller {0} or set verbosity to diagnostic and retry your build.</value>
+  </data>
+  <data name="InvalidVersionControlDropLocation" xml:space="preserve">
+    <value>The drop location {0} is invalid. The build pipeline is configured to copy drops to '{1}', which is not a parent source control folder of this drop location.</value>
+  </data>
+  <data name="InvalidLocalItem" xml:space="preserve">
+    <value>TF215083: The local path {0} for a workspace mapping is not valid. (Detail Message: {1})</value>
+  </data>
+  <data name="InvalidWorkspaceMappingDepth" xml:space="preserve">
+    <value>TF215047: The workspace mapping depth {0} is not valid. Allowed values are 1 and 120.</value>
+  </data>
+  <data name="BuildResourceDeletedEmailTitle" xml:space="preserve">
+    <value>{0} Build resource '{1}' deleted</value>
+  </data>
+  <data name="BuildMachineRequestAlreadyStartedException" xml:space="preserve">
+    <value>The build machine request {1} for pool {0} cannot be started because it has already started.</value>
+  </data>
+  <data name="UnableToFindControllersServiceHost" xml:space="preserve">
+    <value>Cannot find build service host for URI {0} for controller {1}.</value>
+  </data>
+  <data name="FailedToStartBuild" xml:space="preserve">
+    <value>TF900560: Could not start build: {0}</value>
+  </data>
+  <data name="FailedToProcessUploadedFile" xml:space="preserve">
+    <value>TF401041: Failed to process uploaded file.  ContainerId: '{0}' Path: '{1}'.</value>
+  </data>
+  <data name="OnlyHostedServiceOrWebsiteAllowed" xml:space="preserve">
+    <value>Specifying a hosted service and a web site is not allowed.</value>
+  </data>
+  <data name="CannotDeleteDefinitionQueuedBuildExists" xml:space="preserve">
+    <value>TF215033: Build pipeline {0} cannot be deleted because builds still exist for this pipeline. Ensure the queue for this pipeline on controller {1} is empty and try again.</value>
+  </data>
+  <data name="BuildDefinitionIdInvalid" xml:space="preserve">
+    <value>Build pipeline ID {0} is not valid.</value>
+  </data>
+  <data name="BuildRequestGetOptionInvalid" xml:space="preserve">
+    <value>The GetOption must be {0} when specifying {1} as the build reason.</value>
+  </data>
+  <data name="BuildRequestShelvesetIgnored" xml:space="preserve">
+    <value>A shelveset cannot be specified unless either {0} or {1} is specified as the build reason.</value>
+  </data>
+  <data name="AccessDeniedAdministratorRequired" xml:space="preserve">
+    <value>TF215001: Access denied. The action {0} is trying to perform requires administrative privileges on the server.</value>
+  </data>
+  <data name="InvalidBuildRequest" xml:space="preserve">
+    <value>The build pipeline {0} must be configured for Gated Check-in to support submitting changes to source control on a successful build.</value>
+  </data>
+  <data name="ConnectedServiceNotFound" xml:space="preserve">
+    <value>The Connected Service with ID {0} does not exist.</value>
+  </data>
+  <data name="ConflictingBuildQueryParameters" xml:space="preserve">
+    <value>Ids cannot be specified in conjunction with other build query parameters.</value>
+  </data>
+  <data name="BuildStatusMustBeSingleValue" xml:space="preserve">
+    <value>TF215025: The build status {0} is not valid.</value>
+  </data>
+  <data name="HostedXamlBeingRetired" xml:space="preserve">
+    <value>We deprecated the hosted XAML build controller on July 1st, 2017, but your organization has been temporarily exempted. We will complete full decommissioning on July 10th, 2017. We recommend that you migrate to our new build system. However, if you still need to run XAML builds during the migration, then you must set up a private XAML build controller now. Learn more:https://go.microsoft.com/fwlink/?LinkId=816827.</value>
+  </data>
+  <data name="DeletingAgentsDeprecated" xml:space="preserve">
+    <value>Deleting build agents is not supported from this client. Please use a client compatible with Team Foundation Server 2010 and try again.</value>
+  </data>
+  <data name="MissingQuality" xml:space="preserve">
+    <value>TF215061: You must specify a build quality</value>
+  </data>
+  <data name="BuildServerNotFound" xml:space="preserve">
+    <value>Build server with Id {0} could not be found.</value>
+  </data>
+  <data name="BuildMachineRequestDoesNotExistException" xml:space="preserve">
+    <value>The build machine request {1} does not exist for pool {0}.</value>
+  </data>
+  <data name="BuildElasticControllerName" xml:space="preserve">
+    <value>Hosted Build Controller</value>
+  </data>
+  <data name="InformationChangeDuplicateRequest" xml:space="preserve">
+    <value>TF215049: The information node {0} in build {1} cannot receive more than one change per request.</value>
+  </data>
+  <data name="CannotAddPropertyToNondeploymentBuild" xml:space="preserve">
+    <value>The passed in Uri is not for a deployment.</value>
+  </data>
+  <data name="StopBuildTimeout" xml:space="preserve">
+    <value>TF215104: Failed to stop build {0} because the build machine did not respond to a stop request within {1}. If the build machine remains disconnected for a 5-minute interval the build will be stopped automatically by the server.</value>
+  </data>
+  <data name="WorkspaceTemplateMustDefineMapping" xml:space="preserve">
+    <value>TF215064: A workspace template must define at least one mapping.</value>
+  </data>
+  <data name="MachineCountYellow" xml:space="preserve">
+    <value>The machine count in machine pool {0} is lower than would be ideal: {1}</value>
+  </data>
+  <data name="ProjectDoesNotExistWithName" xml:space="preserve">
+    <value>The following project does not exist: {0}. Verify that the name of the project is correct and that the project exists on the specified Azure DevOps Server.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="GitUpgradeTemplateDescription" xml:space="preserve">
+    <value>This is the upgrade Build Process Template for Git-based team projects.</value>
+  </data>
+  <data name="ServerDropMustDeleteDrop" xml:space="preserve">
+    <value>TF400956: For build output on the server, you may not delete details without deleting the drop as well.</value>
+  </data>
+  <data name="BuildCompleted_PartiallySuccessful" xml:space="preserve">
+    <value>{0} Build {1} partially succeeded</value>
+  </data>
+  <data name="RequestLogs_BuildNotInProgress" xml:space="preserve">
+    <value>No diagnostic activity logs are copied because build {0} is not currently in progress.</value>
+  </data>
+  <data name="InformationAddRequestCycleDetected" xml:space="preserve">
+    <value>TF215092: Information node {0} in build {1} contains a cycle. Remove the cycle and try again.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_Released" xml:space="preserve">
+    <value>Released</value>
+  </data>
+  <data name="BuildDeploymentServiceNotSupported" xml:space="preserve">
+    <value>The Deployment Service is not supported in this project.</value>
+  </data>
+  <data name="UnknownTemplate" xml:space="preserve">
+    <value>Request failed: unknown template {0}</value>
+  </data>
+  <data name="GatedCheckInTicketShelvesetModified" xml:space="preserve">
+    <value>The shelveset associated with the gated check-in ticket has been modified.</value>
+  </data>
+  <data name="BuildControllerDoesNotExist" xml:space="preserve">
+    <value>TF401329: The build controller {0} does not exist. Specify a valid build controller and try again.</value>
+  </data>
+  <data name="XamlBuildDisabledMessage" xml:space="preserve">
+    <value>VS403391: XAML build is no longer supported in this release of Azure DevOps Server.</value>
+  </data>
+  <data name="BuildContainerDropNotSupported" xml:space="preserve">
+    <value>TF400961: You cannot copy build output to the server for {0}. To use a server drop, you must first upgrade build controller {1} and its build agents to November 2012 Update for Team Foundation Server 2012 or newer.</value>
+  </data>
+  <data name="UpgradeWorkspaceComment" xml:space="preserve">
+    <value>Created by the Team Build Server for compatibility support</value>
+  </data>
+  <data name="CannotRedeployBuildReason" xml:space="preserve">
+    <value>Cannot redeploy a build that was a gated check-in, private build, batched multiple requests, or with a source get version which is not a changeset.</value>
+  </data>
+  <data name="MachineCountRed" xml:space="preserve">
+    <value>The machine count in machine pool {0} is too low: {1}</value>
+  </data>
+  <data name="CannotRedeployBuildNotFound" xml:space="preserve">
+    <value>Cannot redeploy as the specified deployment URI was not found.</value>
+  </data>
+  <data name="GatedCheckInTicketInvalidShelveset" xml:space="preserve">
+    <value>The shelveset associated with the gated check-in ticket does not exist or does not match the value provided in the request.</value>
+  </data>
+  <data name="FailedToUpgradeBuildTypes" xml:space="preserve">
+    <value>TF215080: Failed to upgrade one or more build types to build pipelines in changeset {0}. You must modify each build type's TFSBuild.proj file to work with this release of Visual Studio.</value>
+  </data>
+  <data name="ServiceCallFailedAuthentication" xml:space="preserve">
+    <value>An SSL trust relationship could not be established with the server.</value>
+  </data>
+  <data name="FailedToProcessDeletedFiles" xml:space="preserve">
+    <value>TF401040: Failed to process deleted files.  ContainerId: '{0}'.</value>
+  </data>
+  <data name="InvalidIdentityNotFound" xml:space="preserve">
+    <value>The specified identity {0} could not be resolved.</value>
+  </data>
+  <data name="InvalidBuildUri" xml:space="preserve">
+    <value>TF215070: The build URI {0} is not valid. Make sure that this build exists and has not been deleted.</value>
+  </data>
+  <data name="LabelRequiresScope" xml:space="preserve">
+    <value>TF215091: The label {0} must specify a scope.</value>
+  </data>
+  <data name="CannotDeleteRetainedBuild" xml:space="preserve">
+    <value>TF900561: The following build cannot be deleted because it is marked as Retain Indefinitely: {0}. Remove the Retain Indefinitely flag to allow deletion of this build.</value>
+  </data>
+  <data name="MachineRequestFailedAlert" xml:space="preserve">
+    <value>Machine request {0} failed in pool {1}-{2} for collection {3}.</value>
+  </data>
+  <data name="FailedToUpdateProcessParameters" xml:space="preserve">
+    <value>Failed to update the process parameters for one or more build pipelines in changeset {0}.</value>
+  </data>
+  <data name="InvalidDeleteOptions" xml:space="preserve">
+    <value>TF215098: The delete options '{0}' are not valid. The Details flag must be included in the delete options.</value>
+  </data>
+  <data name="UpgradeTemplateDoesNotSupportBatching" xml:space="preserve">
+    <value>The build pipeline {0} cannot be configured to batch gated check-ins because the configured process template {1} does not support this feature.</value>
+  </data>
+  <data name="BuildStepTopLevelTestMessage" xml:space="preserve">
+    <value>Running tests for {0}/{1}.</value>
+  </data>
+  <data name="AddingServiceHostRequiresCurrentClient" xml:space="preserve">
+    <value>Upgrade your build server to a newer version and try again.</value>
+  </data>
+  <data name="LabelNameInvalid" xml:space="preserve">
+    <value>TF215090: The label name {0} is not valid.</value>
+  </data>
+  <data name="BuildNumberAlreadyExists" xml:space="preserve">
+    <value>TF42064: The build number '{1}' already exists for build pipeline '{0}'.</value>
+  </data>
+  <data name="MissingUri" xml:space="preserve">
+    <value>TF215062: You must specify a build URI.</value>
+  </data>
+  <data name="GatedCheckInTicketValidationError" xml:space="preserve">
+    <value>The provided gated check-in ticket is not valid.</value>
+  </data>
+  <data name="CannotStopBuildNotStartedOnAgent" xml:space="preserve">
+    <value>TF215095: Cannot stop build {0} because it has not yet started on build controller {1}.</value>
+  </data>
+  <data name="BuildGroupItemInvalidGroup" xml:space="preserve">
+    <value>TF215023: The build path {0} must be the direct child of a team project.</value>
+  </data>
+  <data name="BuildCompletionEmailTitle" xml:space="preserve">
+    <value>{0} Build {1} {2}</value>
+  </data>
+  <data name="DuplicateBuildUpdateRequestException" xml:space="preserve">
+    <value>TF900555: The same build {0} cannot be updated more than once per request.</value>
+  </data>
+  <data name="UpdatingAgentsDeprecated" xml:space="preserve">
+    <value>Updating build agents is not supported from this client. Please use a client compatible with Team Foundation Server 2010 and try again.</value>
+  </data>
+  <data name="BuildDefinitionChangedEmailTitle" xml:space="preserve">
+    <value>{0} Build pipeline '{1}' changed</value>
+  </data>
+  <data name="BuildCompleted_Unknown" xml:space="preserve">
+    <value>{0} Build {1} completed (Status: {2})</value>
+  </data>
+  <data name="AddingAgentsDeprecated" xml:space="preserve">
+    <value>Adding build agents is not supported from this client. Please use a client compatible with Team Foundation Server 2010 and try again.</value>
+  </data>
+  <data name="BuildArtifactTitle" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="BuildOkNumberWaitingInQueue" xml:space="preserve">
+    <value>There is an acceptable number of builds waiting in the queue for machine pool {0}. The current count is {1}.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_ReadyForDeployment" xml:space="preserve">
+    <value>Ready for Deployment</value>
+  </data>
+  <data name="GitCustomTemplateNotSupported" xml:space="preserve">
+    <value>TF401203: You cannot use a custom template stored in a Git repository for {0}. To use a custom template stored in a Git repository, you must first upgrade the build controller {1} and its build agents to Team Foundation Server 2013 or newer.</value>
+  </data>
+  <data name="BuildCompleted_Failed" xml:space="preserve">
+    <value>{0} Build {1} failed</value>
+  </data>
+  <data name="InvalidVersionControlDefaultDropLocation" xml:space="preserve">
+    <value>The drop location {0} is invalid. The team project {1} is configured to copy drops to '{2}', which is not a parent source control folder of this drop location.</value>
+  </data>
+  <data name="BuildRequestReasonInvalid" xml:space="preserve">
+    <value>The build reason {0} is not valid for a build request.</value>
+  </data>
+  <data name="CannotRedeployNondeploymentBuild" xml:space="preserve">
+    <value>Cannot redeploy a build that was not originally a deployment.</value>
+  </data>
+  <data name="CannotDeleteDefinitionBuildExists" xml:space="preserve">
+    <value>TF215032: Build pipeline {0} cannot be deleted because builds still exist for this pipeline. Delete all completed builds for this pipeline and try again.</value>
+  </data>
+  <data name="BuildMachineSlowReimage" xml:space="preserve">
+    <value>Build machine {0} is taking too long to reimage.</value>
+  </data>
+  <data name="EDA8CA26_B64A_44c1_A1D5_42451DD97486_ReadyForInitialTest" xml:space="preserve">
+    <value>Ready for Initial Test</value>
+  </data>
+  <data name="ScheduleJobInvalidDataNoProjectIdZeroDefinitions" xml:space="preserve">
+    <value>Build job {0} contains invalid data (it contains no project id and is not referenced by any build pipelines).</value>
+  </data>
+  <data name="BuildElasticAgentName" xml:space="preserve">
+    <value>Hosted Build Agent</value>
+  </data>
+  <data name="InvalidWorkspaceMappingCannotContainWildcards" xml:space="preserve">
+    <value>TF215048: The workspace mapping path {0} cannot contain wildcards. The wildcards that are not allowed are '*' and '?'.</value>
+  </data>
+  <data name="BuildRequestNotFound" xml:space="preserve">
+    <value>Build request with Id {0} could not be found.</value>
+  </data>
+  <data name="FailedToUpdateBuildControllers" xml:space="preserve">
+    <value>Failed to update the build controllers for one or more build pipelines in changeset {0}.</value>
+  </data>
+  <data name="VersionControlFileNotFoundException" xml:space="preserve">
+    <value>TF215105: The file {0} could not be found in source control.</value>
+  </data>
+  <data name="ScheduleJobInvalidDataNoProjectIdManyDefinitions" xml:space="preserve">
+    <value>Build job {0} contains invalid data (it contains no project id and is referenced by {1} build pipelines).</value>
+  </data>
+  <data name="InformationNodeDoesNotExist" xml:space="preserve">
+    <value>TF215050: The information node {0} does not exist in build {1}.</value>
+  </data>
+  <data name="BuildMachineRequestAlreadyFinishedException" xml:space="preserve">
+    <value>The build machine request {1} for pool {0} cannot be started because it has already finished.</value>
+  </data>
+  <data name="MissingRequiredDeploymentEnvironmentProperty" xml:space="preserve">
+    <value>The ApiEndpoint or Credentials or both were not specified in the DeploymentEnvironment.</value>
+  </data>
+  <data name="AccessDeniedForTeamProject" xml:space="preserve">
+    <value>TF215002: Access denied. {0} needs {1} permissions for team project {2} to perform the action. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="DeploymentEnvironmentNotFound" xml:space="preserve">
+    <value>The DeploymentEnvironment with name {0} does not exist.</value>
+  </data>
+  <data name="RetentionPolicyInvalidReason" xml:space="preserve">
+    <value>TF215102: The build reason {0} is not valid for a retention policy.</value>
+  </data>
+  <data name="BuildDoesNotExistForSpec" xml:space="preserve">
+    <value>TF215019: No build exists for pipeline {0} with build number {1}.</value>
+  </data>
+  <data name="UpdatingBuildInformationDeprecated" xml:space="preserve">
+    <value>Updating build information is not supported from this client. Please use a client compatible with Team Foundation Server 2010 and try again.</value>
+  </data>
+  <data name="InvalidMachinePoolName" xml:space="preserve">
+    <value>The machine pool name is invalid. It may not contain '*', '/', or '__'.</value>
+  </data>
+  <data name="BuildRequestPropertyInvalid" xml:space="preserve">
+    <value>The request property {0} with value {1} is not valid.</value>
+  </data>
+  <data name="CannotUpdateBatchedDefinitionFromOldClient" xml:space="preserve">
+    <value>TF900553: Cannot save build pipeline {0} because it is currently configured for batched gated check-in. Use a client compatible with Team Foundation Server 2013 or newer and try again.</value>
+  </data>
+  <data name="TfvcTemplate12Description" xml:space="preserve">
+    <value>This is the default Build Process Template for Tfvc-based team projects.</value>
+  </data>
+  <data name="MachineCountGreen" xml:space="preserve">
+    <value>The machine count in machine pool {0} is back to an acceptable number: {1}</value>
+  </data>
+  <data name="CannotCreateCDBuildDefWithoutHostedController" xml:space="preserve">
+    <value>Cannot create build pipeline as no hosted build controller could be found.</value>
+  </data>
+</root>

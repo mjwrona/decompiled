@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StringContainsIllegalChars" xml:space="preserve">
+    <value>The value contains characters that are not allowed (control characters, 0xFFFE, or 0xFFFF). Please remove those characters.</value>
+  </data>
+  <data name="ConflictingPathSeparatorForVssFileStorage" xml:space="preserve">
+    <value>There is a conflict with the path separator character '{0}' requested for VssFileStorage at file path: {1}  A previous instance was created with a path separator of '{2}'.</value>
+  </data>
+  <data name="IllegalBase64String" xml:space="preserve">
+    <value>Illegal attempt to decode a malformed Base64-encoded string.</value>
+  </data>
+  <data name="MalformedArtifactId" xml:space="preserve">
+    <value>The artifact is not understood by this application. Either the artifact supplied is invalid or the application doesn't have the required software updates. Artifact Id: {0}</value>
+  </data>
+  <data name="ErrorPositionalArgumentsNotAllowed" xml:space="preserve">
+    <value>Positional arguments are not allowed</value>
+  </data>
+  <data name="ValueMustBeGreaterThanZero" xml:space="preserve">
+    <value>The value must be greater than zero.</value>
+  </data>
+  <data name="ValueOutOfRange" xml:space="preserve">
+    <value>The value {0} is out of range of valid values for parameter {1}. Valid values must be between {2} and {3}.</value>
+  </data>
+  <data name="ErrorDependencyOptionNotProvided" xml:space="preserve">
+    <value>Option '{0}' requires that option '{1}' be provided as well</value>
+  </data>
+  <data name="InvalidUriError" xml:space="preserve">
+    <value>Supplied URI is invalid. The URI should match {0} URI kind format.</value>
+  </data>
+  <data name="ErrorOptionMustExist" xml:space="preserve">
+    <value>Option '{0}' is required</value>
+  </data>
+  <data name="ErrorOptionsAllowingMultiplesRequireCollection" xml:space="preserve">
+    <value>Invalid backing field or property for option '{0}'.  Class members containing the values for options that allow multiples must be a collection type having an 'Add' method.</value>
+  </data>
+  <data name="HttpRequestTimeout" xml:space="preserve">
+    <value>The HTTP request timed out after {0}.</value>
+  </data>
+  <data name="BasicAuthenticationRequiresSsl" xml:space="preserve">
+    <value>Basic authentication requires a secure connection to the server.</value>
+  </data>
+  <data name="EmptyCollectionNotAllowed" xml:space="preserve">
+    <value>The collection must contain at least one element.</value>
+  </data>
+  <data name="ErrorOptionNotFound" xml:space="preserve">
+    <value>Option not found or is case-sensitive:  '{0}'</value>
+  </data>
+  <data name="UnexpectedType" xml:space="preserve">
+    <value>Expecting '{0}' to be of type '{1}'.</value>
+  </data>
+  <data name="ErrorResponseFileNotFound" xml:space="preserve">
+    <value>Response file not found at path '{0}'</value>
+  </data>
+  <data name="EmptyArrayNotAllowed" xml:space="preserve">
+    <value>The array must contain at least one element.</value>
+  </data>
+  <data name="PropertyArgumentExceededMaximumSizeAllowed" xml:space="preserve">
+    <value>TF20508: The argument '{0}' is too long. It must not contain more than '{1}' characters.</value>
+  </data>
+  <data name="ErrorOptionValuesDoNotMatchExpected" xml:space="preserve">
+    <value>The value for option {0} does not match any of the expected values:  {1}</value>
+  </data>
+  <data name="ErrorOptionsAreMutuallyExclusive" xml:space="preserve">
+    <value>The following options are mutually exclusive.  Only 1 may be defined at a time with respect to the others:  {0}</value>
+  </data>
+  <data name="ErrorOptionNotRecognized" xml:space="preserve">
+    <value>Invalid option usage.  Option '{0}' is not a recognized argument.</value>
+  </data>
+  <data name="AvatarUtils_ImageTooLargeMessage" xml:space="preserve">
+    <value>Image size needs to be less than {0} bytes.</value>
+  </data>
+  <data name="AvatarUtils_ImageParseError" xml:space="preserve">
+    <value>Failed to parse and resize image from the byte stream provided.</value>
+  </data>
+  <data name="MalformedUrl" xml:space="preserve">
+    <value>Malformed Artifact URL: {0}</value>
+  </data>
+  <data name="MalformedUri" xml:space="preserve">
+    <value>Malformed Artifact URI: {0}</value>
+  </data>
+  <data name="ContentIdCalculationBlockSizeError" xml:space="preserve">
+    <value>All blocks except the final block must be {0} bytes.</value>
+  </data>
+  <data name="InvalidClientStoragePath" xml:space="preserve">
+    <value>The storage path specified is invalid: '{0}'  This storage path cannot be null or empty. It should begin with the '{1}' path separator character, and have no empty path segments.</value>
+  </data>
+  <data name="VssUnsupportedPropertyValueType" xml:space="preserve">
+    <value>Property '{0}' of type '{1}' is not supported by the Properties service. Convert the value to an Int32, DateTime, Double, String or Byte array for storage.</value>
+  </data>
+  <data name="UrlNotValid" xml:space="preserve">
+    <value>TF249010: The URL that you specified is not valid. The URL must begin with either HTTP or HTTPS and be a valid address.</value>
+  </data>
+  <data name="OutOfRange" xml:space="preserve">
+    <value>The value {0} is outside of the allowed range.</value>
+  </data>
+  <data name="EmptyOrWhiteSpaceStringNotAllowed" xml:space="preserve">
+    <value>The string must have at least one non-white-space character.</value>
+  </data>
+  <data name="InvalidStringPropertyValueNullAllowed" xml:space="preserve">
+    <value>"{0}" is an invalid value for the {1} of a {2}. The text must be null or between {3} and {4} characters long.</value>
+  </data>
+  <data name="NullElementNotAllowedInCollection" xml:space="preserve">
+    <value>Null elements are not allowed in the collection.</value>
+  </data>
+  <data name="AvatarUtils_ContentMissingMessage" xml:space="preserve">
+    <value>A value was expected in the request body in the following Json format: { "value" : "actual value"}.</value>
+  </data>
+  <data name="NullValueNecessary" xml:space="preserve">
+    <value>The value specified for the following variable must be null: {0}.</value>
+  </data>
+  <data name="SingleBitRequired" xml:space="preserve">
+    <value>The value {0} must contain a single bit flag.</value>
+  </data>
+  <data name="ErrorOperationHandlerConstructorNotFound" xml:space="preserve">
+    <value>Operation handler creation failed.  A valid constructor taking the parameters provided was not found on handler of type '{0}'.</value>
+  </data>
+  <data name="ErrorOptionMultiplesNotAllowed" xml:space="preserve">
+    <value>Option '{0}' does not allow multiples/duplicates</value>
+  </data>
+  <data name="SubjectDescriptorEmpty" xml:space="preserve">
+    <value>The subject descriptor specified for parameter {0} must not be empty.</value>
+  </data>
+  <data name="ErrorOptionValueNotAllowed" xml:space="preserve">
+    <value>Option '{0}' does not require or allow a value</value>
+  </data>
+  <data name="ErrorValueCannotBeConvertedToEnum" xml:space="preserve">
+    <value>The value '{0}' cannot be converted to a valid '{1}' enumeration value.</value>
+  </data>
+  <data name="LowercaseStringRequired" xml:space="preserve">
+    <value>The string argument '{0}' must only consist of lowercase characters.</value>
+  </data>
+  <data name="VssInvalidUnicodeCharacter" xml:space="preserve">
+    <value>TF20507: The string argument contains a character that is not valid:'u{0:X4}'. Correct the argument, and then try the operation again.</value>
+  </data>
+  <data name="VssUnauthorized" xml:space="preserve">
+    <value>VS30063: You are not authorized to access {0}.</value>
+  </data>
+  <data name="CannotPromptIfNonInteractive" xml:space="preserve">
+    <value>The prompt option is invalid because the process is not interactive.</value>
+  </data>
+  <data name="VssUnauthorizedUnknownServer" xml:space="preserve">
+    <value>VS30064: You are not authorized to access the server.</value>
+  </data>
+  <data name="ErrorMembersContainingPositionalsRequireCollection" xml:space="preserve">
+    <value>Invalid backing field or property for positional arguments.  Class members containing the values for positional arguments must be a collection type having an 'Add' method.</value>
+  </data>
+  <data name="ConflictingStringComparerForVssFileStorage" xml:space="preserve">
+    <value>There is a conflict with the string comparer '{0}' requested for VssFileStorage at file path: {1}  A previous instance was created with a string comparer of '{2}'.</value>
+  </data>
+  <data name="ErrorOptionFlagRequiresBooleanMember" xml:space="preserve">
+    <value>Option '{0}' must have a boolean member type.  Options that do not take arguments (i.e. used as flags, ex: /v /f) must have a System.Boolean member type.  This member is set to true when the flag exists and false if not.</value>
+  </data>
+  <data name="ErrorDuplicateOperationModeHandlerFound" xml:space="preserve">
+    <value>Duplicate operation handler found.  A distinct operation handler could not be determined because more than 1 matched the operation mode provided on the command-line.</value>
+  </data>
+  <data name="XmlNodeEmpty" xml:space="preserve">
+    <value>The xml node '{0}' under node '{1}' cannot be empty</value>
+  </data>
+  <data name="NullArtifactUriRoot" xml:space="preserve">
+    <value>ArtifactUriRoot is Null</value>
+  </data>
+  <data name="InvalidEmailAddressError" xml:space="preserve">
+    <value>The supplied email address is invalid.</value>
+  </data>
+  <data name="EmptyStringNotAllowed" xml:space="preserve">
+    <value>The string must have at least one character.</value>
+  </data>
+  <data name="ErrorOptionRequiresValue" xml:space="preserve">
+    <value>Option '{0}' requires a value</value>
+  </data>
+  <data name="ErrorOptionRequired" xml:space="preserve">
+    <value>Option '{0}' is required.</value>
+  </data>
+  <data name="ErrorRequiredOptionDoesNotExist" xml:space="preserve">
+    <value>Option '{0}' is a required option but was not provided</value>
+  </data>
+  <data name="StringLengthNotAllowed" xml:space="preserve">
+    <value>Length of '{0}' is invalid. It must be between {1} and {2} characters.</value>
+  </data>
+  <data name="EmptyGuidNotAllowed" xml:space="preserve">
+    <value>The guid specified for parameter {0} must not be Guid.Empty.</value>
+  </data>
+  <data name="UriUtility_MustBeAuthorityOnlyUri" xml:space="preserve">
+    <value>TF253018: The following URL is not valid: {0}. Try removing any relative path information from the URL (for example, {1}).</value>
+  </data>
+  <data name="ErrorOptionArgumentsNotDefined" xml:space="preserve">
+    <value>Option arguments are not defined</value>
+  </data>
+  <data name="UriUtility_AbsoluteUriRequired" xml:space="preserve">
+    <value>TF205013: The following URL is not valid: {0}. You must specify an absolute path.</value>
+  </data>
+  <data name="ValueTypeOutOfRange" xml:space="preserve">
+    <value>{0} is out of range for the {1} of a {2}. The value must be between {3} and {4}.</value>
+  </data>
+  <data name="ErrorInvalidResponseFileOption" xml:space="preserve">
+    <value>The value provided {0} does not represent a valid response file option.  A response file option must be a valid path that begins with the '@' sign (ex:  @C:\Folder\ResponseFile.txt)</value>
+  </data>
+  <data name="UnknownTypeForSerialization" xml:space="preserve">
+    <value>Unknown object type '{0}' for serialization.</value>
+  </data>
+  <data name="ErrorInvalidValueTypeConversion" xml:space="preserve">
+    <value>The value '{0}' is not a valid value for argument of type '{1}'</value>
+  </data>
+  <data name="ErrorOptionsAreMutuallyInclusive" xml:space="preserve">
+    <value>The following options are mutually inclusive.  If one or more are defined, then all must be defined:  {0}</value>
+  </data>
+  <data name="XmlAttributeNull" xml:space="preserve">
+    <value>The node '{0}' must only have the attribute '{1}'</value>
+  </data>
+  <data name="OperationHandlerNotFound" xml:space="preserve">
+    <value>Operation handler not found for the set of arguments provided:  {0}</value>
+  </data>
+  <data name="StringLengthNotMatch" xml:space="preserve">
+    <value>Length of the string does not match with '{0}'</value>
+  </data>
+  <data name="ErrorOperationHandlerNotFound" xml:space="preserve">
+    <value>Operation handler not found.  An operation mode handler was not found for the arguments provided.</value>
+  </data>
+  <data name="ValueEqualsToInfinity" xml:space="preserve">
+    <value>The value must be a finite value.</value>
+  </data>
+  <data name="AvatarUtils_ImageZeroBytesMessage" xml:space="preserve">
+    <value>Avatar image cannot be zero bytes in length.</value>
+  </data>
+  <data name="ErrorDuplicatePositionalOptionAttributes" xml:space="preserve">
+    <value>Duplicate {0} attribute definition.  Only a single member (including inherited members) may be decorated with a {0}.</value>
+  </data>
+  <data name="XmlAttributeEmpty" xml:space="preserve">
+    <value>The attribute '{0}' on node '{1}' cannot be empty</value>
+  </data>
+  <data name="ErrorOptionRunsDoNotSupportValues" xml:space="preserve">
+    <value>Option runs do not support values</value>
+  </data>
+  <data name="StringContainsInvalidCharacters" xml:space="preserve">
+    <value>The string argument contains a character that is not valid:'{0}'. Correct the argument, and then try the operation again.</value>
+  </data>
+  <data name="BothStringsCannotBeNull" xml:space="preserve">
+    <value>One of the following values must not be null or String.Empty: {0}, {1}.</value>
+  </data>
+  <data name="EUIILeakException" xml:space="preserve">
+    <value>Event payload contains EUII. Message: {0}</value>
+  </data>
+  <data name="ErrorInvalidValueConverterDataType" xml:space="preserve">
+    <value>Invalid value converter data type.  The type {0} is not a valid {1} implementation.  Value converters must implement this interface.</value>
+  </data>
+  <data name="UppercaseStringRequired" xml:space="preserve">
+    <value>The string argument '{0}' must only consist of uppercase characters.</value>
+  </data>
+  <data name="UnexpectedBoolValue" xml:space="preserve">
+    <value>Expected {0} to be {1} but found {2}</value>
+  </data>
+  <data name="AbsoluteVirtualPathNotAllowed" xml:space="preserve">
+    <value>An absolute virtual path is not allowed. Remove the leading slash: {0}</value>
+  </data>
+  <data name="ErrorOptionValueConverterNotFound" xml:space="preserve">
+    <value>Option value conversion failed.  A value converter to handle converting arguments of type '{0}' was not found in the set of converters provided.</value>
+  </data>
+  <data name="FailureGetArtifact" xml:space="preserve">
+    <value>Unable to get artifacts from tool.</value>
+  </data>
+  <data name="DefaultValueNotAllowed" xml:space="preserve">
+    <value>The value {0} must not be set to the default.</value>
+  </data>
+  <data name="UriUtility_RelativePathInvalid" xml:space="preserve">
+    <value>TF205014: The following relative path is not valid: {0}. It must be both well formed and relative. It might be an absolute path.</value>
+  </data>
+  <data name="ErrorInvalidEnumValueTypeConversion" xml:space="preserve">
+    <value>Invalid enumeration data type '{0}'.  The type must be a valid enumeration.</value>
+  </data>
+  <data name="ErrorInvalidValueConverterOrNoDefaultFound" xml:space="preserve">
+    <value>A valid value converter was not defined for the class member '{0}' option definition and no default value converter could be found.  Define the Converter property on the option to supply the value converter.</value>
+  </data>
+  <data name="XmlNodeMissing" xml:space="preserve">
+    <value>The mandatory xml node '{0}' is missing under '{1}'.</value>
+  </data>
+  <data name="UriUtility_UriNotAllowed" xml:space="preserve">
+    <value>TF205012: The following URL is not valid: {0}. It must begin with http or https.</value>
+  </data>
+  <data name="InvalidPropertyValueSize" xml:space="preserve">
+    <value>TF20509: The value of property '{0}' exceeds the maximum size allowed. '{1}' values must not exceed '{2}' bytes.</value>
+  </data>
+  <data name="InvalidStringPropertyValueNullForbidden" xml:space="preserve">
+    <value>"{0}" is an invalid value for the {1} of a {2}. The text must be between {3} and {4} characters long and cannot be null.</value>
+  </data>
+  <data name="DateTimeKindMustBeSpecified" xml:space="preserve">
+    <value>The DateTimeKind (Local, UTC) must be specified for DateTime arguments.</value>
+  </data>
+  <data name="InvalidPropertyName" xml:space="preserve">
+    <value>TF400458: Invalid property name: '{0}'. Property names cannot contain leading or trailing whitespace.</value>
+  </data>
+  <data name="VssPropertyValueOutOfRange" xml:space="preserve">
+    <value>Property '{0}' with value '{1}' is out of range for the Properties service. The value must be between {2} and {3}.</value>
+  </data>
+  <data name="WhiteSpaceNotAllowed" xml:space="preserve">
+    <value>The string cannot contain any whitespace characters.</value>
+  </data>
+  <data name="ErrorReadingFile" xml:space="preserve">
+    <value>Error reading file: {0} ({1}).</value>
+  </data>
+  <data name="NullArtifactUrl" xml:space="preserve">
+    <value>Null Artifact Url</value>
+  </data>
+  <data name="CollectionSizeLimitExceeded" xml:space="preserve">
+    <value>Collection '{0}' can have maximum '{1}' elements.</value>
+  </data>
+  <data name="ErrorResponseFileOptionNotSupported" xml:space="preserve">
+    <value>A response file option was provided, but the parser does not support the usage of response files.</value>
+  </data>
+  <data name="InvalidEnumArgument" xml:space="preserve">
+    <value>The value of argument '{0}' ({1}) is invalid for Enum type '{2}'.</value>
+  </data>
+  <data name="DoubleValueOutOfRange" xml:space="preserve">
+    <value>Property '{0}' with value '{1}' is out of range for the Azure DevOps Properties service. Double values must be 0, within -1.79E+308 to -2.23E-308, or within 2.23E-308 to 1.79E+308.</value>
+  </data>
+  <data name="ErrorDuplicateDefaultOperationModeHandlerFound" xml:space="preserve">
+    <value>Duplicate default operation handler found.  A distinct operation handler could not be determined because no handler matched the mode provided on the command-line and more than 1 handler marked as default was found.</value>
+  </data>
+</root>

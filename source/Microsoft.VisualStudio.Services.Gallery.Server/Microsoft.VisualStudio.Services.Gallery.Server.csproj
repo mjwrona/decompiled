@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Gallery.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4269211-5FF9-4547-AAAB-CE8841BA8906}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Gallery.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkdownDeep">
+      <HintPath>lib\MarkdownDeep.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Blob">
+      <HintPath>lib\Microsoft.Azure.Storage.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>lib\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure">
+      <HintPath>lib\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.Types.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.Types.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SecurityRoles.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SecurityRoles.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SecurityRoles.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SecurityRoles.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AcquisitionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherAssetModule.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ICDNService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CDNPathUtil.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CDNService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherAssetConfiguration.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionAsset.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherAssetService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IPublisherAssetService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryProcessHandlerHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryFileSystemHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryBlobProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionValidatorController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerSupportRequestService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerSupportRequestExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ICustomerSupportRequestService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerSupportRequestController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpSourceFileDescription.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ContentVerificationLogController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MultipartBinaryExtensionController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MultipartBinaryExtensionControllerHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDraftHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\DailyStatsHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\BatchExecutionHandler`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CommerceDataHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CommerceDataProps.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDailyStatisticsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionStatTypeRequestParamHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDailyStatsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDailyStatsUpdateData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionEventsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionDailyStatsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDraftController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDraftService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDraftServiceHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MlSpamValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IMlSpamValidationHTTPClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IMlSpamValidationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MlSpamValidationHTTPClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MlSpamValidationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionVersionValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionValidationResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionDraftService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\WeightedRatingJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\DuplicatePublisherCheckCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RegexEx.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TyposquattingCheckType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TypoSquattingData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryNotificationsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryNotificationsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IGalleryNotificationsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionReportsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionReportsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionReportsTabNameConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PurchaseEventsNameConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PurchaseEventCodeMapConstant.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionReportsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AssetInfo.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\BinaryExtensionController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionAssetUploadService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionAssetUploadService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IPostUploadExtensionProcessorService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ProcessExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionVersionToPublish.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IProcessExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionStatisticsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SecuredCategoriesController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PlatformPublishedExtensionCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionSearchResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchFilterType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchFeatureFlags.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchFilterOperatorType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchCriteria.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionSearchParams.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchOverrideFlags.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\QueryMetadataConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchQueryParser.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EqlParamsHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AcquisitionOptionsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CertificateController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AssetController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AssetByNameController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AssetByNameWithoutTokenController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AssetByNameWithTokenController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AuthenticatedAssetController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CategoriesController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionAccountController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionAccountByNameController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionShareController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AcquisitionRequestController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PackageController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VSPackageController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublishedExtensionDataController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionQueryController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VerificationLogController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionBaseController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionVersionValidation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IPublishedExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublishedExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionsByInstallationTargetsResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryServiceConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryCookies.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VsGalleryConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SupportRequestConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionStateConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherAssetConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ValidationErrorsConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ValidationWarningConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ReCaptchaConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\InstallationTargetConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryRequestContextConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryCustomHeaders.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryServiceFeatureFlags.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TraceArea.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TraceLayer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\JobConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomSqlError.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TagType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SignatureArchiveUploadStatus.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SqlColumnBinderConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SqlConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\StoredProcConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MarketKPIs.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AcquisitionServiceConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AuditAction.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AuditResourceNames.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\LcidToLanguageMapper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CostCategoryTypes.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherNotificationActionType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryPackageSize.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryRoleScopeIds.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VSCodePlatformSpecificExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VSCodeManifestConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryProductTypesEnum.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryEnterpriseSharingConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\UpdateVerificationStateOperation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\UploadExtensionAssetsToCdnJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionProcessingJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionVersionValidationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionVersionValidationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryAuditLogService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AuditLogEntry.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IGalleryAuditLogService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryEvents.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryUserSettingsController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryUserSettingsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IGalleryUserSettingsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\FileUploadHandler.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ScanItem.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ScanViolationItem.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpConverter.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpGetOperationStatusRequest.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpGetOperationStatusResponse.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ESRPAuthProviderService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpOperationStatus.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ESRPService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ESRPConfigHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpSignRequest.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\EsrpStartOperationResponse.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IEsrpConverter.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IESRPAuthProviderService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IESRPService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PackageVerificationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ICollectionProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryProjectCollection.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PlatformGalleryService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IProductService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Product.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ProductFamily.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ProductContributionAssociateData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ProductService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ProductRelease.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherAssetController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IQnAService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\QnAMode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IQnAUtils.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\QnAController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ConcernSource.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionQnAItem.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionQnAItemQuestions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ReportedExtensionQnAItem.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\QnAService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\QnAUtils.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzurePublisherController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublishExtensionJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchIndexer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ISearchIndexer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IndexOperationJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\JobMode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ISearchService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureSearchProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureClientMode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureIndexAction.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureSearchSDKWrapper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureSearchConverter.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureIndexProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureSearchConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureSearchIndexDefinitionConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureDevOpsSearchIndexDefinitionConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureSearchVsIdeSupport.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ISearchConverter.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchProviderType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchEnabledStatus.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ISearchProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\AzureIndexDocument.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VSCodeIndexDocument.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ServerExtensionFile.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ServerExtensionVersion.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SearchService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RoleConstants.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GallerySecurity.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherAccessControlEntry.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryRole.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherRole.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionRole.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryRequestLoggerModule.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionIdentifierForDeleteJob.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryServerUtil.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExceptionHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryInstallationTargets.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryNotificationEventIds.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherWithoutTokenController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherQueryController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IPublisherService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherMetadata.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherDbModel.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherDbModelFilterResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherDbModelQueryResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ReservedPublisher.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherLinksHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\WellKnownPublisherMetadataLinks.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherDomainModel.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IRatingAndReviewService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RatingAndReviewController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RatingAndReviewService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IRatingAndReviewUtils.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RatingAndReviewUtils.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\FlaggedReview.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryFileDownloadHttpClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IGalleryFileDownloadHttpClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IRepositorySigningService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RepositorySigningInfo.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SigningStatusJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RepositorySigningStepStatus.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\RepositorySigningService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionStatisticService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionStatisticService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IProductStatisticService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ProductStatisticService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionDownloadCountMonitoringRedisCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SigningKeyController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IGalleryKeyService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryKeyService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IGalleryJwtTokenService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryJwtTokenService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ITagsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TagItem.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TagsService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\TracePoints.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IUserReportedConcernService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\UserReportedConcernService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ClientTraceDataExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerIntelligenceDataExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryOrganizationHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryExcelProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IFileContentProvider.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ExtensionQueryHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IExtensionQueryHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ImageResizeUtils.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherMemberNotificationPerformer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IMailNotification.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MailNotification.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MailNotificationEventData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\QnAMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerSupportRequestAcknowledgementMailNotificat.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerSupportRequestCreationFailedMailNotificati.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherMemberMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerContactMailNotificationData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerContactMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerContactMailNotificationSalesEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ReviewMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\VersionValidationMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherVerificationMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherCertificationMailNotificationEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MailSubscription.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IMailSubscription.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CustomerContactNotificationPerformer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IMailNotificationPerformer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\MailNotificationPerformerBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IFirstPartyPublisherAccessService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\FirstPartyPublisherAccessService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherDomainVerificationController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\IPublisherDomainVerificationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\PublisherDomainVerificationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\GalleryResources.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Telemetry\IGalleryTelemetryHelperService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Telemetry\GalleryTelemetryHelperService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Statistic\VSCodeWebExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\FileIdNullException.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\ISitemapService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\IStorageService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\BlobStorageService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\SitemapService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\SitemapIndex.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\SitemapUrl.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\UploadFailedException.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Sitemap\UrlSet.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\GalleryWcfServiceBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VisualStudioWcfServiceBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\IVisualStudioApiService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\IVsIdeService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VS2012\Vs2012IdeExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VS2012\IVs2012IdeService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Serializer\PreserveObjectReferencesAttribute.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Serializer\PreserveObjectReferencesOperationBehavior.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\ExtensionMetadataKeys.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\ExtensionMetadataValues.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\VisualStudioAffiliation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\MetadataFilterItem.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\VsIdeCategoryIdParser.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\VsIdeExtensionQuery.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Models\VSServiceContextKeys.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\ExtensionsSearchApiQueryBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\FilterExpression.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\FilterOperation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\FilterTranslator.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\IFilterTranslator.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\IExtensionSearchApiQueryBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\ProgrammingLanguage.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\SearchApiQueryBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\VisualStudioIdeVersion.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\ServiceHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Galleries\VSServiceSource.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\CustomExpiryCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\RootCategoriesCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\CategoryTreeCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\SearchReleasesCache.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\VsIdeExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\VisualStudioApiService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\FilterCriteriaComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\MetadataFilterItemComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\IdeCategoryComparor.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\VStudio\CategoryComparor.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SoapService\Cache\CachedPublishedExtensionData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\SigningTool\ReturnCode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\GalleryKPIHelpers.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\RemoteServiceClientFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\IRemoteServiceClientFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\WrappedHttpClient`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\Billing\BillingClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\Billing\IBillingClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\ExtensionManagement\ExtensionManagementClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Remote\ExtensionManagement\IExtensionManagementClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ESRP\ExtensionScanInfo.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ESRP\ScanStatusJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\ESRP\ESRPJobHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\ICvsServiceClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CvsServiceClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\ICVSClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSScanResponse.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSExtensionsIteratorRunnerJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\ExtensionScanInfo.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSJobHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSExtensionScanScheduler.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\CVSService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CVS\ICVSService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\TyposquattingDistanceCalculation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\TyposquattingSkipList.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\TyposquattingStringNormalization.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\AntiSpamService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\ITyposquattingService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\TyposquattingService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\DuplicatePublisherCheckService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\IDuplicatePublisherCheckService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\LowercaseContractResolver.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\IconExtractor.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\RandomNumberGeneratorUtility.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\ReCaptchaUtility.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\RecaptchaState.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\ExtensionNameConflictService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Utility\IExtensionNameConflictService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\HttpClientFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\HttpContentFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\HttpResponseMessageExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\JsonStreamBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\ITracerFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\ClientTraceServiceFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\VssRequestContextTracerFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\JsonSerializerFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Search\ISearchServiceFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Search\SearchServiceClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Search\SearchServiceFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Search\SearchServiceClientException.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\IUnifiedValidationPipelineService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\IValidationRequestEnqueuer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\UnifiedValidationPipelineService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\ValidationRequestEnqueuer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\Typosquatting\TyposquattingThreshold.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\Serializers\ICommandSerializer`2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\Validation\Serializers\ValidationCommandSerializer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IPackageMutationsBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IPackageAggregateMutation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\PackageMutationsBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\PackageAggregateMutation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\GraphQLClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IGraphQLClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IUploadServiceClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\OperationDetailMessage.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\OperationType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\ExtensionDetails.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\PmpUploadServiceErrorResponse.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\Error.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\ErrorDetail.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\ErrorCode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\ErrorDetailCode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\UploadServiceClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\NonOwnedStream.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IPackageManagementPlatformServiceFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\PackageManagementPlatformServiceFacade.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\IEventPublisherService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\IMessagePublisher.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\VSCodeEventPublisherService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\ServiceBusMessagePublisher.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\ArtifactFilePublishedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\ArtifactFileDeletedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\MessageBody`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEvent`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\ArtifactFileEventData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateEventData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateLockedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateUnlockedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateDeletedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateArchivedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateUnarchivedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageAggregateForcedIndexEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageEventData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PackageDeletedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PublisherEventData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Facade\PMP\IndexUpdater\PMPEvents\PMPEventData\PublisherUpdatedEvent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\BackConsolidationMappingEntry.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\RepositorySignExtensionsJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\RepositorySignFilterType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionInformation.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ValidateExtensionsForSpamJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionsFilterType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\VSCodeWebExtensionTagPopulatorJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ProductExtensionsIteratorDriverJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ProductExtensionsIteratorRunnerJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\SyncMessageEnqueuerJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\OperationCode.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\TagGenerators\TagPopulatorJobData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\VsGalleryMigration\IVsGalleryMigrationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\VsGalleryMigration\IVsixIdManagerService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\VsGalleryMigration\VsGalleryMigrationService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\VsGalleryMigration\VsixIdManagerService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\PackageValidationStepBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationStatus.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\StepType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\IValidationPipelineStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationPipelineStepBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationPipelineStepFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationPipeline.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\RepositorySigningStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\PackageValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\CertifiedPublisherValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\ZipValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\SearchIndexPopulationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\SpamValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\VirusScanStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\SchemaValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\SvgContentValidationStep.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPostUploadProcessing\Validation\ValidationSteps\MarkdownFileProps.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ExtensionDataBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ReferralLinkPayloadValidator.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\MsiExePayloadValidator.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\PayloadValidationResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\VsixValidationError.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\VsixValidationWarning.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ProjectLocalizedStrings.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ReservedVsixIdPurposeType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ReservedVsixId.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ExtensionPayloadValidatorBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\VSixPayloadValidator.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\ExtensionPayloadValidatorFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\ExtensionPayloadValidator\IExtensionPayloadValidator.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Controllers\VSCodeWebExtensionController.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\BackConsolidatedExtensionsCacheBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\BackConsolidationExtensionsCacheBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\CachedBackConsolidatedExtensionData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\ProductExtensionsCacheBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\VsCodeExtensionsCacheBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\VstsExtensionsCacheBuilder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\ProductExtensionsCacheBuilderFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\ExtensionOverviewCacheService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\QueryExtensionCacheService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\CachedExtensionData.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\KeyNameToValueListMap`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\InMemoryQuery.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\TitleComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\PublisherNameComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\PublishedDateComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\LastUpdatedDateComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\ReleaseDateComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\StatisticComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\WeightedRatingComparer.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\ComparerFactory.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\MemoryCache`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\ApplicableMemoryCacheType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Extension\Cache\IMemoryCache`1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CSR\AzureStorage.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CSR\CloudBlobExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CSR\CSRGitHubIssuePayload.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CSR\GitHubClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CSR\IAzureStorage.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\CSR\IGitHubClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ScanItemComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ScanItemComponent1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ScanItemBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ScanViolationItemBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ScanItemComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\UserReportedConcernComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\UserReportedConcernBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\TagsComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\TagBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\WeightedRatingComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\VsGalleryMigrationComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\VsixIdManagerComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\VsixIdManagerComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ReservedVsixIdBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\AzurePublisherComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\AzurePublisherComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent4.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent5.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent6.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent7.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent8.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent9.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent10.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent11.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatsComponent12.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionEventBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatBinder2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDailyStatBinder3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionInstallCountBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionEventsTableValuedParameterExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDraftComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDraftAssetRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDraftAssetRowBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionDraftBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryAuditLogComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryAuditLogComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryAuditLogComponent3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ContributionTypeComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryTag.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryTag2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryInstallationTarget.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryInstallationTarget2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryInstallationTarget3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryTagBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryTagBinder2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryInstallationTargetBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryInstallationTargetBinder2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryInstallationTargetBinder3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QueryMatch.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QueryMatchBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionTrendingScoreComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionTrendingScoreComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionTrendingScoreComponent3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ProductStatisticComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ProductStatisticComponent1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ProductStatisticBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QnAComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QnAComponent1.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QnAComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QnAComponent3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QnAComponent4.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QnAComponent5.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionStatisticComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionStatisticTableValuedParameterExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent4.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent5.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent6.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent7.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent8.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent9.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent10.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent11.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent12.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent13.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent14.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent15.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent16.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\RatingAndReviewComponent17.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PendingUserProfileComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\QueryFilterValue.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\GalleryTableValuedParameterExtensions.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent21.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent22.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent23.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent24.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent25.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent26.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent27.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent28.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent29.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent30.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent31.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent32.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionBinder2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionBinder3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent33.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionUpdateBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent34.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent35.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent36.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent37.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent38.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent39.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent40.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent41.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublishedExtensionComponent42.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\BackConsolidationBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionVersionBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionVersionValidationBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionVersionValidationBinder2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionVersionValidationStepBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionValidationResultBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionFileBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionCategoryBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionCategoryBinder2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ProductCategoryRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ProductCategoryBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\CategoryTitleRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\CategoryTitleBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionCategoryIdBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionStatisticRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionStatisticBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionMetadataRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionMetadataBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionResultMetadataRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionResultMetadataRowBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionLcidRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ExtensionLcidBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ResultCountBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\CDNRootDirectoryBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ConflictListRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\ConflictListBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\TyposquattingRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\TyposquattingBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent2.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent3.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent4.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent5.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent6.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent7.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent8.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent9.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherComponent10.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherDisplayNameRow.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\PublisherDisplayNameBinder.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Server\Components\SitemapIndexComponent.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Extensions\PublishExtensionOnPremResult.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Extensions\IOnPremPublishedExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Extensions\OnPremPublishedExtensionService.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Extensions\IHostedGalleryHttpClient.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\Extensions\HostedGalleryHttpClient.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="Galleries\Domain\Model\Category.cs" />
+    <Compile Include="Galleries\Domain\Model\FileAttachment.cs" />
+    <Compile Include="Galleries\Domain\Model\IdeCategory.cs" />
+    <Compile Include="Galleries\Domain\Model\Project.cs" />
+    <Compile Include="Galleries\Domain\Model\Release.cs" />
+    <Compile Include="Galleries\Domain\Model\ReleaseFile.cs" />
+    <Compile Include="Galleries\Domain\Model\ReleaseFileType.cs" />
+    <Compile Include="VsGallery\WebServices\ReleaseQueryResult.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GalleryResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

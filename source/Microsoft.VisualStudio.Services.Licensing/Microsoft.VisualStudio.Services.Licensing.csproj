@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Licensing.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05E593E9-8461-4828-A0E1-C3AA6856D0A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Licensing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Licensing</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.Shared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CloudConnected.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CloudConnected.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Licensing.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Licensing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\Azure\DevOps\Licensing\PlatformLicensingAuditService.cs" />
+    <Compile Include="Microsoft\Azure\DevOps\Licensing\ILicensingAuditService.cs" />
+    <Compile Include="IdentityRefExtensions.cs" />
+    <Compile Include="ILicensingMitigationService.cs" />
+    <Compile Include="LicensingMitigationService.cs" />
+    <Compile Include="LicensedIdentity.cs" />
+    <Compile Include="AccountEntitlementFilterNames.cs" />
+    <Compile Include="AccountEntitlementSort.cs" />
+    <Compile Include="AccountEntitlementSortColumn.cs" />
+    <Compile Include="AccountExtensions.cs" />
+    <Compile Include="AccountEntitlementFilter.cs" />
+    <Compile Include="LicenseFilter.cs" />
+    <Compile Include="ILicensingComponent.cs" />
+    <Compile Include="IExtensionLicensingComponent.cs" />
+    <Compile Include="LicensingSnapshot.cs" />
+    <Compile Include="ClientRelease.cs" />
+    <Compile Include="ClientReleaseType.cs" />
+    <Compile Include="LicensingConstants.cs" />
+    <Compile Include="LicensingCustomerIntelligenceFeature.cs" />
+    <Compile Include="LicensingFeatureNames.cs" />
+    <Compile Include="LicenseMeterNames.cs" />
+    <Compile Include="LicensingServiceConstants.cs" />
+    <Compile Include="UserLicenseComparer.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent1.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent2.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent3.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent4.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent5.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent6.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent7.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent8.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent9.cs" />
+    <Compile Include="ApplicationExtensionLicensingComponent10.cs" />
+    <Compile Include="ExtensionBinders.cs" />
+    <Compile Include="BaseLicenseComponent.cs" />
+    <Compile Include="AccountExtensionCount.cs" />
+    <Compile Include="CollectionHelper.cs" />
+    <Compile Include="CommerceExtensions.cs" />
+    <Compile Include="IdentityExtensions.cs" />
+    <Compile Include="IPlatformExtensionEntitlementService.cs" />
+    <Compile Include="StorageKeyExtensions.cs" />
+    <Compile Include="SubjectDescriptorExtensions.cs" />
+    <Compile Include="ReportLicenseUsageToCommerceJobUtility.cs" />
+    <Compile Include="IAccountMembershipService.cs" />
+    <Compile Include="ExtensionOperationResultInternal.cs" />
+    <Compile Include="ExtensionOperationResultExtensions.cs" />
+    <Compile Include="UserInvitedToAccountEmailExperiment.cs" />
+    <Compile Include="UserInvitedToAccountNotificationEmailData.cs" />
+    <Compile Include="UserInvitedToAccountV1Email.cs" />
+    <Compile Include="UserInvitedToAccountV2Email.cs" />
+    <Compile Include="UserExtensionLicense.cs" />
+    <Compile Include="UserExtensionLicenseStatus.cs" />
+    <Compile Include="UserLicense.cs" />
+    <Compile Include="LicensingTrace.cs" />
+    <Compile Include="LicensingTracePoints.cs" />
+    <Compile Include="EntitlementProcessor.cs" />
+    <Compile Include="LicenseDescriptionIds.cs" />
+    <Compile Include="LicensingRequestType.cs" />
+    <Compile Include="ReleaseType.cs" />
+    <Compile Include="VisualStudioFamily.cs" />
+    <Compile Include="VisualStudioEdition.cs" />
+    <Compile Include="VisualStudioEditionNames.cs" />
+    <Compile Include="VisualStudioOfferNames.cs" />
+    <Compile Include="VisualStudioOfferType.cs" />
+    <Compile Include="ClientRightsAttributes.cs" />
+    <Compile Include="LicensingFailedSyncException.cs" />
+    <Compile Include="LicensingMissingSettingsException.cs" />
+    <Compile Include="LicensingInvalidSettingsException.cs" />
+    <Compile Include="LicensingCertificateException.cs" />
+    <Compile Include="LicensingInvalidMachineIdException.cs" />
+    <Compile Include="LicensingOperationFailException.cs" />
+    <Compile Include="MsdnServiceUnavailableException.cs" />
+    <Compile Include="FailedToRegisterExtensionLicenseException.cs" />
+    <Compile Include="FailedToUpsertExtensionLicenseStatus.cs" />
+    <Compile Include="FailedToSynchronizeUserExtensions.cs" />
+    <Compile Include="FailedToGetExtensionLicenseStatus.cs" />
+    <Compile Include="FailedToCopyExtensionLicense.cs" />
+    <Compile Include="FailedToDeleteUserExtensionLicense.cs" />
+    <Compile Include="FailedToGetUserExtensionLicenses.cs" />
+    <Compile Include="LicenseScopeNotFoundException.cs" />
+    <Compile Include="ClientReleaseNotFoundException.cs" />
+    <Compile Include="ExtensionNotFound.cs" />
+    <Compile Include="FailedToTransferLicensesException.cs" />
+    <Compile Include="FailedToGetOfferSubscriptionsException.cs" />
+    <Compile Include="PlatformExtensionEntitlementService.cs" />
+    <Compile Include="ExtensionAssignmentModel.cs" />
+    <Compile Include="IInternalPlatformEntitlementService.cs" />
+    <Compile Include="PlatformAccountEntitlementService.cs" />
+    <Compile Include="OrderedAccountUserLicense.cs" />
+    <Compile Include="OrderedLicenseCount.cs" />
+    <Compile Include="PlatformAccountMembershipService.cs" />
+    <Compile Include="PlatformLicensingRightsService.cs" />
+    <Compile Include="PlatformLicensingService.cs" />
+    <Compile Include="IPlatformClientLicensingService.cs" />
+    <Compile Include="PlatformClientLicensingService.cs" />
+    <Compile Include="AccountLicensingEntitlementsBatchController.cs" />
+    <Compile Include="AccountLicensingEntitlementsController.cs" />
+    <Compile Include="AccountLicensingEntitlements2Controller.cs" />
+    <Compile Include="AccountLicensingExtensionEntitlementsBatch2Control.cs" />
+    <Compile Include="AccountLicensingExtensionEntitlementsBatchControll.cs" />
+    <Compile Include="AccountLicensingExtensionRightsController.cs" />
+    <Compile Include="AccountLicensingAccountAssignedExtensionsControlle.cs" />
+    <Compile Include="AccountLicensingLicensingRightsController.cs" />
+    <Compile Include="AccountLicensingUsageController.cs" />
+    <Compile Include="LicensingApiController.cs" />
+    <Compile Include="LicensingClientRightsController.cs" />
+    <Compile Include="LicensingEntitlementsController.cs" />
+    <Compile Include="LicensingEntitlementsBatchController.cs" />
+    <Compile Include="LicensingEntitlementsControllerBase.cs" />
+    <Compile Include="LicensingExtensionEntitlementsBatch2Controller.cs" />
+    <Compile Include="LicensingExtensionRightsController.cs" />
+    <Compile Include="LicensingExtensionEntitlementsBatchController.cs" />
+    <Compile Include="LicensingMsdnController.cs" />
+    <Compile Include="LicensingAccountAssignedExtensionsController.cs" />
+    <Compile Include="LicensingLicensingRightsController.cs" />
+    <Compile Include="LicensingUsageController.cs" />
+    <Compile Include="DataImportHelper.cs" />
+    <Compile Include="SecurityUtil.cs" />
+    <Compile Include="CommonUtil.cs" />
+    <Compile Include="UserClaims.cs" />
+    <Compile Include="LicensingEntitlementUtil.cs" />
+    <Compile Include="EntityDiffLogger.cs" />
+    <Compile Include="ClientRightsEnvelopeDiffLogger.cs" />
+    <Compile Include="MsdnEntitlementsDiffLogger.cs" />
+    <Compile Include="CommerceUtil.cs" />
+    <Compile Include="TelemetryHelper.cs" />
+    <Compile Include="ValidationHelper.cs" />
+    <Compile Include="LicensingResources.cs" />
+    <Compile Include="Plugins\AccountEntitlementSyncOrchestrator.cs" />
+    <Compile Include="Plugins\AccountEntitlementSyncResult.cs" />
+    <Compile Include="Service\AzCommerceService.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterSinglePropertyType.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementSinglePropertyFilter.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementNameFilter.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementUserTypeFilter.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementAssignmentSourceFilter.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementLicensesFilter.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterQuerySyntacticTreeVisitorB`1.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterQuerySyntacticTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementSinglePropertyFilterQuerySyntact.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementNameFilterTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementUserTypeFilterTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementAssignmentSourceFilterTreeVisito.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementLicensesFilterTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementSingleLicenseFilterTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementLicenseIdFilterTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementLicenseStatusFilterTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterPathEndTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterStringLiteralTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterUserTypeLiteralTreeVisitor.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterAssignmentSourceLiteralTre.cs" />
+    <Compile Include="Service\Utilities\QueryParser\AccountEntitlementFilterLicenseStatusLiteralTreeVi.cs" />
+    <Compile Include="Service\RestServices\AccountLicensingExtensionEntitlementsController.cs" />
+    <Compile Include="Service\RestServices\AccountLicensingTransferIdentitiesExtensionsContro.cs" />
+    <Compile Include="Service\RestServices\LicensingExtensionEntitlementsController.cs" />
+    <Compile Include="Service\RestServices\LicensingTransferIdentitiesExtensionsController.cs" />
+    <Compile Include="CosmosDataAccess\LicensingCosmosBulkExecutorService.cs" />
+    <Compile Include="CosmosDataAccess\LicensingCosmosComponent.cs" />
+    <Compile Include="CosmosDataAccess\UserLicenseCosmosSerializableDocument.cs" />
+    <Compile Include="CosmosDataAccess\Model\UserLicenseCosmosItem.cs" />
+    <Compile Include="DataAccess\UserLicenseCount.cs" />
+    <Compile Include="DataAccess\VisualStudioTrialUserInfo.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent2.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent3.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent4.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent5.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent6.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent7.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent8.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent9.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent10.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent11.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent12.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingComponent13.cs" />
+    <Compile Include="DataAccess\Binders.cs" />
+    <Compile Include="DataAccess\JsonUtilities.cs" />
+    <Compile Include="DataAccess\LicenseEventRow.cs" />
+    <Compile Include="DataAccess\LicensingComponent.cs" />
+    <Compile Include="DataAccess\LicensingComponent2.cs" />
+    <Compile Include="DataAccess\LicensingVSTrialUserTableValueParameters.cs" />
+    <Compile Include="DataAccess\AccountLicenseCount.cs" />
+    <Compile Include="DataAccess\LicensingEvent.cs" />
+    <Compile Include="DataAccess\LicensingEventDataBase.cs" />
+    <Compile Include="DataAccess\EventDataDescriptor.cs" />
+    <Compile Include="DataAccess\LicensingCommandDataBase.cs" />
+    <Compile Include="DataAccess\SetLicenseCommandData.cs" />
+    <Compile Include="DataAccess\SeedLicensesCommandData.cs" />
+    <Compile Include="DataAccess\DeleteLicenseCommandData.cs" />
+    <Compile Include="DataAccess\ImportLicensesCommandData.cs" />
+    <Compile Include="DataAccess\DeleteLicensesCommandData.cs" />
+    <Compile Include="DataAccess\AddUserCommandData.cs" />
+    <Compile Include="DataAccess\UpdateUserStatusCommandData.cs" />
+    <Compile Include="DataAccess\RemoveUserCommandData.cs" />
+    <Compile Include="DataAccess\TransferUserExtensionLicensesData.cs" />
+    <Compile Include="DataAccess\UpdateLicenseCommandData.cs" />
+    <Compile Include="DataAccess\UpsertLicenseCommandData.cs" />
+    <Compile Include="DataAccess\UserLicensingCommandArguments.cs" />
+    <Compile Include="DataAccess\SetUserStatusCommandArguments.cs" />
+    <Compile Include="DataAccess\SetLicenseCommandArguments.cs" />
+    <Compile Include="DataAccess\AddUserCommandArguments.cs" />
+    <Compile Include="DataAccess\SeedLicenseCommandArguments.cs" />
+    <Compile Include="DataAccess\FullLicenseCommandArguments.cs" />
+    <Compile Include="DataAccess\TransferUserExtensionLicensesCommandArguments.cs" />
+    <Compile Include="DataAccess\LicenseDocumentCommandArguments.cs" />
+    <Compile Include="DataAccess\CommandDataFactory.cs" />
+    <Compile Include="DataAccess\CommandArgumentsFactory.cs" />
+    <Compile Include="DataAccess\ILicensingEvent.cs" />
+    <Compile Include="DataAccess\ILicensingEventData.cs" />
+    <Compile Include="DataAccess\CosmosDBLicensingStore.cs" />
+    <Compile Include="DataAccess\ApplicationLicensingRepository.cs" />
+    <Compile Include="DataAccess\ILicensingRepository.cs" />
+    <Compile Include="DataAccess\LicensingRepositoryFactory`1.cs" />
+    <Compile Include="Application\CustomSqlError.cs" />
+    <Compile Include="Internal\IExtensionEntitlementCache.cs" />
+    <Compile Include="Internal\ExtensionEntitlementCache.cs" />
+    <Compile Include="Internal\ExtensionLicensingAdapter.cs" />
+    <Compile Include="Internal\ILicensingAdapter.cs" />
+    <Compile Include="Internal\ILicensingAdapterFactory.cs" />
+    <Compile Include="Internal\LicensingAdapterFactory.cs" />
+    <Compile Include="Internal\MockMsdnEntitlement.cs" />
+    <Compile Include="Internal\MsdnLicensingAdapter.cs" />
+    <Compile Include="Internal\MsdnEntitlementCodeTuple.cs" />
+    <Compile Include="Internal\IAccountEntitlementCache.cs" />
+    <Compile Include="Internal\AccountEntitlementCache.cs" />
+    <Compile Include="Internal\MsdnSubscriptionStatus.cs" />
+    <Compile Include="Internal\VisualStudioAccountLicensingAdapter.cs" />
+    <Compile Include="Internal\EntitlementToRightsRule.cs" />
+    <Compile Include="Internal\VisualStudioCommunityLicenseAdapter.cs" />
+    <Compile Include="Internal\VisualStudioAndroidEmulatorLicenseAdapter.cs" />
+    <Compile Include="Internal\VisualStudioExpressLicensingAdapter.cs" />
+    <Compile Include="Internal\VisualStudioTrialLicensingAdapter.cs" />
+    <Compile Include="Internal\IRightsQueryContext.cs" />
+    <Compile Include="Internal\RightsQueryContext.cs" />
+    <Compile Include="Internal\ILicenseToken.cs" />
+    <Compile Include="Internal\LicenseToken.cs" />
+    <Compile Include="Internal\IAccountEntitlementToken.cs" />
+    <Compile Include="Internal\AccountEntitlementToken.cs" />
+    <Compile Include="Internal\ClientRightBase.cs" />
+    <Compile Include="Internal\IVisualStudioRightAttributes.cs" />
+    <Compile Include="Internal\ServiceRightBase.cs" />
+    <Compile Include="Internal\TestManagerRight.cs" />
+    <Compile Include="Internal\VisualStudioEmulatorAndroidRight.cs" />
+    <Compile Include="Internal\VisualStudioExpressRight.cs" />
+    <Compile Include="Internal\VisualStudioOnlineServiceRight.cs" />
+    <Compile Include="Internal\VisualStudioRight.cs" />
+    <Compile Include="Internal\ExtensionEntitlementCacheConfiguration.cs" />
+    <Compile Include="Internal\AccountEntitlementServiceConfiguration.cs" />
+    <Compile Include="Internal\ILicensingConfigurationManager.cs" />
+    <Compile Include="Internal\LicensingServiceConfiguration.cs" />
+    <Compile Include="Internal\LicensingConfigurationRegistryManager.cs" />
+    <Compile Include="Internal\MsdnAdapterConfiguration.cs" />
+    <Compile Include="Internal\CircuitBreakerSettings.cs" />
+    <Compile Include="Internal\AccountEntitlementCacheConfiguration.cs" />
+    <Compile Include="Internal\ExtensionAdapterConfiguration.cs" />
+    <Compile Include="Internal\VisualStudioCommunityAdapterConfiguration.cs" />
+    <Compile Include="Internal\VisualStudioAccountAdapterConfiguration.cs" />
+    <Compile Include="Internal\VisualStudioEmulatorAndroidAdapterConfiguration.cs" />
+    <Compile Include="Internal\VisualStudioTrialAdapterConfiguration.cs" />
+    <Compile Include="Internal\ParsingUtilities.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="stmt_CreateTempUserExtensionLicenseTable.sql" />
+    <EmbeddedResource Include="stmt_InsertTempUserExtensionLicense.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

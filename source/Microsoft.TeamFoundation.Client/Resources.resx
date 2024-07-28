@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RegisteredServersCannotFindCollection" xml:space="preserve">
+    <value>TF249000: The url {0} cannot be resolved to a team project collection.</value>
+  </data>
+  <data name="TfsmqInvalidServerConfiguration" xml:space="preserve">
+    <value>The message queue connection manager must be initialized with an instance of type {0} but was provided {1}.</value>
+  </data>
+  <data name="ArgumentNotSupportedClass" xml:space="preserve">
+    <value>TF222050: The object that you provided is not a supported class. The name of the class that you provided is: {0}.</value>
+  </data>
+  <data name="ProcessModelIsNotCorrect" xml:space="preserve">
+    <value>The process model type {0} is invalid. Please use Inheritance or Xml</value>
+  </data>
+  <data name="ClientCertificatesEnabledDisabled" xml:space="preserve">
+    <value>Client authentication certificates enabled: {0}</value>
+  </data>
+  <data name="UICredProvider_MessageText" xml:space="preserve">
+    <value>Please provide credentials to connect to Azure DevOps Server.</value>
+  </data>
+  <data name="QuestionYNSuffix" xml:space="preserve">
+    <value>(Yes/No) </value>
+  </data>
+  <data name="ToolNames_Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="TeamProjectDeleter_ProjectServerNotFound" xml:space="preserve">
+    <value>Warning: Did not find Project Server service.</value>
+  </data>
+  <data name="AnswerAllFull" xml:space="preserve">
+    <value>all</value>
+  </data>
+  <data name="ManageTfsListApplicationInstanceNotSupported" xml:space="preserve">
+    <value>TF222050: You cannot connect to Team Foundation Server 2010 by using this tool because it uses an obsolete class (ManageTfsList) that does not support application instances.</value>
+  </data>
+  <data name="InvalidServerName" xml:space="preserve">
+    <value>TF30335: The server name cannot contain the characters '/' or ':', or start with 'http://' or 'https://'. If the server name is an IPv6 address, it can contain the character ':' only if the full name is enclosed by square brackets.</value>
+  </data>
+  <data name="DialogAuthenticate_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="TfsConnectDialogLegacyServer" xml:space="preserve">
+    <value>({0})</value>
+  </data>
+  <data name="DomainNameAlreadyExists" xml:space="preserve">
+    <value>Azure DevOps Server '{0}' already exists.</value>
+  </data>
+  <data name="CouldNotParseParameter" xml:space="preserve">
+    <value>Could not parse {0} parameter {1}</value>
+  </data>
+  <data name="TeamProjectDeleter_TryUsingForce" xml:space="preserve">
+    <value>To force deletion to continue even after failures, run the command again with the [/force] switch.</value>
+  </data>
+  <data name="InvalidProxyUrl" xml:space="preserve">
+    <value>TF15044: Unable to connect to this Azure DevOps Server Proxy: {0}. Possible reasons for failure include: The Azure DevOps Server Proxy name, port number or protocol is incorrect; The Azure DevOps Server Proxy is offline; Password is expired or incorrect. For further information, contact the Azure DevOps Server Proxy administrator.</value>
+  </data>
+  <data name="NullArtifactUrlInUrlList" xml:space="preserve">
+    <value>A null artifact url was found in the url list. Do not pass in a null artifact url.</value>
+  </data>
+  <data name="TeamProjectDeleter_DomainError" xml:space="preserve">
+    <value>Error determining domain.</value>
+  </data>
+  <data name="HttpRequestTimeout" xml:space="preserve">
+    <value>The http request operation timed out after {0}.</value>
+  </data>
+  <data name="TeamProjectDeleter_ProjectNotFound" xml:space="preserve">
+    <value>The project '{0}' was not found on the Azure DevOps Server.</value>
+  </data>
+  <data name="ValueLengthExceedsMaxForOption" xml:space="preserve">
+    <value>The length of the value for option {0} must not exceed {1} characters.</value>
+  </data>
+  <data name="AddDomainDialog_InvalidServer" xml:space="preserve">
+    <value>Invalid server name/URL</value>
+  </data>
+  <data name="BasicAuthenticationRequiresSsl" xml:space="preserve">
+    <value>Basic authentication requires a secure connection to the server.</value>
+  </data>
+  <data name="CannotGetTempFileName" xml:space="preserve">
+    <value>Unable to generate a temporary file name for : {0}.</value>
+  </data>
+  <data name="ServerNotSupported" xml:space="preserve">
+    <value>You cannot connect to {0} because it is running a version of Azure DevOps Server that is not supported by your version of Visual Studio. Upgrade your server to Team Foundation Server 2010 (or a newer version), or use Visual Studio 2010 or Visual Studio 2012.</value>
+  </data>
+  <data name="ToolNames_WSS" xml:space="preserve">
+    <value>SharePoint</value>
+  </data>
+  <data name="ClientCertificatesUsingSpecific" xml:space="preserve">
+    <value>Using only client authentication certificates with one of the following thumbprints:</value>
+  </data>
+  <data name="HttpClientOpenTimeout" xml:space="preserve">
+    <value>The open operation timed out after {0}. </value>
+  </data>
+  <data name="UnrecognizedOption" xml:space="preserve">
+    <value>Unrecognized command option '{0}'.</value>
+  </data>
+  <data name="ExceptionCaption" xml:space="preserve">
+    <value>Azure DevOps Error</value>
+  </data>
+  <data name="FederatedCredentialWithNoIssuedTokenProvider" xml:space="preserve">
+    <value>Converting federated credential failed because token provider not found.</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>The file {0} does not exist or is not accessible.</value>
+  </data>
+  <data name="TypeCannotSerializeMessage" xml:space="preserve">
+    <value>Type {0} cannot be used in the serializer.</value>
+  </data>
+  <data name="TfsConnectDialogActionLinkSeparator" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="AddDomainDialogAddingCollection" xml:space="preserve">
+    <value>TF249001: You have specified the URL for a project collection, but the application instance that contains the project collection will be added instead.</value>
+  </data>
+  <data name="TeamProjectDeleter_DetachingFromWss" xml:space="preserve">
+    <value>Detaching SharePoint site ...</value>
+  </data>
+  <data name="StandardErrorDlgTitle" xml:space="preserve">
+    <value>Azure DevOps Error</value>
+  </data>
+  <data name="RemoveServer" xml:space="preserve">
+    <value>Do you want to remove Azure DevOps Server '{0}'?</value>
+  </data>
+  <data name="MissingOptionValue" xml:space="preserve">
+    <value>Option {0} requires a value.</value>
+  </data>
+  <data name="InvalidOptionCombination" xml:space="preserve">
+    <value>Option /{0} cannot be combined with option /{1}.</value>
+  </data>
+  <data name="LocalMetadataTableMutexTimeout" xml:space="preserve">
+    <value>TF400030: The local data store is currently in use by another operation. Please wait and then try your operation again. If this error persists, restart the application.</value>
+  </data>
+  <data name="TfsConnectDialogWorking" xml:space="preserve">
+    <value>Working...</value>
+  </data>
+  <data name="RemoveServerTitle" xml:space="preserve">
+    <value>Remove Azure DevOps Server</value>
+  </data>
+  <data name="DoesNotAcceptAValue" xml:space="preserve">
+    <value>Option {0} does not accept a value.</value>
+  </data>
+  <data name="InvalidConnectionString" xml:space="preserve">
+    <value>TF249047: The connection string is not valid: {0}.</value>
+  </data>
+  <data name="TfsmqNotSupportedOnProjectCollection" xml:space="preserve">
+    <value>The message queue transport is not supported on project collection {0}.</value>
+  </data>
+  <data name="TeamProjectDeleter_OperationFailedAtTime" xml:space="preserve">
+    <value>Operation failed {0}.</value>
+  </data>
+  <data name="TeamProjectDeleter_SoftDeleteNotSupported" xml:space="preserve">
+    <value>Soft delete is not supported for this version of Azure DevOps Server. Please hard delete instead using the /harddelete parameter.</value>
+  </data>
+  <data name="ConnectToTfs_Unknown" xml:space="preserve">
+    <value>TF31001: Cannot connect to Azure DevOps Server at {0}. The server returned the following error: {1}</value>
+  </data>
+  <data name="ServerNameNotValid" xml:space="preserve">
+    <value>TF249051: No URL can be found that corresponds to the following server name: {0}. Verify that the server name is correct.</value>
+  </data>
+  <data name="FileTypeFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="DomainNameAlreadyExistsTitle" xml:space="preserve">
+    <value>Azure DevOps Server Exists</value>
+  </data>
+  <data name="ConnectToTfs_UnableToConnect" xml:space="preserve">
+    <value>TF31005: Cannot connect to Azure DevOps Server at {0}.</value>
+  </data>
+  <data name="TfsConnectDialogRefresh" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="ServiceNotRegistered" xml:space="preserve">
+    <value>The service '{0}' is not registered on the server.</value>
+  </data>
+  <data name="ConfigurationErrorsEncountered" xml:space="preserve">
+    <value>There are errors present in the configuration file for this executable. Full exception details:
+
+{0}</value>
+  </data>
+  <data name="ACSAuthenticationError" xml:space="preserve">
+    <value>Failed to authenticate and retrieve a security token from Access Control Services: {0}</value>
+  </data>
+  <data name="TeamProjectDeleter_CouldNotConnect" xml:space="preserve">
+    <value>Could not connect to '{0}'</value>
+  </data>
+  <data name="AddDomainDialog_InvalidPort" xml:space="preserve">
+    <value>Invalid port number</value>
+  </data>
+  <data name="WrongNumberOfArgsForBuiltIn" xml:space="preserve">
+    <value>Wrong number of arguments for built-in interpreter command {0}.</value>
+  </data>
+  <data name="ToolNames_TeamFoundation" xml:space="preserve">
+    <value>Azure DevOps Core</value>
+  </data>
+  <data name="DuplicateOption" xml:space="preserve">
+    <value>Option {0} is specified more than once.</value>
+  </data>
+  <data name="ConnectDialogImages" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAANgYAAAJCTTYGAAAAAAAANgAAACgAAAAgAAAAEAAAAAEAGAAAAAAAAAAAAMQOAADEDgAAAAAAAAAAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vZCQkJCQkJCQkJCQkJCQkJCQkJCQkL29vb/AP/29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb/AP/29vb29vb29vb29vb29vb29vb29vZCQkJCQkJCQkJCQkJCQkJCQkJCQkL29vb/AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP/29vZCQkJCQkJCQkJCQkJCQkL29vZCQkJCQkJCQkJCQkJCQkJCQkJCQkL29vb/AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP/29vZCQkJCQkJCQkJCQkJCQkL29vZCQkJCQkJCQkKGhoZCQkJCQkJCQkL29vb/AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP/29vZCQkJCQkJCQkJCQkJCQkL29vZCQkJCQkKRkZH29vaRkZFCQkJCQkL29vb/AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP/29vZCQkJCQkJCQkKGhoZCQkL29vb29vb29vb29vb29vb29vb29vb29vb29vb/AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP/29vZCQkJCQkKRkZH29vaRkZFCQkJCQkK+vr5NTU1CQkJNTU3Jycn29vb/AP//AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP/29vb29vb29vb29vb29vb29vb29vb29vZNTU1CQkJCQkJCQkJNTU329vb/AP//AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP//AP/29vbJyclNTU1CQkJNTU3Jycn29vZCQkJCQkJCQkJCQkJCQkL29vb/AP//AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP//AP/29vZNTU1CQkJCQkJCQkJNTU329vZNTU1CQkJCQkJCQkJNTU329vb/AP//AP/29vZ6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP//AP/29vZCQkJCQkJCQkJCQkJCQkL29va+vr5NTU1CQkJNTU3Jycn29vb/AP//AP/29vb29vb29vb29vb29vaKvt+ny+Tx7/Dx7/Dx7/Dx7/Dx7/Dx7/B6ttz29vb/AP//AP/29vZNTU1CQkJCQkJCQkJNTU329vb29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP/29vbI3ux6ttx6ttx6ttx6ttx6ttx6ttx6ttx6ttz29vb/AP//AP/29va+vr5NTU1CQkJNTU3Jycn29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP/29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8L</value>
+  </data>
+  <data name="TruncatedStringFormat" xml:space="preserve">
+    <value>{0}...</value>
+  </data>
+  <data name="ExtraCommaInOption" xml:space="preserve">
+    <value>There is an extra comma in option {0}.</value>
+  </data>
+  <data name="TfsmqReceiveTimeout" xml:space="preserve">
+    <value>The receive operation timed out after {0}. The time allotted to this operation may be a portion of a larger timeout.</value>
+  </data>
+  <data name="MissingConnectionString" xml:space="preserve">
+    <value>TF249048: The connection string is missing for the following category: {0}.</value>
+  </data>
+  <data name="UnsafeFileOpenPrompt" xml:space="preserve">
+    <value>The file you are attempting to open is an executable file. This poses a security risk. You should only execute programs from trusted locations. Do you want to continue?</value>
+  </data>
+  <data name="ContentsOfFileTooBig" xml:space="preserve">
+    <value>Contents of file {0} are too big. Contents must be {1} characters or less.</value>
+  </data>
+  <data name="NullServiceUrl" xml:space="preserve">
+    <value>Null or empty service URL returned for ServiceInterface "{0}" registered to tool "{1}".</value>
+  </data>
+  <data name="ConnectToTfs_AddServer_UnableToConnect_WithTechnicalInfo" xml:space="preserve">
+    <value>TF31002: Unable to connect to this Azure DevOps Server: {0}.
+Azure DevOps Server Url: {1}.
+  
+Possible reasons for failure include:
+- The name, port number, or protocol for the Azure DevOps Server is incorrect.
+- The Azure DevOps Server is offline.
+- The password has expired or is incorrect.
+
+Technical information (for administrator):
+{2}</value>
+  </data>
+  <data name="ClientCertificatesUsingAny" xml:space="preserve">
+    <value>Automatically selecting a client authentication certificate when connecting.</value>
+  </data>
+  <data name="NoServiceInterfaces" xml:space="preserve">
+    <value>No ServiceInterfaces were returned for the tool: {0}.</value>
+  </data>
+  <data name="TeamProjectDeleter_OperationHasId" xml:space="preserve">
+    <value>Operation ID: {0}</value>
+  </data>
+  <data name="TeamProjectDeleter_OperationSucceededAtTime" xml:space="preserve">
+    <value>Operation succeeded {0}.</value>
+  </data>
+  <data name="InvalidOptionValue" xml:space="preserve">
+    <value>TF10120: The value {0} is not supported for option {1}.</value>
+  </data>
+  <data name="ClientCertificatesAffectedByMachineSettings" xml:space="preserve">
+    <value>The client certificates configuration was affected by machine-wide settings.
+To inspect and modify machine-wide settings, use the /machine switch.</value>
+  </data>
+  <data name="MoreThanOneServiceInstance" xml:space="preserve">
+    <value>More than one ServiceInstance were registered to the tool: "{0}". Call the overload of this method that specifies a ServiceInterface name instead.</value>
+  </data>
+  <data name="EmptyStringNotAllowed" xml:space="preserve">
+    <value>TF249052: The string must have at least one character.</value>
+  </data>
+  <data name="JobDefinitionPropertiesCannotSet" xml:space="preserve">
+    <value>TF401286: This Property of JobDefinition is readonly.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="AnswerYes" xml:space="preserve">
+    <value>y</value>
+  </data>
+  <data name="AnswerAll" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="TeamProjectDeleter_Failure" xml:space="preserve">
+    <value>The team project could not be deleted.</value>
+  </data>
+  <data name="ConnectToTfs_UnExpected" xml:space="preserve">
+    <value>TF31004: Unexpected error encountered while connecting to Azure DevOps Server at {0}. Wait a few minutes and try again. If the problem persists, contact the server administrator</value>
+  </data>
+  <data name="TeamProjectDeleter_WssNotFound" xml:space="preserve">
+    <value>Warning. Did not find SharePoint site service.</value>
+  </data>
+  <data name="InternetExplorerNotFound" xml:space="preserve">
+    <value>Failed to launch URL "{0}". You can either install a browser and try again or navigate to the URL from a different computer that already has a browser installed.</value>
+  </data>
+  <data name="EnterValidPath" xml:space="preserve">
+    <value>Please enter a valid path, or choose a node to reclassify the artifacts.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="TeamProjectDeleter_DeletingFrom" xml:space="preserve">
+    <value>Deleting from {0} ...</value>
+  </data>
+  <data name="TeamProjectDeleter_EleadNotFound" xml:space="preserve">
+    <value>Warning. Did not find the expected Azure DevOps Server Core Service, vstfs.</value>
+  </data>
+  <data name="UICredProvider_TitleText" xml:space="preserve">
+    <value>Connecting to {0}</value>
+  </data>
+  <data name="TeamProjectDeleter_OperationCancelledAtTime" xml:space="preserve">
+    <value>Operation cancelled {0}.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="MultipleIdentitiesFoundMessage" xml:space="preserve">
+    <value>Multiple identities found matching '{0}'. Please specify one of the following identities:
+
+{1}</value>
+  </data>
+  <data name="NoRootFolder" xml:space="preserve">
+    <value>TF30075: Azure DevOps could not find the specified root folder or the folder is missing.</value>
+  </data>
+  <data name="InvalidPortNumber" xml:space="preserve">
+    <value>Port number is empty or is not valid. Please enter a valid number.</value>
+  </data>
+  <data name="ClientCertificateMissing" xml:space="preserve">
+    <value>No certificate capable of client authentication was found in the certificate store with thumbprint {0}.</value>
+  </data>
+  <data name="TeamProjectDeleter_DeletingFromRosetta" xml:space="preserve">
+    <value>Deleting Report Server files ...</value>
+  </data>
+  <data name="MissingOption" xml:space="preserve">
+    <value>Option /{0} is required for this operation but is missing.</value>
+  </data>
+  <data name="InformationCaption" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="CommandFileLineTooLongWarning" xml:space="preserve">
+    <value>Command file line exceeds {0} characters. Environment variables were not expanded.</value>
+  </data>
+  <data name="NoServiceInterfaceByName" xml:space="preserve">
+    <value>No ServiceInterface named "{0}" found registered to tool "{1}".</value>
+  </data>
+  <data name="ExitCode" xml:space="preserve">
+    <value>ExitCode: {0}</value>
+  </data>
+  <data name="DeleteVolatileCacheDirectoryError" xml:space="preserve">
+    <value>The directory {0} could not be deleted. Delete the directory and try the operation again.
+    
+The following error was encountered: {1}</value>
+  </data>
+  <data name="ConnectionUserChangedWarning" xml:space="preserve">
+    <value>We have detected that the user associated with the connection to {0} has been changed by another process. This mismatch can cause inaccurate information to be displayed or even errors. We recommend that you save your work and close the application.</value>
+  </data>
+  <data name="ToolNames_ProjectServer" xml:space="preserve">
+    <value>Project Server</value>
+  </data>
+  <data name="TeamProjectDeleter_DeletingFromWss" xml:space="preserve">
+    <value>Deleting SharePoint site ...</value>
+  </data>
+  <data name="TeamProjectDeleter_DeletingFromTfs" xml:space="preserve">
+    <value>Deleting from Azure DevOps Server ...</value>
+  </data>
+  <data name="ToolIdMalformed" xml:space="preserve">
+    <value>ToolId {0} malformed.</value>
+  </data>
+  <data name="SwitchUserRequiresFederatedAuthentication" xml:space="preserve">
+    <value>The connection is not correctly authenticated or the authentication type is not supported. You may only switch your user when your connection is established with federated authentication.</value>
+  </data>
+  <data name="ServerOptionIsDeprecated" xml:space="preserve">
+    <value>Option /{0} is deprecated. Use /collection instead.</value>
+  </data>
+  <data name="NullOrEmptyServiceInterface" xml:space="preserve">
+    <value>The returned ServiceInterface for tool "{0}" named "{1}" was null or empty.</value>
+  </data>
+  <data name="CannotModifyBuiltinService" xml:space="preserve">
+    <value>TF249050: You cannot modify the service for the following type: {0}.</value>
+  </data>
+  <data name="SmartCardMissing" xml:space="preserve">
+    <value>The smart card containing the private key for the certificate with thumbprint {0} is not available.</value>
+  </data>
+  <data name="TeamProjectDeleter_Done" xml:space="preserve">
+    <value>Done.</value>
+  </data>
+  <data name="ErrorCaption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="OperationNotSuportedPreFramework" xml:space="preserve">
+    <value>This operation is not supported against Azure DevOps Servers released before Visual Studio Team Foundation Server 2010.</value>
+  </data>
+  <data name="AnswerNoFull" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="RegisteredInstancedDuplicateInstances" xml:space="preserve">
+    <value>TF249054: One or more registry values are duplicates. Duplicate instances in the registry will be removed.</value>
+  </data>
+  <data name="ClientCertificateNoPermission" xml:space="preserve">
+    <value>The certificate with thumbprint {0} could not be used for client authentication. The current user may not have permission to use the certificate.</value>
+  </data>
+  <data name="ComboTreeHelpText" xml:space="preserve">
+    <value>Displays a dropdown tree.</value>
+  </data>
+  <data name="UnregisteredCollectionInvalidMethodError" xml:space="preserve">
+    <value>Unregistered collections cannot be deleted or saved.</value>
+  </data>
+  <data name="TFHost_ErrorWritingTEConfigFile" xml:space="preserve">
+    <value>TF249053: Team Explorer cannot write to the project list configuration file.
+Free up space on the local hard disk. If the problem persists, contact the administrator
+for your computer to confirm that your user account has appropriate permissions to write to the file.</value>
+  </data>
+  <data name="TfsConnectDialogSupplyCredentials" xml:space="preserve">
+    <value>Use different credentials</value>
+  </data>
+  <data name="TokenProviderReturnInvalidCurrentToken" xml:space="preserve">
+    <value>Token provider return invalid current token.</value>
+  </data>
+  <data name="DialogAuthenticate_Waiting" xml:space="preserve">
+    <value>Waiting for {0}...</value>
+  </data>
+  <data name="TfsConnectDialogSelectServerToViewCollections" xml:space="preserve">
+    <value>Select an Azure DevOps Server to view Team Project Collections</value>
+  </data>
+  <data name="WarningCaption" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="TfsConnectDialogUserLabelFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="RegistrationInInconsistentStateMessage" xml:space="preserve">
+    <value>Registration DB is in inconsistent state.</value>
+  </data>
+  <data name="ToolNames_VersionControl" xml:space="preserve">
+    <value>Version Control</value>
+  </data>
+  <data name="TeamProjectDeleter_InitializationException" xml:space="preserve">
+    <value>Warning: Non-fatal exception during initialization: '{0}'</value>
+  </data>
+  <data name="CommandCanceled" xml:space="preserve">
+    <value>Command canceled by the user.</value>
+  </data>
+  <data name="ClientCertificateErrorReadingStore" xml:space="preserve">
+    <value>An exception occurred while loading client authentication certificates from the certificate store: {0}</value>
+  </data>
+  <data name="TeamProjectDeleter_FailureInstructions" xml:space="preserve">
+    <value>The team project could not be deleted. Either the delete operation failed, or project creation failed but the partially-created project could not be deleted. Review the previous entries in this log for details. The team project has been taken offline and remains in a non-operational state. It is not accessible to Team Explorer. To complete the deletion, address the errors noted in this log, and then attempt deleting the project again.</value>
+  </data>
+  <data name="CollectionServicingJobDidNotSucceed" xml:space="preserve">
+    <value>The collection servicing job did not succeed.</value>
+  </data>
+  <data name="NoRegistrationEntries" xml:space="preserve">
+    <value>No RegistrationEntries were returned for the tool: {0}.</value>
+  </data>
+  <data name="InvalidResponse" xml:space="preserve">
+    <value>Invalid response.</value>
+  </data>
+  <data name="ThreadingMustBeSTA" xml:space="preserve">
+    <value>TF249049: Azure DevOps Server could not open the dialog because the threading model must be single-threaded apartment.</value>
+  </data>
+  <data name="MissingAssociatedOption" xml:space="preserve">
+    <value>Option /{0} cannot be used without option /{1}.</value>
+  </data>
+  <data name="SimpleWebCredentialsMissing" xml:space="preserve">
+    <value>Found a simple web token but failed to get the simple web credentials.</value>
+  </data>
+  <data name="TeamProjectDeleter_OperationInProgressAtTime" xml:space="preserve">
+    <value>Operation in progress {0}.</value>
+  </data>
+  <data name="ConnectToTfs_TrustFailure" xml:space="preserve">
+    <value>TF30017: Cannot connect to Azure DevOps Server at {0}. The security certificate is either not installed, not properly configured, or expired.</value>
+  </data>
+  <data name="TfsmqTransportNoProjectCollection" xml:space="preserve">
+    <value>The message queue transport could not be initialized. This is typically caused by not using the provided TfsmqServiceHost class or failure to apply the TfsmqPollBehavior to the service.</value>
+  </data>
+  <data name="TeamProjectDeleter_RosettaNotFound" xml:space="preserve">
+    <value>Warning: Did not find Reporting Services.</value>
+  </data>
+  <data name="PressEnterKey" xml:space="preserve">
+    <value>Press the Enter key to continue.</value>
+  </data>
+  <data name="WaitForCollectionServicingTimeout" xml:space="preserve">
+    <value>TF249053: The timeout limit for servicing the collection has been exceeded. The servicing job will continue to run, but no further information about this job will be available.</value>
+  </data>
+  <data name="QuestionYNASuffix" xml:space="preserve">
+    <value>(Yes/No/All) </value>
+  </data>
+  <data name="ServerNameEmpty" xml:space="preserve">
+    <value>Server name cannot be empty.</value>
+  </data>
+  <data name="TeamProjectDeleter_MissingDomain" xml:space="preserve">
+    <value>The name of the server must be specified because more than one domain is registered: {0}.</value>
+  </data>
+  <data name="ConnectToTfs_AddServer_UnableToConnect" xml:space="preserve">
+    <value>TF31002: Unable to connect to this Azure DevOps Server: {0}.
+Azure DevOps Server Url: {1}.
+  
+Possible reasons for failure include:
+- The name, port number, or protocol for the Azure DevOps Server is incorrect.
+- The Azure DevOps Server is offline.
+- The password has expired or is incorrect.
+
+For further information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="TfsmqInvalidOperationOneWayOnly" xml:space="preserve">
+    <value>The operation {0} for contract {1} is not valid for message queue transport. Valid operation contracts should contain one way operations only. </value>
+  </data>
+  <data name="TfsmqAcceptChannelTimeout" xml:space="preserve">
+    <value>The accept channel operation timed out after {0}. The time allotted to this operation may be a portion of a larger timeout.</value>
+  </data>
+  <data name="TfsConnectDialogSelectCollectionToViewProjects" xml:space="preserve">
+    <value>Select a Team Project Collection to view Team Projects</value>
+  </data>
+  <data name="TfsConnectDialogTitleConnectToServer" xml:space="preserve">
+    <value>Connect to Team Project Collection</value>
+  </data>
+  <data name="AnswerNo" xml:space="preserve">
+    <value>n</value>
+  </data>
+  <data name="InformationBarImages" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAANgwAAAJCTTYMAAAAAAAANgAAACgAAABAAAAAEAAAAAEAGAAAAAAAAAAAAMQOAADEDgAAAAAAAAAAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP+a5vn29vb/AP//AP/29vb29va5vvJNW+oAFOUAFOUAFOUAFOVNW+q5vvL29vb29vb/AP//AP//AP//AP/29vb29vbx4b/ovF/ioRvioRvioRvioRvovF/x4b/29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8f0f729vb/AP/29vb29vZsd+wAFOUAFOUAFOUAFOUAFOUAFOUAFOUAFOVsd+z29vb29vb/AP//AP/29vb29vbrxnvioRvioRvioRvioRvioRvioRvioRvioRvrxnv29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP8AzP8AzP8AzP8AAAAAAAAAzP8AzP8AzP8AzP8AzP+a5vn29vb/AP/29vZcaesAFOUwQOowQOoAFOUAFOUAFOUAFOUwQOowQOoAFOVsd+z29vb/AP//AP/29vbqwW3ioRvioRvioRvioRv////////ioRvioRvioRvioRvrxnv29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4AzP8AzP8AzP8AzP8AAAAAAAAAzP8AzP8AzP8AzP8f0f729vb/AP/29va5vvIAFOUwQOrv8P3v8P0wQOoAFOUAFOUwQOrv8P3v8P0wQOoAFOW5vvL29vb29vbx4b/ioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvx4b/29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP8AzP+a5vn29vb/AP/29vZNW+oAFOUwQOrv8P3////v8P0wQOowQOrv8P3////v8P0wQOoAFOVNW+r29vb29vbovF/ioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvovF/29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4AzP8AzP8AzP8AAAAAAAAAzP8AzP8AzP8f0f729vb/AP//AP/29vYAFOUAFOUAFOUwQOrv8P3////v8P3v8P3////v8P0wQOoAFOUAFOUAFOX29vb29vbioRvioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvioRv29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP8AzP8AAAAAAAAAzP8AzP8AzP+a5vn29vb/AP//AP/29vYAFOUAFOUAFOUAFOUwQOrv8P3////////v8P0wQOoAFOUAFOUAFOUAFOX29vb29vbioRvioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvioRv29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4AzP8AzP8AAAAAAAAAzP8AzP8f0f729vb/AP//AP//AP/29vYAFOUAFOUAFOUAFOUwQOrv8P3////////v8P0wQOoAFOUAFOUAFOUAFOX29vb29vbioRvioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvioRv29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP8AAAAAAAAAzP8AzP+a5vn29vb/AP//AP//AP/29vYAFOUAFOUAFOUwQOrv8P3////v8P3v8P3////v8P0wQOoAFOUAFOUAFOX29vb29vbioRvioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvioRv29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4AzP8AAAAAAAAAzP8f0f729vb/AP//AP//AP//AP/29vZNW+oAFOUwQOrv8P3////v8P0wQOowQOrv8P3////v8P0wQOoAFOVNW+r29vb29vbovF/ioRvioRvioRvioRvioRvioRvioRvioRvioRvioRvioRvioRvovF/29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP8AzP8AzP+a5vn29vb/AP//AP//AP//AP/29va5vvIAFOUwQOrv8P3v8P0wQOoAFOUAFOUwQOrv8P3v8P0wQOoAFOW5vvL29vb29vbx4b/ioRvioRvioRvioRvioRv////////ioRvioRvioRvioRvioRvx4b/29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4AzP8AzP8f0f729vb/AP//AP//AP//AP//AP//AP/29vZsd+wAFOUwQOowQOoAFOUAFOUAFOUAFOUwQOowQOoAFOVsd+z29vb/AP//AP/29vbrxnvioRvioRvioRvioRv////////ioRvioRvioRvioRvrxnv29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vaa5vkAzP8AzP+a5vn29vb/AP//AP//AP//AP//AP//AP/29vb29vZcaesAFOUAFOUAFOUAFOUAFOUAFOUAFOUAFOVsd+z29vb29vb/AP//AP/29vb29vbqwW3ioRvioRvioRvioRvioRvioRvioRvioRvrxnv29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vYf0f4f0f729vb/AP//AP//AP//AP//AP//AP//AP//AP/29vb29va5vvJNW+oAFOUAFOUAFOUAFOVNW+q5vvL29vb29vb/AP//AP//AP//AP/29vb29vbx4b/ovF/ioRvioRvioRvioRvovF/x4b/29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP//AP//AP//AP//AP//AP/29vb29vb29vb29vb29vb29vb29vb29vb/AP//AP//AP//AP8L</value>
+  </data>
+  <data name="ServicingOperationConfigDoesNotDefineOperationNameError" xml:space="preserve">
+    <value>The servicing operation configuration file does not define operation name.</value>
+  </data>
+  <data name="AnswerYesFull" xml:space="preserve">
+    <value>yes</value>
+  </data>
+  <data name="ToolNames_TeamProjects" xml:space="preserve">
+    <value>Team Projects</value>
+  </data>
+  <data name="TeamProjectDeleter_ProjectNotFoundOnService" xml:space="preserve">
+    <value>Not found.</value>
+  </data>
+  <data name="TeamProjectDeleter_OperationQueuedAtTime" xml:space="preserve">
+    <value>Operation queued {0}.</value>
+  </data>
+  <data name="MicrosoftVisualStudioCaption" xml:space="preserve">
+    <value>Microsoft Visual Studio</value>
+  </data>
+  <data name="ConnectToTfs_NoPermission" xml:space="preserve">
+    <value>TF31003: Either you have not entered the necessary credentials or your user account does not have permission to connect to the Azure DevOps Server at {0}. Ask your server administrator to add the appropriate permissions to your account.
+    
+The following error was encountered: {1}</value>
+  </data>
+  <data name="TfsmqInvalidUri" xml:space="preserve">
+    <value>The URI {0} is not a valid in this context. You must connect to the root URI.</value>
+  </data>
+  <data name="ToolNames_WorkItemTracking" xml:space="preserve">
+    <value>Work Item Tracking</value>
+  </data>
+  <data name="ConnectToTfs_AccessCheck" xml:space="preserve">
+    <value>TF249002: Your user account does not have permission to connect to the Azure DevOps Server at {0}. Ask your server administrator to add the appropriate permissions to your account.
+    
+The server returned the following error: {1}</value>
+  </data>
+  <data name="GenericTeamFoundationCaption" xml:space="preserve">
+    <value>Azure DevOps Server</value>
+  </data>
+  <data name="HttpClientAlreadyOpened" xml:space="preserve">
+    <value>The client object has already been opened.</value>
+  </data>
+  <data name="TfsmqInvalidChannelType" xml:space="preserve">
+    <value>The specified channel type {0} is not supported.</value>
+  </data>
+  <data name="ProcessIdentifierFormat" xml:space="preserve">
+    <value>Process name: {0}; Process Id: {1}; Computer: {2} </value>
+  </data>
+  <data name="TfsConnectDialogSwitchUser" xml:space="preserve">
+    <value>Switch User</value>
+  </data>
+  <data name="SwitchUserNotSupportedOnPremise" xml:space="preserve">
+    <value>You may only switch your user with an Azure DevOps Service organization.</value>
+  </data>
+  <data name="TeamProjectDeleter_MissingName" xml:space="preserve">
+    <value>The name of the project must be specified.</value>
+  </data>
+  <data name="CannotAuthenticateAsAnotherUser" xml:space="preserve">
+    <value>We were unable to establish the connection because it is configured for user {0} but you attempted to connect using user {1}. To connect as a different user perform a Switch user operation. To connect with the configured identity just attempt the last operation again.</value>
+  </data>
+  <data name="NodeDoesNotExistMessage" xml:space="preserve">
+    <value>No node with tag "{0}" exists under the given node: {1}.</value>
+  </data>
+</root>

@@ -1,0 +1,24 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Telemetry.Services.IHttpWebResponse
+// Assembly: Microsoft.VisualStudio.Telemetry, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 0E58FD5B-7E43-40D6-A963-E92D0F67BACC
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Telemetry.dll
+
+using System.IO;
+using System.Net;
+
+namespace Microsoft.VisualStudio.Telemetry.Services
+{
+  internal interface IHttpWebResponse
+  {
+    ErrorCode ErrorCode { get; }
+
+    WebExceptionStatus ExceptionCode { get; }
+
+    HttpStatusCode StatusCode { get; }
+
+    WebHeaderCollection Headers { get; set; }
+
+    Stream GetResponseStream();
+  }
+}

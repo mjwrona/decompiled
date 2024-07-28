@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A96C44A5-007F-4220-98DB-DD422475483A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.WorkItemTracking.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking">
+      <HintPath>lib\Microsoft.Azure.Boards.Linking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Charting.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Charting.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Reporting.DataServices">
+      <HintPath>lib\Microsoft.TeamFoundation.Reporting.DataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessControlListMetadata.cs" />
+    <Compile Include="RequiredPermissions.cs" />
+    <Compile Include="AdminMetadata.cs" />
+    <Compile Include="AdminUpdate.cs" />
+    <Compile Include="InsertRuleAttributes.cs" />
+    <Compile Include="ArtifactWorkItemIds.cs" />
+    <Compile Include="BaseUpdate.cs" />
+    <Compile Include="ArtifactWorkItemIdsBinder.cs" />
+    <Compile Include="ConstantRecordBinder.cs" />
+    <Compile Include="WorkItemIdBinder.cs" />
+    <Compile Include="WorkItemLinkChangeBinder.cs" />
+    <Compile Include="WorkItemLinkChangeBinder2.cs" />
+    <Compile Include="WorkItemTypeActionBinder.cs" />
+    <Compile Include="WorkItemTypeFieldBinder.cs" />
+    <Compile Include="WorkItemTypeRecordBinder.cs" />
+    <Compile Include="WorkItemTypeUsageBinder.cs" />
+    <Compile Include="WorkItemLinkTypeRecordBinder.cs" />
+    <Compile Include="FieldDefinitionRecordBinder.cs" />
+    <Compile Include="FieldDefinitionRecordBinder2.cs" />
+    <Compile Include="FieldUsageRecordBinder.cs" />
+    <Compile Include="FieldUsageRecordBinder2.cs" />
+    <Compile Include="DateTimeTupleBinder.cs" />
+    <Compile Include="TreeAdminDataBinder.cs" />
+    <Compile Include="FieldAdminDataBinder.cs" />
+    <Compile Include="FieldUsagesAdminDataBinder.cs" />
+    <Compile Include="CommandGetWorkItemIds.cs" />
+    <Compile Include="CommandGetWorkItemLinkChanges.cs" />
+    <Compile Include="ProjectUtilities.cs" />
+    <Compile Include="ConstantRecordSearchFactor.cs" />
+    <Compile Include="ContextKeys.cs" />
+    <Compile Include="SharedConstants.cs" />
+    <Compile Include="WorkItemXmlConstants.cs" />
+    <Compile Include="DalConstants.cs" />
+    <Compile Include="CoreField.cs" />
+    <Compile Include="DalAccessControlEntry.cs" />
+    <Compile Include="DalAddIdentityElement.cs" />
+    <Compile Include="DalAddLinkTypeElement.cs" />
+    <Compile Include="DalAdminChangeCheckElement.cs" />
+    <Compile Include="DalApplyChangesElement.cs" />
+    <Compile Include="DalApplyIssueChangesElement.cs" />
+    <Compile Include="DalAuthorizeQueryItemsElement.cs" />
+    <Compile Include="DalBeginLocalTranElement.cs" />
+    <Compile Include="DalChangeActionElement.cs" />
+    <Compile Include="DalChangeConstantElement.cs" />
+    <Compile Include="DalChangeConstantSetElement.cs" />
+    <Compile Include="DalChangeFieldElement.cs" />
+    <Compile Include="DalChangeFieldUsageElement.cs" />
+    <Compile Include="DalChangeRuleElement.cs" />
+    <Compile Include="DalChangeTreePropertyElement.cs" />
+    <Compile Include="DalChangeWorkItemTypeCategoryElement.cs" />
+    <Compile Include="DalChangeWorkItemTypeElement.cs" />
+    <Compile Include="DalChangeWorkItemTypeUsageElement.cs" />
+    <Compile Include="DalCheckChangesElement.cs" />
+    <Compile Include="DalCheckWorkItemTypeCategoryElement.cs" />
+    <Compile Include="DalCurrentUtcElement.cs" />
+    <Compile Include="DalDeclareIssueIdVariableElement.cs" />
+    <Compile Include="DalDeclareRollbackErrorElement.cs" />
+    <Compile Include="DalDeclareRollbackVariableElement.cs" />
+    <Compile Include="DalDeclareVerboseVariableElement.cs" />
+    <Compile Include="DalDeleteFieldElement.cs" />
+    <Compile Include="DalDeleteLinkTypeElement.cs" />
+    <Compile Include="DalDeleteProjectElement.cs" />
+    <Compile Include="DalDeleteQueryItemElement.cs" />
+    <Compile Include="DalDeleteWorkItemTypeCategoryMemberElement.cs" />
+    <Compile Include="DalDestroyGlobalListElement.cs" />
+    <Compile Include="DalDestroyWorkItemTypeCategoryElement.cs" />
+    <Compile Include="DalDestroyWorkItemTypeElement.cs" />
+    <Compile Include="DalEndLocalTranElement.cs" />
+    <Compile Include="DalEventChangeElement.cs" />
+    <Compile Include="DalGetDbStampElement.cs" />
+    <Compile Include="DalGetIdentityElement.cs" />
+    <Compile Include="DalGetLocaleElement.cs" />
+    <Compile Include="DalGetNonIdentityConstElement.cs" />
+    <Compile Include="DalGetPersonNameElement.cs" />
+    <Compile Include="DalGetSequenceIds.cs" />
+    <Compile Include="DalGetTempIdMapElement.cs" />
+    <Compile Include="DalGetWorkItemDetailsByLinkFilterElement.cs" />
+    <Compile Include="DalGetWorkItemDetailsByReferencingUriElement.cs" />
+    <Compile Include="DalGetWorkItemDetailsElement.cs" />
+    <Compile Include="DalGetWorkItemDetailsElementBase.cs" />
+    <Compile Include="DalGetWorkItemElement.cs" />
+    <Compile Include="DalGetWorkItemElementBase.cs" />
+    <Compile Include="DalInsertQueryItemElement.cs" />
+    <Compile Include="DalInsertWorkItemTypeCategoryMemberElement.cs" />
+    <Compile Include="DalMetadataChangeValidationElement.cs" />
+    <Compile Include="DalMetadataSelectElement.cs" />
+    <Compile Include="DalObjectPersistenceElement`1.cs" />
+    <Compile Include="DalPersonIdElement.cs" />
+    <Compile Include="DalPersonIdMapElement.cs" />
+    <Compile Include="DalPopulateSecurityInfoElement.cs" />
+    <Compile Include="DalSaveConstantSetElement.cs" />
+    <Compile Include="DalSaveIdentityRuleElement.cs" />
+    <Compile Include="DalSaveRuleElement.cs" />
+    <Compile Include="DalSetIssueIdVariableElement.cs" />
+    <Compile Include="DalQueryItemElement.cs" />
+    <Compile Include="DalSetQueryItemAclElement.cs" />
+    <Compile Include="DalSqlElement.cs" />
+    <Compile Include="DalSqlResourceComponent.cs" />
+    <Compile Include="DalSqlResourceComponent2.cs" />
+    <Compile Include="DalSqlResourceComponent3.cs" />
+    <Compile Include="DalSqlResourceComponent4.cs" />
+    <Compile Include="DalSqlResourceComponent5.cs" />
+    <Compile Include="DalSqlResourceComponent6.cs" />
+    <Compile Include="DalSqlResourceComponent7.cs" />
+    <Compile Include="DalSqlResourceComponent8.cs" />
+    <Compile Include="DalSqlResourceComponent9.cs" />
+    <Compile Include="DalSqlResourceComponent10.cs" />
+    <Compile Include="DalSqlResourceComponent11.cs" />
+    <Compile Include="DalSqlResourceComponent12.cs" />
+    <Compile Include="DalSqlResourceComponent13.cs" />
+    <Compile Include="DalSqlResourceComponent14.cs" />
+    <Compile Include="DalSqlResourceComponent15.cs" />
+    <Compile Include="DalSqlResourceComponent16.cs" />
+    <Compile Include="DalSqlResourceComponent17.cs" />
+    <Compile Include="DalSqlResourceComponent18.cs" />
+    <Compile Include="DalSqlResourceComponent19.cs" />
+    <Compile Include="DalSqlResourceComponent20.cs" />
+    <Compile Include="DalSqlResourceComponent21.cs" />
+    <Compile Include="DalSqlResourceComponent22.cs" />
+    <Compile Include="DalSqlResourceComponent23.cs" />
+    <Compile Include="DalSqlResourceComponent24.cs" />
+    <Compile Include="DalSqlResourceComponent25.cs" />
+    <Compile Include="WorkItemId.cs" />
+    <Compile Include="WorkItemLinkChange.cs" />
+    <Compile Include="DalUpdateLinkTypeElement.cs" />
+    <Compile Include="DalUpdateQueryItemHashElement.cs" />
+    <Compile Include="DalUpdateQueryItemElement.cs" />
+    <Compile Include="EventType.cs" />
+    <Compile Include="DalUpdateSequenceIdElement.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="ColumnType.cs" />
+    <Compile Include="DataAccessLayerImpl.cs" />
+    <Compile Include="DocumentBuilder.cs" />
+    <Compile Include="ElementGroup.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="LegacyServerException.cs" />
+    <Compile Include="LegacyValidationException.cs" />
+    <Compile Include="LegacyConfigurationException.cs" />
+    <Compile Include="LegacySecurityException.cs" />
+    <Compile Include="LegacyDeniedOrNotExist.cs" />
+    <Compile Include="LegacySqlDataTypeConversionException.cs" />
+    <Compile Include="LegacyProvisionPermissionsException.cs" />
+    <Compile Include="LegacyServiceException.cs" />
+    <Compile Include="LegacyQueryOptimizationFailedException.cs" />
+    <Compile Include="LegacySqlErrorDeadlockException.cs" />
+    <Compile Include="LegacySqlErrorViewBindingErrorException.cs" />
+    <Compile Include="LegacySqlErrorFullTextException.cs" />
+    <Compile Include="LegacyGeneralSqlException.cs" />
+    <Compile Include="LegacyCancelledByUserException.cs" />
+    <Compile Include="LegacySqlCommandTimeOutException.cs" />
+    <Compile Include="LegacySqlLoginFailedException.cs" />
+    <Compile Include="LegacySqlCannotOpenDatabaseException.cs" />
+    <Compile Include="LegacyTagsSaveFailedException.cs" />
+    <Compile Include="LegacyWorkItemLinkException.cs" />
+    <Compile Include="LegacyQueryItemException.cs" />
+    <Compile Include="TooManyQueryItemsReturnedException.cs" />
+    <Compile Include="LegacyQueryItemGenericException.cs" />
+    <Compile Include="LegacyWorkItemDestroyException.cs" />
+    <Compile Include="LegacyFieldLimitExceededException.cs" />
+    <Compile Include="ExceptionHelper.cs" />
+    <Compile Include="LegacyBatchSaveException.cs" />
+    <Compile Include="LegacyInvalidHierarchicalQueryException.cs" />
+    <Compile Include="ArgumentConflictException.cs" />
+    <Compile Include="WorkItemTrackingGetMetadataTooManyConcurrentUsersE.cs" />
+    <Compile Include="WorkItemTrackingGetMetadataServerBusyException.cs" />
+    <Compile Include="ExtendedAccessControlListData.cs" />
+    <Compile Include="AccessControlEntryData.cs" />
+    <Compile Include="IdentityDescriptorData.cs" />
+    <Compile Include="AccessControlEntryExtendedData.cs" />
+    <Compile Include="TeamFoundationRequestContextExtensionMethods.cs" />
+    <Compile Include="FieldAdminData.cs" />
+    <Compile Include="FieldUsagesAdminData.cs" />
+    <Compile Include="IDataAccessLayer.cs" />
+    <Compile Include="IdentityEventMessage.cs" />
+    <Compile Include="IdRevisionPair.cs" />
+    <Compile Include="InverseQuery.cs" />
+    <Compile Include="IProvisioningService.cs" />
+    <Compile Include="Payload.cs" />
+    <Compile Include="PayloadTableAsRowSet.cs" />
+    <Compile Include="PayloadColumn.cs" />
+    <Compile Include="PayloadColumnCollection.cs" />
+    <Compile Include="PayloadConverter.cs" />
+    <Compile Include="PayloadTable.cs" />
+    <Compile Include="FieldGroup.cs" />
+    <Compile Include="PayloadTableCollection.cs" />
+    <Compile Include="PayloadTableColumnDescriptor.cs" />
+    <Compile Include="PayloadTableConverter.cs" />
+    <Compile Include="ProcessColumnCallback.cs" />
+    <Compile Include="PayloadTableReadAction.cs" />
+    <Compile Include="PayloadTableWriteAction.cs" />
+    <Compile Include="IPayloadTableSchema.cs" />
+    <Compile Include="PayloadTableSchema.cs" />
+    <Compile Include="DataTableWrapper.cs" />
+    <Compile Include="ProcessIdentityEventMessage.cs" />
+    <Compile Include="ScopedMetadataComponent.cs" />
+    <Compile Include="ProvisionHelper.cs" />
+    <Compile Include="ProvisioningService.cs" />
+    <Compile Include="ProvisioningImportEventsCallback.cs" />
+    <Compile Include="ProvisioningActionType.cs" />
+    <Compile Include="ProcessTemplateConstants.cs" />
+    <Compile Include="QueryItemPermissions.cs" />
+    <Compile Include="ProjectCreationSupportedMacros.cs" />
+    <Compile Include="QueryItem.cs" />
+    <Compile Include="QueryItemMethods.cs" />
+    <Compile Include="DalWorkItemTypeField.cs" />
+    <Compile Include="ScopedMetadataComponent2.cs" />
+    <Compile Include="ScopedMetadataComponent3.cs" />
+    <Compile Include="ScopedMetadataComponent4.cs" />
+    <Compile Include="ScopedMetadataComponent5.cs" />
+    <Compile Include="ScopedMetadataComponent6.cs" />
+    <Compile Include="ScopedMetadataComponent7.cs" />
+    <Compile Include="ScopedMetadataComponent9.cs" />
+    <Compile Include="ScopedMetadataComponent11.cs" />
+    <Compile Include="ScopedMetadataComponent12.cs" />
+    <Compile Include="ScopedMetadataComponent17.cs" />
+    <Compile Include="ScopedMetadataComponent40.cs" />
+    <Compile Include="ScopedMetadataComponent50.cs" />
+    <Compile Include="ConstantRecord.cs" />
+    <Compile Include="WorkItemTypeRecord.cs" />
+    <Compile Include="WorkItemTypeUsage.cs" />
+    <Compile Include="WorkItemLinkTypeRecord.cs" />
+    <Compile Include="FieldDefinitionRecord.cs" />
+    <Compile Include="FieldUsageRecord.cs" />
+    <Compile Include="SequenceIds.cs" />
+    <Compile Include="ServerConstant.cs" />
+    <Compile Include="ServerConstantSet.cs" />
+    <Compile Include="ServerMetadataProvisioningHelper.cs" />
+    <Compile Include="ServerQueryItem.cs" />
+    <Compile Include="Details.cs" />
+    <Compile Include="ServerQueryProvisioningHelper.cs" />
+    <Compile Include="ServerWitCategory.cs" />
+    <Compile Include="ExecuteUnknownCallback`1.cs" />
+    <Compile Include="SqlAccess.cs" />
+    <Compile Include="WorkItemBatchBuilder.cs" />
+    <Compile Include="AttachmentBatchBuilder.cs" />
+    <Compile Include="SqlBatchBuilder.cs" />
+    <Compile Include="SyncBase.cs" />
+    <Compile Include="AccessControlListDetails.cs" />
+    <Compile Include="AccessControlEntryDetails.cs" />
+    <Compile Include="AceExtendedInformation.cs" />
+    <Compile Include="CustomerIntelligenceConstants.cs" />
+    <Compile Include="TraceAreas.cs" />
+    <Compile Include="TraceLayers.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="TreeAdminData.cs" />
+    <Compile Include="ConstantSetTable.cs" />
+    <Compile Include="ConstantSetTable2.cs" />
+    <Compile Include="ConstantTable.cs" />
+    <Compile Include="IdentityMembershipTable.cs" />
+    <Compile Include="RuleTable.cs" />
+    <Compile Include="TempIdReferencingTable`1.cs" />
+    <Compile Include="Update.cs" />
+    <Compile Include="WorkItemTypeTemplateUpdateType.cs" />
+    <Compile Include="PersistenceAction.cs" />
+    <Compile Include="RequiredFields.cs" />
+    <Compile Include="QueryChangeNotificationPayload.cs" />
+    <Compile Include="UpdateDbStamp.cs" />
+    <Compile Include="UserProjectsCache.cs" />
+    <Compile Include="WiqlTransformUtils.cs" />
+    <Compile Include="CoreStringFieldIndexes.cs" />
+    <Compile Include="CoreIntegerFieldIndexes.cs" />
+    <Compile Include="DALWorkItemService.cs" />
+    <Compile Include="WorkItemTrackingPerformanceCounters.cs" />
+    <Compile Include="WorkItemTrackingService.cs" />
+    <Compile Include="WorkItemTypeAction.cs" />
+    <Compile Include="LegacyWorkItemTypeDictionary.cs" />
+    <Compile Include="LegacyWorkItemType.cs" />
+    <Compile Include="IReadOnlyWorkItemTypeCollection.cs" />
+    <Compile Include="WorkItemTypeForm.cs" />
+    <Compile Include="WorkItemTypeState.cs" />
+    <Compile Include="WorkItemTypeTransition.cs" />
+    <Compile Include="DalResourceStrings.cs" />
+    <Compile Include="TestManagement\TestCaseParameterDataHelper.cs" />
+    <Compile Include="DataAccessLayer\LegacyWitMetadataChangedEvent.cs" />
+    <Compile Include="DataAccessLayer\IDalWorkItemLinksService.cs" />
+    <Compile Include="DataAccessLayer\DalWorkItemLinksService.cs" />
+    <Compile Include="DataAccessLayer\TVP\PermissionTable.cs" />
+    <Compile Include="DataAccessLayer\TVP\PermissionTable2.cs" />
+    <Compile Include="DataAccessLayer\TVP\TokenRename.cs" />
+    <Compile Include="DataAccessLayer\TVP\TokenRenameTable3.cs" />
+    <Compile Include="DataAccessLayer\TVP\TokenTable.cs" />
+    <Compile Include="DataAccessLayer\TVP\TokenTable2.cs" />
+    <Compile Include="DataAccessLayer\ResourceLinks\ResourceLinkService.cs" />
+    <Compile Include="DataAccessLayer\ResourceLinks\ResourceLink.cs" />
+    <Compile Include="DataAccessLayer\ResourceLinks\ResourceLinkComponent.cs" />
+    <Compile Include="DataAccessLayer\ResourceLinks\ResourceLinkData.cs" />
+    <Compile Include="DataAccessLayer\MetadataProcessing\ConstantsProcessor.cs" />
+    <Compile Include="DataAccessLayer\MetadataProcessing\ClassificationNodeProcessor.cs" />
+    <Compile Include="DataAccessLayer\MetadataProcessing\PayloadProcessor.cs" />
+    <Compile Include="Compatibility\MetadataInformation.cs" />
+    <Compile Include="Compatibility\MetadataBucket.cs" />
+    <Compile Include="Compatibility\LegacyCachestampDescriptor.cs" />
+    <Compile Include="Compatibility\MetadataCompatibilityComponent.cs" />
+    <Compile Include="Compatibility\MetadataCompatibilityComponent2.cs" />
+    <Compile Include="Compatibility\MetadataCompatibilityComponent3.cs" />
+    <Compile Include="Compatibility\MetadataCompatibilityComponent4.cs" />
+    <Compile Include="Compatibility\MetadataCompatibilityComponent5.cs" />
+    <Compile Include="Compatibility\MetadataInformationRecord.cs" />
+    <Compile Include="Compatibility\StampDbRequestResult.cs" />
+    <Compile Include="Compatibility\WorkItemMetadataCompatibilityService.cs" />
+    <Compile Include="Compatibility\FormProperties.cs" />
+    <Compile Include="Compatibility\WorkItemMetadataGenerator.cs" />
+    <Compile Include="Charting\WITChartingConstants.cs" />
+    <Compile Include="Charting\AssignedToMeQuery.cs" />
+    <Compile Include="Charting\WitProviderInterpreter.cs" />
+    <Compile Include="Charting\DatedWorkItemFieldData.cs" />
+    <Compile Include="Charting\WitUnifiedTransformPipeline`1.cs" />
+    <Compile Include="Charting\WitChartingDalWrapper.cs" />
+    <Compile Include="Charting\WitDataServiceCapabilityProvider.cs" />
+    <Compile Include="Charting\WitSecurityProvider.cs" />
+    <Compile Include="Charting\WitTrendPolicyHelper.cs" />
+    <Compile Include="Charting\WITChartsProvider.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAccessLayer\PerfCounters\man.template" />
+    <EmbeddedResource Include="ResourceStrings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

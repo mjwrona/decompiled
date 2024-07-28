@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddAnnotationAction_UrlInputDescription" xml:space="preserve">
+    <value>The URL through which Grafana can be accessed to post the annotation​.</value>
+  </data>
+  <data name="AddAnnotationAction_ErrorWhileExtractingJToken" xml:space="preserve">
+    <value>Exception occurred while getting token '{0}' from the event.</value>
+  </data>
+  <data name="AddAnnotationAction_ApiTokenInputName" xml:space="preserve">
+    <value>API token. (need one? &lt;a href="http://docs.grafana.org/tutorials/api_org_token_howto/#api-tutorial-how-to-create-api-tokens-and-dashboards-for-a-specific-organization" target="_blank"&gt;Create a Grafana api token&lt;/a&gt;)</value>
+  </data>
+  <data name="InvalidTagLength" xml:space="preserve">
+    <value>The number of tags is invalid. Please provide atleast one tag.</value>
+  </data>
+  <data name="QueryExceptionFormat" xml:space="preserve">
+    <value>Grafana query failed with exception '{0}'</value>
+  </data>
+  <data name="AddAnnotationAction_QueryDashboardValues_InvalidInputIdError" xml:space="preserve">
+    <value>The input id used to query dashboards is invalid. InputId used : {0}.</value>
+  </data>
+  <data name="AddAnnotationAction_UrlInputName" xml:space="preserve">
+    <value>Grafana url</value>
+  </data>
+  <data name="AddAnnotationAction_ApiTokenInputDescription" xml:space="preserve">
+    <value>The  API token for allowing Azure DevOps to post annotations onto dashboards. It is required to authenticate against the API to be able to add annotations to Grafana database. </value>
+  </data>
+  <data name="AddAnnotationAction_DashboardIdInputDescription" xml:space="preserve">
+    <value>The dashboard for which the annotation needs to be added. If left unspecified annotation added at global level​.</value>
+  </data>
+  <data name="AddAnnotationActionName" xml:space="preserve">
+    <value>Add annotation to Grafana database</value>
+  </data>
+  <data name="AddAnnotationAction_TextInputName" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ConsumerName" xml:space="preserve">
+    <value>Grafana</value>
+  </data>
+  <data name="SuppliedTokenNotAuthorized" xml:space="preserve">
+    <value>The supplied token is not authorized to query Grafana.</value>
+  </data>
+  <data name="AddAnnotationAction_TextDefaultDescription" xml:space="preserve">
+    <value>Deployment of {0} on {1} {2}.</value>
+  </data>
+  <data name="AddAnnotationAction_DeploymentDurationInputDescription" xml:space="preserve">
+    <value>If checked, annotation denotes the time period between start of deployment and completion of deployment. Otherwise, annotation only indicates deployment completed.</value>
+  </data>
+  <data name="AnnotationDefaultDescriptionIfDeploymentIsNotThere" xml:space="preserve">
+    <value>Deployment has completed.</value>
+  </data>
+  <data name="AddAnnotationActionDescription" xml:space="preserve">
+    <value>Create an annotation in Grafana. Note that annotations will light up in Grafana dashboard only upon adding and saving annotation queries to filter by the tags that are specified in the service hook creation form.  &lt;a href="http://docs.grafana.org/reference/annotations/#query-by-tag" target="_blank"&gt;Learn more&lt;/a&gt;</value>
+  </data>
+  <data name="ErrorWhileCreatingGrafanaAnnotationPayLoad" xml:space="preserve">
+    <value>Error occured while creating grafana add annotations payload. Error: {0}</value>
+  </data>
+  <data name="AddAnnotationAction_TagsInputDescription" xml:space="preserve">
+    <value>List of tags (comma separated) that are used for adding annotations​.</value>
+  </data>
+  <data name="ConsumerDescription" xml:space="preserve">
+    <value>Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB. </value>
+  </data>
+  <data name="QueryResponseFailureFormat" xml:space="preserve">
+    <value>Grafana query failed with response '{0}'</value>
+  </data>
+  <data name="AddAnnotationAction_TextInputDescription" xml:space="preserve">
+    <value>Custom description for the annotation. If left unspecified, description to describe the release and status​. Links can be added using hypertext links. For example, "&lt;a href="https://www.contoso.com" target="_blank"&gt;Contoso&lt;/a&gt;".</value>
+  </data>
+  <data name="AddAnnotationAction_DeploymentDurationInputName" xml:space="preserve">
+    <value>Annotate deployment duration window</value>
+  </data>
+  <data name="AddAnnotationAction_DashboardIdInputName" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="AddAnnotationAction_TagsInputName" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="GrafanaTextLinkFormat" xml:space="preserve">
+    <value>&lt;a href="{0}" target="_blank"&gt;{1}&lt;/a&gt;</value>
+  </data>
+</root>

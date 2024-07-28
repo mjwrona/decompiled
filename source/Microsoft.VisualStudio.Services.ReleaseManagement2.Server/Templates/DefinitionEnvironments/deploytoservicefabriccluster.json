@@ -1,0 +1,97 @@
+{
+  "id": "c608de31-73e0-42a5-8d9c-8dec308a2db6",
+  "name": "Azure Service Fabric deployment",
+  "category": "Deployment",
+  "iconTaskId": "c6650aa0-185b-11e6-a47d-df93e7a34c64",
+  "description": "Deploy an Azure Service Fabric application.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "TaskId": "c6650aa0-185b-11e6-a47d-df93e7a34c64",
+            "Version": "1.*",
+            "Name": "Deploy Service Fabric Application",
+            "Inputs": {
+              "publishProfilePath": "$(system.defaultworkingdirectory)/**/drop/projectartifacts/**/PublishProfiles/Cloud.xml",
+              "applicationPackagePath": "$(Parameters.applicationPackagePath)",
+              "serviceConnectionName": "$(Parameters.serviceConnectionName)",
+              "useDiffPackage": "true",
+              "compressPackage": "true",
+              "skipUpgradeSameTypeAndVersion":  "true"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "applicationPackagePath",
+          "label": "{ApplicationPackagePathLabel}",
+          "defaultValue": "$(system.defaultworkingdirectory)/**/drop/applicationpackage",
+          "required": true,
+          "type": "filePath",
+          "helpMarkDown": "{ApplicationPackagePathMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "serviceConnectionName",
+          "label": "{ServiceConnectionNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:servicefabric",
+          "helpMarkDown": "{ServiceConnectionNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        }
+      ]
+    }
+  }
+}

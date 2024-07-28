@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.WorkItemTracking.Web.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4AAD05F-273E-45ED-AA06-47F0C33CA7C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.WorkItemTracking</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.Linking" />
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates" />
+    <Reference Include="Microsoft.Azure.Boards.RecentActivity" />
+    <Reference Include="Microsoft.Azure.Boards.WebApi.Common" />
+    <Reference Include="Microsoft.Azure.DevOps.Comments.Web" />
+    <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi" />
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server" />
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service" />
+    <Reference Include="Microsoft.Azure.Devops.Work.PlatformServices" />
+    <Reference Include="Microsoft.TeamFoundation.Comments.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Comments.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Mention.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Mention.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.ProcessDefinitions.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.ProcessTemplate.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Social.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Social.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Web\WorkEventsRoutes.cs" />
+    <Compile Include="Web\ResourceStrings.cs" />
+    <Compile Include="Web\Common\LoopBatchSizeConfigurer.cs" />
+    <Compile Include="Web\Common\DictionaryValueInt32Converter.cs" />
+    <Compile Include="Web\Common\EmbeddedResourcesHelper.cs" />
+    <Compile Include="Web\Common\IFieldRuleModelValidatorService.cs" />
+    <Compile Include="Web\Common\FieldRuleModelValidatorService.cs" />
+    <Compile Include="Web\Common\HttpMethodRequiredAttribute.cs" />
+    <Compile Include="Web\Common\ParsingHelper.cs" />
+    <Compile Include="Web\Common\PickListHelper.cs" />
+    <Compile Include="Web\Common\TelemetryHelper.cs" />
+    <Compile Include="Web\Common\TemporaryQueryModel.cs" />
+    <Compile Include="Web\Common\WorkItemTrackingWebTraceLayers.cs" />
+    <Compile Include="Web\Common\ProcessRuleConverter.cs" />
+    <Compile Include="Web\Common\QueryUtils.cs" />
+    <Compile Include="Web\Common\WorkitemTrackingResourceVersions.cs" />
+    <Compile Include="Web\Common\CacheItemKeys.cs" />
+    <Compile Include="Web\Common\LinkTypeConstants.cs" />
+    <Compile Include="Web\Common\AttributeConstants.cs" />
+    <Compile Include="Web\Common\RuleEngineConstants.cs" />
+    <Compile Include="Web\Common\AttachmentUploadType.cs" />
+    <Compile Include="Web\Common\ConstraintRegexConstants.cs" />
+    <Compile Include="Web\Common\BehaviorPropertyName.cs" />
+    <Compile Include="Web\Common\DefaultRuleConstants.cs" />
+    <Compile Include="Web\Common\ExpandResults\GetProcessesExpandResult.cs" />
+    <Compile Include="Web\Common\ExpandResults\GetWorkItemTypeExpandResult.cs" />
+    <Compile Include="Web\Controllers\AccountMyWorkRecentActivity2Controller.cs" />
+    <Compile Include="Web\Controllers\AccountMyWorkRecentActivityControllerBase`1.cs" />
+    <Compile Include="Web\Controllers\ArtifactUriQuery2Controller.cs" />
+    <Compile Include="Web\Controllers\ArtifactUriQueryController.cs" />
+    <Compile Include="Web\Controllers\Attachment3Controller.cs" />
+    <Compile Include="Web\Controllers\Attachment2Controller.cs" />
+    <Compile Include="Web\Controllers\AttachmentController.cs" />
+    <Compile Include="Web\Controllers\WorkItemComments4Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemCommentReactionsController.cs" />
+    <Compile Include="Web\Controllers\WorkItemComments5Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemCommentVersionsController.cs" />
+    <Compile Include="Web\Controllers\WorkEventsController.cs" />
+    <Compile Include="Web\Controllers\GitHubConnectionController.cs" />
+    <Compile Include="Web\Controllers\Fields2Controller.cs" />
+    <Compile Include="Web\Controllers\Fields3Controller.cs" />
+    <Compile Include="Web\Controllers\FieldsController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeFieldBaseController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeFieldV3Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemFieldAllowedValuesController.cs" />
+    <Compile Include="Web\Controllers\FormLayoutController.cs" />
+    <Compile Include="Web\Controllers\FormLayoutPagesController.cs" />
+    <Compile Include="Web\Controllers\FormLayoutGroupsController.cs" />
+    <Compile Include="Web\Controllers\AccountMyWorkController.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionWorkItemTypesFields2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionWorkItemTypesFieldsControllerBase.cs" />
+    <Compile Include="Web\Controllers\ProcessControllerBase.cs" />
+    <Compile Include="Web\Controllers\Processes2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessAdminBehaviorsController.cs" />
+    <Compile Include="Web\Controllers\ProcessBehaviorsController.cs" />
+    <Compile Include="Web\Controllers\ProcessBehaviors2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessesController.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionBehaviorsController.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionWorkItemTypesController.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionFieldController.cs" />
+    <Compile Include="Web\Controllers\FormLayoutControlsController.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionStateController.cs" />
+    <Compile Include="Web\Controllers\ProcessDefinitionWorkItemTypesFieldsController.cs" />
+    <Compile Include="Web\Controllers\ProcessFieldController.cs" />
+    <Compile Include="Web\Controllers\ArtifactLinkTypeController.cs" />
+    <Compile Include="Web\Controllers\ProcessFormLayoutController.cs" />
+    <Compile Include="Web\Controllers\ProcessFormLayoutControlsController.cs" />
+    <Compile Include="Web\Controllers\ProcessFormLayoutGroupsController.cs" />
+    <Compile Include="Web\Controllers\ProcessFormLayoutPagesController.cs" />
+    <Compile Include="Web\Controllers\ProcessFormLayoutSystemControlsController.cs" />
+    <Compile Include="Web\Controllers\ProcessStates2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessStatesController.cs" />
+    <Compile Include="Web\Controllers\ProcessPickListController.cs" />
+    <Compile Include="Web\Controllers\ProcessWorkItemTypeFieldsController.cs" />
+    <Compile Include="Web\Controllers\ProcessWorkItemTypes2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessWorkItemTypesBehaviorsController.cs" />
+    <Compile Include="Web\Controllers\ProcessWorkItemTypesRules2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessWorkItemTypesRulesController.cs" />
+    <Compile Include="Web\Controllers\ProjectProcessMigrationController.cs" />
+    <Compile Include="Web\Controllers\QueriesBatchController.cs" />
+    <Compile Include="Web\Controllers\TempQueryController.cs" />
+    <Compile Include="Web\Controllers\ReportingLinkFactory.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemLinks4Controller.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemLinks3Controller.cs" />
+    <Compile Include="Web\Controllers\CreateLink`1.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemLinksRequest`1.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemDiscussionsController.cs" />
+    <Compile Include="Web\Controllers\TagsController.cs" />
+    <Compile Include="Web\Controllers\RecycleBin3Controller.cs" />
+    <Compile Include="Web\Controllers\RecycleBin2Controller.cs" />
+    <Compile Include="Web\Controllers\RecycleBinCommonController.cs" />
+    <Compile Include="Web\Controllers\SendMailController.cs" />
+    <Compile Include="Web\Controllers\WorkItem2Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItem5Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItem4Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemBatchController.cs" />
+    <Compile Include="Web\Controllers\WorkItemComments3Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemDeleteBatchController.cs" />
+    <Compile Include="Web\Controllers\WorkItemRevision3Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemRevision2Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemRevisionController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTemplateController.cs" />
+    <Compile Include="Web\Controllers\WorkItemUpdate3Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemUpdate2Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItem3Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemIconController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeColorAndIconController.cs" />
+    <Compile Include="Web\Controllers\WorkItemUpdateBatchController.cs" />
+    <Compile Include="Web\Controllers\WorkItemUpdateBatch2Controller.cs" />
+    <Compile Include="Web\Controllers\ProcessWorkItemTypesController.cs" />
+    <Compile Include="Web\Controllers\WorkItemStateColorController.cs" />
+    <Compile Include="Web\Controllers\AccountMyWorkRecentActivityController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeColorController.cs" />
+    <Compile Include="Web\Controllers\WorkItemPickListController.cs" />
+    <Compile Include="Web\Controllers\AccountRecentMentionsController.cs" />
+    <Compile Include="Web\Controllers\RecycleBinController.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemLinks2Controller.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemLinksControllerBase.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemRevisions2Controller.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemRevisionsControllerBase.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemLinksController.cs" />
+    <Compile Include="Web\Controllers\ReportingWorkItemRevisionsController.cs" />
+    <Compile Include="Web\Controllers\WorkItemComments2Controller.cs" />
+    <Compile Include="Web\Controllers\WorkItemCommentsController.cs" />
+    <Compile Include="Web\Controllers\WorkItemRelationTypesController.cs" />
+    <Compile Include="Web\Controllers\QueryController.cs" />
+    <Compile Include="Web\Controllers\WiqlController.cs" />
+    <Compile Include="Web\Controllers\WorkItemController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTransitionsController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTrackingApiController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeCategoriesController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeStateController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeFieldController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeFieldV2Controller.cs" />
+    <Compile Include="Web\Controllers\ClassificationNodesController.cs" />
+    <Compile Include="Web\Controllers\ProcessImportExportController.cs" />
+    <Compile Include="Web\Controllers\WorkItemUpdateController.cs" />
+    <Compile Include="Web\Controllers\WorkItemTypeTemplateController.cs" />
+    <Compile Include="Web\Controllers\WorkItemHistoryController.cs" />
+    <Compile Include="Web\Controllers\RemoteLinking\RemoteLinkingS2SOnlyController.cs" />
+    <Compile Include="Web\Controllers\Comments\ValidationHelper.cs" />
+    <Compile Include="Web\Controllers\Comments\WorkItemCommentReactionsEngagedUsersController.cs" />
+    <Compile Include="Web\Routing\GitHubConnectionRoutes.cs" />
+    <Compile Include="Web\Routing\SendMailRoute.cs" />
+    <Compile Include="Web\Routing\TempQueryRouter.cs" />
+    <Compile Include="Web\Routing\AccountMyWorkRoutes.cs" />
+    <Compile Include="Web\Routing\ArtifactLinkRoutes.cs" />
+    <Compile Include="Web\Routing\QueriesBatchRoutes.cs" />
+    <Compile Include="Web\Routing\RemoteLinkingRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemCommentRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemDeleteBatchRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemIconRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemPickListRoutes.cs" />
+    <Compile Include="Web\Routing\RecycleBinRoutes.cs" />
+    <Compile Include="Web\Routing\ReportingWorkItemLinksRoutes.cs" />
+    <Compile Include="Web\Routing\ReportingWorkItemRevisionsRoutes.cs" />
+    <Compile Include="Web\Routing\BatchRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemTagsRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemTemplateRoute.cs" />
+    <Compile Include="Web\Routing\WorkItemTransitionsRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemTypeColorAndIconRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemFieldAllowedValuesRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemTypeTemplateRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemTypeCategoriesRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemTypeRoutes.cs" />
+    <Compile Include="Web\Routing\AttachmentRoutes.cs" />
+    <Compile Include="Web\Routing\FieldsRoutes.cs" />
+    <Compile Include="Web\Routing\RelationTypeRoutes.cs" />
+    <Compile Include="Web\Routing\WiqlRoutes.cs" />
+    <Compile Include="Web\Routing\QueryRoutes.cs" />
+    <Compile Include="Web\Routing\ProjectProcessRoutes.cs" />
+    <Compile Include="Web\Routing\ClassificationNodeRoutes.cs" />
+    <Compile Include="Web\Routing\WorkItemRoutes.cs" />
+    <Compile Include="Web\Routing\WorkProcessAdminRoutes.cs" />
+    <Compile Include="Web\Routing\WorkProcessRoutes.cs" />
+    <Compile Include="Web\Models\SendMailBody.cs" />
+    <Compile Include="Web\Models\FieldRuleModel.cs" />
+    <Compile Include="Web\Models\GetWorkItemTypeExpandExtensions.cs" />
+    <Compile Include="Web\Models\AccountRecentMentionWorkItemModel.cs" />
+    <Compile Include="Web\Models\ReportingWorkItemLink.cs" />
+    <Compile Include="Web\Models\RuleActionModel.cs" />
+    <Compile Include="Web\Models\RuleActionType.cs" />
+    <Compile Include="Web\Models\RuleConditionModel.cs" />
+    <Compile Include="Web\Models\RuleConditionType.cs" />
+    <Compile Include="Web\Models\AdminBehavior.cs" />
+    <Compile Include="Web\Models\AdminBehaviorField.cs" />
+    <Compile Include="Web\Models\WorkItemHistory.cs" />
+    <Compile Include="Web\Models\ReportingWorkItemRevisionsBatch.cs" />
+    <Compile Include="Web\Models\StreamingWorkItemRevisionsBatch.cs" />
+    <Compile Include="Web\Models\StreamedBatch`1.cs" />
+    <Compile Include="Web\Models\SmallLoopBatch`1.cs" />
+    <Compile Include="Web\Models\StreamedBatchImpl`1.cs" />
+    <Compile Include="Web\Models\ReportingWorkItemLinksBatch`1.cs" />
+    <Compile Include="Web\Models\StreamingWorkItemLinksBatch`1.cs" />
+    <Compile Include="Web\Models\ReportingWorkItemRevisionsFilter.cs" />
+    <Compile Include="Web\Models\Process\Factories\FieldModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\FieldRuleModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\FieldRuleModelDictionary.cs" />
+    <Compile Include="Web\Models\Process\Factories\PickListItemModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\PickListMetadataModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\PickListModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\ProcessBehaviorFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\ProcessBehaviorFieldFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\ProcessModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\ProcessWorkItemTypeFieldExtensions.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemBehaviorReferenceFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemStateInputModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemStateResultModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemTypeBehaviorModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemTypeModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemBehaviorFieldModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\WorkItemBehaviorModelFactory.cs" />
+    <Compile Include="Web\Models\Process\Factories\ProjectReferenceFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\BehaviorModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\WorkItemBehaviorReferenceFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\WorkItemStateResultModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\WorkItemTypeBehaviorModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\WorkItemTypeModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\FieldModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\PickListItemModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\PickListMetadataModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\PickListModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\WorkItemStateInputModelFactory.cs" />
+    <Compile Include="Web\Models\ProcessDefinitions\Factories\WorkItemTypeFieldModelFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemCommentFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemCommentsFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemTagDefinitionFactory.cs" />
+    <Compile Include="Web\Models\Factories\AttachmentFactory.cs" />
+    <Compile Include="Web\Models\Factories\ProcessWorkItemTypeFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemDeleteShallowReferenceFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemTypeColorAndIconFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemTypeColorFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemUpdateCreateParams.cs" />
+    <Compile Include="Web\Models\Factories\WorkItemUpdateFactory.cs" />
+    <Compile Include="Web\Models\Factories\ProcessCustomization\Process\BasicFieldPropertiesFactory.cs" />
+    <Compile Include="Web\Models\Factories\ProcessCustomization\Process\FieldRulePropertiesFactory.cs" />
+    <Compile Include="Web\Models\Factories\ProcessCustomization\Process\ProcessWorkItemTypeFieldFactory.cs" />
+    <Compile Include="Web\Models\Factories\WorkItem\WorkItemUpdatePayloadParams.cs" />
+    <Compile Include="Web\Extensions\ProcessLayoutExtensions.cs" />
+    <Compile Include="Web\Extensions\LayoutExtensions.cs" />
+    <Compile Include="Web\Batch\BatchCreateRequest.cs" />
+    <Compile Include="Web\Batch\BatchRequest.cs" />
+    <Compile Include="Web\Batch\BatchRequestParameters.cs" />
+    <Compile Include="Web\Batch\BatchUpdateRequest.cs" />
+    <Compile Include="Web\Batch\WorkItemPartialUpdateBatchHandler.cs" />
+    <Compile Include="Web\Batch\QueryGetBatchHandler.cs" />
+    <Compile Include="Web\Batch\BatchHandler.cs" />
+    <Compile Include="Web\Batch\BatchHttpRequestMessage.cs" />
+    <Compile Include="Web\Batch\IBatchHandler.cs" />
+    <Compile Include="Web\Batch\InvalidRouteBatchHandler.cs" />
+    <Compile Include="Web\Batch\WitHttpBatchHandler.cs" />
+    <Compile Include="Web\Batch\UnhandledBatchHandler.cs" />
+    <Compile Include="Web\Batch\WorkItemDeleteBatchHandler.cs" />
+    <Compile Include="Web\Batch\WorkItemDestroyBatchHandler.cs" />
+    <Compile Include="Web\Batch\WorkItemRestoreBatchHandler.cs" />
+    <Compile Include="Web\Batch\WorkItemUpdateBatchHandler.cs" />
+    <Compile Include="Web\Batch\JsonBatchHttpRequest.cs" />
+    <Compile Include="Web\Batch\JsonHttpRequest.cs" />
+    <Compile Include="Web\Batch\JsonBatchHttpResponse.cs" />
+    <Compile Include="Web\Batch\JsonHttpResponse.cs" />
+    <Compile Include="Web\ActionFilters\WitRestCiFilterAttribute.cs" />
+    <Compile Include="WebPreview\Model\ResourceLinkType.cs" />
+    <Compile Include="WebPreview\Model\Link.cs" />
+    <Compile Include="WebPreview\Model\WorkItemLink.cs" />
+    <Compile Include="WebPreview\Model\WorkItemResourceLink.cs" />
+    <Compile Include="WebPreview\Model\LinkUpdateType.cs" />
+    <Compile Include="WebPreview\Model\LinkUpdate.cs" />
+    <Compile Include="WebPreview\Model\WorkItemLinkUpdate.cs" />
+    <Compile Include="WebPreview\Model\WorkItemResourceLinkUpdate.cs" />
+    <Compile Include="WebPreview\Model\LinkUpdateResult.cs" />
+    <Compile Include="WebPreview\Model\WorkItemLinkUpdateResult.cs" />
+    <Compile Include="WebPreview\Model\WorkItemResourceLinkUpdateResult.cs" />
+    <Compile Include="WebPreview\Model\QueryType.cs" />
+    <Compile Include="WebPreview\Model\NodeType.cs" />
+    <Compile Include="WebPreview\Model\QueryReference.cs" />
+    <Compile Include="WebPreview\Model\Query.cs" />
+    <Compile Include="WebPreview\Model\SortField.cs" />
+    <Compile Include="WebPreview\Model\SortDirection.cs" />
+    <Compile Include="WebPreview\Model\QueryResult.cs" />
+    <Compile Include="WebPreview\Model\WorkItem.cs" />
+    <Compile Include="WebPreview\Model\QueryWorkItemLink.cs" />
+    <Compile Include="WebPreview\Model\WorkItemDelta.cs" />
+    <Compile Include="WebPreview\Model\FieldType.cs" />
+    <Compile Include="WebPreview\Model\FieldFlags.cs" />
+    <Compile Include="WebPreview\Model\FieldUsages.cs" />
+    <Compile Include="WebPreview\Model\FieldReference.cs" />
+    <Compile Include="WebPreview\Model\FieldValue.cs" />
+    <Compile Include="WebPreview\Model\FieldValueUpdate.cs" />
+    <Compile Include="WebPreview\Model\WorkItemReference.cs" />
+    <Compile Include="WebPreview\Model\WorkItemUpdate.cs" />
+    <Compile Include="WebPreview\Model\WorkItemUpdateResult.cs" />
+    <Compile Include="WebPreview\Extensions\EnumExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\FieldEntryExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemFieldDataExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemLinkInfoExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemLinkUpdateResultExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemResourceLinkInfoExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemResourceLinkUpdateResultExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemRevisionExtensions.cs" />
+    <Compile Include="WebPreview\Extensions\WorkItemUpdateResultExtensions.cs" />
+    <Compile Include="WebPreview\Common\WitUrlHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_airplane.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_airplane.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_asterisk.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_asterisk.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_book.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_book.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_broken_lightbulb.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_broken_lightbulb.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_car.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_car.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_chart.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_chart.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_chat_bubble.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_chat_bubble.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_check_box.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_check_box.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_clipboard.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_clipboard.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_clipboard_issue.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_clipboard_issue.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_code_response.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_code_response.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_code_review.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_code_review.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_crown.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_crown.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_database_storage.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_database_storage.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_diamond.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_diamond.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_flame.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_flame.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_gavel.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_gavel.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_gear.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_gear.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_gift.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_gift.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_github.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_github.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_github_issue.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_github_issue.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_government.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_government.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_headphone.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_headphone.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_insect.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_insect.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_key.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_key.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_list.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_list.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_megaphone.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_megaphone.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_paint_brush.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_paint_brush.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_palette.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_palette.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_parachute.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_parachute.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_pull_request.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_pull_request.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_response.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_response.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_review.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_review.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_ribbon.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_ribbon.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_star.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_star.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_sticky_note.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_sticky_note.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_beaker.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_beaker.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_case.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_case.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_parameter.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_parameter.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_plan.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_plan.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_step.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_step.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_suite.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_test_suite.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_traffic_cone.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_traffic_cone.xaml" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_trophy.svg" />
+    <EmbeddedResource Include="Web\Resources\WorkItemIcon\icon_trophy.xaml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

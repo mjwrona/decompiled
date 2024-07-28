@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TagDeleteAccessDenied" xml:space="preserve">
+    <value>TF401291: The current user does not have permissions to delete tags.</value>
+  </data>
+  <data name="InvalidProjectUpdate" xml:space="preserve">
+    <value>The project update is invalid.</value>
+  </data>
+  <data name="InTrialMessage" xml:space="preserve">
+    <value>This Azure DevOps Server deployment is in a trial which will expire on {0}. This trial can be completed at any time.</value>
+  </data>
+  <data name="ProcessNotFound" xml:space="preserve">
+    <value>VS402371: Can't find process with id '{0}.</value>
+  </data>
+  <data name="InvalidProjectVisibility" xml:space="preserve">
+    <value>The project visibility specified is invalid. {0} projects are not allowed in this organization.</value>
+  </data>
+  <data name="TrialExpiredMessage" xml:space="preserve">
+    <value>This Azure DevOps Server deployment is currently in a trial which has expired. The trial must now be completed.</value>
+  </data>
+  <data name="InvalidSourceControlType" xml:space="preserve">
+    <value>The source control type '{0}' is invalid. Expected value: Git or Tfvc.</value>
+  </data>
+  <data name="TemporaryDataNotFoundException" xml:space="preserve">
+    <value>VS402349: No data is found. The data is temporary and might be expired.</value>
+  </data>
+  <data name="TeamServiceSafeguardBlockCreateTeamAndAdminOperations_Error" xml:space="preserve">
+    <value>TF403211: Admin operations are temporarily disabled.</value>
+  </data>
+  <data name="UnknownTemporaryDataPropertyMessage" xml:space="preserve">
+    <value>Unknown temporary data property '{0}'</value>
+  </data>
+  <data name="HardDeleteOnHosted" xml:space="preserve">
+    <value>Hard deleting projects is not allowed on Azure DevOps Services.</value>
+  </data>
+  <data name="ProcessLimitInformedExceeded" xml:space="preserve">
+    <value>VS402486: The number of processes has exceeded the limit, {0}.</value>
+  </data>
+  <data name="InvalidTagName" xml:space="preserve">
+    <value>TF400633: Tag name '{0}' is invalid.</value>
+  </data>
+  <data name="InvalidCreateProjectVisibilityLevel" xml:space="preserve">
+    <value>Project visibility cannot be '{0}' when creating a project.</value>
+  </data>
+  <data name="TemporaryDataTooLargeException" xml:space="preserve">
+    <value>VS402348: The data provided was {0} bytes, which is above the maximum of {1} bytes.</value>
+  </data>
+  <data name="ProcessTemplateVersionInvalid" xml:space="preserve">
+    <value>VS402366: Process Template Version with Type {0}, Major Version {1}, Minor Version {2} at scope {3} is not a valid process template version.</value>
+  </data>
+  <data name="PackageManagementFeatureDescription" xml:space="preserve">
+    <value>Store and share Maven, npm, and NuGet packages.</value>
+  </data>
+  <data name="EmptyProjectUri" xml:space="preserve">
+    <value>Project Uri should not be null or empty.</value>
+  </data>
+  <data name="UnableToParseRegistryKeyForProjectLimit" xml:space="preserve">
+    <value>The project limit was not retrieved and parsed correctly from registry key service.</value>
+  </data>
+  <data name="ManageProcessTemplatesPermissionDenied" xml:space="preserve">
+    <value>VS402356: You do not have the ability to manage process templates at scope {0}.</value>
+  </data>
+  <data name="AddAADGroupError" xml:space="preserve">
+    <value>TF400068: There was an error while adding the Microsoft Entra group. Please try again.</value>
+  </data>
+  <data name="EmptyProcessTemplateDataStream" xml:space="preserve">
+    <value>The data stream for the process template is empty</value>
+  </data>
+  <data name="InvalidStateFilter" xml:space="preserve">
+    <value>An invalid state filter was supplied. Please choose from one of the following: {0}</value>
+  </data>
+  <data name="MicrosoftPublishedTFSExtensionsFeatureDescription" xml:space="preserve">
+    <value>Microsoft published Azure DevOps Extensions</value>
+  </data>
+  <data name="TagExceptionWriteAccessDenied" xml:space="preserve">
+    <value>Does not have write permissions on target artifacts.</value>
+  </data>
+  <data name="PROXY_PERMISSION_READ" xml:space="preserve">
+    <value>Read proxies</value>
+  </data>
+  <data name="InvalidProcessTemplateTypeId" xml:space="preserve">
+    <value>The project template type ID '{0}' is invalid.</value>
+  </data>
+  <data name="ManageUsage" xml:space="preserve">
+    <value>Usage</value>
+  </data>
+  <data name="MissingProjectId" xml:space="preserve">
+    <value>Project identifier value was not provided.</value>
+  </data>
+  <data name="MicrosoftPublishedTFSExtensionsFeatureName" xml:space="preserve">
+    <value>Microsoft published Azure DevOps Extensions</value>
+  </data>
+  <data name="TagUpdateAddRemoveConflict" xml:space="preserve">
+    <value>Added tag ids and removed tag ids cannot intersect.</value>
+  </data>
+  <data name="FeatureDisabledError" xml:space="preserve">
+    <value>The feature is disabled. Contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="ProjectLockdown" xml:space="preserve">
+    <value>The service is under temporary maintenance, but please check the &lt;a href="https://go.microsoft.com/fwlink/?LinkId=223676"&gt;service status&lt;/a&gt; page and try again soon.</value>
+  </data>
+  <data name="ProcessTemplatesReadPermissionDenied" xml:space="preserve">
+    <value>VS402364: You do not have permissions to read the process templates.</value>
+  </data>
+  <data name="OverProjectCountLimit" xml:space="preserve">
+    <value>Failed to add a project as this organization already has {0} projects. Please delete unused projects to reduce total project count to under {1} or switch to another organization.</value>
+  </data>
+  <data name="AssemblyDescription" xml:space="preserve">
+    <value>This assembly contains Azure DevOps Specific implementaion that extends the VSS Platform.</value>
+  </data>
+  <data name="DuplicateTemporaryDataIdMessage" xml:space="preserve">
+    <value>Duplicate temporary data guid found ID: {0}, Method: {1}</value>
+  </data>
+  <data name="TemporaryDataInvalid" xml:space="preserve">
+    <value>VS402350: The data provided is invalid. Expected data to be in json format.</value>
+  </data>
+  <data name="RemoveAADGroupError" xml:space="preserve">
+    <value>TF400066: There was an error while removing the Microsoft Entra group. Please try again.</value>
+  </data>
+  <data name="ProcessNameInformedNotUnique" xml:space="preserve">
+    <value>VS402370: Please rename your process, as the process reference name '{0}' is already in use.</value>
+  </data>
+  <data name="CustomProcessTemplateNotSupported" xml:space="preserve">
+    <value>VS402824: Creating a team project using the customized process, {0} ({1}), is not supported from outside Team Explorer. If you want to create a team project with a custom process, please create it from Team Explorer instead. For more information, visit &lt;a href="https://msdn.microsoft.com/Library/vs/alm/overview/create-team-project" target='_blank'&gt;creating a team project&lt;/a&gt;.</value>
+  </data>
+  <data name="TagEnumerateAccessDenied" xml:space="preserve">
+    <value>TF401288: The current user does not have permissions to enumerate tags.</value>
+  </data>
+  <data name="ProjectDescriptionTooLong" xml:space="preserve">
+    <value>The project description was too long ({0} characters). Project descriptions must be less than {1} characters long.</value>
+  </data>
+  <data name="InvalidTagName_InvalidCharactersException" xml:space="preserve">
+    <value>TF401407: The tag name is invalid. It contains invalid characters.</value>
+  </data>
+  <data name="InvalidCollectionName" xml:space="preserve">
+    <value>The collection name is invalid.  The name contains invalid characters, is a reserved name, or exceeds the maximum length.</value>
+  </data>
+  <data name="TrialExpiredCanExtendMessage" xml:space="preserve">
+    <value>This Azure DevOps Server deployment is in a trial which has expired. This trial can be extended to {0}, or it can be completed.</value>
+  </data>
+  <data name="TrialExpiredBanner" xml:space="preserve">
+    <value>The trial for this Azure DevOps Server deployment expired on {0}. An Azure DevOps Server Administrator can complete the trial in the Azure DevOps Server Administration Console.</value>
+  </data>
+  <data name="PropertiesCannotBeUpdated" xml:space="preserve">
+    <value>VS800074: The following properties cannot be updated: {0}.</value>
+  </data>
+  <data name="TeamLimitExceededException" xml:space="preserve">
+    <value>VS403411: This project has {1} teams and exceeds the max limit of {0} teams.</value>
+  </data>
+  <data name="UnableToFindSoftDeletedProject" xml:space="preserve">
+    <value>Cannot find soft deleted project with id '{0}'.</value>
+  </data>
+  <data name="MissingTeamId" xml:space="preserve">
+    <value>Team identifier value was not provided.</value>
+  </data>
+  <data name="ProcessTemplateConnectedToProjects" xml:space="preserve">
+    <value>VS402465: You can't delete process '{0}' because it is used by one or more projects. To delete the process, you need to &lt;a href="https://go.microsoft.com/fwlink/?LinkId=529211" target='_blank'&gt;delete its projects&lt;/a&gt; and try again.</value>
+  </data>
+  <data name="ServiceFriendlyNameAlreadyInUse" xml:space="preserve">
+    <value>VS402477: Service Friendly Name is already in use</value>
+  </data>
+  <data name="TagCreateAccessDenied" xml:space="preserve">
+    <value>TF401289: The current user does not have permissions to create tags.</value>
+  </data>
+  <data name="QueryTeamsInCollectionError" xml:space="preserve">
+    <value>Query teams in collection should be called with system Azure DevOps context.</value>
+  </data>
+  <data name="InvalidConnectedServiceId" xml:space="preserve">
+    <value>Invalid connected service Id. Expected Guid, actual: {0}</value>
+  </data>
+  <data name="InvalidToken" xml:space="preserve">
+    <value>The provided token, {0}, is invalid.</value>
+  </data>
+  <data name="TagUpdateAccessDenied" xml:space="preserve">
+    <value>TF401290: The current user does not have permissions to update tags.</value>
+  </data>
+  <data name="CatalogProjectDescriptionChange" xml:space="preserve">
+    <value>VS402451: Team Project description may no longer be changed from the catalog.  Use UpdateProject from IProjectService or ProjectHttpClient.</value>
+  </data>
+  <data name="MissingTeamData" xml:space="preserve">
+    <value>Team data was not provided.</value>
+  </data>
+  <data name="LicenseNotFound" xml:space="preserve">
+    <value>Could not find license information for {0}</value>
+  </data>
+  <data name="ProcessTemplateInvalidScopeStatusUpdate" xml:space="preserve">
+    <value>VS402368: Deployment Scope template status cannot be updated by user.</value>
+  </data>
+  <data name="TrialExpiredCanExtendBanner" xml:space="preserve">
+    <value>The trial for this Azure DevOps Server deployment expired on {0}. An Azure DevOps Administrator can extend or complete the trial in the Azure DevOps Administration Console.</value>
+  </data>
+  <data name="DefaultProcessTemplate" xml:space="preserve">
+    <value>VS402466: You can't delete process '{0}' because it is the default process. To delete the process, you need to &lt;a href="https://go.microsoft.com/fwlink/?LinkId=529212" target='_blank'&gt;change the default process&lt;/a&gt; and try again.</value>
+  </data>
+  <data name="PROXY_PERMISSION_MANAGE" xml:space="preserve">
+    <value>Manage proxies</value>
+  </data>
+  <data name="InvalidSubscriptionToken" xml:space="preserve">
+    <value>The subscription does not reference a valid project</value>
+  </data>
+  <data name="InvalidServiceEndpointUrl" xml:space="preserve">
+    <value>Invalid connected service URL: {0}</value>
+  </data>
+  <data name="InvalidProjectCreate" xml:space="preserve">
+    <value>The project information supplied to project create is invalid. You must provide all and only these properties/capabilities: name, description, visibility, capabilities.versioncontrol.sourceControlType, capabilities.processTemplate.templateTypeId.</value>
+  </data>
+  <data name="CannotDeleteDefaultTeamMessage" xml:space="preserve">
+    <value>The team '{0}' cannot be deleted since it is a default team for this project. Please change the default team to another team from project settings if you want to delete this team.</value>
+  </data>
+  <data name="InvalidSubscriptionProjectReference" xml:space="preserve">
+    <value>The subscription referenced multiple projects when only one is allowed: </value>
+  </data>
+  <data name="ProcessTemplateInvalid" xml:space="preserve">
+    <value>The specified process template is invalid.</value>
+  </data>
+  <data name="PackageManagementFeatureName" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+</root>

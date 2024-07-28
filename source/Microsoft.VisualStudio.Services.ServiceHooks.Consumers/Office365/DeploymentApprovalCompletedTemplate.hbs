@@ -1,0 +1,21 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape message.text}}}",
+    "themeColor": "{{{jsonEscape data.color}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+            "activityTitle": "{{{jsonEscape message.markdown}}}",
+            "activitySubtitle": "{{{jsonEscape resource.approval.approvedBy['displayName']}}} {{{resource.approval.status}}} [{{{jsonEscape resource.release.releaseDefinition.name}}}]({{{jsonEscape resource.release.releaseDefinition._links.web.href}}}) : [{{{jsonEscape resource.release['name']}}}]({{{jsonEscape resource.release._links.web.href}}}) on {{{jsonEscape resource.approval.modifiedOn}}} UTC",
+            "activityText": null,
+            "activityImage": "{{{iconUrl data.iconFileName}}}",
+            "activityImageType": "article"
+        }
+    ],
+    "potentialAction": []
+}

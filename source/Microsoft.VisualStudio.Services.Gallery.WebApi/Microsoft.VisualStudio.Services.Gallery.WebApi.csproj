@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Gallery.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4ED0A0A5-B802-4A5C-8C31-12BFC75098EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Gallery.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Gallery.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Gallery\GalleryResourceIds.cs" />
+    <Compile Include="Answers.cs" />
+    <Compile Include="AssetDetails.cs" />
+    <Compile Include="AzureRestApiRequestModel.cs" />
+    <Compile Include="GalleryConstants.cs" />
+    <Compile Include="StatisticType.cs" />
+    <Compile Include="ExtensionStatTypeConstants.cs" />
+    <Compile Include="VSCodeWebExtensionStatisicsType.cs" />
+    <Compile Include="VSExtensionScenario.cs" />
+    <Compile Include="AcquisitionConstants.cs" />
+    <Compile Include="NewPublisherExpConstants.cs" />
+    <Compile Include="GalleryProductTypes.cs" />
+    <Compile Include="BadgeConstants.cs" />
+    <Compile Include="ExtensionMetadataConstants.cs" />
+    <Compile Include="ProductStatisticType.cs" />
+    <Compile Include="GalleryCookieConsentConstants.cs" />
+    <Compile Include="DefaultSupportedProductArchitectures.cs" />
+    <Compile Include="PublisherExistsException.cs" />
+    <Compile Include="PublisherDoesNotExistException.cs" />
+    <Compile Include="PublisherVerifiedNameChangeException.cs" />
+    <Compile Include="PublisherLimitExceededException.cs" />
+    <Compile Include="PublisherDomainDoesNotExistException.cs" />
+    <Compile Include="TokenNotFoundInDnsTxtRecordsException.cs" />
+    <Compile Include="DnsTokenNotVerifiedException.cs" />
+    <Compile Include="InvalidUpdateOperationException.cs" />
+    <Compile Include="ExtensionExistsException.cs" />
+    <Compile Include="ExtensionDoesNotExistException.cs" />
+    <Compile Include="InvalidPackageFormatException.cs" />
+    <Compile Include="InvalidPackageException.cs" />
+    <Compile Include="PackageValidationWarningException.cs" />
+    <Compile Include="CharacterLimitExceededException.cs" />
+    <Compile Include="VersionMismatchException.cs" />
+    <Compile Include="CleanUpLegacyAccountException.cs" />
+    <Compile Include="InvalidVersionException.cs" />
+    <Compile Include="ExtensionVersionNotFoundException.cs" />
+    <Compile Include="ExtensionAssetNotFoundException.cs" />
+    <Compile Include="ExtensionAssetAlreadyExistsException.cs" />
+    <Compile Include="InvalidTagException.cs" />
+    <Compile Include="InvalidExtensionDefinitionException.cs" />
+    <Compile Include="InvalidExtensionQueryException.cs" />
+    <Compile Include="ExtensionMustBePrivateException.cs" />
+    <Compile Include="ExtensionValidationException.cs" />
+    <Compile Include="VerifiedPublisherRequiredException.cs" />
+    <Compile Include="VersionValidationException.cs" />
+    <Compile Include="BlockedHostValidationException.cs" />
+    <Compile Include="ReviewExistsException.cs" />
+    <Compile Include="AnonymousReviewSubmissionException.cs" />
+    <Compile Include="AnonymousCustomerSupportRequestException.cs" />
+    <Compile Include="CSRAuthorIdentityMismatchException.cs" />
+    <Compile Include="AnonymousReviewUpdationException.cs" />
+    <Compile Include="ReviewAlreadyReportedException.cs" />
+    <Compile Include="AnonymouslyReviewReportedException.cs" />
+    <Compile Include="ReviewPatchOperationNotSupportedException.cs" />
+    <Compile Include="ReviewDoesNotExistException.cs" />
+    <Compile Include="AzurePublisherDoesNotExistException.cs" />
+    <Compile Include="AzurePublisherExistsException.cs" />
+    <Compile Include="VersionNotIncrementedException.cs" />
+    <Compile Include="PuidExistsException.cs" />
+    <Compile Include="InvalidSettingKeyException.cs" />
+    <Compile Include="ExtensionSizeExceededException.cs" />
+    <Compile Include="VsIdeExtensionNotSupported.cs" />
+    <Compile Include="ExtensionDailyStatsNotSupportedException.cs" />
+    <Compile Include="ExtensionDailyStatsAccessDeniedException.cs" />
+    <Compile Include="ExtensionDailyStatsAnonymousAccessException.cs" />
+    <Compile Include="ExtensionEventsDoNotExistException.cs" />
+    <Compile Include="ExtensionDailyStatsVersionMismatchException.cs" />
+    <Compile Include="CustomerContactNotAllowedException.cs" />
+    <Compile Include="MethodNotAvailableException.cs" />
+    <Compile Include="AnonymousQnASubmissionException.cs" />
+    <Compile Include="AnonymousQnAUpdationException.cs" />
+    <Compile Include="QnAItemDoesNotExistException.cs" />
+    <Compile Include="QnAOperationForbidden.cs" />
+    <Compile Include="QnAUnhandledException.cs" />
+    <Compile Include="ExtensionAssetAccessNotSupportedException.cs" />
+    <Compile Include="QnAItemAlreadyReportedException.cs" />
+    <Compile Include="QnAQuestionIdNotSpecifiedException.cs" />
+    <Compile Include="ValidationStepInvalidParentIdException.cs" />
+    <Compile Include="ValidationStepInvalidStepIdException.cs" />
+    <Compile Include="VerificationLogNotFoundException.cs" />
+    <Compile Include="SvgFromNonAllowedHostException.cs" />
+    <Compile Include="ExtensionDraftNotFoundException.cs" />
+    <Compile Include="ExtensionLinkTypeDisabledException.cs" />
+    <Compile Include="ExtensionDraftTooManyEditsException.cs" />
+    <Compile Include="ExtensionAssetCountLimitExceededException.cs" />
+    <Compile Include="DraftIdDoesNotExistException.cs" />
+    <Compile Include="PublisherMetadataLengthExceededMaxLimitException.cs" />
+    <Compile Include="PublisherMetadataSerializationException.cs" />
+    <Compile Include="InvalidScanItemException.cs" />
+    <Compile Include="PublisherMetadataDeserializationException.cs" />
+    <Compile Include="InvalidPublisherStateTransition.cs" />
+    <Compile Include="PublisherSpamValidationException.cs" />
+    <Compile Include="CSRCreateThresholdExceededException.cs" />
+    <Compile Include="UrlsNotAllowedinPublisherProfileException.cs" />
+    <Compile Include="InvalidReCaptchaTokenException.cs" />
+    <Compile Include="InvalidGDPRServiceBusConnectionStringException.cs" />
+    <Compile Include="InvalidKeyException.cs" />
+    <Compile Include="InvalidCategoryException.cs" />
+    <Compile Include="ExtensionScopesChangedException.cs" />
+    <Compile Include="ExternalSearchException.cs" />
+    <Compile Include="ExtensionVersionAlreadyExistsException.cs" />
+    <Compile Include="ExtensionVersionWithTargetPlatformAlreadyExistsExc.cs" />
+    <Compile Include="ExtensionVersionHasNoSupportForRequestedTargetPlat.cs" />
+    <Compile Include="DuplicateExtensionNameException.cs" />
+    <Compile Include="DuplicateExtensionDisplayNameException.cs" />
+    <Compile Include="SimilarExtensionDisplayNameException.cs" />
+    <Compile Include="SimilarExtensionNameException.cs" />
+    <Compile Include="VSCodeExtensionInvalidPricingTagException.cs" />
+    <Compile Include="ExtensionCreationLimitExceedException.cs" />
+    <Compile Include="VsExtensionVersionImmutabilityException.cs" />
+    <Compile Include="VsVersionNotAllowedForConsolidationException.cs" />
+    <Compile Include="PmpUploadServiceBadRequestException.cs" />
+    <Compile Include="UpdateStatisticsJobException.cs" />
+    <Compile Include="ExtensionTagsLimitExceededException.cs" />
+    <Compile Include="InvalidPublisherNameException.cs" />
+    <Compile Include="ExtensionFile.cs" />
+    <Compile Include="ExtensionIdentifier.cs" />
+    <Compile Include="ExtensionPackage.cs" />
+    <Compile Include="ExtensionPolicyFlags.cs" />
+    <Compile Include="ExtensionPolicy.cs" />
+    <Compile Include="UserExtensionPolicy.cs" />
+    <Compile Include="WellKnownTags.cs" />
+    <Compile Include="ExtensionQueryFilterType.cs" />
+    <Compile Include="SortByType.cs" />
+    <Compile Include="SortOrderType.cs" />
+    <Compile Include="ExtensionQuery.cs" />
+    <Compile Include="ExtensionQueryResult.cs" />
+    <Compile Include="ExtensionFilterResult.cs" />
+    <Compile Include="ExtensionFilterResultMetadata.cs" />
+    <Compile Include="MetadataItem.cs" />
+    <Compile Include="EqlParams.cs" />
+    <Compile Include="PublishedExtensionFlags.cs" />
+    <Compile Include="ExtensionVersionFlags.cs" />
+    <Compile Include="ExtensionDeploymentTechnology.cs" />
+    <Compile Include="ValidationStatusCode.cs" />
+    <Compile Include="ExtensionQueryFlags.cs" />
+    <Compile Include="ExtensionQueryResultMetadataFlags.cs" />
+    <Compile Include="ExtensionShare.cs" />
+    <Compile Include="ExtensionMetadata.cs" />
+    <Compile Include="PublisherFacts.cs" />
+    <Compile Include="PublishedExtension.cs" />
+    <Compile Include="ExtensionVersion.cs" />
+    <Compile Include="ExtensionCategory.cs" />
+    <Compile Include="CategoryLanguageTitle.cs" />
+    <Compile Include="CategoriesResult.cs" />
+    <Compile Include="ProductCategoriesResult.cs" />
+    <Compile Include="ProductCategory.cs" />
+    <Compile Include="AccountCollectionMapping.cs" />
+    <Compile Include="PublishedExtensionUpdate.cs" />
+    <Compile Include="ExtensionDailyStats.cs" />
+    <Compile Include="ExtensionDailyStat.cs" />
+    <Compile Include="EventCounts.cs" />
+    <Compile Include="ExtensionEvents.cs" />
+    <Compile Include="ExtensionEvent.cs" />
+    <Compile Include="ReviewEventProperties.cs" />
+    <Compile Include="ReviewResourceType.cs" />
+    <Compile Include="ReviewEventOperation.cs" />
+    <Compile Include="ExtensionLifecycleEventType.cs" />
+    <Compile Include="ExtensionStatsAggregateType.cs" />
+    <Compile Include="SheetColumnData.cs" />
+    <Compile Include="ExtensionLifecycleWellKnownEvents.cs" />
+    <Compile Include="CustomerLastContact.cs" />
+    <Compile Include="DailyStatType.cs" />
+    <Compile Include="ExtensionDailyStatsConstants.cs" />
+    <Compile Include="ExtensionEventPropertyConstants.cs" />
+    <Compile Include="LastContactKeyConstants.cs" />
+    <Compile Include="ExtensionReportConstants.cs" />
+    <Compile Include="EnvironmentTypeConstants.cs" />
+    <Compile Include="NotificationsData.cs" />
+    <Compile Include="NotificationTemplateType.cs" />
+    <Compile Include="GalleryUtil.cs" />
+    <Compile Include="GalleryHttpClient.cs" />
+    <Compile Include="GalleryCompatHttpClientBase.cs" />
+    <Compile Include="PackageDetails.cs" />
+    <Compile Include="PackageManifest.cs" />
+    <Compile Include="ManifestMetadata.cs" />
+    <Compile Include="ManifestIdentity.cs" />
+    <Compile Include="ManifestFile.cs" />
+    <Compile Include="ExtensionProperty.cs" />
+    <Compile Include="ExtensionBadge.cs" />
+    <Compile Include="InstallationTarget.cs" />
+    <Compile Include="PublisherDetails.cs" />
+    <Compile Include="PackageManifestInternal.cs" />
+    <Compile Include="ManifestMetadataInternal.cs" />
+    <Compile Include="VSIXPackage.cs" />
+    <Compile Include="AzurePublisher.cs" />
+    <Compile Include="PublisherFlags.cs" />
+    <Compile Include="PublisherQueryFlags.cs" />
+    <Compile Include="PublisherState.cs" />
+    <Compile Include="PublisherBase.cs" />
+    <Compile Include="Publisher.cs" />
+    <Compile Include="PublisherQueryFilterType.cs" />
+    <Compile Include="PublisherQuery.cs" />
+    <Compile Include="PublisherQueryResult.cs" />
+    <Compile Include="PublisherFilterResult.cs" />
+    <Compile Include="PublisherPermissions.cs" />
+    <Compile Include="PublisherSecurityRole.cs" />
+    <Compile Include="PublisherRoleAccess.cs" />
+    <Compile Include="PublisherRoleAssignment.cs" />
+    <Compile Include="PublisherUserRoleAssignmentRef.cs" />
+    <Compile Include="PagingDirection.cs" />
+    <Compile Include="FilterCriteria.cs" />
+    <Compile Include="QueryFilter.cs" />
+    <Compile Include="Review.cs" />
+    <Compile Include="ReviewsResult.cs" />
+    <Compile Include="ReviewSummary.cs" />
+    <Compile Include="RatingCountPerRating.cs" />
+    <Compile Include="UserReportedConcern.cs" />
+    <Compile Include="ConcernCategory.cs" />
+    <Compile Include="ReviewPatch.cs" />
+    <Compile Include="ReviewReply.cs" />
+    <Compile Include="ReviewPatchOperation.cs" />
+    <Compile Include="ReviewFilterOptions.cs" />
+    <Compile Include="ReviewsConstants.cs" />
+    <Compile Include="CustomerSupportRequest.cs" />
+    <Compile Include="ExtensionStatistic.cs" />
+    <Compile Include="ExtensionStatisticOperation.cs" />
+    <Compile Include="ExtensionStatisticUpdate.cs" />
+    <Compile Include="SigningKey.cs" />
+    <Compile Include="SigningKeyPermissions.cs" />
+    <Compile Include="JwtHeader.cs" />
+    <Compile Include="JwtClaims.cs" />
+    <Compile Include="TokenManagement.cs" />
+    <Compile Include="InvalidTokenException.cs" />
+    <Compile Include="InvalidSignatureException.cs" />
+    <Compile Include="IImageResizeUtility.cs" />
+    <Compile Include="Badge.cs" />
+    <Compile Include="UserIdentityRef.cs" />
+    <Compile Include="QnAItemStatus.cs" />
+    <Compile Include="QnAItem.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionsResult.cs" />
+    <Compile Include="Concern.cs" />
+    <Compile Include="QnAConstants.cs" />
+    <Compile Include="QnAItemType.cs" />
+    <Compile Include="ExtensionDraft.cs" />
+    <Compile Include="ExtensionPayload.cs" />
+    <Compile Include="UnpackagedExtensionData.cs" />
+    <Compile Include="ExtensionDraftAsset.cs" />
+    <Compile Include="ExtensionDraftPatch.cs" />
+    <Compile Include="DraftStateType.cs" />
+    <Compile Include="VsExtensionType.cs" />
+    <Compile Include="DraftPatchOperation.cs" />
+    <Compile Include="DefaultImageResizeUtility.cs" />
+    <Compile Include="GalleryWebApiResources.cs" />
+    <Compile Include="Commerce\AzureRestApiConstants.cs" />
+    <Compile Include="Commerce\AzureRestApiResponseModel.cs" />
+    <Compile Include="Commerce\RestApiResponseStatusModel.cs" />
+    <Compile Include="Commerce\RestApiResponseStatus.cs" />
+    <Compile Include="AcquisitionRequest\AcquisitionOperationType.cs" />
+    <Compile Include="AcquisitionRequest\AcquisitionOperationState.cs" />
+    <Compile Include="AcquisitionRequest\AcquisitionOperation.cs" />
+    <Compile Include="AcquisitionRequest\AcquisitionAssignmentType.cs" />
+    <Compile Include="AcquisitionRequest\ExtensionAcquisitionRequest.cs" />
+    <Compile Include="AcquisitionOption\AcquisitionOptions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

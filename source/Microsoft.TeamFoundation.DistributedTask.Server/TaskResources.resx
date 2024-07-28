@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PrivateTaskAgentInvalidProvisioningState" xml:space="preserve">
+    <value>The provisioning state {0} is invalid for private agents.</value>
+  </data>
+  <data name="PoolAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to manage the agent pool.</value>
+  </data>
+  <data name="TaskDefinitionAlreadyUploaded" xml:space="preserve">
+    <value>A task definition with ID '{0}', name '{1}' has already been uploaded. To replace the existing definition, provide a task version which is greater than '{2}'.</value>
+  </data>
+  <data name="QueueExists" xml:space="preserve">
+    <value>Agent pool {0} already exists.</value>
+  </data>
+  <data name="AdministratorRole" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="ServiceEndpointAccessDeniedForReadOperation" xml:space="preserve">
+    <value>You are not a 'User' on {0} service connection in project {1}. A service connection Administrator should add you to the User role.</value>
+  </data>
+  <data name="ClassicPipelinesDisabled" xml:space="preserve">
+    <value>The classic pipelines are disabled for this project / organization.</value>
+  </data>
+  <data name="DuplicatePoolNameAndTypeExceptionMessage" xml:space="preserve">
+    <value>Cannot create pool with name {0} and type {1}. Pool {2} already exists with identical name and type.</value>
+  </data>
+  <data name="PlanNotFound" xml:space="preserve">
+    <value>No plan found for identifier {0}.</value>
+  </data>
+  <data name="ProjectContributorsGroupName" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="MetaTaskMissingChildTask" xml:space="preserve">
+    <value>Unable to expand task group due to missing child task. id: {0} and display name: {1}</value>
+  </data>
+  <data name="VirtualMachineGroupsShouldUseDeploymentPools" xml:space="preserve">
+    <value>Service group of type VirtualMachine, should only refer to agent pools of type 'Deployment'.</value>
+  </data>
+  <data name="AgentPoolCannotBeDeletedDuringUpgrade" xml:space="preserve">
+    <value>Agent pools cannot be deleted during the upgrade process. Try the operation again after a few minutes.</value>
+  </data>
+  <data name="AgentCloudDoesNotSupportStatus" xml:space="preserve">
+    <value>This agent cloud does not support more specific status information.</value>
+  </data>
+  <data name="EnvironmentPoolNotFound" xml:space="preserve">
+    <value>Pool is not configured for Enviroment {0}.</value>
+  </data>
+  <data name="PoolRootScopeName" xml:space="preserve">
+    <value>Agent Pools</value>
+  </data>
+  <data name="TaskDefinitionDuplicateFound" xml:space="preserve">
+    <value>More than one tasks found for ID {0} and version {1}.</value>
+  </data>
+  <data name="CannotEditIsLegacyOnPool" xml:space="preserve">
+    <value>Unable to update IsLegacy property on an existing Agent Pool.</value>
+  </data>
+  <data name="DeploymentGroupExistsWithPool" xml:space="preserve">
+    <value>Deployment Group {0}, already exists for the given pool ID {1}</value>
+  </data>
+  <data name="PoolReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the agent pools.</value>
+  </data>
+  <data name="EnvironmentResourceExists" xml:space="preserve">
+    <value>Resource  '{0}' already exists in current environment.</value>
+  </data>
+  <data name="JobCanceledByPoolProvider" xml:space="preserve">
+    <value>The job was canceled by pool provider.</value>
+  </data>
+  <data name="AgentCloudRequestAlreadyCompleted" xml:space="preserve">
+    <value>Agent cloud request {1} for agent cloud {0} is already completed and cannot be modified.</value>
+  </data>
+  <data name="VMRunOnceNotSupported" xml:space="preserve">
+    <value>Run once strategy is not supported for Virtual Machine resources.</value>
+  </data>
+  <data name="DeleteMetaTask" xml:space="preserve">
+    <value>Delete task group</value>
+  </data>
+  <data name="VariableGroupEmptyError" xml:space="preserve">
+    <value>Variable group must have at least one variable defined.</value>
+  </data>
+  <data name="TaskGroupCyclicDependencyPathItemFormat" xml:space="preserve">
+    <value>{0} &gt; {1}</value>
+  </data>
+  <data name="InvalidVariableGroupVariableLength" xml:space="preserve">
+    <value>Length of variable '{0}' is invalid. It must be between {1} and {2} characters. If you cannot shorten it, please consider storing it in Azure key-vault, and linking it to a variable group as per &lt;a href="https://docs.microsoft.com/en-us/vsts/pipelines/library/variable-groups?view=vsts#link-secrets-from-an-azure-key-vault-as-variables" target ="_blank"&gt;this link&lt;/a&gt;. Another option is to keep it in &lt;a href="https://docs.microsoft.com/en-us/vsts/pipelines/library/secure-files?view=vsts" target ="_blank"&gt;secure files&lt;/a&gt;.</value>
+  </data>
+  <data name="PersistedStageGroupAlreadyMapped" xml:space="preserve">
+    <value>Persisted stage with name '{0}' is already mapped to group '{1}' for pipeline run ID {2} of pipeline definition ID {3}.</value>
+  </data>
+  <data name="PoolServicePrincipalsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include service principals for managing pools in service to service scenarios.</value>
+  </data>
+  <data name="UsingDeprecatedAgents" xml:space="preserve">
+    <value>No supported agent found in pool {0}. All agents in this pool are using a version that is deprecated. Migrate to the latest 2.x version of agent. For more information, see https://go.microsoft.com/fwlink/?linkid=851067.</value>
+  </data>
+  <data name="TaskGroupRevisionAlreadyExists" xml:space="preserve">
+    <value>Task group {0} revision {1} already exists.</value>
+  </data>
+  <data name="AgentCloudExists" xml:space="preserve">
+    <value>An agent cloud with the name {0} already exists.</value>
+  </data>
+  <data name="InvalidAgentVersion" xml:space="preserve">
+    <value>The agent version cannot be empty and must be of the format major.minor.patch.build[-semver].</value>
+  </data>
+  <data name="AgentCloudRequestNotFound" xml:space="preserve">
+    <value>An agent cloud request with ID {1} for agent cloud {0} does not exist.</value>
+  </data>
+  <data name="NoResourceFoundWithSpecifiedFilter" xml:space="preserve">
+    <value>No resource were found in the environment with ID {0} matching the specified criteria: ResourceId {1}, ResourceName {2}, ResourceType {3}, Tags {4}.</value>
+  </data>
+  <data name="CreateEndpoint" xml:space="preserve">
+    <value>Create Service Connection</value>
+  </data>
+  <data name="EndpointIdsAndNamesAreExclusive" xml:space="preserve">
+    <value>Only one of endpointIds or endpointNames may be specified.</value>
+  </data>
+  <data name="ProjectBuildAdminAccountName" xml:space="preserve">
+    <value>Build Administrators</value>
+  </data>
+  <data name="ViewEndpoint" xml:space="preserve">
+    <value>View Service Connection</value>
+  </data>
+  <data name="EnvironmentPoolExists" xml:space="preserve">
+    <value>A Deployment Pool with Id {0} is already registered against Environment with Id {1}.</value>
+  </data>
+  <data name="EnvironmentExists" xml:space="preserve">
+    <value>Environment '{0}' already exists.</value>
+  </data>
+  <data name="InvalidUrlLength" xml:space="preserve">
+    <value>The URL specified for parameter {0} is not valid. A valid URL is less than or equal to 128 characters in length.</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="AgentCloudNotFound" xml:space="preserve">
+    <value>An agent cloud with the ID {0} does not exist.</value>
+  </data>
+  <data name="AKSRollingNotSupported" xml:space="preserve">
+    <value>Rolling strategy is not supported for Kubernates resources.</value>
+  </data>
+  <data name="InsufficientPoolPermission" xml:space="preserve">
+    <value>You do not have manage permissions on the pools.</value>
+  </data>
+  <data name="InvalidResourceName" xml:space="preserve">
+    <value>Resource name '{0}' is not valid. A valid name is less than 256 characters in length and does not contain the following characters: ',', '"', '/', '\', '[', ']', ':', '|', '&lt;', '&gt;', '+', '=', ';', '?', and '*'.</value>
+  </data>
+  <data name="TaskDefinitionCouldNotBeDeserialized" xml:space="preserve">
+    <value>The task.json could not be deserialized.</value>
+  </data>
+  <data name="VirtualMachineResourceLinkedPoolNull" xml:space="preserve">
+    <value>Failed to add virtual machine resource. Linked environment pool is null. </value>
+  </data>
+  <data name="InvalidTaskGroupInput" xml:space="preserve">
+    <value>Input TaskGroup parameter cannot be null.</value>
+  </data>
+  <data name="InvalidDeploymentStrategy" xml:space="preserve">
+    <value>Deployment strategy: '{0}' is not supported for {1} scoped target.</value>
+  </data>
+  <data name="AgentPoolRemoved" xml:space="preserve">
+    <value>The hosted agent pool '{0}' has been removed, and is no longer available. Instructions for moving your builds can be found here: {1}</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="InvalidPoolName" xml:space="preserve">
+    <value>The pool name '{0}' is not valid.</value>
+  </data>
+  <data name="EnvironmentCreatorRoleDescription" xml:space="preserve">
+    <value>Creator can create and view environments.</value>
+  </data>
+  <data name="RequestedBy" xml:space="preserve">
+    <value>Requested by {0}</value>
+  </data>
+  <data name="AgentCloudRequestExists" xml:space="preserve">
+    <value>An existing agent cloud request for agent {1} in pool {0} is still in progess.</value>
+  </data>
+  <data name="ViewAuthorization" xml:space="preserve">
+    <value>View Authorization</value>
+  </data>
+  <data name="DeploymentStrategyNotMet" xml:space="preserve">
+    <value>Unable to deploy to the virtual machine '{0}' as the deployment strategy configuration settings are not met.</value>
+  </data>
+  <data name="InternalCloudAgentDefinitionNotFoundExceptionMessage" xml:space="preserve">
+    <value>No InternalCloudAgentDefinition with the identifier '{0}' exists.</value>
+  </data>
+  <data name="InvalidEnvironmentVirtualMachineResourceName" xml:space="preserve">
+    <value>Invalid Virtual Machine resource name '{0}'.</value>
+  </data>
+  <data name="Issues" xml:space="preserve">
+    <value>Issues</value>
+  </data>
+  <data name="InvalidDeploymentTargetTagLength" xml:space="preserve">
+    <value>Deployment target tag {0} is too long. The maximum allowed length for a tag is 256 characters.</value>
+  </data>
+  <data name="DeploymentGroupAdministratorsGroup" xml:space="preserve">
+    <value>Deployment Group Administrators</value>
+  </data>
+  <data name="DeploymentGroupsExpandMachinesDeprecated" xml:space="preserve">
+    <value>‘DeploymentGroupExpands.Machines’ option is no longer supported. You need to query individual deployment group to get the machine details.</value>
+  </data>
+  <data name="InvalidTaskDefinitionTypeForTask" xml:space="preserve">
+    <value>Invalid TaskDefinitionType '{0}' is provided for task '{1}'. Provide valid value '{2}' and try again.</value>
+  </data>
+  <data name="AccessDeniedForEnvironment" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions on environment {2} to perform the action.</value>
+  </data>
+  <data name="AgentPendingUpdateExists" xml:space="preserve">
+    <value>User {0} has already requested an agent update for agent {1} on {2}.</value>
+  </data>
+  <data name="Listen" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="AgentRequestFailedDueToExpiration" xml:space="preserve">
+    <value>This request was automatically failed because there were no enabled agents online to process the request for more than {0}.</value>
+  </data>
+  <data name="QueueAdministratorsGroupName" xml:space="preserve">
+    <value>Agent Queue Administrators</value>
+  </data>
+  <data name="SecureFileExists" xml:space="preserve">
+    <value>Secure file '{0}' already exists.</value>
+  </data>
+  <data name="GetAgentRequestsForDeploymentMachinesApiDeprecated" xml:space="preserve">
+    <value>GetAgentRequestsForDeploymentMachinesAsync API is no longer supported. If you are using REST clients, use GetAgentRequestsForDeploymentTargetsAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="DemandsNotMet" xml:space="preserve">
+    <value>Unable to deploy to the virtual machine '{0}' as some of the following demands are missing: [{1}]. Ensure the machine meets the specified demands and try again.</value>
+  </data>
+  <data name="AgentPoolReferencesDifferentAgentCloud" xml:space="preserve">
+    <value>The pool with ID {0} references the agent cloud with ID {1} not {2}.</value>
+  </data>
+  <data name="KubernetesResourcesDeletionFailed" xml:space="preserve">
+    <value>Failed to delete Kubernetes resources in the environment '{0}'. Unable to delete service connection of the resource '{1}'. {2}</value>
+  </data>
+  <data name="ServiceAccountRole" xml:space="preserve">
+    <value>Service Account</value>
+  </data>
+  <data name="ElasticPoolInvalidAgentPoolExceptionMessage" xml:space="preserve">
+    <value>Agent pool cannot be null or have an Id equal to 0</value>
+  </data>
+  <data name="MigrateDeploymentGroupsNotSupported" xml:space="preserve">
+    <value>This feature is available on on-premises Azure DevOps Server only.</value>
+  </data>
+  <data name="EnvironmentUserRoleDescription" xml:space="preserve">
+    <value>User can view and share the environment with projects on which they have create environment privileges.</value>
+  </data>
+  <data name="IllegalBuilderState" xml:space="preserve">
+    <value>Not all build options have been provided.</value>
+  </data>
+  <data name="InValidTaskGroupUpdateProperties" xml:space="preserve">
+    <value>Invalid Properties sent as body for this request.</value>
+  </data>
+  <data name="EditAgentPool" xml:space="preserve">
+    <value>Edit Agent Pool</value>
+  </data>
+  <data name="GlobalMachineGroupAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer, manage, view and use deployment groups.</value>
+  </data>
+  <data name="TaskInputValidationInvalid" xml:space="preserve">
+    <value>For task input '{0}', the validation '{1}', is invalid: '{2}'</value>
+  </data>
+  <data name="VirtualMachineNotFound" xml:space="preserve">
+    <value>Virtual machine with ID '{0}' not found.</value>
+  </data>
+  <data name="UnableToAddDeploymentAgent" xml:space="preserve">
+    <value>Agent version not compatible with service. Please download latest agent and retry configuration of agent. Refer https://aka.ms/yo4v97 for how to register machine with latest agent.</value>
+  </data>
+  <data name="VirtualMachineResourceAgentMismatch" xml:space="preserve">
+    <value>Provided Agent Id doesnot match with exisitng agent Id.</value>
+  </data>
+  <data name="LibraryCollectionAdminRoleDescription" xml:space="preserve">
+    <value>Organization/Collection Administrator can use, manage and share the library items.</value>
+  </data>
+  <data name="NoMachineFound" xml:space="preserve">
+    <value>No virtual machine found in given virtual machines group.</value>
+  </data>
+  <data name="InvalidResourcesType" xml:space="preserve">
+    <value>Invalid resource type is provided.</value>
+  </data>
+  <data name="VariableGroupAccessDeniedForAdminOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the variable group. A variable group Administrator should add you to the Administrator role.</value>
+  </data>
+  <data name="TaskDefinitionCannotBeReplaced" xml:space="preserve">
+    <value>Task definition with ID {0} is a built-in task definition and cannot be replaced.</value>
+  </data>
+  <data name="FailedToMigrateDeploymentGroups" xml:space="preserve">
+    <value>Failed to migrate all deployment groups from pool {0} to pool {1}. {2}</value>
+  </data>
+  <data name="EnvironmentPermissionInitializationError" xml:space="preserve">
+    <value>Failed to initialize project level environment security. Contact project collection administrators to grant permissions to access environments for the project: {0}, project id: {1}, hostId: {2}. Initialization failed with exception: {3}</value>
+  </data>
+  <data name="AgentNotFoundNoOnlineEnable" xml:space="preserve">
+    <value>No online and enabled agents were found in pool {0}.</value>
+  </data>
+  <data name="QueueReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the agent pools.</value>
+  </data>
+  <data name="LibraryAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can use and manage the library items.</value>
+  </data>
+  <data name="HostedJobRequestTimedOut" xml:space="preserve">
+    <value>The job exceeded the maximum allowed time of {0} and was stopped. Please visit &amp;lt;a href='https://go.microsoft.com/fwlink/?linkid=832649' target='_blank' &amp;gt;parallel jobs&amp;lt;/a&amp;gt; for more information.</value>
+  </data>
+  <data name="DeploymentMachineNotFound" xml:space="preserve">
+    <value>No machine found for deployment group {0} with identifier {1}.</value>
+  </data>
+  <data name="DeploymentSkippedOnVM" xml:space="preserve">
+    <value>Skipped deployment to the virtual machine '{0}' due to unknown reason. Try again.</value>
+  </data>
+  <data name="AgentPendingUpdateNotFound" xml:space="preserve">
+    <value>No agent pending update found for agent {0} in pool {1}.</value>
+  </data>
+  <data name="MachineGroupReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the deployment group.</value>
+  </data>
+  <data name="RequestWasCancelledByRemoteProvider" xml:space="preserve">
+    <value>The request was cancelled by the remote provider.</value>
+  </data>
+  <data name="InvalidCapabilityValue" xml:space="preserve">
+    <value>Capability '{0}' contains a value which is too long. Capability values must be less than 1024 characters in length.</value>
+  </data>
+  <data name="SecureFileWithNoContentError" xml:space="preserve">
+    <value>Content must be provided to upload a secure file.</value>
+  </data>
+  <data name="AgentPoolNotFound" xml:space="preserve">
+    <value>No agent pool found with identifier {0}.</value>
+  </data>
+  <data name="QueuesShouldUseAutomationPools" xml:space="preserve">
+    <value>Project agent pools can only refer to organization agent pools of type Automation.</value>
+  </data>
+  <data name="TaskGroupCanOnlyEditLatestVersion" xml:space="preserve">
+    <value>Task group '{0}' version '{1}' update failed. Changes can be made only to latest version '{2}'.</value>
+  </data>
+  <data name="FailedToProvisionAgent" xml:space="preserve">
+    <value>There was a failure when attempting to provision the agent to service this request.</value>
+  </data>
+  <data name="UnableToRemoveDeploymentAgent" xml:space="preserve">
+    <value>Unable to remove agent. Agent version is not compatible with the service. In order to remove the agent, navigate to 'Deployment groups' in your Azure Pipelines project. Select the deployment group having the agent {0}. From 'Machines' tab, click on the action menu corresponding to agent machine and click 'delete' to remove the machine. In addition, if the agent is configured to run as service, remove the agent service manually.</value>
+  </data>
+  <data name="NoHostedParallelismAvailable" xml:space="preserve">
+    <value>No hosted parallelism has been purchased or granted. To request a free parallelism grant, please fill out the following form https://aka.ms/azpipelines-parallelism-request</value>
+  </data>
+  <data name="AgentCloudResponseStatusCodeInvalid" xml:space="preserve">
+    <value>There was a problem attempting to send a request to agent cloud {0}, received response code {1}.</value>
+  </data>
+  <data name="DuplicateTagsNotSupported" xml:space="preserve">
+    <value>Duplicate entries are not allowed in deployment target tags. Remove duplicates from list of tags: {0}.</value>
+  </data>
+  <data name="SecureFileWithNoContentLengthError" xml:space="preserve">
+    <value>ContentLength header must be specified to upload a secure file.</value>
+  </data>
+  <data name="AgentSessionRevoked" xml:space="preserve">
+    <value>The session {0} has been revoked.</value>
+  </data>
+  <data name="QueueAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer, manage, view and use agent pools.</value>
+  </data>
+  <data name="AccessDeniedForQueue" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions for pool {2} to perform the action. For more information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="InvalidSecureFileName" xml:space="preserve">
+    <value>The secure file name '{0}' is not valid. A valid secure file name is less than or equal to 255 characters in length and does not include '"', '/', ':', '&amp;lt;', '&amp;gt;', '\', '|', '*' and '?'.</value>
+  </data>
+  <data name="InvalidDeploymentTagWithNullValue" xml:space="preserve">
+    <value>Deployment group target does not support null tags</value>
+  </data>
+  <data name="ElasticPoolAlreadyExistsExceptionMessage" xml:space="preserve">
+    <value>An elastic pool already exists with the identifier '{0}'.</value>
+  </data>
+  <data name="InternalCloudAgentDefinitionExistsExceptionMessage" xml:space="preserve">
+    <value>An InternalCloudAgentDefinition already exists with the identifier '{0}'.</value>
+  </data>
+  <data name="AccountDoesNotHaveUsageLeft" xml:space="preserve">
+    <value>Your organization has no free minutes remaining. Add a hosted pipeline to run more builds or releases.  See {0} for more information.</value>
+  </data>
+  <data name="AdministerLibraryItem" xml:space="preserve">
+    <value>Administer library item</value>
+  </data>
+  <data name="InvalidCapabilityName" xml:space="preserve">
+    <value>Capability names cannot be empty and must be less than 256 characters in length.</value>
+  </data>
+  <data name="TfxCliTaskDefinitionCannotBeReplaced" xml:space="preserve">
+    <value>Task definition with ID '{0}', name '{1}' was installed via the tfx-cli or REST API and cannot be replaced using contribution '{2}'. Please delete the task using the tfx-cli or REST API before replacing it with a contribution.</value>
+  </data>
+  <data name="AgentNotFoundAutoUpdateDisabledTask" xml:space="preserve">
+    <value>The pool {0} doesn't allow agent updates. Task {1} version {2} requires agent version {3} and no agents with that version are registered. An administrator can alter this by visiting the pool's Settings page at the organization level.</value>
+  </data>
+  <data name="DeploymentPoolAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer, manage, view and use deployment pools.</value>
+  </data>
+  <data name="ValidNameSuggestion" xml:space="preserve">
+    <value>A valid name is less than {0} characters in length and does not contain the following characters: {1}.</value>
+  </data>
+  <data name="GlobalEnvironmentAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer permissions, create, manage, view and use environments.</value>
+  </data>
+  <data name="InvalidDemand" xml:space="preserve">
+    <value>The value {0} not a valid demand expression.</value>
+  </data>
+  <data name="DeleteDeploymentMachineApiDeprecated" xml:space="preserve">
+    <value>DeleteDeploymentMachineAsync API is no longer supported. If you are using REST clients, use DeleteDeploymentTargetAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="ViewLibraryItemSecrets" xml:space="preserve">
+    <value>View library item secrets</value>
+  </data>
+  <data name="VirtualMachineIsGettingProvisioned" xml:space="preserve">
+    <value>Requesting an agent from the Microsoft-hosted agent pool</value>
+  </data>
+  <data name="AgentPoolCannotBeAddedDuringUpgrade" xml:space="preserve">
+    <value>Agent pools cannot be created during the upgrade process. Try the operation again after a few minutes.</value>
+  </data>
+  <data name="ImageLabelNotFound" xml:space="preserve">
+    <value>No image label found to route agent pool {0}.</value>
+  </data>
+  <data name="DuplicateKeyInVariableGroup" xml:space="preserve">
+    <value>Variable group: '{0}' has following duplicate variable name(s): '{1}'</value>
+  </data>
+  <data name="AgentSessionExpired" xml:space="preserve">
+    <value>The session identifier {0} is not valid.</value>
+  </data>
+  <data name="RequestMaxSizeExceeded" xml:space="preserve">
+    <value>The maximum request size of {0} bytes was exceeded.</value>
+  </data>
+  <data name="MachineManagementRequestAssignmentFailed" xml:space="preserve">
+    <value>An error occurred while attempting to assign the request: {0}</value>
+  </data>
+  <data name="EnvironmentReferenceExists" xml:space="preserve">
+    <value>Environment with ID {0} is still referenced in other projects and cannot be deleted.</value>
+  </data>
+  <data name="EnvironmentReferenceUserRoleDescription" xml:space="preserve">
+    <value>User can view the environment and use it in a pipeline.</value>
+  </data>
+  <data name="TaskDefinitionHostContextMismatch" xml:space="preserve">
+    <value>Cannot operate on tasks in a different context. Task is deployment: {0}. Host type is {1}</value>
+  </data>
+  <data name="DeploymentMachineGroupExists" xml:space="preserve">
+    <value>Deployment group {0} already exists.</value>
+  </data>
+  <data name="AgentStillRunningJob" xml:space="preserve">
+    <value>Agent "{0}" is running a job for pool "{1}"</value>
+  </data>
+  <data name="TaskDefinitionMinimumAgentVersionMismatch" xml:space="preserve">
+    <value>The task definition '{0}' requires a minimum agent version of '{1}'. The agent version supported by the server is '{2}'.</value>
+  </data>
+  <data name="QueueUsersGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to assign the pool for usage from a release or build pipeline.</value>
+  </data>
+  <data name="VariableGroupAccessDeniedForReadOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the variable group. A variable group Administrator should add you to the Reader role.</value>
+  </data>
+  <data name="InvalidOperationOnInternalAgentCloud" xml:space="preserve">
+    <value>That operation cannot be performed on internal agent cloud {0}.</value>
+  </data>
+  <data name="ViewLibraryItem" xml:space="preserve">
+    <value>View library item</value>
+  </data>
+  <data name="KubernetesResourceInvalidProvider" xml:space="preserve">
+    <value>Invalid Provider type {0}.</value>
+  </data>
+  <data name="PoolProviderFailedToSendMessageResponseCode" xml:space="preserve">
+    <value>Unexpected response code from remote provider {0}</value>
+  </data>
+  <data name="WrongIdSpecifiedForTaskGroupId" xml:space="preserve">
+    <value>The request specifies task group ID {0} but the supplied task group has ID {1}.</value>
+  </data>
+  <data name="AgentNotResponseUpdateMessage" xml:space="preserve">
+    <value>Agent hasn't finished updating after {0} minutes of receiving an update message.</value>
+  </data>
+  <data name="MachineManagementRequestFailed" xml:space="preserve">
+    <value>The request was failed due to an internal service error. Please try again.</value>
+  </data>
+  <data name="InvalidAgentCloudType" xml:space="preserve">
+    <value>Input parameter Type  cannot be null</value>
+  </data>
+  <data name="InvalidDeploymentMachineGroupName" xml:space="preserve">
+    <value>The deployment group name '{0}' is not valid.</value>
+  </data>
+  <data name="CannotModifyAgentsForAgentCloudBackedPool" xml:space="preserve">
+    <value>Cannot modify agents for pool {0} because it is backed by an agent cloud and managed by the system. Agents can be added/removed by updating target size of pool</value>
+  </data>
+  <data name="VariableGroupAccessDeniedForCollectionAdminOperation" xml:space="preserve">
+    <value>You need to be an organization/collection level Administrator of the variable group to perform this operation.</value>
+  </data>
+  <data name="PoolAdministratorsGroupName" xml:space="preserve">
+    <value>Agent Pool Administrators</value>
+  </data>
+  <data name="UserRoleDescription" xml:space="preserve">
+    <value>User can view and use agent pools, but cannot manage or create agent pools.</value>
+  </data>
+  <data name="PoolServiceAccountsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include the service accounts used by the agent services set up for this pool.</value>
+  </data>
+  <data name="MetaTaskDefinitionVersionNotFound" xml:space="preserve">
+    <value>No Task group found matching ID {0} and version {1}.</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions to perform the action. For more information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="DeploymentPoolUserRoleDescription" xml:space="preserve">
+    <value>User can view and use the deployment pool for creating deployment groups.</value>
+  </data>
+  <data name="GlobalMachineGroupReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the deployment groups.</value>
+  </data>
+  <data name="CreatorRole" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="ServiceEndpointNotShared" xml:space="preserve">
+    <value>{0} service connection used in variable group is not shared with project {1}. A service connection Administrator should share it with project {1} before sharing the variable group with project {1}.</value>
+  </data>
+  <data name="EnvironmentResourceCreationFailed" xml:space="preserve">
+    <value>Failed to create resource. {0}</value>
+  </data>
+  <data name="OwnerLibraryItem" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="TaskDefinitionAlreadyExists" xml:space="preserve">
+    <value>The task definition with ID '{0}', name '{1}' and version '{2}' already exists.</value>
+  </data>
+  <data name="MachineGroupUserRoleDescription" xml:space="preserve">
+    <value>User can view and use but cannot manage deployment group.</value>
+  </data>
+  <data name="MetaTaskServiceEndpointSecurityCheckFailedMessage" xml:space="preserve">
+    <value>Task Group cannot be saved because it references service connections that cannot be found, or that you don't have permissions to access: {0}</value>
+  </data>
+  <data name="TaskDefinitionAlreadyUploadedForExtension" xml:space="preserve">
+    <value>A task definition with ID '{0}', name '{1}' and version '{2}' has already been uploaded by extension '{3}'. To upload the task, provide a different task id.</value>
+  </data>
+  <data name="AgentNotFoundMatchingSingleDemand" xml:space="preserve">
+    <value>No agent found in pool {0} which satisfies the following demand: {1}. All demands: {2}</value>
+  </data>
+  <data name="QueueAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to manage the agent pool.</value>
+  </data>
+  <data name="EnvironmentPoolAlreadyInUse" xml:space="preserve">
+    <value>Pool id: {0} is already used in a different environment. Select a different Pool.</value>
+  </data>
+  <data name="VariableGroupNotPartOfProject" xml:space="preserve">
+    <value>Variable group is not part of project {0}.</value>
+  </data>
+  <data name="AgentNotFoundMatchingDemands" xml:space="preserve">
+    <value>No agent found in pool {0} which satisfies the specified demands: {1}</value>
+  </data>
+  <data name="DeploymentPoolInUseMultipleCountMessage" xml:space="preserve">
+    <value>Deployment pool {0} can not be removed because {1} and {2} other projects are using the pool.</value>
+  </data>
+  <data name="EnvironmentWithGivenNameNotFound" xml:space="preserve">
+    <value>Environment with name {0} does not exist in current project.</value>
+  </data>
+  <data name="InvalidVariableGroupName" xml:space="preserve">
+    <value>The variable group name '{0}' is not valid.</value>
+  </data>
+  <data name="MissingPackageType" xml:space="preserve">
+    <value>The package type must be specified when querying for packages by platform.</value>
+  </data>
+  <data name="GetDeploymentPoolsSummaryInvalidRequest" xml:space="preserve">
+    <value>Deployment pool name and ID both filters can not be passed together, should use only one filter.</value>
+  </data>
+  <data name="ReplaceDeploymentMachineApiDeprecated" xml:space="preserve">
+    <value>ReplaceDeploymentMachineAsync API is no longer supported. If you are using REST clients, use ReplaceDeploymentTargetAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="UseLibraryItem" xml:space="preserve">
+    <value>Use library item</value>
+  </data>
+  <data name="CannotDeleteAndAddMetadata" xml:space="preserve">
+    <value>Cannot simultaneously remove metadata while passing in new metadata for an Agent Pool Update.</value>
+  </data>
+  <data name="AgentRequestBlockedByPoolUsage" xml:space="preserve">
+    <value>The agent request is not running because all potential agents are running other requests. Current position in queue: {0}</value>
+  </data>
+  <data name="EditMetaTask" xml:space="preserve">
+    <value>Edit task group</value>
+  </data>
+  <data name="GlobalEnvironmentReferenceTokenFormatException" xml:space="preserve">
+    <value>Parameter is expected to be a valid guid. For e.g: '96959149-c55f-4dca-b3f5-10a3306ac543'.</value>
+  </data>
+  <data name="UpdateDeploymentMachineApiDeprecated" xml:space="preserve">
+    <value>UpdateDeploymentMachineAsync API is no longer supported. If you are using REST clients, use UpdateDeploymentTargetAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="VariableGroupNotFound" xml:space="preserve">
+    <value>Variable group with ID '{0}' is not found.</value>
+  </data>
+  <data name="DeploymentMachineExists" xml:space="preserve">
+    <value>Deployment group with ID {0} already contains agent with ID {1}.</value>
+  </data>
+  <data name="QueueCreatorsGroupName" xml:space="preserve">
+    <value>Agent Queue Creators</value>
+  </data>
+  <data name="Use" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="EnvironmentReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the environment.</value>
+  </data>
+  <data name="DisabledPriorVersionsComment" xml:space="preserve">
+    <value>Disabled prior versions: '{0}'</value>
+  </data>
+  <data name="AgentNotFound" xml:space="preserve">
+    <value>No agent found for pool {0} with identifier {1}.</value>
+  </data>
+  <data name="TaskGroupPreviewExists" xml:space="preserve">
+    <value>Task group {0} preview version already exists.</value>
+  </data>
+  <data name="AccessDeniedForAgentCloud" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions for agent cloud {2} to perform the action. For more information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="InvalidEnvironmentName" xml:space="preserve">
+    <value>Environment name '{0}' is not valid.</value>
+  </data>
+  <data name="InvalidContinuationToken" xml:space="preserve">
+    <value>The continuation token {0} was invalid.</value>
+  </data>
+  <data name="ProjectReleaseManagerGroupName" xml:space="preserve">
+    <value>Release Managers</value>
+  </data>
+  <data name="PoolServiceAccountsGroupName" xml:space="preserve">
+    <value>Agent Pool Service Accounts</value>
+  </data>
+  <data name="AgentNotFoundPoolEmpty" xml:space="preserve">
+    <value>No agents were found in pool {0}. Configure an agent for the pool and try again.</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="AgentMediaTypeNotSupported" xml:space="preserve">
+    <value>The requested agent file {0} media type must either be .zip or .tar.gz.</value>
+  </data>
+  <data name="AgentSessionConflict" xml:space="preserve">
+    <value>The task agent {0} already has an active session for owner {1}.</value>
+  </data>
+  <data name="InvalidAgentCloudSharedSecret" xml:space="preserve">
+    <value>An agent cloud should include a shared secret, and that secret should contain at least 16 characters.</value>
+  </data>
+  <data name="UntrustedHost" xml:space="preserve">
+    <value>The task attempted to reach untrusted host: {0}</value>
+  </data>
+  <data name="VariableGroupProjectReferenceInformationNotProvided" xml:space="preserve">
+    <value>Project information is not provided for variable group.</value>
+  </data>
+  <data name="AgentFileNotFound" xml:space="preserve">
+    <value>The requested agent file {0} does not exist.</value>
+  </data>
+  <data name="RequestedMoreThanMaxSupport" xml:space="preserve">
+    <value>The number of deployment group IDs in the input cannot exceed the maximum limit of 1000.</value>
+  </data>
+  <data name="UpdateDeploymentMachinesApiDeprecated" xml:space="preserve">
+    <value>UpdateDeploymentMachinesAsync API is no longer supported. If you are using REST clients, use UpdateDeploymentTargetsAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="MaintenanceJobNotFound" xml:space="preserve">
+    <value>Can't find maintenance job {0} for pool {1}.</value>
+  </data>
+  <data name="QueueCreatorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts of people who should be able to create a new agent pool, but should not be able to administer pools which were not created by them.</value>
+  </data>
+  <data name="QueueIdentityScopeName" xml:space="preserve">
+    <value>{0} Agent Queue</value>
+  </data>
+  <data name="RefreshDeploymentMachinesApiDeprecated" xml:space="preserve">
+    <value>RefreshDeploymentMachinesAsync API is no longer supported. If you are using REST clients, use RefreshDeploymentTargetsAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="AgentNotFoundAutoUpdateDisabled" xml:space="preserve">
+    <value>The pool {0} doesn't allow agent updates. Agent version {1} is required and no agents with that version are registered. An administrator can alter this by visiting the pool's Settings page at the organization level.</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="InvalidProjectIds" xml:space="preserve">
+    <value>Invalid GUID provided in projectIds: {0}</value>
+  </data>
+  <data name="ExclusiveLockRequestAlreadyQueued" xml:space="preserve">
+    <value> Exclusive lock records with ids {0} are already queued for the requested resource of the running stage.</value>
+  </data>
+  <data name="TaskGroupAlreadyUpdated" xml:space="preserve">
+    <value>Task group {0} already updated.</value>
+  </data>
+  <data name="PackageNotFoundWithVersion" xml:space="preserve">
+    <value>A package with type {0}, platform {1}, version {2} was not found.</value>
+  </data>
+  <data name="TaskDefinitionDeserializationErrorWithFolder" xml:space="preserve">
+    <value>The task.json in folder {0} could not be deserialized: {1}</value>
+  </data>
+  <data name="VariableGroupAccessDeniedForDeleteOperation" xml:space="preserve">
+    <value>You need to be a project level Administrator or organization/collection level Administrator of the variable group to perform this operation.</value>
+  </data>
+  <data name="LibraryUserRoleDescription" xml:space="preserve">
+    <value>User can use, but cannot manage the library items.</value>
+  </data>
+  <data name="UploadTaskDefinitionAccessDenied" xml:space="preserve">
+    <value>You cannot install this extension because it includes a build task, and you do not have sufficient permissions. To proceed, you must be an administrator of All Pools. For more information, see https://go.microsoft.com/fwlink/?linkid=848939.</value>
+  </data>
+  <data name="AgentRequestExpired" xml:space="preserve">
+    <value>The request {0} is no longer valid.</value>
+  </data>
+  <data name="PackageExists" xml:space="preserve">
+    <value>A package with type {0}, platform {1}, version {2}.{3}.{4} already exists.</value>
+  </data>
+  <data name="InvalidParentDefinitionIdForDraftTaskGroup" xml:space="preserve">
+    <value>Valid ParentDefinitionId should be passed for a draft task group</value>
+  </data>
+  <data name="InvalidEnvironmentResourceFilter" xml:space="preserve">
+    <value>All fields in Environment Resource Filter (ResourceId, ResourceName, ResourceType) are null.</value>
+  </data>
+  <data name="CreatorRoleDescription" xml:space="preserve">
+    <value>Creator can create and view agent pools, but cannot manage or use agent pools.</value>
+  </data>
+  <data name="MaintenanceDefinitionNotFound" xml:space="preserve">
+    <value>Can't find maintenance definition {0} for pool {1}.</value>
+  </data>
+  <data name="GlobalMachineGroupUserRoleDescription" xml:space="preserve">
+    <value>User can view and use but cannot manage or create deployment groups.</value>
+  </data>
+  <data name="AccessDeniedForAgentCloudPool" xml:space="preserve">
+    <value>Access denied. Agent cloud-backed pools cannot be modified. Modify target size of pool to add or remove agents.</value>
+  </data>
+  <data name="SecureFileAccessDeniedForAdminOperation" xml:space="preserve">
+    <value>You do not have permissions to perform this operation on the secure file. Contact an administrator to add you to the Administrator role.</value>
+  </data>
+  <data name="WaitingForAgentCloudProvisioning" xml:space="preserve">
+    <value>Acquiring an agent from the cloud:
+{0}</value>
+  </data>
+  <data name="ServiceAccountRoleDescription" xml:space="preserve">
+    <value>Service Accounts may view agents, create sessions, and listen for jobs from the agent pool.</value>
+  </data>
+  <data name="SendAgentUpdateMessage" xml:space="preserve">
+    <value>Sent agent update message. Agent will auto-update shortly.</value>
+  </data>
+  <data name="UnableToPopulateAzureStackData" xml:space="preserve">
+    <value>Unable to populate Azure Stack dependency data.</value>
+  </data>
+  <data name="AdministerMetaTaskPermissions" xml:space="preserve">
+    <value>Administer task group permissions</value>
+  </data>
+  <data name="ContributionTaskIdsShouldMatch" xml:space="preserve">
+    <value>All the task versions belonging to Contribution {0} should have the same task id. The tasks at {3} (version {1}) and {4} (version {2}) do not have the same ids.</value>
+  </data>
+  <data name="UsingDeprecatedAgent" xml:space="preserve">
+    <value>Agent is using a deprecated version '{0}'. Migrate to the latest 2.x version of agent. For more information, see https://go.microsoft.com/fwlink/?linkid=851067.</value>
+  </data>
+  <data name="OperationNotAllowedForNonServicePrincipal" xml:space="preserve">
+    <value>Only service principal identity is allowed to perform this operation.</value>
+  </data>
+  <data name="DeploymentPoolsCanNotBeHosted" xml:space="preserve">
+    <value>IsHosted should be set to false for Deployment Pools</value>
+  </data>
+  <data name="PoolProviderRequestUnexpectedFailure" xml:space="preserve">
+    <value>An unexpected failure occurred while attempting to contact the remote provider.</value>
+  </data>
+  <data name="NoErrorAndWarning" xml:space="preserve">
+    <value>   0 Errors, 0 Warnings.</value>
+  </data>
+  <data name="TaskDefinitionIdNotFound" xml:space="preserve">
+    <value>No task definition found matching ID {0}</value>
+  </data>
+  <data name="ParentTaskGroupNotFound" xml:space="preserve">
+    <value>Parent task group '{0}' not found.</value>
+  </data>
+  <data name="EnvironmentResourcesExceededMaxCount" xml:space="preserve">
+    <value>Environment with ID {0} already has maximum supported resources ({1}).</value>
+  </data>
+  <data name="TaskDefinitionNotFound" xml:space="preserve">
+    <value>No task definition found matching ID {0} and version {1}. You must register the task definition before uploading the package.</value>
+  </data>
+  <data name="DuplicateTaskDefinitionInputKey" xml:space="preserve">
+    <value>Following are the task inputs which are same but have different cases:  {0}. Make sure that the case is same in both inputs and try again.</value>
+  </data>
+  <data name="MachineNotFound" xml:space="preserve">
+    <value>No machine found for deployment group {0} with identifier {1}.</value>
+  </data>
+  <data name="AgentExists" xml:space="preserve">
+    <value>Pool {0} already contains an agent with name {1}.</value>
+  </data>
+  <data name="DeploymentMachineGroupNotFound" xml:space="preserve">
+    <value>Deployment group with identifier {0} was not found. Either the deployment group has been deleted or no longer shared with this team project.</value>
+  </data>
+  <data name="InvalidQueueName" xml:space="preserve">
+    <value>The pool name '{0}' is not valid.</value>
+  </data>
+  <data name="ViewSecrets" xml:space="preserve">
+    <value>View Secrets</value>
+  </data>
+  <data name="EnvironmentNotFound" xml:space="preserve">
+    <value>Environment with ID {0} does not exist in current project.</value>
+  </data>
+  <data name="AccessDeniedForHostedPool" xml:space="preserve">
+    <value>Access Denied. Microsoft-hosted agent pools cannot be modified.</value>
+  </data>
+  <data name="ProjectAdministratorsGroupName" xml:space="preserve">
+    <value>Project Administrators</value>
+  </data>
+  <data name="SecureFileNotFound" xml:space="preserve">
+    <value>Secure file with ID '{0}' is not found.</value>
+  </data>
+  <data name="AgentNotFoundAutoUpdateDisabledFeature" xml:space="preserve">
+    <value>The pool {0} doesn't allow agent updates. Feature {1} requires agent version {2} and no agents with that version are registered. An administrator can alter this by visiting the pool's Settings page at the organization level.</value>
+  </data>
+  <data name="TaskJsonNotFound" xml:space="preserve">
+    <value>The task.json file was not found for contribution {0}.</value>
+  </data>
+  <data name="NewEnvrionmentDescription" xml:space="preserve">
+    <value>Automatically created environment</value>
+  </data>
+  <data name="SharingVariableGroupNotAllowed" xml:space="preserve">
+    <value>Sharing of variable group is not allowed.</value>
+  </data>
+  <data name="PackageNotFound" xml:space="preserve">
+    <value>A package with the type {0} could not found.</value>
+  </data>
+  <data name="AtleastOneProjectRequiredForDeletion" xml:space="preserve">
+    <value>At least one project reference should be provided for delete operation</value>
+  </data>
+  <data name="AtleastOneProjectReferenceRequired" xml:space="preserve">
+    <value>Atleast one variable group project reference is required.</value>
+  </data>
+  <data name="VariableGroupExist" xml:space="preserve">
+    <value>Variable group '{0}' already exists.</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>The URL specified for parameter {0} is not valid.</value>
+  </data>
+  <data name="InvalidAgentName" xml:space="preserve">
+    <value>The agent name '{0}' is not valid. A valid agent name is less than 64 characters in length and does not include '"', '/', ':', '&lt;', '&gt;', '\', '|', '*' and '?'.</value>
+  </data>
+  <data name="AgentAccessTokenExpired" xml:space="preserve">
+    <value>The access token being used by the agent has expired.</value>
+  </data>
+  <data name="InvalidAgentCloudUpdateOfSharedSecret" xml:space="preserve">
+    <value>An agent cloud shared secret cannot be updated with other fields.</value>
+  </data>
+  <data name="AgentRequestNotFound" xml:space="preserve">
+    <value>No request was found with identifier {0}.</value>
+  </data>
+  <data name="KubernetesResourceMissingInputs" xml:space="preserve">
+    <value>Please ensure that all mandatory fields are provided as input.</value>
+  </data>
+  <data name="ProjectReleaseAdminAccountName" xml:space="preserve">
+    <value>Release Administrators</value>
+  </data>
+  <data name="InvalidServiceEndpoint" xml:space="preserve">
+    <value>The service group cannot be saved because it references a service connection that cannot be found, or that you do not have permission to access. Details: '{0}'</value>
+  </data>
+  <data name="AdministerEndpoint" xml:space="preserve">
+    <value>Administer Service Connection</value>
+  </data>
+  <data name="TaskDefinitionDeserializationError" xml:space="preserve">
+    <value>The task.json could not be deserialized: {0}</value>
+  </data>
+  <data name="AgentRequestRunningOrCompleted" xml:space="preserve">
+    <value>The agent request is already running or has already completed.</value>
+  </data>
+  <data name="AgentRequestIsBeingProcessed" xml:space="preserve">
+    <value>This agent request is not running yet. Current position in queue: {1}. Current parallelism: {2}. Max Parallelism for parallelism type '{0}': {3}</value>
+  </data>
+  <data name="InvalidCapabilityNameWithValue" xml:space="preserve">
+    <value>Capability name '{0}' is not valid. Capability names must be less than 256 characters in length and may not start or end with whitespace characters.</value>
+  </data>
+  <data name="ManageHistory" xml:space="preserve">
+    <value>Manage history</value>
+  </data>
+  <data name="InvalidTaskDefinitionTypeForTaskGroup" xml:space="preserve">
+    <value>Invalid TaskDefinitionType '{0}' is provided for task group '{1}'. Provide valid value '{2}' and try again.</value>
+  </data>
+  <data name="VariableGroup" xml:space="preserve">
+    <value>Variable Group</value>
+  </data>
+  <data name="AgentRequestBlockedByParallelismLimits" xml:space="preserve">
+    <value>This agent request is not running because you have reached the maximum number of requests that can run for parallelism type '{0}'. Current position in queue: {1}. Current parallelism: {2}. Max Parallelism for parallelism type '{0}': {3}</value>
+  </data>
+  <data name="MachineGroupAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer, manage, view and use deployment group.</value>
+  </data>
+  <data name="AddDeploymentMachineApiDeprecated" xml:space="preserve">
+    <value>AddDeploymentMachineAsync API is no longer supported. If you are using REST clients, use AddDeploymentTargetAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="EnvironmentResourceDeploymentHistoryRecordNotFound" xml:space="preserve">
+    <value>Unable to find deployment execution history record with id: {0} for environment ID {1} and resource ID {2}.</value>
+  </data>
+  <data name="AgentPoolMaintenanceNotEnabled" xml:space="preserve">
+    <value>Pool maintenance is not enabled for pool {0}.</value>
+  </data>
+  <data name="MetaTaskDefinitionRunsOnMismatch" xml:space="preserve">
+    <value>"Meta task '{0}' RunsOn value: '{1}', doesn't match with child task '{2}' RunsOn value: '{3}'. Provide valid value and try again."</value>
+  </data>
+  <data name="WaitingOnAgentToStartRequest" xml:space="preserve">
+    <value>Waiting on the agent to receive and acknowledge the request...</value>
+  </data>
+  <data name="AgentRequestPoolProviderSlowWarning" xml:space="preserve">
+    <value>Pool provider seems slow, we notified pool provider at {0}, still agent has not started processing it. Pool provider delay(in mins): {1}</value>
+  </data>
+  <data name="GlobalMachineGroupCreatorRoleDescription" xml:space="preserve">
+    <value>Creator can create and view deployment groups. </value>
+  </data>
+  <data name="TryingToShareVariableGroupWithSameProject" xml:space="preserve">
+    <value>Cannot share a variable group with the same project.</value>
+  </data>
+  <data name="DeploymentPoolsCanNotAutoProvisionQueues" xml:space="preserve">
+    <value>AutoProvision should be set to false for Deployment Pools</value>
+  </data>
+  <data name="TaskGroupCyclicDependencyErrorFormat" xml:space="preserve">
+    <value>The task group contains a cyclic dependency on itself, or its parent (in case of a draft) - {0}. Please remove this cyclic dependency to proceed.</value>
+  </data>
+  <data name="AccessDeniedForPool" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions for pool {2} to perform the action. For more information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="InvalidScopeId" xml:space="preserve">
+    <value>The scope {0} is not valid.</value>
+  </data>
+  <data name="VariableGroupProjectReferenceInformationNameInvalid" xml:space="preserve">
+    <value>Project information name is not valid for variable group.</value>
+  </data>
+  <data name="GetDeploymentMachineApiDeprecated" xml:space="preserve">
+    <value>GetDeploymentMachineAsync API is no longer supported. If you are using REST clients, use GetDeploymentTargetAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="ElasticPoolDoesNotExistExceptionMessage" xml:space="preserve">
+    <value>No elastic pool with the identifier '{0}' exists.</value>
+  </data>
+  <data name="PoolAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer, manage, view and use agent pools.</value>
+  </data>
+  <data name="GetAgentRequestsForDeploymentMachineApiDeprecated" xml:space="preserve">
+    <value>GetAgentRequestsForDeploymentMachineAsync API is no longer supported. If you are using REST clients, use GetAgentRequestsForDeploymentTargetAsync. If you are using browser, refresh the page and try again.</value>
+  </data>
+  <data name="PoolProviderRequestTimeout" xml:space="preserve">
+    <value>A timeout occurred while sending request to the remote provider.</value>
+  </data>
+  <data name="QueueNotFound" xml:space="preserve">
+    <value>No agent pool found with identifier {0}.</value>
+  </data>
+  <data name="CreateLibraryItem" xml:space="preserve">
+    <value>Create library item</value>
+  </data>
+  <data name="EnvironmentDeploymentExecutionHistoryRecordNotFound" xml:space="preserve">
+    <value>Unable to find deployment execution history record with id: {0} for environment {1}.</value>
+  </data>
+  <data name="CannotCreateSameVariableGroupMultipleTime" xml:space="preserve">
+    <value>Cannot create same variable group multiple times in same project.</value>
+  </data>
+  <data name="AccessDeniedForMachineGroup" xml:space="preserve">
+    <value>Access denied. {0} needs {1} permissions for deployment group {2} to perform the action. For more information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="AgentRequestPoolNoneMatched" xml:space="preserve">
+    <value>No agents in pool {0} are currently able to service this request.</value>
+  </data>
+  <data name="SkippingTaskGroupRestore" xml:space="preserve">
+    <value>Request sent with Restore not set to true, skipping task group restore.</value>
+  </data>
+  <data name="EnvironmentNameFormat" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="PackagePropertyUnknown" xml:space="preserve">
+    <value>The package resource does not contain unknown property {0}.</value>
+  </data>
+  <data name="TaskGroupDisabled" xml:space="preserve">
+    <value>Task group named {0}, version {1} is disabled</value>
+  </data>
+  <data name="DeploymentGroupsShouldUseDeploymentPools" xml:space="preserve">
+    <value>Deployment groups can only refer to agent pools of type Deployment.</value>
+  </data>
+  <data name="ReaderRole" xml:space="preserve">
+    <value>Reader</value>
+  </data>
+  <data name="KubernetesResourceUpdateFailed" xml:space="preserve">
+    <value>Failed to update the authorization parameters of the resource. Service connection with id {0} not found.</value>
+  </data>
+  <data name="DeploymentPoolReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the deployment pools.</value>
+  </data>
+  <data name="QueueRootScopeName" xml:space="preserve">
+    <value>Agent Pools</value>
+  </data>
+  <data name="InvalidOperationForHostedAgentPool" xml:space="preserve">
+    <value>The current action cannot be performed on the Microsoft-hosted agent pool {0}.</value>
+  </data>
+  <data name="VariableGroupProjectReferenceInformationIdInvalid" xml:space="preserve">
+    <value>Project information Id is not valid for variable group.</value>
+  </data>
+  <data name="DeploymentGroupAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to manage all the deployment groups.</value>
+  </data>
+  <data name="FailedToObtainTokenForClient" xml:space="preserve">
+    <value>Failed to obtain the Json Web Token(JWT) for the client '{0}'</value>
+  </data>
+  <data name="SecureFile" xml:space="preserve">
+    <value>Secure File</value>
+  </data>
+  <data name="TaskGroupDraftExists" xml:space="preserve">
+    <value>Task group {0} draft version already exists.</value>
+  </data>
+  <data name="MetaTaskDefinitionExists" xml:space="preserve">
+    <value>Task group {0} already exists.</value>
+  </data>
+  <data name="PoolServicePrincipalsGroupName" xml:space="preserve">
+    <value>Agent Pool Service Principals</value>
+  </data>
+  <data name="QueueUsersGroupName" xml:space="preserve">
+    <value>Agent Queue Users</value>
+  </data>
+  <data name="DeploymentMachineIdDoesNotMatchWithAgentId" xml:space="preserve">
+    <value>Agent ID corresponding to Deployment Machine with ID {0} does not match the provided Agent ID {1}</value>
+  </data>
+  <data name="EnvironmentResourceNotFound" xml:space="preserve">
+    <value>Resource with ID {0} does not exist in environment ID {1} of the current project.</value>
+  </data>
+  <data name="InvalidBuildContributionsTarget" xml:space="preserve">
+    <value>Build contribution '{0}' should have '{1}' as targets value.</value>
+  </data>
+  <data name="VirtualMachineInitializingSection" xml:space="preserve">
+    <value>##[section]Initializing the Microsoft-hosted agent</value>
+  </data>
+  <data name="AgentPoolExists" xml:space="preserve">
+    <value>Agent pool {0} already exists.</value>
+  </data>
+  <data name="UnexpectedMetadataCompressionType" xml:space="preserve">
+    <value>Unexpected Metadata File Compression Type.</value>
+  </data>
+  <data name="AdministerPermissions" xml:space="preserve">
+    <value>Administer Permissions</value>
+  </data>
+  <data name="DeploymentPoolDoesNotExist" xml:space="preserve">
+    <value>The deployment pool '{0}' does not exist</value>
+  </data>
+  <data name="PoolIdentityScopeName" xml:space="preserve">
+    <value>Agent Pool {0}</value>
+  </data>
+  <data name="DeploymentPoolInUseSingleCountMessage" xml:space="preserve">
+    <value>Deployment pool {0} can not be removed because project {1} is using the pool.</value>
+  </data>
+  <data name="AgentPoolNotEnoughPermissions" xml:space="preserve">
+    <value>This agent pool exists, but you don't have enough permissions to access it.</value>
+  </data>
+  <data name="AgentCloudDidNotReturnStatus" xml:space="preserve">
+    <value>No status information was returned from the agent cloud service.</value>
+  </data>
+  <data name="ResourceLimitsLocation" xml:space="preserve">
+    <value>/_admin/_buildQueue?_a=resourceLimits</value>
+  </data>
+  <data name="EnvironmentExistsInProject" xml:space="preserve">
+    <value>Environment '{0}' already exists in current project.</value>
+  </data>
+  <data name="LibraryReaderRoleDescription" xml:space="preserve">
+    <value>Reader can only view the library items.</value>
+  </data>
+  <data name="MetaTaskDefinitionNotFound" xml:space="preserve">
+    <value>Task group {0} not found.</value>
+  </data>
+  <data name="EnvironmentAdministratorRoleDescription" xml:space="preserve">
+    <value>Administrator can administer permissions, manage, view and use an environment.</value>
+  </data>
+  <data name="CannotModifyAgentsForHostedPool" xml:space="preserve">
+    <value>Cannot modify agents for pool {0} because it is hosted and managed by the system. Agents may only be registered with private pools.</value>
+  </data>
+  <data name="GetDeploymentMachinesApiDeprecated" xml:space="preserve">
+    <value>GetDeploymentMachinesAsync API is no longer supported. If you are using REST clients, use GetDeploymentTargetsAsync. If you are using browser, refresh the page and try again.&lt;br&gt;
+For agent configuration, download the latest agent and try again. To unconfigure the agent, from your organization navigate to 'Deployment groups' and remove the agent from the Targets page.</value>
+  </data>
+  <data name="DraftForDraftTaskGroupIsNotAllowed" xml:space="preserve">
+    <value>Draft cannot be created for a draft task group with ID '{0}'.</value>
+  </data>
+  <data name="DeploymentPoolNotFound" xml:space="preserve">
+    <value>Deployment pool with id: {0} could not be found.</value>
+  </data>
+  <data name="InvalidSessionOwnerName" xml:space="preserve">
+    <value>Session owner name cannot be empty and must be less than 512 characters in length.</value>
+  </data>
+  <data name="TaskDefinitionIdRouteParameterMismatch" xml:space="preserve">
+    <value>The ID specified in the request route ({0}) does not match the ID in the task definition ({1}).</value>
+  </data>
+  <data name="AgentRequestPoolNoUpdateStatus" xml:space="preserve">
+    <value>The pool {0} does not allow agent updates. Not all agents in this pool have the required version ({1}) to service this request, which may make this request take longer. Contact your organization admin to update agents.</value>
+  </data>
+  <data name="InvalidVariableGroup" xml:space="preserve">
+    <value>Invalid variable group.</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="MachineOffline" xml:space="preserve">
+    <value>Unable to deploy to the virtual machine '{0}' as the machine is offline.</value>
+  </data>
+  <data name="PoolNamespaceAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to manage agent pools for the namespace.</value>
+  </data>
+  <data name="AgentCloudConnectionIssue" xml:space="preserve">
+    <value>Failed to communicate with the agent cloud.</value>
+  </data>
+  <data name="AgentNotFoundMatchingDemandPair" xml:space="preserve">
+    <value>No agent found in pool {0} satisfies both of the following demands: {1}, {2}. All demands: {3}</value>
+  </data>
+  <data name="UseEndpoint" xml:space="preserve">
+    <value>Use Service Connection</value>
+  </data>
+  <data name="EnvironmentReferenceTokenFormatException" xml:space="preserve">
+    <value>Parameter is expected to be of the format {ProjectId}_{EnvironmentId}. For e.g: 96959149-c55f-4dca-b3f5-10a3306ac543_23.</value>
+  </data>
+  <data name="EnvironmentHistoryAccessDeniedException" xml:space="preserve">
+    <value>You do not have permissions to add or update environment deployment execution history records.</value>
+  </data>
+  <data name="CannotEditAgentCloudOnPool" xml:space="preserve">
+    <value>Unable to update the backing agent cloud on an existing agent pool.</value>
+  </data>
+</root>

@@ -1,0 +1,133 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Ajax.Utilities.JSError
+// Assembly: WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+// MVID: 86487675-C393-48D4-AFEC-7657DB09B21F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\WebGrease.dll
+
+namespace Microsoft.Ajax.Utilities
+{
+  public enum JSError
+  {
+    NoError = 0,
+    SyntaxError = 1002, // 0x000003EA
+    NoColon = 1003, // 0x000003EB
+    NoSemicolon = 1004, // 0x000003EC
+    NoLeftParenthesis = 1005, // 0x000003ED
+    NoRightParenthesis = 1006, // 0x000003EE
+    NoRightBracket = 1007, // 0x000003EF
+    NoLeftCurly = 1008, // 0x000003F0
+    NoRightCurly = 1009, // 0x000003F1
+    NoIdentifier = 1010, // 0x000003F2
+    NoEqual = 1011, // 0x000003F3
+    IllegalAssignment = 1012, // 0x000003F4
+    RegExpSyntax = 1013, // 0x000003F5
+    IllegalChar = 1014, // 0x000003F6
+    UnterminatedString = 1015, // 0x000003F7
+    NoCommentEnd = 1016, // 0x000003F8
+    BadReturn = 1018, // 0x000003FA
+    BadBreak = 1019, // 0x000003FB
+    BadContinue = 1020, // 0x000003FC
+    UnusedLabel = 1021, // 0x000003FD
+    BadHexEscapeSequence = 1023, // 0x000003FF
+    NoWhile = 1024, // 0x00000400
+    BadLabel = 1025, // 0x00000401
+    NoLabel = 1026, // 0x00000402
+    DupDefault = 1027, // 0x00000403
+    NoMemberIdentifier = 1028, // 0x00000404
+    NoCCEnd = 1029, // 0x00000405
+    CCOff = 1030, // 0x00000406
+    NoCatch = 1033, // 0x00000409
+    InvalidElse = 1034, // 0x0000040A
+    NoComma = 1100, // 0x0000044C
+    BadSwitch = 1103, // 0x0000044F
+    CCInvalidEnd = 1104, // 0x00000450
+    CCInvalidElse = 1105, // 0x00000451
+    CCInvalidElseIf = 1106, // 0x00000452
+    ErrorEndOfFile = 1107, // 0x00000453
+    DuplicateName = 1111, // 0x00000457
+    UndeclaredVariable = 1135, // 0x0000046F
+    KeywordUsedAsIdentifier = 1137, // 0x00000471
+    UndeclaredFunction = 1138, // 0x00000472
+    NoRightParenthesisOrComma = 1193, // 0x000004A9
+    NoRightBracketOrComma = 1194, // 0x000004AA
+    ExpressionExpected = 1195, // 0x000004AB
+    UnexpectedSemicolon = 1196, // 0x000004AC
+    TooManyTokensSkipped = 1197, // 0x000004AD
+    SuspectAssignment = 1206, // 0x000004B6
+    SuspectSemicolon = 1207, // 0x000004B7
+    ParameterListNotLast = 1240, // 0x000004D8
+    StatementBlockExpected = 1267, // 0x000004F3
+    VariableDefinedNotReferenced = 1268, // 0x000004F4
+    ArgumentNotReferenced = 1270, // 0x000004F6
+    WithNotRecommended = 1271, // 0x000004F7
+    FunctionNotReferenced = 1272, // 0x000004F8
+    AmbiguousCatchVar = 1273, // 0x000004F9
+    FunctionExpressionExpected = 1274, // 0x000004FA
+    ObjectConstructorTakesNoArguments = 1275, // 0x000004FB
+    JSParserException = 1276, // 0x000004FC
+    NumericOverflow = 1277, // 0x000004FD
+    NumericMaximum = 1278, // 0x000004FE
+    NumericMinimum = 1279, // 0x000004FF
+    ResourceReferenceMustBeConstant = 1280, // 0x00000500
+    AmbiguousNamedFunctionExpression = 1281, // 0x00000501
+    ConditionalCompilationTooComplex = 1282, // 0x00000502
+    UnterminatedAspNetBlock = 1283, // 0x00000503
+    MisplacedFunctionDeclaration = 1284, // 0x00000504
+    OctalLiteralsDeprecated = 1285, // 0x00000505
+    FunctionNameMustBeIdentifier = 1286, // 0x00000506
+    StrictComparisonIsAlwaysTrueOrFalse = 1287, // 0x00000507
+    StrictModeNoWith = 1288, // 0x00000508
+    StrictModeDuplicateArgument = 1289, // 0x00000509
+    StrictModeVariableName = 1290, // 0x0000050A
+    StrictModeFunctionName = 1291, // 0x0000050B
+    StrictModeDuplicateProperty = 1292, // 0x0000050C
+    StrictModeInvalidAssign = 1293, // 0x0000050D
+    StrictModeInvalidPreOrPost = 1294, // 0x0000050E
+    StrictModeInvalidDelete = 1295, // 0x0000050F
+    StrictModeArgumentName = 1296, // 0x00000510
+    DuplicateConstantDeclaration = 1297, // 0x00000511
+    AssignmentToConstant = 1298, // 0x00000512
+    StringNotInlineSafe = 1299, // 0x00000513
+    StrictModeUndefinedVariable = 1300, // 0x00000514
+    UnclosedFunction = 1301, // 0x00000515
+    ObjectLiteralKeyword = 1303, // 0x00000517
+    NoEndIfDirective = 1304, // 0x00000518
+    NoEndDebugDirective = 1305, // 0x00000519
+    BadNumericLiteral = 1306, // 0x0000051A
+    DuplicateLexicalDeclaration = 1307, // 0x0000051B
+    DuplicateCatch = 1308, // 0x0000051C
+    SuspectEquality = 1309, // 0x0000051D
+    SemicolonInsertion = 1310, // 0x0000051E
+    ArrayLiteralTrailingComma = 1311, // 0x0000051F
+    StrictModeCatchName = 1312, // 0x00000520
+    BindingPatternRequiresInitializer = 1313, // 0x00000521
+    ImplicitPropertyNameMustBeIdentifier = 1314, // 0x00000522
+    SetterMustHaveOneParameter = 1315, // 0x00000523
+    RestParameterNotLast = 1316, // 0x00000524
+    UnableToConvertToBinding = 1317, // 0x00000525
+    UnableToConvertFromBinding = 1318, // 0x00000526
+    BadBindingSyntax = 1319, // 0x00000527
+    MethodsNotAllowedInBindings = 1320, // 0x00000528
+    NoForOrIf = 1321, // 0x00000529
+    ClassElementExpected = 1322, // 0x0000052A
+    DuplicateClassElementName = 1323, // 0x0000052B
+    SpecialConstructor = 1324, // 0x0000052C
+    StaticPrototype = 1325, // 0x0000052D
+    NoBinding = 1326, // 0x0000052E
+    MultipleDefaultExports = 1327, // 0x0000052F
+    ImportNoModuleName = 1328, // 0x00000530
+    DuplicateModuleDeclaration = 1329, // 0x00000531
+    NoDefaultModuleExport = 1330, // 0x00000532
+    NoModuleExport = 1331, // 0x00000533
+    NoExpectedFrom = 1332, // 0x00000534
+    NoStringLiteral = 1333, // 0x00000535
+    NewLineNotAllowed = 1334, // 0x00000536
+    NoSpecifierSet = 1335, // 0x00000537
+    ExportNotAtModuleLevel = 1336, // 0x00000538
+    ArrowCannotBeConstructor = 1337, // 0x00000539
+    HighSurrogate = 1338, // 0x0000053A
+    LowSurrogate = 1339, // 0x0000053B
+    ApplicationError = 7000, // 0x00001B58
+    NoSource = 7001, // 0x00001B59
+  }
+}

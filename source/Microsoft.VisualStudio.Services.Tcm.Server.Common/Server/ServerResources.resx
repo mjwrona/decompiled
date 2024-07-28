@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TestPlanMigrationAlreadyCompleted" xml:space="preserve">
+    <value>Test plan migration task is already completed for project {0}.</value>
+  </data>
+  <data name="HistoryCommentForClonedObject" xml:space="preserve">
+    <value>{0}: Created from clone operation. Clone Operation Id: {1} Source Work Item Id: {2}</value>
+  </data>
+  <data name="SuiteAuditInfoTestCasesOrdering" xml:space="preserve">
+    <value>New test case order: {0}</value>
+  </data>
+  <data name="TestResultsCreateErrorDueToRunState" xml:space="preserve">
+    <value>TestCaseResults cannot be added or updated for a test run which is in {0} state</value>
+  </data>
+  <data name="WIQLNoFilterError" xml:space="preserve">
+    <value>Atleast one filter needs to be passed.</value>
+  </data>
+  <data name="TfsIdentityNotFound" xml:space="preserve">
+    <value>Azure DevOps Server Identity cannot be found of the user: {0}</value>
+  </data>
+  <data name="ChartDimensionRunType" xml:space="preserve">
+    <value>Run type</value>
+  </data>
+  <data name="TestCaseNotFound" xml:space="preserve">
+    <value>Could not find test case {0}.</value>
+  </data>
+  <data name="CannotDeleteTeamProject" xml:space="preserve">
+    <value>You do not have the appropriate permissions to delete team projects.</value>
+  </data>
+  <data name="TestPlanStartStateReason" xml:space="preserve">
+    <value>New test plan</value>
+  </data>
+  <data name="OtherOutcomesNotSupportedError" xml:space="preserve">
+    <value>Only failed and aborted are supported. Other outcomes are currently not supported.</value>
+  </data>
+  <data name="TestSuiteCloneNotFound" xml:space="preserve">
+    <value>Test suite Clone {0} not found.</value>
+  </data>
+  <data name="IncompleteAttachmentTitle" xml:space="preserve">
+    <value>(Uploading...) {0}</value>
+  </data>
+  <data name="CreateTestRunStateInvalidMessage" xml:space="preserve">
+    <value>Test Run cannot be created with {0} state. Please create with one of the permissible ones and use update to mark it as {0}.</value>
+  </data>
+  <data name="TestTagForRunNotSupported" xml:space="preserve">
+    <value>Test tag is not supported for Runs.</value>
+  </data>
+  <data name="CannotMoveChildSuiteBelow" xml:space="preserve">
+    <value>Cannot move child suites below themselves.</value>
+  </data>
+  <data name="ApiDisallowMultipleTestCaseIdsMessage" xml:space="preserve">
+    <value>A single testCase Id can be passed to this API. To query for multiple testcase Ids, please use the GetTestCaseList API</value>
+  </data>
+  <data name="CloneOperationNotFoundForSuite" xml:space="preserve">
+    <value>The clone operation id {0} is not valid for test suite clone</value>
+  </data>
+  <data name="DeepCopy_TargetProjectHasNoTestCaseCategory" xml:space="preserve">
+    <value>The destination project "{0}" does not have test case workitem category. Ensure that there is a test case workitem in target project and try again.</value>
+  </data>
+  <data name="TestControllerAlreadyExists" xml:space="preserve">
+    <value>Test controller {0} already exists. Test controller must be unique for a team project collection.</value>
+  </data>
+  <data name="DeletedResultArtifact" xml:space="preserve">
+    <value>Deleted result (run {0}, result {1})</value>
+  </data>
+  <data name="MaxTestResultsLimitCrossedError" xml:space="preserve">
+    <value>Maximum {0} test results can be processed in a single call.</value>
+  </data>
+  <data name="TestOutcome_Aborted" xml:space="preserve">
+    <value>Aborted</value>
+  </data>
+  <data name="CreateSuiteInsideNonStaticSuite" xml:space="preserve">
+    <value>Cannot create new suite inside non-static parent suite.</value>
+  </data>
+  <data name="TestOutcome_Timeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="FailureTypeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="TCMDataMigrationInProgressError" xml:space="preserve">
+    <value>TCMDataMigration is InProgress. Patch and Delete calls are blocked until Migration Completes.</value>
+  </data>
+  <data name="SuiteAuditInfoAddedSuites" xml:space="preserve">
+    <value>Added these test suites: {0}</value>
+  </data>
+  <data name="CannotManageTestEnvironments" xml:space="preserve">
+    <value>You do not have the appropriate permissions to manage test environments in this team project.</value>
+  </data>
+  <data name="AutomatedTestParameterSpecifiedForManualRunError" xml:space="preserve">
+    <value>{0} should not be specified for manual test run.</value>
+  </data>
+  <data name="ReleaseIdOrEnvironmentIdNotSpecified" xml:space="preserve">
+    <value>Both release id and release environment id must be specified</value>
+  </data>
+  <data name="BuildNotFoundError" xml:space="preserve">
+    <value>Build corresponding to id {0} cannot be found</value>
+  </data>
+  <data name="NotificationError" xml:space="preserve">
+    <value>An error occurred during the Test Management notification process.</value>
+  </data>
+  <data name="TestConfigurationInactive" xml:space="preserve">
+    <value>Test configuration {0} is inactive and cannot be assigned to a test suite or a test case.</value>
+  </data>
+  <data name="GenericPermission" xml:space="preserve">
+    <value>You do not have appropriate permissions to perform this operation</value>
+  </data>
+  <data name="TeamProjectNotFound" xml:space="preserve">
+    <value>Team project {0} not found.</value>
+  </data>
+  <data name="WorkItemNotOfTypeRBSSupportedCategory" xml:space="preserve">
+    <value>Work item with Id {0} of category type {1} is not supported. Supported categories are: Requirement, Bug, Epic or Feature.</value>
+  </data>
+  <data name="PropertyCannotBeNullOrEmpty" xml:space="preserve">
+    <value>Property {0} can not be null or empty</value>
+  </data>
+  <data name="TestPlanMigrationAlreadyInProgress" xml:space="preserve">
+    <value>Test plan migration job cannot be started for project {0}. A migration job is already in progress</value>
+  </data>
+  <data name="RunSummaryNotComputedException" xml:space="preserve">
+    <value>Run summary is not available, It is recommended to try again after 1 sec.</value>
+  </data>
+  <data name="TestPlanGetFilterOwnerInsufficientParams" xml:space="preserve">
+    <value>Insufficient parameters. Owner filter must be used with includeplandetails=true</value>
+  </data>
+  <data name="TestVariableAlreadyExistsInConfiguration" xml:space="preserve">
+    <value>There is more than one test variable with the name '{0}' in the test configuration. Test variables in the same test configuration must have unique names.</value>
+  </data>
+  <data name="TestCaseIdSpecifiedWhenTestPointIdSpecifiedError" xml:space="preserve">
+    <value>testCaseId should not be specified when testPointId has been specified</value>
+  </data>
+  <data name="FailureTypesAreInUse" xml:space="preserve">
+    <value>The operation failed because the following test failure types are in use and could not be deleted: &lt;{0}&gt;</value>
+  </data>
+  <data name="FailureTypesCannotBeEmpty" xml:space="preserve">
+    <value>All failure types cannot be deleted from a team project. Ensure that there is at-least one failure type in the team project.</value>
+  </data>
+  <data name="SuiteAuditInfoAddedTestCasesAndSuites" xml:space="preserve">
+    <value>Added these test cases: {0}. Added these test suites: {1}</value>
+  </data>
+  <data name="SuiteAuditInfoAssignedTesters" xml:space="preserve">
+    <value>Assigned testers: {0}</value>
+  </data>
+  <data name="MetricsCalculationException" xml:space="preserve">
+    <value>Exception in calculating PipelineTestMetrics for a {0}.</value>
+  </data>
+  <data name="CannotViewWorkItems" xml:space="preserve">
+    <value>You do not have the appropriate permissions to view work items under this area path.</value>
+  </data>
+  <data name="CreateTestResults_InvalidData_WithArgument" xml:space="preserve">
+    <value>Cannot create test results because one or more test results are invalid. Invalid property: {0}.</value>
+  </data>
+  <data name="OnlyEnumTypesSupportedError" xml:space="preserve">
+    <value>Only enum types are supported by this function</value>
+  </data>
+  <data name="TestPlanNotFound" xml:space="preserve">
+    <value>Test plan {0} not found.</value>
+  </data>
+  <data name="TestResultIdNotObtainedError" xml:space="preserve">
+    <value>Test result Id could not be obtained for test run :{0}</value>
+  </data>
+  <data name="NotSupportedArgumentValue" xml:space="preserve">
+    <value>Value {0} for argument {1} is not supported.</value>
+  </data>
+  <data name="BulkUpdateOfTestPointFailed" xml:space="preserve">
+    <value>Bulk update of test points did not update all the test points selected as duplicate test points exist.</value>
+  </data>
+  <data name="DatabaseVersionOnlySupportedForServicing" xml:space="preserve">
+    <value>The database verion is only supported for servicing.</value>
+  </data>
+  <data name="TestVariableValueInUse" xml:space="preserve">
+    <value>Values in test variable {0} are in use and cannot be deleted. </value>
+  </data>
+  <data name="TestFailureTypeDeprecationMessage" xml:space="preserve">
+    <value>This API has been deprecated. Customizations like creation, updating, and deletion of TestFailureType is no longer supported.</value>
+  </data>
+  <data name="PropertyCannotBeEmpty" xml:space="preserve">
+    <value>Property '{0}' cannot be empty.</value>
+  </data>
+  <data name="MultipleTestSuiteWitStatesMappedToSameMetaStateException" xml:space="preserve">
+    <value>Unable to determine work item state. Multiple work item states are mapped to '{0}' meta state in process configuration. To change test suite state use test suite work item form. If you are using Microsoft Test Manager, then you can open work item form using 'Ctrl+G'.</value>
+  </data>
+  <data name="SessionAlreadyExists" xml:space="preserve">
+    <value>The following session already exists: {0}. The session must be unique for each team project.</value>
+  </data>
+  <data name="TestPlanActiveWorkItemState" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="TestSuiteViewTestResultPermission" xml:space="preserve">
+    <value>You do not have the appropriate permissions to view test suites.</value>
+  </data>
+  <data name="ArtifactTitle" xml:space="preserve">
+    <value>{0} (test run {1})</value>
+  </data>
+  <data name="DefaultFailureType_NewIssue" xml:space="preserve">
+    <value>New Issue</value>
+  </data>
+  <data name="TestCaseNotFoundWithMoreDetails" xml:space="preserve">
+    <value>Could not find test case {0} in suite {1}, plan {2}.</value>
+  </data>
+  <data name="TestControllerNotSupported" xml:space="preserve">
+    <value>Using a test controller with Team Foundation Server 2018 for creating and managing Lab environments is no longer supported. You can use build and release pipelines for automated testing. Refer to https://aka.ms/xiu7ff for more details.</value>
+  </data>
+  <data name="InvalidFieldValue" xml:space="preserve">
+    <value>Invalid value for field {0}.</value>
+  </data>
+  <data name="TestControllerNotFound" xml:space="preserve">
+    <value>Test controller {0} not found.</value>
+  </data>
+  <data name="DateRangeInValid" xml:space="preserve">
+    <value>Date Range should be within 7 days</value>
+  </data>
+  <data name="NegativeAttemptNumber" xml:space="preserve">
+    <value>Attempt number can not be negative.</value>
+  </data>
+  <data name="SessionArtifactTitle" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="UnsupportedGroupByFieldsError" xml:space="preserve">
+    <value>Currently {0} and {1} are supported group by fields</value>
+  </data>
+  <data name="RequiredLinkedWorkItemQueryParametersMissing" xml:space="preserve">
+    <value>You must specify only one of automated test names, test case ids or test plan id.</value>
+  </data>
+  <data name="ParentSuiteNotFound" xml:space="preserve">
+    <value>The action cannot be performed because the parent test suite has been deleted. You must refresh the test suite hierarchy.</value>
+  </data>
+  <data name="InvalidChartTransformInstruction" xml:space="preserve">
+    <value>Generated chart transform instruction is invalid. Invalid value for field {0}.</value>
+  </data>
+  <data name="TestOutcome_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="TestTagNotSupportedForManual" xml:space="preserve">
+    <value>Test Tag is only supported for Automated runs, make sure we have build or release associated.</value>
+  </data>
+  <data name="DefaultFailureType_KnownIssue" xml:space="preserve">
+    <value>Known Issue</value>
+  </data>
+  <data name="BuildNotFound" xml:space="preserve">
+    <value>Build {0} cannot be found.</value>
+  </data>
+  <data name="WorkItemDeletePermissionError" xml:space="preserve">
+    <value>The current user does not have permissions to delete work items under the specified area path</value>
+  </data>
+  <data name="TestCaseTitleNotSpecifiedError" xml:space="preserve">
+    <value>TestCaseTitle must be specified when testPointId and testCaseId have not been specified</value>
+  </data>
+  <data name="DeepCopyPermissionError" xml:space="preserve">
+    <value>You do not have permissions required for Clone operation. Make sure you have permissions to manage associated test plans and view test results.</value>
+  </data>
+  <data name="TFSUsingHelperlayer" xml:space="preserve">
+    <value>TFS is trying to use helper layer When Merge FF is enabled.</value>
+  </data>
+  <data name="TestCaseClonerNotInitialized" xml:space="preserve">
+    <value>Internal error: CloneTestCase method invoked without initialization</value>
+  </data>
+  <data name="InvalidParameterForUpdate" xml:space="preserve">
+    <value>Parameter does not belong to result update request..</value>
+  </data>
+  <data name="InvalidGuidFormat" xml:space="preserve">
+    <value>The value {0} is expected to be in GUID format</value>
+  </data>
+  <data name="TestOutcome_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="LinkAlreadyExistsErrorMessage" xml:space="preserve">
+    <value>Link with this path already exists: {0}</value>
+  </data>
+  <data name="PipelineIdDoNotExist" xml:space="preserve">
+    <value>Pipeline Id do not exist. Pipeline Id:  {0}.</value>
+  </data>
+  <data name="SuiteAuditInfoClone" xml:space="preserve">
+    <value>Clone process added child test suites (clone id: {0})</value>
+  </data>
+  <data name="CannotCreateTeamProject" xml:space="preserve">
+    <value>You do not have the appropriate permissions to create team projects.</value>
+  </data>
+  <data name="TestCaseReferenceError" xml:space="preserve">
+    <value>Cannot delete this work item. Remove the references to all test cases and try again.</value>
+  </data>
+  <data name="NoValidStateTransitionExistsForSuite" xml:space="preserve">
+    <value>No valid state transition exists from '{0}' to '{1}'. To change test suite state use test suite work item form. If you are using Microsoft Test Manager, then you can open work item form using 'Ctrl+G'.</value>
+  </data>
+  <data name="TestManagementSoapAccessBlocked" xml:space="preserve">
+    <value>VS403466: Accessing Test Management from Visual Studio or by using Client Object Model is not supported. Please switch to browser based experiences or REST apis.</value>
+  </data>
+  <data name="TestSettingsAlreadyExists" xml:space="preserve">
+    <value>Test settings '{0}' already exists. Test settings must be unique per team project.</value>
+  </data>
+  <data name="CannotManageTestPlans" xml:space="preserve">
+    <value>You do not have the appropriate permissions to manage test plans under this area path.</value>
+  </data>
+  <data name="BuildIdAndPipelineIdAreNotEqual" xml:space="preserve">
+    <value>Build Id {0} and Pipeline Id {1} should be equal.</value>
+  </data>
+  <data name="ChartDimensionValueNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="CannotCreateWorkItemInInvalidState" xml:space="preserve">
+    <value>{0} cannot be created in '{1}' state. Valid default state is '{2}'.</value>
+  </data>
+  <data name="CloneOperationNotFoundForPlan" xml:space="preserve">
+    <value>The clone operation id {0} is not valid for test plan clone</value>
+  </data>
+  <data name="UpdateTestPlanSettingsWithCorrectBuild" xml:space="preserve">
+    <value>Update the Test plan settings to associate correct build.</value>
+  </data>
+  <data name="TestPointNotFound" xml:space="preserve">
+    <value>Test point {0} not found.</value>
+  </data>
+  <data name="TestFailureTypeInUse" xml:space="preserve">
+    <value>Test failure type {0} cannot be deleted because it is in use.</value>
+  </data>
+  <data name="CannotWriteProject" xml:space="preserve">
+    <value>You do not have the appropriate permissions to write to the project.</value>
+  </data>
+  <data name="FailureTypeKnownIssue" xml:space="preserve">
+    <value>Known Issue</value>
+  </data>
+  <data name="NoPlansToMigrate" xml:space="preserve">
+    <value>Team project {0} does not contain any test plans.</value>
+  </data>
+  <data name="FailureTypeNewIssue" xml:space="preserve">
+    <value>New Issue</value>
+  </data>
+  <data name="HierarchicalResultNotSupported" xml:space="preserve">
+    <value>SubResults is not yet supported, Please make sure SubResults attribute should be null while publishing Test Results.</value>
+  </data>
+  <data name="TestSettingsNotFound" xml:space="preserve">
+    <value>Test settings {0} not found.</value>
+  </data>
+  <data name="LogStoreContainerDeletedMessage" xml:space="preserve">
+    <value>DeleteTestLogStoreContainers containers list.</value>
+  </data>
+  <data name="DeepCopy_TreePathNotInProject" xml:space="preserve">
+    <value>Overridden area path/iteration path "{0}" not present in destination project. Please specify area path/iteration path that belongs to destination project.</value>
+  </data>
+  <data name="InvalidAttachmentFile" xml:space="preserve">
+    <value>File uploaded corresponding to attachment {0} is not valid.</value>
+  </data>
+  <data name="InvalidAttachmentType" xml:space="preserve">
+    <value>Invalid AttachmentType specified</value>
+  </data>
+  <data name="TestResStateAlreadyExists" xml:space="preserve">
+    <value>Test resolution state '{0}' already exists. Test resolution state must be unique per team project.</value>
+  </data>
+  <data name="CloneRequirementsNotSupported" xml:space="preserve">
+    <value>Clone requirements is not supported as your project collection is being serviced. Please try again later.</value>
+  </data>
+  <data name="AccessDeniedExceptionMessage" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="FieldValueInvalidDataType" xml:space="preserve">
+    <value>"The value '{0}' specified for the field '{1}' cannot be converted to data type {2}. Specify a different value."</value>
+  </data>
+  <data name="InvalidPropertyMessage" xml:space="preserve">
+    <value>The value for the {0} property is not within the permissible values for it.</value>
+  </data>
+  <data name="DeepCopyFieldOverriddenMultipleTimes" xml:space="preserve">
+    <value>{0} field is overridden more than once.</value>
+  </data>
+  <data name="ChartDimensionRunBy" xml:space="preserve">
+    <value>Run by</value>
+  </data>
+  <data name="ChartDimensionSuite" xml:space="preserve">
+    <value>Suite</value>
+  </data>
+  <data name="RunSummaryWhenTestRunIsNotCompletedException" xml:space="preserve">
+    <value>Run summary is not available as test run is not completed.</value>
+  </data>
+  <data name="TestPlanViewTestResultPermission" xml:space="preserve">
+    <value>You do not have the appropriate permissions to view test plans.</value>
+  </data>
+  <data name="PositiveArgument" xml:space="preserve">
+    <value>{0} should be greater than zero</value>
+  </data>
+  <data name="ReleaseIdDefinitionAmbigious" xml:space="preserve">
+    <value>You can specify either a release ID or a release pipeline ID.</value>
+  </data>
+  <data name="InvalidFileNameSpecified" xml:space="preserve">
+    <value>Invalid filename specified. Filename contains invalid character '{0}'.</value>
+  </data>
+  <data name="TestManagementServiveMaintenanceInProgress" xml:space="preserve">
+    <value>Test management service maintenance is in progress. Retry the operation after a few minutes.</value>
+  </data>
+  <data name="ChartDimensionResolution" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="TestIterationResultCompletedDateGreaterThanStartDate" xml:space="preserve">
+    <value>Test iteration result completed date must be greater than start date.</value>
+  </data>
+  <data name="WorkItemNotOfTypeRequirementCategory" xml:space="preserve">
+    <value>The workitem with id {0} is not of type requirement category</value>
+  </data>
+  <data name="TestSuiteInPlanningWorkItemState" xml:space="preserve">
+    <value>In Planning</value>
+  </data>
+  <data name="DefaultStateNotMappedToInProgressInProjectProcessConfig" xml:space="preserve">
+    <value>Default state '{0}' for '{1}' work item type must be mapped to 'InProgess' state type in project process configuration.</value>
+  </data>
+  <data name="InvalidWitCategory" xml:space="preserve">
+    <value>{0} is not defined in work item categories (categories.xml). You can use witadmin exportcategories; witadmin importcategories to fix this.</value>
+  </data>
+  <data name="TestRunTypeNotSupported" xml:space="preserve">
+    <value>Creation of TestRun of type '{0}' is not supported. Contact Azure DevOps Server administrator for details.</value>
+  </data>
+  <data name="SuiteAuditInfoRemovedTestCases" xml:space="preserve">
+    <value>Removed these test cases: {0}</value>
+  </data>
+  <data name="PropertyTooLong" xml:space="preserve">
+    <value>The length of property '{0}' cannot exceed {1} characters.</value>
+  </data>
+  <data name="TestRunStartedTitle" xml:space="preserve">
+    <value>{0} - Test Run {1} ({2}) started</value>
+  </data>
+  <data name="FileUploadExceedMaxSize" xml:space="preserve">
+    <value>Cannot upload file as it exceeded the maximum file size ({0} bytes)</value>
+  </data>
+  <data name="SuiteAuditInfoAddedChildSuite" xml:space="preserve">
+    <value>Added test suite to parent: {0}</value>
+  </data>
+  <data name="DeepCopyInvalidOperationId" xml:space="preserve">
+    <value>Clone operation with Id {0} does not exist. Specify a valid operation Id.</value>
+  </data>
+  <data name="InvalidTestSuiteEntry" xml:space="preserve">
+    <value>TestSuiteEntry must specify a non-zero child suite ID or test case ID, but not both.</value>
+  </data>
+  <data name="RunSummaryNegativeValueError" xml:space="preserve">
+    <value>{0} in RunSummary of {1} for outcome {2} is negative.</value>
+  </data>
+  <data name="TestSuiteNotBelongToRequirementBasedCategory" xml:space="preserve">
+    <value>Bulk creation of test suites is currently only supported for Requirement Based Suites</value>
+  </data>
+  <data name="DeepCopyNonEditableField" xml:space="preserve">
+    <value>The field '{0}' is not valid. Only Iteration Path, Area Path or custom fields can be updated during clone operation.</value>
+  </data>
+  <data name="GetTestResultsMetaDataApiMaxLimitError" xml:space="preserve">
+    <value>TestCaseReferenceIds can have a maximum of {0} ids only.</value>
+  </data>
+  <data name="InvalidTcmState" xml:space="preserve">
+    <value>'{0}' is not a valid {1} state</value>
+  </data>
+  <data name="ServiceAccountRequired" xml:space="preserve">
+    <value>This operation may only be performed by the Azure DevOps Server.</value>
+  </data>
+  <data name="FileDownloadExceedMaxSize" xml:space="preserve">
+    <value>Cannot download file as it exceeded the maximum file size ({0} bytes)</value>
+  </data>
+  <data name="TestCasesNotFoundForAdd" xml:space="preserve">
+    <value>One or more test cases which were to be added could not be found.</value>
+  </data>
+  <data name="NullValueForRequiredParameter" xml:space="preserve">
+    <value>Value for required parameter cannot be null</value>
+  </data>
+  <data name="DefaultTestConfigurationNotFound" xml:space="preserve">
+    <value>No default test configuration is found.</value>
+  </data>
+  <data name="CloneOperationNotFoundForTestCase" xml:space="preserve">
+    <value>The clone operation id {0} is not valid for test case clone</value>
+  </data>
+  <data name="CouldNotFindAValidSuiteStateMapping" xml:space="preserve">
+    <value>Could not find a valid state mapping for '{0}' state in process configuration. Each work item state must be mapped to either 'Proposed', 'InProgress' or 'Completed' state type.</value>
+  </data>
+  <data name="DuplicateLinkErrorMessage" xml:space="preserve">
+    <value>Updating path of existing link is no longer supported. To update path, delete the existing link and add a new link.</value>
+  </data>
+  <data name="InvalidSQLArgument" xml:space="preserve">
+    <value>SQL argument '{0}' has invalid value '{1}'.</value>
+  </data>
+  <data name="DataCollectorAlreadyExists" xml:space="preserve">
+    <value>Diagnostic data adapter {0} already exists. Diagnostic data adapter must be unique for a team project collection.</value>
+  </data>
+  <data name="DefaultFailureType_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ActionResultNotFound" xml:space="preserve">
+    <value>No action result was found with action path {0}.</value>
+  </data>
+  <data name="ErrorQueuingJob" xml:space="preserve">
+    <value>Test Management Service encountered an error while queuing job ID: {0}.</value>
+  </data>
+  <data name="CopySuiteEntries_NameTemplate1" xml:space="preserve">
+    <value>{0} - Copy</value>
+  </data>
+  <data name="CopySuiteEntries_NameTemplate2" xml:space="preserve">
+    <value>{0} - Copy({1})</value>
+  </data>
+  <data name="CannotMoveSuiteEntriesAcrossPlans" xml:space="preserve">
+    <value>Moving test suite entries across test plans is not allowed.</value>
+  </data>
+  <data name="CouldNotFindTransitionsForWorkItemType" xml:space="preserve">
+    <value>Could not find state transitions for '{0}'.</value>
+  </data>
+  <data name="SessionNotFound" xml:space="preserve">
+    <value>The following session was not found: {0}.</value>
+  </data>
+  <data name="DefaultFailureType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="TestManagementAPINotSupportedError" xml:space="preserve">
+    <value>The following API is not supported by this version of the server: {0}.</value>
+  </data>
+  <data name="TestOutcome_Passed" xml:space="preserve">
+    <value>Passed</value>
+  </data>
+  <data name="TestOutcome_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="TestOutcome_NotExecuted" xml:space="preserve">
+    <value>Not executed</value>
+  </data>
+  <data name="VariableSeparator" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="DeepCopy_TreePathMustForCloneAcrossProjects" xml:space="preserve">
+    <value>Both area path and iteration path needs to be overridden when cloning across projects.</value>
+  </data>
+  <data name="InvalidConditionForTcmField" xml:space="preserve">
+    <value>The condition {0} is not supported for '{1}' field</value>
+  </data>
+  <data name="TestOutcome_NotApplicable" xml:space="preserve">
+    <value>Not applicable</value>
+  </data>
+  <data name="FieldNotSupportedInQuery" xml:space="preserve">
+    <value>The field name '{0}' is not supported in the query</value>
+  </data>
+  <data name="DeepCopySourceAndDestinationCannotBeInSamePlan" xml:space="preserve">
+    <value>Test suite cannot be cloned to a destination within the same plan. Specify a destination test suite in a different plan.</value>
+  </data>
+  <data name="TestRunNoResultsError" xml:space="preserve">
+    <value>Test run does not have any results to update</value>
+  </data>
+  <data name="CloneAcrossProjectsNotSupported" xml:space="preserve">
+    <value>Clone operations across projects is not supported as your project collection is being serviced. Please try again later.</value>
+  </data>
+  <data name="TestSuiteNotFound" xml:space="preserve">
+    <value>The test suite with id {0} does not exist</value>
+  </data>
+  <data name="TestPointAlreadyExists" xml:space="preserve">
+    <value>A test point for the assigned tester and configuration already exists.</value>
+  </data>
+  <data name="ResourceUrlCreationFailed" xml:space="preserve">
+    <value>Failed to create resource URL</value>
+  </data>
+  <data name="DeepCopyFieldNotFound" xml:space="preserve">
+    <value>The specified field '{0}' does not exist. Specify the Name or ReferenceName of a valid field</value>
+  </data>
+  <data name="InvalidAttachmentContent" xml:space="preserve">
+    <value>Attachment content is not valid</value>
+  </data>
+  <data name="TestCaseAddtoSuiteFailed" xml:space="preserve">
+    <value>Test cases could not added to test suite {0} because another user performed a conflicting operation. Refresh the client and retry again.</value>
+  </data>
+  <data name="ListNullError" xml:space="preserve">
+    <value>{0} list is null</value>
+  </data>
+  <data name="DeepCopyFailedForTestCase" xml:space="preserve">
+    <value>Clone operation encountered an error while processing test case {0}. Exclude this test case from the suites being cloned and retry the operation. 
+Error details: {1}</value>
+  </data>
+  <data name="TestPlanInactiveWorkItemState" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="SyncTestPointsForSuitesFailed" xml:space="preserve">
+    <value>Assign configurations failed for the suites {0} with error '{1}'.</value>
+  </data>
+  <data name="SuiteAuditInfoRemovedTestSuites" xml:space="preserve">
+    <value>Removed these test suites: {0}</value>
+  </data>
+  <data name="TestVariableNotFound" xml:space="preserve">
+    <value>Test variable {0} not found.</value>
+  </data>
+  <data name="ChartDimensionPriority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="TestEnvironmentNotFound" xml:space="preserve">
+    <value>Test environment {0} not found.</value>
+  </data>
+  <data name="DeepCopyFailedWithWITError" xml:space="preserve">
+    <value>Clone operation encountered a WorkItem Tracking error while processing test case {0}. Retry the operation. 
+Error details: {1}</value>
+  </data>
+  <data name="InvalidIdSpecified" xml:space="preserve">
+    <value>Invalid {0} specified</value>
+  </data>
+  <data name="ParentSuiteUpdated" xml:space="preserve">
+    <value>Parent suite {0} got update.</value>
+  </data>
+  <data name="InvalidWorkItemPassed" xml:space="preserve">
+    <value>You cannot use this API to delete the work item, the work item with ID {0} does not belong to {1}.</value>
+  </data>
+  <data name="TestEnvironmentAlreadyExists" xml:space="preserve">
+    <value>Test environment {0} already exists. Test environment must be unique for a team project and a test controller.</value>
+  </data>
+  <data name="SuiteAuditInfoAssignedConfig" xml:space="preserve">
+    <value>Assigned these test configurations: {0}</value>
+  </data>
+  <data name="TestIterationNotFound" xml:space="preserve">
+    <value>Test iteration = {0} cannot be found</value>
+  </data>
+  <data name="NoValidStateTransitionExistsForPlan" xml:space="preserve">
+    <value>No valid state transition exists from '{0}' to '{1}'. To change test plan state use test plan work item form. If you are using Microsoft Test Manager, then you can open work item form using 'Ctrl+G' or from 'Organize' tab.</value>
+  </data>
+  <data name="TestPlanCloneNotFound" xml:space="preserve">
+    <value>Test plan Clone {0} not found.</value>
+  </data>
+  <data name="ResolutionStatesAreInUse" xml:space="preserve">
+    <value>The operation failed because the following test resolution states are in use and could not be deleted: &lt;{0}&gt;</value>
+  </data>
+  <data name="TestSubResultCountMaxedOut" xml:space="preserve">
+    <value>Test Sub Results count should be less than {0} at each hierarchy level.</value>
+  </data>
+  <data name="IncorrectCopyHierarchyValue" xml:space="preserve">
+    <value>CopyAncestorHierarchy cannot be false if multiple suite ids are provided.</value>
+  </data>
+  <data name="AmbiguousDate" xml:space="preserve">
+    <value>Invalid dates specified.</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id:</value>
+  </data>
+  <data name="TestCaseRemovedFromDynamicSuite" xml:space="preserve">
+    <value>Test cases cannot be directly removed from a query based suite</value>
+  </data>
+  <data name="TestResultNotUpdatedError" xml:space="preserve">
+    <value>Test result was not updated. Please check the request model and try again.</value>
+  </data>
+  <data name="TestResolutionStateDeprecationMessage" xml:space="preserve">
+    <value>This API has been deprecated. Customizations like creation, updating, and deletion of TestResolutionState is no longer supported.</value>
+  </data>
+  <data name="DeepCopyInvalidPath" xml:space="preserve">
+    <value>Invalid path '{0}' specified for field '{1}'. Specify a valid Path.</value>
+  </data>
+  <data name="ViewTestPointsPermission" xml:space="preserve">
+    <value>You do not have the appropriate permissions to view test points under this area path.</value>
+  </data>
+  <data name="TestOutcome_Unspecified" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="KeyValueSeparator" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="DeepCopyLinkDefaultComment" xml:space="preserve">
+    <value>TF237027: Clone of related item (Do not edit)</value>
+  </data>
+  <data name="DuplicateTestCasesInSuite" xml:space="preserve">
+    <value>Duplicate test case {0} detected in suite {1}. Test cases must be unique within a common parent.</value>
+  </data>
+  <data name="DefaultFailureType_Regression" xml:space="preserve">
+    <value>Regression</value>
+  </data>
+  <data name="MaxLimitForLinkedTestsExeceeded" xml:space="preserve">
+    <value>Maximum of {0} tests can be linked at a time.</value>
+  </data>
+  <data name="CannotDeleteTestResults" xml:space="preserve">
+    <value>You do not have the appropriate permissions to delete test results in this team project.</value>
+  </data>
+  <data name="DuplicateBranchFlakyStateUpdate" xml:space="preserve">
+    <value>Branch {0} and FlakyState {0} is duplicated in update input</value>
+  </data>
+  <data name="MaxTestFlakinessBranchLimitExceeded" xml:space="preserve">
+    <value>The operation is failed due to max branch limit {0} exceeded</value>
+  </data>
+  <data name="TestVariableInUse" xml:space="preserve">
+    <value>Test variable {0} cannot be deleted as it is in use.</value>
+  </data>
+  <data name="TestPointNotFoundError" xml:space="preserve">
+    <value>One or more tests could not be found. Refresh the test suite and try again.</value>
+  </data>
+  <data name="ControllerSetForNonAutomatedRun" xml:space="preserve">
+    <value>Controller can be set only for automated test run.</value>
+  </data>
+  <data name="DeepCopyFieldValueInvalidDataType" xml:space="preserve">
+    <value>"The value '{0}' specified for the field '{1}' cannot be converted to data type {2}. Specify a different value."</value>
+  </data>
+  <data name="PublicProjectReachedLogStoreCapacityThreshold" xml:space="preserve">
+    <value>The current project reached maximum of allocated storage limit({0} GB).</value>
+  </data>
+  <data name="TestFailureTypeAlreadyExists" xml:space="preserve">
+    <value>Test failure type '{0}' already exists. Test failure type must be unique per team project.</value>
+  </data>
+  <data name="DeepCopyFieldValueMissing" xml:space="preserve">
+    <value>A field was specified for edit, but value was not supplied. Specify a valid value.</value>
+  </data>
+  <data name="InValidListOfIds" xml:space="preserve">
+    <value>{0} should be comma seperated list of valid Ids.</value>
+  </data>
+  <data name="DuplicateIdsExceptionMessage" xml:space="preserve">
+    <value>Collection contains duplicate id: {0}</value>
+  </data>
+  <data name="DeepCopyFailedForRequirement" xml:space="preserve">
+    <value>Clone operation encountered an error while processing requirement {0}. Exclude the corresponding requirement based suite from the suites being cloned and retry the operation. 
+Error details: {1}</value>
+  </data>
+  <data name="CannotAddDuplicateTestCaseToSuite" xml:space="preserve">
+    <value>Cannot add duplicate test case to suite.</value>
+  </data>
+  <data name="RunSummaryWithRunTypeErrorMsg" xml:space="preserve">
+    <value>RunSummary in {0} is applicable when run type is NoConfig.</value>
+  </data>
+  <data name="ActiveTestConfigurationsNotFound" xml:space="preserve">
+    <value>No active test configuration found</value>
+  </data>
+  <data name="TestResultNotFound" xml:space="preserve">
+    <value>Test result {1} of test run {0} cannot be found.</value>
+  </data>
+  <data name="SuiteAuditInfoSetEntryConfigurations" xml:space="preserve">
+    <value>Assigned configurations: {0} to test cases: {1}</value>
+  </data>
+  <data name="DataCollectorNotFound" xml:space="preserve">
+    <value>Diagnostic data adapter {0} not found.</value>
+  </data>
+  <data name="TestOutcome_InProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="TestRunAlreadyUpdated" xml:space="preserve">
+    <value>Test run with id {0} has already been updated.</value>
+  </data>
+  <data name="DefaultConfigurationCreated" xml:space="preserve">
+    <value>Default configuration created @ {0}</value>
+  </data>
+  <data name="FailureTypeRegression" xml:space="preserve">
+    <value>Regression</value>
+  </data>
+  <data name="InvalidContentType" xml:space="preserve">
+    <value>Specify appropriate content type.</value>
+  </data>
+  <data name="TestOutcome_Inconclusive" xml:space="preserve">
+    <value>Inconclusive</value>
+  </data>
+  <data name="InvalidReleaseSpecified" xml:space="preserve">
+    <value>Invalid release specified</value>
+  </data>
+  <data name="DatabaseOperationNotSupportedWhileUpgrade" xml:space="preserve">
+    <value>Cannot perform this operation while your project collection is being serviced. Please try again later.</value>
+  </data>
+  <data name="MaxTestCaseIdsError" xml:space="preserve">
+    <value>Maximum of {0} test case id(s) can be specified at a time.</value>
+  </data>
+  <data name="TestResultsSettingsSecurityErrorMessage" xml:space="preserve">
+    <value>Access denied: User {0} must be a member of Project Collection Administrators or Team Project Administrators or Test Administrators to perform this action.</value>
+  </data>
+  <data name="IterationResultNotFound" xml:space="preserve">
+    <value>The iteration result with iteration id {0} was not found.</value>
+  </data>
+  <data name="AutomationStatusMismatch" xml:space="preserve">
+    <value>Mismatch in automation status of test case and test run</value>
+  </data>
+  <data name="TestResultCompletedDateGreaterThanStartDate" xml:space="preserve">
+    <value>Test result completed date must be greater than test result start date</value>
+  </data>
+  <data name="ChartDimensionOutcome" xml:space="preserve">
+    <value>Outcome</value>
+  </data>
+  <data name="NotAuthorizedToAccessApi" xml:space="preserve">
+    <value>You are not authorized to access this API. Please contact your project administrator</value>
+  </data>
+  <data name="InvalidAttachmentForUpdate" xml:space="preserve">
+    <value>Attachment does not belong to result update request.</value>
+  </data>
+  <data name="CannotEditWorkItems" xml:space="preserve">
+    <value>You do not have the appropriate permissions to edit work items under this area path.</value>
+  </data>
+  <data name="TestConfigurationSpecifiedError" xml:space="preserve">
+    <value>Test Configuration should not be specified when testPointId has been specified</value>
+  </data>
+  <data name="InvalidSuiteType" xml:space="preserve">
+    <value>Invalid suite type: {0}.</value>
+  </data>
+  <data name="DefaultFailureType_NullValue" xml:space="preserve">
+    <value>NullValue</value>
+  </data>
+  <data name="CreateTestResults_InvalidData" xml:space="preserve">
+    <value>Cannot create test results because one or more test results are invalid.</value>
+  </data>
+  <data name="DurationInMsError" xml:space="preserve">
+    <value>Failed to obtain durationInMs field.</value>
+  </data>
+  <data name="PlanCategoryValidationError" xml:space="preserve">
+    <value>Work item {0} does not belong to Test plan category</value>
+  </data>
+  <data name="TestFailureTypeNotFound" xml:space="preserve">
+    <value>Test failure type {0} cannot be found.</value>
+  </data>
+  <data name="TestAttachmentIdNotObtained" xml:space="preserve">
+    <value>TestAttachmentId cannot be obtained</value>
+  </data>
+  <data name="TestPointsNotFound" xml:space="preserve">
+    <value>One or more test points could not be found</value>
+  </data>
+  <data name="SuiteAuditInfoPlanNameChanged" xml:space="preserve">
+    <value>New test plan name: {0}</value>
+  </data>
+  <data name="DuplicateSuiteName" xml:space="preserve">
+    <value>Duplicate suite name detected in suite {0}. Suite names must be unique within a common parent.</value>
+  </data>
+  <data name="PropertyCanNotBeNonNull" xml:space="preserve">
+    <value>Property {0} can not be not null</value>
+  </data>
+  <data name="SuiteAuditInfoAddedTestCases" xml:space="preserve">
+    <value>Added these test cases: {0}</value>
+  </data>
+  <data name="DuplicateNameError" xml:space="preserve">
+    <value>The name '{0}' already exists in the collection.</value>
+  </data>
+  <data name="IllegalRunStateTransition" xml:space="preserve">
+    <value>Test run state cannot be transitioned from '{0}' to '{1}'.</value>
+  </data>
+  <data name="DeepCopy_TargetProjectHasNoRequirementCategory" xml:space="preserve">
+    <value>The destination project "{0}" does not have requirement workitem category. Ensure that there is a requirement workitem in target project and try again.</value>
+  </data>
+  <data name="MultipleTestPlanWitStatesMappedToSameMetaStateException" xml:space="preserve">
+    <value>Unable to determine work item state. Multiple work item states are mapped to '{0}' meta state in process configuration. To change test plan state use test plan work item form. If you are using Microsoft Test Manager, then you can open work item form using 'Ctrl+G' or from 'Organize' tab.</value>
+  </data>
+  <data name="TestOutcome_Blocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="InvalidChartDimension" xml:space="preserve">
+    <value>Invalid dimensions: {0}</value>
+  </data>
+  <data name="TestEnvironmentAlreadyExistsOnTestController" xml:space="preserve">
+    <value>Test environment {0} already exists in this team project for test controller {1}. The test environment must be unique under a team project. If you no longer require test controller {1}, you can remove this test controller from the team project collection and then try again.</value>
+  </data>
+  <data name="MaximumSuitesExceeded" xml:space="preserve">
+    <value>You can specify a maximum of {0} test suites.</value>
+  </data>
+  <data name="DeletedAttachmentArtifact" xml:space="preserve">
+    <value>Deleted attachment (run {0}, result {1})</value>
+  </data>
+  <data name="StartDateAfterEndDateError" xml:space="preserve">
+    <value>The start date cannot occur after the end date.</value>
+  </data>
+  <data name="DuplicateTestCaseId" xml:space="preserve">
+    <value>Duplicate test case id {0} detected in the list. Test cases must be unique within the list.</value>
+  </data>
+  <data name="SuiteAuditInfoDeletedSuites" xml:space="preserve">
+    <value>Deleted these test suites: {0}</value>
+  </data>
+  <data name="PlanUnderClone" xml:space="preserve">
+    <value>Test Plan {0} cannot be deleted as it is in use in a clone operation. Try again after some time.</value>
+  </data>
+  <data name="RequirementSuiteNotFoundForId" xml:space="preserve">
+    <value>Requirement Suite could not be found for the requirement Id {0}.</value>
+  </data>
+  <data name="TestPlanInUse" xml:space="preserve">
+    <value>Test plan {0} cannot be deleted because you do not have  the appropriate permissions to delete its test results.</value>
+  </data>
+  <data name="IdMustBeSpecifiedError" xml:space="preserve">
+    <value>{0} must be specified</value>
+  </data>
+  <data name="TestResStateNotFound" xml:space="preserve">
+    <value>Test resolution state {0} not found.</value>
+  </data>
+  <data name="TestSuiteDoesNotExistInPlan" xml:space="preserve">
+    <value>Test Suite {0} does not exist in plan {1}.</value>
+  </data>
+  <data name="RunSummaryDuplicateEntry" xml:space="preserve">
+    <value>RunSummary in {0} has duplicate entry.</value>
+  </data>
+  <data name="ChartMeasureTests" xml:space="preserve">
+    <value>Tests</value>
+  </data>
+  <data name="TestOutcome_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="BuildsNotFound" xml:space="preserve">
+    <value>No builds found for uri {0}</value>
+  </data>
+  <data name="TestObjectUpdatedError" xml:space="preserve">
+    <value>Test Artifact {0} is already updated.</value>
+  </data>
+  <data name="ProjectCollectionCatalogNodeNotFound" xml:space="preserve">
+    <value>The catalog node of team project collection {0} cannot be found in the organizational tree of the catalog service.</value>
+  </data>
+  <data name="TestSuiteStartStateReason" xml:space="preserve">
+    <value>New test suite</value>
+  </data>
+  <data name="ResultRetentionDurationValidationError" xml:space="preserve">
+    <value>The result duration should be between 1 and 10000 days</value>
+  </data>
+  <data name="TestCaseResultNotFoundError" xml:space="preserve">
+    <value>The test case result no longer exists.</value>
+  </data>
+  <data name="InvalidTestCaseResultForUpdate" xml:space="preserve">
+    <value>Test result does not belong to result update request.</value>
+  </data>
+  <data name="CouldNotFindAValidPlanStateMapping" xml:space="preserve">
+    <value>Could not find a valid state mapping for '{0}' state in process configuration. Each work item state must be mapped to either 'InProgress' or 'Completed' state type.</value>
+  </data>
+  <data name="DuplicateTestCaseInSuite" xml:space="preserve">
+    <value>Duplicate test case detected in suite {0}. Test cases must be unique within a common parent.</value>
+  </data>
+  <data name="CannotManageTestSuites" xml:space="preserve">
+    <value>You do not have the appropriate permissions to manage test suites under this area path.</value>
+  </data>
+  <data name="TestConfigurationAlreadyExists" xml:space="preserve">
+    <value>Test configuration '{0}' already exists. Test configuration must be unique per team project.</value>
+  </data>
+  <data name="InvalidStructurePath" xml:space="preserve">
+    <value>The structure path {0} is not valid.</value>
+  </data>
+  <data name="ResolutionStatesCannotBeEmpty" xml:space="preserve">
+    <value>All resolution states cannot be deleted from a team project. Ensure that there is at-least one resolution state in the team project.</value>
+  </data>
+  <data name="ExtensionFieldsNotFoundError" xml:space="preserve">
+    <value>The following extension fields were not found: {0}</value>
+  </data>
+  <data name="PlannedTestResultPropertiesNotSpecifiedError" xml:space="preserve">
+    <value>TestPointId, testCaseId, testCaseRevision, testCaseTitle must be specified for planned test results.</value>
+  </data>
+  <data name="BulkMarkRunTitle" xml:space="preserve">
+    <value>{0} (Manual)</value>
+  </data>
+  <data name="CannotManageTestControllers" xml:space="preserve">
+    <value>You do not have the appropriate permissions to manage test controllers in this team project collection.</value>
+  </data>
+  <data name="MoveSuiteInsideNonStaticSuite" xml:space="preserve">
+    <value>Cannot move suite inside non-static parent suite.</value>
+  </data>
+  <data name="TestSuiteCannotBeUpdated" xml:space="preserve">
+    <value>Your client does not support editing of the selected query type. To edit this query upgrade your client version to one compatible with Azure DevOps Server.</value>
+  </data>
+  <data name="SystemFieldNotFound" xml:space="preserve">
+    <value>System field {0} not found.</value>
+  </data>
+  <data name="TestSuiteInProgressWorkItemState" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="ChartDimensionConfiguration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="TestResultUpdateFailureCompatiblityIssue" xml:space="preserve">
+    <value>Cannot update one or more result outcome. Server result outcome value is incompatible with this version of client. To view or update such results use latest client.</value>
+  </data>
+  <data name="TeamProjectCatalogNodeNotFound" xml:space="preserve">
+    <value>The catalog node of team project {0} cannot be found in the organizational tree of the catalog service.</value>
+  </data>
+  <data name="CannotManageTestConfigurations" xml:space="preserve">
+    <value>You do not have the appropriate permissions to manage test configurations, test settings, test variables, or test resolution states in this team project.</value>
+  </data>
+  <data name="PointAssignmentsContainDuplicateConfigurations" xml:space="preserve">
+    <value>Point Assignments contains duplicate configurations.</value>
+  </data>
+  <data name="TestSuiteCompletedWorkItemState" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="InvalidValueSpecified" xml:space="preserve">
+    <value>Invalid value specified</value>
+  </data>
+  <data name="SpecifiedInvalidStepIdentifier" xml:space="preserve">
+    <value>Specified invalid step identifier: {0}</value>
+  </data>
+  <data name="WorkItemNotBelongToRequirementCategory" xml:space="preserve">
+    <value>The workitem with id {0} does not belong to requirement category.</value>
+  </data>
+  <data name="TestPlanCategoryNotFound" xml:space="preserve">
+    <value>Test plan work item definitions and category are missing from the project {0}. Please import them inside the project before starting test plan migration. More details can be found in  https://go.microsoft.com/fwlink/?LinkId=</value>
+  </data>
+  <data name="DeepCopyFieldValueTooLong" xml:space="preserve">
+    <value>Specified field value is too long. Field values longer than {0} characters are not supported. Specify a shorter value.</value>
+  </data>
+  <data name="InvalidTestResultIdsSpecified" xml:space="preserve">
+    <value>You must pass in a set of valid test result ids to the resultIds parameter.The following ids are not valid: { 0 }.</value>
+  </data>
+  <data name="DuplicateTestVariable" xml:space="preserve">
+    <value>Test variable(s) {0} specified more than one time for the test configuration.</value>
+  </data>
+  <data name="TestRunNotFound" xml:space="preserve">
+    <value>Test run with id {0} could not be found. It may have been deleted.</value>
+  </data>
+  <data name="ResultRetentionSettingsAlreadyExistsExceptionText" xml:space="preserve">
+    <value>Result retention settings already exists. These settings must be unique for a team project.</value>
+  </data>
+  <data name="SuiteDepthOverLimit" xml:space="preserve">
+    <value>The action cannot be performed because the suite hierarchy cannot go over 14 levels deep.</value>
+  </data>
+  <data name="PlanAreaPathNotFound" xml:space="preserve">
+    <value>The operation cannot complete because the area path of test plan {0} cannot be found.</value>
+  </data>
+  <data name="ResultQueryInvalid" xml:space="preserve">
+    <value>We can either use Result Ids or Result Filter </value>
+  </data>
+  <data name="MaximumTestCaseIdsExceeded" xml:space="preserve">
+    <value>You can specify a maximum of {0} test names or test case ids or test points.</value>
+  </data>
+  <data name="TestSuiteEntryNotFound" xml:space="preserve">
+    <value>The action cannot be performed because not all test suite entries are found.</value>
+  </data>
+  <data name="CloneOperationJobName" xml:space="preserve">
+    <value>TestManagement Clone Operation Job (ID {0})</value>
+  </data>
+  <data name="SomeTestResultLinkedWorkItemsCannotBeObtained" xml:space="preserve">
+    <value>Some of the associatedworkitems cannot be obtained for test result</value>
+  </data>
+  <data name="TestActionResultCompletedDateGreaterThanStartDate" xml:space="preserve">
+    <value>Test action result completed date must be greater than start date.</value>
+  </data>
+  <data name="DeepCopyRelatedLinkTooLong" xml:space="preserve">
+    <value>Related Link comment is too long. Link comments may not be longer than {0} characters. Specify a shorter comment.</value>
+  </data>
+  <data name="BulkUpdateResultApiMaxLimitError" xml:space="preserve">
+    <value>ResultIds array can have a maximum of {0} ids only.</value>
+  </data>
+  <data name="FailureTypeNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ParallelArraySizeMismatch" xml:space="preserve">
+    <value>The array arguments {0} and {1} should be of the same length. Length of {0}: {2}. Length of {1}: {3}.</value>
+  </data>
+  <data name="FailedToCreateTestResultsForTestRun" xml:space="preserve">
+    <value>Failed to create test results for test run: {0}</value>
+  </data>
+  <data name="TestVariableAlreadyExists" xml:space="preserve">
+    <value>Test variable '{0}' already exists. Test variable must be unique per team project.</value>
+  </data>
+  <data name="InactivePlanCannotBeMarkedAsDefault" xml:space="preserve">
+    <value>A plan cannot be marked as Default and Inactive</value>
+  </data>
+  <data name="BuildIdNotSpecifiedWithPlatformFlavor" xml:space="preserve">
+    <value>Build Id needs to be specified along with BuildPlatform and BuildFlavor</value>
+  </data>
+  <data name="ChartDimensionFailureType" xml:space="preserve">
+    <value>Failure type</value>
+  </data>
+  <data name="IllegalResultStateTransition" xml:space="preserve">
+    <value>Test result state cannot be transitioned from '{0}' to '{1}'.</value>
+  </data>
+  <data name="CannotViewTestResults" xml:space="preserve">
+    <value>You cannot view test results because you don’t have the appropriate permission.</value>
+  </data>
+  <data name="TestTagLimitReached" xml:space="preserve">
+    <value>Number of tags {0} for this run are more than supported limit {1}</value>
+  </data>
+  <data name="TestCaseNotFoundError" xml:space="preserve">
+    <value>The test case no longer exists.</value>
+  </data>
+  <data name="CannotPublishTestResults" xml:space="preserve">
+    <value>TF237026: You do not have  the appropriate permissions to publish test results in this team project.</value>
+  </data>
+  <data name="ChartDimensionRunTypeAutomated" xml:space="preserve">
+    <value>Automated</value>
+  </data>
+  <data name="LogStoreContainerDeleted" xml:space="preserve">
+    <value>Project {0}, scope: {1}, id: {2} ;</value>
+  </data>
+  <data name="MaxLimitForWorkItemsExeceeded" xml:space="preserve">
+    <value>Maximum of {0} work items can be queried at a time.</value>
+  </data>
+  <data name="TestTagFormatError" xml:space="preserve">
+    <value>Only Alphanumeric characters are allowed to be used for tags.</value>
+  </data>
+  <data name="MaxHierarchicalResultsLimitCrossedError" xml:space="preserve">
+    <value>Maximum {0} test results can be processed in a single call.</value>
+  </data>
+  <data name="InvalidArgument" xml:space="preserve">
+    <value>Argument {0} with value {1} is not correct. Correct the argument value and try again.</value>
+  </data>
+  <data name="InvalidTestActionResultForUpdate" xml:space="preserve">
+    <value>Action result does not belong to result update request.</value>
+  </data>
+  <data name="WorkItemNotFoundForRequirement" xml:space="preserve">
+    <value>Work Items for some requirements could not be found.</value>
+  </data>
+  <data name="SuiteAuditInfoDeletedTestCases" xml:space="preserve">
+    <value>Deleted these test cases: {0}</value>
+  </data>
+  <data name="ReleaseEnvironmentIdDefinitionAmbigious" xml:space="preserve">
+    <value>You can specify either a release environment ID or a release environment definition ID.</value>
+  </data>
+  <data name="CannotAccessTfsSubsystem" xml:space="preserve">
+    <value>Cannot access the {0} service.  This indicates an Azure DevOps Server setup problem.</value>
+  </data>
+  <data name="TestConfigurationInUse" xml:space="preserve">
+    <value>Test configuration {0} cannot be deleted because it is in use.</value>
+  </data>
+  <data name="NullArgument" xml:space="preserve">
+    <value>Null value for field</value>
+  </data>
+  <data name="TestResultIdSpecifiedInBulkUpdateTestResults" xml:space="preserve">
+    <value>TestResultId should not be specified in request body for bulk update of test results</value>
+  </data>
+  <data name="NewTestOnlySetToTrueWithoutFF" xml:space="preserve">
+    <value>newTestOnly parameter is available only for internal use.</value>
+  </data>
+  <data name="DestinationPlanNotEmptyForPlanCloning" xml:space="preserve">
+    <value>Invalid destination plan {1}. Destination plan must contain only the root suite.</value>
+  </data>
+  <data name="RelatedLinkComment" xml:space="preserve">
+    <value>Related link created as part of suite creation.</value>
+  </data>
+  <data name="InvalidPropertyUpdateForArtifact" xml:space="preserve">
+    <value>Cannot update {0} property for '{1}'.</value>
+  </data>
+  <data name="FieldValueMissing" xml:space="preserve">
+    <value>A field was specified for edit, but value was not supplied. Specify a valid value.</value>
+  </data>
+  <data name="NoTestResultFoundForUpdatingFlakySettings" xml:space="preserve">
+    <value>Team Project- {0} does not contain any test results.</value>
+  </data>
+  <data name="ParameterResultNotFound" xml:space="preserve">
+    <value>No parameter result was found with parameter name {0}.</value>
+  </data>
+  <data name="ControllerNotSetForAutomatedRun" xml:space="preserve">
+    <value>Controller is required for automated test run.</value>
+  </data>
+  <data name="DefaultFailureTypeCreationFailed" xml:space="preserve">
+    <value>Failed to create the default failure types.</value>
+  </data>
+  <data name="MaxIdsError" xml:space="preserve">
+    <value>Maximum of {0} {1} id(s) can be specified at a time.</value>
+  </data>
+  <data name="DeleteInProgressResultSetForNotCompleted" xml:space="preserve">
+    <value>DeleteInProgressResult can only be set when the 'State' passed is 'Completed'.</value>
+  </data>
+  <data name="TestOutcome_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="TestResultAttachmentNotFound" xml:space="preserve">
+    <value>Test attachment {2} of test result {1} of test run {0} cannot be found.</value>
+  </data>
+  <data name="DeleteTestPlanNotSupported" xml:space="preserve">
+    <value>Deleting a test plan is not supported for current version of Azure DevOps Server. Use witadmin tool 'destroywi' command to destroy test plan work item.</value>
+  </data>
+  <data name="DeletedSessionArtifactTitle" xml:space="preserve">
+    <value>Deleted session ({0})</value>
+  </data>
+  <data name="InvalidBuildIdSpecified" xml:space="preserve">
+    <value>Invalid buildId specified</value>
+  </data>
+  <data name="StreamNotObtained" xml:space="preserve">
+    <value>Unable to obtain Stream</value>
+  </data>
+  <data name="TCMChartingInProgressError" xml:space="preserve">
+    <value>We are making some backend improvements. As a result, charts are disabled for the next few mins. Do try again after some time.</value>
+  </data>
+  <data name="InvalidDimensionInChartTransform" xml:space="preserve">
+    <value>Dimension not specified or invalid for chart transform.</value>
+  </data>
+  <data name="TestRunNotFoundError" xml:space="preserve">
+    <value>This test run does not exist. Either it's not created or may have been deleted.</value>
+  </data>
+  <data name="FieldNotFound" xml:space="preserve">
+    <value>The specified field '{0}' does not exist. Specify the Name or ReferenceName of a valid field</value>
+  </data>
+  <data name="SuiteAuditInfoTestPlanDeleted" xml:space="preserve">
+    <value>Test plan deleted</value>
+  </data>
+  <data name="TestOutcome_NotImpacted" xml:space="preserve">
+    <value>Not impacted</value>
+  </data>
+  <data name="TestCasesNotFoundForRemove" xml:space="preserve">
+    <value>One or more test cases which were to be removed could not be found.</value>
+  </data>
+  <data name="CouldNotFindStatesForWorkItemType" xml:space="preserve">
+    <value>Could not find states for '{0}'.</value>
+  </data>
+  <data name="TestSettingsInUse" xml:space="preserve">
+    <value>Test settings {0} cannot be deleted because it is in use.</value>
+  </data>
+  <data name="TestCaseReferenceNotFoundError" xml:space="preserve">
+    <value>Test case reference {0} not found.</value>
+  </data>
+  <data name="QueryNeedsCategoryCondition" xml:space="preserve">
+    <value>Query-based suites can only contain test cases. So, add this clause: &lt; Work Item Type | In Group | {0}&gt;</value>
+  </data>
+  <data name="CannotCancelAlreadyCompletedTestRun" xml:space="preserve">
+    <value>Cannot cancel a test run which has already been completed. Test run with id {0} is in state '{1}'.</value>
+  </data>
+  <data name="ChartDimensionValueNotRun" xml:space="preserve">
+    <value>Not run</value>
+  </data>
+  <data name="TestCaseAddedToRequirementSuite" xml:space="preserve">
+    <value>Test cases cannot be directly added to a requirement based suite.</value>
+  </data>
+  <data name="CouldNotFindValidStartStateForWorkItemType" xml:space="preserve">
+    <value>Could not find a valid start state for '{0}' work item type. Ensure that a default state transition exists in the work item type definition for {0} and try again.</value>
+  </data>
+  <data name="InSufficientProjectMigratePermissions" xml:space="preserve">
+    <value>You need to be a member of project collection administrator or Team Foundation Administrators group to do this operation.</value>
+  </data>
+  <data name="InsufficientRetentionSettingsPermission" xml:space="preserve">
+    <value>You need to be a member of DevOps administator or project collection administrator or team project administrator group to perform this operation</value>
+  </data>
+  <data name="MigrateQBSWarning" xml:space="preserve">
+    <value>All test suites may not be updated. Please check the upgrade logs</value>
+  </data>
+  <data name="SharedStepsNotFound" xml:space="preserve">
+    <value>Could not find shared steps {0}.</value>
+  </data>
+  <data name="BuildIdDefinitionAmbigious" xml:space="preserve">
+    <value>You can specify either a build ID or a build pipeline ID.</value>
+  </data>
+  <data name="CouldNotFindStateMappingsInProjectProcessConfig" xml:space="preserve">
+    <value>Could not find mappings for all states defined in '{0}' work item type. 
+Ensure each of the following states have a mapping in project process configuration under test plan category: {1}.</value>
+  </data>
+  <data name="QueryParameterOutOfRange" xml:space="preserve">
+    <value>A query parameter specified in the request URI is outside the permissible range: {0}</value>
+  </data>
+  <data name="ValueAlreadyExistsInVariable" xml:space="preserve">
+    <value>There is more than one value with the name '{0}' in the test variable. Values in the same test variable must have unique names.</value>
+  </data>
+  <data name="ChartDimensionRunTypeManual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="ChartDimensionValueNotAvailable" xml:space="preserve">
+    <value>Not available</value>
+  </data>
+  <data name="BothSuiteAndPointSpecifiedInQuery" xml:space="preserve">
+    <value>You can specify either suite ids or point ids.</value>
+  </data>
+  <data name="UsersCannotAddSystemFieldsError" xml:space="preserve">
+    <value>Users cannot add system fields. The following custom fields are marked as system fields: {0}</value>
+  </data>
+  <data name="TestSubResultInvalidMaxHierarchy" xml:space="preserve">
+    <value>Invalid Param subResults, Test Sub Results support only {0} level of hierarchy</value>
+  </data>
+  <data name="CannotReadProject" xml:space="preserve">
+    <value>You do not have the appropriate permissions to read to the project.</value>
+  </data>
+  <data name="TestCaseAddedToDynamicSuite" xml:space="preserve">
+    <value>Test cases cannot be directly added to a query based suite.</value>
+  </data>
+  <data name="ReleaseEnvironmentNotFound" xml:space="preserve">
+    <value>Release environment with release uri {0} and environment uri {1} cannot be found.</value>
+  </data>
+  <data name="ApiDisallowMultiplePointIdsMessage" xml:space="preserve">
+    <value>A single pointId can be passed to this API. To query for multiple point Ids, please use the GetPointsList API</value>
+  </data>
+  <data name="OperationNotSupportedDuringUpradeError" xml:space="preserve">
+    <value>This operation is not supported while the team project collection is being serviced. Try again after some time.</value>
+  </data>
+  <data name="NoBuildDefinitionWithName" xml:space="preserve">
+    <value>Build pipeline ‘{0}’ was not found.</value>
+  </data>
+  <data name="ChartDimensionTester" xml:space="preserve">
+    <value>Tester</value>
+  </data>
+  <data name="TestPlanAlreadyCreatedWithWorkItemError" xml:space="preserve">
+    <value>Test plan cannot be created because a test plan with id {0} already exists.</value>
+  </data>
+  <data name="SuiteAuditInfoRemovedTestCasesAndSuites" xml:space="preserve">
+    <value>Removed these test cases: {0}. Removed these test suites: {1}</value>
+  </data>
+  <data name="AutomatedTestNameNotSpecifiedError" xml:space="preserve">
+    <value>AutomatedTestName must be specified for automated test runs when neither TestPointId nor TestCaseId has been specified.</value>
+  </data>
+  <data name="InvalidDestinationPlanForPlanCloning" xml:space="preserve">
+    <value>Invalid destination plan {1}. Destination and source plans cannot be the same during cloning.</value>
+  </data>
+  <data name="TestConfigurationCannotBeFoundError" xml:space="preserve">
+    <value>Test Configuration: {0} cannot be found</value>
+  </data>
+  <data name="CouldNotFindProperStateMappingInProcessConfig" xml:space="preserve">
+    <value>Could not find a valid state for '{0}' metastate in project process configuration.</value>
+  </data>
+  <data name="TestAttachmentNotFound" xml:space="preserve">
+    <value>Test attachment {0} cannot be found.</value>
+  </data>
+  <data name="TestResultIdCannotBeObtainedError" xml:space="preserve">
+    <value>TestResultId cannot be obtained</value>
+  </data>
+  <data name="PointOrSuiteIdMissingInLinkedWorkItemQueryParameters" xml:space="preserve">
+    <value>You must specify test point ids or suite ids along with plan id.</value>
+  </data>
+  <data name="DestinationWorkItemTypeNotFound" xml:space="preserve">
+    <value>The specified destination workitem type '{0}' does not exist in destination project '{1}'. Ensure the workitem type exists and it belongs to test case category.</value>
+  </data>
+  <data name="ChartMeasureTestCases" xml:space="preserve">
+    <value>Test cases</value>
+  </data>
+  <data name="TestConfigurationNotFound" xml:space="preserve">
+    <value>Test configuration {0} not found.</value>
+  </data>
+  <data name="TestCasePropertiesSpecifiedError" xml:space="preserve">
+    <value>{0} should not be specified when either TestPointId or TestCaseId has been specified</value>
+  </data>
+  <data name="LogStoreStorageAccountNotFound" xml:space="preserve">
+    <value>Log Store Storage Account not found.</value>
+  </data>
+  <data name="DeepCopyFieldOverriddenFieldNameEmpty" xml:space="preserve">
+    <value>Field name cannot be empty.</value>
+  </data>
+  <data name="RequiredFieldValueAbsent" xml:space="preserve">
+    <value>Values were not specified for the following required fields: {0}
+Make sure that default values have been specified for all required fields in {1} work item type definition. This operation requires administrator previleges.
+If you are using Microsoft Test Manager, then use 'Ctrl + G' option to open the work item form and try to update the appropriate fields.</value>
+  </data>
+  <data name="TestRunAlreadyCanceled" xml:space="preserve">
+    <value>Cannot cancel test run with id {0}. It has already been canceled.</value>
+  </data>
+  <data name="TestRunCompletedTitle" xml:space="preserve">
+    <value>{0} - Test Run {1} ({2}) completed</value>
+  </data>
+  <data name="DeepCopySharedStepXmlParseError" xml:space="preserve">
+    <value>Failed to parse xml in the UITest file attachment or TCM.Steps field. Make sure this data is valid and retry the operation.</value>
+  </data>
+  <data name="UpdateCssCacheFailedError" xml:space="preserve">
+    <value>The operation failed due to resource contention. Try after sometime.</value>
+  </data>
+  <data name="NonConfigNotSupported" xml:space="preserve">
+    <value>NonConfig run is not supported.</value>
+  </data>
+  <data name="SuiteAuditInfoInhertiConfig" xml:space="preserve">
+    <value>Inherited test configuration from parent</value>
+  </data>
+  <data name="TestResStateInUse" xml:space="preserve">
+    <value>Test resolution state {0} cannot be deleted because it is in use.</value>
+  </data>
+</root>

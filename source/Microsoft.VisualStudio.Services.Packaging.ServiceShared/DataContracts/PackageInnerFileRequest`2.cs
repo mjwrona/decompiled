@@ -1,0 +1,47 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Packaging.ServiceShared.DataContracts.PackageInnerFileRequest`2
+// Assembly: Microsoft.VisualStudio.Services.Packaging.ServiceShared, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 4EF1F7D3-C7DF-4C8F-8AAB-58F76976F85D
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll
+
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.PackageMetadata;
+
+namespace Microsoft.VisualStudio.Services.Packaging.ServiceShared.DataContracts
+{
+  public class PackageInnerFileRequest<TPackageId, TData> : 
+    PackageInnerFileRequest<TPackageId>,
+    IPackageInnerFileRequest<TPackageId, TData>,
+    IPackageInnerFileRequest<TPackageId>,
+    IPackageFileRequest<TPackageId>,
+    IPackageRequest<TPackageId>,
+    IPackageRequest,
+    IFeedRequest,
+    IProtocolAgnosticFeedRequest,
+    IPackageFileRequest,
+    IPackageInnerFileRequest,
+    IPackageFileRequest<TPackageId, TData>,
+    IPackageRequest<TPackageId, TData>,
+    IFeedRequest<TData>
+    where TPackageId : IPackageIdentity
+  {
+    public PackageInnerFileRequest(
+      IFeedRequest feedRequest,
+      TPackageId packageId,
+      string filePath,
+      string innerFilePath,
+      TData additionalData)
+      : base(feedRequest, packageId, filePath, innerFilePath)
+    {
+      this.AdditionalData = additionalData;
+    }
+
+    public PackageInnerFileRequest(
+      IPackageInnerFileRequest<TPackageId> packageRequest,
+      TData additionalData)
+      : this((IFeedRequest) packageRequest, packageRequest.PackageId, packageRequest.FilePath, packageRequest.InnerFilePath, additionalData)
+    {
+    }
+
+    public TData AdditionalData { get; }
+  }
+}

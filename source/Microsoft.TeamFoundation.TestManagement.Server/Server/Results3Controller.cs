@@ -1,0 +1,134 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.TestManagement.Server.Results3Controller
+// Assembly: Microsoft.TeamFoundation.TestManagement.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: F9B71993-88CC-4B0D-89B6-4ADDEEAB3DE1
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.TestManagement.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.TeamFoundation.Server.Core;
+using Microsoft.TeamFoundation.TestManagement.WebApi;
+using Microsoft.VisualStudio.Services.WebApi;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Web.Http;
+
+namespace Microsoft.TeamFoundation.TestManagement.Server
+{
+  [ControllerApiVersion(3.0)]
+  [VersionedApiControllerCustomName(Area = "Test", ResourceName = "Results", ResourceVersion = 4)]
+  public class Results3Controller : TestResultsControllerBase
+  {
+    private ResultsHelper m_resultsHelper;
+
+    [HttpGet]
+    [ClientLocationId("4637D869-3A76-4468-8057-0BB02AA385CF")]
+    [DemandFeature("2BAEE8C9-BB36-4DE1-B991-3C1B6B5CB2B5", true)]
+    public IList<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult> GetTestResults(
+      int runId,
+      ResultDetails detailsToInclude = ResultDetails.None,
+      [FromUri(Name = "$skip")] int skip = 0,
+      [FromUri(Name = "$top")] int? top = null)
+    {
+      bool includeAssociatedWorkItems = (detailsToInclude & ResultDetails.WorkItems) == ResultDetails.WorkItems;
+      bool includeIterationDetails = (detailsToInclude & ResultDetails.Iterations) == ResultDetails.Iterations;
+      bool includePoint = (detailsToInclude & ResultDetails.Point) == ResultDetails.Point;
+      int validatedTop = this.ResultsHelper.ValidateAndSetMaxPageSizeForRunArtifacts(top, includeAssociatedWorkItems | includeIterationDetails, nameof (top), 1000);
+      if (!this.TestManagementRequestContext.RequestContext.IsFeatureEnabled("TestManagement.Server.EnableDirectTCMS2SCallFromTFS"))
+        return (IList<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>) this.ResultsHelper.GetTestResults(this.ProjectId.ToString(), runId, includeIterationDetails, includeAssociatedWorkItems, includePoint, (IList<TestOutcome>) null, skip, validatedTop, detailsToInclude, true);
+      this.ResultsHelper.CheckForViewTestResultPermission(this.ProjectName);
+      List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult> testResults = TestManagementController.InvokeAction<List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>>((Func<List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>>) (() => this.TestResultsHttpClient.GetTestResultsAsync(this.ProjectId.ToString(), runId, new ResultDetails?(detailsToInclude), new int?(skip), new int?(validatedTop), (IEnumerable<TestOutcome>) null, new bool?(), (object) null, new CancellationToken())?.Result));
+      if (includePoint)
+        this.TestManagementRequestContext.PlannedTestResultsHelper.PopulateTestSuiteDetails(testResults, this.ProjectName);
+      TfsRestApiHelper.UpdateConfigurgationNameForResults(this.TestManagementRequestContext, testResults, this.ProjectName);
+      testResults.ForEach((Action<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>) (r => this.ResultsHelper.SecureTestResultWebApiObject(r)));
+      return (IList<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>) testResults;
+    }
+
+    [HttpGet]
+    [ClientLocationId("4637D869-3A76-4468-8057-0BB02AA385CF")]
+    [DemandFeature("2BAEE8C9-BB36-4DE1-B991-3C1B6B5CB2B5", true)]
+    public Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult GetTestResultById(
+      int runId,
+      int testCaseResultId,
+      ResultDetails detailsToInclude = ResultDetails.None)
+    {
+      if (!this.TestManagementRequestContext.RequestContext.IsFeatureEnabled("TestManagement.Server.EnableDirectTCMS2SCallFromTFS"))
+      {
+        bool includeIterations;
+        bool includeAssociatedWorkItems;
+        bool includeSubResults;
+        TfsRestApiHelper.ResultDetailsToIncludeVariable(detailsToInclude, out includeIterations, out includeAssociatedWorkItems, out includeSubResults);
+        return this.ResultsHelper.GetTestResultById(this.ProjectId.ToString(), runId, testCaseResultId, includeIterations, includeAssociatedWorkItems, includeSubResults);
+      }
+      this.ResultsHelper.CheckForViewTestResultPermission(this.ProjectName);
+      Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult testResult = TestManagementController.InvokeAction<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>((Func<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>) (() => this.TestResultsHttpClient.GetTestResultByIdAsync(this.ProjectId.ToString(), runId, testCaseResultId, new ResultDetails?(detailsToInclude))?.Result));
+      IPlannedTestResultsHelper testResultsHelper = this.TestManagementRequestContext.PlannedTestResultsHelper;
+      List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult> testCaseResults = new List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>();
+      testCaseResults.Add(testResult);
+      string projectName = this.ProjectName;
+      testResultsHelper.PopulateTestSuiteDetails(testCaseResults, projectName);
+      this.ResultsHelper.SecureTestResultWebApiObject(testResult);
+      return testResult;
+    }
+
+    [HttpPost]
+    [DemandFeature("2BAEE8C9-BB36-4DE1-B991-3C1B6B5CB2B5", true)]
+    [ClientLocationId("6711DA49-8E6F-4D35-9F73-CEF7A3C81A5B")]
+    public TestResultsQuery GetTestResultsByQuery(TestResultsQuery query)
+    {
+      if (!this.TestManagementRequestContext.RequestContext.IsFeatureEnabled("TestManagement.Server.EnableDirectTCMS2SCallFromTFS"))
+        return this.ResultsHelper.GetTestResults(new GuidAndString(this.ProjectInfo.Uri, this.ProjectInfo.Id), query);
+      this.ResultsHelper.CheckForViewTestResultPermission(this.ProjectName);
+      query = TestManagementController.InvokeAction<TestResultsQuery>((Func<TestResultsQuery>) (() => this.TestResultsHttpClient.GetTestResultsByQueryAsync(query, this.ProjectId, (object) null, new CancellationToken())?.Result));
+      this.TestManagementRequestContext.RequestContext.CheckPermissionToReadPublicIdentityInfo();
+      query.InitializeSecureObject((ISecuredObject) new Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult()
+      {
+        Project = new ShallowReference()
+        {
+          Id = this.ProjectId.ToString()
+        }
+      });
+      return query;
+    }
+
+    [HttpPost]
+    [DemandFeature("2BAEE8C9-BB36-4DE1-B991-3C1B6B5CB2B5", true)]
+    [ClientLocationId("4637D869-3A76-4468-8057-0BB02AA385CF")]
+    public List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult> AddTestResultsToTestRun(
+      int runId,
+      Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult[] results)
+    {
+      if (!this.TestManagementRequestContext.RequestContext.IsFeatureEnabled("TestManagement.Server.EnableDirectTCMS2SCallFromTFS"))
+        return this.ResultsHelper.AddTestResultsToTestRun(this.ProjectId.ToString(), runId, results, true);
+      if (this.ResultsHelper.IsPlannedTestRun(results))
+      {
+        Microsoft.TeamFoundation.TestManagement.WebApi.TestRun testRun = TestManagementController.InvokeAction<Microsoft.TeamFoundation.TestManagement.WebApi.TestRun>((Func<Microsoft.TeamFoundation.TestManagement.WebApi.TestRun>) (() => this.TestResultsHttpClient.GetTestRunByIdAsync(this.ProjectId, runId, new bool?(true), new bool?(), (object) null, new CancellationToken())?.Result));
+        int result;
+        if (testRun != null && testRun.Plan != null && testRun.Plan.Id != null && int.TryParse(testRun.Plan.Id, out result) && result > 0)
+          results = this.TestManagementRequestContext.WorkItemFieldDataHelper.PopulateTestResultFromWorkItem(this.TestManagementRequestContext, this.ProjectName, results, result);
+      }
+      return TestManagementController.InvokeAction<List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>>((Func<List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>>) (() => this.TestResultsHttpClient.AddTestResultsToTestRunAsync(results, this.ProjectId, runId, (object) null, new CancellationToken())?.Result));
+    }
+
+    [HttpPatch]
+    [DemandFeature("2BAEE8C9-BB36-4DE1-B991-3C1B6B5CB2B5", true)]
+    [ClientLocationId("4637D869-3A76-4468-8057-0BB02AA385CF")]
+    public List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult> UpdateTestResults(
+      int runId,
+      Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult[] results)
+    {
+      return !this.TestManagementRequestContext.RequestContext.IsFeatureEnabled("TestManagement.Server.EnableDirectTCMS2SCallFromTFS") ? this.ResultsHelper.UpdateTestResults(this.ProjectId.ToString(), runId, results) : TestManagementController.InvokeAction<List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>>((Func<List<Microsoft.TeamFoundation.TestManagement.WebApi.TestCaseResult>>) (() => this.TestResultsHttpClient.UpdateTestResultsAsync(results, this.ProjectId, runId, (object) null, new CancellationToken())?.Result));
+    }
+
+    internal ResultsHelper ResultsHelper
+    {
+      get
+      {
+        if (this.m_resultsHelper == null)
+          this.m_resultsHelper = new ResultsHelper(this.TestManagementRequestContext);
+        return this.m_resultsHelper;
+      }
+    }
+  }
+}

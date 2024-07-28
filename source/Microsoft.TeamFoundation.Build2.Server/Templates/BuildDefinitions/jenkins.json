@@ -1,0 +1,51 @@
+﻿{
+  "id": "jenkins",
+  "name": "Jenkins",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "c24b86d4-4256-4925-9a29-246f81aa64a7",
+  "description": "Queue a Jenkins job and download its artifacts.",
+  "template":{
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "build": [
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "task": {
+          "id": "c24b86d4-4256-4925-9a29-246f81aa64a7",
+          "versionSpec": "1.*"
+        }
+      },
+      {
+        "enabled": true,
+        "inputs": {
+          "saveTo": "$(Build.ArtifactStagingDirectory)"
+        },
+        "task": {
+          "id": "86c37a92-59a7-444b-93c7-220fcf91e29c",
+          "versionSpec": "1.*"
+        }
+      },
+      {
+        "enabled": true,
+        "inputs": {
+          "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+          "ArtifactName": "drop",
+          "ArtifactType": "Container"
+        },
+        "task": {
+          "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+          "versionSpec": "1.*"
+        }
+      }
+    ],
+    "options": [],
+      "variables": {
+        "system.debug": {
+          "value": "false",
+          "allowOverride": true
+        }
+      },
+    "triggers": []
+  }
+}

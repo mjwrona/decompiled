@@ -1,0 +1,30 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Nest.ICloneIndexRequest
+// Assembly: Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d
+// MVID: CCE7C15C-052B-4528-A6A5-137560B7864B
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Nest.dll
+
+using Elasticsearch.Net.Specification.IndicesApi;
+using Elasticsearch.Net.Utf8Json;
+using System.Runtime.Serialization;
+
+namespace Nest
+{
+  [MapsApi("indices.clone")]
+  [ReadAs(typeof (CloneIndexRequest))]
+  [InterfaceDataContract]
+  public interface ICloneIndexRequest : IRequest<CloneIndexRequestParameters>, IRequest
+  {
+    [DataMember(Name = "aliases")]
+    IAliases Aliases { get; set; }
+
+    [DataMember(Name = "settings")]
+    IIndexSettings Settings { get; set; }
+
+    [IgnoreDataMember]
+    IndexName Index { get; }
+
+    [IgnoreDataMember]
+    IndexName Target { get; }
+  }
+}

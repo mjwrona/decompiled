@@ -1,0 +1,106 @@
+{
+  "id": "5971C7A4-FD3F-4B34-884F-AADEAB908BB3",
+  "name": "Azure Service Fabric Compose deployment",
+  "category": "Deployment",
+  "iconTaskId": "c6650aa0-185b-11e6-a47d-df93e7a34c64",
+  "description": "Deploy a Docker Compose application to a Service Fabric cluster.",
+  "environment": {
+    "name": "",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "TaskId": "19C02B15-D377-40E0-9EFA-3168506E0933",
+            "Version": "0.*",
+            "Name": "Deploy docker-compose application to a Service Fabric cluster",
+            "Inputs": {
+              "serviceConnectionName": "$(Parameters.serviceConnectionName)",
+              "composeFilePath": "$(Parameters.composeFilePath)",
+              "applicationName": "$(Parameters.applicationName)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "serviceConnectionName",
+          "label": "{ServiceConnectionNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:serviceFabric",
+          "helpMarkDown": "{ServiceConnectionNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "composeFilePath",
+          "label": "{ComposeFilePathLabel}",
+          "defaultValue": "**/docker-compose.yml",
+          "required": true,
+          "type": "filePath",
+          "helpMarkDown": "{ComposeFilePathMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "applicationName",
+          "label": "{ApplicationNameLabel}",
+          "defaultValue": "Application1",
+          "required": true,
+          "type": "string",
+          "helpMarkDown": "{ApplicationNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        }
+      ]
+    }
+  }
+}

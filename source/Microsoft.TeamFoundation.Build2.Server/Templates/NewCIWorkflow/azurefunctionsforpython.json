@@ -1,0 +1,151 @@
+{
+    "id": "AzureFunctionsForPython",
+    "name": "Azure Functions for Python",
+    "category": "Build",
+    "defaultHostedQueue": "Azure Pipelines",
+    "iconTaskId": "501DD25D-1785-43E4-B4E5-A5C78CCC0573",
+    "description": "Build and package a Python based Azure Functions application to be deployed on Azure Functions.",
+    "template": {
+      "process": {
+        "type": 1,
+        "phases": [
+          {
+            "steps": [
+              {
+                  "environment": {},
+                  "enabled": true,
+                  "continueOnError": false,
+                  "alwaysRun": false,
+                  "displayName": "Build extensions",
+                  "timeoutInMinutes": 0,
+                  "condition": "succeeded()",
+                  "task": {
+                      "id": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+                      "versionSpec": "3.*",
+                      "definitionType": "task"
+                  },
+                  "inputs": {
+                      "targetType": "inline",
+                      "filePath": "",
+                      "arguments": "",
+                      "script": "if [ -f extensions.csproj ]\nthen\n    dotnet build extensions.csproj --output ./bin\nfi",
+                      "workingDirectory": "",
+                      "failOnStderr": "false",
+                      "noProfile": "true",
+                      "noRc": "true"
+                  }
+              },
+              {
+                  "environment": {},
+                  "enabled": true,
+                  "continueOnError": false,
+                  "alwaysRun": false,
+                  "displayName": "Use Python 3.6",
+                  "timeoutInMinutes": 0,
+                  "condition": "succeeded()",
+                  "task": {
+                      "id": "33c63b11-352b-45a2-ba1b-54cb568a29ca",
+                      "versionSpec": "0.*",
+                      "definitionType": "task"
+                  },
+                  "inputs": {
+                      "versionSpec": "3.6",
+                      "addToPath": "true",
+                      "architecture": "x64"
+                  }
+              },
+              {
+                  "environment": {},
+                  "enabled": true,
+                  "continueOnError": false,
+                  "alwaysRun": false,
+                  "displayName": "Install Application Dependencies",
+                  "timeoutInMinutes": 0,
+                  "condition": "succeeded()",
+                  "task": {
+                      "id": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+                      "versionSpec": "3.*",
+                      "definitionType": "task"
+                  },
+                  "inputs": {
+                      "targetType": "inline",
+                      "filePath": "",
+                      "arguments": "",
+                      "script": "python3.6 -m venv worker_venv\nsource worker_venv/bin/activate\npip3.6 install setuptools\npip3.6 install -r requirements.txt",
+                      "workingDirectory": "",
+                      "failOnStderr": "false",
+                      "noProfile": "true",
+                      "noRc": "true"
+                  }
+              },
+              {
+                  "environment": {},
+                  "enabled": true,
+                  "continueOnError": false,
+                  "alwaysRun": false,
+                  "displayName": "Archive files",
+                  "timeoutInMinutes": 0,
+                  "condition": "succeeded()",
+                  "task": {
+                      "id": "d8b84976-e99a-4b86-b885-4849694435b0",
+                      "versionSpec": "2.*",
+                      "definitionType": "task"
+                  },
+                  "inputs": {
+                      "rootFolderOrFile": "$(System.DefaultWorkingDirectory)",
+                      "includeRootFolder": "false",
+                      "archiveType": "zip",
+                      "tarCompression": "gz",
+                      "archiveFile": "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip",
+                      "replaceExistingArchive": "true",
+                      "verbose": "false",
+                      "quiet": "false"
+                  }
+              },
+              {
+                  "environment": {},
+                  "enabled": true,
+                  "continueOnError": false,
+                  "alwaysRun": false,
+                  "displayName": "Publish Artifact: drop",
+                  "timeoutInMinutes": 0,
+                  "condition": "succeeded()",
+                  "task": {
+                      "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                      "versionSpec": "1.*",
+                      "definitionType": "task"
+                  },
+                  "inputs": {
+                      "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+                      "ArtifactName": "drop",
+                      "ArtifactType": "Container",
+                      "TargetPath": "",
+                      "Parallel": "false",
+                      "ParallelCount": "8"
+                  }
+              }
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "enabled": true,
+          "definition": {
+            "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+          },
+          "inputs": {}
+        }
+      ],
+      "variables": {
+        "system.debug": {
+          "value": "false",
+          "allowOverride": true
+        }
+      },
+      "properties": {},
+      "tags": [],
+      "triggers": [],
+      "processParameters": {}
+    }
+  }

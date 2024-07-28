@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Search.WebApi.Legacy.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61AA8A35-9388-413B-A89A-AE6B4CF0D84F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.WebApi.Legacy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditTrail.cs" />
+    <Compile Include="RepositoryIndexingProperties.cs" />
+    <Compile Include="DepotLastChangeInfo.cs" />
+    <Compile Include="CustomBranchInfo.cs" />
+    <Compile Include="CustomRepositoryHealthResponse.cs" />
+    <Compile Include="CustomRepositoryPropertiesJsonConverter.cs" />
+    <Compile Include="CustomRepositoryPropertiesType.cs" />
+    <Compile Include="CustomRepositoryProperties.cs" />
+    <Compile Include="FailedFile.cs" />
+    <Compile Include="FileTypeEnum.cs" />
+    <Compile Include="PaginationDetails.cs" />
+    <Compile Include="SDBranchDetail.cs" />
+    <Compile Include="SDMappingDetail.cs" />
+    <Compile Include="SDMappingType.cs" />
+    <Compile Include="SDRepositoryProperties.cs" />
+    <Compile Include="IndexDetail.cs" />
+    <Compile Include="CollectionDetail.cs" />
+    <Compile Include="CustomRepository.cs" />
+    <Compile Include="FilesMetadataRequest.cs" />
+    <Compile Include="FilesMetadataResponse.cs" />
+    <Compile Include="MetadataType.cs" />
+    <Compile Include="OperationStatus.cs" />
+    <Compile Include="FileOperation.cs" />
+    <Compile Include="FileDetail.cs" />
+    <Compile Include="BulkCodeIndexRequest.cs" />
+    <Compile Include="BulkCodeIndexResponse.cs" />
+    <Compile Include="CustomTenant.cs" />
+    <Compile Include="Legacy\CodeResults.cs" />
+    <Compile Include="Legacy\SearchQuery.cs" />
+    <Compile Include="Legacy\CodeResult.cs" />
+    <Compile Include="Legacy\CodeQueryResponse.cs" />
+    <Compile Include="Legacy\QueryHelper.cs" />
+    <Compile Include="Legacy\WorkItemSearchHttpClient.cs" />
+    <Compile Include="Legacy\SearchConstants.cs" />
+    <Compile Include="Legacy\SearchHttpClient.cs" />
+    <Compile Include="Legacy\SearchWebApiResources.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\Constants.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemField.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemFieldType.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemResult.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemFieldMetadata.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemResults.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemHit.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemSearchRequest.cs" />
+    <Compile Include="Legacy\Contracts\WorkItem\WorkItemSearchResponse.cs" />
+    <Compile Include="Legacy\Contracts\Code\VersionControlType.cs" />
+    <Compile Include="Legacy\Contracts\CustomRepository\CustomIndexingMode.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Legacy\SearchWebApiResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

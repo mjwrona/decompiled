@@ -1,0 +1,114 @@
+{
+  "id": "7F172E11-F50D-4B2B-B097-B2E38510175E",
+  "name": "IIS website and SQL database online upgrade",
+  "category": "Deployment",
+  "description": "Deployment Group: Upgrade ASP.NET or ASP.NET Core based websites. Upgrade a SQL database using SQL scripts executed when the web application is online.",
+  "iconTaskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "IIS Deployment with webapp online",
+        "rank": 1,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "OneTargetAtATime",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "e94f1750-a6a8-11e6-be69-bdf37a7b15d8",
+            "version": "1.*",
+            "Name": "Azure Network Load Balancer - Disconnect",
+            "inputs": {
+              "Action": "Disconnect"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "1B467810-6725-4B6D-ACCD-886174C09BBA",
+            "version": "0.*",
+            "Name": "IIS Web App Deploy",
+            "inputs": {
+              "Package": "$(System.DefaultWorkingDirectory)\\**\\*.zip"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "e94f1750-a6a8-11e6-be69-bdf37a7b15d8",
+            "version": "1.*",
+            "Name": "Azure Network Load Balancer - Connect",
+            "inputs": {
+              "Action": "Connect"
+            },
+            "Enabled": true,
+            "AlwaysRun": true,
+            "ContinueOnError": false
+          }
+        ]
+      },
+      {
+        "name": "SQL upgrade with webapp online",
+        "rank": 2,
+        "phaseType": 4,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "deploymentHealthOption": "AllTargetsInParallel",
+          "healthPercent": 0,
+          "tags": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "4B506F7F-720F-47BB-BF21-029BAC6A690D",
+            "version": "0.*",
+            "Name": "SQL DB Deploy",
+            "inputs": {
+              "TaskType": "sqlQuery",
+              "ExecuteInTransaction": true,
+              "ExclusiveLock": true
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+    },
+    "variables": {}
+  }
+}

@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07D12FA8-5207-46C7-BD1B-AD33E3DEA94A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.Agile.Common" />
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking" />
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates" />
+    <Reference Include="Microsoft.Azure.Boards.RecentActivity" />
+    <Reference Include="Microsoft.Azure.Boards.Settings">
+      <HintPath>lib\Microsoft.Azure.Boards.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server" />
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform" />
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Work.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Favorites.Server" />
+    <Reference Include="Microsoft.VisualStudio.Services.Favorites.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\Server\WebAccess\WorkItemTracking\Models\TeamWITSettingsModel.cs" />
+    <Compile Include="WorkItemStateCacheService.cs" />
+    <Compile Include="WorkItemStateCachedData.cs" />
+    <Compile Include="StateGroupForCache.cs" />
+    <Compile Include="WorkItemStateColorCacheService.cs" />
+    <Compile Include="WorkItemStateColorCachedData.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CustomerIntelligenceConstants.cs" />
+    <Compile Include="WorkItemRouteConstants.cs" />
+    <Compile Include="BoardFieldConstants.cs" />
+    <Compile Include="CustomerIntelligenceFeature.cs" />
+    <Compile Include="CustomerIntelligencePropertyName.cs" />
+    <Compile Include="WITCommonConstants.cs" />
+    <Compile Include="OobFieldRefNames.cs" />
+    <Compile Include="FollowsConstants.cs" />
+    <Compile Include="UnfollowResultStatus.cs" />
+    <Compile Include="FormLayoutType.cs" />
+    <Compile Include="WorkItemSettingsConstants.cs" />
+    <Compile Include="WorkItemFeatureStateConstants.cs" />
+    <Compile Include="WorkItemLinkConstants.cs" />
+    <Compile Include="QueriesConstants.cs" />
+    <Compile Include="WebAccessCustomerIntelligencePropertyName.cs" />
+    <Compile Include="WebAccessCustomerIntelligenceFeature.cs" />
+    <Compile Include="SettingsConstants.cs" />
+    <Compile Include="BoardCardSettingRow.cs" />
+    <Compile Include="JsonExtensions.cs" />
+    <Compile Include="BacklogParentNotFoundException.cs" />
+    <Compile Include="BacklogDoesNotExistException.cs" />
+    <Compile Include="InvalidBacklogWorkItemType.cs" />
+    <Compile Include="StateGroup.cs" />
+    <Compile Include="ProjectPermission.cs" />
+    <Compile Include="WorkItemTrackingPermission.cs" />
+    <Compile Include="ReferencedNodes.cs" />
+    <Compile Include="ExtendedTreeNode.cs" />
+    <Compile Include="RegisteredLinkType.cs" />
+    <Compile Include="SecuredGenericData.cs" />
+    <Compile Include="FollowsMacroExtension.cs" />
+    <Compile Include="MyRecentActivityMacroExtension.cs" />
+    <Compile Include="RecentProjectActivityMacroExtension.cs" />
+    <Compile Include="BugBehaviorFeature.cs" />
+    <Compile Include="BugsOnBacklogFeature.cs" />
+    <Compile Include="BugsOnTaskBoardFeature.cs" />
+    <Compile Include="CodeReviewFeature.cs" />
+    <Compile Include="CoreFeature.cs" />
+    <Compile Include="FeedbackFeature.cs" />
+    <Compile Include="MyWorkFeature.cs" />
+    <Compile Include="PlanningToolsFeature.cs" />
+    <Compile Include="PortfolioBacklogsFeature.cs" />
+    <Compile Include="ProjectFeatureBase.cs" />
+    <Compile Include="ReleasePipelineFeature.cs" />
+    <Compile Include="SharedParametersFeature.cs" />
+    <Compile Include="StoryboardIntegrationFeature.cs" />
+    <Compile Include="TcmFeature.cs" />
+    <Compile Include="IProjectFeature.cs" />
+    <Compile Include="INotifyProjectFeatureProvisioned.cs" />
+    <Compile Include="IProjectFeatureProvisioning.cs" />
+    <Compile Include="IProjectFeatureProvisioningDetails.cs" />
+    <Compile Include="IProjectMetadata.cs" />
+    <Compile Include="IProjectProvisioningContext.cs" />
+    <Compile Include="ProcessTemplateMetadata.cs" />
+    <Compile Include="ProcessTemplateWorkItemTypeMetadata.cs" />
+    <Compile Include="ProjectFeatureProvisioningService.cs" />
+    <Compile Include="ProjectFeatureStatus.cs" />
+    <Compile Include="ProjectFeatureState.cs" />
+    <Compile Include="ProjectProvisioningContext.cs" />
+    <Compile Include="ProjectProvisioningIssue.cs" />
+    <Compile Include="IssueLevel.cs" />
+    <Compile Include="ProjectWorkItemTypeMetadata.cs" />
+    <Compile Include="ProvisionContextSettingsValidatorDataProvider.cs" />
+    <Compile Include="WorkItemField.cs" />
+    <Compile Include="WorkItemTypeMetadata.cs" />
+    <Compile Include="BacklogConfigurationService.cs" />
+    <Compile Include="IBacklogConfigurationService.cs" />
+    <Compile Include="BoardCardRules.cs" />
+    <Compile Include="CardRules.cs" />
+    <Compile Include="Rule.cs" />
+    <Compile Include="BoardCardSettings.cs" />
+    <Compile Include="CardSetting.cs" />
+    <Compile Include="FieldSetting.cs" />
+    <Compile Include="BoardTestSettings.cs" />
+    <Compile Include="StatesExtensions.cs" />
+    <Compile Include="BoardUserSettings.cs" />
+    <Compile Include="BoardFilterSettings.cs" />
+    <Compile Include="BoardInput.cs" />
+    <Compile Include="BoardRow.cs" />
+    <Compile Include="BoardRowRevision.cs" />
+    <Compile Include="BoardRowRevisionForReporting.cs" />
+    <Compile Include="BoardRowsValidator.cs" />
+    <Compile Include="BoardSettingsCacheService.cs" />
+    <Compile Include="BoardSettingsDTOConverter.cs" />
+    <Compile Include="IWorkItemMetadataFacadeService.cs" />
+    <Compile Include="MyWorkService.cs" />
+    <Compile Include="WorkItemMetadataFacadeService.cs" />
+    <Compile Include="ITeamIterationsService.cs" />
+    <Compile Include="TeamIterationsService.cs" />
+    <Compile Include="SortedIterationSubscriptions.cs" />
+    <Compile Include="BacklogConfiguration.cs" />
+    <Compile Include="BoardColumnsValidator.cs" />
+    <Compile Include="BoardValidator.cs" />
+    <Compile Include="BoardValidatorBase.cs" />
+    <Compile Include="BoardValidatorException.cs" />
+    <Compile Include="ProjectProcessConfiguration.cs" />
+    <Compile Include="ProjectRenameEventSubscriber.cs" />
+    <Compile Include="CurrentIterationMacroExtension.cs" />
+    <Compile Include="ProjectCategoryStateMap.cs" />
+    <Compile Include="IterationNotFoundException.cs" />
+    <Compile Include="IterationPathNotFoundException.cs" />
+    <Compile Include="CapacityNotSetException.cs" />
+    <Compile Include="TeamDaysOutOfRangeException.cs" />
+    <Compile Include="OverlappingDateRangesException.cs" />
+    <Compile Include="AgileTracePoints.cs" />
+    <Compile Include="SettingsTracePoints.cs" />
+    <Compile Include="AdminTrace.cs" />
+    <Compile Include="LegacySettingsConverter.cs" />
+    <Compile Include="ProjectProcessConfigurationHelpers.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="WitTraceAreas.cs" />
+    <Compile Include="WitTraceLayers.cs" />
+    <Compile Include="AgileTracingUtils.cs" />
+    <Compile Include="BoardsAdminDataSource.cs" />
+    <Compile Include="BoardsQueryWITDataSource.cs" />
+    <Compile Include="QueryResultHtmlFormatter.cs" />
+    <Compile Include="TeamSettingsDataSource.cs" />
+    <Compile Include="WorkItemUrlFormatter.cs" />
+    <Compile Include="QueryHelpers.cs" />
+    <Compile Include="IBoardUserSettingsUtils.cs" />
+    <Compile Include="BoardUserSettingsUtils.cs" />
+    <Compile Include="ConversionHelper.cs" />
+    <Compile Include="CssUtils.cs" />
+    <Compile Include="LayoutUserSettingsUtility.cs" />
+    <Compile Include="WITDataSource.cs" />
+    <Compile Include="DataExtensions.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="XmlExtensions.cs" />
+    <Compile Include="AgileSettingsUtils.cs" />
+    <Compile Include="ProcessConfigurationServiceNotifications.cs" />
+    <Compile Include="QueryColumnHelper.cs" />
+    <Compile Include="KanbanUtils.cs" />
+    <Compile Include="CoreField.cs" />
+    <Compile Include="ProcessErrorCodes.cs" />
+    <Compile Include="CoreFieldReferenceNames.cs" />
+    <Compile Include="FieldDefinition.cs" />
+    <Compile Include="FieldDefinitionCollection.cs" />
+    <Compile Include="FieldUsage.cs" />
+    <Compile Include="IWorkItemType.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="WebAccessWorkItemService.cs" />
+    <Compile Include="SecuredGenericDataReader.cs" />
+    <Compile Include="TreeNode.cs" />
+    <Compile Include="WorkItemLinkType.cs" />
+    <Compile Include="WorkItemLinkTypeEnd.cs" />
+    <Compile Include="WorkItemLinkTypeCollection.cs" />
+    <Compile Include="WorkItemLinkTypeEndCollection.cs" />
+    <Compile Include="WorkItemType.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="BoardChangedException.cs" />
+    <Compile Include="BoardColumn.cs" />
+    <Compile Include="BoardColumnRevision.cs" />
+    <Compile Include="BoardColumnRevisionForReporting.cs" />
+    <Compile Include="BoardColumnType.cs" />
+    <Compile Include="BoardColumnRevisionComparer.cs" />
+    <Compile Include="BoardExistsException.cs" />
+    <Compile Include="BoardService.cs" />
+    <Compile Include="BoardCardSettingsCacheService.cs" />
+    <Compile Include="BoardColumnSuggestedValueService.cs" />
+    <Compile Include="BoardRowSuggestedValueService.cs" />
+    <Compile Include="BoardIdToBoardInputMap.cs" />
+    <Compile Include="BoardSettings.cs" />
+    <Compile Include="AddPanelConfiguration.cs" />
+    <Compile Include="CategoryConfiguration.cs" />
+    <Compile Include="BacklogCategoryConfiguration.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="TypeField.cs" />
+    <Compile Include="TypeFieldValue.cs" />
+    <Compile Include="FieldTypeEnum.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="StateComparer.cs" />
+    <Compile Include="StateTypeEnum.cs" />
+    <Compile Include="WorkItemTypeEnum.cs" />
+    <Compile Include="GridColumnTypeEnum.cs" />
+    <Compile Include="FieldDisplayContextTypeEnum.cs" />
+    <Compile Include="AgilePropertiesEnum.cs" />
+    <Compile Include="TeamPropertiesEnum.cs" />
+    <Compile Include="ProjectPropertiesEnum.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="DefaultSettingsValidatorDataProvider.cs" />
+    <Compile Include="InvalidTeamSettingsException.cs" />
+    <Compile Include="IProjectConfigurationService.cs" />
+    <Compile Include="ISettingsValidatorDataProvider.cs" />
+    <Compile Include="ITeamConfigurationService.cs" />
+    <Compile Include="ITeamFieldSettings.cs" />
+    <Compile Include="ITeamFieldValue.cs" />
+    <Compile Include="TeamFieldProperty.cs" />
+    <Compile Include="TeamFieldSettingsInterfaceExtensions.cs" />
+    <Compile Include="ITeamIteration.cs" />
+    <Compile Include="ITeamIterationsCollection.cs" />
+    <Compile Include="ITeamSettings.cs" />
+    <Compile Include="BugsBehavior.cs" />
+    <Compile Include="CumulativeFlowDiagramSettings.cs" />
+    <Compile Include="ITeamWeekends.cs" />
+    <Compile Include="AgileProjectConfiguration.cs" />
+    <Compile Include="ProductBacklogConfiguration.cs" />
+    <Compile Include="IterationBacklogConfiguration.cs" />
+    <Compile Include="AgileSettingsValidator.cs" />
+    <Compile Include="CommonProjectConfiguration.cs" />
+    <Compile Include="CommonSettingsValidator.cs" />
+    <Compile Include="ISupportValidation.cs" />
+    <Compile Include="ProjectConfigurationCompatibilityEngine.cs" />
+    <Compile Include="WorkItemCategory.cs" />
+    <Compile Include="ProcessSettingsValidator.cs" />
+    <Compile Include="ProjectConfigurationService.cs" />
+    <Compile Include="ProcessSettingsChangedNotification.cs" />
+    <Compile Include="ProjectSettingsException.cs" />
+    <Compile Include="MissingProjectSettingsException.cs" />
+    <Compile Include="InvalidProjectSettingsException.cs" />
+    <Compile Include="RollupCalculation.cs" />
+    <Compile Include="RollupType.cs" />
+    <Compile Include="RollupAggregation.cs" />
+    <Compile Include="SettingsException.cs" />
+    <Compile Include="SettingsPropertyNameAttribute.cs" />
+    <Compile Include="SettingsValidator.cs" />
+    <Compile Include="NodeDescription.cs" />
+    <Compile Include="TeamCapacity.cs" />
+    <Compile Include="TeamConfiguration.cs" />
+    <Compile Include="TeamAreaAction.cs" />
+    <Compile Include="IterationsInDateRange.cs" />
+    <Compile Include="TeamConfigurationHelper.cs" />
+    <Compile Include="AreaIdToTeamMappingsHelper.cs" />
+    <Compile Include="TeamConfigurationService.cs" />
+    <Compile Include="TeamFieldSettings.cs" />
+    <Compile Include="TeamFieldValue.cs" />
+    <Compile Include="TeamIteration.cs" />
+    <Compile Include="TeamIterationsCollection.cs" />
+    <Compile Include="Activity.cs" />
+    <Compile Include="TeamMemberCapacity.cs" />
+    <Compile Include="TeamSettingsFields.cs" />
+    <Compile Include="TeamWeekendsJsonConverter.cs" />
+    <Compile Include="TeamWeekends.cs" />
+    <Compile Include="StateCategoryColorPair.cs" />
+    <Compile Include="WorkItemIdentityExtensions.cs" />
+    <Compile Include="CommonQueries.cs" />
+    <Compile Include="WorkItemExtensions.cs" />
+    <Compile Include="WorkItemsRouteConstants.cs" />
+    <Compile Include="WorkItemsRouteUtility.cs" />
+    <Compile Include="WorkItemTrackingCommonExtensions.cs" />
+    <Compile Include="WorkItemTrackingUtils.cs" />
+    <Compile Include="WorkItemTypeExtensionUtils.cs" />
+    <Compile Include="XmlSerializationHelper.cs" />
+    <Compile Include="TeamPanelConstants.cs" />
+    <Compile Include="TeamPanelProperties.cs" />
+    <Compile Include="TeamPanelPropertiesUtils.cs" />
+    <Compile Include="BaseWorkItemFormLayoutUserSettingsSecuredObject.cs" />
+    <Compile Include="ProjectSettings.cs" />
+    <Compile Include="ProcessSettings.cs" />
+    <Compile Include="LayoutUserSettings.cs" />
+    <Compile Include="WorkItemTypeSettings.cs" />
+    <Compile Include="SecuredCollapsedGroups.cs" />
+    <Compile Include="EtagHelper.cs" />
+    <Compile Include="Serializers\LayoutSerializationHelper.cs" />
+    <Compile Include="Utilities\TeamProjectUtilAzureBoards.cs" />
+    <Compile Include="Utilities\AdhocQueryProvider.cs" />
+    <Compile Include="Utilities\WorkItemTrackingPermissionHelper.cs" />
+    <Compile Include="Settings\DuplicateFlowConfiguration.cs" />
+    <Compile Include="Settings\DuplicateFlowWorkItemType.cs" />
+    <Compile Include="Settings\DuplicateFlowWorkFieldValue.cs" />
+    <Compile Include="Settings\TeamCreationSubscriber.cs" />
+    <Compile Include="Settings\Legacy\BugsBehaviorTranslator.cs" />
+    <Compile Include="Settings\Legacy\ProjectConfigurationCompatibilityConverter.cs" />
+    <Compile Include="Promote\ITeamFoundationProjectPromoteService.cs" />
+    <Compile Include="Promote\ProcessTemplateHelper.cs" />
+    <Compile Include="Promote\AgilePromoteStepFactory.cs" />
+    <Compile Include="Promote\IProjectPromoteStep.cs" />
+    <Compile Include="Promote\IProjectPromoteStepFactory.cs" />
+    <Compile Include="Promote\ProcessTemplateConstants.cs" />
+    <Compile Include="Promote\PromoteJob.cs" />
+    <Compile Include="Promote\OutOfBoxProcessTemplateTypeIds.cs" />
+    <Compile Include="Promote\TeamFoundationProjectPromoteService.cs" />
+    <Compile Include="Promote\PromoteProjectInfo.cs" />
+    <Compile Include="Promote\ProjectPromoteState.cs" />
+    <Compile Include="Promote\TeamProjectPromoteJobExtension.cs" />
+    <Compile Include="Promote\TeamProjectPromoteJobData.cs" />
+    <Compile Include="Promote\WorkItemTrackingPromoteStepFactory.cs" />
+    <Compile Include="Promote\WitPromoteExtensions.cs" />
+    <Compile Include="Plugins\AgileProcessTemplateExtension.cs" />
+    <Compile Include="Plugins\TeamAreasMacroExtension.cs" />
+    <Compile Include="Plugins\MacroArgumentHelper.cs" />
+    <Compile Include="SocialWorkItem\Models\WorkItemProjectModel.cs" />
+    <Compile Include="SocialWorkItem\Models\WorkItemTypeModel.cs" />
+    <Compile Include="SocialWorkItem\Models\WorkItemLayout.cs" />
+    <Compile Include="SocialWorkItem\Models\WorkItemLayoutPage.cs" />
+    <Compile Include="SocialWorkItem\Models\WorkItemTypeFieldModel.cs" />
+    <Compile Include="Models\BacklogConfigurationExtensions.cs" />
+    <Compile Include="Models\BacklogColumn.cs" />
+    <Compile Include="Models\BacklogLevelConfiguration.cs" />
+    <Compile Include="Models\BacklogFieldInfo.cs" />
+    <Compile Include="Models\BacklogConfiguration.cs" />
+    <Compile Include="Models\WorkItemTypeStateInfo.cs" />
+    <Compile Include="Models\WorkItemTypeStateInfoWithOrder.cs" />
+    <Compile Include="Models\ShortStateInfo.cs" />
+    <Compile Include="Models\BacklogQueryResultType.cs" />
+    <Compile Include="Models\BoardFilterSettingsModel.cs" />
+    <Compile Include="Models\CardStyle.cs" />
+    <Compile Include="Models\CardRule.cs" />
+    <Compile Include="Models\FilterClause.cs" />
+    <Compile Include="Models\FilterGroup.cs" />
+    <Compile Include="Models\FilterModel.cs" />
+    <Compile Include="Models\IdentityRefBuilder.cs" />
+    <Compile Include="Models\IdentityReferenceBuilder.cs" />
+    <Compile Include="Models\QueryResultPayload.cs" />
+    <Compile Include="Models\HtmlQueryResult.cs" />
+    <Compile Include="Models\QueryResultFormat.cs" />
+    <Compile Include="Models\QueryResultModel.cs" />
+    <Compile Include="Models\QueryDisplayColumn.cs" />
+    <Compile Include="Models\QueryEditorModel.cs" />
+    <Compile Include="Models\QuerySortColumn.cs" />
+    <Compile Include="Models\QueryFilterType.cs" />
+    <Compile Include="Models\QueryFilterModel.cs" />
+    <Compile Include="Models\QueryAdapter.cs" />
+    <Compile Include="Models\WiqlHelper.cs" />
+    <Compile Include="Models\WitIdentityRef.cs" />
+    <Compile Include="Models\WorkItemCommentVersionModelFactory.cs" />
+    <Compile Include="Models\WorkItemFilter.cs" />
+    <Compile Include="Models\ISavedFilterSettings.cs" />
+    <Compile Include="Models\ParentChildWIMap.cs" />
+    <Compile Include="Models\WorkItemModelFactory.cs" />
+    <Compile Include="Models\WorkItemSettings.cs" />
+    <Compile Include="Models\WorkItemStateColor.cs" />
+    <Compile Include="Models\WorkItemTypeNameToStateColors.cs" />
+    <Compile Include="Models\SavedFilterSettings.cs" />
+    <Compile Include="Models\WorkItemLinksModel.cs" />
+    <Compile Include="Models\WorkItemModel.cs" />
+    <Compile Include="Models\WorkItemProjectFieldModel.cs" />
+    <Compile Include="Models\WorkItemLinksTypeModel.cs" />
+    <Compile Include="Models\WorkItemLinkTypeEndModel.cs" />
+    <Compile Include="Models\RegisteredLinkTypeModel.cs" />
+    <Compile Include="Models\TeamPanelDataProviderResponse.cs" />
+    <Compile Include="Models\TeamPanelItem.cs" />
+    <Compile Include="Models\WorkItemProjectModel.cs" />
+    <Compile Include="Models\WorkItemFieldModel.cs" />
+    <Compile Include="Models\ProcessDescriptorModel.cs" />
+    <Compile Include="Models\SecuredDictionary`2.cs" />
+    <Compile Include="Models\WorkItemCommentVersionModel.cs" />
+    <Compile Include="Models\WorkItemMetadataCacheData.cs" />
+    <Compile Include="Models\AdHocQueriesResult.cs" />
+    <Compile Include="Models\WorkItemsHtmlResultData.cs" />
+    <Compile Include="Models\AgileTreeNodeModel.cs" />
+    <Compile Include="Models\TagWorkItemAssociationModel.cs" />
+    <Compile Include="Models\WorkItemTagAssociationModel.cs" />
+    <Compile Include="Models\Query\UpdateColumnOptionsResult.cs" />
+    <Compile Include="Models\Search\SearchFilterToken.cs" />
+    <Compile Include="Models\Search\SearchQueryParser.cs" />
+    <Compile Include="Models\Search\SearchToken.cs" />
+    <Compile Include="Models\Search\SearchTokenHelper.cs" />
+    <Compile Include="Models\Common\BaseSecuredObjectModel.cs" />
+    <Compile Include="Extensions\CommonExtensions.cs" />
+    <Compile Include="Events\KanbanBoardChangeType.cs" />
+    <Compile Include="Events\TeamBoardSettingsChangedEvent.cs" />
+    <Compile Include="Events\TeamBoardSettingsArtifact.cs" />
+    <Compile Include="Events\TaskboardCardSettingsChangedEvent.cs" />
+    <Compile Include="Events\TeamSettingsChangeType.cs" />
+    <Compile Include="Events\TeamSettingsChangedEvent.cs" />
+    <Compile Include="DataAccess\BoardCardRulesDTO.cs" />
+    <Compile Include="DataAccess\BoardSettingsDTO.cs" />
+    <Compile Include="DataAccess\BoardCardRuleRow.cs" />
+    <Compile Include="DataAccess\BoardRowTable.cs" />
+    <Compile Include="DataAccess\BoardRowRevisionForReportingTable.cs" />
+    <Compile Include="DataAccess\CardRuleAttributeRow.cs" />
+    <Compile Include="DataAccess\RuleAttributeRow.cs" />
+    <Compile Include="DataAccess\TVPBinders.cs" />
+    <Compile Include="DataAccess\DataspaceIdWatermarkPairTypeRow.cs" />
+    <Compile Include="DataAccess\DataspaceIdWatermarkPairTypeRowBinder.cs" />
+    <Compile Include="DataAccess\TeamIterationRow.cs" />
+    <Compile Include="DataAccess\IterationRowBinder.cs" />
+    <Compile Include="DataAccess\FullIterationRowBinder.cs" />
+    <Compile Include="DataAccess\TeamIdIterationIdWatermarkPairTypeRow.cs" />
+    <Compile Include="DataAccess\TeamIdIterationIdWatermarkPairTypeRowBinder.cs" />
+    <Compile Include="DataAccess\TeamIdWatermarkPairTypeRow.cs" />
+    <Compile Include="DataAccess\TeamIdWatermarkPairTypeRowBinder.cs" />
+    <Compile Include="DataAccess\TeamIdIterationIdPairTypeRow.cs" />
+    <Compile Include="DataAccess\TeamIdIterationIdPairTypeRowBinder.cs" />
+    <Compile Include="DataAccess\TeamCapacityDaysOffRangeRow2.cs" />
+    <Compile Include="DataAccess\TeamCapacityDaysOffRangeRowBinder2.cs" />
+    <Compile Include="DataAccess\TeamCapacityRow2.cs" />
+    <Compile Include="DataAccess\TeamCapacityRowBinder2.cs" />
+    <Compile Include="DataAccess\TeamIdBinder.cs" />
+    <Compile Include="DataAccess\TeamConfigurationPropertyRow.cs" />
+    <Compile Include="DataAccess\TeamConfigurationPropertyRowBinder.cs" />
+    <Compile Include="DataAccess\FullTeamConfigurationPropertyRowBinder.cs" />
+    <Compile Include="DataAccess\TeamConfigurationWeekendRow.cs" />
+    <Compile Include="DataAccess\TeamConfigurationWeekendRowBinder.cs" />
+    <Compile Include="DataAccess\FullTeamConfigurationWeekendRowBinder.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent2.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent3.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent4.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent5.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent6.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent7.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent8.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent9.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent10.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent11.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent12.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent13.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent14.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent15.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent16.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent17.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent18.cs" />
+    <Compile Include="DataAccess\BoardSettingsComponent19.cs" />
+    <Compile Include="DataAccess\BoardSettingsDTOBinder.cs" />
+    <Compile Include="DataAccess\BoardSettingsDTOBinder2.cs" />
+    <Compile Include="DataAccess\BoardCardSettingRowBinder.cs" />
+    <Compile Include="DataAccess\BoardColumnRowBinder.cs" />
+    <Compile Include="DataAccess\BoardColumnRowBinder2.cs" />
+    <Compile Include="DataAccess\BoardRowRowBinder.cs" />
+    <Compile Include="DataAccess\BoardRowRowBinder2.cs" />
+    <Compile Include="DataAccess\BoardRowRevisionForReportingBinder.cs" />
+    <Compile Include="DataAccess\BoardColumnRevisionRowBinder.cs" />
+    <Compile Include="DataAccess\BoardColumnRevisionForReportingBinder.cs" />
+    <Compile Include="DataAccess\BoardCardRuleBinder.cs" />
+    <Compile Include="DataAccess\BoardCardStyleBinder.cs" />
+    <Compile Include="DataAccess\BoardRecord.cs" />
+    <Compile Include="DataAccess\BoardRecordBinder.cs" />
+    <Compile Include="DataAccess\BoardRecordBinder2.cs" />
+    <Compile Include="DataAccess\BoardSuggestedValueRecord.cs" />
+    <Compile Include="DataAccess\BoardSuggestedValueRecordBinder.cs" />
+    <Compile Include="DataAccess\BoardOptionRecord.cs" />
+    <Compile Include="DataAccess\BoardOptionRecordBinder.cs" />
+    <Compile Include="DataAccess\ProjectProcessConfigurationComponent.cs" />
+    <Compile Include="DataAccess\ProjectProcessConfigurationComponent2.cs" />
+    <Compile Include="DataAccess\ProjectProcessConfigurationComponent3.cs" />
+    <Compile Include="DataAccess\ProjectProcessConfigurationComponent4.cs" />
+    <Compile Include="DataAccess\ProjectProcessConfigurationComponent5.cs" />
+    <Compile Include="DataAccess\ProjectProcessConfigurationComponent6.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent2.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent4.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent5.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent6.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent7.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent8.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent9.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent10.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent11.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent12.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent13.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent14.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent15.cs" />
+    <Compile Include="DataAccess\TeamConfigurationComponent16.cs" />
+    <Compile Include="DataAccess\BoardColumnRow.cs" />
+    <Compile Include="DataAccess\BoardColumnRevisionForReportingTable.cs" />
+    <Compile Include="DataAccess\DisplayFieldRow.cs" />
+    <Compile Include="DataAccess\DisplayFieldRowBinder.cs" />
+    <Compile Include="DataAccess\GridColumnRow.cs" />
+    <Compile Include="DataAccess\GridColumnRowBinder.cs" />
+    <Compile Include="DataAccess\KeyValuePairStringTableBinder.cs" />
+    <Compile Include="DataAccess\TypeFieldBinder.cs" />
+    <Compile Include="DataAccess\TypeFieldValueRow.cs" />
+    <Compile Include="DataAccess\TypeFieldValueRowBinder.cs" />
+    <Compile Include="DataAccess\WorkItemStateRow.cs" />
+    <Compile Include="DataAccess\WorkItemStateRowBinder.cs" />
+    <Compile Include="DataAccess\WorkItemTypeRow.cs" />
+    <Compile Include="DataAccess\WorkItemTypeRowBinder.cs" />
+    <Compile Include="DataAccess\TeamCapacityDaysOffRangeRow.cs" />
+    <Compile Include="DataAccess\TeamCapacityDaysOffRangeRowBinder.cs" />
+    <Compile Include="DataAccess\TeamCapacityRow.cs" />
+    <Compile Include="DataAccess\TeamCapacityRowBinder.cs" />
+    <Compile Include="DataAccess\TeamFieldRow.cs" />
+    <Compile Include="DataAccess\TeamFieldRowBinder.cs" />
+    <Compile Include="DataAccess\FullTeamFieldRowBinder.cs" />
+    <Compile Include="DataAccess\TeamFieldConfigurationRowBinder.cs" />
+    <Compile Include="DataAccess\Tvps\ProjectGuidWatermarkPair.cs" />
+    <Compile Include="Microsoft\TeamFoundation\Agile\Web\Utilities\AgileDataSource.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

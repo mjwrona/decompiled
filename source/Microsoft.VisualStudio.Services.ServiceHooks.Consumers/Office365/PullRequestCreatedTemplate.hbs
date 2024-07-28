@@ -1,0 +1,24 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.createdBy['displayName']}}} created a pull request : {{{jsonEscape resource.title}}} ",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+            "activityTitle": "[PR {{{jsonEscape resource.pullRequestId}}}]({{{jsonEscape resource._links.web.href}}}): {{{jsonEscape resource.title}}}",
+            "activitySubtitle": "{{#joinLines " | " 3 "" ""}}
+Created by [{{{jsonEscape resource.createdBy['displayName']}}}](mailto:{{{jsonEscape resource.createdBy['uniqueName']}}}) in [{{{jsonEscape resource.repository.project.name}}}]({{{jsonEscape resourceContainers.project.baseUrl}}}{{{jsonEscape resource.repository.project.name}}})
+[{{{jsonEscape resource.repository.name}}}]({{{jsonEscape resource.repository.webUrl}}})
+[{{{stringReplace resource.sourceRefName "refs/heads/" ""}}}]({{{resource.repository.webUrl}}}{{{jsonEscape "/#version=GB"}}}{{{stringReplace resource.sourceRefName "refs/heads/" ""}}})
+{{/joinLines}}",
+            "activityText": "{{{jsonEscape resource.description}}}",
+            "activityImage": "{{{iconUrl data.iconFileName}}}",
+            "activityImageType": "article"
+        }
+    ],
+    "potentialAction": []
+}

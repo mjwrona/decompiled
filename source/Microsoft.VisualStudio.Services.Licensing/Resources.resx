@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LicenseNotAvailableException" xml:space="preserve">
+    <value>VSS012012: No licenses are available.</value>
+  </data>
+  <data name="DeleteUserLicenseByCollection" xml:space="preserve">
+    <value>Failed to delete user extension license by collection ID</value>
+  </data>
+  <data name="VsReleaseNoPriorRelease" xml:space="preserve">
+    <value>No prior release was found for versions {0}-{1}. Specify the Force parameter to add or update this release.</value>
+  </data>
+  <data name="EmailContentYoureInvited" xml:space="preserve">
+    <value>You've been invited!</value>
+  </data>
+  <data name="UserNotEligibleForExtension" xml:space="preserve">
+    <value>User {0} is not eligible for this extension. Check {0}'s access level. </value>
+  </data>
+  <data name="EmailContentBugsWorkItemsFeedback" xml:space="preserve">
+    <value>Track bugs, work items, feedback and more</value>
+  </data>
+  <data name="InvalidClientRightsQueryContextProductFamily" xml:space="preserve">
+    <value>VSS012008: Invalid ClientRightsQueryContext ProductFamily.</value>
+  </data>
+  <data name="LicensingOperationFailed" xml:space="preserve">
+    <value>VSS012009: Failed to complete the requested operation.</value>
+  </data>
+  <data name="FoundAdditionalTargetLicenses" xml:space="preserve">
+    <value>Additional users with licenses were found in target: {0}</value>
+  </data>
+  <data name="UserDisabled" xml:space="preserve">
+    <value>VSS012017: User is disabled in this organization</value>
+  </data>
+  <data name="UserExtensionLicenseUpdateException" xml:space="preserve">
+    <value>Failed to update extension license</value>
+  </data>
+  <data name="VsReleaseOverlapDetected" xml:space="preserve">
+    <value>Existing release '{0}' with BuildLab {1} and versions {2}-{3} is overlapping the new release. Change the release parameters or specify the Force parameter.</value>
+  </data>
+  <data name="EmailContentUnlimitedFreeRepos" xml:space="preserve">
+    <value>Unlimited free private code repos</value>
+  </data>
+  <data name="InvalidClientRightsQueryContextProductVersion" xml:space="preserve">
+    <value>VSS012001: Invalid ClientRightsQueryContext ProductVersion.</value>
+  </data>
+  <data name="FoundAdditionalTargetExtensionLicenses" xml:space="preserve">
+    <value>Additional users with extension licenses were found in target: {0}</value>
+  </data>
+  <data name="InvaliduserIdServiceIdentity" xml:space="preserve">
+    <value>VSS012010: Invalid User Id: {0}. Service Identity is not allowed.</value>
+  </data>
+  <data name="ExtensionAccountAssignmentDoesNotExistWarning" xml:space="preserve">
+    <value>User {0} does not have an active assignment to this extension.</value>
+  </data>
+  <data name="InvalidOrderByQuery" xml:space="preserve">
+    <value>Invalid orderBy: "{0}"</value>
+  </data>
+  <data name="EmailContentContinuousIntegrationBuilds" xml:space="preserve">
+    <value>Continuous integration builds</value>
+  </data>
+  <data name="InvalidOperationRequiresProcessing" xml:space="preserve">
+    <value>VSS012011: Existing licenses must be processed before new licenses can be assigned.</value>
+  </data>
+  <data name="InvalidRoamingAssignment" xml:space="preserve">
+    <value>Can not assign {0} this extension as user is sourced from another collection.</value>
+  </data>
+  <data name="InvalidFilterQuery" xml:space="preserve">
+    <value>Invalid filter: "{0}"</value>
+  </data>
+  <data name="EmailContentServicesYoullLoveLikeTracked" xml:space="preserve">
+    <value>Azure DevOps Services give teams access to a {0} wide set of developer services{1} we think you'll love like:</value>
+  </data>
+  <data name="InternalAccountShouldUseEarlyAdopter" xml:space="preserve">
+    <value>Internal organizations should only assign early adopter licenses. </value>
+  </data>
+  <data name="ExtensionAccountAssignmentAlreadyExistsWarning" xml:space="preserve">
+    <value>{0} already has this extension assigned to them. </value>
+  </data>
+  <data name="UserCannotBeAssignedNoneLicense" xml:space="preserve">
+    <value>VSS012024: Organization user cannot be assigned a None license.</value>
+  </data>
+  <data name="VsReleasePastExpirationDate" xml:space="preserve">
+    <value>The Force parameter must be specified to add or update a release with an expiration date in the past.</value>
+  </data>
+  <data name="EmailContentDevelopInAnyLanguage" xml:space="preserve">
+    <value>Develop in any language</value>
+  </data>
+  <data name="ExtensionBundleUnassignmentWarning" xml:space="preserve">
+    <value>Cannot unassign the extension because it is available for {0} through Visual Studio/MSDN subscription.</value>
+  </data>
+  <data name="EmailContentOpenInVisualStudio" xml:space="preserve">
+    <value>Open in Visual Studio</value>
+  </data>
+  <data name="EmailContentNeedHelp" xml:space="preserve">
+    <value>Need help? Check our {0} support options {1}</value>
+  </data>
+  <data name="InvalidUserId" xml:space="preserve">
+    <value>VSS012011: Invalid User Id: {0}.</value>
+  </data>
+  <data name="UserIsDeletedFromAccount" xml:space="preserve">
+    <value>VSS012016: User has been deleted from this organization</value>
+  </data>
+  <data name="FailedToGetOfferSubscriptionsException" xml:space="preserve">
+    <value>Failed to get offer subscriptions</value>
+  </data>
+  <data name="InvalidClientRightsQueryContextProductEdition" xml:space="preserve">
+    <value>VSS012002: Invalid ClientRightsQueryContext ProductEdition.</value>
+  </data>
+  <data name="InvalidIdentityType" xml:space="preserve">
+    <value>VSS012026: Invalid Identity Id: {0}. Only type 5 and type 6 identities can be assigned licenses.</value>
+  </data>
+  <data name="ExtensionAlreadyExistsThroughBoundleWarning" xml:space="preserve">
+    <value>{0} has the extension through the Visual Studio/MSDN Subscription.</value>
+  </data>
+  <data name="ExtensionLicenseNotAvailableException" xml:space="preserve">
+    <value>VSS012023: You'll have to purchase {0} more {1} extension(s) to complete this assignment. </value>
+  </data>
+  <data name="SourceExtensionLicensesNotFoundException" xml:space="preserve">
+    <value>Source extention licenses for user(s) not found in target: {0}</value>
+  </data>
+  <data name="EmailContentJoinPersonAtAccount" xml:space="preserve">
+    <value>Join {0} at {1} to plan, collaborate and ship great software.</value>
+  </data>
+  <data name="EarlyAdopterLicenseExpired" xml:space="preserve">
+    <value>VSS012022: User early adopter license for this organization has expired</value>
+  </data>
+  <data name="EmailContentVisualStudioTeam" xml:space="preserve">
+    <value>The Visual Studio team</value>
+  </data>
+  <data name="ClientReleaseNotFoundException" xml:space="preserve">
+    <value>No client release was found with name '{0}'.</value>
+  </data>
+  <data name="EmailContentStartOwnProject" xml:space="preserve">
+    <value>Start your own project</value>
+  </data>
+  <data name="InvalidOrderByProperty" xml:space="preserve">
+    <value>Invalid orderBy property: "{0}"</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>VSS012027: User Not Found: {0}</value>
+  </data>
+  <data name="UserImplicitAssignment" xml:space="preserve">
+    <value>Cannot explicitly assign this extension to {0}. All eligible organization members can use this extension. </value>
+  </data>
+  <data name="NoLicenseFound" xml:space="preserve">
+    <value>VSS012020: No License found for this user in this organization</value>
+  </data>
+  <data name="SourceAcesNotFoundException" xml:space="preserve">
+    <value>Source licensing ACEs not found in target: {0}</value>
+  </data>
+  <data name="CertificateDrawerNotFound" xml:space="preserve">
+    <value>VSS012010: Did not find certificate drawer '{0}'.</value>
+  </data>
+  <data name="UserLicenseExpired" xml:space="preserve">
+    <value>VSS012018: User license for this organization has expired</value>
+  </data>
+  <data name="UserInvitedToAccountV2_Template" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;style&gt;
+
+    table {
+      border-spacing: 0;
+    }
+
+    table td {
+      border-collapse: collapse;
+      margin: 0;
+    }
+
+    img {
+      border: 0;
+      outline: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: normal;
+    }
+
+    h1 {
+      color: #662879;
+      font-size: 2.1em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+    
+    body,
+    .page {
+      text-align: left;
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      background: #ffffff;
+      margin: 0;
+      line-height: 20px;
+      width: 676px;
+      max-width: 676px;
+      table-layout: fixed;
+    }
+
+    .main-container {
+      padding: 0 40px;
+    }
+
+    .row {
+      padding: 0 10px;
+    }
+
+    .hidden-link {
+      cursor: default !important;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .image-container {
+      overflow: hidden;
+    }
+    
+    .button-table td {
+        padding: 4px 35px 6px;
+        color: #fefefe;
+        background-color: #008a01;
+        text-align: center;
+        height: 26px;
+    }
+  
+    .button {
+      text-decoration: none;
+      color: #fefefe;
+      background-color: #008a01;
+      line-height: 30px;
+    }
+    
+    .button:active {
+      color: #fefefe;
+    }
+
+    .product-link{
+      font-size: 1.2em;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .product {
+      padding: 10px;
+    }
+
+    .product &gt; table &gt; tbody &gt; tr &gt; td+td {
+      padding-left: 10px;
+    }
+    
+    .hero &gt; table &gt; tbody &gt; tr &gt; td {
+      text-align: center;
+    }
+
+    .product.hero {
+      background-color: #eee;
+	  padding: 30px 0;
+    }
+	
+	.hero table{
+	  width: 100%;
+	}
+
+    p {
+      margin: 12px 0;
+    }
+	
+	.start-project{
+	  margin: 0;
+	}
+	
+	.title{
+	  padding-bottom: 20px;
+	}
+	
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="text-align: left;font-family: 'Segoe UI', Helvetica, Arial, sans-serif;font-size: 13px;background: #ffffff;margin: 0;line-height: 20px;width: 676px;max-width: 676px;table-layout: fixed;"&gt;
+  &lt;table class="page" style="border-spacing: 0;text-align: left;font-family: 'Segoe UI', Helvetica, Arial, sans-serif;font-size: 13px;background: #ffffff;margin: 0;line-height: 20px;width: 676px;max-width: 676px;table-layout: fixed;"&gt;
+    &lt;tbody&gt;
+
+      &lt;tr&gt;
+        &lt;td class="header" style="border-collapse: collapse;margin: 0;"&gt;
+          %%##HEADING-TOKEN##%%
+        &lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td class="main-container" style="border-collapse: collapse;margin: 0;padding: 0 40px;"&gt;
+          &lt;table style="border-spacing: 0;"&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td class="row title" style="border-collapse: collapse;margin: 0;padding: 0 10px;padding-bottom: 20px;"&gt;
+                  &lt;h1 style="font-weight: normal;color: #662879;font-size: 2.1em;"&gt;%%##EmailContentYoureInvited##%%&lt;/h1&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+
+              &lt;tr&gt;
+                &lt;td class="row product hero" style="border-collapse: collapse;margin: 0;padding: 30px 0;background-color: #eee;"&gt;
+                  &lt;table style="border-spacing: 0;width: 100%;"&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;td style="border-collapse: collapse;margin: 0;text-align: center;"&gt;
+                          &lt;h2 style="font-weight: normal;font-size: 1.6em;"&gt;%%##EmailContentJoinAtTitle##%%&lt;br&gt;
+                          &lt;a href="%%##AccountUrlTracked##%%"&gt;%%##AccountHost##%%&lt;/a&gt;&lt;/h2&gt;
+                          &lt;table style="border-spacing: 0;width: 100%;"&gt;
+                            &lt;tr&gt;
+							  &lt;td style="width: 20%;border-collapse: collapse;margin: 0;"&gt;&lt;/td&gt;
+                              &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+                                &lt;table class="button-table" style="border-spacing: 0;width: 100%;"&gt;
+                                  &lt;tr&gt;
+                                    &lt;td style="border-collapse: collapse;margin: 0;padding: 4px 35px 6px;color: #fefefe;background-color: #008a01;text-align: center;height: 26px;"&gt;
+                                      &lt;a href="%%##AccountUrlTracked##%%" class="button" style="text-decoration: none;color: #fefefe;background-color: #008a01;line-height: 30px;"&gt;
+                                        %%##EmailContentJoinNow##%%
+                                      &lt;/a&gt;
+                                    &lt;/td&gt;
+                                  &lt;/tr&gt;
+                                &lt;/table&gt;
+                              &lt;/td&gt;
+                              &lt;td width="5%" style="border-collapse: collapse;margin: 0;"&gt;
+                              &lt;/td&gt;
+                              &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+                                &lt;a href="%%##OpenInVsUri##%%" class="product-link" style="font-size: 1.2em;text-decoration: none;color: #000;"&gt;%%##EmailContentOpenInVisualStudio##%% &amp;gt;&lt;/a&gt;
+                              &lt;/td&gt;
+							  &lt;td style="width: 20%;border-collapse: collapse;margin: 0;"&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/table&gt;
+                        &lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+
+              &lt;tr&gt;
+                &lt;td class="row product" style="border-collapse: collapse;margin: 0;padding: 10px;"&gt;
+                  &lt;table style="border-spacing: 0;"&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+                          &lt;h2 style="font-weight: normal;font-size: 1.6em;"&gt;%%##EmailContentNewtoVSTS##%%&lt;/h2&gt;
+                          &lt;ul class="short-table"&gt;
+                            &lt;li&gt;%%##EmailContentUnlimitedFreeRepos##%%&lt;/li&gt;
+                            &lt;li&gt;%%##EmailContentBugsWorkItemsFeedback##%%&lt;/li&gt;
+                            &lt;li&gt;%%##EmailContentDevelopInAnyLanguage##%%&lt;/li&gt;
+                            &lt;li&gt;%%##EmailContentUseVisualStudioEclipseTracked##%%&lt;/li&gt;
+                            &lt;li&gt;%%##EmailContentContinuousIntegrationBuilds##%%&lt;/li&gt;
+                            &lt;li&gt;%%##EmailContentEnterpriseGradeServices##%%&lt;/li&gt;
+                          &lt;/ul&gt;
+						  &lt;table class="main-container" style="border-spacing: 0;padding: 0 40px;"&gt;
+							&lt;tr&gt;
+							  &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+							    &lt;p class="start-project" style="margin: 0;"&gt;
+								  &lt;a href="%%##StartOwnProject##%%" class="product-link" style="font-size: 1.2em;text-decoration: none;color: #000;"&gt;%%##EmailContentStartOwnProject##%% &amp;gt;&lt;/a&gt;
+                                &lt;/p&gt;
+							  &lt;/td&gt;
+							&lt;/tr&gt;
+						  &lt;/table&gt;
+                          
+                        &lt;/td&gt;
+                        &lt;td style="border-collapse: collapse;margin: 0;padding-left: 10px;"&gt;
+                            &lt;img alt="Visual Studio Dev Essentials" src="https://i3-vso.sec.s-msft.com/dynimg/IC836829.png" style="border: 0;outline: none;"&gt;
+                        &lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+
+              &lt;tr&gt;
+                &lt;td class="row" style="border-collapse: collapse;margin: 0;padding: 0 10px;"&gt;
+                  &lt;p style="margin: 12px 0;"&gt;%%##EmailContentHereAreYourDetails##%%&lt;/p&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;%%##EmailContentAccountUrl##%% - &lt;b&gt;&lt;a href="%%##AccountUrlTracked##%%"&gt;%%##AccountUrl##%%&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;
+                    &lt;li&gt;%%##EmailContentSignInAddress##%% - &lt;b&gt;%%##SignInAddress##%%&lt;/b&gt;&lt;/li&gt;
+                    &lt;li&gt;%%##EmailContentNotSureWhatToDo##%%&lt;/li&gt;
+                    &lt;li&gt;%%##EmailContentNeedHelpTracked##%%&lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;p style="margin: 12px 0;"&gt;%%##EmailContentHappyCoding##%%&lt;/p&gt;
+                  &lt;p style="margin: 12px 0;"&gt;%%##EmailContentVisualStudioTeam##%%&lt;/p&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td class="footer" style="border-collapse: collapse;margin: 0;"&gt;
+          %%##FOOTER-TOKEN##%%
+        &lt;/td&gt;
+      &lt;/tr&gt;
+
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  %%##EmailOpenedEventTracking##%%
+&lt;/body&gt;
+
+&lt;/html&gt;</value>
+  </data>
+  <data name="EmailContentJoinPersonAtAccountTracked" xml:space="preserve">
+    <value>Join {0} at {1} to plan, collaborate and ship great software.</value>
+  </data>
+  <data name="ExtensionLicenseRegistrationFailed" xml:space="preserve">
+    <value>Failed to register extension license</value>
+  </data>
+  <data name="InvalidAccountId" xml:space="preserve">
+    <value>VSS012013: Invalid Organization Id.</value>
+  </data>
+  <data name="EmailContentAccountUrl" xml:space="preserve">
+    <value>Organization URL</value>
+  </data>
+  <data name="EmailContentNewtoVSTS" xml:space="preserve">
+    <value>New to Azure DevOps Services?</value>
+  </data>
+  <data name="UserExtensionLicenseCopyException" xml:space="preserve">
+    <value>Failed to copy user extension license</value>
+  </data>
+  <data name="FailedToTransferLicensesException" xml:space="preserve">
+    <value>Failed to transfer licenses</value>
+  </data>
+  <data name="ShardingBlocksAddLicensedUser" xml:space="preserve">
+    <value>VSS82647: We are currently migrating (sharding) identities in this organization and unable to assign license to the user.</value>
+  </data>
+  <data name="AdvancedLicenseMessage" xml:space="preserve">
+    <value>&lt;li&gt;Use the &lt;a href='{0}'&gt;Test Hub&lt;/a&gt; and &lt;a href='{1}'&gt; Microsoft Test Manager (MTM)&lt;/a&gt; to create test plans, run manual and automated tests and more.&lt;/li&gt;</value>
+  </data>
+  <data name="EmailContentJoin" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="EmailContentJoinAtTitle" xml:space="preserve">
+    <value>Join {0} at</value>
+  </data>
+  <data name="EmailContentNeedHelpTracked" xml:space="preserve">
+    <value>Need help? Check our {0} support options {1}</value>
+  </data>
+  <data name="RequestedLicenseNotAvailable" xml:space="preserve">
+    <value>VSS012014: No licenses for '{0}' are available.</value>
+  </data>
+  <data name="EmailContentUseVisualStudioEclipseTracked" xml:space="preserve">
+    <value>Use {0}Visual Studio{1},{2}Eclipse, or your own IDE{3}</value>
+  </data>
+  <data name="EmailContentJoinNow" xml:space="preserve">
+    <value>Join now</value>
+  </data>
+  <data name="EmailContentUseVisualStudioEclipse" xml:space="preserve">
+    <value>Use {0}Visual Studio{1},{2}Eclipse, or your own IDE{3}</value>
+  </data>
+  <data name="InvaliduserIdGroupIdentity" xml:space="preserve">
+    <value>VSS012025: Invalid User Id: {0}. Group Identity is not allowed.</value>
+  </data>
+  <data name="UserPendingValidation" xml:space="preserve">
+    <value>Cannot assign {0} this extension because they have not logged into this organization yet.</value>
+  </data>
+  <data name="OwnerCannotBeAssignedStakeholderLicense" xml:space="preserve">
+    <value>VSS012023: Organization owner cannot be assigned a stakeholder license.</value>
+  </data>
+  <data name="MinimumRequiredAccessLevelException" xml:space="preserve">
+    <value>VSS012024: User {0} does not have the minimun reqired access level {1}</value>
+  </data>
+  <data name="ImplicitAssignmentExtensionUnassignment" xml:space="preserve">
+    <value>Cannot unassign the extension for {0} because it is available for all organization members.</value>
+  </data>
+  <data name="InvalidClientRightsQueryContextMachineId" xml:space="preserve">
+    <value>VSS012005: Invalid ClientRightsQueryContext MachineId.</value>
+  </data>
+  <data name="UserInvitedToAccountV1_Template" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&lt;style&gt;
+  body 
+  {
+    background:#ffffff;
+    margin:0;
+    overflow:hidden;
+    text-align:left;
+  }
+
+  table td 
+  {
+    border-collapse:collapse;
+    margin:0;
+  }
+
+  img 
+  {
+    border:0;
+    outline:none;
+  }
+
+  h1, h2, h3
+  {
+    font-weight: normal;
+  }
+
+  h1, h2
+  {
+    color: #662879;
+  } 
+
+  h3
+  {
+    text-align: center;
+  }
+
+  .image-container
+  {
+    width:200px;
+    height:150px;
+    overflow: hidden;
+  }
+
+  .three-column-table
+  {
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+
+  .three-column-table tr td
+  {
+    width: 200px;
+    vertical-align: top;
+    padding-right:5px;
+  }
+
+  .button-container
+  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:15px;
+  }
+
+  .button
+  {
+    color:#fefefe;
+    background-color: #008a01;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button:active
+  {
+    color:#fefefe;
+  }
+
+  .short-table
+  {
+    margin-top: -10px;
+    float:left;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body style="background: #ffffff;margin: 0;overflow: hidden;text-align: left;"&gt;
+      %%##HEADING-TOKEN##%%
+  &lt;table cellpadding="0" cellspacing="0" border="0" width="676"&gt;        
+    &lt;tr&gt;
+      &lt;td width="45" style="padding-bottom: 13px;border-collapse: collapse;margin: 0;"&gt;&lt;/td&gt;
+      &lt;td width="510" align="left" style="border-collapse: collapse;margin: 0;"&gt;
+        &lt;h2 style="font-family: 'Segoe UI',Arial,sans-serif;font-weight: normal;color: #662879;"&gt;%%##EmailContentYoureInvited##%%&lt;/h2&gt;
+        &lt;p&gt;%%##EmailContentJoinPersonAtAccountTracked##%%&lt;/p&gt;
+		%%##EmailContentTwoWaysToAccept##%%
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;td width="30" style="border-collapse: collapse;margin: 0;"&gt;&lt;/td&gt;
+            &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+              &lt;table width="200" style="float:left; margin-right:20px;"&gt;
+                &lt;tr&gt;
+                  &lt;td style="white-space: nowrap;overflow: hidden;padding: 5px 7px 7px;background-color: #008a01;text-align: center;border-collapse: collapse;margin: 0;"&gt;
+                    &lt;b&gt;&lt;a style="color: #fefefe;font-family: 'Segoe UI',Arial,sans-serif;font-size: 12px;line-height: 20px;background-color: #008a01;text-align: center;text-decoration: none;" href="%%##AccountUrlTracked##%%" class="button"&gt;%%##EmailContentJoin##%%&lt;/a&gt;&lt;/b&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/td&gt;
+            &lt;td width="20" style="border-collapse: collapse;margin: 0;"&gt;&lt;/td&gt;
+            &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+              &lt;table width="150" style="float:left;"&gt;
+                &lt;tr&gt;
+                  &lt;td style="white-space: nowrap;overflow: hidden;padding: 5px 7px 7px;background-color: #008a01;text-align: center;border-collapse: collapse;margin: 0;"&gt;
+                    &lt;b&gt;&lt;a style="color: #fefefe;font-family: 'Segoe UI',Arial,sans-serif;font-size: 12px;line-height: 20px;background-color: #008a01;text-align: center;text-decoration: none;" href="%%##OpenInVsUri##%%" class="button"&gt;%%##EmailContentOpenInVisualStudio##%%&lt;/a&gt;&lt;/b&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;" class="list-title"&gt;%%##EmailContentServicesYoullLoveLikeTracked##%%&lt;/p&gt;
+        &lt;table style="width:510; height: 180px;"&gt;
+          &lt;tr&gt;
+            &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+              &lt;ul style="font-family: 'Segoe UI',Arial,sans-serif;font-size: 12px;line-height: 20px;margin-top: -10px;float: left;" class="short-table"&gt;
+                &lt;li&gt;%%##EmailContentUnlimitedFreeRepos##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentBugsWorkItemsFeedback##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentDevelopInAnyLanguage##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentUseVisualStudioEclipseTracked##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentContinuousIntegrationBuilds##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentEnterpriseGradeServices##%%&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/td&gt;
+            &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+              &lt;img src="https://i3-vso.sec.s-msft.com/dynimg/IC836829.png" class="short-table" style="border: 0;outline: none;margin-top: -10px;float: left;"&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;"&gt;%%##EmailContentHereAreYourDetails##%%&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;td style="border-collapse: collapse;margin: 0;"&gt;
+              &lt;ul style="font-family: 'Segoe UI',Arial,sans-serif;font-size: 12px;line-height: 20px;margin-top: -10px;float: left;" class="short-table"&gt;
+                &lt;li&gt;%%##EmailContentAccountUrl##%% - &lt;b&gt;&lt;a href="%%##AccountUrlTracked##%%"&gt;%%##AccountUrl##%%&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentSignInAddress##%% - &lt;b&gt;%%##SignInAddress##%%&lt;/b&gt;&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentNotSureWhatToDo##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentNeedHelpTracked##%%&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;div&gt;
+          &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;"&gt;
+          %%##EmailContentHappyCoding##%%
+          &lt;/p&gt;
+          &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;"&gt;
+          %%##EmailContentVisualStudioTeam##%%
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+%%##FOOTER-TOKEN##%%
+%%##EmailOpenedEventTracking##%%
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="EmailContentTwoWaysToAccept" xml:space="preserve">
+    <value>Here are two ways to accept the invitation:</value>
+  </data>
+  <data name="EmailContentHereAreYourDetails" xml:space="preserve">
+    <value>And here are your details:</value>
+  </data>
+  <data name="UserInvitedToAccountBodyTemplate" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&lt;style&gt;
+  body 
+  {
+    background:#ffffff;
+    margin:0;
+    overflow:hidden;
+    text-align:left;
+  }
+
+  table td 
+  {
+    border-collapse:collapse;
+    margin:0;
+  }
+
+  img 
+  {
+    border:0;
+    outline:none;
+  }
+
+  h1, h2, h3
+  {
+    font-weight: normal;
+  }
+
+  h1, h2
+  {
+    color: #662879;
+  } 
+
+  h3
+  {
+    text-align: center;
+  }
+
+  .image-container
+  {
+    width:200px;
+    height:150px;
+    overflow: hidden;
+  }
+
+  .three-column-table
+  {
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+
+  .three-column-table tr td
+  {
+    width: 200px;
+    vertical-align: top;
+    padding-right:5px;
+  }
+
+  .button-container
+  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:15px;
+  }
+
+  .button
+  {
+    color:#fefefe;
+    background-color: #008a01;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button:active
+  {
+    color:#fefefe;
+  }
+
+  .short-table
+  {
+    margin-top: -10px;
+    float:left;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+      %%##HEADING-TOKEN##%%
+  &lt;table cellpadding="0" cellspacing="0" border="0" width="676"&gt;        
+    &lt;tr&gt;
+      &lt;td width="45" style="padding-bottom: 13px;"&gt;&lt;/td&gt;
+      &lt;td width="510" align="left"&gt;
+        &lt;h2 style="font-family:'Segoe UI',Arial,sans-serif;"&gt;%%##EmailContentYoureInvited##%%&lt;/h2&gt;
+        &lt;p&gt;%%##EmailContentJoinPersonAtAccount##%%&lt;/p&gt;
+		%%##EmailContentTwoWaysToAccept##%%
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;td width="30" /&gt;
+            &lt;td&gt;
+              &lt;table width="200" style="float:left; margin-right:20px;"&gt;
+                &lt;tr&gt;
+                  &lt;td style="white-space:nowrap;overflow:hidden;padding: 5px 7px 7px; background-color:#008a01; text-align:center;"&gt;
+                    &lt;b&gt;&lt;a style="color:#fefefe;font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;" href="%%##AccountUrl##%%" class="button"&gt;%%##EmailContentJoin##%%&lt;/a&gt;&lt;/b&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/td&gt;
+            &lt;td width="20"&gt;&lt;/td&gt;
+            &lt;td&gt;
+              &lt;table width="150" style="float:left;"&gt;
+                &lt;tr&gt;
+                  &lt;td style="white-space:nowrap;overflow:hidden;padding: 5px 7px 7px; background-color:#008a01; text-align:center;"&gt;
+                    &lt;b&gt;&lt;a style="color:#fefefe;font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;" href="https://www.visualstudio.com/en-us/get-started/setup/connect-to-visual-studio-online" class="button"&gt;%%##EmailContentOpenInVisualStudio##%%&lt;/a&gt;&lt;/b&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;" class="list-title"&gt;%%##EmailContentServicesYoullLoveLike##%%&lt;/p&gt;
+        &lt;table style="width:510; height: 180px;"&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;ul style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;" class="short-table"&gt;
+                &lt;li&gt;%%##EmailContentUnlimitedFreeRepos##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentBugsWorkItemsFeedback##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentDevelopInAnyLanguage##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentUseVisualStudioEclipse##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentContinuousIntegrationBuilds##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentEnterpriseGradeServices##%%&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;img src="https://i3-vso.sec.s-msft.com/dynimg/IC836829.png" class="short-table"&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;"&gt;%%##EmailContentHereAreYourDetails##%%&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;ul style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;" class="short-table"&gt;
+                &lt;li&gt;%%##EmailContentAccountUrl##%% - &lt;b&gt;&lt;a href="%%##AccountUrl##%%"&gt;%%##AccountUrl##%%&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentSignInAddress##%% - &lt;b&gt;%%##SignInAddress##%%&lt;/b&gt;&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentNotSureWhatToDo##%%&lt;/li&gt;
+                &lt;li&gt;%%##EmailContentNeedHelp##%%&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;div&gt;
+          &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;"&gt;
+          %%##EmailContentHappyCoding##%%
+          &lt;/p&gt;
+          &lt;p style="font-family:'Segoe UI',Arial,sans-serif; font-size:12px; line-height:20px;"&gt;
+          %%##EmailContentVisualStudioTeam##%%
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+%%##FOOTER-TOKEN##%%
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="InvalidVisualStudioOffersQueryContextProductFamily" xml:space="preserve">
+    <value>VSS012006: Invalid VisualStudioOffersQueryContext ProductFamily.</value>
+  </data>
+  <data name="EmailContentServicesYoullLoveLike" xml:space="preserve">
+    <value>Azure DevOps Services give teams access to a {0} wide set of developer services{1} we think you'll love like:</value>
+  </data>
+  <data name="SourceLicensesNotFoundException" xml:space="preserve">
+    <value>Source licenses for user(s) not found in target: {0} </value>
+  </data>
+  <data name="ExtensionOperationInternalFailure" xml:space="preserve">
+    <value>VSS012021: Internal error occurred while performing operation for user {0}.</value>
+  </data>
+  <data name="NoMSDNSubscription" xml:space="preserve">
+    <value>VSS012019: No MSDN subscription found for this user</value>
+  </data>
+  <data name="InvalidVisualStudioOffersQueryContextProductEdition" xml:space="preserve">
+    <value>VSS012007: Invalid VisualStudioOffersQueryContext ProductEdition.</value>
+  </data>
+  <data name="InvalidClientRightsQueryContextCanary" xml:space="preserve">
+    <value>VSS012004: Invalid ClientRightsQueryContext Canary.</value>
+  </data>
+  <data name="UserIsMissingFromAccount" xml:space="preserve">
+    <value>VSS012015: User does not exist in this organization</value>
+  </data>
+  <data name="EmailContentNotSureWhatToDo" xml:space="preserve">
+    <value>Not sure what to do? Contact {0} at {1}</value>
+  </data>
+  <data name="EmailContentHappyCoding" xml:space="preserve">
+    <value>Happy Coding!</value>
+  </data>
+  <data name="ExtensionNotFound" xml:space="preserve">
+    <value>Extension '{0}' not found</value>
+  </data>
+  <data name="InvalidClientRightsQueryContextReleaseType" xml:space="preserve">
+    <value>VSS012003: Invalid ClientRightsQueryContext ReleaseType.</value>
+  </data>
+  <data name="AuditGroupRuleReason" xml:space="preserve">
+    <value>due to group rule</value>
+  </data>
+  <data name="InvalidRoamingUnassignment" xml:space="preserve">
+    <value>Can not unassign {0} this extension as user is sourced from another collection.</value>
+  </data>
+  <data name="EmailContentEnterpriseGradeServices" xml:space="preserve">
+    <value>Enterprise-grade services, priced to be small-team friendly</value>
+  </data>
+  <data name="UserExtensionLicenseNotFound" xml:space="preserve">
+    <value>User Extension License Not Found</value>
+  </data>
+  <data name="EmailContentSignInAddress" xml:space="preserve">
+    <value>Your sign-in address</value>
+  </data>
+  <data name="CertificateNotFound" xml:space="preserve">
+    <value>VSS012000: Did not find certificate with thumbprint={0} installed on the machine.</value>
+  </data>
+  <data name="SourcePreviousLicensesNotFoundException" xml:space="preserve">
+    <value>Source previous licenses for user(s) not found in target: {0} </value>
+  </data>
+</root>

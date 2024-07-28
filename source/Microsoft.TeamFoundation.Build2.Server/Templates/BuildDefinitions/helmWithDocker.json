@@ -1,0 +1,198 @@
+{
+    "id": "helmWithDocker",
+    "name": "Azure Kubernetes Service",
+    "category": "Build",
+    "defaultHostedQueue": "Azure Pipelines",
+    "description": "Build a container image, push it to the specified container registry. After image push is complete, package the Helm chart and publish it as an artifact.",
+    "iconTaskId": "E28912F1-0114-4464-802A-A3A35437FD12",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "build": [
+          {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Build a container image",
+            "timeoutInMinutes": 0,
+            "task": {
+              "id": "E28912F1-0114-4464-802A-A3A35437FD16",
+              "versionSpec": "0.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+            }
+          },
+          {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Push a container image",
+            "timeoutInMinutes": 0,
+            "task": {
+              "id": "E28912F1-0114-4464-802A-A3A35437FD16",
+              "versionSpec": "0.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "containerregistrytype": "Azure Container Registry",
+              "dockerRegistryEndpoint": "",
+              "azureSubscriptionEndpoint": "",
+              "azureContainerRegistry": "",
+              "action": "Push an image",
+              "dockerFile": "**/Dockerfile",
+              "buildArguments": "",
+              "defaultContext": "true",
+              "context": "",
+              "imageName": "$(Build.Repository.Name):$(Build.BuildId)",
+              "imageNamesPath": "",
+              "qualifyImageName": "true",
+              "additionalImageTags": "",
+              "includeSourceTags": "false",
+              "includeLatestTag": "false",
+              "imageDigestFile": "",
+              "containerName": "",
+              "ports": "",
+              "volumes": "",
+              "envVars": "",
+              "workDir": "",
+              "entrypoint": "",
+              "containerCommand": "",
+              "detached": "true",
+              "restartPolicy": "no",
+              "restartMaxRetries": "",
+              "customCommand": "",
+              "dockerHostEndpoint": "",
+              "enforceDockerNamingConvention": "true",
+              "cwd": "$(System.DefaultWorkingDirectory)",
+              "memory": ""
+            }
+          },
+          {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Install Helm 2.9.1",
+            "timeoutInMinutes": 0,
+            "task": {
+              "id": "068d5909-43e6-48c5-9e01-7c8a94816220",
+              "versionSpec": "0.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "helmVersion": "2.9.1",
+              "installKubeCtl": "true",
+              "kubectlVersion": "1.10.3",
+              "checkLatestKubeCtl": "false"
+            }
+          },
+          {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "helm init --client-only",
+            "timeoutInMinutes": 0,
+            "task": {
+              "id": "AFA7D54D-537B-4DC8-B60A-E0EEEA2C9A87",
+              "versionSpec": "0.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "connectionType": "Azure Resource Manager",
+              "azureSubscriptionEndpoint": "",
+              "azureResourceGroup": "",
+              "kubernetesCluster": "",
+              "kubernetesServiceEndpoint": "",
+              "namespace": "",
+              "command": "init",
+              "chartType": "FilePath",
+              "chartName": "",
+              "chartPath": "",
+              "version": "",
+              "releaseName": "",
+              "overrideValues": "",
+              "valueFile": "",
+              "destination": "$(Build.ArtifactStagingDirectory)",
+              "canaryimage": "false",
+              "upgradetiller": "false",
+              "updatedependency": "false",
+              "save": "false",
+              "install": "false",
+              "recreate": "false",
+              "resetValues": "false",
+              "force": "false",
+              "waitForExecution": "true",
+              "arguments": "--client-only",
+              "tillernamespace": ""
+            }
+          },
+          {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "helm package",
+            "timeoutInMinutes": 0,
+            "task": {
+              "id": "AFA7D54D-537B-4DC8-B60A-E0EEEA2C9A87",
+              "versionSpec": "0.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "connectionType": "Azure Resource Manager",
+              "azureSubscriptionEndpoint": "",
+              "azureResourceGroup": "",
+              "kubernetesCluster": "",
+              "kubernetesServiceEndpoint": "",
+              "namespace": "",
+              "command": "package",
+              "chartType": "FilePath",
+              "chartName": "",
+              "chartPath": "",
+              "version": "",
+              "releaseName": "",
+              "overrideValues": "",
+              "valueFile": "",
+              "destination": "$(Build.ArtifactStagingDirectory)",
+              "canaryimage": "false",
+              "upgradetiller": "false",
+              "updatedependency": "false",
+              "save": "false",
+              "install": "false",
+              "recreate": "false",
+              "resetValues": "false",
+              "force": "false",
+              "waitForExecution": "true",
+              "arguments": "",
+              "tillernamespace": ""
+            }
+          },
+          {
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish Artifacts: drop",
+            "timeoutInMinutes": 0,
+            "task": {
+              "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+              "ArtifactName": "drop",
+              "ArtifactType": "Container",
+              "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)",
+              "Parallel": "false",
+              "ParallelCount": "8"
+            }
+          }
+        ],
+        "options": [],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            }
+        },
+        "triggers": []
+    }
+}

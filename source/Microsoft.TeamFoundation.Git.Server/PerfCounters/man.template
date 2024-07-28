@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{FAA8EFAB-0928-4472-B54F-C91BC2306ED6}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.Git.Server.dll" providerName="MicrosoftTeamFoundationGitServer" providerType="userMode" symbol="MicrosoftTeamFoundationGitServer" callback="custom">
+        <counterSet guid="{BE87FACF-B027-4B70-B8A2-4BCCAE4F2895}" name="TFS Services:GitPullRequestQuery" description="Git Pull Request Query Stats aggregated by query type" instances="multipleAggregate" symbol="PullRequestQueryStats" uri="Microsoft.TeamFoundation.Git.Server.PullRequestQueryPerfCounters" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Query Pull Request calls/sec" description="Number of calls to QueryGitPullRequests by second" type="perf_counter_bulk_count" detailLevel="standard" uri="Microsoft.TeamFoundation.Git.Server.PullRequestQueryPerfCounters.QueryPullRequestsPerSec" />
+          <counter id="2" baseID="3" name="Average Query Pull Request Time" description="Average time needed to run QueryGitPullRequests" type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.Git.Server.PullRequestQueryPerfCounters.AverageQueryPullRequestsTime" />
+          <counter id="3" name="Average Query Pull Request Time Base" description="Base for Average Query Pull Request Time counter" type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.Git.Server.PullRequestQueryPerfCounters.AverageQueryPullRequestsTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+        </counterSet>
+        <counterSet guid="{B6EFFF70-6725-11E2-84DA-6FF56088709B}" name="TFS Services:Git" description="Git Stats for Azure DevOps Server" instances="globalAggregate" symbol="TFSServicesGitStats" uri="Microsoft.TeamFoundation.Framework.Server.Perf_ServiceGitStats" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Current Pushes" description="Number of currently active Git Push operations." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitCurrentPushes" />
+          <counter id="2" name="Current Fetches" description="Number of currently active Git Fetch operations." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitCurrentFetches" />
+          <counter id="3" name="Current Clones" description="Number of currently active Git Clone operations." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitCurrentClones" />
+          <counter id="4" name="Current Objects/Sec" description="Number of Git Clone objects processed per Second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitObjectsPerSec" />
+          <counter id="5" name="Git Repos - Small Repos being processed" description="Number of Small Repos being processed (1000 items or less)." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitSmallRepos" />
+          <counter id="6" name="Git Repos - Medium Repos being processed" description="Number of Medium Repos being processed betwen 1001 and 10k items." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitMediumRepos" />
+          <counter id="7" name="Git Repos - Large Repos being processed" description="Number of Large Repos being processed betwen 10k and 100k items." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitLargeRepos" />
+          <counter id="8" name="Git Repos - Extra Large Repos being processed" description="Number of XLarge Repos being processed (More than 100k items)" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitXLargeRepos" />
+          <counter id="9" name="Git Jobs - Commit Manifest Processing Jobs" description="Current Running Git Commit Manifest Processing Jobs" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitCommitManifestJobs" />
+          <counter id="10" name="Git Jobs - Repacker Jobs" description="Current Running Git Repacker Jobs" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitRepackerJobs" />
+          <counter id="11" name="Git Jobs - Commit Mention Processing Job" description="Current Running Git Commit Mention Processing Job" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitCommitMentionProcessingJobs" />
+          <counter id="12" name="Git Jobs - Native Merge Job" description="Current Running Git Native Merge Job Count" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitNativeMergeJobs" />
+          <counter id="13" name="Git Jobs - Completion Queue Job" description="Current Running Git Pull Request Completion Job Count" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitCompletionQueueJobs" />
+          <counter id="14" name="Git Jobs - Auto Completion Job" description="Current Running Git Auto Completion Job Count" type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Service_GitAutoCompleteJobs" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

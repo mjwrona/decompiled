@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LinkTypeTopologyNotSpecified" xml:space="preserve">
+    <value>TF201004: A Topology attribute is required for link type {0}.</value>
+  </data>
+  <data name="ErrorQueryNestingLimit" xml:space="preserve">
+    <value>TF237119: Selection criteria has too many levels of nesting.</value>
+  </data>
+  <data name="ErrorWorkItemStoreAlreadyConnected" xml:space="preserve">
+    <value>TF26199: Cannot connect to a different server for a work item store that has successfully connected to an Azure DevOps Server</value>
+  </data>
+  <data name="ErrorFieldNotQueryable" xml:space="preserve">
+    <value>TF26036: Azure DevOps Server does not support querying on this field '{0}'. Change your query and try again.</value>
+  </data>
+  <data name="QueryHierarchyNameConflict" xml:space="preserve">
+    <value>TF237006: The destination folder {0} already contains a query or a query folder named {1}. 
+You cannot add an item with the same name. Rename one of the items</value>
+  </data>
+  <data name="ErrorLinkAlreadyAdded" xml:space="preserve">
+    <value>TF237105: The link is already a part of a different work item.</value>
+  </data>
+  <data name="PredicateErrorMissingFieldName" xml:space="preserve">
+    <value>Field comparison operator must have a valid field reference name.</value>
+  </data>
+  <data name="ErrorPageSizeLocked" xml:space="preserve">
+    <value>Cannot change page size after accessing items in the collection.</value>
+  </data>
+  <data name="ErrorLinkLocationTooLong" xml:space="preserve">
+    <value>TF26185: Azure DevOps Server does not support link paths over {0} characters long. Shorten the link path and try again.</value>
+  </data>
+  <data name="WebLayout_SystemControlReplacesFieldDuplicated" xml:space="preserve">
+    <value>VS403295: The replacement field {0} already exists in SystemControls.</value>
+  </data>
+  <data name="QueryHierarchyNameCannotBeEmpty" xml:space="preserve">
+    <value>TF237007: You cannot create a query or a query folder without a name. Use a valid name when you create an item.</value>
+  </data>
+  <data name="QueryHierarchyCannotAddDeletedItems" xml:space="preserve">
+    <value>TF237003: The item {0} has been deleted. You cannot add an item that has already been deleted.</value>
+  </data>
+  <data name="ErrorIncompatibleDetail" xml:space="preserve">
+    <value>TF26045: The field '{0}' has the 'Reportable' attribute set to 'Detail', but its field type does not support this attribute. This attribute supports the following field types: Integer, Double, String, or DateTime. Change this attribute for the field, or change the field type and try again.</value>
+  </data>
+  <data name="ErrorMissingIdentity" xml:space="preserve">
+    <value>User/group '{0}' is not found. </value>
+  </data>
+  <data name="ErrorDuplicateStateInTransition" xml:space="preserve">
+    <value>TF26214: State '{0}' is specified in source and destination states in the transition. These states must be different.</value>
+  </data>
+  <data name="ErrorUnknownTypeInCategory" xml:space="preserve">
+    <value>TF237059: The import of the category definition failed. In the type definition, category {0} refers to a work item type that does not exist {1}.</value>
+  </data>
+  <data name="ErrorDuplicatePattern" xml:space="preserve">
+    <value>TF237098: Duplicate match pattern value: '{0}'</value>
+  </data>
+  <data name="QueryAlreadySaved" xml:space="preserve">
+    <value>Query has already been saved.</value>
+  </data>
+  <data name="WorkItemFormAttachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="ErrorBadServiceConfig" xml:space="preserve">
+    <value>TF237147: The server is unavailable due a configuration error. Contact your server administrator.</value>
+  </data>
+  <data name="WebLayout_SystemControlFieldNameNotAllowed" xml:space="preserve">
+    <value>VS403178: Field {0} is not allowed in SystemControl.</value>
+  </data>
+  <data name="ErrorAddFileFileDoesNotExist" xml:space="preserve">
+    <value>VS402398: WorkItem attachment does not exist.</value>
+  </data>
+  <data name="WorkItemFormHistory" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="ErrorProjectNotExist" xml:space="preserve">
+    <value>TF26193: The team project {0} does not exist. Check the team project name and try again. </value>
+  </data>
+  <data name="QueryTextEmpty" xml:space="preserve">
+    <value>TF26169: Query name cannot be empty</value>
+  </data>
+  <data name="ErrorDuplicateExternalLink" xml:space="preserve">
+    <value>TF237093: Duplicate external link.</value>
+  </data>
+  <data name="ErrorChangesRejected" xml:space="preserve">
+    <value>TF237151: The update has been rejected.</value>
+  </data>
+  <data name="AddLinkAlreadyExists" xml:space="preserve">
+    <value>TF201037: A {0} link between work items {1} and {2} already exists. It may have been added by another user.</value>
+  </data>
+  <data name="ErrorWorkItemLinkChangeSourceId" xml:space="preserve">
+    <value>TF237126: Can't change source ID for the link in the workitem collection.</value>
+  </data>
+  <data name="ErrorFieldTypeMismatch" xml:space="preserve">
+    <value>TF26038: Field type for {0} does not match the existing type. It was {1}, but now is {2}.</value>
+  </data>
+  <data name="ErrorNotANamespaceAdmin" xml:space="preserve">
+    <value>TF26155: You are not a recognized Azure DevOps Server administrator in the current team project. Contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="ErrorFullTextService" xml:space="preserve">
+    <value>TF248015: Your work item query could not be completed due to an unexpected error returned by the Microsoft SQL Server Full-text engine. Contact your system administrator to check the Application event log for Azure DevOps Server.</value>
+  </data>
+  <data name="ErrorBisMiddleTierNotRegistered" xml:space="preserve">
+    <value>TF26176: Could not connect to the specified Azure DevOps Server collection URL. Please check the URL and try again.</value>
+  </data>
+  <data name="QueryHierarchyCannotAddParentAsChild" xml:space="preserve">
+    <value>TF237002: Folder {0} is the parent folder. You cannot add a parent folder to any of its child folders</value>
+  </data>
+  <data name="QueryHierarchyItemAlreadyExists" xml:space="preserve">
+    <value>TF237021: The query or a query folder already exists on the server. Refresh your query hierarchy.</value>
+  </data>
+  <data name="ErrorNullLinkInArray" xml:space="preserve">
+    <value>TF237114: The link array should not contain null elements.</value>
+  </data>
+  <data name="CannotChangeQueryScope" xml:space="preserve">
+    <value>Query Scope cannot be changed after stored query is saved.  Must copy.</value>
+  </data>
+  <data name="RemoteLinkAddLockedLink" xml:space="preserve">
+    <value>VS403478: You cannot lock a remote link.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_ReverseNameInUse" xml:space="preserve">
+    <value>TF201026: The reverse name is not unique.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_NothingSpecified" xml:space="preserve">
+    <value>TF201027: The link type definition is unchanged.</value>
+  </data>
+  <data name="QueryHierarchyServerDoesNotSupportFolders" xml:space="preserve">
+    <value>TF237005: You cannot create a query folder with this version of Azure DevOps Server. 
+Upgrade to a newer version of Azure DevOps Server in order to create query folders.</value>
+  </data>
+  <data name="LinkTypeNameConflict" xml:space="preserve">
+    <value>TF201006: The link type {0} conflicts with link type {1}. The name {2} is already being used.</value>
+  </data>
+  <data name="ErrorDeleteFieldNoPermission" xml:space="preserve">
+    <value>TF400326: You are trying to delete field '{0}'. To delete a field, you must have Work Item Tracking provisioning permission on the Team Project Collection.</value>
+  </data>
+  <data name="LinksControlNonDirectionalLinkWithFilterOn" xml:space="preserve">
+    <value>TF201048: The links control filter contains an element for link type {0} that is not supported. That link type is not directed, so the {1} attribute cannot be used.</value>
+  </data>
+  <data name="FormatterQuery" xml:space="preserve">
+    <value>Query: </value>
+  </data>
+  <data name="LinksControlExcludeAllLinkTypesFiltersCannotContainWorkItemTypeFilters" xml:space="preserve">
+    <value>TF248013: The {0} and {1} links control elements are not compatible. Either do not set the {2} attribute of the {1} element to {3}, or else remove the {0} element.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_EditDenied" xml:space="preserve">
+    <value>TF201028: The link type cannot be modified because it is a core link type.</value>
+  </data>
+  <data name="ErrorMaxNewAttachments" xml:space="preserve">
+    <value>TF26084: The attachment could not be added because the work item already has the maximum number of supported attachments {0}. Remove attachments that are no longer being used and try again, or create a link to the file instead. </value>
+  </data>
+  <data name="ErrorSqlErrorTimeOutOrServerNotResponding" xml:space="preserve">
+    <value>TF237161: Server operation timed out or server not responding. Try again.</value>
+  </data>
+  <data name="ErrorMissingProjectScope" xml:space="preserve">
+    <value>TF248001: You have specified a project-scoped group, '{0}', which is not allowed for a global list or a global workflow that is defined for a project collection. Remove the reference to the specified group.</value>
+  </data>
+  <data name="ErrorCannotOpenDatabase" xml:space="preserve">
+    <value>TF237148: The Azure DevOps Server work item database cannot be opened. It may be offline for system administration. Try again later or contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="LinksControlLinkColumnInvalidAttributes" xml:space="preserve">
+    <value>TF201040: The 'LinkColumn' element requires the 'LinkAttribute' or the 'RefName' attribute, but not both. Specify either the 'LinkAttribute' or the 'RefName' attribute.</value>
+  </data>
+  <data name="ErrorInternalField" xml:space="preserve">
+    <value>TF26050: The work item type definition has a definition for field '{0}' that is a reserved system field name and cannot be used. Rename or remove this field definition and try again.</value>
+  </data>
+  <data name="WorkItemFormDevelopment" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="LinkTypeNotFound" xml:space="preserve">
+    <value>TF201031: {0} is not a valid type of link. Check the spelling and capitalization. If you're not sure, use witadmin.exe to list the available link types. See the command-line help topic witadmin (https://go.microsoft.com/fwlink/?LinkId=75598) for more details.</value>
+  </data>
+  <data name="LinksControlCannotContainLinksOptions" xml:space="preserve">
+    <value>TF237176: The import failed.  The work item type definition that you are trying to import contains a links control with an element {0} that is not supported on this server. That element is supported by a more recent version of Azure DevOps Server.</value>
+  </data>
+  <data name="ErrorChangeFieldReportingTypeAlreadySet" xml:space="preserve">
+    <value>TF237150: Importing work item type failed. Reporting type has already been set and cannot be changed.</value>
+  </data>
+  <data name="ErrorBatchSaveNullWorkItem" xml:space="preserve">
+    <value>TF237087: Null workitem is not allowed in the BatchSave call.</value>
+  </data>
+  <data name="ErrorItemNotOpen" xml:space="preserve">
+    <value>TF237103: The work item must be open for this operation. Open the work item and try again.</value>
+  </data>
+  <data name="ErrorItemIsNew" xml:space="preserve">
+    <value>TF26073: This operation cannot be performed on an item that has not yet been saved.</value>
+  </data>
+  <data name="AddRemoteLinkAccountRequired" xml:space="preserve">
+    <value>VS403469: Account is required for remote work item links.</value>
+  </data>
+  <data name="ErrorAddFileFileAlreadyExists" xml:space="preserve">
+    <value>TF237137: File attachment already exists.</value>
+  </data>
+  <data name="PredicateError" xml:space="preserve">
+    <value>Invalid Predicate</value>
+  </data>
+  <data name="InvalidContributionInputIdException" xml:space="preserve">
+    <value>Unexpected input {0} is provided for contribution {1}.</value>
+  </data>
+  <data name="WebLayout_ContributionNotFoundOrNotInListedExtensionsElement" xml:space="preserve">
+    <value>VS403120: Contribution "{0}" does not exist or is not in the extensions listed in the &lt;Extensions&gt; element.</value>
+  </data>
+  <data name="ErrorFieldIndexingInvalidType" xml:space="preserve">
+    <value>TF212021: You cannot index field '{0}' because it is not one of the following types: String, Integer, Double, DateTime, Boolean, Guid.</value>
+  </data>
+  <data name="ErrorDuplicateWorkItemLink" xml:space="preserve">
+    <value>TF237099: Duplicate work item link.</value>
+  </data>
+  <data name="QueryDescriptionTooLong" xml:space="preserve">
+    <value>TF26163: Azure DevOps Server does not support query descriptions over {0} characters long. Shorten the description and try again.</value>
+  </data>
+  <data name="FileUploadedExceededMax" xml:space="preserve">
+    <value>Cannot upload file as it exceeds the maximum file size ({0:#,#} Byte(s)).</value>
+  </data>
+  <data name="WebLayout_ControlTypeNotAllowed" xml:space="preserve">
+    <value>VS403069: Control type {0} is not allowed in WebLayout.</value>
+  </data>
+  <data name="SearchPageKeywordNotHelpTextWithoutRepro" xml:space="preserve">
+    <value>{0} and {1}</value>
+  </data>
+  <data name="ErrorCannotSortBy" xml:space="preserve">
+    <value>TF26009: Azure DevOps Server does not support sorting by this field.</value>
+  </data>
+  <data name="WebLayout_SystemControlReplacesFieldNotAllowed" xml:space="preserve">
+    <value>VS403294: Only the fields {0} can be replaced.</value>
+  </data>
+  <data name="TagAuth" xml:space="preserve">
+    <value>{1} on behalf of {0}</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_ForwardNameInUse" xml:space="preserve">
+    <value>TF201025: The forward name is not unique.</value>
+  </data>
+  <data name="ErrorIgnoreField" xml:space="preserve">
+    <value>TF237101: The field must be ignored by the client.</value>
+  </data>
+  <data name="ErrorBadAdminDataInvalidFieldType" xml:space="preserve">
+    <value>TF26206: Work Item Type Import failed. Unsupported Field Type.</value>
+  </data>
+  <data name="ErrorBadAdminDataInvalidFieldName" xml:space="preserve">
+    <value>TF26205: Work Item Type Import failed. Unsupported field name.</value>
+  </data>
+  <data name="ErrorNoPermissions" xml:space="preserve">
+    <value>TF201017: You don't have permissions to complete the operation. To create, modify or delete link types, you must have the '{0}' permission.</value>
+  </data>
+  <data name="WebLayout_InvalidControlsInGroup" xml:space="preserve">
+    <value>VS403073: Group {0} violates the rule that a group can only contain a single HTML or WebPage control preceded by label controls.</value>
+  </data>
+  <data name="WebLayout_RequiredFieldsNotInBothLayouts" xml:space="preserve">
+    <value>VS403103: The required field ‘{0}’ is not included in all layouts.</value>
+  </data>
+  <data name="ErrorWorkItemTypeAlreadyExists" xml:space="preserve">
+    <value>TF237132: The work item type already exists in the project. </value>
+  </data>
+  <data name="ErrorPageSizeRange" xml:space="preserve">
+    <value>TF237117: PageSize has to be between {0} and {1}</value>
+  </data>
+  <data name="DifferentStores" xml:space="preserve">
+    <value>The mixing of objects, which belong to different Work Item Stores, is not allowed.</value>
+  </data>
+  <data name="WebLayout_FieldNameNotAllowed" xml:space="preserve">
+    <value>VS403068: Field {0} is not allowed in WebLayout.</value>
+  </data>
+  <data name="ErrorDuplicateFieldName" xml:space="preserve">
+    <value>TF237094: Field name '{0}' is used by the field '{1}', so it cannot be used by the field '{2}'.</value>
+  </data>
+  <data name="AddLinkAlreadyExists2" xml:space="preserve">
+    <value>TF201064: A {0} link to work item {1} already exists. It may have been added by another user.</value>
+  </data>
+  <data name="QueryHierarchyCircularReference" xml:space="preserve">
+    <value>TF237019: You are working with a query hierarchy, but the hierarchy has been changed between now and when you last refreshed. You are advised to refresh the query hierarchy.</value>
+  </data>
+  <data name="WebLayout_SystemControlHiddenFieldNotAllowed" xml:space="preserve">
+    <value>VS403361: Only the fields {0} can be hidden.</value>
+  </data>
+  <data name="FieldTypeInvalid" xml:space="preserve">
+    <value>VS402802: You've specified an invalid type for the field.</value>
+  </data>
+  <data name="ErrorSqlErrorDeadlock" xml:space="preserve">
+    <value>TF237160: Server operation failed. Try again. (Code: {0})</value>
+  </data>
+  <data name="ErrorNotAProjectUser" xml:space="preserve">
+    <value>TF26157: You are not a recognized user in the current team project. Contact your Azure DevOps Server administrator to request permissions to this team project.</value>
+  </data>
+  <data name="ErrorProhibitedMeasure" xml:space="preserve">
+    <value>TF237118: Attribute '{0}' is prohibited for field '{1}' unless its '{2}' attribute is set to '{3}'.</value>
+  </data>
+  <data name="ErrorDuplicateActions" xml:space="preserve">
+    <value>TF237092: Action '{0}' is defined for more than one transition from state '{1}'. Transitions from every single state must have a unique set of actions.</value>
+  </data>
+  <data name="ErrorAttachmentUploadFailed" xml:space="preserve">
+    <value>TF237082: The attachment could not be uploaded. Verify that you have a network connection and that Azure DevOps Server is available. If the problem persists, provide the following information to the server administrator.
+ 
+The server returned the following message: 
+{0}</value>
+  </data>
+  <data name="ErrorNotEnoughFields" xml:space="preserve">
+    <value>TF26213: Too many new fields. You are trying to create {0} field(s), while the server has space for {1} of them.</value>
+  </data>
+  <data name="UnknownUser" xml:space="preserve">
+    <value>Unknown user</value>
+  </data>
+  <data name="IncorrectLinkedWorkItemQueryMethod" xml:space="preserve">
+    <value>TF248022: You have specified a query string that is not valid when you use the query method for linked work items. You cannot specify a parameterized query or a query string for a flat list of work items with the query method you specified.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_InvalidTopology" xml:space="preserve">
+    <value>TF201021: The topology is not supported. See https://go.microsoft.com/fwlink/?LinkId=74075 for the supported link type topologies.</value>
+  </data>
+  <data name="WebLayout_InvalidOrDuplicatedGroupLabel" xml:space="preserve">
+    <value>VS403080: Group label '{0}' already exists on the same page</value>
+  </data>
+  <data name="ErrorImageNotFound" xml:space="preserve">
+    <value>TF602212: The image '{0}' was moved or deleted, or it is being used by another process.</value>
+  </data>
+  <data name="WorkItemFormLinks" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="ErrorWorkItemTypeletDoesNotExist" xml:space="preserve">
+    <value>Work item typelet does not exist.</value>
+  </data>
+  <data name="LinkAuthorizationFailed" xml:space="preserve">
+    <value>TF201038: Linked item does not exist or access is denied. See Work Item Permissions for Links (https://go.microsoft.com/fwlink/?LinkId=75624) for more details.</value>
+  </data>
+  <data name="ErrorWorkItemLinkOneOfIds" xml:space="preserve">
+    <value>TF237129: One of the source or target workitem IDs should be equal to the current workitem ID.</value>
+  </data>
+  <data name="ErrorInvalidQueryColumn" xml:space="preserve">
+    <value>TF237159: The query contains columns that are not valid.</value>
+  </data>
+  <data name="WebLayout_FormExtensionDoesNotHavePageGroupOrControlContribution" xml:space="preserve">
+    <value>VS403296: Extension {0} does not have a control, group or page contribution.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_ModifyTopology" xml:space="preserve">
+    <value>TF201030: You cannot change the topology for a link type that has already been defined.</value>
+  </data>
+  <data name="WebExceptionCouldNotReachServer" xml:space="preserve">
+    <value>TF26173: Azure DevOps Server could not connect to the application tier. Check that you have a network connection and that the Azure DevOps Server is available. If the problem persists, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="WebLayout_InvalidContributionInputValue" xml:space="preserve">
+    <value>VS403117: The input value "{0}" is not a valid input value for input "{1}" in contribution "{2}"</value>
+  </data>
+  <data name="ErrorNoAreaWriteAccess" xml:space="preserve">
+    <value>TF237111: The current user does not have permissions to save work items under the specified area path.</value>
+  </data>
+  <data name="ErrorWorkItemNeedCollection" xml:space="preserve">
+    <value>TF237131: PartialOpen call can be applied to the query results only.</value>
+  </data>
+  <data name="ErrorNoWidthElements" xml:space="preserve">
+    <value>TF26217: The form '{0}' element has neither '{1}' nor '{2}' attributes.</value>
+  </data>
+  <data name="QueryHierarchyParentDoesNotExist" xml:space="preserve">
+    <value>TF237016: The destination folder does not exist on the server. It might have been deleted. Refresh your query hierarchy.</value>
+  </data>
+  <data name="ErrorCannotFindNodeFromId" xml:space="preserve">
+    <value>TF26006: Azure DevOps Server could not find {0}.</value>
+  </data>
+  <data name="QueryHierarchyAddingAcrossStoresProhibited" xml:space="preserve">
+    <value>TF237010: You cannot add a query or a query folder from a folder in a WorkItemStore
+object to a folder in a different WorkItemStore object.</value>
+  </data>
+  <data name="QueryHierarchyNameConflictsWithExistingItem" xml:space="preserve">
+    <value>TF237018: A query or a query folder on the server has the same name as an item you tried to save. Refresh your query hierarchy.</value>
+  </data>
+  <data name="QueryHierarchyDeniedOrNotExist" xml:space="preserve">
+    <value>TF237015: The query or query folder that you referenced either does not exist, or you do not have permissions to access it.</value>
+  </data>
+  <data name="ErrorHyperLinkAlreadyAdded" xml:space="preserve">
+    <value>TF237100: Hyperlink is already a part of a different work item.</value>
+  </data>
+  <data name="ErrorDuplicateTransition" xml:space="preserve">
+    <value>TF26215: Transition from state '{0}' to state '{1}' (for='{2}', not='{3}') is defined more than once.</value>
+  </data>
+  <data name="ErrorBatchSaveInvalidWorkitem" xml:space="preserve">
+    <value>TF237086: The work item cannot be saved because at least one field contains a value that is not allowed.</value>
+  </data>
+  <data name="ErrorInvalidQueryName" xml:space="preserve">
+    <value>TF26059: The query name is not recognized.</value>
+  </data>
+  <data name="ErrorInvalidQueryText" xml:space="preserve">
+    <value>TF26060: The query text is not recognized.</value>
+  </data>
+  <data name="ErrorInvalidTreeNode" xml:space="preserve">
+    <value>TF26065: The project hierarchy node is not recognized.</value>
+  </data>
+  <data name="QueryHierarchyCannotMoveRootFolder" xml:space="preserve">
+    <value>TF237022: You cannot move root folders.</value>
+  </data>
+  <data name="ErrorNoDefaultState" xml:space="preserve">
+    <value>TF237112: Default state cannot be inferred from transitions. Default state is defined by a transition from an empty state, which works for new items.</value>
+  </data>
+  <data name="LinkNotFoundForDelete" xml:space="preserve">
+    <value>TF201032: The {0} link between work items {1} and {2} that you are attempting to delete does not exist. It may have been deleted by another user.</value>
+  </data>
+  <data name="ErrorItemAlreadyUpdatedOnServer" xml:space="preserve">
+    <value>TF26071: This work item has been changed by someone else since you opened it.  You will need to refresh it and discard your changes.</value>
+  </data>
+  <data name="ErrorInvalidWorkItemTypeReferenceName" xml:space="preserve">
+    <value>VS402476: Work item type reference name is invalid: {0}. Correct it, and try again.</value>
+  </data>
+  <data name="ErrorGroupContainsAADGroupSnippetTeamProject" xml:space="preserve">
+    <value>'{0}' (Child of '{1}', in team project '{2}')</value>
+  </data>
+  <data name="AddLinkLimitExceeded" xml:space="preserve">
+    <value>TF237201: You cannot add a {0} link from work item {1} to work item to {2}. Adding a link between these work items will exceed the limit of links per work item allowed.</value>
+  </data>
+  <data name="ErrorCannotUseHistoryType" xml:space="preserve">
+    <value>TF26178: Field type '{0}' can be used only with the '{1}' field.</value>
+  </data>
+  <data name="WebLayout_DuplicatePageContributions" xml:space="preserve">
+    <value>VS403157: Cannot have more than one page contribution '{0}'</value>
+  </data>
+  <data name="ErrorInvalidOnParamedQuery" xml:space="preserve">
+    <value>TF26057: This operation is not supported on a parameterized query</value>
+  </data>
+  <data name="SearchPageKeywordNotHelpTextWithRepro" xml:space="preserve">
+    <value>{0}, {1}, and {2}</value>
+  </data>
+  <data name="WhereIsNotEmptyOnParamedQuery" xml:space="preserve">
+    <value>The WHERE and ORDER BY clauses of a query string are not supported on a parameterized query.</value>
+  </data>
+  <data name="ErrorSavingWorkItemTagFailed" xml:space="preserve">
+    <value>TF401011: The work item cannot be saved. Associated tags are invalid.</value>
+  </data>
+  <data name="AddRemoteLinkWhenPendingDelete" xml:space="preserve">
+    <value>VS403479: The remote link '{0}' between work items '{1}' and '{2}' that you are attempting to create is pending delete and cannot be added.</value>
+  </data>
+  <data name="ErrorIncompatibleMeasure" xml:space="preserve">
+    <value>TF26047: The field '{0}' has the 'Reportable' attribute set to 'Measure', but its field type does not support this attribute. This attribute supports the field types 'Integer' and 'Double'. Change this attribute for the field, or change the field type and try again.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_DeleteDenied" xml:space="preserve">
+    <value>TF201029: The link type cannot be deleted. See https://go.microsoft.com/fwlink/?LinkId=74121 for more information on deleting link types.</value>
+  </data>
+  <data name="ErrorDuplicateFieldNameBackup" xml:space="preserve">
+    <value>TF237095: Field names '{0}' and '{1}' cannot be used with the field '{2}' as they are used by fields '{3}' and '{4}'.</value>
+  </data>
+  <data name="WebLayout_InvalidContributionInputType" xml:space="preserve">
+    <value>VS403126: The input type "{0}" for input "{1}" in contribution "{2}" is not a valid Input type</value>
+  </data>
+  <data name="QueryHierarchyServerDoesNotSupportPermissions" xml:space="preserve">
+    <value>TF237199: You cannot set query or query folder permissions with this version of Azure DevOps Server. 
+Upgrade to a newer version of Azure DevOps Server in order to set permissions.</value>
+  </data>
+  <data name="ErrorWorkItemLinkNeedTargetId" xml:space="preserve">
+    <value>TF237128: Target workitem ID should be set before adding link to collection.</value>
+  </data>
+  <data name="ErrorInGroupNotSupported" xml:space="preserve">
+    <value>TF248007: You cannot use the 'in group' operator to run a query. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="ErrorDifferentReportingSettings" xml:space="preserve">
+    <value>TF237091: Actual reporting settings for the field {0} are different from those specified in the XML. Changing these settings is prohibited.</value>
+  </data>
+  <data name="QueryHierarchyTypeMismatch" xml:space="preserve">
+    <value>TF237020: The update operation could not complete. Refresh your query hierarchy.</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="ErrorDuplicateReason" xml:space="preserve">
+    <value>TF26024: The transition from '{0}' to '{1}' has a duplicate reason {2}. Remove the duplicate reason and try again.</value>
+  </data>
+  <data name="WebLayout_SystemControlTypeNotAllowed" xml:space="preserve">
+    <value>VS403176: Either field name is missing or control type {0} is not allowed in SystemControls.</value>
+  </data>
+  <data name="AddLinkExtraParent" xml:space="preserve">
+    <value>TF201036: You cannot add a {0} link between work items {1} and {2} because a work item can have only one {3} link.</value>
+  </data>
+  <data name="LinksControlUnknownFilterName" xml:space="preserve">
+    <value>TF201044: The link type filter '{0}' specifies a link type that does not exist on the Azure DevOps Server. Specify a valid link type.</value>
+  </data>
+  <data name="CopiedCommentItem" xml:space="preserve">
+    <value>Copied from {0}.</value>
+  </data>
+  <data name="ErrorComputedFieldInRevisionQuery" xml:space="preserve">
+    <value>TF212022: You cannot specify '{0}' in a query that returns revisions of work items because that field is a computed field.</value>
+  </data>
+  <data name="IndexAssociatedWithFieldError" xml:space="preserve">
+    <value>Field cannot be deleted because an index is associated with the field. Please contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="LinksControlLinkColumnDuplicateColumn" xml:space="preserve">
+    <value>TF201041: The link column named '{0}' is referenced more than once. Remove the duplicate references.</value>
+  </data>
+  <data name="ErrorMissingRequiredAttribute" xml:space="preserve">
+    <value>TF237108: Element '{0}' doesn't have a required attribute '{1}'.</value>
+  </data>
+  <data name="ErrorChangeWorkItemTypeInvalidProjectID" xml:space="preserve">
+    <value>TF26207: Work Item Type Import failed. Unrecognized project.</value>
+  </data>
+  <data name="ErrorBadAdminDataInvalidFieldReferenceName" xml:space="preserve">
+    <value>TF26205: Work Item Type Import failed. Unsupported field reference name.</value>
+  </data>
+  <data name="MultipleControlsInLinksGroupException" xml:space="preserve">
+    <value>VS403159: Group {0} can only have one links control.</value>
+  </data>
+  <data name="AddLinkCircularity2" xml:space="preserve">
+    <value>TF201063: Adding a {0} link to work item {1} would result in a circular relationship. To create this link, evaluate the existing links, and remove one of the other links in the cycle.</value>
+  </data>
+  <data name="ErrorCouldNotConnect" xml:space="preserve">
+    <value>TF26012: Cannot connect to Azure DevOps Server.</value>
+  </data>
+  <data name="ErrorFieldSelfReference" xml:space="preserve">
+    <value>TF26037: Rule '{0}' is declared for the field '{1}' and references the same field.</value>
+  </data>
+  <data name="ErrorBadAdminDataRuleEnforcementIsNotImplemented" xml:space="preserve">
+    <value>TF237144: Work Item Type Import failed. Unimplemented Rule.</value>
+  </data>
+  <data name="ErrorGroupContainsADGroupMember" xml:space="preserve">
+    <value>VS237302: The process contains field rule attributes "for" or "not" that reference Active Directory (AD) groups, which is unsupported in data import as these groups will be converted to Microsoft Entra groups post data import. The '{0}' group contains the following AD groups: {1}</value>
+  </data>
+  <data name="LinkTypeFieldRefNameConflict" xml:space="preserve">
+    <value>TF201010: Link type {0} conflicts with an existing field. The name {1} is already in use.</value>
+  </data>
+  <data name="LinksControlDuplicateWITFilterName" xml:space="preserve">
+    <value>TF237175: The import failed. The work item type filter {0} is specified more than once in the work item type definition. Remove the duplicate filters and import it again.</value>
+  </data>
+  <data name="ErrorProjectIdNotExist" xml:space="preserve">
+    <value>TF26192: The team project specified by the ID {0} does not exist. Check the team project ID and try again.</value>
+  </data>
+  <data name="SearchPageFailed" xml:space="preserve">
+    <value>Search failed.</value>
+  </data>
+  <data name="WebLayout_SystemControlNameDuplicated" xml:space="preserve">
+    <value>VS403177: Control name {0} already exists.</value>
+  </data>
+  <data name="ErrorUnknownFormField" xml:space="preserve">
+    <value>TF237122: The form uses undefined field '{0}'.</value>
+  </data>
+  <data name="ErrorManyStates" xml:space="preserve">
+    <value>TF26083: The state '{0}' is defined more than once in the work item type definition (WITD) file. Remove or rename the duplicate state and try again.</value>
+  </data>
+  <data name="ErrorAttachmentFileNotFound" xml:space="preserve">
+    <value>TF26003: Azure DevOps Server could not find the file. Check the file name and path and try again.</value>
+  </data>
+  <data name="UnsupportedUriSchemeWebpageControl" xml:space="preserve">
+    <value>TF237078: Importing the definition failed. The definition you are trying to import uses unsupported Url protocol '{0}' for a Web page control. Modify the type definition to use http or https protocol and then try to import it again. Error Xml:{1}.</value>
+  </data>
+  <data name="QueryHierarchyQueryTextCannotBeEmpty" xml:space="preserve">
+    <value>TF237009: You cannot create an empty query. Create a query that has a valid string.</value>
+  </data>
+  <data name="UnsupportedUriScheme" xml:space="preserve">
+    <value>TF237077:Importing the work item type definition failed. The definition you are trying to import uses unsupported Url protocol '{0}' in the link label. Modify the type definition to use http, https, or mailto protocol, and then try to import it again. Error Xml:{1}.</value>
+  </data>
+  <data name="LinkTypeCannotUpdateTopology" xml:space="preserve">
+    <value>TF201001: Cannot change topology for a link type {0}, it has already been defined.</value>
+  </data>
+  <data name="ErrorBatchSaveDuplicateWorkItem" xml:space="preserve">
+    <value>TF237084: Duplicate workitems are not allowed in the BatchSave call.</value>
+  </data>
+  <data name="ErrorDuplicateListItem" xml:space="preserve">
+    <value>TF26022: The list contains a duplicate value {0}. Remove the duplicate and try again.</value>
+  </data>
+  <data name="ErrorInvalidListItem" xml:space="preserve">
+    <value>TF26055: The value '{0}' is not supported for the field type of field '{1}'.</value>
+  </data>
+  <data name="WorkItemFormRelatedWork" xml:space="preserve">
+    <value>Related Work</value>
+  </data>
+  <data name="ErrorInvalidFieldValue" xml:space="preserve">
+    <value>TF26052: Attempt to set the field to an unsupported value.</value>
+  </data>
+  <data name="ErrorFieldIdNotExist" xml:space="preserve">
+    <value>TF26032: The field specified by ID {0} does not exist in this work item type. Remove the reference or correct the work item type definition and try again.</value>
+  </data>
+  <data name="ErrorCannotUseTreePathType" xml:space="preserve">
+    <value>TF26179: Field type '{0}' can be used only with '{1}' and '{2}' fields.</value>
+  </data>
+  <data name="ErrorInvalidLinkTypeReferenceName" xml:space="preserve">
+    <value>TF201016: {0} is not a valid link type reference name. See https://go.microsoft.com/fwlink/?LinkID=72977 for link type reference name restrictions.</value>
+  </data>
+  <data name="ErrorNoPermissionToModifyRules" xml:space="preserve">
+    <value>TF201071: Your change included a modification to system rules that cannot be modified.</value>
+  </data>
+  <data name="ErrorNoPermissionToModifyField" xml:space="preserve">
+    <value>TF201070: You do not have permission to modify the field.</value>
+  </data>
+  <data name="AttachmentChangedException" xml:space="preserve">
+    <value>The attachment {0} was changed before it could be saved.</value>
+  </data>
+  <data name="LinkTypeNonDirectionalSourceTargetDifferent" xml:space="preserve">
+    <value>TF201005: The non-directional topology {0} for link type {1} must have the same ForwardName and ReverseName.</value>
+  </data>
+  <data name="PredicateErrorInvalidValueType" xml:space="preserve">
+    <value>The type of the value supplied for field comparison operator is incompatible with field type. </value>
+  </data>
+  <data name="LinkTypeDirectionalSourceTargetSame" xml:space="preserve">
+    <value>TF201006: The directional topology {0} for link type {1} must have the different ForwardName and ReverseName.</value>
+  </data>
+  <data name="ErrorWitCategoriesNotSupported" xml:space="preserve">
+    <value>TF248003: You cannot create categories of work item types. Either this feature is not enabled on this server, or the server version is earlier than Visual Studio Team Foundation Server 2010.</value>
+  </data>
+  <data name="ErrorLinkLockingNotSupported" xml:space="preserve">
+    <value>TF248010: You cannot lock a link between work items. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="WebLayout_DuplicateControlsInGroup" xml:space="preserve">
+    <value>VS403111: The control {0} already exists in group {1}.</value>
+  </data>
+  <data name="BuletPlainText" xml:space="preserve">
+    <value> *  </value>
+  </data>
+  <data name="ImportWorkitemTypeException" xml:space="preserve">
+    <value>Work Item Type Import failed to make the requested rule changes.</value>
+  </data>
+  <data name="ErrorNoPermissionToModify" xml:space="preserve">
+    <value>TF201068: You do not have permission to modify the work item type or field. You must have permission to modify work item types and fields in each team project where they are used.</value>
+  </data>
+  <data name="ErrorDuplicateWorkItemTypeletName" xml:space="preserve">
+    <value>Duplicate work item typelet name.</value>
+  </data>
+  <data name="ErrorWorkItemUpdateForceRollback" xml:space="preserve">
+    <value>TF237165: Azure DevOps Server could not update the work item because of a validation error on the server. This may happen because the work item type has been modified or destroyed, or you do not have permission to update the work item.</value>
+  </data>
+  <data name="ErrorGlobalListInUse" xml:space="preserve">
+    <value>TF237049: You cannot destroy a global list that is in use. Make sure that no work item types are using the global list.</value>
+  </data>
+  <data name="QueryHierarchyCannotAddToDeletedFolder" xml:space="preserve">
+    <value>TF237004: The query folder {0} has been deleted. You cannot add any items to a deleted folder.</value>
+  </data>
+  <data name="ErrorFieldDefinitionIdNotExist" xml:space="preserve">
+    <value>TF26026: A field definition ID {0} in the work item type definition file does not exist. Add a definition for this field ID, or remove the reference to the field ID and try again.</value>
+  </data>
+  <data name="ImageAltTextStart" xml:space="preserve">
+    <value>[</value>
+  </data>
+  <data name="LinksControlLinkAttributeInvalid" xml:space="preserve">
+    <value>TF201045: The link attribute '{0}' is not a supported link column. Specify one of the valid link column types, {1}, {2}, {3}.</value>
+  </data>
+  <data name="ErrorGroupIdentityNotFound" xml:space="preserve">
+    <value>VS403464: Group cannot be found: {0}. Verify the group used in your work item type definition exists.</value>
+  </data>
+  <data name="ErrorRequestNotCancelable" xml:space="preserve">
+    <value>TF26159: The request cannot be canceled.</value>
+  </data>
+  <data name="ErrorBadAdminDataUnimplementedReadRuleCondition" xml:space="preserve">
+    <value>TF237146: Work Item Type Import failed.  Unimplemented Read Rule.</value>
+  </data>
+  <data name="ErrorNotUniqueStoredQuery" xml:space="preserve">
+    <value>TF26191: The query name already exists. Rename the query and try again.</value>
+  </data>
+  <data name="QueryHierarchyCannotModifyDeletedItems" xml:space="preserve">
+    <value>TF237013: Cannot modify queries or query folders that are deleted.</value>
+  </data>
+  <data name="ErrorInvalidLinkTypeReferenceNameSystem" xml:space="preserve">
+    <value>TF201046: {0} is not a valid link type reference name. User defined reference names may not begin with 'System.'. See https://go.microsoft.com/fwlink/?LinkID=72977 for link type reference name restrictions.</value>
+  </data>
+  <data name="ErrorReportingFieldNamesCollision" xml:space="preserve">
+    <value>TF26218: Field names {0} and {1} map to the same field name {2} in reporting and cannot be used together.</value>
+  </data>
+  <data name="LinkAuthorizationFailedAreaIdChanged" xml:space="preserve">
+    <value>TF400947: Linked item has changed while saving the work item link. Try again later.</value>
+  </data>
+  <data name="ErrorMalformedUri" xml:space="preserve">
+    <value>TF237106: Malformed URI: {0}</value>
+  </data>
+  <data name="ErrorManyDefaultStates" xml:space="preserve">
+    <value>TF237107: Only one transition from the empty state is allowed.</value>
+  </data>
+  <data name="WebExceptionTimeOut" xml:space="preserve">
+    <value>TF26174: Azure DevOps Server timed out trying to connect to the server. Check that you have a network connection and that the Azure DevOps Server is available. If the problem persists, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="ErrorRequestCancelledByUser" xml:space="preserve">
+    <value>TF237120: The request was canceled by the user.</value>
+  </data>
+  <data name="ErrorInvalidXml" xml:space="preserve">
+    <value>TF237070: Importing the definition failed. The definition you are trying to import did not validate against the schema. Edit the definition, then try to import it again.</value>
+  </data>
+  <data name="ErrorInvalidURL" xml:space="preserve">
+    <value>TF26066: The URL is not recognized. </value>
+  </data>
+  <data name="WebLayoutLinksControlLinkColumnInvalidAttributes" xml:space="preserve">
+    <value>TF201040: The 'Column' element requires the 'Name' attribute.</value>
+  </data>
+  <data name="QueryHierarchyParentIsNotAFolder" xml:space="preserve">
+    <value>TF237017: The item specified as a parent is not a folder.</value>
+  </data>
+  <data name="ErrorAddConstantNotValidDomainAccount" xml:space="preserve">
+    <value>TF26204: The account you entered is not recognized. Contact your Azure DevOps Server administrator to add your account.</value>
+  </data>
+  <data name="ErrorGroupContainsAADGroupSnippet" xml:space="preserve">
+    <value>'{0}' (Child of '{1}')</value>
+  </data>
+  <data name="ErrorAuthorizeFieldChanges" xml:space="preserve">
+    <value>TF237139: Work Item Type Import failed to make the requested field changes.</value>
+  </data>
+  <data name="FileDownloadExceededMaxBytes" xml:space="preserve">
+    <value>TF237082: The file you are trying to download exceeds the supported file download size ({0:#,#} Byte(s)).</value>
+  </data>
+  <data name="AddRemoteLinkProjectRequired" xml:space="preserve">
+    <value>VS403470: Project is required for remote work item links.</value>
+  </data>
+  <data name="QueryHierarchyCannotDeleteDeletedItems" xml:space="preserve">
+    <value>TF237046: Cannot delete queries or query folders that are already deleted.</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="ErrorInconsistentRules" xml:space="preserve">
+    <value>TF26049: The field '{0}' has rules '{1}' and '{2}' that are inconsistent. </value>
+  </data>
+  <data name="DataImportWhitelistedLinksControlUnknownFilterName" xml:space="preserve">
+    <value>TF201084: The link type filter '{0}' specifies a link type that does not exist on the Azure DevOps Server. Specify a valid link type.</value>
+  </data>
+  <data name="FileUploadedExceededMaxMb" xml:space="preserve">
+    <value>TF237082: The file you are trying to upload exceeds the supported file upload size ({0:#,#} MB(s)). Instead of uploading the file, add the file to version control or to the team project web site, and then link the file to the work item.</value>
+  </data>
+  <data name="ErrorWorkItemChangeRejected" xml:space="preserve">
+    <value>TF237123: Change to the work item was rejected by the server.</value>
+  </data>
+  <data name="ErrorBadAdminDataFieldsOutOfRange" xml:space="preserve">
+    <value>TF237143: Work Item Type Import failed. Field out of range.</value>
+  </data>
+  <data name="TagFormatTransition" xml:space="preserve">
+    <value>Edited ({0} to {1}) by {2}</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_InvalidRules" xml:space="preserve">
+    <value>TF201020: You cannot add a link type that is disabled or that cannot be deleted.</value>
+  </data>
+  <data name="ErrorActionsForInitialTransition" xml:space="preserve">
+    <value>TF237080: Transition from the empty state must have no actions.</value>
+  </data>
+  <data name="LinksControlAllFiltersCannotContainChildren" xml:space="preserve">
+    <value>TF201047: The {0} links control element is not supported. When the {1} attribute is {2}, that element cannot contain &lt;{3}&gt; elements. Use {4} for the {1} attribute, or remove the &lt;{3}&gt; elements.</value>
+  </data>
+  <data name="ErrorDeniedOrNotExist" xml:space="preserve">
+    <value>TF237090: Does not exist or access is denied.</value>
+  </data>
+  <data name="ErrorUserOrGroupNotFound" xml:space="preserve">
+    <value>TF201072: A user or group could not be found. Verify that the users and groups used in your work item type definition have been added to Azure DevOps Server.</value>
+  </data>
+  <data name="QueryHierarchyRootNodesMayNotBeModified" xml:space="preserve">
+    <value>TF237012: Root node {0} may not be modified.</value>
+  </data>
+  <data name="ErrorDuplicateFieldDefinition" xml:space="preserve">
+    <value>TF26016: The field {0} has been defined more than once in the work item type definition file. Remove or rename one of the definitions and try again.</value>
+  </data>
+  <data name="ErrorWorkItemTypeNameNotUnique" xml:space="preserve">
+    <value>VS402474: Work item type name is not unique: {0}. Correct the definition, and try again.</value>
+  </data>
+  <data name="ErrorUnexpected" xml:space="preserve">
+    <value>TF237121: Cannot complete the operation. An unexpected error occurred.</value>
+  </data>
+  <data name="WebLayout_FormExtensionNotFoundOrNoFormContribution" xml:space="preserve">
+    <value>VS403121: Extension(s) "{0}" does not exist , or has no work item form contribution.</value>
+  </data>
+  <data name="ErrorDuplicateGlobalList" xml:space="preserve">
+    <value>TF26018: The global list '{0}' is defined more than once in the work item type definition file. Remove one of the definitions and try again.</value>
+  </data>
+  <data name="ErrorDifferentFieldDefinitions" xml:space="preserve">
+    <value>TF400930: Field '{0}' is defined multiple times with different field definitions. Correct the field definition and try again.</value>
+  </data>
+  <data name="ParamIndexDuplicateError" xml:space="preserve">
+    <value>TF237069: Importing the work item type definition failed. The definition you are trying to import lists more than one parameter element with index {0}. Remove the duplicate element and try to import it again. Error Xml: {1}.</value>
+  </data>
+  <data name="QueryHierarchyTeamQueries" xml:space="preserve">
+    <value>Team Queries</value>
+  </data>
+  <data name="ErrorGroupContainsAADGroupMember" xml:space="preserve">
+    <value>VS237301: The process contains field rule attributes "for" or "not" that reference Microsoft Entra groups, which is unsupported. The '{0}' group contains the following Microsoft Entra groups: {1}</value>
+  </data>
+  <data name="ErrorRenameSafeChanged" xml:space="preserve">
+    <value>TF248018: You cannot change the "{1}" attribute of field '{0}' in a work item type definition. You can only change the value of this attribute by using the witadmin changefield command-line tool. For more information, see the Microsoft Web site:  https://go.microsoft.com/fwlink/?LinkId=759719. </value>
+  </data>
+  <data name="ErrorWitLinksNotSupported" xml:space="preserve">
+    <value>TF248004: You cannot create custom types of links between work items. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="ErrorIdentityMustBeAGroup" xml:space="preserve">
+    <value>Identity '{0}' must be a group.</value>
+  </data>
+  <data name="FileUploadedExceededMaxBytes" xml:space="preserve">
+    <value>TF237082: The file you are trying to upload exceeds the supported file upload size ({0:#,#} Byte(s)). Instead of uploading the file, add the file to version control or to the team project web site, and then link the file to the work item.</value>
+  </data>
+  <data name="IncorrectEndAsyncQuery" xml:space="preserve">
+    <value>The begin and end methods of asynchronous query do not match.</value>
+  </data>
+  <data name="ErrorWorkItemLinkTypeNotExist" xml:space="preserve">
+    <value>TF201019: Work item link type {0} does not exist.</value>
+  </data>
+  <data name="WorkItemTag" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="ErrorControlLabelAttrMissing" xml:space="preserve">
+    <value>TF237064: Importing the work item type definition failed. The Control element must specify a Label attribute if a Link element is present. Add a Label attribute and try to import it again. Error Xml: {0}.</value>
+  </data>
+  <data name="ErrorInvalidLinkTypeName" xml:space="preserve">
+    <value>TF201015: {0} is not a supported link type name. See https://go.microsoft.com/fwlink/?LinkID=72977 for link type name restrictions.</value>
+  </data>
+  <data name="IncorrectWorkItemState" xml:space="preserve">
+    <value>TF400276: You have tried to set a value for a field of a work item which is not opened or partial opened. You cannot set a value for a field of a work item which is not opened or partial opened.</value>
+  </data>
+  <data name="ErrorDuplicateWorkItem" xml:space="preserve">
+    <value>TF26180: An item with this ID already exists in the input array.</value>
+  </data>
+  <data name="ErrorInvalidRuleForField" xml:space="preserve">
+    <value>TF26062: Rule '{0}' is not supported for the field '{1}'.</value>
+  </data>
+  <data name="QueryLinksOnParamedQuery" xml:space="preserve">
+    <value>The FROM clause of a query string cannot specify links on a parameterized query.</value>
+  </data>
+  <data name="ErrorBatchSaveFailed" xml:space="preserve">
+    <value>TF237085: Item has an unknown error that caused BatchSave to fail</value>
+  </data>
+  <data name="AddLinkDisabledType" xml:space="preserve">
+    <value>TF201034: You cannot add {0} links because that type of link has been disabled.</value>
+  </data>
+  <data name="ErrorSqlErrorLoginFailed" xml:space="preserve">
+    <value>TF26161: You have been denied permissions to the SQL Server database. Azure DevOps Server is not properly configured. Contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="CopiedCommentNewItem" xml:space="preserve">
+    <value>Copied from new work item </value>
+  </data>
+  <data name="ArgumentCannotBeNullOrEmpty" xml:space="preserve">
+    <value>Argument {0} cannot be null or empty.</value>
+  </data>
+  <data name="QueryNameEmpty" xml:space="preserve">
+    <value>TF26167: The query name was empty. Add a query name and try again.</value>
+  </data>
+  <data name="ErrorImageUploadFailed" xml:space="preserve">
+    <value>TF602213: The image, '{0}', inserted in the '{1}' field could not be uploaded. Verify that you have a network connection and that Azure DevOps Server is available. If the problem persists, provide the following information to the server administrator.
+ 
+The server returned the following message: 
+{2}</value>
+  </data>
+  <data name="ErrorIdentityNotFound" xml:space="preserve">
+    <value>VS402504: User or group cannot be found: {0}. Verify that the users and groups used in your work item type definition exist.</value>
+  </data>
+  <data name="ErrorWorkItemLinkAlreadyAdded" xml:space="preserve">
+    <value>TF237125: The work item link object is already a part of a different work item.</value>
+  </data>
+  <data name="ErrorDifferentProjectsInBatchSave" xml:space="preserve">
+    <value>TF248011: You cannot save work items to more than one project in a single operation. Either this feature is not enabled on one of the servers, or the server version is earlier than Visual Studio Team Foundation Server 2010.</value>
+  </data>
+  <data name="ErrorFieldReportabilityChange" xml:space="preserve">
+    <value>TF201078: You are trying to import a type of work item that uses the field '{0}'. Your definition of the field includes a reportable setting that differs from the setting for that field in the database for Azure DevOps Server. To change the database setting, you must log on as a member of the Project Collection Administrators group. To import the type of work item without changing the database setting, you must remove the setting from your definition of the field, or you must change that setting to match the database.</value>
+  </data>
+  <data name="ErrorInvalidFieldSpecified" xml:space="preserve">
+    <value>TF237158: The Field specified does not exist.</value>
+  </data>
+  <data name="ErrorQueryDepthTooLarge" xml:space="preserve">
+    <value>TF26158: The query has too many levels of nesting. Restructure the query and try again.</value>
+  </data>
+  <data name="QueryHierarchyCannotDeleteRootFolder" xml:space="preserve">
+    <value>TF237023: You cannot delete root folders.</value>
+  </data>
+  <data name="SearchPageCancelled" xml:space="preserve">
+    <value>Search cancelled.</value>
+  </data>
+  <data name="SearchPageKeywordHelpTextWithoutRepro" xml:space="preserve">
+    <value>{0} or {1}</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_ReverseNameInvalid" xml:space="preserve">
+    <value>TF201022: The reverse name is not specified or is not supported. See https://go.microsoft.com/fwlink/?LinkID=72977 for link type name restrictions.</value>
+  </data>
+  <data name="ErrorUnexpectedWithDetails" xml:space="preserve">
+    <value>TF237121: Cannot complete the operation. An unexpected error occurred.
+
+Technical information (for administrator):
+{0}
+  </value>
+  </data>
+  <data name="BackendArgumentException" xml:space="preserve">
+    <value>The server operation failed. ({0}).</value>
+  </data>
+  <data name="AddRemoteLinkCannotLinkToSameAccount" xml:space="preserve">
+    <value>VS403467: A remote work item cannot link to the same account.</value>
+  </data>
+  <data name="CouldNotReachServer" xml:space="preserve">
+    <value>TF26000: Could not connect to the Azure DevOps Server. Check that you have a network connection and that your Azure DevOps Server is available.</value>
+  </data>
+  <data name="ErrorInvalidFieldReferenceName" xml:space="preserve">
+    <value>TF26061: '{0}' is not a supported reference field name.</value>
+  </data>
+  <data name="InvalidUrlRootFormat" xml:space="preserve">
+    <value>TF237076: Importing the work item type definition failed. The definition you are trying to import contains an invalid UrlRoot attribute value '{0}'. The value must contain a valid Url or valid macro. Change the attribute value in the type definition and then try to import it again. The following are valid macros: @PortalPage, @ProcessGuidance, @ReportManagerUrl, @ReportServiceSiteUrl. Error: {1} Error Xml:{2}.</value>
+  </data>
+  <data name="AddLinkExtraParent2" xml:space="preserve">
+    <value>TF201065: You cannot add a {0} link to this work item because a work item can have only one link of this type.</value>
+  </data>
+  <data name="AddLinkExtraParent3" xml:space="preserve">
+    <value>TF201066: You cannot add a {0} link to work item {1} because a work item can have only one {2} link.</value>
+  </data>
+  <data name="ImageAltTextEnd" xml:space="preserve">
+    <value>]</value>
+  </data>
+  <data name="ErrorHistory" xml:space="preserve">
+    <value>TF26182: This operation is not supported on revision history items.</value>
+  </data>
+  <data name="WebLayout_FormExtensionNotDeclared" xml:space="preserve">
+    <value>VS403158: Extension is required before adding page, group or control contribution in the layout xml.</value>
+  </data>
+  <data name="ErrorGlobalWorkflowNotSupported" xml:space="preserve">
+    <value>TF298000: You cannot import global workflow. To import global workflow, the feature must be enabled on the application-tier server and the server must be running a version newer than Visual Studio Team Foundation Server 2010 Service Pack 1.</value>
+  </data>
+  <data name="LinkTypeTargetRelationNameRequired" xml:space="preserve">
+    <value>TF201003: A ReverseName attribute is required for directional link type {0}.</value>
+  </data>
+  <data name="ErrorFieldNotFound" xml:space="preserve">
+    <value>TF26035: The definition for the field {0} was not found. Add a definition for this field and try again.</value>
+  </data>
+  <data name="InvalidParamIndexError" xml:space="preserve">
+    <value>TF237068: Importing the work item type definition failed. The definition you are trying to import lists a parameter index value {0} that is greater than the number of the parameter elements {1} in a Link element.  Note that index values start at zero. Correct the index value and then try to import it again. Error Xml: {2}.</value>
+  </data>
+  <data name="ErrorDuplicateFieldReference" xml:space="preserve">
+    <value>TF237096: Field '{0}' is referenced more than once in the same scope.</value>
+  </data>
+  <data name="IncorrectWorkItemQueryMethod" xml:space="preserve">
+    <value>TF248021: You have specified a query string that is not valid when you use the query method for a flat list of work items. You cannot specify a parameterized query or a query string for linked work items with the query method you specified.</value>
+  </data>
+  <data name="ErrorWorkItemNotExistOrNoAccess" xml:space="preserve">
+    <value>TF26198: The work item does not exist, or you do not have permission to access it.</value>
+  </data>
+  <data name="ErrorCantModifyIdField" xml:space="preserve">
+    <value>TF237088: Can't modify ID field</value>
+  </data>
+  <data name="WarningMissingIdentity" xml:space="preserve">
+    <value>TF26171: User/group '{0}' is not found. </value>
+  </data>
+  <data name="ErrorOnlyIdentitiesAllowedInIdentityFields" xml:space="preserve">
+    <value>Field '{0}': {1} is not a valid identity. An identity field can only contain identity names.</value>
+  </data>
+  <data name="ErrorIncompatibleDimension" xml:space="preserve">
+    <value>TF26046: The field '{0}' has the 'Reportable' attribute set to 'Dimension', but its field type does not support this attribute. This attribute supports the following field types: Integer, Double, String, or DateTime. Change this attribute for the field, or change the field type and try again.</value>
+  </data>
+  <data name="ErrorUserNotFoundForSid" xml:space="preserve">
+    <value>TF237163: The user was not found.</value>
+  </data>
+  <data name="ErrorRelatedLinkToSelf" xml:space="preserve">
+    <value>TF26196: Azure DevOps Server does not support relating a work item to itself. Select a different related work item.</value>
+  </data>
+  <data name="ErrorLinkParamsTooFew" xml:space="preserve">
+    <value>TF237066: Importing the work item type definition failed. The parameter elements specified for the link  are fewer than required in the URL. Fix the parameter element and try to import it again. Error xml: {0}.</value>
+  </data>
+  <data name="WebLayout_ControlNotRecognized" xml:space="preserve">
+    <value>VS403348: Control type {0} is not recognized in WebLayout.</value>
+  </data>
+  <data name="AddLinkCircularity" xml:space="preserve">
+    <value>TF201035: Adding a {0} link between work items {1} and {2} would result in a circular relationship. To create this link, evaluate the existing links, and remove one of the other links in the cycle.</value>
+  </data>
+  <data name="SearchPageExceededTermLimit" xml:space="preserve">
+    <value>You cannot enter more than {0} search terms.</value>
+  </data>
+  <data name="ErrorMissingConstant" xml:space="preserve">
+    <value>TF26085: Unknown constant with ID {0}.</value>
+  </data>
+  <data name="NewFormFirstPageTitle" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="ErrorWorkItemTypeInUse" xml:space="preserve">
+    <value>TF237055: You cannot destroy a work item type that is being used. Verify that the work item type is not being used in any categories.</value>
+  </data>
+  <data name="RemoteLinkInvalidUriException" xml:space="preserve">
+    <value>VS403475: The remote uri is either invalid or service is unavailable.</value>
+  </data>
+  <data name="SearchPageExceededCharacterLimit" xml:space="preserve">
+    <value>Your search query exceeded the maximum character count of {0}.</value>
+  </data>
+  <data name="ErrorWorkItemIsNotReadyToSave" xml:space="preserve">
+    <value>TF237124: Work Item is not ready to save</value>
+  </data>
+  <data name="TagFormatEdit" xml:space="preserve">
+    <value>Edited by {0}</value>
+  </data>
+  <data name="ErrorAddSetInvalidParentIDOrConstID" xml:space="preserve">
+    <value>TF237138: An error while adding a set member. The Parent ID or Constant ID specified is not valid.</value>
+  </data>
+  <data name="AddLinkMaxDepthExceeded" xml:space="preserve">
+    <value>TF237200: You cannot add a {0} link from work item {1} to work item to {2}. Adding a link between these work items will increase the hierarchy levels to more than the maximum 220 levels.</value>
+  </data>
+  <data name="ErrorFieldDefinitionNotExist" xml:space="preserve">
+    <value>TF26027: A field definition {0} in the work item type definition file does not exist. Add a definition for this field or remove the reference to the field and try again.</value>
+  </data>
+  <data name="FieldLinkTypeRefNameConflict" xml:space="preserve">
+    <value>TF201000: Field reference name {0} conflicts with an existing link type. The name is already in use.</value>
+  </data>
+  <data name="QueryNameTooLong" xml:space="preserve">
+    <value>TF26168: Azure DevOps Server does not support query or folder names over {0} characters long. Shorten the query name and try again.</value>
+  </data>
+  <data name="LinkNotFound2" xml:space="preserve">
+    <value>TF201061: There is not a {0} link to work item {1}. It may have been deleted by another user.</value>
+  </data>
+  <data name="ErrorLookupRuleTreeIdNotFound" xml:space="preserve">
+    <value>TF26154: Work item type Import failed.</value>
+  </data>
+  <data name="ErrorServerRejectedChangesException" xml:space="preserve">
+    <value>TF26212: Azure DevOps Server could not save your changes. There may be problems with the work item type definition, or a conflicting work item type definition change may require a refresh on your client. Restart your client application and try again, or contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="ErrorInvalidProject" xml:space="preserve">
+    <value>All work items in the BatchSave call should belong to the same team project.</value>
+  </data>
+  <data name="ErrorWrongFieldTypeInInGroup" xml:space="preserve">
+    <value>TF248016: You cannot use the In Group operator with the field '{0}'. You can use the In Group operator only with the Work Item Type field, or with a field that has the {1} data type.</value>
+  </data>
+  <data name="WebLayout_UnsupportedAutoInjectionContributionType" xml:space="preserve">
+    <value>VS403155: The type of contribution "{0}" is not supported for auto injection.</value>
+  </data>
+  <data name="ErrorOrphanedLink" xml:space="preserve">
+    <value>TF237116: The link has been disconnected from its parent and cannot be used.</value>
+  </data>
+  <data name="ErrorOrphanedItem" xml:space="preserve">
+    <value>TF237115: The item has been disconnected from its parent.</value>
+  </data>
+  <data name="FileDownloadExceededMaxMb" xml:space="preserve">
+    <value>TF237082: The file you are trying to download exceeds the supported file download size ({0:#,#} MB(s)).</value>
+  </data>
+  <data name="ErrorServerInternalUnknown" xml:space="preserve">
+    <value>There is a problem on the server. Contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="ErrorFieldDefinitionNotExistGeneral" xml:space="preserve">
+    <value>TF26028: A field definition in the work item type definition file does not exist. Add a definition for this field, or remove the reference to the field and try again.</value>
+  </data>
+  <data name="ErrorDuplicateWorkItemTypeletID" xml:space="preserve">
+    <value>Duplicate work item typelet ID.</value>
+  </data>
+  <data name="WebpageControlInvalidAttributes" xml:space="preserve">
+    <value>TF237167: Importing the definition failed. The definition you are trying to import cannot use the attributes AllowScript or ReloadOnParamChange when the Content element is used in the WebpageControl. Remove those attributes in the type definition and then try to import it again. Error Xml:{0}.</value>
+  </data>
+  <data name="ErrorTwoWidthElements" xml:space="preserve">
+    <value>TF26216: The form '{0} element has mutually exclusive attributes '{1}' and '{2}'.</value>
+  </data>
+  <data name="ErrorQueryFieldsComparisonNotSupported" xml:space="preserve">
+    <value>TF248009: You cannot run a query that compares fields. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="ErrorWorkItemTypeReferenceNameNotUnique" xml:space="preserve">
+    <value>VS402475: Work item type reference name is not unique: {0}. Correct the definition, and try again.</value>
+  </data>
+  <data name="IsEmptyValidWith" xml:space="preserve">
+    <value>Is Empty can only be used with history, long text and plaintext fields.</value>
+  </data>
+  <data name="ErrorWorkItemLinkChangeTargetId" xml:space="preserve">
+    <value>TF237127: Can't change target ID for the link in the workitem collection.</value>
+  </data>
+  <data name="ErrorChangeWorkItemTypeAlreadyChanged" xml:space="preserve">
+    <value>TF237152: Work Item Type Import failed applying work item type changes.</value>
+  </data>
+  <data name="WebExceptionConnectFailed" xml:space="preserve">
+    <value>TF26173: Azure DevOps Server could not connect to the application tier. Check that you have a network connection and that the Azure DevOps Server is available. If the problem persists, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="LinkTypeCannotBeModified" xml:space="preserve">
+    <value>TF201013: The link type {0} cannot be modified.</value>
+  </data>
+  <data name="QueryHierarchyMoveBetweenProjectsProhibited" xml:space="preserve">
+    <value>TF237014: You cannot move queries or query folders between projects.</value>
+  </data>
+  <data name="FieldNameChanged" xml:space="preserve">
+    <value>Name of the field '{0}' was changed from '{1}' to '{2}' as '{1}' is already used by field '{3}'.</value>
+  </data>
+  <data name="ErrorAddFileFailedToFindFile" xml:space="preserve">
+    <value>TF237136: File attachment does not exist, or you do not have permissions to read it.</value>
+  </data>
+  <data name="ErrorBadAdminCannotAddRuleOnCoreFields" xml:space="preserve">
+    <value>TF237141: Work Item Type Import failed. Deleted structure node.</value>
+  </data>
+  <data name="ErrorSearchInvalidFieldName" xml:space="preserve">
+    <value>Your search criteria contains an undefined field for this team project: '{0}'. Check the spelling or remove the field from the search criteria and try again.</value>
+  </data>
+  <data name="ErrorCannotRenameField" xml:space="preserve">
+    <value>TF26177: The field {0} cannot be renamed from '{1}' to '{2}'. </value>
+  </data>
+  <data name="LinkTypeCannotBeDeleted" xml:space="preserve">
+    <value>TF201018: The link type {0} cannot be deleted because it is a core link type.</value>
+  </data>
+  <data name="ImportWorkItemLinkTypeException_ReferenceNameInUse" xml:space="preserve">
+    <value>TF201024: The reference name is not unique.</value>
+  </data>
+  <data name="ErrorGuidFieldsNotSupported" xml:space="preserve">
+    <value>TF248005: You cannot create a field of the GUID. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="UnrecognizedServerData" xml:space="preserve">
+    <value>The Azure DevOps Server returned data which are not recognized.</value>
+  </data>
+  <data name="AttachmentExistsException" xml:space="preserve">
+    <value>The attachment was already added to a work item.</value>
+  </data>
+  <data name="ErrorReportabilityValidationFailed" xml:space="preserve">
+    <value>TF400930: The reporting attribute for field {0} is inconsistent between the imported XML and what is currently configured for the field. Correct the field configuration in the XML and try again.</value>
+  </data>
+  <data name="ErrorBoolFieldsNotSupported" xml:space="preserve">
+    <value>TF248006: You cannot create a field of the Boolean type. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="ErrorInconsistentFieldTypes" xml:space="preserve">
+    <value>TF26048: The rule '{0}' for field '{1}' refers to field '{2}', which is a different field type. Change the field type or the field reference so that the field referred to is the same type and try again.</value>
+  </data>
+  <data name="ErrorDuplicateTypeInCategory" xml:space="preserve">
+    <value>TF237060: The import of the category definition failed. The category {0} type definition refers to work item type {1} more than once.</value>
+  </data>
+  <data name="ErrorInvalidParam" xml:space="preserve">
+    <value>TF237067: Importing the work item type definition failed. The Url  parameter {0} is not a valid field name or a valid macro. Valid macros include the following: @Me. Correct the Url parameter and try to import it again. Error xml: {1}.</value>
+  </data>
+  <data name="ErrorWorkItemUpdateFieldsConflict" xml:space="preserve">
+    <value>TF248023: Your work item has not been saved. Review the history which contains conflicting changes made recently by another user, make any additional changes you need, then save again to save your changes.</value>
+  </data>
+  <data name="WebLayout_DuplicateGroupContributions" xml:space="preserve">
+    <value>VS403156: Cannot have more than one group contribution '{0}' in page '{1}'</value>
+  </data>
+  <data name="ErrorInvalidState" xml:space="preserve">
+    <value>TF26063: '{0}' is not in the list of supported states.</value>
+  </data>
+  <data name="ErrorUnsupportedReportingFieldType" xml:space="preserve">
+    <value>TF248020: You cannot specify the 'Reportable' attribute for field '{0}'. You can only define the reportable attribute for Integer, Double, String, or DateTime fields. Remove this attribute for the field, or change the field type and try again.</value>
+  </data>
+  <data name="ErrorChangeActionAlreadyChanged" xml:space="preserve">
+    <value>TF237149: Work Item Type Import failed applying action changes</value>
+  </data>
+  <data name="ErrorWorkItemLinkToUndefined" xml:space="preserve">
+    <value>TF237130: One of work item links references new workitems, which are not defined in the same package.</value>
+  </data>
+  <data name="ErrorBadAdminDataDenyAdminNotAllowed" xml:space="preserve">
+    <value>TF237142: Work Item Type Import failed. Cannot deny administrator.</value>
+  </data>
+  <data name="LinkTypeNotSupportedForQuerying" xml:space="preserve">
+    <value>The link type '{0}' is not a supported link type for querying.</value>
+  </data>
+  <data name="AttachmentNotFoundException" xml:space="preserve">
+    <value>The attachment {0} was moved or deleted before it could be saved, or it is being used by another process.</value>
+  </data>
+  <data name="LinksControlDuplicateName" xml:space="preserve">
+    <value>TF201039: The name '{0}' is already in use by another links control. Specify a different name.</value>
+  </data>
+  <data name="LinkAuthorizationFailedLinkLocked" xml:space="preserve">
+    <value>TF248014: Locked links cannot be updated. Unlock the links and then proceed with the update.</value>
+  </data>
+  <data name="QueryHierarchyMyQueries" xml:space="preserve">
+    <value>My Queries</value>
+  </data>
+  <data name="LinkTypeSourceRelationNameRequired" xml:space="preserve">
+    <value>TF201002: A ForwardName attribute is required for link type {0}.</value>
+  </data>
+  <data name="ErrorBadAdminDataRuleFlagsNonEditable" xml:space="preserve">
+    <value>TF237145: Work Item Type Import failed. Rule cannot be edited.</value>
+  </data>
+  <data name="SearchPageFormatException" xml:space="preserve">
+    <value>'{0}' does not match the expected format of {1}, which is a {2} field.</value>
+  </data>
+  <data name="ErrorWorkItemUpdateWorkItemMissingOrUpdated" xml:space="preserve">
+    <value>TF237079: Azure DevOps Server could not update the work item because it was already updated by another user, it does not exist, or you do not have permission to update it.</value>
+  </data>
+  <data name="ErrorGlobalListNotFound" xml:space="preserve">
+    <value>TF26041: Global list '{0}' does not exist in this database.</value>
+  </data>
+  <data name="WebLayout_InvalidContributionInputId" xml:space="preserve">
+    <value>VS403118: The input ID "{0}" does not exist in contribution "{1}"</value>
+  </data>
+  <data name="WorkItemAttachmentIncorrectOffset" xml:space="preserve">
+    <value>VS402399: Offset value {0} is incorrect for attachment with ID {1}. Please try restarting the upload.</value>
+  </data>
+  <data name="ErrorAttachmentCommentTooLong" xml:space="preserve">
+    <value>TF26002: Azure DevOps Server does not support comments over {0} characters long. Shorten your comment and try again.</value>
+  </data>
+  <data name="ErrorInvalidFieldName" xml:space="preserve">
+    <value>TF26051: The field name '{0}' is not a supported field name.</value>
+  </data>
+  <data name="WorkItemTypeListItemMustHaveValue" xml:space="preserve">
+    <value>VS403301: A LISTITEM element does not have a value.</value>
+  </data>
+  <data name="LinksControlDuplicateFilterName" xml:space="preserve">
+    <value>TF201043: The link type filter '{0}' is specified more than once. Remove the duplicate filters.</value>
+  </data>
+  <data name="WebLayout_InvalidOrDuplicatedPageLabel" xml:space="preserve">
+    <value>VS403072: Page label '{0}' already exists or duplicated with preserved system label</value>
+  </data>
+  <data name="ErrorWorkItemTypeNameInvalid" xml:space="preserve">
+    <value>TF237133: The work item type name {0} is not supported.</value>
+  </data>
+  <data name="ErrorWorkItemUpdateRuleViolation" xml:space="preserve">
+    <value>TF248024: Your changes were not saved because the work item was updated recently by another user and the resulting merged work item breaks one or more rules. You must modify one or more fields to resolve the issue and then save the work item.</value>
+  </data>
+  <data name="ErrorInvalidProjectId" xml:space="preserve">
+    <value>TF248000: The project ID '{0}' does not exist. Specify a valid project ID, and then try again.</value>
+  </data>
+  <data name="AddLinkCannotLinkToSelf" xml:space="preserve">
+    <value>TF201033: A work item cannot be linked to itself.</value>
+  </data>
+  <data name="ErrorItemOpen" xml:space="preserve">
+    <value>TF237104: The work item must be closed for this operation. Close the work item and try again.</value>
+  </data>
+  <data name="ErrorIdentityFieldsNotSupported" xml:space="preserve">
+    <value>You cannot create a field of type Identity. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2014.</value>
+  </data>
+  <data name="ErrorInvalidRuleForFieldType" xml:space="preserve">
+    <value>TF237102: Field '{0}': {1} is not allowed for fields of type {2}.</value>
+  </data>
+  <data name="ErrorRevisionQueriesNotSupported" xml:space="preserve">
+    <value>TF248008: You cannot run a query for revisions. Either this feature is not enabled on this server, or the server version is earlier than Team Foundation Server 2010.</value>
+  </data>
+  <data name="WebLayout_ControlTypeOnlyAllowedInFirstSection" xml:space="preserve">
+    <value>VS403070: Control type {0} is only allowed in first section of the page.</value>
+  </data>
+  <data name="ErrorObseleteFeature" xml:space="preserve">
+    <value>TF401327: The operation is not supported. The feature is obselete.</value>
+  </data>
+  <data name="QueryHierarchyCannotDeleteOrphanedItems" xml:space="preserve">
+    <value>TF237048: You cannot delete a query or a query folder that does not have a parent folder.</value>
+  </data>
+  <data name="WebLayout_InvalidContributionType" xml:space="preserve">
+    <value>VS403116: The contribution "{0}" is not a valid {1} contribution.</value>
+  </data>
+  <data name="ErrorCannotImportWITNoPermissionToModifyFieldForAllProjects" xml:space="preserve">
+    <value>TF218007: Cannot import the work item type. It changes fields in team projects in which you do not have permissions to make changes. Correct this problem by changing the definition of the work item type so that it does not change the name or reporting behavior of these fields: {0}
+Or obtain permissions to make changes to these team projects: {1}</value>
+  </data>
+  <data name="ErrorFieldAlreadyExists" xml:space="preserve">
+    <value>TF26025: The field '{0}' already exists in the collection.</value>
+  </data>
+  <data name="ErrorSqlInsufficientMemory" xml:space="preserve">
+    <value>TF237162: There is insufficient system memory on the Azure DevOps Server SQL Server to run this query.</value>
+  </data>
+  <data name="ErrorReadOnlyField" xml:space="preserve">
+    <value>TF26194: The value for the field '{0}' cannot be changed. </value>
+  </data>
+  <data name="ErrorBisAttributeNotFound" xml:space="preserve">
+    <value>TF26175: Azure DevOps Core Services attribute '{0}' not found.</value>
+  </data>
+  <data name="ErrorRelatedLinkNotExist" xml:space="preserve">
+    <value>TF26195: The related work item does not exist.</value>
+  </data>
+  <data name="ErrorInvalidQueryItemName" xml:space="preserve">
+    <value>TF24003: The query or query folder name you entered contains characters that are not supported. Correct the name and try again.</value>
+  </data>
+  <data name="ArgumentCannotBeEmpty" xml:space="preserve">
+    <value>The argument {0} cannot be empty.</value>
+  </data>
+  <data name="ErrorCantSortBy" xml:space="preserve">
+    <value>TF237089: The field '{0}' cannot be used to sort by.</value>
+  </data>
+  <data name="ErrorNoImportPermissions" xml:space="preserve">
+    <value>TF237113: You don't have enough permissions to complete the import operation.</value>
+  </data>
+  <data name="ErrorWorkItemValidation" xml:space="preserve">
+    <value>TF26201: This work item has unsupported fields, or user does not have permissions.</value>
+  </data>
+  <data name="LinkNotFoundForEdit" xml:space="preserve">
+    <value>TF201074: The {0} link between work items {1} and {2} that you are attempting to modify does not exist. It may have been deleted by another user. You may need to refresh the work item before you add the link again.</value>
+  </data>
+  <data name="ErrorRenameSafeNotValid" xml:space="preserve">
+    <value>TF248017: You cannot specify the "renamesafe" attribute for field '{0}'. You can only specify the "{2}" attribute for a field whose data type is "{1}".</value>
+  </data>
+  <data name="ErrorWrongRuleForFieldType" xml:space="preserve">
+    <value>TF237134: Field '{0}' cannot have rule '{1}' - the rule is not supported by field's type.</value>
+  </data>
+  <data name="ErrorDuplicateHyperlink" xml:space="preserve">
+    <value>TF237097: Duplicate hyperlink.</value>
+  </data>
+  <data name="LinkTypeRefNameConflict" xml:space="preserve">
+    <value>TF201008: Link type {0} conflicts with an existing link type. The name {1} is already in use.</value>
+  </data>
+  <data name="QueryHierarchyCannotAddSelfAsChild" xml:space="preserve">
+    <value>TF237001: Cannot add self to child list</value>
+  </data>
+  <data name="ErrorInvalidXmlNamespace" xml:space="preserve">
+    <value>TF26184: The default namespace is unrecognized. It must be either empty or set to '{0}', but it is set to '{1}'.</value>
+  </data>
+  <data name="ErrorNodeNotExist" xml:space="preserve">
+    <value>TF26186: The project hierarchy node '{0}' was not found.</value>
+  </data>
+  <data name="LinkTypeHasBeenDeleted" xml:space="preserve">
+    <value>TF201014: The link type {0} has been deleted. You cannot activate, deactivate, or delete a link type that has already been deleted.</value>
+  </data>
+  <data name="WebLayout_ControlHeightNotAllowed" xml:space="preserve">
+    <value>VS403160: 'Height' atttribute is only allowed for HTML, Links and Webpage controls</value>
+  </data>
+  <data name="ErrorDuplicateGlobalListItem" xml:space="preserve">
+    <value>TF26019: The global list '{0}' appears more than once in the list of values. Remove the redundant references and try again.</value>
+  </data>
+  <data name="ErrorWorkItemTypeNotExist" xml:space="preserve">
+    <value>TF201077: The work item type {0} cannot be found. It may have been renamed or destroyed.</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="SearchPageKeywordHelpTextWithRepro" xml:space="preserve">
+    <value>{0}, {1}, or {2}</value>
+  </data>
+  <data name="InvalidProjectNodeId" xml:space="preserve">
+    <value>Could not find the team project node on the Azure DevOps Server.</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="ErrorLinkCommentTooLong" xml:space="preserve">
+    <value>TF26079: Azure DevOps Server does not support link comments over {0} characters long. Shorten the comment and try again.</value>
+  </data>
+  <data name="WebLayout_ContributionInputNotSpecified" xml:space="preserve">
+    <value>VS403116: The contribution input "{0}" is not specified for contribution {1}.</value>
+  </data>
+  <data name="TagFormatCreate" xml:space="preserve">
+    <value>Created by {0}</value>
+  </data>
+  <data name="ErrorAttachmentAlreadyExists" xml:space="preserve">
+    <value>TF237081: A file attachment with the same name already exists.</value>
+  </data>
+</root>

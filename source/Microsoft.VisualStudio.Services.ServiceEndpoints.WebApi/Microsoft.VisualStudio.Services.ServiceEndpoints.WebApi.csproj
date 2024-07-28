@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1EBB574-7E71-43C0-91E3-4884CD76B5C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\ServiceEndpoints\ServiceEndpointProjectReference.cs" />
+    <Compile Include="ServiceEndpointHttpClientBase.cs" />
+    <Compile Include="AadLoginPromptOption.cs" />
+    <Compile Include="AadOauthTokenRequest.cs" />
+    <Compile Include="AadOauthTokenResult.cs" />
+    <Compile Include="AuthConfiguration.cs" />
+    <Compile Include="AuthenticationSchemeReference.cs" />
+    <Compile Include="AuthorizationHeader.cs" />
+    <Compile Include="AzurePermission.cs" />
+    <Compile Include="AzurePermissionJsonConverter.cs" />
+    <Compile Include="AzureAppService.cs" />
+    <Compile Include="AzureKeyVaultPermission.cs" />
+    <Compile Include="AzurePermissionResourceProviders.cs" />
+    <Compile Include="AzureResourcePermission.cs" />
+    <Compile Include="AzureRoleAssignmentPermission.cs" />
+    <Compile Include="AzureSpnOperationStatus.cs" />
+    <Compile Include="AzureManagementGroup.cs" />
+    <Compile Include="AzureManagementGroupInfo.cs" />
+    <Compile Include="AzureSubscriptionInfo.cs" />
+    <Compile Include="AzureManagementGroupQueryResult.cs" />
+    <Compile Include="AzureSubscription.cs" />
+    <Compile Include="AzureSubscriptionQueryResult.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="DataSourceBinding.cs" />
+    <Compile Include="DataSourceDetails.cs" />
+    <Compile Include="DependencyData.cs" />
+    <Compile Include="DependsOn.cs" />
+    <Compile Include="DependencyBinding.cs" />
+    <Compile Include="EndpointAuthorizationSchemes.cs" />
+    <Compile Include="EndpointAuthorizationParameters.cs" />
+    <Compile Include="EndpointAuthorization.cs" />
+    <Compile Include="AccessTokenRequestType.cs" />
+    <Compile Include="EndpointOperationStatus.cs" />
+    <Compile Include="EndpointUrl.cs" />
+    <Compile Include="EndpointUrlJsonConverter.cs" />
+    <Compile Include="ServiceEndpointExceptionType.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="ServiceEndpointNotFoundException.cs" />
+    <Compile Include="ServiceEndpointException.cs" />
+    <Compile Include="InvalidEndpointResponseException.cs" />
+    <Compile Include="InvalidJsonPathResponseSelectorException.cs" />
+    <Compile Include="InvalidServiceEndpointRequestException.cs" />
+    <Compile Include="InvalidAuthorizationDetailsException.cs" />
+    <Compile Include="XPathJTokenParseException.cs" />
+    <Compile Include="ServiceEndpointQueryFailedException.cs" />
+    <Compile Include="OAuthConfigurationException.cs" />
+    <Compile Include="DataSourceNotFoundException.cs" />
+    <Compile Include="InvalidDataSourceBindingException.cs" />
+    <Compile Include="OAuthConfigurationNotFoundException.cs" />
+    <Compile Include="OAuthConfigurationExistsException.cs" />
+    <Compile Include="ServiceEndpointUntrustedHostException.cs" />
+    <Compile Include="InvalidDatasourceException.cs" />
+    <Compile Include="AzureKeyVaultManualSpnObjectNotFoundException.cs" />
+    <Compile Include="DuplicateServiceConnectionException.cs" />
+    <Compile Include="HelpLink.cs" />
+    <Compile Include="AzureMLWorkspace.cs" />
+    <Compile Include="OAuthConfiguration.cs" />
+    <Compile Include="OAuthConfigurationActionFilter.cs" />
+    <Compile Include="OAuthConfigurationParams.cs" />
+    <Compile Include="OAuthEndpointStatusStates.cs" />
+    <Compile Include="OAuthEndpointStatusMessages.cs" />
+    <Compile Include="OAuthEndpointStatus.cs" />
+    <Compile Include="OAuth2TokenResult.cs" />
+    <Compile Include="IPagedCollection`1.cs" />
+    <Compile Include="PagedCollection`1.cs" />
+    <Compile Include="Parameter.cs" />
+    <Compile Include="ServiceEndpointOAuthConfigurationReference.cs" />
+    <Compile Include="ServiceEndpointExecutionOwner.cs" />
+    <Compile Include="ResultTransformationDetails.cs" />
+    <Compile Include="RefreshAuthenticationParameters.cs" />
+    <Compile Include="SerializationHelper.cs" />
+    <Compile Include="ServiceEndpointExecutionResult.cs" />
+    <Compile Include="ServiceEndpoint.cs" />
+    <Compile Include="EndpointIsReadyConverter`1.cs" />
+    <Compile Include="EndpointIsDisabledConverter`1.cs" />
+    <Compile Include="ServiceEndpointAuthenticationScheme.cs" />
+    <Compile Include="ServiceEndpointAuthenticationSchemeExtensions.cs" />
+    <Compile Include="ServiceEndpointDetails.cs" />
+    <Compile Include="ServiceEndpointExecutionData.cs" />
+    <Compile Include="ServiceEndpointExecutionRecord.cs" />
+    <Compile Include="ServiceEndpointExecutionRecordsInput.cs" />
+    <Compile Include="ServiceEndpointExtensions.cs" />
+    <Compile Include="ServiceEndpointHttpClient.cs" />
+    <Compile Include="ServiceEndpointHttpClient2.cs" />
+    <Compile Include="ServiceEndpointRequest.cs" />
+    <Compile Include="ServiceEndpointRequestResult.cs" />
+    <Compile Include="ServiceEndpointResourceIds.cs" />
+    <Compile Include="ServiceEndpointType.cs" />
+    <Compile Include="ServiceEndpointTypeExtensions.cs" />
+    <Compile Include="ServiceEndpointTypes.cs" />
+    <Compile Include="ClientCertificate.cs" />
+    <Compile Include="ProjectReference.cs" />
+    <Compile Include="ServiceEndpointOwner.cs" />
+    <Compile Include="ServiceEndpointActionFilter.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

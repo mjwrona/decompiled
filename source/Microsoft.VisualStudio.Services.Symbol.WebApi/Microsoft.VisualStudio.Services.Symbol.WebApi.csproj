@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Symbol.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9A10781-EA9E-4659-B62B-163698DF2DFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Symbol.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Symbol.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugEntry.cs" />
+    <Compile Include="DebugEntryCreateBatch.cs" />
+    <Compile Include="DebugEntryCreateBehavior.cs" />
+    <Compile Include="DebugEntrySortOrder.cs" />
+    <Compile Include="DebugEntryStatus.cs" />
+    <Compile Include="JsonBlobBlockHash.cs" />
+    <Compile Include="JsonBlobIdentifier.cs" />
+    <Compile Include="JsonBlobIdentifierWithBlocks.cs" />
+    <Compile Include="JsonSerializeableObject.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="RequestStatus.cs" />
+    <Compile Include="ResourceBase.cs" />
+    <Compile Include="ClientNotFoundException.cs" />
+    <Compile Include="ClientTypeInvalidException.cs" />
+    <Compile Include="CollectionNotFoundException.cs" />
+    <Compile Include="DebugEntryExistsException.cs" />
+    <Compile Include="DebugEntryNotChunkedException.cs" />
+    <Compile Include="DebugEntryNotCreatedException.cs" />
+    <Compile Include="DebugEntryNotDeletedException.cs" />
+    <Compile Include="DebugEntryNotFoundException.cs" />
+    <Compile Include="InvalidEndpointParameterException.cs" />
+    <Compile Include="PackageExtensionNotInstalledException.cs" />
+    <Compile Include="QueryParameterIsNotNumericException.cs" />
+    <Compile Include="QueryParameterMustNotBeNegativeException.cs" />
+    <Compile Include="RequestExistsException.cs" />
+    <Compile Include="RequestListInvalidQueryParameterValuesException.cs" />
+    <Compile Include="RequestNameRequiredException.cs" />
+    <Compile Include="RequestNotDeletedException.cs" />
+    <Compile Include="RequestNotFoundException.cs" />
+    <Compile Include="RequestSealedException.cs" />
+    <Compile Include="RequestUpdateConflictException.cs" />
+    <Compile Include="RequestUpdateInvalidException.cs" />
+    <Compile Include="SymbolException.cs" />
+    <Compile Include="SymbolExceptionMapping.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="ISymbolHttpClient.cs" />
+    <Compile Include="SymbolHttpClient.cs" />
+    <Compile Include="SymbolResourceIds.cs" />
+    <Compile Include="SymbolVersionHttpClient.cs" />
+    <Compile Include="SymbolVersioning.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

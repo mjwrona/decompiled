@@ -1,0 +1,54 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Feed.Server.PackagingProtocolService
+// Assembly: Microsoft.VisualStudio.Services.Feed.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 55555083-3B79-4F4F-AA85-92D66019974E
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.VisualStudio.Services.Common;
+using Microsoft.VisualStudio.Services.Feed.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+
+namespace Microsoft.VisualStudio.Services.Feed.Server
+{
+  internal class PackagingProtocolService : IPackagingProtocolService, IVssFrameworkService
+  {
+    private static readonly IEnumerable<string> unsupportedProtocols = (IEnumerable<string>) new HashSet<string>((IEqualityComparer<string>) StringComparer.OrdinalIgnoreCase)
+    {
+      "Ivy"
+    };
+    private IDisposableReadOnlyList<IPackagingOperations> loadedExtensions;
+
+    internal IEnumerable<string> UnsupportedProtocols => PackagingProtocolService.unsupportedProtocols;
+
+    public void ServiceStart(IVssRequestContext requestContext)
+    {
+      requestContext.CheckDeploymentRequestContext();
+      this.LoadExtensions(requestContext);
+    }
+
+    public void ServiceEnd(IVssRequestContext requestContext)
+    {
+      if (this.loadedExtensions == null)
+        return;
+      this.loadedExtensions.Dispose();
+      this.loadedExtensions = (IDisposableReadOnlyList<IPackagingOperations>) null;
+    }
+
+    public IPackagingOperations GetPackagingOperations(string protocol)
+    {
+      ArgumentUtility.CheckForNull<string>(protocol, nameof (protocol));
+      IPackagingOperations packagingOperations = this.loadedExtensions.FirstOrDefault<IPackagingOperations>((Func<IPackagingOperations, bool>) (po => string.Equals(po.Protocol, protocol, StringComparison.OrdinalIgnoreCase)));
+      if (packagingOperations != null)
+        return packagingOperations;
+      if (this.UnsupportedProtocols.Contains<string>(protocol))
+        throw new NotSupportedException(Resources.Error_PackagingOperationNotFound((object) protocol));
+      throw new TypeLoadException(Resources.Error_FailedToLoadPackagingProtocolExtension((object) protocol));
+    }
+
+    private void LoadExtensions(IVssRequestContext requestContext) => Interlocked.CompareExchange<IDisposableReadOnlyList<IPackagingOperations>>(ref this.loadedExtensions, requestContext.GetExtensions<IPackagingOperations>(throwOnError: true), (IDisposableReadOnlyList<IPackagingOperations>) null);
+  }
+}

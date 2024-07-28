@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.Indexer.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EFF8F32-12E9-4C35-B980-EB2609D8F761}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Indexer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Indexer</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common.Arriba">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.Arriba.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platforms.SearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.ReSearch.Core">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.ReSearch.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.DataAccess" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.EventHandler" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.Jobs.Definitions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.Jobs.Definitions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Search\Common\ProjectRepoDocumentsUpdateDataStorage.cs" />
+    <Compile Include="SettingIndexProvisionerFactory.cs" />
+    <Compile Include="PackageIndexProvisionerFactory.cs" />
+    <Compile Include="WikiIndexProvisionerFactory.cs" />
+    <Compile Include="WorkItemIndexProvisionerFactory.cs" />
+    <Compile Include="BoardIndexProvisionerFactory.cs" />
+    <Compile Include="ProvisioningContext.cs" />
+    <Compile Include="SettingContracter.cs" />
+    <Compile Include="PackageVersionContracter.cs" />
+    <Compile Include="WikiContracter.cs" />
+    <Compile Include="BoardContracter.cs" />
+    <Compile Include="WorkItemContracterV2.cs" />
+    <Compile Include="DocumentContractTypeService.cs" />
+    <Compile Include="DocumentContractTypeServiceHelper.cs" />
+    <Compile Include="ElasticsearchFeedbackLoopExtensions.cs" />
+    <Compile Include="ElasticsearchFeedbackProcessor.cs" />
+    <Compile Include="FailureRecordStore.cs" />
+    <Compile Include="IndexingExecutionContext.cs" />
+    <Compile Include="IndexInfoIndexerExtensions.cs" />
+    <Compile Include="ExecutionContextExtensions.cs" />
+    <Compile Include="IndexingExecutionContextExtensions.cs" />
+    <Compile Include="IQueryScopingCacheUpdaterMapper.cs" />
+    <Compile Include="IVssRequestContextIndexerExtensions.cs" />
+    <Compile Include="CodeQueryScopingCacheUpdaterMapper.cs" />
+    <Compile Include="IDocumentContractTypeService.cs" />
+    <Compile Include="SettingIndexUpdater.cs" />
+    <Compile Include="PackageVersionIndexUpdater.cs" />
+    <Compile Include="WikiIndexUpdater.cs" />
+    <Compile Include="WorkItemIndexUpdater.cs" />
+    <Compile Include="BoardIndexUpdater.cs" />
+    <Compile Include="DedicatedIndexProvisioner.cs" />
+    <Compile Include="CollectionDedicatedIndexProvisioner.cs" />
+    <Compile Include="IRoutingSelectorService.cs" />
+    <Compile Include="IndexingUnitRoutingExtensions.cs" />
+    <Compile Include="IRoutingService.cs" />
+    <Compile Include="CodeQueryScopingCache.cs" />
+    <Compile Include="CollectionRenameUpdateCodeQueryScopingCache.cs" />
+    <Compile Include="ProjectDeleteUpdateCodeQueryScopingCache.cs" />
+    <Compile Include="ProjectRenameUpdateCodeQueryScopingCache.cs" />
+    <Compile Include="RepoAdditionUpdateCodeQueryScopingCache.cs" />
+    <Compile Include="RepoDeletionUpdateCodeQueryScopingCache.cs" />
+    <Compile Include="RepoRenameUpdateCodeQueryScopingCache.cs" />
+    <Compile Include="CodeQueryScopingCacheUtil.cs" />
+    <Compile Include="IQueryScopingCache.cs" />
+    <Compile Include="IQueryScopingCacheUpdater.cs" />
+    <Compile Include="QueryScopingCache.cs" />
+    <Compile Include="RoutingSelectorService.cs" />
+    <Compile Include="RoutingService.cs" />
+    <Compile Include="CodeQueryScopingCacheService.cs" />
+    <Compile Include="IQueryScopingCacheService.cs" />
+    <Compile Include="QueryScopingCacheService.cs" />
+    <Compile Include="TracerCICorrelationDetailsFactory.cs" />
+    <Compile Include="IndexerFactory.cs" />
+    <Compile Include="IIndexProvisioner.cs" />
+    <Compile Include="CodeIndexProvisionerFactory.cs" />
+    <Compile Include="IndexProvisionerFactory.cs" />
+    <Compile Include="ProjectIndexProvisionerFactory.cs" />
+    <Compile Include="EntityContracter.cs" />
+    <Compile Include="ProjectContracter.cs" />
+    <Compile Include="DocumentContracterFactory.cs" />
+    <Compile Include="IDocumentContracter.cs" />
+    <Compile Include="CodeContracter.cs" />
+    <Compile Include="AbstractIndexUpdater.cs" />
+    <Compile Include="IndexUpdaterParams.cs" />
+    <Compile Include="CodeIndexUpdater.cs" />
+    <Compile Include="ProjectIndexUpdater.cs" />
+    <Compile Include="IndexProvisionerBase.cs" />
+    <Compile Include="CreateSearchIndexHelper.cs" />
+    <Compile Include="RepositoryDedicatedIndexProvisioner.cs" />
+    <Compile Include="ISharedIndexSelectorService.cs" />
+    <Compile Include="SharedIndexProvisioner.cs" />
+    <Compile Include="SharedIndexSelectorService.cs" />
+    <Compile Include="Settings\CrawlerSettings.cs" />
+    <Compile Include="Settings\FeederSettings.cs" />
+    <Compile Include="Routing\RoutingProviders\SettingEntityRoutingProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\CodeEntityRoutingProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\DefaultSizeBasedShardAllocator.cs" />
+    <Compile Include="Routing\RoutingProviders\ShardAssignmentDetails.cs" />
+    <Compile Include="Routing\RoutingProviders\IndexingUnitWithSize.cs" />
+    <Compile Include="Routing\RoutingProviders\IRoutingDataProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\PackageEntityRoutingProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\ProjectEntityRoutingProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\WikiEntityRoutingProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\WorkItemEntityRoutingProvider.cs" />
+    <Compile Include="Routing\RoutingProviders\BoardEntityRoutingProvider.cs" />
+    <Compile Include="IndexProvisioner\IIndexProvisionerAndManager.cs" />
+    <Compile Include="IndexProvisioner\Definitions\IndexSubScope.cs" />
+    <Compile Include="IndexProvisioner\SharedIndexProvisioner\DocumentCountBasedIndexProvisionerAndManager.cs" />
+    <Compile Include="IndexProvisioner\SharedIndexProvisioner\SharedIndexSelectorFactory.cs" />
+    <Compile Include="IndexProvisioner\SharedIndexProvisioner\DocumentCountBasedSharedIndexSelector.cs" />
+    <Compile Include="IndexProvisioner\SharedIndexProvisioner\EntitySharedIndexSelector.cs" />
+    <Compile Include="IndexProvisioner\Entities\SettingEntityProvisionProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\PackageEntityProvisionProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\WikiEntityProvisionProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\WorkItemEntityProvisionProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\BoardEntityProvisionProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\CodeEntityProvisionProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\ProvisionerConfigAndConstantsProvider.cs" />
+    <Compile Include="IndexProvisioner\Entities\EntityProvisionerFactory.cs" />
+    <Compile Include="IndexProvisioner\Entities\ProjectEntityProvisionProvider.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

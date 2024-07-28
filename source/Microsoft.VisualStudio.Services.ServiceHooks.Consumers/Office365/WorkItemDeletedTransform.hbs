@@ -1,0 +1,22 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}: {{{jsonEscape resource.fields['System.Title']}}} deleted by {{{emailEscapeForSubject resource.fields['System.ChangedBy'].uniqueName}}}",
+    "themeColor": "{{{jsonEscape data.workItemColor}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+            "activityTitle": "{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}:  {{{jsonEscape resource.fields['System.Title']}}}",
+            "activitySubtitle": "",
+            "activityText": "
+{{#if resource.fields.['System.ChangedBy']}}
+                    Deleted by {{{emailEscape resource.fields['System.ChangedBy'].uniqueName}}}
+{{/if}}",
+            "activityImage": "{{{encodedAvatar resource.fields['System.ChangedBy'].id}}}"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+﻿{
+  "id": "javaazureweb",
+  "name": "Azure Web App for Java",
+  "category": "Build",
+  "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+  "iconTaskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+  "description": "Build a Java WAR file and deploy it to an Azure Web App.",
+  "template":{
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "build": [
+      {
+        "enabled": true,
+        "task": {
+          "id": "AC4EE482-65DA-4485-A532-7B085873E532",
+          "versionSpec": "*"
+        }
+      },
+      {
+        "enabled": false,
+        "inputs": {
+          "antBuildFile": "build.xml"
+        },
+        "task": {
+          "id": "3A6A2D63-F2B2-4E93-BCF9-0CBE22F5DC26",
+          "versionSpec": "*"
+        }
+      },
+      {
+        "enabled": false,
+        "task": {
+          "id": "8D8EEBD8-2B94-4C97-85AF-839254CC6DA4",
+          "versionSpec": "*"
+        }
+      },      
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "displayName": "Copy files to staging folder",
+        "inputs": {
+          "SourceFolder": "$(build.sourcesdirectory)",
+          "Contents": "**/*.war",
+          "TargetFolder": "$(build.artifactstagingdirectory)"
+        },
+        "task": {
+          "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+          "versionSpec": "*"
+        }
+      },      
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "inputs": {
+          "PathtoPublish": "$(build.artifactstagingdirectory)",
+          "ArtifactName": "drop",
+          "ArtifactType": "Container"
+        },
+        "task": {
+          "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+          "versionSpec": "*"
+        }
+      },
+      {
+        "enabled": true,
+        "condition": "succeeded()",
+        "displayName": "Stop Azure Web App",
+        "task": {
+          "id": "f045e430-8704-11e6-968f-e717e6411619",
+          "versionSpec": "*"
+        },
+        "inputs": {
+          "Action": "Stop Azure App Service"
+        }
+      },      
+      {
+        "enabled": true,
+        "alwaysRun": false,
+        "displayName": "Deploy Azure Web App",
+        "task": {
+          "id": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+          "versionSpec": "*"
+        },
+        "inputs": {
+          "Package": "$(build.artifactstagingdirectory)/**/*.war"
+        }
+      },
+      {
+        "enabled": true,
+        "condition": "succeeded()",
+        "displayName": "Start Azure Web App",
+        "task": {
+          "id": "f045e430-8704-11e6-968f-e717e6411619",
+          "versionSpec": "*"
+        },
+        "inputs": {
+          "Action": "Start Azure App Service"
+        }
+      },
+      {
+        "enabled": false,
+        "condition": "succeeded()",
+        "displayName": "Swap Azure Web App slots",
+        "task": {
+          "id": "f045e430-8704-11e6-968f-e717e6411619",
+          "versionSpec": "*"
+        },
+        "inputs": {
+          "Action": "Swap Slots"
+        }
+      }      
+    ],
+    "options": [],
+      "variables": {
+        "system.debug": {
+          "value": "false",
+          "allowOverride": true
+        }
+      },
+    "triggers": []
+  }
+}

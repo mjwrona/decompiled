@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Notifications.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28D15D28-2EC9-45F8-BFCF-3E404F534A7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Notifications.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Notifications</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Framework.Extensions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Framework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\NotificationFrameworkConstants.cs" />
+    <Compile Include="Common\DeliveryTypeChannelMapper.cs" />
+    <Compile Include="Common\NotificationUrlConstants.cs" />
+    <Compile Include="Common\MDMConstants.cs" />
+    <Compile Include="Common\ContributedNames.cs" />
+    <Compile Include="Common\LegacyNames.cs" />
+    <Compile Include="Common\NotificationEventId.cs" />
+    <Compile Include="Common\FeatureFlags.cs" />
+    <Compile Include="Common\ContributedFeatureFlags.cs" />
+    <Compile Include="Common\EventPublishSecurity.cs" />
+    <Compile Include="Common\DataspaceCategories.cs" />
+    <Compile Include="Common\NotificationTrace.cs" />
+    <Compile Include="Server\ConditionEvalHelper.cs" />
+    <Compile Include="Server\Evaluation.cs" />
+    <Compile Include="Server\INotificationsSystemEventFactory.cs" />
+    <Compile Include="Server\NotificationsSystemEventFactory.cs" />
+    <Compile Include="Server\PublishEventStats.cs" />
+    <Compile Include="Server\TeamFoundationVerifySubscriptionEvent.cs" />
+    <Compile Include="Server\VerifySubscriptionFieldContainer.cs" />
+    <Compile Include="Server\SubscriptionFieldProvider.cs" />
+    <Compile Include="Server\EvaluationContext.cs" />
+    <Compile Include="Server\EvaluationContextEvaluate.cs" />
+    <Compile Include="Server\FilterCondition.cs" />
+    <Compile Include="Server\FilterConditionUtil.cs" />
+    <Compile Include="Server\FieldCompare`1.cs" />
+    <Compile Include="Server\StringFieldCompare.cs" />
+    <Compile Include="Server\BooleanFieldCompare.cs" />
+    <Compile Include="Server\DateFieldCompare.cs" />
+    <Compile Include="Server\NumericFieldCompare.cs" />
+    <Compile Include="Server\FieldComparer.cs" />
+    <Compile Include="Server\StringFieldComparer.cs" />
+    <Compile Include="Server\BooleanFieldComparer.cs" />
+    <Compile Include="Server\DateFieldComparer.cs" />
+    <Compile Include="Server\NumericFieldComparer.cs" />
+    <Compile Include="Server\IFilterCondition.cs" />
+    <Compile Include="Server\EmptyFilterCondition.cs" />
+    <Compile Include="Server\LogicalOperationFilterCondition.cs" />
+    <Compile Include="Server\AndFilterCondition.cs" />
+    <Compile Include="Server\OrFilterCondition.cs" />
+    <Compile Include="Server\IIdentityTestHook.cs" />
+    <Compile Include="Server\IdentityTestHookExtensionMethod.cs" />
+    <Compile Include="Server\INotificationJob.cs" />
+    <Compile Include="Server\INotificationProcessingJob.cs" />
+    <Compile Include="Server\INotificationDeliveryJob.cs" />
+    <Compile Include="Server\SerializedNotificationEvent.cs" />
+    <Compile Include="Server\DefaultFollowsSubscriptionAdapter.cs" />
+    <Compile Include="Server\AndCondition.cs" />
+    <Compile Include="Server\Condition.cs" />
+    <Compile Include="Server\ExpressionFilterField.cs" />
+    <Compile Include="Server\DynamicDocumentFieldContainer.cs" />
+    <Compile Include="Server\TeamFoundationNotificationExtensions.cs" />
+    <Compile Include="Server\SendNotificationState.cs" />
+    <Compile Include="Server\NotificationStatus.cs" />
+    <Compile Include="Server\BlockMatcherFilter.cs" />
+    <Compile Include="Server\BaseMatcherFilter.cs" />
+    <Compile Include="Server\FollowsMatcherFilter.cs" />
+    <Compile Include="Server\IMatcherFilter.cs" />
+    <Compile Include="Server\LegacyActorMatcherFilter.cs" />
+    <Compile Include="Server\LegacyBlockMatcherFilter.cs" />
+    <Compile Include="Server\LegacyMatcherFilterBase.cs" />
+    <Compile Include="Server\LegacyPathMatcherFilter.cs" />
+    <Compile Include="Server\MatcherFilterFactory.cs" />
+    <Compile Include="Server\ActorMatcherFilter.cs" />
+    <Compile Include="Server\PathMatcherFilter.cs" />
+    <Compile Include="Server\SerializedMatcherFilter.cs" />
+    <Compile Include="Server\INotificationJobService.cs" />
+    <Compile Include="Server\INotificationAdminSettingsService.cs" />
+    <Compile Include="Server\SettingsChangedHandler.cs" />
+    <Compile Include="Server\INotificationAdminSettingsServiceInternal.cs" />
+    <Compile Include="Server\FrameworkNotificationAdminSettingsService.cs" />
+    <Compile Include="Server\NotificationAdminSettingsServiceBase.cs" />
+    <Compile Include="Server\PlatformNotificationAdminSettingsService.cs" />
+    <Compile Include="Server\NotificationDiagnosticLogService.cs" />
+    <Compile Include="Server\INotificationDiagnosticLogService.cs" />
+    <Compile Include="Server\IEventNotificationService.cs" />
+    <Compile Include="Server\IEventNotificationServiceInternal.cs" />
+    <Compile Include="Server\INotificationEventService.cs" />
+    <Compile Include="Server\INotificationEventServiceInternal.cs" />
+    <Compile Include="Server\NotificationEventService.cs" />
+    <Compile Include="Server\EventTypeSerializationFormatCache.cs" />
+    <Compile Include="Server\NotificationJobService.cs" />
+    <Compile Include="Server\NotificationJobMappingServiceHelpers.cs" />
+    <Compile Include="Server\SubscriberCacheService.cs" />
+    <Compile Include="Server\EventNotificationComponentExtensions.cs" />
+    <Compile Include="Server\NotificationQueryBinder.cs" />
+    <Compile Include="Server\NotificationQueryBinder2.cs" />
+    <Compile Include="Server\NotificationDiagnosticLogBinder.cs" />
+    <Compile Include="Server\NotificationStatisticEntry.cs" />
+    <Compile Include="Server\NotificationStatisticsException.cs" />
+    <Compile Include="Server\SubscriberType.cs" />
+    <Compile Include="Server\SubscriberApiFlags.cs" />
+    <Compile Include="Server\INotificationSubscriberService.cs" />
+    <Compile Include="Server\NotificationSubscriberService.cs" />
+    <Compile Include="Server\InvalidSubscriptionDiagnostics.cs" />
+    <Compile Include="Server\ISubscriptionValidator.cs" />
+    <Compile Include="Server\SubscriptionDiagnosticsExtensions.cs" />
+    <Compile Include="Server\DiagnosticUtils.cs" />
+    <Compile Include="Server\SubscriptionLookupType.cs" />
+    <Compile Include="Server\SubscriptionLookup.cs" />
+    <Compile Include="Server\SubscriptionTraceEventProcessingLogInternal.cs" />
+    <Compile Include="Server\NotificationAuditing.cs" />
+    <Compile Include="Server\NotificationDiagnosticsQueryType.cs" />
+    <Compile Include="Server\NotificationDiagnosticsQuery.cs" />
+    <Compile Include="Server\SubscriptionObjectTracer.cs" />
+    <Compile Include="Server\NotificationTracerQueue.cs" />
+    <Compile Include="Server\ProcessTreeContext.cs" />
+    <Compile Include="Server\EventTransformController.cs" />
+    <Compile Include="Server\IdentityExtensionsCacheService.cs" />
+    <Compile Include="Server\IIdentityExtensionsCacheService.cs" />
+    <Compile Include="Server\SubscriptionDiagnosticsNotificationTracingControll.cs" />
+    <Compile Include="Server\AuditOptInUtils.cs" />
+    <Compile Include="Server\ContributionUtils.cs" />
+    <Compile Include="Server\IdentityCheck.cs" />
+    <Compile Include="Server\NotificationIdentityHelper.cs" />
+    <Compile Include="Server\DiagnosticLogUtil.cs" />
+    <Compile Include="Server\NotificationBatchStatus.cs" />
+    <Compile Include="Server\NotificationBacklogUtil.cs" />
+    <Compile Include="Server\NotificationStopwatch.cs" />
+    <Compile Include="Server\AutoStopwatch.cs" />
+    <Compile Include="Server\ConversationIndex.cs" />
+    <Compile Include="Server\NotifHelpers.cs" />
+    <Compile Include="Server\ExpansionFlags.cs" />
+    <Compile Include="Server\VsIdentityWithGroupInformation.cs" />
+    <Compile Include="Server\NotificationIdentityExtensions.cs" />
+    <Compile Include="Server\RegistryEntryExtension.cs" />
+    <Compile Include="Server\IEventNotificationComponent.cs" />
+    <Compile Include="Server\NotificationBacklogStatusBinder.cs" />
+    <Compile Include="Server\EventBacklogStatusBinder.cs" />
+    <Compile Include="Server\NotificationBacklogStatusBinder1200.cs" />
+    <Compile Include="Server\EventBacklogStatusBinder1200.cs" />
+    <Compile Include="Server\NotificationBacklogStatusBinder1380.cs" />
+    <Compile Include="Server\EventBacklogStatusBinder1380.cs" />
+    <Compile Include="Server\BacklogStatusBinderCommon.cs" />
+    <Compile Include="Server\NotificationStatisticBinder.cs" />
+    <Compile Include="Server\TeamFoundationNotificationBinder.cs" />
+    <Compile Include="Server\TeamFoundationNotificationBinder2.cs" />
+    <Compile Include="Server\DefaultSubscriptionUserCandidateBinder.cs" />
+    <Compile Include="Server\DefaultSubscriptionAdminCandidateBinder.cs" />
+    <Compile Include="Server\TeamFoundationEventBinder.cs" />
+    <Compile Include="Server\SubscriptionBinder.cs" />
+    <Compile Include="Server\NotificationEventTypes.cs" />
+    <Compile Include="Server\HookGetDataspaceId.cs" />
+    <Compile Include="Server\HookGetDataspaceIdentifier.cs" />
+    <Compile Include="Server\EventNotificationComponent.cs" />
+    <Compile Include="Server\EventNotificationComponent17.cs" />
+    <Compile Include="Server\EventNotificationComponent107.cs" />
+    <Compile Include="Server\EventNotificationComponent108.cs" />
+    <Compile Include="Server\EventNotificationComponent1120.cs" />
+    <Compile Include="Server\EventNotificationComponent1130.cs" />
+    <Compile Include="Server\EventNotificationComponent1150.cs" />
+    <Compile Include="Server\EventNotificationComponent1160.cs" />
+    <Compile Include="Server\EventNotificationComponent1200.cs" />
+    <Compile Include="Server\EventNotificationComponent1220.cs" />
+    <Compile Include="Server\EventNotificationComponent1260.cs" />
+    <Compile Include="Server\EventNotificationComponent1290.cs" />
+    <Compile Include="Server\EventNotificationComponent1310.cs" />
+    <Compile Include="Server\EventNotificationComponent1313.cs" />
+    <Compile Include="Server\EventNotificationComponent1321.cs" />
+    <Compile Include="Server\EventNotificationComponent1330.cs" />
+    <Compile Include="Server\EventNotificationComponent1340.cs" />
+    <Compile Include="Server\EventNotificationComponent1360.cs" />
+    <Compile Include="Server\EventNotificationComponent1380.cs" />
+    <Compile Include="Server\EventNotificationComponent1430.cs" />
+    <Compile Include="Server\EventNotificationComponent1440.cs" />
+    <Compile Include="Server\EventNotificationComponent2170.cs" />
+    <Compile Include="Server\EventNotificationComponentLatest.cs" />
+    <Compile Include="Server\NotificationsSerialization.cs" />
+    <Compile Include="Server\NotificationsCamelCasePropertyNamesContractResolve.cs" />
+    <Compile Include="Server\NotificationsCamelCasePropertyNamesPreserveEnumsCo.cs" />
+    <Compile Include="Server\TypeValueProvider.cs" />
+    <Compile Include="Server\NotificationsEmbedTypeContractResolver.cs" />
+    <Compile Include="Server\NotificationsEmbedTypeAttribute.cs" />
+    <Compile Include="Server\ExtensionsUtil.cs" />
+    <Compile Include="Server\FollowsSubscriptionAdapter.cs" />
+    <Compile Include="Server\INotificationSubscriptionService.cs" />
+    <Compile Include="Server\INotificationSubscriptionServiceInternal.cs" />
+    <Compile Include="Server\EventTypeMapper.cs" />
+    <Compile Include="Server\NotificationCustomerIntelligence.cs" />
+    <Compile Include="Server\NotificationDeliveryDetails.cs" />
+    <Compile Include="Server\NotificationRecipient.cs" />
+    <Compile Include="Server\DefaultSubscriptionAdminCandidate.cs" />
+    <Compile Include="Server\DefaultSubscriptionUserCandidate.cs" />
+    <Compile Include="Server\EmptyCondition.cs" />
+    <Compile Include="Server\INotificationTrace.cs" />
+    <Compile Include="Server\ISubscriptionObjectTrace.cs" />
+    <Compile Include="Server\INotificationObjectTrace.cs" />
+    <Compile Include="Server\NotificationEventExtensions.cs" />
+    <Compile Include="Server\NotificationEventSubscriber.cs" />
+    <Compile Include="Server\GroupAdminCheck.cs" />
+    <Compile Include="Server\GroupAdminBulkCheck.cs" />
+    <Compile Include="Server\NotificationSubscriptionSecurityUtils.cs" />
+    <Compile Include="Server\SubscriptionStatusInternal.cs" />
+    <Compile Include="Server\SubscriptionExtensions.cs" />
+    <Compile Include="Server\EventNotificationService.cs" />
+    <Compile Include="Server\SubscriptionDisabledEvent.cs" />
+    <Compile Include="Server\NotificationTrackingConstants.cs" />
+    <Compile Include="Server\NotificationTrackingData.cs" />
+    <Compile Include="Server\NotificationTrackingUtils.cs" />
+    <Compile Include="Server\EmailTemplateInputProvider.cs" />
+    <Compile Include="Server\FollowsMatcherTemplateInputProvider.cs" />
+    <Compile Include="Server\NotificationTransformHandlebarHelpers.cs" />
+    <Compile Include="Server\NotificationTransformResult.cs" />
+    <Compile Include="Server\XslEmailTemplateTransform.cs" />
+    <Compile Include="Server\ITemplateInputProvider.cs" />
+    <Compile Include="Server\IChannelBasedTemplateInputProvider.cs" />
+    <Compile Include="Server\IEventTypeBasedTemplateInputProvider.cs" />
+    <Compile Include="Server\IMatcherBasedTemplateInputProvider.cs" />
+    <Compile Include="Server\NotificationTransformConstants.cs" />
+    <Compile Include="Server\INotificationTransformService.cs" />
+    <Compile Include="Server\NotificationTransformService.cs" />
+    <Compile Include="Server\NotificationTransformUtils.cs" />
+    <Compile Include="Server\NotificationTranformJsonFormatter.cs" />
+    <Compile Include="Server\ContributedTemplateBase.cs" />
+    <Compile Include="Server\ContributedTemplate.cs" />
+    <Compile Include="Server\ContributedDataTemplate.cs" />
+    <Compile Include="Server\TemplateFields.cs" />
+    <Compile Include="Server\TemplateFieldReplacement.cs" />
+    <Compile Include="Server\IContributedTemplateServiceBase`1.cs" />
+    <Compile Include="Server\IContributedTemplateService.cs" />
+    <Compile Include="Server\IContributedDataTemplateService.cs" />
+    <Compile Include="Server\ContributedTemplateServiceBase`1.cs" />
+    <Compile Include="Server\ContributedTemplateService.cs" />
+    <Compile Include="Server\ContributedDataTemplateService.cs" />
+    <Compile Include="Server\INotificationTemplateTypeCache.cs" />
+    <Compile Include="Server\XslNotificationTemplateTypeCache.cs" />
+    <Compile Include="Server\NotificationTransformContext.cs" />
+    <Compile Include="Server\HandlebarsTemplateTransformExtensions.cs" />
+    <Compile Include="Server\HandlebarsTemplateEvaluationHelpers.cs" />
+    <Compile Include="Server\HandlebarsTemplateTransform.cs" />
+    <Compile Include="Server\HandlebarsDataTemplateTransform.cs" />
+    <Compile Include="Server\NotificationStatisticsQueryController.cs" />
+    <Compile Include="Server\NotificationEventTypeFieldValuesQueryController.cs" />
+    <Compile Include="Server\NotificationTracer.cs" />
+    <Compile Include="Server\NumericCondition.cs" />
+    <Compile Include="Server\ConstantCondition.cs" />
+    <Compile Include="Server\ContextUtil.cs" />
+    <Compile Include="Server\Date.cs" />
+    <Compile Include="Server\LiteralDate.cs" />
+    <Compile Include="Server\RelativeDate.cs" />
+    <Compile Include="Server\DateFieldCondition.cs" />
+    <Compile Include="Server\DocumentFieldContainer.cs" />
+    <Compile Include="Server\DynamicPredicateCondition.cs" />
+    <Compile Include="Server\SubscriptionAlreadyExistsException.cs" />
+    <Compile Include="Server\EventTypeDoesNotExistException.cs" />
+    <Compile Include="Server\MatcherNotsupportedException.cs" />
+    <Compile Include="Server\MatcherEventTypeCombinationNotSupportedException.cs" />
+    <Compile Include="Server\SubscriptionNotFoundException.cs" />
+    <Compile Include="Server\InvalidEventsException.cs" />
+    <Compile Include="Server\LegacyEventNameNotSupportedException.cs" />
+    <Compile Include="Server\ContributedEventNameNotSupportedException.cs" />
+    <Compile Include="Server\InvalidFilterResultException.cs" />
+    <Compile Include="Server\1MatcherNotSupportedException.cs" />
+    <Compile Include="Server\InvalidFieldValueException.cs" />
+    <Compile Include="Server\EventTypeDoesNotSupportXmlException.cs" />
+    <Compile Include="Server\EventTypeNotSupportedException.cs" />
+    <Compile Include="Server\EventTypeTransformNotFoundException.cs" />
+    <Compile Include="Server\InvalidScopeException.cs" />
+    <Compile Include="Server\DynamicEventPredicateException.cs" />
+    <Compile Include="Server\NoSubscriptionAdaterFoundException.cs" />
+    <Compile Include="Server\FilterMatcherNotFoundExpcetion.cs" />
+    <Compile Include="Server\TypeHasNoDefaultConstructor.cs" />
+    <Compile Include="Server\InvalidRoleBasedExpressionException.cs" />
+    <Compile Include="Server\IdentityInactiveException.cs" />
+    <Compile Include="Server\SubscriptionMemberMissingPermissionsException.cs" />
+    <Compile Include="Server\SubscriptionProjectInvalidException.cs" />
+    <Compile Include="Server\NotificationTemplateNotFoundException.cs" />
+    <Compile Include="Server\ContributionsInFallbackModeException.cs" />
+    <Compile Include="Server\ExceptionUtil.cs" />
+    <Compile Include="Server\FieldCondition.cs" />
+    <Compile Include="Server\FieldResult.cs" />
+    <Compile Include="Server\ConstantFieldResult.cs" />
+    <Compile Include="Server\ArrayFieldResult.cs" />
+    <Compile Include="Server\IdentityListFieldResult.cs" />
+    <Compile Include="Server\UnderPathComparer.cs" />
+    <Compile Include="Server\BatchStatus.cs" />
+    <Compile Include="Server\IBatchSettings.cs" />
+    <Compile Include="Server\MatchTarget.cs" />
+    <Compile Include="Server\IBatchState.cs" />
+    <Compile Include="Server\IDynamicEventPredicate.cs" />
+    <Compile Include="Server\IEventMatcher.cs" />
+    <Compile Include="Server\DynamicFieldContainerType.cs" />
+    <Compile Include="Server\IFieldContainer.cs" />
+    <Compile Include="Server\IgnoreSubscription.cs" />
+    <Compile Include="Server\INotificationBridge.cs" />
+    <Compile Include="Server\INotificationTransform.cs" />
+    <Compile Include="Server\INotificationDeliveryFilter.cs" />
+    <Compile Include="Server\ISampleEventTransformFilter.cs" />
+    <Compile Include="Server\NotificationDeliveryContent.cs" />
+    <Compile Include="Server\NotificationPrepareContent.cs" />
+    <Compile Include="Server\NotificationArtifact.cs" />
+    <Compile Include="Server\NotificationDeliveryData.cs" />
+    <Compile Include="Server\UserDeliveryContent.cs" />
+    <Compile Include="Server\DeliveryContent.cs" />
+    <Compile Include="Server\INotificationFormatter.cs" />
+    <Compile Include="Server\InvalidSubscriptionException.cs" />
+    <Compile Include="Server\InvalidContributedSubscriptionException.cs" />
+    <Compile Include="Server\ISubscriptionPathValidator.cs" />
+    <Compile Include="Server\ISubscriptionPersistence.cs" />
+    <Compile Include="Server\SubscriptionIdentityPersistenceBase.cs" />
+    <Compile Include="Server\JsonDocumentFieldContainer.cs" />
+    <Compile Include="Server\NotCondition.cs" />
+    <Compile Include="Server\TeamFoundationNotification.cs" />
+    <Compile Include="Server\InvalidEventSerializerAttributeException.cs" />
+    <Compile Include="Server\NotificationXsltContext.cs" />
+    <Compile Include="Server\OrCondition.cs" />
+    <Compile Include="Server\TeamFoundationXmlEventConditionParser.cs" />
+    <Compile Include="Server\TeamFoundationJsonEventConditionParser.cs" />
+    <Compile Include="Server\TeamFoundationEventConditionParser.cs" />
+    <Compile Include="Server\ActorSubscriptionAdapter.cs" />
+    <Compile Include="Server\BlockSubscriptionAdapter.cs" />
+    <Compile Include="Server\RoleBasedExpression.cs" />
+    <Compile Include="Server\RoleBasedSubscriptionAdapter.cs" />
+    <Compile Include="Server\TeamFoundationEventConditionScanner.cs" />
+    <Compile Include="Server\ParseException.cs" />
+    <Compile Include="Server\StringFieldMode.cs" />
+    <Compile Include="Server\StringFieldCondition.cs" />
+    <Compile Include="Server\DualStringFieldCondition.cs" />
+    <Compile Include="Server\StringFieldFactory.cs" />
+    <Compile Include="Server\SubscribeEventStepData.cs" />
+    <Compile Include="Server\Subscription.cs" />
+    <Compile Include="Server\SubscriptionEvaluationJobData.cs" />
+    <Compile Include="Server\SubscriptionEvaluationStats.cs" />
+    <Compile Include="Server\SubscriptionUpdate.cs" />
+    <Compile Include="Server\EventStats.cs" />
+    <Compile Include="Server\TeamFoundationEvent.cs" />
+    <Compile Include="Server\TeamFoundationEventFactory.cs" />
+    <Compile Include="Server\TeamFoundationJsonEvent.cs" />
+    <Compile Include="Server\TeamFoundationXmlEvent.cs" />
+    <Compile Include="Server\TfsNamespaceResolver.cs" />
+    <Compile Include="Server\NotificationSubscriptionService.cs" />
+    <Compile Include="Server\JobRegisteredStatus.cs" />
+    <Compile Include="Server\PlatformAuditLogService.cs" />
+    <Compile Include="Server\IdentityExtensions.cs" />
+    <Compile Include="Server\ISubscriptionAdapter.cs" />
+    <Compile Include="Server\BaseSubscriptionAdapter.cs" />
+    <Compile Include="Server\NotificationControllerBase.cs" />
+    <Compile Include="Server\NotificationSubscriptionQueryController.cs" />
+    <Compile Include="Server\NotificationSubscriptionsController.cs" />
+    <Compile Include="Server\SubscriptionAdapterFactory.cs" />
+    <Compile Include="Server\XmlDocumentFieldContainer.cs" />
+    <Compile Include="Server\XPathExtensionVariable.cs" />
+    <Compile Include="Server\XPathStringExtensionFunction.cs" />
+    <Compile Include="Server\PathSubscriptionAdapter.cs" />
+    <Compile Include="Server\XPathSubscriptionAdapter.cs" />
+    <Compile Include="Server\JsonPathSubscriptionAdapter.cs" />
+    <Compile Include="Server\RequestContextExtensions.cs" />
+    <Compile Include="Server\GeneratedVersionInfo.cs" />
+    <Compile Include="Server\CoreRes.cs" />
+    <Compile Include="Server\WebApi\NotificationDiagnosticLogsController.cs" />
+    <Compile Include="Server\WebApi\NotificationReasonsController.cs" />
+    <Compile Include="Server\WebApi\NotificationSettingsController.cs" />
+    <Compile Include="Server\WebApi\NotificationSubscribersController.cs" />
+    <Compile Include="Server\WebApi\NotificationBatchNotificationOperationsController.cs" />
+    <Compile Include="Server\WebApi\INotificationEventPublishValidator.cs" />
+    <Compile Include="Server\WebApi\NotificationEventsController.cs" />
+    <Compile Include="Server\WebApi\NotificationSubscriptionTemplatesController.cs" />
+    <Compile Include="Server\WebApi\NotificationEventTypesController.cs" />
+    <Compile Include="Server\WebApi\NotificationSubscriptionUserSettingsController.cs" />
+    <Compile Include="Server\WebApi\TokenNotificationEventsController.cs" />
+    <Compile Include="Server\SqlComponent\NotificationsTransferComponent.cs" />
+    <Compile Include="Server\Follows\ArtifactSubscription.cs" />
+    <Compile Include="Server\Follows\IFollowsEmailMetadataProvider.cs" />
+    <Compile Include="Server\Follows\FollowsTracePoints.cs" />
+    <Compile Include="Server\Follows\IArtifactUriProvider.cs" />
+    <Compile Include="Server\Follows\IVssFollowsService.cs" />
+    <Compile Include="Server\Follows\IFollowSecurityProvider.cs" />
+    <Compile Include="Server\Follows\VssFollowsService.cs" />
+    <Compile Include="Server\Follows\IFollowsEventFilter.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

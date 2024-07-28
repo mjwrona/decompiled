@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.TableAccess.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7170401-68F3-44F2-B9B1-A1AE8C4FAD92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.TableAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.TableAccess</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITableAccessPlatform.cs" />
+    <Compile Include="ITable`1.cs" />
+    <Compile Include="TableEntityFilter.cs" />
+    <Compile Include="TableEntityFilterList.cs" />
+    <Compile Include="QueryOperators.cs" />
+    <Compile Include="ClassificationNodeComponentV2.cs" />
+    <Compile Include="ClassificationNodeComponentV4.cs" />
+    <Compile Include="ClassificationNodeComponentV3.cs" />
+    <Compile Include="PackageContainerComponent.cs" />
+    <Compile Include="CustomRepositoryInfoTableV2.cs" />
+    <Compile Include="DisabledFilesTableV2.cs" />
+    <Compile Include="HealthStatusMonitoringComponent.cs" />
+    <Compile Include="IndexingUnitDetailsComponent.cs" />
+    <Compile Include="IndexingUnitWikisComponent.cs" />
+    <Compile Include="IndexingUnitWikisComponentV1.cs" />
+    <Compile Include="IndexingUnitWikisComponentV2.cs" />
+    <Compile Include="DisabledFilesTable.cs" />
+    <Compile Include="ClassificationNodeComponent.cs" />
+    <Compile Include="CustomRepositoryInfoTable.cs" />
+    <Compile Include="HealthStatusComponent.cs" />
+    <Compile Include="HealthStatusComponentV2.cs" />
+    <Compile Include="ReindexingStatusTableV2.cs" />
+    <Compile Include="ReindexingStatusTable.cs" />
+    <Compile Include="ReindexingStatusTableV3.cs" />
+    <Compile Include="SearchMigrationComponent.cs" />
+    <Compile Include="ShardDetailsComponent.cs" />
+    <Compile Include="ShardDetailsComponentV2.cs" />
+    <Compile Include="ShardDetailsComponentV3.cs" />
+    <Compile Include="TableAccessPlatform.cs" />
+    <Compile Include="InMemoryTablePlatform.cs" />
+    <Compile Include="SQLTable`1.cs" />
+    <Compile Include="TableSimulator`1.cs" />
+    <Compile Include="IndexingUnitComponent.cs" />
+    <Compile Include="IndexingUnitComponentV8.cs" />
+    <Compile Include="WorkItemRecentActivityComponent.cs" />
+    <Compile Include="WorkItemRecentActivityComponent2.cs" />
+    <Compile Include="RecentActivity.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV14.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV13.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV12.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV11.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV15.cs" />
+    <Compile Include="Implementation\FileMetadataStoreComponent.cs" />
+    <Compile Include="Implementation\FileMetadataStoreComponentV2.cs" />
+    <Compile Include="Implementation\FileMetadataStoreComponentV3.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponent.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV2.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV4.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV3.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV5.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV6.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV7.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV10.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV9.cs" />
+    <Compile Include="Implementation\ItemLevelFailuresComponentV8.cs" />
+    <Compile Include="Implementation\LockManagerComponent.cs" />
+    <Compile Include="Implementation\LockManagerComponent2.cs" />
+    <Compile Include="Implementation\IndexingUnitComponentV2.cs" />
+    <Compile Include="Implementation\IndexingUnitComponentV3.cs" />
+    <Compile Include="Implementation\IndexingUnitComponentV4.cs" />
+    <Compile Include="Implementation\IndexingUnitComponentV5.cs" />
+    <Compile Include="Implementation\IndexingUnitComponentV6.cs" />
+    <Compile Include="Implementation\IndexingUnitComponentV7.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponent.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV2.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV3.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV4.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV5.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV6.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV7.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV8.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV9.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV10.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventComponentV11.cs" />
+    <Compile Include="Implementation\IndexingUnitChangeEventArchiveComponent.cs" />
+    <Compile Include="Implementation\TempFileMetadataStoreComponent.cs" />
+    <Compile Include="Implementation\TempFileMetadataStoreComponentV3.cs" />
+    <Compile Include="Implementation\TempFileMetadataStoreComponentV2.cs" />
+    <Compile Include="Common\TableAcessErrorCodeEnum.cs" />
+    <Compile Include="Common\TableConstants.cs" />
+    <Compile Include="Common\TableAccessException.cs" />
+    <Compile Include="Common\TableEntityHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

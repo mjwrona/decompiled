@@ -1,0 +1,46 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.ReleaseManagement.Data.Model.ManualInterventionTimeoutJobData
+// Assembly: Microsoft.VisualStudio.Services.ReleaseManagement2.Data, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: A69B0FB7-3028-4162-BA38-794D80D7A49A
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ReleaseManagement2.Data.dll
+
+using System;
+using System.Xml.Serialization;
+
+namespace Microsoft.VisualStudio.Services.ReleaseManagement.Data.Model
+{
+  public class ManualInterventionTimeoutJobData
+  {
+    [XmlAttribute("ProjectId")]
+    public Guid ProjectId { get; set; }
+
+    [XmlAttribute("ReleaseId")]
+    public int ReleaseId { get; set; }
+
+    [XmlAttribute("Id")]
+    public int Id { get; set; }
+
+    [XmlAttribute("Resume")]
+    public bool ResumeOnTimeout { get; set; }
+
+    [XmlAttribute("Timeout")]
+    public double TimeoutInMinutes { get; set; }
+
+    public static ManualInterventionTimeoutJobData GetManualInterventionTimeoutJobData(
+      Guid projectId,
+      int releaseId,
+      int id,
+      bool resumeOnTimeout,
+      double timeoutInMinutes)
+    {
+      return new ManualInterventionTimeoutJobData()
+      {
+        ProjectId = projectId,
+        ReleaseId = releaseId,
+        Id = id,
+        ResumeOnTimeout = resumeOnTimeout,
+        TimeoutInMinutes = timeoutInMinutes
+      };
+    }
+  }
+}

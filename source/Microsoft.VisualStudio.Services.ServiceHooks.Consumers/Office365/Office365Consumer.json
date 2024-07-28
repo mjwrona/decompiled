@@ -1,0 +1,134 @@
+﻿{
+  "id": "office365",
+  "name": "Office 365",
+  "description": "Provide Office 365 users with real-time notifications for key events in Azure DevOps Services.",
+  "externalConfiguration": {
+    "createSubscriptionUrl": "https://go.microsoft.com/fwlink/?LinkId=723535",
+    "hostedOnly": true
+  },
+  "imageUrl": "",
+  "informationUrl": "https://go.microsoft.com/fwlink/?LinkId=723535",
+  "inputDescriptors": [
+    {
+      "id": "officeConnectorUrl",
+      "name": "Connector URL",
+      "description": "The Office connector URL to post the message to",
+      "inputMode": "textbox",
+      "isConfidential": false,
+      "useInDefaultDescription": true,
+      "validation": {
+        "isRequired": true,
+        "dataType": "uri"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "postMessageToGroup",
+      "name": "Post message to a group",
+      "description": "Posts a message with details about the event to an Office group. <a href='https://go.microsoft.com/fwlink/?linkid=723535'>Learn more</a>",
+      "supportedEventTypes": [ "*" ],
+      "supportedResourceVersions": {
+        "workitem.created": [ "3.1-preview.3" ],
+        "workitem.updated": [ "3.1-preview.3" ],
+        "workitem.commented": [ "3.1-preview.3" ],
+        "workitem.deleted": [ "3.1-preview.3" ],
+        "workitem.restored": [ "3.1-preview.3" ]
+      },
+      "publishEvent": {
+        "url": "{{{officeConnectorUrl}}}",
+        "resourceDetailsToSend": "all",
+        "transforms": [
+          {
+            "eventType": "build.complete",
+            "templateAssetType": "BuildCompleteTransform.hbs"
+          },
+          {
+            "eventType": "git.pullrequest.created",
+            "templateAssetType": "PullRequestCreatedTemplate.hbs"
+          },
+          {
+            "eventType": "git.pullrequest.merged",
+            "templateAssetType": "PullRequestMergedTemplate.hbs"
+          },
+          {
+            "eventType": "git.pullrequest.updated",
+            "templateAssetType": "PullRequestUpdatedTemplate.hbs"
+          },
+          {
+            "eventType": "workitem.commented",
+            "templateAssetType": "WorkItemCommentedTransform.hbs"
+          },
+          {
+            "eventType": "workitem.created",
+            "templateAssetType": "WorkItemCreatedTransform.hbs"
+          },
+          {
+            "eventType": "workitem.deleted",
+            "templateAssetType": "WorkItemDeletedTransform.hbs"
+          },
+          {
+            "eventType": "workitem.restored",
+            "templateAssetType": "WorkItemRestoredTransform.hbs"
+          },
+          {
+            "eventType": "workitem.updated",
+            "templateAssetType": "WorkItemUpdatedTransform.hbs"
+          },
+          {
+            "eventType": "git.push",
+            "templateAssetType": "CommitsPushedTransform.hbs"
+          },
+          {
+            "eventType": "tfvc.checkin",
+            "templateAssetType": "CodeCheckedInTransform.hbs"
+          },
+          {
+            "eventType": "message.posted",
+            "templateAssetType": "MessagePostedTransform.hbs"
+          },
+          {
+            "eventType": "ms.vss-release.release-created-event",
+            "templateAssetType": "ReleaseCreatedTemplate.hbs"
+          },
+          {
+            "eventType": "ms.vss-release.release-abandoned-event",
+            "templateAssetType": "ReleaseAbandonedTemplate.hbs"
+          },
+          {
+            "eventType": "ms.vss-release.deployment-approval-pending-event",
+            "templateAssetType": "DeploymentApprovalPendingTemplate.hbs"
+          },
+          {
+            "eventType": "ms.vss-release.deployment-approval-completed-event",
+            "templateAssetType": "DeploymentApprovalCompletedTemplate.hbs"
+          },
+          {
+            "eventType": "ms.vss-release.deployment-started-event",
+            "templateAssetType": "DeploymentStartedTemplate.hbs"
+          },
+          {
+            "eventType": "ms.vss-release.deployment-completed-event",
+            "templateAssetType": "DeploymentCompletedTemplate.hbs"
+          },
+          {
+            "eventType": "ms.vss-pipelines.stage-state-changed-event",
+            "templateAssetType": "RunStateChange.hbs"
+          },
+          {
+            "eventType": "ms.vss-pipelinechecks-events.approval-completed",
+            "templateAssetType": "RunStageApproved.hbs"
+          },
+          {
+            "eventType": "ms.vss-pipelinechecks-events.approval-pending",
+            "templateAssetType": "RunStageWaitingApproval.hbs"
+          },
+          {
+            "eventType": "ms.vss-pipelines.run-state-changed-event",
+            "templateAssetType": "RunStateChange.hbs"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+﻿{
+  "id": "ant",
+  "name": "Ant",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "3A6A2D63-F2B2-4E93-BCF9-0CBE22F5DC26",
+  "description": "Build and test a Java project with Apache Ant.",
+  "template":{
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "build": [
+      {
+        "enabled": true,
+        "inputs": {
+          "antBuildFile": "build.xml"
+        },
+        "task": {
+          "id": "3A6A2D63-F2B2-4E93-BCF9-0CBE22F5DC26",
+          "versionSpec": "1.*"
+        }
+      },
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "inputs": {
+          "SourceFolder": "$(build.sourcesdirectory)",
+          "Contents": "**/*.jar",
+          "TargetFolder": "$(build.artifactstagingdirectory)"
+        },
+        "task": {
+          "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+          "versionSpec": "2.*"
+        }
+      },
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "inputs": {
+          "PathtoPublish": "$(build.artifactstagingdirectory)",
+          "ArtifactName": "drop",
+          "ArtifactType": "Container"
+        },
+        "task": {
+          "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+          "versionSpec": "1.*"
+        }
+      }
+    ],
+    "options": [],
+      "variables": {
+        "system.debug": {
+          "value": "false",
+          "allowOverride": true
+        }
+      },
+    "triggers": []
+  }
+}

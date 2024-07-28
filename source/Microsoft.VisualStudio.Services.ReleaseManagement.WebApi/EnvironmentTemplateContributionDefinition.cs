@@ -1,0 +1,37 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.EnvironmentTemplateContributionDefinition
+// Assembly: Microsoft.VisualStudio.Services.ReleaseManagement.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: AE7F604E-30D7-44A7-BE7B-AB7FB5A67B31
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.dll
+
+using Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.Contracts;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Microsoft.VisualStudio.Services.ReleaseManagement.WebApi
+{
+  public class EnvironmentTemplateContributionDefinition
+  {
+    [DataMember]
+    public Guid Id { get; set; }
+
+    [DataMember]
+    public string Name { get; set; }
+
+    [DataMember]
+    public string Description { get; set; }
+
+    [DataMember]
+    public IDictionary<string, ConfigurationVariableValue> Variables { get; private set; }
+
+    [DataMember]
+    public IList<DeployPhase> DeployPhases { get; private set; }
+
+    public EnvironmentTemplateContributionDefinition()
+    {
+      this.Variables = (IDictionary<string, ConfigurationVariableValue>) new Dictionary<string, ConfigurationVariableValue>((IEqualityComparer<string>) StringComparer.OrdinalIgnoreCase);
+      this.DeployPhases = (IList<DeployPhase>) new List<DeployPhase>();
+    }
+  }
+}

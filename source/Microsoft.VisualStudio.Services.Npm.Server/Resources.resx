@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_ParameterCannotBeNull" xml:space="preserve">
+    <value>There was no value provided for {0}</value>
+  </data>
+  <data name="Error_PackageAddOrUpdateMustHaveBody" xml:space="preserve">
+    <value>The request must contain a body when publishing or updating a package</value>
+  </data>
+  <data name="Error_InvalidCommitEntryType" xml:space="preserve">
+    <value>Invalid commit log entry type.</value>
+  </data>
+  <data name="Error_GettingTarballUrlsForInternalUpstreamsNotSupported" xml:space="preserve">
+    <value>Getting tarball URLs for internal upstreams is not supported.</value>
+  </data>
+  <data name="Error_FeedNotBeingUpgraded" xml:space="preserve">
+    <value>You may only save cached packages as part of a feed upgrade operation.</value>
+  </data>
+  <data name="Error_MustUpgradeFeed" xml:space="preserve">
+    <value>Cannot save cached packages unless you are upgrading a feed.</value>
+  </data>
+  <data name="Error_MultipleUpstreamsUnavailable" xml:space="preserve">
+    <value>All upstream sources are unavailable. {0}</value>
+  </data>
+  <data name="Error_PackageNameTooLong" xml:space="preserve">
+    <value>The package name is too long. The maximum accepted length is {0}</value>
+  </data>
+  <data name="Error_PackageNameReserved" xml:space="preserve">
+    <value>The package name provided is a reserved word</value>
+  </data>
+  <data name="Error_OperationApplierNotFound" xml:space="preserve">
+    <value>The specified applier could not be found for the operation: {0}</value>
+  </data>
+  <data name="Error_PackageNameMustNotContainWhitespace" xml:space="preserve">
+    <value>The package name must not contain whitespace</value>
+  </data>
+  <data name="Error_PackageTooLarge" xml:space="preserve">
+    <value>Package is too large. Size limit is {0} bytes.</value>
+  </data>
+  <data name="Error_BadPackageJson" xml:space="preserve">
+    <value>The package.json file could not be understood:</value>
+  </data>
+  <data name="Error_NoVersionInPackageMetadata" xml:space="preserve">
+    <value>Couldn't find version string for one of the versions in the package metadata</value>
+  </data>
+  <data name="Error_ReadmeNotFoundPackageVersion" xml:space="preserve">
+    <value>A readme.md file could not be found for the package '{0}' with version '{1}'</value>
+  </data>
+  <data name="Error_InvalidPackageVersion" xml:space="preserve">
+    <value>The package version '{0}' is not a valid SemVer 2.0.0 version</value>
+  </data>
+  <data name="Error_InvalidBatchOperation" xml:space="preserve">
+    <value>Invalid batch operation received: {0}</value>
+  </data>
+  <data name="Error_CannotParsePackageJson" xml:space="preserve">
+    <value>Error reading package json '{0}'</value>
+  </data>
+  <data name="Error_GetDownloadUriFailed" xml:space="preserve">
+    <value>Couldn't get a download URI for '{0}'</value>
+  </data>
+  <data name="Error_DistTagIsSemanticVersion" xml:space="preserve">
+    <value>Distribution tags cannot be valid semantic versions.</value>
+  </data>
+  <data name="Error_InvalidPackageMetadata" xml:space="preserve">
+    <value>The metadata document for {0} could not be understood: {1}</value>
+  </data>
+  <data name="Error_VersionWasMissingTarball" xml:space="preserve">
+    <value>Couldn't find tarball url for one of the versions in package metadata</value>
+  </data>
+  <data name="Error_UpstreamError" xml:space="preserve">
+    <value>Upstream request {0} error: {1}</value>
+  </data>
+  <data name="Error_UpstreamSourceDoesNotSupportNpm" xml:space="preserve">
+    <value>The upstream source does not support the npm protocol</value>
+  </data>
+  <data name="Error_InvalidPackageRevision" xml:space="preserve">
+    <value>The package does not contain a revision</value>
+  </data>
+  <data name="Error_PackageNotFound" xml:space="preserve">
+    <value>The package '{0}' was not found in feed '{1}'</value>
+  </data>
+  <data name="Error_InvalidUpstreamPackageMetadata" xml:space="preserve">
+    <value>Upstream source {0} returned a metadata document that could not be understood. {1}</value>
+  </data>
+  <data name="Error_LatestDistTagCannotBeDeleted" xml:space="preserve">
+    <value>The "latest" dist tag cannot be deleted.</value>
+  </data>
+  <data name="Error_UpstreamWebExceptionMessage" xml:space="preserve">
+    <value>Upstream request {0} returned HTTP {1}, {2}, {3}.</value>
+  </data>
+  <data name="Error_MultipleVersionsUnpublished" xml:space="preserve">
+    <value>Only a single version can be specified for deletion. You have specified {0} versions to delete. Please specify a single version and retry.</value>
+  </data>
+  <data name="Error_CannotCreateOrUpdateCachedPackage" xml:space="preserve">
+    <value>Cached packages cannot be created or updated.</value>
+  </data>
+  <data name="Error_PackageTooManyVersions" xml:space="preserve">
+    <value>Package {0} has more than the supported number of published versions ({1} versions). Please unpublish some versions using the npm unpublish command or PACKAGE hub or the REST APIs.</value>
+  </data>
+  <data name="Error_PackageNameMustBeLowercase" xml:space="preserve">
+    <value>The package name must be lowercase</value>
+  </data>
+  <data name="Error_UpstreamsFailureException" xml:space="preserve">
+    <value>All configured upstream registries failed with the following responses: [{0}]</value>
+  </data>
+  <data name="Error_AuditNotEnabled" xml:space="preserve">
+    <value>The npm audit functionality is currently not available in Azure Artifacts. For more information, see https://go.microsoft.com/fwlink/?linkid=2244875</value>
+  </data>
+  <data name="Error_VersionsNotFoundInPackageMetadata" xml:space="preserve">
+    <value>Couldn't find the versions section from the package metadata</value>
+  </data>
+  <data name="Error_InvalidLatestPackageVersion" xml:space="preserve">
+    <value>The 'latest' dist-tag may only be set to the greatest version of the package available in the feed.</value>
+  </data>
+  <data name="Error_OneOrMorePackagesWereNotFound" xml:space="preserve">
+    <value>One or more packages were not found in the feed.</value>
+  </data>
+  <data name="Error_PackageNameMustNotBeNullOrEmpty" xml:space="preserve">
+    <value>The package name must be provided</value>
+  </data>
+  <data name="Error_UpstreamFailureException" xml:space="preserve">
+    <value>A configured upstream registry failed: {0}</value>
+  </data>
+  <data name="Error_PackageVersionExistsOnUpstream" xml:space="preserve">
+    <value>Package version '{0}' of package '{1}' already exists on the upstream source.</value>
+  </data>
+  <data name="Error_InvalidPackageTarball" xml:space="preserve">
+    <value>The package tarball is corrupt or invalid</value>
+  </data>
+  <data name="Error_InvalidPackageVersionTooLong" xml:space="preserve">
+    <value>The package version '{0}' is too long</value>
+  </data>
+  <data name="Error_DistTagNotFound" xml:space="preserve">
+    <value>The distribution tag '{0}' was not found on package '{1}'</value>
+  </data>
+  <data name="Error_PackagePublishMustHaveOneAttachment" xml:space="preserve">
+    <value>The request must have exactly one attachment</value>
+  </data>
+  <data name="Error_UnknownOperationType" xml:space="preserve">
+    <value>The operation type {0} was not recognized.</value>
+  </data>
+  <data name="Error_InternalUpstreamSourceDeleted" xml:space="preserve">
+    <value>The upstream source {0} cannot be found, please ask an owner of the feed to remove invalid/deleted upstream sources from this feed.</value>
+  </data>
+  <data name="Error_InvalidPackageMetadataUpstream" xml:space="preserve">
+    <value>The metadata document for {0} from {1} could not be understood: {2}</value>
+  </data>
+  <data name="Error_UpstreamInternalFeedExceptionMessage" xml:space="preserve">
+    <value>Upstream feed {0} returned an error.  {1}</value>
+  </data>
+  <data name="Error_NoPackageJsonInTarball" xml:space="preserve">
+    <value>The package tarball does not contain a package.json file</value>
+  </data>
+  <data name="Error_PackageNameExistsOnUpstream" xml:space="preserve">
+    <value>Package '{0}' already exists on the upstream source.</value>
+  </data>
+  <data name="Error_PackageVersionNotFound" xml:space="preserve">
+    <value>The package '{0}' with version '{1}' was not found in feed '{2}'</value>
+  </data>
+  <data name="Error_FeedIsReadOnly" xml:space="preserve">
+    <value>The Feed is currently read-only.</value>
+  </data>
+  <data name="Error_InvalidPackageVersions" xml:space="preserve">
+    <value>Packages contains invalid SemVer 2.0.0 version</value>
+  </data>
+  <data name="Error_InvalidUpstreamSourceDuplicatePackages" xml:space="preserve">
+    <value>The upstream source {0} contains duplicate versions for package {1}. Duplicate version: {2}"</value>
+  </data>
+  <data name="Error_UpstreamIngestion_CannotSkipIngestion" xml:space="preserve">
+    <value>For security reasons, an upstream package cannot be downloaded from a browser. Please use an official Npm client.</value>
+  </data>
+  <data name="Error_CantPromoteToImplicitView" xml:space="preserve">
+    <value>Explicit promotion of packages to implicit views is not allowed.</value>
+  </data>
+  <data name="Error_PackageVersionBlocked" xml:space="preserve">
+    <value>The package {0}@{1} has been blocked by the system as malicious.</value>
+  </data>
+  <data name="Error_PackageNamesDontMatch" xml:space="preserve">
+    <value>The name '{0}' of the package does not match the name '{1}' extracted from the package file.</value>
+  </data>
+  <data name="Error_UpstreamProjectDoesNotExist" xml:space="preserve">
+    <value>Error encountered fetching upstream data. Upstream feed is scoped to project with id '{0}' which does not exist or has had its permissions changed.</value>
+  </data>
+  <data name="Error_NoNameInPackageMetadata" xml:space="preserve">
+    <value>Couldn't find name string for one of the versions in the package metadata</value>
+  </data>
+  <data name="Error_PackageJsonAndRequestMustMatch" xml:space="preserve">
+    <value>The contents of the package.json file must match the version described in the request body. The property does not match: {0}</value>
+  </data>
+  <data name="Error_UpstreamUnavailable" xml:space="preserve">
+    <value>Could not contact the upstream package source. Try again later.</value>
+  </data>
+  <data name="Error_InvalidPackageJson" xml:space="preserve">
+    <value>The package.json could not be understood</value>
+  </data>
+  <data name="Error_InvalidPackageName" xml:space="preserve">
+    <value>The package name is invalid: {0}</value>
+  </data>
+  <data name="Error_UpstreamVssServiceExceptionMessage" xml:space="preserve">
+    <value>Upstream {0} returned HTTP {1}, {2}.</value>
+  </data>
+  <data name="Error_RequestMustContainPackageJsonVersion" xml:space="preserve">
+    <value>The request does not contain an entry for the version of the package attached</value>
+  </data>
+  <data name="Error_NpmServiceReadOnly" xml:space="preserve">
+    <value>The Npm service is currently read-only for maintenance. Please try again later. </value>
+  </data>
+  <data name="Error_PackageNameMustNotStartWithSpecialCharacter" xml:space="preserve">
+    <value>The package name must not start with a special character</value>
+  </data>
+  <data name="Error_OneOrMorePackagesWereNotFoundInRecycleBin" xml:space="preserve">
+    <value>One or more packages were not found in the feed's recycle bin.</value>
+  </data>
+  <data name="Error_UpstreamUnavailableAt" xml:space="preserve">
+    <value>Could not contact the upstream package source at {0}. Try again later.</value>
+  </data>
+  <data name="Error_UpstreamGenericError" xml:space="preserve">
+    <value>Error encountered fetching upstream data. {0}</value>
+  </data>
+  <data name="Error_RevisionMismatch" xml:space="preserve">
+    <value>The available versions have changed since issuing this command.  Please verify your command and retry.</value>
+  </data>
+  <data name="Error_InvalidPackageFileName" xml:space="preserve">
+    <value>The package filename must be of the format '&lt;PackageNameWithoutScope&gt;-&lt;PackageVersion&gt;.tgz'</value>
+  </data>
+  <data name="Error_UpstreamSourcesCannotBeQueriedViaViews" xml:space="preserve">
+    <value>Views do not support accessing upstream sources.</value>
+  </data>
+  <data name="Error_FeedAlreadyContainsPackage" xml:space="preserve">
+    <value>The feed already contains the package '{0}' at version '{1}'</value>
+  </data>
+  <data name="Error_PackageVersionsDontMatch" xml:space="preserve">
+    <value>The version '{0}' of the package does not match the version '{1}' extracted from the package file.</value>
+  </data>
+  <data name="Error_NamesDoNotMatch" xml:space="preserve">
+    <value>Expected metadata name {0} but found {1}</value>
+  </data>
+  <data name="Error_CannotDeletePackageWithMultipleVersions" xml:space="preserve">
+    <value>Can only unpublish an entire package if there is only a single version remaining.</value>
+  </data>
+  <data name="Error_PackageNameMustBeAlphaNumericOrDashUnderscoreDot" xml:space="preserve">
+    <value>The package name must only contain ASCII alpha-numeric characters, as well the characters '-', '_', and '.'</value>
+  </data>
+  <data name="Error_UpstreamInvalidPackageVersion" xml:space="preserve">
+    <value>The upstream source contained a package version '{0}' that could not be parsed</value>
+  </data>
+  <data name="Error_V2DoesntCache" xml:space="preserve">
+    <value>This feed doesn't support caching packages, but will save them instead.</value>
+  </data>
+  <data name="Error_PackageJsonTooLarge" xml:space="preserve">
+    <value>The package.json file is too large. Size limit is {0} bytes.</value>
+  </data>
+  <data name="Error_UpstreamSourceTypeNotSupported" xml:space="preserve">
+    <value>Upstream source type '{0}' is not supported.</value>
+  </data>
+</root>

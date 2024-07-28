@@ -1,0 +1,61 @@
+﻿-- Please update vssf\sdk\Sql\Common\Role\ProvisionTfsRoles.sql while updating this file
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSEXECROLE')
+BEGIN
+    CREATE ROLE TFSEXECROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSBUILDEXECROLE')
+BEGIN
+    CREATE ROLE TFSBUILDEXECROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'TFSREADERROLE')
+BEGIN
+    CREATE ROLE TFSREADERROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'VSODBOROLE')
+BEGIN
+    CREATE ROLE VSODBOROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT * FROM sys.database_principals
+      WHERE NAME = 'VSODIAGROLE')
+BEGIN
+      CREATE ROLE VSODIAGROLE AUTHORIZATION dbo
+END
+
+IF NOT EXISTS (
+      SELECT  *
+      FROM    sys.database_principals
+      WHERE   name = 'VssfAdmin'
+)
+BEGIN
+      CREATE USER VssfAdmin WITHOUT LOGIN WITH DEFAULT_SCHEMA = dbo
+END
+
+EXEC sp_addrolemember 'db_datareader', 'TFSREADERROLE'
+EXEC sp_addrolemember 'db_owner', 'VSODBOROLE'
+EXEC sp_addrolemember 'db_datareader', 'VSODIAGROLE'
+EXEC sp_addrolemember 'db_owner', 'VssfAdmin'
+
+GRANT VIEW DATABASE STATE TO VSODIAGROLE
+GRANT SHOWPLAN TO VSODIAGROLE
+GRANT VIEW DEFINITION TO VSODIAGROLE
+
+-- We grant SELECT and EXECUTE to TFSEXECROLE as reader access to table
+GRANT SELECT TO TFSEXECROLE
+GRANT EXECUTE TO TFSEXECROLE
+GRANT VIEW DEFINITION TO TFSEXECROLE
+
+-- Grant VIEW DEFINITION TO TFSREADERROLE as well
+GRANT VIEW DEFINITION TO TFSREADERROLE

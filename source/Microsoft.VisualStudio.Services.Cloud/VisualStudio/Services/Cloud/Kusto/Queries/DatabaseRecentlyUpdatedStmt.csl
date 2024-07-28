@@ -1,0 +1,10 @@
+﻿DatabasePerformanceStatistics
+| where PeriodStart between (dateFrom .. dateTo)
+| extend DatabaseFullName = iff(Listener != "", strcat(Listener, ";", DatabaseName), strcat(ServerName, ";", DatabaseName)) 
+| where DatabaseFullName in (databases)
+| where IsReadOnly == 0
+| where ServiceObjective != ""
+| where ServiceObjective !contains "Enterprise"
+| summarize dcount(ServiceObjective), dcount(PoolName), existDays=max(TIMESTAMP)-min(TIMESTAMP) by ServerName, DatabaseName
+| extend DatabaseUpdated = iff(dcount_ServiceObjective > 1 or dcount_PoolName > 1 or existDays < (dateTo - dateFrom) - 1d, true, false)
+| project ServerName, DatabaseName, DatabaseUpdated

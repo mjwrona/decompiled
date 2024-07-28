@@ -1,0 +1,140 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Framework.Server.OnPremiseServicingConstants
+// Assembly: Microsoft.TeamFoundation.Framework.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 07453D77-2935-488F-B470-3D01F1673D9B
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Framework.Server.dll
+
+namespace Microsoft.TeamFoundation.Framework.Server
+{
+  public static class OnPremiseServicingConstants
+  {
+    public static readonly string[] ConfigDbSchemaOperations = new string[14]
+    {
+      ServicingOperationConstants.CreateConfigurationSchema,
+      ServicingOperationConstants.CreateSignalRSchema,
+      ServicingOperationConstants.CreateDistributedTaskOrchestrationSchema,
+      ServicingOperationConstants.CreateDistributedTaskConfigurationSchema,
+      ServicingOperationConstants.CreateTfsConfigurationSchema,
+      ServicingOperationConstants.CreateIdentitySchema,
+      ServicingOperationConstants.CreateGallerySchema,
+      ServicingOperationConstants.CreateNotificationsConfigurationSchema,
+      ServicingOperationConstants.CreateSearchSchema,
+      ServicingOperationConstants.CreateCommerceSchema,
+      ServicingOperationConstants.CreateLicensingSchema,
+      ServicingOperationConstants.CreatePackagingConfigurationSchema,
+      ServicingOperationConstants.CreateServiceEndpointsConfigurationSchema,
+      ServicingOperationConstants.CreatePermissionLevelSchema
+    };
+    public static readonly string[] ConfigDbHostOperations = new string[33]
+    {
+      ServicingOperationConstants.InstallCore,
+      ServicingOperationConstants.ConnectCore,
+      ServicingOperationConstants.ConnectComplete,
+      ServicingOperationConstants.InstallSignalRDeployment,
+      ServicingOperationConstants.InstallDistributedTaskOrchestrationDeployment,
+      ServicingOperationConstants.InstallDistributedTaskDeployment,
+      ServicingOperationConstants.InstallNotificationsDeployment,
+      ServicingOperationConstants.Install,
+      ServicingOperationConstants.ConnectTfs,
+      ServicingOperationConstants.InstallGallery,
+      ServicingOperationConstants.ConnectGallery,
+      ServicingOperationConstants.InstallExtensionManagement,
+      ServicingOperationConstants.InstallReleaseManagement,
+      ServicingOperationConstants.ConnectReleaseManagement,
+      ServicingOperationConstants.InstallBlobStore,
+      ServicingOperationConstants.InstallSearch,
+      ServicingOperationConstants.ConnectSearch,
+      ServicingOperationConstants.InstallAlmSearch,
+      ServicingOperationConstants.InstallSocialDeployment,
+      ServicingOperationConstants.ConnectAlmSearch,
+      ServicingOperationConstants.InstallFeed,
+      ServicingOperationConstants.ConnectFeed,
+      ServicingOperationConstants.InstallPackaging,
+      ServicingOperationConstants.ConnectPackaging,
+      ServicingOperationConstants.InstallAnalytics,
+      ServicingOperationConstants.ConnectAnalytics,
+      ServicingOperationConstants.InstallFavoritesDeployment,
+      ServicingOperationConstants.InstallCodeReviewDeployment,
+      ServicingOperationConstants.InstallAnalyticsSdkDeployment,
+      ServicingOperationConstants.InstallPipelinePolicyDeployment,
+      ServicingOperationConstants.InstallPipelineDeploymentConfig,
+      ServicingOperationConstants.InstallComplete,
+      ServicingOperationConstants.InstallTcm
+    };
+    public static readonly string[] PartitionDbSchemaOperations = new string[22]
+    {
+      ServicingOperationConstants.CreateCodeReviewPartitionSchema,
+      ServicingOperationConstants.CreateCollectionSchema,
+      ServicingOperationConstants.CreateSignalRSchema,
+      ServicingOperationConstants.CreateDistributedTaskOrchestrationSchema,
+      ServicingOperationConstants.CreateDistributedTaskPartitionSchema,
+      ServicingOperationConstants.CreateServiceHooksSchema,
+      ServicingOperationConstants.CreateReleaseManagementPartitionSchema,
+      ServicingOperationConstants.CreateExtensionPartitionSchema,
+      ServicingOperationConstants.CreateAnalyticsPartitionSchema,
+      ServicingOperationConstants.CreateNotificationsPartitionSchema,
+      ServicingOperationConstants.CreateSearchPartitionSchema,
+      ServicingOperationConstants.CreateFeedPartitionSchema,
+      ServicingOperationConstants.CreatePackagingPartitionSchema,
+      ServicingOperationConstants.CreateASTablePartitionSchema,
+      ServicingOperationConstants.CreateBlobStorePartitionSchema,
+      ServicingOperationConstants.CreateCommercePartitionSchema,
+      ServicingOperationConstants.CreateFavoritesPartitionSchema,
+      ServicingOperationConstants.CreateSocialPartitionSchema,
+      ServicingOperationConstants.CreateServiceEndpointsPartitionSchema,
+      ServicingOperationConstants.CreatePipelinePolicyPartitionSchema,
+      ServicingOperationConstants.CreateDeploymentPartitionSchema,
+      ServicingOperationConstants.CreateTagsPartitionSchema
+    };
+    public static readonly string[] DeltaOperationPrefixes = new string[26]
+    {
+      ServicingOperationPrefixes.VisualStudioServices,
+      ServicingOperationPrefixes.SignalR,
+      ServicingOperationPrefixes.DistributedTaskOrchestration,
+      ServicingOperationPrefixes.DistributedTask,
+      ServicingOperationPrefixes.CodeReview,
+      string.Empty,
+      ServicingOperationPrefixes.ServiceHooks,
+      ServicingOperationPrefixes.ReleaseManagement,
+      ServicingOperationPrefixes.Gallery,
+      ServicingOperationPrefixes.ExtensionManagement,
+      ServicingOperationPrefixes.BlobStore,
+      ServicingOperationPrefixes.Analytics,
+      ServicingOperationPrefixes.AnalyticsSdk,
+      ServicingOperationPrefixes.Notifications,
+      ServicingOperationPrefixes.Search,
+      ServicingOperationPrefixes.AlmSearch,
+      ServicingOperationPrefixes.Feed,
+      ServicingOperationPrefixes.Packaging,
+      ServicingOperationPrefixes.PackagingConfig,
+      ServicingOperationPrefixes.ASTable,
+      ServicingOperationPrefixes.Favorites,
+      ServicingOperationPrefixes.Social,
+      ServicingOperationPrefixes.ServiceEndpoints,
+      ServicingOperationPrefixes.PipelinePolicy,
+      ServicingOperationPrefixes.Deployment,
+      ServicingOperationPrefixes.Tags
+    };
+    public static readonly string[] CollectionOperations = new string[18]
+    {
+      ServicingOperationConstants.CreateCollection_Framework,
+      ServicingOperationConstants.CreateCollection_SignalR,
+      ServicingOperationConstants.CreateCollection_DistributedTaskOrchestration,
+      ServicingOperationConstants.CreateCollection_DistributedTask,
+      ServicingOperationConstants.CreateCollection_ExtensionManagement,
+      ServicingOperationConstants.CreateCollection_CodeReview,
+      ServicingOperationConstants.CreateCollection_Tfs,
+      ServicingOperationConstants.CreateCollection_ServiceHooks,
+      ServicingOperationConstants.CreateCollection_ReleaseManagement,
+      ServicingOperationConstants.CreateCollection_BlobStore,
+      ServicingOperationConstants.CreateCollection_Analytics,
+      ServicingOperationConstants.CreateCollection_AnalyticsSdk,
+      ServicingOperationConstants.CreateCollection_Notifications,
+      ServicingOperationConstants.CreateCollection_Search,
+      ServicingOperationConstants.CreateCollection_Feed,
+      ServicingOperationConstants.CreateCollection_Packaging,
+      ServicingOperationConstants.CreateCollection_PipelinePolicy,
+      ServicingOperationConstants.CreateCollection_Tcm
+    };
+  }
+}

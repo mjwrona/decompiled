@@ -1,0 +1,203 @@
+﻿{
+  "id": "4b40d960-68c6-46b6-a61d-3840e3e16282",
+  "name": "Deploy Function App to Azure App Service with Slot",
+  "category": "Deployment",
+  "iconTaskId": "501DD25D-1785-43E4-B4E5-A5C78CCC0573",
+  "description": "Deploy your Function App to a staging slot and swap slots to deploy to production.",
+  "environment": {
+    "name": "Production",
+    "rank": 1,
+    "deployPhases": [
+      {
+        "name": "Run on agent",
+        "rank": 1,
+        "phaseType": 1,
+        "controlOptions": {},
+        "deploymentInput": {
+          "queueId": 1,
+          "runOptions": {},
+          "demands": []
+        },
+        "workflowTasks": [
+          {
+            "taskId": "501DD25D-1785-43E4-B4E5-A5C78CCC0573",
+            "version": "1.*",
+            "Name": "Deploy Azure Function App",
+            "inputs": {
+              "azureSubscription": "$(Parameters.AzureSubscription)",
+              "appType": "$(Parameters.AppType)",
+              "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+              "appName": "$(Parameters.AppName)",
+              "slotName": "$(Parameters.SlotName)",
+              "deployToSlotOrASE": "$(Parameters.DeployToSlotOrASEFlag)",
+              "resourceGroupName": "$(Parameters.ResourceGroupName)",
+              "startUpCommand": "$(Parameters.StartupCommand)"
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          },
+          {
+            "taskId": "f045e430-8704-11e6-968f-e717e6411619",
+            "version": "0.*",
+            "Name": "Function App - Slot Swap",
+            "inputs": {
+              "ConnectedServiceName": "$(Parameters.AzureSubscription)",
+              "WebAppName": "$(Parameters.AppName)",
+              "ResourceGroupName": "$(Parameters.ResourceGroupName)",
+              "SourceSlot": "$(Parameters.SlotName)",
+              "SwapWithProduction": true
+            },
+            "Enabled": true,
+            "AlwaysRun": false,
+            "ContinueOnError": false
+          }
+        ]
+      }
+    ],
+    "deployStep": {
+      "tasks": []
+    },
+    "preDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "postDeployApprovals": {
+      "approvals": [
+        {
+          "isAutomated": true,
+          "rank": 1
+        }
+      ],
+      "approvalOptions": null
+    },
+    "runOptions": {},
+    "processParameters": {
+      "inputs": [
+        {
+          "options": {},
+          "properties": {},
+          "name": "AzureSubscription",
+          "label": "{AzureSubscriptionNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "connectedService:AzureRM",
+          "helpMarkDown": "{AzureSubscriptionNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "options": {
+            "functionApp": "Function App on Windows",
+            "functionAppLinux": "Function App on Linux"
+          },
+          "properties": {
+            "EditableOptions": "false"
+          },
+          "name": "AppType",
+          "label": "{AppKindLabel}",
+          "defaultValue": "functionApp",
+          "type": "pickList",
+          "helpMarkDown": "",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "AppName",
+          "label": "{AppNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{AppNameMarkdown}",
+          "visibleRule": "",
+          "groupName": ""
+        },
+        {
+          "name": "StartupCommand",
+          "type": "string",
+          "label": "{StartupCommandLabel}",
+          "defaultValue": "",
+          "required": false,
+          "visibleRule": "AppType != functionApp",
+          "helpMarkDown": "{StartupCommandMarkdown}",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {},
+          "name": "DeployToSlotOrASEFlag",
+          "label": "{DeployToSlotOrASEFlagLabel}",
+          "defaultValue": "true",
+          "type": "boolean",
+          "helpMarkDown": "{DeployToSlotOrASEFlagMarkdown}",
+          "groupName": "",
+          "visibleRule": "AppType != \"\""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "ResourceGroupName",
+          "label": "{ResourceGroupNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{ResourceGroupNameMarkdown}",
+          "visibleRule": "DeployToSlotOrASEFlag = true",
+          "groupName": ""
+        },
+        {
+          "options": {},
+          "properties": {
+            "EditableOptions": "True"
+          },
+          "name": "SlotName",
+          "label": "{SlotNameLabel}",
+          "defaultValue": "",
+          "required": true,
+          "type": "pickList",
+          "helpMarkDown": "{SlotNameMarkdown}",
+          "visibleRule": "DeployToSlotOrASEFlag = true",
+          "groupName": ""
+        }
+      ],
+      "dataSourceBindings": [
+        {
+          "dataSourceName": "AzureFunctionAppNamesByAppType",
+          "parameters": {
+            "WebAppKind": "$(AppType)"
+          },
+          "endpointId": "$(AzureSubscription)",
+          "target": "AppName"
+        },
+        {
+          "dataSourceName": "AzureRMWebAppResourceGroup",
+          "parameters": {
+            "WebAppName": "$(AppName)"
+          },
+          "endpointId": "$(AzureSubscription)",
+          "target": "ResourceGroupName"
+        },
+        {
+          "dataSourceName": "AzureRMWebAppSlotsId",
+          "parameters": {
+            "WebAppName": "$(AppName)",
+            "ResourceGroupName": "$(ResourceGroupName)"
+          },
+          "endpointId": "$(AzureSubscription)",
+          "target": "SlotName",
+          "resultTemplate": "{\"Value\":\"{{{ #extractResource slots}}}\",\"DisplayValue\":\"{{{ #extractResource slots}}}\"}"
+        }
+      ]
+    }
+  }
+}

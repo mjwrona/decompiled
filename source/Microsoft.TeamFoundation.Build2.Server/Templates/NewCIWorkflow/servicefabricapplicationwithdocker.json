@@ -1,0 +1,236 @@
+{
+    "id": "ServiceFabricApplicationWithDocker",
+    "name": "Azure Service Fabric application with Docker support",
+    "category": "Build",
+    "defaultHostedQueue": "Hosted Windows 2019 with VS 2019",
+    "iconTaskId": "97ef6e59-b8cc-48aa-9937-1a01e35e7584",
+    "description": "Build and package an Azure Service Fabric application that contains Docker images to be pushed to a container registry.",
+    "template": {
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "process": {
+            "type": 1,
+            "phases": [
+                {
+                    "steps": [
+                        {
+                            "enabled": true,
+                            "displayName": "Use NuGet 4.4.1",
+                            "task": {
+                                "id": "2c65196a-54fd-4a02-9be8-d9d1837b7c5d",
+                                "versionSpec": "0.*",
+                                "definitionType": "task"
+                            },
+                            "inputs": {
+                                "versionSpec": "4.4.1",
+                                "checkLatest": "false"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "command": "restore",
+                                "solution": "$(Parameters.solution)",
+                                "selectOrConfig": "select",
+                                "includeNuGetOrg": "true"
+                            },
+                            "task": {
+                                "id": "333b11bd-d341-40d9-afcf-b32d5ce6f23b",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "solution": "$(Parameters.solution)",
+                                "msbuildArgs": "/p:Deterministic=true /p:PathMap=$(Agent.BuildDirectory)=C:\\",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)",
+                                "restoreNugetPackages": "false"
+                            },
+                            "task": {
+                                "id": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "solution": "$(Parameters.serviceFabricProject)",
+                                "msbuildArgs": "/t:Package /p:PackageLocation=$(build.artifactstagingdirectory)\\applicationpackage;BuiltDockerImagesFilePath=$(build.artifactstagingdirectory)\\BuiltDockerImages.txt",
+                                "platform": "$(BuildPlatform)",
+                                "configuration": "$(BuildConfiguration)",
+                                "restoreNugetPackages": "false"
+                            },
+                            "task": {
+                                "id": "71a9a2d3-a98a-4caa-96ab-affca411ecda",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "action": "Tag images",
+                                "imageNamesPath": "$(build.artifactstagingdirectory)\\BuiltDockerImages.txt"
+                            },
+                            "task": {
+                                "id": "e28912f1-0114-4464-802a-a3a35437fd16",
+                                "versionSpec": "0.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "action": "Push images",
+                                "imageNamesPath": "$(build.artifactstagingdirectory)\\BuiltDockerImages.txt",
+                                "imageDigestFile": "$(build.artifactstagingdirectory)\\ImageDigests.txt"
+                            },
+                            "task": {
+                                "id": "e28912f1-0114-4464-802a-a3a35437fd16",
+                                "versionSpec": "0.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "SourceFolder": "$(build.artifactstagingdirectory)\\applicationpackage",
+                                "Contents": "**\\*.pdb",
+                                "TargetFolder": "$(build.artifactstagingdirectory)\\pdbs",
+                                "CleanTargetFolder": "false",
+                                "OverWrite": "false",
+                                "flattenFolders": "false"
+                            },
+                            "task": {
+                                "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "SourceFolder": "$(build.artifactstagingdirectory)\\applicationpackage",
+                                "Contents": "**\\*.pdb"
+                            },
+                            "task": {
+                                "id": "b7e8b412-0437-4065-9371-edc5881de25b",
+                                "versionSpec": "1.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "applicationPackagePath": "$(build.artifactstagingdirectory)\\applicationpackage",
+                                "updateType": "Docker image settings",
+                                "imageNamesPath": "$(build.artifactstagingdirectory)\\BuiltDockerImages.txt",
+                                "imageDigestsPath": "$(build.artifactstagingdirectory)\\ImageDigests.txt"
+                            },
+                            "task": {
+                                "id": "97ef6e59-b8cc-48aa-9937-1a01e35e7584",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "inputs": {
+                                "applicationPackagePath": "$(build.artifactstagingdirectory)\\applicationpackage",
+                                "versionSuffix": ".$(build.buildnumber)",
+                                "updateOnlyChanged": "true",
+                                "pkgArtifactName": "drop",
+                                "updateType": "Manifest versions"
+                            },
+                            "task": {
+                                "id": "97ef6e59-b8cc-48aa-9937-1a01e35e7584",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "SourceFolder": "$(system.defaultworkingdirectory)",
+                                "Contents": "**\\PublishProfiles\\*.xml\n**\\ApplicationParameters\\*.xml",
+                                "TargetFolder": "$(build.artifactstagingdirectory)\\projectartifacts"
+                            },
+                            "task": {
+                                "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+                                "versionSpec": "2.*"
+                            }
+                        },
+                        {
+                            "enabled": true,
+                            "alwaysRun": true,
+                            "inputs": {
+                                "PathtoPublish": "$(build.artifactstagingdirectory)",
+                                "ArtifactName": "drop",
+                                "ArtifactType": "Container",
+                                "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)"
+                            },
+                            "task": {
+                                "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+                                "versionSpec": "1.*"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": [
+            {
+                "definition": {
+                    "id": "5D58CC01-7C75-450C-BE18-A388DDB129EC"
+                },
+                "enabled": true,
+                "inputs": {
+                }
+            }
+        ],
+        "triggers": [
+            {
+                "triggerType": "continuousIntegration",
+                "batchChanges": false,
+                "branchFilters": []
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "Release",
+                "allowOverride": true
+            },
+            "BuildPlatform": {
+                "value": "x64",
+                "allowOverride": false
+            }
+        },
+        "processParameters": {
+            "inputs": [
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "solution",
+                    "label": "{SourceLabel}",
+                    "defaultValue": "**\\*.sln",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{SourceDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                },
+                {
+                    "options": {},
+                    "properties": {},
+                    "name": "serviceFabricProject",
+                    "label": "{ProjectLabel}",
+                    "defaultValue": "**\\*.sfproj",
+                    "required": true,
+                    "type": "filePath",
+                    "helpMarkDown": "{ProjectDescription}",
+                    "visibleRule": "",
+                    "groupName": ""
+                }
+            ]
+        }
+    }
+}

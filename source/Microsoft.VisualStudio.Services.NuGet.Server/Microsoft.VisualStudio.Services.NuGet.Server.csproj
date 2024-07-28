@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.NuGet.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC23DBFA-322C-4548-BD57-BBFDDD9D32AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.NuGet.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.NuGet.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="BuildXL.Cache.ContentStore.UtilitiesCore">
+      <HintPath>lib\BuildXL.Cache.ContentStore.UtilitiesCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>lib\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>lib\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>lib\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.BclPolyfills">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.HttpStreams">
+      <HintPath>lib\Microsoft.VisualStudio.Services.HttpStreams.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.NuGet.Client.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.NuGet.Client.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.NuGet.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.NuGet.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.ServiceShared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.Internal.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.Internal.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.NuGet">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.NuGet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks">
+      <HintPath>lib\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Versioning">
+      <HintPath>lib\NuGet.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData">
+      <HintPath>lib\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Packaging\ServiceShared\BlobPrototype\NuGetGetPackageIndexRequest`1.cs" />
+    <Compile Include="GetSeekableStreamFromContentResultHandler.cs" />
+    <Compile Include="NuGetMigrationJobConstants.cs" />
+    <Compile Include="NuGetMigrationProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="Protocol.cs" />
+    <Compile Include="PackagingRegistration.cs" />
+    <Compile Include="InternalUpstreamNuGetClientBase.cs" />
+    <Compile Include="NuGetRealNonForwardingUpstreamHttpClientFacade.cs" />
+    <Compile Include="INonForwardingPublicUpstreamHttpClient.cs" />
+    <Compile Include="PublicNuGetV2HttpClient.cs" />
+    <Compile Include="CrossCollectionUpstreamNuGetClient.cs" />
+    <Compile Include="IUpstreamNuGetClient.cs" />
+    <Compile Include="NuGetRegistrationState.cs" />
+    <Compile Include="NuGetPackageRegistrationState.cs" />
+    <Compile Include="NuGetVulnerability.cs" />
+    <Compile Include="NuGetDeprecation.cs" />
+    <Compile Include="NuGetUpstreamMetadata.cs" />
+    <Compile Include="NuGetVersionsService.cs" />
+    <Compile Include="NuGetRealUpstreamHttpClientFacade.cs" />
+    <Compile Include="IPublicUpstreamHttpClient.cs" />
+    <Compile Include="PublicNuGetHttpClient.cs" />
+    <Compile Include="NuGetCatalogIndex.cs" />
+    <Compile Include="NuGetCatalogIndexPageReference.cs" />
+    <Compile Include="NuGetCatalogPage.cs" />
+    <Compile Include="NuGetCatalogPageItem.cs" />
+    <Compile Include="INuGetV3Client.cs" />
+    <Compile Include="SameCollectionUpstreamClient.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="ExtensionMethods\MediaTypeHeaderValueExtensions.cs" />
+    <Compile Include="ItemStore\NuGetItemStore.cs" />
+    <Compile Include="Utils\INuGetServerUtils.cs" />
+    <Compile Include="Utils\NuGetPackageRetrievalValidationUtils.cs" />
+    <Compile Include="Utils\NuGetUriBuilder.cs" />
+    <Compile Include="Utils\INuGetLicenseUriCalculator.cs" />
+    <Compile Include="Utils\NuGetLicenseUriCalculator.cs" />
+    <Compile Include="Utils\INuGetIconUriCalculator.cs" />
+    <Compile Include="Utils\NuGetIconUriCalculator.cs" />
+    <Compile Include="Utils\INuGetExtractInnerFileFromNupkgUriCalculator.cs" />
+    <Compile Include="Utils\NuGetExtractInnerFileFromNupkgUriCalculator.cs" />
+    <Compile Include="Utils\NuGetServerUtils.cs" />
+    <Compile Include="PublicClient\UpstreamNuGetClientFactoryBootstrapper.cs" />
+    <Compile Include="PublicClient\UpstreamNuGetClientFactory.cs" />
+    <Compile Include="PackageIndex\NuGetMetadataConstants.cs" />
+    <Compile Include="PackageIndex\NuGetMetadataFactory.cs" />
+    <Compile Include="PackageIndex\NuGetProtocolMetadata.cs" />
+    <Compile Include="PackageIndex\NuGetSortableVersionBuilder.cs" />
+    <Compile Include="HttpHandlers\NuGetV2PushHttpHandler.cs" />
+    <Compile Include="HttpHandlers\NuGetV2PushRouteHandler.cs" />
+    <Compile Include="Constants\NuGetServerConstants.cs" />
+    <Compile Include="Constants\FeatureEnabledConstants.cs" />
+    <Compile Include="Constants\NuGetTracePoints.cs" />
+    <Compile Include="PackageDownload\INuGetPackageMetadataCacheService.cs" />
+    <Compile Include="PackageDownload\NuGetPackageStorageIdCacheService.cs" />
+    <Compile Include="PackageDownload\NuGetDownloadV2UriCalculator.cs" />
+    <Compile Include="PackageDownload\NuGetDownloadV3UriCalculator.cs" />
+    <Compile Include="PackageDownload\NuGetDownloadV2UriBuilderFactory.cs" />
+    <Compile Include="ChangeProcessing\NuGetExceptionMarkFactory.cs" />
+    <Compile Include="ChangeProcessing\NuGetExceptionMarkList.cs" />
+    <Compile Include="Exceptions\NoStreamForBlobBackedPackageException.cs" />
+    <Compile Include="Exceptions\NupkgIngestionNotAllowedException.cs" />
+    <Compile Include="Exceptions\NoNupkgForDropBackedPackageException.cs" />
+    <Compile Include="Exceptions\FailedToCreateDropException.cs" />
+    <Compile Include="Exceptions\NuGetExceptionMappings.cs" />
+    <Compile Include="Exceptions\NuGetClientMessageExceptionFilter.cs" />
+    <Compile Include="UpstreamClient\PublicNuGetClientBase.cs" />
+    <Compile Include="UpstreamClient\IPublicServiceIndexVssService.cs" />
+    <Compile Include="UpstreamClient\PublicServiceIndexService.cs" />
+    <Compile Include="UpstreamClient\IPublicServiceIndexService.cs" />
+    <Compile Include="UpstreamClient\PublicServiceIndexFacade.cs" />
+    <Compile Include="Telemetry\PackageContentStorageTypeExtensions.cs" />
+    <Compile Include="Telemetry\NuGetPackagingTelemetryBuilder.cs" />
+    <Compile Include="Telemetry\NuGetCiDataFactory.cs" />
+    <Compile Include="Search3\INuGetLatestVersionsFinder.cs" />
+    <Compile Include="Search3\INuGetPackageMetadataSearchVersionFilteringStrateg.cs" />
+    <Compile Include="Search3\LatestVersions.cs" />
+    <Compile Include="Search3\NaivePackageMetadataSearchHandlerBootstrapper.cs" />
+    <Compile Include="Search3\NuGetLatestVersionsFinder.cs" />
+    <Compile Include="Search3\NuGetPackageMetadataSearchVersionFilteringStrategy.cs" />
+    <Compile Include="Search3\NuGetPackageSearch3Bootstrapper.cs" />
+    <Compile Include="Search3\NuGetSearchResultsInfo.cs" />
+    <Compile Include="Search3\NuGetSearchTelemetryCollector.cs" />
+    <Compile Include="Search3\NuGetSearchTelemetryRecorder.cs" />
+    <Compile Include="Search3\NaivePackageMetadataSearchHandler.cs" />
+    <Compile Include="Search3\NuGetSearchQueryBuilderConverter.cs" />
+    <Compile Include="Search3\V2SearchResultBuilderHandler.cs" />
+    <Compile Include="Search3\V3QueryResultBuilderHandler.cs" />
+    <Compile Include="Search3\OData\QueryNodeExtensions.cs" />
+    <Compile Include="Search3\OData\IFilterRecognizer.cs" />
+    <Compile Include="Search3\OData\FilterRecognizer.cs" />
+    <Compile Include="Search3\OData\LowerableProperty.cs" />
+    <Compile Include="Search3\OData\IOrderByRecognizer.cs" />
+    <Compile Include="Search3\OData\OrderByRecognizer.cs" />
+    <Compile Include="Search3\OData\PackageSelectorList.cs" />
+    <Compile Include="Search3\OData\RecognizeResult`1.cs" />
+    <Compile Include="Search3\OData\SubstringCall.cs" />
+    <Compile Include="Search3\OData\V2FeedPackageModelInfo.cs" />
+    <Compile Include="Search3\OData\VersionCategorySelectorList.cs" />
+    <Compile Include="Search3\QueryRepresentation\NuGetSearchPackageNameQuery.cs" />
+    <Compile Include="Search3\QueryRepresentation\NuGetSearchQueryInputs.cs" />
+    <Compile Include="Search3\QueryRepresentation\Filter.cs" />
+    <Compile Include="Search3\QueryRepresentation\NameMatchFields.cs" />
+    <Compile Include="Search3\QueryRepresentation\NameMatchType.cs" />
+    <Compile Include="Search3\QueryRepresentation\NuGetSearchResult.cs" />
+    <Compile Include="Search3\QueryRepresentation\NuGetSearchResultVersionSummary.cs" />
+    <Compile Include="Search3\QueryRepresentation\PackageNameSelector.cs" />
+    <Compile Include="Search3\QueryRepresentation\PackageSelector.cs" />
+    <Compile Include="Search3\QueryRepresentation\PackageVersionSelector.cs" />
+    <Compile Include="Search3\QueryRepresentation\NuGetSearchQuery.cs" />
+    <Compile Include="Search3\QueryRepresentation\NuGetSearchResultShape.cs" />
+    <Compile Include="Search3\QueryRepresentation\VersionCategorySelector.cs" />
+    <Compile Include="Search3\QueryRepresentation\VersionMatchFields.cs" />
+    <Compile Include="Search3\QueryRepresentation\VersionMatchType.cs" />
+    <Compile Include="PublicRepositories\NuGetDirectPublicRepoDataFetcher.cs" />
+    <Compile Include="PublicRepositories\INuGetPublicRepoCacheUniverseService.cs" />
+    <Compile Include="PublicRepositories\NuGetPublicRepoCacheUniverseService.cs" />
+    <Compile Include="PublicRepositories\NuGetCatalogBookmarkTokenProvider.cs" />
+    <Compile Include="PublicRepositories\NuGetCatalogCursor.cs" />
+    <Compile Include="PublicRepositories\NuGetCatalogCursorBasedUpstreamChangeProvider.cs" />
+    <Compile Include="PublicRepositories\NuGetCatalogUpstreamFollower.cs" />
+    <Compile Include="PublicRepositories\NugetPublicRepoCacheReflection.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCacheAlternatePackage.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCachePackageDeprecation.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCacheVulnerability.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCacheVersionMutableInfo.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCacheVersionNuspec.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCacheVersionLevelInfo.cs" />
+    <Compile Include="PublicRepositories\NuGetPubCachePackageNameFile.cs" />
+    <Compile Include="PublicRepositories\NuGetPublicRepositoryClient.cs" />
+    <Compile Include="PublicRepositories\NuGetPublicRepositoryProvider.cs" />
+    <Compile Include="PublicRepositories\INuGetPublicRepository.cs" />
+    <Compile Include="PublicRepositories\INuGetPublicRepository`1.cs" />
+    <Compile Include="PublicRepositories\NuGetPublicRepository.cs" />
+    <Compile Include="PublicRepositories\INuGetPublicRepositoryPackageMemoryCacheService.cs" />
+    <Compile Include="PublicRepositories\NuGetPublicRepositoryPackageMemoryCacheService.cs" />
+    <Compile Include="PublicRepositories\NuGetCacheUniverseProvider.cs" />
+    <Compile Include="PublicRepositories\NuGetPublicRepository`1.cs" />
+    <Compile Include="PackageMetadata\NuGetIdentityResolver.cs" />
+    <Compile Include="PackageMetadata\NuGetPackageMetadataExtensions.cs" />
+    <Compile Include="PackageMetadata\NuGetNuspecUtils.cs" />
+    <Compile Include="PackageMetadata\NuGetDependency.cs" />
+    <Compile Include="PackageMetadata\NuGetDependencyGroup.cs" />
+    <Compile Include="PackageMetadata\MetadataReadOptions.cs" />
+    <Compile Include="PackageMetadata\NuGetPackageMetadata.cs" />
+    <Compile Include="PackageMetadata\VssNuGetPackageName.cs" />
+    <Compile Include="PackageMetadata\VssNuGetPackageIdentity.cs" />
+    <Compile Include="PackageMetadata\VssNuGetPackageVersion.cs" />
+    <Compile Include="PackageIngestion\PackageIngestionVersionToExceptionConverter.cs" />
+    <Compile Include="PackageIngestion\GetNuspecBlobIdFromDropHandler.cs" />
+    <Compile Include="PackageIngestion\GetBytesFromBlobIdHandler.cs" />
+    <Compile Include="PackageIngestion\NuGetNoopPackageIngestionService.cs" />
+    <Compile Include="PackageIngestion\NuGetPackageIngestionServiceFactory.cs" />
+    <Compile Include="PackageIngestion\SasTokenExpiryTimeFactoryFacade.cs" />
+    <Compile Include="PackageIngestion\GetSeekableBlobHttpStreamHandler.cs" />
+    <Compile Include="PackageIngestion\GetSeekableBlobHttpStreamHandlerBootstrapper.cs" />
+    <Compile Include="PackageIngestion\IngestionUtils.cs" />
+    <Compile Include="PackageIngestion\InvalidPackageExceptionHelper.cs" />
+    <Compile Include="PackageIngestion\NuGetPackageIngestionValidationUtils.cs" />
+    <Compile Include="PackageIngestion\BlobIdentifierWithOrWithoutBlocks.cs" />
+    <Compile Include="PackageIngestion\StoredNupkgItemInfo.cs" />
+    <Compile Include="PackageIngestion\IPackageIngestionService.cs" />
+    <Compile Include="PackageIngestion\NuGetPackageIngestionService.cs" />
+    <Compile Include="PackageIngestion\TracingBlobStoreWrapper.cs" />
+    <Compile Include="Migration\NuGetMigrationNames.cs" />
+    <Compile Include="Migration\NuGetMigrationDefinitionsProviderBootstrapper.cs" />
+    <Compile Include="CommitLog\NuGetCommitLogFacadeBootstrapper.cs" />
+    <Compile Include="CommitLog\INuGetCommitLogService.cs" />
+    <Compile Include="CommitLog\IUnsafeNuGetCommitLogService.cs" />
+    <Compile Include="CommitLog\NuGetCommitLogItem.cs" />
+    <Compile Include="CommitLog\NuGetCommitLogService.cs" />
+    <Compile Include="CommitLog\INuGetAddOperationData.cs" />
+    <Compile Include="CommitLog\NuGetAddOperationData.cs" />
+    <Compile Include="CommitLog\NuGetOperationDeserializer.cs" />
+    <Compile Include="CommitLog\NuGetOperationSerializer.cs" />
+    <Compile Include="CommitLog\OperationsData\INuGetRestoreToFeedOperationData.cs" />
+    <Compile Include="CommitLog\OperationsData\NuGetRestoreToFeedOperationData.cs" />
+    <Compile Include="CommitLog\Operations\NuGetOperations.cs" />
+    <Compile Include="CommitLog\Operations\NuGetPermanentDeleteOperation.cs" />
+    <Compile Include="CommitLog\Operations\NuGetRestoreToFeedOperation.cs" />
+    <Compile Include="CommitLog\Operations\NuGetAddOperation.cs" />
+    <Compile Include="CommitLog\Operations\NuGetDeleteOperation.cs" />
+    <Compile Include="CommitLog\Operations\NuGetDelistOperation.cs" />
+    <Compile Include="CommitLog\Operations\NuGetRelistOperation.cs" />
+    <Compile Include="CommitLog\Operations\NuGetViewOperation.cs" />
+    <Compile Include="Upstreams\NugetManualUpstreamIngestionBootstrapper.cs" />
+    <Compile Include="Upstreams\NuGetUpstreamMetadataServiceWithNameCacheFactoryBo.cs" />
+    <Compile Include="Upstreams\NuGetCollectionPackageUpstreamRefreshJobQueuerBoot.cs" />
+    <Compile Include="Upstreams\NuGetRefreshListTrimmingJobQueuerBootstrapper.cs" />
+    <Compile Include="Upstreams\NuGetUpstreamMetadataManagerFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\NuGetUpstreamMetadataManagerExistingLocalMetadataB.cs" />
+    <Compile Include="Upstreams\NuGetUpstreamMetadataServiceFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\NuGetUpstreamsConstants.cs" />
+    <Compile Include="Controllers\ControllerExceptionHelper.cs" />
+    <Compile Include="Controllers\NuGetCommitLogController.cs" />
+    <Compile Include="Controllers\NuGetClientController.cs" />
+    <Compile Include="Controllers\NuGetApiController.cs" />
+    <Compile Include="Controllers\V3\IncludeSemVer2VersionsFlag.cs" />
+    <Compile Include="Controllers\V3\V3QueryController.cs" />
+    <Compile Include="Controllers\V3\V3RegistrationsController.cs" />
+    <Compile Include="Controllers\V3\V3ServiceIndexController.cs" />
+    <Compile Include="Controllers\V3\NuGetServiceIndexGenerator.cs" />
+    <Compile Include="Controllers\V3\V3PackagesController.cs" />
+    <Compile Include="Controllers\V3\Flat\V3FlatController.cs" />
+    <Compile Include="Controllers\V2\NuGetV2DownloadController.cs" />
+    <Compile Include="Controllers\V2\SecureDelegatingODataEdmTypeSerializer.cs" />
+    <Compile Include="Controllers\V2\SecureNuGetODataFormattingAttribute.cs" />
+    <Compile Include="Controllers\V2\SecureNuGetODataSerializerProvider.cs" />
+    <Compile Include="Controllers\V2\IFileStreamFactory.cs" />
+    <Compile Include="Controllers\V2\FileStreamFactory.cs" />
+    <Compile Include="Controllers\V2\NuGetV2DeleteController.cs" />
+    <Compile Include="Controllers\V2\NuGetV2DependencyUtils.cs" />
+    <Compile Include="Controllers\V2\NuGetODataMetadataController.cs" />
+    <Compile Include="Controllers\V2\V2PackagesController.cs" />
+    <Compile Include="Controllers\V2\PlainTextResult.cs" />
+    <Compile Include="Controllers\V2\NuGetV2LatestPackageVersionUtils.cs" />
+    <Compile Include="Controllers\V2\WrappedExceptionErrorSerializer.cs" />
+    <Compile Include="Controllers\V2\NuGetEntityTypeSerializer.cs" />
+    <Compile Include="Controllers\V2\ServerV2FeedPackage.cs" />
+    <Compile Include="Controllers\Internal\AllPackageVersionsController.cs" />
+    <Compile Include="Controllers\Internal\V3FlatInternalController.cs" />
+    <Compile Include="Controllers\Api\NuGetFindPackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="Controllers\Api\NuGetRecycleBinController.cs" />
+    <Compile Include="Controllers\Api\NuGetRecyleBinPackagesBatchController.cs" />
+    <Compile Include="Controllers\Api\NuGetUpstreamingController.cs" />
+    <Compile Include="Controllers\Api\NuGetPackagesBatchController.cs" />
+    <Compile Include="Controllers\Api\NuGetStorageController.cs" />
+    <Compile Include="Controllers\Api\NuGetPackageDropController.cs" />
+    <Compile Include="Controllers\Api\NuGetMetadataEntryToPackageConverter.cs" />
+    <Compile Include="Controllers\Api\GetPackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="Controllers\Api\PackageVersionContentController.cs" />
+    <Compile Include="Controllers\Api\NuGetVersionsController.cs" />
+    <Compile Include="BlobPrototype\ApplyConflictException.cs" />
+    <Compile Include="BlobPrototype\PackageRequestToStorageIdAsyncHandler.cs" />
+    <Compile Include="BlobPrototype\ZipExtractingStorageContentProvider.cs" />
+    <Compile Include="BlobPrototype\GetNuspecsInternalBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetGetNuspecsRequest.cs" />
+    <Compile Include="BlobPrototype\NuGetGetPackageNuspecsHandler.cs" />
+    <Compile Include="BlobPrototype\InternalPackageVersionsHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\V3PackageVersionsInternalToPublicConverter.cs" />
+    <Compile Include="BlobPrototype\NuGetMigrationKickerJobBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetMigrationJobHandlerFactoryBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetFeedChangeProcessingJobHandlerFactoryBootstra.cs" />
+    <Compile Include="BlobPrototype\NuGetPackagesBatchListingOperationRequestConverter.cs" />
+    <Compile Include="BlobPrototype\NuGetPackagesBatchBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetBatchValidatingOpGeneratingHandlerBootstrappe.cs" />
+    <Compile Include="BlobPrototype\NuGetRecycleBinPackagesBatchBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetRecycleBinBatchValidatingOpGeneratingHandlerB.cs" />
+    <Compile Include="BlobPrototype\INuGetPackageIngestionService.cs" />
+    <Compile Include="BlobPrototype\NuGetPackageIngestionServiceFacade.cs" />
+    <Compile Include="BlobPrototype\NuGetMetadataDocumentOpApplierFactory.cs" />
+    <Compile Include="BlobPrototype\NuGetRestoreToFeedHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetRestoreToFeedValidatingOpGeneratingHandlerBoo.cs" />
+    <Compile Include="BlobPrototype\NuGetRestoreToFeedOperationDataGeneratingHandlerBo.cs" />
+    <Compile Include="BlobPrototype\NuGetRestoreToFeedOperationDataGeneratingHandler.cs" />
+    <Compile Include="BlobPrototype\NuGetUpstreamFetchingMetadataServiceBootstrapper.cs" />
+    <Compile Include="BlobPrototype\ThrowNotFoundOnInvalidPackageNameValidator.cs" />
+    <Compile Include="BlobPrototype\NuGetPermanentDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetUpstreamOnlyMetadataStore.cs" />
+    <Compile Include="BlobPrototype\RequiresAnyNuGetApiKeyAttribute.cs" />
+    <Compile Include="BlobPrototype\GetNuGetPermanentDeleteCiDataFacadeHandler.cs" />
+    <Compile Include="BlobPrototype\GetNuGetRestoreToFeedCiDataFacadeHandler.cs" />
+    <Compile Include="BlobPrototype\GetStorageInfoApiDownloadCiDataFacadeHandler.cs" />
+    <Compile Include="BlobPrototype\DownloadAndIngestNupkgFromUpstreamHandler.cs" />
+    <Compile Include="BlobPrototype\IngestRawPackageIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="BlobPrototype\IngestPackageIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="BlobPrototype\ReadNuspecFromContentProviderHandler.cs" />
+    <Compile Include="BlobPrototype\NuGetAggregationDefinitions.cs" />
+    <Compile Include="BlobPrototype\NuGetMetadataHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetMetadataEntry.cs" />
+    <Compile Include="BlobPrototype\NuGetV2DelistRequestHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetDelistValidatingOpGeneratingHandlerBootstrapp.cs" />
+    <Compile Include="BlobPrototype\NuGetWriteBootstrapper`3.cs" />
+    <Compile Include="BlobPrototype\GetNuGetDeleteCiDataFacadeHandler.cs" />
+    <Compile Include="BlobPrototype\FullMetadataEntryToV2FeedPackageConverter.cs" />
+    <Compile Include="BlobPrototype\V2PackageNameRequestConverter.cs" />
+    <Compile Include="BlobPrototype\V2FindPackagesByIdBlobHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\RawV2PackageNameRequest.cs" />
+    <Compile Include="BlobPrototype\RawV2PackageRequest.cs" />
+    <Compile Include="BlobPrototype\V2PackageRequestConverter.cs" />
+    <Compile Include="BlobPrototype\V2PackageNameRequest.cs" />
+    <Compile Include="BlobPrototype\V2BatchDownloadUrlPopulator.cs" />
+    <Compile Include="BlobPrototype\V2FilterRequest.cs" />
+    <Compile Include="BlobPrototype\V2FindPackagesByIdBlobHandler.cs" />
+    <Compile Include="BlobPrototype\V2GetDownloadUrlBatchRequest.cs" />
+    <Compile Include="BlobPrototype\V2ODataFilterConverter.cs" />
+    <Compile Include="BlobPrototype\ByContentBlobStoreStreamingHandler.cs" />
+    <Compile Include="BlobPrototype\ByBlobIdStreamingHandler.cs" />
+    <Compile Include="BlobPrototype\GetFileAsyncBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetGetFileData.cs" />
+    <Compile Include="BlobPrototype\GetNuGetDownloadCiDataFacadeHandler.cs" />
+    <Compile Include="BlobPrototype\NuGetDownloadExtensions.cs" />
+    <Compile Include="BlobPrototype\NupkgNameValidator.cs" />
+    <Compile Include="BlobPrototype\NuSpecStreamingHandler.cs" />
+    <Compile Include="BlobPrototype\PackageNameRequestConverter.cs" />
+    <Compile Include="BlobPrototype\PackageVersionsFromPackageNameHandler.cs" />
+    <Compile Include="BlobPrototype\NuGetRawPackageRequestToIdentityConverter.cs" />
+    <Compile Include="BlobPrototype\NuGetRawPackageRequestToIdentityConverterBootstrap.cs" />
+    <Compile Include="BlobPrototype\V3BlobGetFileAsyncHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\V3PackageVersionsHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\IRegistrationsPackageFrameCreator.cs" />
+    <Compile Include="BlobPrototype\RegistrationPackageIndexBlobHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\RegistrationPackageIndexHandler.cs" />
+    <Compile Include="BlobPrototype\RegistrationPackagePageBlobHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\RegistrationPackageVersionHandler.cs" />
+    <Compile Include="BlobPrototype\RegistrationPackagePageHandler.cs" />
+    <Compile Include="BlobPrototype\RegistrationsPackageFrameCreator.cs" />
+    <Compile Include="BlobPrototype\RegistrationsPageDetailsHandler.cs" />
+    <Compile Include="BlobPrototype\NuGetGetPackageIndexRawToResolvedRequestConverter.cs" />
+    <Compile Include="BlobPrototype\V2PackageBlobHandler.cs" />
+    <Compile Include="BlobPrototype\V2PackageBlobHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\INuGetMetadataEntry.cs" />
+    <Compile Include="BlobPrototype\INuGetMetadataEntryWriteable.cs" />
+    <Compile Include="BlobPrototype\NuGetChangeProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetMetadataOpApplierFactory.cs" />
+    <Compile Include="BlobPrototype\NuGetListMetadataOpApplier.cs" />
+    <Compile Include="BlobPrototype\NuGetAddMetadataOpApplier.cs" />
+    <Compile Include="BlobPrototype\NuGetRestoreToFeedRepopulateNuspecHandler.cs" />
+    <Compile Include="BlobPrototype\NuGetPackageNameParsingConverterBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetPackageNameQuery.cs" />
+    <Compile Include="BlobPrototype\BasicNuGetMetadataByBlobServiceBootstrapper.cs" />
+    <Compile Include="BlobPrototype\BasicNuGetMetadataByBlobServiceDifferentPathBootst.cs" />
+    <Compile Include="BlobPrototype\NuGetDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\DeleteResultFromCommitEntryHandler.cs" />
+    <Compile Include="BlobPrototype\UpdatePackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetUpdatePackageVersionValidatingOpGeneratingHan.cs" />
+    <Compile Include="BlobPrototype\UpdatePackageVersionRawRequestToCiDataFacadeHandle`2.cs" />
+    <Compile Include="BlobPrototype\NuGetListingOperationFromUpdateRequestValidatingCo.cs" />
+    <Compile Include="BlobPrototype\NugetUpgradeAggregationsBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGetRawPackageRequestConverter.cs" />
+    <Compile Include="BlobPrototype\ThrowIfNotFoundOrDeletedDelegatingMetadataStore.cs" />
+    <Compile Include="BlobPrototype\V2PackageRequest.cs" />
+    <Compile Include="BlobPrototype\RegistrationPackageVersionBlobHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NuGet\NuGetJsonSerializerFactory.cs" />
+    <Compile Include="BlobPrototype\PackagingApi\PackageVersionDownloadPackageMetadataHandlerBootst.cs" />
+    <Compile Include="BlobPrototype\V3StorageIds\NuGetBlobStorageIdToInfoAsyncHandler.cs" />
+    <Compile Include="BlobPrototype\V3StorageIds\NuGetDropStorageIdToInfoAsyncHandler.cs" />
+    <Compile Include="BlobPrototype\V3StorageIds\NuGetPackageStorageIdResponseAsyncHandler.cs" />
+    <Compile Include="BlobPrototype\V3StorageIds\V3BlobGetPackageStorageIdAsyncHandlerBootstrapper.cs" />
+    <Compile Include="BlobPrototype\NonProtocolApis\DeletePackageVersion\NuGetDeleteOpGeneratorBootstrapper.cs" />
+    <Compile Include="BlobPrototype\Aggregations\NuGetAggregationResolver.cs" />
+    <Compile Include="BlobPrototype\Aggregations\NuGetProblemPackagesAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\NuGetUpstreamVersionListAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\Removed\NuGetNamesAggregation_Removed.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\INuGetVersionListWithSizeService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\INuGetVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\NuGetVersionListWithSizeAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\NuGetVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\StorageIdCache\NuGetStorageIdCacheAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\StorageIdCache\INuGetStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\StorageIdCache\NuGetStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\GetVersionCountsResult.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\INuGetNamesService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\INuGetPackageVersionCountsService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\INuGetPackageVersionCountsDocumentBytesService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\INuGetPackageVersionCountsAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\LocalViewFoldingRequestToViewConverter.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\INuGetPackageVersionCounts.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\NuGetPackageVersionCounts.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\NuGetPackageVersionCountsAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\NuGetPackageVersionCountsAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\LazyNuGetPackageVersionCounts.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\ILazyNuGetPackageVersionCounts.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\NuGetPackageVersionCountsRetryCountProvider.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\NuGetSearchCategoryToggles.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\ProtobufConstants.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\IVersionListsPackage.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsPackage.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\IVersionListsPackageVersion.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsPackageVersion.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\ILazyVersionListsFile.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsFile.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\PackageVersionCountsReflection.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\LatestVersionFlags.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionCountsPackageView.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionCountsPackage.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionCountsFile.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\PackagingTracesVersionCountsImplementationMetricsR.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\IVersionCountsFromFileProvider.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionCountsFromFileProvider.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\IVersionListsFileProvider.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsFileProvider.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsFilePacker.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsFileUnpacker.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\IMutableVersionListsFile.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\ILazyVersionListsPackage.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageVersionCounts\VersionListsFileWrapper.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageMetadata\INuGetMetadataService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageMetadata\INuGetPackageMetadataAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageMetadata\NuGetPackageMetadataAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\PackageMetadata\NuGetPackageMetadataAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\FeedIndex\NuGetFeedIndexCommitHandlerFactory.cs" />
+    <Compile Include="BlobPrototype\Aggregations\FeedIndex\NuGetFeedIndexAggregation.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

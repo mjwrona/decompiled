@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A218BDB2-05E1-4E0A-8162-549197692C75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Feed.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Feed.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.BclPolyfills">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FeedPostInstallExtensionEventsController.cs" />
+    <Compile Include="FeedPreInstallExtensionEventsController.cs" />
+    <Compile Include="BindOntoBinder`1.cs" />
+    <Compile Include="BuildPackageBinder.cs" />
+    <Compile Include="FeedInternalStateBinder.cs" />
+    <Compile Include="FeedViewBinder.cs" />
+    <Compile Include="FeedViewWithFeedIdBinder.cs" />
+    <Compile Include="IBindOnto`1.cs" />
+    <Compile Include="PackageInfoBinder.cs" />
+    <Compile Include="PackageInfo.cs" />
+    <Compile Include="QueryPackageVersionMetricsBinder.cs" />
+    <Compile Include="QueryPackageVersionMetricsRow.cs" />
+    <Compile Include="QueryPackageMetricsBinder.cs" />
+    <Compile Include="QueryPackageMetricsRow.cs" />
+    <Compile Include="PackageVersionProvenanceBinder.cs" />
+    <Compile Include="PackageVersionProvenanceRow.cs" />
+    <Compile Include="MinimalPackageVersionBinder.cs" />
+    <Compile Include="PackageBinder.cs" />
+    <Compile Include="CachedPackageBinder.cs" />
+    <Compile Include="PackageDependencyDetailsBinder.cs" />
+    <Compile Include="ProtocolPackageVersionIdentityBinder.cs" />
+    <Compile Include="ColumnBinder`1.cs" />
+    <Compile Include="PackageStatsBinder.cs" />
+    <Compile Include="SingleInt32ValueBinder.cs" />
+    <Compile Include="PackageIndexEntryResponseBinder.cs" />
+    <Compile Include="PackageVersionBindOptions.cs" />
+    <Compile Include="DownstreamFeedBinder.cs" />
+    <Compile Include="DownstreamFeed.cs" />
+    <Compile Include="UpstreamBinder.cs" />
+    <Compile Include="FeedRecycleBinSqlResourceComponent.cs" />
+    <Compile Include="FeedSqlResourceComponentBase.cs" />
+    <Compile Include="PackageMetricsSqlResourceComponent.cs" />
+    <Compile Include="PackageMetricsSqlResourceComponent2.cs" />
+    <Compile Include="PackageMetricsSqlResourceComponent3.cs" />
+    <Compile Include="PackageMetricsSqlResourceComponent4.cs" />
+    <Compile Include="FeedViewSqlResourceComponent.cs" />
+    <Compile Include="FeedViewSqlResourceComponent2.cs" />
+    <Compile Include="FeedViewSqlResourceComponent3.cs" />
+    <Compile Include="FeedViewSqlResourceComponent4.cs" />
+    <Compile Include="FeedViewSqlResourceComponent5.cs" />
+    <Compile Include="FeedViewSqlResourceComponent6.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent2.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent3.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent4.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent5.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent6.cs" />
+    <Compile Include="PackageRecycleBinSqlResourceComponent7.cs" />
+    <Compile Include="PackageInfoSqlResourceComponent.cs" />
+    <Compile Include="ProvenanceSqlResourceComponent.cs" />
+    <Compile Include="ProvenanceSqlResourceComponent2.cs" />
+    <Compile Include="FeedBatchController.cs" />
+    <Compile Include="FeedIdsController.cs" />
+    <Compile Include="FeedCapabilitiesController.cs" />
+    <Compile Include="FeedRecycleBinController.cs" />
+    <Compile Include="PackageVersionMetricsBatchController.cs" />
+    <Compile Include="PackageMetricsBatchController.cs" />
+    <Compile Include="PackageVersionProvenanceController.cs" />
+    <Compile Include="PackageBadgeController.cs" />
+    <Compile Include="FeedBatchService.cs" />
+    <Compile Include="IFeedProjectCacheService.cs" />
+    <Compile Include="ProjectCacheKey.cs" />
+    <Compile Include="FeedProjectCacheService.cs" />
+    <Compile Include="FeedRecycleBinService.cs" />
+    <Compile Include="IFeedRecycleBinService.cs" />
+    <Compile Include="FeedMetricsService.cs" />
+    <Compile Include="FeedRetentionService.cs" />
+    <Compile Include="FeedCapabilitiesService.cs" />
+    <Compile Include="IFeedBatchService.cs" />
+    <Compile Include="IFeedMetricsService.cs" />
+    <Compile Include="IFeedRetentionService.cs" />
+    <Compile Include="IFeedCapabilitiesService.cs" />
+    <Compile Include="FeedProtocolDeletionResult.cs" />
+    <Compile Include="IRetentionOperationsLimitCalculator.cs" />
+    <Compile Include="JobScheduleBasedRetentionOperationsLimitCalculator.cs" />
+    <Compile Include="IPackageRetentionVersionSource.cs" />
+    <Compile Include="IPackageRetentionPolicyStore.cs" />
+    <Compile Include="FeedIndexPackageRetentionVersionSource.cs" />
+    <Compile Include="PackageRetentionOrchestrator.cs" />
+    <Compile Include="PackageRetentionPolicyStore.cs" />
+    <Compile Include="FeedRecycleBinPackagesController.cs" />
+    <Compile Include="FeedRecycleBinVersionsController.cs" />
+    <Compile Include="FeedRetentionPolicyController.cs" />
+    <Compile Include="FeedViewController.cs" />
+    <Compile Include="FeedChangeBinder.cs" />
+    <Compile Include="PackageChangeBinder.cs" />
+    <Compile Include="FeedChangeSqlResourceComponent.cs" />
+    <Compile Include="FeedChangeSqlResourceComponent2.cs" />
+    <Compile Include="FeedChangeSqlResourceComponent3.cs" />
+    <Compile Include="FeedChangeSqlResourceComponent4.cs" />
+    <Compile Include="FeedChangeController.cs" />
+    <Compile Include="PackageChangeController.cs" />
+    <Compile Include="FeedViewCacheData.cs" />
+    <Compile Include="FeedViewCache2Data.cs" />
+    <Compile Include="FeedCacheData.cs" />
+    <Compile Include="FeedChangeService.cs" />
+    <Compile Include="FeedGlobalPermissionsController.cs" />
+    <Compile Include="FeedIndexService.cs" />
+    <Compile Include="FeedServiceFeedViewCache2.cs" />
+    <Compile Include="FeedViewChangedNotificationData.cs" />
+    <Compile Include="FeedViewService.cs" />
+    <Compile Include="FeedLocalSecurityInvalidationFacade.cs" />
+    <Compile Include="FeedServiceFeedCache.cs" />
+    <Compile Include="IFeedChangeService.cs" />
+    <Compile Include="IFeedServiceFeedViewCache2.cs" />
+    <Compile Include="PackageRecycleBinService.cs" />
+    <Compile Include="IFeedIndexService.cs" />
+    <Compile Include="IFeedViewService.cs" />
+    <Compile Include="IFeedServiceFeedCache.cs" />
+    <Compile Include="IPackageRecycleBinService.cs" />
+    <Compile Include="IPackagingProtocolService.cs" />
+    <Compile Include="PackagingProtocolService.cs" />
+    <Compile Include="FeedPermissionsHelper.cs" />
+    <Compile Include="ServiceInstanceIds.cs" />
+    <Compile Include="FeedRegistryConstants.cs" />
+    <Compile Include="FeedTelemetryConstants.cs" />
+    <Compile Include="FeedSqlConstants.cs" />
+    <Compile Include="FeatureAvailabilityConstants.cs" />
+    <Compile Include="NamesConstants.cs" />
+    <Compile Include="RetentionDefaultConstants.cs" />
+    <Compile Include="JobConstants.cs" />
+    <Compile Include="PackageVersionBinder.cs" />
+    <Compile Include="PackageSqlResourceComponent.cs" />
+    <Compile Include="PackageSqlResourceComponent2.cs" />
+    <Compile Include="PackageSqlResourceComponent3.cs" />
+    <Compile Include="PackageSqlResourceComponent4.cs" />
+    <Compile Include="PackageSqlResourceComponent5.cs" />
+    <Compile Include="PackageSqlResourceComponent6.cs" />
+    <Compile Include="PackageSqlResourceComponent7.cs" />
+    <Compile Include="PackageSqlResourceComponent8.cs" />
+    <Compile Include="PackageSqlResourceComponent9.cs" />
+    <Compile Include="PackageSqlResourceComponent10.cs" />
+    <Compile Include="PackageSqlResourceComponent11.cs" />
+    <Compile Include="PackageSqlResourceComponent12.cs" />
+    <Compile Include="PackageSqlResourceComponent13.cs" />
+    <Compile Include="PackageSqlResourceComponent14.cs" />
+    <Compile Include="PackageSqlResourceComponent15.cs" />
+    <Compile Include="PackageSqlResourceComponent16.cs" />
+    <Compile Include="PackageSqlResourceComponent17.cs" />
+    <Compile Include="PackageSqlResourceComponent18.cs" />
+    <Compile Include="FeedBinder.cs" />
+    <Compile Include="FeedSqlResourceComponent.cs" />
+    <Compile Include="FeedSqlResourceComponent3.cs" />
+    <Compile Include="FeedSqlResourceComponent4.cs" />
+    <Compile Include="FeedSqlResourceComponent5.cs" />
+    <Compile Include="FeedSqlResourceComponent6.cs" />
+    <Compile Include="FeedSqlResourceComponent7.cs" />
+    <Compile Include="FeedSqlResourceComponent8.cs" />
+    <Compile Include="FeedSqlResourceComponent9.cs" />
+    <Compile Include="FeedSqlResourceComponent10.cs" />
+    <Compile Include="FeedSqlResourceComponent11.cs" />
+    <Compile Include="FeedSqlResourceComponent12.cs" />
+    <Compile Include="FeedSqlResourceConponent13.cs" />
+    <Compile Include="FeedSqlResourceComponent14.cs" />
+    <Compile Include="FeedSqlResourceComponent15.cs" />
+    <Compile Include="FeedSqlResourceComponent16.cs" />
+    <Compile Include="FeedSqlResourceComponent17.cs" />
+    <Compile Include="FeedPackageVersionController.cs" />
+    <Compile Include="FeedPackageController.cs" />
+    <Compile Include="FeedController.cs" />
+    <Compile Include="FeedApiController.cs" />
+    <Compile Include="FeedPermissionsController.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="FeedEventId.cs" />
+    <Compile Include="FeedService.cs" />
+    <Compile Include="IFeedService.cs" />
+    <Compile Include="FeedMessageBus.cs" />
+    <Compile Include="IFeedMessageBus.cs" />
+    <Compile Include="FeedModelExtensions.cs" />
+    <Compile Include="ProjectHelper.cs" />
+    <Compile Include="RetryHelper`1.cs" />
+    <Compile Include="UpstreamSourceHelper.cs" />
+    <Compile Include="UpstreamIdentifier.cs" />
+    <Compile Include="UpstreamIdentifierComparer.cs" />
+    <Compile Include="BuildPackageSqlResourceComponent.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Telemetry\FeedCiPublisher.cs" />
+    <Compile Include="Telemetry\FeedTelemetryConstants.cs" />
+    <Compile Include="Telemetry\FeedTelemetryPropertyConstants.cs" />
+    <Compile Include="Utils\ICrossCollectionClientCreatorService.cs" />
+    <Compile Include="Utils\CrossCollectionClientCreatorService.cs" />
+    <Compile Include="Utils\FeedAuditHelper.cs" />
+    <Compile Include="Utils\FeatureAvailabilityHelper.cs" />
+    <Compile Include="Utils\FeedViewsHelper.cs" />
+    <Compile Include="Utils\InternalSourceValidator.cs" />
+    <Compile Include="Utils\MetricsJobUtils.cs" />
+    <Compile Include="Utils\PublicSourceValidator.cs" />
+    <Compile Include="Utils\UpstreamNameValidator.cs" />
+    <Compile Include="Utils\NameValidator.cs" />
+    <Compile Include="Utils\PackageBadgeHelper.cs" />
+    <Compile Include="Utils\FeedSourcesValidator.cs" />
+    <Compile Include="Utils\UpstreamSourceValidator.cs" />
+    <Compile Include="Types\DownstreamFeeds.cs" />
+    <Compile Include="Types\FeedInternalState.cs" />
+    <Compile Include="Types\PackageStats.cs" />
+    <Compile Include="Types\ResultOptions.cs" />
+    <Compile Include="Types\PagingOptions.cs" />
+    <Compile Include="Types\PackageVersionUpdate.cs" />
+    <Compile Include="Types\UpstreamSourceSql.cs" />
+    <Compile Include="Provenance\IProvenanceService.cs" />
+    <Compile Include="Provenance\InvalidProvenanceException.cs" />
+    <Compile Include="Provenance\ProvenanceService.cs" />
+    <Compile Include="MessageBus\FeedChangedPublisher.cs" />
+    <Compile Include="Upstream\FeedUpstreamService.cs" />
+    <Compile Include="Upstream\IFeedUpstreamService.cs" />
+    <Compile Include="Upstream\IFeedUpstreamSQLService.cs" />
+    <Compile Include="Upstream\IFeedUpstreamCacheService.cs" />
+    <Compile Include="Upstream\FeedUpstreamServiceFactory.cs" />
+    <Compile Include="Upstream\FeedUpstreamCacheService.cs" />
+    <Compile Include="Upstream\WellKnownUpstreamSourceExtensions.cs" />
+    <Compile Include="Upstream\RawUpstreamSourceIdentity.cs" />
+    <Compile Include="Retention\RetentionTrimmedPackageVersionHardcodeRewriter.cs" />
+    <Compile Include="RecycleBin\EmptyRecycleBinJobData.cs" />
+    <Compile Include="RecycleBin\EmptyRecycleBinResult.cs" />
+    <Compile Include="Internal\FeedInternalController.cs" />
+    <Compile Include="Internal\FeedMetricsController.cs" />
+    <Compile Include="Internal\CachedPackagesController.cs" />
+    <Compile Include="Internal\FeedIndexEntryController.cs" />
+    <Compile Include="ClientServices\PlatformCachedPackagesInternalClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedChangeClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedInternalClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedIndexClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedIndexInternalClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedMetricsInternalClientService.cs" />
+    <Compile Include="ClientServices\PlatformFeedRecycleBinClientService.cs" />
+    <Compile Include="Binders\DeletedPackageVersionBinder.cs" />
+    <Compile Include="Binders\RecycleBinPackageVersionBinder.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

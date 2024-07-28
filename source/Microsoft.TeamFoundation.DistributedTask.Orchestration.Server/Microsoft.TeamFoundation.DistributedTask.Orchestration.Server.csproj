@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC78E133-371B-4CAD-847F-CEF496535E30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Orchestration.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Cosmos.Table">
+      <HintPath>lib\Microsoft.Azure.Cosmos.Table.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault">
+      <HintPath>lib\Microsoft.Azure.KeyVault.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>lib\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Framework.Extensions">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Framework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.PipelineCache.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.PipelineCache.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pipelines\IPipelineDecorator.cs" />
+    <Compile Include="Pipelines\SourceProviders\ExternalSourceProviderException.cs" />
+    <Compile Include="Pipelines\SourceProviders\SourceProviderConfigurationException.cs" />
+    <Compile Include="Pipelines\SourceProviders\FrameworkTfsVersionControlService.cs" />
+    <Compile Include="Pipelines\SourceProviders\IPipelineTfsGitService.cs" />
+    <Compile Include="Pipelines\SourceProviders\TfsGitRepository.cs" />
+    <Compile Include="Pipelines\SourceProviders\IPipelineTfsVersionControlService.cs" />
+    <Compile Include="Pipelines\SourceProviders\ISourceProvider.cs" />
+    <Compile Include="Pipelines\SourceProviders\ICachingSourceProvider.cs" />
+    <Compile Include="Pipelines\SourceProviders\CommitInfo.cs" />
+    <Compile Include="Pipelines\SourceProviders\ISourceProviderExtensions.cs" />
+    <Compile Include="Pipelines\SourceProviders\ISourceProviderService.cs" />
+    <Compile Include="Pipelines\SourceProviders\LimitReadStream.cs" />
+    <Compile Include="Pipelines\SourceProviders\RepositoryFileProvider.cs" />
+    <Compile Include="Pipelines\SourceProviders\RepositoryFileProviderFactory.cs" />
+    <Compile Include="Pipelines\SourceProviders\SourceProviderAttributes.cs" />
+    <Compile Include="Pipelines\SourceProviders\SourceProviderBase.cs" />
+    <Compile Include="Pipelines\SourceProviders\SourceProviderCapabilities.cs" />
+    <Compile Include="Pipelines\SourceProviders\SourceProviderAvailability.cs" />
+    <Compile Include="Pipelines\SourceProviders\SourceProviderService.cs" />
+    <Compile Include="Pipelines\SourceProviders\FrameworkPipelineTfsGitService.cs" />
+    <Compile Include="Pipelines\Artifacts\PipelineResourceExtension.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\IWebHookExtension.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\IWebHookService.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookExtensions.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookService.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHook.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\IWebHookSubscription.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookConstants.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookPayloadMappingConstants.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookException.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookHelper.cs" />
+    <Compile Include="Pipelines\Artifacts\WebHooks\WebHookPublisherException.cs" />
+    <Compile Include="Pipelines\Artifacts\ContainerProviders\DockerArtifactProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\ContainerProviders\ContainerProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\ContainerProviders\ContainerProviderHelper.cs" />
+    <Compile Include="Pipelines\Artifacts\ContainerProviders\IContainerProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\ContainerProviders\ACRArtifactProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\BuildProviders\IWebHookProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\BuildProviders\WebHookProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\BuildProviders\BuildProvider.cs" />
+    <Compile Include="Pipelines\Artifacts\BuildProviders\BuildProviderExtensions.cs" />
+    <Compile Include="Pipelines\Artifacts\BuildProviders\ExternalBuildProviderException.cs" />
+    <Compile Include="Pipelines\Artifacts\BuildProviders\IBuildProvider.cs" />
+    <Compile Include="Pipelines\Server\PersistedStageResolver.cs" />
+    <Compile Include="Pipelines\Server\PublishPipelineMetadataStepProvider.cs" />
+    <Compile Include="Pipelines\Server\TaskBuildConfigExceptionResolver.cs" />
+    <Compile Include="Pipelines\Server\TaskOverrideResolver2.cs" />
+    <Compile Include="Pipelines\Server\AgentPoolResolver.cs" />
+    <Compile Include="Pipelines\Server\AgentQueueResolver.cs" />
+    <Compile Include="Pipelines\Server\ConfigurationFile.cs" />
+    <Compile Include="Pipelines\Server\SecureFileResolver.cs" />
+    <Compile Include="Pipelines\Server\CounterResolver.cs" />
+    <Compile Include="Pipelines\Server\IPipelineDecoratorLoaderExtension.cs" />
+    <Compile Include="Pipelines\Server\JustInTimeFileProvider.cs" />
+    <Compile Include="Pipelines\Server\JustInTimeFileProviderFactory.cs" />
+    <Compile Include="Pipelines\Server\PipelineClaimHelper.cs" />
+    <Compile Include="Pipelines\Server\PipelineClaimConstants.cs" />
+    <Compile Include="Pipelines\Server\ScopeTokenHelper.cs" />
+    <Compile Include="Pipelines\Server\ServiceEndpointResolver.cs" />
+    <Compile Include="Pipelines\Server\PackageResolver.cs" />
+    <Compile Include="Pipelines\Server\IPipelineRuntimeService.cs" />
+    <Compile Include="Pipelines\Server\PipelineCounterService.cs" />
+    <Compile Include="Pipelines\Server\IPipelineCounterServiceExtensions.cs" />
+    <Compile Include="Pipelines\Server\IPipelineCounterService.cs" />
+    <Compile Include="Pipelines\Server\IPipelineBuilderService.cs" />
+    <Compile Include="Pipelines\Server\IYamlCacheService.cs" />
+    <Compile Include="Pipelines\Server\YamlPipelineLoadResult.cs" />
+    <Compile Include="Pipelines\Server\IYamlPipelineLoaderService.cs" />
+    <Compile Include="Pipelines\Server\PipelineBuilderService.cs" />
+    <Compile Include="Pipelines\Server\PipelineRuntimeService.cs" />
+    <Compile Include="Pipelines\Server\EnvironmentResolver.cs" />
+    <Compile Include="Pipelines\Server\TaskResolver.cs" />
+    <Compile Include="Pipelines\Server\VariableGroupResolver.cs" />
+    <Compile Include="Pipelines\Server\ContributionFileProvider.cs" />
+    <Compile Include="Pipelines\Server\ContributionFileProviderFactory.cs" />
+    <Compile Include="Pipelines\Server\YamlCacheProvider.cs" />
+    <Compile Include="Pipelines\Server\YamlCacheService.cs" />
+    <Compile Include="Pipelines\Server\YamlMemoryCacheService.cs" />
+    <Compile Include="Pipelines\Server\IYamlNameFormatter.cs" />
+    <Compile Include="Pipelines\Server\YamlPipelineLoaderService.cs" />
+    <Compile Include="Pipelines\Server\ContributionPipelineDecorator.cs" />
+    <Compile Include="Pipelines\Server\SystemPipelineDecorator.cs" />
+    <Compile Include="Pipelines\Server\ContributionContentMemoryCacheService.cs" />
+    <Compile Include="Pipelines\BuildProviders\PipelineInfo.cs" />
+    <Compile Include="Pipelines\BuildProviders\PipelineDefinitionReference.cs" />
+    <Compile Include="Pipelines\BuildProviders\FrameworkTfsBuildService.cs" />
+    <Compile Include="Pipelines\BuildProviders\IPipelineTfsBuildService.cs" />
+    <Compile Include="Server\IdentityServiceExtensions.cs" />
+    <Compile Include="Server\IDistributedTaskCommerceListener.cs" />
+    <Compile Include="Orchestration\Server\ArgumentValidation.cs" />
+    <Compile Include="Orchestration\Server\AzureKeyVaultValueProvider.cs" />
+    <Compile Include="Orchestration\Server\AzureKeyVaultVariableGroupProviderExtensions.cs" />
+    <Compile Include="Orchestration\Server\KeyVaultProvider.cs" />
+    <Compile Include="Orchestration\Server\AzureLogLineStoreService.cs" />
+    <Compile Include="Orchestration\Server\TableContinuationTokenExtensionsTests.cs" />
+    <Compile Include="Orchestration\Server\AzureTableProvider.cs" />
+    <Compile Include="Orchestration\Server\AzureTableStorageHelper.cs" />
+    <Compile Include="Orchestration\Server\BitbucketServiceEndpointExtensions.cs" />
+    <Compile Include="Orchestration\Server\CommandGetLogLines2.cs" />
+    <Compile Include="Orchestration\Server\TaskHubOidcTokenController.cs" />
+    <Compile Include="Orchestration\Server\IBlobStoreLogService.cs" />
+    <Compile Include="Orchestration\Server\BlobStoreLogService.cs" />
+    <Compile Include="Orchestration\Server\GitHubAppConstants.cs" />
+    <Compile Include="Orchestration\Server\DeploymentGroupManager.cs" />
+    <Compile Include="Orchestration\Server\FrameworkResourceLockService.cs" />
+    <Compile Include="Orchestration\Server\IPlanThrottleService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskResourceLockService.cs" />
+    <Compile Include="Orchestration\Server\LogBlobIdentifier.cs" />
+    <Compile Include="Orchestration\Server\PipelineFeatureFlagDictionaryFactory.cs" />
+    <Compile Include="Orchestration\Server\PipelineOidcFederationClaims.cs" />
+    <Compile Include="Orchestration\Server\PlanConcurrency.cs" />
+    <Compile Include="Orchestration\Server\PlanThrottleService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkEnvironmentDeploymentHistoryService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkEnvironmentService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkEnvironmentsRouteService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskEnvironmentDeploymentHistoryServic.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskEnvironmentService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskEnvironmentsRouteService.cs" />
+    <Compile Include="Orchestration\Server\IPhaseProviderExtension.cs" />
+    <Compile Include="Orchestration\Server\FakePhaseProvider.cs" />
+    <Compile Include="Orchestration\Server\TaskDefinitionInstallType.cs" />
+    <Compile Include="Orchestration\Server\DistributedTaskEventSource.cs" />
+    <Compile Include="Orchestration\Server\DistributedTaskInstalledAppService.cs" />
+    <Compile Include="Orchestration\Server\GithubServiceEndpointExtensions.cs" />
+    <Compile Include="Orchestration\Server\IdentityExtensions.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskHubServiceExtensions.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskInstalledAppService.cs" />
+    <Compile Include="Orchestration\Server\DistributedTaskInstalledAppData.cs" />
+    <Compile Include="Orchestration\Server\ITaskDefinitionCacheService.cs" />
+    <Compile Include="Orchestration\Server\JobEventExtensions.cs" />
+    <Compile Include="Orchestration\Server\VariableSecret.cs" />
+    <Compile Include="Orchestration\Server\OutputVariableSecret.cs" />
+    <Compile Include="Orchestration\Server\PlanSecretStore.cs" />
+    <Compile Include="Orchestration\Server\RegistryKeys.cs" />
+    <Compile Include="Orchestration\Server\DynamicResourceCreationHelper.cs" />
+    <Compile Include="Orchestration\Server\SecureFileTraceabilityRcExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskInputDefinitionExtensions.cs" />
+    <Compile Include="Orchestration\Server\PredicateRule.cs" />
+    <Compile Include="Orchestration\Server\VisibilityRule.cs" />
+    <Compile Include="Orchestration\Server\TaskInputVisibilityRule.cs" />
+    <Compile Include="Orchestration\Server\TaskOrchestrationPlanMemoryCache.cs" />
+    <Compile Include="Orchestration\Server\PlanLogTableMemoryCache.cs" />
+    <Compile Include="Orchestration\Server\VstsVariableGroupValueProvider.cs" />
+    <Compile Include="Orchestration\Server\TaskAttachmentExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskDefinitionCacheService.cs" />
+    <Compile Include="Orchestration\Server\TaskDefinitionRefreshCache.cs" />
+    <Compile Include="Orchestration\Server\TaskDefinitionResult.cs" />
+    <Compile Include="Orchestration\Server\TaskGroupTemplateResolver.cs" />
+    <Compile Include="Orchestration\Server\TaskOrchestrationPlanReferenceExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskReferenceNameValidator.cs" />
+    <Compile Include="Orchestration\Server\ISecureFileServiceExtensions.cs" />
+    <Compile Include="Orchestration\Server\VariableGroupExtensions.cs" />
+    <Compile Include="Orchestration\Server\IInputValidationService.cs" />
+    <Compile Include="Orchestration\Server\IInputValidator.cs" />
+    <Compile Include="Orchestration\Server\InputValidationService.cs" />
+    <Compile Include="Orchestration\Server\TaskConditions.cs" />
+    <Compile Include="Orchestration\Server\FrameworkDistributedTaskLibraryService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkSecureFileService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkVariableGroupService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkTaskHubLicenseService.cs" />
+    <Compile Include="Orchestration\Server\GetTaskOrchestrationJobResult.cs" />
+    <Compile Include="Orchestration\Server\HostedTelemetryLogger.cs" />
+    <Compile Include="Orchestration\Server\IAgentPoolSubscriber.cs" />
+    <Compile Include="Orchestration\Server\CommandGetLogLines.cs" />
+    <Compile Include="Orchestration\Server\DistributedTaskFeatures.cs" />
+    <Compile Include="Orchestration\Server\TaskHubNotFoundException.cs" />
+    <Compile Include="Orchestration\Server\TaskHubExistsException.cs" />
+    <Compile Include="Orchestration\Server\CreatePersonalAccessTokenFailedException.cs" />
+    <Compile Include="Orchestration\Server\AzureStorageAccessKeyFetchFailedException.cs" />
+    <Compile Include="Orchestration\Server\AzureKubeConfigFetchFailedException.cs" />
+    <Compile Include="Orchestration\Server\UnableToDetermineTargetPoolException.cs" />
+    <Compile Include="Orchestration\Server\ServiceExtensionNotFoundException.cs" />
+    <Compile Include="Orchestration\Server\FrameworkPackageMetadataService.cs" />
+    <Compile Include="Orchestration\Server\FrameworkPoolService.cs" />
+    <Compile Include="Orchestration\Server\IAgentEventsSubscriber.cs" />
+    <Compile Include="Orchestration\Server\IDeploymentMachineEventsSubscriber.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskHubService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskLibraryService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskPackageMetadataService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskPoolService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskPoolServiceExtensions.cs" />
+    <Compile Include="Orchestration\Server\IServerTaskHandler.cs" />
+    <Compile Include="Orchestration\Server\IStoreService.cs" />
+    <Compile Include="Orchestration\Server\ILogLineService.cs" />
+    <Compile Include="Orchestration\Server\LogLineService.cs" />
+    <Compile Include="Orchestration\Server\IDistributedTaskPersistedStageService.cs" />
+    <Compile Include="Orchestration\Server\ISecureFileService.cs" />
+    <Compile Include="Orchestration\Server\IVariableGroupService.cs" />
+    <Compile Include="Orchestration\Server\ITaskHubLicenseService.cs" />
+    <Compile Include="Orchestration\Server\ITaskHubResolver.cs" />
+    <Compile Include="Orchestration\Server\ITelemetryLogger.cs" />
+    <Compile Include="Orchestration\Server\OutputVariableScope.cs" />
+    <Compile Include="Orchestration\Server\MethodScope.cs" />
+    <Compile Include="Orchestration\Server\OnPremTelemetryHelper.cs" />
+    <Compile Include="Orchestration\Server\OnPremTelemetryLogger.cs" />
+    <Compile Include="Orchestration\Server\SessionTokenGenerator.cs" />
+    <Compile Include="Orchestration\Server\PlanCacheData.cs" />
+    <Compile Include="Orchestration\Server\TaskOrchestrationPlanCache.cs" />
+    <Compile Include="Orchestration\Server\RequestContextExtensions.cs" />
+    <Compile Include="Orchestration\Server\RequestContextStrongBoxExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskHubApiController.cs" />
+    <Compile Include="Orchestration\Server\TaskAgentQueueCacheService.cs" />
+    <Compile Include="Orchestration\Server\TaskApiRouteParameters.cs" />
+    <Compile Include="Orchestration\Server\TaskAttachmentDataExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskAttachmentData.cs" />
+    <Compile Include="Orchestration\Server\TaskDefinitionExtensions.cs" />
+    <Compile Include="Orchestration\Server\CustomerIntelligenceHelper.cs" />
+    <Compile Include="Orchestration\Server\ClientTraceHelper.cs" />
+    <Compile Include="Orchestration\Server\ITaskHubPlanFetcher.cs" />
+    <Compile Include="Orchestration\Server\TaskHubPlanFetcher.cs" />
+    <Compile Include="Orchestration\Server\TaskHub.cs" />
+    <Compile Include="Orchestration\Server\FeedData.cs" />
+    <Compile Include="Orchestration\Server\SecureFileComparer.cs" />
+    <Compile Include="Orchestration\Server\TaskConstants.cs" />
+    <Compile Include="Orchestration\Server\TaskOrchestrationOwnerReferences.cs" />
+    <Compile Include="Orchestration\Server\TaskOrchestrationPlanExtensions.cs" />
+    <Compile Include="Orchestration\Server\TelemetryFactory.cs" />
+    <Compile Include="Orchestration\Server\TimelineExtensions.cs" />
+    <Compile Include="Orchestration\Server\TimelineRecordExtensions.cs" />
+    <Compile Include="Orchestration\Server\DistributedTaskEndpointServiceHelper.cs" />
+    <Compile Include="Orchestration\Server\DistributedTaskHubService.cs" />
+    <Compile Include="Orchestration\Server\FileContainerExtensions.cs" />
+    <Compile Include="Orchestration\Server\LogParsingStream.cs" />
+    <Compile Include="Orchestration\Server\TaskHubExtension.cs" />
+    <Compile Include="Orchestration\Server\TaskHubExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskLogExtensions.cs" />
+    <Compile Include="Orchestration\Server\TaskLogPage.cs" />
+    <Compile Include="Orchestration\Server\TaskLogPageState.cs" />
+    <Compile Include="Orchestration\Server\TimelineRecordTypes.cs" />
+    <Compile Include="Orchestration\Server\TraceConstants.cs" />
+    <Compile Include="Orchestration\Server\ServiceEndpointConverter.cs" />
+    <Compile Include="Orchestration\Server\KPIHelper.cs" />
+    <Compile Include="Orchestration\Server\KpiName.cs" />
+    <Compile Include="Orchestration\Server\ParseOptionsFactory.cs" />
+    <Compile Include="Orchestration\Server\TaskHubVariableHelper.cs" />
+    <Compile Include="Orchestration\Server\TaskResources.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactResolver.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactTaskInputMapper.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\IArtifactTraceabilityService.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\FrameworkArtifactTraceabilityService.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\DistributedTaskArtifactTraceabilityService.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\WellKnownContainerArtifactVariables.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\IDistributedTaskArtifactTraceabilityService.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\AgentArtifactDefinition.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\AgentArtifactType.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactContributionDefinition.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactDefinitionConstants.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactFilter.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactSource.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactTriggerConfiguration.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactTypeBase.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactTypes.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ArtifactTypeService.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\GetConfig.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\LinkConfig.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\DeploymentData.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Pipeline.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Run.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Environment.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\DeploymentState.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PipelineArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\TfsGitArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\GithubArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\BitBucketArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\GitHubEnterpriseArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\RepositoryArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\IArtifactService.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\IArtifactType.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Change.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ConfigurationVariableValue.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\CustomArtifact.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\CustomArtifactDetails.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\CustomArtifactTypeExtensions.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ExecuteServiceEndpointRequestFailedException.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\InputValuesDictionaryExtension.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\InvalidRequestException.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PipelineArtifactSource.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ServerModelUtility.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\ServiceEndpointHelper.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\VariablesUtility.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\WellKnownArtifactInputs.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\WellKnownArtifactVariables.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\WellKnownBuildArtifactVariables.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\WorkItemRef.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\WebHooks\WebHookEventPayloadInputMapper.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PipelineProviders\IPipelineProvider.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PipelineProviders\PipelineProvider.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PipelineProviders\PipelineProviderException.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PipelineProviders\PipelineProviderExtensions.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PackageProviders\IPackageProvider.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\PackageProviders\PackageProvider.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\ArtifactCategory.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\RepositoryType.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\EndpointReferenceData.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\ArtifactTraceabilityResourceInfo.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\ArtifactTraceabilityData.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\ArtifactVersion.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\SubArtifactVersion.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\ArtifactSourceVersion.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Models\CDPipelineRunData.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Constants\ArtifactTraceabilityPropertyKeys.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Constants\BuildTypeNames.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Constants\PipelineTypeNames.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Constants\ArtifactCategoryNames.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Constants\ArtifactTraceabilityConstants.cs" />
+    <Compile Include="Orchestration\Server\Artifacts\Constants\ImageDetailsRepositoryPropertyKeys.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\EncryptionHelper.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\IAesEncryptionKeyProvider.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\ITaskRequestQueueService.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\StrongBoxBasedEncryptionKeyProvider.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\TaskRequestQueueMessage.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\TaskRequestMessageType.cs" />
+    <Compile Include="Orchestration\Server\TaskRequestMessage\TaskRequestQueueService.cs" />
+    <Compile Include="Orchestration\Server\Sharding\CompatShardLocator.cs" />
+    <Compile Include="Orchestration\Server\Sharding\DistributedTaskActivityShardLocatorService.cs" />
+    <Compile Include="Orchestration\Server\Sharding\IDistributedTaskActivityShardLocatorService.cs" />
+    <Compile Include="Orchestration\Server\Sharding\PipelineShardOverride.cs" />
+    <Compile Include="Orchestration\Server\Sharding\ServerTaskShardLocatorRandom.cs" />
+    <Compile Include="Orchestration\Server\Sharding\ShardingStrategyBuilder.cs" />
+    <Compile Include="Orchestration\Server\Sharding\ThrottledPipelinesShardLocator.cs" />
+    <Compile Include="Orchestration\Server\Releases\ReleaseClaimHelper.cs" />
+    <Compile Include="Orchestration\Server\Events\BatchStageCompletedEvent.cs" />
+    <Compile Include="Orchestration\Server\Events\PlanCompletedEvent.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubPlanGroupsQueueMetricsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubPlanGroupsQueue2Controller.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubPlanGroupsQueueController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubTimelineRecordAttachmentController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatApiController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatOrchestrationPlanEventsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubOrchestrationPlanEventsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatOrchestrationPlansController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatOrchestrationPlans2Controller.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatTimelineRecordFeedsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubTimelineRecordFeedsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubOrchestrationPlansController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatTimelineRecordLogController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubTimelineRecordLogController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatTimelineRecordsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubJobInstancesController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubTimelineRecordsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCompatTimelinesController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubCheckpointsController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\TaskHubTimelinesController.cs" />
+    <Compile Include="Orchestration\Server\Controllers\ExternalWebHookEventsController.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordReferenceBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\GetLogsResult.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\PipelineDataspaceCategories.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineAttemptData.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineAttemptBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineAttemptBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\PlanContext.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\PlanContextBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\CounterComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\CounterComponent2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\CounterComponent3.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\CounterVariableBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskHubTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskSdkTransferComponentBase.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskAttachmentTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskJobTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskLogTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskLogPageTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskPlanTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskPlanDefinitionReferenceTransferComp.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskPlanOwnerReferenceTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskPlanQueueTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskPlanTaskReferenceTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskTaskDefinitionReferenceTransferComp.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskTimelineTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskTimelineRecordTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskTimelineRecordIssueTransferComponen.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskTimelineRecordVariableTransferCompo.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskTimelineStringTransferComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\DistributedTaskHubTransferConstants.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordVariableData.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordVariableBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordVariableBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskRequestQueueComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskRequestQueueComponent2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskRequestQueueBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskAttachmentDataBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskReferenceData.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\UpdatePlanResult.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\CustomSqlError.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\SqlDataRecordExtensions.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\SqlErrorExtensions.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\SqlNotificationEventIds.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskHubBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskHubBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskHubBinder3.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskLogBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskLogPageBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskLogPageBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\PlanLogTableBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationJobBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder3.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder4.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder5.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder6.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanBinder7.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanReferenceBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanReferenceBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanReferenceBinder3.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskOrchestrationPlanReferenceBinder4.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskSqlComponentBase.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder3.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder4.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder5.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder6.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder7.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TimelineRecordBinder8.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent2.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent3.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent4.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent5.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent6.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent7.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent8.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent9.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent10.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent11.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent12.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent13.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent14.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent15.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent16.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent17.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent18.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent19.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent20.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent21.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent23.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent24.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent25.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent26.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent27.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent28.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent29.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent30.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent31.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent32.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent33.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent34.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent35.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent36.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent37.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent38.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent39.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent40.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent41.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent42.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent43.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent44.cs" />
+    <Compile Include="Orchestration\Server\DataAccess\TaskTrackingComponent45.cs" />
+    <Compile Include="Orchestration\Server\Analytics\ProjectDataspace.cs" />
+    <Compile Include="Orchestration\Server\Analytics\ProjectDataspaceBinder.cs" />
+    <Compile Include="Orchestration\Server\Analytics\ShallowTaskPlan.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskAnalyticsDataBinderBase`1.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskDataSource.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskDefinitionReference.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskDefinitionReferenceBinder.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskDefinitionTimelineRecord.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskDefinitionTimelineRecordBinder.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskPlan.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskPlanWatermark.cs" />
+    <Compile Include="Orchestration\Server\Analytics\ShallowTaskPlanBinder.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskPlanBinder.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskTimelineRecord.cs" />
+    <Compile Include="Orchestration\Server\Analytics\TaskTimelineRecordBinder.cs" />
+    <Compile Include="Orchestration\Server\Analytics\DistributedTaskAnalyticsService.cs" />
+    <Compile Include="Orchestration\Server\Analytics\AnalyticsComponent.cs" />
+    <Compile Include="Orchestration\Server\Analytics\AnalyticsComponent2.cs" />
+    <Compile Include="Orchestration\Server\Analytics\AnalyticsComponent3.cs" />
+    <Compile Include="Orchestration\Server\Analytics\AnalyticsComponent4.cs" />
+    <Compile Include="Orchestration\Server\Analytics\AnalyticsComponent5.cs" />
+    <Compile Include="Orchestration\Server\Analytics\AnalyticsComponent6.cs" />
+    <Compile Include="Orchestration\Server\Analytics\IDistributedTaskAnalyticsService.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TaskResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

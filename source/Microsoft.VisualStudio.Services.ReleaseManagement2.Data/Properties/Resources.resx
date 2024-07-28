@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PlanIdAlreadyExists" xml:space="preserve">
+    <value>PlanId {0} already exists.</value>
+  </data>
+  <data name="ContainerImageTagMatchesRegex" xml:space="preserve">
+    <value>The container image tag: '{0}' matches the regex tag filter: '{1}', for artifact '{2}'</value>
+  </data>
+  <data name="ClassicPipelinesDisabled" xml:space="preserve">
+    <value>The classic pipelines are disabled for this project / organization.</value>
+  </data>
+  <data name="FolderExists" xml:space="preserve">
+    <value>Folder with path {0} already exists.</value>
+  </data>
+  <data name="InvalidRegexInTagFilter" xml:space="preserve">
+    <value>The specified regular expression '{0}' as tag filter for artifact '{1}' is invalid. Error: '{2}'</value>
+  </data>
+  <data name="IgnoreGateUpdateFailedExceptionMessage" xml:space="preserve">
+    <value>Unable to ignore the gate of release ID '{0}' gate step ID '{1}'. Please try again.</value>
+  </data>
+  <data name="DefinitionEnvironmentTemplateNotFound" xml:space="preserve">
+    <value>VS402945: Release pipeline stage template with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="InvalidReleaseTriggerType" xml:space="preserve">
+    <value>Release trigger type {0} is invalid. Expected triggers type are {1}.</value>
+  </data>
+  <data name="DefinitionEnvironmentTemplateAlreadyExists" xml:space="preserve">
+    <value>VS402944: A release pipeline stage template with the name '{0}' already exists. Specify a different name and try again.</value>
+  </data>
+  <data name="InvalidSelectiveArtifactsInDeploymentInput" xml:space="preserve">
+    <value>Deploy job '{0}' has selective artifacts '{1}' for artifact '{2}'. Selective artifacts should be null or empty for artifact download mode '{3}'. Specify a valid artifact download mode and selective artifacts and try again.</value>
+  </data>
+  <data name="ReleaseApprovalHistoryReassignedPostApproval" xml:space="preserve">
+    <value>Reassigned post-deployment approval on '{0}' to '{1}'</value>
+  </data>
+  <data name="ReleaseDeployPhasesSnapshotDeploymentInputCannotBeModified" xml:space="preserve">
+    <value>Deployment Input in deploy job '{0}' cannot be modified. Changes were detected in the following properties: '{1}'</value>
+  </data>
+  <data name="UnsupportedVariableGroupType" xml:space="preserve">
+    <value>Variable group type: {0} is not supported.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryRejectedDeployment" xml:space="preserve">
+    <value>Rejected deployment on '{0}'</value>
+  </data>
+  <data name="ReleaseHistoryUndeleteRelease" xml:space="preserve">
+    <value>Undeleted '{0}'</value>
+  </data>
+  <data name="InvalidTaskOverrideInputEnvironmentVariable" xml:space="preserve">
+    <value>Override input value '{0}' is not defined in a stage variable or pipeline parameter for the {1} task in the {2} deploy job of the {3} stage.</value>
+  </data>
+  <data name="TriggerReleaseCreationJobFailureMessageFormat" xml:space="preserve">
+    <value>Trigger Release Creation Job Failures: System Related: {0} User Related: {1} out of total {2} Releases.</value>
+  </data>
+  <data name="TriggerReasonOnSuccesfulDeployment" xml:space="preserve">
+    <value>After successful deployment of {0}</value>
+  </data>
+  <data name="GenericDatabaseUpdateError" xml:space="preserve">
+    <value>VS402940: There was a database update error. Please try your operation again.</value>
+  </data>
+  <data name="MachineExcluded" xml:space="preserve">
+    <value>Skipped deployment to the target '{0}' because either the target is disabled or deleted during deployment.</value>
+  </data>
+  <data name="LatestArtifactVersionNotFound" xml:space="preserve">
+    <value>No latest version found for artifact source alias: {0}</value>
+  </data>
+  <data name="InvalidReleaseStatusUpdate" xml:space="preserve">
+    <value>VS402948: Status of the release with ID '{0}' cannot be updated as the release has either been deleted or its status is already up to date.</value>
+  </data>
+  <data name="ScheduleEnvironmentJobExtentionFailureMessageFormat" xml:space="preserve">
+    <value>ScheduleEnvironmentJobExtension for ProjectId: {0}, ReleaseDefinitionId: {1}, EnvironmentId: {2} Failed with {3}: \r\n\r\n {4}</value>
+  </data>
+  <data name="ReleaseDefinitionSnapshotFileIdUpdateFailed" xml:space="preserve">
+    <value>Failed to update Release DefinitionSnapshot FileId. Updated row count: {0}</value>
+  </data>
+  <data name="ReleaseApprovalHistoryReassignedPreApproval" xml:space="preserve">
+    <value>Reassigned pre-deployment approval on '{0}' to '{1}'</value>
+  </data>
+  <data name="ReleaseHistoryDeletedRelease" xml:space="preserve">
+    <value>Deleted '{0}'</value>
+  </data>
+  <data name="DeploymentSkippedOnTarget" xml:space="preserve">
+    <value>Skipped deployment to the target '{0}' due to unknown reason. Try again.</value>
+  </data>
+  <data name="ReleaseDefinitionNotFound" xml:space="preserve">
+    <value>VS402936: Release pipeline with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="DefaultVersionTypeNotAllowedForSelectedArtifact" xml:space="preserve">
+    <value>DefaultVersionType '{0}' is not allowed for '{1}'. The only supported type is SelectDuringReleaseCreationType</value>
+  </data>
+  <data name="DeletedDefinitionEnvironmentTemplateNotFound" xml:space="preserve">
+    <value>VS403052: Deleted release pipeline stage template with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="InvalidIntegerValue" xml:space="preserve">
+    <value>The value '{0}' is not an integer in given '{1}' string. Specify valid input and try again.</value>
+  </data>
+  <data name="ReleaseDefinitionSnapshotRevisionNotMatched" xml:space="preserve">
+    <value>Release version does not match.</value>
+  </data>
+  <data name="AutoTriggerIssuesBuildEventMissingPullRequestData" xml:space="preserve">
+    <value>{0} attributes are null or empty in build event so ignoring Pull Request triggers</value>
+  </data>
+  <data name="AutoTriggerIssuesBranchConditionIsExcludedUserIssue" xml:space="preserve">
+    <value>Branch {1} for release trigger of {0} is excluded.</value>
+  </data>
+  <data name="DeploymentOperationStatusAlreadyUpdated" xml:space="preserve">
+    <value>VS402920: Operation status for deployment attempt {0} on stage {1}, release {2} cannot be updated to {3} as it is already up to date. </value>
+  </data>
+  <data name="DeploymentNotStartedTaskNotFoundMessageFormat" xml:space="preserve">
+    <value>VS402950: Could not start the deployment as the task definition does not exist for the task '{0}'.</value>
+  </data>
+  <data name="InvalidApprovalUpdate" xml:space="preserve">
+    <value>VS402932: This approval request does not exist or is no longer valid. Refresh to get the latest status.</value>
+  </data>
+  <data name="EnvironmentResetByAbandonReleaseComment" xml:space="preserve">
+    <value>Stage with Scheduled status was reset to Not Started since the release was abandoned.</value>
+  </data>
+  <data name="RegexTimeoutForContainerImageTag" xml:space="preserve">
+    <value>Regex time-out occurred while matching container image tag: '{0}' with regex tag filter: '{1}', for artifact: '{2}'. Exception error message: '{3}'</value>
+  </data>
+  <data name="InvalidDeployStepUpdate" xml:space="preserve">
+    <value>Unable to update deploy step ID {0} of release ID {1} to {2} state as step is not in pending state.</value>
+  </data>
+  <data name="InvalidNewEnvironmentId" xml:space="preserve">
+    <value>VS402995: Stage ID should be less than 1 for new stages. Following are invalid Ids for new stage : {0}</value>
+  </data>
+  <data name="InvalidAreaRequested" xml:space="preserve">
+    <value>We have renamed the area of our APIs from ReleaseManagement to Release. Make sure you use the new area and try again. In case you are using the browser to access the service, refresh the browser cache by doing a Ctrl-F5 and try again.</value>
+  </data>
+  <data name="InvalidArtifactsDownloadForNonTaskifiedArtifacts" xml:space="preserve">
+    <value>Deploy job '{0}' has an invalid selection of artifacts. Artifacts '{1}' should be either skipped together or selected together.</value>
+  </data>
+  <data name="ReleaseHistoryAbandonedRelease" xml:space="preserve">
+    <value>Abandoned '{0}'</value>
+  </data>
+  <data name="ScheduleTriggerNotFoundInDefinition" xml:space="preserve">
+    <value>Schedule trigger for release not found in definition: {0}</value>
+  </data>
+  <data name="RunOnMachineGroupPhaseName" xml:space="preserve">
+    <value>Run on deployment group</value>
+  </data>
+  <data name="InvalidValuesInExecutionPolicy" xml:space="preserve">
+    <value>VS402973: Input not valid for executionPolicy:'{0}'. Specify valid input and try again.</value>
+  </data>
+  <data name="ReleaseDeletionNotAllowedDueToPendingOnEnvironments" xml:space="preserve">
+    <value>VS402996: '{0}' cannot be deleted as it is pending or in-progress state on stage(s) {1}. To delete this release, you must first cancel the deployments to the stages that are in progress.</value>
+  </data>
+  <data name="ReleaseIssuesErrorText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DemandsNotMet" xml:space="preserve">
+    <value>Unable to deploy to the target '{0}' as some of the following demands are missing: [{1}]. Ensure the target meets the specified demands and try again.</value>
+  </data>
+  <data name="ScheduledReleaseForDefinitionChangeNotInitiated" xml:space="preserve">
+    <value>No change in release definition and linked artifacts detected. Definition last modified on: {0}</value>
+  </data>
+  <data name="SelectDuringReleaseCreationType" xml:space="preserve">
+    <value>Specify at the time of release creation</value>
+  </data>
+  <data name="FolderNotFound" xml:space="preserve">
+    <value>Requested folder at path {0} is not found.</value>
+  </data>
+  <data name="EnvironmentCancelledByQueuingPolicyComment" xml:space="preserve">
+    <value>Deployment was cancelled since a more recent release was available for deployment.</value>
+  </data>
+  <data name="NumberOfGatesMoreThanLimit" xml:space="preserve">
+    <value>The number of gates added as {0} for stage '{1}' exceeds the limit of {2}. Reduce the number of gates and try again.</value>
+  </data>
+  <data name="ReleaseHistoryChangeDetailsUnknownReleaseChangeType" xml:space="preserve">
+    <value>Unknown Release change type found</value>
+  </data>
+  <data name="ReleaseDescriptionFormatForScheduleTriggeredRelease" xml:space="preserve">
+    <value>Scheduled release for pipeline '{0}'.</value>
+  </data>
+  <data name="MachineGroupNotFound" xml:space="preserve">
+    <value>VS402924: A deployment group with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="CreatedNewSlot" xml:space="preserve">
+    <value>Created new slot</value>
+  </data>
+  <data name="ContainerImageTriggerTagsLimitExceeded" xml:space="preserve">
+    <value>Cannot specify more than one tag filter for a container image artifact: Artifact: '{0}', Current count: '{1}'</value>
+  </data>
+  <data name="BuildVersionNotFound" xml:space="preserve">
+    <value>VS403522: Version of build to download for artifact source {0} not found.</value>
+  </data>
+  <data name="NoMachineFound" xml:space="preserve">
+    <value>No machine found in given deployment group.</value>
+  </data>
+  <data name="ScheduleReleaseJobExtentionFailureMessageFormat" xml:space="preserve">
+    <value>ScheduleReleaseJobExtension for ProjectId: {0}, ReleaseDefinitionId: {1}, Failed with {2}: \r\n\r\n {3}</value>
+  </data>
+  <data name="BranchFilterNotAllowedWhenBuildDefinitionBranchIsUsed" xml:space="preserve">
+    <value>Branch filter in trigger should be empty when UseBuildDefinitionBranch option is selected.</value>
+  </data>
+  <data name="ExecutionPolicyErrorWithValidValuesSuggestionString" xml:space="preserve">
+    <value>{0}:{1}, valid values are: {2}.</value>
+  </data>
+  <data name="IgnoreGateUpdateFailedMessage" xml:space="preserve">
+    <value>Unable to ignore gate(s) '{0}'. Please try again.</value>
+  </data>
+  <data name="ContainerImageTagDoesNotMatchRegex" xml:space="preserve">
+    <value>The container image tag: '{0}' does not match the regex tag filter: '{1}', for artifact '{2}'</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>Access denied. {0} does not have enough permissions to access pipeline settings. For more information, contact the Azure DevOps administrator.</value>
+  </data>
+  <data name="ReleaseHistoryPostDeploymentGateUpdateInprogress" xml:space="preserve">
+    <value>Processing post-deployment gate '{0}' ignore on '{1}'</value>
+  </data>
+  <data name="AutoTriggerIssuesBranchConditionsDontMatchUserIssue" xml:space="preserve">
+    <value>Expected branch for release trigger for {0} is {1}.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryQueuedDeployment" xml:space="preserve">
+    <value>Queued deployment on '{0}'</value>
+  </data>
+  <data name="ReleaseHistoryChangeDetailsUnknownMessage" xml:space="preserve">
+    <value>Unknown message found</value>
+  </data>
+  <data name="ReleaseEnvironmentNotInActiveState" xml:space="preserve">
+    <value>Could not complete the requested operation as the stage is not in in-progress state.</value>
+  </data>
+  <data name="ArtifactDefinitionAlreadyExists" xml:space="preserve">
+    <value>VS402930: Artifact definitions with the names '{0}' already exist. Try with different names.</value>
+  </data>
+  <data name="NewDeploymentAlreadyStarted" xml:space="preserve">
+    <value>VS403021: Retrigger deployment attempt will not be created on stage {0} with release {1}, a new deployment is already started by release {2}</value>
+  </data>
+  <data name="JobScopeCacheKeyFormat" xml:space="preserve">
+    <value>{0}_{1}</value>
+  </data>
+  <data name="DefinitionFolderPathsNotFoundMessage" xml:space="preserve">
+    <value>could not get folder path(s) for following release definition Ids: {0},  Exception: {1}</value>
+  </data>
+  <data name="ReleaseDefinitionDisabled" xml:space="preserve">
+    <value>Could not create release for the specified release definition ID {0} as the release definition is disabled.</value>
+  </data>
+  <data name="ObjectDoesNotExist" xml:space="preserve">
+    <value>VS402933: Could not find an object of type '{0}' with the specified ID - {1}.</value>
+  </data>
+  <data name="ShareOutputVariablesNotSupportedError" xml:space="preserve">
+    <value>Only agent-based deploy jobs can share output variables with subsequent jobs. Correct the ShareOutputVariables value for the '{0}' job and try again.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryPartiallySucceededDeployment" xml:space="preserve">
+    <value>Partially succeeded deployment on '{0}'</value>
+  </data>
+  <data name="OverrideInputPropertyTypeNotMatching" xml:space="preserve">
+    <value>Input '{0}' is invalid for '{1}' override input present in {2} job deployment input. Specify valid value for override input and try again.</value>
+  </data>
+  <data name="AutoTriggerIssuesTagsDontMatchUserIssue" xml:space="preserve">
+    <value>Tags set for release trigger did not match the tags in build branch</value>
+  </data>
+  <data name="EnvironmentResetBySchedulesDeletionComment" xml:space="preserve">
+    <value>Deployment was reset since the stage schedules are deleted for the stage.</value>
+  </data>
+  <data name="ServiceConnectionIsNotValid" xml:space="preserve">
+    <value>Build artifact with alias {0} is using an invalid service connection. Service connection with ID {0} is either dirty, deleted or unauthorized.</value>
+  </data>
+  <data name="DuplicatePhaseRefNameUsedInStage" xml:space="preserve">
+    <value>Duplicate phase reference name '{0}' within the stage.</value>
+  </data>
+  <data name="InvalidOverrideInput" xml:space="preserve">
+    <value>'{0}' property not present in {1} job deployment input. Remove the property from override inputs and try again.</value>
+  </data>
+  <data name="ReleasesNotFound" xml:space="preserve">
+    <value>VS402949: Could not find release(s) for the specified ID(s) {0}. Give valid ID(s) and try again.</value>
+  </data>
+  <data name="InvalidData" xml:space="preserve">
+    <value>VS402956: The inputs specified are not valid. Specify valid inputs and try again.</value>
+  </data>
+  <data name="ReleaseNameFormatForBuildTriggeredRelease" xml:space="preserve">
+    <value>Release.{0}</value>
+  </data>
+  <data name="DuplicateKeyInVariableGroup" xml:space="preserve">
+    <value>Variable group: {0} has following duplicate key in variables: {1}</value>
+  </data>
+  <data name="AutoTriggerArtifactNotFound" xml:space="preserve">
+    <value>AutoTrigger: Could not find triggering artifact for release pipeline {0}.</value>
+  </data>
+  <data name="TriggerContentExceededLimit" xml:space="preserve">
+    <value>The number of trigger conditions for artifact '{0}' has exceeded the maximum numbers allowed. Reduce the number of trigger conditions and try again.</value>
+  </data>
+  <data name="BranchNotAllowedForLatestWithBuildDefinitionBranchAndTagsType" xml:space="preserve">
+    <value>Branch should not be provided when latestWithBuildDefinitionBranchAndTagsType option is chosen.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryResetDeployment" xml:space="preserve">
+    <value>Reset deployment on '{0}'</value>
+  </data>
+  <data name="ReleaseDescriptionFormatForGitTriggeredRelease" xml:space="preserve">
+    <value>Triggered by Repository: {0}, Branch: {1}, Commit Id: {2}.</value>
+  </data>
+  <data name="ReleaseApprovalHistoryRejectedPostApproval" xml:space="preserve">
+    <value>Rejected post-deployment approval on '{0}'</value>
+  </data>
+  <data name="PoolNotFound" xml:space="preserve">
+    <value>The project agent pool {0} must refer to an organization agent pool.</value>
+  </data>
+  <data name="ProcessParametersNotDefiniedForOverrideInput" xml:space="preserve">
+    <value>{0} job '{1}' override input value is not defined in a pipeline parameter, or the expanded value of the override input is empty. Specify a valid value and try again.</value>
+  </data>
+  <data name="ReleaseStepByDefinitionEnvironmentIdNotFound" xml:space="preserve">
+    <value>VS402975: Release step with releaseId {0}, definitionEnvironmentId {1} and trialNumber {2} does not exist.</value>
+  </data>
+  <data name="DeploymentHealthNotMet" xml:space="preserve">
+    <value>Unable to deploy to the target '{0}' as the Deployment Group deployment configuration settings are not met.</value>
+  </data>
+  <data name="ReleaseHistoryPostDeploymentGateUpdate" xml:space="preserve">
+    <value>Post-deployment gate '{0}' on '{1}' ignored</value>
+  </data>
+  <data name="EnvironmentStatusCannotBeConvertedError" xml:space="preserve">
+    <value>Stage Status '{0}' cannot be converted to Task Result</value>
+  </data>
+  <data name="EnvironmentResetByReleaseDeletionComment" xml:space="preserve">
+    <value>Stage with pending pre-deployment approval was reset to Not Started on release deletion.</value>
+  </data>
+  <data name="ReleaseHistoryUpdatedRelease" xml:space="preserve">
+    <value>Updated '{0}'</value>
+  </data>
+  <data name="ReleaseDescriptionFormatForBuildTagsTriggeredRelease" xml:space="preserve">
+    <value>Triggered by {0} {1} with tags: {2}.</value>
+  </data>
+  <data name="ReleaseEnvironmentAutoRecoveryJobText" xml:space="preserve">
+    <value>Auto recovery job has cancelled deployment on '{0}'.</value>
+  </data>
+  <data name="RunOnServerPhaseName" xml:space="preserve">
+    <value>Run on server</value>
+  </data>
+  <data name="DuplicateGateNames" xml:space="preserve">
+    <value>{0} in stage '{1}' has duplicate gate names. Gate names should be unique. Specify unique gate names and try again.</value>
+  </data>
+  <data name="InvalidDeployPhaseRefName" xml:space="preserve">
+    <value>Deploy job reference name '{0}' is not valid or exceeds {1} allowable characters. Specify a valid ref name and try again.</value>
+  </data>
+  <data name="InvalidSkipArtifactsDownloadInDeploymentInput" xml:space="preserve">
+    <value>Deploy job '{0}' has SkipArtifactsDownload set to true. ArtifactsDownloadInput should be null or empty when SkipArtifactsDownload is true. Specify a valid SkipArtifactsDownload value and try again.</value>
+  </data>
+  <data name="InvalidTaskTimeout" xml:space="preserve">
+    <value>Task '{0}' in deploy job '{1}' of stage '{2}' has an invalid timeout value.</value>
+  </data>
+  <data name="ReleaseIssuesWarningText" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ReleaseDefinitionDeletionNotAllowed" xml:space="preserve">
+    <value>Deletion of release pipeline ‘{0}’ is not allowed as one or more associated release deployments are in pending, queued or in-progress state. Please cancel the release deployments and try again.</value>
+  </data>
+  <data name="InvalidGateTimeout" xml:space="preserve">
+    <value>{0} timeout in stage '{1}' is invalid. Timeout value should be in between {2} minute to {3} minutes. Specify valid timeout and try again.</value>
+  </data>
+  <data name="GatesAreNotInProgress" xml:space="preserve">
+    <value>Gates are not in in-progress state for ReleaseId: {0}, GateStepId: {1}. Only gate can be ignored if gates are in in-progress state. Please refresh release and retry again.</value>
+  </data>
+  <data name="VariableNameLengthExceeded" xml:space="preserve">
+    <value>VS402941: Variable name '{0}' length is too long. Use a name shorter than 400 characters and try again.</value>
+  </data>
+  <data name="MoreThanOneTaskInServerPhase" xml:space="preserve">
+    <value>Only one server side task is allowed to run in a server job. One of the server jobs in stage '{0}' has more than one server-side task.</value>
+  </data>
+  <data name="ManualInterventionNotFound" xml:space="preserve">
+    <value>VS402977: Manual Intervention with ID {0} does not exist.</value>
+  </data>
+  <data name="ProjectReleaseService" xml:space="preserve">
+    <value>Project Release Service</value>
+  </data>
+  <data name="LatestArtifactVersionUnavailable" xml:space="preserve">
+    <value>Latest version information could not be loaded for artifact {0}. This could be due to inaccessible artifact source or no version is available.</value>
+  </data>
+  <data name="ReleaseHistoryChangeDetailsUnknownReleaseEnvironmentStatus" xml:space="preserve">
+    <value>Unknown ReleaseEnvironment status found</value>
+  </data>
+  <data name="OrphanScheduleJobDetected" xml:space="preserve">
+    <value>Found orphan job with ID '{0}'.</value>
+  </data>
+  <data name="DraftReleaseCannotBeStarted" xml:space="preserve">
+    <value>VS402951: Release with ID {0} cannot be started as it has already been started or currently it is not in draft state.</value>
+  </data>
+  <data name="InvalidArtifactTypeInDeploymentInput" xml:space="preserve">
+    <value>Artifact type '{0}' is not matching with any linked artifact types for deploy job '{1}'. Specify a valid artifact type and try again.</value>
+  </data>
+  <data name="GateWorkflowCannotBeEmpty" xml:space="preserve">
+    <value>One or more of the gates added as {0} of stage '{1}' are invalid. Please add valid gates and try again.</value>
+  </data>
+  <data name="DeploymentApprovalTimeoutMessage" xml:space="preserve">
+    <value>This approval was rejected because of timeout {0} minute(s).</value>
+  </data>
+  <data name="NoMachineFoundWithGivenTags" xml:space="preserve">
+    <value>No machine found in given deployment group with tags {0}.</value>
+  </data>
+  <data name="ReleaseNotFound" xml:space="preserve">
+    <value>VS402939: Release with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="ReleaseNotInActiveState" xml:space="preserve">
+    <value>VS402957: Could not complete the requested operation as the release is not in in-progress state.</value>
+  </data>
+  <data name="ReleaseHistoryPreDeploymentGateUpdateInprogress" xml:space="preserve">
+    <value>Processing pre-deployment gate '{0}' ignore on '{1}'</value>
+  </data>
+  <data name="PropertyNotAllowedToOverride" xml:space="preserve">
+    <value>'{0}' property in {1} job not allowed to override. Remove from override inputs and try again.</value>
+  </data>
+  <data name="ArtifactDefinitionDoesNotExist" xml:space="preserve">
+    <value>VS402931: Could not find artifact definitions with the specified IDs {0}. Provide valid IDs and try again</value>
+  </data>
+  <data name="InvalidGateTaskTimeout" xml:space="preserve">
+    <value>Gate '{0}' in {1} of stage '{2}' has invalid timeout value. Specify valid timeout and try again.</value>
+  </data>
+  <data name="ReleaseApprovalHistoryRejectedPreApproval" xml:space="preserve">
+    <value>Rejected pre-deployment approval on '{0}'</value>
+  </data>
+  <data name="InvalidGateSamplingIntervalTime" xml:space="preserve">
+    <value>{0} sampling interval time in stage '{1}' is invalid. Sampling interval value should be in between {2} minute(s) to {3} minutes or less than Timeout. Specify valid sampling interval and try again.</value>
+  </data>
+  <data name="DefinitionAlreadyUpdated" xml:space="preserve">
+    <value>You are using an old copy of the release pipeline. Refresh your copy and try again.</value>
+  </data>
+  <data name="ScheduledReleaseCreationFailed" xml:space="preserve">
+    <value>"ScheduleReleaseJobExtension has no release instance to queue for definitionId: {0}, definitionName: {1}"</value>
+  </data>
+  <data name="SelectiveArtifactsNotSupportedForXamlBuild" xml:space="preserve">
+    <value>VS403053:{0} is Xaml build artifact and selective artifacts are not supported for xaml build.</value>
+  </data>
+  <data name="InvalidTasksInDeployPhase" xml:space="preserve">
+    <value>Tasks with versions '{0}' are not valid for deploy job '{1}' in stage {2}. </value>
+  </data>
+  <data name="InvalidPatchReleaseRequest" xml:space="preserve">
+    <value>VS402970: Provide valid 'release status' and/or 'keep forever' property</value>
+  </data>
+  <data name="DefinitionReferenceNotFound" xml:space="preserve">
+    <value>Pipeline reference is either empty or does not have the pipeline</value>
+  </data>
+  <data name="CannotOverrideEnvironmentToManual" xml:space="preserve">
+    <value>VS402974: Stages can be overridden to manual only while starting a draft release or creating a new release.</value>
+  </data>
+  <data name="CannotUpdateManualIntervention" xml:space="preserve">
+    <value>VS402779: Cannot update manual intervention with ID {0} as its status is already up to date.</value>
+  </data>
+  <data name="LatestType" xml:space="preserve">
+    <value>Latest</value>
+  </data>
+  <data name="CreatedNewTestWebApp" xml:space="preserve">
+    <value>Created new web application for test stage</value>
+  </data>
+  <data name="NoPrimaryArtifactInReleaseDefinition" xml:space="preserve">
+    <value>Release pipeline with ID {0} has linked artifacts but none of them is set as primary.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistorySucceededDeployment" xml:space="preserve">
+    <value>Succeeded deployment on '{0}'</value>
+  </data>
+  <data name="StringifiedReleaseScheduleFormat" xml:space="preserve">
+    <value>"JobId:{0} | TimeZoneId:{1} | StartHours:{2} | StartMinutes:{3} | DaysToRelease:{4} | ScheduleOnlyWithChanges:{5}"</value>
+  </data>
+  <data name="DeploymentGateAlreadyIgnored" xml:space="preserve">
+    <value>Given deployment gate(s) '{0}' already ignored. Please refresh release and try again.</value>
+  </data>
+  <data name="ServerJobCreationError" xml:space="preserve">
+    <value>VS402881:The requested job is invalid. Make sure you have exactly one task enabled and have a valid server execution handler.</value>
+  </data>
+  <data name="DeletedReleaseDefinitionNotFound" xml:space="preserve">
+    <value>VS403051: Could not delete pipeline with ID {0} because it was not found. Specify a valid ID and try again.</value>
+  </data>
+  <data name="MissingRequiredArtifactSourceDataInArtifact" xml:space="preserve">
+    <value>VS402938: Artifact input {0} is missing for artifact source {1}</value>
+  </data>
+  <data name="InvalidArtifactDownloadModeInDeploymentInput" xml:space="preserve">
+    <value>Deploy job '{0}' has an invalid artifact download mode. Artifact download mode '{1}' is not supported artifact type '{2}'. Allowed artifact download mode values are '{3}'. Specify a valid artifact download mode and try again.</value>
+  </data>
+  <data name="ReleaseDefinitionAlreadyExists" xml:space="preserve">
+    <value>VS402934: A release pipeline with the name '{0}' already exists. Specify a different name and try again.</value>
+  </data>
+  <data name="RegexMatchingErrorForContainerImageTag" xml:space="preserve">
+    <value>An error occurred while matching container image tag: '{0}' with regex tag filter: '{1}', for artifact: '{2}'. Exception error message: '{3}'</value>
+  </data>
+  <data name="NoLinkedArtifactForReleaseDefinition" xml:space="preserve">
+    <value>"No linked artifacts found for ReleaseDefinition: {0}."</value>
+  </data>
+  <data name="GitHubInstallationAccessTokenMissingError" xml:space="preserve">
+    <value>Error in generating access token for your GitHub installation, please unlink and link the GitHub artifact associated with this endpoint {0}.</value>
+  </data>
+  <data name="ReleaseWithGivenNameAlreadyExists" xml:space="preserve">
+    <value>VS402937: A release with the name '{0}' already exists. Modify the release name format in the release pipeline to ensure a unique release name and try again.</value>
+  </data>
+  <data name="ManualInterventionRejected" xml:space="preserve">
+    <value>rejected</value>
+  </data>
+  <data name="ReleaseHistoryCreatedRelease" xml:space="preserve">
+    <value>Created '{0}'</value>
+  </data>
+  <data name="DuplicateRefNameUsedInPhase" xml:space="preserve">
+    <value>Duplicate task reference name '{0}' within the same job.</value>
+  </data>
+  <data name="SlotCreationFailed" xml:space="preserve">
+    <value>Slot creation failed: {0}</value>
+  </data>
+  <data name="ReleaseApprovalHistoryApprovedPreApproval" xml:space="preserve">
+    <value>Approved pre-deployment approval on '{0}'</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryCancelledDeployment" xml:space="preserve">
+    <value>Cancelled deployment on '{0}'</value>
+  </data>
+  <data name="ReleaseStepNotFound" xml:space="preserve">
+    <value>VS402947: Release step with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="DefinitionEnvironmentHealthJobFailureMessageFormat" xml:space="preserve">
+    <value>Failed to recover {0} release stages out of {1}.</value>
+  </data>
+  <data name="InvalidTriggerType" xml:space="preserve">
+    <value>Invalid trigger type: '{0}'</value>
+  </data>
+  <data name="DownloadOfCustomArtifactsNotSupported" xml:space="preserve">
+    <value>Downloading custom artifacts from builds isn't supported. Unselect the artifact {0} from job inputs and try again. To download the artifact, manually add a download task to the release pipeline.</value>
+  </data>
+  <data name="AgentBasedDeploymentDefaultName" xml:space="preserve">
+    <value>Run on an agent pool</value>
+  </data>
+  <data name="DeploymentStatusAlreadyUpdated" xml:space="preserve">
+    <value>VS402921: Cannot change status of deployment to '{0}' as it is already in '{1}' state.</value>
+  </data>
+  <data name="ReleaseDescriptionFormatForBuildTriggeredRelease" xml:space="preserve">
+    <value>Triggered by {0} {1}.</value>
+  </data>
+  <data name="ReleaseDeletionNotAllowedAsKeepForeverIsSet" xml:space="preserve">
+    <value>VS402971: '{0}' cannot be deleted as it is currently marked to be retained indefinitely.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryScheduledDeployment" xml:space="preserve">
+    <value>Scheduled deployment on '{0}'</value>
+  </data>
+  <data name="OnlyAllowedToAcceptOrRejectManualIntervention" xml:space="preserve">
+    <value>VS402778: You can only approve or reject a manual intervention request.</value>
+  </data>
+  <data name="TransactionRequiredError" xml:space="preserve">
+    <value>There was a database stored procedure error.Please retry the operation.</value>
+  </data>
+  <data name="ReleaseDefinitionRevisionAlreadyExists" xml:space="preserve">
+    <value>VS402952: Release pipeline with ID '{0}' and revision '{1}' already exists. Failed to make an entry in history.</value>
+  </data>
+  <data name="StartEnvironmentJobFailureMessageFormat" xml:space="preserve">
+    <value>Failed to initiate release stage execution for {0} release stages out of {1}.</value>
+  </data>
+  <data name="LatestFromBranchType" xml:space="preserve">
+    <value>Latest from the default branch</value>
+  </data>
+  <data name="DeploymentResourceNotFound" xml:space="preserve">
+    <value>Deployment resource with Id: {0} could not be found.</value>
+  </data>
+  <data name="InvalidGateStabilizationTime" xml:space="preserve">
+    <value>{0} stabilization time in stage '{1}' is invalid. Stabilization time value should be in between {2} minute(s) to {3} minutes. Specify valid time and try again.</value>
+  </data>
+  <data name="DuplicateStepsInsertion" xml:space="preserve">
+    <value>VS402955: Step(s) with the specified release ID {0}, stage ID {1}, rank {2}, step type {3} with trial number {4} already exists.</value>
+  </data>
+  <data name="LinkedArtifactNotFound" xml:space="preserve">
+    <value>No linked artifact found for trigger artifact alias: {0}</value>
+  </data>
+  <data name="ScheduleTriggerServiceAccountNotFound" xml:space="preserve">
+    <value>Service users group account was not found</value>
+  </data>
+  <data name="InvalidValuesInEnvironmentOptions" xml:space="preserve">
+    <value>The inputs {0} are not valid for environmentOptions:{1}. Specify valid inputs and try again.</value>
+  </data>
+  <data name="ProcessParametersNotDefinitedForOverrideInputs" xml:space="preserve">
+    <value>{0} job override input values are not defined in pipeline parameters. Specify valid values and try again.</value>
+  </data>
+  <data name="ManualInterventionTimeoutMessage" xml:space="preserve">
+    <value>The {0} has been {1} because of timeout {2} minute(s).</value>
+  </data>
+  <data name="AutoTriggerIssueMessage" xml:space="preserve">
+    <value>Issue Found</value>
+  </data>
+  <data name="ReleaseHistoryPreDeploymentGateUpdate" xml:space="preserve">
+    <value>Pre-deployment gate '{0}' on '{1}' ignored</value>
+  </data>
+  <data name="ProjectCollectionReleaseService" xml:space="preserve">
+    <value>Project Collection Release Service</value>
+  </data>
+  <data name="SelectiveArtifactsCannotBeEmptyInDeploymentInput" xml:space="preserve">
+    <value>Deploy job '{0}' has no selective artifacts defined for artifact '{1}'. Selective artifacts should not be empty for artifact download mode '{2}'. Specify a valid artifact download mode and selective artifacts and try again.</value>
+  </data>
+  <data name="RunOnAgentPhaseName" xml:space="preserve">
+    <value>Run on agent</value>
+  </data>
+  <data name="DeploymentResourceAlreadyExists" xml:space="preserve">
+    <value>Deployment resource with resourceIdentifier: {0} already exists.</value>
+  </data>
+  <data name="PhaseConditionInvalid" xml:space="preserve">
+    <value>VS402997: Job condition for job "{0}" in stage "{1}" is invalid: {2}</value>
+  </data>
+  <data name="DeployPhaseWorkflowCannotBeEmpty" xml:space="preserve">
+    <value>Workflow of deploy job '{0}' in release pipeline stage '{1}' is invalid. Add valid tasks and try again.</value>
+  </data>
+  <data name="ReleaseDeletionNotAllowedForRetainedReleases" xml:space="preserve">
+    <value>VS402972: '{0}' cannot be deleted since it is marked to be retained indefinitely.</value>
+  </data>
+  <data name="ApprovalNotFoundException" xml:space="preserve">
+    <value>Approval with ID {0} was not found.</value>
+  </data>
+  <data name="DefinitionEnvironmentNotFound" xml:space="preserve">
+    <value>VS402976: Release pipeline stage with definitionEnvironmentId {0} does not exist.</value>
+  </data>
+  <data name="AutoTriggerIssuesTriggeringBuildMatchesLastReleaseBuildIssue" xml:space="preserve">
+    <value>Triggering build: {0} from build pipeline: {1} is currently deployed to the latest release.</value>
+  </data>
+  <data name="RetrieveFileForRDAndCheckForSecretFailureMessage" xml:space="preserve">
+    <value>There was an error in retrieving the file from storage and checking for secret</value>
+  </data>
+  <data name="ServiceIdentityNotFound" xml:space="preserve">
+    <value>Service identity used for executing deployment is not found.</value>
+  </data>
+  <data name="ReleaseRevisionFileIdUpdateFailureTraceMessage" xml:space="preserve">
+    <value>ReleaseId: {0}, DefinitionSnapshotRevision: {1}, ChangeType: {2}, FileId: {3}, ExceptionMessage: {4}</value>
+  </data>
+  <data name="CannotGetPipelineGeneralSettings" xml:space="preserve">
+    <value>"Failed to get pipelines general settings. Project: {0}. Exception : {1}"</value>
+  </data>
+  <data name="EnvironmentResetByQueuingPolicyComment" xml:space="preserve">
+    <value>Deployment was reset since a more recent release was available for deployment.</value>
+  </data>
+  <data name="QueueNotFound" xml:space="preserve">
+    <value>VS402943: A release pool with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="InvalidTaskOverrideInputValue" xml:space="preserve">
+    <value>{0} task in {1} deploy job of {2} stage has invalid override value '{3}'. </value>
+  </data>
+  <data name="ProjectScopedServiceIdentityNotFoundInPublicProject" xml:space="preserve">
+    <value>Service identity used for executing deployment is not found. Please queue a build before attempting to queue a release for the identity to get provisioned.</value>
+  </data>
+  <data name="InvalidDeployPhaseType" xml:space="preserve">
+    <value>Invalid deploy job type: {0}.</value>
+  </data>
+  <data name="NoTriggerForReleaseDefinition" xml:space="preserve">
+    <value>No triggers found for ReleaseDefinition: {0}</value>
+  </data>
+  <data name="DeploymentUpdateNotAllowedException" xml:space="preserve">
+    <value>Operation status for deployment attempt {0} on stage {1}, release {2} cannot be updated to {3} as it is already updated with operation status {4} and deployment status {5}.</value>
+  </data>
+  <data name="InvalidTaskCondition" xml:space="preserve">
+    <value>Task '{0}' in deploy job '{1}' of stage '{2}' has invalid condition. Specify valid condition and try again.</value>
+  </data>
+  <data name="InvalidGatesMinimumSuccessWindow" xml:space="preserve">
+    <value>{0} minimum success window time in stage '{1}' is invalid. This should be between {2} minute(s) to {3} minutes or less than Timeout. Specify valid value and try again.</value>
+  </data>
+  <data name="QueueReleaseNotAllowed" xml:space="preserve">
+    <value>VS402954: Release with ID '{0}' cannot be queued on stage as the release is not in 'Released' state.</value>
+  </data>
+  <data name="ReleaseEnvironmentHistoryTriggeredDeployment" xml:space="preserve">
+    <value>Triggered deployment on '{0}'</value>
+  </data>
+  <data name="QueueAlreadyExists" xml:space="preserve">
+    <value>VS402942: A pool with the name '{0}' already exists. Specify a different name and try again.</value>
+  </data>
+  <data name="FolderParentNotFound" xml:space="preserve">
+    <value>Parent folder {0} was not found. Make sure the parent folder exists.</value>
+  </data>
+  <data name="ManualInterventionResumed" xml:space="preserve">
+    <value>resumed</value>
+  </data>
+  <data name="ReleaseHistoryChangeDetailsUnknownReleaseStatus" xml:space="preserve">
+    <value>Unknown Release status found</value>
+  </data>
+  <data name="InvalidArtifactAliasInDeploymentInput" xml:space="preserve">
+    <value>Artifact alias '{0}' does not matching any linked artifact aliases for deploy job '{1}'. Specify a valid artifact alias and try again.</value>
+  </data>
+  <data name="DeploymentGatesPhaseName" xml:space="preserve">
+    <value>Gates job</value>
+  </data>
+  <data name="InvalidReleaseEnvironmentStatusUpdate" xml:space="preserve">
+    <value>VS402953: Status of stage with ID '{0}', of release '{1}' cannot be updated as its status is already up to date.</value>
+  </data>
+  <data name="ExecutionPolicyConcurrencyCountErrorWithValidValuesSuggestionString" xml:space="preserve">
+    <value>concurrencyCount setting value: {0} on stage: {1} is incorrect. Specify a value greater than or equal to zero and try again.</value>
+  </data>
+  <data name="InvalidTaskOverrideInputs" xml:space="preserve">
+    <value>{0} task in {1} deploy job of {2} stage has invalid override inputs. Only '{3}' parameter supports override. Specify valid override inputs and try again.</value>
+  </data>
+  <data name="ReleaseEnvironmentNotFound" xml:space="preserve">
+    <value>Release environment with ID {1} does not exist in Release ID {0}. Specify a valid ID and try again.</value>
+  </data>
+  <data name="InvalidOverrideInputsKeyValuePair" xml:space="preserve">
+    <value>Null values not allowed in override inputs key values. {0} job override inputs key or value null. Specify valid values and try again.</value>
+  </data>
+  <data name="InvalidValuesInDeploymentInput" xml:space="preserve">
+    <value>The values '{0}' are not valid for deployment inputs '{1}' for deploy job '{2}'. Specify valid inputs and try again.</value>
+  </data>
+  <data name="IncompatibleTasksInDeployPhase" xml:space="preserve">
+    <value>Tasks '{0}' are not compatible for deploy job '{1}' in stage {2}. Add {3} based tasks and try again.</value>
+  </data>
+  <data name="TestWebAppCreationFailed" xml:space="preserve">
+    <value>Test WebApp creation failed: {0}</value>
+  </data>
+  <data name="CDConfiguredSuccessfully" xml:space="preserve">
+    <value>Successfully setup continuous delivery and triggered deployment to Azure Web application</value>
+  </data>
+  <data name="CancelManualInterventionMessage" xml:space="preserve">
+    <value>The release stage has been canceled.</value>
+  </data>
+  <data name="ReleaseHistoryStartedRelease" xml:space="preserve">
+    <value>Started '{0}'</value>
+  </data>
+  <data name="InvalidReleaseEnvironmentStatus" xml:space="preserve">
+    <value>Release stage step ID {0} of release ID {1} should be in {2} state but it is in {3} state.</value>
+  </data>
+  <data name="InvalidGateStepType" xml:space="preserve">
+    <value>Specified step ID '{0}' is not a valid gate step. Please specify valid gate step ID and retry.</value>
+  </data>
+  <data name="ArtifactWithAliasNotFound" xml:space="preserve">
+    <value>VS402958: Could not find artifact with alias {0}.</value>
+  </data>
+  <data name="MaxPropertyLengthExceeded" xml:space="preserve">
+    <value>The property {0} length cannot exceed {1} characters.</value>
+  </data>
+  <data name="ReleaseHistoryChangeDetailsUnknownApprovalStatus" xml:space="preserve">
+    <value>Unknown Approval status found</value>
+  </data>
+  <data name="DefaultVersionTypeNotAllowedForArtifactType" xml:space="preserve">
+    <value>DefaultVersionType '{0}' is not allowed for '{1}'. The only supported types are "{2}"</value>
+  </data>
+  <data name="CannotGetArtifactVersionForSelectDuringReleaseCreationDefaultVersionType" xml:space="preserve">
+    <value>Cannot retrieve the default version for artifact '{0}' because default version type is 'selectDuringReleaseCreationType'</value>
+  </data>
+  <data name="ReleaseApprovalHistoryApprovedPostApproval" xml:space="preserve">
+    <value>Approved post-deployment approval on '{0}'</value>
+  </data>
+  <data name="MachineOffline" xml:space="preserve">
+    <value>Unable to deploy to the target '{0}' as the target is offline.</value>
+  </data>
+  <data name="ReleaseDeletionNotAllowedDueToCurrentlyActiveOnEnvironments" xml:space="preserve">
+    <value>VS402946: '{0}' cannot be deleted as it is currently deployed on stage(s) {1}.</value>
+  </data>
+</root>

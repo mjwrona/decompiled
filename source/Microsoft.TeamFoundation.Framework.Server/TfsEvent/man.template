@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instrumentationManifest xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd" xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace">
+  <instrumentation>
+    <events>
+      <provider name="Microsoft-Team Foundation Server"
+                guid="{80761876-6844-47d5-8106-f8ed2aa8687b}"
+                symbol="TFSProvider"
+                resourceFileName="@FRAMEWORK_RESOURCE_ASSEMBLY@"
+                messageFileName="@FRAMEWORK_RESOURCE_ASSEMBLY@"
+                message="$(string.TeamFoundationServer.channel.TeamFoundationServer.message)">
+        <events>
+          <event symbol="Event_Debug_Info8" value="0" version="7" channel="TeamFoundationServer" level="win:Informational" task="ProductTrace" opcode="Info" template="Info8" keywords="Info" message="$(string.TeamFoundationServer.event.0.1.message)" />
+          <event symbol="Event_Debug_Error8" value="1" version="7" channel="TeamFoundationServer" level="win:Error" task="ProductTrace" opcode="Error" template="Info8" keywords="Error" message="$(string.TeamFoundationServer.event.1.1.message)" />
+          <event symbol="Event_Debug_Warning8" value="2" version="7" channel="TeamFoundationServer" level="win:Warning" task="ProductTrace" opcode="Warning" template="Info8" keywords="Warning" message="$(string.TeamFoundationServer.event.2.1.message)" />
+          <event symbol="Event_Debug_Verbose8" value="3" version="7" channel="TeamFoundationServer" level="win:Verbose" task="ProductTrace" opcode="Verbose" template="Info8" keywords="Verbose" message="$(string.TeamFoundationServer.event.3.1.message)" />
+          <event symbol="Event_SQL_Info" value="4" version="0" channel="TeamFoundationServer" level="win:Informational" task="Debug_Tracing" opcode="Info" template="SQL" keywords="Info" message="$(string.TeamFoundationServer.event.4.message)" />
+          <event symbol="Event_JobAgentHistory_Info14" value="5" version="14" channel="TeamFoundationServer" level="win:Informational" task="JobHistory" opcode="Info" template="JobAgentHistory15" keywords="Info" message="$(string.TeamFoundationServer.event.5.message)" />
+          <event symbol="Event_ActivityLog_Info38" value="6" version="37" channel="TeamFoundationServer" level="win:Informational" task="ActivityLog" opcode="Info" template="ActivityLog38" keywords="Info" message="$(string.TeamFoundationServer.event.6.message)" />
+          <event symbol="Event_CustomerIntelligence_Info5" value="7" version="4" channel="TeamFoundationServer" level="win:Informational" task="CustomerIntelligence" opcode="Info" template="CustomerIntelligence5" keywords="Info" message="$(string.TeamFoundationServer.event.7.message)" />
+          <event symbol="Event_Kpi_Info" value="8" version="0" channel="TeamFoundationServer" level="win:Informational" task="KPI" opcode="Info" template="Kpi" keywords="Info" message="$(string.TeamFoundationServer.event.8.message)" />
+          <event symbol="Event_MachinePool_RequestHistory7" value="9" version="6" channel="TeamFoundationServer" level="win:Informational" task="MachinePoolRequestHistory" opcode="Info" template="MachinePoolRequestHistory7" keywords="Info" message="$(string.TeamFoundationServer.event.9.message)" />
+          <event symbol="Event_HostHistory3" value="10" version="2" channel="TeamFoundationServer" level="win:Informational" task="ServiceHost" opcode="Info" template="HostHistory3" keywords="Info" message="$(string.TeamFoundationServer.event.10.message)" />
+          <event symbol="Event_SqlRunningStatus6" value="11" version="5" channel="TeamFoundationServerExtended" level="win:Informational" task="SqlRunningStatus" opcode="Info" template="SqlRunningStatus6" keywords="Info" message="$(string.TeamFoundationServer.event.11.message)" />
+          <event symbol="Event_DatabasePerformanceStatistics14" value="12" version="13" channel="TeamFoundationServer" level="win:Informational" task="DatabasePerformanceStatistics" opcode="Info" template="DatabasePerformanceStatistics14" keywords="Info" message="$(string.TeamFoundationServer.event.12.message)" />
+          <event symbol="Event_ServicingJobDetail" value="14" channel="TeamFoundationServerExtended" level="win:Informational" task="ServicingJobDetail" opcode="Info" template="ServicingJobDetail" keywords="Info" message="$(string.TeamFoundationServer.event.14.message)" />
+          <event symbol="Event_ServicingStepDetail2" value="15" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task="ServicingStepDetail" opcode="Info" template="ServicingStepDetail2" keywords="Info" message="$(string.TeamFoundationServer.event.15.message)" />
+          <event symbol="Event_KpiMetric_Info2" value="16" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task="KpiMetric" opcode="Info" template="KpiMetric2" keywords="Info" message="$(string.TeamFoundationServer.event.16.message)" />
+          <event symbol="Event_EventMetric_Info2" value="17" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task="EventMetric" opcode="Info" template="EventMetric2" keywords="Info" message="$(string.TeamFoundationServer.event.17.message)" />
+          <event symbol="Event_Commerce_Info" value="19" version="0" channel="TeamFoundationServer" level="win:Informational" task="Commerce" opcode="Info" template="Commerce" keywords="Info" message="$(string.TeamFoundationServer.event.19.message)" />
+          <event symbol="Event_User_Info" value="20" version="0" channel="TeamFoundationServer" level="win:Informational" task="User" opcode="Info" template="User" keywords="Info" message="$(string.TeamFoundationServer.event.20.message)" />
+          <event symbol="Event_Account_Info" value="22" version="0" channel="TeamFoundationServer" level="win:Informational" task="Account" opcode="Info" template="Account" keywords="Info" message="$(string.TeamFoundationServer.event.22.message)" />
+          <event symbol="Event_Subscription_Info" value="23" version="0" channel="TeamFoundationServer" level="win:Informational" task="Subscription" opcode="Info" template="Subscription" keywords="Info" message="$(string.TeamFoundationServer.event.23.message)" />
+          <event symbol="Event_TableSpaceUsage3" value="24" version="2" channel="TeamFoundationServer" level="win:Informational" task="DatabaseSpaceStatistics" opcode="Info" template="TableSpaceUsage3" keywords="Info" message="$(string.TeamFoundationServer.event.24.message)" />
+          <event symbol="Event_Licensing_Info" value="25" version="0" channel="TeamFoundationServer" level="win:Informational" task="Licensing" opcode="Info" template="Licensing" keywords="Info" message="$(string.TeamFoundationServer.event.25.message)" />
+          <event symbol="Event_Identity_SessionToken" value="26" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="IdentitySessionTokens" opcode="Info" template="Identity_SessionTokens" keywords="Info" message="$(string.TeamFoundationServer.event.26.message)" />
+          <event symbol="Notification_Event_Info" value="27" version="0" channel="TeamFoundationServer" level="win:Informational" task="Debug_Tracing" opcode="Info" template="Notification" keywords="Verbose" message="$(string.TeamFoundationServer.event.27.message)" />
+          <event symbol="Event_QDS3" value="28" version="2" channel="TeamFoundationServerExtended" level="win:Informational" task="QDS" opcode="Info" template="QDS3" keywords="Info" message="$(string.TeamFoundationServer.event.28.message)" />
+          <event symbol="Event_Identity_Reads" value="29" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="IdentityReads" opcode="Info" template="Identity_Reads" keywords="Info" message="$(string.TeamFoundationServer.event.29.message)" />
+          <event symbol="Event_Identity_Token" value="30" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="IdentityTokens" opcode="Info" template="Identity_Token" keywords="Info" message="$(string.TeamFoundationServer.event.30.message)" />
+          <event symbol="Event_Identity_Cache_Changes" value="31" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="IdentityCache" opcode="Info" template="Identity_Cache_Changes" keywords="Info" message="$(string.TeamFoundationServer.event.31.message)" />
+          <event symbol="Event_Identity_Sql_Changes" value="32" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="IdentitySql" opcode="Info" template="Identity_Sql_Changes" keywords="Info" message="$(string.TeamFoundationServer.event.32.message)" />
+          <event symbol="Event_Organization_Info" value="33" version="0" channel="TeamFoundationServer" level="win:Informational" task="Organization" opcode="Info" template="Organization" keywords="Info" message="$(string.TeamFoundationServer.event.33.message)" />
+          <event symbol="Event_Directory_Member_Info" value="34" version="0" channel="TeamFoundationServer" level="win:Informational" task="DirectoryMember" opcode="Info" template="Directory_Member" keywords="Info" message="$(string.TeamFoundationServer.event.34.message)" />
+          <event symbol="Event_StorageMetricsTransactions5" value="35" version="4" channel="TeamFoundationServer" level="win:Informational" task="StorageMetricsTransactions" opcode="Info" template="StorageMetricsTransactions5" keywords="Info" message="$(string.TeamFoundationServer.event.35.message)" />
+          <event symbol="Event_StorageAnalyticsLogs" value="36" version="0" channel="TeamFoundationServer" level="win:Informational" task="StorageAnalyticsLogs" opcode="Info" template="StorageAnalyticsLogs" keywords="Info" message="$(string.TeamFoundationServer.event.36.message)" />
+          <event symbol="Event_ResourceUtilization_Info3" value="37" version="2" channel="TeamFoundationServerExtended" level="win:Informational" task="ResourceUtilization" opcode="Info" template="ResourceUtilization3" keywords="Info" message="$(string.TeamFoundationServer.event.37.message)" />
+          <event symbol="Event_HostingServiceCertficates_Info" value="39" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="HostingServiceCertficates" opcode="Info" template="HostingServiceCertficates" keywords="Info" message="$(string.TeamFoundationServer.event.39.message)" />
+          <event symbol="Event_SqlServerAlwaysOnHealthStats_Info" value="40" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="SqlServerAlwaysOnHealthStats" opcode="Info" template="SqlServerAlwaysOnHealthStats" keywords="Info" message="$(string.TeamFoundationServer.event.40.message)" />
+          <event symbol="Event_XEventData_Info6" value="41" version="5" channel="TeamFoundationServerExtended" level="win:Informational" task="XEventData" opcode="Info" template="XEventData6" keywords="Info" message="$(string.TeamFoundationServer.event.41.message)" />
+          <event symbol="Event_MemoryClerks3" value="42" version ="2" channel="TeamFoundationServerExtended" level="win:Informational" task ="MemoryClerks" opcode ="Info" template="MemoryClerks3" keywords="Info" message="$(string.TeamFoundationServer.event.42.message)" />
+          <event symbol="Event_ResourceSemaphores3" value="43" version="2" channel="TeamFoundationServerExtended" level="win:Informational" task ="ResourceSemaphores" opcode ="Info" template="ResourceSemaphores3" keywords="Info" message="$(string.TeamFoundationServer.event.43.message)" />
+          <event symbol="Event_QueryOptimizerMemoryGateways3" value="44" version="2" channel="TeamFoundationServerExtended" level="win:Informational" task ="QueryOptimizerMemoryGateways" opcode ="Info" template="QueryOptimizerMemoryGateways3" keywords="Info" message="$(string.TeamFoundationServer.event.44.message)" />
+          <event symbol="Event_SQLPerformanceCounters3" value="45" version="2" channel="TeamFoundationServerExtended" level="win:Informational" task ="SQLPerformanceCounters" opcode ="Info" template="SQLPerformanceCounters3" keywords="Info" message="$(string.TeamFoundationServer.event.45.message)" />
+          <event symbol="Event_HttpOutgoingRequests6" value="46" version="5" channel="TeamFoundationServerExtended" level="win:Informational" task="HttpOutgoingRequests" opcode="Info" template="HttpOutgoingRequests6" keywords="Info" message="$(string.TeamFoundationServer.event.46.message)" />
+          <event symbol="Event_PackagingTraces3" value="47" version="3" channel="TeamFoundationServerExtended" level="win:Informational" task ="PackagingTraces" opcode ="Info" template="PackagingTraces3" keywords="Info" message="$(string.TeamFoundationServer.event.47.message)" />
+          <event symbol="Event_GeoReplicationLinkStatus2" value="48" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task ="GeoReplicationLinkStatus" opcode ="Info" template="GeoReplicationLinkStatus2" keywords="Info" message="$(string.TeamFoundationServer.event.48.message)" />
+          <event symbol="Event_XEventData_RPCCompleted5" value="49" version="4" channel="TeamFoundationServerExtended" level="win:Informational" task="XEventDataRPCCompleted" opcode="Info" template="XEventDataRPCCompleted5" keywords="Info" message="$(string.TeamFoundationServer.event.49.message)" />
+          <event symbol="Event_JobAgentJobStarted_Info" value="50" version="1" channel="TeamFoundationServer" level="win:Informational" task ="JobStarted" opcode ="Info" template="JobAgentJobStarted2" keywords="Info" message="$(string.TeamFoundationServer.event.50.message)" />
+          <event symbol="Event_CloudServiceRoleDetails10" value="51" version="9" channel="TeamFoundationServerExtended" level="win:Informational" task ="CloudServiceRoleDetails" opcode ="Info" template="CloudServiceRoleDetails10" keywords="Info" message="$(string.TeamFoundationServer.event.51.message)" />
+          <event symbol="Event_SurveyEvent2" value="52" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task ="SurveyEvent" opcode ="Info" template="SurveyEvent2" keywords="Info" message="$(string.TeamFoundationServer.event.52.message)" />
+          <event symbol="Event_TuningRecommendation2" value="53" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task ="TuningRecommendation" opcode ="Info" template="TuningRecommendation2" keywords="Info" message="$(string.TeamFoundationServer.event.53.message)" />
+          <event symbol="Event_ServiceBusActivity4" value="54" version="3" channel="TeamFoundationServerExtended" level="win:Informational" task="ServiceBusActivity" opcode="Info" template="ServiceBusActivity4" keywords="Info" message="$(string.TeamFoundationServer.event.54.message)" />
+          <event symbol="Event_ClientTrace_Info2" value="55" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task ="ClientTrace" opcode ="Info" template="ClientTrace2" keywords="Info" message="$(string.TeamFoundationServer.event.55.message)" />
+          <event symbol="Event_ActivityLogCore_Info6" value="56" version="5" channel="TeamFoundationServer" level="win:Informational" task="ActivityLogCore" opcode="Info" template="ActivityLogCore6" keywords="Info" message="$(string.TeamFoundationServer.event.56.message)" />
+          <event symbol="Event_EuiiTrace" value="57" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="EuiiTrace" opcode="Info" template="EuiiTrace" keywords="Info" message="$(string.TeamFoundationServer.event.57.message)" />
+          <event symbol="Event_DetectedEuiiEvent" value="58" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task ="DetectedEuiiEvent" opcode ="Info" template="DetectedEuiiEvent" keywords="Info" message="$(string.TeamFoundationServer.event.58.message)" />
+          <event symbol="Event_ActivityLogMapping_Info4" value="59" version="3" channel="TeamFoundationServer" level="win:Informational" task="ActivityLogMapping" opcode="Info" template="ActivityLogMapping4" keywords="Info" message="$(string.TeamFoundationServer.event.59.message)" />
+          <event symbol="Event_ServicePrincipalIsMember_Info" value="60" version="0" channel="TeamFoundationServerExtended" level="win:Informational" task="Debug_Tracing" opcode="Info" template="ServicePrincipalIsMember" keywords="Info" message="$(string.TeamFoundationServer.event.60.message)" />
+          <event symbol="Event_ServiceBusPublishMetadata2" value="61" version="1" channel="TeamFoundationServerExtended" level="win:Informational" task="ServiceBusPublishMetadata" opcode="Info" template="ServiceBusPublishMetadata2" keywords="Info" message="$(string.TeamFoundationServer.event.61.message)" />
+          <event symbol="Event_EuiiUser_Info" value="62" version="0" channel="TeamFoundationServer" level="win:Informational" task="EuiiUser" opcode="Info" template="EuiiUser" keywords="Info" message="$(string.TeamFoundationServer.event.62.message)" />
+          <event symbol="Event_OrchestrationLog_Info3" value="63" version="2" channel="TeamFoundationServer" level="win:Informational" task="OrchestrationLog" opcode="Info" template="OrchestrationLog3" keywords="Info" message="$(string.TeamFoundationServer.event.63.message)" />
+          <event symbol="Event_ServiceBusMetrics_Info" value="64" version="0" channel="TeamFoundationServer" level="win:Informational" task="ServiceBusMetrics" opcode="Info" template="ServiceBusMetrics" keywords="Info" message="$(string.TeamFoundationServer.event.64.message)" />
+          <event symbol="Event_SQLSpinlocks_Info3" value="65" version="2" channel="TeamFoundationServer" level="win:Informational" task="Debug_Tracing" opcode="Info" template="SQLSpinlocks3" keywords="Info" message="$(string.TeamFoundationServer.event.65.message)" />
+          <event symbol="Event_JobHistoryCore_Info" value="66" version="0" channel="TeamFoundationServer" level="win:Informational" task="Debug_Tracing" opcode="Info" template="JobHistoryCore" keywords="Info" message="$(string.TeamFoundationServer.event.66.message)" />
+          <event symbol="Event_RedisCacheMetrics_Info" value="67" version="0" channel="TeamFoundationServer" level="win:Informational" task="RedisCacheMetrics" opcode="Info" template="RedisCacheMetrics" keywords="Info" message="$(string.TeamFoundationServer.event.67.message)" />
+          <event symbol="Event_ServiceHostExtended_Info" value="68" version="1" channel="TeamFoundationServer" level="win:Informational" task="Debug_Tracing" opcode="Info" template="ServiceHostExtended" keywords="Info" message="$(string.TeamFoundationServer.event.68.message)" />
+          <event symbol="Event_FeatureFlagStatus_Info_HostVSID" value="69" version="1" channel="TeamFoundationServer" level="win:Informational" task="FeatureFlagStatus" opcode="Info" template="FeatureFlagStatusHostVSID" keywords="Info" message="$(string.TeamFoundationServer.event.69.message)" />
+          <event symbol="Event_DocDBMetrics_Info" value="70" version="0" channel="TeamFoundationServer" level="win:Informational" task="DocDBStorageMetrics" opcode="Info" template="DocDBStorageMetrics" keywords="Info" message="$(string.TeamFoundationServer.event.70.message)" />
+          <event symbol="Event_AzureSearchMetrics_Info" value="71" version="0" channel="TeamFoundationServer" level="win:Informational" task="AzureSearchMetrics" opcode="Info" template="AzureSearchMetrics" keywords="Info" message="$(string.TeamFoundationServer.event.71.message)" />
+          <event symbol="Event_DocDBRUMetrics_Info" value="72" version="0" channel="TeamFoundationServer" level="win:Informational" task="DocDBRUMetrics" opcode="Info" template="DocDBRUMetrics" keywords="Info" message="$(string.TeamFoundationServer.event.72.message)" />
+          <event symbol="Event_VirtualFileStats_Info" value="73" version="0" channel="TeamFoundationServer" level="win:Informational" task="Debug_Tracing" opcode="Info" template="VirtualFileStats" keywords="Info" message="$(string.TeamFoundationServer.event.73.message)" />
+          <event symbol="Event_HostPreferredRegionUpdate_Info" value="74" version="0" channel="TeamFoundationServer" level="win:Informational" task="HostPreferredRegionUpdate" opcode="Info" template="HostPreferredRegionUpdate" keywords="Info" message="$(string.TeamFoundationServer.event.74.message)" />
+          <event symbol="Event_LowPriorityProductTrace_Info" value="75" version="0" channel="TeamFoundationServerLowPriority" level="win:Informational" task="LowPriorityProductTrace" opcode="Info" template="Info8" keywords="Info" message="$(string.TeamFoundationServer.event.75.message)" />
+          <event symbol="Event_OrganizationTenant_Info2" value="76" version="1" channel="TeamFoundationServer" level="win:Informational" task="OrganizationTenantTrace" opcode="Info" template="OrganizationTenant2" keywords="Info" message="$(string.TeamFoundationServer.event.76.message)" />
+          <event symbol="Event_DatabaseDetails5" value="77" version="4" channel="TeamFoundationServerExtended" level="win:Informational" task="DatabaseDetails" opcode="Info" template="DatabaseDetails5" keywords="Info" message="$(string.TeamFoundationServer.event.77.message)" />
+          <event symbol="Event_DatabaseConnectionInfo" value="78" version="0" channel="TeamFoundationServer" level="win:Informational" task="DatabaseConnectionInfo" opcode="Info" template="DatabaseConnectionInfo" keywords="Info" message="$(string.TeamFoundationServer.event.78.message)" />
+          <event symbol="Event_OrchestrationActivityLog_Info1" value="79" version="1" channel="TeamFoundationServer" level="win:Informational" task="OrchestrationActivityLog" opcode="Info" template="OrchestrationActivityLog1" keywords="Info" message="$(string.TeamFoundationServer.event.79.message)" />
+          <event symbol="Event_DatabaseCounters_Info" value="80" version="0" channel="TeamFoundationServer" level="win:Informational" task="DatabaseCounters" opcode="Info" template="DatabaseCounters" keywords="Info" message="$(string.TeamFoundationServer.event.80.message)" />
+          <event symbol="Event_DatabaseIdentityColumns_Info" value="81" version="0" channel="TeamFoundationServer" level="win:Informational" task="DatabaseIdentityColumns" opcode="Info" template="DatabaseIdentityColumns" keywords="Info" message="$(string.TeamFoundationServer.event.81.message)" />
+          <event symbol="Event_DatabaseServicePrincipals_Info" value="82" version="0" channel="TeamFoundationServer" level="win:Informational" task="DatabaseServicePrincipals" opcode="Info" template="DatabaseServicePrincipals" keywords="Info" message="$(string.TeamFoundationServer.event.82.message)" />
+          <event symbol="Event_SqlRowLockInfo_Info2" value="83" version="1" channel="TeamFoundationServer" level="win:Informational" task="SqlRowLockInfo" opcode="Info" template="SqlRowLockInfo2" keywords="Info" message="$(string.TeamFoundationServer.event.83.message)" />
+          <event symbol="Event_DatabasePrincipals_Info" value="84" version="0" channel="TeamFoundationServer" level="win:Informational" task="DatabasePrincipals" opcode="Info" template="DatabasePrincipals" keywords="Info" message="$(string.TeamFoundationServer.event.84.message)" />
+          <event symbol="Event_XEventSessions_Info" value="85" version="0" channel="TeamFoundationServer" level="win:Informational" task="XEventSessions" opcode="Info" template="XEventSessions" keywords="Info" message="$(string.TeamFoundationServer.event.85.message)" />
+          <event symbol="Event_GitThrottlingSettings_Info" value="86" version="0" channel="TeamFoundationServer" level="win:Informational" task="GitThrottlingSettings" opcode="Info" template="GitThrottlingSettings" keywords="Info" message="$(string.TeamFoundationServer.event.86.message)" />
+          <event symbol="Event_HostPreferredGeographyUpdate_Info" value="87" version="0" channel="TeamFoundationServer" level="win:Informational" task="HostPreferredGeographyUpdate" opcode="Info" template="HostPreferredGeographyUpdate" keywords="Info" message="$(string.TeamFoundationServer.event.87.message)" />
+          <!-- if adding a new event (value="n+1"), update these two files as well:
+            Vssf/Sdk/DiagnosticsPackage/MdsDiagnostics/DevConfigs/CommonConfigs/ETWChannels.xml
+            Vssf/Sdk/DiagnosticsPackage/MdsDiagnostics/ProdConfigs/ETWEvents.xml.template
+            Make sure that task attribute matches the name of the table in Kusto
+          -->
+        </events>
+        <levels />
+        <!-- From the https://www.osgwiki.com/wiki/ETW_Overview
+             Each crimson event has a task. The task is a user-defined category that can be used to mark events, but does not affect ETW routing.
+             Tasks can be used to group events into categories. Since manifest-based ETW did not support "event names" before RS3, some developers have used tasks to give a name to an event.
+             Let us use task to specify Kusto table for the event.
+        -->
+        <tasks>
+          <task name="Debug_Tracing" symbol="DebugTracing" value="255" eventGUID="{00000000-0000-0000-0000-000000000000}" message="$(string.TeamFoundationServer.task.DebugTracing.message)" />
+          <task value="1"  name="ProductTrace" />
+          <task value="6"  name="ActivityLog" />
+          <task value="5"  name="JobHistory" />
+          <task value="8"  name="KPI" />
+          <task value="7"  name="CustomerIntelligence" />
+          <task value="9"  name="MachinePoolRequestHistory" />
+          <task value="10" name="ServiceHost" />
+          <task value="11" name="SqlRunningStatus" />
+          <task value="12" name="DatabasePerformanceStatistics" />
+          <task value="14" name="ServicingJobDetail" />
+          <task value="15" name="ServicingStepDetail" />
+          <task value="16" name="KpiMetric" />
+          <task value="17" name="EventMetric" />
+          <task value="18" name="MSDN" />
+          <task value="19" name="Commerce" />
+          <task value="20" name="User" />
+          <task value="21" name="VssHealthAgent" />
+          <task value="22" name="Account" />
+          <task value="23" name="Subscription" />
+          <task value="24" name="DatabaseSpaceStatistics" />
+          <task value="25" name="Licensing" />
+          <task value="26" name="IdentitySessionTokens" />
+          <task value="28" name="QDS" />
+          <task value="29" name="IdentityReads" />
+          <task value="30" name="IdentityTokens" />
+          <task value="31" name="IdentityCache" />
+          <task value="32" name="IdentitySql" />
+          <task value="33" name="Organization" />
+          <task value="34" name="DirectoryMember" />
+          <task value="35" name="StorageMetricsTransactions" />
+          <task value="36" name="StorageAnalyticsLogs" />
+          <task value="37" name="ResourceUtilization" />
+          <task value="39" name="HostingServiceCertficates" />
+          <task value="40" name="SqlServerAlwaysOnHealthStats" />
+          <task value="41" name="XEventData" />
+          <task value="42" name="MemoryClerks" />
+          <task value="43" name="ResourceSemaphores" />
+          <task value="44" name="QueryOptimizerMemoryGateways" />
+          <task value="45" name="SQLPerformanceCounters" />
+          <task value="46" name="HttpOutgoingRequests" />
+          <task value="47" name="PackagingTraces" />
+          <task value="48" name="GeoReplicationLinkStatus" />
+          <task value="49" name="XEventDataRPCCompleted" />
+          <task value="50" name="JobStarted" />
+          <task value="51" name="CloudServiceRoleDetails" />
+          <task value="52" name="SurveyEvent" />
+          <task value="53" name="TuningRecommendation" />
+          <task value="54" name="ServiceBusActivity" />
+          <task value="55" name="ClientTrace" />
+          <task value="56" name="ActivityLogCore" />
+          <task value="57" name="EuiiTrace" />
+          <task value="58" name="DetectedEuiiEvent" />
+          <task value="59" name="ActivityLogMapping" />
+          <task value="61" name="ServiceBusPublishMetadata"/>
+          <task value="62" name="EuiiUser"/>
+          <task value="63" name="OrchestrationLog"/>
+          <task value="64" name="ServiceBusMetrics" />
+          <task value="67" name="RedisCacheMetrics" />
+          <task value="69" name="FeatureFlagStatus"/>
+          <task value="70" name="DocDBStorageMetrics" />
+          <task value="71" name="AzureSearchMetrics" />
+          <task value="72" name="DocDBRUMetrics" />
+          <task value="74" name="HostPreferredRegionUpdate" />
+          <task value="75" name="LowPriorityProductTrace" />
+          <task value="76" name="OrganizationTenantTrace" />
+          <task value="77" name="DatabaseDetails" />
+          <task value="78" name="DatabaseConnectionInfo" />
+          <task value="79" name="OrchestrationActivityLog" />
+          <task value="80" name="DatabaseCounters" />
+          <task value="81" name="DatabaseIdentityColumns" />
+          <task value="82" name="DatabaseServicePrincipals"/>
+          <task value="83" name="SqlRowLockInfo"/>
+          <task value="84" name="DatabasePrincipals"/>
+          <task value="85" name="XEventSessions"/>
+          <task value="86" name="GitThrottlingSettings"/>
+          <task value="87" name="HostPreferredGeographyUpdate" />
+        </tasks>
+        <opcodes>
+          <opcode name="Info" symbol="_opcode_info" value="10" message="$(string.TeamFoundationServer.opcode._opcode_info.message)" />
+          <opcode name="Error" symbol="_opcode_error" value="11" message="$(string.TeamFoundationServer.opcode._opcode_error.message)" />
+          <opcode name="Warning" symbol="_opcode_warning" value="12" message="$(string.TeamFoundationServer.opcode._opcode_warning.message)" />
+          <opcode name="Verbose" symbol="_opcode_verbose" value="13" message="$(string.TeamFoundationServer.opcode._opcode_verbose.message)" />
+        </opcodes>
+        <channels>
+          <!-- Type: Define this as an Operational channel so that we get a circular log -->
+          <!-- Name: All of the TFS channels should ideally be placed under the Microsoft folder.  However, we have to be satisfied with the -->
+          <!--       convention where dashes in the name separate the parts.  The dashes are interpreted as path separators if you use -->
+          <!--       Microsoft-Windows or Microsoft-SharePoint Products as a prefix, but do not create folders in the server manager view otherwise. -->
+          <channel chid="TeamFoundationServer"
+                   name="Microsoft-Team Foundation Server/Debug"
+                   type="Operational"
+                   symbol="TFSProviderChannel"
+                   enabled="true">
+            <logging>
+              <retention>false</retention>
+              <maxSize>104857600</maxSize>
+            </logging>
+          </channel>
+          <channel chid="TeamFoundationServerExtended"
+                   name="Microsoft-Team Foundation Server/Extended"
+                   type="Operational"
+                   symbol="TFSProviderChannelExtended"
+                   enabled="true">
+            <logging>
+              <retention>false</retention>
+              <maxSize>104857600</maxSize>
+            </logging>
+          </channel>
+          <channel chid="TeamFoundationServerLowPriority"
+                   name="Microsoft-Team Foundation Server/LowPriority"
+                   type="Operational"
+                   symbol="TFSProviderChannelLowPriority"
+                   enabled="true">
+            <logging>
+              <retention>false</retention>
+              <maxSize>104857600</maxSize>
+            </logging>
+          </channel>
+        </channels>
+        <keywords>
+          <keyword name="Info" symbol="_keyword_info" mask="0x1" message="$(string.TeamFoundationServer.Keyword._keyword_info.message)" />
+          <keyword name="Error" symbol="_keyword_error" mask="0x2" message="$(string.TeamFoundationServer.Keyword._keyword_error.message)" />
+          <keyword name="Verbose" symbol="_keyword_verbose" mask="0x4" message="$(string.TeamFoundationServer.Keyword._keyword_verbose.message)" />
+          <keyword name="Warning" symbol="_keyword_warning" mask="0x8" message="$(string.TeamFoundationServer.Keyword._keyword_warning.message)" />
+        </keywords>
+
+        <templates>
+          <template tid="Info8" name="ProductTrace">
+            <data name="TraceId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Tracepoint" inType="win:Int32"/>
+            <data name="ServiceHost" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ContextId" inType="win:Int64"/>
+            <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Username" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Service" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Method" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Area" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Layer" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UserAgent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Uri" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Path" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UserDefined" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Message" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ProviderId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WebSiteId" inType="win:Int8" outType="xs:byte"/>
+          </template>
+
+          <template tid="SQL">
+            <data name="Database" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Datasource" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Operation" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Retries" inType="win:Int16" outType="xs:short"/>
+            <data name="Success" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="TotalTime" inType="win:Int32" outType="xs:int" />
+            <data name="ConnectTime" inType="win:Int32" outType="xs:int" />
+            <data name="ExecutionTime" inType="win:Int32" outType="xs:int" />
+            <data name="WaitTime" inType="win:Int32" outType="xs:int" />
+            <data name="ErrorCode" inType="win:Int32" outType="xs:int" />
+            <data name="ErrorMessage" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="JobAgentHistory15">
+            <data name="Plugin" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="JobName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="JobSource" inType="win:GUID" outType="xs:GUID"/>
+            <data name="JobId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="QueueTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ExecutionTime" inType="win:Int64" outType="xs:long"/>
+            <data name="AgentId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Result" inType="win:Int32" outType="xs:int"/>
+            <data name="ResultMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueuedReasons" inType="win:Int32" outType="xs:int" />
+            <data name="QueueFlags" inType="win:Int32" outType="xs:int" />
+            <data name="Priority" inType="win:Int16" outType="xs:short" />
+            <data name="LogicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="PhysicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ElapsedTime" inType="win:Int32" outType="xs:int"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SqlExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUCycles" inType="win:Int64" outType="xs:long"/>
+            <data name="FinalSqlCommandExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AadGraphExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadGraphExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="DocDBExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="DocDBExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="DocDBRUsConsumed" inType="win:Int32" outType="xs:int"/>
+            <data name="AllocatedBytes" inType="win:Int64" outType="xs:long"/>
+            <data name="RequesterActivityId" inType="win:GUID" outType="xs:GUID" />
+            <data name="RequesterVsid" inType="win:GUID" outType="xs:GUID" />
+            <data name="CPUCyclesAsync" inType="win:Int64" outType="xs:long"/>
+            <data name="AllocatedBytesAsync" inType="win:Int64" outType="xs:long"/>
+          </template>
+
+          <!--JobAgentHistory: Be sure to also update JobHistoryCore when adding columns to JobAgentHistory, if they're relevant. -->
+
+          <template tid="JobAgentJobStarted2">
+            <data name="Plugin" inType="win:UnicodeString" outType="xs:string" />
+            <data name="JobName" inType="win:UnicodeString" outType="xs:string" />
+            <data name="JobSource" inType="win:GUID" outType="xs:GUID" />
+            <data name="JobId" inType="win:GUID" outType="xs:GUID" />
+            <data name="QueueTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="AgentId" inType="win:GUID" outType="xs:GUID" />
+            <data name="QueuedReasons" inType="win:Int32" outType="xs:int" />
+            <data name="QueueFlags" inType="win:Int32" outType="xs:int" />
+            <data name="Priority" inType="win:Int16" outType="xs:short" />
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string" />
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID" />
+            <data name="RequesterActivityId" inType="win:GUID" outType="xs:GUID" />
+            <data name="RequesterVsid" inType="win:GUID" outType="xs:GUID" />
+          </template>
+
+          <template tid="ActivityLog38">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ContextId" inType="win:Int64" outType="xs:long" />
+            <data name="Application" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Command" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Status" inType="win:Int32" outType="xs:int"/>
+            <data name="Count" inType="win:Int32" outType="xs:int"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ExecutionTime" inType="win:Int64" outType="xs:long"/>
+            <data name="IdentityName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IPAddress" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UserAgent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CommandIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ResponseCode" inType="win:Int32" outType="xs:int"/>
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="TimeToFirstPage" inType="win:Int64" outType="xs:long"/>
+            <data name="ActivityStatus" inType="win:Int32" outType="xs:int"/>
+            <data name="ExecutionTimeThreshold" inType="win:Int64" outType="xs:long"/>
+            <data name="IsExceptionExpected" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="DelayTime" inType="win:Int64" outType="xs:long"/>
+            <data name="RelatedActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="LogicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="PhysicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ElapsedTime" inType="win:Int32" outType="xs:int"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostStartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SqlExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUCycles" inType="win:Int64" outType="xs:long"/>
+            <data name="FinalSqlCommandExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="PersistentSessionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="PendingAuthenticationSessionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CurrentAuthenticationSessionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ProviderId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="QueueTime" inType="win:Int64" outType="xs:long"/>
+            <data name="AuthenticationMechanism" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TSTUs" inType="win:Double" outType="xs:double"/>
+            <data name="AadGraphExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadGraphExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ThrottleReason" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Referrer" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UriStem" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SupportsPublicAccess" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="ConcurrencySemaphoreTime" inType="win:Int64" outType="xs:long"/>
+            <data name="AuthorizationId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="MethodInformationTimeout" inType="win:Int64" outType="xs:long"/>
+            <data name="PreControllerTime" inType="win:Int64" outType="xs:long"/>
+            <data name="ControllerTime" inType="win:Int64" outType="xs:long"/>
+            <data name="PostControllerTime" inType="win:Int64" outType="xs:long"/>
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DocDBExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="DocDBExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="DocDBRUsConsumed" inType="win:Int32" outType="xs:int"/>
+            <data name="AllocatedBytes" inType="win:Int64" outType="xs:long"/>
+            <data name="SmartRouterStatus" inType="win:UnicodeString" outType="xs:string" />
+            <data name="SmartRouterReason" inType="win:UnicodeString" outType="xs:string" />
+            <data name="SmartRouterTarget" inType="win:UnicodeString" outType="xs:string" />
+            <data name="OAuthAppId" inType="win:GUID" outType="xs:GUID" />
+            <data name="WebSiteId" inType="win:Int8" outType="xs:byte"/>
+          </template>
+
+          <template tid="CustomerIntelligence5">
+            <data name="Count" inType="win:Int32" outType="xs:int"/>
+            <data name="Properties" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID" />
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="VSID" inType="win:GUID" outType="xs:GUID" />
+            <data name="Area" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Useragent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID" />
+            <data name="DataspaceType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataspaceId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataspaceVisibility" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SupportsPublicAccess" inType="win:UInt8" outType="xs:unsignedByte"/>
+          </template>
+
+          <template tid="Kpi">
+            <!--  Need count for build purposes even though it is not being used. -->
+            <data name="Count" inType="win:Int32" outType="xs:int"/>
+            <data name="Metrics" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="MachinePoolRequestHistory7">
+            <data name="PoolType" inType="win:UnicodeString" outType="xs:string" />
+            <data name="PoolName" inType="win:UnicodeString" outType="xs:string" />
+            <data name="InstanceName" inType="win:UnicodeString" outType="xs:string" />
+            <data name="RequestId" inType="win:Int64" outType="xs:long" />
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="QueuedTime" inType="win:SYSTEMTIME" outType="xs:dateTime" />
+            <data name="AssignedTime" inType="win:SYSTEMTIME" outType="xs:dateTime" />
+            <data name="StartTime" inType="win:SYSTEMTIME" outType="xs:dateTime" />
+            <data name="FinishTime" inType="win:SYSTEMTIME" outType="xs:dateTime" />
+            <data name="UnassignedTime" inType="win:SYSTEMTIME" outType="xs:dateTime" />
+            <data name="Outcome" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Inputs" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Outputs" inType="win:UnicodeString" outType="xs:string" />
+            <data name="TraceActivityId" inType="win:GUID" outType="xs:GUID" />
+            <data name="MaxParallelism" inType="win:Int32" outType="xs:int" />
+            <data name="ImageLabel" inType="win:UnicodeString" outType="xs:string" />
+            <data name="TimeoutSeconds" inType="win:Int64" outType="xs:long" />
+            <data name="SlaSeconds" inType="win:Int64" outType="xs:long" />
+            <data name="SlaStartTime" inType="win:SYSTEMTIME" outType="xs:dateTime" />
+            <data name="Tags" inType="win:UnicodeString" outType="xs:string" />
+            <data name="SubscriptionId" inType="win:GUID" outType="xs:GUID" />
+            <data name="RequiredResourceVersion" inType="win:UnicodeString" outType="xs:string" />
+            <data name="SuspiciousActivity" inType="win:UnicodeString" outType="xs:string" />
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string" />
+            <data name="PoolRegion" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ImageVersion" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="HostHistory3">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ModifiedDate" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ActionType" inType="win:Int16" outType="xs:short"/>
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Authority" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Status" inType="win:Int16" outType="xs:short"/>
+            <data name="StatusReason" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SupportedFeatures" inType="win:Int16" outType="xs:short"/>
+            <data name="HostType" inType="win:Int16" outType="xs:short"/>
+            <data name="LastUserAccess" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="Name" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseId" inType="win:Int32" outType="xs:int"/>
+            <data name="StorageAccountId" inType="win:Int32" outType="xs:int"/>
+            <data name="SubStatus" inType="win:Int32" outType="xs:int"/>
+          </template>
+
+          <template tid="SqlRunningStatus6">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SessionId" inType="win:Int16" outType="xs:short" />
+            <data name="Seconds" inType="win:Int32" outType="xs:int" />
+            <data name="ElapsedTime" inType="win:Double" outType="xs:double"/>
+            <data name="Command" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="BlockingSessionId" inType="win:Int16" outType="xs:short" />
+            <data name="HeadBlockerSessionId" inType="win:Int16" outType="xs:short" />
+            <data name="BlockingLevel" inType="win:Int32" outType="xs:int" />
+            <data name="Text" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Statement" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="BlockerQueryText" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WaitType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WaitTime" inType="win:Int32" outType="xs:int"/>
+            <data name="LastWaitType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WaitResource" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Reads" inType="win:Int64" outType="xs:long"/>
+            <data name="Writes" inType="win:Int64" outType="xs:long"/>
+            <data name="LogicalReads" inType="win:Int64" outType="xs:long"/>
+            <data name="CPUTime" inType="win:Int32" outType="xs:int" />
+            <data name="GrantedQueryMemory" inType="win:Int32" outType="xs:int" />
+            <data name="RequestedMemory" inType="win:Int64" outType="xs:long"/>
+            <data name="MaxUsedMemory" inType="win:Int64" outType="xs:long"/>
+            <data name="Dop" inType="win:Int16" outType="xs:short" />
+            <data name="QueryPlan" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsReadOnly" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LoginName" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="DatabasePerformanceStatistics14">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PeriodStart" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="AverageCpuPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumCpuPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="AverageDataIOPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumDataIOPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="AverageLogWriteUtilizationPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumLogWriteUtilizationPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="AverageMemoryUsagePercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumMemoryUsagePercentage" inType="win:Double" outType="xs:double"/>
+            <data name="ServiceObjective" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="AverageWorkerPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumWorkerPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="AverageSessionPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumSessionPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="dtu_limit" inType="win:Int16" outType="xs:short" />
+            <data name="PoolName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsReadOnly" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="AverageXtpPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="MaximumXtpPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="ResourceVersion" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Schedulers" inType="win:Int32"/>
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="AverageInstanceCpuPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="AverageInstanceMemoryPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="ReplicaRole" inType="win:Int16" outType="xs:short"/>
+            <data name="CompatibilityLevel" inType="win:Int16" outType="xs:short"/>
+            <data name="RedoQueueSizeKB" inType="win:Int64" />
+            <data name="RedoRateKBPerSec" inType="win:Int64" />
+            <data name="SecondaryLagSeconds" inType="win:Double" outType="xs:double" />
+            <data name="SynchronizationHealth" inType="win:Int16" outType="xs:short" />
+            <data name="ServiceObjectiveHardware" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ServicingJobDetail">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="JobId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="OperationClass" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Operations" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="JobStatus" inType="win:Int32" outType="xs:int"/>
+            <data name="JobStatusDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Result" inType="win:Int32" outType="xs:int"/>
+            <data name="ResultDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueueTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="StartTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="EndTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="DurationInSeconds" inType="win:Double" outType="xs:double"/>
+            <data name="CompletedStepCount" inType="win:Int16" outType="xs:short"/>
+            <data name="TotalStepCount" inType="win:Int16" outType="xs:short"/>
+          </template>
+
+          <template tid="ServicingStepDetail2">
+            <data name="DetailTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="Message" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="OperationName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="GroupName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StepName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EntryKind" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="JobId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="QueueTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+          </template>
+
+          <template tid="TableSpaceUsage3">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SchemaName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TableName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IndexName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IndexType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Compression" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IndexId" inType="win:Int32"/>
+            <data name="RowCount" inType="win:Int64"/>
+            <data name="UsedSpaceInMB" inType="win:Double"/>
+            <data name="ReservedSpaceInMB" inType="win:Double"/>
+            <data name="InRowUsedSpaceInMB" inType="win:Double"/>
+            <data name="InRowReservedSpaceInMB" inType="win:Double"/>
+            <data name="LobUsedSpaceInMB" inType="win:Double"/>
+            <data name="LobReservedSpaceInMB" inType="win:Double"/>
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PartitionNumber" inType="win:Int32" outType="xs:int"/>
+            <data name="PartitionBoundary" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="KpiMetric2">
+            <data name="EventTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="Area" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Scope" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="KpiMetricName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="KpiMetricValue" inType="win:Double" outType="xs:double"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="DisplayName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Description" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="EventMetric2">
+            <data name="EventTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="EventSource" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EventMetricName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EventMetricValue" inType="win:Double" outType="xs:double"/>
+            <data name="DatabaseId" inType="win:Int32" outType="xs:int" />
+            <data name="DeploymentId" inType="win:UnicodeString" outType="xs:string" />
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="MachineName" inType="win:UnicodeString" outType="xs:string" />
+            <data name="RoleInstanceId" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Scope" inType="win:UnicodeString" outType="xs:string" />
+            <data name="EventType" inType="win:UnicodeString" outType="xs:string" />
+            <data name="EventId" inType="win:Int32" outType="xs:int" />
+          </template>
+
+          <template tid="Commerce">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="User">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Account">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Subscription">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Licensing">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Identity_SessionTokens">
+            <data name="Operation" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SessionTokenType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Error" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ClientId" inType="win:GUID" outType="xs:GUID" />
+            <data name="AccessId" inType="win:GUID" outType="xs:GUID" />
+            <data name="AuthorizationId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostAuthorizationId" inType="win:GUID" outType="xs:GUID" />
+            <data name="UserId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ValidFrom" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="ValidTo" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="DisplayName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Scope" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TargetAccounts" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsValid" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="IsPublic" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="PublicData" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Source" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Notification">
+            <data name="CreatedDate" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="EventTaskName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="EventType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Identifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="QDS3">
+            <data name="RunId" inType="win:Int64" />
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PeriodStart" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="PeriodEnd" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="QueryText" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueryId" inType="win:Int64" />
+            <data name="ObjectName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueryTextId" inType="win:Int64" />
+            <data name="PlanId" inType="win:Int64" />
+            <data name="TotalPhysicalReads" inType="win:Int64"  />
+            <data name="TotalCpuTime" inType="win:Int64" />
+            <data name="AverageRowCount" inType="win:Int64" />
+            <data name="TotalExecutions" inType="win:Int64" />
+            <data name="TotalLogicalReads" inType="win:Int64" />
+            <data name="AverageCpuTime" inType="win:Int64" />
+            <data name="TotalAborted" inType="win:Int64" />
+            <data name="TotalExceptions" inType="win:Int64" />
+            <data name="TotalLogicalWrites" inType="win:Int64" />
+            <data name="AverageDop" inType="win:Double" outType="xs:double"/>
+            <data name="AverageQueryMaxUsedMemory" inType="win:Int64" />
+            <data name="QueryHash"  inType="win:Int64" />
+            <data name="QueryPlanHash" inType="win:Int64" />
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Identity_Reads">
+            <data name="ClassName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Flavor" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Identifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueryMembership" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PropertyNameFilters" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Options" inType="win:UnicodeString" outType="xs:string" />
+            <data name="CallStack" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="Identity_Token">
+            <data name="ClassName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Header" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Claims" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Nonce" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Identity_Cache_Changes">
+            <data name="StoreType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EventType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SearchFilter" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DomainId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EventValue" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueryMembership" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CacheResult" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CallStack" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="Identity_Sql_Changes">
+            <data name="EventType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DomainId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EventValue" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueryMembership" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CallStack" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="Organization">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="Directory_Member">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="StorageMetricsTransactions5">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="StorageAccount" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StorageService" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StartingIntervalUTC" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="TotalIngress" inType="win:Int64" outType="xs:long"/>
+            <data name="TotalEgress" inType="win:Int64" outType="xs:long"/>
+            <data name="TotalRequests" inType="win:Int64" outType="xs:long"/>
+            <data name="TotalBillableRequests" inType="win:Int64" outType="xs:long"/>
+            <data name="Availability" inType="win:Double" outType="xs:double"/>
+            <data name="AverageE2ELatency" inType="win:Double" outType="xs:double"/>
+            <data name="AverageServerLatency" inType="win:Double" outType="xs:double"/>
+            <data name="PercentSuccess" inType="win:Double" outType="xs:double"/>
+            <data name="PercentThrottlingError" inType="win:Double" outType="xs:double"/>
+            <data name="PercentTimeoutError" inType="win:Double" outType="xs:double"/>
+            <data name="PercentServerOtherError" inType="win:Double" outType="xs:double"/>
+            <data name="PercentClientOtherError" inType="win:Double" outType="xs:double"/>
+            <data name="PercentAuthorizationError" inType="win:Double" outType="xs:double"/>
+            <data name="PercentNetworkError" inType="win:Double" outType="xs:double"/>
+            <data name="Success" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousSuccess" inType="win:Int64" outType="xs:long"/>
+            <data name="SasSuccess" inType="win:Int64" outType="xs:long"/>
+            <data name="ThrottlingError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousThrottlingError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasThrottlingError" inType="win:Int64" outType="xs:long"/>
+            <data name="ClientTimeoutError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousClientTimeoutError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasClientTimeoutError" inType="win:Int64" outType="xs:long"/>
+            <data name="ServerTimeoutError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousServerTimeoutError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasServerTimeoutError" inType="win:Int64" outType="xs:long"/>
+            <data name="ClientOtherError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasClientOtherError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousClientOtherError" inType="win:Int64" outType="xs:long"/>
+            <data name="ServerOtherError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousServerOtherError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasServerOtherError" inType="win:Int64" outType="xs:long"/>
+            <data name="AuthorizationError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousAuthorizationError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasAuthorizationError" inType="win:Int64" outType="xs:long"/>
+            <data name="NetworkError" inType="win:Int64" outType="xs:long"/>
+            <data name="AnonymousNetworkError" inType="win:Int64" outType="xs:long"/>
+            <data name="SasNetworkError" inType="win:Int64" outType="xs:long"/>
+            <data name="OperationType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StorageCluster" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StorageKind" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StorageSku" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="BlobGeoLastSyncTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="TableGeoLastSyncTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="QueueGeoLastSyncTime" inType="win:FILETIME" outType="xs:dateTime"/>
+          </template>
+
+          <template tid="StorageAnalyticsLogs">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="StorageAccount" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StorageService" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="VersionNumber" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestStartTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="OperationType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestStatus" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HttpStatusCode" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EndtoEndLatencyInMs" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ServerLatencyInMs" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="AuthenticationType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequesterAccountName" inType="win:UnicodeString" outType="xs:string" />
+            <data name="OwnerAccountName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestUrl" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestedObjectKey" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestIdHeader" inType="win:GUID" outType="xs:GUID"/>
+            <data name="OperationCount" inType="win:Int64" outType="xs:long"/>
+            <data name="RequesterIpAddress" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestVersionHeader" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestHeaderSize" inType="win:Int64" outType="xs:long"/>
+            <data name="RequestPacketSize" inType="win:Int64" outType="xs:long"/>
+            <data name="ResponseHeaderSize" inType="win:Int64" outType="xs:long"/>
+            <data name="ResponsePacketSize" inType="win:Int64" outType="xs:long"/>
+            <data name="RequestContentLength" inType="win:Int64" outType="xs:long"/>
+            <data name="RequestMd5" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ServerMd5" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EtagIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastModifiedTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ConditionsUsed" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UserAgentHeader" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ReferrerHeader" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ClientRequestId" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ResourceUtilization3">
+            <data name="StartTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Channel" inType="win:Int32" outType="xs:int"/>
+          </template>
+
+          <template tid="HostingServiceCertficates">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Source" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Thumbprint" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SerialNumber" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SubjectName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IssuerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SignatureAlgorithm" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CreatedDate" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ExpiryDate" inType="win:FILETIME" outType="xs:dateTime" />
+          </template>
+
+          <template tid="SqlServerAlwaysOnHealthStats">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ListenerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="GroupId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="GroupName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ReplicaId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ReplicaServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ReplicaDatabaseId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ConnectedStateDesc" inType="win:UnicodeString" outType="xs:string" />
+            <data name="AvailabilityModeDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SynchronizationStateDesc" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ReplicaRoleDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsLocal" inType="win:Int32" outType="xs:int" />
+            <data name="IsJoined" inType="win:Int32" outType="xs:int"/>
+            <data name="IsSuspended" inType="win:Int32" outType="xs:int"/>
+            <data name="SuspendReasonDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsFailoverReady" inType="win:Int32" outType="xs:int"/>
+            <data name="EstimatedDataLossIfFailoverNotReadyInSec" inType="win:Int32" outType="xs:int"/>
+            <data name="EstimatedRecoveryTime" inType="win:Double" outType="xs:double"/>
+            <data name="FileStreamSendRate" inType="win:Int64" outType="xs:long"/>
+            <data name="LogSendQueueSize" inType="win:Int64" outType="xs:long"/>
+            <data name="LogSendRate" inType="win:Int64" outType="xs:long" />
+            <data name="RedoQueueSize" inType="win:Int64" outType="xs:long"/>
+            <data name="RedoRate" inType="win:Int64" outType="xs:long" />
+            <data name="SynchronizationPerformance" inType="win:Double" outType="xs:double"/>
+            <data name="LastCommitLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastCommitTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="LastHardenedLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastHardenedTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="LastReceivedLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastReceivedTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="LastSentLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastSentTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="LastRedoneLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastRedoneTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="EndOfLogLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RecoveryLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TruncationLsn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CollectionTime" inType="win:FILETIME" outType="xs:dateTime" />
+          </template>
+
+          <template tid="XEventData6">
+            <data name="EventTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="SequenceNumber" inType="win:Int32" outType="xs:int"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Type" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="ObjectName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Actions" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Fields" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="XEventTypeName" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="MemoryClerks3">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ClerkName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SizeKB" inType="win:Int64" outType="xs:long"/>
+            <data name="IsReadonly" inType="win:Boolean" outType="xs:boolean" />
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ResourceSemaphores3">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ResourceSemaphoreId" inType="win:Int32" outType="xs:int"/>
+            <data name="TargetMemoryKB" inType="win:Int64" outType="xs:long"/>
+            <data name="MaxTargetMemoryKB" inType="win:Int64" outType="xs:long"/>
+            <data name="TotalMemoryKB" inType="win:Int64" outType="xs:long"/>
+            <data name="AvailableMemoryKB" inType="win:Int64" outType="xs:long"/>
+            <data name="GrantedMemoryKB" inType="win:Int64" outType="xs:long"/>
+            <data name="UsedMemoryKB" inType="win:Int64" outType="xs:long"/>
+            <data name="GranteeCount" inType="win:Int32" outType="xs:int"/>
+            <data name="WaiterCount" inType="win:Int32" outType="xs:int"/>
+            <data name="TimeoutErrorCount" inType="win:Int64" outType="xs:long"/>
+            <data name="ForcedGrantCount" inType="win:Int64" outType="xs:long"/>
+            <data name="PoolId" inType="win:Int32" outType="xs:int"/>
+            <data name="IsReadonly" inType="win:Boolean" outType="xs:boolean" />
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="QueryOptimizerMemoryGateways3">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PoolId" inType="win:Int32" outType="xs:int"/>
+            <data name="MaxCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ActiveCount" inType="win:Int32" outType="xs:int"/>
+            <data name="WaiterCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ThresholdFactor" inType="win:Int64" outType="xs:long"/>
+            <data name="Threshold" inType="win:Int64" outType="xs:long"/>
+            <data name="IsActive" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="IsReadonly" inType="win:Boolean" outType="xs:boolean" />
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="SQLPerformanceCounters3">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CounterName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CounterValue" inType="win:Int64" outType="xs:long"/>
+            <data name="IsReadonly" inType="win:Boolean" outType="xs:boolean" />
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="HttpOutgoingRequests6">
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="TimeTaken" inType="win:Int32" outType="xs:int"/>
+            <data name="HttpClientName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HttpMethod" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UrlHost" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UrlPath" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ResponseCode" inType="win:Int32" outType="xs:int"/>
+            <data name="ErrorMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AfdRefInfo" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RequestPriority" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CalledActivityId" inType="win:GUID" outType="xs:GUID" />
+            <data name="RequestPhase" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TokenRetries" inType="win:Int32" outType="xs:int"/>
+            <data name="HandlerStartTime" inType="win:Int32" outType="xs:int"/>
+            <data name="BufferedRequestTime" inType="win:Int32" outType="xs:int"/>
+            <data name="RequestSendTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ResponseContentTime" inType="win:Int32" outType="xs:int"/>
+            <data name="GetTokenTime" inType="win:Int32" outType="xs:int"/>
+            <data name="TrailingTime" inType="win:Int32" outType="xs:int"/>
+          </template>
+
+          <template tid="PackagingTraces3">
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CollectionHostName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ProjectId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Protocol" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Command" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="FeedId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="FeedName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ViewId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ViewName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PackageName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PackageVersion" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ResponseCode" inType="win:Int32" outType="xs:int"/>
+            <data name="IsSlow" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="TimeToFirstPageInMs" inType="win:Int64" outType="xs:long"/>
+            <data name="ExecutionTimeInMs" inType="win:Int64" outType="xs:long"/>
+            <data name="QueueTimeInMs" inType="win:Int64" outType="xs:long"/>
+            <data name="IsFailed" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IdentityName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UserAgent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ClientSessionId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RefererHeader" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SourceIp" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostIp" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="BuildNumber" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CommitId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataCurrentVersion" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataDestinationVersion" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataMigrationState" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="FeatureFlagsOn" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="FeatureFlagsOff" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StackTrace" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TimingsTrace" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Uri" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HttpMethod" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RelatedActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Properties" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PackageStorageId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ProjectVisibility" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid ="GeoReplicationLinkStatus2">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LinkGuid" inType="win:GUID" outType="xs:GUID"/>
+            <data name="PartnerServer" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PartnerDatabase" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastReplication" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ReplicationLagSec" inType="win:Int32" outType="xs:int"/>
+            <data name="ReplicationState" inType="win:Int32" outType="xs:int"/>
+            <data name="ReplicationStateDescription" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Role" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="RoleDescription" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SecondaryAllowConnections" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="SecondaryAllowConnectionsDescription" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastCommit" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="XEventDataRPCCompleted5">
+            <data name="EventTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="SequenceNumber" inType="win:Int32" outType="xs:int"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Type" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="ObjectName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CpuTime" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="Duration" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="PhysicalReads" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="LogicalReads" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="Writes" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="Result" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RowCount" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="ConnectionResetOption" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Statement" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TSTUs" inType="win:Double" outType="xs:double"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsGoverned" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="IsReadScaleOut" inType="win:Boolean" outType="xs:boolean"/>
+          </template>
+
+          <template tid="CloudServiceRoleDetails10">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AzureSubscriptionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AzureSubscriptionAadTenantId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="RoleType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RoleCountMin" inType="win:Int32" outType="xs:int"/>
+            <data name="RoleCount" inType="win:Int32" outType="xs:int"/>
+            <data name="RoleCountMax" inType="win:Int32" outType="xs:int"/>
+            <data name="RoleSize" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RoleCores" inType="win:Int32" outType="xs:int"/>
+            <data name="RoleMemoryMB" inType="win:Int64" outType="xs:long"/>
+            <data name="HostedServiceDnsName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="BuildNumber" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="OSImageVersion" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DeploymentOsVersion" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DeploymentHotfixes" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="EncryptionAtHost" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="SecurityType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SecureBootEnabled" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="VTpmEnabled" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="OSDiskStorageAccountType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="OSDiskSizeInGB" inType="win:Int32" outType="xs:int"/>
+            <!-- Unfortunatelly, DeploymentRing cannot be int, since we have deployment rings such as ppe, preflight, canary-1, 2A -->
+            <data name="DeploymentRing" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WeekdayPeakRoleCountMin" inType="win:Int32" outType="xs:int"/>
+            <data name="WeekdayPeakRoleCountMax" inType="win:Int32" outType="xs:int"/>
+            <data name="WeekdayPeakStartTime" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WeekdayPeakEndTime" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WeekendPeakRoleCountMin" inType="win:Int32" outType="xs:int"/>
+            <data name="WeekendPeakRoleCountMax" inType="win:Int32" outType="xs:int"/>
+            <data name="WeekendPeakStartTime" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="WeekendPeakEndTime" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Zones" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="SurveyEvent2">
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID" />
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="VSID" inType="win:GUID" outType="xs:GUID" />
+            <data name="CUID" inType="win:GUID" outType="xs:GUID" />
+            <data name="Area" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UserAgent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Properties" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataspaceType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataspaceId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataspaceVisibility" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SupportsPublicAccess" inType="win:UInt8" outType="xs:unsignedByte"/>
+          </template>
+
+          <template tid="TuningRecommendation2">
+            <data name="RunId" inType="win:Int64" outType="xs:long"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Name" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Type" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Reason" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ValidSince" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="LastRefresh"  inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="State" inType="win:UnicodeString" outType="xs:string" />
+            <data name="IsExecutableAction" inType="win:Boolean" outType="xs:boolean" />
+            <data name="IsRevertableAction" inType="win:Boolean" outType="xs:boolean" />
+            <data name="ExecuteActionStartTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="ExecuteActionDurationMilliseconds" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="ExecuteActionInitiatedBy" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ExecuteActionInitiatedTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="RevertActionStartTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="RevertActionDurationMilliseconds" inType="win:UInt64" outType="xs:unsignedLong"/>
+            <data name="RevertActionInitiatedBy" inType="win:UnicodeString" outType="xs:string" />
+            <data name="RevertActionInitiatedTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="Score" inType="win:Int32" outType="xs:int"/>
+            <data name="Details" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ServiceBusActivity4">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="TopicName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Plugin" inType="win:UnicodeString" outType="xs:string" />
+            <data name="SourceInstanceId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="SourceInstanceType" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Status" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="LogicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="PhysicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CPUTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ElapsedTime" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUCycles" inType="win:Int64" outType="xs:long"/>
+            <data name="SqlExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadGraphExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadGraphExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="FinalSqlCommandExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="MessageId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Namespace" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ContentType" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ServiceBusPublishMetadata2">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="TopicName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="MessageId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TargetScaleUnits" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Status" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="PublishTimeMs" inType="win:Int64" outType="xs:long"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Namespace" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ContentType" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ClientTrace2">
+            <data name="Properties" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID" />
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="VSID" inType="win:GUID" outType="xs:GUID" />
+            <data name="Area" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Useragent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID" />
+            <data name="Method" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Component" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Message" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string" />
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID" />
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ProviderId" inType="win:GUID" outType="xs:GUID" />
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+          </template>
+
+          <template tid="ActivityLogCore6">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Application" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Command" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Status" inType="win:Int32" outType="xs:int"/>
+            <data name="Count" inType="win:Int32" outType="xs:int"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ExecutionTime" inType="win:Int64" outType="xs:long"/>
+            <data name="UserAgent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="TimeToFirstPage" inType="win:Int64" outType="xs:long"/>
+            <data name="ActivityStatus" inType="win:Int32" outType="xs:int"/>
+            <data name="IsExceptionExpected" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CPUTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ElapsedTime" inType="win:Int32" outType="xs:int"/>
+            <data name="DelayTime" inType="win:Int64" outType="xs:long"/>
+            <data name="SqlExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SupportsPublicAccess" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="PendingAuthenticationSessionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="UriStem" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="EuiiTrace">
+            <data name="Properties" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="UniqueIdentifier" inType="win:GUID" outType="xs:GUID" />
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="VSID" inType="win:GUID" outType="xs:GUID" />
+            <data name="Area" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Useragent" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID" />
+            <data name="Method" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Uri" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Component" inType="win:UnicodeString" outType="xs:string" />
+            <data name="Message" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string" />
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID" />
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ProviderId" inType="win:GUID" outType="xs:GUID" />
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+          </template>
+
+          <template tid="DetectedEuiiEvent">
+            <data name="EventTime" inType="win:FILETIME" outType="xs:dateTime" />
+            <data name="Source" inType="win:UnicodeString" outType="xs:string" />
+            <data name="EuiiType" inType="win:Int32" outType="xs:int" />
+            <data name="Message" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="ActivityLogMapping4">
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="IdentityName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IPAddress" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID" />
+            <data name="VSID" inType="win:GUID" outType="xs:GUID" />
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+          </template>
+
+          <template tid="ServicePrincipalIsMember">
+            <data name="ServicePrincipalId" inType="win:GUID" outType="xs:GUID" />
+            <data name="GroupSid" inType="win:UnicodeString" outType="xs:string" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="StackTrace" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ExecutionCount" inType="win:Int32" outType="xs:int" />
+          </template>
+
+          <template tid="EuiiUser">
+            <data name="EntityTypeName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DataFeed" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="OrchestrationLog3">
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="EndTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ExecutionTimeThreshold" inType="win:Int64" outType="xs:long"/>
+            <data name="OrchestrationStatus" inType="win:UInt8" outType="xs:unsignedByte"/>
+            <data name="Application" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Command" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsExceptionExpected" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="VSID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CUID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AnonymousIdentifier" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="ServiceBusMetrics">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServiceBusNamespace" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SKUTier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StartingIntervalUTC" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="TotalSuccessfulRequests" inType="win:Double" outType="xs:double"/>
+            <data name="TotalServerErrors" inType="win:Double" outType="xs:double"/>
+            <data name="TotalUserErrors" inType="win:Double" outType="xs:double"/>
+            <data name="TotalThrottledRequests" inType="win:Double" outType="xs:double"/>
+            <data name="TotalIncomingRequests" inType="win:Double" outType="xs:double"/>
+            <data name="TotalIncomingMessages" inType="win:Double" outType="xs:double"/>
+            <data name="TotalOutgoingMessages" inType="win:Double" outType="xs:double"/>
+            <data name="TotalActiveConnections" inType="win:Double" outType="xs:double"/>
+            <data name="AverageSizeInBytes" inType="win:Double" outType="xs:double"/>
+            <data name="AverageMessages" inType="win:Double" outType="xs:double"/>
+            <data name="AverageActiveMessages" inType="win:Double" outType="xs:double"/>
+          </template>
+
+          <template tid="SQLSpinlocks3">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SpinlockName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Collisions" inType="win:Int64" outType="xs:long"/>
+            <data name="Spins" inType="win:Int64" outType="xs:long"/>
+            <data name="SpinsPerCollision" inType="win:Float" outType="xs:float"/>
+            <data name="SleepTime" inType="win:Int64" outType="xs:long"/>
+            <data name="Backoffs" inType="win:Int64" outType="xs:long"/>
+            <data name="IsReadOnly" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="Listener" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="JobHistoryCore">
+            <data name="Plugin" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="JobName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="JobSource" inType="win:GUID" outType="xs:GUID"/>
+            <data name="JobId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="QueueTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="StartTime" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ExecutionTime" inType="win:Int64" outType="xs:long"/>
+            <data name="AgentId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="Result" inType="win:Int32" outType="xs:int"/>
+            <data name="QueuedReasons" inType="win:Int32" outType="xs:int" />
+            <data name="QueueFlags" inType="win:Int32" outType="xs:int" />
+            <data name="Priority" inType="win:Int16" outType="xs:short" />
+            <data name="LogicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="PhysicalReads" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ElapsedTime" inType="win:Int32" outType="xs:int"/>
+            <data name="Feature" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SqlExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="RedisExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="BlobStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="TableStorageExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="ServiceBusExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="VssClientExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlRetryExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="SqlReadOnlyExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="CPUCycles" inType="win:Int64" outType="xs:long"/>
+            <data name="FinalSqlCommandExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AadGraphExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadGraphExecutionCount" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionTime" inType="win:Int32" outType="xs:int"/>
+            <data name="AadTokenExecutionCount" inType="win:Int32" outType="xs:int"/>
+          </template>
+
+          <template tid="RedisCacheMetrics">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="RedisCacheInstance" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SKUTier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StartingIntervalUTC" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="TotalConnectedClients" inType="win:Double" outType="xs:double"/>
+            <data name="TotalCommandsProcessed" inType="win:Double" outType="xs:double"/>
+            <data name="TotalCacheHits" inType="win:Double" outType="xs:double"/>
+            <data name="TotalCacheMisses" inType="win:Double" outType="xs:double"/>
+            <data name="TotalUsedMemory" inType="win:Double" outType="xs:double"/>
+            <data name="TotalUsedMemoryRss" inType="win:Double" outType="xs:double"/>
+            <data name="TotalServerLoad" inType="win:Double" outType="xs:double"/>
+            <data name="TotalProcessorTime" inType="win:Double" outType="xs:double"/>
+            <data name="TotalOperationsPerSecond" inType="win:Double" outType="xs:double"/>
+            <data name="TotalGetCommands" inType="win:Double" outType="xs:double"/>
+            <data name="TotalSetCommands" inType="win:Double" outType="xs:double"/>
+            <data name="TotalEvictedKeys" inType="win:Double" outType="xs:double"/>
+            <data name="TotalTotalKeys" inType="win:Double" outType="xs:double"/>
+            <data name="TotalExpiredKeys" inType="win:Double" outType="xs:double"/>
+            <data name="TotalUsedMemoryPercentage" inType="win:Double" outType="xs:double"/>
+            <data name="TotalCacheRead" inType="win:Double" outType="xs:double"/>
+            <data name="TotalErrors" inType="win:Double" outType="xs:double"/>
+          </template>
+
+          <template tid="AzureSearchMetrics">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AzureSearchInstance" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SKUTier" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StartingIntervalUTC" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="SearchLatency" inType="win:Double" outType="xs:double"/>
+            <data name="QueriesPerSecond" inType="win:Double" outType="xs:double"/>
+            <data name="ThrottledSearchQueriesPercentage" inType="win:Double" outType="xs:double"/>
+          </template>
+
+          <template tid="ServiceHostExtended">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Status" inType="win:Int16" outType="xs:short"/>
+            <data name="StatusReason" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LastUserAccess" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="IsDeleted" inType="win:Boolean" outType="xs:boolean"/>
+          </template>
+
+          <template tid="OrganizationTenant2">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="HostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="HostName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ParentHostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ParentHostType" inType="win:UInt8" outType="xs:unsignedByte" />
+            <data name="ParentHostName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TenantId" inType="win:GUID" outType="xs:GUID" />
+            <data name="TenantLastModified" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="PreferredRegion" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="DatabaseDetails5">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="DatabaseId" inType="win:Int32" outType="xs:int"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Version" inType="win:Int64" outType="xs:long"/>
+            <data name="ServiceLevel" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PoolName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PoolMaxDatabaseLimit" inType="win:Int32" outType="xs:int"/>
+            <data name="Tenants" inType="win:Int32" outType="xs:int"/>
+            <data name="MaxTenants" inType="win:Int32" outType="xs:int"/>
+            <data name="Status" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StatusReason" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="StatusChangedDate" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="Flags" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="MinServiceObjective" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="MaxServiceObjective" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RetentionDays" inType="win:Int32" outType="xs:int"/>
+            <data name="ConnectionString" inType= "win:UnicodeString" outType="xs:string"/>
+            <data name="CreatedOn" inType="win:FILETIME" outType="xs:dateTime"/>
+            <data name="ServiceObjective" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="BackupStorageRedundancy" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsZoneRedundant" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="Collation" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Location" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DefaultSecondaryLocation" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ReadScale" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HighAvailabilityReplicaCount" inType="win:Int32" outType="xs:int"/>
+            <data name="MaxSizeInGB" inType="win:Double" outType="xs:double"/>
+            <data name="MaxLogSizeInGB" inType="win:Double" outType="xs:double"/>
+            <data name="Kind" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="DatabaseConnectionInfo">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsReadOnly" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="HostName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ProgramName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostProcessId" inType="win:Int32" outType="xs:int" />
+            <data name="Count" inType="win:Int32" outType="xs:int" />
+            <data name="InactiveCount" inType="win:Int32" outType="xs:int" />
+            <data name="SampleText" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="FeatureFlagStatusHostVSID">
+            <data name="RunId" inType="win:Int64" />
+            <data name="FeatureFlagName" inType="win:UnicodeString" outType="xs:string" />
+            <data name="EffectiveState" inType="win:UnicodeString" outType="xs:string" />
+            <data name="ExplicitState" inType="win:UnicodeString" outType="xs:string" />
+            <data name="HostId" inType="win:UnicodeString" outType="xs:string" />
+            <data name="VSID" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="DocDBStorageMetrics">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="AccountName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseCategory" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CollectionId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CollectionSizeUsage" inType="win:Int64" outType="xs:long"/>
+            <data name="CollectionSizeQuota" inType="win:Int64" outType="xs:long"/>
+            <data name="PartitionKeyRangeId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PartitionKeyRangeDocumentCount" inType="win:Int64" outType="xs:long"/>
+            <data name="PartitionKeyRangeSize" inType="win:Int64" outType="xs:long"/>
+            <data name="PartitionKeyRangeDominantPartitionKeys" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="DocDBRUMetrics">
+            <data name="AccountName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseCategory" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CollectionId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DocumentType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ConsumedRUs" inType="win:Int64" outType="xs:long"/>
+          </template>
+
+          <template tid="VirtualFileStats">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ReadOnly" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="databaseId" inType="win:Int16" outType="xs:short" />
+            <data name="fileId" inType="win:Int16" outType="xs:short" />
+            <data name="sampleMs" inType="win:Int64" outType="xs:long" />
+            <data name="numReads" inType="win:Int64" outType="xs:long" />
+            <data name="numBytesRead" inType="win:Int64" outType="xs:long" />
+            <data name="ioStallReadMs" inType="win:Int64" outType="xs:long" />
+            <data name="numWrites" inType="win:Int64" outType="xs:long" />
+            <data name="numBytesWritten" inType="win:Int64" outType="xs:long" />
+            <data name="ioStallWriteMs" inType="win:Int64" outType="xs:long" />
+            <data name="ioStall" inType="win:Int64" outType="xs:long" />
+            <data name="sizeOnDiskBytes" inType="win:Int64" outType="xs:long" />
+            <data name="ioStallQueuedReadMs" inType="win:Int64" outType="xs:long" />
+            <data name="ioStallQueueWriteMs" inType="win:Int64" outType="xs:long" />
+          </template>
+
+          <template tid="HostPreferredRegionUpdate">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="PreferredRegion" inType="win:UnicodeString" outType="xs:string" />
+            <data name="RegionUpdateType" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+          <template tid="OrchestrationActivityLog1">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="OrchestrationId" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Name" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Version" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="QueueTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="StartTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="ExecutionTime" inType="win:Int64" outType="xs:long"/>
+            <data name="CPUExecutionTime" inType="win:Int64" outType="xs:long"/>
+            <data name="ExceptionType" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ExceptionMessage" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ActivityId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="E2EID" inType="win:GUID" outType="xs:GUID"/>
+            <data name="CPUCycles" inType="win:Int64" outType="xs:long"/>
+            <data name="AllocatedBytes" inType="win:Int64" outType="xs:long"/>
+          </template>
+
+          <template tid="DatabaseCounters">
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="ProjectId" inType="win:GUID" outType="xs:GUID" />
+            <data name="CounterName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CounterValue" inType="win:Int64" outType="xs:long"/>
+            <data name="LeftOverPercent" inType="win:Int32" outType="xs:int" />
+          </template>
+
+          <template tid="DatabaseIdentityColumns">
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SchemaName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TableName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IdentityColumnName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IdentityColumnValue" inType="win:Int64" outType="xs:long"/>
+            <data name="IdentityColumnDatatype" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="LeftOverPercent" inType="win:Int32" outType="xs:int" />
+          </template>
+
+          <template tid="DatabaseServicePrincipals">
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="ServicePrincipalId" inType="win:Int32" outType="xs:int"/>
+            <data name="ServicePrincipalName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TypeDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="AuthenticationTypeDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CreateTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="ModifyTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="StateDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PermissionName" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="DatabasePrincipals">
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="PrincipalId" inType="win:Int32" outType="xs:int"/>
+            <data name="PrincipalName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="RoleName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="Permissions" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TypeDesc" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="CreateTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+            <data name="ModifyTime" inType="win:SYSTEMTIME" outType="xs:dateTime"/>
+          </template>
+
+          <template tid="SqlRowLockInfo2">
+            <data name="ExecutionId" inType="win:GUID" outType="xs:GUID"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsReadOnly" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="SchemaName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="TableName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IndexName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="HobtId" inType="win:Int64" outType="xs:long"/>
+            <data name="ObjectId" inType="win:Int32" outType="xs:int"/>
+          </template>
+
+          <template tid="XEventSessions">
+            <data name="SessionId" inType="win:Int32" outType="xs:int"/>
+            <data name="ServerName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="DatabaseName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="SessionName" inType="win:UnicodeString" outType="xs:string"/>
+            <data name="IsEventFileTruncated" inType="win:Boolean" outType="xs:boolean"/>
+            <data name="BuffersLogged" inType="win:Int32" outType="xs:int"/>
+            <data name="BuffersDropped" inType="win:Int32" outType="xs:int"/>
+            <data name="EventFileName" inType="win:UnicodeString" outType="xs:string"/>
+          </template>
+
+          <template tid="GitThrottlingSettings">
+            <data name="Size" inType="win:Int32" outType="xs:int"/>
+            <data name="Tarpit" inType="win:Int32" outType="xs:int"/>
+            <data name="WorkUnitSize" inType="win:Int32" outType="xs:int"/>
+          </template>
+
+          <template tid="HostPreferredGeographyUpdate">
+            <data name="HostId" inType="win:GUID" outType="xs:GUID" />
+            <data name="PreferredGeography" inType="win:UnicodeString" outType="xs:string" />
+            <data name="GeographyUpdateType" inType="win:UnicodeString" outType="xs:string" />
+          </template>
+
+        </templates>
+      </provider>
+    </events>
+  </instrumentation>
+  <localization>
+    <resources culture="en-US">
+      <stringTable>
+        <string id="level.Informational" value="Information" />
+        <string id="level.Error" value="Error" />
+        <string id="TeamFoundationServer.task.DebugTracing.message" value="This task has debugging events" />
+        <string id="TeamFoundationServer.opcode._opcode_info.message" value="Info message" />
+        <string id="TeamFoundationServer.opcode._opcode_error.message" value="Error messages" />
+        <string id="TeamFoundationServer.opcode._opcode_warning.message" value="Warning messages" />
+        <string id="TeamFoundationServer.opcode._opcode_verbose.message" value="Verbose messages" />
+        <string id="TeamFoundationServer.event.0.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.0.1.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.1.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.1.1.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.2.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.2.1.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.3.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.3.1.message" value="TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.4.message" value="TFS SQL message" />
+        <string id="TeamFoundationServer.event.5.message" value="TFS JobAgentHistory Entry" />
+        <string id="TeamFoundationServer.event.6.message" value="TFS ActivityLog Entry" />
+        <string id="TeamFoundationServer.event.7.message" value="Customer Intelligence Entry" />
+        <string id="TeamFoundationServer.event.8.message" value="Kpi Entry" />
+        <string id="TeamFoundationServer.event.9.message" value="MachinePoolRequestHistory Entry" />
+        <string id="TeamFoundationServer.channel.TeamFoundationServer.message" value="Microsoft-Team Foundation Server" />
+        <string id="TeamFoundationServer.Keyword._keyword_info.message" value="Info Messages" />
+        <string id="TeamFoundationServer.Keyword._keyword_error.message" value="Error Messages" />
+        <string id="TeamFoundationServer.Keyword._keyword_warning.message" value="Warning Messages" />
+        <string id="TeamFoundationServer.Keyword._keyword_verbose.message" value="Verbose Messages" />
+        <string id="TeamFoundationServer.event.10.message" value="Host History Entry" />
+        <string id="TeamFoundationServer.event.11.message" value="Sql Running Status Entry" />
+        <string id="TeamFoundationServer.event.12.message" value="Database Performance Statistics Entry" />
+        <string id="TeamFoundationServer.event.14.message" value="Servicing Job Detail Entry" />
+        <string id="TeamFoundationServer.event.15.message" value="Servicing Step Detail Entry" />
+        <string id="TeamFoundationServer.event.16.message" value="Kpi Metric Entry" />
+        <string id="TeamFoundationServer.event.17.message" value="Event Metric Entry" />
+        <string id="TeamFoundationServer.event.18.message" value="MPSA Data Feed Entry" />
+        <string id="TeamFoundationServer.event.19.message" value="Commerce Data Entry" />
+        <string id="TeamFoundationServer.event.20.message" value="User Data Entry" />
+        <string id="TeamFoundationServer.event.22.message" value="Account Data Entry" />
+        <string id="TeamFoundationServer.event.23.message" value="Subscription Data Entry" />
+        <string id="TeamFoundationServer.event.24.message" value="Table Space Usage Entry" />
+        <string id="TeamFoundationServer.event.25.message" value="Licensing Data Entry" />
+        <string id="TeamFoundationServer.event.26.message" value="Identity Session Tokens Entry" />
+        <string id="TeamFoundationServer.event.27.message" value="Notification Event Entry" />
+        <string id="TeamFoundationServer.event.28.message" value="Query Data Store Entry" />
+        <string id="TeamFoundationServer.event.29.message" value="Identity Reads Entry" />
+        <string id="TeamFoundationServer.event.30.message" value="Identity Tokens Entry" />
+        <string id="TeamFoundationServer.event.31.message" value="Identity Cache Changes Entry" />
+        <string id="TeamFoundationServer.event.32.message" value="Identity Sql Changes Entry" />
+        <string id="TeamFoundationServer.event.33.message" value="Organization Changes Entry" />
+        <string id="TeamFoundationServer.event.34.message" value="Directory Member Entry" />
+        <string id="TeamFoundationServer.event.35.message" value="Storage Metrics Transactions Entry" />
+        <string id="TeamFoundationServer.event.36.message" value="Storage Analytics Logs Entry" />
+        <string id="TeamFoundationServer.event.37.message" value="Resource Utilization Entry" />
+        <!-- ID 38 was ServicePrincipalPermissions; now defunct -->
+        <string id="TeamFoundationServer.event.39.message" value="Hosting Service Certficate Entry" />
+        <string id="TeamFoundationServer.event.40.message" value="Sql AlwaysOn Health Stats Entry" />
+        <string id="TeamFoundationServer.event.41.message" value="XEvent Data Entry" />
+        <string id="TeamFoundationServer.event.42.message" value="Memory Clerks Entry" />
+        <string id="TeamFoundationServer.event.43.message" value="Resource Semaphore Entry" />
+        <string id="TeamFoundationServer.event.44.message" value="Query Optimizer Memory Gateways Data Entry" />
+        <string id="TeamFoundationServer.event.45.message" value="SQL Performance Counter Entry" />
+        <string id="TeamFoundationServer.event.46.message" value="Http Outgoing Request Entry" />
+        <string id="TeamFoundationServer.event.47.message" value="Packaging Activity Log Entry" />
+        <string id="TeamFoundationServer.event.48.message" value="GeoReplicationLinkStatus Entry" />
+        <string id="TeamFoundationServer.event.49.message" value="XEvent Data RPC:Completed Entry" />
+        <string id="TeamFoundationServer.event.50.message" value="TFS JobAgentJobStarted Entry" />
+        <string id="TeamFoundationServer.event.51.message" value="CloudService Role Details Entry" />
+        <string id="TeamFoundationServer.event.52.message" value="Survey Event Entry" />
+        <string id="TeamFoundationServer.event.53.message" value="Tuning Recommendation Entry" />
+        <string id="TeamFoundationServer.event.54.message" value="Service Bus Activity Entry" />
+        <string id="TeamFoundationServer.event.55.message" value="Client Trace Entry" />
+        <string id="TeamFoundationServer.event.56.message" value="TFS ActivityLogCore Entry" />
+        <string id="TeamFoundationServer.event.57.message" value="Euii Event Entry" />
+        <string id="TeamFoundationServer.event.58.message" value="Detected EUII Event Entry" />
+        <string id="TeamFoundationServer.event.59.message" value="TFS ActivityLogMapping Entry" />
+        <string id="TeamFoundationServer.event.60.message" value="Service Principal IsMember Entry" />
+        <string id="TeamFoundationServer.event.61.message" value="Service Bus Metadata Entry" />
+        <string id="TeamFoundationServer.event.62.message" value="EUII User Entry" />
+        <string id="TeamFoundationServer.event.63.message" value="TFS OrchestrationLog Entry" />
+        <string id="TeamFoundationServer.event.64.message" value="Service Bus Metrics Entry" />
+        <string id="TeamFoundationServer.event.65.message" value="SQL Spinlocks Entry" />
+        <string id="TeamFoundationServer.event.66.message" value="Job History Core Entry" />
+        <string id="TeamFoundationServer.event.67.message" value="Redis Cache Metrics Entry" />
+        <string id="TeamFoundationServer.event.68.message" value="Service Host Extended Entry" />
+        <string id="TeamFoundationServer.event.69.message" value="Feature Flag Status Entry" />
+        <string id="TeamFoundationServer.event.70.message" value="DocDB Storage Metrics Entry" />
+        <string id="TeamFoundationServer.event.71.message" value="Azure Search Metrics Entry" />
+        <string id="TeamFoundationServer.event.72.message" value="DocDB RU Metrics Entry" />
+        <string id="TeamFoundationServer.event.73.message" value="SQL Virtual File Stats Entry" />
+        <string id="TeamFoundationServer.event.74.message" value="Host Preferred Region Update Entry" />
+        <string id="TeamFoundationServer.event.75.message" value="Low-Priority TFS ProductTrace Entry" />
+        <string id="TeamFoundationServer.event.76.message" value="Organization Tenant Mapping Entry" />
+        <string id="TeamFoundationServer.event.77.message" value="Database Details Entry" />
+        <string id="TeamFoundationServer.event.78.message" value="Database Connection Info Entry" />
+        <string id="TeamFoundationServer.event.79.message" value="TFS OrchestrationActivityLog Entry" />
+        <string id="TeamFoundationServer.event.80.message" value="DatabaseCounters Entry" />
+        <string id="TeamFoundationServer.event.81.message" value="DatabaseIdentityColumns Entry" />
+        <string id="TeamFoundationServer.event.82.message" value="DatabaseServicePrincipals Entry" />
+        <string id="TeamFoundationServer.event.83.message" value="SqlRowLockInfo Entry" />
+        <string id="TeamFoundationServer.event.84.message" value="DatabasePrincipals Entry" />
+        <string id="TeamFoundationServer.event.85.message" value="XEventSessions Entry" />
+        <string id="TeamFoundationServer.event.86.message" value="GitThrottlingSettings Entry" />
+        <string id="TeamFoundationServer.event.87.message" value="Host Preferred Geography Update Entry" />
+        <string id="TeamFoundationServer.event.88.message" value="Service Host Export Entry" />
+      </stringTable>
+    </resources>
+  </localization>
+</instrumentationManifest>

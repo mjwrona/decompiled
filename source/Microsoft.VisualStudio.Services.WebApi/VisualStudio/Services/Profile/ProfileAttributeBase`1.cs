@@ -1,0 +1,35 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Profile.ProfileAttributeBase`1
+// Assembly: Microsoft.VisualStudio.Services.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 7B264323-C592-4F23-AB6B-55AEDC85864F
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.WebApi.dll
+
+using System;
+using System.Runtime.Serialization;
+
+namespace Microsoft.VisualStudio.Services.Profile
+{
+  [DataContract]
+  public class ProfileAttributeBase<T> : ITimeStamped, IVersioned, ICloneable
+  {
+    [DataMember]
+    public AttributeDescriptor Descriptor { get; set; }
+
+    [DataMember]
+    public T Value { get; set; }
+
+    [DataMember(IsRequired = false, EmitDefaultValue = false)]
+    public DateTimeOffset TimeStamp { get; set; }
+
+    [DataMember(IsRequired = false, EmitDefaultValue = false)]
+    public int Revision { get; set; }
+
+    public object Clone()
+    {
+      ProfileAttributeBase<T> profileAttributeBase = (ProfileAttributeBase<T>) this.MemberwiseClone();
+      profileAttributeBase.Descriptor = this.Descriptor != null ? (AttributeDescriptor) this.Descriptor.Clone() : (AttributeDescriptor) null;
+      profileAttributeBase.Value = (object) this.Value is ICloneable ? (T) ((ICloneable) (object) this.Value).Clone() : this.Value;
+      return (object) profileAttributeBase;
+    }
+  }
+}

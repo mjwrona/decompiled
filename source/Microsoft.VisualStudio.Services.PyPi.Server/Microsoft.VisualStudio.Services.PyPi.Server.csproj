@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.PyPi.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{943C59BE-593C-4572-B8E2-6D1BD634C432}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.PyPi.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.PyPi.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="BuildXL.Cache.ContentStore.UtilitiesCore">
+      <HintPath>lib\BuildXL.Cache.ContentStore.UtilitiesCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>lib\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.BclPolyfills">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.ServiceShared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.Internal.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.Internal.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.PyPi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.PyPi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.PyPi.Client.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.PyPi.Client.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.PyPi.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.PyPi.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pegasus.Common">
+      <HintPath>lib\Pegasus.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PyPiMetadataAggregation.cs" />
+    <Compile Include="IPyPiMetadataAggregationAccessor.cs" />
+    <Compile Include="PyPiMetadataAggregationAccessor.cs" />
+    <Compile Include="IPyPiVersionMetadataAggregationAccessor.cs" />
+    <Compile Include="PyPiVersionMetadataAggregationAccessor.cs" />
+    <Compile Include="PyPiAggregationResolver.cs" />
+    <Compile Include="PyPiProblemPackagesAggregation.cs" />
+    <Compile Include="PyPiUpstreamVersionListAggregation.cs" />
+    <Compile Include="PackagingRegistration.cs" />
+    <Compile Include="PyPiVersionsService.cs" />
+    <Compile Include="Protocol.cs" />
+    <Compile Include="PyPiWriteBootstrapper`3.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Upstreams\DownloadAndIngestPyPiFileFromUpstreamHandler.cs" />
+    <Compile Include="Upstreams\IngestPyPiFileIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="Upstreams\IUpstreamPyPiClient.cs" />
+    <Compile Include="Upstreams\IPublicUpstreamPyPiClient.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamMetadata.cs" />
+    <Compile Include="Upstreams\LimitedPyPiMetadata.cs" />
+    <Compile Include="Upstreams\PyPiPackageRegistrationState.cs" />
+    <Compile Include="Upstreams\PyPiPackageVersionRegistrationState.cs" />
+    <Compile Include="Upstreams\PyPiPackageVersionFileRegistrationState.cs" />
+    <Compile Include="Upstreams\PublicUpstreamPyPiClient.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamJsonMetadataPackageFileMetadataRequest.cs" />
+    <Compile Include="Upstreams\PyPiRefreshListTrimmingJobQueuerBootstrapper.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamsConstants.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamJsonMetadataToIngestionMetadataConvert.cs" />
+    <Compile Include="Upstreams\PyPiDotOrgNameLevelJsonToLimitedMetadatasConverter.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamJsonMetadataUtility.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamFetchingMetadataServiceBootstrapper.cs" />
+    <Compile Include="Upstreams\ThrowNotFoundOnInvalidPackageNameValidator.cs" />
+    <Compile Include="Upstreams\PyPiCollectionPackageUpstreamRefreshJobQueuerBoots.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamMetadataManagerExistingLocalMetadataBo.cs" />
+    <Compile Include="Upstreams\RetainNothingUpstreamEntriesRetainingStrategyHandl`1.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamMetadataManagerFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamMetadataParsingException.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamJsonMetadataConstants.cs" />
+    <Compile Include="Upstreams\PyPiUpstreamOnlyMetadataStore.cs" />
+    <Compile Include="Upstreams\UpstreamPyPiClientFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\UpstreamPyPiClientFactory.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\CrossCollectionUpstreamPyPiClient.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\PyPiUpstreamPackageFileRequestToUpstreamMetadataCo.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\PyPiInternalUpstreamHelper.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\SameCollectionUpstreamPyPiClient.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\LimitedPyPiMetadataResponseToLimitedPyPiMetadataCo.cs" />
+    <Compile Include="Telemetry\PyPiDeleteCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\PyPiUpdatePackageVersionCiDataHandler`2.cs" />
+    <Compile Include="Telemetry\PyPiDownloadPackageCiDataFacadeHandler.cs" />
+    <Compile Include="Telemetry\PyPiUploadPackage2CiDataFacadeHandler.cs" />
+    <Compile Include="DataContracts\PyPiPackageFileRequest.cs" />
+    <Compile Include="HttpHandlers\PyPiUploadHttpHandler.cs" />
+    <Compile Include="HttpHandlers\PyPiUploadRouteHandler.cs" />
+    <Compile Include="Exceptions\PyPiExceptionMappings.cs" />
+    <Compile Include="SimpleGetPackage\BatchPackageFileRequest`1.cs" />
+    <Compile Include="SimpleGetPackage\PyPiBlobGetSimplePackageHandler.cs" />
+    <Compile Include="SimpleGetPackage\PyPiBlobGetSimplePackageHandlerBootstrapper.cs" />
+    <Compile Include="SimpleGetPackage\PyPiDownloadUriCalculator.cs" />
+    <Compile Include="SimpleGetPackage\RedirectNonNormalizedSimpleRequestsHandler.cs" />
+    <Compile Include="RequirementSpecs\CancellingTracer.cs" />
+    <Compile Include="RequirementSpecs\ExtrasList.cs" />
+    <Compile Include="RequirementSpecs\Identifier.cs" />
+    <Compile Include="RequirementSpecs\LegacyVersionIdentifier.cs" />
+    <Compile Include="RequirementSpecs\MarkerBinaryExpression.cs" />
+    <Compile Include="RequirementSpecs\MarkerEnvVar.cs" />
+    <Compile Include="RequirementSpecs\MarkerExpression.cs" />
+    <Compile Include="RequirementSpecs\MarkerVariable.cs" />
+    <Compile Include="RequirementSpecs\Operator.cs" />
+    <Compile Include="RequirementSpecs\PythonString.cs" />
+    <Compile Include="RequirementSpecs\RequirementParseException.cs" />
+    <Compile Include="RequirementSpecs\RequirementParser.cs" />
+    <Compile Include="RequirementSpecs\RequirementParserInternal.cs" />
+    <Compile Include="RequirementSpecs\RequirementVersionFormattingOptions.cs" />
+    <Compile Include="RequirementSpecs\RequirementSpec.cs" />
+    <Compile Include="RequirementSpecs\UrlSpec.cs" />
+    <Compile Include="RequirementSpecs\VersionConstraint.cs" />
+    <Compile Include="RequirementSpecs\VersionConstraintList.cs" />
+    <Compile Include="RequirementSpecs\Pep440VersionIdentifier.cs" />
+    <Compile Include="RequirementSpecs\VersionIdentifier.cs" />
+    <Compile Include="PublicRepository\PyPiChangelogCursor.cs" />
+    <Compile Include="PublicRepository\PyPiChangelogCursorBasedUpstreamChangeProvider.cs" />
+    <Compile Include="PublicRepository\PyPiDirectPublicRepoDataFetcher.cs" />
+    <Compile Include="PublicRepository\PyPiPubCachePackageNameFile.cs" />
+    <Compile Include="PublicRepository\PyPiPubCacheVersionLevelInfo.cs" />
+    <Compile Include="PublicRepository\PyPiPubCachePackageVersionFileLevelInfo.cs" />
+    <Compile Include="PublicRepository\PyPiPublicRepoCacheReflection.cs" />
+    <Compile Include="PublicRepository\PyPiPublicRepositoryClient.cs" />
+    <Compile Include="PublicRepository\IPyPiPublicRepository.cs" />
+    <Compile Include="PublicRepository\PyPiPublicRepository.cs" />
+    <Compile Include="PublicRepository\IPyPiPublicRepositoryPackageMemoryCacheService.cs" />
+    <Compile Include="PublicRepository\PyPiPublicRepositoryPackageMemoryCacheService.cs" />
+    <Compile Include="PublicRepository\PyPiPublicRepositoryProvider.cs" />
+    <Compile Include="PackageIdentity\PyPiIdentityResolver.cs" />
+    <Compile Include="PackageIdentity\PyPiPackageLocalVersionUtils.cs" />
+    <Compile Include="PackageIdentity\PyPiSortableVersionConverter.cs" />
+    <Compile Include="PackageIdentity\PyPiPackageVersionParser.cs" />
+    <Compile Include="PackageIdentity\PyPiPackageIdentity.cs" />
+    <Compile Include="PackageIdentity\PyPiPackageName.cs" />
+    <Compile Include="PackageIdentity\PyPiPackageVersion.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\PyPiLocalVersionLabel.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\IVersionLabelSegment.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\NumericVersionLabelSegment.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\StringVersionLabelSegment.cs" />
+    <Compile Include="Operations\PyPiAddMetadataOpApplier.cs" />
+    <Compile Include="Operations\PyPiVersionMetadataAddOpApplier.cs" />
+    <Compile Include="Operations\PyPiVersionMetadataDocumentApplierFactory.cs" />
+    <Compile Include="Operations\PyPiVersionMetadataOpApplierFactory.cs" />
+    <Compile Include="Operations\PyPiAddOperationData.cs" />
+    <Compile Include="Operations\PyPiMetadataOpApplierFactory.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersion\UpdatePackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersion\UpdatePackageVersionValidatingHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\PyPiBatchValidatingOpGeneratingHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\PyPiPackagesBatchBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\PyPiRecycleBinBatchValidatingOpGeneratingHandlerBo.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\PyPiRecycleBinPackagesBatchBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\RestoreToFeed\PyPiRestoreToFeedHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\RestoreToFeed\PyPiRestoreToFeedValidatingOpGeneratingHandlerBoot.cs" />
+    <Compile Include="NonProtocolApis\GetPackageVersion\GetPackageVersionHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\Converters\PyPiMetadataEntryToPackageConverter.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\IPyPiPermanentDeleteOperationData.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\PyPiPermanentDeleteOperationData.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\PyPiPermanentDeleteValidatingOpGeneratingHandler.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\PyPiPermanentDeleteValidatingOpGeneratingHandlerBo.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\PyPiPermanentDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\PyPiDeleteOpGeneratorBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\DeleteResultFromCommitEntryHandler.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\PyPiDeleteRequestHandlerBootstrapper.cs" />
+    <Compile Include="Migration\PyPiUpgradeAggregationsBootstrapper.cs" />
+    <Compile Include="Migration\PyPiMigrationKickerJobBootstrapper.cs" />
+    <Compile Include="Migration\PyPiMigrationJobHandlerFactoryBootstrapper.cs" />
+    <Compile Include="Migration\AggregationDefinitions.cs" />
+    <Compile Include="Migration\PyPiMigrationNames.cs" />
+    <Compile Include="Migration\PyPiMigrationDefinitionsProviderBootstrapper.cs" />
+    <Compile Include="Metadata\PyPiByBlobVersionMetadataServiceFactoryBootstrappe.cs" />
+    <Compile Include="Metadata\PyPiDistType.cs" />
+    <Compile Include="Metadata\PyPiMetadataUtils.cs" />
+    <Compile Include="Metadata\PyPiPackageFile.cs" />
+    <Compile Include="Metadata\PyPiPackageFileWithRawMetadata.cs" />
+    <Compile Include="Metadata\IUnstoredPyPiPackageFile.cs" />
+    <Compile Include="Metadata\PyPiFeedIndexPackageFileInfo.cs" />
+    <Compile Include="Metadata\PyPiFeedIndexPackageInfo.cs" />
+    <Compile Include="Metadata\IPyPiResolvedMetadata.cs" />
+    <Compile Include="Metadata\PyPiResolvedMetadata.cs" />
+    <Compile Include="Metadata\PyPiMetadataDocumentSerializerBase`3.cs" />
+    <Compile Include="Metadata\PyPiVersionMetadataDocumentSerializerFactory.cs" />
+    <Compile Include="Metadata\IPyPiMetadataEntryCore`1.cs" />
+    <Compile Include="Metadata\IPyPiMetadataEntryWritableCore`1.cs" />
+    <Compile Include="Metadata\IPyPiMetadataEntry.cs" />
+    <Compile Include="Metadata\IPyPiMetadataEntryWritable.cs" />
+    <Compile Include="Metadata\IPyPiMetadataEntryWithRawMetadata.cs" />
+    <Compile Include="Metadata\IPyPiMetadataEntryWithRawMetadataWritable.cs" />
+    <Compile Include="Metadata\PyPiByBlobMetadataServiceFactoryBootstrapper.cs" />
+    <Compile Include="Metadata\PyPiMetadataDocumentSerializerFactory.cs" />
+    <Compile Include="Metadata\PyPiMetadataEntry.cs" />
+    <Compile Include="Metadata\PyPiMetadataEntryWithRawMetadata.cs" />
+    <Compile Include="Metadata\PyPiMetadataEntryBase`1.cs" />
+    <Compile Include="Metadata\PyPiMetadataHandlerBootstrapper.cs" />
+    <Compile Include="JobManagement\PyPiFeedChangeProcessingJobHandlerFactoryBootstrap.cs" />
+    <Compile Include="JobManagement\PyPiMigrationProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="JobManagement\PyPiChangeProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="Ingestion\PyPiMetadataIngestionValidatingHandlerBootstrapper.cs" />
+    <Compile Include="Ingestion\PackageIngestionFormData.cs" />
+    <Compile Include="Ingestion\PackageFileStream.cs" />
+    <Compile Include="Ingestion\PyPiPackageIngesterBootstrapper.cs" />
+    <Compile Include="Ingestion\PyPiUploadedPackageMetadata.cs" />
+    <Compile Include="Ingestion\IPyPiStorablePackageInfo.cs" />
+    <Compile Include="Ingestion\Validation\EmailValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\GpgSignatureContentValidator.cs" />
+    <Compile Include="Ingestion\Validation\UriValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\UriValidator.cs" />
+    <Compile Include="Ingestion\Validation\GpgSignatureLengthValidator.cs" />
+    <Compile Include="Ingestion\Validation\FileNameValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\ContentValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\DescriptionContentTypeValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\DescriptionValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\ProjectUrlValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\RequirementSpecsValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\SummaryValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\MetadataVersionValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\PythonVersionValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\FileTypeToAllowedExtensionMappingsValidatingHandle.cs" />
+    <Compile Include="Ingestion\Validation\DigestsValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\ProtocolVersionValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\OnlyOneSourceDistValidatingHandler.cs" />
+    <Compile Include="Ingestion\Validation\PyPiPackageIngestionValidationUtils.cs" />
+    <Compile Include="Ingestion2\PyPiIngester2HandlerBootstrapper.cs" />
+    <Compile Include="Ingestion2\PyPiPackageIngester2.cs" />
+    <Compile Include="Ingestion2\PyPiParsedIngestionParams.cs" />
+    <Compile Include="EmailSpecification\EmailParser.cs" />
+    <Compile Include="EmailSpecification\Email.cs" />
+    <Compile Include="EmailSpecification\EmailParserInternal.cs" />
+    <Compile Include="EmailSpecification\EmailSpec.cs" />
+    <Compile Include="Download\IPyPiPackageMetadataCacheService.cs" />
+    <Compile Include="Download\PyPiPackageMetadataCacheService.cs" />
+    <Compile Include="Converters\LimitedPyPiMetadataResponseConverter.cs" />
+    <Compile Include="Converters\Name\PyPiRawPackageNameRequestToNameConverter.cs" />
+    <Compile Include="Converters\Name\PyPiRawPackageNameRequestToRequestConverter.cs" />
+    <Compile Include="Converters\Name\PyPiRawPackageNameRequestToRequestConverterBootstr.cs" />
+    <Compile Include="Converters\Identity\PyPiRawPackageRequestToIdentityConverter.cs" />
+    <Compile Include="Converters\Identity\PyPiRawPackageRequestToIdentityConverterBootstrapp.cs" />
+    <Compile Include="Converters\Identity\PyPiRawPackageRequestToRequestConverterBootstrappe.cs" />
+    <Compile Include="Converters\Identity\PyPiRawPackageRequestWithDataConverterBootstrapper`1.cs" />
+    <Compile Include="Controllers\PyPiApiController.cs" />
+    <Compile Include="Controllers\PyPiDownloadController.cs" />
+    <Compile Include="Controllers\PyPiBlobDownloadGpgSignatureFileHandlerBootstrappe.cs" />
+    <Compile Include="Controllers\PyPiDownloadGpgSignatureHandler.cs" />
+    <Compile Include="Controllers\PyPiBlobDownloadPackageFileHandlerBootstrapper.cs" />
+    <Compile Include="Controllers\PyPiSimpleController.cs" />
+    <Compile Include="Controllers\Internal\PyPiInternalUpstreamsController.cs" />
+    <Compile Include="Controllers\Internal\PyPiInternalUpstreamsFileController.cs" />
+    <Compile Include="Controllers\Api\PyPiContentController.cs" />
+    <Compile Include="Controllers\Api\PyPiLargeUploadController.cs" />
+    <Compile Include="Controllers\Api\PyPiPackagesBatchController.cs" />
+    <Compile Include="Controllers\Api\PyPiRecycleBinController.cs" />
+    <Compile Include="Controllers\Api\PyPiRecycleBinPackagesBatchController.cs" />
+    <Compile Include="Controllers\Api\PyPiUpstreamingController.cs" />
+    <Compile Include="Controllers\Api\PyPiVersionsController.cs" />
+    <Compile Include="Constants\PyPiFeatureFlags.cs" />
+    <Compile Include="Constants\PyPiFeedIndexConstants.cs" />
+    <Compile Include="Constants\PyPiPackageIngestionConstants.cs" />
+    <Compile Include="Constants\PyPiJobConstants.cs" />
+    <Compile Include="Constants\PyPiServerConstants.cs" />
+    <Compile Include="CommitLog\IUnsafePyPiCommitLogService.cs" />
+    <Compile Include="CommitLog\PyPiCommitLogEntryDeserializer.cs" />
+    <Compile Include="CommitLog\PyPiCommitLogEntrySerializer.cs" />
+    <Compile Include="CommitLog\PyPiCommitLogFacadeBootstrapper.cs" />
+    <Compile Include="CommitLog\PyPiCommitLogService.cs" />
+    <Compile Include="CommitLog\PyPiItemStore.cs" />
+    <Compile Include="CommitLog\PyPiOperations.cs" />
+    <Compile Include="CommitLog\IPyPiCommitLogService.cs" />
+    <Compile Include="ChangeProcessing\PyPiExceptionMarkFactory.cs" />
+    <Compile Include="Attributes\PipNoRedirectPublicProjectRequestRestrictionsAttri.cs" />
+    <Compile Include="BlobPrototype\PyPiMetadataDocumentOpApplierFactory.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\IPyPiVersionListWithSizeService.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\IPyPiVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\PyPiVersionListWithSizeAggregation.cs" />
+    <Compile Include="BlobPrototype\Aggregations\VersionListWithSize\PyPiVersionListWithSizeAggregationAccessor.cs" />
+    <Compile Include="Aggregations\StorageIdCache\PyPiStorageIdCacheAggregation.cs" />
+    <Compile Include="Aggregations\StorageIdCache\IPyPiStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="Aggregations\StorageIdCache\PyPiStorageIdCacheAggregationAccessor.cs" />
+    <Compile Include="Aggregations\PackageMetadata\PyPiPackageVersionMetadataAggregation.cs" />
+    <Compile Include="Aggregations\FeedIndex\PyPiCommitHandlerFactory.cs" />
+    <Compile Include="Aggregations\FeedIndex\PyPiFeedIndexAggregation.cs" />
+    <Compile Include="PublicRepositories\PyPiChangelogBookmarkTokenProvider.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

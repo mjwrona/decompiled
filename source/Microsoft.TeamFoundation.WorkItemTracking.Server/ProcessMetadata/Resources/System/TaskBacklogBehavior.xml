@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<extension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id>245A5DD2-3849-4AE0-8950-F5FA84229E8D</id>
+  <name>Tasks</name>
+  <refname>System.TaskBacklogBehavior</refname>
+  <description>Task level backlog and board</description>
+  <color>A4880A</color>
+  <last-change-date>2016-02-08T22:09:07.687Z</last-change-date>
+  <process-id>D0171D51-FF84-4038-AFC1-8800AB613160</process-id>
+  <typelet-type>2</typelet-type>
+  <is-deleted>false</is-deleted>
+  <is-abstract>false</is-abstract>
+  <parent-type-refname>System.OrderedBehavior</parent-type-refname>
+  <fields>
+    <field referenceName="Microsoft.VSTS.Scheduling.RemainingWork" behaviorFieldId ="RemainingWork"/>
+    <field referenceName="Microsoft.VSTS.Common.Activity" behaviorFieldId ="Activity"/>
+  </fields>
+  <properties>
+    <property name="RemainingWorkFormat" value="{0} h"/>
+  </properties>
+  <rank>10</rank>
+</extension>

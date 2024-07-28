@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema targetNamespace="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/categories"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified"
+  xmlns="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/categories"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:typelib="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/typelib">
+  
+  <xs:import namespace="http://schemas.microsoft.com/VisualStudio/2009/workitemtracking/typelib"/>
+  
+  <xs:element name="CATEGORIES">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CATEGORY" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEFAULTWORKITEMTYPE" type="WorkItemTypeRef" />
+              <xs:element name="WORKITEMTYPE" type="WorkItemTypeRef" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="refname" type="typelib:ReferenceName" use="required"/>
+            <xs:attribute name="name" type="typelib:FriendlyName" use="required"/>
+          </xs:complexType>
+          <xs:unique name="WorkItemTypeName">
+            <xs:selector xpath="*"/>
+            <xs:field xpath="@name"/>
+          </xs:unique>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="CategoryRefName">
+      <xs:selector xpath="CATEGORY"/>
+      <xs:field xpath="@refname"/>
+    </xs:unique>
+    <xs:unique name="CategoryName">
+      <xs:selector xpath="CATEGORY"/>
+      <xs:field xpath="@name"/>
+    </xs:unique>
+  </xs:element>
+  <xs:complexType name="WorkItemTypeRef">
+    <xs:attribute name="name" type="typelib:NonEmptyPlainConstant" use="required"/>
+  </xs:complexType>
+</xs:schema>

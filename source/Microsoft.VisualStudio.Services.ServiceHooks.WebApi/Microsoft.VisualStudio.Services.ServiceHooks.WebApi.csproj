@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ServiceHooks.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8983B9FF-7352-435B-9CFE-E7E5FBE8D990}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ServiceHooks.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ServiceHooks.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationType.cs" />
+    <Compile Include="Consumer.cs" />
+    <Compile Include="ConsumerAction.cs" />
+    <Compile Include="ServiceHooksDefaultServiceData.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventMessages.cs" />
+    <Compile Include="EventResourceDetails.cs" />
+    <Compile Include="EventTypeDescriptor.cs" />
+    <Compile Include="PublisherEvent.cs" />
+    <Compile Include="PublishEventsRequestData.cs" />
+    <Compile Include="SessionToken.cs" />
+    <Compile Include="ExternalConfigurationDescriptor.cs" />
+    <Compile Include="FormattedEventMessage.cs" />
+    <Compile Include="SubscriptionInputScope.cs" />
+    <Compile Include="SubscriptionInputValuesQuery.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="NotificationDetails.cs" />
+    <Compile Include="NotificationRef.cs" />
+    <Compile Include="NotificationResult.cs" />
+    <Compile Include="NotificationResultsSummaryDetail.cs" />
+    <Compile Include="NotificationsQuery.cs" />
+    <Compile Include="NotificationStatus.cs" />
+    <Compile Include="NotificationSummary.cs" />
+    <Compile Include="TestNotification.cs" />
+    <Compile Include="Publisher.cs" />
+    <Compile Include="PublishersQuery.cs" />
+    <Compile Include="ResourceContainer.cs" />
+    <Compile Include="Subscription.cs" />
+    <Compile Include="SubscriptionRef.cs" />
+    <Compile Include="SubscriptionsQuery.cs" />
+    <Compile Include="SubscriptionStatus.cs" />
+    <Compile Include="VersionedResource.cs" />
+    <Compile Include="WebHookEvent.cs" />
+    <Compile Include="ConsumerNotFoundException.cs" />
+    <Compile Include="ConsumerNotAvailableException.cs" />
+    <Compile Include="ConsumerActionNotFoundException.cs" />
+    <Compile Include="InvalidPayloadException.cs" />
+    <Compile Include="NotificationNotFoundException.cs" />
+    <Compile Include="PublisherNotFoundException.cs" />
+    <Compile Include="PublisherEventTypeNotFoundException.cs" />
+    <Compile Include="PublisherEventTypeNotSupportedAtCollectionScope.cs" />
+    <Compile Include="NoPublishersDefinedException.cs" />
+    <Compile Include="NoPublisherSpecifiedException.cs" />
+    <Compile Include="ServiceHookException.cs" />
+    <Compile Include="ServiceHooksEventType.cs" />
+    <Compile Include="SubscriptionInputException.cs" />
+    <Compile Include="SubscriptionNotFoundException.cs" />
+    <Compile Include="SubscriptionScopeChangedException.cs" />
+    <Compile Include="PublisherEventExtensions.cs" />
+    <Compile Include="SubscriptionExtensions.cs" />
+    <Compile Include="SubscriptionInputDescriptorExtensions.cs" />
+    <Compile Include="SubscriptionInputFilterExtensions.cs" />
+    <Compile Include="HtmlConverterBase.cs" />
+    <Compile Include="HtmlMessageUtility.cs" />
+    <Compile Include="HtmlToMarkdownConverter.cs" />
+    <Compile Include="HtmlToPlainTextConverter.cs" />
+    <Compile Include="MarkdownMessageUtility.cs" />
+    <Compile Include="PlainTextMessageUtility.cs" />
+    <Compile Include="ResourceVersionComparer.cs" />
+    <Compile Include="SecurityHelper.cs" />
+    <Compile Include="ServiceHooksHttpClientBase.cs" />
+    <Compile Include="ServiceHooksManagementHttpClient.cs" />
+    <Compile Include="ServiceHooksPublisherHttpClient.cs" />
+    <Compile Include="ServiceHooksPublisherApiConstants.cs" />
+    <Compile Include="ServiceHooksApiConstants.cs" />
+    <Compile Include="ServiceHooksEventTypeConstants.cs" />
+    <Compile Include="ServiceHooksSecurityConstants.cs" />
+    <Compile Include="ServiceHooksWebApiConstants.cs" />
+    <Compile Include="ServiceHooksWebApiResources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServiceHooksWebApiResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

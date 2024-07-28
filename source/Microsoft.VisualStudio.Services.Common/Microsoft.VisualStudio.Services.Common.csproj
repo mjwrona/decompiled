@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7380A65-880D-4D76-B61F-DA772B29028D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ExpiringIssuedToken.cs" />
+    <Compile Include="Common\FederatedCredential.cs" />
+    <Compile Include="Common\HttpRequestMessageWrapper.cs" />
+    <Compile Include="Common\HttpResponseMessageWrapper.cs" />
+    <Compile Include="Common\ICachedVssCredentialProvider.cs" />
+    <Compile Include="Common\IHttpHeaders.cs" />
+    <Compile Include="Common\IHttpRequest.cs" />
+    <Compile Include="Common\IHttpResponse.cs" />
+    <Compile Include="Common\IssuedToken.cs" />
+    <Compile Include="Common\IssuedTokenCredential.cs" />
+    <Compile Include="Common\ISupportSignOut.cs" />
+    <Compile Include="Common\IssuedTokenProvider.cs" />
+    <Compile Include="Common\IVssCredentialPrompt.cs" />
+    <Compile Include="Common\IVssCredentialPrompts.cs" />
+    <Compile Include="Common\IVssCredentialStorage.cs" />
+    <Compile Include="Common\VssBasicCredential.cs" />
+    <Compile Include="Common\VssBasicToken.cs" />
+    <Compile Include="Common\BasicAuthTokenProvider.cs" />
+    <Compile Include="Common\VssSignInContextModel.cs" />
+    <Compile Include="Common\VssCredentialsType.cs" />
+    <Compile Include="Common\CredentialPromptType.cs" />
+    <Compile Include="Common\VssCredentials.cs" />
+    <Compile Include="Common\VssServiceIdentityCredential.cs" />
+    <Compile Include="Common\VssServiceIdentityToken.cs" />
+    <Compile Include="Common\VssServiceIdentityTokenProvider.cs" />
+    <Compile Include="Common\WindowsCredential.cs" />
+    <Compile Include="Common\WindowsToken.cs" />
+    <Compile Include="Common\WindowsTokenProvider.cs" />
+    <Compile Include="Common\IConcurrencyConsolidator`2.cs" />
+    <Compile Include="Common\ConcurrencyConsolidator`2.cs" />
+    <Compile Include="Common\ExceptionMappingAttribute.cs" />
+    <Compile Include="Common\VssAuthenticationException.cs" />
+    <Compile Include="Common\VssUnauthorizedException.cs" />
+    <Compile Include="Common\ConfigFileException.cs" />
+    <Compile Include="Common\VssServiceException.cs" />
+    <Compile Include="Common\EUIILeakException.cs" />
+    <Compile Include="Common\VssPropertyValidationException.cs" />
+    <Compile Include="Common\PropertyTypeNotSupportedException.cs" />
+    <Compile Include="Common\TagNotFoundException.cs" />
+    <Compile Include="Common\TagOperationFailed.cs" />
+    <Compile Include="Common\IExternalProviderHttpRequester.cs" />
+    <Compile Include="Common\HttpRequestResult.cs" />
+    <Compile Include="Common\IExternalProviderHttpRequesterFactory.cs" />
+    <Compile Include="Common\GenerateConstantAttributeBase.cs" />
+    <Compile Include="Common\GenerateConstantAttribute.cs" />
+    <Compile Include="Common\GenerateAllConstantsAttribute.cs" />
+    <Compile Include="Common\GenerateSpecificConstantsAttribute.cs" />
+    <Compile Include="Common\GenerateInterfaceAttribute.cs" />
+    <Compile Include="Common\IVssClientCertificateManager.cs" />
+    <Compile Include="Common\IVssHttpRetryInfo.cs" />
+    <Compile Include="Common\PerformanceTimerConstants.cs" />
+    <Compile Include="Common\PerformanceTimingGroup.cs" />
+    <Compile Include="Common\PerformanceTimingEntry.cs" />
+    <Compile Include="Common\Base32Encoder.cs" />
+    <Compile Include="Common\HMACSHA256Hash.cs" />
+    <Compile Include="Common\HMACSHA512Hash.cs" />
+    <Compile Include="Common\HMACHash`1.cs" />
+    <Compile Include="Common\TaskCancellationExtensions.cs" />
+    <Compile Include="Common\ArgumentUtility.cs" />
+    <Compile Include="Common\ArrayUtility.cs" />
+    <Compile Include="Common\BackoffTimerHelper.cs" />
+    <Compile Include="Common\CollectionsExtensions.cs" />
+    <Compile Include="Common\ConnectionStringUtility.cs" />
+    <Compile Include="Common\ContentIdentification.cs" />
+    <Compile Include="Common\ConvertUtility.cs" />
+    <Compile Include="Common\CachedCredentialsType.cs" />
+    <Compile Include="Common\CredentialsCacheConstants.cs" />
+    <Compile Include="Common\TfsCredentialCacheEntry.cs" />
+    <Compile Include="Common\CredentialsCacheManager.cs" />
+    <Compile Include="Common\CredentialsProviderHelper.cs" />
+    <Compile Include="Common\CredentialsProviderRegistryHelper.cs" />
+    <Compile Include="Common\CultureResolution.cs" />
+    <Compile Include="Common\DateTimeUtility.cs" />
+    <Compile Include="Common\DictionaryExtensions.cs" />
+    <Compile Include="Common\EncryptionUtility.cs" />
+    <Compile Include="Common\EnumerableExtensions.cs" />
+    <Compile Include="Common\EnumerableUtility.cs" />
+    <Compile Include="Common\EnumUtility.cs" />
+    <Compile Include="Common\EnvironmentWrapper.cs" />
+    <Compile Include="Common\EuiiUtility.cs" />
+    <Compile Include="Common\ExceptionExtentions.cs" />
+    <Compile Include="Common\ExpectedExceptionExtensions.cs" />
+    <Compile Include="Common\LinkingUtilities.cs" />
+    <Compile Include="Common\LongPathUtility.cs" />
+    <Compile Include="Common\MD5Utility.cs" />
+    <Compile Include="Common\MsalUtility.cs" />
+    <Compile Include="Common\OSDetails.cs" />
+    <Compile Include="Common\WindowsEdition.cs" />
+    <Compile Include="Common\WindowsVersion.cs" />
+    <Compile Include="Common\PartitionResults`1.cs" />
+    <Compile Include="Common\MultiPartitionResults`1.cs" />
+    <Compile Include="Common\PathUtility.cs" />
+    <Compile Include="Common\PrimitiveExtensions.cs" />
+    <Compile Include="Common\ProcessUtility.cs" />
+    <Compile Include="Common\ReadOnlyDictionaryComparer`2.cs" />
+    <Compile Include="Common\RSAParametersExtensions.cs" />
+    <Compile Include="Common\SecretUtility.cs" />
+    <Compile Include="Common\SecureCompare.cs" />
+    <Compile Include="Common\SerializationHelper.cs" />
+    <Compile Include="Common\StreamParser.cs" />
+    <Compile Include="Common\SubStream.cs" />
+    <Compile Include="Common\StreamUtility.cs" />
+    <Compile Include="Common\StringExtensions.cs" />
+    <Compile Include="Common\TypeExtensionMethods.cs" />
+    <Compile Include="Common\UriBuilderExtensions.cs" />
+    <Compile Include="Common\UriExtensions.cs" />
+    <Compile Include="Common\HexConverter.cs" />
+    <Compile Include="Common\LinkFilter.cs" />
+    <Compile Include="Common\FilterType.cs" />
+    <Compile Include="Common\ArtifactId.cs" />
+    <Compile Include="Common\Artifact.cs" />
+    <Compile Include="Common\ExtendedAttribute.cs" />
+    <Compile Include="Common\ArtifactLink.cs" />
+    <Compile Include="Common\OutboundLink.cs" />
+    <Compile Include="Common\IVssDateTimeProvider.cs" />
+    <Compile Include="Common\VssDateTimeProvider.cs" />
+    <Compile Include="Common\VssStringComparer.cs" />
+    <Compile Include="Common\CsvException.cs" />
+    <Compile Include="Common\CsvIoException.cs" />
+    <Compile Include="Common\CsvConfiguration`1.cs" />
+    <Compile Include="Common\CsvWriter`1.cs" />
+    <Compile Include="Common\AdminConstants.cs" />
+    <Compile Include="Common\IdentityConstants.cs" />
+    <Compile Include="Common\IdentityAttributeTags.cs" />
+    <Compile Include="Common\DirectoryRoleConstants.cs" />
+    <Compile Include="Common\ToolNames.cs" />
+    <Compile Include="Common\ArtifactTypeNames.cs" />
+    <Compile Include="Common\NotificationConstants.cs" />
+    <Compile Include="Common\LocationSecurityConstants.cs" />
+    <Compile Include="Common\SecuritySecurityConstants.cs" />
+    <Compile Include="Common\GraphSecurityConstants.cs" />
+    <Compile Include="Common\TeamProjectSecurityConstants.cs" />
+    <Compile Include="Common\ContentValidationSecurityConstants.cs" />
+    <Compile Include="Common\WinHttpErrorCode.cs" />
+    <Compile Include="Common\CurlErrorCode.cs" />
+    <Compile Include="Common\CommonPropertyConstants.cs" />
+    <Compile Include="Common\VssEnvironment.cs" />
+    <Compile Include="Common\VssException.cs" />
+    <Compile Include="Common\VssHttpMessageHandler.cs" />
+    <Compile Include="Common\VssHttpRequestSettings.cs" />
+    <Compile Include="Common\VssHttpRetryMessageHandler.cs" />
+    <Compile Include="Common\VssHttpRetryOptions.cs" />
+    <Compile Include="Common\VssNetworkHelper.cs" />
+    <Compile Include="Common\VssPerformanceEventSource.cs" />
+    <Compile Include="Common\VssHttpMessageHandlerTraceInfo.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\SafeTaskCompletionSource`1.cs" />
+    <Compile Include="Common\VssReadConsistencyLevel.cs" />
+    <Compile Include="Common\GeneratedVersionInfo.cs" />
+    <Compile Include="Common\Utility\ByteConverterUtility.cs" />
+    <Compile Include="Common\Utility\ByteConverterUtilityUnit.cs" />
+    <Compile Include="Common\Utility\SearchTermType.cs" />
+    <Compile Include="Common\Utility\IdentityDisplayName.cs" />
+    <Compile Include="Common\Utility\LookupGenerator.cs" />
+    <Compile Include="Common\Utility\UrlEncodingUtility.cs" />
+    <Compile Include="Common\TokenStorage\RegistryToken.cs" />
+    <Compile Include="Common\TokenStorage\RegistryTokenStorage.cs" />
+    <Compile Include="Common\TokenStorage\RegistryTokenStorageHelper.cs" />
+    <Compile Include="Common\TokenStorage\VssToken.cs" />
+    <Compile Include="Common\TokenStorage\VssTokenKey.cs" />
+    <Compile Include="Common\TokenStorage\VssTokenStorage.cs" />
+    <Compile Include="Common\TokenStorage\VssTokenStorageException.cs" />
+    <Compile Include="Common\TokenStorage\VssTokenStorageFactory.cs" />
+    <Compile Include="Common\Performance\PerformanceNativeMethods.cs" />
+    <Compile Include="Common\Diagnostics\HttpRequestMessageExtensions.cs" />
+    <Compile Include="Common\Diagnostics\VssHttpEventSource.cs" />
+    <Compile Include="Common\Diagnostics\VssEventSources.cs" />
+    <Compile Include="Common\Diagnostics\VssHttpMethod.cs" />
+    <Compile Include="Common\Diagnostics\VssTraceActivity.cs" />
+    <Compile Include="Common\CommandLine\Argument.cs" />
+    <Compile Include="Common\CommandLine\AttributeBasedOperationModeHandlerFactory.cs" />
+    <Compile Include="Common\CommandLine\AttributeBasedOptionParserAdapter.cs" />
+    <Compile Include="Common\CommandLine\BasicParser.cs" />
+    <Compile Include="Common\CommandLine\CommandLineLexer.cs" />
+    <Compile Include="Common\CommandLine\OptionType.cs" />
+    <Compile Include="Common\CommandLine\OptionArgumentType.cs" />
+    <Compile Include="Common\CommandLine\OptionMetadata.cs" />
+    <Compile Include="Common\CommandLine\OptionException.cs" />
+    <Compile Include="Common\CommandLine\OptionNotFoundException.cs" />
+    <Compile Include="Common\CommandLine\OptionValidationException.cs" />
+    <Compile Include="Common\CommandLine\OptionValueConversionException.cs" />
+    <Compile Include="Common\CommandLine\OperationHandlerNotFoundException.cs" />
+    <Compile Include="Common\CommandLine\DuplicateOperationHandlerException.cs" />
+    <Compile Include="Common\CommandLine\DefaultValueConverterNotFoundException.cs" />
+    <Compile Include="Common\CommandLine\DuplicatePositionalOptionAttributeException.cs" />
+    <Compile Include="Common\CommandLine\ExtensionsMethods.cs" />
+    <Compile Include="Common\CommandLine\IEnumerable`2.cs" />
+    <Compile Include="Common\CommandLine\OperationHandler.cs" />
+    <Compile Include="Common\CommandLine\OperationHandlerFactory.cs" />
+    <Compile Include="Common\CommandLine\OperationModeAttribute.cs" />
+    <Compile Include="Common\CommandLine\Option.cs" />
+    <Compile Include="Common\CommandLine\PositionalOption.cs" />
+    <Compile Include="Common\CommandLine\OptionAttributeBase.cs" />
+    <Compile Include="Common\CommandLine\OptionAttribute.cs" />
+    <Compile Include="Common\CommandLine\PositionalOptionAttribute.cs" />
+    <Compile Include="Common\CommandLine\OptionParser.cs" />
+    <Compile Include="Common\CommandLine\OptionReader.cs" />
+    <Compile Include="Common\CommandLine\ResponseFileOptionReader.cs" />
+    <Compile Include="Common\CommandLine\CsvCollectionConverter`1.cs" />
+    <Compile Include="Common\CommandLine\EnumConverter.cs" />
+    <Compile Include="Common\CommandLine\EnumConverter`1.cs" />
+    <Compile Include="Common\CommandLine\IValueConvertible.cs" />
+    <Compile Include="Common\CommandLine\IPositionalValueConvertor.cs" />
+    <Compile Include="Common\CommandLine\UriConverter.cs" />
+    <Compile Include="Common\CommandLine\ValueConverter.cs" />
+    <Compile Include="Common\CommandLine\NoValueConverter.cs" />
+    <Compile Include="Common\CommandLine\BooleanConverter.cs" />
+    <Compile Include="Common\CommandLine\ByteConverter.cs" />
+    <Compile Include="Common\CommandLine\DateTimeConverter.cs" />
+    <Compile Include="Common\CommandLine\DateTimeOffsetConverter.cs" />
+    <Compile Include="Common\CommandLine\DecimalConverter.cs" />
+    <Compile Include="Common\CommandLine\DoubleConverter.cs" />
+    <Compile Include="Common\CommandLine\GuidConverter.cs" />
+    <Compile Include="Common\CommandLine\Int16Converter.cs" />
+    <Compile Include="Common\CommandLine\Int32Converter.cs" />
+    <Compile Include="Common\CommandLine\Int64Converter.cs" />
+    <Compile Include="Common\CommandLine\NullableBooleanConverter.cs" />
+    <Compile Include="Common\CommandLine\NullableByteConverter.cs" />
+    <Compile Include="Common\CommandLine\NullableDateTimeConverter.cs" />
+    <Compile Include="Common\CommandLine\NullableDateTimeOffsetConverter.cs" />
+    <Compile Include="Common\CommandLine\NullableInt16Converter.cs" />
+    <Compile Include="Common\CommandLine\NullableInt32Converter.cs" />
+    <Compile Include="Common\CommandLine\NullableInt64Converter.cs" />
+    <Compile Include="Common\CommandLine\NullableTimeSpanConverter.cs" />
+    <Compile Include="Common\CommandLine\NullableUInt16Converter.cs" />
+    <Compile Include="Common\CommandLine\NullableUInt32Converter.cs" />
+    <Compile Include="Common\CommandLine\NullableUInt64Converter.cs" />
+    <Compile Include="Common\CommandLine\SByteConverter.cs" />
+    <Compile Include="Common\CommandLine\SingleConverter.cs" />
+    <Compile Include="Common\CommandLine\TimeSpanConverter.cs" />
+    <Compile Include="Common\CommandLine\UInt16Converter.cs" />
+    <Compile Include="Common\CommandLine\UInt32Converter.cs" />
+    <Compile Include="Common\CommandLine\UInt64Converter.cs" />
+    <Compile Include="Common\CommandLine\Validation\DefaultValidation.cs" />
+    <Compile Include="Common\CommandLine\Validation\IOptionValidation.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionExistsFilter.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionMustExist.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionRequiresSpecificValue.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionsAreMutuallyExclusive.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionsAreMutuallyInclusive.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionValidation.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionValidationFilter.cs" />
+    <Compile Include="Common\CommandLine\Validation\OptionValueFilter.cs" />
+    <Compile Include="Common\Contracts\ErrorData.cs" />
+    <Compile Include="Common\Contracts\PageHandler.cs" />
+    <Compile Include="Common\Contracts\PageHandlerStyle.cs" />
+    <Compile Include="Common\ClientStorage\IVssClientStorage.cs" />
+    <Compile Include="Common\ClientStorage\IVssClientStorageReader.cs" />
+    <Compile Include="Common\ClientStorage\IVssClientStorageWriter.cs" />
+    <Compile Include="Common\ClientStorage\VssClientStorage.cs" />
+    <Compile Include="Common\ClientStorage\VssFileStorage.cs" />
+    <Compile Include="Common\Internal\EnvironmentUtility.cs" />
+    <Compile Include="Common\Internal\HttpHeaders.cs" />
+    <Compile Include="Common\Internal\HtmlUtility.cs" />
+    <Compile Include="Common\Internal\DeviceJoinType.cs" />
+    <Compile Include="Common\Internal\DeviceJoinInfomation.cs" />
+    <Compile Include="Common\Internal\NativeMethods.cs" />
+    <Compile Include="Common\Internal\PasswordUtility.cs" />
+    <Compile Include="Common\Internal\PropertyValidation.cs" />
+    <Compile Include="Common\Internal\RegistryChangeNotificationFilter.cs" />
+    <Compile Include="Common\Internal\RegistryAccessMask.cs" />
+    <Compile Include="Common\Internal\RegistrySecurityInformation.cs" />
+    <Compile Include="Common\Internal\RegistryHelper.cs" />
+    <Compile Include="Common\Internal\UriUtility.cs" />
+    <Compile Include="Common\Internal\XmlUtility.cs" />
+    <Compile Include="Common\Internal\XmlElementWriterUtility.cs" />
+    <Compile Include="Common\Internal\CommonResources.cs" />
+    <Compile Include="CircuitBreaker\AtomicBoolean.cs" />
+    <Compile Include="CircuitBreaker\AtomicLong.cs" />
+    <Compile Include="CircuitBreaker\ICircuitBreaker.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerFactory.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerImpl.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerNoOpImpl.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerStatus.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreaker.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerException.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerShortCircuitException.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerExceededConcurrencyException.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerExceededExecutionLimitException.cs" />
+    <Compile Include="CircuitBreaker\CommandAsync.cs" />
+    <Compile Include="CircuitBreaker\CommandAsync`1.cs" />
+    <Compile Include="CircuitBreaker\Command.cs" />
+    <Compile Include="CircuitBreaker\Command`1.cs" />
+    <Compile Include="CircuitBreaker\CommandMetrics.cs" />
+    <Compile Include="CircuitBreaker\HealthCounts.cs" />
+    <Compile Include="CircuitBreaker\CommandPropertiesDefault.cs" />
+    <Compile Include="CircuitBreaker\CommandPropertiesSetter.cs" />
+    <Compile Include="CircuitBreaker\CommandSetter.cs" />
+    <Compile Include="CircuitBreaker\ICommandFactory.cs" />
+    <Compile Include="CircuitBreaker\ICommandProperties.cs" />
+    <Compile Include="CircuitBreaker\EventType.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerTracePoints.cs" />
+    <Compile Include="CircuitBreaker\IEventNotifier.cs" />
+    <Compile Include="CircuitBreaker\EventNotifierDefault.cs" />
+    <Compile Include="CircuitBreaker\ImmutableKey.cs" />
+    <Compile Include="CircuitBreaker\CommandKey.cs" />
+    <Compile Include="CircuitBreaker\CommandGroupKey.cs" />
+    <Compile Include="CircuitBreaker\ITime.cs" />
+    <Compile Include="CircuitBreaker\ITimeDefault.cs" />
+    <Compile Include="CircuitBreaker\IRollingNumber.cs" />
+    <Compile Include="CircuitBreaker\RollingNumber.cs" />
+    <Compile Include="CircuitBreaker\RollingNumberNoOpImpl.cs" />
+    <Compile Include="CircuitBreaker\ITryableSemaphore.cs" />
+    <Compile Include="CircuitBreaker\TryableSemaphore.cs" />
+    <Compile Include="CircuitBreaker\TryableSemaphoreNoOpImpl.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

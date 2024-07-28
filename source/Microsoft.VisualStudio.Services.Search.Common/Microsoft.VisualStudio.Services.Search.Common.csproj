@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3384F2A3-36C3-4E74-9DC1-CFEE53C251AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.ProjectAnalysis.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platform">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.Storage.FileSystem.Definitions" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.WebApi.Legacy" />
+    <Reference Include="Microsoft.VisualStudio.Services.Social.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Social.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CodeBranchInformationHelperForLargeRepos.cs" />
+    <Compile Include="Common\Setting.cs" />
+    <Compile Include="Common\ErrorCodeConvertor.cs" />
+    <Compile Include="Common\IAdjustableSemaphoreService.cs" />
+    <Compile Include="Common\AdjustableSemaphoreService.cs" />
+    <Compile Include="Common\BasicAuthCredentialsHelper.cs" />
+    <Compile Include="Common\DocumentId.cs" />
+    <Compile Include="Common\ElasticsearchConfigurationData.cs" />
+    <Compile Include="Common\OperationType.cs" />
+    <Compile Include="Common\CompleteGitBranchDeleteEventData.cs" />
+    <Compile Include="Common\TfvcDestroyEventData.cs" />
+    <Compile Include="Common\PackageContainerEqualityComparator.cs" />
+    <Compile Include="Common\PackageContainerIdComparator.cs" />
+    <Compile Include="Common\ClassificationNodeEqualityComparator.cs" />
+    <Compile Include="Common\ClassificationNodeIdComparator.cs" />
+    <Compile Include="Common\WorkItemDestroyedEventData.cs" />
+    <Compile Include="Common\DataContractKnownTypesPluginService.cs" />
+    <Compile Include="Common\HealthStatusMonitoringRecord.cs" />
+    <Compile Include="Common\HealthStatusRecord.cs" />
+    <Compile Include="Common\HealthStatusRecordExtensions.cs" />
+    <Compile Include="Common\FeedIndexJobYieldData.cs" />
+    <Compile Include="Common\BoardIndexJobYieldData.cs" />
+    <Compile Include="Common\JobMode.cs" />
+    <Compile Include="Common\JobStatus.cs" />
+    <Compile Include="Common\SearchExceptionConvertor.cs" />
+    <Compile Include="Common\FileAttributes.cs" />
+    <Compile Include="Common\FilePathAndContentHash.cs" />
+    <Compile Include="Common\ICountHandler.cs" />
+    <Compile Include="Common\ICountHandlerFactory.cs" />
+    <Compile Include="Common\PriorityManagerService.cs" />
+    <Compile Include="Common\IPowerShellCommandExecutor.cs" />
+    <Compile Include="Common\PowerShellCommandExecutor.cs" />
+    <Compile Include="Common\InstallElasticsearchHelperBase.cs" />
+    <Compile Include="Common\ConfigDefaults.cs" />
+    <Compile Include="Common\SearchExtensionConstants.cs" />
+    <Compile Include="Common\CommonConstants.cs" />
+    <Compile Include="Common\CustomUtils.cs" />
+    <Compile Include="Common\CodeBalanceShardsEventData.cs" />
+    <Compile Include="Common\PackageBulkIndexEventData.cs" />
+    <Compile Include="Common\PackageIndexPublishData.cs" />
+    <Compile Include="Common\PackageMetadataDeleteIndexEventData.cs" />
+    <Compile Include="Common\PackageContinuousIndexEventData.cs" />
+    <Compile Include="Common\WikiMetadataDeleteIndexEventData.cs" />
+    <Compile Include="Common\WorkItemUpdateFieldValuesEventData.cs" />
+    <Compile Include="Common\WorkItemPatchEventData.cs" />
+    <Compile Include="Common\CollectionProjectRepoRepoCrudEventData.cs" />
+    <Compile Include="Common\CollectionProjectRepoProjectCrudEventData.cs" />
+    <Compile Include="Common\GitRepositoryBIEventData.cs" />
+    <Compile Include="Common\ProjectRepoMetadataDeleteIndexEventData.cs" />
+    <Compile Include="Common\WikiBulkIndexEventData.cs" />
+    <Compile Include="Common\WikiIndexPublishData.cs" />
+    <Compile Include="Common\WikiMetadataCrawlEventData.cs" />
+    <Compile Include="Common\DeleteIndexEventData.cs" />
+    <Compile Include="Common\PackageVersionChangeEntityMetadata.cs" />
+    <Compile Include="Common\BoardMetadata.cs" />
+    <Compile Include="Common\PackageContainer.cs" />
+    <Compile Include="Common\PackageContainerType.cs" />
+    <Compile Include="Common\IndexingUnitWikisEntry.cs" />
+    <Compile Include="Common\WorkItemFailureMetadata.cs" />
+    <Compile Include="Common\IndexingUnitNotifications.cs" />
+    <Compile Include="Common\IndexingUnitProvider.cs" />
+    <Compile Include="Common\IndexingUnitCacheObject.cs" />
+    <Compile Include="Common\IndexingUnitCacheService.cs" />
+    <Compile Include="Common\GitIndexJobYieldData.cs" />
+    <Compile Include="Common\TfvcCrawlType.cs" />
+    <Compile Include="Common\TfvcIndexJobYieldData.cs" />
+    <Compile Include="Common\TfvcBranchData.cs" />
+    <Compile Include="Common\TfvcBranchGroup.cs" />
+    <Compile Include="Common\TfvcBranchInfo.cs" />
+    <Compile Include="Common\WorkItemCrawlStage.cs" />
+    <Compile Include="Common\WorkItemIndexJobYieldData.cs" />
+    <Compile Include="Common\GitIndexJobYieldStats.cs" />
+    <Compile Include="Common\TfvcIndexJobYieldStats.cs" />
+    <Compile Include="Common\NullRevisionBatchException.cs" />
+    <Compile Include="Common\CodeSearchRequestConvertor.cs" />
+    <Compile Include="Common\CodeSearchResponseConvertor.cs" />
+    <Compile Include="Common\WikiSearchRequestConvertor.cs" />
+    <Compile Include="Common\WikiSearchResponseConvertor.cs" />
+    <Compile Include="Common\WorkItemSearchRequestConvertor.cs" />
+    <Compile Include="Common\WorkItemSearchResponseConvertor.cs" />
+    <Compile Include="Common\DictionaryExtensions.cs" />
+    <Compile Include="Common\FeedExtensions.cs" />
+    <Compile Include="Common\TimeSpanExtensions.cs" />
+    <Compile Include="Common\FilePathBranchInfo.cs" />
+    <Compile Include="Common\CodeDocumentId.cs" />
+    <Compile Include="Common\BoardDocumentId.cs" />
+    <Compile Include="Common\CustomRepositoryIndexRequestEventData.cs" />
+    <Compile Include="Common\CodeProjectRenameEventData.cs" />
+    <Compile Include="Common\FileSplitGroupData.cs" />
+    <Compile Include="Common\GitBranchAddedEventData.cs" />
+    <Compile Include="Common\GitBranchDeleteEventData.cs" />
+    <Compile Include="Common\GitCodeContinuousIndexEventData.cs" />
+    <Compile Include="Common\CodeDeleteOrphanFilesEventData.cs" />
+    <Compile Include="Common\EntityRenameEventData.cs" />
+    <Compile Include="Common\GitRepositoryAcesSyncEventData.cs" />
+    <Compile Include="Common\RepositoryPatchEventData.cs" />
+    <Compile Include="Common\TFVCCodeContinuousIndexEventData.cs" />
+    <Compile Include="Common\CodeIndexPublishData.cs" />
+    <Compile Include="Common\CodeBulkIndexEventData.cs" />
+    <Compile Include="Common\UpdateMetadataEventData.cs" />
+    <Compile Include="Common\WorkItemClassificationNodesEventData.cs" />
+    <Compile Include="Common\EventType.cs" />
+    <Compile Include="Common\WorkItemContinuousIndexEventData.cs" />
+    <Compile Include="Common\ProjectRepoMetadataCrawlEventData.cs" />
+    <Compile Include="Common\WorkItemMetadataCrawlEventData.cs" />
+    <Compile Include="Common\WorkItemUpdateIndexEventData.cs" />
+    <Compile Include="Common\WorkItemIndexPublishData.cs" />
+    <Compile Include="Common\WorkItemBulkIndexEventData.cs" />
+    <Compile Include="Common\BoardBulkIndexEventData.cs" />
+    <Compile Include="Common\CustomRepositoryEntity.cs" />
+    <Compile Include="Common\ClassificationNode.cs" />
+    <Compile Include="Common\ClassificationNodeType.cs" />
+    <Compile Include="Common\DisabledFile.cs" />
+    <Compile Include="Common\ProjectRepositoryEntityMetadata.cs" />
+    <Compile Include="Common\FailureMetadata.cs" />
+    <Compile Include="Common\FileFailureMetadata.cs" />
+    <Compile Include="Common\FileUpdateMetadata.cs" />
+    <Compile Include="Common\IndexingUnit.cs" />
+    <Compile Include="Common\IndexingUnitChangeEvent.cs" />
+    <Compile Include="Common\IndexingUnitChangeEventPrerequisites.cs" />
+    <Compile Include="Common\IndexingUnitChangeEventPrerequisitesFilter.cs" />
+    <Compile Include="Common\IndexingUnitChangeEventFilterOperator.cs" />
+    <Compile Include="Common\ReindexingStatusEntry.cs" />
+    <Compile Include="Common\ReindexingStatusEntryExtension.cs" />
+    <Compile Include="Common\AbstractJobYieldData.cs" />
+    <Compile Include="Common\GitBulkIndexJobYieldData.cs" />
+    <Compile Include="Common\TfvcBulkIndexJobYieldData.cs" />
+    <Compile Include="Common\TfvcContinuousIndexJobYieldData.cs" />
+    <Compile Include="Common\AbstractJobYieldStats.cs" />
+    <Compile Include="Common\CrawlEntityType.cs" />
+    <Compile Include="Common\FileDisableReasonCode.cs" />
+    <Compile Include="Common\JobTrigger.cs" />
+    <Compile Include="Common\VersionControlType.cs" />
+    <Compile Include="Common\VersionControlTypeContants.cs" />
+    <Compile Include="Common\CodeMetadataCrawlEventData.cs" />
+    <Compile Include="Common\EventProcessingContext.cs" />
+    <Compile Include="Common\ExceptionMessage.cs" />
+    <Compile Include="Common\ServiceInitializationException.cs" />
+    <Compile Include="Common\StoreException.cs" />
+    <Compile Include="Common\SearchPlatformException.cs" />
+    <Compile Include="Common\StreamLoggerException.cs" />
+    <Compile Include="Common\FeederException.cs" />
+    <Compile Include="Common\IndexerException.cs" />
+    <Compile Include="Common\IndexProvisionException.cs" />
+    <Compile Include="Common\ParserException.cs" />
+    <Compile Include="Common\UnableToLoadParserException.cs" />
+    <Compile Include="Common\ExecutionTracerContext.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\SearchServiceException.cs" />
+    <Compile Include="Common\CrawlerException.cs" />
+    <Compile Include="Common\ConfigKeys.cs" />
+    <Compile Include="Common\ExecutionContextExtensions.cs" />
+    <Compile Include="Common\WorkItemExtensions.cs" />
+    <Compile Include="Common\TeamProjectExtensions.cs" />
+    <Compile Include="Common\VersionControlChangeTypeExtensions.cs" />
+    <Compile Include="Common\FileWriter.cs" />
+    <Compile Include="Common\FriendlyDictionary`2.cs" />
+    <Compile Include="Common\SearchPlatformExceptionLogger.cs" />
+    <Compile Include="Common\SearchServiceErrorCode.cs" />
+    <Compile Include="Common\ExecutionContext.cs" />
+    <Compile Include="Common\IIndexingUnitChangeEventSelector.cs" />
+    <Compile Include="Common\PriorityBasedIndexingUnitChangeEventSelector.cs" />
+    <Compile Include="Common\CreationTimeBasedIndexingUnitChangeEventSelector.cs" />
+    <Compile Include="Common\LeaseFilter.cs" />
+    <Compile Include="Common\ChangeEventData.cs" />
+    <Compile Include="Common\IndexInfo.cs" />
+    <Compile Include="Common\IndexingUnitProviderFactory.cs" />
+    <Compile Include="Common\InfoAttribute.cs" />
+    <Compile Include="Common\InfoAttributeValues.cs" />
+    <Compile Include="Common\LockStatus.cs" />
+    <Compile Include="Common\AdjustableSemaphore.cs" />
+    <Compile Include="Common\WorkItemPatchDescription.cs" />
+    <Compile Include="Common\PatchDescription.cs" />
+    <Compile Include="Common\IPriorityManager.cs" />
+    <Compile Include="Common\PriorityManager.cs" />
+    <Compile Include="Common\LockDetails.cs" />
+    <Compile Include="Common\LockMode.cs" />
+    <Compile Include="Common\ProjectEventData.cs" />
+    <Compile Include="Common\Operation.cs" />
+    <Compile Include="Common\RegistryManagerV2.cs" />
+    <Compile Include="Common\RegistryManager.cs" />
+    <Compile Include="Common\RepositoryConstants.cs" />
+    <Compile Include="Common\QueryScopingCacheUpdateData.cs" />
+    <Compile Include="Common\QueryScopingCacheUpdateEvent.cs" />
+    <Compile Include="Common\S2SCommunicator.cs" />
+    <Compile Include="Common\SearchOptions.cs" />
+    <Compile Include="Common\SearchServiceFeatures.cs" />
+    <Compile Include="Common\ProvisionerSettings.cs" />
+    <Compile Include="Common\JobSettings.cs" />
+    <Compile Include="Common\StoreSettings.cs" />
+    <Compile Include="Common\PipelineSettings.cs" />
+    <Compile Include="Common\FaultManagementSettings.cs" />
+    <Compile Include="Common\ServiceSettings.cs" />
+    <Compile Include="Common\SqlNotificationEventClasses.cs" />
+    <Compile Include="Common\WorkItemCollectionOnboardingHelper.cs" />
+    <Compile Include="Common\FilenameTokenizer.cs" />
+    <Compile Include="Common\SearchServiceJobData.cs" />
+    <Compile Include="Common\SecurityChecksUtils.cs" />
+    <Compile Include="Common\IVssRequestContextExtensions.cs" />
+    <Compile Include="Common\StorageContext.cs" />
+    <Compile Include="Common\TfvcItemExtensions.cs" />
+    <Compile Include="Common\Utils\FileTypeUtil.cs" />
+    <Compile Include="Common\Utils\UTF8Flags.cs" />
+    <Compile Include="Common\Utils\DateUtils.cs" />
+    <Compile Include="Common\Utils\SQLNotificationSenders.cs" />
+    <Compile Include="Common\Utils\CrawlerHelpers.cs" />
+    <Compile Include="Common\Utils\FilePathUtils.cs" />
+    <Compile Include="Common\Utils\HashUtils.cs" />
+    <Compile Include="Common\Utils\MultiPatternTextFilter.cs" />
+    <Compile Include="Common\Utils\Serializers.cs" />
+    <Compile Include="Common\Utils\XmlExtensions.cs" />
+    <Compile Include="Common\Exceptions\InvalidContinuationTokenException.cs" />
+    <Compile Include="Common\Exceptions\AccountMigratorException.cs" />
+    <Compile Include="Common\Exceptions\GitRepoSyncAnalyzerException.cs" />
+    <Compile Include="Common\StorageEndpoint\ContentId.cs" />
+    <Compile Include="Common\StorageEndpoint\IStorageEndpointCollection.cs" />
+    <Compile Include="Common\StorageEndpoint\IObjectStoreItem.cs" />
+    <Compile Include="Common\StorageEndpoint\IStorageEndpoint.cs" />
+    <Compile Include="Common\StorageEndpoint\CompressorAlgorithm.cs" />
+    <Compile Include="Common\StorageEndpoint\IStorageEndpointCollectionService.cs" />
+    <Compile Include="Common\StorageEndpoint\Hash.cs" />
+    <Compile Include="Common\StorageEndpoint\StorageEndpointCollectionService.cs" />
+    <Compile Include="Common\SearchPlatform\SearchPlatformService.cs" />
+    <Compile Include="Common\SearchPlatform\ISearchPlatformService.cs" />
+    <Compile Include="Common\HttpClientWrappers\WorkItemHttpClientWrapper2.cs" />
+    <Compile Include="Common\HttpClientWrappers\GitHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\GvfsClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\HttpClientWrapperFactory.cs" />
+    <Compile Include="Common\HttpClientWrappers\SocialHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\SocialEngagementActivities.cs" />
+    <Compile Include="Common\HttpClientWrappers\LanguageMetrics.cs" />
+    <Compile Include="Common\HttpClientWrappers\ProjectCollectionHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\TfsCollectionRedirectedService.cs" />
+    <Compile Include="Common\HttpClientWrappers\IHttpClientWrapperFactory.cs" />
+    <Compile Include="Common\HttpClientWrappers\CodeActivities.cs" />
+    <Compile Include="Common\HttpClientWrappers\ProjectAnalysisHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\TfsContributionsHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\ProjectHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\FeedHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\WikiHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\ICollectionRedirectionService.cs" />
+    <Compile Include="Common\HttpClientWrappers\WorkItemHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\BoardHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\TfvcHttpClientWrapper.cs" />
+    <Compile Include="Common\HttpClientWrappers\GvfsHttpClient\GitEndPointResponseData.cs" />
+    <Compile Include="Common\HttpClientWrappers\GvfsHttpClient\GitObjectSize.cs" />
+    <Compile Include="Common\HttpClientWrappers\GvfsHttpClient\GvfsClient.cs" />
+    <Compile Include="Common\FaultManagement\RequestCounter.cs" />
+    <Compile Include="Common\FaultManagement\IIndexerRequestThrottleService.cs" />
+    <Compile Include="Common\FaultManagement\RequestConstants.cs" />
+    <Compile Include="Common\FaultManagement\IRequestStore.cs" />
+    <Compile Include="Common\FaultManagement\RegistryServiceRequestStore.cs" />
+    <Compile Include="Common\FaultManagement\FaultConstants.cs" />
+    <Compile Include="Common\FaultManagement\IIndexerFaultService.cs" />
+    <Compile Include="Common\FaultManagement\BaseIndexerFaultService.cs" />
+    <Compile Include="Common\FaultManagement\IndexerV1FaultService.cs" />
+    <Compile Include="Common\FaultManagement\IndexerFault.cs" />
+    <Compile Include="Common\FaultManagement\IndexerFaultStatus.cs" />
+    <Compile Include="Common\FaultManagement\IndexerFaultSource.cs" />
+    <Compile Include="Common\FaultManagement\IndexerFaultSeverity.cs" />
+    <Compile Include="Common\FaultManagement\ServiceFaultState.cs" />
+    <Compile Include="Common\FaultManagement\AsyncInvoker.cs" />
+    <Compile Include="Common\FaultManagement\ExponentialBackoffRetryInvoker.cs" />
+    <Compile Include="Common\FaultManagement\GenericInvoker.cs" />
+    <Compile Include="Common\FaultManagement\IndexFaultMapManager.cs" />
+    <Compile Include="Common\FaultManagement\IFaultStore.cs" />
+    <Compile Include="Common\FaultManagement\RegistryServiceFaultStore.cs" />
+    <Compile Include="Common\FaultManagement\Definitions\TransientFaultState.cs" />
+    <Compile Include="Common\FaultManagement\FaultStateHandler\IStateHandler.cs" />
+    <Compile Include="Common\FaultManagement\FaultStateHandler\StateHandlerFactory.cs" />
+    <Compile Include="Common\FaultManagement\FaultStates\ClosedStateHandler.cs" />
+    <Compile Include="Common\FaultManagement\FaultStates\PartiallyOpenStateHandler.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ContinuationTokenInvalidFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESEntityTooLargeFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\GitCommitNotFoundFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ItemBatchNotFoundExceptionFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESDocumentMissingFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESSearchPlatformNonRetriableExceptionsFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\HostStoppedFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\DefaultTeamNotFoundFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\GitItemDoesNotExistFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\TfvcItemNotFoundFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ClassificationNodeNotRecognizedFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\WorkItemPermanentlyDeletedFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\WorkItemAreaIterationIdNotRecognizedFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESNestNonGenericFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\FaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESRejectedExecutionExceptionFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESStateRedFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESStateYellowFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ESTimeOutFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\ProjectNotFoundFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\RepoDoesNotExistFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\TfsBranchNotFoundFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\LocationHttpClientCircuitBreakerFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\WorkItemDeletedFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\TfvcScopePathConflictFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\VssThrottlingFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\VssConcurrencyLimitFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\VssInsufficientPermissionsFaultMapper.cs" />
+    <Compile Include="Common\FaultManagement\Maps\VssTimeOutFaultMapper.cs" />
+    <Compile Include="Common\Constants\JobConstants.cs" />
+    <Compile Include="Common\Constants\JobQueuePriority.cs" />
+    <Compile Include="Common\Enums\PipelineDocumentState.cs" />
+    <Compile Include="Common\Enums\ProgrammingLanguages.cs" />
+    <Compile Include="Common\Enums\RejectionCode.cs" />
+    <Compile Include="Common\Enums\RejectionCodeExtension.cs" />
+    <Compile Include="Common\Enums\MaintenanceJobStatus.cs" />
+    <Compile Include="Common\Enums\MaintenanceJobStatusExtensions.cs" />
+    <Compile Include="Common\Enums\CodeSearchTag.cs" />
+    <Compile Include="Common\Enums\QueryScopingCacheStatus.cs" />
+    <Compile Include="Common\Enums\DocumentContractType.cs" />
+    <Compile Include="Common\Enums\DocumentContractTypeExtension.cs" />
+    <Compile Include="Common\Enums\IndexingUnitChangeEventState.cs" />
+    <Compile Include="Common\Enums\IndexingUnitChangeEventStateExtensions.cs" />
+    <Compile Include="Common\Enums\IndexProvisionType.cs" />
+    <Compile Include="Common\Enums\Patch.cs" />
+    <Compile Include="Common\Enums\ReindexingStatus.cs" />
+    <Compile Include="Common\Enums\RouteLevel.cs" />
+    <Compile Include="Common\Enums\Stage.cs" />
+    <Compile Include="Common\Enums\UpdateMetaDataOperationType.cs" />
+    <Compile Include="Common\Enums\BoardType.cs" />
+    <Compile Include="Common\Entities\TenantWikiEntityType.cs" />
+    <Compile Include="Common\Entities\BoardEntityType.cs" />
+    <Compile Include="Common\Entities\EntityType.cs" />
+    <Compile Include="Common\Entities\ElasticsearchIndexDetail.cs" />
+    <Compile Include="Common\Entities\SettingEntityType.cs" />
+    <Compile Include="Common\Entities\EsShardDetails.cs" />
+    <Compile Include="Common\Entities\IndexingUnitChangeEventDetailsWithEntityType.cs" />
+    <Compile Include="Common\Entities\IndexingUnitDetails.cs" />
+    <Compile Include="Common\Entities\EntityService.cs" />
+    <Compile Include="Common\Entities\EntityPluginsFactory.cs" />
+    <Compile Include="Common\Entities\AllEntityType.cs" />
+    <Compile Include="Common\Entities\CodeEntityType.cs" />
+    <Compile Include="Common\Entities\FileEntityType.cs" />
+    <Compile Include="Common\Entities\PackageEntityType.cs" />
+    <Compile Include="Common\Entities\ProjectRepoEntityType.cs" />
+    <Compile Include="Common\Entities\TenantCodeEntityType.cs" />
+    <Compile Include="Common\Entities\WikiEntityType.cs" />
+    <Compile Include="Common\Entities\WorkItemEntityType.cs" />
+    <Compile Include="Common\Entities\DiffInShardEstimates.cs" />
+    <Compile Include="Common\Entities\ShardDetailsActualInfo.cs" />
+    <Compile Include="Common\Entities\ShardEstimateChange.cs" />
+    <Compile Include="Common\Entities\IEntityService.cs" />
+    <Compile Include="Common\Entities\IEntityType.cs" />
+    <Compile Include="Common\Entities\ShardDetails.cs" />
+    <Compile Include="Common\Entities\BranchMetadata.cs" />
+    <Compile Include="Common\Entities\ContentHashBranchListDictionary.cs" />
+    <Compile Include="Common\Entities\Branches.cs" />
+    <Compile Include="Common\Entities\ItemLevelFailureRecord.cs" />
+    <Compile Include="Common\Entities\FileMetadataRecord.cs" />
+    <Compile Include="Common\Entities\QueryingUnit.cs" />
+    <Compile Include="Common\Entities\CollectionQueryingUnit.cs" />
+    <Compile Include="Common\Entities\IndexingUnitChangeEventDetails.cs" />
+    <Compile Include="Common\Entities\TempFileMetadataRecord.cs" />
+    <Compile Include="Common\Entities\TemporaryBranchMetadata.cs" />
+    <Compile Include="Common\Entities\UpdateContentDictionary.cs" />
+    <Compile Include="Common\Entities\UpdateTypeDictionary.cs" />
+    <Compile Include="Common\Entities\BranchInfo.cs" />
+    <Compile Include="Common\Entities\ChangeEventData\LargeRepositoryMetadataCrawlerEventData.cs" />
+    <Compile Include="Common\Entities\ChangeEventData\GitRepositoryCustomBulkIndexingEventData.cs" />
+    <Compile Include="Common\Entities\HealthJobData\HealthStatusJobData.cs" />
+    <Compile Include="Common\Entities\HealthJobData\Scenario.cs" />
+    <Compile Include="Common\Entities\HealthJobData\ActionRunData.cs" />
+    <Compile Include="Common\Entities\EntityTypes\EntityTypeComparer.cs" />
+    <Compile Include="Common\Entities\EntityProperties\DeploymentIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\FeedIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CollectionPackageIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\FeedTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\OrganizationAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\OrganizationIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\BoardTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CustomRepoCodeTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\GitCodeRepoIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\GitBranchIndexInfo.cs" />
+    <Compile Include="Common\Entities\EntityProperties\GitCodeRepoTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\ProjectCodeTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\ProjectCodeIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CodeRepoTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CustomRepoCodeIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\DepotIndexInfo.cs" />
+    <Compile Include="Common\Entities\EntityProperties\ScopedGitRepositoryIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\ScopedGitBranchIndexInfo.cs" />
+    <Compile Include="Common\Entities\EntityProperties\TfvcCodeRepoTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\TfvcCodeRepoIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CollectionIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\IndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CollectionAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CollectionProjectRepoIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\TFSEntityAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\ProjectWorkItemIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\ProjectWorkItemTFSAttributes.cs" />
+    <Compile Include="Common\Entities\EntityProperties\CollectionBoardIndexingProperties.cs" />
+    <Compile Include="Common\Entities\EntityProperties\Code\ScopedGitRepositoryAttributes.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Tokenizers\SourceCode\CodeTokenKind.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\ObjectStore\ObjectStoreType.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\IMetaDataStore.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\IMetaDataStore`1.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\IMetaDataStoreEncoder`1.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\IMetaDataStoreItem.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\IMetaDataStoreProvider.cs" />
+    <Compile Include="Extensions\Libraries\reSearch\Core\Stores\TreeStore\MetaDataStoreUpdateType.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\ISharedIndexingPropertyDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IHealthStatusDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IHealthStatusMonitoringDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IShardDetailsDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\DataAccessErrorCodeEnum.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\DataAccessException.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\ExceptionHelper.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IndexingUnitChangeEventComparer.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IClassificationNodeDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IPackageContainerDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\ICustomRepositoryDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IDataAccessFactory.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IDisabledFilesDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IFileMetadataStoreDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IIndexingUnitChangeEventArchiveDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IIndexingUnitChangeEventDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IIndexingUnitDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IIndexingUnitDataAccessExtensions.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IIndexingUnitWikisDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IItemLevelFailureDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\ILockManager.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\IReindexingStatusDataAccess.cs" />
+    <Compile Include="Server\DataAccess\DataAccessLayer\ITempFileMetadataStoreDataAccess.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\ExceptionMessage.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

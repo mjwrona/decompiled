@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.TestManagement.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23CEB51A-825A-42BF-ABAE-834E94AD1EF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.TestManagement.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.TestManagement.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TestResultFailureType.cs" />
+    <Compile Include="TestResultFailureTypeRequestModel.cs" />
+    <Compile Include="AfnStrip.cs" />
+    <Compile Include="RequestParameterKeys.cs" />
+    <Compile Include="RequestParamaterValues.cs" />
+    <Compile Include="TestAttachment.cs" />
+    <Compile Include="TestLogStoreAttachment.cs" />
+    <Compile Include="TestAttachmentReference.cs" />
+    <Compile Include="TestLogStoreAttachmentReference.cs" />
+    <Compile Include="TestAttachmentRequestModel.cs" />
+    <Compile Include="AttachmentType.cs" />
+    <Compile Include="TestLog.cs" />
+    <Compile Include="TestLogReference.cs" />
+    <Compile Include="TestLogScope.cs" />
+    <Compile Include="TestLogType.cs" />
+    <Compile Include="TestLogCompressionType.cs" />
+    <Compile Include="TestLogStoreSecuredObject.cs" />
+    <Compile Include="TestLogStoreEndpointDetails.cs" />
+    <Compile Include="TestLogStoreEndpointType.cs" />
+    <Compile Include="TestLogStoreOperationType.cs" />
+    <Compile Include="TestLogStatus.cs" />
+    <Compile Include="TestLogStatusCode.cs" />
+    <Compile Include="BatchResponse.cs" />
+    <Compile Include="BuildConfiguration.cs" />
+    <Compile Include="BuildReference.cs" />
+    <Compile Include="PipelineReference.cs" />
+    <Compile Include="JobReference.cs" />
+    <Compile Include="PhaseReference.cs" />
+    <Compile Include="StageReference.cs" />
+    <Compile Include="DatedTestFieldData.cs" />
+    <Compile Include="TestAuthoringDetails.cs" />
+    <Compile Include="TestExecutionReportData.cs" />
+    <Compile Include="TestFieldData.cs" />
+    <Compile Include="CloneOperationInformation.cs" />
+    <Compile Include="CloneOperationState.cs" />
+    <Compile Include="ResultObjectType.cs" />
+    <Compile Include="CloneOptions.cs" />
+    <Compile Include="CloneTestCaseOptions.cs" />
+    <Compile Include="CloneStatistics.cs" />
+    <Compile Include="BuildCoverage.cs" />
+    <Compile Include="CodeCoverageSummary.cs" />
+    <Compile Include="CodeCoverageData.cs" />
+    <Compile Include="CodeCoverageStatistics.cs" />
+    <Compile Include="CoverageSummaryStatus.cs" />
+    <Compile Include="CoverageDetailedSummaryStatus.cs" />
+    <Compile Include="CodeCoverageSecuredObject.cs" />
+    <Compile Include="CoverageQueryFlags.cs" />
+    <Compile Include="CoverageStatistics.cs" />
+    <Compile Include="FunctionCoverage.cs" />
+    <Compile Include="ModuleCoverage.cs" />
+    <Compile Include="TestRunCoverage.cs" />
+    <Compile Include="FileCoverage.cs" />
+    <Compile Include="LineBlockCoverage.cs" />
+    <Compile Include="CoverageStatus.cs" />
+    <Compile Include="FileCoverageRequest.cs" />
+    <Compile Include="FolderCoverageData.cs" />
+    <Compile Include="FileCoverageData.cs" />
+    <Compile Include="SourceViewBuildCoverage.cs" />
+    <Compile Include="CustomTestFieldScope.cs" />
+    <Compile Include="CustomTestFieldType.cs" />
+    <Compile Include="CustomTestField.cs" />
+    <Compile Include="CustomTestFieldDefinition.cs" />
+    <Compile Include="ITestAction.cs" />
+    <Compile Include="ITestActionGroup.cs" />
+    <Compile Include="ITestActionOwner.cs" />
+    <Compile Include="ITestAttachment.cs" />
+    <Compile Include="ITestBase.cs" />
+    <Compile Include="ITestBaseHelper.cs" />
+    <Compile Include="ITestStep.cs" />
+    <Compile Include="ISharedStep.cs" />
+    <Compile Include="ITestStepAttachment.cs" />
+    <Compile Include="IXmlStorage.cs" />
+    <Compile Include="LastResultDetails.cs" />
+    <Compile Include="EntryType.cs" />
+    <Compile Include="Layout.cs" />
+    <Compile Include="Link`1.cs" />
+    <Compile Include="SessionLinkType.cs" />
+    <Compile Include="TestResultsSession.cs" />
+    <Compile Include="SessionResult.cs" />
+    <Compile Include="SessionSourcePipeline.cs" />
+    <Compile Include="TestSessionEnvironment.cs" />
+    <Compile Include="TestResultsSessionState.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="Timeline`1.cs" />
+    <Compile Include="SessionTimelineType.cs" />
+    <Compile Include="TestResultDimension.cs" />
+    <Compile Include="LinkOperationType.cs" />
+    <Compile Include="ResultLinkType.cs" />
+    <Compile Include="ReleaseEnvironmentDefinitionReference.cs" />
+    <Compile Include="ReleaseReference.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="ResultRetentionSettings.cs" />
+    <Compile Include="ShallowReference.cs" />
+    <Compile Include="TestTag.cs" />
+    <Compile Include="TestTagSummary.cs" />
+    <Compile Include="TestTagsUpdateModel.cs" />
+    <Compile Include="OperationType.cs" />
+    <Compile Include="TestRunSummary2.cs" />
+    <Compile Include="TestFieldsEx2.cs" />
+    <Compile Include="TestResultsEx2.cs" />
+    <Compile Include="ReleaseReference2.cs" />
+    <Compile Include="TestCaseReference2.cs" />
+    <Compile Include="BuildReference2.cs" />
+    <Compile Include="TestRunContext2.cs" />
+    <Compile Include="TestMessageLog2.cs" />
+    <Compile Include="TestResult2.cs" />
+    <Compile Include="TestMessageLogEntry2.cs" />
+    <Compile Include="TestCaseMetadata2.cs" />
+    <Compile Include="RequirementsToTestsMapping2.cs" />
+    <Compile Include="TestRun2.cs" />
+    <Compile Include="TestActionResult2.cs" />
+    <Compile Include="TestResultReset2.cs" />
+    <Compile Include="TestParameter2.cs" />
+    <Compile Include="TestRunEx2.cs" />
+    <Compile Include="TestRunExtended2.cs" />
+    <Compile Include="Coverage2.cs" />
+    <Compile Include="FunctionCoverage2.cs" />
+    <Compile Include="ModuleCoverage2.cs" />
+    <Compile Include="CodeCoverageSummary2.cs" />
+    <Compile Include="TCMPropertyBag2.cs" />
+    <Compile Include="PointsResults2.cs" />
+    <Compile Include="PointsReference2.cs" />
+    <Compile Include="ParameterizedString.cs" />
+    <Compile Include="ParameterizedStringPart.cs" />
+    <Compile Include="TestAction.cs" />
+    <Compile Include="TestActionType.cs" />
+    <Compile Include="TestActionCollection.cs" />
+    <Compile Include="TestActionGroup.cs" />
+    <Compile Include="TestActionRootGroup.cs" />
+    <Compile Include="TestAttachmentLink.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="TestBaseHelper.cs" />
+    <Compile Include="TestStep.cs" />
+    <Compile Include="TestStepType.cs" />
+    <Compile Include="SharedStep.cs" />
+    <Compile Include="TestStepAttachment.cs" />
+    <Compile Include="TestAttachmentCollection.cs" />
+    <Compile Include="SharedStepModel.cs" />
+    <Compile Include="TestIterationDetailsModel.cs" />
+    <Compile Include="TestMethod.cs" />
+    <Compile Include="NameValuePair.cs" />
+    <Compile Include="TestConfiguration.cs" />
+    <Compile Include="TestConfigurationState.cs" />
+    <Compile Include="TestVariable.cs" />
+    <Compile Include="DtlEnvironmentDetails.cs" />
+    <Compile Include="TestEnvironment.cs" />
+    <Compile Include="TestFailureType.cs" />
+    <Compile Include="TestManagementBaseSecuredObject.cs" />
+    <Compile Include="TestManagementConstants.cs" />
+    <Compile Include="TestManagementEventType.cs" />
+    <Compile Include="TestOperationReference.cs" />
+    <Compile Include="PlanUpdateModel.cs" />
+    <Compile Include="TestPlan.cs" />
+    <Compile Include="TestOutcomeSettings.cs" />
+    <Compile Include="TestPlanCloneRequest.cs" />
+    <Compile Include="TestPlanHubData.cs" />
+    <Compile Include="TestPlansWithSelection.cs" />
+    <Compile Include="PointAssignment.cs" />
+    <Compile Include="PointsFilter.cs" />
+    <Compile Include="PointUpdateModel.cs" />
+    <Compile Include="PointWorkItemProperty.cs" />
+    <Compile Include="FilterPointQuery.cs" />
+    <Compile Include="PointLastResult.cs" />
+    <Compile Include="TestPoint.cs" />
+    <Compile Include="TestPointsQuery.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="QueryModel.cs" />
+    <Compile Include="AggregatedDataForResultTrend.cs" />
+    <Compile Include="AggregatedResultsAnalysis.cs" />
+    <Compile Include="AggregatedResultsByOutcome.cs" />
+    <Compile Include="AggregatedResultsDifference.cs" />
+    <Compile Include="AggregatedRunsByState.cs" />
+    <Compile Include="AggregatedRunsByOutcome.cs" />
+    <Compile Include="Metrics.cs" />
+    <Compile Include="PipelineTestMetrics.cs" />
+    <Compile Include="AggregatedResultDetailsByOutcome.cs" />
+    <Compile Include="ResultsAnalysis.cs" />
+    <Compile Include="ResultsSummaryByOutcome.cs" />
+    <Compile Include="ResultSummary.cs" />
+    <Compile Include="RunSummary.cs" />
+    <Compile Include="TestFailureDetails.cs" />
+    <Compile Include="TestFailuresAnalysis.cs" />
+    <Compile Include="TestResultFailuresAnalysis.cs" />
+    <Compile Include="GroupTestResultsBy.cs" />
+    <Compile Include="TestResultsContextType.cs" />
+    <Compile Include="TestResultHistory.cs" />
+    <Compile Include="TestResultHistoryDetailsForGroup.cs" />
+    <Compile Include="TestResultsContext.cs" />
+    <Compile Include="TestResultsDetails.cs" />
+    <Compile Include="TestResultsDetailsForGroup.cs" />
+    <Compile Include="TestResultSummary.cs" />
+    <Compile Include="TestResultTrendFilter.cs" />
+    <Compile Include="TestResolutionState.cs" />
+    <Compile Include="FailingSince.cs" />
+    <Compile Include="ResultsFilter.cs" />
+    <Compile Include="ResultUpdateRequestModel.cs" />
+    <Compile Include="ResultUpdateResponseModel.cs" />
+    <Compile Include="TestActionResultModel.cs" />
+    <Compile Include="TestCaseResult.cs" />
+    <Compile Include="ShallowTestCaseResult.cs" />
+    <Compile Include="TestCaseResultAttachmentModel.cs" />
+    <Compile Include="TestHistoryQuery.cs" />
+    <Compile Include="TestResultHistoryForGroup.cs" />
+    <Compile Include="TestResultGroupBy.cs" />
+    <Compile Include="TestCaseResultIdentifier.cs" />
+    <Compile Include="TestCaseResultUpdateModel.cs" />
+    <Compile Include="TestResultCreateModel.cs" />
+    <Compile Include="TestResultDocument.cs" />
+    <Compile Include="TestOutcome.cs" />
+    <Compile Include="ResultDetails.cs" />
+    <Compile Include="ResultGroupType.cs" />
+    <Compile Include="ResultMetaDataDetails.cs" />
+    <Compile Include="TestResultsSettingsType.cs" />
+    <Compile Include="ResultMetadata.cs" />
+    <Compile Include="TestResultModelBase.cs" />
+    <Compile Include="TestResultParameterModel.cs" />
+    <Compile Include="TestResultPayload.cs" />
+    <Compile Include="TestResultsGroupsForBuild.cs" />
+    <Compile Include="TestResultsGroupsForRelease.cs" />
+    <Compile Include="FieldDetailsForTestResults.cs" />
+    <Compile Include="TestResultsQuery.cs" />
+    <Compile Include="ValidTestResultGroupByFields.cs" />
+    <Compile Include="ValidTestResultPropertyFilters.cs" />
+    <Compile Include="TestResultMetaDataUpdateResponse.cs" />
+    <Compile Include="FlakyDetection.cs" />
+    <Compile Include="FlakyDetectionPipelines.cs" />
+    <Compile Include="FlakySettings.cs" />
+    <Compile Include="NewTestResultLoggingSettings.cs" />
+    <Compile Include="FlakyDetectionType.cs" />
+    <Compile Include="TestResultsSettings.cs" />
+    <Compile Include="TestResultsUpdateSettings.cs" />
+    <Compile Include="RunCreateModel.cs" />
+    <Compile Include="RunType.cs" />
+    <Compile Include="RunFilter.cs" />
+    <Compile Include="RunStatistic.cs" />
+    <Compile Include="RunUpdateModel.cs" />
+    <Compile Include="TestMessageLogDetails.cs" />
+    <Compile Include="TestRun.cs" />
+    <Compile Include="SourceWorkflow.cs" />
+    <Compile Include="TestRunState.cs" />
+    <Compile Include="TestRunOutcome.cs" />
+    <Compile Include="TestRunSubstate.cs" />
+    <Compile Include="TestRunPublishContext.cs" />
+    <Compile Include="TestRunEvent.cs" />
+    <Compile Include="TestRunCreatedEvent.cs" />
+    <Compile Include="TestRunStartedEvent.cs" />
+    <Compile Include="TestRunCanceledEvent.cs" />
+    <Compile Include="TestRunWithDtlEnvEvent.cs" />
+    <Compile Include="TestRunStatistic.cs" />
+    <Compile Include="RunSummaryModel.cs" />
+    <Compile Include="PropertyBag.cs" />
+    <Compile Include="TestSession.cs" />
+    <Compile Include="TestSessionSource.cs" />
+    <Compile Include="TestSessionState.cs" />
+    <Compile Include="TestSessionWorkItemReference.cs" />
+    <Compile Include="TestSessionExploredWorkItemReference.cs" />
+    <Compile Include="TestSettings.cs" />
+    <Compile Include="TestSettings2.cs" />
+    <Compile Include="SuiteCreateModel.cs" />
+    <Compile Include="SuiteEntry.cs" />
+    <Compile Include="SuiteEntryUpdateModel.cs" />
+    <Compile Include="SuiteExpand.cs" />
+    <Compile Include="SuiteTestCase.cs" />
+    <Compile Include="SuiteTestCaseUpdateModel.cs" />
+    <Compile Include="SuiteUpdateModel.cs" />
+    <Compile Include="TestSuite.cs" />
+    <Compile Include="TestSuiteCloneRequest.cs" />
+    <Compile Include="TestSummaryForWorkItem.cs" />
+    <Compile Include="TestToWorkItemLinks.cs" />
+    <Compile Include="WorkItemToTestLinks.cs" />
+    <Compile Include="TestSubResult.cs" />
+    <Compile Include="TestResultMetaData.cs" />
+    <Compile Include="TestResultMetaDataUpdateInput.cs" />
+    <Compile Include="TestFlakyIdentifier.cs" />
+    <Compile Include="XmlStorageHelper.cs" />
+    <Compile Include="LinkedWorkItemsQuery.cs" />
+    <Compile Include="LinkedWorkItemsQueryResult.cs" />
+    <Compile Include="WorkItemReference.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="TestObjectNotFoundException.cs" />
+    <Compile Include="TeamProjectNotFoundException.cs" />
+    <Compile Include="InvalidPropertyException.cs" />
+    <Compile Include="TestObjectInUseException.cs" />
+    <Compile Include="TestObjectUpdatedException.cs" />
+    <Compile Include="RequestBlockedException.cs" />
+    <Compile Include="TCMDataMigrationInProgressException.cs" />
+    <Compile Include="TCMChartingInProgressException.cs" />
+    <Compile Include="TestObjectSizeExceededException.cs" />
+    <Compile Include="TestHttpClientBase.cs" />
+    <Compile Include="TestCompatHttpClientBase.cs" />
+    <Compile Include="TestManagementHttpClient.cs" />
+    <Compile Include="TestManagementResourceIds.cs" />
+    <Compile Include="ITestResultsHttpClient.cs" />
+    <Compile Include="TestManagementHttpClientRetryHelper.cs" />
+    <Compile Include="TestManagementRetryHelper.cs" />
+    <Compile Include="TCMServiceDataMigrationStatus.cs" />
+    <Compile Include="TestPointReference.cs" />
+    <Compile Include="TestPointsEvent.cs" />
+    <Compile Include="TestPointsUpdatedEvent.cs" />
+    <Compile Include="TestPointState.cs" />
+    <Compile Include="Contracts\TestSession\TestSessionConstants.cs" />
+    <Compile Include="Legacy\QueryTestActionResultResponse.cs" />
+    <Compile Include="Legacy\TestActionResult.cs" />
+    <Compile Include="Legacy\TestResultAttachment.cs" />
+    <Compile Include="Legacy\TestResultParameter.cs" />
+    <Compile Include="Legacy\DefaultAfnStripBinding.cs" />
+    <Compile Include="Legacy\ResultsStoreQuery.cs" />
+    <Compile Include="Legacy\LegacyBuildConfiguration.cs" />
+    <Compile Include="Legacy\LegacyReleaseReference.cs" />
+    <Compile Include="Legacy\ResultUpdateRequest.cs" />
+    <Compile Include="Legacy\ResultUpdateResponse.cs" />
+    <Compile Include="Legacy\LegacyTestCaseResult.cs" />
+    <Compile Include="Legacy\TestCaseResultIdAndRev.cs" />
+    <Compile Include="Legacy\LegacyTestCaseResultIdentifier.cs" />
+    <Compile Include="Legacy\TestExtensionField.cs" />
+    <Compile Include="Legacy\TestExtensionFieldDetails.cs" />
+    <Compile Include="Legacy\TestResultAttachmentIdentity.cs" />
+    <Compile Include="Legacy\LegacyTestRun.cs" />
+    <Compile Include="Legacy\TestRunType.cs" />
+    <Compile Include="Legacy\LegacyTestRunStatistic.cs" />
+    <Compile Include="Legacy\LegacyTestSettings.cs" />
+    <Compile Include="Legacy\TestSettingsMachineRole.cs" />
+    <Compile Include="Legacy\UpdatedProperties.cs" />
+    <Compile Include="Legacy\CreateTestRunRequest.cs" />
+    <Compile Include="Legacy\TestResultAcrossProjectResponse.cs" />
+    <Compile Include="Legacy\FetchTestResultsRequest.cs" />
+    <Compile Include="Legacy\FetchTestResultsResponse.cs" />
+    <Compile Include="Legacy\QueryByRunRequest.cs" />
+    <Compile Include="Legacy\QueryTestRuns2Request.cs" />
+    <Compile Include="Legacy\QueryTestRunsRequest.cs" />
+    <Compile Include="Legacy\ResultsByQueryResponse.cs" />
+    <Compile Include="Legacy\BulkResultUpdateRequest.cs" />
+    <Compile Include="Legacy\CreateTestResultsRequest.cs" />
+    <Compile Include="Legacy\ResultsByQueryRequest.cs" />
+    <Compile Include="Legacy\QueryTestActionResultRequest.cs" />
+    <Compile Include="Legacy\DeleteTestRunRequest.cs" />
+    <Compile Include="Legacy\TestMessageLogEntry.cs" />
+    <Compile Include="Legacy\CreateTestMessageLogEntryRequest.cs" />
+    <Compile Include="Legacy\QueryTestMessageLogEntryRequest.cs" />
+    <Compile Include="Legacy\UpdateTestRunRequest.cs" />
+    <Compile Include="Legacy\UpdateTestRunResponse.cs" />
+    <Compile Include="Legacy\ResetTestResultsRequest.cs" />
+    <Compile Include="Legacy\AbortTestRunRequest.cs" />
+    <Compile Include="Legacy\QueryTestRunStatsRequest.cs" />
+    <Compile Include="Legacy\QueryByPointRequest.cs" />
+    <Compile Include="Legacy\TestResultsWithWatermark.cs" />
+    <Compile Include="Legacy\DownloadAttachmentsRequest.cs" />
+    <Compile Include="Legacy\HttpPostedTcmAttachment.cs" />
+    <Compile Include="Legacy\UploadAttachmentsRequest.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

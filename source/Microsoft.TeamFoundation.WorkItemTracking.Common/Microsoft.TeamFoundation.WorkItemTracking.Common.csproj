@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CA78642-9BE0-4716-9615-2CEE68A5EFE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\Mark.cs" />
+    <Compile Include="Common\Marker.cs" />
+    <Compile Include="Common\WITCodeMarkerStartEnd.cs" />
+    <Compile Include="WorkItemTracking\Internals\FieldHelpers.cs" />
+    <Compile Include="WorkItemTracking\Internals\GenericDataReader.cs" />
+    <Compile Include="WorkItemTracking\Internals\HtmlConverter.cs" />
+    <Compile Include="WorkItemTracking\Internals\AllowedHtmlTags.cs" />
+    <Compile Include="WorkItemTracking\Internals\IHtmlFilterWriter.cs" />
+    <Compile Include="WorkItemTracking\Internals\HtmlSimpleWriter.cs" />
+    <Compile Include="WorkItemTracking\Internals\HtmlPlainTextWriter.cs" />
+    <Compile Include="WorkItemTracking\Internals\HtmlEntities.cs" />
+    <Compile Include="WorkItemTracking\Internals\IRowSetCollectionHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\IRowSetCollectionHelper2.cs" />
+    <Compile Include="WorkItemTracking\Internals\IRowSetHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\IWiqlAdapterHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\TreeStructureType.cs" />
+    <Compile Include="WorkItemTracking\Internals\IWorkItemOpenFieldDataHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\IWorkItemSaveFieldDataHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\IWorkItemSaveLinkDataHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\LinkInfo.cs" />
+    <Compile Include="WorkItemTracking\Internals\FileLinkInfo.cs" />
+    <Compile Include="WorkItemTracking\Internals\AttachmentInfo.cs" />
+    <Compile Include="WorkItemTracking\Internals\WorkItemLinkInfo.cs" />
+    <Compile Include="WorkItemTracking\Internals\LinkProperties.cs" />
+    <Compile Include="WorkItemTracking\Internals\LinkUpdate.cs" />
+    <Compile Include="WorkItemTracking\Internals\IWorkItemRelation.cs" />
+    <Compile Include="WorkItemTracking\Internals\InternalWorkItemRelation.cs" />
+    <Compile Include="WorkItemTracking\Internals\InternalWorkItemLinkInfo.cs" />
+    <Compile Include="WorkItemTracking\Internals\QueryHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\QueryItemHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\Replication.cs" />
+    <Compile Include="WorkItemTracking\Internals\ConstantSetReference.cs" />
+    <Compile Include="WorkItemTracking\Internals\ConstantSetReferenceTypeConverter.cs" />
+    <Compile Include="WorkItemTracking\Internals\ExtendedConstantSetRef.cs" />
+    <Compile Include="WorkItemTracking\Internals\WiqlConstants.cs" />
+    <Compile Include="WorkItemTracking\Internals\LinkQueryMode.cs" />
+    <Compile Include="WorkItemTracking\Internals\WiqlAdapter.cs" />
+    <Compile Include="WorkItemTracking\Internals\QueryXmlConstants.cs" />
+    <Compile Include="WorkItemTracking\Internals\WorkItemFormExtensionsConstants.cs" />
+    <Compile Include="WorkItemTracking\Internals\WorkItemFormContributionProperties.cs" />
+    <Compile Include="WorkItemTracking\Internals\WorkItemExternalEventConstants.cs" />
+    <Compile Include="WorkItemTracking\Internals\WorkItemHelper.cs" />
+    <Compile Include="WorkItemTracking\Internals\InternalsResourceStrings.cs" />
+    <Compile Include="WorkItemTracking\Common\DalErrors.cs" />
+    <Compile Include="WorkItemTracking\Common\BoxcarExtensionIds.cs" />
+    <Compile Include="WorkItemTracking\Common\PageSizeLimits.cs" />
+    <Compile Include="WorkItemTracking\Common\AccountDisplayMode.cs" />
+    <Compile Include="WorkItemTracking\Common\StoredProcedureNames.cs" />
+    <Compile Include="WorkItemTracking\Common\DatabaseTableNames.cs" />
+    <Compile Include="WorkItemTracking\Common\DatabaseColumnNames.cs" />
+    <Compile Include="WorkItemTracking\Common\DatabaseCoreFieldRefName.cs" />
+    <Compile Include="WorkItemTracking\Common\DatabaseInternalFieldRefName.cs" />
+    <Compile Include="WorkItemTracking\Common\DatabaseNotificationIds.cs" />
+    <Compile Include="WorkItemTracking\Common\UpdatePackageNames.cs" />
+    <Compile Include="WorkItemTracking\Common\QueryPackageNames.cs" />
+    <Compile Include="WorkItemTracking\Common\SoapExceptionDetailNames.cs" />
+    <Compile Include="WorkItemTracking\Common\ReportingTypes.cs" />
+    <Compile Include="WorkItemTracking\Common\FieldReportingType.cs" />
+    <Compile Include="WorkItemTracking\Common\AttachmentRequestParameters.cs" />
+    <Compile Include="WorkItemTracking\Common\ReportingFormulas.cs" />
+    <Compile Include="WorkItemTracking\Common\ReportingFormulaNames.cs" />
+    <Compile Include="WorkItemTracking\Common\SharedVariables.cs" />
+    <Compile Include="WorkItemTracking\Common\BuiltInSecurityGroups.cs" />
+    <Compile Include="WorkItemTracking\Common\DalFields.cs" />
+    <Compile Include="WorkItemTracking\Common\DalLinkFields.cs" />
+    <Compile Include="WorkItemTracking\Common\GetSequenceIdFields.cs" />
+    <Compile Include="WorkItemTracking\Common\Instrumentation.cs" />
+    <Compile Include="WorkItemTracking\Common\StringMaxLengths.cs" />
+    <Compile Include="WorkItemTracking\Common\CssSync.cs" />
+    <Compile Include="WorkItemTracking\Common\SyncBis.cs" />
+    <Compile Include="WorkItemTracking\Common\BisData.cs" />
+    <Compile Include="WorkItemTracking\Common\ServiceIdentifiers.cs" />
+    <Compile Include="WorkItemTracking\Common\ServiceIdentifierStrings.cs" />
+    <Compile Include="WorkItemTracking\Common\RegisteredLinks.cs" />
+    <Compile Include="WorkItemTracking\Common\RemoteStatus.cs" />
+    <Compile Include="WorkItemTracking\Common\CurrituckArtifactType.cs" />
+    <Compile Include="WorkItemTracking\Common\ToolType.cs" />
+    <Compile Include="WorkItemTracking\Common\WarehouseFactFieldNames.cs" />
+    <Compile Include="WorkItemTracking\Common\WarehouseDimensionFieldNames.cs" />
+    <Compile Include="WorkItemTracking\Common\WarehouseDimensionNames.cs" />
+    <Compile Include="WorkItemTracking\Common\WarehouseFieldTypeNames.cs" />
+    <Compile Include="WorkItemTracking\Common\FieldReferenceNames.cs" />
+    <Compile Include="WorkItemTracking\Common\RemoteLinkTypeReferenceNames.cs" />
+    <Compile Include="WorkItemTracking\Common\ValidationMethods.cs" />
+    <Compile Include="WorkItemTracking\Common\BisEventTypes.cs" />
+    <Compile Include="WorkItemTracking\Common\BisDataChangedEvent.cs" />
+    <Compile Include="WorkItemTracking\Common\BisEventMessage.cs" />
+    <Compile Include="WorkItemTracking\Common\EventElementAttributes.cs" />
+    <Compile Include="WorkItemTracking\Common\StructureElementAttributes.cs" />
+    <Compile Include="WorkItemTracking\Common\AceElementAttributes.cs" />
+    <Compile Include="WorkItemTracking\Common\PayloadXmlConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\LinkQueryResultXmlConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\LinkTypeRuleMasks.cs" />
+    <Compile Include="WorkItemTracking\Common\CoreLinkTypes.cs" />
+    <Compile Include="WorkItemTracking\Common\InTheBoxTfsGroupSids.cs" />
+    <Compile Include="WorkItemTracking\Common\LinkTopologies.cs" />
+    <Compile Include="WorkItemTracking\Common\LinkTopology.cs" />
+    <Compile Include="WorkItemTracking\Common\UserSecurityMask.cs" />
+    <Compile Include="WorkItemTracking\Common\QueryItemPermissionsInternal.cs" />
+    <Compile Include="WorkItemTracking\Common\PlanSecurityGroupConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\QueryItemSecurityConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\QueryItemSecurityObjectClassIds.cs" />
+    <Compile Include="WorkItemTracking\Common\QueryItemExceptionType.cs" />
+    <Compile Include="WorkItemTracking\Common\SpecialGuids.cs" />
+    <Compile Include="WorkItemTracking\Common\SpecialGuidStrings.cs" />
+    <Compile Include="WorkItemTracking\Common\FieldDBType.cs" />
+    <Compile Include="WorkItemTracking\Common\InternalFieldType.cs" />
+    <Compile Include="WorkItemTracking\Common\InternalFieldUsages.cs" />
+    <Compile Include="WorkItemTracking\Common\InternalSupportedFeatures.cs" />
+    <Compile Include="WorkItemTracking\Common\ServerDefaultType.cs" />
+    <Compile Include="WorkItemTracking\Common\ServerDefaultFieldValue.cs" />
+    <Compile Include="WorkItemTracking\Common\StringColumnMaxLength.cs" />
+    <Compile Include="WorkItemTracking\Common\ClientVersion.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemServerVersion.cs" />
+    <Compile Include="WorkItemTracking\Common\ConstantSearchFactor.cs" />
+    <Compile Include="WorkItemTracking\Common\RecursionLevelInternal.cs" />
+    <Compile Include="WorkItemTracking\Common\LinkUpdateType.cs" />
+    <Compile Include="WorkItemTracking\Common\SurrogateNames.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemTrackingSecurityConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemTrackingPermissions.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemTypeExtensionReconciliationStatus.cs" />
+    <Compile Include="WorkItemTracking\Common\TrendDataValue.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemClassificationReconciliationState.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemTrackingJobs.cs" />
+    <Compile Include="WorkItemTracking\Common\ExternalConnectionConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\ExternalArtifactConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\ExternalArtifactHydrationStatus.cs" />
+    <Compile Include="WorkItemTracking\Common\AdminUpdatePackageHelpers.cs" />
+    <Compile Include="WorkItemTracking\Common\ClientCapabilities.cs" />
+    <Compile Include="WorkItemTracking\Common\CommonClientResourceStrings.cs" />
+    <Compile Include="WorkItemTracking\Common\CommonUtils.cs" />
+    <Compile Include="WorkItemTracking\Common\FieldStatusFlags.cs" />
+    <Compile Include="WorkItemTracking\Common\IMetadataProvisioningHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\ValidateWebLayoutSystemControlErrorActions.cs" />
+    <Compile Include="WorkItemTracking\Common\WorkItemGroupIdentityScope.cs" />
+    <Compile Include="WorkItemTracking\Common\PsConstantSetMetadataRecord.cs" />
+    <Compile Include="WorkItemTracking\Common\ListItem.cs" />
+    <Compile Include="WorkItemTracking\Common\LinkingUtilitiesWrapper.cs" />
+    <Compile Include="WorkItemTracking\Common\InternalSchemaType.cs" />
+    <Compile Include="WorkItemTracking\Common\InternalSchemaFiles.cs" />
+    <Compile Include="WorkItemTracking\Common\InternalSchemas.cs" />
+    <Compile Include="WorkItemTracking\Common\UnknownIdentity.cs" />
+    <Compile Include="WorkItemTracking\Common\AmbiguousIdentity.cs" />
+    <Compile Include="WorkItemTracking\Common\FormExtensionNotDeclaredException.cs" />
+    <Compile Include="WorkItemTracking\Common\InvalidContributionTypeException.cs" />
+    <Compile Include="WorkItemTracking\Common\InvalidContributionInputIdException.cs" />
+    <Compile Include="WorkItemTracking\Common\InvalidContributionInputValueException.cs" />
+    <Compile Include="WorkItemTracking\Common\ContributionInputNotSpecifiedException.cs" />
+    <Compile Include="WorkItemTracking\Common\InvalidContributionInputTypeException.cs" />
+    <Compile Include="WorkItemTracking\Common\FormExtensionNotFoundOrNoFormContribution.cs" />
+    <Compile Include="WorkItemTracking\Common\ExtensionDoesNotContainValidFormContribution.cs" />
+    <Compile Include="WorkItemTracking\Common\ContributionNotFoundOrNotInListedExtensionsElement.cs" />
+    <Compile Include="WorkItemTracking\Common\DuplicatePageContributionsException.cs" />
+    <Compile Include="WorkItemTracking\Common\DuplicateGroupContributionsException.cs" />
+    <Compile Include="WorkItemTracking\Common\WiqlHelpers.cs" />
+    <Compile Include="WorkItemTracking\Common\WiqlOperatorsOptions.cs" />
+    <Compile Include="WorkItemTracking\Common\WiqlOperators.cs" />
+    <Compile Include="WorkItemTracking\Common\WITQueryApplicationIntentOverride.cs" />
+    <Compile Include="WorkItemTracking\Common\Search\ISearchCriteriaRecorder.cs" />
+    <Compile Include="WorkItemTracking\Common\Search\ISearchTokenHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\Search\SearchConstants.cs" />
+    <Compile Include="WorkItemTracking\Common\Search\SearchParseError.cs" />
+    <Compile Include="WorkItemTracking\Common\Search\SearchFilterTokenType.cs" />
+    <Compile Include="WorkItemTracking\Common\Search\SearchWiqlBuilder.cs" />
+    <Compile Include="WorkItemTracking\Common\Presentation\FormattingFieldDefinition.cs" />
+    <Compile Include="WorkItemTracking\Common\Presentation\FormattingWorkItem.cs" />
+    <Compile Include="WorkItemTracking\Common\Presentation\FormattingWorkItemCollection.cs" />
+    <Compile Include="WorkItemTracking\Common\Presentation\HtmlFormatter.cs" />
+    <Compile Include="WorkItemTracking\Common\Presentation\IWorkItemUrlBuilder.cs" />
+    <Compile Include="WorkItemTracking\Common\Presentation\WorkItemUrlBuilder.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\InvalidPredicateException.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\IPredicateValidationHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\IPredicateEvaluationHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateVisitor.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateUnaryOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\WorkItemExtensionPredicate.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateNotOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateBinaryOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateAndOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateOrOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateFieldComparisonOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateEqualsOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateNotEqualsOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateGreaterThanOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateGreaterOrEqualsOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateLessThanOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateLessOrEqualsOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateContainsOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateNotContainsOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateUnderOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateNotUnderOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateInOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateInGroupOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Predicates\PredicateInListOperator.cs" />
+    <Compile Include="WorkItemTracking\Common\Metadata\WorkItemLinkTypeEnd.cs" />
+    <Compile Include="WorkItemTracking\Common\Metadata\MDWorkItemLinkType.cs" />
+    <Compile Include="WorkItemTracking\Common\Internal\ExtensionMethods.cs" />
+    <Compile Include="WorkItemTracking\Common\Constants\CoreFieldRefNames.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\CategoryHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\GlobalListsCollection.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\IQueryProvisioningHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\MatchKey.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\MetaIDFactory.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\MetaID.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\ProvisionTags.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\ProvisionAttributes.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\ProvisionValues.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\WellKnownControlNames.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\QueryItemUpdatePackageHelpers.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\QueryAccessControlEntry.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\ListRuleType.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackage.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\ConditionType.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageCondition.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageData.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageField.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageFieldCollection.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\RuleFlags.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\TransitionKey.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageFlagManager.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\FlagHelper.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\WorkItemLinkTypeImporter.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\RuleTypeEnum.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageRule.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageRuleContext.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageRuleProperties.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\UpdatePackageTransition.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\WITImporter.cs" />
+    <Compile Include="WorkItemTracking\Common\Provision\WorkItemTypeDefinition.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsMetadataTypeMask.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsUserDisplayModeEnum.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsMaxLengths.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsErrorEnum.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsSqlError.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsUserRightsMask.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsFieldDefinitionTypeEnum.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsCoreFieldsEnum.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsDatastoreItemTypeEnum.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsCSSType.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsUserRights.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsRuleMetadataFlags.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsRuleMetadataFlags2.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsSpecialVariantType.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsSpecialVariantValue.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsComputedFieldDefinitionProperty.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsAccessMask.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsComputedFieldFlags.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\PsAccessCheckFlags.cs" />
+    <Compile Include="WorkItemTracking\Common\DataStore\ServerDefaultType.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="categories01.xsd" />
+    <EmbeddedResource Include="globallists01.xsd" />
+    <EmbeddedResource Include="gworkflow01.xsd" />
+    <EmbeddedResource Include="ResourceStrings.resx" />
+    <EmbeddedResource Include="typelib01.xsd" />
+    <EmbeddedResource Include="typelib02.xsd" />
+    <EmbeddedResource Include="WorkItemLinkTypeDefinition01.xsd" />
+    <EmbeddedResource Include="WorkItemTracking\Common\CommonClientResourceStrings.resx" />
+    <EmbeddedResource Include="WorkItemTypeDefinition01.xsd" />
+    <EmbeddedResource Include="WorkItemTypeDefinition02.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

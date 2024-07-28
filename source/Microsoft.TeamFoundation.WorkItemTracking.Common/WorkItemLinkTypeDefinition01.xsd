@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+  id="WorkItemLinkTypeDefinition" 
+  elementFormDefault="unqualified" 
+  attributeFormDefault="unqualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  targetNamespace="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/WorkItemLinkTypeDefinition.xsd" 
+  xmlns="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/WorkItemLinkTypeDefinition.xsd" 
+  xmlns:mstns="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/WorkItemLinkTypeDefinition.xsd" 
+  xmlns:typelib="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/typelib"
+  version="1.0">
+
+  <xs:import namespace="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/typelib"/>
+
+  <xs:simpleType name="TopologyTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Network" />
+      <xs:enumeration value="DirectedNetwork" />
+      <xs:enumeration value="Dependency" />
+      <xs:enumeration value="Tree" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="LinkTypeType">
+    <xs:attribute name="ReferenceName" type="typelib:ReferenceName" use="required" />
+    <xs:attribute name="Topology" type="TopologyTypes" use="optional" />
+    <xs:attribute name="ForwardName" type="typelib:FriendlyName" use="optional" />
+    <xs:attribute name="ReverseName" type="typelib:FriendlyName" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="LinkTypesType">
+    <xs:sequence>
+      <xs:element name="LinkType" type="LinkTypeType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="LinkTypes" type="LinkTypesType" />
+
+</xs:schema>

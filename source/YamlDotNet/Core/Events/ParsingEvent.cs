@@ -1,0 +1,30 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: YamlDotNet.Core.Events.ParsingEvent
+// Assembly: YamlDotNet, Version=5.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e
+// MVID: 5F9DD5C4-A41D-46B2-A793-8157A0D55AB5
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\YamlDotNet.dll
+
+namespace YamlDotNet.Core.Events
+{
+  public abstract class ParsingEvent
+  {
+    private readonly Mark start;
+    private readonly Mark end;
+
+    public virtual int NestingIncrease => 0;
+
+    internal abstract EventType Type { get; }
+
+    public Mark Start => this.start;
+
+    public Mark End => this.end;
+
+    public abstract void Accept(IParsingEventVisitor visitor);
+
+    internal ParsingEvent(Mark start, Mark end)
+    {
+      this.start = start;
+      this.end = end;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Feed.Server.Types.FeedInternalState
+// Assembly: Microsoft.VisualStudio.Services.Feed.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 55555083-3B79-4F4F-AA85-92D66019974E
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.Server.dll
+
+using System;
+
+namespace Microsoft.VisualStudio.Services.Feed.Server.Types
+{
+  public class FeedInternalState
+  {
+    public FeedInternalState(Guid feedId, int state, DateTime? stateChanged)
+    {
+      this.FeedId = feedId;
+      this.State = state;
+      this.StateChanged = stateChanged;
+    }
+
+    public Guid FeedId { get; private set; }
+
+    public int State { get; private set; }
+
+    public DateTime? StateChanged { get; private set; }
+  }
+}

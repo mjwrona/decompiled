@@ -1,0 +1,63 @@
+{
+  "id": "azuqua",
+  "name": "Azuqua",
+  "description": "Azuqua provides a platform that allows to visually create business processes spanning multiples cloud services.",
+  "imageUrl": "",
+  "informationUrl": "https://go.microsoft.com/fwlink/?LinkID=521778",
+  "externalConfiguration": {
+    "createSubscriptionUrl": "http://azuqua.com"
+  },
+  "inputDescriptors": [ ],
+  "actions": [
+    {
+      "id": "postEventToFlo",
+      "name": "Post event to FLO",
+      "description": "Posts an event to a Azuqua FLO",
+      "supportedEventTypes": [
+        "*"
+      ],
+      "supportedResourceVersions": {
+        "build.complete": [ "1.0" ],
+        "git.push": [ "1.0" ],
+        "git.pullrequest.created": [ "1.0-preview.1" ],
+        "git.pullrequest.updated": [ "1.0-preview.1" ],
+        "tfvc.checkin": [ "1.0" ],
+        "workitem.created": [ "1.0" ],
+        "workitem.updated": [ "1.0" ],
+        "workitem.commented": [ "1.0" ],
+        "message.posted": [ "1.0" ]
+      },
+      "inputDescriptors": [
+        {
+          "id": "webhookId",
+          "name": "Webhook identifier",
+          "description": "The Webhook identifier that triggers the Azuqua FLO",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "validation": {
+            "isRequired": true,
+            "dataType": "string"
+          }
+        },
+        {
+          "id": "clientToken",
+          "name": "Client token",
+          "description": "Token that identifies the client",
+          "inputMode": "textbox",
+          "isConfidential": true,
+          "validation": {
+            "isRequired": true,
+            "dataType": "string"
+          }
+        }
+
+      ],
+      "publishEvent": {
+        "url": "https://api.azuqua.com/webhooks/{{uriEscape webhookId}}?clientToken={{uriEscape clientToken}}",
+        "resourceDetailsToSend": "all",
+        "messagesToSend": "all",
+        "detailedMessagesToSend": "all"
+      },
+    }
+  ]
+}

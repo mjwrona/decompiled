@@ -1,0 +1,34 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Framework.Server.VssSessionCookieWithSignInPerfCounters
+// Assembly: Microsoft.TeamFoundation.Framework.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 07453D77-2935-488F-B470-3D01F1673D9B
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Framework.Server.dll
+
+namespace Microsoft.TeamFoundation.Framework.Server
+{
+  internal static class VssSessionCookieWithSignInPerfCounters
+  {
+    internal static readonly VssPerformanceCounter CallsWithoutSessionCookiePerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsWithoutSessionCookiePerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsWithMalformedSessionCookiePerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsWithMalformedSessionCookiePerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsWithSessionCookiePerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsWithSessionCookiePerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForNewPendingAuthenticationPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForNewPendingAuthenticationPerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForCompletedAuthenticationsPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForCompletedAuthenticationPerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForCompletedAuthenticationsWithoutPendingSessionPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForCompletedAuthenticationWithoutPendingSessionPerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForNewPendingAuthenticationWithPendingSessionPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForNewPendingAuthenticationWithPendingSessionPerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForLoopingSignInValidationPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForLoopingSignInValidationPerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForLoopingSignInValidationWithRealmPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForLoopingSignInValidationWithRealmPerSec", "SessionCookieWithSignInStateProcessor");
+    internal static readonly VssPerformanceCounter CallsForLoopingSignInDetectionPerSecCounter = VssPerformanceCounterManager.GetPerformanceCounter("Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForLoopingSignInDetectionPerSec", "SessionCookieWithSignInStateProcessor");
+    private const string UriBase = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_";
+    private const string CallsWithoutSessionCookiePerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsWithoutSessionCookiePerSec";
+    private const string CallsWithMalformedSessionCookiePerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsWithMalformedSessionCookiePerSec";
+    private const string CallsWithSessionCookiePerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsWithSessionCookiePerSec";
+    private const string CallsForNewPendingAuthenticationPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForNewPendingAuthenticationPerSec";
+    private const string CallsForNewPendingAuthenticationWithPendingSessionPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForNewPendingAuthenticationWithPendingSessionPerSec";
+    private const string CallsForCompletedAuthenticationPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForCompletedAuthenticationPerSec";
+    private const string CallsForCompletedAuthenticationWithoutPendingSessionPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForCompletedAuthenticationWithoutPendingSessionPerSec";
+    private const string CallsForLoopingSignInValidationPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForLoopingSignInValidationPerSec";
+    private const string CallsForLoopingSignInValidationWithRealmPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForLoopingSignInValidationWithRealmPerSec";
+    private const string CallsForLoopingSignInDetectionPerSec = "Microsoft.TeamFoundation.Framework.Server.Perf_SessionCookieWithSignIn_CallsForLoopingSignInDetectionPerSec";
+    private const string SessionCookieProcessorName = "SessionCookieWithSignInStateProcessor";
+  }
+}

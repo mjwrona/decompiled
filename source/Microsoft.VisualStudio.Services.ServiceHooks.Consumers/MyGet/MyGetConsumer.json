@@ -1,0 +1,89 @@
+﻿{
+  "id": "myGet",
+  "name": "MyGet",
+  "description": "MyGet allows you to create and host your own NuGet feeds with your own packages and those from other package sources such as NuGet.org",
+  "externalConfiguration": {
+    "createSubscriptionUrl": "http://myget.org"
+  },
+  "imageUrl": "https://www.myget.org/Content/images/myget/logo.png",
+  "informationUrl": "https://go.microsoft.com/fwlink/?LinkID=393619",
+  "inputDescriptors": [ ],
+  "actions": [
+    {
+      "id": "triggerBuild",
+      "name": "Trigger a MyGet build",
+      "description": "Trigger a MyGet build, which is based on several conventions.<a href='http://docs.myget.org/docs/reference/build-services'>Learn more</a>",
+      "supportedEventTypes": [
+        "git.push"
+      ],
+      "inputDescriptors": [
+        {
+          "id": "feedId",
+          "name": "Feed",
+          "description": "The MyGet private or public feed where to trigger a build",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "useInDefaultDescription": true,
+          "validation": {
+            "dataType": "string",
+            "isRequired": true,
+            "pattern": "^[a-z0-9]([_-]?[a-z0-9]+)*$",
+            "maxLength": 63
+          }
+        },
+        {
+          "id": "buildSourceId",
+          "name": "Build source identifier",
+          "description": "The MyGet build source identifier which defines the sources to build",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "validation": {
+            "dataType": "guid",
+            "isRequired": true
+          }
+        }
+      ],
+      "publishEvent": {
+        "url": "https://www.myget.org/BuildSource/Hook/{{uriEscape feedId}}?identifier={{uriEscape buildSourceId}}"
+      },
+    },
+    {
+      "id": "publishPackage",
+      "name": "Publish NuGet package to MyGet",
+      "description": "Publish NuGet package produced in a build to a MyGet feed",
+      "supportedEventTypes": [
+        "build.complete"
+      ],
+      "inputDescriptors": [
+        {
+          "id": "feedId",
+          "name": "Feed",
+          "description": "The MyGet private or public feed where to publish the packages",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "useInDefaultDescription": true,
+          "validation": {
+            "dataType": "string",
+            "isRequired": true,
+            "pattern": "^[a-z0-9]([_-]?[a-z0-9]+)*$",
+            "maxLength": 63
+          }
+        },
+        {
+          "id": "packageSourceId",
+          "name": "Package source identifier",
+          "description": "The MyGet package source identifier which defines the packages to publish",
+          "inputMode": "textbox",
+          "isConfidential": false,
+          "validation": {
+            "dataType": "guid",
+            "isRequired": true
+          }
+        }
+      ],
+      "publishEvent": {
+        "url": "https://www.myget.org/PackageSource/Hook/{{uriEscape feedId}}?identifier={{uriEscape packageSourceId}}"
+      },
+    }
+  ]
+}

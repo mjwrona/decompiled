@@ -1,0 +1,21 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.release.modifiedBy['displayName']}}} abandoned release: {{{jsonEscape resource.release['name']}}}",
+    "themeColor": "{{{jsonEscape "#dadada"}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+            "activityTitle": "{{{jsonEscape resource.release.modifiedBy['displayName']}}} abandoned release [{{{jsonEscape resource.release['name']}}}]({{{jsonEscape resource.release._links.web.href}}}) ",
+            "activitySubtitle": "{{{jsonEscape resource.release.modifiedBy['displayName']}}} abandoned [{{{jsonEscape resource.release.releaseDefinition.name}}}]({{{jsonEscape resource.release.releaseDefinition._links.web.href}}}) : [{{{jsonEscape resource.release['name']}}}]({{{jsonEscape resource.release._links.web.href}}}) Trigger: {{{jsonEscape resource.release['reason']}}}",
+            "activityText": "{{{jsonEscape resource.release.description}}}",
+            "activityImage": "{{{iconUrl "teams-release-abandoned.png"}}}",
+            "activityImageType": "article"
+        }
+    ],
+    "potentialAction": []
+}

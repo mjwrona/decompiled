@@ -1,0 +1,22 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "Merge Commit created for Pull Request {{{jsonEscape resource.pullRequestId}}} by {{{jsonEscape resource.createdBy['displayName']}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+            "title": null,
+            "text": null,
+            "markdown": true,
+            "images": null,
+            "activityTitle": "[PR {{{jsonEscape resource.pullRequestId}}}]({{{resource._links.web.href}}}): {{{jsonEscape resource.title}}}",
+            "activitySubtitle": "{{#joinLines " | " 3 "" ""}}
+Merge attempted by [{{{jsonEscape resource.createdBy['displayName']}}}](mailto:{{{jsonEscape resource.createdBy['uniqueName']}}}) in [{{{jsonEscape resource.repository.project.name}}}]({{{jsonEscape resourceContainers.project.baseUrl}}}{{{uriEscape resource.repository.project.name}}})
+[{{{jsonEscape resource.repository.name}}}]({{{jsonEscape resource.repository.remoteUrl}}})
+[{{{stringReplace resource.sourceRefName "refs/heads/" ""}}}]({{{jsonEscape resource.repository.remoteUrl}}}{{{jsonEscape "/#version=GB"}}}{{{stringReplace resource.sourceRefName "refs/heads/" ""}}})
+{{/joinLines}}",
+            "activityText": null,
+            "activityImage": "{{{iconUrl data.iconFileName}}}"
+        }
+    ]
+}

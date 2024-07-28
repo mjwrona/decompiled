@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SqlInlineMarkdown" xml:space="preserve">
+    <value>Enter the MySQL script to execute on the database selected above.</value>
+  </data>
+  <data name="DockerRepositoryMarkdown" xml:space="preserve">
+    <value>Name of the repository where the container images are stored.&lt;br/&gt; Note: a fully qualified image name will be of the format: '`&lt;registry or namespace`&gt;/&lt;b&gt;`&lt;repository`&gt;&lt;/b&gt;:`&lt;tag`&gt;'. For example, 'myregistry.azurecr.io/&lt;b&gt;nginx&lt;/b&gt;:latest'.</value>
+  </data>
+  <data name="DatabaseNameMarkdown" xml:space="preserve">
+    <value>The name of database against which the below script should run, if it exists. Otherwise, the script itself can be used to create the database.</value>
+  </data>
+  <data name="DockerRepositoryLabel" xml:space="preserve">
+    <value>Repository</value>
+  </data>
+  <data name="ConnectedServiceNameMarkdown" xml:space="preserve">
+    <value>Select the Azure Resource Manager subscription for the deployment.</value>
+  </data>
+  <data name="SqlInlineLabel" xml:space="preserve">
+    <value>Inline MySQL Script</value>
+  </data>
+  <data name="ServerNameMarkdown" xml:space="preserve">
+    <value>Server name of 'Azure database for MySQL'. Example: fabrikam.mysql.database.azure.com. When you connect using MySQL Workbench, this is the same value that is used for 'Hostname' in 'Parameters'</value>
+  </data>
+  <data name="WebAppNameMarkdown" xml:space="preserve">
+    <value>Enter or select the name of an existing Azure App Service.</value>
+  </data>
+  <data name="SqlPasswordMarkdown" xml:space="preserve">
+    <value>Administrator password for Azure database for MySQL. If you don’t recall the password, you can change it on the [Azure Portal](https://aka.ms/mysql-server-manage).&lt;br&gt;It can also be a variable defined in the pipeline. Example: $(password).&lt;br&gt;In this case, it is recommended that you mark the variable as 'secret' to secure it.</value>
+  </data>
+  <data name="TaskNameSelectorMarkdown" xml:space="preserve">
+    <value>Select "Script file" or "Inline script".</value>
+  </data>
+  <data name="DockerNamespaceLabel" xml:space="preserve">
+    <value>Registry or Namespace</value>
+  </data>
+  <data name="SqlFileLabel" xml:space="preserve">
+    <value>MySQL Script</value>
+  </data>
+  <data name="PythonAppFramework" xml:space="preserve">
+    <value>Python App Framework</value>
+  </data>
+  <data name="DatabaseNameLabel" xml:space="preserve">
+    <value>Database Name</value>
+  </data>
+  <data name="SqlPasswordLabel" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="WebAppKindLabel" xml:space="preserve">
+    <value>App type</value>
+  </data>
+  <data name="SqlUsernameMarkdown" xml:space="preserve">
+    <value>Azure Database for MySQL supports native MySQL authentication. You can connect and authenticate with the server's admin login. Example: bbo1@fabrikam. When you connect using MySQL Workbench, this is the same value that is used for 'Username' in 'Parameters'.</value>
+  </data>
+  <data name="ConnectedServiceNameLabel" xml:space="preserve">
+    <value>Azure subscription</value>
+  </data>
+  <data name="StartupCommandMarkdown" xml:space="preserve">
+    <value>Enter the start up command. For ex.&lt;br/&gt;dotnet run&lt;br/&gt;dotnet filename.dll</value>
+  </data>
+  <data name="ServerNameLabel" xml:space="preserve">
+    <value>Host Name</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Deploy a Python Django, Bottle, or Flask application to an Azure Web App and database to Azure Database for MySQL.</value>
+  </data>
+  <data name="SqlUsernameLabel" xml:space="preserve">
+    <value>Server Admin Login</value>
+  </data>
+  <data name="DockerNamespaceMarkdown" xml:space="preserve">
+    <value>A globally unique, top-level domain name for your specific registry or namespace.&lt;br/&gt; Note: a fully qualified image name will be of the format: '&lt;b&gt;`&lt;registry or namespace`&gt;&lt;/b&gt;/`&lt;repository`&gt;:`&lt;tag`&gt;'. For example, '&lt;b&gt;myregistry.azurecr.io&lt;/b&gt;/nginx:latest'.</value>
+  </data>
+  <data name="TaskNameSelectorLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SqlFileMarkdown" xml:space="preserve">
+    <value>Full path of the script file on the agent machine or on a UNC path accessible to the agent like, \\\\\\\\BudgetIT\\DeployBuilds\\script.sql. Also, predefined system variables like $(agent.releaseDirectory) can be used. A file containing SQL statements can also be used.</value>
+  </data>
+  <data name="StartupCommandLabel" xml:space="preserve">
+    <value>Startup command</value>
+  </data>
+  <data name="WebAppNameLabel" xml:space="preserve">
+    <value>App Service name</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Deploy a Python app to Azure App Service and Azure database for MySQL</value>
+  </data>
+</root>

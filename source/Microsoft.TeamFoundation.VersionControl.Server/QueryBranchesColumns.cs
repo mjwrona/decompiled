@@ -1,0 +1,58 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.VersionControl.Server.QueryBranchesColumns
+// Assembly: Microsoft.TeamFoundation.VersionControl.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: C5D9EE74-8805-4E00-959F-39760D2358B5
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.VersionControl.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using System.Data;
+
+namespace Microsoft.TeamFoundation.VersionControl.Server
+{
+  internal class QueryBranchesColumns : VersionControlObjectBinder<BranchRelative>
+  {
+    protected SqlColumnBinder branchFrom = new SqlColumnBinder("BranchedFromPath");
+    protected SqlColumnBinder branchTo = new SqlColumnBinder("BranchedToPath");
+    protected SqlColumnBinder branchToVersion = new SqlColumnBinder("BranchedToVersion");
+    protected SqlColumnBinder branchToDeletionId = new SqlColumnBinder("DeletionId");
+    protected SqlColumnBinder branchFromVersion = new SqlColumnBinder("BranchedFromVersion");
+    protected SqlColumnBinder branchFromItemId = new SqlColumnBinder("BranchedFromItemId");
+    protected SqlColumnBinder branchToItemId = new SqlColumnBinder("BranchedToItemId");
+    protected SqlColumnBinder itemType = new SqlColumnBinder("ItemType");
+    protected SqlColumnBinder checkinDate = new SqlColumnBinder("CheckinDate");
+    protected SqlColumnBinder isRequestedItem = new SqlColumnBinder("IsRequestedItem");
+    protected SqlColumnBinder branchedToCommand = new SqlColumnBinder("BranchedToCommand");
+
+    public QueryBranchesColumns()
+    {
+    }
+
+    public QueryBranchesColumns(VersionControlSqlResourceComponent component)
+      : base(component)
+    {
+    }
+
+    protected override BranchRelative Bind()
+    {
+      BranchRelative branchRelative = new BranchRelative();
+      string serverItem = this.branchFrom.GetServerItem(this.Reader, true);
+      if (serverItem != null)
+      {
+        branchRelative.BranchFromItem = new Item();
+        branchRelative.BranchFromItem.ItemPathPair = ItemPathPair.FromServerItem(serverItem);
+        branchRelative.BranchFromItem.ChangesetId = this.branchFromVersion.GetInt32((IDataReader) this.Reader);
+        branchRelative.BranchFromItem.ItemId = this.branchFromItemId.GetInt32((IDataReader) this.Reader);
+      }
+      branchRelative.BranchToItem = new Item();
+      branchRelative.BranchToItem.ItemPathPair = this.GetPreDataspaceItemPathPair(this.branchTo.GetServerItem(this.Reader, false));
+      branchRelative.BranchToItem.ChangesetId = this.branchToVersion.GetInt32((IDataReader) this.Reader);
+      branchRelative.BranchToItem.CheckinDate = this.checkinDate.GetDateTime((IDataReader) this.Reader);
+      branchRelative.BranchToItem.DeletionId = this.branchToDeletionId.GetInt32((IDataReader) this.Reader, 0);
+      branchRelative.BranchToItem.ItemId = this.branchToItemId.GetInt32((IDataReader) this.Reader);
+      branchRelative.BranchToItem.ItemType = (ItemType) this.itemType.GetByte((IDataReader) this.Reader);
+      branchRelative.IsRequestedItem = this.isRequestedItem.GetBoolean((IDataReader) this.Reader);
+      branchRelative.BranchToChangeType = VersionControlSqlResourceComponent.GetChangeType((int) this.branchedToCommand.GetInt16((IDataReader) this.Reader));
+      return branchRelative;
+    }
+  }
+}

@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef"
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef"
+    xmlns:typelib="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typelib">
+
+    <xs:import namespace="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typelib"/>
+
+    <!-- Simple types -->
+    <!-- Control and Label Font Size -->
+    <xs:simpleType name="FontSize">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="small" />
+            <xs:enumeration value="normal" />
+            <xs:enumeration value="large" />
+            <xs:enumeration value="xlarge" />
+            <xs:enumeration value="xxlarge" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- EmptyText string for controls -->
+    <xs:simpleType name="EmptyTextType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Complex types -->
+
+    <!-- WITD (root element) -->
+    <xs:complexType name="Witd">
+        <xs:sequence>
+            <xs:element name="WORKITEMTYPE" type="WorkItemType" />
+        </xs:sequence>
+        <xs:attribute name="application" fixed="Work item type editor" />
+        <xs:attribute name="version" fixed="1.0" use="required"/>
+    </xs:complexType>
+    <!-- WORKITEMTYPE -->
+    <xs:complexType name="WorkItemType">
+        <xs:sequence>
+            <xs:element name="DESCRIPTION" type="typelib:NonEmptyLargeText" minOccurs="0" />
+            <xs:element name="GLOBALLISTS" type="typelib:GlobalListsDef" minOccurs="0"/>
+            <xs:element name="FIELDS" type="FieldDefinitions" />
+            <xs:element name="WORKFLOW" type="Workflow" />
+            <xs:element name="FORM" type="Form" />
+        </xs:sequence>
+        <xs:attribute name="name" type="typelib:NonEmptyPlainConstant" use="required" />
+        <xs:attribute name="refname" type="typelib:ReferenceName" use="optional" />
+    </xs:complexType>
+    <!-- Field definition (FIELD) -->
+    <xs:complexType name="FieldDefinition">
+        <xs:complexContent>
+            <xs:extension base="typelib:FieldDefinitionBase">
+                <xs:sequence minOccurs="0">
+                    <xs:group ref="typelib:PlainRules" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="HELPTEXT" type="typelib:HelpTextRule" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="typelib:PlainRules" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- FIELDS (field definitions) -->
+    <xs:complexType name="FieldDefinitions">
+        <xs:sequence >
+            <xs:element name="FIELD" type="FieldDefinition" maxOccurs="unbounded" />
+        </xs:sequence >
+    </xs:complexType>
+    <!-- WORKFLOW -->
+    <xs:complexType name="Workflow">
+        <xs:sequence>
+            <xs:element name="STATES" type="States" />
+            <xs:element name="TRANSITIONS" type="Transitions" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- States (STATES) -->
+    <xs:complexType name="States">
+        <xs:sequence>
+            <xs:element name="STATE" type="State" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- State -->
+    <xs:complexType name="State">
+        <xs:sequence>
+            <xs:element name="FIELDS" type="FieldReferences" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="value" type="typelib:NonEmptyPlainConstant" use="required" />
+    </xs:complexType>
+    <!-- Field references (FIELDS) -->
+    <xs:complexType name="FieldReferences">
+        <xs:sequence>
+            <xs:element name="FIELD" type="FieldReference" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Field reference (FIELD) -->
+    <xs:complexType name="FieldReference">
+        <!-- At least one rule or condition -->
+        <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:group ref="typelib:PlainRules"/>
+        </xs:sequence>
+        <xs:attribute name="refname" type="typelib:ReferenceFieldName" use="required"/>
+    </xs:complexType>
+    <!-- Transitions (TRANSITIONS) -->
+    <xs:complexType name="Transitions">
+        <xs:sequence>
+            <xs:element name="TRANSITION" type="Transition" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Transition (TRANSITION) -->
+    <xs:complexType name="Transition">
+        <xs:all>
+            <xs:element name="ACTIONS" type="ActionList" minOccurs="0" />
+            <xs:element name="REASONS" type="Reasons" />
+            <xs:element name="FIELDS" type="FieldReferences" minOccurs="0"/>
+        </xs:all>
+        <xs:attribute name="from" type="typelib:PlainConstant" use="required" />
+        <xs:attribute name="to" type="typelib:NonEmptyPlainConstant" use="required" />
+        <xs:attribute name="for" type="typelib:IdentityName" />
+        <xs:attribute name="not" type="typelib:IdentityName" />
+    </xs:complexType>
+    <!-- Action list (ACTIONS) -->
+    <xs:complexType name="ActionList">
+        <xs:sequence>
+            <xs:element name="ACTION" type="typelib:ListItem" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Reasons (REASONS) -->
+    <xs:complexType name="Reasons">
+        <xs:sequence>
+            <xs:element name="REASON" type="Reason" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="DEFAULTREASON" type="Reason" />
+            <xs:element name="REASON" type="Reason" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Reason (REASON) -->
+    <xs:complexType name="Reason">
+        <xs:sequence>
+            <xs:element name="FIELDS" type="FieldReferences" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="value" type="typelib:NonEmptyPlainConstant" use="required" />
+    </xs:complexType>
+
+    <!-- Root element -->
+    <xs:element name="WITD" type="Witd" />
+
+    <!-- ****BEGIN**** Form Definition schema ****BEGIN**** -->
+    <xs:complexType name="Form">
+        <xs:sequence>
+            <xs:element name="Layout" type="LayoutType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="WebLayout" type="WebLayoutType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutType">
+        <xs:sequence>
+            <xs:element name="Extensions" type="WebLayoutExtensionsType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="SystemControls" type="WebLayoutSystemControlsType" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Page" type="WebLayoutPageType" />
+                <xs:element name="PageContribution" type="WebLayoutPageContributionType" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="ShowEmptyReadOnlyFields" type="xs:boolean" use="optional" />
+    </xs:complexType>
+  
+    <!--PageLayoutMode type-->
+    <xs:simpleType name="PageLayoutModeType">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="FirstColumnWide" />
+        <xs:enumeration value="EqualColumns" />
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="WebLayoutExtensionsType">
+        <xs:sequence>
+            <xs:element name="Extension" type="WebLayoutExtensionType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutSystemControlsType">
+      <xs:sequence>
+        <xs:element name="Control" type="WebLayoutSystemControlType" minOccurs="0" maxOccurs="9"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutExtensionType">
+        <xs:attribute name="Id" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutPageType">
+        <xs:sequence>
+            <xs:element name="Section" type="WebLayoutSectionType" minOccurs="1" maxOccurs="4"/>
+        </xs:sequence>
+        <xs:attribute name="Label" type="xs:string" use="required" />
+        <xs:attribute name="Id" type="xs:string" use="optional" />
+        <xs:attribute name="LayoutMode" type="PageLayoutModeType" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutSectionType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Group" type="WebLayoutGroupType" />
+            <xs:element name="GroupContribution" type="WebLayoutGroupContributionType" />
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutGroupType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Control" type="WebLayoutControlType" />
+            <xs:element name="ControlContribution" type="WebLayoutControlContributionType" />
+        </xs:choice>
+        <xs:attribute name="Label" type="xs:string" use="required" />
+        <xs:attribute name="Id" type="xs:string" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutPageContributionType">
+        <xs:attribute name="Id" type="ContributionIdType" use="required" />
+        <xs:attribute name="Label" type="xs:string" use="required" />
+        <xs:attribute name="Visible" type="xs:boolean" />
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutGroupContributionType">
+        <xs:attribute name="Id" type="ContributionIdType" use="required" />
+        <xs:attribute name="Label" type="xs:string" use="required" />
+        <xs:attribute name="Visible" type="xs:boolean" />
+        <xs:attribute name="Height" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutControlContributionType">
+        <xs:sequence>
+            <xs:element name="Inputs" type="ControlContributionInputsType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Id" type="ContributionIdType" use="required" />
+        <xs:attribute name="Label" type="xs:string" />
+        <xs:attribute name="Visible" type="xs:boolean" />
+        <xs:attribute name="Height" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="ControlContributionInputsType">
+        <xs:sequence>
+            <xs:element name="Input" type="ControlContributionInputType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ControlContributionInputType">
+        <xs:attribute name="Id" type="xs:string" use="required" />
+        <xs:attribute name="Value" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:simpleType name="WebLayoutLinksControlViewMode">
+        <xs:restriction base="xs:string">
+            <!-- Default: Switches between Grid and List as per the user context. -->
+            <xs:enumeration value="Dynamic" />
+
+            <!-- Always shows a grid, if Column trunction is Off all columns are always shown. -->
+            <xs:enumeration value="Grid" />
+
+            <!-- Always shows a list. -->
+            <xs:enumeration value="List" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="WebLayoutLinksControlColumnTruncation">
+        <xs:restriction base="xs:string">
+            <!-- Default: Switches between all columns and limited depending upon user context. -->
+            <xs:enumeration value="Auto" />
+
+            <!-- Always shows all columns. -->
+            <xs:enumeration value="Off" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="WebLayoutLinksControlZeroDataExperience">
+        <xs:restriction base="xs:string">
+            <!-- Default: Based on user/system context. -->
+            <xs:enumeration value="Default" />
+
+            <!-- Shows Development foucsed actions e.g. Create Branch for Git backed project. -->
+            <xs:enumeration value="Development" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="WebLayoutLinkColumnType" >
+        <xs:attribute name="Name" type="typelib:ReferenceFieldName"/>
+    </xs:complexType>
+
+    <xs:complexType name="WebLayoutLinkColumnsType" >
+        <xs:sequence>
+            <xs:element name="Column" type="WebLayoutLinkColumnType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Truncation" type="WebLayoutLinksControlColumnTruncation" use="optional"/>
+    </xs:complexType>
+
+  <xs:complexType name="WebLayoutLinkFilterType">
+    <!-- For external links it is the link type name, for WorkItem links it is the name of the link and optional (-Forward/-Reverse for directional links)
+    There is special filter values
+      a) System.IncludeAll - Results into inclusion of all 
+    -->
+    <xs:attribute name="Type" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="WebLayoutLinkFiltersType" >
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="WorkItemLinkFilter" type="WebLayoutLinkFilterType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ExternalLinkFilter" type="WebLayoutLinkFilterType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="WebLayoutLinksControlWorkItemTypeFiltersElementType" >
+    <xs:sequence>
+      <xs:element name="Filter" type="LinksControlWorkItemTypeFilterElementType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WebLayoutLinksControlListViewOptionsType" >
+      <xs:attribute name="PageSize" type="PositiveIntegerGreaterThanZero" use="optional" />
+      <xs:attribute name="GroupLinks" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="WebLayoutLinksControlOptionsType">
+    <xs:all>
+      <xs:element name="ListViewOptions" type="WebLayoutLinksControlListViewOptionsType" minOccurs="0" maxOccurs="1" />
+      <!-- Absense of Columns means default columns -->
+      <xs:element name="Columns" type="WebLayoutLinkColumnsType" minOccurs="0" maxOccurs="1" />
+      <!-- Absense of Filters means include all -->
+      <xs:element name="LinkFilters" type="WebLayoutLinkFiltersType" minOccurs="0" maxOccurs="1"/>
+      <!-- Absense of WorkItemTypeFilters means all work item types are included. -->
+      <xs:element name="WorkItemTypeFilters" type="WebLayoutLinksControlWorkItemTypeFiltersElementType" minOccurs="0" maxOccurs="1" />
+    </xs:all>
+    <xs:attribute name="ViewMode" type="WebLayoutLinksControlViewMode" use="optional" />
+    <xs:attribute name="ZeroDataExperience" type="WebLayoutLinksControlZeroDataExperience" use="optional" />
+    <xs:attribute name="ShowCallToAction" type="xs:boolean" use="optional" />
+    <xs:attribute name="WorkItemTypeFiltersScope" type="LinksControlWorkItemTypeFilterScopeKind" use="optional" />
+  </xs:complexType>
+
+    <!--For WebLayout, we only removed the attributes that we do not use to keep the XML clean.
+        And we kept the same children requirement until we know exactly what we will be using.-->
+  <xs:complexType name="WebLayoutControlType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="1">
+        <xs:element name="Link" type="HyperLinkType" minOccurs="0" maxOccurs="1" />
+        <xs:element name="LabelText" type="LabelElementType" minOccurs="0" maxOccurs="1" />
+      </xs:choice>
+      <xs:choice minOccurs="0" maxOccurs="1">
+        <xs:element name="CustomControlOptions" type="CustomControlOptionsType" minOccurs="0" maxOccurs="1" />
+        <xs:element name="LinksControlOptions" type="WebLayoutLinksControlOptionsType" minOccurs="0" maxOccurs="1" />
+        <xs:element name="WebpageControlOptions" type="WebpageControlOptionsType" minOccurs="0" maxOccurs="1" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="FieldName" type="typelib:ReferenceFieldName" use="optional" />
+    <xs:attribute name="Type" type="ValidControlsType" use="required" />
+    <xs:attribute name="Label"     type="LabelType" use="optional" />
+    <xs:attribute name="ReadOnly" type="ReadOnlyType" use="optional" />
+    <xs:attribute name="Height" type="PositiveIntegerGreaterThanZero" use="optional" />
+    <xs:anyAttribute processContents="skip"/>
+  </xs:complexType>
+
+  <xs:complexType name="WebLayoutSystemControlType">
+    <xs:attribute name="FieldName" type="typelib:ReferenceFieldName" use="optional" />
+    <xs:attribute name="Type" type="ValidControlsType" use="required" />
+    <xs:attribute name="Label" type="LabelType" use="optional" />
+    <xs:attribute name="ReadOnly" type="ReadOnlyType" use="optional" />
+    <xs:attribute name="EmptyText" type="EmptyTextType" use="optional" />
+    <xs:attribute name="Name" type="NonBlankString" use="optional" />
+    <xs:attribute name="Replaces" type="typelib:ReferenceFieldName" use="optional" />
+    <xs:attribute name="Visible" type="xs:boolean" use="optional" />
+    <xs:anyAttribute processContents="skip"/>
+  </xs:complexType>
+
+    <xs:complexType name="LayoutType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Group" type="GroupType" minOccurs="0"/>
+            <xs:element name="Control" type="ControlType" minOccurs="0"/>
+            <xs:element name="TabGroup" type="TabGroupType" minOccurs="0"/>
+            <xs:element name="Splitter" type="SplitterType" minOccurs="0"/>
+        </xs:choice>
+        <xs:attribute name="Target" type="xs:string" use="optional" />
+        <xs:attribute name="MinimumSize" type="SizeType" use="optional" />
+        <xs:attribute name="Padding" type="PaddingType" use="optional" />
+        <xs:attribute name="Margin" type="PaddingType" use="optional" />
+        <xs:attribute name="ControlSpacing" type="PositiveInteger" use="optional" />
+        <xs:attribute name="LabelSpacing" type="PositiveInteger" use="optional" />
+        <xs:attribute name="HideControlBorders" type="xs:boolean" use="optional" />
+        <xs:attribute name="HideReadOnlyEmptyFields" type="xs:boolean" use="optional" />
+        <xs:attribute name="NumberOfSections" type="NumberOfSectionsType" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="GroupType">
+        <xs:sequence>
+            <xs:element name="Column" type="ColumnType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Label" type="LabelType" use="optional" />
+        <xs:attribute name="Padding" type="PaddingType" use="optional" />
+        <xs:attribute name="Margin" type="PaddingType" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="ColumnType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Group"      type="GroupType"    minOccurs="0" />
+            <xs:element name="Control"    type="ControlType"    minOccurs="0" />
+            <xs:element name="TabGroup"   type="TabGroupType" minOccurs="0" />
+            <xs:element name="Splitter"   type="SplitterType"    minOccurs="0" />
+        </xs:choice>
+        <xs:attribute name="PercentWidth" type="PercentWidthType" use="optional" />
+        <xs:attribute name="FixedWidth"   type="FixedWidthType" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="TabGroupType">
+        <xs:sequence>
+            <xs:element name="Tab" type="TabType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Padding" type="PaddingType" use="optional" />
+        <xs:attribute name="Margin" type="PaddingType" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="TabType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Group" type="GroupType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Control" type="ControlType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="TabGroup" type="TabGroupType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Splitter" type="SplitterType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:choice>
+        <xs:attribute name="Label" type="LabelType" use="required"/>
+        <xs:attribute name="Padding" type="PaddingType" use="optional" />
+        <xs:attribute name="Margin" type="PaddingType" use="optional" />
+    </xs:complexType>
+
+    <xs:simpleType name="ValidControlsType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="LinksControlFilterKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="include" />
+            <xs:enumeration value="exclude" />
+            <xs:enumeration value="includeAll" />
+            <xs:enumeration value="excludeAll" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LinksControlFilterOnKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="forwardname" />
+            <xs:enumeration value="reversename" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ExternalLinkTypeName">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="128"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LinksControlWorkItemTypeFilterKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="include" />
+            <xs:enumeration value="exclude" />
+            <xs:enumeration value="includeAll" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LinksControlWorkItemTypeFilterScopeKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="project" />
+            <xs:enumeration value="all" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="LinksControlWorkItemTypeFilterElementType" >
+        <xs:attribute name="WorkItemType" type="typelib:NonEmptyPlainConstant" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="LinksControlWorkItemTypeFiltersElementType" >
+        <xs:sequence>
+            <xs:element name="Filter" type="LinksControlWorkItemTypeFilterElementType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Scope" type="LinksControlWorkItemTypeFilterScopeKind" use="optional" />
+        <xs:attribute name="FilterType" type="LinksControlWorkItemTypeFilterKind" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="WorkItemLinkFilterElementType" >
+        <xs:attribute name="LinkType" type="typelib:ReferenceFieldName" use="required" />
+        <xs:attribute name="FilterOn" type="LinksControlFilterOnKind" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="ExternalLinkFilterElementType" >
+        <xs:attribute name="LinkType" type="ExternalLinkTypeName" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="WorkItemLinkFiltersType" >
+        <xs:sequence>
+            <xs:element name="Filter" type="WorkItemLinkFilterElementType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="FilterType" type="LinksControlFilterKind" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="ExternalLinkFiltersType" >
+        <xs:sequence>
+            <xs:element name="Filter" type="ExternalLinkFilterElementType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="FilterType" type="LinksControlFilterKind" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="LinkColumnType" >
+        <!-- Must be one or the other, but not both -->
+        <xs:attribute name="LinkAttribute" type="typelib:ReferenceFieldName" use="optional" />
+        <xs:attribute name="RefName" type="typelib:ReferenceFieldName" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="LinkColumnsType" >
+        <xs:sequence>
+            <xs:element name="LinkColumn" type="LinkColumnType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LinksControlOptionsType">
+        <xs:all>
+            <xs:element name="LinkColumns"      type="LinkColumnsType"    minOccurs="0" maxOccurs="1" />
+            <xs:element name="WorkItemLinkFilters"    type="WorkItemLinkFiltersType"    minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ExternalLinkFilters"   type="ExternalLinkFiltersType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="WorkItemTypeFilters"   type="LinksControlWorkItemTypeFiltersElementType" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="CustomControlOptionsType">
+        <xs:sequence>
+            <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HyperLinkType" >
+        <xs:sequence>
+            <xs:element name="Param" type="HyperLinkParamType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="UrlRoot"  type="NonBlankString" use="required" />
+        <xs:attribute name="UrlPath"  type="NonBlankString" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="HyperLinkParamType" >
+        <xs:attribute name="Index"     type="PositiveInteger" use="required" />
+        <xs:attribute name="Value"     type="xs:string" use="required" />
+        <xs:attribute name="Type" type="HyperLinkParamValueKind" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="TextElementType" mixed="true">
+        <xs:sequence>
+            <xs:element name="Link" type="HyperLinkType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LabelElementType">
+        <xs:sequence>
+            <xs:element name="Text" type="TextElementType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WebpageControlOptionsType">
+        <xs:choice minOccurs="1" maxOccurs="1">
+            <xs:element name="Link" type="HyperLinkType"/>
+            <xs:element name="Content" type="xs:string"/>
+        </xs:choice>
+        <xs:attribute name="AllowScript" type="xs:boolean" use="optional" />
+        <xs:attribute name="ReloadOnParamChange" type="xs:boolean" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="ControlType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="Link" type="HyperLinkType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="LabelText" type="LabelElementType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CustomControlOptions" type="CustomControlOptionsType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="LinksControlOptions" type="LinksControlOptionsType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="WebpageControlOptions" type="WebpageControlOptionsType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="FieldName" type="typelib:ReferenceFieldName" use="optional" />
+        <xs:attribute name="Type" type="ValidControlsType" use="required" />
+        <xs:attribute name="Label"     type="LabelType" use="optional" />
+        <xs:attribute name="LabelPosition" type="LabelPositionType" />
+        <xs:attribute name="Dock"     type="DockType" use="optional" />
+        <xs:attribute name="Padding" type="PaddingType" use="optional" />
+        <xs:attribute name="Margin" type="PaddingType" use="optional" />
+        <xs:attribute name="ReadOnly" type="ReadOnlyType" use="optional" />
+        <xs:attribute name="MinimumSize" type="SizeType" use="optional" />
+        <xs:attribute name="Name" type="NonBlankString" use="optional" />
+        <xs:attribute name="ControlFontSize" type="FontSize" use="optional" />
+        <xs:attribute name="LabelFontSize" type="FontSize" use="optional" />
+        <xs:attribute name="EmptyText" type="EmptyTextType" use="optional" />
+        <xs:anyAttribute processContents="skip"/>
+    </xs:complexType>
+
+    <xs:complexType name="SplitterType">
+        <xs:attribute name="Dock" type="DockType" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="FixedWidthType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PositiveInteger">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PositiveIntegerGreaterThanZero">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PercentWidthType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NumberOfSectionsType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="3"/>
+            <xs:maxInclusive value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LabelType">
+        <xs:restriction  base="xs:string">
+            <xs:maxLength value="80"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LabelPositionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Top"/>
+            <xs:enumeration value="Bottom"/>
+            <xs:enumeration value="Left"/>
+            <xs:enumeration value="Right"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DockType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Fill"/>
+            <xs:enumeration value="Top"/>
+            <xs:enumeration value="Bottom"/>
+            <xs:enumeration value="Left"/>
+            <xs:enumeration value="Right"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ReadOnlyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="True"/>
+            <xs:enumeration value="False"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SizeType">
+        <xs:restriction  base="xs:string">
+            <xs:pattern value="^\(\d+\,\d+\)$"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PaddingType">
+        <xs:restriction  base="xs:string">
+            <xs:pattern value="^\(\d+\,\d+\,\d+\,\d+\)$"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NonBlankString">
+        <xs:restriction  base="xs:string">
+            <xs:pattern value=".*\S+.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="HyperLinkParamValueKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Original"/>
+            <xs:enumeration value="Current"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- anything matching a.b.c format -->
+    <xs:simpleType name="ContributionIdType">
+        <xs:restriction  base="xs:string">
+            <xs:pattern value="^.*\..*\..*$"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+<!-- *****END***** Form Definition schema *****END*****  -->

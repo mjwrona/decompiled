@@ -1,0 +1,52 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.WorkItemTracking.Server.ProcessComparer.Declarations.ServerDefaultRuleDeclaration
+// Assembly: Microsoft.TeamFoundation.WorkItemTracking.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: B0AE48DA-B6D2-466C-91D8-D0BF0F05DE87
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.WorkItemTracking.Server.dll
+
+using System;
+using System.Xml.Linq;
+
+namespace Microsoft.TeamFoundation.WorkItemTracking.Server.ProcessComparer.Declarations
+{
+  public class ServerDefaultRuleDeclaration : WorkItemRuleDeclaration
+  {
+    public ServerDefaultRuleDeclaration(XElement xmlRuleElement, Action<string> logError)
+      : base(xmlRuleElement)
+    {
+      this.From = Utilities.RequireAttribute(xmlRuleElement, (XName) "from", logError);
+      switch (this.From)
+      {
+        case "clock":
+          break;
+        case "currentuser":
+          break;
+        default:
+          throw new NotSupportedException("The attribute value '" + this.From + "' for 'from' is not supported.");
+      }
+    }
+
+    public override WorkItemRuleName Name => WorkItemRuleName.ServerDefault;
+
+    public string From { get; set; }
+
+    public override bool Equals(
+      WorkItemRuleDeclaration other,
+      bool deep,
+      Func<WorkItemRuleDeclaration, bool> applicable)
+    {
+      if (!base.Equals(other, deep, applicable))
+        return false;
+      ServerDefaultRuleDeclaration defaultRuleDeclaration = other as ServerDefaultRuleDeclaration;
+      return StringComparer.OrdinalIgnoreCase.Equals(this.From ?? "", defaultRuleDeclaration?.From ?? "");
+    }
+
+    public override int CompareTo(WorkItemRuleDeclaration other)
+    {
+      int num = base.CompareTo(other);
+      if (num == 0 && other is ServerDefaultRuleDeclaration defaultRuleDeclaration)
+        num = StringComparer.OrdinalIgnoreCase.Compare(this.From, defaultRuleDeclaration.From);
+      return num;
+    }
+  }
+}

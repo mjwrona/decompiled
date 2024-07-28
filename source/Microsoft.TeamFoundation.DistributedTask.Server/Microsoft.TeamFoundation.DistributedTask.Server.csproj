@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7532018-77A7-4D16-9300-DD42D9245D35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>lib\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Checks.Server">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Checks.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Checks.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Checks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Deployment.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Deployment.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.PoolProvider.Client">
+      <HintPath>lib\Microsoft.Azure.Pipelines.PoolProvider.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.PoolProvider.Contracts">
+      <HintPath>lib\Microsoft.Azure.Pipelines.PoolProvider.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Core.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Core.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Core.Server.Plugins">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Core.Server.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Tasks">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.Shared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.Types.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.Types.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.MachineManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.MachineManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SecurityRoles.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SecurityRoles.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SecurityRoles.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SecurityRoles.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SignalR">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SignalR.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAgentPoolEvent.cs" />
+    <Compile Include="AgentCloudContributionExtensions.cs" />
+    <Compile Include="AgentCloudService.cs" />
+    <Compile Include="RemoteServerPoolProviderType.cs" />
+    <Compile Include="AgentCloudServiceExtensions.cs" />
+    <Compile Include="AgentCloudTypesService.cs" />
+    <Compile Include="AgentRequestExtensions.cs" />
+    <Compile Include="CrossRealmService.cs" />
+    <Compile Include="MMSUrlConfigurationService.cs" />
+    <Compile Include="IInternalCloudAgentDefinitionService.cs" />
+    <Compile Include="InternalCloudAgentDefinition.cs" />
+    <Compile Include="DistributedTaskServerAnalyticsService.cs" />
+    <Compile Include="IDistributedTaskServerAnalyticsService.cs" />
+    <Compile Include="InternalCloudAgentDefinitionService.cs" />
+    <Compile Include="PlatformPersistedStageService.cs" />
+    <Compile Include="PoolProviderConfigurationHelpers.cs" />
+    <Compile Include="PlatformResourceLockService.cs" />
+    <Compile Include="AgentRequestCompletedEvent.cs" />
+    <Compile Include="DeploymentStrategyRunTimeConstants.cs" />
+    <Compile Include="DeploymentPhaseHelper.cs" />
+    <Compile Include="JobSchedulerHelper.cs" />
+    <Compile Include="KubernetesResourcePlugin.cs" />
+    <Compile Include="DeploymentLifeCycleExecutor.cs" />
+    <Compile Include="DeploymentRequestManager.cs" />
+    <Compile Include="IDeploymentRequestManager.cs" />
+    <Compile Include="IJobSchedulerManager.cs" />
+    <Compile Include="ILifeCycleManager.cs" />
+    <Compile Include="IVMProviderManager.cs" />
+    <Compile Include="IVMProviderManager2.cs" />
+    <Compile Include="LifeCycleManager.cs" />
+    <Compile Include="JobSchedulerManager.cs" />
+    <Compile Include="VMProviderManager.cs" />
+    <Compile Include="VMProviderManager2.cs" />
+    <Compile Include="RunDeploymentLifeCycleInput.cs" />
+    <Compile Include="RunDeploymentLifeCycleHookInput.cs" />
+    <Compile Include="RunDeploymentPhaseInput.cs" />
+    <Compile Include="RunDeploymentPhaseInput2.cs" />
+    <Compile Include="DefaultStrategyExecutorFactory.cs" />
+    <Compile Include="DefaultStrategyExecutorFactory2.cs" />
+    <Compile Include="KubernetesStrategyExecutorFactory.cs" />
+    <Compile Include="KubernetesStrategyExecutorFactory2.cs" />
+    <Compile Include="VMStrategyExecutorFactory.cs" />
+    <Compile Include="VMStrategyExecutorFactory2.cs" />
+    <Compile Include="DefaultRunOnceStrategyExecutor.cs" />
+    <Compile Include="DefaultRunOnceStrategyExecutor2.cs" />
+    <Compile Include="IStrategyExecutor2.cs" />
+    <Compile Include="KubernetesCanaryStrategyExecutor.cs" />
+    <Compile Include="IStrategyExecutor.cs" />
+    <Compile Include="KubernetesRunOnceStrategyExecutor.cs" />
+    <Compile Include="KubernetesRunOnceStrategyExecutor2.cs" />
+    <Compile Include="RunOnceStrategyExecutorBase.cs" />
+    <Compile Include="BaseStrategyExecutorBase.cs" />
+    <Compile Include="RunOnceStrategyExecutorBase2.cs" />
+    <Compile Include="VMRollingStrategyExecutor.cs" />
+    <Compile Include="VMRollingStrategyExecutor2.cs" />
+    <Compile Include="VMRunOnceStrategyExecutor2.cs" />
+    <Compile Include="VMRunOnceStrategyExecutor.cs" />
+    <Compile Include="VMStrategyExecutorBase2.cs" />
+    <Compile Include="VMStrategyExecutorBase.cs" />
+    <Compile Include="EnvironmentTaskHubHelper.cs" />
+    <Compile Include="EnvironmentConstants.cs" />
+    <Compile Include="DeploymentPhaseService.cs" />
+    <Compile Include="CanceledEvent.cs" />
+    <Compile Include="LifeCycleHookHelper.cs" />
+    <Compile Include="VMResourceDataProvider.cs" />
+    <Compile Include="VMStrategyExecutorBase3.cs" />
+    <Compile Include="VMRunOnceStrategyExecutor3.cs" />
+    <Compile Include="VMRollingStrategyExecutor3.cs" />
+    <Compile Include="VMResourceStateExtensions.cs" />
+    <Compile Include="VMResourceState.cs" />
+    <Compile Include="VMDeploymentExecutionStateExtensions.cs" />
+    <Compile Include="VMDeploymentExecutionState.cs" />
+    <Compile Include="VirtualMachineStateExtensions.cs" />
+    <Compile Include="VirtualMachineGroupState.cs" />
+    <Compile Include="VirtualMachineState.cs" />
+    <Compile Include="IDeploymentPhaseService.cs" />
+    <Compile Include="RetryHelper.cs" />
+    <Compile Include="PublishDeploymentJobCommitterDetailsData.cs" />
+    <Compile Include="EnvironmentResourceDataProviderFactory.cs" />
+    <Compile Include="TaskStepProcessor.cs" />
+    <Compile Include="TaskStepsValidationError.cs" />
+    <Compile Include="KubernetesResourceDataProvider.cs" />
+    <Compile Include="IEnvironmentResourceDataProvider.cs" />
+    <Compile Include="ProviderPhaseEvents.cs" />
+    <Compile Include="DeploymentStrategyHelper.cs" />
+    <Compile Include="AgentRequestsAssignmentResult.cs" />
+    <Compile Include="EnvironmentResourceReferenceService.cs" />
+    <Compile Include="AbandonedAgentRequestsResult.cs" />
+    <Compile Include="EnvironmentPermissions.cs" />
+    <Compile Include="EnvironmentRoles.cs" />
+    <Compile Include="EnvironmentRolePermissions.cs" />
+    <Compile Include="AgentPoolPermissions.cs" />
+    <Compile Include="AgentPoolRoles.cs" />
+    <Compile Include="AgentPoolRolePermissionsName.cs" />
+    <Compile Include="AgentPoolRoleNameConstants.cs" />
+    <Compile Include="AgentPoolServiceAccountRoles.cs" />
+    <Compile Include="ArgumentValidation.cs" />
+    <Compile Include="AsyncAgentAssignmentNotifcationSender.cs" />
+    <Compile Include="DistributedTaskRequestDispatcherService.cs" />
+    <Compile Include="AutomationPoolSecurityProvider.cs" />
+    <Compile Include="DeploymentGroupsPaginationConstants.cs" />
+    <Compile Include="EnvironmentExecutionHistoryPaginationConstants.cs" />
+    <Compile Include="EnvironmentsPaginationConstants.cs" />
+    <Compile Include="ResourceConstants.cs" />
+    <Compile Include="ContributionTasksUpdateJob.cs" />
+    <Compile Include="DefaultAccessControlService.cs" />
+    <Compile Include="DefaultAgentCloudSecurityProvider.cs" />
+    <Compile Include="AgentCloudPermissions.cs" />
+    <Compile Include="AgentCloudRoles.cs" />
+    <Compile Include="DefaultJobEventSender.cs" />
+    <Compile Include="DefaultPackageMetadataProvider.cs" />
+    <Compile Include="DefaultPoolExtension.cs" />
+    <Compile Include="DefaultSecurityProvider.cs" />
+    <Compile Include="DefaultTaskAgentExtension.cs" />
+    <Compile Include="DeploymentGroupMetadata.cs" />
+    <Compile Include="DeploymentGroupExtensions.cs" />
+    <Compile Include="DeploymentGroupHelper.cs" />
+    <Compile Include="DeploymentGroupService.cs" />
+    <Compile Include="DeploymentPoolExtension.cs" />
+    <Compile Include="EnvironmentSecurityProvider.cs" />
+    <Compile Include="DeploymentPoolSecurityProvider.cs" />
+    <Compile Include="DistributedTaskCommerceHelper.cs" />
+    <Compile Include="DistributedTaskEventPublisherService.cs" />
+    <Compile Include="DistributedTaskFeatureFlags.cs" />
+    <Compile Include="HostedPoolSettings.cs" />
+    <Compile Include="DistributedTaskHostedPoolHelper.cs" />
+    <Compile Include="DistributedTaskAgentCloudPoolsHelper.cs" />
+    <Compile Include="DistributedTaskScopeHelper.cs" />
+    <Compile Include="DistributedTaskScopes.cs" />
+    <Compile Include="DistributedTaskResourceService.cs" />
+    <Compile Include="DistributedTaskResourceServiceHelper.cs" />
+    <Compile Include="DistributedTaskPackageResources.cs" />
+    <Compile Include="DistributedTaskService.cs" />
+    <Compile Include="HostedParallelismLevel.cs" />
+    <Compile Include="HostedParallelismSource.cs" />
+    <Compile Include="HostedParallelism.cs" />
+    <Compile Include="IEnvironmentResourceReferenceService.cs" />
+    <Compile Include="PlatformEnvironmentDeploymentExecutionHistoryServi.cs" />
+    <Compile Include="PlatformDistributedTaskEnvironmentsRouteService.cs" />
+    <Compile Include="EnvironmentCustomerIntelligenceHelper.cs" />
+    <Compile Include="EnvironmentService.cs" />
+    <Compile Include="DistributedTaskException.cs" />
+    <Compile Include="FileContainerExtensions.cs" />
+    <Compile Include="HostedTaskAgentExtension.cs" />
+    <Compile Include="EnvironmentHostedTelemetryLogger.cs" />
+    <Compile Include="HostedParallelismService.cs" />
+    <Compile Include="IAccessControlService.cs" />
+    <Compile Include="IAgentAssignmentNotificationSender.cs" />
+    <Compile Include="IAgentCloudSecurityProvider.cs" />
+    <Compile Include="IAgentCloudService.cs" />
+    <Compile Include="IAgentCloudServiceExtensions.cs" />
+    <Compile Include="IAgentCloudTypesService.cs" />
+    <Compile Include="IAgentPoolSecurityProvider.cs" />
+    <Compile Include="IDeploymentGroupService.cs" />
+    <Compile Include="IDistributedTaskEventPublisherService.cs" />
+    <Compile Include="IDistributedTaskResourceService.cs" />
+    <Compile Include="IDistributedTaskResourceServiceExtensions.cs" />
+    <Compile Include="IDistributedTaskService.cs" />
+    <Compile Include="IEnvironmentDeploymentExecutionHistoryService.cs" />
+    <Compile Include="IEnvironmentExtension.cs" />
+    <Compile Include="IEnvironmentService.cs" />
+    <Compile Include="IHostedParallelismService.cs" />
+    <Compile Include="IInternalAgentCloudService.cs" />
+    <Compile Include="IInternalDistributedTaskService.cs" />
+    <Compile Include="IInternalDistributedTaskResourceService.cs" />
+    <Compile Include="IJobEventSender.cs" />
+    <Compile Include="IJobEventSenderSyncExtensions.cs" />
+    <Compile Include="IEnvironmentResourceService`1.cs" />
+    <Compile Include="IVirtualMachineGroupService.cs" />
+    <Compile Include="IVirtualMachineResourceService.cs" />
+    <Compile Include="IKubernetesResourceService.cs" />
+    <Compile Include="IMetaTaskService.cs" />
+    <Compile Include="IServerPoolProvider.cs" />
+    <Compile Include="IPackageMetadataProvider.cs" />
+    <Compile Include="IPackageMetadataService.cs" />
+    <Compile Include="ISecureFileSecretsHelper.cs" />
+    <Compile Include="ISecurityProvider.cs" />
+    <Compile Include="ITaskAgentExtension.cs" />
+    <Compile Include="ITaskAgentExtensionSyncExtensions.cs" />
+    <Compile Include="ITaskAgentPoolExtension.cs" />
+    <Compile Include="ITaskContributionLoaderService.cs" />
+    <Compile Include="ITaskDefinitionDataCacheService.cs" />
+    <Compile Include="ITaskHubLicensePlugin.cs" />
+    <Compile Include="IEnvironmentTelemetryLogger.cs" />
+    <Compile Include="IVariableGroupSecretsHelper.cs" />
+    <Compile Include="IYamlSchemaService.cs" />
+    <Compile Include="EnvironmentResourceService`1.cs" />
+    <Compile Include="PoolProviderAgentRequestHelper.cs" />
+    <Compile Include="PoolProviderAgentRequestJobHelper.cs" />
+    <Compile Include="SingleHostedPoolMigrationStage.cs" />
+    <Compile Include="SingleHostedPoolMigration.cs" />
+    <Compile Include="DeleteAgentPoolEvent.cs" />
+    <Compile Include="TaskAgentCloudInternalExtensions.cs" />
+    <Compile Include="TaskGroupChangingEvent.cs" />
+    <Compile Include="VariableGroupChangingEvent.cs" />
+    <Compile Include="VariableGroupHelper.cs" />
+    <Compile Include="VirtualMachineGroupHelper.cs" />
+    <Compile Include="VirtualMachineGroupService.cs" />
+    <Compile Include="VirtualMachineResourceHelper.cs" />
+    <Compile Include="VirtualMachineResourceService.cs" />
+    <Compile Include="KubernetesResourceService.cs" />
+    <Compile Include="KubernetesResourceElevatedOperation.cs" />
+    <Compile Include="KubernetesResourceProviderType.cs" />
+    <Compile Include="MachineGroupPermissions.cs" />
+    <Compile Include="MachineGroupRoles.cs" />
+    <Compile Include="MachineGroupRolePermissionsName.cs" />
+    <Compile Include="MachineGroupRoleNameConstants.cs" />
+    <Compile Include="InternalPoolProvider.cs" />
+    <Compile Include="MessageContainerExtensions.cs" />
+    <Compile Include="MessageQueueHelpers.cs" />
+    <Compile Include="MetaTaskDefinitionData.cs" />
+    <Compile Include="MetaTaskDefinitionExtensions.cs" />
+    <Compile Include="MetaTaskDefinitionRevisionData.cs" />
+    <Compile Include="MetaTaskDefinitionRevisionExtensions.cs" />
+    <Compile Include="MetaTaskEndpointSecurity.cs" />
+    <Compile Include="MetaTaskHelper.cs" />
+    <Compile Include="MetaTaskPermissions.cs" />
+    <Compile Include="MetaTaskService.cs" />
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="EnvironmentOnPremTelemetryLogger.cs" />
+    <Compile Include="PackageData.cs" />
+    <Compile Include="PackageMetadataByVersionComparer.cs" />
+    <Compile Include="PlatformDistributedTaskLibraryService.cs" />
+    <Compile Include="PlatformPackageMetadataService.cs" />
+    <Compile Include="PlatformDistributedTaskEnvironmentService.cs" />
+    <Compile Include="PlatformPoolService.cs" />
+    <Compile Include="SecureFileConstants.cs" />
+    <Compile Include="PlatformSecureFileService.cs" />
+    <Compile Include="PropertyFunctionNode.cs" />
+    <Compile Include="DummyTracer.cs" />
+    <Compile Include="PlatformTaskHubLicenseService.cs" />
+    <Compile Include="VariableGroupConstants.cs" />
+    <Compile Include="PlatformVariableGroupService.cs" />
+    <Compile Include="PoolSecurityProvider.cs" />
+    <Compile Include="PrivateAgentPoolProvider.cs" />
+    <Compile Include="RemoteAgentPoolProvider.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="ResourceLimitExtensions.cs" />
+    <Compile Include="ResourceLimitUtil.cs" />
+    <Compile Include="SecureFileSecurityProvider.cs" />
+    <Compile Include="SegmentedMemoryStream.cs" />
+    <Compile Include="TimeSpanExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TaskAgentCapabilityType.cs" />
+    <Compile Include="TaskAgentCloudCacheService.cs" />
+    <Compile Include="TaskAgentConstants.cs" />
+    <Compile Include="TaskAgentExtensions.cs" />
+    <Compile Include="TaskAgentJobRequestExtensions.cs" />
+    <Compile Include="TaskAgentMachine.cs" />
+    <Compile Include="TaskAgentPoolCacheService.cs" />
+    <Compile Include="TaskAgentPoolData.cs" />
+    <Compile Include="TaskAgentPoolExtensions.cs" />
+    <Compile Include="TaskAgentCloudExtensions.cs" />
+    <Compile Include="TaskAgentPublicKeyExtensions.cs" />
+    <Compile Include="TaskAgentQueryResult.cs" />
+    <Compile Include="TaskAgentQueueExtensions.cs" />
+    <Compile Include="TaskAgentQueueType.cs" />
+    <Compile Include="DeletedAgentSessionCacheService.cs" />
+    <Compile Include="TaskAgentSessionCacheService.cs" />
+    <Compile Include="TaskAgentSessionData.cs" />
+    <Compile Include="TaskAgentUpdateReasonData.cs" />
+    <Compile Include="TaskConstants.cs" />
+    <Compile Include="ContributionTasksDownloaderJobData.cs" />
+    <Compile Include="ContributionTasksDeleteJobData.cs" />
+    <Compile Include="TaskContainer.cs" />
+    <Compile Include="TaskContribution.cs" />
+    <Compile Include="ITaskContributionPackageStore.cs" />
+    <Compile Include="TaskContributionLoaderService.cs" />
+    <Compile Include="TaskContributionPackageCacheFile.cs" />
+    <Compile Include="TaskDefinitionData.cs" />
+    <Compile Include="TaskDefinitionDataCacheService.cs" />
+    <Compile Include="TaskDefinitionDataRefreshCache.cs" />
+    <Compile Include="TaskDefinitionDataResult.cs" />
+    <Compile Include="TaskDefinitionReferenceExtensions.cs" />
+    <Compile Include="TaskDefinitionValidation.cs" />
+    <Compile Include="TaskContributionPackage.cs" />
+    <Compile Include="TaskGroupExtensionsRetriever.cs" />
+    <Compile Include="TaskLocalization.cs" />
+    <Compile Include="ITaskPackageReader.cs" />
+    <Compile Include="ZipPackageReader.cs" />
+    <Compile Include="TaskPackageResource.cs" />
+    <Compile Include="TaskPackageResources.cs" />
+    <Compile Include="ArtifactPropertyKinds.cs" />
+    <Compile Include="TaskWellKnownScopeIds.cs" />
+    <Compile Include="TaskWellKnownSecurityIds.cs" />
+    <Compile Include="TaskWellKnownIdentityDescriptors.cs" />
+    <Compile Include="EnvironmentTelemetryFactory.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="UpdateAgentPoolEvent.cs" />
+    <Compile Include="VariableGroupSecretsHelper.cs" />
+    <Compile Include="VariableGroupSecurityProvider.cs" />
+    <Compile Include="YamlSchemaService.cs" />
+    <Compile Include="ZipArchiveExtensions.cs" />
+    <Compile Include="TaskResources.cs" />
+    <Compile Include="Extensions\RunDefaultDeploymentPhase.cs" />
+    <Compile Include="Extensions\RunDefaultDeploymentPhase2.cs" />
+    <Compile Include="Extensions\RunDeploymentLifeCycle.cs" />
+    <Compile Include="Extensions\RunDeploymentLifeCycleHook.cs" />
+    <Compile Include="Extensions\RunDeploymentPhaseBase.cs" />
+    <Compile Include="Extensions\RunDeploymentPhaseBase2.cs" />
+    <Compile Include="Extensions\RunVMDeploymentPhase.cs" />
+    <Compile Include="Extensions\RunVMDeploymentPhase2.cs" />
+    <Compile Include="Extensions\RunVMDeploymentPhase3.cs" />
+    <Compile Include="Extensions\RunKubernetesDeploymentPhase.cs" />
+    <Compile Include="Extensions\RunKubernetesDeploymentPhase2.cs" />
+    <Compile Include="Exceptions\InvalidRequestException.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolSizeData.cs" />
+    <Compile Include="DataAccess\AgentRequestData.cs" />
+    <Compile Include="DataAccess\AgentRequestDataBinder.cs" />
+    <Compile Include="DataAccess\AgentRequestDataBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolSizeDataBinder.cs" />
+    <Compile Include="DataAccess\InternalCloudAgentDefinitionComponent.cs" />
+    <Compile Include="DataAccess\InternalCloudAgentDefinitionComponent2.cs" />
+    <Compile Include="DataAccess\InternalCloudAgentDefinitionBinder.cs" />
+    <Compile Include="DataAccess\PersistedStageBinder.cs" />
+    <Compile Include="DataAccess\PersistedStageComponent.cs" />
+    <Compile Include="DataAccess\PersistedStageGroupBinder.cs" />
+    <Compile Include="DataAccess\ElasticNodeBinder.cs" />
+    <Compile Include="DataAccess\ElasticNodeComponent.cs" />
+    <Compile Include="DataAccess\ElasticPoolLogComponent.cs" />
+    <Compile Include="DataAccess\ElasticPoolLogBinder.cs" />
+    <Compile Include="DataAccess\ResourceLockComponent.cs" />
+    <Compile Include="DataAccess\ResourceLockComponent2.cs" />
+    <Compile Include="DataAccess\ResourceLockComponent3.cs" />
+    <Compile Include="DataAccess\ResourceLockComponent4.cs" />
+    <Compile Include="DataAccess\ResourceLockComponent5.cs" />
+    <Compile Include="DataAccess\ResourceLockRequestBinder.cs" />
+    <Compile Include="DataAccess\ResourceLockRequestBinder2.cs" />
+    <Compile Include="DataAccess\AgentPoolData.cs" />
+    <Compile Include="DataAccess\AgentPoolDataBinder.cs" />
+    <Compile Include="DataAccess\DeploymentExecutionRecordObjectBinder.cs" />
+    <Compile Include="DataAccess\DeploymentExecutionRecordObjectBinder2.cs" />
+    <Compile Include="DataAccess\ElasticPoolBinder.cs" />
+    <Compile Include="DataAccess\ElasticPoolBinder5.cs" />
+    <Compile Include="DataAccess\ElasticPoolBinder6.cs" />
+    <Compile Include="DataAccess\ElasticPoolComponent.cs" />
+    <Compile Include="DataAccess\ElasticPoolComponent6.cs" />
+    <Compile Include="DataAccess\EnvironmentDeploymentExecutionHistoryComponent2.cs" />
+    <Compile Include="DataAccess\EnvironmentDeploymentExecutionHistoryComponent4.cs" />
+    <Compile Include="DataAccess\EnvironmentDeploymentExecutionHistoryComponent3.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceDeploymentExecutionRecordBinder.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceData.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceDataBinder.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceReferenceComponent.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceTag.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceTagBinder.cs" />
+    <Compile Include="DataAccess\HostedParallelismBinder.cs" />
+    <Compile Include="DataAccess\HostedParallelismComponent.cs" />
+    <Compile Include="DataAccess\IEnvironmentResourceComponent`1.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionRevisionDataBinder2.cs" />
+    <Compile Include="DataAccess\RunAgentEventBinderHelper.cs" />
+    <Compile Include="DataAccess\ProvisionAgentEventBinder.cs" />
+    <Compile Include="DataAccess\AgentConnecteEventBinder.cs" />
+    <Compile Include="DataAccess\RequestAssignedEventBinder.cs" />
+    <Compile Include="DataAccess\RequestFinishedEventBinder.cs" />
+    <Compile Include="DataAccess\DeprovisionEventBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestData.cs" />
+    <Compile Include="DataAccess\TaskOrchestrationOwnerBinder.cs" />
+    <Compile Include="DataAccess\VirtualMachineGroupBinder.cs" />
+    <Compile Include="DataAccess\VirtualMachineGroupComponent.cs" />
+    <Compile Include="DataAccess\VirtualMachineGroupComponent2.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestQueryResult.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestQueryContinuationTokenHelper.cs" />
+    <Compile Include="DataAccess\ExpiredAgentRequestsResult.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolStatusBinder.cs" />
+    <Compile Include="DataAccess\VirtualMachineResourceBinder.cs" />
+    <Compile Include="DataAccess\VirtualMachineResourceComponent.cs" />
+    <Compile Include="DataAccess\TaskAgentList.cs" />
+    <Compile Include="DataAccess\AgentConnectivityResult.cs" />
+    <Compile Include="DataAccess\AgentQueueOrMachineGroup.cs" />
+    <Compile Include="DataAccess\AssignAgentRequestsResult.cs" />
+    <Compile Include="DataAccess\AssignedAgentRequestResult.cs" />
+    <Compile Include="DataAccess\BooleanBinder.cs" />
+    <Compile Include="DataAccess\CreateAgentResult.cs" />
+    <Compile Include="DataAccess\CreateAgentSessionResult.cs" />
+    <Compile Include="DataAccess\DeleteAgentPoolResult.cs" />
+    <Compile Include="DataAccess\DeleteAgentQueueResult.cs" />
+    <Compile Include="DataAccess\DeleteAgentResult.cs" />
+    <Compile Include="DataAccess\DeprovisionedAgentResultBinder.cs" />
+    <Compile Include="DataAccess\DeprovisionedAgentResultBinder2.cs" />
+    <Compile Include="DataAccess\DeprovisioningAgentResult.cs" />
+    <Compile Include="DataAccess\DeletePoolMaintenanceDefinitionResult.cs" />
+    <Compile Include="DataAccess\EnvironmentResourceBinder.cs" />
+    <Compile Include="DataAccess\EnvironmentBinder.cs" />
+    <Compile Include="DataAccess\EnvironmentBinder2.cs" />
+    <Compile Include="DataAccess\EnvironmentDeploymentExecutionRecordBinder.cs" />
+    <Compile Include="DataAccess\UpdateVirtualMachinesResult.cs" />
+    <Compile Include="DataAccess\GetVirtualMachinesResult.cs" />
+    <Compile Include="DataAccess\VirtualMachineDataBinder.cs" />
+    <Compile Include="DataAccess\VirtualMachineTagBinder.cs" />
+    <Compile Include="DataAccess\VirtualMachineData.cs" />
+    <Compile Include="DataAccess\VirtualMachineTag.cs" />
+    <Compile Include="DataAccess\DeploymentGroupBinder.cs" />
+    <Compile Include="DataAccess\DeploymentGroupMetricsBinder.cs" />
+    <Compile Include="DataAccess\DeploymentMachineData.cs" />
+    <Compile Include="DataAccess\DeploymentPoolSummaryBinder.cs" />
+    <Compile Include="DataAccess\DistributedTaskLibraryComponent.cs" />
+    <Compile Include="DataAccess\DistributedTaskLibraryComponent2.cs" />
+    <Compile Include="DataAccess\DistributedTaskObjectBinder`1.cs" />
+    <Compile Include="DataAccess\EnvironmentDeploymentExecutionHistoryComponent.cs" />
+    <Compile Include="DataAccess\FinishAgentRequestResult.cs" />
+    <Compile Include="DataAccess\GetAgentQueuesResult.cs" />
+    <Compile Include="DataAccess\GetDeploymentMachinesResult.cs" />
+    <Compile Include="DataAccess\GetTaskAgentPoolMaintenanceDefinitionResult.cs" />
+    <Compile Include="DataAccess\Int32Binder.cs" />
+    <Compile Include="DataAccess\KubernetesResourceBinder.cs" />
+    <Compile Include="DataAccess\KubernetesResourceComponent.cs" />
+    <Compile Include="DataAccess\KubernetesResourceComponent2.cs" />
+    <Compile Include="DataAccess\KubernetesResourceComponent3.cs" />
+    <Compile Include="DataAccess\KubernetesResourceComponent4.cs" />
+    <Compile Include="DataAccess\KubernetesResourceComponent5.cs" />
+    <Compile Include="DataAccess\MajorVersionBinder.cs" />
+    <Compile Include="DataAccess\MatchedAgent.cs" />
+    <Compile Include="DataAccess\MatchedAgentBinder.cs" />
+    <Compile Include="DataAccess\MatchedAgentBinder2.cs" />
+    <Compile Include="DataAccess\MatchedAgentBinder3.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent2.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent3.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent4.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent5.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent6.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent7.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent8.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent9.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionComponent10.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionDataBinder.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionHistoryComponent.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionHistoryComponent2.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionHistoryComponent3.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionHistoryComponent4.cs" />
+    <Compile Include="DataAccess\MetaTaskDefinitionRevisionDataBinder.cs" />
+    <Compile Include="DataAccess\PackageDataBinder.cs" />
+    <Compile Include="DataAccess\PackageMetadataComponent.cs" />
+    <Compile Include="DataAccess\PackageMetadataComponent2.cs" />
+    <Compile Include="DataAccess\PackageMetadataComponent3.cs" />
+    <Compile Include="DataAccess\PackageMetadataComponent4.cs" />
+    <Compile Include="DataAccess\QueueAgent.cs" />
+    <Compile Include="DataAccess\QueueAgentBinder.cs" />
+    <Compile Include="DataAccess\AssignedAgentRequestResultBinder.cs" />
+    <Compile Include="DataAccess\AssignedAgentRequestResultBinder2.cs" />
+    <Compile Include="DataAccess\AssignedAgentRequestResultBinder3.cs" />
+    <Compile Include="DataAccess\AssignedAgentRequestResultBinder4.cs" />
+    <Compile Include="DataAccess\AssignedAgentRequestResultBinder5.cs" />
+    <Compile Include="DataAccess\QueueAgentTag.cs" />
+    <Compile Include="DataAccess\QueueAgentTagBinder.cs" />
+    <Compile Include="DataAccess\RequestAgentsUpdateResult.cs" />
+    <Compile Include="DataAccess\ResourceUsageData.cs" />
+    <Compile Include="DataAccess\ResourceUsageDataBinder.cs" />
+    <Compile Include="DataAccess\SecureFileBinder.cs" />
+    <Compile Include="DataAccess\SecureFileComponent.cs" />
+    <Compile Include="DataAccess\SecureFileComponent2.cs" />
+    <Compile Include="DataAccess\SecureFileComponent3.cs" />
+    <Compile Include="DataAccess\VariableGroupIdBinder.cs" />
+    <Compile Include="DataAccess\VariableGroupProjectReferenceBinder.cs" />
+    <Compile Include="DataAccess\SqlDataRecordExtensions.cs" />
+    <Compile Include="DataAccess\SqlErrorExtensions.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder4.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder5.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder6.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder7.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder8.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder9.cs" />
+    <Compile Include="DataAccess\TaskAgentBinder10.cs" />
+    <Compile Include="DataAccess\TaskAgentCapability.cs" />
+    <Compile Include="DataAccess\TaskAgentCapabilityBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudRequestBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudRequestBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudRequestBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentMachineBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder4.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder5.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder6.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder7.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder8.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder9.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder10.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder11.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder12.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder13.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolBinder14.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolMaintenanceJobBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolMaintenanceJobTargetAgentBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolMaintenanceJobTargetAgentBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentPoolMaintenanceDefinitionBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudBinder4.cs" />
+    <Compile Include="DataAccess\TaskAgentCloudBinder5.cs" />
+    <Compile Include="DataAccess\TaskAgentQueueBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentQueueBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentQueueBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder4.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder5.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder6.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder7.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder8.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder9.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder10.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder11.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder12.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder13.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder14.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder15.cs" />
+    <Compile Include="DataAccess\TaskAgentRequestBinder16.cs" />
+    <Compile Include="DataAccess\TaskAgentSessionDataBinder.cs" />
+    <Compile Include="DataAccess\TaskAgentSessionDataBinder2.cs" />
+    <Compile Include="DataAccess\TaskAgentSessionDataBinder3.cs" />
+    <Compile Include="DataAccess\TaskAgentSessionDataBinder4.cs" />
+    <Compile Include="DataAccess\TaskAgentTag.cs" />
+    <Compile Include="DataAccess\TaskAgentTagBinder.cs" />
+    <Compile Include="DataAccess\TaskContributionDataBinder.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent2.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent3.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent4.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent5.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent6.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent7.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent8.cs" />
+    <Compile Include="DataAccess\TaskDefinitionComponent9.cs" />
+    <Compile Include="DataAccess\TaskDefinitionDataBinder.cs" />
+    <Compile Include="DataAccess\TaskDefinitionDataBinder2.cs" />
+    <Compile Include="DataAccess\TaskDefinitionDataBinder3.cs" />
+    <Compile Include="DataAccess\TaskIdBinder.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent2.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent3.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent4.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent5.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent6.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent7.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent8.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent9.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent10.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent11.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent12.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent13.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent14.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent15.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent16.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent17.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent18.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent19.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent20.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent21.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent22.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent24.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent25.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent26.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent27.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent28.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent29.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent30.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent31.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent32.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent33.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent34.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent35.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent36.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent37.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent38.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent39.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent40.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent41.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent42.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent43.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent44.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent45.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent46.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent47.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent48.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent49.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent50.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent51.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent52.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent53.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent54.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent55.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent56.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent57.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent58.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent59.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent60.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent61.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent62.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent63.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent64.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent65.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent66.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent67.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent68.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent69.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent70.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent71.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent72.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent73.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent74.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent75.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent76.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent77.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent78.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent79.cs" />
+    <Compile Include="DataAccess\TaskResourceComponent80.cs" />
+    <Compile Include="DataAccess\TaskSqlComponentBase.cs" />
+    <Compile Include="DataAccess\TaskVersionBinder.cs" />
+    <Compile Include="DataAccess\UpdateAgentRequestResult.cs" />
+    <Compile Include="DataAccess\UpdateAgentResult.cs" />
+    <Compile Include="DataAccess\UpdateAgentPoolResult.cs" />
+    <Compile Include="DataAccess\UpdateDeploymentMachinesResult.cs" />
+    <Compile Include="DataAccess\UpdateTaskAgentPoolMaintenanceJobResult.cs" />
+    <Compile Include="DataAccess\VariableGroupBinder.cs" />
+    <Compile Include="DataAccess\VariableGroupBinder2.cs" />
+    <Compile Include="DataAccess\EnvironmentComponent.cs" />
+    <Compile Include="DataAccess\EnvironmentComponent2.cs" />
+    <Compile Include="DataAccess\EnvironmentComponent3.cs" />
+    <Compile Include="DataAccess\EnvironmentComponent4.cs" />
+    <Compile Include="DataAccess\VariableGroupComponent.cs" />
+    <Compile Include="DataAccess\VariableGroupComponent2.cs" />
+    <Compile Include="DataAccess\VariableGroupComponent3.cs" />
+    <Compile Include="DataAccess\VariableGroupComponent4.cs" />
+    <Compile Include="DataAccess\VariableGroupComponent5.cs" />
+    <Compile Include="DataAccess\VariableGroupComponent6.cs" />
+    <Compile Include="DataAccess\Migration\MetaTaskDocumentMigrationComponent.cs" />
+    <Compile Include="DataAccess\Migration\MetaTaskDocumentBinder.cs" />
+    <Compile Include="DataAccess\Migration\MetaTaskDocumentData.cs" />
+    <Compile Include="DataAccess\Migration\ProjectAndMetaTaskDefinitionIdComponent.cs" />
+    <Compile Include="DataAccess\Migration\MetaTaskDefinitionIdsBinder.cs" />
+    <Compile Include="DataAccess\Migration\ProjectAndMetaTaskDefinitionId.cs" />
+    <Compile Include="Constants\DistributedTaskJobIds.cs" />
+    <Compile Include="Constants\DataspaceCategories.cs" />
+    <Compile Include="Constants\TaskApiRouteParameters.cs" />
+    <Compile Include="Controllers\VariableGroupController.cs" />
+    <Compile Include="Controllers\VirtualMachineGroupController.cs" />
+    <Compile Include="Controllers\VirtualMachinesController.cs" />
+    <Compile Include="Controllers\TaskContributionPreInstallController.cs" />
+    <Compile Include="Controllers\DeploymentGroupAccessTokenController.cs" />
+    <Compile Include="Controllers\DeploymentGroupApiController.cs" />
+    <Compile Include="Controllers\DeploymentGroupMetricsController.cs" />
+    <Compile Include="Controllers\DeploymentGroupsController.cs" />
+    <Compile Include="Controllers\DistributedTaskAgentsDownloadController.cs" />
+    <Compile Include="Controllers\EnvironmentDeploymentExecutionHistoryController.cs" />
+    <Compile Include="Controllers\EnvironmentsController.cs" />
+    <Compile Include="Controllers\KubernetesResourceController.cs" />
+    <Compile Include="Controllers\DeploymentMachinesController.cs" />
+    <Compile Include="Controllers\DeploymentPoolAccessTokenController.cs" />
+    <Compile Include="Controllers\DeploymentPoolsSummaryController.cs" />
+    <Compile Include="Controllers\DeploymentTargetJobRequestsController.cs" />
+    <Compile Include="Controllers\DeploymentTargetMessagesController.cs" />
+    <Compile Include="Controllers\DeploymentTargetsController.cs" />
+    <Compile Include="Controllers\DistributedTaskApiControllerHelper.cs" />
+    <Compile Include="Controllers\DistributedTaskApiController.cs" />
+    <Compile Include="Controllers\DistributedTaskProjectApiController.cs" />
+    <Compile Include="Controllers\DistributedTaskExceptionMapper.cs" />
+    <Compile Include="Controllers\DistributedTaskPackages3r2Controller.cs" />
+    <Compile Include="Controllers\DistributedTaskPackages3Controller.cs" />
+    <Compile Include="Controllers\DistributedTaskPackagesController.cs" />
+    <Compile Include="Controllers\DistributedTaskScopeApiController.cs" />
+    <Compile Include="Controllers\InputValidationController.cs" />
+    <Compile Include="Controllers\LegacyAzureRmManagemenetGroupsController.cs" />
+    <Compile Include="Controllers\LegacyAzureRmSubscriptionsController.cs" />
+    <Compile Include="Controllers\DeploymentMachineGroupAccessTokenController.cs" />
+    <Compile Include="Controllers\DeploymentMachineGroupMachinesController.cs" />
+    <Compile Include="Controllers\DeploymentMachineGroupsController.cs" />
+    <Compile Include="Controllers\DeploymentMachineJobRequestsController.cs" />
+    <Compile Include="Controllers\DeploymentMachineMessageController.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointExecutionHistoryController.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointProxy2Controller.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointProxyController.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointProxyControllerBase.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointTypesController.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpoints3Controller.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpoints2Controller.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointsController.cs" />
+    <Compile Include="Controllers\LegacyServiceEndpointsControllerBase.cs" />
+    <Compile Include="Controllers\TaskAgentJobRequestsLegacyController.cs" />
+    <Compile Include="Controllers\LegacyVstsAadOAuthController.cs" />
+    <Compile Include="Controllers\ResourceLimitsController.cs" />
+    <Compile Include="Controllers\ResourceUsage2Controller.cs" />
+    <Compile Include="Controllers\ResourceUsageController.cs" />
+    <Compile Include="Controllers\SecureFileController.cs" />
+    <Compile Include="Controllers\TaskAgentCloudRequestJobController.cs" />
+    <Compile Include="Controllers\TaskAgentCloudRequestMessageController.cs" />
+    <Compile Include="Controllers\TaskAgentCloudsController.cs" />
+    <Compile Include="Controllers\TaskAgentCloudRequestsController.cs" />
+    <Compile Include="Controllers\TaskAgentCloudTypesController.cs" />
+    <Compile Include="Controllers\TaskAgentJobRequestsController.cs" />
+    <Compile Include="Controllers\TaskAgentMessagesController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolMaintenanceDefinitionsController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolMaintenanceJobsController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolMetadataController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolPermissionsController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolsController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolsRolesCompatController.cs" />
+    <Compile Include="Controllers\TaskAgentPoolsRolesController.cs" />
+    <Compile Include="Controllers\TaskAgentQueuesController.cs" />
+    <Compile Include="Controllers\TaskAgentQueuesRolesController.cs" />
+    <Compile Include="Controllers\TaskAgentSessionsController.cs" />
+    <Compile Include="Controllers\TaskAgentUpdatesController.cs" />
+    <Compile Include="Controllers\TaskAgentUserCapabilitiesController.cs" />
+    <Compile Include="Controllers\TaskAgents2Controller.cs" />
+    <Compile Include="Controllers\TaskAgentsController.cs" />
+    <Compile Include="Controllers\TaskAgentsBaseController.cs" />
+    <Compile Include="Controllers\TaskDefinitionIconsController.cs" />
+    <Compile Include="Controllers\TaskDefinitionWebApiProxyController.cs" />
+    <Compile Include="Controllers\TaskDefinitionsControllerBase.cs" />
+    <Compile Include="Controllers\TaskDefinitionsController.cs" />
+    <Compile Include="Controllers\TaskDefinitions2Controller.cs" />
+    <Compile Include="Controllers\TaskDefinitions3Controller.cs" />
+    <Compile Include="Controllers\TaskDefinitions4Controller.cs" />
+    <Compile Include="Controllers\TaskGroupHistoryController.cs" />
+    <Compile Include="Controllers\TaskGroups2Controller.cs" />
+    <Compile Include="Controllers\TaskGroups3Controller.cs" />
+    <Compile Include="Controllers\TaskGroups4Controller.cs" />
+    <Compile Include="Controllers\TaskGroupsController.cs" />
+    <Compile Include="Controllers\TaskHubLicenseDetails3Controller.cs" />
+    <Compile Include="Controllers\TaskHubLicenseDetails2Controller.cs" />
+    <Compile Include="Controllers\TaskHubLicenseDetailsController.cs" />
+    <Compile Include="Controllers\LegacyVariableGroupController.cs" />
+    <Compile Include="Controllers\YamlSchemaController.cs" />
+    <Compile Include="Converters\EnvironmentResourceDataConverter.cs" />
+    <Compile Include="Converters\VirtualMachineGroupConverter.cs" />
+    <Compile Include="Converters\DeploymentTargetConverter.cs" />
+    <Compile Include="Converters\DeploymentGroupConverter.cs" />
+    <Compile Include="Converters\EnvironmentConverter.cs" />
+    <Compile Include="Converters\EnvironmentResourceReferenceConverter.cs" />
+    <Compile Include="Converters\EnvironmentResourceReferenceObjectConverter.cs" />
+    <Compile Include="Converters\EnvironmentObjectConverter.cs" />
+    <Compile Include="Converters\KubernetesResourceConverter.cs" />
+    <Compile Include="Converters\TaskGroupConverter.cs" />
+    <Compile Include="Converters\VariableGroupConverter.cs" />
+    <Compile Include="Converters\VirtualMachineResourceConverter.cs" />
+    <Compile Include="Data\Model\EnvironmentResourceProviderData.cs" />
+    <Compile Include="Data\Model\EnvironmentObject.cs" />
+    <Compile Include="Data\Model\DeploymentExecutionRecordObject.cs" />
+    <Compile Include="Data\Model\EnvironmentResourceReferenceObject.cs" />
+    <Compile Include="Data\Model\EnvironmentJobStatus.cs" />
+    <Compile Include="Hubs\IAgentHubDispatcher.cs" />
+    <Compile Include="Hubs\AgentHub.cs" />
+    <Compile Include="Hubs\AgentHubDispatcher.cs" />
+    <Compile Include="Hubs\PoolHub.cs" />
+    <Compile Include="Hubs\PoolHubDispatcher.cs" />
+    <Compile Include="Hubs\DeploymentGroupHub.cs" />
+    <Compile Include="Hubs\DeploymentGroupHubDispatcher.cs" />
+    <Compile Include="Hubs\IPoolHubDispatcher.cs" />
+    <Compile Include="Hubs\IDeploymentGroupHubDispatcher.cs" />
+    <Compile Include="Hubs\IPoolsHubDispatcher.cs" />
+    <Compile Include="Hubs\ITaskAgentPoolHubDispatcher.cs" />
+    <Compile Include="Hubs\PoolsHub.cs" />
+    <Compile Include="Hubs\PoolsHubDispatcher.cs" />
+    <Compile Include="Hubs\TaskAgentPoolHub.cs" />
+    <Compile Include="Hubs\TaskAgentPoolHubDispatcher.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TaskDefinitionDefaultIcon.png" />
+    <EmbeddedResource Include="TaskResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

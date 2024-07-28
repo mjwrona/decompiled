@@ -1,0 +1,27 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: YamlDotNet.Serialization.ScalarEventInfo
+// Assembly: YamlDotNet, Version=5.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e
+// MVID: 5F9DD5C4-A41D-46B2-A793-8157A0D55AB5
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\YamlDotNet.dll
+
+using YamlDotNet.Core;
+
+namespace YamlDotNet.Serialization
+{
+  public sealed class ScalarEventInfo : ObjectEventInfo
+  {
+    public ScalarEventInfo(IObjectDescriptor source)
+      : base(source)
+    {
+      this.Style = source.ScalarStyle;
+    }
+
+    public string RenderedValue { get; set; }
+
+    public ScalarStyle Style { get; set; }
+
+    public bool IsPlainImplicit { get; set; }
+
+    public bool IsQuotedImplicit { get; set; }
+  }
+}

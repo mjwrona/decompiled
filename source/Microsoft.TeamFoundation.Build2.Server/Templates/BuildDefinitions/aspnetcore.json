@@ -1,0 +1,102 @@
+{
+  "id": "AspNetCore",
+  "name": "ASP.NET Core",
+  "category": "Build",
+  "defaultHostedQueue": "Azure Pipelines",
+  "iconTaskId": "5541a522-603c-47ad-91fc-a4b1d163081b",
+  "description": "Build and test an ASP.NET Core web application.",
+  "template": {
+    "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+    "build": [
+      {
+        "enabled": true,
+        "displayName": "Restore",
+        "inputs": {
+          "command": "restore",
+          "projects": "**/*.csproj"
+        },
+        "task": {
+          "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+          "versionSpec": "2.*",
+          "definitionType": "task"
+        }
+      },
+      {
+        "enabled": true,
+        "displayName": "Build",
+        "inputs": {
+          "command": "build",
+          "projects": "**/*.csproj",
+          "arguments": "--configuration $(BuildConfiguration)"
+        },
+        "task": {
+          "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+          "versionSpec": "2.*",
+          "definitionType": "task"
+        }
+      },
+      {
+        "enabled": true,
+        "displayName": "Test",
+        "inputs": {
+          "command": "test",
+          "projects": "**/*[Tt]ests/*.csproj",
+          "arguments": "--configuration $(BuildConfiguration)"
+        },
+        "task": {
+          "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+          "versionSpec": "2.*",
+          "definitionType": "task"
+        }
+      },
+      {
+        "enabled": true,
+        "displayName": "Publish",
+        "inputs": {
+          "command": "publish",
+          "publishWebProjects": true,
+          "zipAfterPublish": true,
+          "projects": "**/*.csproj",
+          "arguments": "--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)"
+        },
+        "task": {
+          "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+          "versionSpec": "2.*",
+          "definitionType": "task"
+        }
+      },
+      {
+        "enabled": true,
+        "alwaysRun": true,
+        "displayName": "Publish Artifact",
+        "inputs": {
+          "PathtoPublish": "$(build.artifactstagingdirectory)",
+          "ArtifactName": "drop",
+          "ArtifactType": "Container",
+          "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)"
+        },
+        "task": {
+          "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+          "versionSpec": "1.*",
+          "definitionType": "task"
+        }
+      }
+    ],
+    "options": [],
+    "variables": {
+      "system.debug": {
+        "value": "false",
+        "allowOverride": true
+      },
+      "BuildConfiguration": {
+        "value": "Release",
+        "allowOverride": true
+      },
+      "BuildPlatform": {
+        "value": "any cpu",
+        "allowOverride": true
+      }
+    },
+    "triggers": []
+  }
+}

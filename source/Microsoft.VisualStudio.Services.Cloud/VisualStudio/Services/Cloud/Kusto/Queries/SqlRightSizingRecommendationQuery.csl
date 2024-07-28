@@ -1,0 +1,69 @@
+﻿DatabasePerformanceStatistics
+| extend dtu = max_of(AverageInstanceCpuPercentage, AverageDataIOPercentage, AverageLogWriteUtilizationPercentage)
+| extend dtu = min_of(dtu, 100.0)
+| summarize cpu_perc = percentile(AverageInstanceCpuPercentage, 80), io_perc = percentile(AverageDataIOPercentage, 80), logwrite_perc = percentile(AverageLogWriteUtilizationPercentage, 80),
+            dtu_perc = percentile(dtu, 80), MaxDTU = max(dtu), memory_consumption = max(AverageMemoryUsagePercentage), arg_max(PeriodStart, ServiceObjective),
+            worker_perc = percentile(MaximumWorkerPercentage, 80) 
+            by bin(PeriodStart, 15m), ServerName, Listener, PoolName, DatabaseName, Region, Service
+| summarize Max80thDTU = percentile(dtu_perc, 99), MaxDTU = percentile(MaxDTU, 97.7), MaxMemory = max(memory_consumption), 
+            Max80thCPU = percentile(cpu_perc, 99), Max80thIO = percentile(io_perc, 99), Max80thLogWrite = percentile(logwrite_perc, 99), 
+            arg_max(PeriodStart, ServiceObjective), MaxWorkerPerc = max(worker_perc)
+            by ServerName, Listener, PoolName, DatabaseName, Region, Service
+| extend DTUComputedBy = iif(Max80thCPU > Max80thIO, iif(Max80thCPU > Max80thLogWrite, "CPU", "LogWrite"), iif(Max80thIO > Max80thLogWrite, "IO", "LogWrite"))            
+| extend Slo = ServiceObjective
+| extend Max80thDTU = iff(isnull(Max80thDTU), 0.0, todouble(Max80thDTU)), 
+    MaxDTU = iff(isnull(MaxDTU), 0.0, todouble(MaxDTU)), 
+    MaxMemory = iff(isnull(MaxMemory), 0.0, todouble(MaxMemory))
+| project ServerName, Listener, DatabaseName, Region, Service, Slo,
+    Max80thDTU, MaxDTU, DTUComputedBy, 
+    Max80thCPU, Max80thIO, Max80thLogWrite, MaxMemory, MaxWorkerPerc
+| join DatabaseRecentlyUpdated on ServerName, DatabaseName
+| extend Utilization_RC = iff(DTUComputedBy == 'LogWrite', case(
+        Max80thDTU == 0, 0,                         // idle
+        Max80thDTU > 0 and Max80thDTU <= 20, 1,     // heavily under
+        Max80thDTU > 20 and Max80thDTU <= 50, 2,    // medium under
+        Max80thDTU > 50 and Max80thDTU <= 60, 3,    // slightly under
+        Max80thDTU > 60 and Max80thDTU <= 70, 4,    // optimal
+        Max80thDTU > 70, 5,                         // over
+        6), case(                                   // error
+        Max80thDTU == 0, 0,                         // idle
+        Max80thDTU > 0 and Max80thDTU <= 10, 1,     // heavily under
+        Max80thDTU > 10 and Max80thDTU <= 30, 2,    // medium under
+        Max80thDTU > 30 and Max80thDTU <= 40, 3,    // slightly under
+        Max80thDTU > 40 and Max80thDTU <= 70, 4,    // optimal
+        Max80thDTU > 70, 5,                         // over
+        6                                           // error
+        )
+    )
+| extend Utilization_maxDTU = case(
+    MaxDTU == 0, 0,                             // idle
+    MaxDTU > 0 and MaxDTU <= 10, 1,             // heavily under
+    MaxDTU > 10 and MaxDTU <= 30, 2,            // medium under
+    MaxDTU > 30 and MaxDTU <= 50, 3,            // slightly under
+    MaxDTU > 50 and MaxDTU <= 80, 4,            // optimal
+    MaxDTU > 80, 5,                             // over
+    6)                                          // error
+| extend Utilization_maxWorker = case(
+    MaxWorkerPerc <= 20, 0,                     // idle
+    5)                                          // over
+| extend Utilization_max = max_of(Utilization_RC, Utilization_maxDTU, Utilization_maxWorker)
+| extend Utilization = case(
+    Utilization_max == 0, "Idle",
+    Utilization_max == 1, "Heavily Underutilized",
+    Utilization_max == 2, "Medium Underutilized",
+    Utilization_max == 3, "Slightly Underutilized",
+    Utilization_max == 4, "Optimal",
+    Utilization_max == 5, "Overutilized",
+    "Error")
+| extend ActionToTake = case(
+    Utilization_max <= 2, "Downgrade",
+    Utilization_max == 3, "PossibleDowngrade",
+    Utilization_max == 4, "Keep",
+    Utilization_max == 5, "Upgrade",
+    "Keep")
+| extend DatabaseRecentlyUpdated = DatabaseUpdated
+| project ServerName, Listener, DatabaseName, Region, Service,
+    Max80thDTU, MaxDTU, DTUComputedBy, Utilization,
+    Max80thCPU, Max80thIO, Max80thLogWrite, MaxMemory,
+    Slo, ActionToTake, DatabaseRecentlyUpdated
+| order by ActionToTake desc

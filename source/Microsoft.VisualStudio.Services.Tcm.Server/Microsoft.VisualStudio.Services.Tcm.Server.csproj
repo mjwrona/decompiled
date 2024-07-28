@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Tcm.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{243C1DD4-01CC-4A77-8044-278A3F4DAEBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Tcm.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmResultsDocumentController.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmResultsByPipelineController.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmLinkedWorkItemsToResultController.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmResultGroupsByBuild5Controller.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmResultGroupsByRelease5Controller.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmResultsByBuild4Controller.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmResultsByRelease4Controller.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmTestLinkedWorkItemsController.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TestLinkedWorkItems6Controller.cs" />
+    <Compile Include="TeamFoundation\TestManagement\Server\TcmTestSettingsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\CoverageStatusBadgeController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\FileCoverageController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestResultFailureTypeController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\LogStoreAttachmentsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestLogController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestTagsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestTagSummaryController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\PipelineTestSummaryByMetricsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmResults6_0Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\ResultsMetaData6_0Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestResultsSessionController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\RunSummaryController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\SimilarResultsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\StatisticsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\Statistics2Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestResultsSettingsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestResultsGroupDetailsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmRunLogsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestLogStoreEndpointController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmRuns5Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmAttachmentsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmCodeCoverageController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmResultDetailsForBuildController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmResultDetailsForReleaseController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmResultsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\ResultsMetaDataController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmResultsMetaData5_1Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestHistory5Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestHistory5_1Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestResultHistoryController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestResultsReportsForBuildController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TestResultsReportsForPipelineController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestResultsReportsForReleaseController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestResultTrendForBuildController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestResultTrendForReleaseController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmTestsSummaryByRequirementController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\ResultsMetaData5_1_3Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TcmResources.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\CodeCoverageSummaryController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\CoverageController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\FunctionCoverageController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\MigrationStatusController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\ModuleCoverageController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\PointResultsController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TCMPropertyBagController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\BuildRefController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\ReleaseRefController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\RequirementsToTestsMappingController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TcmDataMigrationControllerBase.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestActionResultController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestCaseMetadataController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestCaseReferenceController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestMessageLogController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestMessageLogEntryController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestParameterController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestResult2Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestResultResetController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestRun2Controller.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestRunController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestRunContextController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestRunExController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestRunExtendedController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestRunSummaryController.cs" />
+    <Compile Include="VisualStudio\Services\Tcm\TCMServiceDataMigration\TestResultsExController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

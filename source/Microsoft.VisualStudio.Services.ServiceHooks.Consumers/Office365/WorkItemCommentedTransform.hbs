@@ -1,0 +1,33 @@
+﻿{
+    "sender": "Azure DevOps Services",
+    "summary": "{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}: {{{jsonEscape resource.fields['System.Title']}}} commented by {{{emailEscapeForSubject resource.fields['System.ChangedBy'].uniqueName}}}",
+    "themeColor": "{{{jsonEscape data.workItemColor}}}",
+    "title": null,
+    "text": null,
+    "sections": [
+        {
+        "title": null,
+        "text": null,
+        "markdown": true,
+        "facts": [
+{{#resource.fields['System.History']}}
+                {
+                    "name": "Discussion",
+                    "value": "{{{jsonEscape resource.fields['System.History']}}}"
+                },
+{{/resource.fields['System.History']}}
+            ],
+        "images": null,
+        "activityTitle": "[{{{jsonEscape resource.fields['System.WorkItemType']}}} {{{jsonEscape resource.id}}}]({{{jsonEscape data.DisplayUrl}}}): {{{jsonEscape resource.fields['System.Title']}}}",
+        "activitySubtitle": "",
+        "activityText": "Commented by {{{emailEscape resource.fields['System.ChangedBy'].uniqueName}}}",
+{{#if data.workItemIconUrl}}
+        "activityImage": "{{{jsonEscape data.workItemIconUrl}}}",
+        "activityImageType": "article"
+{{else}}
+        "activityImage": "{{{encodedAvatar resource.fields['System.ChangedBy'].id}}}"
+{{/if}}
+    }
+  ],
+    "potentialAction": []
+}
