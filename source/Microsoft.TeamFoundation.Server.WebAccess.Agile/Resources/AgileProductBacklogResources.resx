@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Rollup_SuccessColumnTooltip" xml:space="preserve">
+    <value>Rollup is up to date</value>
+  </data>
+  <data name="ChangeParentDialogWorkItemPickerDisabledText" xml:space="preserve">
+    <value>There are no possible parents in this team.</value>
+  </data>
+  <data name="ContextMenu_AddChildItems" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="Tooltip_Backlog_InProgress" xml:space="preserve">
+    <value>Show or hide {0} in the state(s): {1}</value>
+  </data>
+  <data name="AddPanel_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="BulkEdit_ErrorMessageHeader" xml:space="preserve">
+    <value>One or more items could not be saved. </value>
+  </data>
+  <data name="GroupRow_OrphanProductBacklogItem" xml:space="preserve">
+    <value>Unparented {0}</value>
+  </data>
+  <data name="ToolPanel_Capacity" xml:space="preserve">
+    <value>Work details</value>
+  </data>
+  <data name="CreateQuery_ClickHere" xml:space="preserve">
+    <value>Click here to view it.</value>
+  </data>
+  <data name="ContextMenu_AriaLabel" xml:space="preserve">
+    <value>Backlog Item Actions</value>
+  </data>
+  <data name="ForecastingSprintStartsWithLabel" xml:space="preserve">
+    <value>{0} starts with</value>
+  </data>
+  <data name="AddPanel_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Rollup_FailureColumnTooltip" xml:space="preserve">
+    <value>Failed to process data into Analytics. Last update was {0}.</value>
+  </data>
+  <data name="BacklogInfo_WorkItemRemoved_Footer_LinkText" xml:space="preserve">
+    <value>Edit now</value>
+  </data>
+  <data name="SprintHeader_Past" xml:space="preserve">
+    <value>Past</value>
+  </data>
+  <data name="Forecast_MessageDisabledWhileFiltering" xml:space="preserve">
+    <value>Forecasting disabled while filtering</value>
+  </data>
+  <data name="Forecast_NoSprints" xml:space="preserve">
+    <value>Forecast lines cannot be drawn. There are no remaining iterations in your schedule.</value>
+  </data>
+  <data name="CreateQuery_Error" xml:space="preserve">
+    <value>An error occurred while creating the backlog query. The query could not be saved. The server might be offline or unresponsive. Wait a few minutes, and then try again.</value>
+  </data>
+  <data name="BacklogInfo_RefreshRequired" xml:space="preserve">
+    <value>You have modified the work item(s) in a way that affects how it appears on the backlog. You must refresh the backlog to reflect the latest changes. </value>
+  </data>
+  <data name="AddPanel_CloseAltText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LoadParentErrorMessage" xml:space="preserve">
+    <value>Uh-oh, we hit a snag. Unable to show this parent. Please try refreshing.</value>
+  </data>
+  <data name="Rollup_FailureColumnTooltip_NoDate" xml:space="preserve">
+    <value>We are still processing data into Analytics.</value>
+  </data>
+  <data name="IterationBacklog" xml:space="preserve">
+    <value>Iteration backlog</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Open_New_Item_Panel" xml:space="preserve">
+    <value>Open New Item Panel</value>
+  </data>
+  <data name="RollupColumn_TotalBy_WorkItemType" xml:space="preserve">
+    <value>Count of {0}</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Move_Item_To_Current_Iteration" xml:space="preserve">
+    <value>Move item to current iteration</value>
+  </data>
+  <data name="BacklogsChangeParentDialogTitle" xml:space="preserve">
+    <value>Change parent</value>
+  </data>
+  <data name="Add_WorkItems_Error" xml:space="preserve">
+    <value>The following error occurred while attempting to add a new work item: {0}.</value>
+  </data>
+  <data name="RollupColumn_TotalBy_FieldName" xml:space="preserve">
+    <value>Sum of {0}</value>
+  </data>
+  <data name="ProductBacklogLoading_ForecastEnd" xml:space="preserve">
+    <value>Forecast content loaded</value>
+  </data>
+  <data name="AddPanel_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="TooManyItemsOnBacklog_ShowingOneHop" xml:space="preserve">
+    <value>There are too many items on the backlog. Only two levels of the tree can be shown. Delete items or {0} for this team.</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Move_Item_Up" xml:space="preserve">
+    <value>Move item up</value>
+  </data>
+  <data name="ProductBacklog_Reparent_Toast_Multiple" xml:space="preserve">
+    <value>You successfully mapped {0} work items to "{1}".</value>
+  </data>
+  <data name="ContextMenu_AddLink" xml:space="preserve">
+    <value>Add link</value>
+  </data>
+  <data name="ChangeParentDialogWorkItemPickerHelpText" xml:space="preserve">
+    <value>Select a work item</value>
+  </data>
+  <data name="MappingPane_On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="Add_WorkItems" xml:space="preserve">
+    <value>Add: {0}</value>
+  </data>
+  <data name="ProductBacklog" xml:space="preserve">
+    <value>Product backlog</value>
+  </data>
+  <data name="ProductBacklogLoading_MappingPaneStart" xml:space="preserve">
+    <value>Mapping pane is loading</value>
+  </data>
+  <data name="Forecast_ItemTooBig" xml:space="preserve">
+    <value>Forecast lines cannot be drawn. Based on the velocity you have entered, the first item on your backlog cannot be completed in the remaining iterations.</value>
+  </data>
+  <data name="ToolPanel_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="UnownedItemTooltip" xml:space="preserve">
+    <value>This item cannot be reordered because it is owned by another team.</value>
+  </data>
+  <data name="ChangeParentDialogTeamPickerLabel" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="Tooltip_Backlog_Parents" xml:space="preserve">
+    <value>Show or hide the parents of {0} owned by {1}.</value>
+  </data>
+  <data name="TooManyItemsOnBacklog" xml:space="preserve">
+    <value>There are too many items on this backlog to show the full work item tree. Delete items or {0} for this team.</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Move_Item_Down" xml:space="preserve">
+    <value>Move item down</value>
+  </data>
+  <data name="ProductBacklogLoading_RightPaneExtesionStart" xml:space="preserve">
+    <value>Right pane extension menu is loading</value>
+  </data>
+  <data name="BacklogsChangeParentDialogFooterOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SprintHeader_Future" xml:space="preserve">
+    <value>Future</value>
+  </data>
+  <data name="MoveUserStory_TasksUpdateIterationFailed" xml:space="preserve">
+    <value>You moved a work item to a sprint or a backlog, but an error occurred while attempting to update the iteration path of one or more children associated with this work item to reflect this change. You must manually update the children with the correct iteration.</value>
+  </data>
+  <data name="ChangeParentInvalidSelectionLearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=845482</value>
+  </data>
+  <data name="ChangeParentErrorLoadingParentWorkItemsMessage" xml:space="preserve">
+    <value>Error loading parent work items: {0}</value>
+  </data>
+  <data name="ProductBacklog_LevelRedirectToDefaultLevel" xml:space="preserve">
+    <value>The backlog you requested is either hidden for your team or cannot be found. We're showing you the default backlog instead. If you navigated here from a bookmark, you will need to update your bookmark.</value>
+  </data>
+  <data name="ContextMenu_MoveToTop" xml:space="preserve">
+    <value>Move to top</value>
+  </data>
+  <data name="Backlog_Toolbar_AriaLabel" xml:space="preserve">
+    <value>Backlog toolbar</value>
+  </data>
+  <data name="ChangeParentInvalidSelectionLearnMore" xml:space="preserve">
+    <value>Learn more about reparenting.</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Assign_To" xml:space="preserve">
+    <value>Assign to</value>
+  </data>
+  <data name="RollupColumn_TotalBy_AllDescendants" xml:space="preserve">
+    <value>Count of Work Items</value>
+  </data>
+  <data name="ContextMenu_MoveToPosition" xml:space="preserve">
+    <value>Move to position...</value>
+  </data>
+  <data name="ContextMenu_LinkToNewItem" xml:space="preserve">
+    <value>New item...</value>
+  </data>
+  <data name="CreateQuery_Toolbar_Text" xml:space="preserve">
+    <value>Create Query</value>
+  </data>
+  <data name="ToolPanel_Mapping" xml:space="preserve">
+    <value>Mapping</value>
+  </data>
+  <data name="ProductBacklogLoading_RightPaneError" xml:space="preserve">
+    <value>Error loading right pane</value>
+  </data>
+  <data name="ProductBacklogLoading_AddPanelEnd" xml:space="preserve">
+    <value>Add panel loaded</value>
+  </data>
+  <data name="Add_WorkItems_Seperator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="ContextMenu_LinkToExistingItem" xml:space="preserve">
+    <value>Existing item...</value>
+  </data>
+  <data name="Forecast_VelocityLabel" xml:space="preserve">
+    <value>Forecasting based on velocity of</value>
+  </data>
+  <data name="RollupColumn_ProgressBy_AllCompletedDescendants" xml:space="preserve">
+    <value>Progress by all Work Items</value>
+  </data>
+  <data name="BacklogAction_EmailQueryResult" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ProductBacklogLoading_ForecastError" xml:space="preserve">
+    <value>Error loading forecast content</value>
+  </data>
+  <data name="ProductBacklogLoading_ForecastStart" xml:space="preserve">
+    <value>Forecast content is loading</value>
+  </data>
+  <data name="MoveUserStory_UserStoryUpdateIterationFailed" xml:space="preserve">
+    <value>The work item could not be moved to the sprint or backlog because an error occurred when attempting to update the iteration path of the parent work item. You might not have the necessary permissions to edit the work item, the work item might have been modified by another user, or you might have lost connection to your server. Refresh your browser, and then try again.</value>
+  </data>
+  <data name="MappingPane_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="ProductBacklogContextMenu_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="BacklogsChangeParentDialogFooterCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="KeyboardShortcutGroup_Backlog" xml:space="preserve">
+    <value>Backlogs</value>
+  </data>
+  <data name="SprintHeader_Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="BulkEdit_Backlog_OrderFieldRefresh" xml:space="preserve">
+    <value>You changed the field used for backlog ordering. You must refresh your backlog to see the items in the new location. </value>
+  </data>
+  <data name="AddPanel_Loading" xml:space="preserve">
+    <value>Loading ...</value>
+  </data>
+  <data name="ChangeParentDialogWorkItemPickerLabel" xml:space="preserve">
+    <value>New parent</value>
+  </data>
+  <data name="RollupColumn_ComputeError" xml:space="preserve">
+    <value>An error occurred while fetching available rollup columns.</value>
+  </data>
+  <data name="ChangeParentErrorLoadingTeamsMessage" xml:space="preserve">
+    <value>Error loading teams: {0}</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Move_Item_To_Backlog" xml:space="preserve">
+    <value>Move item to backlog</value>
+  </data>
+  <data name="GroupRow_OrphanTasks" xml:space="preserve">
+    <value>Unparented</value>
+  </data>
+  <data name="Rollup_EffortFieldName" xml:space="preserve">
+    <value>Effort</value>
+  </data>
+  <data name="BacklogsChangeParentDialogDescription" xml:space="preserve">
+    <value>This will replace any existing parent of the {0} selected item(s).</value>
+  </data>
+  <data name="BacklogInfo_WorkItemRemoved_ListHeader" xml:space="preserve">
+    <value>The following changes removed the item:</value>
+  </data>
+  <data name="StatusMessage_RecoverableError" xml:space="preserve">
+    <value>An error has occurred while attempting to save your changes. Click here to try saving your changes again. Error details: {0}</value>
+  </data>
+  <data name="BacklogInfo_OrderFieldRefresh" xml:space="preserve">
+    <value>You changed the field used for backlog ordering. You must refresh your backlog to see the item in the new location. </value>
+  </data>
+  <data name="RollupColumn_ProgressBy_WorkItemType" xml:space="preserve">
+    <value>Progress by {0}</value>
+  </data>
+  <data name="Forecast_Column_Title" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="ProductBacklog_MappingPane_Error" xml:space="preserve">
+    <value>The work item could not be mapped because an error occurred when attempting to update the link to the parent work item. You might not have the necessary permissions to edit the work item, the work item might have been modified by another user, or you might have lost connection to your server. Refresh your browser, and then try again.</value>
+  </data>
+  <data name="ContextMenu_ChangePosition" xml:space="preserve">
+    <value>Change position...</value>
+  </data>
+  <data name="ProductBacklogLoading_MappingPaneEnd" xml:space="preserve">
+    <value>Mapping pane loaded</value>
+  </data>
+  <data name="BulkEdit_Backlog_RefreshRequired" xml:space="preserve">
+    <value>You have modified the work items in a way that affects how it appears on the backlog. You must refresh the backlog to reflect the latest changes. </value>
+  </data>
+  <data name="BacklogInfo_WorkItemRemoved_ListItem" xml:space="preserve">
+    <value>{0} was set to: {1}</value>
+  </data>
+  <data name="MissingProposedStateMapping" xml:space="preserve">
+    <value>Items added to the backlog may disappear on a refresh because your team project marks them as "in progress". Those items will appear when you change the "In progress" filter to Show.</value>
+  </data>
+  <data name="ChangeParentSelectionCannotReparentMessage" xml:space="preserve">
+    <value>You cannot change the parent because these are top-level items.</value>
+  </data>
+  <data name="ReorderDialogMessage" xml:space="preserve">
+    <value>Enter a value between 1 and {0}:</value>
+  </data>
+  <data name="ReorderDialogError_Message" xml:space="preserve">
+    <value>Your input is invalid. Please enter an integer value between 1 and {0}.</value>
+  </data>
+  <data name="ProductBacklog_ParentColumnTitle" xml:space="preserve">
+    <value>Parent</value>
+  </data>
+  <data name="Forecast_NoBacklog" xml:space="preserve">
+    <value>Forecast lines cannot be drawn. There are no proposed items in your backlog.</value>
+  </data>
+  <data name="MultipleItemTypesDragHelperText" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="Columns_ErrorSaving" xml:space="preserve">
+    <value>Error saving column options. Click here to discard your changes and refresh your view of the backlog.</value>
+  </data>
+  <data name="ForecastingSprintEndsWithLabel" xml:space="preserve">
+    <value>{0} ends with</value>
+  </data>
+  <data name="ProductBacklog_OrderColumnTitle" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="BulkEdit_WorkItemRemovedFromBacklog_ListHeader" xml:space="preserve">
+    <value>The following changes removed the items:</value>
+  </data>
+  <data name="ChangeParentSelectionLimitExceededMessage" xml:space="preserve">
+    <value>You cannot change the parent of these because there are more than 200 items selected.</value>
+  </data>
+  <data name="ProductBacklogLoading_RightPaneExtesionEnd" xml:space="preserve">
+    <value>Right pane extension menu loaded</value>
+  </data>
+  <data name="MappingPane_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ProductBacklogLoading_AddPanelError" xml:space="preserve">
+    <value>Error loading add panel</value>
+  </data>
+  <data name="ToolPanel_FilterTitle" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="ProductBacklogLoading_AddPanelStart" xml:space="preserve">
+    <value>Add panel is loading</value>
+  </data>
+  <data name="ReduceAreaOfOwnershipLinkText" xml:space="preserve">
+    <value>reduce the area of ownership</value>
+  </data>
+  <data name="ContextMenu_ChangeParent" xml:space="preserve">
+    <value>Change parent...</value>
+  </data>
+  <data name="BulkEdit_ErrorListHeader" xml:space="preserve">
+    <value>The following errors appear on one or more items:</value>
+  </data>
+  <data name="BacklogInfo_RefreshRequired_LinkText" xml:space="preserve">
+    <value>Refresh now</value>
+  </data>
+  <data name="CreateQuery_Created" xml:space="preserve">
+    <value>Your backlog query has been created. </value>
+  </data>
+  <data name="AddPanel_AriaDescription" xml:space="preserve">
+    <value>Set {0} for new work item</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Move_Item_To_Next_Iteration" xml:space="preserve">
+    <value>Move item to next iteration</value>
+  </data>
+  <data name="BacklogInfo_WorkItemRemoved_Footer" xml:space="preserve">
+    <value>If you did not want to remove this item, you may edit it to undo your changes. </value>
+  </data>
+  <data name="ChangeParentInvalidSelectionMessage" xml:space="preserve">
+    <value>You cannot change the parent of these items because of which items are selected. If items of multiple levels are selected, they must all have a selected ancestor. </value>
+  </data>
+  <data name="KeyboardShortcutDescription_Move_Item_To_Top" xml:space="preserve">
+    <value>Move item to top</value>
+  </data>
+  <data name="EmailBacklogQueryResult" xml:space="preserve">
+    <value>Send backlog query as an email</value>
+  </data>
+  <data name="BacklogInfo_WorkItemRemoved_Header" xml:space="preserve">
+    <value>"{0}" was removed because of your recent changes.</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Show_Hide_Parents" xml:space="preserve">
+    <value>Show / Hide Parents</value>
+  </data>
+  <data name="KeyboardShortcutDescription_Add_Child" xml:space="preserve">
+    <value>Add child</value>
+  </data>
+  <data name="ProductBacklog_Error_UnsavedChanges" xml:space="preserve">
+    <value>You have unsaved changes. You can retry after all changes are saved, or refresh the page to discard the changes.</value>
+  </data>
+  <data name="BulkEdit_WorkItemRemovedFromBacklog_Header" xml:space="preserve">
+    <value>One or more items were removed because of your recent changes.</value>
+  </data>
+  <data name="ProductBacklog_Reparent_Toast_1" xml:space="preserve">
+    <value>You successfully mapped "{0}" to "{1}".</value>
+  </data>
+  <data name="MappingPane_FilterTitle" xml:space="preserve">
+    <value>Mapping</value>
+  </data>
+  <data name="StatusMessage_FatalError" xml:space="preserve">
+    <value>An error has occurred while attempting to save your changes. Click here to discard your changes and refresh your view of the backlog. Error details: {0}</value>
+  </data>
+  <data name="Unparented" xml:space="preserve">
+    <value>Unparented</value>
+  </data>
+  <data name="RollupColumn_ProgressBy_EffortField" xml:space="preserve">
+    <value>Progress by {0}</value>
+  </data>
+  <data name="AddPanel_TitleDisabledWhileFiltering" xml:space="preserve">
+    <value>Adding items has been disabled while filtering</value>
+  </data>
+  <data name="RollupColumn" xml:space="preserve">
+    <value>Rollup Column</value>
+  </data>
+</root>

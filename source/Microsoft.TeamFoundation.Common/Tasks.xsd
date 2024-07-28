@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:complexType name="TaskType">
+    <xs:sequence>
+      <xs:element name="dependencies" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="dependency" minOccurs="0" maxOccurs="unbounded" nillable="false">
+              <xs:complexType>
+                <xs:attribute name="taskId" type="NonEmptyString" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="artifacts" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="artifact" minOccurs="1" nillable="false" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence />
+                <xs:attribute name="id" type="NonEmptyString" msprop:nullValue="_throw" use="required" />
+                <xs:attribute name="description" type="NonEmptyString" use="optional" msprop:nullValue="_empty" />
+              </xs:complexType>
+              <xs:key name="UniqueArtifactidWithinTask">
+                <xs:selector xpath="." />
+                <xs:field xpath="@id" />
+              </xs:key>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="taskXml" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="NonEmptyString" use="required" msprop:nullValue="_throw" />
+    <xs:attribute name="name" type="NonEmptyString" use="optional" msprop:nullValue="_throw" />
+    <xs:attribute name="plugin" type="NonEmptyString" use="required" msprop:nullValue="_throw" />
+    <xs:attribute name="completionMessage" type="NonEmptyMax256String" use="optional" msprop:nullValue="_throw" />
+    <xs:attribute name="completionDescription" type="NonEmptyString" use="optional" msprop:nullValue="_throw" />
+  </xs:complexType>
+  <xs:complexType name="LinkType">
+    <xs:sequence>
+      <xs:element name="source">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="artifact" type="ArtifactType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="destination" maxOccurs="1" minOccurs="1" nillable="false">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element name="artifact" type="ArtifactType" maxOccurs="1" minOccurs="1" nillable="false" />
+              <xs:element name="url" type="xs:anyURI" minOccurs="1" maxOccurs="1" nillable="false" />
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="type" type="NonEmptyString" use="required" />
+  </xs:complexType>
+  <xs:element name="tasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+          <xs:element name="task" type="TaskType" minOccurs="1" maxOccurs="1" nillable="false" />
+          <xs:element name="links" minOccurs="1" maxOccurs="1" nillable="false">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="link" type="SimpleLinkType" minOccurs="1" maxOccurs="unbounded" nillable="false" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="UniqueTaskIds">
+      <xs:selector xpath=".//task" />
+      <xs:field xpath="@id" />
+    </xs:key>
+  </xs:element>
+  <xs:complexType name="ArtifactType">
+    <xs:sequence />
+    <xs:attribute name="groupId" type="NonEmptyString" />
+    <xs:attribute name="taskId" type="NonEmptyString" />
+    <xs:attribute name="artifactId" type="NonEmptyString" />
+  </xs:complexType>
+  <xs:simpleType name="NonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NonEmptyMax256String">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="256" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SimpleLinkType">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="type" type="NonEmptyString" msprop:nullValue="_throw" use="required" />
+    <xs:attribute name="sourceId" type="NonEmptyString" msprop:nullValue="_throw" use="required" />
+    <xs:attribute name="destinationId" type="NonEmptyString" use="required" />
+  </xs:complexType>
+</xs:schema>

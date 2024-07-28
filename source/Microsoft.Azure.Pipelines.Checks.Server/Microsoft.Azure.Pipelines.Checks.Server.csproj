@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Pipelines.Checks.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA436679-1618-4FC1-815F-868F03574A59}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.Checks.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.Checks.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Pipelines.Approval.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Approval.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Authorization.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Authorization.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Checks.Common">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Checks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Checks.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Checks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.TaskCheck.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.TaskCheck.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArgumentValidation.cs" />
+    <Compile Include="CheckExecutionOptions.cs" />
+    <Compile Include="ICheckConfigurationService.cs" />
+    <Compile Include="IChecksEventPublisherService.cs" />
+    <Compile Include="IChecksExtensionService.cs" />
+    <Compile Include="ICheckSuiteService.cs" />
+    <Compile Include="ICheckType.cs" />
+    <Compile Include="CheckConfigurationService.cs" />
+    <Compile Include="CheckConfigurationRefExtension.cs" />
+    <Compile Include="CheckSuiteService.cs" />
+    <Compile Include="CheckSuiteResult.cs" />
+    <Compile Include="ChecksEventPublisherService.cs" />
+    <Compile Include="ChecksExtensionCache.cs" />
+    <Compile Include="ChecksExtensionService.cs" />
+    <Compile Include="CheckTimeoutJobData.cs" />
+    <Compile Include="IPipelineDetailsProvider.cs" />
+    <Compile Include="IPipelineRouteProvider.cs" />
+    <Compile Include="JobConstants.cs" />
+    <Compile Include="CheckExpirationJobData.cs" />
+    <Compile Include="JobHelper.cs" />
+    <Compile Include="TelemetryConstants.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="PipelineChecksResources.cs" />
+    <Compile Include="DataAccess\CheckConfigurationBinder.cs" />
+    <Compile Include="DataAccess\CheckConfigurationBinder2.cs" />
+    <Compile Include="DataAccess\CheckConfigurationBinder3.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent2.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent3.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent4.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent5.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent6.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent7.cs" />
+    <Compile Include="DataAccess\CheckConfigurationComponent8.cs" />
+    <Compile Include="DataAccess\CheckRunUpdateBinder.cs" />
+    <Compile Include="DataAccess\CheckRunUpdateBinder2.cs" />
+    <Compile Include="DataAccess\CheckSuiteContextBinder.cs" />
+    <Compile Include="DataAccess\CheckSuiteContextBinder2.cs" />
+    <Compile Include="DataAccess\DbConstants.cs" />
+    <Compile Include="DataAccess\CheckSuiteBinder.cs" />
+    <Compile Include="DataAccess\CheckSuiteBinder2.cs" />
+    <Compile Include="DataAccess\CheckSuiteBinder3.cs" />
+    <Compile Include="DataAccess\CheckSuiteBinder4.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent2.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent3.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent4.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent5.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent6.cs" />
+    <Compile Include="DataAccess\CheckSuiteComponent7.cs" />
+    <Compile Include="DataAccess\ChecksSqlComponentBase.cs" />
+    <Compile Include="DataAccess\SingleInt32ValueBinder.cs" />
+    <Compile Include="Controllers\PipelineChecksApiController.cs" />
+    <Compile Include="Controllers\PipelineChecksProjectApiController.cs" />
+    <Compile Include="Controllers\PipelineChecksExceptionMapper.cs" />
+    <Compile Include="Controllers\CheckConfigurationsController.cs" />
+    <Compile Include="Controllers\CheckQueryConfigurationsController.cs" />
+    <Compile Include="Controllers\CheckSuitesController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

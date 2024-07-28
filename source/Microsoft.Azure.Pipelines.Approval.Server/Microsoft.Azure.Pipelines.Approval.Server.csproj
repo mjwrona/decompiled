@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Pipelines.Approval.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E61EA4CD-535D-4C17-842D-C185EA40DC87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.Approval.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.Approval.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Pipelines.Approval.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Approval.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Checks.Common">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Checks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalEventPublisherService.cs" />
+    <Compile Include="ApprovalService.cs" />
+    <Compile Include="ArgumentValidation.cs" />
+    <Compile Include="IApprovalEventPublisherService.cs" />
+    <Compile Include="IApprovalCompletedEventSubscriber.cs" />
+    <Compile Include="IApprovalOwner.cs" />
+    <Compile Include="IApprovalDetailsProvider.cs" />
+    <Compile Include="IApprovalEventListener.cs" />
+    <Compile Include="IApprovalService.cs" />
+    <Compile Include="IDeferredApprovalPlugin.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="ApprovalResources.cs" />
+    <Compile Include="DataAccess\ApprovalBinder.cs" />
+    <Compile Include="DataAccess\ApprovalBinder2.cs" />
+    <Compile Include="DataAccess\ApprovalBinder3.cs" />
+    <Compile Include="DataAccess\ApprovalBlockedApproverBinder.cs" />
+    <Compile Include="DataAccess\ApprovalComponent.cs" />
+    <Compile Include="DataAccess\ApprovalComponent2.cs" />
+    <Compile Include="DataAccess\ApprovalComponent3.cs" />
+    <Compile Include="DataAccess\ApprovalComponent4.cs" />
+    <Compile Include="DataAccess\ApprovalComponent5.cs" />
+    <Compile Include="DataAccess\ApprovalComponent6.cs" />
+    <Compile Include="DataAccess\ApprovalComponent7.cs" />
+    <Compile Include="DataAccess\ApprovalSqlComponentBase.cs" />
+    <Compile Include="DataAccess\ApprovalStepHistoryBinder.cs" />
+    <Compile Include="DataAccess\ApprovalStepBinder.cs" />
+    <Compile Include="DataAccess\ApprovalStepBinder2.cs" />
+    <Compile Include="DataAccess\Model\BlockedApproverType.cs" />
+    <Compile Include="DataAccess\Model\CreateApprovalParameter.cs" />
+    <Compile Include="Controllers\ApprovalController.cs" />
+    <Compile Include="Controllers\ApprovalProjectApiController.cs" />
+    <Compile Include="Controllers\ApprovalExceptionMapper.cs" />
+    <Compile Include="Controllers\Approval2Controller.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

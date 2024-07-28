@@ -1,0 +1,40 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Notifications.WebApi.DiagnosticNotification
+// Assembly: Microsoft.VisualStudio.Services.Notifications.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: FF217E0A-7730-437B-BE9F-877363CB7392
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Notifications.WebApi.dll
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Microsoft.VisualStudio.Services.Notifications.WebApi
+{
+  [DataContract]
+  public class DiagnosticNotification
+  {
+    [DataMember]
+    public int Id { get; set; }
+
+    [DataMember]
+    public string Result { get; set; }
+
+    [DataMember]
+    public int EventId { get; set; }
+
+    [DataMember]
+    public string EventType { get; set; }
+
+    [DataMember]
+    public string SubscriptionId { get; set; }
+
+    [DataMember]
+    public Dictionary<string, int> Stats { get; } = new Dictionary<string, int>();
+
+    [DataMember]
+    public Dictionary<Guid, DiagnosticRecipient> Recipients { get; } = new Dictionary<Guid, DiagnosticRecipient>();
+
+    [DataMember]
+    public List<NotificationDiagnosticLogMessage> Messages { get; } = new List<NotificationDiagnosticLogMessage>();
+  }
+}

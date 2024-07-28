@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthTokenCannotBeEmpty" xml:space="preserve">
+    <value>AuthToken for HttpRequest cannot be empty.</value>
+  </data>
+  <data name="ResultTemplateNotSupported" xml:space="preserve">
+    <value>Result templates are not supported in .NetStandard</value>
+  </data>
+  <data name="FileContentResponseSizeExceeded" xml:space="preserve">
+    <value>File content size is more than 512KB. Make sure that requested file size is less than 512KB.</value>
+  </data>
+  <data name="ResponseSizeExceeded" xml:space="preserve">
+    <value>Cannot query datasource with response size greater than 2 MB.</value>
+  </data>
+  <data name="InvalidEndpointAuthorizer" xml:space="preserve">
+    <value>No connection authorizer was found for the service connection of type '{0}'</value>
+  </data>
+  <data name="MaxResponseParsingDepthReached" xml:space="preserve">
+    <value>Cannot process objects beyond nested level {0}.</value>
+  </data>
+  <data name="ExecuteServiceEndpointFailed" xml:space="preserve">
+    <value>Executing the service connection requested failed.</value>
+  </data>
+  <data name="MaxStringLengthReached" xml:space="preserve">
+    <value>Cannot process string with the length more than {0}.</value>
+  </data>
+  <data name="InvalidBrokerTokenArgument" xml:space="preserve">
+    <value>Invalid {0} specified in bearer token argument.</value>
+  </data>
+  <data name="InvalidDateTimeFormatException" xml:space="preserve">
+    <value>{0} is a invalid Datetime format.</value>
+  </data>
+  <data name="KeyValueCountMismatch" xml:space="preserve">
+    <value>Key and value count mismatch detected while parsing JSON response</value>
+  </data>
+  <data name="InvalidResponseSize" xml:space="preserve">
+    <value>Response body is too long and exceeds the size of {0} bytes.</value>
+  </data>
+  <data name="InvalidContentTypeArgument" xml:space="preserve">
+    <value>{0} content type is not supported only application/json is supported.</value>
+  </data>
+  <data name="TemplateEvaluationTimeExceeded" xml:space="preserve">
+    <value>String '{0}' exceeded template evaluation timeout of {1} ms.</value>
+  </data>
+  <data name="OutofRangeDateTimeException" xml:space="preserve">
+    <value>{0} is outside the range of dates supported by the calendar.</value>
+  </data>
+  <data name="InvalidBodyArgument" xml:space="preserve">
+    <value>Size of the post body exceeds the size limit of {0} bytes.</value>
+  </data>
+  <data name="InvalidGuidFormatException" xml:space="preserve">
+    <value>'{0}' is not a valid Guid format specifier.</value>
+  </data>
+  <data name="InvalidJsonResponse" xml:space="preserve">
+    <value>Unable to parse response as JSON object. Error: {0}</value>
+  </data>
+  <data name="MaxTokenLimitReached" xml:space="preserve">
+    <value>Cannot process tokens beyond the maximum number of token {0}.</value>
+  </data>
+  <data name="InvaludMaxRepeatCount" xml:space="preserve">
+    <value>Invalid value for parameter MaxRepeatCount mentioned.</value>
+  </data>
+  <data name="SelectorParseError" xml:space="preserve">
+    <value>Selector could not parse response.</value>
+  </data>
+  <data name="InvalidMethod" xml:space="preserve">
+    <value>{0} is not supported method. Only GET and POST is suppoted.</value>
+  </data>
+  <data name="InvalidCertificate" xml:space="preserve">
+    <value>Invalid certificate.</value>
+  </data>
+  <data name="InvalidJsonStringArgument" xml:space="preserve">
+    <value>JSON argument '{0}' specified is invalid.</value>
+  </data>
+  <data name="InvalidMustacheExpressionParameter" xml:space="preserve">
+    <value>Invalid parameter {0} passed for the block helper {1}</value>
+  </data>
+  <data name="UrlCannotBeEmpty" xml:space="preserve">
+    <value>URL for HttpRequest cannot be empty.</value>
+  </data>
+  <data name="HttpTimeoutException" xml:space="preserve">
+    <value>The HTTP call was timed out because it exceeded {0} seconds.</value>
+  </data>
+  <data name="InvalidSelectorType" xml:space="preserve">
+    <value>No Response Selector suitable for selector '{0}'</value>
+  </data>
+  <data name="UrlIsNotWhiteListed" xml:space="preserve">
+    <value>Request URL '{0}' is not an allowed URL. Use either service connection URL or current collection URL as request URL.</value>
+  </data>
+  <data name="InvalidDateTimeStringRepresentationException" xml:space="preserve">
+    <value>{0} does not contain a valid string representation of a date and time.</value>
+  </data>
+  <data name="ResourceUrlNotSupported" xml:space="preserve">
+    <value>Resource URL is not supported for the service connection type {0} and authentication scheme {1}.</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>The specified URL {0} is not a valid URL.</value>
+  </data>
+  <data name="InvalidEndpointVariable" xml:space="preserve">
+    <value>Variable with name {0} could not be found for the given service connection.</value>
+  </data>
+  <data name="CannotSortBeyondMaxObjectCount" xml:space="preserve">
+    <value>Cannot sort objects which is more than the maximum count {0}.</value>
+  </data>
+  <data name="ShouldStartWithEndpointUrlError" xml:space="preserve">
+    <value>Only URLs starting with {{endpoint.url}} can be called.</value>
+  </data>
+  <data name="MaxArrayLimitReached" xml:space="preserve">
+    <value>Cannot process array with the length more than {0}.</value>
+  </data>
+  <data name="NoCertificate" xml:space="preserve">
+    <value>Could not extract the certificate.</value>
+  </data>
+  <data name="InvalidFormatSpecifierInRecursiveFormat" xml:space="preserve">
+    <value>Format specifier mentioned in the block helper recursiveFormat is invalid.</value>
+  </data>
+  <data name="RegexMatchTimeExceeded" xml:space="preserve">
+    <value>String '{0}' exceeded regex match timeout of {1} ms.</value>
+  </data>
+</root>

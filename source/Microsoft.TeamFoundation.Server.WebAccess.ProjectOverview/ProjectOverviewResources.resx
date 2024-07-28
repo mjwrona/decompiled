@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProjectDescription_ErrorSaving" xml:space="preserve">
+    <value>Failed to save the project description</value>
+  </data>
+  <data name="ActivityPanel_DropDownText_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="WikiPageTitleText" xml:space="preserve">
+    <value>Wiki - {0}</value>
+  </data>
+  <data name="ProjectDescription_SaveButtonLabel" xml:space="preserve">
+    <value>save description</value>
+  </data>
+  <data name="ActivityPanel_DropDownLabel" xml:space="preserve">
+    <value>Time range for showing activity data</value>
+  </data>
+  <data name="Favorite_ActiveText" xml:space="preserve">
+    <value>Remove from favorites</value>
+  </data>
+  <data name="ProjectDescription_DiscardDialogOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ProjectDescription_UnsavedDescriptionNavigateAwayMessage" xml:space="preserve">
+    <value>Description changes you made may not be saved.</value>
+  </data>
+  <data name="Upsells_Build_Heading" xml:space="preserve">
+    <value>Use continuous integration</value>
+  </data>
+  <data name="ProjectLanguage_ItemNameAriaLabel" xml:space="preserve">
+    <value>{0} Language  {1} percent   </value>
+  </data>
+  <data name="Upsells_Release_Heading" xml:space="preserve">
+    <value>Use continuous delivery</value>
+  </data>
+  <data name="MetricContainer_Git" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="BuildUpsell_SetupBuild" xml:space="preserve">
+    <value>Set up a pipeline</value>
+  </data>
+  <data name="ProjectMembers_ManageTeamMembers" xml:space="preserve">
+    <value>Manage Team Members</value>
+  </data>
+  <data name="Upsells_ClearButtonTooltip" xml:space="preserve">
+    <value>Dismiss this message</value>
+  </data>
+  <data name="Upsells_Release_LearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=836562</value>
+  </data>
+  <data name="Upsells_Release_LearnMoreText" xml:space="preserve">
+    <value>Learn more about continuous delivery</value>
+  </data>
+  <data name="VisibilityTag_VisibilityValueInvalid" xml:space="preserve">
+    <value>{0} is not a valid visibility value.</value>
+  </data>
+  <data name="RepositorySelector_ChangeToWikiHomePage" xml:space="preserve">
+    <value>Display wiki homepage for this project</value>
+  </data>
+  <data name="Tag_DeleteButtonAriaLabel" xml:space="preserve">
+    <value>Delete {0} Tag </value>
+  </data>
+  <data name="CloseButtonAriaLabel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Tag_ItemNameAriaLabel" xml:space="preserve">
+    <value>{0} Tag</value>
+  </data>
+  <data name="MetricsClosed" xml:space="preserve">
+    <value>closed</value>
+  </data>
+  <data name="CodeMetrics_DataUnavailable_DetailFormat" xml:space="preserve">
+    <value>Activity data for the code section is currently incomplete. Showing the last {0} days of data.</value>
+  </data>
+  <data name="JobMonitor_JobFailed" xml:space="preserve">
+    <value>Job failed</value>
+  </data>
+  <data name="ProjectDescription_AdminPlaceHolder" xml:space="preserve">
+    <value>Briefly describe your project...</value>
+  </data>
+  <data name="CodeMetric_Chart_TimeUnit_Day" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="Error_RefreshLinkText" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ChangeReadmeDialog_WikiHomePageErrorMessage" xml:space="preserve">
+    <value>Wiki homepage is not available. {0} to create your wiki homepage.</value>
+  </data>
+  <data name="Favorite_InactiveText" xml:space="preserve">
+    <value>Add to favorites</value>
+  </data>
+  <data name="ChangeReadmeDialog_ConfirmationMessage" xml:space="preserve">
+    <value>Any changes will be applicable to all visitors to the project page.</value>
+  </data>
+  <data name="ReadmeRepoNotFoundText" xml:space="preserve">
+    <value>[{0}]</value>
+  </data>
+  <data name="ChangeReadmeDialog_WikiHomePageText" xml:space="preserve">
+    <value>Wiki homepage</value>
+  </data>
+  <data name="ProjectMembers_ImageOf" xml:space="preserve">
+    <value>Image of {0}</value>
+  </data>
+  <data name="ProjectTags_ErrorLoadingTags" xml:space="preserve">
+    <value>Failed to load project tags. Refresh to try again.</value>
+  </data>
+  <data name="Readme_LearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=838521</value>
+  </data>
+  <data name="GitMetrics_PullRequests" xml:space="preserve">
+    <value>Pull requests</value>
+  </data>
+  <data name="AddTagLabel" xml:space="preserve">
+    <value>Add tag...</value>
+  </data>
+  <data name="MetricContainer_Work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="MetricContainer_Tfvc" xml:space="preserve">
+    <value>Team Foundation Version Control</value>
+  </data>
+  <data name="MetricContainer_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="ActivityPanel_DropDownText_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="Upsells_Work_ButtonText" xml:space="preserve">
+    <value>Add Work</value>
+  </data>
+  <data name="Readme_ReadmeRepoNotFound" xml:space="preserve">
+    <value>The selected repository to display 'README.md' cannot be found. Please choose a different repository.</value>
+  </data>
+  <data name="ReleaseUpsell_ReleaseEmpty" xml:space="preserve">
+    <value>No releases yet</value>
+  </data>
+  <data name="ReleaseMetrics_NoDeployements" xml:space="preserve">
+    <value>No deployments</value>
+  </data>
+  <data name="Upsells_Code_Heading" xml:space="preserve">
+    <value>Manage code and builds in one place.</value>
+  </data>
+  <data name="ChangeReadmeDialog_ClickHere" xml:space="preserve">
+    <value>Click here</value>
+  </data>
+  <data name="MetricContainer_BuildRelease" xml:space="preserve">
+    <value>Pipelines</value>
+  </data>
+  <data name="MetricContainer_Repos" xml:space="preserve">
+    <value>Repos</value>
+  </data>
+  <data name="MetricContainer_Boards" xml:space="preserve">
+    <value>Boards</value>
+  </data>
+  <data name="CodeMetric_Authors_Format" xml:space="preserve">
+    <value>{0}\nby {1} authors</value>
+  </data>
+  <data name="ProjectDescription_DiscardDialogCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="InsufficientReadmePermission" xml:space="preserve">
+    <value>You do not have sufficient permissions to complete the operation.</value>
+  </data>
+  <data name="WorkMetrics_WorkItems" xml:space="preserve">
+    <value>Work items</value>
+  </data>
+  <data name="Upsells_Build_ButtonText" xml:space="preserve">
+    <value>Set up a pipeline</value>
+  </data>
+  <data name="ProjectDescription_LessButtonText" xml:space="preserve">
+    <value>Less</value>
+  </data>
+  <data name="Error_RefreshMessageFormat" xml:space="preserve">
+    <value>{0} the page and try again.</value>
+  </data>
+  <data name="ReadmeToolbar_NoReadme" xml:space="preserve">
+    <value>No README.md found in</value>
+  </data>
+  <data name="ProjectDescription_MoreButtonLabel" xml:space="preserve">
+    <value>Show more</value>
+  </data>
+  <data name="Upsells_Build_Description" xml:space="preserve">
+    <value>Improve code quality by detecting breaking changes as soon as they happen.</value>
+  </data>
+  <data name="WorkUpsell_WorkEmpty" xml:space="preserve">
+    <value>No work items yet</value>
+  </data>
+  <data name="BuildMetrics_Succeeded" xml:space="preserve">
+    <value>Builds succeeded</value>
+  </data>
+  <data name="Readme_RepositorySelectorLabel" xml:space="preserve">
+    <value>Repository selector for readme</value>
+  </data>
+  <data name="ProjectTags_ErrorSaving" xml:space="preserve">
+    <value>Failed to save project tags</value>
+  </data>
+  <data name="MetricsCreated" xml:space="preserve">
+    <value>created</value>
+  </data>
+  <data name="ReadmeCTA_LearnMore" xml:space="preserve">
+    <value>Learn more about README files and what to include</value>
+  </data>
+  <data name="ProjectDescription_DiscardButtonLabel" xml:space="preserve">
+    <value>discard changes</value>
+  </data>
+  <data name="CodeUpsell_CodeEmpty" xml:space="preserve">
+    <value>No code yet</value>
+  </data>
+  <data name="TagsPanel_Header" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="CodeMetrics_CommitsAndChangesets" xml:space="preserve">
+    <value>Commits and Changesets</value>
+  </data>
+  <data name="EmptyProject_Heading_MemberAccess" xml:space="preserve">
+    <value>Get started with your new project!</value>
+  </data>
+  <data name="ProjectTags_AriaLabel" xml:space="preserve">
+    <value>Project Tags</value>
+  </data>
+  <data name="ReadmeCTA_Heading" xml:space="preserve">
+    <value>Add a README</value>
+  </data>
+  <data name="NoProjectWikiFound" xml:space="preserve">
+    <value>No project wiki is present in this project. </value>
+  </data>
+  <data name="ProjectDescription_UnsavedDescriptionDiscardMessage" xml:space="preserve">
+    <value>You have unsaved changes made to the project description. Are you sure you want to discard these changes?</value>
+  </data>
+  <data name="Upsells_Release_Description" xml:space="preserve">
+    <value>Build, test, and release your software faster and more frequently.</value>
+  </data>
+  <data name="Upsells_Work_Description" xml:space="preserve">
+    <value>Stay on top of issues with customizable backlogs and boards.</value>
+  </data>
+  <data name="ProjectTags_MaxCountReached" xml:space="preserve">
+    <value>The number of tags reached the limit. Up to {0} tags are allowed.</value>
+  </data>
+  <data name="Upsells_Build_LearnMoreText" xml:space="preserve">
+    <value>Learn more about continuous integration</value>
+  </data>
+  <data name="Upsells_Build_LearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=834365</value>
+  </data>
+  <data name="ChangeReadmeDialog_Title" xml:space="preserve">
+    <value>Select file to display</value>
+  </data>
+  <data name="VisibilityTag_PrivateProject_Tooltip_Text" xml:space="preserve">
+    <value>Shared with members of the project</value>
+  </data>
+  <data name="ProjectDescription_LessButtonLabel" xml:space="preserve">
+    <value>Show less</value>
+  </data>
+  <data name="ProjectTags_LastCharactersNotAllowedAdded" xml:space="preserve">
+    <value>A tag name cannot end with '{0}'.</value>
+  </data>
+  <data name="ActivityPanel_Header" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="ReadmeCTA_EditLabel" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CodeMetric_Chart_TimeUnit_Hour" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="CodeMetrics_GraphUnavailable" xml:space="preserve">
+    <value>Graph Unavailable</value>
+  </data>
+  <data name="RepositorySelector_ChangeToReadme" xml:space="preserve">
+    <value>Display README.md from selected repository for this project</value>
+  </data>
+  <data name="MetricsCompleted" xml:space="preserve">
+    <value>completed</value>
+  </data>
+  <data name="ProjectMembers_ErrorLoadingMembers" xml:space="preserve">
+    <value>Failed to load project members. Refresh to try again.</value>
+  </data>
+  <data name="BuildMetrics_NoBuild" xml:space="preserve">
+    <value>No builds</value>
+  </data>
+  <data name="RepositorySelector_Discard" xml:space="preserve">
+    <value>Discard repository change</value>
+  </data>
+  <data name="VisibilityTag_OrgVisibleProject_Tooltip_Text" xml:space="preserve">
+    <value>Shared with people in your enterprise</value>
+  </data>
+  <data name="ProjectDescription_MoreButtonText" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="ReleaseMetrics_Succeeded" xml:space="preserve">
+    <value>Deployments succeeded</value>
+  </data>
+  <data name="ProjectDescription_NonAdminPlaceHolder" xml:space="preserve">
+    <value>No description provided</value>
+  </data>
+  <data name="WikiHomePageNotFoundText" xml:space="preserve">
+    <value>[Homepage]</value>
+  </data>
+  <data name="ProjectTags_AdminPlaceholder" xml:space="preserve">
+    <value>Add tags</value>
+  </data>
+  <data name="LikeHeartTooltipUnliked" xml:space="preserve">
+    <value>Like this project</value>
+  </data>
+  <data name="Readme_RepoChange_NonAdmin_Tooltip_Content" xml:space="preserve">
+    <value>Contact the project administrator to show a README.md from a different repository or show the wiki homepage.</value>
+  </data>
+  <data name="Loading_Label" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="ChangeReadmeDialog_CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ProjectLanguages_AriaLabel" xml:space="preserve">
+    <value>Project Languages</value>
+  </data>
+  <data name="ProjectTags_MaxCountExceeded" xml:space="preserve">
+    <value>The number of tags exceeds the limit. Up to {0} tags are allowed.</value>
+  </data>
+  <data name="MembersAndActivityRegion_Label" xml:space="preserve">
+    <value>Members and Activity</value>
+  </data>
+  <data name="CodeUpsell_AddCode" xml:space="preserve">
+    <value>Add Code</value>
+  </data>
+  <data name="ProjectTags_SaveButtonLabel" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ProjectInformationRegion_Label" xml:space="preserve">
+    <value>Project Information</value>
+  </data>
+  <data name="ReadmeFileTitleText" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="ProjectTags_TagCharacterLimitExceeded" xml:space="preserve">
+    <value>A tag cannot be greater than {0} characters long.</value>
+  </data>
+  <data name="MetricContainer_Pipelines" xml:space="preserve">
+    <value>Pipelines</value>
+  </data>
+  <data name="ProjectTags_SaveButtonAriaLabel" xml:space="preserve">
+    <value>Save Tags</value>
+  </data>
+  <data name="BuildUpsell_BuildEmpty" xml:space="preserve">
+    <value>No builds yet</value>
+  </data>
+  <data name="ReleaseUpsell_SetupRelease" xml:space="preserve">
+    <value>Set up a release pipeline</value>
+  </data>
+  <data name="CodeMetrics_DataUnavailable_ConciseMessage" xml:space="preserve">
+    <value>Activity data for the code section is currently incomplete.</value>
+  </data>
+  <data name="Upsells_Code_LearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=836563</value>
+  </data>
+  <data name="Upsells_Code_LearnMoreText" xml:space="preserve">
+    <value>Learn more about importing repositories</value>
+  </data>
+  <data name="ProjectTags_CharactersNotAllowedAdded" xml:space="preserve">
+    <value>A tag name cannot contain '{0}'.</value>
+  </data>
+  <data name="Upsells_Work_Heading" xml:space="preserve">
+    <value>Organize your work</value>
+  </data>
+  <data name="Upsells_Code_Description" xml:space="preserve">
+    <value>Import your repository to keep your whole dev pipeline together.</value>
+  </data>
+  <data name="ChangeReadmeDialog_ChangeButtonText" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="JobMonitor_JobCancelled" xml:space="preserve">
+    <value>Job canceled</value>
+  </data>
+  <data name="ProjectDescription_DiscardChangesTitle" xml:space="preserve">
+    <value>Discard changes</value>
+  </data>
+  <data name="ChangeReadmeDialog_SourceRepositoryText" xml:space="preserve">
+    <value>Source repository</value>
+  </data>
+  <data name="TfvcMetrics_Changesets" xml:space="preserve">
+    <value>Changesets</value>
+  </data>
+  <data name="Upsells_Work_LearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=836907</value>
+  </data>
+  <data name="Upsells_Work_LearnMoreText" xml:space="preserve">
+    <value>Learn more about Agile Tools</value>
+  </data>
+  <data name="EmptyProject_Heading_PublicAccess" xml:space="preserve">
+    <value>Let’s get started!</value>
+  </data>
+  <data name="ReadmeRegion_Label" xml:space="preserve">
+    <value>Readme</value>
+  </data>
+  <data name="ReadmeCTA_EditInWikiLabel" xml:space="preserve">
+    <value>Edit in Wiki</value>
+  </data>
+  <data name="GitMetrics_Commits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
+  <data name="Tag_AddButtonAriaLabel" xml:space="preserve">
+    <value>Add Tag</value>
+  </data>
+  <data name="CodeMetric_Table_Header" xml:space="preserve">
+    <value>Number of {0} per {1}</value>
+  </data>
+  <data name="ProjectOverview_ErrorLoadingPageData" xml:space="preserve">
+    <value>We're having trouble loading this page.</value>
+  </data>
+  <data name="ReadmeCTA_Description" xml:space="preserve">
+    <value>Help others learn about your project</value>
+  </data>
+  <data name="ProjectMembers_Title" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="Upsells_Release_ButtonText" xml:space="preserve">
+    <value>Set up a release pipeline</value>
+  </data>
+  <data name="Upsells_Code_ButtonText" xml:space="preserve">
+    <value>Import repository</value>
+  </data>
+  <data name="ProjectVisibilityEveryoneInTenant" xml:space="preserve">
+    <value>Enterprise</value>
+  </data>
+  <data name="WorkUpsell_AddWork" xml:space="preserve">
+    <value>Add Work</value>
+  </data>
+  <data name="ReadmeCTA_Create" xml:space="preserve">
+    <value>Create README</value>
+  </data>
+  <data name="VisibilityTag_PublicProject_Tooltip_Text" xml:space="preserve">
+    <value>Anyone on the internet can view</value>
+  </data>
+  <data name="ReadmeCTA_ChangeLabel" xml:space="preserve">
+    <value>Change</value>
+  </data>
+</root>

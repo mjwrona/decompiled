@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WikiNotFound" xml:space="preserve">
+    <value>Could not find a Wiki with the provided Wiki Id.</value>
+  </data>
+  <data name="WikiVersionInvalidOrDoesNotExist" xml:space="preserve">
+    <value>The version '{0}' either is invalid or does not exist.</value>
+  </data>
+  <data name="WikiPageNameHasReservedCharacters" xml:space="preserve">
+    <value>The page name cannot contain the following reserved characters {0}.</value>
+  </data>
+  <data name="PageReorderedDefaultComment" xml:space="preserve">
+    <value>Reordered page '{0}' to order '{1}'.</value>
+  </data>
+  <data name="WikiPageOperationNotSupported" xml:space="preserve">
+    <value>The wiki page operation is not supported on wikis of type '{0}'.</value>
+  </data>
+  <data name="WikiPageOperationFailedWithStatus" xml:space="preserve">
+    <value>The wiki page operation failed with ref update status {0}</value>
+  </data>
+  <data name="PageEditedDefaultComment" xml:space="preserve">
+    <value>Updated page '{0}'.</value>
+  </data>
+  <data name="ErrorMessagePageHasConflicts" xml:space="preserve">
+    <value>This page has been updated by another user since it was loaded for editing and your changes cannot be saved. Copy your edited version, refresh the page to receive the latest version and apply your changes.</value>
+  </data>
+  <data name="ErrorMessageWritePermissionRequired" xml:space="preserve">
+    <value>User does not have write permissions for this wiki.</value>
+  </data>
+  <data name="MalformedWikiData" xml:space="preserve">
+    <value>The supplied wiki data is malformed</value>
+  </data>
+  <data name="ErrorMessageInvalidPageId" xml:space="preserve">
+    <value>Page id should be a positive integer.</value>
+  </data>
+  <data name="ErrorMessageReadOperationInvalidPagePath" xml:space="preserve">
+    <value>The provided path value is either null or empty. Please provide a valid page path.</value>
+  </data>
+  <data name="InvalidJsonBody" xml:space="preserve">
+    <value>The body of the request contains invalid Json. Json parsing failed with exception {0}.</value>
+  </data>
+  <data name="TeamProjectRequired" xml:space="preserve">
+    <value>A team project Id or name is required in the URL or request body.</value>
+  </data>
+  <data name="RequestMaxSizeExceeded" xml:space="preserve">
+    <value>The maximum request size of {0} bytes was exceeded.</value>
+  </data>
+  <data name="WikiAttachmentOperationNotSupported" xml:space="preserve">
+    <value>The wiki attachment operation is not supported on wikis of type '{0}'.</value>
+  </data>
+  <data name="PageDeletedDefaultComment" xml:space="preserve">
+    <value>Deleted page '{0}'. </value>
+  </data>
+  <data name="GetPageInvalidRecursionLevelError" xml:space="preserve">
+    <value>The provided recursion level data is invalid.</value>
+  </data>
+  <data name="WikiPagesBatchInvalidContinuationToken" xml:space="preserve">
+    <value>Invalid ContinuationToken '{0}'.</value>
+  </data>
+  <data name="ErrorMessageWriteOperationInvalidPagePath" xml:space="preserve">
+    <value>The provided path value is either null, empty or wiki root. Please provide a valid page path.</value>
+  </data>
+  <data name="ErrorMessageStalePageObjectId" xml:space="preserve">
+    <value>The wiki page has already been updated by another client, so you cannot update it. Please try again.</value>
+  </data>
+  <data name="WikiAttachmentContentNullMessage" xml:space="preserve">
+    <value>The attachment content cannot be null.</value>
+  </data>
+  <data name="CreateAttachmentFailedWithMessage" xml:space="preserve">
+    <value>The wiki attachment creation failed with message : {0}</value>
+  </data>
+  <data name="WikiPageOperationFailedWithMessage" xml:space="preserve">
+    <value>The wiki page operation failed with message : {0}</value>
+  </data>
+  <data name="WikiPageNotFound" xml:space="preserve">
+    <value>Wiki page ‘{0}’ could not be found. Ensure that the path of the page is correct and the page exists.</value>
+  </data>
+  <data name="InvalidParametersOrNull" xml:space="preserve">
+    <value>The combination of parameters is either invalid or null.</value>
+  </data>
+  <data name="WikiAttachmentCommitMessage" xml:space="preserve">
+    <value>Saving wiki attachment '{0}'.</value>
+  </data>
+  <data name="PageAddedDefaultComment" xml:space="preserve">
+    <value>Added page '{0}'.</value>
+  </data>
+  <data name="ErrorMessageInvalidWikiVersion" xml:space="preserve">
+    <value>The versionType should be 'branch' and version cannot not be null</value>
+  </data>
+  <data name="MismatchedProjectId" xml:space="preserve">
+    <value>The project Id in the URI does not match the project Id in the request.</value>
+  </data>
+  <data name="PageRenamedDefaultComment" xml:space="preserve">
+    <value>Renamed page '{0}' to '{1}'.</value>
+  </data>
+</root>

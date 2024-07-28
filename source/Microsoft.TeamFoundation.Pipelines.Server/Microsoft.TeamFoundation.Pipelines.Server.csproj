@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Pipelines.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC5D1E06-7697-4CCE-8D6E-22BD186F362D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Pipelines.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Pipelines.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server" />
+    <Reference Include="Microsoft.Azure.Pipelines.Deployment.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Deployment.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.WebApi" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Rest.ClientRuntime" />
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Routes" />
+    <Reference Include="Microsoft.TeamFoundation.Build2.Server" />
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.ConnectedService.Server" />
+    <Reference Include="Microsoft.TeamFoundation.ConnectedService.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Core.Server.Plugins" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Server" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.ExternalIntegration.HostIdMapping">
+      <HintPath>lib\Microsoft.TeamFoundation.ExternalIntegration.HostIdMapping.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.ExternalIntegration.Utilities">
+      <HintPath>lib\Microsoft.TeamFoundation.ExternalIntegration.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server" />
+    <Reference Include="Microsoft.TeamFoundation.Pipelines.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Pipelines.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Common" />
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.Sdk.Server" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommentCommandProvider.cs" />
+    <Compile Include="CommentResponseBuilder.cs" />
+    <Compile Include="AppDescriptorController.cs" />
+    <Compile Include="RecommendationsInputsExtensions.cs" />
+    <Compile Include="RecalculateResourceTriggersJob.cs" />
+    <Compile Include="RecalculateResourceTriggersJobData.cs" />
+    <Compile Include="RecalculateResourceTriggersJobDataUtilities.cs" />
+    <Compile Include="GitHubAppPushHandlerJobData.cs" />
+    <Compile Include="GitHubAppPushHandlerJobExtension.cs" />
+    <Compile Include="ProviderServiceConnectionEvent.cs" />
+    <Compile Include="RecommendationsInputs.cs" />
+    <Compile Include="LanguageInfo.cs" />
+    <Compile Include="ResultCallbackInfo.cs" />
+    <Compile Include="RepositoryContext.cs" />
+    <Compile Include="IPipelineHostIdMappingRouter.cs" />
+    <Compile Include="PipelinesVsassetsUrlResolver.cs" />
+    <Compile Include="BuildFrameworkDetectionService.cs" />
+    <Compile Include="BuildFrameworkDetectorProviderService.cs" />
+    <Compile Include="AzureFunctionAppDetector.cs" />
+    <Compile Include="DockerBuildFrameworkDetector.cs" />
+    <Compile Include="DockerfileParser.cs" />
+    <Compile Include="IDockerfileInfo.cs" />
+    <Compile Include="IDockerBuildStage.cs" />
+    <Compile Include="BaseImage.cs" />
+    <Compile Include="PowershellBuildFrameworkDetector.cs" />
+    <Compile Include="InstrumentedFileContentsProvider.cs" />
+    <Compile Include="StatisticsBuilder.cs" />
+    <Compile Include="DetectorStats.cs" />
+    <Compile Include="StatisticsTimer.cs" />
+    <Compile Include="DetectedBuildFrameworkWeightingService.cs" />
+    <Compile Include="IDetectedBuildFrameworkWeightingService.cs" />
+    <Compile Include="IPipelineFragmentProvider.cs" />
+    <Compile Include="IPipelineFragmentProviderService.cs" />
+    <Compile Include="PipelineFragmentProviderService.cs" />
+    <Compile Include="DockerPipelineFragmentProvider.cs" />
+    <Compile Include="DotNetCorePipelineFragmentProvider.cs" />
+    <Compile Include="FallbackPipelineFragmentProvider.cs" />
+    <Compile Include="MsBuildPipelineFragmentProvider.cs" />
+    <Compile Include="NodeJsPipelineFragmentProvider.cs" />
+    <Compile Include="PhpPipelineFragmentProvider.cs" />
+    <Compile Include="PipelineFragmentProviderBase.cs" />
+    <Compile Include="PowershellPipelineFragmentProvider.cs" />
+    <Compile Include="PythonPipelineFragmentProvider.cs" />
+    <Compile Include="ConnectionsService.cs" />
+    <Compile Include="ConfigurationsController.cs" />
+    <Compile Include="ConnectionsController.cs" />
+    <Compile Include="DetectedBuildFrameworksController.cs" />
+    <Compile Include="EventsController.cs" />
+    <Compile Include="TemplateResourcesController.cs" />
+    <Compile Include="EventsService.cs" />
+    <Compile Include="PipelineConnectionException.cs" />
+    <Compile Include="PipelineEventException.cs" />
+    <Compile Include="PipelineStatusException.cs" />
+    <Compile Include="TemplateNotFoundException.cs" />
+    <Compile Include="BuildFrameworkDetectionException.cs" />
+    <Compile Include="FileContentsProviderException.cs" />
+    <Compile Include="InvalidTokenException.cs" />
+    <Compile Include="AppDescriptorNotFoundException.cs" />
+    <Compile Include="AppDescriptorEmptyException.cs" />
+    <Compile Include="BuildEventHelper.cs" />
+    <Compile Include="BuildServiceHelper.cs" />
+    <Compile Include="ExternalGitPushYamlTriggerMaterializationJob.cs" />
+    <Compile Include="ExternalGitPushYamlHandlerJobData.cs" />
+    <Compile Include="ExternalGitPushYamlHandlerJobDataUtilities.cs" />
+    <Compile Include="CIDataExtensions.cs" />
+    <Compile Include="ConfigurationExtensions.cs" />
+    <Compile Include="ConfigurationFileExtensions.cs" />
+    <Compile Include="DetectedBuildFrameworkExtensions.cs" />
+    <Compile Include="HttpRequestExtensions.cs" />
+    <Compile Include="PipelineConnectionExtensions.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="TaskHubExtensions.cs" />
+    <Compile Include="NaturalStringComparer.cs" />
+    <Compile Include="PipelinesHostIdMappingManager.cs" />
+    <Compile Include="RepositoryInformationHelper.cs" />
+    <Compile Include="ServiceEndpointHelper.cs" />
+    <Compile Include="StringExtractionJsonHelper.cs" />
+    <Compile Include="PullRequestHandlerJobData.cs" />
+    <Compile Include="MergeJobStatus.cs" />
+    <Compile Include="PullRequestHandlerJobUtilities.cs" />
+    <Compile Include="ResourceHelper.cs" />
+    <Compile Include="PipelineHelper.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="TraceExtensions.cs" />
+    <Compile Include="Tracer`1.cs" />
+    <Compile Include="DotNetCoreBuildFrameworkDetector.cs" />
+    <Compile Include="FallbackBuildFrameworkDetector.cs" />
+    <Compile Include="MsBuildBuildFrameworkDetector.cs" />
+    <Compile Include="MsBuildProjectParser.cs" />
+    <Compile Include="VsProjectFile.cs" />
+    <Compile Include="VsProjectType.cs" />
+    <Compile Include="FilePath.cs" />
+    <Compile Include="PythonRequirementsParser.cs" />
+    <Compile Include="FileContentsProviderExtensions.cs" />
+    <Compile Include="IBuildFrameworkDetectionService.cs" />
+    <Compile Include="IBuildFrameworkDetector.cs" />
+    <Compile Include="IBuildFrameworkDetectorProviderService.cs" />
+    <Compile Include="IFileContentsProvider.cs" />
+    <Compile Include="CachingFileContentsProvider.cs" />
+    <Compile Include="DetectedBuildFramework.cs" />
+    <Compile Include="DetectedBuildTarget.cs" />
+    <Compile Include="PhpBuildFrameworkDetector.cs" />
+    <Compile Include="NodeJsBuildFrameworkDetector.cs" />
+    <Compile Include="IConnectionsService.cs" />
+    <Compile Include="IEventsService.cs" />
+    <Compile Include="IPipelineConnectionCreator.cs" />
+    <Compile Include="IPipelineEventsHandler.cs" />
+    <Compile Include="IPipelineEventHandler.cs" />
+    <Compile Include="IPipelinesExternalApp.cs" />
+    <Compile Include="IRepositoryAnalysisService.cs" />
+    <Compile Include="IResourceCreationService.cs" />
+    <Compile Include="IResourceTemplateCreator.cs" />
+    <Compile Include="ITemplatesSource.cs" />
+    <Compile Include="ITemplatesService.cs" />
+    <Compile Include="ITreeAnalysisProviderService.cs" />
+    <Compile Include="ExternalAppInstallationInfo.cs" />
+    <Compile Include="ProviderInstallationRepositoriesEvent.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ConfigurationFile.cs" />
+    <Compile Include="ProviderInstallationEvent.cs" />
+    <Compile Include="ProviderMarketplacePurchaseEvent.cs" />
+    <Compile Include="MarketplacePurchase.cs" />
+    <Compile Include="PipelineConstants.cs" />
+    <Compile Include="GitHubProviderConstants.cs" />
+    <Compile Include="JiraProviderConstants.cs" />
+    <Compile Include="TfsGitProviderConstants.cs" />
+    <Compile Include="PipelineCustomerIntelligenceInfo.cs" />
+    <Compile Include="PipelineTemplateRenderConstants.cs" />
+    <Compile Include="PipelinesFeatures.cs" />
+    <Compile Include="IPipelineSourceProvider.cs" />
+    <Compile Include="PythonBuildFrameworkDetector.cs" />
+    <Compile Include="PipelinesResourceTemplateCreator.cs" />
+    <Compile Include="RepositoryAnalysisService.cs" />
+    <Compile Include="PipelinesUrlResolver.cs" />
+    <Compile Include="SourceProviderFileContentsProvider.cs" />
+    <Compile Include="TreeAnalysisExtensions.cs" />
+    <Compile Include="ResourceCreationService.cs" />
+    <Compile Include="ResourcesTemplatesSource.cs" />
+    <Compile Include="TemplateResourceNames.cs" />
+    <Compile Include="TemplatesService.cs" />
+    <Compile Include="TreeAnalysisProviderService.cs" />
+    <Compile Include="TemplateIds.cs" />
+    <Compile Include="PipelinesResources.cs" />
+    <Compile Include="android_pipelines.cs" />
+    <Compile Include="ant_pipelines.cs" />
+    <Compile Include="aspnetcorefunctionapptowindowsonazure_pipelines.cs" />
+    <Compile Include="aspnetcorenetframework_pipelines.cs" />
+    <Compile Include="aspnetcore_pipelines.cs" />
+    <Compile Include="aspnet_pipelines.cs" />
+    <Compile Include="deploytoexistingkubernetescluster_pipelines.cs" />
+    <Compile Include="dockerbuild_pipelines.cs" />
+    <Compile Include="dockercontainerfunctionapp_pipelines.cs" />
+    <Compile Include="dockercontainertoacr_pipelines.cs" />
+    <Compile Include="dockercontainertoaks_pipelines.cs" />
+    <Compile Include="dockercontainerwebapp_pipelines.cs" />
+    <Compile Include="dockercontainer_pipelines.cs" />
+    <Compile Include="empty_pipelines.cs" />
+    <Compile Include="gcc_pipelines.cs" />
+    <Compile Include="go_pipelines.cs" />
+    <Compile Include="gradle_pipelines.cs" />
+    <Compile Include="html_pipelines.cs" />
+    <Compile Include="jekyllcontainer_pipelines.cs" />
+    <Compile Include="mavenwebapptolinuxonazure_pipelines.cs" />
+    <Compile Include="maven_pipelines.cs" />
+    <Compile Include="netdesktop_pipelines.cs" />
+    <Compile Include="nodejsexpresswebapptolinuxonazure_pipelines.cs" />
+    <Compile Include="nodejsfunctionapptolinuxonazure_pipelines.cs" />
+    <Compile Include="nodejsreactwebapptolinuxonazure_pipelines.cs" />
+    <Compile Include="nodejswithangular_pipelines.cs" />
+    <Compile Include="nodejswithgrunt_pipelines.cs" />
+    <Compile Include="nodejswithgulp_pipelines.cs" />
+    <Compile Include="nodejswithreact_pipelines.cs" />
+    <Compile Include="nodejswithvue_pipelines.cs" />
+    <Compile Include="nodejswithwebpack_pipelines.cs" />
+    <Compile Include="nodejs_pipelines.cs" />
+    <Compile Include="phpwebapptolinuxonazure_pipelines.cs" />
+    <Compile Include="php_pipelines.cs" />
+    <Compile Include="powershellfunctionapptowindowsonazure_pipelines.cs" />
+    <Compile Include="pythondjango_pipelines.cs" />
+    <Compile Include="pythonfunctionapptolinuxonazure_pipelines.cs" />
+    <Compile Include="pythonpackage_pipelines.cs" />
+    <Compile Include="pythontolinuxwebapponazure_pipelines.cs" />
+    <Compile Include="ruby_pipelines.cs" />
+    <Compile Include="universalwindowsplatform_pipelines.cs" />
+    <Compile Include="xamarinandroid_pipelines.cs" />
+    <Compile Include="xamarinios_pipelines.cs" />
+    <Compile Include="xcode_pipelines.cs" />
+    <Compile Include="Helpers\RepositoryAnalysisRecommendationsJobHelper.cs" />
+    <Compile Include="Helpers\TemplateRules.cs" />
+    <Compile Include="Providers\JiraExternalApp.cs" />
+    <Compile Include="Providers\JiraConnectionCreator.cs" />
+    <Compile Include="Providers\JiraEventsHandler.cs" />
+    <Compile Include="Providers\JiraHelper.cs" />
+    <Compile Include="Providers\JiraAccountNameRouter.cs" />
+    <Compile Include="Providers\JiraProjectConfiguration.cs" />
+    <Compile Include="Providers\JiraConfiguration.cs" />
+    <Compile Include="Providers\JiraInstallationData.cs" />
+    <Compile Include="Providers\JiraLifecycleEventHandler.cs" />
+    <Compile Include="Providers\JiraLifecycleEventData.cs" />
+    <Compile Include="Providers\JiraConfigurationData.cs" />
+    <Compile Include="Providers\JiraProvider.cs" />
+    <Compile Include="Providers\IJiraConnectAppKeyVaultProvider2.cs" />
+    <Compile Include="Providers\JiraConnectAppKeyVaultProvider2.cs" />
+    <Compile Include="Providers\KeyVaultProvider2.cs" />
+    <Compile Include="Providers\GitHubExternalApp.cs" />
+    <Compile Include="Providers\GitHubGitEventHandler.cs" />
+    <Compile Include="Providers\GitHubCommentHandler.cs" />
+    <Compile Include="Providers\GitHubConnectionCreator.cs" />
+    <Compile Include="Providers\GitHubEventsHandler.cs" />
+    <Compile Include="Providers\GitHubHelper.cs" />
+    <Compile Include="Providers\GitHubInstallationEventHandler.cs" />
+    <Compile Include="Providers\GitHubPullRequestProvider.cs" />
+    <Compile Include="Providers\PipelinesGitHubInstallationIdRouter.cs" />
+    <Compile Include="Providers\IPipelinePullRequestProvider.cs" />
+    <Compile Include="Providers\GitHubProvider.cs" />
+    <Compile Include="Providers\IPipelineSourceProviderService.cs" />
+    <Compile Include="Providers\PipelineSourceProviderService.cs" />
+    <Compile Include="Commands\CommandNames.cs" />
+    <Compile Include="Commands\ListCommand.cs" />
+    <Compile Include="Commands\CommandJobHelper.cs" />
+    <Compile Include="Commands\WhereCommand.cs" />
+    <Compile Include="Commands\HelpCommand.cs" />
+    <Compile Include="Commands\ICommentCommand.cs" />
+    <Compile Include="Commands\RunCommand.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="android_pipelines.resx" />
+    <EmbeddedResource Include="ant_pipelines.resx" />
+    <EmbeddedResource Include="aspnet_pipelines.resx" />
+    <EmbeddedResource Include="aspnetcore_pipelines.resx" />
+    <EmbeddedResource Include="aspnetcorefunctionapptowindowsonazure_pipelines.resx" />
+    <EmbeddedResource Include="aspnetcorenetframework_pipelines.resx" />
+    <EmbeddedResource Include="deploytoexistingkubernetescluster_pipelines.resx" />
+    <EmbeddedResource Include="dockerbuild_pipelines.resx" />
+    <EmbeddedResource Include="dockercontainer_pipelines.resx" />
+    <EmbeddedResource Include="dockercontainerfunctionapp_pipelines.resx" />
+    <EmbeddedResource Include="dockercontainertoacr_pipelines.resx" />
+    <EmbeddedResource Include="dockercontainertoaks_pipelines.resx" />
+    <EmbeddedResource Include="dockercontainerwebapp_pipelines.resx" />
+    <EmbeddedResource Include="empty_pipelines.resx" />
+    <EmbeddedResource Include="gcc_pipelines.resx" />
+    <EmbeddedResource Include="go_pipelines.resx" />
+    <EmbeddedResource Include="gradle_pipelines.resx" />
+    <EmbeddedResource Include="html_pipelines.resx" />
+    <EmbeddedResource Include="jekyllcontainer_pipelines.resx" />
+    <EmbeddedResource Include="maven_pipelines.resx" />
+    <EmbeddedResource Include="mavenwebapptolinuxonazure_pipelines.resx" />
+    <EmbeddedResource Include="netdesktop_pipelines.resx" />
+    <EmbeddedResource Include="nodejs_pipelines.resx" />
+    <EmbeddedResource Include="nodejsexpresswebapptolinuxonazure_pipelines.resx" />
+    <EmbeddedResource Include="nodejsfunctionapptolinuxonazure_pipelines.resx" />
+    <EmbeddedResource Include="nodejsreactwebapptolinuxonazure_pipelines.resx" />
+    <EmbeddedResource Include="nodejswithangular_pipelines.resx" />
+    <EmbeddedResource Include="nodejswithgrunt_pipelines.resx" />
+    <EmbeddedResource Include="nodejswithgulp_pipelines.resx" />
+    <EmbeddedResource Include="nodejswithreact_pipelines.resx" />
+    <EmbeddedResource Include="nodejswithvue_pipelines.resx" />
+    <EmbeddedResource Include="nodejswithwebpack_pipelines.resx" />
+    <EmbeddedResource Include="php_pipelines.resx" />
+    <EmbeddedResource Include="phpwebapptolinuxonazure_pipelines.resx" />
+    <EmbeddedResource Include="PipelinesResources.resx" />
+    <EmbeddedResource Include="powershellfunctionapptowindowsonazure_pipelines.resx" />
+    <EmbeddedResource Include="pythondjango_pipelines.resx" />
+    <EmbeddedResource Include="pythonfunctionapptolinuxonazure_pipelines.resx" />
+    <EmbeddedResource Include="pythonpackage_pipelines.resx" />
+    <EmbeddedResource Include="pythontolinuxwebapponazure_pipelines.resx" />
+    <EmbeddedResource Include="ruby_pipelines.resx" />
+    <EmbeddedResource Include="Templates\Pipelines\Assets\k8s\deployment.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Assets\k8s\service.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\android.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\ant.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\aspnet.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\aspnetcore.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\aspnetcorefunctionapptowindowsonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\aspnetcorenetframework.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\deploytoexistingkubernetescluster.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\dockerbuild.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\dockercontainer.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\dockercontainerfunctionapp.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\dockercontainertoacr.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\dockercontainertoaks.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\dockercontainerwebapp.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\empty.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\gcc.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\go.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\gradle.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\html.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\jekyllcontainer.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\maven.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\mavenwebapptolinuxonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\netdesktop.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejs.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejsexpresswebapptolinuxonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejsfunctionapptolinuxonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejsreactwebapptolinuxonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejswithangular.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejswithgrunt.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejswithgulp.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejswithreact.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejswithvue.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\nodejswithwebpack.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\php.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\phpwebapptolinuxonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\powershellfunctionapptowindowsonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\pythondjango.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\pythonfunctionapptolinuxonazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\pythonpackage.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\pythontolinuxwebapponazure.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\ruby.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\universalwindowsplatform.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\xamarinandroid.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\xamarinios.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Definitions\xcode.yml" />
+    <EmbeddedResource Include="Templates\Pipelines\Readme\logo.png" />
+    <EmbeddedResource Include="Templates\Pipelines\Readme\readme.md" />
+    <EmbeddedResource Include="universalwindowsplatform_pipelines.resx" />
+    <EmbeddedResource Include="xamarinandroid_pipelines.resx" />
+    <EmbeddedResource Include="xamarinios_pipelines.resx" />
+    <EmbeddedResource Include="xcode_pipelines.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

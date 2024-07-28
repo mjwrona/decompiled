@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Storage.Blob.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A0C5A61-470F-433B-B6A4-AE6CB9C7BB07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Storage.Blob</AssemblyName>
+    <ApplicationVersion>11.2.3.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure.Storage</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\BlobDecryptStream.cs" />
+    <Compile Include="Core\ReadLengthLimitingStream.cs" />
+    <Compile Include="Core\Auth\BlobSharedAccessSignatureHelper.cs" />
+    <Compile Include="Core\Util\BlobCommonUtility.cs" />
+    <Compile Include="Blob\BlobEncryptedWriteStream.cs" />
+    <Compile Include="Blob\BlobEncryptionPolicy.cs" />
+    <Compile Include="Blob\BlobReadStream.cs" />
+    <Compile Include="Blob\BlobWriteStream.cs" />
+    <Compile Include="Blob\CloudAppendBlob.cs" />
+    <Compile Include="Blob\CloudBlob.cs" />
+    <Compile Include="Blob\CloudBlobClient.cs" />
+    <Compile Include="Blob\CloudBlobContainer.cs" />
+    <Compile Include="Blob\CloudBlobDirectory.cs" />
+    <Compile Include="Blob\CloudBlobStream.cs" />
+    <Compile Include="Blob\CloudBlockBlob.cs" />
+    <Compile Include="Blob\CloudPageBlob.cs" />
+    <Compile Include="Blob\ICloudBlob.cs" />
+    <Compile Include="Blob\ParallelDownloadStream.cs" />
+    <Compile Include="Blob\ParallelDownloadToFile.cs" />
+    <Compile Include="Blob\BlobAccountExtensions.cs" />
+    <Compile Include="Blob\BlobAttributes.cs" />
+    <Compile Include="Blob\BlobSetTierBatchOperation.cs" />
+    <Compile Include="Blob\BlobDeleteBatchOperation.cs" />
+    <Compile Include="Blob\BatchOperation.cs" />
+    <Compile Include="Blob\BlobBatchSubOperationResponse.cs" />
+    <Compile Include="Blob\BlobBatchSubOperationError.cs" />
+    <Compile Include="Blob\BlobBatchException.cs" />
+    <Compile Include="Blob\BlobContainerPermissions.cs" />
+    <Compile Include="Blob\BlobContainerProperties.cs" />
+    <Compile Include="Blob\BlobContainerPublicAccessType.cs" />
+    <Compile Include="Blob\BlobContinuationToken.cs" />
+    <Compile Include="Blob\BlobCustomerProvidedKey.cs" />
+    <Compile Include="Blob\BlobEncryptionData.cs" />
+    <Compile Include="Blob\BlobEncryptionMode.cs" />
+    <Compile Include="Blob\BlobListingDetails.cs" />
+    <Compile Include="Blob\BlobProperties.cs" />
+    <Compile Include="Blob\BlobReadStreamBase.cs" />
+    <Compile Include="Blob\BlobRequestOptions.cs" />
+    <Compile Include="Blob\BlobResultSegment.cs" />
+    <Compile Include="Blob\BlobType.cs" />
+    <Compile Include="Blob\BlobWriteStreamBase.cs" />
+    <Compile Include="Blob\BlockListingFilter.cs" />
+    <Compile Include="Blob\BlockSearchMode.cs" />
+    <Compile Include="Blob\ContainerListingDetails.cs" />
+    <Compile Include="Blob\ContainerResultSegment.cs" />
+    <Compile Include="Blob\CopyState.cs" />
+    <Compile Include="Blob\CopyStatus.cs" />
+    <Compile Include="Blob\DeleteSnapshotsOption.cs" />
+    <Compile Include="Blob\IListBlobItem.cs" />
+    <Compile Include="Blob\LeaseAction.cs" />
+    <Compile Include="Blob\LeaseDuration.cs" />
+    <Compile Include="Blob\LeaseState.cs" />
+    <Compile Include="Blob\LeaseStatus.cs" />
+    <Compile Include="Blob\ListBlockItem.cs" />
+    <Compile Include="Blob\PageDiffRange.cs" />
+    <Compile Include="Blob\PageRange.cs" />
+    <Compile Include="Blob\PremiumPageBlobTier.cs" />
+    <Compile Include="Blob\RehydratePriority.cs" />
+    <Compile Include="Blob\RehydrationStatus.cs" />
+    <Compile Include="Blob\SequenceNumberAction.cs" />
+    <Compile Include="Blob\SharedAccessBlobHeaders.cs" />
+    <Compile Include="Blob\SharedAccessBlobPermissions.cs" />
+    <Compile Include="Blob\SharedAccessBlobPolicies.cs" />
+    <Compile Include="Blob\SharedAccessBlobPolicy.cs" />
+    <Compile Include="Blob\StandardBlobTier.cs" />
+    <Compile Include="Blob\SubStream.cs" />
+    <Compile Include="Blob\BlobContainerEncryptionScopeOptions.cs" />
+    <Compile Include="Blob\Protocol\BlobHttpRequestMessageFactory.cs" />
+    <Compile Include="Blob\Protocol\BlobRequestMessageExtensions.cs" />
+    <Compile Include="Blob\Protocol\BlobHttpResponseParsers.cs" />
+    <Compile Include="Blob\Protocol\ContainerHttpRequestMessageFactory.cs" />
+    <Compile Include="Blob\Protocol\ContainerHttpResponseParsers.cs" />
+    <Compile Include="Blob\Protocol\BlobAccessPolicyResponse.cs" />
+    <Compile Include="Blob\Protocol\BlobContainerEntry.cs" />
+    <Compile Include="Blob\Protocol\BlobErrorCodeStrings.cs" />
+    <Compile Include="Blob\Protocol\BlobListingContext.cs" />
+    <Compile Include="Blob\Protocol\BlobRequest.cs" />
+    <Compile Include="Blob\Protocol\BlobResponse.cs" />
+    <Compile Include="Blob\Protocol\GetBlockListResponse.cs" />
+    <Compile Include="Blob\Protocol\GetPageDiffRangesResponse.cs" />
+    <Compile Include="Blob\Protocol\GetPageRangesResponse.cs" />
+    <Compile Include="Blob\Protocol\IListBlobEntry.cs" />
+    <Compile Include="Blob\Protocol\ListBlobEntry.cs" />
+    <Compile Include="Blob\Protocol\ListBlobPrefixEntry.cs" />
+    <Compile Include="Blob\Protocol\ListBlobsResponse.cs" />
+    <Compile Include="Blob\Protocol\ListContainersResponse.cs" />
+    <Compile Include="Blob\Protocol\PageWrite.cs" />
+    <Compile Include="Blob\Protocol\PutBlockListItem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

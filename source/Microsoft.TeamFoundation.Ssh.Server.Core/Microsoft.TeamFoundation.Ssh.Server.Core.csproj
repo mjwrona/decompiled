@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Ssh.Server.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A9C3C8D-F79A-47E3-A333-7C4800A7232E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Ssh.Server.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Ssh.Server.Core</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\Framework\Server\SshPerfCounters.cs" />
+    <Compile Include="ITunneledCommandExtensionProvider.cs" />
+    <Compile Include="GitSshCommandInfo.cs" />
+    <Compile Include="KexInitOptions.cs" />
+    <Compile Include="SshAccessAudit.cs" />
+    <Compile Include="SshHelper.cs" />
+    <Compile Include="ISshSession.cs" />
+    <Compile Include="SshSessionKpiHelper.cs" />
+    <Compile Include="SessionClosedHandler.cs" />
+    <Compile Include="ISshOptionsService.cs" />
+    <Compile Include="SshOptionsService.cs" />
+    <Compile Include="SshOptions.cs" />
+    <Compile Include="ISshCommandStreams.cs" />
+    <Compile Include="TunneledCommandExtensionHelpers.cs" />
+    <Compile Include="ITunneledCommandExtension.cs" />
+    <Compile Include="TunneledCommandAttribute.cs" />
+    <Compile Include="KeyAlgorithm.cs" />
+    <Compile Include="SshSessionState.cs" />
+    <Compile Include="CryptographicKeyPair.cs" />
+    <Compile Include="ICryptographicKeyPair.cs" />
+    <Compile Include="SshConstants.cs" />
+    <Compile Include="DelegatedAuthorizationSecretConstants.cs" />
+    <Compile Include="SshRegistryConstants.cs" />
+    <Compile Include="SshServicingTokenConstants.cs" />
+    <Compile Include="SshFeatureFlags.cs" />
+    <Compile Include="SshEncodings.cs" />
+    <Compile Include="ExtensibilityProviders\CommandExtensionNotFoundException.cs" />
+    <Compile Include="ExtensibilityProviders\IAuthenticationProvider.cs" />
+    <Compile Include="ExtensibilityProviders\IVssRequestContextProvider.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PerfCounters\man.template" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

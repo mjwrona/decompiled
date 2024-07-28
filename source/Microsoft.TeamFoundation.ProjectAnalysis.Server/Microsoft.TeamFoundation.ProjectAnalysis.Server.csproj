@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.ProjectAnalysis.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B986D41F-DB18-4FB7-995E-DAFF1616286A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.ProjectAnalysis.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.ProjectAnalysis.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Git.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.ProjectAnalysis.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.ProjectAnalysis.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebServer">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAnalyzer.cs" />
+    <Compile Include="DefaultLanguageConfigurator.cs" />
+    <Compile Include="ILanguageConfigurator.cs" />
+    <Compile Include="LanguageConfigurationDefaults.cs" />
+    <Compile Include="Match.cs" />
+    <Compile Include="LanguageConfigurationPattern.cs" />
+    <Compile Include="NameParser.cs" />
+    <Compile Include="PathParser.cs" />
+    <Compile Include="TfsLanguageConfiguratorBase.cs" />
+    <Compile Include="TfvcAttributesLanguageConfigurator.cs" />
+    <Compile Include="LanguageAnalyzerHelpers.cs" />
+    <Compile Include="LanguageFilePathExtensions.cs" />
+    <Compile Include="LanguageMetadataAnalyzer.cs" />
+    <Compile Include="LanguageStatsDescendingComparer.cs" />
+    <Compile Include="LanguageMetadataAnalyzerJobData.cs" />
+    <Compile Include="LanguageMetadataAnalyzerJobDataExtension.cs" />
+    <Compile Include="LanguageMetadataRecord.cs" />
+    <Compile Include="LanguageMetadataRecordExtension.cs" />
+    <Compile Include="TfsGitAttributesLanguageConfigurator.cs" />
+    <Compile Include="LanguageMetadataRecordBinder.cs" />
+    <Compile Include="TeamFoundationRequestContextLanguageMetadataExtens.cs" />
+    <Compile Include="ProjectAnalysisComponentBase.cs" />
+    <Compile Include="ProjectAnalysisComponent.cs" />
+    <Compile Include="ProjectAnalysisComponent2.cs" />
+    <Compile Include="ProjectAnalysisComponent3.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="ProjectAnalysisConstants.cs" />
+    <Compile Include="LanguageAnalyticsController.cs" />
+    <Compile Include="NoDefaultBranchException.cs" />
+    <Compile Include="RepositoryNotFoundException.cs" />
+    <Compile Include="LanguageMetadataExistsException.cs" />
+    <Compile Include="LanguageMetadataNotFoundException.cs" />
+    <Compile Include="IFileAccessor.cs" />
+    <Compile Include="IFileAccessorFactory.cs" />
+    <Compile Include="DefaultFileAcessorFactory.cs" />
+    <Compile Include="TfsFileAccessorBase`1.cs" />
+    <Compile Include="TfvcFileAccessor.cs" />
+    <Compile Include="TfsGitFileAccessor.cs" />
+    <Compile Include="ProjectAnalysisCIDataExtension.cs" />
+    <Compile Include="ProjectAnalysisTracePoints.cs" />
+    <Compile Include="ActivityMetricsProviderHelper.cs" />
+    <Compile Include="RepositoryActivityMetricsProvider.cs" />
+    <Compile Include="IProjectAnalysisService.cs" />
+    <Compile Include="ProjectAnalysisService.cs" />
+    <Compile Include="TfvcRepositoryDescriptor.cs" />
+    <Compile Include="TfsGitRepositoryDescriptor.cs" />
+    <Compile Include="ProjectActivityMetricsProvider.cs" />
+    <Compile Include="ProjectAnalysisResources.cs" />
+    <Compile Include="Controllers\RepositoryActivityMetricsController.cs" />
+    <Compile Include="Controllers\ProjectActivityMetricsController.cs" />
+    <Compile Include="Controllers\ProjectAnalysisApiController.cs" />
+    <Compile Include="Microsoft\TeamFoundation\ProjectAnalysis\WebApi\RepositoryType.cs" />
+    <Compile Include="Microsoft\TeamFoundation\ProjectAnalysis\WebApi\IRepositoryDescriptor.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectAnalysisResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

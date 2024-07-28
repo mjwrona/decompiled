@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.CodeSense.Server.Shared.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8A183F2-31B6-4ED1-8604-24EE738C05F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.CodeSense.Server.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.CodeSense.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.CodeSense.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.CodeSense.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.CodeSense.Platform.Abstraction">
+      <HintPath>lib\Microsoft.TeamFoundation.CodeSense.Platform.Abstraction.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.CodeSense.Shared.Hosted">
+      <HintPath>lib\Microsoft.TeamFoundation.CodeSense.Shared.Hosted.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\CodeSense\CodeSenseFeatures.cs" />
+    <Compile Include="IBranchMap.cs" />
+    <Compile Include="IBranchResult.cs" />
+    <Compile Include="DetailsResponseV3.cs" />
+    <Compile Include="BranchDetailsResultV3.cs" />
+    <Compile Include="CodeElementChangeResultV3.cs" />
+    <Compile Include="CodeElementDetailsResultV3.cs" />
+    <Compile Include="CodeElementIdentityCollectionV3.cs" />
+    <Compile Include="CodeElementIdentityV3.cs" />
+    <Compile Include="CommitDataV3.cs" />
+    <Compile Include="SourceControlDataV3.cs" />
+    <Compile Include="WorkItemDataV3.cs" />
+    <Compile Include="CodeSenseSerializationSettings.cs" />
+    <Compile Include="IndexingStatusExtensions.cs" />
+    <Compile Include="AuthorSummary.cs" />
+    <Compile Include="AuthorSummaryCollection.cs" />
+    <Compile Include="BranchLinkData.cs" />
+    <Compile Include="CodeElementChangeResult.cs" />
+    <Compile Include="CodeElementKind.cs" />
+    <Compile Include="CodeElementResult.cs" />
+    <Compile Include="CodeElementDetailsResult.cs" />
+    <Compile Include="CodeElementSummaryResult.cs" />
+    <Compile Include="CodeSenseResourceVersion.cs" />
+    <Compile Include="CodeSenseResourceVersions.cs" />
+    <Compile Include="CollectorResult.cs" />
+    <Compile Include="ElementChangeKind.cs" />
+    <Compile Include="FileChangeAggregateResult.cs" />
+    <Compile Include="FileChangeSliceResult.cs" />
+    <Compile Include="FileDetailsResult.cs" />
+    <Compile Include="FileSummaryResult.cs" />
+    <Compile Include="BranchLinkDataV3.cs" />
+    <Compile Include="FileChangeSliceResultV3.cs" />
+    <Compile Include="FileDetailsResultV3.cs" />
+    <Compile Include="AggregateDescriptor.cs" />
+    <Compile Include="ProjectMapEntity.cs" />
+    <Compile Include="SliceDescriptor.cs" />
+    <Compile Include="WorkItemAssociationLookupEntry.cs" />
+    <Compile Include="AggregatepathExtensions.cs" />
+    <Compile Include="BranchLinkExtensions.cs" />
+    <Compile Include="DataspaceServiceHelper.cs" />
+    <Compile Include="DictionaryComparer`2.cs" />
+    <Compile Include="ProjectServiceHelper.cs" />
+    <Compile Include="SetComparer`1.cs" />
+    <Compile Include="BranchResultExtensions.cs" />
+    <Compile Include="TeamFoundationJobDefinitionExtensions.cs" />
+    <Compile Include="WatermarkKind.cs" />
+    <Compile Include="Watermark.cs" />
+    <Compile Include="MopupExtensions.cs" />
+    <Compile Include="WatermarkExtensions.cs" />
+    <Compile Include="LongRunningActionLogger.cs" />
+    <Compile Include="ProjectMapCache.cs" />
+    <Compile Include="ConverterUtilities.cs" />
+    <Compile Include="EscapedStringJsonConverter.cs" />
+    <Compile Include="JPath.cs" />
+    <Compile Include="TfWorkItemFactoryBase.cs" />
+    <Compile Include="TfWorkItemPermissionsFactory.cs" />
+    <Compile Include="ValidateCodeLensInputAttribute.cs" />
+    <Compile Include="ValidateInputAttribute.cs" />
+    <Compile Include="SliceSource.cs" />
+    <Compile Include="Rules\HistoryRetentionRule.cs" />
+    <Compile Include="Rules\JobRule.cs" />
+    <Compile Include="Rules\RuleRunner.cs" />
+    <Compile Include="Rules\StorageLimitRule.cs" />
+    <Compile Include="Jobs\IBatchQueue`1.cs" />
+    <Compile Include="Jobs\BatchProcessWithRetry`1.cs" />
+    <Compile Include="Jobs\JobConstants.cs" />
+    <Compile Include="Jobs\FLICatchupWatermarkIterator.cs" />
+    <Compile Include="Jobs\ITfsChangesetJobData.cs" />
+    <Compile Include="Jobs\TfsChangesetJobData.cs" />
+    <Compile Include="Jobs\CatchupWatermarkIterator.cs" />
+    <Compile Include="Jobs\WatermarkIterator.cs" />
+    <Compile Include="Jobs\MopupWatermarkIterator.cs" />
+    <Compile Include="Jobs\KeepupWatermarkIterator.cs" />
+    <Compile Include="Extensions\CounterServiceExtensions.cs" />
+    <Compile Include="Data\CodeSenseSqlResourceComponent.cs" />
+    <Compile Include="Data\CodeSenseSqlResourceComponent2.cs" />
+    <Compile Include="Data\CodeSenseSqlResourceComponent3.cs" />
+    <Compile Include="Data\EnumerableExtension.cs" />
+    <Compile Include="Data\ICodeSenseSqlResourceComponent.cs" />
+    <Compile Include="Data\IgnoreListedItem.cs" />
+    <Compile Include="Data\Constants.cs" />
+    <Compile Include="Contracts\BranchDetailsResult.cs" />
+    <Compile Include="Contracts\BranchSummaryResult.cs" />
+    <Compile Include="Common\CodeSenseEvents.cs" />
+    <Compile Include="Shared\CheckinHandlerHelper.cs" />
+    <Compile Include="Services\AggregateNotFoundException.cs" />
+    <Compile Include="Services\Aggregate.cs" />
+    <Compile Include="Services\AggregateDetailsConverter.cs" />
+    <Compile Include="Services\AggregateSummaryConverter.cs" />
+    <Compile Include="Services\AggregateV3.cs" />
+    <Compile Include="Services\AggregateVersions.cs" />
+    <Compile Include="Services\AggregationStore.cs" />
+    <Compile Include="Services\FilterUtilities.cs" />
+    <Compile Include="Services\IAggregateReader.cs" />
+    <Compile Include="Services\IAggregateWriter.cs" />
+    <Compile Include="Services\IAggregationStore.cs" />
+    <Compile Include="Services\ResponseCreator.cs" />
+    <Compile Include="Services\SliceWriter.cs" />
+    <Compile Include="Services\VersionedContent.cs" />
+    <Compile Include="Services\CodeSensePerformanceCounters.cs" />
+    <Compile Include="Services\CollectSizeInformationAttribute.cs" />
+    <Compile Include="Services\IFileDataService.cs" />
+    <Compile Include="Services\FileDataService.cs" />
+    <Compile Include="Services\IFileService.cs" />
+    <Compile Include="Services\TeamFoundationFileServiceWrapper.cs" />
+    <Compile Include="Services\UploadFailedException.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PerfCounters\man.template" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

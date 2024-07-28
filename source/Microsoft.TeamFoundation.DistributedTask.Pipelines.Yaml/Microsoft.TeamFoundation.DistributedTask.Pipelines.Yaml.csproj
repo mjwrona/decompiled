@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DD537B7-2C62-4CD1-9545-BE471B27B37E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="NCrontab.Signed">
+      <HintPath>lib\NCrontab.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="YamlDotNet">
+      <HintPath>lib\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\DistributedTask\Pipelines\YamlFileNotFoundException.cs" />
+    <Compile Include="CacheValue.cs" />
+    <Compile Include="CompositeVariables.cs" />
+    <Compile Include="CompositeVariablesEnumerator.cs" />
+    <Compile Include="EnvironmentDeploymentUtility.cs" />
+    <Compile Include="ICacheProvider.cs" />
+    <Compile Include="IFileProvider.cs" />
+    <Compile Include="IFileProviderFactory.cs" />
+    <Compile Include="JTokenExtensions.cs" />
+    <Compile Include="ParseOptions.cs" />
+    <Compile Include="ParseResult.cs" />
+    <Compile Include="ParserUtil.cs" />
+    <Compile Include="PipelineParser.cs" />
+    <Compile Include="PipelineTemplateEvents.cs" />
+    <Compile Include="ResourceJsonConverter.cs" />
+    <Compile Include="RetrieveOptions.cs" />
+    <Compile Include="TemplateResultConverter.cs" />
+    <Compile Include="TemplateSchemaConverter.cs" />
+    <Compile Include="TraceFileContent.cs" />
+    <Compile Include="UserVariables.cs" />
+    <Compile Include="UserVariablesInternal.cs" />
+    <Compile Include="UserVariablesEnumerator.cs" />
+    <Compile Include="YamlConstants.cs" />
+    <Compile Include="YamlObjectReader.cs" />
+    <Compile Include="YamlTemplateLoader.cs" />
+    <Compile Include="YamlWriter.cs" />
+    <Compile Include="YamlStrings.cs" />
+    <Compile Include="ObjectTemplating\ContextValueNode.cs" />
+    <Compile Include="ObjectTemplating\EmptyTraceWriter.cs" />
+    <Compile Include="ObjectTemplating\ExpressionTraceWriter.cs" />
+    <Compile Include="ObjectTemplating\IObjectReader.cs" />
+    <Compile Include="ObjectTemplating\IObjectWriter.cs" />
+    <Compile Include="ObjectTemplating\ITemplateLoader.cs" />
+    <Compile Include="ObjectTemplating\ITraceWriter.cs" />
+    <Compile Include="ObjectTemplating\ITraceWriterExtensions.cs" />
+    <Compile Include="ObjectTemplating\LoadTemplateResult.cs" />
+    <Compile Include="ObjectTemplating\TemplateConstants.cs" />
+    <Compile Include="ObjectTemplating\TemplateContext.cs" />
+    <Compile Include="ObjectTemplating\TemplateEvaluator.cs" />
+    <Compile Include="ObjectTemplating\TemplateMemory.cs" />
+    <Compile Include="ObjectTemplating\TemplateParametersBuilder.cs" />
+    <Compile Include="ObjectTemplating\TemplateReader.cs" />
+    <Compile Include="ObjectTemplating\TemplateTelemetry.cs" />
+    <Compile Include="ObjectTemplating\TemplateUnraveler.cs" />
+    <Compile Include="ObjectTemplating\TemplateUtil.cs" />
+    <Compile Include="ObjectTemplating\TemplateWriter.cs" />
+    <Compile Include="ObjectTemplating\TransformFunction.cs" />
+    <Compile Include="ObjectTemplating\Tokens\BasicExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\EachExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ElseExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ElseIfExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\IfExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\InsertExpressionToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\IReadOnlyTemplateToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ScalarStyle.cs" />
+    <Compile Include="ObjectTemplating\Tokens\LiteralToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\MappingToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ReadOnlyLiteralToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ReadOnlyMappingToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ReadOnlySequenceToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\ScalarToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\SequenceToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\TemplateToken.cs" />
+    <Compile Include="ObjectTemplating\Tokens\TemplateTokenJsonConverter.cs" />
+    <Compile Include="ObjectTemplating\Tokens\TemplateTokenReadOnlyDictionary.cs" />
+    <Compile Include="ObjectTemplating\Tokens\TemplateTokenReadOnlyList.cs" />
+    <Compile Include="ObjectTemplating\Tokens\TokenType.cs" />
+    <Compile Include="ObjectTemplating\Schemas\Definition.cs" />
+    <Compile Include="ObjectTemplating\Schemas\MappingSchema.cs" />
+    <Compile Include="ObjectTemplating\Schemas\PropertyValue.cs" />
+    <Compile Include="ObjectTemplating\Schemas\ScalarSchema.cs" />
+    <Compile Include="ObjectTemplating\Schemas\Schema.cs" />
+    <Compile Include="ObjectTemplating\Schemas\SchemaType.cs" />
+    <Compile Include="ObjectTemplating\Schemas\SequenceSchema.cs" />
+    <Compile Include="ObjectTemplating\Schemas\TemplateSchema.cs" />
+    <Compile Include="ObjectTemplating\Events\TemplateEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingStartEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingKeyEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingValueEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingEndEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnSequenceStartEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnSequenceItemEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnSequenceEndEventArgs.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingStartEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingKeyEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingValueEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\OnMappingEndEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\OnSequenceStartEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\OnSequenceItemEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\OnSequenceEndEventHandler.cs" />
+    <Compile Include="ObjectTemplating\Events\TemplateEvents.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="publish-metadata-post-steps.yml" />
+    <EmbeddedResource Include="schema.yml" />
+    <EmbeddedResource Include="system-pre-steps.yml" />
+    <EmbeddedResource Include="YamlStrings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ItemStore.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83504A6F-7558-425B-9906-8AC07A6D742F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ItemStore.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ItemStore.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContainerIsDeletePendingException.cs" />
+    <Compile Include="ContainerIsSealedException.cs" />
+    <Compile Include="ContainerNotFoundException.cs" />
+    <Compile Include="CouldNotReferenceBlobException.cs" />
+    <Compile Include="ItemNotFoundException.cs" />
+    <Compile Include="CommitId.cs" />
+    <Compile Include="OverrideBlobStoreUri.cs" />
+    <Compile Include="AssociateException.cs" />
+    <Compile Include="ItemConstants.cs" />
+    <Compile Include="AssociationsItem.cs" />
+    <Compile Include="ItemAssociationResult.cs" />
+    <Compile Include="IByteSizeItem.cs" />
+    <Compile Include="IItemAssociator.cs" />
+    <Compile Include="IItemUploader.cs" />
+    <Compile Include="ItemUploader.cs" />
+    <Compile Include="ItemHttpClientBase.cs" />
+    <Compile Include="AssociationsStatus.cs" />
+    <Compile Include="BlobItem.cs" />
+    <Compile Include="ContainedItem.cs" />
+    <Compile Include="ContainerItem.cs" />
+    <Compile Include="DictionaryItem`1.cs" />
+    <Compile Include="ExpiringItemHelper.cs" />
+    <Compile Include="FileItem.cs" />
+    <Compile Include="FileItemExtensions.cs" />
+    <Compile Include="FolderItem.cs" />
+    <Compile Include="IExpiringItem.cs" />
+    <Compile Include="IFilterableItem.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ListItem`1.cs" />
+    <Compile Include="MoveItemOperations.cs" />
+    <Compile Include="MoveItemOptions.cs" />
+    <Compile Include="MoveOperation.cs" />
+    <Compile Include="StoredItem.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="DictionaryItemData.cs" />
+    <Compile Include="DictionaryItem.cs" />
+    <Compile Include="IItemData.cs" />
+    <Compile Include="IItemDataExtensions.cs" />
+    <Compile Include="JObjectItem.cs" />
+    <Compile Include="JObjectItemData.cs" />
+    <Compile Include="ItemTreeInfo.cs" />
+    <Compile Include="NetworkPathsNotFoundException.cs" />
+    <Compile Include="BlobItemInvalidDomainException.cs" />
+    <Compile Include="DropManifestItemException.cs" />
+    <Compile Include="TimedExecutionHelper.cs" />
+    <Compile Include="WrappedJsonReaderException.cs" />
+    <Compile Include="ContentException.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Telemetry\SealResultType.cs" />
+    <Compile Include="Telemetry\ItemUploaderRecord.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Server.Types.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F8E71C2-9361-4896-AA0D-50647AA2111C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.Types</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\TfsApiResourceScope.cs" />
+    <Compile Include="Core\TfsProjectApiConstants.cs" />
+    <Compile Include="Core\TfsTeamApiConstants.cs" />
+    <Compile Include="Core\TeamFoundationProjectScopeLocationServiceExtension.cs" />
+    <Compile Include="Core\TfsApiScopeRouteCollectionExtensions.cs" />
+    <Compile Include="Types\BaseProjectPropertyService.cs" />
+    <Compile Include="Types\BaseProjectService.cs" />
+    <Compile Include="Types\BaseProjectUpdateJobWorker.cs" />
+    <Compile Include="Types\IProjectService.cs" />
+    <Compile Include="Types\ProjectRequestContextItemKeys.cs" />
+    <Compile Include="Types\TeamProjectOperationConstants.cs" />
+    <Compile Include="Types\ProjectConstants.cs" />
+    <Compile Include="Types\ProjectInfoExtensions.cs" />
+    <Compile Include="Types\ProjectPropertyCacheService.cs" />
+    <Compile Include="Types\ProjectPropertyName.cs" />
+    <Compile Include="Types\ProjectResourcePermissionsControllerBase`1.cs" />
+    <Compile Include="Types\ProjectServiceExtensions.cs" />
+    <Compile Include="Types\ProjectCache.cs" />
+    <Compile Include="Types\ProjectCreatedEvent.cs" />
+    <Compile Include="Types\ProjectUpdatedEvent.cs" />
+    <Compile Include="Types\ProjectDeletedEvent.cs" />
+    <Compile Include="Types\ProjectRenamedEvent.cs" />
+    <Compile Include="Types\ProjectsLockedEvent.cs" />
+    <Compile Include="Types\ProjectEventConstants.cs" />
+    <Compile Include="Types\ProjectOperation.cs" />
+    <Compile Include="Types\ProjectOperationProperty.cs" />
+    <Compile Include="Types\ProjectUtility.cs" />
+    <Compile Include="Types\PublicProjectRequestRestrictionsAttribute.cs" />
+    <Compile Include="Types\RequestContextExtensions.cs" />
+    <Compile Include="Types\AllowAnonymousProjectLevelRequestsAttribute.cs" />
+    <Compile Include="Types\ResolveTfsProjectFilterAttribute.cs" />
+    <Compile Include="Types\ITfsProjectApiController.cs" />
+    <Compile Include="Types\TfsProjectApiController.cs" />
+    <Compile Include="Types\PublicDeploymentRequestRestrictionsAttribute.cs" />
+    <Compile Include="Types\ServerTypesResources.cs" />
+    <Compile Include="Types\Team\ITeamService.cs" />
+    <Compile Include="Types\Team\SecuredTeam.cs" />
+    <Compile Include="Microsoft\TeamFoundation\Framework\Server\IdentityPropertiesView.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServerTypesResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

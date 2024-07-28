@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:annotation>
+        <xs:documentation>
+            This schema defines the XML structure associated
+            with the XML document returned with the GetMethodologies()
+            call in ELead web Service.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:element name="metadata">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" msprop:nullValue="_empty" />
+                <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" msprop:nullValue="_empty" />
+                <xs:element name="plugins" minOccurs="1" maxOccurs="1" nillable="false">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="plugin" minOccurs="1" nillable="false">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+                                    <xs:attribute name="wizardPage" type="xs:boolean" default="false" msprop:nullValue="_throw" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="UniqueAdapterName">
+                        <xs:selector xpath="plugin" />
+                        <xs:field xpath="@name" />
+                    </xs:unique>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:annotation>
+        <xs:documentation>
+            Guid type definition.
+            Accepts the guid with and with out the {}
+        </xs:documentation>
+    </xs:annotation>
+</xs:schema>

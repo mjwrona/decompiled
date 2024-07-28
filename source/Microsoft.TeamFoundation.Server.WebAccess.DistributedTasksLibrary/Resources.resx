@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WizardSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="WizardNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="CreateAutoSpnFooter" xml:space="preserve">
+    <value>A new Azure service principal will be created and assigned with "Contributor" role, having access to all resources within the subscription. Optionally, you can select the Resource Group to which you want to limit access.&lt;br/&gt;&lt;br/&gt;If your subscription is not listed above, or your organization is not backed by Microsoft Entra, or to specify an existing service principal,</value>
+  </data>
+  <data name="NoMatchingSubscriptionFound" xml:space="preserve">
+    <value>No matching subscription or service connection was found</value>
+  </data>
+  <data name="Task_DurationInProgressFormat" xml:space="preserve">
+    <value>Running for {0} ({1})</value>
+  </data>
+  <data name="RunOnServerTaskTypeDescription" xml:space="preserve">
+    <value>Tasks are shown that will run on the server. Currently, only one task can be added to a server job.</value>
+  </data>
+  <data name="AgentAcquisitionRunAsLaunchAgentServiceText" xml:space="preserve">
+    <value>To run as a LaunchAgent service see &lt;a target="_blank" href="https://go.microsoft.com/fwlink/?LinkID=821556"&gt;here&lt;/a&gt;</value>
+  </data>
+  <data name="ManagementGroupName" xml:space="preserve">
+    <value>Management Group name</value>
+  </data>
+  <data name="ErrorWhileAuthorizingOnSubscription" xml:space="preserve">
+    <value>Could not authorize to query on the selected subscription.</value>
+  </data>
+  <data name="SubscriptionIdInvalid" xml:space="preserve">
+    <value>The subscription ID must be a valid GUID</value>
+  </data>
+  <data name="MetataskInstanceNameFormat" xml:space="preserve">
+    <value>Task group: {0} {1}</value>
+  </data>
+  <data name="ConnectionLabel" xml:space="preserve">
+    <value>Connection:</value>
+  </data>
+  <data name="NoGenericConnectionFound" xml:space="preserve">
+    <value>No generic service connection was found</value>
+  </data>
+  <data name="AgentAcquisitionPlatformOsxVersion" xml:space="preserve">
+    <value>macOS {0}</value>
+  </data>
+  <data name="WebAppName" xml:space="preserve">
+    <value>WebApp Name</value>
+  </data>
+  <data name="AzureRMEndpointHelpText" xml:space="preserve">
+    <value>Select the Azure service connection to deploy. To configure a new service connection, select the Azure subscription from the list and click 'Authorize'.
+
+Note: If your subscription is not listed or if you want to use an existing service principal, you can set up an Azure service connection using the 'Add' or 'Manage' link.</value>
+  </data>
+  <data name="ServiceConnectionDefaultAuthText" xml:space="preserve">
+    <value>Allow all pipelines to use this connection.</value>
+  </data>
+  <data name="MetataskControlOptionsTooltipText" xml:space="preserve">
+    <value>Setting the control option as 'false' in the task group will override the control option value in the sub-tasks. Otherwise, it honors the value set in sub-tasks. [Read more](https://go.microsoft.com/fwlink/?LinkId=761053).</value>
+  </data>
+  <data name="VerifyServiceEndpointFailureSuggestion" xml:space="preserve">
+    <value>Note: Verification may fail if the URL is not accessible from {0}. However, it might still be valid and accessible from the agent that executes the build or release.</value>
+  </data>
+  <data name="AuthorizedUsingOAuthFormat" xml:space="preserve">
+    <value>Authorized as user '{0}'</value>
+  </data>
+  <data name="KubernetesAzureSubscriptionHelpText" xml:space="preserve">
+    <value>Select Azure subscription to list clusters. Only Azure Cloud subscriptions are listed in the dropdown.</value>
+  </data>
+  <data name="ErrorSavingEndpointPolicyDuringCreation" xml:space="preserve">
+    <value>Service connection was created successfully, but there was an error in saving policy.{0}{1}</value>
+  </data>
+  <data name="RunOnServerPhaseHeaderTooltip" xml:space="preserve">
+    <value>A group of tasks that will run on the server</value>
+  </data>
+  <data name="ConfigurationUrlFooterText" xml:space="preserve">
+    <value>&lt;p&gt; If no configuration URL is displayed, add an OAuth configuration for {0} in your &lt;a href={1} target="_blank"&gt;organization settings&lt;/a&gt;. &lt;/p&gt;</value>
+  </data>
+  <data name="Task_ErrorMessageForAzureEndpoint" xml:space="preserve">
+    <value>The selected Azure service connection in the current task has been updated to service connection type 'Azure' under the 'Service connections' settings. Update the Azure connection type field for the current task with value 'Azure Classic'.</value>
+  </data>
+  <data name="KubernetesAcceptUntrustedCerts" xml:space="preserve">
+    <value>Accept untrusted certificates</value>
+  </data>
+  <data name="ManagementGroupsListedFromAzureCloud" xml:space="preserve">
+    <value>Management Groups listed are from Azure Cloud</value>
+  </data>
+  <data name="DockerRegistryAzureSubscriptionHelpText" xml:space="preserve">
+    <value>Select Azure subscription to list container registries.</value>
+  </data>
+  <data name="CreateAutoSpnFooterForMlWorkspace" xml:space="preserve">
+    <value>A new Azure service principal will be created and assigned with the "Contributor" role, having access to all resources within the Workspace.&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="Task_TestCategoryText" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="KubernetesServiceAccountCertificateHelpText" xml:space="preserve">
+    <value>The ca.cert content if the Kubernetes API is using a TLS certificate. Use the ‘kubectl get serviceaccounts &lt;service-account-name&gt; -o yaml’ and ‘kubectl get secret &lt;service-account-secret-name&gt;  -o yaml’ commands to get the ca.cert content.</value>
+  </data>
+  <data name="AzureContainerRegistryLabel" xml:space="preserve">
+    <value>Azure container registry</value>
+  </data>
+  <data name="DockerRegistryHelpText" xml:space="preserve">
+    <value>The URL for your Docker Registry</value>
+  </data>
+  <data name="AddTaskToPhase" xml:space="preserve">
+    <value>Add a task to the job</value>
+  </data>
+  <data name="KubernetesOperationStatusMessagePrefix" xml:space="preserve">
+    <value>The following error occurred while setting up the Kubernetes service account: </value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Environment</value>
+  </data>
+  <data name="AuthorizedUsingPAT" xml:space="preserve">
+    <value>Authorized using a personal access token</value>
+  </data>
+  <data name="KubernetesServiceAccountTokenHelpText" xml:space="preserve">
+    <value>The token for authenticating to Kubernetes. Use the ‘kubectl get serviceaccounts &lt;service-account-name&gt; -o yaml’ and ‘kubectl get secret &lt;service-account-secret-name&gt;  -o yaml’ commands to get the token.</value>
+  </data>
+  <data name="AddUIContributionConnectionsDialogTitle" xml:space="preserve">
+    <value>Add {0} service connection</value>
+  </data>
+  <data name="SubscriptionsListedFromAzureCloud" xml:space="preserve">
+    <value>Subscriptions listed are from Azure Cloud</value>
+  </data>
+  <data name="GenerateLinkText" xml:space="preserve">
+    <value>generate</value>
+  </data>
+  <data name="DisplayNameText" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="Task_PreviewMajorVersionSpecFormat" xml:space="preserve">
+    <value>{0} (preview)</value>
+  </data>
+  <data name="KubernetesServiceAccountSecretYamlHelpText" xml:space="preserve">
+    <value>Copy and paste the  output of the get service account secret command as mentioned below.</value>
+  </data>
+  <data name="Task_AddServiceEndpointTitle" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AgentAcquisitionDialogTitle" xml:space="preserve">
+    <value>Get the agent</value>
+  </data>
+  <data name="MoreInformationTooltipText" xml:space="preserve">
+    <value>More information</value>
+  </data>
+  <data name="KubernetesServiceAccountCertificate" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="ByText" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="AgentAcquisitionPlatformWindows" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="TaskEditorInputContainerLabel" xml:space="preserve">
+    <value>Task editor input container</value>
+  </data>
+  <data name="ProcessParameterGroupLabel" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="KubernetesNamespaceHelpText" xml:space="preserve">
+    <value>Select the namespace within the cluster.</value>
+  </data>
+  <data name="EndpointCreationOperationFailed" xml:space="preserve">
+    <value>Service connection creation operation failed</value>
+  </data>
+  <data name="KubernetesServiceAccountAuthText" xml:space="preserve">
+    <value>Service account</value>
+  </data>
+  <data name="AgentAcquisitionDownloadAgentTitle" xml:space="preserve">
+    <value>Download the agent</value>
+  </data>
+  <data name="Task_AddTaskHelpDialogTitle" xml:space="preserve">
+    <value>{0} help</value>
+  </data>
+  <data name="ControlOptionsText" xml:space="preserve">
+    <value>Control options</value>
+  </data>
+  <data name="ConnectionStatusVerifying" xml:space="preserve">
+    <value>Verifying...</value>
+  </data>
+  <data name="KubernetesClusterUrl" xml:space="preserve">
+    <value>Cluster URL</value>
+  </data>
+  <data name="Task_SucceededWithIssues" xml:space="preserve">
+    <value>Succeeded with issues</value>
+  </data>
+  <data name="DocumentationText" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="Tasks_MenuEnableText" xml:space="preserve">
+    <value>Enable selected tasks</value>
+  </data>
+  <data name="RunOnMachineGroupPhaseName" xml:space="preserve">
+    <value>Run on deployment group</value>
+  </data>
+  <data name="DockerPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Task_ToolCategoryText" xml:space="preserve">
+    <value>Tool</value>
+  </data>
+  <data name="MSIConnectionNameTooltip" xml:space="preserve">
+    <value>Enter the service connection name.</value>
+  </data>
+  <data name="MethodExceptionInExtension" xml:space="preserve">
+    <value>Error when invoking the '{0}' method in the service connection UI contribution.</value>
+  </data>
+  <data name="RequiredInputErrorMessage" xml:space="preserve">
+    <value>This setting is required.</value>
+  </data>
+  <data name="AgentAcquisitionRunAsSystemDServiceText" xml:space="preserve">
+    <value>To run as a SystemD service see &lt;a target="_blank" href="https://go.microsoft.com/fwlink/?LinkID=821557"&gt;here&lt;/a&gt;</value>
+  </data>
+  <data name="Task_PackageCategoryText" xml:space="preserve">
+    <value>Package</value>
+  </data>
+  <data name="UsePAT" xml:space="preserve">
+    <value>Use a personal access token</value>
+  </data>
+  <data name="DeletePhaseIconTooltip" xml:space="preserve">
+    <value>Delete the job '{0}'</value>
+  </data>
+  <data name="ManualUpdateToAutoCreatedServiceEndpointNotSupported" xml:space="preserve">
+    <value>Manual updates to service connections created in automatic flow are not supported</value>
+  </data>
+  <data name="UseAutoSpnUpdateWindowFooter" xml:space="preserve">
+    <value>To renew the service principal key automatically, </value>
+  </data>
+  <data name="TaskDeletedMessage" xml:space="preserve">
+    <value>This task is no longer installed. Re-install the task or remove it from your build pipeline.</value>
+  </data>
+  <data name="RunOnAgentPhaseHeaderTooltip" xml:space="preserve">
+    <value>A group of tasks that will run on an agent</value>
+  </data>
+  <data name="Task_HelpMessageForTaskCategory" xml:space="preserve">
+    <value>Categorizes the task according to the selected option.</value>
+  </data>
+  <data name="DraftText" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="Task_MiscCategoryText" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="MlWorkspacesListedFromAzureCloud" xml:space="preserve">
+    <value>Machine Learning Workspaces listed are from Azure Cloud</value>
+  </data>
+  <data name="SelectTemplateLinkText" xml:space="preserve">
+    <value>Select a template</value>
+  </data>
+  <data name="AzureManagementGroupDisplayName" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="UpdateAutoSpnFooter" xml:space="preserve">
+    <value>The Azure service principal key will be renewed for this service connection.&lt;br/&gt;&lt;br/&gt;To update using an existing service principal, </value>
+  </data>
+  <data name="AddPhaseLabel" xml:space="preserve">
+    <value>Add a job</value>
+  </data>
+  <data name="Tasks_MenuManageMetaTask" xml:space="preserve">
+    <value>Manage the task group</value>
+  </data>
+  <data name="SpnDialogHere" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="ScopeLevelText" xml:space="preserve">
+    <value>Scope level</value>
+  </data>
+  <data name="InternalErrorPrefix" xml:space="preserve">
+    <value>Internal Error: </value>
+  </data>
+  <data name="Task_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="KubernetesHelpText" xml:space="preserve">
+    <value>Copy and paste content of the kubeconfig file. The configuration information in your kubeconfig file allows Kubernetes clients to talk to your Kubernetes API servers. This file is used by kubectl and all supported Kubernetes clients.</value>
+  </data>
+  <data name="GitHubAuthRequiredMessage" xml:space="preserve">
+    <value>We need your authorization to access the GitHub repositories</value>
+  </data>
+  <data name="AddTasksRegionLabel" xml:space="preserve">
+    <value>Add tasks</value>
+  </data>
+  <data name="Task_TaskRenameTooltip" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="SystemPrerequisites" xml:space="preserve">
+    <value>System prerequisites</value>
+  </data>
+  <data name="AgentAcquisitionConfigureAccountHtml" xml:space="preserve">
+    <value>Configure your organization by following the steps outlined &lt;a target="_blank" href="https://aka.ms/vstsagentroles"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="ConfigurationUrl" xml:space="preserve">
+    <value>{0} Configuration URL</value>
+  </data>
+  <data name="KubernetesCheckAcceptUntrustedCertErrorHelpText" xml:space="preserve">
+    <value>Could not establish a trust relationship for the SSL/TLS secure channel. Try enabling the accept untrusted certificates checkbox.</value>
+  </data>
+  <data name="ServicePrincipalLinkLabel" xml:space="preserve">
+    <value>Creation of Azure service principal</value>
+  </data>
+  <data name="AzureServicePrincipalIdText" xml:space="preserve">
+    <value>Service principal client ID</value>
+  </data>
+  <data name="Task_Succeeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="ResourceGroupNameInvalid" xml:space="preserve">
+    <value>Enter a valid resource group name</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Subscription</value>
+  </data>
+  <data name="MoreInformation" xml:space="preserve">
+    <value>More information</value>
+  </data>
+  <data name="AddRunOnAgentTasksText" xml:space="preserve">
+    <value>Add an agent job</value>
+  </data>
+  <data name="ChooseRegistryTypeText" xml:space="preserve">
+    <value>Choose registry type</value>
+  </data>
+  <data name="TaskLearnMoreText" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="KubernetesUnableToQueryNamespaces" xml:space="preserve">
+    <value>Unable to query the namespaces as the kube config is not fetched. Please ensure you have selected a cluster on which you have permissions to fetch clusterAdmin kube config.</value>
+  </data>
+  <data name="AgentAcquisitionPlatformLegacyWindows" xml:space="preserve">
+    <value>Windows (legacy)</value>
+  </data>
+  <data name="AuthorizationFailedFormat" xml:space="preserve">
+    <value>Authorization failed: {0}</value>
+  </data>
+  <data name="AzureSubscriptionLabel" xml:space="preserve">
+    <value>Azure subscription</value>
+  </data>
+  <data name="ServicePrincipalSetupInProgress" xml:space="preserve">
+    <value>Setting up service principal for registry....</value>
+  </data>
+  <data name="Task_BuildCategoryText" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="KubernetesTitle" xml:space="preserve">
+    <value>Add a Kubernetes service connection</value>
+  </data>
+  <data name="ApplyTemplateButtonText" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="ErrorWhileParsingKubernetesClustersResponse" xml:space="preserve">
+    <value>An error occurred while parsing the List Kubernetes clusters response. Internal error: </value>
+  </data>
+  <data name="WorkspaceNameInvalid" xml:space="preserve">
+    <value>Enter a valid workspace name</value>
+  </data>
+  <data name="AgentAcquisitionPlatformUbuntuVersion" xml:space="preserve">
+    <value>Ubuntu {0}</value>
+  </data>
+  <data name="Task_TaskEnabledText" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="AddRunOnServerTasksText" xml:space="preserve">
+    <value>Add a server job</value>
+  </data>
+  <data name="DisabledText" xml:space="preserve">
+    <value>(Disabled)</value>
+  </data>
+  <data name="Task_DurationFormatSeconds" xml:space="preserve">
+    <value>{0} seconds</value>
+  </data>
+  <data name="Task_UtilityCategoryText" xml:space="preserve">
+    <value>Utility</value>
+  </data>
+  <data name="Tasks_MetaTaskDescTooltip" xml:space="preserve">
+    <value>Help-text for task group inputs (optional).</value>
+  </data>
+  <data name="WizardPrevious" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="SubscriptionNameInvalid" xml:space="preserve">
+    <value>Enter a valid subscription name</value>
+  </data>
+  <data name="CopyTaskDisplayNameFormat" xml:space="preserve">
+    <value>{0} copy</value>
+  </data>
+  <data name="DockerVerifyConnection" xml:space="preserve">
+    <value>Verify this connection</value>
+  </data>
+  <data name="TaskExtensionDisabledMessage" xml:space="preserve">
+    <value>This task’s extension "{0}" has been disabled.</value>
+  </data>
+  <data name="UpdateAutoSpnFooterForMLWorkspaceScope" xml:space="preserve">
+    <value>The Azure service principal key will be renewed for this service connection.</value>
+  </data>
+  <data name="KubernetesServiceAccountToken" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="Task_TaskHelpTooltip" xml:space="preserve">
+    <value>Click to see help</value>
+  </data>
+  <data name="DeletePhaseConfirmation" xml:space="preserve">
+    <value>You are about to delete the '{0}' job and all its settings. This action cannot be reversed.</value>
+  </data>
+  <data name="Task_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ErrorThisAccountNotAAD" xml:space="preserve">
+    <value>Error: This organization is not backed by Microsoft Entra.</value>
+  </data>
+  <data name="DockerId" xml:space="preserve">
+    <value>Docker ID</value>
+  </data>
+  <data name="CreatePublishProfileEndpointFooter" xml:space="preserve">
+    <value>Use this option if you want to create Azure endpoint targeting app-service via publish profile.</value>
+  </data>
+  <data name="KubernetesChooseAuthTypeText" xml:space="preserve">
+    <value>Choose authentication</value>
+  </data>
+  <data name="CouldNotAuthenticateAAD" xml:space="preserve">
+    <value>Could not authenticate to Microsoft Entra. If a popup blocker is enabled in the browser, disable it and try again.</value>
+  </data>
+  <data name="ConnectionStatusNotVerified" xml:space="preserve">
+    <value>Not verified</value>
+  </data>
+  <data name="KubernetesNamespace" xml:space="preserve">
+    <value>Namespace</value>
+  </data>
+  <data name="ResourceGroup" xml:space="preserve">
+    <value>Resource Group</value>
+  </data>
+  <data name="AzureSubscriptionText" xml:space="preserve">
+    <value>Azure Subscription</value>
+  </data>
+  <data name="ErrorDeletingPolicy" xml:space="preserve">
+    <value>Error disconnecting the service connection.Please try again.{0}{1}</value>
+  </data>
+  <data name="PublishProfileConnectionNameTooltip" xml:space="preserve">
+    <value>Enter the service connection name.</value>
+  </data>
+  <data name="KubernetesServiceAccountDetailsHelpHeaderText" xml:space="preserve">
+    <value>Get service account details</value>
+  </data>
+  <data name="TaskGroup_InPreviewToolTip" xml:space="preserve">
+    <value>These options are in preview</value>
+  </data>
+  <data name="KubernetesAksClusterId" xml:space="preserve">
+    <value>Cluster ID</value>
+  </data>
+  <data name="Task_AzureConnectionManageTitle" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="RunOnServerPhaseName" xml:space="preserve">
+    <value>Run on server</value>
+  </data>
+  <data name="KubernetesRenewServiceAccount" xml:space="preserve">
+    <value>Create new service account</value>
+  </data>
+  <data name="AgentAcquisitionPlatformOsx" xml:space="preserve">
+    <value>macOS</value>
+  </data>
+  <data name="AzureSpnCertificate" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="KubernetesCouldNotObtainClusterUrl" xml:space="preserve">
+    <value>Could not obtain cluster URL from cluster properties. Unable to find property - fqdn</value>
+  </data>
+  <data name="AppServiceNameInvalid" xml:space="preserve">
+    <value>Enter a valid app service name</value>
+  </data>
+  <data name="AuthSchemeSelector" xml:space="preserve">
+    <value>Authentication scheme selector</value>
+  </data>
+  <data name="ErrorWhileParsingKubernetesNamespacesResponse" xml:space="preserve">
+    <value>An error occurred while parsing the List Kubernetes namespaces response. Internal error: </value>
+  </data>
+  <data name="Task_DurationFormatDays" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="OnlyOneManualInterventionTaskIsAllowedError" xml:space="preserve">
+    <value>Only one manual intervention task is allowed per run of a server job.</value>
+  </data>
+  <data name="MSISubscriptionNameToolip" xml:space="preserve">
+    <value>Enter the subscription name.</value>
+  </data>
+  <data name="DockerRegistryTitle" xml:space="preserve">
+    <value>Add a Docker Registry service connection</value>
+  </data>
+  <data name="Tasks_MetaTaskDialogCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Task_ErrorMessageForAzureRmEndpoint" xml:space="preserve">
+    <value>The selected Azure service connection in the current task has been updated to service connection type 'Azure Resource Manager' under the 'Service connections' settings. Update the Azure connection type field for the current task with value 'Azure Resource Manager'.</value>
+  </data>
+  <data name="CouldNotFetchEndpointTypes" xml:space="preserve">
+    <value>Could not retrieve available service connection types</value>
+  </data>
+  <data name="ContinueOnErrorText" xml:space="preserve">
+    <value>Continue on error</value>
+  </data>
+  <data name="Task_DurationFormatHours" xml:space="preserve">
+    <value>{0} hours</value>
+  </data>
+  <data name="Task_NumTasksUpdateInProgress" xml:space="preserve">
+    <value>{0} tasks are being updated and will be available soon.</value>
+  </data>
+  <data name="Task_Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="KubernetesServerUrlHelpText" xml:space="preserve">
+    <value>API server address to access the Kubernetes API. For example, https://k8s.contoso.com, or in Azure, aks-contoso-cluster.hcp.eastus.azmk8s.io</value>
+  </data>
+  <data name="KubernetesInvalidKubeconfig" xml:space="preserve">
+    <value>The Kubconfig specified is invalid. Please check your Kubeconfig.</value>
+  </data>
+  <data name="ManagementGroupNameInvalid" xml:space="preserve">
+    <value>Enter a valid Management Group name</value>
+  </data>
+  <data name="DockerConnectionLabel" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="AzureRMAvailableServiceConnections" xml:space="preserve">
+    <value>Available Azure service connections</value>
+  </data>
+  <data name="Task_ResetText" xml:space="preserve">
+    <value>reset</value>
+  </data>
+  <data name="DockerRegistryOperationStatusMessagePrefix" xml:space="preserve">
+    <value>The following error occurred while setting up the service principal for registry : </value>
+  </data>
+  <data name="KubernetesClusterHelpText" xml:space="preserve">
+    <value>Choose your cluster context.</value>
+  </data>
+  <data name="AzureSubscriptionIdText" xml:space="preserve">
+    <value>Subscription ID</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="MSISubscriptionIdTooltip" xml:space="preserve">
+    <value>Enter the subscription ID to which the MSI-enabled agent has access.</value>
+  </data>
+  <data name="ConnectionNameInvalid" xml:space="preserve">
+    <value>Enter a valid connection name</value>
+  </data>
+  <data name="ErrorDeletingEndpoint" xml:space="preserve">
+    <value>Error disconnecting the service connection.Policies for the connection may have changed.Please try again.{0}{1}</value>
+  </data>
+  <data name="AgentAcquisitionMoreInfoTitle" xml:space="preserve">
+    <value>That’s it!</value>
+  </data>
+  <data name="DockerRegistry" xml:space="preserve">
+    <value>Docker Registry</value>
+  </data>
+  <data name="Task_InvalidSectionName" xml:space="preserve">
+    <value>{0}  *</value>
+  </data>
+  <data name="MissingRequiredFieldMessage" xml:space="preserve">
+    <value>Missing required setting(s)</value>
+  </data>
+  <data name="SubscriptionNameMismatchError" xml:space="preserve">
+    <value>Subscription name mismatch error. Subscription ID {0} has a display name of {1}.</value>
+  </data>
+  <data name="AzureSubscriptionDisplayName" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="AzureServicePrincipalKeyText" xml:space="preserve">
+    <value>Service principal key</value>
+  </data>
+  <data name="DockerRegistryOthers" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="CustomEndpointInvalidGuidInputMessage" xml:space="preserve">
+    <value>{0} must be a valid GUID</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Tasks_MenuCreateMetaTask" xml:space="preserve">
+    <value>Create a task group</value>
+  </data>
+  <data name="CreateMetaTaskDescriptionWatermarkText" xml:space="preserve">
+    <value>Enter description</value>
+  </data>
+  <data name="SpnKeyInvalid" xml:space="preserve">
+    <value>Enter a valid service principal key</value>
+  </data>
+  <data name="Token" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="Task_UnableToCreateTaskGroupMessage" xml:space="preserve">
+    <value>Unable to create the task group. Task {0} with runsOn value {1}, does not match with other child tasks.</value>
+  </data>
+  <data name="UpdateUIContributionConnectionsDialogTitle" xml:space="preserve">
+    <value>Update authentication for {0}</value>
+  </data>
+  <data name="TaskGroup_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ClipboardPasteLargeDataError" xml:space="preserve">
+    <value>The clipboard data is too large to paste</value>
+  </data>
+  <data name="TimeoutInMinutes" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="ExternalLinkTooltipText" xml:space="preserve">
+    <value>External link</value>
+  </data>
+  <data name="TenantIdIsNullOrUndefinedForSubscription" xml:space="preserve">
+    <value>No tenant ID exists for subscription {0}.</value>
+  </data>
+  <data name="ServerUrl" xml:space="preserve">
+    <value>Server URL</value>
+  </data>
+  <data name="AddTask" xml:space="preserve">
+    <value>Add task</value>
+  </data>
+  <data name="Tasks_MetaTaskParamTooltip" xml:space="preserve">
+    <value>Variables extracted from the selected tasks.</value>
+  </data>
+  <data name="TaskGroupHeaderTooltip" xml:space="preserve">
+    <value>Learn more about how you can run tasks on the server and agents. &lt;a href=\'https://www.visualstudio.com/docs/build/steps/deploy/manual-intervention\' target=\'_blank\'&gt;More information&lt;/a&gt;</value>
+  </data>
+  <data name="VisualStudioTeamServicesProductName" xml:space="preserve">
+    <value>Azure DevOps</value>
+  </data>
+  <data name="UseAutoSpnCreateWindowFooter" xml:space="preserve">
+    <value>To create a new service principal automatically, </value>
+  </data>
+  <data name="AgentAcquisitionPlatformLinux" xml:space="preserve">
+    <value>Linux</value>
+  </data>
+  <data name="DeleteTaskIconLabel" xml:space="preserve">
+    <value>Delete task</value>
+  </data>
+  <data name="TaskTypeDescriptioHelpUrl" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=825235</value>
+  </data>
+  <data name="NoChefConnectionFound" xml:space="preserve">
+    <value>No Chef service connection was found</value>
+  </data>
+  <data name="ManagementGroup" xml:space="preserve">
+    <value>Management Group</value>
+  </data>
+  <data name="AgentAcquisitionCreateAgentTitle" xml:space="preserve">
+    <value>Create the agent</value>
+  </data>
+  <data name="LearnMoreAboutKubernetesLink" xml:space="preserve">
+    <value>&lt;a href="https://go.microsoft.com/fwlink/?linkid=851275" target="_blank"&gt;&lt;b&gt;Learn more about Kubernetes&lt;/b&gt;&lt;/a&gt;</value>
+  </data>
+  <data name="SpnClientIdInvalid" xml:space="preserve">
+    <value>Enter a valid service principal client ID or name</value>
+  </data>
+  <data name="KubernetesServiceAccountDetailsHelpSectionText" xml:space="preserve">
+    <value>&lt;div id="kubernetesServiceAccountDetails" class="kubernetes_sa_details"&gt;&lt;code&gt;# Copy the secret name from the output of the get secret command&lt;br&gt;~/$ kubectl get serviceaccounts &amp;lt;service-account-name&amp;gt; -o yaml&lt;br&gt;~/$ kubectl get secret &amp;lt;service-account-secret-name&amp;gt; -o yaml&lt;/code&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ServicePrincipalTip" xml:space="preserve">
+    <value>For help on creating an Azure service principal, see &lt;a href="https://go.microsoft.com/fwlink/?LinkID=623000&amp;clcid=0x409" target="_blank"&gt;service connections&lt;/a&gt;.</value>
+  </data>
+  <data name="TaskDefinitionListTitle" xml:space="preserve">
+    <value>Add tasks</value>
+  </data>
+  <data name="TaskTimeoutTooltip" xml:space="preserve">
+    <value>Specifies the maximum time, in minutes, that a task is allowed to execute on the agent before being canceled by the server.&lt;br&gt; A zero value indicates an infinite timeout.</value>
+  </data>
+  <data name="AlwaysRunText" xml:space="preserve">
+    <value>Always run</value>
+  </data>
+  <data name="TeamFoundationServerProductName" xml:space="preserve">
+    <value>Azure DevOps Server</value>
+  </data>
+  <data name="KubernetesClusterContextListPlaceholderText" xml:space="preserve">
+    <value>Choose your cluster context.</value>
+  </data>
+  <data name="Tasks_MetaTaskDialogParameterHeader" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MSITenantIdTooltip" xml:space="preserve">
+    <value>Enter the tenant ID of the subscription mentioned above.</value>
+  </data>
+  <data name="DeploymentGroupDemandsWarningTooltip" xml:space="preserve">
+    <value>Some machines do not meet all task demands</value>
+  </data>
+  <data name="MSIEnvironmentTooltip" xml:space="preserve">
+    <value>Select the environment.</value>
+  </data>
+  <data name="Task_InProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="UsePATDescription" xml:space="preserve">
+    <value>Create a GitHub service connection authenticated with a GitHub personal access token</value>
+  </data>
+  <data name="KubernetesKubeconfigFieldNotPresent" xml:space="preserve">
+    <value>The Kubconfig does not contain '{0}' field. Please check the kubeconfig.</value>
+  </data>
+  <data name="ManagementGroupId" xml:space="preserve">
+    <value>Management Group ID</value>
+  </data>
+  <data name="ErrorPrefix" xml:space="preserve">
+    <value>Error: </value>
+  </data>
+  <data name="AgentAcquisitionConfigureAgentTitle" xml:space="preserve">
+    <value>Configure the agent</value>
+  </data>
+  <data name="ProcessParameterText" xml:space="preserve">
+    <value>Pipeline parameters</value>
+  </data>
+  <data name="AzureContainerRegistry" xml:space="preserve">
+    <value>Azure Container Registry</value>
+  </data>
+  <data name="AzureSubscriptionNameText" xml:space="preserve">
+    <value>Subscription name</value>
+  </data>
+  <data name="ProcessParameterTaskDetailText" xml:space="preserve">
+    <value>Apply a template to see its properties</value>
+  </data>
+  <data name="ErrorWhileParsingListACRResponse" xml:space="preserve">
+    <value>An error occurred while parsing the List ACR response. Internal error: </value>
+  </data>
+  <data name="ConnectionName" xml:space="preserve">
+    <value>Connection name</value>
+  </data>
+  <data name="SpnCreationInProgress" xml:space="preserve">
+    <value>Setting up service principal details for the service connection...</value>
+  </data>
+  <data name="KubernetesServiceAccountSecretYaml" xml:space="preserve">
+    <value>Secret</value>
+  </data>
+  <data name="AgentAcquisitionPlatformRedhat" xml:space="preserve">
+    <value>Red Hat</value>
+  </data>
+  <data name="AgentAcquisitionRunAgentInteractiveOrServiceTitle" xml:space="preserve">
+    <value>You can run the agent interactively or as a LaunchAgent service.</value>
+  </data>
+  <data name="KubernetesAksClusterHelpText" xml:space="preserve">
+    <value>Select the Azure Kubernetes Service cluster.</value>
+  </data>
+  <data name="AgentAcquisitionPlatformUbuntu" xml:space="preserve">
+    <value>Ubuntu</value>
+  </data>
+  <data name="Task_MetaTaskDialogParentParameterHeading" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="MlWorkspaceName" xml:space="preserve">
+    <value>Machine Learning Workspace</value>
+  </data>
+  <data name="AgentAcquisitionRunAgentOptionallyTitle" xml:space="preserve">
+    <value>Optionally run the agent interactively</value>
+  </data>
+  <data name="Task_DurationCompletedFormat" xml:space="preserve">
+    <value>Ran for {0} ({1}), completed {2} ago</value>
+  </data>
+  <data name="DockerHub" xml:space="preserve">
+    <value>Docker Hub</value>
+  </data>
+  <data name="ServiceAccountSetupInProgress" xml:space="preserve">
+    <value>Setting up Kubernetes service account...</value>
+  </data>
+  <data name="KubernetesKubeconfigAuthText" xml:space="preserve">
+    <value>Kubeconfig</value>
+  </data>
+  <data name="Task_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="CheckoutMarketPlaceText" xml:space="preserve">
+    <value>Check out the Marketplace.</value>
+  </data>
+  <data name="Task_NotStarted" xml:space="preserve">
+    <value>Not started</value>
+  </data>
+  <data name="Authorize" xml:space="preserve">
+    <value>Authorize</value>
+  </data>
+  <data name="ConnectionStatusVerified" xml:space="preserve">
+    <value>Verified</value>
+  </data>
+  <data name="UseManualSpnWindowFooterLink" xml:space="preserve">
+    <value>use the full version of the service connection dialog.</value>
+  </data>
+  <data name="Task_DeployCategoryText" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="KuberntesInvalidServiceAccountSecretYaml" xml:space="preserve">
+    <value>The service account secret yaml specified is invalid. Make sure that its a valid yaml and try again.</value>
+  </data>
+  <data name="AgentAcquisitionPlatformRedhatVersion" xml:space="preserve">
+    <value>Red Hat {0}</value>
+  </data>
+  <data name="AddCustomConnectionsDialogTitle" xml:space="preserve">
+    <value>Add {0} service connection</value>
+  </data>
+  <data name="KubernetesAksCluster" xml:space="preserve">
+    <value>Cluster</value>
+  </data>
+  <data name="AgentAcquisitionRunAgentTitle" xml:space="preserve">
+    <value>Run the agent</value>
+  </data>
+  <data name="CloseTooltipText" xml:space="preserve">
+    <value>Close this tooltip</value>
+  </data>
+  <data name="VerifyConnection" xml:space="preserve">
+    <value>Verify connection</value>
+  </data>
+  <data name="Task_NewVersionAvailable" xml:space="preserve">
+    <value>A new version of the task is available.</value>
+  </data>
+  <data name="AzureContainerRegistryHelpText" xml:space="preserve">
+    <value>Select the Azure Container Registry</value>
+  </data>
+  <data name="Tasks_MetaTaskDialogValuesHeader" xml:space="preserve">
+    <value>Default value</value>
+  </data>
+  <data name="PFXToPEMConversion" xml:space="preserve">
+    <value>To convert PFX to PEM content, execute the below command: &lt;br /&gt;&lt;b&gt;openssl  pkcs12  -in  file.pfx   -out file.pem   -nodes -password pass:&amp;lt;password_here&amp;gt;&lt;/b&gt;</value>
+  </data>
+  <data name="KubernetesRenewServiceAccountHelpText" xml:space="preserve">
+    <value>Enable this to create a new service account</value>
+  </data>
+  <data name="Task_NameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AddRunOnMachineGroupTasksText" xml:space="preserve">
+    <value>Add a deployment group job</value>
+  </data>
+  <data name="GenerateLinkTooltip" xml:space="preserve">
+    <value>Generate the name from task attributes</value>
+  </data>
+  <data name="Tasks_MarketPlaceText" xml:space="preserve">
+    <value>Don’t see what you need? Check out the Marketplace.</value>
+  </data>
+  <data name="CustomEndpointInvalidUriInputMessage" xml:space="preserve">
+    <value>{0} must be a valid URL</value>
+  </data>
+  <data name="AddAzureResourceManagerDialogTitle" xml:space="preserve">
+    <value>Add an Azure Resource Manager service connection</value>
+  </data>
+  <data name="AllFieldsRequired" xml:space="preserve">
+    <value>All fields are required</value>
+  </data>
+  <data name="CouldNotCompleteOAuth2" xml:space="preserve">
+    <value>Could not authorize using OAuth2. If a popup blocker is enabled in the browser, disable it and try again.</value>
+  </data>
+  <data name="Task_DurationFormatMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="Task_AllCategoriesText" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="RunOnAgentPhaseName" xml:space="preserve">
+    <value>Run on agent</value>
+  </data>
+  <data name="DockerRegistryType" xml:space="preserve">
+    <value>Registry type</value>
+  </data>
+  <data name="Task_CreateMetaTaskDialogTitle" xml:space="preserve">
+    <value>Create a task group</value>
+  </data>
+  <data name="Task_AddLabelText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="AzureRMAvailableAzureSubscriptions" xml:space="preserve">
+    <value>Available Azure subscriptions</value>
+  </data>
+  <data name="SpnAuthorizationInProgress" xml:space="preserve">
+    <value>Authorizing...</value>
+  </data>
+  <data name="ConnectionStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="DeletePhaseIconLabel" xml:space="preserve">
+    <value>Delete the job</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="KubernetesKubeConfigText" xml:space="preserve">
+    <value>KubeConfig</value>
+  </data>
+  <data name="AddTaskLinkText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="KubernetesClusterContextText" xml:space="preserve">
+    <value>Cluster Context</value>
+  </data>
+  <data name="ClickAuthorizeHelpText" xml:space="preserve">
+    <value>Click Authorize to configure an Azure service connection</value>
+  </data>
+  <data name="TaskDisabledMessage" xml:space="preserve">
+    <value>This task has been disabled for your project.</value>
+  </data>
+  <data name="ConfigurationUrlHelpText" xml:space="preserve">
+    <value>Service connection uses the configuration URL.</value>
+  </data>
+  <data name="Task_AddTasksDialogTitle" xml:space="preserve">
+    <value>Task catalog</value>
+  </data>
+  <data name="DeletePhaseConfirmationTitle" xml:space="preserve">
+    <value>Delete the job</value>
+  </data>
+  <data name="CreateAutoSpnFooterForManagementGroup" xml:space="preserve">
+    <value>A new Azure service principal will be created and assigned with the "Owner" role, having access to all resources within the Management Group.&lt;br/&gt;&lt;br/&gt;If your Management Group is not listed above, or your organization is not backed by Microsoft Entra, or to specify an existing service principal,</value>
+  </data>
+  <data name="AgentAcquisitionConfigureAccountTitle" xml:space="preserve">
+    <value>Configure your organization</value>
+  </data>
+  <data name="RunOnMachineGroupTasksDescription" xml:space="preserve">
+    <value>Lets you add tasks that run on an agent</value>
+  </data>
+  <data name="TaskDefinitionListAllText" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AzureRMAvailableAzureManagementGroups" xml:space="preserve">
+    <value>Available Azure management groups</value>
+  </data>
+  <data name="RunOnMachineGroupPhaseHeaderTooltip" xml:space="preserve">
+    <value>A group of tasks that will run on a deployment group</value>
+  </data>
+  <data name="LearnMoreAboutTaskGroups" xml:space="preserve">
+    <value>Learn more about task groups</value>
+  </data>
+  <data name="RunOnServerTasksDescription" xml:space="preserve">
+    <value>Lets you add tasks which run on the server</value>
+  </data>
+  <data name="AzureTenantId" xml:space="preserve">
+    <value>Tenant ID</value>
+  </data>
+  <data name="UseAutoSpnCreateWindowFooterLink" xml:space="preserve">
+    <value>use the automated version of the service connection dialog.</value>
+  </data>
+  <data name="AgentAcquisitionConfigureAgentDetailedInstructions" xml:space="preserve">
+    <value>detailed instructions</value>
+  </data>
+  <data name="Task_InvalidLabelText" xml:space="preserve">
+    <value>{0} *</value>
+  </data>
+  <data name="Tasks_MetaTaskValueTooltip" xml:space="preserve">
+    <value>The default value for task group inputs (optional).</value>
+  </data>
+  <data name="ManagementGroupIDInvalid" xml:space="preserve">
+    <value>Enter a valid Management Group ID</value>
+  </data>
+  <data name="SpnAuthorizationFailedError" xml:space="preserve">
+    <value>Authorization failed</value>
+  </data>
+  <data name="TaskTypeDescriptionHelpText" xml:space="preserve">
+    <value>Learn more &lt;a href='{0}' target='_blank'&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="AdvancedSettingsText" xml:space="preserve">
+    <value>Advanced settings</value>
+  </data>
+  <data name="Task_NewVersionHelp" xml:space="preserve">
+    <value>A new stable version of the task is available.</value>
+  </data>
+  <data name="Task_VersionSelectorLabel" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="SpnUpdateInProgress" xml:space="preserve">
+    <value>Service principal details are being updated...</value>
+  </data>
+  <data name="RunOnAgentTasksDescription" xml:space="preserve">
+    <value>Lets you add tasks which run on an agent</value>
+  </data>
+  <data name="AgentAcquisitionRunInteractivelyTitle" xml:space="preserve">
+    <value>To run interactively:</value>
+  </data>
+  <data name="CopyUrlToClipboard" xml:space="preserve">
+    <value>Copy the URL to the clipboard</value>
+  </data>
+  <data name="AuthorizeToCreateAzureRMEndpointHelpText" xml:space="preserve">
+    <value>Click Authorize to configure an Azure service connection. A new Azure service principal will be created and added to the Contributor role, having access to all resources in the selected subscription.</value>
+  </data>
+  <data name="TenetIdInvalid" xml:space="preserve">
+    <value>Enter a valid tenant ID</value>
+  </data>
+  <data name="DockerEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Tasks_MetaTaskDialogDescriptionHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PhaseAddTaskButtonTooltip" xml:space="preserve">
+    <value>Add a task in job '{0}'</value>
+  </data>
+  <data name="Task_NoAzureEnvironmentsFound" xml:space="preserve">
+    <value>No subscriptions were found</value>
+  </data>
+  <data name="CertificateInvalid" xml:space="preserve">
+    <value>Invalid certificate provided</value>
+  </data>
+  <data name="KubernetesCluster" xml:space="preserve">
+    <value>Cluster</value>
+  </data>
+  <data name="LearnMoreTextForAzureSubscriptionBasedKubernetesEndpoint" xml:space="preserve">
+    <value>&lt;br&gt;For an RBAC enabled cluster, the service account is created in the chosen namespace and has permissions only on that namespace.&lt;br&gt;&lt;br&gt;For an RBAC disabled cluster, though the service account is created in the chosen namespace, it has permissions across all namespaces (cluster-wide).&lt;br&gt;&lt;br&gt;&lt;a href="https://go.microsoft.com/fwlink/?linkid=851275" target="_blank"&gt;&lt;b&gt;Learn more about Kubernetes&lt;/b&gt;&lt;/a&gt;&lt;br&gt;</value>
+  </data>
+  <data name="KubernetesServiceAccountSecretFieldNotPresent" xml:space="preserve">
+    <value>The service acount secret yaml does not contain '{0}' field. Make sure that its present and try again.</value>
+  </data>
+  <data name="Task_WhatsNewMarkdown" xml:space="preserve">
+    <value>&lt;h4&gt;What’s new in version `{0}`&lt;/h4&gt;</value>
+  </data>
+  <data name="CategoryText" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Tasks_MetaTaskVariablesMessage" xml:space="preserve">
+    <value>The following parameters and values are from the configuration variables used in the underlying tasks.</value>
+  </data>
+  <data name="NoSubscriptionsFound" xml:space="preserve">
+    <value>No subscriptions were found</value>
+  </data>
+  <data name="Tasks_MenuDisableText" xml:space="preserve">
+    <value>Disable selected tasks</value>
+  </data>
+  <data name="JenkinsLicenseText" xml:space="preserve">
+    <value>"Jenkins" is a registered trademark of Software in the Public Interest Inc. The Jenkins logo is licensed under the Creative Commons Attribution-ShareAlike Unported License by the Jenkins project (https://jenkins-ci.org/)</value>
+  </data>
+  <data name="KubernetesAcceptUntrustedCertsHelpText" xml:space="preserve">
+    <value>Enable this if your authentication uses untrusted certificates.</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="CustomEndpointInvalidInputMessage" xml:space="preserve">
+    <value>Enter a valid {0}</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Task_NewPreviewVersionHelp" xml:space="preserve">
+    <value>A new preview version of the task is available. Would you like to try it?</value>
+  </data>
+  <data name="Task_RenameTaskLabel" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="AgentAcquisitionRunAgentOptionallyInfo" xml:space="preserve">
+    <value>If you didn't run as a service above:</value>
+  </data>
+  <data name="AzureSpnCertificateSpnHelpText" xml:space="preserve">
+    <value>Copy the contents of the *.pem file. Include both the certificate and​ private key sections​.</value>
+  </data>
+  <data name="TaskDefinitionListDescription" xml:space="preserve">
+    <value>Don't see what you need?</value>
+  </data>
+  <data name="CreateMsiEndpointFooter" xml:space="preserve">
+    <value>Use this option if you have enabled the system assigned managed identity on an Azure VM to automatically authenticate and gain access to resources in Azure Resource Manager. For more information, see &lt;a href="https://go.microsoft.com/fwlink/?linkid=2044617" target="_blank"&gt;Managed  Identities overview​&lt;/a&gt;.</value>
+  </data>
+</root>

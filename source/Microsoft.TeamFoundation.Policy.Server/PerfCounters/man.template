@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{551F1420-17D2-4F58-8C17-F8C1A9F00469}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.Policy.Server.dll" providerName="MicrosoftTeamFoundationPolicyServer" providerType="userMode" symbol="MicrosoftTeamFoundationPolicyServer" callback="custom">
+        <counterSet guid="{48CAB49E-711D-4BBC-8A87-8763E77E6AB5}" name="TFS Services:Policy" description="Counters for the Policy Service" instances="globalAggregate" symbol="PerfCounters" uri="Microsoft.TeamFoundation.Policy.Server.PerfCounters" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Versioned Cache Queries/Sec" description="Frequency of times the versioned cache was called to query policy configurations" type="perf_counter_bulk_count" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.VersionedCacheQueriesPerSec" />
+          <counter id="2" baseID="3" name="Average Versioned Cache Query Time" description="Average time needed to retrieve policy configurations from the versioned cache" type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AverageVersionedCacheQueryTime" />
+          <counter id="3" name="Average Versioned Cache Query Time Base" description="Base for the Average Versioned Cache Time" type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AverageVersionedCacheQueryTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="4" name="Scoped Queries/Sec" description="Frequency of times query policy configurations by scope was called" type="perf_counter_bulk_count" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.ScopedQueriesPerSec" />
+          <counter id="5" baseID="6" name="Average Scoped Query Time" description="Average time needed to retrieve policy configurations by scope" type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AverageScopedQueryTime" />
+          <counter id="6" name="Average Scoped Query Time Base" description="Base for the Average Scoped Query Time" type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AverageScopedQueryTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="7" name="Paginated Project Queries/Sec" description="Frequency of times paginated query policies by project was called" type="perf_counter_bulk_count" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.PaginatedProjectQueriesPerSec" />
+          <counter id="8" baseID="9" name="Average Paginated Project Query Time" description="Average time needed to retrieve paginated policy configurations by project" type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AveragePaginatedProjectQueryTime" />
+          <counter id="9" name="Average Paginated Project Time Base" description="Base for the Average Paginated Project Query Time" type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AveragePaginatedProjectQueryTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="10" name="Query Counts by Scope/Sec" description="Frequency of times query counts by scope was called" type="perf_counter_bulk_count" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.QueryCountsByScopePerSec" />
+          <counter id="11" baseID="12" name="Average Query Counts by Scope Time" description="Average time needed to retrieve query counts by scope" type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AverageQueryCountsByScopeTime" />
+          <counter id="12" name="Average Query Counts Time Base" description="Base for the Average Query Counts by Scope Time" type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.Policy.Server.AverageQueryCountsByScopeTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+        </counterSet>
+        <counterSet guid="{AB08C5E3-2DEA-4A94-84CD-DFC5F3BB689B}" name="TFS Services:PolicyInstance" description="Counters for the Policy Service aggregated by instance" instances="multipleAggregate" symbol="PerfCountersInstance" uri="Microsoft.TeamFoundation.Policy.Server.PerfCountersInstance" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Policy Evaluation Failures/Sec" description="Frequency of policy evaluation failures by ID" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Policy.Server.PerfCountersInstance_PolicyEvaluationFailuresPerSec" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

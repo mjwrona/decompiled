@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TaskDefinitionInvalidTaskInput" xml:space="preserve">
+    <value>Task definition visible rule's input name '{0}' is invalid. Task definition Input with that name cannot be found for Task with ID '{1}'.</value>
+  </data>
+  <data name="TargetMissingOrEmpty" xml:space="preserve">
+    <value>Target is missing or empty in dataSourceBinding of task with ID '{0}'.</value>
+  </data>
+  <data name="TaskDefinitionInvalidCategory" xml:space="preserve">
+    <value>Task definition category '{0}'  is not a well known category. Please use one of these: "Build", "Utility", "Test", "Package", "Deploy"</value>
+  </data>
+  <data name="ParsingFailedForEndpointType" xml:space="preserve">
+    <value>Unable to parse the service connection contribution. Parsing failed with the following error: {0}</value>
+  </data>
+  <data name="DataSourceBindingInvalid" xml:space="preserve">
+    <value>DataSourceBinding is invalid in task with ID '{0}'. Either DataSourceName or (EndpointUrl and ResultSelector) should be present. Both cannot be present.</value>
+  </data>
+  <data name="InvalidUrlForEndpoint" xml:space="preserve">
+    <value>{0} is not a valid URL.</value>
+  </data>
+  <data name="TaskDefinitionInvalidVisibleRuleRelation" xml:space="preserve">
+    <value>Task definition visible rule '{0}' is invalid. The task definition input with name '{1}' is already part of another rule for Task with ID '{2}'.</value>
+  </data>
+  <data name="ContributionUsesExistingTaskID" xml:space="preserve">
+    <value>The Task Contribution {0} with ID {1} already exists in the Marketplace. To publish the extension, please ensure you have a unique task id.</value>
+  </data>
+  <data name="TaskDefinitionInvalidDependentInputsOrder" xml:space="preserve">
+    <value>Task definition input '{0}' should come before Task definition input '{1}' as per dependent inputs order for Task with ID '{2}'.</value>
+  </data>
+  <data name="EndpointTypeInvalidMessage" xml:space="preserve">
+    <value>The following errors were found in service connection contribution:</value>
+  </data>
+  <data name="EndpointIdMissingOrEmpty" xml:space="preserve">
+    <value>EndpointId is missing or empty in dataSourceBinding of task with ID '{0}'.</value>
+  </data>
+  <data name="MissingContribution" xml:space="preserve">
+    <value>Updated version of the extension does not contain {0} contribution.</value>
+  </data>
+  <data name="EndpointNameInvalidMessage" xml:space="preserve">
+    <value>
+      The service connection should have a valid name.</value>
+  </data>
+  <data name="TaskDefinitionInvalidDependentInputs" xml:space="preserve">
+    <value>Task definition input '{0}' and Task definition input '{1}' must belong to same group as they are dependent inputs for Task with ID '{2}'.</value>
+  </data>
+  <data name="TaskDefinitionInvalidVisibleRuleOperators" xml:space="preserve">
+    <value>Task definition visible rule '{0}' is invalid. Rule cannot contain both '&amp;&amp;' and '||' operators.</value>
+  </data>
+  <data name="TaskDefinitionInvalidVisibleRuleFormat" xml:space="preserve">
+    <value>Task definition visible rule '{0}' is invalid. It should be of format "A &lt;validconditionhere&gt; B" for Task with ID '{1}'.</value>
+  </data>
+  <data name="EndpointTypeMissingAuthScheme" xml:space="preserve">
+    <value>
+      The service connection should support at least one authentication scheme.</value>
+  </data>
+  <data name="EndpointDisplayNameInvalidMessage" xml:space="preserve">
+    <value>
+      The service connection should have a valid display name.</value>
+  </data>
+  <data name="ContributionsWithSameTaskId" xml:space="preserve">
+    <value>Contributions : {0} have the same task ID {1}. To publish the extension, all contributions must map to different task IDs.</value>
+  </data>
+  <data name="TaskDefinitionInvalidIdRequired" xml:space="preserve">
+    <value>Task definition identifier must be provided.</value>
+  </data>
+  <data name="ContributionIdDoesNotMatchTaskId" xml:space="preserve">
+    <value>Task ID mismatch between extension versions. To publish the extension, continue to use same task ID for a contribution in all the versions.
+Contribution {0} maps to task ID {1} in a previous version.
+Contribution {2} maps to task ID {3} in current version.</value>
+  </data>
+  <data name="ContributionsWithSameServiceEndpointName" xml:space="preserve">
+    <value>Contributions : {0} have the same service endpoint name {1}. To publish the extension, all contributions must map to different service endpoint names.</value>
+  </data>
+  <data name="TaskDefinitionInvalidAliasDuplicate" xml:space="preserve">
+    <value>The input alias '{0}' is invalid. The same alias may not be used more than once.</value>
+  </data>
+  <data name="ContributionReusesTaskId" xml:space="preserve">
+    <value>Contribution {0} is re-using task ID of some other contribution from earlier version. To publish the extension, change the task ID.</value>
+  </data>
+  <data name="ContributionUsesExistingServiceEndpointName" xml:space="preserve">
+    <value>The Service Endpoint Contribution {0} with Name {1} already exists in the Marketplace. To publish the extension, please ensure you have a unique service endpoint name.</value>
+  </data>
+  <data name="TaskDefinitionInvalidVisibleRuleCondition" xml:space="preserve">
+    <value>Task definition visible rule condition {0} is invalid for input {1} Task with ID {2}.Supported conditions are '!=','==' or '=','&lt;','&gt;','&lt;=','&gt;='.</value>
+  </data>
+  <data name="EndpointTypeInvalidAuthSchemes" xml:space="preserve">
+    <value>
+      Authentication schemes {0} are not valid.</value>
+  </data>
+  <data name="TaskDefinitionInvalidGroupVisibleRuleDependent" xml:space="preserve">
+    <value>The visibility of task definition group '{0}' cannot depend upon the task definition input '{1}' within the same group for task with ID '{2}'.</value>
+  </data>
+  <data name="TaskDefinitionInvalidAliasMatchingName" xml:space="preserve">
+    <value>The input alias '{0}' is invalid. An alias must not match another input's name.</value>
+  </data>
+</root>

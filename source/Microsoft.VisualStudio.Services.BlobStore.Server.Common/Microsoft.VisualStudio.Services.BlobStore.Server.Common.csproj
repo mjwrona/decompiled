@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.BlobStore.Server.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E88D0733-9D45-4BCA-8D5A-2674EC62A922}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.BlobStore.Server.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.BlobStore.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Artifact.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Artifact.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.Shared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.AzComm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.AzComm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Server.BlobStitcher.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Server.BlobStitcher.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Azure">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlobStorageShardManagerExtensions.cs" />
+    <Compile Include="ChunkDedupGCPhase.cs" />
+    <Compile Include="ChunkDedupGCCheckpoint.cs" />
+    <Compile Include="ServiceRegistryConstants.cs" />
+    <Compile Include="Common\AzureFrontDoorUrlSigner.cs" />
+    <Compile Include="Common\BlobCoverageEstimator.cs" />
+    <Compile Include="Common\BlobReferenceStateHelper.cs" />
+    <Compile Include="Common\IRemoteCache`2.cs" />
+    <Compile Include="Common\ICountableRemoteCache`2.cs" />
+    <Compile Include="Common\LocalCache`2.cs" />
+    <Compile Include="Common\BlobStoragePhysicalNode.cs" />
+    <Compile Include="Common\BlobStoreBufferPoolsProvider.cs" />
+    <Compile Include="Common\BlobStoreExtensions.cs" />
+    <Compile Include="Common\FrameworkBlobStoreVersion.cs" />
+    <Compile Include="Common\BlobStoreSharedConstants.cs" />
+    <Compile Include="Common\BlobStoreProviderConstants.cs" />
+    <Compile Include="Common\BlobStoreUtils.cs" />
+    <Compile Include="Common\BlobsZipWriter.cs" />
+    <Compile Include="Common\IDedupInfo.cs" />
+    <Compile Include="Common\HealthStatus.cs" />
+    <Compile Include="Common\IDedupMetadataEntryProcessor.cs" />
+    <Compile Include="Common\ISessionProvider.cs" />
+    <Compile Include="Common\IHostDomainStoreService.cs" />
+    <Compile Include="Common\DedupManifestArtifactValidator.cs" />
+    <Compile Include="Common\DedupMetadataEntry.cs" />
+    <Compile Include="Common\DedupOnlyComparer.cs" />
+    <Compile Include="Common\DedupsValidationResult.cs" />
+    <Compile Include="Common\IBlobEdgeCachingService.cs" />
+    <Compile Include="Common\BlobEdgeCachingService.cs" />
+    <Compile Include="Common\FeatureEnabledConstants.cs" />
+    <Compile Include="Common\FrameworkBlobStore.cs" />
+    <Compile Include="Common\FrameworkDedupStore.cs" />
+    <Compile Include="Common\FrameworkHostDomainStore.cs" />
+    <Compile Include="Common\IDiagnosticBlobUploader.cs" />
+    <Compile Include="Common\DiagnosticBlobUploader.cs" />
+    <Compile Include="Common\IBlobProvider.cs" />
+    <Compile Include="Common\BlobProviderExtentions.cs" />
+    <Compile Include="Common\BasicBlobMetadata.cs" />
+    <Compile Include="Common\EtagValue`1.cs" />
+    <Compile Include="Common\DisposableEtagValue`1.cs" />
+    <Compile Include="Common\EtagValueExtensions.cs" />
+    <Compile Include="Common\BlockInfo.cs" />
+    <Compile Include="Common\BlobReferenceState.cs" />
+    <Compile Include="Common\IBlobMetadata.cs" />
+    <Compile Include="Common\BlobExistsRowConstants.cs" />
+    <Compile Include="Common\SweepOperation.cs" />
+    <Compile Include="Common\ReferenceResult.cs" />
+    <Compile Include="Common\RemoveReferenceResult.cs" />
+    <Compile Include="Common\IBlobMetadataProvider.cs" />
+    <Compile Include="Common\ValidateMetadataAndCopyBlobsToCorrectShardsResults.cs" />
+    <Compile Include="Common\FixMetadataAfterDisasterResults.cs" />
+    <Compile Include="Common\IBlobMetadataSizeInfo.cs" />
+    <Compile Include="Common\BlobReferenceDetailInfo.cs" />
+    <Compile Include="Common\IBlobMetadataProjectScopedSizeInfo.cs" />
+    <Compile Include="Common\IAdminBlobMetadataProvider.cs" />
+    <Compile Include="Common\IAdminBlobMetadataProviderWithTestHooks.cs" />
+    <Compile Include="Common\BlobMetadataProviderExtensions.cs" />
+    <Compile Include="Common\IBlobStore.cs" />
+    <Compile Include="Common\RemoveReferencesResult.cs" />
+    <Compile Include="Common\IAdminBlobStore.cs" />
+    <Compile Include="Common\IBlobsZipWriter.cs" />
+    <Compile Include="Common\IClientToolStorageProvider.cs" />
+    <Compile Include="Common\IDedupProvider.cs" />
+    <Compile Include="Common\DeleteDecision.cs" />
+    <Compile Include="Common\DeleteResult.cs" />
+    <Compile Include="Common\IDedupProviderExtensions.cs" />
+    <Compile Include="Common\IDedupStore.cs" />
+    <Compile Include="Common\IQuotaCacheServiceBase.cs" />
+    <Compile Include="Common\IQuotaCacheServiceV2.cs" />
+    <Compile Include="Common\KeepUntilResult.cs" />
+    <Compile Include="Common\MarkResult.cs" />
+    <Compile Include="Common\QuotaService.cs" />
+    <Compile Include="Common\IQuotaService.cs" />
+    <Compile Include="Common\QuotaCacheService.cs" />
+    <Compile Include="Common\ReceiptSecretTandem.cs" />
+    <Compile Include="Common\ResultArrangement.cs" />
+    <Compile Include="Common\StateFilter.cs" />
+    <Compile Include="Common\DedupMetadataPageRetrievalOption.cs" />
+    <Compile Include="Common\RegistryServiceExtension.cs" />
+    <Compile Include="Common\PathEntry.cs" />
+    <Compile Include="Common\SASUriExpiry.cs" />
+    <Compile Include="Common\SASUriExpiryPolicy.cs" />
+    <Compile Include="Common\SASUriExpiryBounds.cs" />
+    <Compile Include="Common\PrefixResult.cs" />
+    <Compile Include="Common\ShardingRangePrefixLister.cs" />
+    <Compile Include="Common\LengthComparer.cs" />
+    <Compile Include="Common\StorageLogExportJobDefinition.cs" />
+    <Compile Include="Common\UpdateKeepUntilReferenceHelper.cs" />
+    <Compile Include="Common\VisitDedupResult.cs" />
+    <Compile Include="Common\Resources.cs" />
+    <Compile Include="Common\DedupValidation\DedupValidationResult.cs" />
+    <Compile Include="Common\DedupValidation\Diagnostics.cs" />
+    <Compile Include="Common\DedupValidation\ResultStatus.cs" />
+    <Compile Include="Common\DedupValidation\ValidationMetrics.cs" />
+    <Compile Include="Common\DedupValidation\RootsValidationConfig.cs" />
+    <Compile Include="Common\DedupValidation\RootsValidationResult.cs" />
+    <Compile Include="Common\Models\IBlobIdReferenceProcessor.cs" />
+    <Compile Include="Common\Models\IBlobIdReferenceRowVisitor.cs" />
+    <Compile Include="Common\Models\IdBlobReferenceRow.cs" />
+    <Compile Include="Common\Telemetry\TracePoints.cs" />
+    <Compile Include="Common\DedupStitcher\AdjustableBufferDedupContentDownloader.cs" />
+    <Compile Include="Common\DedupStitcher\DedupContentDownloader.cs" />
+    <Compile Include="Common\DedupGC\MetadataOperationResult.cs" />
+    <Compile Include="Common\DedupGC\MetadataOperationType.cs" />
+    <Compile Include="Common\DedupGC\KeepUntil\ConstantFutureKeepUntil.cs" />
+    <Compile Include="Common\DedupGC\KeepUntil\ConstantKeepUntil.cs" />
+    <Compile Include="Common\DedupGC\KeepUntil\AlwaysMarkConstantKeepUntil.cs" />
+    <Compile Include="Common\DedupGC\KeepUntil\DailyConstantKeepUntil.cs" />
+    <Compile Include="Common\DedupGC\KeepUntil\IKeepUntil.cs" />
+    <Compile Include="Common\DedupGC\KeepUntil\KeepUntilFactory.cs" />
+    <Compile Include="Common\DedupUtility\IDedupVisitorOuterContext.cs" />
+    <Compile Include="Common\DedupUtility\AggregateTraversalResult.cs" />
+    <Compile Include="Common\DedupUtility\IOperationProfiler.cs" />
+    <Compile Include="Common\DedupUtility\ProfilingResultsHandler.cs" />
+    <Compile Include="Common\DedupUtility\ProfilingReport.cs" />
+    <Compile Include="Common\DedupUtility\ProfilingType.cs" />
+    <Compile Include="Common\DedupUtility\ExternalCounter.cs" />
+    <Compile Include="Common\DedupUtility\DerivedCounter.cs" />
+    <Compile Include="Common\DedupUtility\ICounterLookup.cs" />
+    <Compile Include="Common\DedupUtility\IResettable.cs" />
+    <Compile Include="Common\DedupUtility\IProfilingResult.cs" />
+    <Compile Include="Common\DedupUtility\ProfilingResultType.cs" />
+    <Compile Include="Common\DedupUtility\WindowsSamplingPerfCounter.cs" />
+    <Compile Include="Common\DedupUtility\CPUCounter.cs" />
+    <Compile Include="Common\DedupUtility\NoOpProfilingResult.cs" />
+    <Compile Include="Common\DedupUtility\NoOpOperationProfiler.cs" />
+    <Compile Include="Common\DedupUtility\ProfilingGroup.cs" />
+    <Compile Include="Common\DedupUtility\IProfilingCategory.cs" />
+    <Compile Include="Common\DedupUtility\ProfilingCategory.cs" />
+    <Compile Include="Common\DedupUtility\OperationProfiler.cs" />
+    <Compile Include="Common\DedupUtility\PrefixParallelismConvertor.cs" />
+    <Compile Include="Common\DedupUtility\ITraversalResult.cs" />
+    <Compile Include="Common\DedupUtility\IDiagnosticTraversalResult.cs" />
+    <Compile Include="Common\DedupUtility\TraversalResultBase.cs" />
+    <Compile Include="Common\DedupUtility\DedupProcessingConfig.cs" />
+    <Compile Include="Common\DedupUtility\DedupTraversalConfig.cs" />
+    <Compile Include="Common\DedupUtility\BottomUpTraversalOption.cs" />
+    <Compile Include="Common\DedupUtility\DedupTimeRangeUtil.cs" />
+    <Compile Include="Common\Domains\DomainBlobMetadataProvider`1.cs" />
+    <Compile Include="Common\Domains\DomainProvider`1.cs" />
+    <Compile Include="Common\Domains\BlobContainerNode.cs" />
+    <Compile Include="Common\Domains\ElevatedDomainSecurityValidator.cs" />
+    <Compile Include="Common\Domains\IDomainSecurityValidator.cs" />
+    <Compile Include="Common\Domains\DomainSecurityValidator.cs" />
+    <Compile Include="Common\Domains\DomainSecurityValidatorExtensions.cs" />
+    <Compile Include="Common\Domains\SecuredDomainRequest.cs" />
+    <Compile Include="Common\Domains\IBlobContainerDomain.cs" />
+    <Compile Include="Common\Domains\IBlobProviderDomain.cs" />
+    <Compile Include="Common\Domains\IDomain.cs" />
+    <Compile Include="Common\Domains\IDomainBlobMetadataProvider`1.cs" />
+    <Compile Include="Common\Domains\IDomainProvider`1.cs" />
+    <Compile Include="Common\Domains\ShardedBlobContainerDomain.cs" />
+    <Compile Include="Common\Domains\ShardedBlobProviderDomain.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

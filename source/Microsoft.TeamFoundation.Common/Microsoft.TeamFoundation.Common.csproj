@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78A69F34-1772-4526-856D-2D916132F045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtensionNameAttribute.cs" />
+    <Compile Include="ILinkingProvider.cs" />
+    <Compile Include="ILinkingConsumer.cs" />
+    <Compile Include="ILinking.cs" />
+    <Compile Include="ArtifactLinkIds.cs" />
+    <Compile Include="LinkingServiceName.cs" />
+    <Compile Include="OperationCanceledException.cs" />
+    <Compile Include="LoggingDBReportingNames.cs" />
+    <Compile Include="EventLogSourceNames.cs" />
+    <Compile Include="TraceComponentNames.cs" />
+    <Compile Include="SccDataKeys.cs" />
+    <Compile Include="FolderCreateMode.cs" />
+    <Compile Include="WatsonReportingNames.cs" />
+    <Compile Include="ServiceInterfaces.cs" />
+    <Compile Include="FrameworkServiceIdentifiers.cs" />
+    <Compile Include="IntegrationServiceIdentifiers.cs" />
+    <Compile Include="SpecialUrls.cs" />
+    <Compile Include="TfsSecurity.cs" />
+    <Compile Include="ServerAttributes.cs" />
+    <Compile Include="HttpSessionCookies.cs" />
+    <Compile Include="HttpHeaderExceptions.cs" />
+    <Compile Include="RedirectCommands.cs" />
+    <Compile Include="OperationalDatabaseNames.cs" />
+    <Compile Include="ArtifactConstants.cs" />
+    <Compile Include="PermissionNamespaces.cs" />
+    <Compile Include="PermissionObjectClasses.cs" />
+    <Compile Include="PermissionActionIdConstants.cs" />
+    <Compile Include="WellKnownSidPoolId.cs" />
+    <Compile Include="GroupWellKnownSidConstants.cs" />
+    <Compile Include="UserWellKnownSidConstants.cs" />
+    <Compile Include="GroupWellKnownSecurityIds.cs" />
+    <Compile Include="UserWellKnownSecurityIds.cs" />
+    <Compile Include="BuildGroupWellKnownSecurityIds.cs" />
+    <Compile Include="GroupWellKnownShortNames.cs" />
+    <Compile Include="ReservedGroupWellKnownNames.cs" />
+    <Compile Include="CurrentVsVersionInformation.cs" />
+    <Compile Include="ProcessGuidanceConstants.cs" />
+    <Compile Include="SharePointConstants.cs" />
+    <Compile Include="WebAccessConstants.cs" />
+    <Compile Include="FeatureAvailabilityConstants.cs" />
+    <Compile Include="ReportingConstants.cs" />
+    <Compile Include="WebServiceNamespace.cs" />
+    <Compile Include="CommonSqlError.cs" />
+    <Compile Include="SqlCommandTimeout.cs" />
+    <Compile Include="StandardSqlError.cs" />
+    <Compile Include="CollectionServicingTokens.cs" />
+    <Compile Include="DiagnosticConstants.cs" />
+    <Compile Include="TeamFoundationServerSetupConstants.cs" />
+    <Compile Include="ObsoleteMessages.cs" />
+    <Compile Include="ProxyConstants.cs" />
+    <Compile Include="PackageGuids.cs" />
+    <Compile Include="TeamConstants.cs" />
+    <Compile Include="DragDropConstants.cs" />
+    <Compile Include="WorkItemCategoryNames.cs" />
+    <Compile Include="TFConstants.cs" />
+    <Compile Include="ProcessTemplateTypeIdentifiers.cs" />
+    <Compile Include="CredentialsStorageRegistryKeywords.cs" />
+    <Compile Include="CodeReviewContextKeyNames.cs" />
+    <Compile Include="PropertyCacheServiceConstants.cs" />
+    <Compile Include="TeamFoundationServerException.cs" />
+    <Compile Include="CredentialProcurement.cs" />
+    <Compile Include="TeamFoundationAuthenticationError.cs" />
+    <Compile Include="TeamFoundationServerUnauthorizedException.cs" />
+    <Compile Include="TeamFoundationInvalidAuthenticationException.cs" />
+    <Compile Include="TeamFoundationServerVersionCheckException.cs" />
+    <Compile Include="TeamFoundationInvalidServerNameException.cs" />
+    <Compile Include="TeamFoundationServiceUnavailableException.cs" />
+    <Compile Include="DatetimeShiftDetectedException.cs" />
+    <Compile Include="TeamFoundationServerInvalidResponseException.cs" />
+    <Compile Include="TeamFoundationServerInvalidRequestException.cs" />
+    <Compile Include="TeamFoundationClientVersionCheckException.cs" />
+    <Compile Include="TeamFoundationExceptionFormatter.cs" />
+    <Compile Include="InvalidPathException.cs" />
+    <Compile Include="TeamFoundationTextWriterTraceListener.cs" />
+    <Compile Include="TeamFoundationVersion.cs" />
+    <Compile Include="TraceKeywords.cs" />
+    <Compile Include="TraceKeywordSets.cs" />
+    <Compile Include="TraceType.cs" />
+    <Compile Include="TeamFoundationTraceSettings.cs" />
+    <Compile Include="ITeamFoundationTraceable.cs" />
+    <Compile Include="TeamFoundationTrace.cs" />
+    <Compile Include="Framework\Common\CatalogResourceTypes.cs" />
+    <Compile Include="Framework\Common\CatalogConstants.cs" />
+    <Compile Include="Framework\Common\CatalogRoots.cs" />
+    <Compile Include="Framework\Common\CatalogTree.cs" />
+    <Compile Include="Framework\Common\MachineCatalogKeys.cs" />
+    <Compile Include="Framework\Common\TeamFoundationInstanceCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ProjectCollectionCatalogKeys.cs" />
+    <Compile Include="Framework\Common\SQLDatabaseInstanceCatalogKeys.cs" />
+    <Compile Include="Framework\Common\SQLAnalysisInstanceCatalogKeys.cs" />
+    <Compile Include="Framework\Common\SQLReportingInstanceCatalogKeys.cs" />
+    <Compile Include="Framework\Common\WebApplicationCatalogKeys.cs" />
+    <Compile Include="Framework\Common\CollectionDBCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ApplicationDBCatalogKeys.cs" />
+    <Compile Include="Framework\Common\GeneralCatalogKeys.cs" />
+    <Compile Include="Framework\Common\SharePointWebApplicationCatalogKeys.cs" />
+    <Compile Include="Framework\Common\SharePointSiteCreationLocationCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ProjectPortalCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ProcessGuidanceSiteCatalogKeys.cs" />
+    <Compile Include="Framework\Common\WarehouseDatabaseCatalogKeys.cs" />
+    <Compile Include="Framework\Common\AnalysisDatabaseCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ReportingConfigurationCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ReportingServerCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ReportingFolderCatalogKeys.cs" />
+    <Compile Include="Framework\Common\TeamSystemWebAccessCatalogKeys.cs" />
+    <Compile Include="Framework\Common\TestControllerCatalogKeys.cs" />
+    <Compile Include="Framework\Common\TestEnvironmentCatalogKeys.cs" />
+    <Compile Include="Framework\Common\ProjectServerResourceCatalogKeys.cs" />
+    <Compile Include="Framework\Common\CatalogChangeType.cs" />
+    <Compile Include="Framework\Common\CatalogQueryOptions.cs" />
+    <Compile Include="Framework\Common\ServicingStepLogEntryKind.cs" />
+    <Compile Include="Framework\Common\ServicingStepState.cs" />
+    <Compile Include="Framework\Common\AsyncOperation.cs" />
+    <Compile Include="Framework\Common\AsyncPump.cs" />
+    <Compile Include="Framework\Common\AvailableFeatures.cs" />
+    <Compile Include="Framework\Common\ICollectionDictionary`2.cs" />
+    <Compile Include="Framework\Common\CollectionDictionary`2.cs" />
+    <Compile Include="Framework\Common\ConcurrentCollectionDictionary`2.cs" />
+    <Compile Include="Framework\Common\CompletedOperation.cs" />
+    <Compile Include="Framework\Common\CompletedOperation`1.cs" />
+    <Compile Include="Framework\Common\OperationNotSupportedException.cs" />
+    <Compile Include="Framework\Common\ConfigFileException.cs" />
+    <Compile Include="Framework\Common\MultipleIdentitiesFoundExceptionProperties.cs" />
+    <Compile Include="Framework\Common\ExpirationCache`2.cs" />
+    <Compile Include="Framework\Common\FrameworkConstants.cs" />
+    <Compile Include="Framework\Common\ArtifactKinds.cs" />
+    <Compile Include="Framework\Common\ProcessTemplateVersionPropertyNames.cs" />
+    <Compile Include="Framework\Common\ProcessTemplateIdPropertyNames.cs" />
+    <Compile Include="Framework\Common\TeamFoundationSupportedFeatures.cs" />
+    <Compile Include="Framework\Common\IdentitySearchFactor.cs" />
+    <Compile Include="Framework\Common\GroupSpecialType.cs" />
+    <Compile Include="Framework\Common\MembershipQuery.cs" />
+    <Compile Include="Framework\Common\GroupProperty.cs" />
+    <Compile Include="Framework\Common\ReadIdentityOptions.cs" />
+    <Compile Include="Framework\Common\IdentityPropertyScope.cs" />
+    <Compile Include="Framework\Common\ItemDequeuedCallback.cs" />
+    <Compile Include="Framework\Common\InputQueue`1.cs" />
+    <Compile Include="Framework\Common\Capture`1.cs" />
+    <Compile Include="Framework\Common\Capture.cs" />
+    <Compile Include="Framework\Common\CaptureLength.cs" />
+    <Compile Include="Framework\Common\CaptureSize.cs" />
+    <Compile Include="Framework\Common\ClockHandEvictionPolicy`2.cs" />
+    <Compile Include="Framework\Common\MemoryCacheListUnsafe`2.cs" />
+    <Compile Include="Framework\Common\IMemoryCacheCapacityPolicy`2.cs" />
+    <Compile Include="Framework\Common\IMemoryCacheValidityPolicy`2.cs" />
+    <Compile Include="Framework\Common\ISizeProvider`2.cs" />
+    <Compile Include="Framework\Common\IExpiryProvider`2.cs" />
+    <Compile Include="Framework\Common\ITimeProvider.cs" />
+    <Compile Include="Framework\Common\IMemoryCacheList`2.cs" />
+    <Compile Include="Framework\Common\IMemoryCacheSubscriber`2.cs" />
+    <Compile Include="Framework\Common\DummyMemoryCacheList`2.cs" />
+    <Compile Include="Framework\Common\UnlimitedCapacityMemoryCachePolicy`2.cs" />
+    <Compile Include="Framework\Common\AllValidMemoryCachePolicy`2.cs" />
+    <Compile Include="Framework\Common\NoSizeProvider`2.cs" />
+    <Compile Include="Framework\Common\NoExpiryProvider`2.cs" />
+    <Compile Include="Framework\Common\DefaultTimeProvider.cs" />
+    <Compile Include="Framework\Common\MemoryCacheDummySubscriber`2.cs" />
+    <Compile Include="Framework\Common\SizePair.cs" />
+    <Compile Include="Framework\Common\MemoryCacheOperationStatistics.cs" />
+    <Compile Include="Framework\Common\IMemoryCacheEntry`2.cs" />
+    <Compile Include="Framework\Common\IMemoryCacheEvictionPolicy`2.cs" />
+    <Compile Include="Framework\Common\MemoryCacheList`2.cs" />
+    <Compile Include="Framework\Common\MemoryCacheMultiSubscriber`2.cs" />
+    <Compile Include="Framework\Common\MemoryCacheMultiSubscriber.cs" />
+    <Compile Include="Framework\Common\BaseMemoryCacheCapacityPolicy`2.cs" />
+    <Compile Include="Framework\Common\LengthAndSizeMemoryCachePolicy`2.cs" />
+    <Compile Include="Framework\Common\LengthOnlyMemoryCachePolicy`2.cs" />
+    <Compile Include="Framework\Common\SizeOnlyMemoryCachePolicy`2.cs" />
+    <Compile Include="Framework\Common\MemoryCacheListSynchronized`2.cs" />
+    <Compile Include="Framework\Common\PathTableRecursion.cs" />
+    <Compile Include="Framework\Common\PathTableTokenAndValue`1.cs" />
+    <Compile Include="Framework\Common\PathTable`1.cs" />
+    <Compile Include="Framework\Common\SparseTree`1.cs" />
+    <Compile Include="Framework\Common\EnumSubTreeOptions.cs" />
+    <Compile Include="Framework\Common\EnumParentsOptions.cs" />
+    <Compile Include="Framework\Common\EnumeratedSparseTreeNode`1.cs" />
+    <Compile Include="Framework\Common\RegistryChangeType.cs" />
+    <Compile Include="Framework\Common\RegistryUtility.cs" />
+    <Compile Include="Framework\Common\TeamFoundationServiceHostStatus.cs" />
+    <Compile Include="Framework\Common\ServiceHostSubStatus.cs" />
+    <Compile Include="Framework\Common\TimeoutHelper.cs" />
+    <Compile Include="Framework\Common\JobPriorityClass.cs" />
+    <Compile Include="Framework\Common\JobPriorityLevel.cs" />
+    <Compile Include="Framework\Common\TeamFoundationJobState.cs" />
+    <Compile Include="Framework\Common\TeamFoundationJobResult.cs" />
+    <Compile Include="Framework\Common\TeamFoundationJobEnabledState.cs" />
+    <Compile Include="Framework\Common\TeamFoundationJobQueuedReasons.cs" />
+    <Compile Include="Framework\Common\LocationServiceConstants.cs" />
+    <Compile Include="Framework\Common\RelativeToSetting.cs" />
+    <Compile Include="Framework\Common\ConnectOptions.cs" />
+    <Compile Include="Framework\Common\LocationHelper.cs" />
+    <Compile Include="Framework\Common\TfsMessageQueueVersion.cs" />
+    <Compile Include="Framework\Common\MakeConnectionConstants.cs" />
+    <Compile Include="Framework\Common\TfsMessageQueueConstantsV1.cs" />
+    <Compile Include="Framework\Common\TfsMessageQueueConstantsV2.cs" />
+    <Compile Include="Framework\Common\MakeConnectionBodyWriter.cs" />
+    <Compile Include="Framework\Common\TfsmqTraceKeywords.cs" />
+    <Compile Include="Framework\Common\TfsmqTraceKeywordSets.cs" />
+    <Compile Include="Framework\Common\TfsmqTraceActivity.cs" />
+    <Compile Include="Framework\Common\PropertiesOptions.cs" />
+    <Compile Include="Framework\Common\GetPropertiesOptions.cs" />
+    <Compile Include="Framework\Common\TeamFoundationPropertyValidationException.cs" />
+    <Compile Include="Framework\Common\PropertyTypeNotSupportedException.cs" />
+    <Compile Include="Framework\Common\ProjectSettingsCatalogHelper.cs" />
+    <Compile Include="Framework\Common\IProxyRegistration.cs" />
+    <Compile Include="Framework\Common\FrameworkSecurity.cs" />
+    <Compile Include="Framework\Common\FrameworkPermissions.cs" />
+    <Compile Include="Framework\Common\EventSubscriptionPermissions.cs" />
+    <Compile Include="Framework\Common\EventSubscriberPermissions.cs" />
+    <Compile Include="Framework\Common\MessageQueuePermissions.cs" />
+    <Compile Include="Framework\Common\RegistryServicePermissions.cs" />
+    <Compile Include="Framework\Common\CollectionManagementPermissions.cs" />
+    <Compile Include="Framework\Common\JobPermissions.cs" />
+    <Compile Include="Framework\Common\CatalogPermissions.cs" />
+    <Compile Include="Framework\Common\IdentityPermissions.cs" />
+    <Compile Include="Framework\Common\IdentitiesPermission.cs" />
+    <Compile Include="Framework\Common\LocationPermissions.cs" />
+    <Compile Include="Framework\Common\ProcessTemplatePermissions.cs" />
+    <Compile Include="Framework\Common\ProcessPermissions.cs" />
+    <Compile Include="Framework\Common\StrongBoxPermissions.cs" />
+    <Compile Include="Framework\Common\DiagnosticPermissions.cs" />
+    <Compile Include="Framework\Common\AccessCheckExceptionProperties.cs" />
+    <Compile Include="Framework\Common\WitProvisionSecurity.cs" />
+    <Compile Include="Framework\Common\TeamProjectPermissions.cs" />
+    <Compile Include="Framework\Common\TeamProjectCollectionPermissions.cs" />
+    <Compile Include="Framework\Common\TaggingPermissions.cs" />
+    <Compile Include="Framework\Common\AadSecurity.cs" />
+    <Compile Include="Framework\Common\ProxyPermissions.cs" />
+    <Compile Include="Framework\Common\SecurityNamespaceStructure.cs" />
+    <Compile Include="Framework\Common\SecurityIdentifierInfo.cs" />
+    <Compile Include="Framework\Common\SecurityUtility.cs" />
+    <Compile Include="Framework\Common\SidIdentityHelper.cs" />
+    <Compile Include="Framework\Common\CombinedStream.cs" />
+    <Compile Include="Framework\Common\HashingStream.cs" />
+    <Compile Include="Framework\Common\RestrictedStream.cs" />
+    <Compile Include="Framework\Common\ConcatenatingStream.cs" />
+    <Compile Include="Framework\Common\Catalog\Objects\CatalogObjectUtilities.cs" />
+    <Compile Include="Common\ArrayUtil.cs" />
+    <Compile Include="Common\BaseAsyncResult.cs" />
+    <Compile Include="Common\ClrHashUtil.cs" />
+    <Compile Include="Common\ComputerInfo.cs" />
+    <Compile Include="Common\StructureType.cs" />
+    <Compile Include="Common\UrlConstants.cs" />
+    <Compile Include="Common\IDirectoryProxy.cs" />
+    <Compile Include="Common\DirectoryProxy.cs" />
+    <Compile Include="Common\EditionType.cs" />
+    <Compile Include="Common\ELeadException.cs" />
+    <Compile Include="Common\EmbeddedResourceUtil.cs" />
+    <Compile Include="Common\ExceptionPropertyCollection.cs" />
+    <Compile Include="Common\ExceptionFormatter.cs" />
+    <Compile Include="Common\IFileProxy.cs" />
+    <Compile Include="Common\FileProxy.cs" />
+    <Compile Include="Common\ByteArrayEqualityComparer.cs" />
+    <Compile Include="Common\JavaScriptObjectDeserializer.cs" />
+    <Compile Include="Common\AdminTraceLogger.cs" />
+    <Compile Include="Common\AggregateLogger.cs" />
+    <Compile Include="Common\FileLogger.cs" />
+    <Compile Include="Common\ITFLogger.cs" />
+    <Compile Include="Common\ITFLoggerExtensions.cs" />
+    <Compile Include="Common\MarshalByRefLogger.cs" />
+    <Compile Include="Common\NullLogger.cs" />
+    <Compile Include="Common\TFLogger.cs" />
+    <Compile Include="Common\TraceLogger.cs" />
+    <Compile Include="Common\ProcessTemplateSchema.cs" />
+    <Compile Include="Common\RetryManager.cs" />
+    <Compile Include="Common\ServiceControlManagerUtility.cs" />
+    <Compile Include="Common\TFCommonUtil.cs" />
+    <Compile Include="Common\TswaHyperlinkBuilder.cs" />
+    <Compile Include="Common\VssAssemblyResolver.cs" />
+    <Compile Include="Common\FileSpec.cs" />
+    <Compile Include="Common\FileSpecBottomUpComparer.cs" />
+    <Compile Include="Common\FileSpecTopDownComparer.cs" />
+    <Compile Include="Common\CompressionFormat.cs" />
+    <Compile Include="Common\XmlHelper.cs" />
+    <Compile Include="Common\XmlElementHelper.cs" />
+    <Compile Include="Common\GeneratedVersionInfo.cs" />
+    <Compile Include="Common\SharePoint\SharePointUtilities.cs" />
+    <Compile Include="Common\Reporting\ReportingUtilities.cs" />
+    <Compile Include="Common\Logging\ConsoleLogger.cs" />
+    <Compile Include="Common\Logging\DebugLogger.cs" />
+    <Compile Include="Common\Internal\RetrievablePropertyState.cs" />
+    <Compile Include="Common\Internal\RetrievableCollection`1.cs" />
+    <Compile Include="Common\Internal\BaseDataSource.cs" />
+    <Compile Include="Common\Internal\ComUtils.cs" />
+    <Compile Include="Common\Internal\DateTimeExtensions.cs" />
+    <Compile Include="Common\Internal\DebugUtil.cs" />
+    <Compile Include="Common\Internal\FileSystemUtil.cs" />
+    <Compile Include="Common\Internal\HighResTimer.cs" />
+    <Compile Include="Common\Internal\HostingDiagnosticConstants.cs" />
+    <Compile Include="Common\Internal\IServiceProviderExtensions.cs" />
+    <Compile Include="Common\Internal\TextLogger.cs" />
+    <Compile Include="Common\Internal\MD5Util.cs" />
+    <Compile Include="Common\Internal\ServiceHandle.cs" />
+    <Compile Include="Common\Internal\HResult.cs" />
+    <Compile Include="Common\Internal\NativeMethods.cs" />
+    <Compile Include="Common\Internal\ProjectPortalType.cs" />
+    <Compile Include="Common\Internal\ProcessGuidanceType.cs" />
+    <Compile Include="Common\Internal\ServerRoleType.cs" />
+    <Compile Include="Common\Internal\StreamUtil.cs" />
+    <Compile Include="Common\Internal\StringExtensions.cs" />
+    <Compile Include="Common\Internal\StringUtil.cs" />
+    <Compile Include="Common\Internal\TeamFoundationEnvironment.cs" />
+    <Compile Include="Common\Internal\TfsAssemblyResolver.cs" />
+    <Compile Include="Common\Internal\TfsBaseWorker.cs" />
+    <Compile Include="Common\Internal\TfsBackgroundWorkerPriority.cs" />
+    <Compile Include="Common\Internal\TfsWorkerState.cs" />
+    <Compile Include="Common\Internal\TfsBackgroundWorkerManager.cs" />
+    <Compile Include="Common\Internal\TFVersionUtil.cs" />
+    <Compile Include="Common\Internal\Tree`1.cs" />
+    <Compile Include="Common\Internal\TreeNode`1.cs" />
+    <Compile Include="Common\Internal\TreeNodeCollection`1.cs" />
+    <Compile Include="Common\Internal\UserNameUtil.cs" />
+    <Compile Include="Common\Internal\WatsonReport.cs" />
+    <Compile Include="Common\Internal\WindowsErrorReport.cs" />
+    <Compile Include="Common\Internal\Wildcard.cs" />
+    <Compile Include="Common\Internal\TFCommonResources.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\HostManagement\ServiceHostType.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\HostManagement\ServiceHostProperties.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Css.xsd" />
+    <EmbeddedResource Include="CssProperties.xsd" />
+    <EmbeddedResource Include="Gss.xsd" />
+    <EmbeddedResource Include="ProcessTemplate.xsd" />
+    <EmbeddedResource Include="ProcessTemplateItem.xsd" />
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Rosetta.xsd" />
+    <EmbeddedResource Include="Tasks.xsd" />
+    <EmbeddedResource Include="Wss.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.TestManagement.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C131563-C748-491B-99AE-624DF5E9D313}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.TestManagement.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.TestManagement.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\TestManagement\Server\SqlMessageCode.cs" />
+    <Compile Include="Microsoft\TeamFoundation\TestManagement\Server\Phase.cs" />
+    <Compile Include="Microsoft\TeamFoundation\TestManagement\Server\AutomationPhaseState.cs" />
+    <Compile Include="AttachmentTypes.cs" />
+    <Compile Include="EnvironmentParentTypes.cs" />
+    <Compile Include="SharedParametersRowsMappingType.cs" />
+    <Compile Include="TestCaseParameterType.cs" />
+    <Compile Include="IdConstants.cs" />
+    <Compile Include="TestWellKnownGroups.cs" />
+    <Compile Include="Schema.cs" />
+    <Compile Include="TCMWitFields.cs" />
+    <Compile Include="ISharedParameterData.cs" />
+    <Compile Include="ISharedParameterDataRows.cs" />
+    <Compile Include="ISharedParameterDataRow.cs" />
+    <Compile Include="IKeyValuePair.cs" />
+    <Compile Include="ParameterDataInfoHelper.cs" />
+    <Compile Include="ParameterDefinition.cs" />
+    <Compile Include="LocalParameterDefinition.cs" />
+    <Compile Include="SharedParameterDefinition.cs" />
+    <Compile Include="KeyValuePair.cs" />
+    <Compile Include="SharedParameterDataRow.cs" />
+    <Compile Include="SharedParameterDataRows.cs" />
+    <Compile Include="SharedParameterData.cs" />
+    <Compile Include="SharedParameterJsonConverter.cs" />
+    <Compile Include="TestCaseParameterDataInfo.cs" />
+    <Compile Include="TestCaseParameterDataRow.cs" />
+    <Compile Include="TestCaseParameterValue.cs" />
+    <Compile Include="TestCaseLocalParameterValue.cs" />
+    <Compile Include="TestCaseSharedParameterValue.cs" />
+    <Compile Include="ParameterDataHelper.cs" />
+    <Compile Include="TestManagementErrorCodes.cs" />
+    <Compile Include="WitCategoryRefName.cs" />
+    <Compile Include="WitCategoryName.cs" />
+    <Compile Include="Internal\ArtifactHelper.cs" />
+    <Compile Include="Internal\AttachmentDownloadFields.cs" />
+    <Compile Include="Internal\HttpRange.cs" />
+    <Compile Include="Internal\WorkItemFieldNames.cs" />
+    <Compile Include="Internal\XmlUtility.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bugfieldmapping.xsd" />
+    <EmbeddedResource Include="testconfiguration.xsd" />
+    <EmbeddedResource Include="testfailuretype.xsd" />
+    <EmbeddedResource Include="testresolutionstate.xsd" />
+    <EmbeddedResource Include="testsettings.xsd" />
+    <EmbeddedResource Include="testvariable.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

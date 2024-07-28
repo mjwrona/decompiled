@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.MachineManagement.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{203785D3-7ACC-401A-97A8-10EA785C51A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.MachineManagement.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.MachineManagement.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\MachineManagement\XamlIntegration\XamlActivityArchiveReader.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\MachineManagement\Server\HostReputation.cs" />
+    <Compile Include="AbuseDetectionMetrics.cs" />
+    <Compile Include="AgentSpec.cs" />
+    <Compile Include="AgentSpecHealth.cs" />
+    <Compile Include="AgentSpecHealthRequest.cs" />
+    <Compile Include="BillingAndAbuseInformation.cs" />
+    <Compile Include="CrossRealm.cs" />
+    <Compile Include="DevFabricRelaySettings.cs" />
+    <Compile Include="DiskStates.cs" />
+    <Compile Include="DiskTypes.cs" />
+    <Compile Include="MachineManagementException.cs" />
+    <Compile Include="MachineOSImageExistsException.cs" />
+    <Compile Include="MachineOSImageDoesNotExistException.cs" />
+    <Compile Include="MachinePoolTypeExistsException.cs" />
+    <Compile Include="MachinePoolTypeDoesNotExistException.cs" />
+    <Compile Include="MachinePoolDeleteException.cs" />
+    <Compile Include="MachinePoolExistsException.cs" />
+    <Compile Include="MachinePoolNotFoundException.cs" />
+    <Compile Include="MachineRequestTagNotFoundException.cs" />
+    <Compile Include="MachineRequestTypeNotFoundException.cs" />
+    <Compile Include="MachinePoolAliasExistsException.cs" />
+    <Compile Include="MultipleAliasesForSameMachinePoolException.cs" />
+    <Compile Include="MachineInstanceExistsException.cs" />
+    <Compile Include="MachineInstanceNotFoundException.cs" />
+    <Compile Include="MachineRequestInProgressException.cs" />
+    <Compile Include="MachineRequestDoesNotExistException.cs" />
+    <Compile Include="MachineRequestAlreadyStartedException.cs" />
+    <Compile Include="MachineRequestAlreadyFinishedException.cs" />
+    <Compile Include="MachinePoolTypeDeleteException.cs" />
+    <Compile Include="MachineOSImageDeleteException.cs" />
+    <Compile Include="MachineRequestResourceAlreadyExistsException.cs" />
+    <Compile Include="MachineRequestResourceDoesNotExistException.cs" />
+    <Compile Include="FailedCreatingAccessTokenException.cs" />
+    <Compile Include="ResourceGroupNotFoundException.cs" />
+    <Compile Include="ResourceGroupAlreadyExistsException.cs" />
+    <Compile Include="StorageAccountNotFoundException.cs" />
+    <Compile Include="StorageAccountAlreadyExistsException.cs" />
+    <Compile Include="VirtualMachineDiskAlreadyExistsException.cs" />
+    <Compile Include="ImageUpdateAlreadyInProgressException.cs" />
+    <Compile Include="DefaultImageAlreadyDefinedException.cs" />
+    <Compile Include="ImageNameAlreadyExistsException.cs" />
+    <Compile Include="ImageNameDoesNotExistException.cs" />
+    <Compile Include="NoDefaultImageExistsException.cs" />
+    <Compile Include="MachineImageLabelExistsException.cs" />
+    <Compile Include="MessageIdAlreadyExistsException.cs" />
+    <Compile Include="MachineImageLabelDoesNotExistException.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="CannotDeleteAndAddMetadataException.cs" />
+    <Compile Include="MachineManagementTooManyRequestsException.cs" />
+    <Compile Include="AgentSpecAlreadyExistsException.cs" />
+    <Compile Include="AgentSpecNotFoundException.cs" />
+    <Compile Include="NoSupportedImageLabelsFoundForNestedPoolException.cs" />
+    <Compile Include="TrustedHostShutDownException.cs" />
+    <Compile Include="MachineManagementHttpClientBase.cs" />
+    <Compile Include="IMachineInstanceManager.cs" />
+    <Compile Include="IMachinePoolManager.cs" />
+    <Compile Include="IMachineRequestResourceManager.cs" />
+    <Compile Include="ListKeyValuePairExtensions.cs" />
+    <Compile Include="MachineAuthorization.cs" />
+    <Compile Include="MachineConfiguration.cs" />
+    <Compile Include="MachineConfigurationResponse.cs" />
+    <Compile Include="MachineImage.cs" />
+    <Compile Include="MachineImageOperatingSystems.cs" />
+    <Compile Include="MachineImageTypes.cs" />
+    <Compile Include="MachineImageLabel.cs" />
+    <Compile Include="MachineImageLabelVersion.cs" />
+    <Compile Include="MachineImageLabelSelection.cs" />
+    <Compile Include="MachineInstance.cs" />
+    <Compile Include="MachinePoolAndInstance.cs" />
+    <Compile Include="MachineInstanceEvents.cs" />
+    <Compile Include="MachineInstanceMachineRequestEvents.cs" />
+    <Compile Include="MachineInstanceManager.cs" />
+    <Compile Include="MachineInstanceMessage.cs" />
+    <Compile Include="MachineInstanceOperations.cs" />
+    <Compile Include="MachineInstanceSettings.cs" />
+    <Compile Include="MachineInstanceStates.cs" />
+    <Compile Include="MachineManagementConstants.cs" />
+    <Compile Include="MachineManagementMessageTypes.cs" />
+    <Compile Include="AzureResourceProviderConstants.cs" />
+    <Compile Include="AzureResourceTagConstants.cs" />
+    <Compile Include="MachineManagementResourceIds.cs" />
+    <Compile Include="WebApiConstants.cs" />
+    <Compile Include="MachinePoolProperties.cs" />
+    <Compile Include="AzureResourceProviderMachinePoolProperties.cs" />
+    <Compile Include="AzureResourceProviderStorageAccountProperties.cs" />
+    <Compile Include="MachineImageProperties.cs" />
+    <Compile Include="MachinePoolPropertiesDefaultValues.cs" />
+    <Compile Include="CleanupPolicy.cs" />
+    <Compile Include="MachineRequestNotificationType.cs" />
+    <Compile Include="MachinePoolTypeExtendedProperties.cs" />
+    <Compile Include="MachinePoolExtendedProperties.cs" />
+    <Compile Include="MachineInstanceProperties.cs" />
+    <Compile Include="PropertiesCollectionExtensions.cs" />
+    <Compile Include="ResourceProviderType.cs" />
+    <Compile Include="MachineManagementHttpClient.cs" />
+    <Compile Include="MachineMetric.cs" />
+    <Compile Include="MachineOrchestrationEvent.cs" />
+    <Compile Include="MachineInstanceOrchestrationEvent.cs" />
+    <Compile Include="MachineCleanupEvent.cs" />
+    <Compile Include="MachineCreatedEvent.cs" />
+    <Compile Include="MachineConnectedEvent.cs" />
+    <Compile Include="MachineDebugEvent.cs" />
+    <Compile Include="MachineDeletedEvent.cs" />
+    <Compile Include="MachineDeleteEvent.cs" />
+    <Compile Include="MachineEnterErrorStateEvent.cs" />
+    <Compile Include="MachineProvisioningEvent.cs" />
+    <Compile Include="MachineProvisionedEvent.cs" />
+    <Compile Include="ImageProvisionedEvent.cs" />
+    <Compile Include="MachineReimageEvent.cs" />
+    <Compile Include="MachineReimageLaterEvent.cs" />
+    <Compile Include="MachineReimageLaterTimeoutElapsedEvent.cs" />
+    <Compile Include="MachineDeallocateEvent.cs" />
+    <Compile Include="MachineReallocateEvent.cs" />
+    <Compile Include="MachineRecycleOrchestrationEvent.cs" />
+    <Compile Include="MachineRequestAssignedEvent.cs" />
+    <Compile Include="MachineRequestFinishedEvent.cs" />
+    <Compile Include="MachineRequestStartedEvent.cs" />
+    <Compile Include="MachineRequestTimedOutEvent.cs" />
+    <Compile Include="MachineOperationTimeoutEvent.cs" />
+    <Compile Include="MachineOrchestrationCancelledEvent.cs" />
+    <Compile Include="MachineEventJsonConverter.cs" />
+    <Compile Include="MachinePool.cs" />
+    <Compile Include="MachinePoolAlias.cs" />
+    <Compile Include="MachinePoolConfiguration.cs" />
+    <Compile Include="MachinePoolEvent.cs" />
+    <Compile Include="MachinePoolEvents.cs" />
+    <Compile Include="MachinePoolManager.cs" />
+    <Compile Include="MachinePoolOperations.cs" />
+    <Compile Include="MachinePoolOrchestrationEvent.cs" />
+    <Compile Include="MachineManagementCancelOrchestrationEvent.cs" />
+    <Compile Include="MachinePoolOrchestrationQueuedEvent.cs" />
+    <Compile Include="MachinePoolCreatedEvent.cs" />
+    <Compile Include="MachinePoolDeleteEvent.cs" />
+    <Compile Include="MachinePoolOrchestrationTimeoutEvent.cs" />
+    <Compile Include="MachinePoolRecycleOrchestrationEvent.cs" />
+    <Compile Include="MachineInstanceReallocationCompletedEvent.cs" />
+    <Compile Include="MachinePoolEventJsonConverter.cs" />
+    <Compile Include="MachinePoolResourceGroup.cs" />
+    <Compile Include="MachinePoolSecurity.cs" />
+    <Compile Include="CertificateInfo.cs" />
+    <Compile Include="MachinePoolStates.cs" />
+    <Compile Include="MachinePoolType.cs" />
+    <Compile Include="MachineProvisionerSettings.cs" />
+    <Compile Include="MachineRegistrationResponseData.cs" />
+    <Compile Include="MachineRequest.cs" />
+    <Compile Include="MachineRequestInputs.cs" />
+    <Compile Include="MachineRequestManager.cs" />
+    <Compile Include="MachineRequestNotification.cs" />
+    <Compile Include="MachineRequestNotificationClient.cs" />
+    <Compile Include="FinishRequestEvent.cs" />
+    <Compile Include="AbortRequestEvent.cs" />
+    <Compile Include="MachineRequestOutputs.cs" />
+    <Compile Include="MachineRequestResource.cs" />
+    <Compile Include="MachineRequestResourceState.cs" />
+    <Compile Include="MachineRequestResourceArtifactIds.cs" />
+    <Compile Include="MachineRequestResourceManager.cs" />
+    <Compile Include="MachineRequestResult.cs" />
+    <Compile Include="MachineRequestOutcome.cs" />
+    <Compile Include="RequestState.cs" />
+    <Compile Include="RequestStateData.cs" />
+    <Compile Include="MachineRequestTag.cs" />
+    <Compile Include="MachineRequestTags.cs" />
+    <Compile Include="MachineRequestType.cs" />
+    <Compile Include="MachineRequestTypeFactory.cs" />
+    <Compile Include="MachineRequestTypes.cs" />
+    <Compile Include="MmsProvisionerTrace.cs" />
+    <Compile Include="MmsResourceIds.cs" />
+    <Compile Include="NameValueCollectionExtensions.cs" />
+    <Compile Include="NestedPoolConfigurationSettings.cs" />
+    <Compile Include="NestedImageSettings.cs" />
+    <Compile Include="PoolProfile.cs" />
+    <Compile Include="ResourceProviderEvents.cs" />
+    <Compile Include="ResourceProviderResult.cs" />
+    <Compile Include="MessageAcknowledgementState.cs" />
+    <Compile Include="MessageAcknowledgedEvent.cs" />
+    <Compile Include="MessageCompletedEvent.cs" />
+    <Compile Include="ResourceProviderMessage.cs" />
+    <Compile Include="ResourceProviderMessageExtensions.cs" />
+    <Compile Include="StorageAccount.cs" />
+    <Compile Include="StorageAccountType.cs" />
+    <Compile Include="StorageAccountState.cs" />
+    <Compile Include="SuspiciousActivityReport.cs" />
+    <Compile Include="VirtualMachineDisk.cs" />
+    <Compile Include="MachineManagementResources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MachineManagementResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportingServices" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:element name="ReportingServices">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="site" type="xs:string" minOccurs="0" maxOccurs="1" />
+                <xs:element name="folders" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="folder" type="FolderType" minOccurs="1" maxOccurs="unbounded" nillable="false">
+                                <xs:key name="folderKey">
+                                    <xs:selector xpath="." />
+                                    <xs:field xpath="@path" />
+                                </xs:key>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reports" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="report" type="ReportType" minOccurs="1" maxOccurs="unbounded" nillable="false">
+                                <xs:key name="reportKey">
+                                    <xs:selector xpath="." />
+                                    <xs:field xpath="@name" />
+                                </xs:key>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="datasources" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="datasource" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence />
+                                    <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+                                    <xs:attribute name="folder" type="xs:string" use="required" msprop:nullValue="_throw" />
+                                    <xs:attributeGroup ref="DataSourceDefinition" />
+                                </xs:complexType>
+                                <xs:key name="datasourceKey">
+                                    <xs:selector xpath="." />
+                                    <xs:field xpath="@name" />
+                                </xs:key>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ReportType">
+        <xs:sequence>
+            <xs:element name="parameters" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="parameter" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                </xs:sequence>
+                                <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+                                <xs:attribute name="value" type="xs:string" use="required" msprop:nullValue="_throw" />
+                            </xs:complexType>
+                        </xs:element>
+		    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="properties" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="property" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                </xs:sequence>
+                                <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+                                <xs:attribute name="value" type="xs:string" use="required" msprop:nullValue="_throw" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="datasources" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element name="reference" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence />
+                                <xs:attributeGroup ref="DataSourceReference" />
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="definition">
+                            <xs:complexType>
+                                <xs:sequence />
+                                <xs:attribute name="name" type="xs:string" />
+                                <xs:attributeGroup ref="DataSourceDefinition" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="cacheExpiration" type="xs:int" use="required"  />
+        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="filename" use="required" >
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="260" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+        <xs:attribute name="folder" type="xs:string" use="required" msprop:nullValue="_throw" />
+    </xs:complexType>
+    <xs:complexType name="FolderType">
+        <xs:sequence>
+        </xs:sequence>
+        <xs:attribute name="path" type="xs:string" msprop:nullValue="_throw" use="required" />
+    </xs:complexType>
+    <xs:complexType name="DataSourceDefType">
+        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="folder" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attributeGroup ref="DataSourceDefinition" />
+    </xs:complexType>
+    <xs:attributeGroup name="DataSourceReference">
+        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="dsname" type="xs:string" use="required" msprop:nullValue="_throw" />
+    </xs:attributeGroup>
+    <xs:attributeGroup name="DataSourceDefinition">
+        <xs:attribute name="extension" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="connectionstring" type="xs:string" msprop:nullValue="_throw" use="optional" />
+        <xs:attribute name="windowscredentials" type="xs:boolean" msprop:nullValue="_throw" default="true" use="optional" />
+        <xs:attribute name="impersonateuser" type="xs:boolean" use="optional" msprop:nullValue="_throw" />
+        <xs:attribute name="prompt" type="xs:string" use="optional" msprop:nullValue="_empty" />
+        <xs:attribute name="username" type="xs:string" use="optional" msprop:nullValue="_empty" />
+        <xs:attribute name="password" type="xs:string" msprop:nullValue="_empty" use="optional" />
+        <xs:attribute name="credentialretrieval" type="CredentialRetrievalEnum" use="optional" msprop:nullValue="_throw" />
+    </xs:attributeGroup>
+    <xs:simpleType name="ParameterType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Boolean" />
+            <xs:enumeration value="DateTime" />
+            <xs:enumeration value="Integer" />
+            <xs:enumeration value="Float" />
+            <xs:enumeration value="String" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CredentialRetrievalEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Prompt" />
+            <xs:enumeration value="Store" />
+            <xs:enumeration value="Integrated" />
+            <xs:enumeration value="None" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

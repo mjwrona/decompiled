@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Graph.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7758FE1-D656-4E74-885F-13005822B2E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Graph</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Graph</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Identity">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\Framework\Server\RestrictInternalGraphEndpointsAttribute.cs" />
+    <Compile Include="GraphGroupCreationContextExtensions.cs" />
+    <Compile Include="GraphMembershipTraversalCacheWarmupData.cs" />
+    <Compile Include="GraphSubjectExtensions.cs" />
+    <Compile Include="IRemoteGraphMembershipTraversalExtension.cs" />
+    <Compile Include="RemoteGraphMembershipTraversal.cs" />
+    <Compile Include="RemoteDirectoryName.cs" />
+    <Compile Include="RemoteDirectoryTraversalExtensionNotFoundGraphExce.cs" />
+    <Compile Include="MultipleTraversalExtensionsFoundGraphException.cs" />
+    <Compile Include="FailedToRetrieveLocalDescendantsGraphException.cs" />
+    <Compile Include="UnsupportedSubjectTypeForMembershipTraversal.cs" />
+    <Compile Include="FailedToRetrieveStorageKeysInScopeGraphException.cs" />
+    <Compile Include="FeatureFlagNotEnabledGraphException.cs" />
+    <Compile Include="UnsupportedRemoteDirectoryGraphException.cs" />
+    <Compile Include="GraphMembershipHelper.cs" />
+    <Compile Include="GraphProviderInfoHelper.cs" />
+    <Compile Include="GraphSubjectHelper.cs" />
+    <Compile Include="GraphUserCreationContextExtensions.cs" />
+    <Compile Include="QueryFilters.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="IPlatformGraphIdentifierConversionService.cs" />
+    <Compile Include="PlatformGraphIdentifierConversionService.cs" />
+    <Compile Include="PlatformGraphCachePolicyService.cs" />
+    <Compile Include="GraphCachePoliciesController.cs" />
+    <Compile Include="GraphFederatedProviderDataController.cs" />
+    <Compile Include="GraphAvatarsController.cs" />
+    <Compile Include="GraphMembersControllerBase`1.cs" />
+    <Compile Include="GraphMembers2Controller.cs" />
+    <Compile Include="GraphProviderInfoController.cs" />
+    <Compile Include="GraphSubjectQueryController.cs" />
+    <Compile Include="UserMapperController.cs" />
+    <Compile Include="PlatformGraphFederatedProviderService.cs" />
+    <Compile Include="PlatformGraphMembershipTraversalServiceConstants.cs" />
+    <Compile Include="GraphMembershipStatesController.cs" />
+    <Compile Include="GraphStorageKeysController.cs" />
+    <Compile Include="GraphControllerBase.cs" />
+    <Compile Include="GraphGroupsController.cs" />
+    <Compile Include="GraphMembershipsBatchController.cs" />
+    <Compile Include="GraphMembershipsController.cs" />
+    <Compile Include="GraphScopesController.cs" />
+    <Compile Include="GraphMemberLookupController.cs" />
+    <Compile Include="GraphSubjectLookupController.cs" />
+    <Compile Include="GraphMembersController.cs" />
+    <Compile Include="GraphSubjectsController.cs" />
+    <Compile Include="GraphUsersController.cs" />
+    <Compile Include="GraphServicePrincipalsController.cs" />
+    <Compile Include="GraphIdentityTranslationController.cs" />
+    <Compile Include="RequestAccessController.cs" />
+    <Compile Include="GraphMembershipTraversalCache.cs" />
+    <Compile Include="GraphMembershipPermissionChecker.cs" />
+    <Compile Include="IGraphMembershipTraversalCache.cs" />
+    <Compile Include="PlatformGraphMembershipTraversalService.cs" />
+    <Compile Include="ExtendedPropertyTracepoints.cs" />
+    <Compile Include="IPlatformRequestAccessService.cs" />
+    <Compile Include="PlatformRequestAccessService.cs" />
+    <Compile Include="BusinessRulesValidator.cs" />
+    <Compile Include="GraphDescriptorsController.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Services\GraphUsersService.cs" />
+    <Compile Include="Store\GraphMembershipStoreConstants.cs" />
+    <Compile Include="Store\GraphMembershipStore.cs" />
+    <Compile Include="Store\IGraphMembershipStore.cs" />
+    <Compile Include="RestServices\GraphMembershipTraversalController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

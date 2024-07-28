@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisabledUsersByScopeUnsupported" xml:space="preserve">
+    <value>VS860013:Currently no support for finding all disabled users in a scope.</value>
+  </data>
+  <data name="GraphServicePrincipalMissingRequiredFields" xml:space="preserve">
+    <value>VS860015: OriginId must be set.</value>
+  </data>
+  <data name="GroupCreationContextMissingRequiredField" xml:space="preserve">
+    <value>VS860004: Must provide a {0} to create a group.</value>
+  </data>
+  <data name="OnlyVstsGroupsInCustomScope" xml:space="preserve">
+    <value>VS860004: Only Visual Studio created groups can be added to a custom scope.</value>
+  </data>
+  <data name="GraphUserServicePrincipalsMappingNotAllowed" xml:space="preserve">
+    <value>VS860043: Service principals mappings are not allowed.</value>
+  </data>
+  <data name="FailedToRetrieveLocalDescendants" xml:space="preserve">
+    <value>VS860030: "Failed to retrieve local descendants for descriptor {0}</value>
+  </data>
+  <data name="GetValidWithPersistentIdOrDescriptor" xml:space="preserve">
+    <value>VS860001: Cannot use both perisistentIds and descriptors in the same call.</value>
+  </data>
+  <data name="GraphAvatarUnsupportedSubject" xml:space="preserve">
+    <value>VS860040: We do not support avatars with that type of subject.</value>
+  </data>
+  <data name="GraphMemberForDescriptorNotFound" xml:space="preserve">
+    <value>VS860033: Could not find a graphmember from which to extract a Microsoft Entra Object Id from the descriptor {0}</value>
+  </data>
+  <data name="GroupCannotBeModified" xml:space="preserve">
+    <value>This group's name and description cannot be modified.</value>
+  </data>
+  <data name="TraversalDepthNotSupported" xml:space="preserve">
+    <value>VS860019: The provided traversal depth '{0}' is not supported for parameter '{1}'. Currently the only supported value is '1'.</value>
+  </data>
+  <data name="TraversalDirectionNotSupported" xml:space="preserve">
+    <value>VS860020: The provided traversal direction '{0}' is not supported for parameter '{1}'. The supported values are 'up' and 'down'.</value>
+  </data>
+  <data name="GraphAvatarNotFound" xml:space="preserve">
+    <value>VS860041: We did not find an avatar for subject {0}.</value>
+  </data>
+  <data name="MemberUpdateContextMissingRequiredField" xml:space="preserve">
+    <value>VS860008: Must provide a {0} to map a member.</value>
+  </data>
+  <data name="FailedToRetrieveStorageKeysInScope" xml:space="preserve">
+    <value>VS860031: Could not retrieve any storage keys that are active in scope {0}</value>
+  </data>
+  <data name="FailedToRetrieveDescendants" xml:space="preserve">
+    <value>VS860035:Failed to retrieve descendants. Please try after some time.</value>
+  </data>
+  <data name="GraphMemberIncorrectSubjectType" xml:space="preserve">
+    <value>VS860046: Provided subject type '{0}' is incorrent. Please use the correct one '{1}'</value>
+  </data>
+  <data name="ScopeCreationContextMissingRequiredField" xml:space="preserve">
+    <value>VS860009: Must provide a {0} to create a scope.</value>
+  </data>
+  <data name="GraphGroupMissingRequiredFields" xml:space="preserve">
+    <value>VS860014: Must have exactly one of originId, principalName or displayName set.</value>
+  </data>
+  <data name="UnsupportedGraphTraversalDirection" xml:space="preserve">
+    <value>VS860038: Currently only GraphTraversalDirection.Down is supported.</value>
+  </data>
+  <data name="GraphApiIsUnavailable" xml:space="preserve">
+    <value>VS860010: The graph api is temporarily unavailable. Please try again later.</value>
+  </data>
+  <data name="UnsupportedMegaTenantStorageKeysInScopeRetrievalGraphException" xml:space="preserve">
+    <value>VS860032: Retrieval of storage keys in scope for large organizations in currently unsupported.</value>
+  </data>
+  <data name="CheckScopeMembershipUnsupported" xml:space="preserve">
+    <value>VS860011: Getting membership of scopes is not supported at this time.</value>
+  </data>
+  <data name="TraversedDecendantsLimitReached" xml:space="preserve">
+    <value>VS8600023: Reached the limit of the number of descendants obtained during descendant traversal. The current limit is {0} descendants.</value>
+  </data>
+  <data name="UnsupportedSubjectTypeForMembershipTraversal" xml:space="preserve">
+    <value>VS860036: Currently we only support Group Subject Type for traversals. {0} unsupported Subject Types for Membership Traversal.</value>
+  </data>
+  <data name="CannotMaterializeGraphSubject" xml:space="preserve">
+    <value>VS860016: Could not find subject '{0}' in the backing domain. This value came from the parameter '{1}'. Please check your input and try again.</value>
+  </data>
+  <data name="UnsupportedRemoteDirectoryTraversal" xml:space="preserve">
+    <value>VS860026: Currently only traversals over Microsoft Entra are supported.</value>
+  </data>
+  <data name="UpdateSourceTenant" xml:space="preserve">
+    <value>VS860003: The descriptor {0} is a reference to an identity from an external tenant. You must update the identity in the source tenant to modify any properties of this reference.</value>
+  </data>
+  <data name="AadGroupExpansionLimitReached" xml:space="preserve">
+    <value>VS8600022: Reached limit of Microsoft Entra group expansions during traversal</value>
+  </data>
+  <data name="TraverseDescendantsFeatureIsUnavailable" xml:space="preserve">
+    <value>VS860025: The traverse descendants feature is unavailable.</value>
+  </data>
+  <data name="MemberCreationContextMissingRequiredField" xml:space="preserve">
+    <value>VS860008: Must provide a {0} to create a member.</value>
+  </data>
+  <data name="GraphUserMissingRequiredFields" xml:space="preserve">
+    <value>VS860015: Must have exactly one of originId or principalName set.</value>
+  </data>
+  <data name="GraphMemberSubjectTypeIsNotAllowed" xml:space="preserve">
+    <value>VS860045: Provided subject type '{0}' is not supported by the API endpoint.</value>
+  </data>
+  <data name="ProviderInfoApiIsUnavailable" xml:space="preserve">
+    <value>VS860011: The provider info api is temporarily unavailable. Please try again later.</value>
+  </data>
+  <data name="GraphSubjectForDescriptorNotFound" xml:space="preserve">
+    <value>VS860029: Could not find a graph subject from which to extract a Microsoft Entra Object Id from the descriptor {0}</value>
+  </data>
+  <data name="GetScopeMembershipUnsupported" xml:space="preserve">
+    <value>VS860012: Checking membership of scopes is not supported at this time.</value>
+  </data>
+  <data name="UnsupportStorageKeyAssignment" xml:space="preserve">
+    <value>Enterprise level storage key '{0}' assignment is not support when you already have the identity at deployment with different storage key '{1}'</value>
+  </data>
+  <data name="GetStorageKeysInScopeFeatureIsUnavailable" xml:space="preserve">
+    <value>VS860034: Getting storage keys in scope is currently unavailable.</value>
+  </data>
+  <data name="SubjectDoesNotMatchType" xml:space="preserve">
+    <value>VS860002: The descriptor {0} does not represent an identity of expected type {1}.</value>
+  </data>
+  <data name="MultipleAadTraversalExtensionsFound" xml:space="preserve">
+    <value>VS860028: Found multiple extensions for traversing Microsoft Entra descendants, but expected a single extension.</value>
+  </data>
+  <data name="CannotCreateSpecialGroup" xml:space="preserve">
+    <value>VS860006: Insufficient permissions to create a group of type {0}.</value>
+  </data>
+  <data name="CannotParseParameter" xml:space="preserve">
+    <value>VS860005: Cannot parse field {0} for value {1}.</value>
+  </data>
+  <data name="GraphAvatarTooBig" xml:space="preserve">
+    <value>VS860039: The supplied image is larger than the max allowable size.</value>
+  </data>
+  <data name="GraphServicePrincipalMappingToServicePrincipalsAllowedOnly" xml:space="preserve">
+    <value>VS860042: Service principals can only be mapped to other service principals.</value>
+  </data>
+  <data name="GraphServicePrincipalMissingUpdateContext" xml:space="preserve">
+    <value>VS860018: GraphServicePrincipal UpdateContext is null.</value>
+  </data>
+  <data name="TraverseDescendantsDepthNotSupported" xml:space="preserve">
+    <value>VS860024: The provided traverse descendants depth {0} is not supported. Currently the only supported value is {1}.</value>
+  </data>
+  <data name="UnsupportedTraversedDescendantsDepth" xml:space="preserve">
+    <value>VS860027: TraverseDescendants can only be called with depth = -1, but received depth = {0}.</value>
+  </data>
+  <data name="GraphAadGetAccessTokenFailed" xml:space="preserve">
+    <value>VS860044: Failed to authenticate the user. Please perform an interactive sign-in into Azure DevOps to fix the issue and retry.</value>
+  </data>
+  <data name="GraphServicePrincipalMissingCreateContext" xml:space="preserve">
+    <value>VS860021: GraphServicePrincipal CreationContext is null.</value>
+  </data>
+  <data name="GraphMemberForCuidNotFound" xml:space="preserve">
+    <value>VS860037: Could not find a graphmember from the Cuid {0}</value>
+  </data>
+  <data name="AadTraversalExtensionNotFound" xml:space="preserve">
+    <value>VS8600021: Could not find the extension to traverse Microsoft Entra descendants</value>
+  </data>
+  <data name="IllegalSid" xml:space="preserve">
+    <value>VS860017: The provided sid '{0}' is not a legal sid format. Verify that the string provided is a legal SecurityIdentifier.</value>
+  </data>
+  <data name="CannotModifyScopes" xml:space="preserve">
+    <value>VS860007: Scopes can only be created or modified by system level operations. You do not have permissions to create or modify a scope.</value>
+  </data>
+</root>

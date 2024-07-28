@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Npm.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82B02736-D239-412E-947E-168911FA1A1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Npm.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Npm.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NpmWebApiExtensions.cs" />
+    <Compile Include="ResourceIds.cs" />
+    <Compile Include="BatchDeprecateData.cs" />
+    <Compile Include="INpmDeprecateData.cs" />
+    <Compile Include="NpmBatchUpgradeData.cs" />
+    <Compile Include="NpmBatchOperationType.cs" />
+    <Compile Include="NpmPackagesBatchRequest.cs" />
+    <Compile Include="Types\Attachment.cs" />
+    <Compile Include="Types\BundledDependencies.cs" />
+    <Compile Include="Types\BugTracker.cs" />
+    <Compile Include="Types\Directories.cs" />
+    <Compile Include="Types\Distribution.cs" />
+    <Compile Include="Types\PackageMetadata.cs" />
+    <Compile Include="Types\NpmResponseMessage.cs" />
+    <Compile Include="Types\PackageJson.cs" />
+    <Compile Include="Types\Person.cs" />
+    <Compile Include="Types\Repository.cs" />
+    <Compile Include="Types\VersionMetadata.cs" />
+    <Compile Include="Types\API\NpmPackageVersionDeletionState.cs" />
+    <Compile Include="Types\API\Package.cs" />
+    <Compile Include="Types\API\PackageExtensions.cs" />
+    <Compile Include="Types\API\NpmRecycleBinPackageVersionDetails.cs" />
+    <Compile Include="Types\API\PackageVersionDetails.cs" />
+    <Compile Include="Generated\NpmHttpClient.cs" />
+    <Compile Include="Exceptions\ArgumentFormatException.cs" />
+    <Compile Include="Exceptions\DistTagNotFoundException.cs" />
+    <Compile Include="Exceptions\FileNotFoundInPackageException.cs" />
+    <Compile Include="Exceptions\DeletePackageWithMultipleVersionsNotSupportedExcep.cs" />
+    <Compile Include="Exceptions\InvalidRequestException.cs" />
+    <Compile Include="Exceptions\RequiredFieldPackageJsonException.cs" />
+    <Compile Include="Exceptions\PackageTooLargeException.cs" />
+    <Compile Include="Exceptions\ServiceCanceledDueToClientException.cs" />
+    <Compile Include="Exceptions\TooManyVersionsException.cs" />
+    <Compile Include="Exceptions\MultipleVersionsUnpublishedException.cs" />
+    <Compile Include="Exceptions\RevisionMismatchException.cs" />
+    <Compile Include="Exceptions\InvalidDistTagException.cs" />
+    <Compile Include="Exceptions\InvalidPackageJsonException.cs" />
+    <Compile Include="Exceptions\NpmClientException.cs" />
+    <Compile Include="Exceptions\InvalidPublishException.cs" />
+    <Compile Include="Exceptions\InvalidPackageTarballException.cs" />
+    <Compile Include="Exceptions\InvalidPackageException.cs" />
+    <Compile Include="Exceptions\InvalidUpstreamPackage.cs" />
+    <Compile Include="Exceptions\PackageVersionAlreadyExistsException.cs" />
+    <Compile Include="Exceptions\InvalidDownloadRequestException.cs" />
+    <Compile Include="Exceptions\UnsupportedMediaTypeException.cs" />
+    <Compile Include="Exceptions\ReadOnlyViewOperationException.cs" />
+    <Compile Include="Exceptions\InvalidFeedOperationException.cs" />
+    <Compile Include="Exceptions\UpstreamUnavailableException.cs" />
+    <Compile Include="Exceptions\PublicUpstreamTgzNotFoundException.cs" />
+    <Compile Include="Exceptions\UnknownUpstreamErrorException.cs" />
+    <Compile Include="Converters\BundledDependenciesJsonConverter.cs" />
+    <Compile Include="Converters\ForceStringConverter.cs" />
+    <Compile Include="Converters\DependencyConverter.cs" />
+    <Compile Include="Converters\ArrayOrSingleItemConverter`1.cs" />
+    <Compile Include="Converters\BaseMultiFormatJsonConverter`1.cs" />
+    <Compile Include="Converters\BinaryJsonConverter.cs" />
+    <Compile Include="Converters\ReadMeJsonConverter.cs" />
+    <Compile Include="Converters\LicenseJsonConverter.cs" />
+    <Compile Include="Converters\BugTrackerJsonConverter.cs" />
+    <Compile Include="Converters\NpmPackagesBatchRequestConverter.cs" />
+    <Compile Include="Converters\RepositoryJsonConverter.cs" />
+    <Compile Include="Converters\KeyValueJsonConverter.cs" />
+    <Compile Include="Converters\LegacyKeywordJsonConverter.cs" />
+    <Compile Include="Converters\PersonJsonConverter.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

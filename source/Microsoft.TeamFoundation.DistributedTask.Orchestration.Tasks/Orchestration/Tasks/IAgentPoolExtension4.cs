@@ -1,0 +1,51 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.IAgentPoolExtension4
+// Assembly: Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: ACF674F2-B05D-403A-A061-F4792BD3317C
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.dll
+
+using Microsoft.TeamFoundation.DistributedTask.WebApi;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks
+{
+  public interface IAgentPoolExtension4
+  {
+    Task CancelJob(
+      int poolId,
+      long requestId,
+      TaskAgentReference agent,
+      Guid scopeId,
+      Guid planId,
+      Guid jobId,
+      TimeSpan timeout);
+
+    Task DeleteAgentRequest(int poolId, long requestId, Guid scopeId, Guid planId, Guid jobId);
+
+    Task<TaskAgentJobRequest> GetAgentRequest(int poolId, long requestId);
+
+    Task<TaskResult?> GetJobResult(
+      int poolId,
+      long requestId,
+      Guid scopeId,
+      Guid planId,
+      Guid jobId);
+
+    Task<TaskAgentJobRequest> QueueAgentRequest(
+      int poolId,
+      IList<Demand> demands,
+      Guid scopeId,
+      Guid planId,
+      Guid jobId);
+
+    Task StartJob(
+      int poolId,
+      long requestId,
+      TaskAgentReference agent,
+      Guid scopeId,
+      Guid planId,
+      Guid jobId);
+  }
+}

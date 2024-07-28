@@ -1,0 +1,21 @@
+<xs:schema elementFormDefault="qualified" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="properties">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="property" minOccurs="1" maxOccurs="unbounded" nillable="false">
+                    <xs:complexType>
+                        <xs:sequence />
+                        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+                        <xs:attribute name="value" type="xs:string" use="required" />
+                        <xs:attribute name="isFile" type="xs:boolean" use="optional" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueProperty">
+            <xs:selector xpath="property"/>
+            <xs:field xpath="@name"/>
+            <xs:field xpath="@value"/>
+        </xs:unique>
+    </xs:element>
+</xs:schema>

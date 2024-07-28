@@ -1,0 +1,47 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.RunJobInput4
+// Assembly: Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: ACF674F2-B05D-403A-A061-F4792BD3317C
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.dll
+
+using Microsoft.TeamFoundation.DistributedTask.WebApi;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks
+{
+  public sealed class RunJobInput4
+  {
+    private List<int> m_agentIds;
+
+    [DataMember]
+    public int PoolId { get; set; }
+
+    [DataMember]
+    public Guid ScopeId { get; set; }
+
+    [DataMember]
+    public Guid PlanId { get; set; }
+
+    [DataMember]
+    public TaskOrchestrationJob Job { get; set; }
+
+    [DataMember]
+    public TaskOrchestrationJobAttempt JobAttempt { get; set; }
+
+    [DataMember]
+    public List<int> AgentIds
+    {
+      get
+      {
+        if (this.m_agentIds == null)
+          this.m_agentIds = new List<int>();
+        return this.m_agentIds;
+      }
+    }
+
+    [DataMember]
+    public bool NotifyJobAssigned { get; set; }
+  }
+}

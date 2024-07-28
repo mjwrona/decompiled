@@ -1,0 +1,70 @@
+<xs:schema elementFormDefault="qualified" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:simpleType name="StructureTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ProjectLifecycle" />
+            <xs:enumeration value="ProjectModelHierarchy" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="255" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="Node">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Node" minOccurs="0" maxOccurs="unbounded"/> 
+                <xs:element name="Children" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Node" minOccurs="0" maxOccurs="unbounded"/> 
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="StructureType" type="StructureTypes" use="required" msprop:nullValue="_throw" />
+            <xs:attribute name="Name" type="NonEmptyString" msprop:nullValue="_throw" use="required" />
+        </xs:complexType>
+
+        <xs:unique name="uniqueNestedNodeTypeName">
+            <xs:selector xpath="Children/Node"/>
+            <xs:field xpath="@StructureType"/>
+            <xs:field xpath="@Name"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:element name="Nodes" nillable="false" msdata:CaseSensitive="true">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Node" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueNodeTypeName">
+            <xs:selector xpath="Node"/>
+            <xs:field xpath="@StructureType"/>
+            <xs:field xpath="@Name"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:element name="properties">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="property" minOccurs="1" maxOccurs="unbounded" nillable="false">
+                    <xs:complexType>
+                        <xs:sequence />
+                        <xs:attribute name="name" type="NonEmptyString" use="required" msprop:nullValue="_throw" />
+                        <xs:attribute name="value" type="NonEmptyString" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueProperty">
+            <xs:selector xpath="property"/>
+            <xs:field xpath="@name"/>
+            <xs:field xpath="@value"/>
+        </xs:unique>
+    </xs:element>
+</xs:schema>

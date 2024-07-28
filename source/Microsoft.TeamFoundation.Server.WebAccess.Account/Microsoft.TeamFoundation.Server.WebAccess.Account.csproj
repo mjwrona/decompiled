@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Server.WebAccess.Account.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE15825E-BFE4-4D41-857E-0FE53C5549D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.Account</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.Account</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Presentation" />
+    <Reference Include="Microsoft.TeamFoundation.Ssh.Server.External.Eldos" />
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountAreaRegistration.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="AccountAreaController.cs" />
+    <Compile Include="AccountController.cs" />
+    <Compile Include="AccountHomeController.cs" />
+    <Compile Include="ApiAccountController.cs" />
+    <Compile Include="ApiUserController.cs" />
+    <Compile Include="UserController.cs" />
+    <Compile Include="PublicKeyController.cs" />
+    <Compile Include="UsersContributionPreloadHandler.cs" />
+    <Compile Include="RoutingExtensions.cs" />
+    <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="IPublicKeyUtility.cs" />
+    <Compile Include="CreateProjectViewModel.cs" />
+    <Compile Include="IdentityProviderModel.cs" />
+    <Compile Include="OAuthAuthorizationsModel.cs" />
+    <Compile Include="PersonalAccessTokenDetailsModel.cs" />
+    <Compile Include="PersonalAccessTokenIndexModel.cs" />
+    <Compile Include="PersonalAccessTokenModel.cs" />
+    <Compile Include="ApplicableAccountMode.cs" />
+    <Compile Include="AuthorizedScopeMode.cs" />
+    <Compile Include="AccountDeleteReason.cs" />
+    <Compile Include="PersonalAccessTokenPageData.cs" />
+    <Compile Include="PublicKeyEditModel.cs" />
+    <Compile Include="UserModel.cs" />
+    <Compile Include="LicenseModel.cs" />
+    <Compile Include="UserViewModel.cs" />
+    <Compile Include="ServerFingerprintModel.cs" />
+    <Compile Include="PublicKeyIndexModel.cs" />
+    <Compile Include="PublicKeyModel.cs" />
+    <Compile Include="SecurityModel.cs" />
+    <Compile Include="UserProfileInformationModel.cs" />
+    <Compile Include="UserProfilePreferencesModel.cs" />
+    <Compile Include="AccountResources.cs" />
+    <Compile Include="AccountServerResources.cs" />
+    <Compile Include="KeyFormat.cs" />
+    <Compile Include="DefaultPublicKeyUtility.cs" />
+    <Compile Include="Models\DetailsSecurityActionUrlModel.cs" />
+    <Compile Include="Models\PersonalAccessTokenUrlModel.cs" />
+    <Compile Include="Models\PublicKeyUrlModel.cs" />
+    <Compile Include="Controllers\OAuthAuthorizationsController.cs" />
+    <Compile Include="Controllers\PersonalAccessTokenController.cs" />
+    <Compile Include="Controllers\UserProfileController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AccountResources.resx" />
+    <EmbeddedResource Include="Resources\AccountServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

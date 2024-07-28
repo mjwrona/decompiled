@@ -1,0 +1,35 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.Exceptions.PackageExistsAsDeletedException
+// Assembly: Microsoft.VisualStudio.Services.Packaging.Shared.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 9764DF62-33FE-41B6-9E79-DE201B497BE0
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll
+
+using Microsoft.VisualStudio.Services.Common;
+using System;
+using System.Runtime.Serialization;
+
+namespace Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.Exceptions
+{
+  [Serializable]
+  public class PackageExistsAsDeletedException : VssServiceException
+  {
+    public PackageExistsAsDeletedException()
+    {
+    }
+
+    public PackageExistsAsDeletedException(string message)
+      : base(message)
+    {
+    }
+
+    public PackageExistsAsDeletedException(string message, Exception innerException)
+      : base(message, innerException)
+    {
+    }
+
+    protected PackageExistsAsDeletedException(SerializationInfo info, StreamingContext context)
+      : base(info, context)
+    {
+    }
+  }
+}

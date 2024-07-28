@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Handler" xml:space="preserve">
+    <value>Handler for node.js application</value>
+  </data>
+  <data name="ErrorSavingVGPolicyDuringCreation" xml:space="preserve">
+    <value>Variable group was created successfully.But there was an error in saving policy.{0}{1}</value>
+  </data>
+  <data name="AuthorizeForUseInAllPipelines" xml:space="preserve">
+    <value>Authorize for use in all pipelines</value>
+  </data>
+  <data name="IISIpAddressTooltip" xml:space="preserve">
+    <value>Provide an IP address that end-users can use to access this website. If 'All Unassigned' is selected, then the website will respond to requests for all IP addresses on the port and for the host name, unless another website on the server has a binding on the same port but with a specific IP address.</value>
+  </data>
+  <data name="AzureKeyVaultInfoText" xml:space="preserve">
+    <value>Toggle this button to link an Azure key vault and map selective vault secrets to this variable group.</value>
+  </data>
+  <data name="SecureStringToolTip" xml:space="preserve">
+    <value>This parameter is a 'secureString'. To avoid storing 'secureString' parameters in plain text, it is recommended that you use secret variables, for example '$(variableName)'.</value>
+  </data>
+  <data name="PropertiesTabTitle" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="VariableGroupSettings" xml:space="preserve">
+    <value>Variable Group Settings</value>
+  </data>
+  <data name="InvalidCSMParametersFileURL" xml:space="preserve">
+    <value>Template parameters path doesn't point to a valid JSON file</value>
+  </data>
+  <data name="OAuthConfigurationGettingStartedLearnMore" xml:space="preserve">
+    <value>Learn more about OAuth client configurations</value>
+  </data>
+  <data name="StaticFolderPath" xml:space="preserve">
+    <value>Path to serve static files</value>
+  </data>
+  <data name="StatusText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="OAuthConfigurationsDetailsUrlColumn" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="SecurityDialogTitle" xml:space="preserve">
+    <value>Assign security roles for {0}</value>
+  </data>
+  <data name="UrlText" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="IISPortLabel" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="ParameterTypeNotSupported" xml:space="preserve">
+    <value>Cannot override this parameter type</value>
+  </data>
+  <data name="AzureKeyVaultSpnPermissionsOnPremErrorText" xml:space="preserve">
+    <value>Specified Azure service connection needs to have "Get, List" secret management permissions on the selected key vault. Set these secret permissions in Azure portal or run the following commands in powershell window.</value>
+  </data>
+  <data name="OAuthConfigurationsDetailsModifiedByColumn" xml:space="preserve">
+    <value>Modified by</value>
+  </data>
+  <data name="OAuthConfigurationTable" xml:space="preserve">
+    <value>OAuth configurations table</value>
+  </data>
+  <data name="OAuthConfigurationTitle" xml:space="preserve">
+    <value>OAuth Configuration</value>
+  </data>
+  <data name="IISHostnameLabel" xml:space="preserve">
+    <value>Hostname</value>
+  </data>
+  <data name="KeyVaultsNotFoundText" xml:space="preserve">
+    <value>No key vaults found in the selected subscription.</value>
+  </data>
+  <data name="StringOverrideHelpText" xml:space="preserve">
+    <value>Enclose the value in quotes if there are words seperated with whitespace. For example "word1 word2" or "$(var)" if variable has whitespace. Use escaped characters if value has a quote, for example "word\"withquote"</value>
+  </data>
+  <data name="NotSupportedArtifact" xml:space="preserve">
+    <value>Cannot fetch the file content of selected source provider / linked artifact. </value>
+  </data>
+  <data name="TemplateLinkNotSupplied" xml:space="preserve">
+    <value>Template file path was not provided</value>
+  </data>
+  <data name="ErrorDeletingVGPolicy" xml:space="preserve">
+    <value>Error deleting the variable group. Please try again{0}{1}</value>
+  </data>
+  <data name="LibraryItemMenuToolTip" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="ErrorLoadingSecureFile" xml:space="preserve">
+    <value>There was an error in loading the secure file. Please try again. {0}{1}</value>
+  </data>
+  <data name="AMRInputValidationErrorMessage" xml:space="preserve">
+    <value>Input validation errors. </value>
+  </data>
+  <data name="AMRConditionLabel" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="extraParametersWarning" xml:space="preserve">
+    <value>Parameters specified are not found in template and could fail the deployment</value>
+  </data>
+  <data name="IISSslThumbprintTooltip" xml:space="preserve">
+    <value>Provide the thumb-print of the Secure Socket Layer certificate that the website is going to use for the HTTPS communication as a 40 character long hexadecimal string. The SSL certificate should be already installed on the Computer, at Local Computer, Personal store.</value>
+  </data>
+  <data name="OAuthConfigurationAriaLabel" xml:space="preserve">
+    <value>OAuth configurations</value>
+  </data>
+  <data name="ThisText" xml:space="preserve">
+    <value> this </value>
+  </data>
+  <data name="OkText" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="OAuthConfigurationGettingStartedButtonText" xml:space="preserve">
+    <value>Add OAuth configuration</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="LibraryItemsAriaLabel" xml:space="preserve">
+    <value>Library items</value>
+  </data>
+  <data name="IISIpAddressLabel" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="OAuthConfigurationListWindowTitle" xml:space="preserve">
+    <value>OAuth configurations</value>
+  </data>
+  <data name="ShareVariableGroupPanelDescriptionText" xml:space="preserve">
+    <value>Share variable groups across projects</value>
+  </data>
+  <data name="InvalidCSMFile" xml:space="preserve">
+    <value>Template file provided is invalid. $schema, contentVersion, resources are required elements in your template</value>
+  </data>
+  <data name="NotAllPipelineAccess" xml:space="preserve">
+    <value>Don't allow access to all pipelines</value>
+  </data>
+  <data name="IISProtocolTooltip" xml:space="preserve">
+    <value>Select HTTP for the website to have an HTTP binding, or select HTTPS for the website to have a Secure Sockets Layer (SSL) binding.</value>
+  </data>
+  <data name="AMRAddAlertButtonText" xml:space="preserve">
+    <value>Add alert rule</value>
+  </data>
+  <data name="ChecksIssuesMessage" xml:space="preserve">
+    <value>Please review and update the approvals and checks to meet compliance requirements before {0}.</value>
+  </data>
+  <data name="AMRConditionHelpText" xml:space="preserve">
+    <value>Select condition using which your metric will be evaluated.</value>
+  </data>
+  <data name="PipelinePermissions" xml:space="preserve">
+    <value>Pipeline permissions</value>
+  </data>
+  <data name="IISHostnameTooltip" xml:space="preserve">
+    <value>Enter a host name (or domain name) for the website. If a host name is specified, then the clients must use the host name instead of the IP address to access the website.</value>
+  </data>
+  <data name="SecretText" xml:space="preserve">
+    <value>Secret</value>
+  </data>
+  <data name="CreateVariableGroupHelpText" xml:space="preserve">
+    <value>Create groups of variables that you can share &lt;br/&gt; across multiple pipelines.</value>
+  </data>
+  <data name="NameSortedDescending" xml:space="preserve">
+    <value>Name sorted descending</value>
+  </data>
+  <data name="IISSslThumbprintLabel" xml:space="preserve">
+    <value>SSL certificate thumbprint</value>
+  </data>
+  <data name="AMRErrorMessageBarAriaLabel" xml:space="preserve">
+    <value>Error message bar</value>
+  </data>
+  <data name="KeyVaultSecretsNotFoundText" xml:space="preserve">
+    <value>No secrets found in the selected key vault.</value>
+  </data>
+  <data name="DownloadFailedForLinkedCSMFile" xml:space="preserve">
+    <value>Failed to download the template file from the given path '{0}' with the following error: {1}</value>
+  </data>
+  <data name="VariableGroupPipelinePolicyHeader" xml:space="preserve">
+    <value>Pipeline policies</value>
+  </data>
+  <data name="IISSniTooltip" xml:space="preserve">
+    <value>Select the option to set the Server Name Indication (SNI) for the website. SNI extends the SSL and TLS protocols to indicate the host name that the clients are attempting to connect to. It allows, multiple secure websites with different certificates, to use the same IP address.</value>
+  </data>
+  <data name="JarPathOnAppService" xml:space="preserve">
+    <value>Specify jar path on Azure App Service directory. For example D:\\home\\site\\wwwroot\\*.jar</value>
+  </data>
+  <data name="PythonWFASTCGIPath" xml:space="preserve">
+    <value>Absolute path for wfastcgi.py. Variables set in Output variable of Azure App Service Manage task can be consumed here. Example: $(python_ext_var)/wfastcgi.py</value>
+  </data>
+  <data name="InvalidSecureFileName" xml:space="preserve">
+    <value>Provide a valid file name for the secure file.</value>
+  </data>
+  <data name="AMRPeriodHelpText" xml:space="preserve">
+    <value>Chose the Period of time that the metric rule must be satisfied before the alert triggers.</value>
+  </data>
+  <data name="OAuthConfigurationWindowTitle" xml:space="preserve">
+    <value>OAuth Configuration</value>
+  </data>
+  <data name="FailedToDeleteSecretText" xml:space="preserve">
+    <value>Failed to delete secret</value>
+  </data>
+  <data name="IISBindingTitle" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="DisabledText" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ProjectText" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="AMRMandatoryInputErrorMessage" xml:space="preserve">
+    <value>Mandatory input field.</value>
+  </data>
+  <data name="UnsavedChanges" xml:space="preserve">
+    <value>You have unsaved changes.</value>
+  </data>
+  <data name="ConfirmNavigation" xml:space="preserve">
+    <value>Are you sure you want to leave the page?</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>Search variable groups</value>
+  </data>
+  <data name="IISInvalidInputs" xml:space="preserve">
+    <value>Some input fields are missing or are invalid. Check the bindings.</value>
+  </data>
+  <data name="TargetNotFound" xml:space="preserve">
+    <value>Target input not found</value>
+  </data>
+  <data name="AMRThresholdLabel" xml:space="preserve">
+    <value>Threshold</value>
+  </data>
+  <data name="DeleteVariableGroupHelpText" xml:space="preserve">
+    <value>Delete might affect the pipelines using this variable group. &lt;br/&gt;Are you sure you want to proceed?</value>
+  </data>
+  <data name="NameSortedAscending" xml:space="preserve">
+    <value>Name sorted ascending</value>
+  </data>
+  <data name="SharedBadgeText" xml:space="preserve">
+    <value>SHARED</value>
+  </data>
+  <data name="ContentTypeText" xml:space="preserve">
+    <value>Content type</value>
+  </data>
+  <data name="VariableGroupPolicyTab" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="AMRDeleteAlertAriaLabel" xml:space="preserve">
+    <value>Delete alert rule</value>
+  </data>
+  <data name="VariableGroupMenuItemTitleBar" xml:space="preserve">
+    <value>Variable group</value>
+  </data>
+  <data name="InvalidDuplicateVariableName" xml:space="preserve">
+    <value>Variable Name is already used.</value>
+  </data>
+  <data name="IISProtocolLabel" xml:space="preserve">
+    <value>Protocol</value>
+  </data>
+  <data name="GoExeFileName" xml:space="preserve">
+    <value>Exe file for Go application</value>
+  </data>
+  <data name="AMRThresholdHelpText" xml:space="preserve">
+    <value>Threshold value for metric.</value>
+  </data>
+  <data name="SecureFilesTabTitle" xml:space="preserve">
+    <value>Secure files</value>
+  </data>
+  <data name="DownloadFailedForLinkedCSMParametersFile" xml:space="preserve">
+    <value>Failed to download the template parameters file from the given path '{0}' with the following error: {1}</value>
+  </data>
+  <data name="DeleteVariableGroup" xml:space="preserve">
+    <value>Delete variable group</value>
+  </data>
+  <data name="IISPortTooltip" xml:space="preserve">
+    <value>Provide the port, where the Hypertext Transfer Protocol Stack (HTTP.sys) will listen to the website requests.</value>
+  </data>
+  <data name="AMRResourceIDEmptyError" xml:space="preserve">
+    <value>Unable to fetch resourceId for the resourceName : {0}. Check if the resource exists in the resource group. </value>
+  </data>
+  <data name="SecureFileNameText" xml:space="preserve">
+    <value>Secure file name</value>
+  </data>
+  <data name="SearchTextSecureFiles" xml:space="preserve">
+    <value>Search secure files</value>
+  </data>
+  <data name="OAuthConfigurationsDetailsModifiedOnColumn" xml:space="preserve">
+    <value>Date modified</value>
+  </data>
+  <data name="DownloadFailedForCSMFile" xml:space="preserve">
+    <value>Failed to download the file from template path. This feature requires that CORS rules are enabled at the source. If templates are in Azure storage blob, refer to {0} to enable CORS.</value>
+  </data>
+  <data name="ObjectOverrideHelpText" xml:space="preserve">
+    <value>To override, use stringified JSON objects. For example {"key" : "value"} or ["val1", "val2"]</value>
+  </data>
+  <data name="OAuthConfigurationInvalidUrl" xml:space="preserve">
+    <value>The URL specified is not valid</value>
+  </data>
+  <data name="NotAPartOfTemplateHelpText" xml:space="preserve">
+    <value>This parameter is not a part of template. Deployment could fail</value>
+  </data>
+  <data name="OAuthConfigurationGettingStartedTitle" xml:space="preserve">
+    <value>Add OAuth configuration</value>
+  </data>
+  <data name="OAuthConfigurationGettingStartedAbout" xml:space="preserve">
+    <value>OAuth client configurations define underlying settings that are required to set up service connections in your projects</value>
+  </data>
+  <data name="SecureFileTableName" xml:space="preserve">
+    <value>Secure Files Table</value>
+  </data>
+  <data name="InvalidVariableGroupName" xml:space="preserve">
+    <value>Variable group name is invalid.</value>
+  </data>
+  <data name="ErrorParsingKubernetesSecretArguments" xml:space="preserve">
+    <value>Error parsing Kubernetes secret arguments</value>
+  </data>
+  <data name="AzureKeyVaultSpnPermissionsScriptFormatPowerShell" xml:space="preserve">
+    <value>```powershell
+{0}
+```</value>
+  </data>
+  <data name="AMRAlertRuleLabelPrefix" xml:space="preserve">
+    <value>Alert rule</value>
+  </data>
+  <data name="VariableGroupNotFound" xml:space="preserve">
+    <value>Variable group with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="DeleteOAuthConfigurationHelpText" xml:space="preserve">
+    <value>You are about to delete the configuration {0}.</value>
+  </data>
+  <data name="OrganizationText" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="CopyScriptToClipboard" xml:space="preserve">
+    <value>Copy script to clipboard</value>
+  </data>
+  <data name="SecureFileText" xml:space="preserve">
+    <value>Secure file</value>
+  </data>
+  <data name="DeleteVariableText" xml:space="preserve">
+    <value>Delete variable</value>
+  </data>
+  <data name="CloneText" xml:space="preserve">
+    <value>Clone</value>
+  </data>
+  <data name="AMRMetricsLabel" xml:space="preserve">
+    <value>Metrics</value>
+  </data>
+  <data name="LearnMoreText" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="InvalidCSMParametersFile" xml:space="preserve">
+    <value>Template parameters file provided is invalid. Template parameters should either have a reference or a value</value>
+  </data>
+  <data name="NoSecretsSelectedInfo" xml:space="preserve">
+    <value>No secrets selected. Click add button to select secrets.</value>
+  </data>
+  <data name="LearnMoreAboutSecureFilesHelpText" xml:space="preserve">
+    <value>&lt;a  href='{0}' target='_blank'&gt;Learn more about secure files.&lt;/a&gt;</value>
+  </data>
+  <data name="ParameterTypeIs" xml:space="preserve">
+    <value>This parameter is of '{0}' type.</value>
+  </data>
+  <data name="VariableGroupTableName" xml:space="preserve">
+    <value>Variable Groups Table</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="WebConfigParametersAppTypeInfoText" xml:space="preserve">
+    <value>A standard Web.config will be generated and deployed to Azure App Service if the application does not have one. The values in web.config can be edited and vary based on the application framework. For example for node.js application, web.config will have startup file and iis_node module values. And for python web.config will have PYTHONPATH, WSGI_HANDLER etc.</value>
+  </data>
+  <data name="LoadingInProgress" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="ShareVariableGroupPanelHeaderText" xml:space="preserve">
+    <value>Share variable groups</value>
+  </data>
+  <data name="ApprovalsAndChecksDialogTitle" xml:space="preserve">
+    <value>Approvals and checks for Library / {0}</value>
+  </data>
+  <data name="OAuthConfigurationsDetailsEndpointTypeColumn" xml:space="preserve">
+    <value>Service connection type</value>
+  </data>
+  <data name="ServerUrl" xml:space="preserve">
+    <value>{0} URL</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="VariableGroupNameText" xml:space="preserve">
+    <value>Variable group name</value>
+  </data>
+  <data name="ErrorSavingVGPolicy" xml:space="preserve">
+    <value>There was an error in saving the variable group. Please try again. {0}{1}</value>
+  </data>
+  <data name="ChecksComplianceBlogPostLink" xml:space="preserve">
+    <value>https://aka.ms/AzPipelines/NoncompliantChecks</value>
+  </data>
+  <data name="ChangingVariableGroupToKeyVaultMessage" xml:space="preserve">
+    <value>Toggling this switch would erase all variables previously saved with this variable group. Are you sure you want to continue?</value>
+  </data>
+  <data name="AMRAlertNameHelpText" xml:space="preserve">
+    <value>Display name for Azure monitor alert.</value>
+  </data>
+  <data name="ClientId" xml:space="preserve">
+    <value>Client ID</value>
+  </data>
+  <data name="VariableText" xml:space="preserve">
+    <value>Variable</value>
+  </data>
+  <data name="InvalidOAuthConfigurationId" xml:space="preserve">
+    <value>The OAuth configuration ID is invalid. It should be a valid GUID</value>
+  </data>
+  <data name="DownloadFailedForCSMParametersFile" xml:space="preserve">
+    <value>Failed to download the file from template parameters path. This feature requires that CORS rules are enabled at the source. If file is in Azure storage blob, refer to {0} to enable CORS.</value>
+  </data>
+  <data name="NeverText" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="SecretNameText" xml:space="preserve">
+    <value>Secret name</value>
+  </data>
+  <data name="DateModifiedText" xml:space="preserve">
+    <value>Date modified</value>
+  </data>
+  <data name="VariableGroupsTabTitle" xml:space="preserve">
+    <value>Variable groups</value>
+  </data>
+  <data name="ApprovalsAndChecks" xml:space="preserve">
+    <value>Approvals and checks</value>
+  </data>
+  <data name="EnabledText" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="WSGIHandlerDjango" xml:space="preserve">
+    <value>WSGI_HANDLER object for your Django application</value>
+  </data>
+  <data name="NodeStartFile" xml:space="preserve">
+    <value>Startup file for node.js application</value>
+  </data>
+  <data name="OAuthConfigurationDoesNotExist" xml:space="preserve">
+    <value>OAuth configuration with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="NewVariableGroupText" xml:space="preserve">
+    <value>New variable group</value>
+  </data>
+  <data name="CloneVariableGroupError" xml:space="preserve">
+    <value>You do not have permissions to clone the key vault variable group '{0}'. You need to be added as 'User' role for the azure service connection used in the key vault.</value>
+  </data>
+  <data name="OAuthConfigurationsHubTitle" xml:space="preserve">
+    <value>OAuth configurations</value>
+  </data>
+  <data name="AzureKeyVaultNameLabel" xml:space="preserve">
+    <value>Key vault name</value>
+  </data>
+  <data name="ModifiedByText" xml:space="preserve">
+    <value>Modified by</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="InvalidAllowedValuesField" xml:space="preserve">
+    <value>Allowed Values of a parameter should be of type array</value>
+  </data>
+  <data name="SecureStringHelpText" xml:space="preserve">
+    <value>To avoid storing "secureString" parameters in plain text, it is recommended that you use secret variables, for example "$(variableName)".</value>
+  </data>
+  <data name="ClientSecret" xml:space="preserve">
+    <value>Secret</value>
+  </data>
+  <data name="RefreshKeyVaultsList" xml:space="preserve">
+    <value>Refresh key vaults list</value>
+  </data>
+  <data name="ChangingSelectedSubscriptionMessage" xml:space="preserve">
+    <value>Changing subscription would erase all selected key vault variables previously saved with this variable group. Are you sure you want to continue?</value>
+  </data>
+  <data name="WSGIHandlerBottle" xml:space="preserve">
+    <value>WSGI_HANDLER object for your Bottle application</value>
+  </data>
+  <data name="IntegerOverrideHelpText" xml:space="preserve">
+    <value>Value should be a valid integer</value>
+  </data>
+  <data name="ManageInAzurePortalText" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="SelectSecretText" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="DeleteSecureFileHelpText" xml:space="preserve">
+    <value>Deleting will affect any build and release pipelines using this secure file. &lt;br/&gt;Are you sure you want to proceed?</value>
+  </data>
+  <data name="ErrorDeletingVg" xml:space="preserve">
+    <value>Error deleting the variable group. Policies for the variable group may have changed. Please try again{0}{1}</value>
+  </data>
+  <data name="OAuthConfigurationsTabTitle" xml:space="preserve">
+    <value>OAuth configurations</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ChangingVariableGroupTypeTitle" xml:space="preserve">
+    <value>Variable group</value>
+  </data>
+  <data name="PythonPath" xml:space="preserve">
+    <value>Absolute path for python.exe. Variables set in Output variable of Azure App Service Manage task can be consumed here. Example: $(python_ext_var)/python.exe</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AzureKeyVaultSubscriptionLabel" xml:space="preserve">
+    <value>Azure subscription</value>
+  </data>
+  <data name="ExpiresText" xml:space="preserve">
+    <value>Expiration date</value>
+  </data>
+  <data name="ChooseSecretsMessage" xml:space="preserve">
+    <value>Choose secrets to be included in this variable group</value>
+  </data>
+  <data name="WSGIHandlerFlask" xml:space="preserve">
+    <value>WSGI_HANDLER object for your Flask application</value>
+  </data>
+  <data name="AMRAlertNameLabel" xml:space="preserve">
+    <value>Alert name</value>
+  </data>
+  <data name="LoadMoreText" xml:space="preserve">
+    <value>Load more</value>
+  </data>
+  <data name="AddOAuthConfigurationPageTitle" xml:space="preserve">
+    <value>Add OAuth configuration</value>
+  </data>
+  <data name="AMRMetricsHelpText" xml:space="preserve">
+    <value>Select the resource metric you want to monitor.</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="LibraryHubTitle" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="LearnMoreAboutVariableGroupsHelpText" xml:space="preserve">
+    <value>&lt;a  href='{0}' target='_blank'&gt;Learn more about variable groups.&lt;/a&gt;</value>
+  </data>
+  <data name="UpdateSecretRequiredText" xml:space="preserve">
+    <value>You must provide secret to update the OAuth configuration</value>
+  </data>
+  <data name="IISMandatoryInputField" xml:space="preserve">
+    <value>Mandatory input field.</value>
+  </data>
+  <data name="CopyText" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="KeyVaultPlaceholder" xml:space="preserve">
+    <value>Type to override Azure Key Vault reference</value>
+  </data>
+  <data name="AddBindingText" xml:space="preserve">
+    <value>Add Binding</value>
+  </data>
+  <data name="ChecksIssueLinkText" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="KeyVaultNotFoundText" xml:space="preserve">
+    <value>Key vault {0} not found in the selected subscription.</value>
+  </data>
+  <data name="ValueText" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="WebConfigParametersAppTypeText" xml:space="preserve">
+    <value>Application framework</value>
+  </data>
+  <data name="AllowPipelineAccess" xml:space="preserve">
+    <value>Allow access to all pipelines</value>
+  </data>
+  <data name="PermissionDeniedMessage" xml:space="preserve">
+    <value>You do not have permission to manage this item.</value>
+  </data>
+  <data name="VariablesText" xml:space="preserve">
+    <value>Variables</value>
+  </data>
+  <data name="OAuthConfigurationsDetailsNameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="IISSniLabel" xml:space="preserve">
+    <value>Server Name Indication required</value>
+  </data>
+  <data name="DeleteOAuthConfiguration" xml:space="preserve">
+    <value>Delete OAuth configuration</value>
+  </data>
+  <data name="ChangingVariableGroupToCustomMessage" xml:space="preserve">
+    <value>Toggling this switch would unlink the Azure key vault from this variable group and would erase all key vault variables previously saved with this variable group. Are you sure you want to continue?</value>
+  </data>
+  <data name="AdditionalOptionsForDeployment" xml:space="preserve">
+    <value>Specify additional options for deployment of jar package on Azure App Service. For example spring.profiles.active=dev. Do not change -Dserver.port=%HTTP_PLATFORM_PORT% because only HTTP_PLATFORM_PORT is open for Azure App Service. Enclose this value in single quote.</value>
+  </data>
+  <data name="ErrorLoadingVGPolicy" xml:space="preserve">
+    <value>Error loading policy.{0}{1}</value>
+  </data>
+  <data name="LinkSecretsUsingAzureKeyVaultLabelText" xml:space="preserve">
+    <value>Link secrets from an Azure key vault as variables</value>
+  </data>
+  <data name="SearchResultsMessage" xml:space="preserve">
+    <value>{0} search results were found</value>
+  </data>
+  <data name="DjangoSettingsModule" xml:space="preserve">
+    <value>If the ‘settings.py’ file exists, the value will be auto-detected. Value should be provided in the format ‘&lt;folder containing settings.py&gt;.settings'</value>
+  </data>
+  <data name="IISInavlidSSLThumbprint" xml:space="preserve">
+    <value>Invalid SSL thumbprint. Length is not 40 characters or contains non-hexadecimal characters.</value>
+  </data>
+  <data name="ChangingSelectedKeyVaultMessage" xml:space="preserve">
+    <value>Changing key vault name would erase all selected key vault variables previously saved with this variable group. Are you sure you want to continue?</value>
+  </data>
+  <data name="SourceType" xml:space="preserve">
+    <value>Source Type</value>
+  </data>
+  <data name="UploadSecureFileHelpText" xml:space="preserve">
+    <value>Upload sensitive files such as certificates and signing keys &lt;br/&gt; and securely use them in your pipelines.</value>
+  </data>
+  <data name="ChooseSecretsTitle" xml:space="preserve">
+    <value>Choose secrets</value>
+  </data>
+  <data name="AzureKeyVaultSpnPermissionsHostedErrorText" xml:space="preserve">
+    <value>The specified Azure service connection needs to have "Get, List" secret management permissions on the selected key vault. Click "Authorize" to enable Azure Pipelines to set these permissions or manage secret permissions in the Azure portal.</value>
+  </data>
+  <data name="UploadSecureFileText" xml:space="preserve">
+    <value>Upload a secure file</value>
+  </data>
+  <data name="VariableGroupText" xml:space="preserve">
+    <value>Variable group</value>
+  </data>
+  <data name="NewVariableGroupButtonName" xml:space="preserve">
+    <value>Add new variable group</value>
+  </data>
+  <data name="EditOAuthConfigurationPageTitle" xml:space="preserve">
+    <value>Edit OAuth configuration</value>
+  </data>
+  <data name="AMRPeriodLabel" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="DeleteSecureFile" xml:space="preserve">
+    <value>Delete secure file</value>
+  </data>
+  <data name="ErrorParsingJson" xml:space="preserve">
+    <value>Error parsing json</value>
+  </data>
+  <data name="ViewOAuthConfigurationToolTip" xml:space="preserve">
+    <value>View OAuth configuration: {0}</value>
+  </data>
+  <data name="UnSupportedVariableGroupTypeFormat" xml:space="preserve">
+    <value>Variable group type {0} is not supported.</value>
+  </data>
+  <data name="ARIALabelSecretsTable" xml:space="preserve">
+    <value>Secrets table</value>
+  </data>
+  <data name="AMRMetricDefinitonsEmpty" xml:space="preserve">
+    <value>Unable to fetch metric definitions.</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="ShareText" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="LastRefreshedOnLabelFormat" xml:space="preserve">
+    <value>Last refreshed: {0}</value>
+  </data>
+  <data name="InvalidCSMFileURL" xml:space="preserve">
+    <value>Template path doesn't point to a valid JSON file</value>
+  </data>
+  <data name="DeleteSecretText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="SecureFilePropertiesHelpText" xml:space="preserve">
+    <value>Optionally define properties for the secure file.</value>
+  </data>
+  <data name="CouldNotFetchTemplateParameters" xml:space="preserve">
+    <value>Warning: </value>
+  </data>
+  <data name="ErrorSavingSecureFile" xml:space="preserve">
+    <value>There was an error in saving the secure file. Please try again. {0}{1}</value>
+  </data>
+  <data name="AzureKeyVaultAuthorizeHasFailedWithSpnObjectNotFoundException" xml:space="preserve">
+    <value>{0}. Specified Azure service connection needs to have "Get, List" secret management permissions on the selected key vault. Set these secret permissions in Azure portal or run the following commands in powershell window and refresh the list.</value>
+  </data>
+</root>

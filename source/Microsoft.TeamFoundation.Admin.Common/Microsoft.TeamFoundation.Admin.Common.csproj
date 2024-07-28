@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Admin.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CA5A921-64EC-488C-AA76-B72398AF2139}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Admin.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Admin</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminHelpReferences.cs" />
+    <Compile Include="LogType.cs" />
+    <Compile Include="LogActivity.cs" />
+    <Compile Include="LogArea.cs" />
+    <Compile Include="LogEntryType.cs" />
+    <Compile Include="AdminLog.cs" />
+    <Compile Include="AdminLogTokens.cs" />
+    <Compile Include="AdminTrace.cs" />
+    <Compile Include="FeatureHelper.cs" />
+    <Compile Include="FileLogWriter.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="SqlHashUtils.cs" />
+    <Compile Include="ILogWriter.cs" />
+    <Compile Include="ConfigurationStateChangedEventArgs.cs" />
+    <Compile Include="InstalledFeatureService.cs" />
+    <Compile Include="InstalledFeature.cs" />
+    <Compile Include="FeatureType.cs" />
+    <Compile Include="ApplicationPoolType.cs" />
+    <Compile Include="IFeature.cs" />
+    <Compile Include="IInstalledFeatureService.cs" />
+    <Compile Include="ServiceDeploymentType.cs" />
+    <Compile Include="StdoutLogWriter.cs" />
+    <Compile Include="TeamFoundationProductVersion.cs" />
+    <Compile Include="TfsAdminException.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="AdminCommonResources.cs" />
+    <Compile Include="FeatureDisplayName.cs" />
+    <Compile Include="Common\AOConstants.cs" />
+    <Compile Include="Common\AzureResourceMapper.cs" />
+    <Compile Include="Common\UnreferencedClass.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminCommonResources.resx" />
+    <EmbeddedResource Include="FeatureDisplayName.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

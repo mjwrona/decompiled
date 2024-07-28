@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InvalidApprovalReassignRequest" xml:space="preserve">
+    <value>Approval reassign failed. The reassign request for approval id '{0}' is invalid.</value>
+  </data>
+  <data name="ApprovalSkippedUnauthorizedExceptionMessage" xml:space="preserve">
+    <value>Approval skip operation failed. User '{0}' is not permitted to skip approval with ID '{1}' due to lack of administrator permissions on the resource for which the approval is configured.</value>
+  </data>
+  <data name="GenericDatabaseUpdateError" xml:space="preserve">
+    <value>There was a database update error. Please try your operation again.</value>
+  </data>
+  <data name="ApprovalIdNotProvided" xml:space="preserve">
+    <value>Approval ID is not provided.</value>
+  </data>
+  <data name="ApprovalReassignBlockedExceptionMessage" xml:space="preserve">
+    <value>Approval reassign failed. The approver with id '{0}' is blocked from approving the approval '{1}'.</value>
+  </data>
+  <data name="InvalidApprovalConfigMinRequiredApproversInput" xml:space="preserve">
+    <value>Minimum required approvers should be between 1 and the number of specified approvers.</value>
+  </data>
+  <data name="DuplicateApprovalCreateRequests" xml:space="preserve">
+    <value>Approval create failed. Approval ID should be unique for each request.</value>
+  </data>
+  <data name="ApprovalNotFoundExceptionMessage" xml:space="preserve">
+    <value>No approvals found for the specified query.</value>
+  </data>
+  <data name="InvalidApprovalsQueryParameters" xml:space="preserve">
+    <value>Query for approvals failed. A minimum of one query parameter is required.</value>
+  </data>
+  <data name="ApprovalParametersMaxLengthExceptionMessage" xml:space="preserve">
+    <value>Too many input parameters provided. A maximum of '{0}' parameters are supported.</value>
+  </data>
+  <data name="DeferredApprovalsMustHaveValidDeferredTo" xml:space="preserve">
+    <value>Deferred approvals must have DeferredTo date within 30 days from now</value>
+  </data>
+  <data name="StringValueCommaSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="InvalidApprovalConfigInSequenceMinRequiredApproversInput" xml:space="preserve">
+    <value>Incorrect value for minimum required approvers with in-sequence execution.</value>
+  </data>
+  <data name="InvalidQueryFilteringParameters" xml:space="preserve">
+    <value>ApproverId should be provided with ApproverStatus.</value>
+  </data>
+  <data name="ApprovalReassignRequestFailed" xml:space="preserve">
+    <value>Approval reassign failed. The reassign request for approval id '{0}' is invalid. The approval may already be completed, reassigned or not started.</value>
+  </data>
+  <data name="ApprovalBlockedExceptionMessage" xml:space="preserve">
+    <value>Approval update failed. Approver '{0}' is not permitted to complete approval with ID '{1}'.</value>
+  </data>
+  <data name="ApprovalUnauthorizedExceptionMessage" xml:space="preserve">
+    <value>Approval update failed. Approver '{0}' is not permitted to complete approval with ID '{1}'.</value>
+  </data>
+  <data name="DeferredApprovalNotSupported" xml:space="preserve">
+    <value>Deferred approvals are not supported.</value>
+  </data>
+  <data name="ApprovalUpdateRequestFailed" xml:space="preserve">
+    <value>Approval update failed. The approval id '{0}' is not waiting for your response. It may already be completed, reassigned or not started.</value>
+  </data>
+  <data name="ApproverExists" xml:space="preserve">
+    <value>Approval reassign failed. The approval id '{0}' already contains one approver with id '{1}'.</value>
+  </data>
+  <data name="InvalidIdentities" xml:space="preserve">
+    <value>The following identities are invalid: {0}.</value>
+  </data>
+  <data name="ApprovalExists" xml:space="preserve">
+    <value>Approval with ID '{0}' already exists.</value>
+  </data>
+  <data name="ApprovalReassignUnauthorizedExceptionMessage" xml:space="preserve">
+    <value>Approval reassign failed. Approver '{0}' is not permitted to reassign step with assigned approver ID '{1}'.</value>
+  </data>
+  <data name="InvalidApprovalId" xml:space="preserve">
+    <value>The approval ID is invalid.</value>
+  </data>
+  <data name="InvalidApprovalOwner" xml:space="preserve">
+    <value>This value for approval owner is not valid. </value>
+  </data>
+  <data name="ApprovalAlreadyCompletedExceptionMessage" xml:space="preserve">
+    <value>Approval update failed. Approval is already in completed state.</value>
+  </data>
+</root>

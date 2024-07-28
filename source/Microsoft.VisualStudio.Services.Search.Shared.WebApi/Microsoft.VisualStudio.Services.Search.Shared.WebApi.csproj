@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Search.Shared.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{586D2878-4236-4FF7-853A-DAFA47A319B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Shared.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Shared.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="SearchSecuredV2Object.cs" />
+    <Compile Include="SearchSharedWebApiResources.cs" />
+    <Compile Include="Exceptions\InvalidCustomRequestException.cs" />
+    <Compile Include="Exceptions\InvalidQueryException.cs" />
+    <Compile Include="Exceptions\SearchException.cs" />
+    <Compile Include="Contracts\EntitySearchRequestBase.cs" />
+    <Compile Include="Contracts\Collection.cs" />
+    <Compile Include="Contracts\EntitySearchRequest.cs" />
+    <Compile Include="Contracts\EntitySearchResponse.cs" />
+    <Compile Include="Contracts\Filter.cs" />
+    <Compile Include="Contracts\ProjectReference.cs" />
+    <Compile Include="Contracts\SortOrder.cs" />
+    <Compile Include="Contracts\SortOption.cs" />
+    <Compile Include="Contracts\Version.cs" />
+    <Compile Include="Contracts\ScrollSearchRequest.cs" />
+    <Compile Include="Contracts\ContractConstants.cs" />
+    <Compile Include="Contracts\InfoCodes.cs" />
+    <Compile Include="Contracts\Hit.cs" />
+    <Compile Include="Contracts\Repository.cs" />
+    <Compile Include="Contracts\VersionControlType.cs" />
+    <Compile Include="Contracts\Package\PackageSearchFilterCategories.cs" />
+    <Compile Include="Contracts\Package\PackageSearchSortOptionSupportedFields.cs" />
+    <Compile Include="Contracts\Package\PackageSearchRequest.cs" />
+    <Compile Include="Contracts\Package\PackageSearchResponse.cs" />
+    <Compile Include="Contracts\Package\PackageSearchResponseContent.cs" />
+    <Compile Include="Contracts\Package\PackageResult.cs" />
+    <Compile Include="Contracts\Package\PackageHit.cs" />
+    <Compile Include="Contracts\Package\FeedInfo.cs" />
+    <Compile Include="Contracts\Wiki\Wiki.cs" />
+    <Compile Include="Contracts\Wiki\WikiHit.cs" />
+    <Compile Include="Contracts\Wiki\WikiResult.cs" />
+    <Compile Include="Contracts\Wiki\WikiSearchRequest.cs" />
+    <Compile Include="Contracts\Wiki\WikiSearchResponse.cs" />
+    <Compile Include="Contracts\Setting\SearchScope.cs" />
+    <Compile Include="Contracts\Setting\SettingSearchRequest.cs" />
+    <Compile Include="Contracts\Setting\SettingResult.cs" />
+    <Compile Include="Contracts\Setting\SettingSearchResponse.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SearchSharedWebApiResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

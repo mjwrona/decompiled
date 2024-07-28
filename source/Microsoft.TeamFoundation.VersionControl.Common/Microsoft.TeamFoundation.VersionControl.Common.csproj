@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.VersionControl.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F823253-0DB6-4C74-93AF-6171DD6B3F89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.VersionControl.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.VersionControl.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Diff">
+      <HintPath>lib\Microsoft.TeamFoundation.Diff.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ByteStreamCompare.cs" />
+    <Compile Include="CodeChurnConstants.cs" />
+    <Compile Include="CodeChurnUtility.cs" />
+    <Compile Include="VCTraceKeywords.cs" />
+    <Compile Include="VCTraceKeywordSets.cs" />
+    <Compile Include="DiffSegmentType.cs" />
+    <Compile Include="DiffSegment.cs" />
+    <Compile Include="DiffOutput.cs" />
+    <Compile Include="Binary.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="Ed.cs" />
+    <Compile Include="Unified.cs" />
+    <Compile Include="UnixNormal.cs" />
+    <Compile Include="Rcs.cs" />
+    <Compile Include="Vss.cs" />
+    <Compile Include="DiffUtil.cs" />
+    <Compile Include="DiffOptions.cs" />
+    <Compile Include="DiffLineComparer.cs" />
+    <Compile Include="DiffSummary.cs" />
+    <Compile Include="DiffFile.cs" />
+    <Compile Include="DiffLine.cs" />
+    <Compile Include="DiffOptionFlags.cs" />
+    <Compile Include="DiffOutputType.cs" />
+    <Compile Include="VssOutputType.cs" />
+    <Compile Include="DownloadUrl.cs" />
+    <Compile Include="IBranchHistoryTreeItem.cs" />
+    <Compile Include="IBranchRelative.cs" />
+    <Compile Include="LabelSpec.cs" />
+    <Compile Include="MergeChangeType.cs" />
+    <Compile Include="IMergeChange.cs" />
+    <Compile Include="MergeOptions.cs" />
+    <Compile Include="MergeSummary.cs" />
+    <Compile Include="MergeChange.cs" />
+    <Compile Include="RepositoryConstants.cs" />
+    <Compile Include="RepositoryFailureCodes.cs" />
+    <Compile Include="SupportedFeatures.cs" />
+    <Compile Include="MergeOptionsEx.cs" />
+    <Compile Include="DestroyFlags.cs" />
+    <Compile Include="PendChangesOptions.cs" />
+    <Compile Include="ConflictOptions.cs" />
+    <Compile Include="RollbackOptions.cs" />
+    <Compile Include="CheckInOptions2.cs" />
+    <Compile Include="CheckInState.cs" />
+    <Compile Include="ProxyFlags.cs" />
+    <Compile Include="QueryMergesExtendedOptions.cs" />
+    <Compile Include="ShelvesetVersions.cs" />
+    <Compile Include="VersionControlPropertyKinds.cs" />
+    <Compile Include="PropertyConstants.cs" />
+    <Compile Include="VersionControlConstants.cs" />
+    <Compile Include="PendingChangePropertyVersions.cs" />
+    <Compile Include="VersionControlWellKnownGroups.cs" />
+    <Compile Include="OwnershipState.cs" />
+    <Compile Include="ChangePendedFlags.cs" />
+    <Compile Include="WorkspaceLocation.cs" />
+    <Compile Include="WorkspaceOptions.cs" />
+    <Compile Include="LocalPendingChangeFlags.cs" />
+    <Compile Include="ResolveErrorOptions.cs" />
+    <Compile Include="PathLength.cs" />
+    <Compile Include="VersionedItemPermissions.cs" />
+    <Compile Include="GlobalPermissions.cs" />
+    <Compile Include="SecurityConstants.cs" />
+    <Compile Include="TemporaryDirectory.cs" />
+    <Compile Include="VersionControlDebug.cs" />
+    <Compile Include="VersionControlPath.cs" />
+    <Compile Include="VersionControlUtil.cs" />
+    <Compile Include="ItemValidationError.cs" />
+    <Compile Include="VersionSpecCommon.cs" />
+    <Compile Include="VersionSpecFactory.cs" />
+    <Compile Include="VersionSpecType.cs" />
+    <Compile Include="WorkspaceSpec.cs" />
+    <Compile Include="Internal\MergeFinder.cs" />
+    <Compile Include="Internal\MergeOptions.cs" />
+    <Compile Include="Internal\MergeOutput.cs" />
+    <Compile Include="Internal\Set`1.cs" />
+    <Compile Include="Internal\DiffResources.cs" />
+    <Compile Include="Internal\Resources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DiffResources.resx" />
+    <EmbeddedResource Include="HatterasRes.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

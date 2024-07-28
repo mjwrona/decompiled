@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExceptionReportNoDetails" xml:space="preserve">
+    <value>{0}
+Date (UTC): {1}
+Machine: {2}
+Application Domain: {3}
+Assembly: {4}
+Service Host: {5}
+Process Details:
+  Process Name: {6}
+  Process Id: {7}
+  Thread Id: {8}
+  Account name: {9}</value>
+  </data>
+  <data name="CannotDetachFailedInitializeCollection" xml:space="preserve">
+    <value>TF205047: You cannot detach this team project collection because it has at least one failed servicing operation of the following type: {0}. The operation must be completed before the collection can be detached. You can also choose to delete this collection using the 'TfsConfig.exe collection' command.</value>
+  </data>
+  <data name="InvalidLocationMappingsServiceDefinition" xml:space="preserve">
+    <value>Only deployment level service definitions may have location mappings.</value>
+  </data>
+  <data name="TimeStampFullDate" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="InvalidFindServiceByTypeAndToolId" xml:space="preserve">
+    <value>TF205042: Two or more service definitions are in conflict. The specified parameters were found in the following number of service definitions: {2}. Service definitions must have unique parameters for the combination of ServiceType and ToolID in order to call this function. ServiceType: {0}. ToolID: {1}.</value>
+  </data>
+  <data name="DateTimeAgoADay" xml:space="preserve">
+    <value>a day ago</value>
+  </data>
+  <data name="DateTimeAgoDays" xml:space="preserve">
+    <value>{0} days ago</value>
+  </data>
+  <data name="DateTimeAgoAMinute" xml:space="preserve">
+    <value>a minute ago</value>
+  </data>
+  <data name="FrameworkEventingServiceDescription" xml:space="preserve">
+    <value>Event Service for Azure DevOps Server.</value>
+  </data>
+  <data name="InvalidSqlTimestampString" xml:space="preserve">
+    <value>String '{0}' is not a valid sql timestamp.</value>
+  </data>
+  <data name="PROJECT_GENERIC_READ" xml:space="preserve">
+    <value>View project-level information</value>
+  </data>
+  <data name="CollectionIdIsNotInitialized" xml:space="preserve">
+    <value>CollectionId is not initialized.</value>
+  </data>
+  <data name="FrameworkSecurityServiceDescription" xml:space="preserve">
+    <value>Security Service for Azure DevOps Server.</value>
+  </data>
+  <data name="InvalidPathInvalidCharactersAndWildcards" xml:space="preserve">
+    <value>TF205000: The path '{0}' contains one or more characters which are not allowed. Characters which are not allowed include '"', '/', ':', '&lt;', '&gt;', '\', '|', '?', and '*'.</value>
+  </data>
+  <data name="WatsonMainIntroRegular" xml:space="preserve">
+    <value>TF30070: An unexpected condition has occurred in the Azure DevOps Server. Information about the condition has been gathered.</value>
+  </data>
+  <data name="WatsonMainPleaBold" xml:space="preserve">
+    <value>Please tell Microsoft about this problem.</value>
+  </data>
+  <data name="PROJECT_RENAME" xml:space="preserve">
+    <value>Rename team project</value>
+  </data>
+  <data name="InnerException" xml:space="preserve">
+    <value>Inner Exception Details:</value>
+  </data>
+  <data name="UnableToRetrieveLocationInfo" xml:space="preserve">
+    <value>Unable to retrieve the location service information for '{0}'.</value>
+  </data>
+  <data name="GSS_BAD_SID_ARRAY" xml:space="preserve">
+    <value>TF50361: Argument {0} is zero length, there must be at least one SID element.</value>
+  </data>
+  <data name="FailedToAddSharePointServiceAccountWithException" xml:space="preserve">
+    <value>TF205016: Required permissions could not be granted to the service account for the SharePoint Web application in Azure DevOps Server. The following error occurred: {2}. The service account is for the following SharePoint Web application: {0}. Open the Azure DevOps Administration Console and make sure that the service account is a member of the following group: {1}. If necessary, manually add the service account to that group. </value>
+  </data>
+  <data name="DuplicateLocationMappingMessage" xml:space="preserve">
+    <value>Only one location mapping can exist on a service definition for a given access mapping.</value>
+  </data>
+  <data name="WatsonReportNotFiled" xml:space="preserve">
+    <value>TF53014: A crash report for this problem was recently created; a new crash report for this occurrence of the problem is not being created. This problem has occurred {0} times.</value>
+  </data>
+  <data name="EntityModel_CollectionOrganizationalNodeNotFound" xml:space="preserve">
+    <value>TF249006: The organizational node for the project collection could not be found.</value>
+  </data>
+  <data name="SoapExceptionReport" xml:space="preserve">
+    <value>SoapException Details: {0}</value>
+  </data>
+  <data name="FrameworkNewTeamProjectWebDescription" xml:space="preserve">
+    <value>New Team Project Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="EntityModel_PortalOwnerInfo" xml:space="preserve">
+    <value>Project Portal for the '{0}' Project in the '{1}' Project Collection</value>
+  </data>
+  <data name="InvalidSecurityNamespaceDescriptionMessage" xml:space="preserve">
+    <value>For a hierarchical security namespace, either the separator character or the element length must be set and the other one must be the invalid value ('\0' for the separator character and -1 for the element length).</value>
+  </data>
+  <data name="NullArtifactUrlInUrlList" xml:space="preserve">
+    <value>A null artifact url was found in the url list. Do not pass in a null artifact url.</value>
+  </data>
+  <data name="AlternateAccessMappingDisplayName" xml:space="preserve">
+    <value>Alternate Public Access Mapping</value>
+  </data>
+  <data name="EntityModel_IncompatibleType" xml:space="preserve">
+    <value>TF205056: The item is not a compatible type.</value>
+  </data>
+  <data name="EntityModel_ReportingNotConfiguredSubTitle" xml:space="preserve">
+    <value>Your server administrator has not enabled reports for this project collection.</value>
+  </data>
+  <data name="SparseTreeTokenAlreadyExists" xml:space="preserve">
+    <value>A node with the same token already exists in the SparseTree.</value>
+  </data>
+  <data name="NAMESPACE_MANAGE_ENTERPRISE_POLICIES" xml:space="preserve">
+    <value>Manage enterprise policies</value>
+  </data>
+  <data name="VersionCheckFailed" xml:space="preserve">
+    <value>TF53000: The client version is not supported by the server {0}.</value>
+  </data>
+  <data name="TextLoggerErrorLine" xml:space="preserve">
+    <value>[Error] {0}</value>
+  </data>
+  <data name="TraceStartMessage" xml:space="preserve">
+    <value># Azure DevOps Trace for component {0} started at {1} [note all date/time values are in UTC].</value>
+  </data>
+  <data name="EntityModel_CannotResolveUriWithoutSession" xml:space="preserve">
+    <value>TF205067: The object is not bound to a session. The location service is not available to resolve the URL.</value>
+  </data>
+  <data name="InvalidComputerNameTooLong" xml:space="preserve">
+    <value>TF10204: The computer name '{0}' contains more than {1} characters.</value>
+  </data>
+  <data name="InvalidCatalogNodePathAllowWildcard" xml:space="preserve">
+    <value>TF205030: The following catalog node path is not valid: {0}. Catalog node paths must be built from base-64 encoded Guids, cannot exceed 37 levels, and can contain only the wildcards *, **, and … at the end of the path.</value>
+  </data>
+  <data name="FailedToMapWssBackToTfsWithException" xml:space="preserve">
+    <value>TF205018: An error occurred when attempting to save the mapping from the SharePoint Web application to Azure DevOps Server. The SharePoint Web application is: {0}. The error is: {1}.</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Method: {0}</value>
+  </data>
+  <data name="NAMESPACE_MANAGE_TEST_CONTROLLERS" xml:space="preserve">
+    <value>Manage test controllers</value>
+  </data>
+  <data name="FrameworkFileHandlerServiceDescription" xml:space="preserve">
+    <value>File Handler Service for Azure DevOps Server.</value>
+  </data>
+  <data name="InvalidAccessMappingLocationServiceUrl" xml:space="preserve">
+    <value>TF205035: The access mapping is not valid and cannot be registered. The location service URL cannot be null or empty.</value>
+  </data>
+  <data name="FrameworkIdentityServiceDescription" xml:space="preserve">
+    <value>Identity Service for Azure DevOps Server.</value>
+  </data>
+  <data name="ExceptionDataDictionaryReport" xml:space="preserve">
+    <value>{0} = {1}</value>
+  </data>
+  <data name="PROJECT_WORK_ITEM_MOVE" xml:space="preserve">
+    <value>Move work items out of this project</value>
+  </data>
+  <data name="TextLoggerWarningLine" xml:space="preserve">
+    <value>[Warn] {0}</value>
+  </data>
+  <data name="EntityModel_BadBooleanFormat" xml:space="preserve">
+    <value>TF205050: The Boolean value is not formatted correctly.</value>
+  </data>
+  <data name="FailureGetArtifactWithTool" xml:space="preserve">
+    <value>Unable to get artifacts from tool: {0}</value>
+  </data>
+  <data name="PropertyArgumentExceededMaximumSizeAllowed" xml:space="preserve">
+    <value>TF20508: The argument '{0}' is too long. It must not contain more than '{1}' characters.</value>
+  </data>
+  <data name="AccessCheckExceptionPrivilegeFormat" xml:space="preserve">
+    <value>Access Denied: {0} needs the following permission(s) to perform this action: {1}</value>
+  </data>
+  <data name="EntityModel_ServiceDefinitionNotFound" xml:space="preserve">
+    <value>TF249019: The following service definition was not found: {0}.</value>
+  </data>
+  <data name="SingletonServiceDefinitionViolation" xml:space="preserve">
+    <value>The service definition with type '{0}' could not be registered because it would violate the singleton service definition constraint. Either a singleton service definition of this type is already registered or this is a singleton definition and other service definitions of this type are already registered.</value>
+  </data>
+  <data name="ServiceDefinitionDoesNotExist" xml:space="preserve">
+    <value>The service definition with service type '{0}' and identifier '{1}' does not exist.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_UnterminatedString" xml:space="preserve">
+    <value>Unterminated string passed in..</value>
+  </data>
+  <data name="UnauthorizedUnknownServer" xml:space="preserve">
+    <value>TF30064: You are not authorized to access the server.</value>
+  </data>
+  <data name="InvalidOperationOnNonHierarchicalNamespace" xml:space="preserve">
+    <value>TF205044: This function must be called on a hierarchical security namespace.</value>
+  </data>
+  <data name="TimeStampYesterdayAt" xml:space="preserve">
+    <value>Yesterday at {0}</value>
+  </data>
+  <data name="FailedToMapPropertyKindToArtifactKind" xml:space="preserve">
+    <value>Could not find the artifact type for property kind '{0}'. The property kind was not properly defined.</value>
+  </data>
+  <data name="ServiceControlManagerOpenError" xml:space="preserve">
+    <value>TF400750: Unable to open the service control manager.</value>
+  </data>
+  <data name="EntityModel_RefreshNotAvailable" xml:space="preserve">
+    <value>TF205070: The object is not bound to a session. Refresh is not available.</value>
+  </data>
+  <data name="PROJECT_MANAGE_SYSTEM_PROPERTIES" xml:space="preserve">
+    <value>Manage system project properties</value>
+  </data>
+  <data name="EntityModel_WebAccessNotConfiguredSubTitle" xml:space="preserve">
+    <value>Your server administrator has not enabled Web access to this server.</value>
+  </data>
+  <data name="ServicesUnavailableNoServer" xml:space="preserve">
+    <value>TF400324: Azure DevOps services are not available from the server.
+Technical information (for administrator):
+  {0}</value>
+  </data>
+  <data name="PROJECT_UPDATE_BUILD" xml:space="preserve">
+    <value>Write to build operational store</value>
+  </data>
+  <data name="PROJECT_MANAGE_TEST_ENVIRONMENTS" xml:space="preserve">
+    <value>Manage test environments</value>
+  </data>
+  <data name="PROJECT_VIEW_TEST_RESULTS" xml:space="preserve">
+    <value>View test runs</value>
+  </data>
+  <data name="RelativeLocationMappingErrorMessage" xml:space="preserve">
+    <value>TF205038: You cannot add location mappings to service definitions that are not part of the FullyQualified type.</value>
+  </data>
+  <data name="EntityModel_BadEnumFormat" xml:space="preserve">
+    <value>TF205051: The enumeration value is not valid. It is either not formatted correctly or it has an unknown enumeration value.</value>
+  </data>
+  <data name="ExecutingServicingStep" xml:space="preserve">
+    <value>Executing servicing step '{0}'. (ServicingOperation: {1}; Step group: {2})</value>
+  </data>
+  <data name="ProjectCollectionContributorsGroupName" xml:space="preserve">
+    <value>Project Collection Contributors</value>
+  </data>
+  <data name="ProjectCollectionContributorsGroupDesc" xml:space="preserve">
+    <value>Members of this group can connect to the collection, view its information and create workspaces in version control</value>
+  </data>
+  <data name="ServiceOpenError" xml:space="preserve">
+    <value>TF400751: Unable to open the service configuration for {0}.</value>
+  </data>
+  <data name="PathIsNotADirectory" xml:space="preserve">
+    <value>The path {0} is not a directory.</value>
+  </data>
+  <data name="NAMESPACE_GENERIC_READ" xml:space="preserve">
+    <value>View collection-level information</value>
+  </data>
+  <data name="FileInUse" xml:space="preserve">
+    <value>The process cannot access the file '{0}' because it is being used by another process.</value>
+  </data>
+  <data name="OperationNotSupportedMessage" xml:space="preserve">
+    <value>The function: '{0}' within the service: '{1}'  is not supported by the server this client is talking to.</value>
+  </data>
+  <data name="MultipleExtensionNames" xml:space="preserve">
+    <value>Warning: Azure DevOps Extension has multiple ExtensionName attributes. Using full class name as extension name.</value>
+  </data>
+  <data name="WatsonReportBeingPrepared" xml:space="preserve">
+    <value>TF53012: A crash report is being prepared for Microsoft using the Watson Crash Reporting Mechanism. The prepared report will be queued when ready and may be sent to Microsoft through administrator control.</value>
+  </data>
+  <data name="BAD_DISPLAY_NAME" xml:space="preserve">
+    <value>TF205025: The following display name is not valid: '{0}'.</value>
+  </data>
+  <data name="FullyQualifiedLocationParameter" xml:space="preserve">
+    <value>The value of the location parameter cannot be null if the RelativeToSetting is 'FullyQualified'</value>
+  </data>
+  <data name="EntityModel_AlreadyHasParent" xml:space="preserve">
+    <value>TF205066: The value already has a parent. You can only set a parent on a new item.</value>
+  </data>
+  <data name="InvalidTokenSplitType" xml:space="preserve">
+    <value>A split cannot be performed on a resource that has a SecurityTokenSplitType of NoSplit.</value>
+  </data>
+  <data name="PublicAccessMappingDisplayName" xml:space="preserve">
+    <value>Public Access Mapping</value>
+  </data>
+  <data name="GSS_BAD_ACTIONID" xml:space="preserve">
+    <value>TF50369: Argument {1} contains an invalid action identifier ('{0}').</value>
+  </data>
+  <data name="UnableToRunApp" xml:space="preserve">
+    <value>The application "{0}" could not be executed.</value>
+  </data>
+  <data name="WildcardsNotAllowed" xml:space="preserve">
+    <value>Wildcards are not allowed.</value>
+  </data>
+  <data name="ReadOnlySecurityCollectionExceptionMessage" xml:space="preserve">
+    <value>Invalid attempt to write to collection, it is read only.</value>
+  </data>
+  <data name="InvalidStringPropertyValueNullAllowed" xml:space="preserve">
+    <value>"{0}" is an invalid value for the {1} of a {2}. The text must be null or between {3} and {4} characters long.</value>
+  </data>
+  <data name="ValidatingServicingStep" xml:space="preserve">
+    <value>Validating servicing step {0}. (ServicingOperation: {1}; Step group: {2})</value>
+  </data>
+  <data name="PropertyValueOutOfRange" xml:space="preserve">
+    <value>Property '{0}' with value '{1}' is out of range for the Azure DevOps Properties service. The value must be between {2} and {3}.</value>
+  </data>
+  <data name="InvalidInheritLevelServiceDefinition" xml:space="preserve">
+    <value>A service definition exists with the following InheritLevel value: {0}. Only deployment-level service definitions may specify an InheritLevel value.</value>
+  </data>
+  <data name="FrameworkIdentityService2Description" xml:space="preserve">
+    <value>Identity Service Version 2 for Azure DevOps Server.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_ExpectedOpenBrace" xml:space="preserve">
+    <value>Invalid object passed in, '{' expected..</value>
+  </data>
+  <data name="GSS_BAD_DISTINGUISHED_NAME_ARRAY" xml:space="preserve">
+    <value>TF50372: Argument {0} is zero length, there must be at least one distinguished name element.</value>
+  </data>
+  <data name="InvalidPathTermination" xml:space="preserve">
+    <value>TF10202: The path '{0}' ends with a character which is not allowed. Characters which are not allowed include '.' and ' '.</value>
+  </data>
+  <data name="EntityModel_TooManyFieldValues" xml:space="preserve">
+    <value>TF205063: The object has more field values than are allowed within the specified schema.</value>
+  </data>
+  <data name="ServicingStepFailed" xml:space="preserve">
+    <value>Servicing step '{0}' failed. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="PROCESS_PERMISSION_DELETE" xml:space="preserve">
+    <value>Delete process</value>
+  </data>
+  <data name="SecurityIdentityNotFoundMessage" xml:space="preserve">
+    <value>The guid {0} that was provided to the security system was not found.</value>
+  </data>
+  <data name="FrameworkUtilizationUsageSummaryDescription" xml:space="preserve">
+    <value>Usage Web Page for Azure DevOps Services.</value>
+  </data>
+  <data name="InvalidPathMissingRoot" xml:space="preserve">
+    <value>The path '{0}' must start with $/.</value>
+  </data>
+  <data name="SparseTreeNoEmptyStringToken" xml:space="preserve">
+    <value>Empty string tokens are not supported with a fixed element length.</value>
+  </data>
+  <data name="EntityModel_BadInt32Format" xml:space="preserve">
+    <value>TF205053: The Int32 value is not formatted correctly.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_InvalidArrayExtraComma" xml:space="preserve">
+    <value>Invalid array passed in, extra trailing ','..</value>
+  </data>
+  <data name="InvalidHexString" xml:space="preserve">
+    <value>Invalid hex string. A hex string starts with '0x' and has an even number of characters.</value>
+  </data>
+  <data name="EntityModel_AccessZoneNotFound" xml:space="preserve">
+    <value>TF249003: The following access mapping was not found: {0}.</value>
+  </data>
+  <data name="GSS_BAD_OBJECT_CLASS_ID" xml:space="preserve">
+    <value>TF50368: Argument {1} contains an invalid object class identifier ('{0}').</value>
+  </data>
+  <data name="InvalidGroupDescriptor" xml:space="preserve">
+    <value>Group {0}`s descriptor is missing or doesn`t have a valid Identifier.</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category: {0}</value>
+  </data>
+  <data name="TeamSystemWebAccessUrlIsMissing" xml:space="preserve">
+    <value>'{0}' is missing. Please verify that Team Web Access is configured correctly.</value>
+  </data>
+  <data name="DateTimeAgoMinutes" xml:space="preserve">
+    <value>{0} minutes ago</value>
+  </data>
+  <data name="BAD_GROUP_NAME" xml:space="preserve">
+    <value>TF50241: The following Azure DevOps group name is not valid: '{0}'. For more information about valid naming conventions for Azure DevOps groups, see the topic "Naming Restrictions for Azure DevOps Server" on the Microsoft Web site (https://go.microsoft.com/fwlink/?LinkId=77936).</value>
+  </data>
+  <data name="UnableToContactService" xml:space="preserve">
+    <value>TF53016: Unable to contact the web service; examine the event log for other correlating entries.</value>
+  </data>
+  <data name="Exception" xml:space="preserve">
+    <value>Exception: </value>
+  </data>
+  <data name="ServicingStepSkipped" xml:space="preserve">
+    <value>Servicing step '{0}' skipped. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="PROJECT_EDIT_BUILD_STATUS" xml:space="preserve">
+    <value>Edit build quality</value>
+  </data>
+  <data name="InvalidServerResponse" xml:space="preserve">
+    <value>Please contact your administrator. There was an error contacting the server.
+Technical information (for administrator):
+  {0}</value>
+  </data>
+  <data name="EntityModel_DataDefinesUnsupportedSchema" xml:space="preserve">
+    <value>TF205054: The data defines an unsupported schema.</value>
+  </data>
+  <data name="GSS_BAD_ACTIONID_ARRAY" xml:space="preserve">
+    <value>TF50370: Argument {0} is zero length, there must be at least one action identifier element.</value>
+  </data>
+  <data name="PROCESS_PERMISSION_CREATE" xml:space="preserve">
+    <value>Create process</value>
+  </data>
+  <data name="FrameworkSecurityManagementWebDescription" xml:space="preserve">
+    <value>Security Management Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="FrameworkAdministrationServiceDescription" xml:space="preserve">
+    <value>Administration Service for Azure DevOps Server.</value>
+  </data>
+  <data name="EntityModel_ParentCannotChange" xml:space="preserve">
+    <value>TF205069: The parent cannot be changed once it is set.</value>
+  </data>
+  <data name="GSS_BAD_OBJECTID_ARRAY" xml:space="preserve">
+    <value>TF50367: Argument {0} is zero length, there must be at least one object identifier element.</value>
+  </data>
+  <data name="LocationService" xml:space="preserve">
+    <value>Location Service</value>
+  </data>
+  <data name="AccessMappingNotRegistered" xml:space="preserve">
+    <value>TF205034: The "AccessMapping" class has an unregistered value for the "Moniker" property. The following value has not been registered: {0}.</value>
+  </data>
+  <data name="XML_SCHEMAVALIDATION_FAILED" xml:space="preserve">
+    <value>Xml schema validation error in {0}: {1}</value>
+  </data>
+  <data name="UnsupportedLinkFilter" xml:space="preserve">
+    <value>TF54001: An unsupported link filter type {0} was specified.</value>
+  </data>
+  <data name="PROJECT_AGILETOOLS_BACKLOG" xml:space="preserve">
+    <value>Agile backlog management.</value>
+  </data>
+  <data name="EntityModel_PortalSiteNotConfiguredSubTitle" xml:space="preserve">
+    <value>Your project administrator has not configured a portal for this team project.</value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>TF10121: The path '{0}' is not found or not supported. Type or select a different path.</value>
+  </data>
+  <data name="FrameworkIterationsManagementWebDescription" xml:space="preserve">
+    <value>Work Item Iterations Management Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="EntityModel_InvalidObjectRefValue_BadFormat" xml:space="preserve">
+    <value>TF205058: The object reference value is not formatted correctly.</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>TF10132: {0} is not a supported user name.</value>
+  </data>
+  <data name="CatalogResourceTypeDoesNotExist" xml:space="preserve">
+    <value>TF205029: No catalog resource type exists with the following identifier: {0}.</value>
+  </data>
+  <data name="InvalidIdentifierOnUpdate" xml:space="preserve">
+    <value>When updating a service definition, make sure the identifier is properly set. The best way to do this is to retrieve the existing IServiceDefinition from the client object model.</value>
+  </data>
+  <data name="GSS_BAD_ACCOUNT_NAME_ARRAY" xml:space="preserve">
+    <value>TF50371: Argument {0} is zero length, there must be at least one account name element.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_InvalidArrayExpectComma" xml:space="preserve">
+    <value>Invalid array passed in, ',' expected..</value>
+  </data>
+  <data name="UnsupportedPropertyType" xml:space="preserve">
+    <value>TF20511: The property type '{0}' is not supported.</value>
+  </data>
+  <data name="PROJECT_UPDATE_VISIBILITY" xml:space="preserve">
+    <value>Update project visibility</value>
+  </data>
+  <data name="PROJECT_BYPASS_RULES" xml:space="preserve">
+    <value>Bypass rules on work item updates</value>
+  </data>
+  <data name="EntityModel_InvalidInstanceId" xml:space="preserve">
+    <value>TF205057: The instance ID is not valid.</value>
+  </data>
+  <data name="ServicingStepNotExecuted" xml:space="preserve">
+    <value>Servicing step '{0}' is not executed. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="BAD_DIRECTORY_ALIAS" xml:space="preserve">
+    <value>The following alias is not valid: '{0}'. For more information about valid naming conventions, see the topic "Naming Restrictions for Azure DevOps Server" on the Microsoft Web site (https://go.microsoft.com/fwlink/?LinkId=77936).</value>
+  </data>
+  <data name="GSS_BAD_PROJECT_URI" xml:space="preserve">
+    <value>TF50362: Argument {1} contains an invalid project URI ('{0}').</value>
+  </data>
+  <data name="CollectionDoesNotExist" xml:space="preserve">
+    <value>The collection with id '{0}' does not exist.</value>
+  </data>
+  <data name="WatsonEventDescription" xml:space="preserve">
+    <value>TF30068: An exception has occurred in an Azure DevOps component: {0}</value>
+  </data>
+  <data name="EntityModel_WebAccessNotConfigured" xml:space="preserve">
+    <value>Team Web Access has not been enabled.</value>
+  </data>
+  <data name="FrameworkMessageQueueServiceDescription" xml:space="preserve">
+    <value>Message Queue Service for Azure DevOps Server.</value>
+  </data>
+  <data name="EntityModel_SecurityNamespaceNotAvailable" xml:space="preserve">
+    <value>TF205071: The security namespace is not available within the current context.</value>
+  </data>
+  <data name="DatabaseMissingErrorMessages" xml:space="preserve">
+    <value>TF205005: One or more of the installed error messages for Azure DevOps Server cannot be found. Either the SQL Server instance has not been configured to work with Azure DevOps Server, or a configuration change has caused a conflict. In order to fix this problem, you must run the TFSConfig PrepSQL command on the SQL Server instance. Detailed error information: {0}</value>
+  </data>
+  <data name="ServiceInterfacesDepricated" xml:space="preserve">
+    <value>Service Interfaces are no longer valid entries in Registration configuration files. Service Interfaces should be entered using the Location Service configuration files.</value>
+  </data>
+  <data name="InvalidPathInvalidCharacters" xml:space="preserve">
+    <value>TF10200: The path '{0}' contains one or more characters which are not allowed. Characters which are not allowed include '"', '/', ':', '&lt;', '&gt;', '\', and '|'.</value>
+  </data>
+  <data name="ServiceDefinitionWithNoLocations" xml:space="preserve">
+    <value>TF205046: The service with the following type does not have a location mapping: {0}. You must provide at least one location in order to configure locations for an external service.</value>
+  </data>
+  <data name="AccessCheckExceptionTokenFormat" xml:space="preserve">
+    <value>Access Denied: {0} needs the following permission(s) on the resource {1} to perform this action: {2}</value>
+  </data>
+  <data name="EntityModel_ProcessGuidanceNotConfigured" xml:space="preserve">
+    <value>No process guidance has been configured for this project.</value>
+  </data>
+  <data name="ServicingStepValidated" xml:space="preserve">
+    <value>Servicing step '{0}' was validated. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="DequeueTimeout" xml:space="preserve">
+    <value>The asynchronous dequeue operation timed out after {0}. This timeout may be a portion of a larger timeout.</value>
+  </data>
+  <data name="InvalidLocationServiceUrlRelativePath" xml:space="preserve">
+    <value>The location service url '{0}' is invalid. The location service url passed in must end with '{1}'.</value>
+  </data>
+  <data name="ConfigFileException" xml:space="preserve">
+    <value>The configuration file failed to load.</value>
+  </data>
+  <data name="LogExceptionHeader" xml:space="preserve">
+    <value>
+Exception Message: {0} (type {1})</value>
+  </data>
+  <data name="PROJECT_CHANGE_PROCESS" xml:space="preserve">
+    <value>Change process of team project</value>
+  </data>
+  <data name="InvalidPathDollarSign" xml:space="preserve">
+    <value>TF10122: The path '{0}' contains a '$' at the beginning of a path component. Remove the '$' and try again.</value>
+  </data>
+  <data name="ServerIncompatible" xml:space="preserve">
+    <value>TF205073: The Azure DevOps client cannot connect to the following server: {0}. You must connect to Team Foundation Server 2008 or a later version.</value>
+  </data>
+  <data name="InvalidInheritLevelRelativeServiceDefinition" xml:space="preserve">
+    <value>A service definition with InheritLevel: {0} and RelativeToSetting value: {1} must define a parent service definition.</value>
+  </data>
+  <data name="ServicingStepPassed" xml:space="preserve">
+    <value>Servicing step '{0}' passed. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="XmlNodeEmpty" xml:space="preserve">
+    <value>The xml node '{0}' under node '{1}' cannot be empty</value>
+  </data>
+  <data name="InvalidServiceDefinitionMissingMapping" xml:space="preserve">
+    <value>The service definition for service {0} is missing the location of the service for the access mapping {1}.</value>
+  </data>
+  <data name="SharePointServiceAccountsGroupDescription" xml:space="preserve">
+    <value>This application group should only contain service accounts for SharePoint Web applications.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_InvalidArrayEnd" xml:space="preserve">
+    <value>Invalid array passed in, ']' expected..</value>
+  </data>
+  <data name="WorkItemOnlyViewUsersGroupDescription" xml:space="preserve">
+    <value>Members of this group can only use the Work Item Only View feature in Web Access.</value>
+  </data>
+  <data name="LocationMappingDoesNotExist" xml:space="preserve">
+    <value>TF205037: No location mapping exists with the specified parameters. You specified a location mapping with the following service type, service identifier, and moniker: {0}, {1}, {2}.</value>
+  </data>
+  <data name="SharePointServiceAccountsGroupNotFound" xml:space="preserve">
+    <value>TF249022: The following group could not be found: {0}. Verify that the group name is correct.</value>
+  </data>
+  <data name="DateTimeAgoHours" xml:space="preserve">
+    <value>{0} hours ago</value>
+  </data>
+  <data name="GSS_BAD_PARENTOBJECTID_SELFPARENT" xml:space="preserve">
+    <value>TF50376: Argument {0} is invalid. Object ('{1}') cannot inherit from itself.</value>
+  </data>
+  <data name="DuplicateRegistrationEntry" xml:space="preserve">
+    <value>Duplicate registration entry in configuration file: {0}</value>
+  </data>
+  <data name="DateTimeAgoAYear" xml:space="preserve">
+    <value>a year ago</value>
+  </data>
+  <data name="DateTimeAgoAWeek" xml:space="preserve">
+    <value>a week ago</value>
+  </data>
+  <data name="TimeStampDayAt" xml:space="preserve">
+    <value>{0} at {1}</value>
+  </data>
+  <data name="DateTimeAgoYears" xml:space="preserve">
+    <value>{0} years ago</value>
+  </data>
+  <data name="PROJECT_MANAGE_PROPERTIES" xml:space="preserve">
+    <value>Manage project properties</value>
+  </data>
+  <data name="EmptyStringNotAllowed" xml:space="preserve">
+    <value>The string must have at least one character.</value>
+  </data>
+  <data name="DateTimeAgoWeeks" xml:space="preserve">
+    <value>{0} weeks ago</value>
+  </data>
+  <data name="ExceptionStackTrace" xml:space="preserve">
+    <value>Exception Stack Trace: {0}</value>
+  </data>
+  <data name="ServicesUnavailable" xml:space="preserve">
+    <value>TF400324: Azure DevOps services are not available from server {0}.
+Technical information (for administrator):
+  {1}</value>
+  </data>
+  <data name="WebExceptionReport_ResponseDisposed" xml:space="preserve">
+    <value>
+Status : {0}
+Response already disposed, no additional information available.</value>
+  </data>
+  <data name="InvalidTraceFile" xml:space="preserve">
+    <value>TF30048: The file {0} specified to store the trace output could not be found or created. Confirm that the file name is correct and that your user account has permission to access the file: {1}</value>
+  </data>
+  <data name="StackFrameLineFormat" xml:space="preserve">
+    <value>{0} (line {1})</value>
+  </data>
+  <data name="TimeStampTodayAt" xml:space="preserve">
+    <value>Today at {0}</value>
+  </data>
+  <data name="FrameworkTaskBoardWebDescription" xml:space="preserve">
+    <value>Team Task board Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="IdentityPropertyReadOnly" xml:space="preserve">
+    <value>{0} is a read-only identity property</value>
+  </data>
+  <data name="ServiceForFilterNotFoundWithIdentifier" xml:space="preserve">
+    <value>TF205041: No services exist with the specified type and identifier. Type: {0}. Identifier: {1}.</value>
+  </data>
+  <data name="ExtensionNameNullOrEmpty" xml:space="preserve">
+    <value>Warning: Extension name is null or empty. Using full class name as extension name.</value>
+  </data>
+  <data name="IllegalIdentityException" xml:space="preserve">
+    <value>TF10158: The user or group name {0} contains unsupported characters, is empty, or too long.</value>
+  </data>
+  <data name="LogExceptionDataDictionary" xml:space="preserve">
+    <value>Exception Data Dictionary:
+{0}
+</value>
+  </data>
+  <data name="StackFrameHeader" xml:space="preserve">
+    <value>at {0}.{1}</value>
+  </data>
+  <data name="InvalidServerPathTooLong" xml:space="preserve">
+    <value>TF400889: The following path contains more than the allowed 259 characters: {0}. Specify a shorter path.</value>
+  </data>
+  <data name="UnsupportedPropertyValue" xml:space="preserve">
+    <value>Property '{0}' value '{1}' of type '{2}' is not supported by Azure DevOps Properties.</value>
+  </data>
+  <data name="InvalidComputerName" xml:space="preserve">
+    <value>TF10203: The computer name '{0}' is not supported.</value>
+  </data>
+  <data name="EntityModel_NoUriForCurrentZone" xml:space="preserve">
+    <value>TF249046: The URL could not be resolved for the following service: {0}. Service zone and location information might not be configured for your current location, or the configuration might contain errors. An administrator for Azure DevOps Server must create and verify the settings for the service zone.</value>
+  </data>
+  <data name="ServicingStepPassedWithWarnings" xml:space="preserve">
+    <value>Servicing step '{0}' passed, with warnings. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="EmptyGuidNotAllowed" xml:space="preserve">
+    <value>The guid specified for parameter {0} must not be Guid.Empty.</value>
+  </data>
+  <data name="InvalidPropertyScope" xml:space="preserve">
+    <value>Invalid IdentityPropertyScope for requested operation.</value>
+  </data>
+  <data name="AccessToPathDenied" xml:space="preserve">
+    <value>Access to the path '{0}' is denied.</value>
+  </data>
+  <data name="EntityModel_BadGuidFormat" xml:space="preserve">
+    <value>TF205052: The GUID value is not formatted correctly.</value>
+  </data>
+  <data name="ServicingStepStateChange" xml:space="preserve">
+    <value>Servicing step '{0}' state changed to '{1}'. (ServicingOperation: '{2}'; Step group: '{3}')</value>
+  </data>
+  <data name="UserNameAndPasswordRequiredForLoginTypeServiceIdentity" xml:space="preserve">
+    <value>Both a username and password must be explicitly provided when using /logintype:serviceidentity.</value>
+  </data>
+  <data name="EntityModel_ReadOnly" xml:space="preserve">
+    <value>TF249015: The object could not be updated because it is read-only.</value>
+  </data>
+  <data name="PROJECT_OVERRIDE_BUILD_CHECKIN_VALIDATION" xml:space="preserve">
+    <value>Override check-in validation by build</value>
+  </data>
+  <data name="ServicingStepValidatedWithWarnings" xml:space="preserve">
+    <value>Servicing step '{0}' was validated, with warnings. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="GlobalSecurityAdministerConfigurationPermission" xml:space="preserve">
+    <value>Administer Configuration</value>
+  </data>
+  <data name="BAD_GROUP_DESCRIPTION" xml:space="preserve">
+    <value>TF50250: Invalid group description ('{0}').</value>
+  </data>
+  <data name="EntityModel_PortalSiteNotConfigured" xml:space="preserve">
+    <value>No team project portal has been configured for this project.</value>
+  </data>
+  <data name="FrameworkStrongBoxServiceDescription" xml:space="preserve">
+    <value>StrongBox Service for Azure DevOps Server.</value>
+  </data>
+  <data name="MultipleIdentitiesFoundMessage" xml:space="preserve">
+    <value>Multiple identities found matching '{0}'. Use the unique name to specify one of the following identities:
+
+{1}</value>
+  </data>
+  <data name="BAD_GROUP_DESCRIPTION_TOO_LONG" xml:space="preserve">
+    <value>TF50250: Invalid group description: group descriptions cannot be longer than ('{0}') characters.</value>
+  </data>
+  <data name="CannotCreateOrphanedResource" xml:space="preserve">
+    <value>TF205026: One or more resources that you specified cannot be created. All resources must be referenced by at least one node. In order to create a new resource, make sure that it is attached to a node that is either being created or being updated.</value>
+  </data>
+  <data name="PROJECT_PUBLISH_TEST_RESULTS" xml:space="preserve">
+    <value>Create test runs</value>
+  </data>
+  <data name="FrameworkStrongBoxFileUploadServiceDescription" xml:space="preserve">
+    <value>StrongBox File Upload Service for Azure DevOps Server.</value>
+  </data>
+  <data name="WatsonReportReady" xml:space="preserve">
+    <value>TF53015: A crash report has been prepared for Microsoft using the Watson Crash Reporting Mechanism. The prepared report has been queued and may be sent to Microsoft through administrator control.</value>
+  </data>
+  <data name="BAD_ALIAS_NOT_ALPHANUM" xml:space="preserve">
+    <value>The following alias is not valid: '{0}'. An alias can only contain letters and/or digits.</value>
+  </data>
+  <data name="XmlRootNodeMissing" xml:space="preserve">
+    <value>The mandatory root node '{0}' is missing.</value>
+  </data>
+  <data name="ListenerInitializeError" xml:space="preserve">
+    <value>TF30049: Azure DevOps Server encountered an error initializing listener {0}.</value>
+  </data>
+  <data name="WatsonMainIntroBold" xml:space="preserve">
+    <value>TF30069: An unexpected condition has occurred.</value>
+  </data>
+  <data name="FrameworkRoomsHubWebDescription" xml:space="preserve">
+    <value>Rooms hub Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="TeamByNameDoesNotExist" xml:space="preserve">
+    <value>TF400460: TeamFoundation Team with Name {0} does not exist.</value>
+  </data>
+  <data name="WorkItemOnlyViewUsersGroupName" xml:space="preserve">
+    <value>Work Item Only View Users</value>
+  </data>
+  <data name="GSS_BAD_PROJECT_URI_ARRAY" xml:space="preserve">
+    <value>TF50373: Argument {0} is zero length, there must be at least one project URI element.</value>
+  </data>
+  <data name="GSS_BAD_CLASSID_ACTIONID_PAIR_EXCEPTION" xml:space="preserve">
+    <value>TF50365: The combination of the class ID and the Action ID is not valid. Class ID: '{0}'. Action ID: '{1}'.</value>
+  </data>
+  <data name="InvalidCatalogNodePathNoWildcard" xml:space="preserve">
+    <value>TF205031: The following catalog node path is not valid: {0}. Catalog node paths must be built from base-64 encoded Guids, cannot exceed 37 levels, and cannot contain wildcards.</value>
+  </data>
+  <data name="WebAccess_UnSupportedArtifactType" xml:space="preserve">
+    <value>Unsupported artifact type: {0}.</value>
+  </data>
+  <data name="SharePointServiceAccountsGroupName" xml:space="preserve">
+    <value>SharePoint Web Application Services</value>
+  </data>
+  <data name="RegistrationDataUnavailable" xml:space="preserve">
+    <value>TF53002: Unable to obtain registration data for application {0}.</value>
+  </data>
+  <data name="EntityModel_MustDeriveFromTfsObject" xml:space="preserve">
+    <value>TF205061: The type must be inherited from the TfsObject class.</value>
+  </data>
+  <data name="InvalidPathTooLongVariable" xml:space="preserve">
+    <value>TF205023: The following path contains more than the allowed {1} characters: {0}. Specify a shorter path.</value>
+  </data>
+  <data name="ValueTypeOutOfRange" xml:space="preserve">
+    <value>{0} is out of range for the {1} of a {2}. The value must be between {3} and {4}.</value>
+  </data>
+  <data name="EntityModel_ProcessGuidanceNotConfiguredSubTitle" xml:space="preserve">
+    <value>Your project administrator has not configured process guidance for this team project.</value>
+  </data>
+  <data name="FrameworkDownloadServiceDescription" xml:space="preserve">
+    <value>Download Service for Azure DevOps Server.</value>
+  </data>
+  <data name="DateTimeAgoLessThanMinute" xml:space="preserve">
+    <value>just now</value>
+  </data>
+  <data name="FrameworkIdentityManagementWebDescription" xml:space="preserve">
+    <value>Identity Management Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="ExceptionReport" xml:space="preserve">
+    <value>{0}
+Date (UTC): {1}
+Machine: {2}
+Application Domain: {3}
+Assembly: {4}
+Service Host: {5}
+Process Details:
+  Process Name: {6}
+  Process Id: {7}
+  Thread Id: {8}
+  Account name: {9}
+
+Detailed Message: {10}</value>
+  </data>
+  <data name="FoundDirectoryExpectedFilePath" xml:space="preserve">
+    <value>{0} could not be retrieved because a directory by the same name exists locally.</value>
+  </data>
+  <data name="PROJECT_AGILETOOLS_PLANS" xml:space="preserve">
+    <value>Agile plans.</value>
+  </data>
+  <data name="ServiceChangeError" xml:space="preserve">
+    <value>TF400749: Unable to change the service configuration for {0}.</value>
+  </data>
+  <data name="XmlAttributeNull" xml:space="preserve">
+    <value>The node '{0}' must only have the attribute '{1}'</value>
+  </data>
+  <data name="StringPatternDidNotMatch" xml:space="preserve">
+    <value>The String pattern did not match: {0}</value>
+  </data>
+  <data name="XML_SCHEMAVALIDATION_READSCHEMAFAILED" xml:space="preserve">
+    <value>TF30254: Unable to read the schema from resources.</value>
+  </data>
+  <data name="UnsupportedPropertyValueType" xml:space="preserve">
+    <value>Property '{0}' of type '{1}' is not supported by Azure DevOps Properties. Convert the value to an Int32, DateTime, Double, String or Byte array for storage.</value>
+  </data>
+  <data name="SqlExceptionError" xml:space="preserve">
+    <value>SQL Error[{0}]: {1}
+    Class: {2}
+    Number: {3}
+    Server: {4}
+    Source: {5}
+    State: {6}
+    Procedure: {7}
+    Line Number: {8}</value>
+  </data>
+  <data name="FrameworkJobServiceDescription" xml:space="preserve">
+    <value>Job Service for Azure DevOps Server.</value>
+  </data>
+  <data name="PROJECT_SUPPRESS_NOTIFICATIONS" xml:space="preserve">
+    <value>Suppress notifications for work item updates</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_BadEscape" xml:space="preserve">
+    <value>Unrecognized escape sequence..</value>
+  </data>
+  <data name="EntityModel_DefaultZoneRequiresAllPaths" xml:space="preserve">
+    <value>TF249007: The default zone must have paths specified for the following parameters: {0}, {1}.</value>
+  </data>
+  <data name="CannotResolveServerHostUsingAD" xml:space="preserve">
+    <value>TF255042: Cannot convert {0} to Windows NT 4.0 account name using directory services. Error code: {1}.</value>
+  </data>
+  <data name="EntityModel_ProjectUriNotFound" xml:space="preserve">
+    <value>TF249040: The catalog does not contain a team project with the following URL: {0}. Verify that the specified URL is correct.</value>
+  </data>
+  <data name="InvalidSecurityNamespaceGuid" xml:space="preserve">
+    <value>TF205045: No security namespace exists with the following ID: {0}.</value>
+  </data>
+  <data name="FrameworkLocationServiceDescription" xml:space="preserve">
+    <value>Location Service for Azure DevOps Server.</value>
+  </data>
+  <data name="CatalogNodeDoesNotExist" xml:space="preserve">
+    <value>TF205027: The catalog node that you specified either does not exist, or you do not have sufficient permissions to access it.</value>
+  </data>
+  <data name="CorruptRegistrationData" xml:space="preserve">
+    <value>The registry data near '{0}' appears to be invalid. An entry with a name of '{1}' was expected.</value>
+  </data>
+  <data name="InvalidRelativeServiceDefinition" xml:space="preserve">
+    <value>A service definition with a RelativeToSetting of '{0}' must have a RelativePath property that is not null.</value>
+  </data>
+  <data name="ServicingStepPassedWithSkipChildren" xml:space="preserve">
+    <value>Servicing step '{0}' passed, and marked its children steps to be skipped. (ServicingOperation: '{1}'; Step group: '{2}')</value>
+  </data>
+  <data name="InvalidPathTooLong" xml:space="preserve">
+    <value>TF205022: The following path contains more than the allowed 259 characters: {0}. Specify a shorter path.</value>
+  </data>
+  <data name="EntityModel_FieldFiltersNotSupported" xml:space="preserve">
+    <value>TF205068: Field filters are not supported when querying the hierarchy in the catalog.</value>
+  </data>
+  <data name="FailedToAutoConfigureSharePointWebApplication" xml:space="preserve">
+    <value>TF205019: An error occurred when attempting to automatically configure the following resource: {0}. The error is: {1}. </value>
+  </data>
+  <data name="XmlAttributeEmpty" xml:space="preserve">
+    <value>The attribute '{0}' on node '{1}' cannot be empty</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_DepthLimitExceeded" xml:space="preserve">
+    <value>RecursionLimit exceeded..</value>
+  </data>
+  <data name="PROJECT_GENERIC_WRITE" xml:space="preserve">
+    <value>Edit project-level information</value>
+  </data>
+  <data name="TraceSettingArgumentException" xml:space="preserve">
+    <value>TF30061: The trace switch {0} is not a valid Azure DevOps Server trace switch.</value>
+  </data>
+  <data name="PropertyInvalidVersionSpecification" xml:space="preserve">
+    <value>TF20510: The following version specification is not valid: '{0}'. You must specify a valid version.</value>
+  </data>
+  <data name="ExceptionSource" xml:space="preserve">
+    <value>Azure DevOps</value>
+  </data>
+  <data name="FrameworkRegistryServiceDescription" xml:space="preserve">
+    <value>Registry Service for Azure DevOps Server.</value>
+  </data>
+  <data name="DuplicateExtensionNameError" xml:space="preserve">
+    <value>Extension name {0} is used by type {1} and {2}. </value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_IllegalPrimitive" xml:space="preserve">
+    <value>Invalid JSON primitive: {0}..</value>
+  </data>
+  <data name="EntityModel_SessionMissing" xml:space="preserve">
+    <value>TF205062: The object is not bound to a session.</value>
+  </data>
+  <data name="IdentityNotFoundException" xml:space="preserve">
+    <value>TF14045: The identity {0} is not a recognized identity.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_InvalidObject" xml:space="preserve">
+    <value>Invalid object passed in, ':' or '}' expected..</value>
+  </data>
+  <data name="BAD_ALIAS" xml:space="preserve">
+    <value>The following alias is not valid: '{0}'. For more information about valid naming conventions, see the topic "Naming Restrictions for Azure DevOps Server" on the Microsoft Web site (https://go.microsoft.com/fwlink/?LinkId=77936).</value>
+  </data>
+  <data name="InvalidServiceTypeOnRegister" xml:space="preserve">
+    <value>TF205036: A service cannot be registered with the following service type: {0}.</value>
+  </data>
+  <data name="EntityModel_UnsupportedDerivedType" xml:space="preserve">
+    <value>TF205072: The data type for the server object is not supported.</value>
+  </data>
+  <data name="FrameworkStrongBoxFileDownloadServiceDescription" xml:space="preserve">
+    <value>StrongBox File Download Service for Azure DevOps Server.</value>
+  </data>
+  <data name="FrameworkAccessControlServiceDescription" xml:space="preserve">
+    <value>Access Control Service for Azure DevOps Server.</value>
+  </data>
+  <data name="NAMESPACE_GENERIC_WRITE" xml:space="preserve">
+    <value>Edit collection-level information</value>
+  </data>
+  <data name="EntityModel_UnknownType" xml:space="preserve">
+    <value>TF205064: The following type is not known: {0}.</value>
+  </data>
+  <data name="WatsonMainPleaRegular" xml:space="preserve">
+    <value>We have created an error report that you can send to help us fix bugs. We will treat this report as confidential and anonymous.</value>
+  </data>
+  <data name="StringLengthExceedsLimit" xml:space="preserve">
+    <value>The String length exceeds maximum limit.</value>
+  </data>
+  <data name="InvalidUnicodeCharacter" xml:space="preserve">
+    <value>TF20507: The string argument contains a character that is not valid: U+{0:X4}. Correct the argument, and then try the operation again.</value>
+  </data>
+  <data name="InvalidServerRequest" xml:space="preserve">
+    <value>The request was rejected by the server.
+Technical information:
+  {0}</value>
+  </data>
+  <data name="MessageQueueAccessMappingDisplayName" xml:space="preserve">
+    <value>Message Queue Access Mapping</value>
+  </data>
+  <data name="PROJECT_BYPASS_PROPERTY_CACHE" xml:space="preserve">
+    <value>Bypass project property cache</value>
+  </data>
+  <data name="FrameworkSignOutWebDescription" xml:space="preserve">
+    <value>Sign-Out Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="BAD_SID" xml:space="preserve">
+    <value>TF50360: Argument {1} contains an invalid SID ('{0}').</value>
+  </data>
+  <data name="FrameworkFileContainerDescription" xml:space="preserve">
+    <value>File Containers Resource for Azure DevOps Server.</value>
+  </data>
+  <data name="CatalogServiceDescriptrion" xml:space="preserve">
+    <value>Catalog Service for Azure DevOps Server.</value>
+  </data>
+  <data name="BAD_ACCOUNT_NAME" xml:space="preserve">
+    <value>TF205024: The following organization name is not valid: '{0}'. For more information about valid naming conventions for organizations, see the topic "Naming Restrictions for Azure DevOps Server" on the Microsoft Web site (https://go.microsoft.com/fwlink/?LinkId=77936).</value>
+  </data>
+  <data name="GSS_BAD_DISTINGUISHED_NAME" xml:space="preserve">
+    <value>TF50364: The following distinguished name (DN) is not formatted correctly or contains an empty string: '{0}'. Make sure that the formatting for the distinguished name is correct for LDAP API naming conventions. For more information, see the topic "Distinguished Names" on the Microsoft Web site (https://go.microsoft.com/fwlink/?LinkId=81167).</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_StringNotQuoted" xml:space="preserve">
+    <value>Invalid string passed in, '\"' expected..</value>
+  </data>
+  <data name="GSS_ARGUMENT_EXCEPTION" xml:space="preserve">
+    <value>TF50606: Argument {0} is invalid.</value>
+  </data>
+  <data name="CannotDeleteDirectoryWithWritableFile" xml:space="preserve">
+    <value>The directory {0} cannot be deleted because it contains at least one writable file.</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_InvalidArrayStart" xml:space="preserve">
+    <value>Invalid array passed in, '[' expected..</value>
+  </data>
+  <data name="PROJECT_WORK_ITEM_DELETE" xml:space="preserve">
+    <value>Delete and restore work items</value>
+  </data>
+  <data name="CollectionManagementServiceDescription" xml:space="preserve">
+    <value>Team Project Collection Management Service for Azure DevOps Server.</value>
+  </data>
+  <data name="PROJECT_ADMINISTER_BUILD" xml:space="preserve">
+    <value>Administer a build</value>
+  </data>
+  <data name="CommandFailedWithExitCode" xml:space="preserve">
+    <value>The program {0} failed with exit code {1}.</value>
+  </data>
+  <data name="FrameworkProcessTemplateServiceDescription" xml:space="preserve">
+    <value>Process Template Service for Azure DevOps Server.</value>
+  </data>
+  <data name="TeamByIdDoesNotExist" xml:space="preserve">
+    <value>TF400461: TeamFoundation Team with Id {0} does not exist.</value>
+  </data>
+  <data name="FrameworkMethodologyUploadServiceDescription" xml:space="preserve">
+    <value>Methodology Upload Service for Azure DevOps Server.</value>
+  </data>
+  <data name="NAMESPACE_DELETE_FIELD" xml:space="preserve">
+    <value>Delete field from organization</value>
+  </data>
+  <data name="GSS_BAD_OBJECTID" xml:space="preserve">
+    <value>TF50366: Argument {1} contains an invalid object identifier ('{0}').</value>
+  </data>
+  <data name="AssertionFailureHeader" xml:space="preserve">
+    <value>Debug Assertion</value>
+  </data>
+  <data name="DateTimeAgoMonths" xml:space="preserve">
+    <value>{0} months ago</value>
+  </data>
+  <data name="NAMESPACE_MANAGE_LINK_TYPES" xml:space="preserve">
+    <value>Manage work item link types</value>
+  </data>
+  <data name="CatalogResourceDoesNotExist" xml:space="preserve">
+    <value>TF205028: An error occurred when attempting to access the catalog resource with the following name: {0}. Either the resource does not exist, or you do not have sufficient permissions to access it.</value>
+  </data>
+  <data name="AccessMappingIsDefaultMessage" xml:space="preserve">
+    <value>TF205032: You cannot delete the following access mapping: {0}. This mapping is the default access mapping. To delete it, you must first specify another access mapping as the default.</value>
+  </data>
+  <data name="EntityModel_HelpLink" xml:space="preserve">
+    <value>Microsoft Web Site</value>
+  </data>
+  <data name="PROCESS_PERMISSIONS_ADMINISTER" xml:space="preserve">
+    <value>Administer process permissions</value>
+  </data>
+  <data name="InvalidFullyQualifiedServiceDefinition" xml:space="preserve">
+    <value>TF205043: A service definition exists with the following RelativeToSetting value: {0}. Any service definition that has this RelativeToSetting value must have its RelativePath property value set to null.</value>
+  </data>
+  <data name="TraceStopMessage" xml:space="preserve">
+    <value># Azure DevOps Trace for component {0} stopped at {1} [note all date/time values are in UTC].</value>
+  </data>
+  <data name="PROJECT_DELETE" xml:space="preserve">
+    <value>Delete team project</value>
+  </data>
+  <data name="InvalidEnumerationValue" xml:space="preserve">
+    <value>Unknown value {0} for enumeration {1}.</value>
+  </data>
+  <data name="UserNameAndPasswordRequiredForLoginTypeOAuth" xml:space="preserve">
+    <value>Both a username and password must be explicitly provided when using /logintype:oauth.</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>TF30063: You are not authorized to access {0}.</value>
+  </data>
+  <data name="PROJECT_CHECK_IN" xml:space="preserve">
+    <value>Check files in</value>
+  </data>
+  <data name="EntityModel_ReportingCubeInvalid" xml:space="preserve">
+    <value>TF249016: Reports could not be configured for the server. The Visual Studio Team System cube does not point to the data warehouse already specified for SQL Server Reporting Services.</value>
+  </data>
+  <data name="EntityModel_DefaultSiteCreationLocationNotConfigured" xml:space="preserve">
+    <value>No default location for site creation has been configured for this project collection.</value>
+  </data>
+  <data name="NAMESPACE_TRIGGER_EVENT" xml:space="preserve">
+    <value>Trigger events</value>
+  </data>
+  <data name="TextLoggerInfoLine" xml:space="preserve">
+    <value>[Info] {0}</value>
+  </data>
+  <data name="FrameworkProjectAlertsWebDescription" xml:space="preserve">
+    <value>Project Alerts Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="EntityModel_AdministratorsMessage" xml:space="preserve">
+    <value>Administrators: For more information about how to configure or enable this option, see the {0}.</value>
+  </data>
+  <data name="NAMESPACE_DIAGNOSTIC_TRACE" xml:space="preserve">
+    <value>Alter trace settings</value>
+  </data>
+  <data name="EntityModel_InvalidObjectRefValue_UnknownIdentifier" xml:space="preserve">
+    <value>TF205060: The object reference value is not valid. No such identifier exists.</value>
+  </data>
+  <data name="UnauthorizedUserForReauthentication" xml:space="preserve">
+    <value>TF400459: You are not allowed to change users when re-authenticating.</value>
+  </data>
+  <data name="NAMESPACE_SYNCHRONIZE_READ" xml:space="preserve">
+    <value>View system synchronization information</value>
+  </data>
+  <data name="XmlNodeMissing" xml:space="preserve">
+    <value>The mandatory xml node '{0}' is missing under '{1}'.</value>
+  </data>
+  <data name="ServicingResourceUploadServiceDescription" xml:space="preserve">
+    <value>Servicing Resource Upload Service for Azure DevOps Server.</value>
+  </data>
+  <data name="UnableToRetrieveRegistrationInfo" xml:space="preserve">
+    <value>Unable to retrieve the registration information for '{0}'.</value>
+  </data>
+  <data name="InvalidPropertyValueSize" xml:space="preserve">
+    <value>TF20509: The value of property '{0}' exceeds the maximum size allowed. '{1}' values must not exceed '{2}' bytes.</value>
+  </data>
+  <data name="PerformanceCounterCategoryNotRegistered" xml:space="preserve">
+    <value>Perfromance counter category {0} has not been registered</value>
+  </data>
+  <data name="EntityModel_DefaultSiteCreationLocationNotConfiguredSubTitle" xml:space="preserve">
+    <value>Your server administrator has not configured a default location for site creation for this project collection.</value>
+  </data>
+  <data name="MemoryCacheListKeyAlreadyPresent" xml:space="preserve">
+    <value>TF205049: The key that you supplied is already present in MemoryCacheList.</value>
+  </data>
+  <data name="UnableToEstablishConnection" xml:space="preserve">
+    <value>Unable to establish a connection with the Azure DevOps Server.</value>
+  </data>
+  <data name="EntityModel_InvalidObjectRefValue_BadIdentifier" xml:space="preserve">
+    <value>TF205059: The object reference value is not formatted correctly. If the value is not null, it must start with '#'.</value>
+  </data>
+  <data name="InvalidStringPropertyValueNullForbidden" xml:space="preserve">
+    <value>"{0}" is an invalid value for the {1} of a {2}. The text must be between {3} and {4} characters long and cannot be null.</value>
+  </data>
+  <data name="FrameworkUtilizationUserUsageSummaryDescription" xml:space="preserve">
+    <value>User-specific Usage Web Page for Azure DevOps Services.</value>
+  </data>
+  <data name="HeadersAndContentsDontMatch" xml:space="preserve">
+    <value>headers length ({0}) and number of contents columns ({1}) must match</value>
+  </data>
+  <data name="InvalidServiceDefinitionToolId" xml:space="preserve">
+    <value>The ToolId property for a service definition cannot be the empty string. To represent the service definition not having a tool id, pass null.</value>
+  </data>
+  <data name="DateTimeKindMustBeSpecified" xml:space="preserve">
+    <value>The DateTimeKind (Local, UTC) must be specified for DateTime arguments.</value>
+  </data>
+  <data name="WatsonReportException" xml:space="preserve">
+    <value>TF30071: Unable to create and file a Watson report.</value>
+  </data>
+  <data name="InvalidPropertyName" xml:space="preserve">
+    <value>TF400458: Invalid property name: '{0}'. Property names cannot contain leading or trailing whitespace.</value>
+  </data>
+  <data name="PROCESS_PERMISSION_EDIT" xml:space="preserve">
+    <value>Edit process</value>
+  </data>
+  <data name="PROCESS_PERMISSION_READ" xml:space="preserve">
+    <value>View Process</value>
+  </data>
+  <data name="JavaScriptSerializer_JSON_InvalidMemberName" xml:space="preserve">
+    <value>Invalid object passed in, member name expected..</value>
+  </data>
+  <data name="HttpStatusInfo" xml:space="preserve">
+    <value>HTTP code {0}: {1}</value>
+  </data>
+  <data name="WatsonReportInformation" xml:space="preserve">
+    <value>TF53013: A crash report is being prepared for Microsoft. The following information is included in that report:
+{0}</value>
+  </data>
+  <data name="EntityModel_ReportingNotConfigured" xml:space="preserve">
+    <value>Reports have not been enabled for this project collection.</value>
+  </data>
+  <data name="InvalidRegistryValue" xml:space="preserve">
+    <value>The type converter for type {0} must support conversion from the source type to {1}.</value>
+  </data>
+  <data name="FailedToAddSharePointServiceAccount" xml:space="preserve">
+    <value>TF205015: Required permissions could not be granted to the service account for the SharePoint Web application in Azure DevOps Server. The service account is for the following SharePoint Web application: {0}. Open the Azure DevOps Administration Console and make sure that the service account is a member of the following group: {1}. If necessary, manually add the service account to that group.</value>
+  </data>
+  <data name="ApplicationUrlIsNotInitialized" xml:space="preserve">
+    <value>ApplicationUrl is not initialized.</value>
+  </data>
+  <data name="CannotDeleteDirectoryWithContents" xml:space="preserve">
+    <value>The directory {0} cannot be deleted because it is not empty.</value>
+  </data>
+  <data name="ServerAccessMappingDisplayName" xml:space="preserve">
+    <value>Server Access Mapping</value>
+  </data>
+  <data name="NAMESPACE_MANAGE_TEMPLATE" xml:space="preserve">
+    <value>Manage process template</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>{0}...</value>
+  </data>
+  <data name="ErrorCreatingTempFile" xml:space="preserve">
+    <value>Error creating temp file in '{0}'</value>
+  </data>
+  <data name="ErrorReadingFile" xml:space="preserve">
+    <value>Error reading file: {0} ({1}).</value>
+  </data>
+  <data name="EntityModel_AlreadyBoundToAnotherSession" xml:space="preserve">
+    <value>TF205065: The object is already bound to another session.</value>
+  </data>
+  <data name="AColonB" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="SqlExceptionReport" xml:space="preserve">
+    <value>
+SQL Exception Class: {0}
+SQL Exception Number: {1}
+SQL Exception Procedure: {2}
+SQL Exception Line Number: {3}
+SQL Exception Server: {4}
+SQL Exception State: {5}
+SQL Error(s):
+{6}</value>
+  </data>
+  <data name="DateTimeAgoAnHour" xml:space="preserve">
+    <value>an hour ago</value>
+  </data>
+  <data name="EntityModel_DataDoesNotDefineSchema" xml:space="preserve">
+    <value>TF205055: The data does not define a schema.</value>
+  </data>
+  <data name="AccountTenantExists" xml:space="preserve">
+    <value>Account already belongs to a tenant.</value>
+  </data>
+  <data name="InvalidAsynchronousOperationParameter" xml:space="preserve">
+    <value>Invalid asynchronous operation specified for parameter {0}.</value>
+  </data>
+  <data name="DateTimeAgoAMonth" xml:space="preserve">
+    <value>a month ago</value>
+  </data>
+  <data name="InvalidPathInvalidChar" xml:space="preserve">
+    <value>TF10123: The path '{0}' contains the character '{1}'. Remove the '{1}' and try again.</value>
+  </data>
+  <data name="PROJECT_START_BUILD" xml:space="preserve">
+    <value>Start a build</value>
+  </data>
+  <data name="AccessMappingAlreadyRegistered" xml:space="preserve">
+    <value>TF205033: The "AccessMapping" class has a value for the "Moniker" property that is not valid. The value for "Moniker" must be unique, but another property already has the following value: {0}.</value>
+  </data>
+  <data name="VersionCheckFailedRange" xml:space="preserve">
+    <value>TF53003: The client version is not supported by the server {0}. Supported range is {1}.</value>
+  </data>
+  <data name="FrameworkPropertyServiceDescription" xml:space="preserve">
+    <value>Property Service for Azure DevOps Server.</value>
+  </data>
+  <data name="PROJECT_WORK_ITEM_PERMANENTLY_DELETE" xml:space="preserve">
+    <value>Permanently delete work items</value>
+  </data>
+  <data name="WebExceptionReport" xml:space="preserve">
+    <value>Status: {0}
+Response Status Code: {1}
+Response Status Message: {2}
+</value>
+  </data>
+  <data name="PROJECT_MANAGE_TEST_CONFIGURATIONS" xml:space="preserve">
+    <value>Manage test configurations</value>
+  </data>
+  <data name="ServiceForFilterNotFound" xml:space="preserve">
+    <value>TF205040: No services exist with the following type: {0}.</value>
+  </data>
+  <data name="NAMESPACE_CREATE_PROJECTS" xml:space="preserve">
+    <value>Create new projects</value>
+  </data>
+  <data name="DoubleValueOutOfRange" xml:space="preserve">
+    <value>Property '{0}' with value '{1}' is out of range for the Azure DevOps Properties service. Double values must be 0, within -1.79E+308 to -2.23E-308, or within 2.23E-308 to 1.79E+308.</value>
+  </data>
+  <data name="InvalidComputerNameInvalidCharacters" xml:space="preserve">
+    <value>TF10205: The computer name '{0}' contains characters which are not allowed. Characters which are not allowed include '`', '~', '!', '@', '#', '$', '%', ' ', '^', '&amp;', '*', '(', ')', '=', '+', '[', ']', '{{', '}}', '\', '|', ';', ':', ''', '"', ',', '&lt;', '&gt;', '/', and '?'.</value>
+  </data>
+  <data name="EntityModel_ProjectIdNotFound" xml:space="preserve">
+    <value>TF249013: No team project could be found in the catalog with the following ID: {0}.</value>
+  </data>
+  <data name="PROJECT_DELETE_TEST_RESULTS" xml:space="preserve">
+    <value>Delete test runs</value>
+  </data>
+  <data name="RegistrationEntryTypeMissing" xml:space="preserve">
+    <value>Registration entry type missing.</value>
+  </data>
+  <data name="TraceToggleException" xml:space="preserve">
+    <value>TF30062: An error occurred while manipulating the trace state of the application</value>
+  </data>
+  <data name="ServiceDefinitionWithoutIdentifierDoesNotExist" xml:space="preserve">
+    <value>TF205039: No service definition exists with the following service type: {0}.</value>
+  </data>
+  <data name="PROCESS_PERMISSION_READ_RULES" xml:space="preserve">
+    <value>Read process rules</value>
+  </data>
+  <data name="FrameworkConnectedServicesServiceDescription" xml:space="preserve">
+    <value>ConnectedServices Service for Azure DevOps Server.</value>
+  </data>
+  <data name="FrameworkAreasManagementWebDescription" xml:space="preserve">
+    <value>Work Item Areas Management Web Page for Azure DevOps Server.</value>
+  </data>
+  <data name="FrameworkMethodologyServiceDescription" xml:space="preserve">
+    <value>Methodology Service for Azure DevOps Server.</value>
+  </data>
+  <data name="FailedToAutoActivateSharePointWebApplicationFeature" xml:space="preserve">
+    <value>TF205021: A feature could not be activated in the following Web application: {0}. The feature is {1}. This feature is part of the following solution: {2}. Without this feature, project dashboards will not function correctly. Verify that the solution has been deployed to the SharePoint farm, and that the feature has been activated in SharePoint Central Administration. The server returned the following error: {3}.</value>
+  </data>
+</root>

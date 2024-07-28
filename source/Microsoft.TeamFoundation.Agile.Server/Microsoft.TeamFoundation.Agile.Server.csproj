@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Agile.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{099CF6B7-DB19-446C-A96B-2F074C95B0F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Agile.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Agile.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.Agile.Common" />
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Work.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgileResources.cs" />
+    <Compile Include="AgileServerTracePoints.cs" />
+    <Compile Include="AgileConstants.cs" />
+    <Compile Include="WorkRestResources.cs" />
+    <Compile Include="AgileResourceConstants.cs" />
+    <Compile Include="DeliveryConstants.cs" />
+    <Compile Include="PlanConstants.cs" />
+    <Compile Include="AgileCustomerIntelligenceFeature.cs" />
+    <Compile Include="FeatureFlags.cs" />
+    <Compile Include="SqlErrorCodes.cs" />
+    <Compile Include="AgileSettings.cs" />
+    <Compile Include="BacklogContext.cs" />
+    <Compile Include="IAgileSettings.cs" />
+    <Compile Include="IAgileSettingsExtensions.cs" />
+    <Compile Include="Team.cs" />
+    <Compile Include="BacklogObjectBinder`1.cs" />
+    <Compile Include="KanbanHelper.cs" />
+    <Compile Include="AgileBaseQueryBuilder.cs" />
+    <Compile Include="BacklogQueryExecutionHelper.cs" />
+    <Compile Include="ProductBacklogQueryBuilder.cs" />
+    <Compile Include="IterationQueryBuilder.cs" />
+    <Compile Include="TaskBoardQueryBuilder.cs" />
+    <Compile Include="TimelineIterations.cs" />
+    <Compile Include="IIterationBacklogService.cs" />
+    <Compile Include="IterationBacklogService.cs" />
+    <Compile Include="TaskBoard\TaskboardWorkItemColumnChangedEvent.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnOptionsChangedEvent.cs" />
+    <Compile Include="TaskBoard\TaskboardColumn.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnMappingEntry.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnMapping.cs" />
+    <Compile Include="TaskBoard\TaskboardWorkItemColumn.cs" />
+    <Compile Include="TaskBoard\TaskboardWorkItemColumnEntry.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnNotCustomizedException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnMappingInvalidException.cs" />
+    <Compile Include="TaskBoard\TaskboardInvalidTeamIterationException.cs" />
+    <Compile Include="TaskBoard\TaskboardWorkItemInvalidIterationException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnInvalidException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnInvalidForStateException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnMinColumnLimitException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnUpdateUserIsNotTeamAdminException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnDuplicateColumnIdException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnMaxLimitExceededException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnNameInvalidException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnIdInvalidException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnMappingEmptyException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnNameDuplicateException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnInvalidMappingException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnUpdateException.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnNotFoundException.cs" />
+    <Compile Include="TaskBoard\TaskboardComponent.cs" />
+    <Compile Include="TaskBoard\ITaskboardWorkItemService.cs" />
+    <Compile Include="TaskBoard\TaskboardWorkItemService.cs" />
+    <Compile Include="TaskBoard\ITaskboardColumnService.cs" />
+    <Compile Include="TaskBoard\TaskboardColumnService.cs" />
+    <Compile Include="TaskBoard\TaskboardColumns.cs" />
+    <Compile Include="Services\IAgileProjectPermissionService.cs" />
+    <Compile Include="Services\AgileProjectPermissionService.cs" />
+    <Compile Include="Services\IProductBacklogWorkItemService.cs" />
+    <Compile Include="Services\ProductBacklogWorkItemService.cs" />
+    <Compile Include="QueryHelpers\NewTimelineQueryBuilder.cs" />
+    <Compile Include="QueryHelpers\TimelineTeamFilter.cs" />
+    <Compile Include="QueryHelpers\TimelineQueryBuilder.cs" />
+    <Compile Include="Exceptions\BacklogChangedException.cs" />
+    <Compile Include="Exceptions\InvalidReorderOperationException.cs" />
+    <Compile Include="Exceptions\SameTypeHierarchyException.cs" />
+    <Compile Include="Exceptions\InvalidHierarchyException.cs" />
+    <Compile Include="Exceptions\InvalidIterationIdException.cs" />
+    <Compile Include="Exceptions\BoardDoesNotExistException.cs" />
+    <Compile Include="Exceptions\ChartDoesNotExistException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateChartException.cs" />
+    <Compile Include="Exceptions\InvalidArgumentValueException.cs" />
+    <Compile Include="Exceptions\ChartUpdateFailureException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateCardSettingsException.cs" />
+    <Compile Include="Exceptions\CardSettingsValidationFailureException.cs" />
+    <Compile Include="Exceptions\CardSettingsUpdateFailureException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateCardRulesException.cs" />
+    <Compile Include="Exceptions\CardRulesValidationFailureException.cs" />
+    <Compile Include="Exceptions\CardRulesUpdateFailureException.cs" />
+    <Compile Include="Exceptions\FilterSettingsValidationFailureException.cs" />
+    <Compile Include="Exceptions\FilterSettingsUpdateFailureException.cs" />
+    <Compile Include="Exceptions\NoPermissionUpdateBoardOptions.cs" />
+    <Compile Include="Exceptions\BoardUserSettingsUpdateFailureException.cs" />
+    <Compile Include="Exceptions\BoardUserSettingsReadFailureException.cs" />
+    <Compile Include="Exceptions\BoardParentChildWIMapReadFailureException.cs" />
+    <Compile Include="Exceptions\BoardParentChildWIMapLimitExceededException.cs" />
+    <Compile Include="Exceptions\CurrentIterationDoesNotExistException.cs" />
+    <Compile Include="Badge\StatusBadgeHelper.cs" />
+    <Compile Include="Backlog\OrderedWorkItemResult.cs" />
+    <Compile Include="Backlog\OrderedWorkItemTreeResult.cs" />
+    <Compile Include="Backlog\OwnershipEvaluator.cs" />
+    <Compile Include="Backlog\PagedBacklogWorkItem.cs" />
+    <Compile Include="Backlog\ProductBacklog.cs" />
+    <Compile Include="Backlog\WorkItemComparer.cs" />
+    <Compile Include="Microsoft\Azure\Boards\Agile\Server\Reorder\ProductBacklogReorderHelper.cs" />
+    <Compile Include="Microsoft\Azure\Boards\Agile\Server\Reorder\PagedWorkItemData.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgileResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

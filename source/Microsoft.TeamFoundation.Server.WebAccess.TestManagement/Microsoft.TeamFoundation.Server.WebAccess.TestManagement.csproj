@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Server.WebAccess.TestManagement.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{973FE875-B267-4A1D-AF3C-9C0829B0A05A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.TestManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.TestManagement</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.Linking">
+      <HintPath>lib\Microsoft.Azure.Boards.Linking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Settings">
+      <HintPath>lib\Microsoft.Azure.Boards.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service">
+      <HintPath>lib\Microsoft.Azure.Devops.Teams.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Work.RemoteServices">
+      <HintPath>lib\Microsoft.Azure.Devops.Work.RemoteServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Requirements">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Requirements.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildResultDetailsController.cs" />
+    <Compile Include="AdminTestManagementController.cs" />
+    <Compile Include="ApiTestQueriesController.cs" />
+    <Compile Include="ApiTestManagementController.cs" />
+    <Compile Include="ApiTestResultController.cs" />
+    <Compile Include="ApiTestRunController.cs" />
+    <Compile Include="FeedbackResponseController.cs" />
+    <Compile Include="TestExecutionController.cs" />
+    <Compile Include="TestManagementAreaController.cs" />
+    <Compile Include="TestManagementController.cs" />
+    <Compile Include="TestManagementExtensions.cs" />
+    <Compile Include="ExportToHtmlSendMailJob.cs" />
+    <Compile Include="AvailableTestConfiguration.cs" />
+    <Compile Include="ExploratorySessionSettingModel.cs" />
+    <Compile Include="TestManagementWebUserSettingsHive.cs" />
+    <Compile Include="IWebUserSettingsHive.cs" />
+    <Compile Include="TestRunHubUserSettings.cs" />
+    <Compile Include="WorkItemTypeCategoryModel.cs" />
+    <Compile Include="WorkItemTypeReference.cs" />
+    <Compile Include="WorkItemColorModel.cs" />
+    <Compile Include="WitTestPointModel.cs" />
+    <Compile Include="ColumnSettingModel.cs" />
+    <Compile Include="ColumnSortOrderModel.cs" />
+    <Compile Include="QueryColumnInfoModel.cs" />
+    <Compile Include="QueryDisplayColumn.cs" />
+    <Compile Include="QuerySortColumn.cs" />
+    <Compile Include="QueryHierarchyModel.cs" />
+    <Compile Include="QueryModel.cs" />
+    <Compile Include="QueryResultDataRowModel.cs" />
+    <Compile Include="QueryResultModel.cs" />
+    <Compile Include="TestRunQueryResultDataRowModel.cs" />
+    <Compile Include="ResultUpdateRequestModel.cs" />
+    <Compile Include="ResultUpdateResponseModel.cs" />
+    <Compile Include="TestResultQueryResultDataRowModel.cs" />
+    <Compile Include="TeamCapacityModel.cs" />
+    <Compile Include="TeamDaysOffModel.cs" />
+    <Compile Include="TeamSettingsModel.cs" />
+    <Compile Include="TeamFieldModel.cs" />
+    <Compile Include="TestActionResultDetailsModel.cs" />
+    <Compile Include="TestResultLinkedBugsModel.cs" />
+    <Compile Include="TestActionResultModel.cs" />
+    <Compile Include="TestAttachmentModel.cs" />
+    <Compile Include="TestCaseAndSuiteModel.cs" />
+    <Compile Include="TestActionModel.cs" />
+    <Compile Include="TestStepModel.cs" />
+    <Compile Include="SharedStepModel.cs" />
+    <Compile Include="TestStepXmlParserHelper.cs" />
+    <Compile Include="ExportToHtmSendMailJobDataModel.cs" />
+    <Compile Include="TestCaseResultIdentifierModel.cs" />
+    <Compile Include="TestCaseResultModel.cs" />
+    <Compile Include="TestCaseResultWithActionResultModel.cs" />
+    <Compile Include="TestConfigurationModel.cs" />
+    <Compile Include="TesterModel.cs" />
+    <Compile Include="TesterModelV2.cs" />
+    <Compile Include="TestFailureTypeModel.cs" />
+    <Compile Include="TestHubUserSettings.cs" />
+    <Compile Include="TestManagementErrorModel.cs" />
+    <Compile Include="TestManagementUserSettings.cs" />
+    <Compile Include="UserSettingScope.cs" />
+    <Compile Include="TestPlanCreationRequestModel.cs" />
+    <Compile Include="TestRunAttachmentModel.cs" />
+    <Compile Include="TestPlanModel.cs" />
+    <Compile Include="ReleaseEnvironmentDefinitionModel.cs" />
+    <Compile Include="TestPlansWithSelectionModel.cs" />
+    <Compile Include="TestPointGridDisplayColumn.cs" />
+    <Compile Include="TestPointModel.cs" />
+    <Compile Include="TestPointReferenceNames.cs" />
+    <Compile Include="TestPointFieldIds.cs" />
+    <Compile Include="TestPointIndexes.cs" />
+    <Compile Include="TestPointQueryResultModel.cs" />
+    <Compile Include="TestResolutionStateModel.cs" />
+    <Compile Include="TestResultCreationRequestModel.cs" />
+    <Compile Include="TestResultCreationResponseModel.cs" />
+    <Compile Include="TestResultModelBase.cs" />
+    <Compile Include="TestResultParameterModel.cs" />
+    <Compile Include="TestRunAndResultsModel.cs" />
+    <Compile Include="TestRunResultsAndActionResults.cs" />
+    <Compile Include="TestRunModel.cs" />
+    <Compile Include="TestRunModelBase.cs" />
+    <Compile Include="TestSuiteCreationRequestModel.cs" />
+    <Compile Include="QueryBasedSuiteCreationRequestModel.cs" />
+    <Compile Include="TestSuiteDisplayModel.cs" />
+    <Compile Include="TestSuiteModel.cs" />
+    <Compile Include="TestSuitePointCountModel.cs" />
+    <Compile Include="TestCaseModel.cs" />
+    <Compile Include="TestSuitesQueryResultModel.cs" />
+    <Compile Include="WitTestSuiteModel.cs" />
+    <Compile Include="CachedIdentitiesCollection.cs" />
+    <Compile Include="ColumnSettingsHelper.cs" />
+    <Compile Include="HtmlDocumentGenerator.cs" />
+    <Compile Include="TestPlanXmlGenerationHelper.cs" />
+    <Compile Include="TestSuiteXmlGenerationHelper.cs" />
+    <Compile Include="TestCaseXmlGenerationHelper.cs" />
+    <Compile Include="TestCaseIdToTestPointsMap.cs" />
+    <Compile Include="SharedStepWorkItem.cs" />
+    <Compile Include="LinkedWorkItem.cs" />
+    <Compile Include="PointPropertyValue.cs" />
+    <Compile Include="ParametersXmlMap.cs" />
+    <Compile Include="XsltTransformationHelper.cs" />
+    <Compile Include="XmlCreationHelper.cs" />
+    <Compile Include="ExportHtmlDialogSettings.cs" />
+    <Compile Include="PublicUrlHelper.cs" />
+    <Compile Include="LatestTestOutcomeColumnIds.cs" />
+    <Compile Include="checkboxesNames.cs" />
+    <Compile Include="HtmlElementsTag.cs" />
+    <Compile Include="QueriesStore.cs" />
+    <Compile Include="QueryAdapter.cs" />
+    <Compile Include="QueryAdapter`1.cs" />
+    <Compile Include="QueryAdapterFactory.cs" />
+    <Compile Include="QueryFieldType.cs" />
+    <Compile Include="QueryField.cs" />
+    <Compile Include="QueryField`1.cs" />
+    <Compile Include="QueryStringField`1.cs" />
+    <Compile Include="QueryIntField`1.cs" />
+    <Compile Include="QueryEnumField`2.cs" />
+    <Compile Include="QueryDateField`1.cs" />
+    <Compile Include="QueryBoolField`1.cs" />
+    <Compile Include="QueryTimeSpanField`1.cs" />
+    <Compile Include="TestQueryTFIdentityField`1.cs" />
+    <Compile Include="QueryOperator.cs" />
+    <Compile Include="QueryOperatorCollection.cs" />
+    <Compile Include="TestArtifactQueryField`2.cs" />
+    <Compile Include="TestConfigurationQueryField.cs" />
+    <Compile Include="TestResolutionStateQueryField.cs" />
+    <Compile Include="TestFailureTypeQueryField.cs" />
+    <Compile Include="TestSettingsTypeQueryField.cs" />
+    <Compile Include="QueryPriorityField`1.cs" />
+    <Compile Include="TestResultQueryAdapter.cs" />
+    <Compile Include="TestRunQueryAdapter.cs" />
+    <Compile Include="QueryHelper.cs" />
+    <Compile Include="QuerySetting.cs" />
+    <Compile Include="TestOutcomeConverter.cs" />
+    <Compile Include="TestRunStateConverter.cs" />
+    <Compile Include="TestResultsHelper.cs" />
+    <Compile Include="SqmHelper.cs" />
+    <Compile Include="TeamHelper.cs" />
+    <Compile Include="TestHelperBase.cs" />
+    <Compile Include="TestManagerRequestContext.cs" />
+    <Compile Include="PlanDefaultQueryHelper.cs" />
+    <Compile Include="TestPlansHelper.cs" />
+    <Compile Include="TestSuiteType.cs" />
+    <Compile Include="TestResultHelper.cs" />
+    <Compile Include="TestRunHelper.cs" />
+    <Compile Include="TestCasesHelper.cs" />
+    <Compile Include="TestSuitesHelper.cs" />
+    <Compile Include="SuitePointCountQueryParameters.cs" />
+    <Compile Include="SuitePointCountQueryParameters2.cs" />
+    <Compile Include="UriBuilderHelper.cs" />
+    <Compile Include="TestManagementAreaRegistration.cs" />
+    <Compile Include="TestManagementResources.cs" />
+    <Compile Include="TestManagementServerResources.cs" />
+    <Compile Include="HtmlCssParser.cs" />
+    <Compile Include="CssStylesheet.cs" />
+    <Compile Include="HtmlFromXamlConverter.cs" />
+    <Compile Include="HtmlLexicalAnalyzer.cs" />
+    <Compile Include="HtmlParser.cs" />
+    <Compile Include="HtmlSchema.cs" />
+    <Compile Include="HtmlToFlowDocumentConverterConstants.cs" />
+    <Compile Include="HtmlTokenType.cs" />
+    <Compile Include="HtmlToXamlConverter.cs" />
+    <Compile Include="TestManagementUrlHelper.cs" />
+    <Compile Include="StringManipulator.cs" />
+    <Compile Include="TestManagementConstants.cs" />
+    <Compile Include="TestManagementTrace.cs" />
+    <Compile Include="TraceLayer.cs" />
+    <Compile Include="ViewDataConstants.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestManagementResources.resx" />
+    <EmbeddedResource Include="TestManagementServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

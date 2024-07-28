@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Licensing.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C325991-81FB-4741-A0AB-FB01D0001843}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Licensing.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MaxClientRightsHelper.cs" />
+    <Compile Include="NotificationSubscriberBase`1.cs" />
+    <Compile Include="UserMapping\IUserAccountMappingChangeExtension.cs" />
+    <Compile Include="UserMapping\UserStatusChangeEvent.cs" />
+    <Compile Include="UserMapping\UserLicenseChangeEvent.cs" />
+    <Compile Include="UserMapping\UserExtensionChange.cs" />
+    <Compile Include="UserMapping\UserRightsTransferEvent.cs" />
+    <Compile Include="UserMapping\UserStatusChangeKind.cs" />
+    <Compile Include="Licensing\AccountEntitlementEvent.cs" />
+    <Compile Include="Licensing\AccountEntitlementEventKind.cs" />
+    <Compile Include="Licensing\AccountMembershipKind.cs" />
+    <Compile Include="Licensing\IdentityServiceExtensions.cs" />
+    <Compile Include="Licensing\ILicensingAccountHandler.cs" />
+    <Compile Include="Licensing\ILicensingEmailHandler.cs" />
+    <Compile Include="Licensing\LicensingCommonConstants.cs" />
+    <Compile Include="Licensing\RequestContextMigrationExtensions.cs" />
+    <Compile Include="Licensing\LicensingMigrationTracePoints.cs" />
+    <Compile Include="Licensing\LicensingPermissions.cs" />
+    <Compile Include="Licensing\LicensingSecurity.cs" />
+    <Compile Include="Licensing\VssRequestContextLicensingExtensions.cs" />
+    <Compile Include="Licensing\CommonResources.cs" />
+    <Compile Include="Licensing\Http\TraceFilterWithExceptionAttribute.cs" />
+    <Compile Include="Account\AccountMembershipEvent.cs" />
+    <Compile Include="Account\AccountMembershipEventKind.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

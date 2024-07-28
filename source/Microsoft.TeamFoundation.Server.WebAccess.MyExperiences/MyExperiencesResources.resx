@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="VersionControlLearnMoreAriaLabel" xml:space="preserve">
+    <value>Learn more about selecting the right version control.</value>
+  </data>
+  <data name="CreateProjectDisabledProjectVisibilityTooltip" xml:space="preserve">
+    <value>Your enterprise is preventing you from selecting this option</value>
+  </data>
+  <data name="CreateProjectCodeOfConductText" xml:space="preserve">
+    <value>code of conduct</value>
+  </data>
+  <data name="CreateProjectCodeOfConductLink" xml:space="preserve">
+    <value>https://aka.ms/vstscodeofconduct</value>
+  </data>
+  <data name="Projects_LoadProjectsError" xml:space="preserve">
+    <value>We're having trouble loading the list of projects.</value>
+  </data>
+  <data name="BannerGreetingAlreadyGreeted" xml:space="preserve">
+    <value>Welcome back, {0}</value>
+  </data>
+  <data name="MyWork_Loading_PivotChangeError" xml:space="preserve">
+    <value>Error loading items</value>
+  </data>
+  <data name="Favorites_FailedToLoadError" xml:space="preserve">
+    <value>An error occurred while trying to load this content.</value>
+  </data>
+  <data name="CreateProjectInvalidVisibilityValue" xml:space="preserve">
+    <value>{0} is not a valid visibility value.</value>
+  </data>
+  <data name="Favorite_Backlog_DeletedMessage" xml:space="preserve">
+    <value>This backlog has been deleted</value>
+  </data>
+  <data name="CreateProjectOnPremWarningFindoutLinkText" xml:space="preserve">
+    <value>Find out</value>
+  </data>
+  <data name="MyWork_WorkItemGrid_LastUpdatedPrefix" xml:space="preserve">
+    <value>Updated {0}</value>
+  </data>
+  <data name="MyWork_WorkItemGrid_LastViewedActivityDate" xml:space="preserve">
+    <value>You viewed {0}</value>
+  </data>
+  <data name="CreateProjectPublicProjectsLearnMoreLink" xml:space="preserve">
+    <value>https://aka.ms/public-project-learn-more</value>
+  </data>
+  <data name="CreateProjectProcessTemplateHelpToolTip" xml:space="preserve">
+    <value>Select the right work item process to create a team project.</value>
+  </data>
+  <data name="Favorites_BuildDefinition_GroupTitle" xml:space="preserve">
+    <value>Build pipelines</value>
+  </data>
+  <data name="Projects_NoAdditionalTeams" xml:space="preserve">
+    <value>This project only contains a default team.</value>
+  </data>
+  <data name="Projects_RemoveFromMruFailed" xml:space="preserve">
+    <value>Something went wrong while removing that item.</value>
+  </data>
+  <data name="Projects_LoadSearchResultsError" xml:space="preserve">
+    <value>We're having trouble loading this content.</value>
+  </data>
+  <data name="CreateProjectMembersOfYourOrganizationText" xml:space="preserve">
+    <value>People in your enterprise</value>
+  </data>
+  <data name="CreateProjectMembersOfYourOrganizationLink" xml:space="preserve">
+    <value>/_org/_security?_a=members</value>
+  </data>
+  <data name="CreateProjectNameInvalidText" xml:space="preserve">
+    <value>The project name '{0}' is invalid. </value>
+  </data>
+  <data name="Projects_AnnounceProjectsLoaded" xml:space="preserve">
+    <value>All projects are loaded</value>
+  </data>
+  <data name="Projects_ToExpandButtonAriaLabel" xml:space="preserve">
+    <value>Show teams</value>
+  </data>
+  <data name="BannerGreetingMorning" xml:space="preserve">
+    <value>Good morning, {0}</value>
+  </data>
+  <data name="Favorites_FavoritingItemFailedError" xml:space="preserve">
+    <value>An error occurred while trying to favorite.</value>
+  </data>
+  <data name="Favorites_Dashboards_GroupTitle" xml:space="preserve">
+    <value>Dashboards</value>
+  </data>
+  <data name="Favorites_UpArrow" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="CreateProjectUnauthorizedAccessText" xml:space="preserve">
+    <value>You do not have sufficient permissions to create a new project. Please contact the organization administrator for support.</value>
+  </data>
+  <data name="AnnounceFilterResult" xml:space="preserve">
+    <value>Found {0} result containing {1}</value>
+  </data>
+  <data name="CreateProjectCreatingCTAButtonToolTip" xml:space="preserve">
+    <value>Creating project</value>
+  </data>
+  <data name="Projects_ErrorRefreshLinkText" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="CreateProjectOnPremWarningPart2" xml:space="preserve">
+    <value> how you can create your reports afterwards.</value>
+  </data>
+  <data name="CreateProjectOnPremWarningPart1" xml:space="preserve">
+    <value>Reports are not created automatically. </value>
+  </data>
+  <data name="MyWork_WorkItemGrid_LastEditedActivityDate" xml:space="preserve">
+    <value>You updated {0}</value>
+  </data>
+  <data name="MyWork_GroupLabel_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ArtifactDeletedFormat" xml:space="preserve">
+    <value>This {0} has been deleted</value>
+  </data>
+  <data name="FavoritesSearchWatermark" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="CreateProjectShowDescriptionCalloutTextTooltip" xml:space="preserve">
+    <value>Process template description is : {0}</value>
+  </data>
+  <data name="CreateProjectNameRequirementsLearnMoreAriaLabel" xml:space="preserve">
+    <value>Learn more on naming conventions for project name.</value>
+  </data>
+  <data name="FavoritesZeroDataPrimary" xml:space="preserve">
+    <value>Quickly find what you're looking for with Favorites</value>
+  </data>
+  <data name="CreateProjectNavigatingCTAButtonToolTip" xml:space="preserve">
+    <value>Navigating to project</value>
+  </data>
+  <data name="MyWork_LearnMore_LinkText" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="MyWork_FollowsNotConfiguredMessage" xml:space="preserve">
+    <value>Your organization is not set up to support following work items. {0}</value>
+  </data>
+  <data name="Projects_LoadTeamsForProjectError" xml:space="preserve">
+    <value>Something went wrong while loading this project's teams.</value>
+  </data>
+  <data name="RetrieveCreateProjectFailureTextHere" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="Favorite_Project_DeletedMessage" xml:space="preserve">
+    <value>This project has been deleted</value>
+  </data>
+  <data name="MyWork_Filter_NoResults" xml:space="preserve">
+    <value>No work items match your filter.</value>
+  </data>
+  <data name="MyWork_Loading_PivotChangeEnd" xml:space="preserve">
+    <value>Items loaded</value>
+  </data>
+  <data name="CloseDialogButtonLabel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CreateProjectCreateCTAButtonToolTip" xml:space="preserve">
+    <value>Create project</value>
+  </data>
+  <data name="AccountSwitcher_CollectionNavigationError" xml:space="preserve">
+    <value>We ran into some issues.</value>
+  </data>
+  <data name="OrganizationCollectionsnSearchNoResultFoundText" xml:space="preserve">
+    <value>No organizations found</value>
+  </data>
+  <data name="CreateProjectDescriptionContainerHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="CreateProjectCreatingCTAButtonText" xml:space="preserve">
+    <value>Creating</value>
+  </data>
+  <data name="MyWork_Loading_AssignedToMeStart" xml:space="preserve">
+    <value>Loading items assigned to you</value>
+  </data>
+  <data name="Favorite_Team_DeletedMessage" xml:space="preserve">
+    <value>This team has been deleted</value>
+  </data>
+  <data name="CreateProjectPrivateVisibilityText" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="MyWork_LimitMessage_Followed" xml:space="preserve">
+    <value>You follow more work items than can be shown on this page.</value>
+  </data>
+  <data name="MyWork_Action_Follow" xml:space="preserve">
+    <value>Follow</value>
+  </data>
+  <data name="CreateProjectPublicVisibilityText" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="FavoritesSearchResultsTitle" xml:space="preserve">
+    <value>Search results</value>
+  </data>
+  <data name="CreateProjectWorkItemProcessSectionHeader" xml:space="preserve">
+    <value>Work item process</value>
+  </data>
+  <data name="MyWork_Pivot_Mentioned" xml:space="preserve">
+    <value>Mentioned</value>
+  </data>
+  <data name="RetrieveCreateProjectFailureTextAfterHere" xml:space="preserve">
+    <value>to download full logs.</value>
+  </data>
+  <data name="MyWork_ErrorMessage_FailedToFollowUnfollow" xml:space="preserve">
+    <value>A problem occurred when performing this action.</value>
+  </data>
+  <data name="Favorites_DownArrow" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="Search_NoResultsFound" xml:space="preserve">
+    <value>No results found</value>
+  </data>
+  <data name="Favorite_Dashboard_DeletedMessage" xml:space="preserve">
+    <value>This dashboard has been deleted</value>
+  </data>
+  <data name="CreateProjectOrganizationProjectsLearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=871387</value>
+  </data>
+  <data name="Projects_RecentHeader" xml:space="preserve">
+    <value>Recent</value>
+  </data>
+  <data name="CreateProjectNavigatingCTAButtonText" xml:space="preserve">
+    <value>Navigating</value>
+  </data>
+  <data name="MyWork_ErrorMessage_FailedToGetFollowedIds" xml:space="preserve">
+    <value>A problem occurred when identifying followed items.</value>
+  </data>
+  <data name="Projects_AllHeader" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="CreateProjectPrivateVisibilityOptionDescription" xml:space="preserve">
+    <value>Only people you give access to will be able to view this project.</value>
+  </data>
+  <data name="MyWork_Pivot_AssignedToMe" xml:space="preserve">
+    <value>Assigned to me</value>
+  </data>
+  <data name="CreateProjectGenericServerErrorText" xml:space="preserve">
+    <value>We're having trouble loading the page content.</value>
+  </data>
+  <data name="Projects_HeaderTitle" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="CreateProjectFormSubHeader" xml:space="preserve">
+    <value>Projects contain your source code, work items, automated builds and more.</value>
+  </data>
+  <data name="Projects_AnnounceMruItemDeletedFormat" xml:space="preserve">
+    <value>Removed {0} from recently used list</value>
+  </data>
+  <data name="Favorites_UnfavoritingItemFailedError" xml:space="preserve">
+    <value>An error occurred while trying to unfavorite.</value>
+  </data>
+  <data name="QuickLinksToHubs" xml:space="preserve">
+    <value>Quick links to hubs</value>
+  </data>
+  <data name="FavoritesZeroDataSecondaryText" xml:space="preserve">
+    <value>Use the {0} to favorite the projects, repositories, queries, etc. that you frequently use. All favorited items will appear here.</value>
+  </data>
+  <data name="MyWork_Loading_MentionedStart" xml:space="preserve">
+    <value>Loading @mentioned</value>
+  </data>
+  <data name="Favorites_Projects_GroupTitle" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="CreateProjectVersionControlHelpToolTip" xml:space="preserve">
+    <value>Compare and choose the right version control for your project.</value>
+  </data>
+  <data name="Projects_ErrorRefreshPromptFormat" xml:space="preserve">
+    <value>{0} the page and try again.</value>
+  </data>
+  <data name="MyWork_Filter_Watermark" xml:space="preserve">
+    <value>Filter your work items</value>
+  </data>
+  <data name="Projects_Announce_LoadedTeams" xml:space="preserve">
+    <value>Loaded teams</value>
+  </data>
+  <data name="Favorites_FavoriteButton" xml:space="preserve">
+    <value>favorite button</value>
+  </data>
+  <data name="CollapsibleMessageShowDetails" xml:space="preserve">
+    <value>Show details</value>
+  </data>
+  <data name="CreateProjectJobFailedErrorText" xml:space="preserve">
+    <value>Project creation job failed. Please retry project creation.</value>
+  </data>
+  <data name="Favorites_SearchWatermark" xml:space="preserve">
+    <value>Filter favorites</value>
+  </data>
+  <data name="MyWork_Filter_SearchAll" xml:space="preserve">
+    <value>Search all work items...</value>
+  </data>
+  <data name="CreateProjectOrganizationVisibilityText" xml:space="preserve">
+    <value>Enterprise</value>
+  </data>
+  <data name="Favorite_BuildDefinition_DeletedMessage" xml:space="preserve">
+    <value>This build pipeline has been deleted</value>
+  </data>
+  <data name="MyWork_Title" xml:space="preserve">
+    <value>My work items</value>
+  </data>
+  <data name="LearnMoreText" xml:space="preserve">
+    <value> Learn more</value>
+  </data>
+  <data name="ProjectsSearchResultsTitle" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="CreateProjectCodeOfConductStatement" xml:space="preserve">
+    <value>By creating this project, you agree to the {0} {1}</value>
+  </data>
+  <data name="HubLoadingGeneric" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="CreateProjectShowDescriptionLinkAriaLabel" xml:space="preserve">
+    <value>Show description for selected custom work item process</value>
+  </data>
+  <data name="CreateProjectVersionControlToolTip" xml:space="preserve">
+    <value>Select a version control type for the default repository. You can always add more repositories later.</value>
+  </data>
+  <data name="CreateProjectPageTitle" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
+  <data name="Favorite_Repository_DeletedMessage" xml:space="preserve">
+    <value>This repository has been deleted</value>
+  </data>
+  <data name="Favorite_WitQuery_QueryPathAriaLabel" xml:space="preserve">
+    <value>Query path</value>
+  </data>
+  <data name="CreateProjectOrganizationVisibilityOptionDescription" xml:space="preserve">
+    <value>{0} can view the project. {1}.</value>
+  </data>
+  <data name="CreateProjectJobFailedErrorTextOnPrem" xml:space="preserve">
+    <value>Project creation job failed.</value>
+  </data>
+  <data name="OrganizationCollectionsSearchPlaceholderText" xml:space="preserve">
+    <value>Search organizations...</value>
+  </data>
+  <data name="BannerGreetingEvening" xml:space="preserve">
+    <value>Good evening, {0}</value>
+  </data>
+  <data name="RetrieveCreateProjectFailureTextPreHere" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="FavoritesZeroDataInfoLinkText" xml:space="preserve">
+    <value>Learn more about favorites</value>
+  </data>
+  <data name="Favorite_Iteration_DeletedMessage" xml:space="preserve">
+    <value>This sprint has been deleted</value>
+  </data>
+  <data name="Favorite_WitQuery_DeletedMessage" xml:space="preserve">
+    <value>This work item query has been deleted</value>
+  </data>
+  <data name="MyWork_LimitMessage_AssignedToMe" xml:space="preserve">
+    <value>There are more work items assigned to you than can be shown on this page. Either there are too many items, or some have not been updated recently.</value>
+  </data>
+  <data name="CreateProjectVersionControlLearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=825687</value>
+  </data>
+  <data name="MyWork_Loading_FollowingStart" xml:space="preserve">
+    <value>Loading followed items</value>
+  </data>
+  <data name="MyWork_Action_Unfollow" xml:space="preserve">
+    <value>Unfollow</value>
+  </data>
+  <data name="CreateProjectPublicVisibilityOptionDescription" xml:space="preserve">
+    <value>Anyone on the internet can view the project. Certain features like TFVC are not supported. {0}.</value>
+  </data>
+  <data name="CreateProjectShowDescriptionCalloutTitleTooltip" xml:space="preserve">
+    <value>Selected process template is : {0}</value>
+  </data>
+  <data name="Projects_RemoveFromMRULabel" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="MyWork_ErrorMessage_FailedToLoadData" xml:space="preserve">
+    <value>A problem occurred when loading your work items.</value>
+  </data>
+  <data name="Projects_AnnounceLoadingProjects" xml:space="preserve">
+    <value>Loading all projects</value>
+  </data>
+  <data name="CreateProjectCTAButtonText" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Projects_CreateProjectButtonText" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="MyWork_Pivot_RecentActivity" xml:space="preserve">
+    <value>My activity</value>
+  </data>
+  <data name="FavoritesHubTitle" xml:space="preserve">
+    <value>My favorites</value>
+  </data>
+  <data name="CreateProjectCollectionNameContainerHeader" xml:space="preserve">
+    <value>Organization name</value>
+  </data>
+  <data name="Projects_NonTeamMemberError" xml:space="preserve">
+    <value>You aren't a member of any team projects for this organization.</value>
+  </data>
+  <data name="Favorite_Board_DeletedMessage" xml:space="preserve">
+    <value>This board has been deleted</value>
+  </data>
+  <data name="Favorites_ProjectsTeam_GroupTitle" xml:space="preserve">
+    <value>Projects &amp; Teams</value>
+  </data>
+  <data name="TeamProjectDisplayTextConnector" xml:space="preserve">
+    <value> / </value>
+  </data>
+  <data name="OrganizationCollectionsPickerPlaceholderText" xml:space="preserve">
+    <value>Organizations</value>
+  </data>
+  <data name="CreateProjectFormHeader" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
+  <data name="Favorites_ZeroFavorites_AltText" xml:space="preserve">
+    <value>You have not created any favorites</value>
+  </data>
+  <data name="CreateProjectNameNotAvailableText" xml:space="preserve">
+    <value>The project '{0}' already exists.</value>
+  </data>
+  <data name="CreateProjectVersionControlSectionHeader" xml:space="preserve">
+    <value>Version control</value>
+  </data>
+  <data name="Projects_ToCollapseButtonAriaLabel" xml:space="preserve">
+    <value>Hide teams</value>
+  </data>
+  <data name="Projects_Announce_LoadingTeams" xml:space="preserve">
+    <value>Loading teams</value>
+  </data>
+  <data name="CreateProjectNameContainerHeader" xml:space="preserve">
+    <value>Project name</value>
+  </data>
+  <data name="CreateProjectOnPremWarning" xml:space="preserve">
+    <value>Reporting and SharePoint integration steps will be skipped when creating a team project from the Web. Customizations that require specific user credentials will also not work because the operation is being performed using the server credentials. &lt;a href="https://msdn.microsoft.com/Library/vs/alm/overview/create-team-project" target="_blank" rel="noopener noreferrer"&gt;Learn more&lt;/a&gt;</value>
+  </data>
+  <data name="CreateProjectProjectVisibilitySectionHeader" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="Favorites_Repository_GroupTitle" xml:space="preserve">
+    <value>Repositories</value>
+  </data>
+  <data name="MyWork_GroupLabel_Doing" xml:space="preserve">
+    <value>Doing</value>
+  </data>
+  <data name="CollapsibleMessageHideDetails" xml:space="preserve">
+    <value>Hide details</value>
+  </data>
+  <data name="CreateProjectDecriptionToolTip" xml:space="preserve">
+    <value>Enter a brief description for your project. This field is optional.</value>
+  </data>
+  <data name="CreateProjectProcessTemplateLearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=825688</value>
+  </data>
+  <data name="BannerGreetingAfternoon" xml:space="preserve">
+    <value>Good afternoon, {0}</value>
+  </data>
+  <data name="CreateProjectNameRequirementsLearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=842564</value>
+  </data>
+  <data name="CreateProjectProcessTemplateToolTip" xml:space="preserve">
+    <value>Select the work item process to plan and track work.</value>
+  </data>
+  <data name="CreateProjectShowDescriptionText" xml:space="preserve">
+    <value>Show description</value>
+  </data>
+  <data name="Favorites_DeletedMessage" xml:space="preserve">
+    <value>This item is deleted</value>
+  </data>
+  <data name="Projects_SearchWatermark" xml:space="preserve">
+    <value>Filter projects and teams</value>
+  </data>
+  <data name="CreateProjectOnPremWarningFindoutLinkUrl" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=852483</value>
+  </data>
+  <data name="Favorites_WriteBlocked" xml:space="preserve">
+    <value>Favorite item could not be updated right now - the service is being upgraded.</value>
+  </data>
+  <data name="MyWork_WorkItem_Unassigned" xml:space="preserve">
+    <value>Unassigned</value>
+  </data>
+  <data name="CreateProjectNameToolTip" xml:space="preserve">
+    <value>Enter a memorable name for your project.</value>
+  </data>
+  <data name="MyWork_Loading_MyActivityStart" xml:space="preserve">
+    <value>Loading recent activity</value>
+  </data>
+  <data name="CreateProjectCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Favorites_WITQuery_GroupTitle" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="MyWork_Pivot_Followed" xml:space="preserve">
+    <value>Following</value>
+  </data>
+  <data name="WorkItemProcessLearnMoreAriaLabel" xml:space="preserve">
+    <value>Learn more about selecting the right work item process template.</value>
+  </data>
+</root>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.PermissionLevel.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41136802-8A86-4E6B-B21A-09334479867C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.PermissionLevel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.PermissionLevel</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IPlatformPermissionLevelDefinitionService.cs" />
+    <Compile Include="PermissionLevelAssignmentException.cs" />
+    <Compile Include="PermissionLevelAssignmentNotFoundException.cs" />
+    <Compile Include="PermissionLevelAssignmentAlreadyExistsException.cs" />
+    <Compile Include="PermissionLevelAssignmentBadRequestException.cs" />
+    <Compile Include="PermissionLevelDefinitionException.cs" />
+    <Compile Include="PermissionLevelDefinitionNotFoundException.cs" />
+    <Compile Include="PermissionLevelDefinitionAlreadyExistsException.cs" />
+    <Compile Include="PermissionLevelAssignmentsController.cs" />
+    <Compile Include="PermissionLevelDefinitionsController.cs" />
+    <Compile Include="PlatformPermissionLevelAssignmentService.cs" />
+    <Compile Include="PermissionLevelAssignmentsExtensions.cs" />
+    <Compile Include="PlatformPermissionLevelDefinitionService.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Store\IPermissionLevelAssignmentStore.cs" />
+    <Compile Include="Store\PermissionLevelAssignmentStore.cs" />
+    <Compile Include="Store\PermissionLevelDefinitionStore.cs" />
+    <Compile Include="Store\Interfaces\IPermissionLevelDefinitionStore.cs" />
+    <Compile Include="DataAccess\PermissionLevelAssignmentComponent.cs" />
+    <Compile Include="DataAccess\PermissionLevelAssignmentBinder.cs" />
+    <Compile Include="DataAccess\PermissionLevelAssignmentStoreItem.cs" />
+    <Compile Include="DataAccess\CustomDeploymentSqlError.cs" />
+    <Compile Include="DataAccess\PermissionLevelDefinitionComponent.cs" />
+    <Compile Include="DataAccess\PermissionLevelDefinitionBinder.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

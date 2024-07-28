@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Analytics.Sdk.Plugins.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74EE55CE-77E1-4777-AF3D-B03C0474B00B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Analytics.Sdk.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Analytics.Plugins</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Analytics.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Analytics.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Analytics.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Analytics.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LimitedConcurrencyAnalyticsJobCommand.cs" />
+    <Compile Include="GetRecordsInfo.cs" />
+    <Compile Include="AnalyticsJobCommand.cs" />
+    <Compile Include="PerfCounterAnalyticsJobCommandListener.cs" />
+    <Compile Include="ResultMessageAnalyticsJobCommandListener.cs" />
+    <Compile Include="TraceAnalyticsJobCommandListener.cs" />
+    <Compile Include="InvalidationOption.cs" />
+    <Compile Include="AnalyticsShardInvalidator.cs" />
+    <Compile Include="AnalyticsStagingTraceArea.cs" />
+    <Compile Include="AnalyticsStagingTracePoints.cs" />
+    <Compile Include="AnalyticsStagingCustomTracePoints.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="ClientResolvedEventArgs.cs" />
+    <Compile Include="NonFatalStreamErrorEventArgs.cs" />
+    <Compile Include="ShardEventArgs.cs" />
+    <Compile Include="StagePostEnvelopeEventArgs.cs" />
+    <Compile Include="StreamCountEventArgs.cs" />
+    <Compile Include="StreamEventArgs.cs" />
+    <Compile Include="AnalyticsPluginsPerfCounters.cs" />
+    <Compile Include="AnalyticsJobScheduler.cs" />
+    <Compile Include="JobRetryConfiguration.cs" />
+    <Compile Include="AnalyticsJobEventHandler.cs" />
+    <Compile Include="Jobs\AnalyticsMaintainStagingSchedulesJob.cs" />
+    <Compile Include="Jobs\WatermarkUtil.cs" />
+    <Compile Include="EventSubscribers\AnalyticsEventSubscriberBase.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Analytics\Sdk\Plugins\AnalyticsEnabledFilterProperties.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Analytics\Sdk\Plugins\AnalyticsEnabledFilter.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\Analytics\Sdk\Plugins\AnalyticsSdkPluginResources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft\VisualStudio\Services\Analytics\Sdk\Plugins\PerfCounters\man.template" />
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

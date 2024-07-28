@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExportToHtmlReportGenerationFailureSubjectMessage" xml:space="preserve">
+    <value>{0} (Error)</value>
+  </data>
+  <data name="QueryColumnNameBuildNumber" xml:space="preserve">
+    <value>Build Number</value>
+  </data>
+  <data name="ResultsPaneNodeDisplayText" xml:space="preserve">
+    <value>Date: {0}; Config: {1}; RunBy: {2}; Duration: {3}</value>
+  </data>
+  <data name="Stories" xml:space="preserve">
+    <value>_Stories_</value>
+  </data>
+  <data name="TestCasePaneFilter_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="TestResultOpenMessage" xml:space="preserve">
+    <value>You cannot open test results or session artifacts in Web view. Use Microsoft Test Manager to view test results or Session artifacts.</value>
+  </data>
+  <data name="QueryContains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="RemoveConfigurationVariable" xml:space="preserve">
+    <value>Remove configuration variable</value>
+  </data>
+  <data name="SelectReleaseEnvironmentInfoText" xml:space="preserve">
+    <value>Lists the stages available in the selected release pipeline.</value>
+  </data>
+  <data name="TestCaseToolTip" xml:space="preserve">
+    <value>Test case details</value>
+  </data>
+  <data name="TestPointOutcomeFilter" xml:space="preserve">
+    <value>Outcome</value>
+  </data>
+  <data name="AreaPathNotAssignedToTeamError" xml:space="preserve">
+    <value>You have not selected any areas for your team. You must select at least one area to view the test plans.</value>
+  </data>
+  <data name="ReferencedTestCasesPaneStatusOn" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="FailureTypeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="TestStepsParametersNotAllowed" xml:space="preserve">
+    <value>Parameters cannot be added or edited using Team Web Access. Use your local instance of Microsoft Test Manager instead.</value>
+  </data>
+  <data name="QueryColumnNameBuildFlavor" xml:space="preserve">
+    <value>Build flavor</value>
+  </data>
+  <data name="ResetFilter" xml:space="preserve">
+    <value>Reset filter</value>
+  </data>
+  <data name="ErrorInvalidTestResultIdFormat" xml:space="preserve">
+    <value>Invalid test result id "{0}". Expected format: "runId;resultId".</value>
+  </data>
+  <data name="BuildCountExceedWarning" xml:space="preserve">
+    <value>There are more than 50 builds. Use additional filters if the build you want does not appear above.</value>
+  </data>
+  <data name="ErrorInvalidFieldOperatorFormat" xml:space="preserve">
+    <value>Can't use operator '{0}' with field '{1}'.</value>
+  </data>
+  <data name="ReferencedTestCasesPaneStatusOff" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="SelectBuildHelpText" xml:space="preserve">
+    <value>Select the build to use for running selected tests.</value>
+  </data>
+  <data name="QueryColumnNameCreationDate" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="QueryGreaterThanOrEqualTo" xml:space="preserve">
+    <value>&gt;=</value>
+  </data>
+  <data name="TestHubTestsTabTitle" xml:space="preserve">
+    <value>Tests</value>
+  </data>
+  <data name="TestRunsTabTitle" xml:space="preserve">
+    <value>Test runs</value>
+  </data>
+  <data name="RunQueryExceptionMessageFormat" xml:space="preserve">
+    <value>Can't run your query: {0}</value>
+  </data>
+  <data name="RunUsingClientText" xml:space="preserve">
+    <value>Run using client</value>
+  </data>
+  <data name="AddAttachmentFileNotFoundError" xml:space="preserve">
+    <value>TF20004: Could not find the specified file '{0}'. Check the file name and try again.</value>
+  </data>
+  <data name="FindBuildsLabel" xml:space="preserve">
+    <value>Find Builds</value>
+  </data>
+  <data name="QueryColumnNameResolutionState" xml:space="preserve">
+    <value>Resolution state</value>
+  </data>
+  <data name="DataCollectorLabel" xml:space="preserve">
+    <value>Data collectors</value>
+  </data>
+  <data name="Last30DaysText" xml:space="preserve">
+    <value>Last 30 days</value>
+  </data>
+  <data name="AssignTestersToSuiteEmailTextViewTest" xml:space="preserve">
+    <value>View tests</value>
+  </data>
+  <data name="TestCasePaneFilter_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="RunWithOptionDialogBuildLabel" xml:space="preserve">
+    <value>Build:</value>
+  </data>
+  <data name="SuitePaneNodeTitle" xml:space="preserve">
+    <value>Team Project: {0}; TestPlan: {1}</value>
+  </data>
+  <data name="QueryColumnNameBuildPlatform" xml:space="preserve">
+    <value>Build platform</value>
+  </data>
+  <data name="PaneFilter_TestCase" xml:space="preserve">
+    <value>Test case</value>
+  </data>
+  <data name="ToogleConfigurationVariablesPane" xml:space="preserve">
+    <value>Show/hide configuration variables pane</value>
+  </data>
+  <data name="FindBuildDialogDefinitionLabel" xml:space="preserve">
+    <value>Pipeline</value>
+  </data>
+  <data name="ExportToHtmlReportGenerationFailureMessage" xml:space="preserve">
+    <value>Your email request could not be completed due to a server error. Contact your administrator to understand the reasons of failure or retry your request again. JobId: {0}</value>
+  </data>
+  <data name="ExploratorySessionsTabTitle" xml:space="preserve">
+    <value>Exploratory sessions</value>
+  </data>
+  <data name="QueryNotContains" xml:space="preserve">
+    <value>Does Not Contain</value>
+  </data>
+  <data name="ListText" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="QueryColumnNameNotApplicableTests" xml:space="preserve">
+    <value>Not applicable test count</value>
+  </data>
+  <data name="ErrorFieldNotFoundFormat" xml:space="preserve">
+    <value>Field '{0}' isn't a valid field.</value>
+  </data>
+  <data name="Last14DaysText" xml:space="preserve">
+    <value>Last 14 days</value>
+  </data>
+  <data name="TestResultFetchError" xml:space="preserve">
+    <value>Error fetching result</value>
+  </data>
+  <data name="ResultsQueryTabTitle" xml:space="preserve">
+    <value>Test results</value>
+  </data>
+  <data name="ExportHtmlSuiteRequirementHeading" xml:space="preserve">
+    <value>Requirement</value>
+  </data>
+  <data name="ReferencedTestCasesPaneTitle" xml:space="preserve">
+    <value>Referenced test cases</value>
+  </data>
+  <data name="AssignTestersToSuiteHintMessageForRedirectPart1" xml:space="preserve">
+    <value>(In certain cases, you may have to click the above link twice to view the tests assigned to you. </value>
+  </data>
+  <data name="AssignTestersToSuiteHintMessageForRedirectPart3" xml:space="preserve">
+    <value>.)</value>
+  </data>
+  <data name="AssignTestersToSuiteHintMessageForRedirectPart2" xml:space="preserve">
+    <value>Read more</value>
+  </data>
+  <data name="QueryNotEqualTo" xml:space="preserve">
+    <value>&lt;&gt;</value>
+  </data>
+  <data name="SelectTestRunParametersInfoText" xml:space="preserve">
+    <value>Overrides the test run parameters defined in run settings file</value>
+  </data>
+  <data name="TestCasePaneFilter_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="NewMenuTitle" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="TestCasePaneFilter_Title" xml:space="preserve">
+    <value>Test case pane</value>
+  </data>
+  <data name="SharedParametersErrorTitle" xml:space="preserve">
+    <value>Shared Parameters</value>
+  </data>
+  <data name="Boolean_True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="QueryIn" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="NoneText" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="FindBuildDialogFindButtonLabel" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="AdminTestHubName" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="NoTestConfigExist" xml:space="preserve">
+    <value>No test configuration exist</value>
+  </data>
+  <data name="ErrorQueryInvalidSortFieldFormat" xml:space="preserve">
+    <value>Invalid sortby field: '{0}' is not a valid query field.</value>
+  </data>
+  <data name="BuildDetailSummaryTestRunsAllPassed" xml:space="preserve">
+    <value>All {0} tests passed</value>
+  </data>
+  <data name="ConfigurationFilter" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="FailureTypeKnownIssue" xml:space="preserve">
+    <value>Known Issue</value>
+  </data>
+  <data name="ConfigurationVariablePaneTitle" xml:space="preserve">
+    <value>Configuration variable: {0}</value>
+  </data>
+  <data name="FailureTypeNewIssue" xml:space="preserve">
+    <value>New Issue</value>
+  </data>
+  <data name="TestPlanExplorerSplitterLabel" xml:space="preserve">
+    <value>Test plan explorer</value>
+  </data>
+  <data name="ExportHtmlSuiteStateInProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="QueryColumnNameTestCaseTitle" xml:space="preserve">
+    <value>Test Case Title</value>
+  </data>
+  <data name="AllSessionsText" xml:space="preserve">
+    <value>All sessions</value>
+  </data>
+  <data name="Last7DaysText" xml:space="preserve">
+    <value>Last 7 days</value>
+  </data>
+  <data name="StepTitleFormat" xml:space="preserve">
+    <value>{0}. {1}</value>
+  </data>
+  <data name="TestServiceStatusMessage" xml:space="preserve">
+    <value>Test services are in preview. &lt;a href='https://go.microsoft.com/fwlink/?LinkID=269578' rel='nofollow noopener noreferrer' target='_blank'&gt;Learn more&lt;/a&gt;.</value>
+  </data>
+  <data name="QueryColumnNameFailedTests" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="ResultGridHeader_ActiveBugs" xml:space="preserve">
+    <value>Active bugs</value>
+  </data>
+  <data name="DataCollectorHelpText" xml:space="preserve">
+    <value>Specify the data to collect while testing your application.</value>
+  </data>
+  <data name="QueryColumnNameIncompleteTests" xml:space="preserve">
+    <value>Incomplete test count</value>
+  </data>
+  <data name="TestPointsGridSuiteRequirementId" xml:space="preserve">
+    <value>Requirement ID: {0}</value>
+  </data>
+  <data name="QueryColumnNameTestCaseId" xml:space="preserve">
+    <value>Test Case ID</value>
+  </data>
+  <data name="BuildDetailSummaryTestRunsPassed" xml:space="preserve">
+    <value>{0} of {1} passed</value>
+  </data>
+  <data name="QueryColumnNameIsAutomated" xml:space="preserve">
+    <value>Is automated</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="QueryColumnNameTestRunId" xml:space="preserve">
+    <value>Run Id</value>
+  </data>
+  <data name="ExportHtmlSuiteStatePlanning" xml:space="preserve">
+    <value>In Planning</value>
+  </data>
+  <data name="FailedText" xml:space="preserve">
+    <value>failed</value>
+  </data>
+  <data name="EnvironmentToRunTestsSubText" xml:space="preserve">
+    <value>Select a release pipeline and stage that can consume the selected build's artifacts.</value>
+  </data>
+  <data name="ResolutionTypeNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="RunSummaryChartsTabTitle" xml:space="preserve">
+    <value>Run summary</value>
+  </data>
+  <data name="ResultGridHeader_Resolutions" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="AssignTestersToSuiteEmailTextHi" xml:space="preserve">
+    <value>Hi,</value>
+  </data>
+  <data name="SharedParameterProperties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="FindBuildDialogResultLabel" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="ResultHistoryTabTitle" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="PositionFilter" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="QueryColumnNameCompleteDate" xml:space="preserve">
+    <value>Completed Date</value>
+  </data>
+  <data name="TestsHubText" xml:space="preserve">
+    <value>Test Plans</value>
+  </data>
+  <data name="QueryColumnNamePassRate" xml:space="preserve">
+    <value>Pass Rate</value>
+  </data>
+  <data name="TestPointNotFoundInKanbanBoardError" xml:space="preserve">
+    <value>One or more tests could not be found. Refresh the board and try again.</value>
+  </data>
+  <data name="Boolean_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="TestSuitesToolTip" xml:space="preserve">
+    <value>List of test suites that contain this test case</value>
+  </data>
+  <data name="TestStepsControlTestStepsTitle" xml:space="preserve">
+    <value>Test Steps</value>
+  </data>
+  <data name="SelectPlanHubTitleWithNoCreateTestPlan" xml:space="preserve">
+    <value>You can’t create or run test cases without a test plan. Learn how to &lt;a href='https://go.microsoft.com/fwlink/?LinkId=276858' rel='nofollow noopener noreferrer' target='_blank'&gt;create a test plan&lt;/a&gt;.</value>
+  </data>
+  <data name="EnvironmentToRunTestsText" xml:space="preserve">
+    <value>Environment to run automated tests</value>
+  </data>
+  <data name="QueryColumnNameAutomatedTestStorage" xml:space="preserve">
+    <value>Automated test storage</value>
+  </data>
+  <data name="AssignTestersToSuiteEmailTextThanks" xml:space="preserve">
+    <value>Thanks,</value>
+  </data>
+  <data name="RunWithOptionsDialogSelectBuildPlaceholder" xml:space="preserve">
+    <value>Select a build</value>
+  </data>
+  <data name="QueryFilterTabTitle" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="PaneFilter_TestSuite" xml:space="preserve">
+    <value>Test suites</value>
+  </data>
+  <data name="TestSettingsDefault" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="TestResultsFilterText" xml:space="preserve">
+    <value>Filter results</value>
+  </data>
+  <data name="SharedParameterValues" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="CannotAssignConfigToTestCases" xml:space="preserve">
+    <value>Cannot assign configurations to test cases when show tests from child suites option is enabled. Disable the option first and then do the assignment.</value>
+  </data>
+  <data name="TestOutcome_Unspecified" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="SelectTestRunParametersHelpText" xml:space="preserve">
+    <value>Specify the test run parameters to use to run automated tests</value>
+  </data>
+  <data name="PaneFilter" xml:space="preserve">
+    <value>Pane</value>
+  </data>
+  <data name="PassedText" xml:space="preserve">
+    <value>passed</value>
+  </data>
+  <data name="TestPointNotFoundError" xml:space="preserve">
+    <value>One or more tests could not be found. Refresh the test suite and try again.</value>
+  </data>
+  <data name="AddAttachmentUnknownError" xml:space="preserve">
+    <value>Unknown Attachment Error</value>
+  </data>
+  <data name="SelectReleaseEnvironmentHelpText" xml:space="preserve">
+    <value>Specify the release stage to use to run automated tests</value>
+  </data>
+  <data name="IncorrectQueryField" xml:space="preserve">
+    <value>{0} is not a queryable field.</value>
+  </data>
+  <data name="TestHubChartsTabTitle" xml:space="preserve">
+    <value>Charts</value>
+  </data>
+  <data name="FailureTypeRegression" xml:space="preserve">
+    <value>Regression</value>
+  </data>
+  <data name="SelectReleaseEnvironmentLabel" xml:space="preserve">
+    <value>Stage</value>
+  </data>
+  <data name="QueryColumnNamePriority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="FileUploadedExceededMaxSize" xml:space="preserve">
+    <value>Cannot upload file as it exceeded the maximum file size ({0} bytes)</value>
+  </data>
+  <data name="QueryColumnNameFailureType" xml:space="preserve">
+    <value>Failure type</value>
+  </data>
+  <data name="TestPointGridColumnAutomation" xml:space="preserve">
+    <value>Automation Status</value>
+  </data>
+  <data name="BuildDetailSummaryTestRunsProgress" xml:space="preserve">
+    <value>Run is in progress</value>
+  </data>
+  <data name="QueryLessThan" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="AttachmentCreationDate" xml:space="preserve">
+    <value>Creation Date</value>
+  </data>
+  <data name="Last60DaysText" xml:space="preserve">
+    <value>Last 60 days</value>
+  </data>
+  <data name="SelectTestRunParametersLabel" xml:space="preserve">
+    <value>Test run parameters</value>
+  </data>
+  <data name="UniqueDisplayNameFormat" xml:space="preserve">
+    <value>{0} &lt;{1}&gt;</value>
+  </data>
+  <data name="SelectBuildLabel" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="QueryText" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="PaneFilter_TestResults" xml:space="preserve">
+    <value>Test results</value>
+  </data>
+  <data name="SetFilter" xml:space="preserve">
+    <value>Set filter</value>
+  </data>
+  <data name="Last90DaysText" xml:space="preserve">
+    <value>Last 90 days</value>
+  </data>
+  <data name="OwnerFormat" xml:space="preserve">
+    <value>Owner: {0}</value>
+  </data>
+  <data name="QueryColumnNameComputerName" xml:space="preserve">
+    <value>Machine name</value>
+  </data>
+  <data name="ExportToHtmlReportSendEmailFailureMessage" xml:space="preserve">
+    <value>Error occurred while sending email. Reason: {0}</value>
+  </data>
+  <data name="QueryColumnNameTestSettings" xml:space="preserve">
+    <value>Test settings</value>
+  </data>
+  <data name="AssignTestersToSuiteEmailTextContent" xml:space="preserve">
+    <value>You have been assigned tests to run - </value>
+  </data>
+  <data name="ResultSummaryTabTitle" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="TestPointGridColumnPriority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="BuildDetailSummaryTestRunsCompleted" xml:space="preserve">
+    <value>Run completed {0}</value>
+  </data>
+  <data name="TestCaseResultNotFoundError" xml:space="preserve">
+    <value>The test case result no longer exists.</value>
+  </data>
+  <data name="SelectQueryText" xml:space="preserve">
+    <value>Select query...</value>
+  </data>
+  <data name="TestPointState_NotReady" xml:space="preserve">
+    <value>Not ready</value>
+  </data>
+  <data name="PeriodText" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="ViewFilterText" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="QueryColumnNameLastUpdated" xml:space="preserve">
+    <value>Last updated</value>
+  </data>
+  <data name="QueryColumnNameAutomatedTestType" xml:space="preserve">
+    <value>Automated test type</value>
+  </data>
+  <data name="QueryColumnNameAutomatedTestName" xml:space="preserve">
+    <value>Automated test name</value>
+  </data>
+  <data name="ExportHtmlSuiteStateCompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ErrorUnknownQueryTypeFormat" xml:space="preserve">
+    <value>Error: Unknown query type specified.</value>
+  </data>
+  <data name="ConfigurationVariablesPane" xml:space="preserve">
+    <value>Configuration variables pane</value>
+  </data>
+  <data name="TestRunSummaryNoneText" xml:space="preserve">
+    <value>&lt;None&gt;</value>
+  </data>
+  <data name="RunsHubKeyboardShortcutGroup" xml:space="preserve">
+    <value>Runs</value>
+  </data>
+  <data name="QueryNotIn" xml:space="preserve">
+    <value>Not In</value>
+  </data>
+  <data name="QueryColumnNameConfiguration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="SaveTestRunKeyboardShortcutText" xml:space="preserve">
+    <value>Save test run</value>
+  </data>
+  <data name="IncorrectDateFormat" xml:space="preserve">
+    <value>Value '{0}' isn't a valid DateTime format.</value>
+  </data>
+  <data name="RunWithOptionDialogUseSectionLabel" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="QueryUnder" xml:space="preserve">
+    <value>Under</value>
+  </data>
+  <data name="QueryColumnNameTestResultId" xml:space="preserve">
+    <value>Test Result ID</value>
+  </data>
+  <data name="FailureTypeNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="FailureTypeLabelFormat" xml:space="preserve">
+    <value>Failure Type: {0}</value>
+  </data>
+  <data name="TestSuiteChartsPageNotReady" xml:space="preserve">
+    <value>TF401194: The Test Suite charts page is in an unready state.</value>
+  </data>
+  <data name="ReferencedTestCasesPaneStatusTitle" xml:space="preserve">
+    <value>Test cases pane</value>
+  </data>
+  <data name="RunCommandText" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="ErrorQueryNotFoundFormat" xml:space="preserve">
+    <value>Could not find query with path: {0}.</value>
+  </data>
+  <data name="TestCaseNotFoundError" xml:space="preserve">
+    <value>The test case no longer exists.</value>
+  </data>
+  <data name="ExportHtmlOkText" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="QueryLessThanOrEqualTo" xml:space="preserve">
+    <value>&lt;=</value>
+  </data>
+  <data name="BuildDetailSummaryTestRunsAborted" xml:space="preserve">
+    <value>Run has been aborted</value>
+  </data>
+  <data name="FindBuildDialogBuildNumberLabel" xml:space="preserve">
+    <value>Build number</value>
+  </data>
+  <data name="ChartsViewKeyboardShortcutGroup" xml:space="preserve">
+    <value>Charts View</value>
+  </data>
+  <data name="RunTitleQueryText" xml:space="preserve">
+    <value>Run Title Query</value>
+  </data>
+  <data name="ResultShortcutGroupName" xml:space="preserve">
+    <value>Results View</value>
+  </data>
+  <data name="DownloadTestRunnerLabel" xml:space="preserve">
+    <value>Download Test Runner (Azure Test Plans)</value>
+  </data>
+  <data name="OpenTestCaseShortcutText" xml:space="preserve">
+    <value>Open test case with WIT</value>
+  </data>
+  <data name="MeMacro" xml:space="preserve">
+    <value>@Me</value>
+  </data>
+  <data name="SaveTestConfiguration" xml:space="preserve">
+    <value>Save test configuration</value>
+  </data>
+  <data name="ConfigurationVariablesPaneStatusOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="JsonLimitExceeded" xml:space="preserve">
+    <value>The resulting string has exceeded the MaxJsonLength for JavascriptSerializer.</value>
+  </data>
+  <data name="SelectRDLabel" xml:space="preserve">
+    <value>Release Pipeline</value>
+  </data>
+  <data name="ConfigurationVariablesPaneStatusOn" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="QueryNeedsCategoryCondition" xml:space="preserve">
+    <value>Query-based suites can only contain test cases. So, add this clause: &lt; Work Item Type | In Group | {0}&gt;</value>
+  </data>
+  <data name="AddAttachmentDialogLabel" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="RunWithOptionDialogLaunchSectionLabel" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="QueryColumnNamePassedTests" xml:space="preserve">
+    <value>Passed test count</value>
+  </data>
+  <data name="Asterisk" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="GridText" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="FetchMorePointsHelpText" xml:space="preserve">
+    <value>Scroll down to fetch more tests.</value>
+  </data>
+  <data name="SelectRunnerHelpText" xml:space="preserve">
+    <value>Test type and runner</value>
+  </data>
+  <data name="QueryColumnNameErrorMessage" xml:space="preserve">
+    <value>Error message</value>
+  </data>
+  <data name="QueryColumnNameComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="RootSuiteTitle" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="ExportHtmlCancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BasicUserLimitedPortfolioAccessNotificationMessage" xml:space="preserve">
+    <value>As a Basic user, you can run tests. To create test plans and test cases, you must have an Advanced license.</value>
+  </data>
+  <data name="QueryColumnNameTotalTests" xml:space="preserve">
+    <value>Total test count</value>
+  </data>
+  <data name="QueryGreaterThan" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="ConfigurationNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="TestConfigurationExplorerSplitterLabel" xml:space="preserve">
+    <value>Test configuration explorer</value>
+  </data>
+  <data name="MySessionsText" xml:space="preserve">
+    <value>My sessions</value>
+  </data>
+  <data name="AssignTestersToSuiteEmailTextRunAllTest" xml:space="preserve">
+    <value>Run all tests now</value>
+  </data>
+  <data name="AssignConfigurationToTestCasesTooltip" xml:space="preserve">
+    <value>Assign configurations to selected test cases</value>
+  </data>
+  <data name="SelectRDHelpText" xml:space="preserve">
+    <value>Specify the release pipeline to use to run automated tests</value>
+  </data>
+  <data name="TodayMacro" xml:space="preserve">
+    <value>@Today</value>
+  </data>
+  <data name="QueryColumnNameRunBy" xml:space="preserve">
+    <value>Run By</value>
+  </data>
+  <data name="QueryColumnNameTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="QueryColumnNameOwner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="SelectRDInfoText" xml:space="preserve">
+    <value>List the release pipelines that can consume the selected build's artifacts.</value>
+  </data>
+  <data name="TestResultsToolTip" xml:space="preserve">
+    <value>Recent test results for this test case</value>
+  </data>
+  <data name="RunWithOptionsDialogSelectRunnerLabel" xml:space="preserve">
+    <value>Test type and runner</value>
+  </data>
+  <data name="ErrorFieldValueNotAllowedFormat" xml:space="preserve">
+    <value>Invalid field value: '{0}' is not an allowed value for field '{1}'.</value>
+  </data>
+</root>

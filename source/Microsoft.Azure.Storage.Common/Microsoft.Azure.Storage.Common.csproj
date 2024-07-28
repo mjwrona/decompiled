@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Storage.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{820A7149-0CB7-44B1-9994-2C41047CDCD3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Storage.Common</AssemblyName>
+    <ApplicationVersion>11.2.3.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure.Storage</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ICancellableAsyncResult.cs" />
+    <Compile Include="AccessCondition.cs" />
+    <Compile Include="AuthenticationScheme.cs" />
+    <Compile Include="CloudStorageAccount.cs" />
+    <Compile Include="DoesServiceRequestAttribute.cs" />
+    <Compile Include="EncryptionAgent.cs" />
+    <Compile Include="EncryptionAlgorithm.cs" />
+    <Compile Include="EncryptionData.cs" />
+    <Compile Include="IBufferManager.cs" />
+    <Compile Include="IContinuationToken.cs" />
+    <Compile Include="IPAddressOrRange.cs" />
+    <Compile Include="IRequestOptions.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="NameValidator.cs" />
+    <Compile Include="OperationContext.cs" />
+    <Compile Include="RequestEventArgs.cs" />
+    <Compile Include="RequestResult.cs" />
+    <Compile Include="ResultSegment`1.cs" />
+    <Compile Include="SharedAccessAccountPermissions.cs" />
+    <Compile Include="SharedAccessAccountPolicy.cs" />
+    <Compile Include="SharedAccessAccountResourceTypes.cs" />
+    <Compile Include="SharedAccessAccountServices.cs" />
+    <Compile Include="SharedAccessProtocol.cs" />
+    <Compile Include="StorageException.cs" />
+    <Compile Include="StorageExtendedErrorInformation.cs" />
+    <Compile Include="StorageLocation.cs" />
+    <Compile Include="StorageUri.cs" />
+    <Compile Include="UserDelegationKey.cs" />
+    <Compile Include="WrappedKey.cs" />
+    <Compile Include="RetryPolicies\ExponentialRetry.cs" />
+    <Compile Include="RetryPolicies\IExtendedRetryPolicy.cs" />
+    <Compile Include="RetryPolicies\IRetryPolicy.cs" />
+    <Compile Include="RetryPolicies\LinearRetry.cs" />
+    <Compile Include="RetryPolicies\LocationMode.cs" />
+    <Compile Include="RetryPolicies\NoRetry.cs" />
+    <Compile Include="RetryPolicies\RetryContext.cs" />
+    <Compile Include="RetryPolicies\RetryInfo.cs" />
+    <Compile Include="Auth\StorageAccountKey.cs" />
+    <Compile Include="Auth\StorageCredentials.cs" />
+    <Compile Include="Auth\NewTokenAndFrequency.cs" />
+    <Compile Include="Auth\RenewTokenFuncAsync.cs" />
+    <Compile Include="Auth\TokenCredential.cs" />
+    <Compile Include="Auth\Protocol\StorageAuthenticationHttpHandler.cs" />
+    <Compile Include="Shared\Protocol\HttpRequestHandler.cs" />
+    <Compile Include="Shared\Protocol\StorageService.cs" />
+    <Compile Include="Shared\Protocol\AccessPolicyResponseBase`1.cs" />
+    <Compile Include="Shared\Protocol\AccountProperties.cs" />
+    <Compile Include="Shared\Protocol\CappedLengthReadOnlyStream.cs" />
+    <Compile Include="Shared\Protocol\Checksum.cs" />
+    <Compile Include="Shared\Protocol\ChecksumRequested.cs" />
+    <Compile Include="Shared\Protocol\ChecksumOptions.cs" />
+    <Compile Include="Shared\Protocol\Constants.cs" />
+    <Compile Include="Shared\Protocol\CorsHttpMethods.cs" />
+    <Compile Include="Shared\Protocol\CorsProperties.cs" />
+    <Compile Include="Shared\Protocol\CorsRule.cs" />
+    <Compile Include="Shared\Protocol\DeleteRetentionPolicy.cs" />
+    <Compile Include="Shared\Protocol\GeoReplicationStats.cs" />
+    <Compile Include="Shared\Protocol\GeoReplicationStatus.cs" />
+    <Compile Include="Shared\Protocol\GetUserDelegationKeyResponse.cs" />
+    <Compile Include="Shared\Protocol\HttpClientFactory.cs" />
+    <Compile Include="Shared\Protocol\HttpContentFactory.cs" />
+    <Compile Include="Shared\Protocol\HttpRequestMessageFactory.cs" />
+    <Compile Include="Shared\Protocol\HttpRequestParsers.cs" />
+    <Compile Include="Shared\Protocol\HttpResponseParsers.cs" />
+    <Compile Include="Shared\Protocol\ListingContext.cs" />
+    <Compile Include="Shared\Protocol\LoggingOperations.cs" />
+    <Compile Include="Shared\Protocol\LoggingProperties.cs" />
+    <Compile Include="Shared\Protocol\MetricsLevel.cs" />
+    <Compile Include="Shared\Protocol\MetricsProperties.cs" />
+    <Compile Include="Shared\Protocol\Request.cs" />
+    <Compile Include="Shared\Protocol\RequestMessageExtensions.cs" />
+    <Compile Include="Shared\Protocol\Response.cs" />
+    <Compile Include="Shared\Protocol\ResponseParsingBase`1.cs" />
+    <Compile Include="Shared\Protocol\RetryableStreamContent.cs" />
+    <Compile Include="Shared\Protocol\ServiceProperties.cs" />
+    <Compile Include="Shared\Protocol\ServiceStats.cs" />
+    <Compile Include="Shared\Protocol\StaticWebsiteProperties.cs" />
+    <Compile Include="Shared\Protocol\StorageErrorCodeStrings.cs" />
+    <Compile Include="Core\ByteCountingStream.cs" />
+    <Compile Include="Core\LengthLimitingStream.cs" />
+    <Compile Include="Core\Logger.cs" />
+    <Compile Include="Core\TimeoutStream.cs" />
+    <Compile Include="Core\CanonicalizedString.cs" />
+    <Compile Include="Core\CommandLocationMode.cs" />
+    <Compile Include="Core\MultiBufferMemoryStream.cs" />
+    <Compile Include="Core\NonCloseableStream.cs" />
+    <Compile Include="Core\NullType.cs" />
+    <Compile Include="Core\SasQueryBuilder.cs" />
+    <Compile Include="Core\SR.cs" />
+    <Compile Include="Core\StorageRequestMessage.cs" />
+    <Compile Include="Core\SyncMemoryStream.cs" />
+    <Compile Include="Core\UriQueryBuilder.cs" />
+    <Compile Include="Core\Auth\ICanonicalizer.cs" />
+    <Compile Include="Core\Auth\SharedAccessSignatureHelper.cs" />
+    <Compile Include="Core\Auth\SharedKeyCanonicalizer.cs" />
+    <Compile Include="Core\Auth\SharedKeyLiteCanonicalizer.cs" />
+    <Compile Include="Core\Util\APMWithTimeout.cs" />
+    <Compile Include="Core\Util\AsyncExtensions.cs" />
+    <Compile Include="Core\Util\AsyncSemaphore.cs" />
+    <Compile Include="Core\Util\AsyncStreamCopier`1.cs" />
+    <Compile Include="Core\Util\CancellableAsyncResultTaskWrapper.cs" />
+    <Compile Include="Core\Util\CancellableAsyncResultTaskWrapper`1.cs" />
+    <Compile Include="Core\Util\CancellableOperationBase.cs" />
+    <Compile Include="Core\Util\NativeMD5.cs" />
+    <Compile Include="Core\Util\NativeMethods.cs" />
+    <Compile Include="Core\Util\StorageAsyncResult`1.cs" />
+    <Compile Include="Core\Util\StorageCommandAsyncResult.cs" />
+    <Compile Include="Core\Util\XMLReaderExtensions.cs" />
+    <Compile Include="Core\Util\AsyncManualResetEvent.cs" />
+    <Compile Include="Core\Util\AsyncSemaphoreAsync.cs" />
+    <Compile Include="Core\Util\AuthenticationUtility.cs" />
+    <Compile Include="Core\Util\ChecksumWrapper.cs" />
+    <Compile Include="Core\Util\CommonUtility.cs" />
+    <Compile Include="Core\Util\CounterEventAsync.cs" />
+    <Compile Include="Core\Util\Crc64.cs" />
+    <Compile Include="Core\Util\Crc64Wrapper.cs" />
+    <Compile Include="Core\Util\CryptoUtility.cs" />
+    <Compile Include="Core\Util\CultureStringComparer.cs" />
+    <Compile Include="Core\Util\Exceptions.cs" />
+    <Compile Include="Core\Util\HttpResponseMessageUtils.cs" />
+    <Compile Include="Core\Util\HttpWebUtility.cs" />
+    <Compile Include="Core\Util\MD5Wrapper.cs" />
+    <Compile Include="Core\Util\NavigationHelper.cs" />
+    <Compile Include="Core\Util\PlatformAgnosticReflectionExtensions.cs" />
+    <Compile Include="Core\Util\StorageProgress.cs" />
+    <Compile Include="Core\Util\AggregatingProgressIncrementer.cs" />
+    <Compile Include="Core\Util\ProgressIncrementingStream.cs" />
+    <Compile Include="Core\Util\StreamDescriptor.cs" />
+    <Compile Include="Core\Util\StreamExtensions.cs" />
+    <Compile Include="Core\Util\TaskExtensions.cs" />
+    <Compile Include="Core\Executor\Executor.cs" />
+    <Compile Include="Core\Executor\RecoveryActions.cs" />
+    <Compile Include="Core\Executor\ExecutionState`1.cs" />
+    <Compile Include="Core\Executor\ExecutorBase.cs" />
+    <Compile Include="Core\Executor\ExecutorOperation.cs" />
+    <Compile Include="Core\Executor\RESTCommand`1.cs" />
+    <Compile Include="Core\Executor\StorageCommandBase`1.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

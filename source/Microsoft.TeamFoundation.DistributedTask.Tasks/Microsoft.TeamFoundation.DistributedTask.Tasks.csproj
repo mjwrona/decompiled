@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Tasks.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A35A8851-15A4-4566-819F-A4AADCA8D545}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Tasks</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask.Tasks</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Pipelines.PoolProvider.Contracts">
+      <HintPath>lib\Microsoft.Azure.Pipelines.PoolProvider.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentCloudType.cs" />
+    <Compile Include="AgentOrchestrationCreator.cs" />
+    <Compile Include="IAgentCloudExtension.cs" />
+    <Compile Include="IAgentExtension.cs" />
+    <Compile Include="IPoolProviderExtension.cs" />
+    <Compile Include="IRunAgentSettingsExtension.cs" />
+    <Compile Include="OrchestrationContextExtensions.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="PoolProviderResponse.cs" />
+    <Compile Include="AgentProvisionResponse.cs" />
+    <Compile Include="ProvisionResponseType.cs" />
+    <Compile Include="RunAgent.cs" />
+    <Compile Include="RunAgentEvents.cs" />
+    <Compile Include="RunAgentEvent.cs" />
+    <Compile Include="ProvisionAgentEvent.cs" />
+    <Compile Include="AgentProvisionedEvent.cs" />
+    <Compile Include="AgentConnectedEvent.cs" />
+    <Compile Include="RequestAssignedEvent.cs" />
+    <Compile Include="RequestFinishedEvent.cs" />
+    <Compile Include="DeprovisionEvent.cs" />
+    <Compile Include="RunAgentInput.cs" />
+    <Compile Include="RunAgentSettings.cs" />
+    <Compile Include="TasksResources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TasksResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

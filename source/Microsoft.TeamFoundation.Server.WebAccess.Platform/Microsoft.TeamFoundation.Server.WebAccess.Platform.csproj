@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2121DF9-81F0-4C76-A654-6FD151BB2C46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.Platform</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>lib\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages">
+      <HintPath>lib\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonAreaRegistration.cs" />
+    <Compile Include="BrowserFilterMode.cs" />
+    <Compile Include="BrowserFilterEntry.cs" />
+    <Compile Include="BrowserSupportLevel.cs" />
+    <Compile Include="BrowserVersion.cs" />
+    <Compile Include="BrowserFilterService.cs" />
+    <Compile Include="TfsMailSettings.cs" />
+    <Compile Include="WebPlatformConstants.cs" />
+    <Compile Include="WebAccessRegistryConstants.cs" />
+    <Compile Include="WebAccessStrongboxConstants.cs" />
+    <Compile Include="WebPlatformFeatureFlags.cs" />
+    <Compile Include="WebPlatformBootstrapFeatureFlags.cs" />
+    <Compile Include="WebAccessCustomerIntelligenceConstants.cs" />
+    <Compile Include="WebAccessMobileConstants.cs" />
+    <Compile Include="WellKnownContributionIds.cs" />
+    <Compile Include="WellKnownContributionTypes.cs" />
+    <Compile Include="DataImportStatusModel.cs" />
+    <Compile Include="DataImportFileTransferProgressMetricModel.cs" />
+    <Compile Include="FontController.cs" />
+    <Compile Include="FontFamilyNames.cs" />
+    <Compile Include="FontNames.cs" />
+    <Compile Include="FontSets.cs" />
+    <Compile Include="FontFormats.cs" />
+    <Compile Include="FontSet.cs" />
+    <Compile Include="FontFormat.cs" />
+    <Compile Include="FontRegistration.cs" />
+    <Compile Include="PlatCommonExtensions.cs" />
+    <Compile Include="CrossServiceHtmlExtensions.cs" />
+    <Compile Include="ContributionsHtmlExtensions.cs" />
+    <Compile Include="JsonIslandHtmlExtensions.cs" />
+    <Compile Include="TagBuilderHtmlExtensions.cs" />
+    <Compile Include="PatternModel.cs" />
+    <Compile Include="CalendarModel.cs" />
+    <Compile Include="CultureInfoModel.cs" />
+    <Compile Include="DefaultCultureInfoModel.cs" />
+    <Compile Include="HeaderConstants.cs" />
+    <Compile Include="PlatformServerResources.cs" />
+    <Compile Include="HtmlContentProviderHelpers.cs" />
+    <Compile Include="TfsBypassAntiForgeryValidation.cs" />
+    <Compile Include="TfsAntiForgeryValidation.cs" />
+    <Compile Include="WebPageDataProviderConstants.cs" />
+    <Compile Include="WebDataProviderResolution.cs" />
+    <Compile Include="WebPageGlobalizationContext.cs" />
+    <Compile Include="WebPageDataProviderPageSource.cs" />
+    <Compile Include="WebPageDataProviderUtil.cs" />
+    <Compile Include="ContributionUtility.cs" />
+    <Compile Include="ServiceLocations.cs" />
+    <Compile Include="WaitHandleLock`2.cs" />
+    <Compile Include="WebPerformanceTimerHelpers.cs" />
+    <Compile Include="ContributedServiceContextData.cs" />
+    <Compile Include="ContributedServiceContext.cs" />
+    <Compile Include="HubsContext.cs" />
+    <Compile Include="PinningPreferences.cs" />
+    <Compile Include="HubGroup.cs" />
+    <Compile Include="Hub.cs" />
+    <Compile Include="AccessPointModel.cs" />
+    <Compile Include="IdentityModel.cs" />
+    <Compile Include="TeamFoundationServiceHostModel.cs" />
+    <Compile Include="FeatureAvailabilityContext.cs" />
+    <Compile Include="TimeZonesConfiguration.cs" />
+    <Compile Include="DaylightSavingsAdjustmentEntry.cs" />
+    <Compile Include="ContributionPath.cs" />
+    <Compile Include="ContributionPathType.cs" />
+    <Compile Include="ModuleLoaderShimConfiguration.cs" />
+    <Compile Include="ModuleLoaderConfiguration.cs" />
+    <Compile Include="CoreReferenceScriptIdentifiers.cs" />
+    <Compile Include="CoreReferencesContext.cs" />
+    <Compile Include="StylesheetReference.cs" />
+    <Compile Include="JavascriptFileReference.cs" />
+    <Compile Include="MicrosoftAjaxConfig.cs" />
+    <Compile Include="PageContext.cs" />
+    <Compile Include="NavigationContext.cs" />
+    <Compile Include="HubsManagement.cs" />
+    <Compile Include="HttpInvalidLicenseException.cs" />
+    <Compile Include="InvalidRedirectException.cs" />
+    <Compile Include="TypeUtils.cs" />
+    <Compile Include="IWebContextProvider.cs" />
+    <Compile Include="DefaultWebContextProvider.cs" />
+    <Compile Include="WebContextFactory.cs" />
+    <Compile Include="SupportedContextLevels.cs" />
+    <Compile Include="NumberShortFormInfo.cs" />
+    <Compile Include="ClientCultureInfo.cs" />
+    <Compile Include="ScriptResourceController.cs" />
+    <Compile Include="PlatformHtmlExtensions.cs" />
+    <Compile Include="WebMessageLevel.cs" />
+    <Compile Include="WebGlobalMessage.cs" />
+    <Compile Include="GeneralHtmlExtensions.cs" />
+    <Compile Include="UrlHelperExtensions.cs" />
+    <Compile Include="AppInsightsConfiguration.cs" />
+    <Compile Include="AppInsightsCustomTrackPageData.cs" />
+    <Compile Include="ResourceModuleInfo.cs" />
+    <Compile Include="ModuleShimConfiguration.cs" />
+    <Compile Include="ScriptArea.cs" />
+    <Compile Include="ScriptRegistration.cs" />
+    <Compile Include="TimeZoneInfoModel.cs" />
+    <Compile Include="DefaultTimeZoneInfoModel.cs" />
+    <Compile Include="UxServicesModel.cs" />
+    <Compile Include="UxServicesModelBuilder.cs" />
+    <Compile Include="AcceptNavigationLevelsAttribute.cs" />
+    <Compile Include="NavigationContextLevels.cs" />
+    <Compile Include="NavigationLevelExtensions.cs" />
+    <Compile Include="NavigationHelpers.cs" />
+    <Compile Include="ErrorModel.cs" />
+    <Compile Include="ReparentingStatusModel.cs" />
+    <Compile Include="PlatformJsonExtensions.cs" />
+    <Compile Include="PlatformNavigationExtensions.cs" />
+    <Compile Include="ContextIdentifier.cs" />
+    <Compile Include="HostContext.cs" />
+    <Compile Include="ExtendedHostContext.cs" />
+    <Compile Include="ContextHostType.cs" />
+    <Compile Include="TeamContext.cs" />
+    <Compile Include="UserContext.cs" />
+    <Compile Include="GlobalizationContext.cs" />
+    <Compile Include="DiagnosticsContext.cs" />
+    <Compile Include="PageXHRData.cs" />
+    <Compile Include="ContributionsPageData.cs" />
+    <Compile Include="PageContribution.cs" />
+    <Compile Include="PageContributionProviderDetails.cs" />
+    <Compile Include="WebContext.cs" />
+    <Compile Include="ConfigurationContext.cs" />
+    <Compile Include="ConfigurationContextPaths.cs" />
+    <Compile Include="ConfigurationContextApis.cs" />
+    <Compile Include="WebModule`1.cs" />
+    <Compile Include="PlatformResources.cs" />
+    <Compile Include="JsObject.cs" />
+    <Compile Include="RestApiJsonResult.cs" />
+    <Compile Include="SecureJsonResult.cs" />
+    <Compile Include="JsonArrayWrapper.cs" />
+    <Compile Include="TfsHandleFeatureFlag.cs" />
+    <Compile Include="TfsSeedFileResources.cs" />
+    <Compile Include="TfsTraceLayers.cs" />
+    <Compile Include="TfsTraceFilterAttribute.cs" />
+    <Compile Include="PlatformViewUserControl`1.cs" />
+    <Compile Include="PlatformViewUserControl.cs" />
+    <Compile Include="CommonUtility.cs" />
+    <Compile Include="ConvertUtility.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="PlatformHelpers.cs" />
+    <Compile Include="ThemeModel.cs" />
+    <Compile Include="ThemesUtility.cs" />
+    <Compile Include="WebAccessTrace.cs" />
+    <Compile Include="WebRegistryUtils.cs" />
+    <Compile Include="WACommonResources.cs" />
+    <Compile Include="Platform\WebPlatformAreaController.cs" />
+    <Compile Include="Platform\WebSessionTokenController.cs" />
+    <Compile Include="Platform\WebSessionTokenValue.cs" />
+    <Compile Include="Platform\SessionTokenCookie.cs" />
+    <Compile Include="Platform\AccountTokens.cs" />
+    <Compile Include="Platform\AppTokens.cs" />
+    <Compile Include="Platform\UserTokens.cs" />
+    <Compile Include="Platform\SessionTokens.cs" />
+    <Compile Include="Platform\INamedWebSessionTokenProvider.cs" />
+    <Compile Include="Platform\NamedWebSessionTokenProviderService.cs" />
+    <Compile Include="Platform\WebPlatformController.cs" />
+    <Compile Include="Platform\RouteCollectionExtensions.cs" />
+    <Compile Include="Platform\WebContextExtensions.cs" />
+    <Compile Include="Platform\PageHtmlExtensions.cs" />
+    <Compile Include="Platform\PlatformViewMasterPage`1.cs" />
+    <Compile Include="Platform\PlatformViewMasterPage.cs" />
+    <Compile Include="Platform\PlatformViewPage`1.cs" />
+    <Compile Include="Platform\PlatformViewPage.cs" />
+    <Compile Include="Platform\WebPlatformModule.cs" />
+    <Compile Include="Platform\Filters\ApplyRequestLanguageAttribute.cs" />
+    <Compile Include="Platform\ErrorHandling\NoTenantException.cs" />
+    <Compile Include="UxServices\IContentProvider.cs" />
+    <Compile Include="UxServices\IContentService.cs" />
+    <Compile Include="UxServices\IContentTransformer.cs" />
+    <Compile Include="UxServices\IUxServicesCacheService.cs" />
+    <Compile Include="UxServices\LoginContext.cs" />
+    <Compile Include="UxServices\SignInPlaceholderTransformer.cs" />
+    <Compile Include="UxServices\UxServicesCacheService.cs" />
+    <Compile Include="UxServices\UxServicesCacheConfiguration.cs" />
+    <Compile Include="UxServices\UxServicesHttpRequestWrapper.cs" />
+    <Compile Include="UxServices\UxServicesProvider.cs" />
+    <Compile Include="UxServices\UxServicesRequestData.cs" />
+    <Compile Include="UxServices\ControlName.cs" />
+    <Compile Include="Routing\RouteDirectionConstraint.cs" />
+    <Compile Include="Routing\SupportedRouteAreaAttribute.cs" />
+    <Compile Include="Routing\TfsRoute.cs" />
+    <Compile Include="Routing\TfsRouteArea.cs" />
+    <Compile Include="Routing\TfsRouteAreaConstraint.cs" />
+    <Compile Include="Routing\TfsRouteSegmentNames.cs" />
+    <Compile Include="Routing\TfsRouteLevel.cs" />
+    <Compile Include="Routing\TfsRouteNames.cs" />
+    <Compile Include="Routing\TfsRouteWellKnownNames.cs" />
+    <Compile Include="Routing\PlatformRouteHelpers.cs" />
+    <Compile Include="Routing\TfsServiceHostDescriptor.cs" />
+    <Compile Include="Routing\WrappedRequestContext.cs" />
+    <Compile Include="Redirect\RedirectWithIdentityController.cs" />
+    <Compile Include="Html\FeatureAvailabilityHtmlExtensions.cs" />
+    <Compile Include="Controls\InternalContentHost.cs" />
+    <Compile Include="Controls\IContributionControl.cs" />
+    <Compile Include="Controls\ContributionControl.cs" />
+    <Compile Include="Controls\HeaderContributionControlSections.cs" />
+    <Compile Include="Controls\HeaderContributionControlConstants.cs" />
+    <Compile Include="Controls\HeaderContributionControl.cs" />
+    <Compile Include="Controls\ContainerControl.cs" />
+    <Compile Include="Controls\ControlBase.cs" />
+    <Compile Include="Controls\ControlFactory.cs" />
+    <Compile Include="Controls\Menu.cs" />
+    <Compile Include="Controls\MenuBase.cs" />
+    <Compile Include="Controls\MenuExtensions.cs" />
+    <Compile Include="Controls\MenuItemPinningOptions.cs" />
+    <Compile Include="Controls\MenuItem.cs" />
+    <Compile Include="Controls\MenuItemCollection.cs" />
+    <Compile Include="Controls\MenuOwner.cs" />
+    <Compile Include="Controls\MenuBar.cs" />
+    <Compile Include="Controls\PopupMenu.cs" />
+    <Compile Include="Controls\StaticPopupMenu.cs" />
+    <Compile Include="Controls\PivotFilterBehavior.cs" />
+    <Compile Include="Controls\PivotFilter.cs" />
+    <Compile Include="Controls\PivotFilterItem.cs" />
+    <Compile Include="Controls\PivotView.cs" />
+    <Compile Include="Controls\PivotViews.cs" />
+    <Compile Include="Contributions\HtmlContent\ContributionHtmlProviderResult.cs" />
+    <Compile Include="Contributions\HtmlContent\ContributionHtmlProviderContext.cs" />
+    <Compile Include="Contributions\HtmlContent\IContributionHtmlProvider.cs" />
+    <Compile Include="Contributions\HtmlContent\HtmlProviderConstants.cs" />
+    <Compile Include="Contributions\HtmlContent\ContributionHtmlProviderTypesService.cs" />
+    <Compile Include="Contributions\HtmlContent\IContributionHtmlProviderService.cs" />
+    <Compile Include="Contributions\HtmlContent\ContributionHtmlProviderService.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\Msal\MsalPopupController.cs" />
+    <Compile Include="Controllers\Msal\MsalJsSignoutController.cs" />
+    <Compile Include="Controllers\Msal\MsalSignedInController.cs" />
+    <Compile Include="Controllers\Msal\MsalRedirectController.cs" />
+    <Compile Include="ContentSecurityPolicy\CspReportLoggingService.cs" />
+    <Compile Include="ContentSecurityPolicy\CspReportController.cs" />
+    <Compile Include="ContentSecurityPolicy\CspReport.cs" />
+    <Compile Include="ContentSecurityPolicy\CspPost.cs" />
+    <Compile Include="ContentSecurityPolicy\IncludeCspHeaderAttribute.cs" />
+    <Compile Include="Bundling\BundleConstants.cs" />
+    <Compile Include="Bundling\BundleDefinition.cs" />
+    <Compile Include="Bundling\ScriptBundleDefinition.cs" />
+    <Compile Include="Bundling\CSSBundleDefinition.cs" />
+    <Compile Include="Bundling\IBundledContent`2.cs" />
+    <Compile Include="Bundling\IBundledScriptContent.cs" />
+    <Compile Include="Bundling\IBundledCSSContent.cs" />
+    <Compile Include="Bundling\BundleFileContent.cs" />
+    <Compile Include="Bundling\BundleTextContent.cs" />
+    <Compile Include="Bundling\BundleScriptModulesContent.cs" />
+    <Compile Include="Bundling\BundleCSSContent.cs" />
+    <Compile Include="Bundling\BundledFilePublisher.cs" />
+    <Compile Include="Bundling\BundleMetadata.cs" />
+    <Compile Include="Bundling\BundleAreaMetadata.cs" />
+    <Compile Include="Bundling\BundleModuleMetadata.cs" />
+    <Compile Include="Bundling\BundleInfo.cs" />
+    <Compile Include="Bundling\BundleModuleInfo.cs" />
+    <Compile Include="Bundling\DiagnoseHelper.cs" />
+    <Compile Include="Bundling\DynamicScriptBundle.cs" />
+    <Compile Include="Bundling\DynamicCSSBundle.cs" />
+    <Compile Include="Bundling\DynamicBundlesCollection.cs" />
+    <Compile Include="Bundling\BundlingHelper.cs" />
+    <Compile Include="Bundling\BundledFile.cs" />
+    <Compile Include="Bundling\BundledScriptFile.cs" />
+    <Compile Include="Bundling\BundledCSSFile.cs" />
+    <Compile Include="Bundling\BundledFileGenerator.cs" />
+    <Compile Include="Bundling\BundlingService.cs" />
+    <Compile Include="Bundling\BundlingController.cs" />
+    <Compile Include="Bundling\VssCSSBundleBuilder.cs" />
+    <Compile Include="Bundling\CSSPluginModuleNameParser.cs" />
+    <Compile Include="Bundling\VssCSSModule.cs" />
+    <Compile Include="Bundling\VssCSSRootModule.cs" />
+    <Compile Include="Bundling\VssScriptFileInfo.cs" />
+    <Compile Include="Bundling\VssScriptsRootModule.cs" />
+    <Compile Include="Bundling\VssScriptsModuleInfo.cs" />
+    <Compile Include="Bundling\VssScriptsModule.cs" />
+    <Compile Include="Bundling\VssScriptsBundle.cs" />
+    <Compile Include="Bundling\PluginModuleLookup.cs" />
+    <Compile Include="Bundling\VssScriptsBundleBuilder.cs" />
+    <Compile Include="Bundling\BundleStream.cs" />
+    <Compile Include="Bundling\IBundleStreamProvider.cs" />
+    <Compile Include="Bundling\BundleFileStreamProvider.cs" />
+    <Compile Include="Bundling\BundleTextStreamProvider.cs" />
+    <Compile Include="Microsoft\TeamFoundation\Framework\Server\RestrictAadServicePrincipalsMvcAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PlatformResources.resx" />
+    <EmbeddedResource Include="PlatformServerResources.resx" />
+    <EmbeddedResource Include="TfsSeedFileResources.resx" />
+    <EmbeddedResource Include="WACommonResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

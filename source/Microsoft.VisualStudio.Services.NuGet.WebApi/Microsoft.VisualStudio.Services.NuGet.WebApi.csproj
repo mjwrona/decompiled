@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.NuGet.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{906A4701-3EA0-4F61-8756-C45AFB407717}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.NuGet.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.NuGet.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGetConstants.cs" />
+    <Compile Include="ResourceIds.cs" />
+    <Compile Include="ServiceIndexExtensions.cs" />
+    <Compile Include="BytesResponse.cs" />
+    <Compile Include="CatalogModel.cs" />
+    <Compile Include="CatalogModelBase.cs" />
+    <Compile Include="CatalogDataPage.cs" />
+    <Compile Include="CatalogPageModel.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="NuGetBatchOperationType.cs" />
+    <Compile Include="PackageVersionsResponse.cs" />
+    <Compile Include="RawPackageIdentity.cs" />
+    <Compile Include="PackageDetailsLinkModel.cs" />
+    <Compile Include="QueryResult.cs" />
+    <Compile Include="QueryResultPackage.cs" />
+    <Compile Include="QueryResultPackageVersion.cs" />
+    <Compile Include="JsonLdUris.cs" />
+    <Compile Include="ServiceEntry.cs" />
+    <Compile Include="ServiceIndex.cs" />
+    <Compile Include="V2FeedPackage.cs" />
+    <Compile Include="VssNuGetServiceTypes.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Types\BatchListData.cs" />
+    <Compile Include="Types\NuGetPackagesBatchRequest.cs" />
+    <Compile Include="Types\V2\NugetV2PackageEntryResponse.cs" />
+    <Compile Include="Types\V2\NugetV2PackageFeedResponse.cs" />
+    <Compile Include="Types\V2\Content.cs" />
+    <Compile Include="Types\V2\Properties.cs" />
+    <Compile Include="Types\API\DropInfo.cs" />
+    <Compile Include="Types\API\NuGetBlobPackageContentStorageInfo.cs" />
+    <Compile Include="Types\API\NuGetDropPackageContentStorageInfo.cs" />
+    <Compile Include="Types\API\NuGetPackageContentStorageInfo.cs" />
+    <Compile Include="Types\API\NuGetPackageContentStorageInfoConverter.cs" />
+    <Compile Include="Types\API\NuGetPackageVersionDeletionState.cs" />
+    <Compile Include="Types\API\NuGetUnknownTypePackageContentStorageInfo.cs" />
+    <Compile Include="Types\API\Package.cs" />
+    <Compile Include="Types\API\PackageExtensions.cs" />
+    <Compile Include="Types\API\NuGetStorageInfo.cs" />
+    <Compile Include="Types\API\PackageContentStorageType.cs" />
+    <Compile Include="Types\API\NuGetRecycleBinPackageVersionDetails.cs" />
+    <Compile Include="Types\API\PackageVersionDetails.cs" />
+    <Compile Include="Generated\NuGetHttpClient.cs" />
+    <Compile Include="Generated\NuGetHttpClientBase.cs" />
+    <Compile Include="Exceptions\ArgumentFormatException.cs" />
+    <Compile Include="Exceptions\ExpiredUrlException.cs" />
+    <Compile Include="Exceptions\InvalidPushRequestException.cs" />
+    <Compile Include="Exceptions\TooManyVersionsException.cs" />
+    <Compile Include="Exceptions\ReadOnlyViewOperationException.cs" />
+    <Compile Include="Exceptions\UnsupportedODataFilterException.cs" />
+    <Compile Include="Exceptions\UnsupportedODataOrderByException.cs" />
+    <Compile Include="Exceptions\ViewOperationException.cs" />
+    <Compile Include="Exceptions\NuGetApiKeyRequiredException.cs" />
+    <Compile Include="Exceptions\HttpMethodNotAllowedException.cs" />
+    <Compile Include="Exceptions\PackageExistsAsDeletedException.cs" />
+    <Compile Include="Exceptions\PackageContentBlobNotFoundException.cs" />
+    <Compile Include="Exceptions\InvalidPackageException.cs" />
+    <Compile Include="Exceptions\PackageNotFoundException.cs" />
+    <Compile Include="Exceptions\PackageSubresourceNotFoundException.cs" />
+    <Compile Include="Exceptions\PathPartMissingException.cs" />
+    <Compile Include="Exceptions\RequiredArgumentMissingException.cs" />
+    <Compile Include="Exceptions\ServiceCanceledDueToClientException.cs" />
+    <Compile Include="Exceptions\TooLargePackagePushException.cs" />
+    <Compile Include="Exceptions\UnsupportedMediaTypeException.cs" />
+    <Compile Include="Exceptions\VssInvalidDataException.cs" />
+    <Compile Include="Exceptions\PackageAlreadyExistsException.cs" />
+    <Compile Include="Converters\NuGetPackagesBatchRequestConverter.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

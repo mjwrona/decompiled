@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Favorites.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86673412-2284-470C-9273-04374C87FC00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Favorites.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Favorites.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContributionConstants.cs" />
+    <Compile Include="OwnerScopeTypes.cs" />
+    <Compile Include="FavoriteRestConstants.cs" />
+    <Compile Include="FavoriteLimits.cs" />
+    <Compile Include="FavoritesSecuredObject.cs" />
+    <Compile Include="FavoritesPrivileges.cs" />
+    <Compile Include="FavoritesPermissions.cs" />
+    <Compile Include="FavoriteStorageScopes.cs" />
+    <Compile Include="ArtifactScope.cs" />
+    <Compile Include="ArtifactProperties.cs" />
+    <Compile Include="FavoriteCreateParameters.cs" />
+    <Compile Include="Favorite.cs" />
+    <Compile Include="FavoriteProvider.cs" />
+    <Compile Include="FavoritesOwnerIdConflictException.cs" />
+    <Compile Include="FavoritesOwnerMismatchException.cs" />
+    <Compile Include="FavoriteWritesDisabledDuringMigrationException.cs" />
+    <Compile Include="UnsupportedScopeTypeException.cs" />
+    <Compile Include="AmbiguousFavoriteDeleteException.cs" />
+    <Compile Include="UnsupportedOwnerScopeTypeException.cs" />
+    <Compile Include="FavoritesScopedQuotaExceededException.cs" />
+    <Compile Include="UnknownOwnerIdentityException.cs" />
+    <Compile Include="FavoriteServiceException.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="FavoritesWebApiResources.cs" />
+    <Compile Include="Clients\FavoriteHttpClient.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FavoritesWebApiResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

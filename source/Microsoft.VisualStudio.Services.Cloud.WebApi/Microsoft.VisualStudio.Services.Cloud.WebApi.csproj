@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Cloud.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{983D6BED-6795-4AEF-9CF1-8FF585B0609E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Cloud.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cloud\WebApi\AadCapResult.cs" />
+    <Compile Include="Cloud\WebApi\DataImportInformation.cs" />
+    <Compile Include="Cloud\WebApi\DataImportPackage.cs" />
+    <Compile Include="Cloud\WebApi\FrameworkDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\DataImportHostMove.cs" />
+    <Compile Include="Cloud\WebApi\DataImportRunType.cs" />
+    <Compile Include="Cloud\WebApi\CreateCollectionDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\DatabaseDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\FileCopyDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\ObtainDatabaseHoldDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\HostMoveDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\OnlinePostHostUpgradeDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\StopHostAfterUpgradeDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\HostUpgradeDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\DataImportDehydrateRequest.cs" />
+    <Compile Include="Cloud\WebApi\RemoveDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\ActivateDataImportRequest.cs" />
+    <Compile Include="Cloud\WebApi\DataImportRequestStatus.cs" />
+    <Compile Include="Cloud\WebApi\DataImportExtensions.cs" />
+    <Compile Include="Cloud\WebApi\IFrameworkDataImportRequestVisitor`1.cs" />
+    <Compile Include="Cloud\WebApi\DataImportQueryHttpClient.cs" />
+    <Compile Include="Cloud\WebApi\ReparentCollectionHttpClient.cs" />
+    <Compile Include="Cloud\WebApi\NewDomainUrlMigrationHttpClient.cs" />
+    <Compile Include="Cloud\WebApi\NewDomainUrlOrchestrationHttpClient.cs" />
+    <Compile Include="Cloud\WebApi\FrameworkNewDomainUrlMigrationRequest.cs" />
+    <Compile Include="Cloud\WebApi\ResetRoutingDataRequest.cs" />
+    <Compile Include="Cloud\WebApi\PlatformNewDomainUrlMigrationRequest.cs" />
+    <Compile Include="Cloud\WebApi\OnboardNewDomainRequest.cs" />
+    <Compile Include="Cloud\WebApi\RevertToOldDomainRequest.cs" />
+    <Compile Include="Cloud\WebApi\ReparentCollectionPropertyConstants.cs" />
+    <Compile Include="Cloud\WebApi\FrameworkServicingOrchestrationRequest.cs" />
+    <Compile Include="Cloud\WebApi\PropertyPair.cs" />
+    <Compile Include="Cloud\WebApi\PropertyCollection.cs" />
+    <Compile Include="Cloud\WebApi\FrameworkReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\ValidateReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\InitializeReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\FinalizeReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\PerformReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\CompleteReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\RollbackReparentCollectionRequest.cs" />
+    <Compile Include="Cloud\WebApi\ReparentCollectionHostAction.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationJsonConverter`1.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationRequest.cs" />
+    <Compile Include="Cloud\WebApi\DataImportEntryAlreadyExistsException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportEntryDoesNotExistException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportInvalidAccountException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportInvalidCollectionException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportRequestOutOfOrderException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportUnexpectedRemovalException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportInProgressException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportFinalizedException.cs" />
+    <Compile Include="Cloud\WebApi\BlobsCopiedExceededThresholdException.cs" />
+    <Compile Include="Cloud\WebApi\InvalidDataImportDacpacException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportRegionMismatchException.cs" />
+    <Compile Include="Cloud\WebApi\ValidationDataModifiedException.cs" />
+    <Compile Include="Cloud\WebApi\InvalidDataImportPropertyValueException.cs" />
+    <Compile Include="Cloud\WebApi\MissingDataImportPropertyException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportConfigurationException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationEntryAlreadyExistsException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationEntryDoesNotExistException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationRequestOutOfOrderException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationRequestInProgressException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationFinalizedException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationBlockedException.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationInvalidRequestException.cs" />
+    <Compile Include="Cloud\WebApi\DataImportOrchestrationHttpClient.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationStatus.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationRequestStatus.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationLocationIds.cs" />
+    <Compile Include="Cloud\WebApi\DataImportQueryResourceIds.cs" />
+    <Compile Include="Cloud\WebApi\NewDomainUrlMigrationResourceIds.cs" />
+    <Compile Include="Cloud\WebApi\AadCapResourceIds.cs" />
+    <Compile Include="Cloud\WebApi\DataImportResources.cs" />
+    <Compile Include="Cloud\WebApi\ServicingOrchestrationResources.cs" />
+    <Compile Include="MSGraph\Client\ErrorResult.cs" />
+    <Compile Include="MSGraph\Client\Error.cs" />
+    <Compile Include="MSGraph\Client\Invitation.cs" />
+    <Compile Include="MSGraph\Client\InvitationResult.cs" />
+    <Compile Include="MSGraph\Client\MicrosoftGraphClientConstants.cs" />
+    <Compile Include="MSGraph\Client\MicrosoftGraphClientException.cs" />
+    <Compile Include="MSGraph\Client\MicrosoftGraphHttpClient.cs" />
+    <Compile Include="Migration\MigrationResourceIds.cs" />
+    <Compile Include="AadCap\WebApi\AadConditionalAccessPolicyHttpClient.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataImportResources.resx" />
+    <EmbeddedResource Include="ServicingOrchestrationResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

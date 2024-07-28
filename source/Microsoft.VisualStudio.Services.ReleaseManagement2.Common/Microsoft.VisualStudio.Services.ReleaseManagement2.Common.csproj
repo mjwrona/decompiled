@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ReleaseManagement2.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4A5ACB0-1542-4BEE-B8DE-779813B49FA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ReleaseManagement2.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ReleaseManagement.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PerformanceDescriptor.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="PerformanceTelemetryService.cs" />
+    <Compile Include="ReleaseManagementFeatureFlags.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityExtensions.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityHelper.cs" />
+    <Compile Include="Security\ReleaseManagementSecurityInfo.cs" />
+    <Compile Include="Registry\RegistryConstants.cs" />
+    <Compile Include="Helpers\FlightAssignmentsHelper.cs" />
+    <Compile Include="Helpers\KpiHelper.cs" />
+    <Compile Include="Helpers\MultiMachineHandler.cs" />
+    <Compile Include="Helpers\MultiplierHelpers.cs" />
+    <Compile Include="Helpers\ParallelExecutionHandlerBase.cs" />
+    <Compile Include="Helpers\NoneExecutionHandler.cs" />
+    <Compile Include="Helpers\ExecutionHandler.cs" />
+    <Compile Include="Helpers\MultiConfigHandler.cs" />
+    <Compile Include="Helpers\ParallelExecutionHandlerFactory.cs" />
+    <Compile Include="Helpers\LicenseHelper.cs" />
+    <Compile Include="Helpers\RestUrlHelper.cs" />
+    <Compile Include="Helpers\RmKpiHelperConstants.cs" />
+    <Compile Include="Helpers\TaskOrchestrationHelper.cs" />
+    <Compile Include="Helpers\VariableResolutionHelper.cs" />
+    <Compile Include="Helpers\ExceptionsUtilities.cs" />
+    <Compile Include="Helpers\RetryExecutor.cs" />
+    <Compile Include="Helpers\RmIdentityHelper.cs" />
+    <Compile Include="Helpers\WebAccessLinks.cs" />
+    <Compile Include="Helpers\WebAccessUrlBuilder.cs" />
+    <Compile Include="Extensions\TaskExtension.cs" />
+    <Compile Include="Extensions\IdentityExtensions.cs" />
+    <Compile Include="Extensions\TeamFoundationRequestContextExtensions.cs" />
+    <Compile Include="Exceptions\ReleaseManagementExternalServiceException.cs" />
+    <Compile Include="Diagnostics\InvalidMultiConfigException.cs" />
+    <Compile Include="Diagnostics\IStopwatch.cs" />
+    <Compile Include="Diagnostics\PlatformStopwatch.cs" />
+    <Compile Include="Diagnostics\ReleaseManagementTimer.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

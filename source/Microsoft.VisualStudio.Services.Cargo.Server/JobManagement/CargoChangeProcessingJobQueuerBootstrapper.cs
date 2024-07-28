@@ -1,0 +1,31 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Cargo.Server.JobManagement.CargoChangeProcessingJobQueuerBootstrapper
+// Assembly: Microsoft.VisualStudio.Services.Cargo.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 148B8823-9815-48AA-B93D-5DED42B9B7A4
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Cargo.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using Microsoft.VisualStudio.Services.Cargo.Server.CommitLog;
+using Microsoft.VisualStudio.Services.Cargo.Server.Constants;
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.BlobPrototype;
+using Microsoft.VisualStudio.Services.Packaging.ServiceShared.BlobPrototype.JobManagement;
+using System.Diagnostics.CodeAnalysis;
+
+
+#nullable enable
+namespace Microsoft.VisualStudio.Services.Cargo.Server.JobManagement
+{
+  [ExcludeFromCodeCoverage]
+  public class CargoChangeProcessingJobQueuerBootstrapper : IBootstrapper<IFeedJobQueuer>
+  {
+    private readonly IVssRequestContext requestContext;
+
+    public CargoChangeProcessingJobQueuerBootstrapper(IVssRequestContext requestContext) => this.requestContext = requestContext;
+
+    public IFeedJobQueuer Bootstrap()
+    {
+      ICommitLog commitLogReader = new CargoCommitLogFacadeBootstrapper(this.requestContext).Bootstrap();
+      return new ChangeProcessingFeedJobQueuerBootstrapper(this.requestContext, CargoJobConstants.ChangeProcessingJobConstants.CargoChangeProcessingJobCreationInfo, (ICommitLogEndpointReader) commitLogReader).Bootstrap();
+    }
+  }
+}

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Server.WebAccess.Agile.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B50A103-B6E0-4752-94D6-6B1465ED4D8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.Agile</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.Agile</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core" />
+    <Reference Include="Microsoft.Azure.Boards.Charts" />
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates" />
+    <Reference Include="Microsoft.Azure.Boards.Settings">
+      <HintPath>lib\Microsoft.Azure.Boards.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Agile.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Agile.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Agile.Web">
+      <HintPath>lib\Microsoft.TeamFoundation.Agile.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Admin" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Work.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.SignalR" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgileAreaModules.cs" />
+    <Compile Include="AgileAreaRegistration.cs" />
+    <Compile Include="AgileConstants.cs" />
+    <Compile Include="AgileHubContributionIds.cs" />
+    <Compile Include="RightPanelExtensionIds.cs" />
+    <Compile Include="BacklogConstants.cs" />
+    <Compile Include="AgileHubServerConstants.cs" />
+    <Compile Include="BoardsHubServerConstants.cs" />
+    <Compile Include="SprintsHubServerConstants.cs" />
+    <Compile Include="DirectoryConstants.cs" />
+    <Compile Include="FavoriteConstants.cs" />
+    <Compile Include="BoardsHubRoutingConstants.cs" />
+    <Compile Include="SprintsHubRoutingConstants.cs" />
+    <Compile Include="SprintsHubBackCompatRoutingConstants.cs" />
+    <Compile Include="BacklogsHubConstants.cs" />
+    <Compile Include="BoardsHubConstants.cs" />
+    <Compile Include="SprintsHubConstants.cs" />
+    <Compile Include="AgileRouteParameters.cs" />
+    <Compile Include="AgileQueryParameters.cs" />
+    <Compile Include="SprintsHubStorageConstants.cs" />
+    <Compile Include="WorkItemsConstants.cs" />
+    <Compile Include="TeamPanelConstants.cs" />
+    <Compile Include="AgileContributions.cs" />
+    <Compile Include="WebAccessAgileFeatureFlags.cs" />
+    <Compile Include="AgileTestConstants.cs" />
+    <Compile Include="AdminWorkController.cs" />
+    <Compile Include="ApiBacklogController.cs" />
+    <Compile Include="BoardDirectoryResources.cs" />
+    <Compile Include="TeamPanelResources.cs" />
+    <Compile Include="IBacklogViewModelProvider.cs" />
+    <Compile Include="BacklogViewModelProvider.cs" />
+    <Compile Include="AgileAreaController.cs" />
+    <Compile Include="AgileTileController.cs" />
+    <Compile Include="ApiBacklogControllerHelper.cs" />
+    <Compile Include="ApiProcessConfigurationController.cs" />
+    <Compile Include="BacklogsBacklogActionHelper.cs" />
+    <Compile Include="BacklogsBoardActionHelper.cs" />
+    <Compile Include="BacklogsController.cs" />
+    <Compile Include="BacklogsControllerHelper.cs" />
+    <Compile Include="BacklogsIterationActionHelper.cs" />
+    <Compile Include="ChartHelper.cs" />
+    <Compile Include="ControlDataHelper.cs" />
+    <Compile Include="JsonExtensions.cs" />
+    <Compile Include="WITExtensions.cs" />
+    <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="CleanupAgileArtifactsJobExtension.cs" />
+    <Compile Include="ProvisionKanbanBoardJobExtension.cs" />
+    <Compile Include="BacklogInvalidContextException.cs" />
+    <Compile Include="TaskBacklogInvalidContextException.cs" />
+    <Compile Include="BoardViewResources.cs" />
+    <Compile Include="AgileAdminResources.cs" />
+    <Compile Include="AgileControlsResources.cs" />
+    <Compile Include="AgileControlsServerResources.cs" />
+    <Compile Include="AgileEngagementServerResources.cs" />
+    <Compile Include="AgileProductBacklogResources.cs" />
+    <Compile Include="AgileHubsSharedResources.cs" />
+    <Compile Include="AgileProductBacklogServerResources.cs" />
+    <Compile Include="AgileNavigationResources.cs" />
+    <Compile Include="AgileResources.cs" />
+    <Compile Include="AgileServerResources.cs" />
+    <Compile Include="AgileSprintPlanningResources.cs" />
+    <Compile Include="AgileSprintPlanningServerResources.cs" />
+    <Compile Include="AgileTaskboardResources.cs" />
+    <Compile Include="AgileTaskboardServerResources.cs" />
+    <Compile Include="AgileViewResources.cs" />
+    <Compile Include="AgileEngagementResources.cs" />
+    <Compile Include="AgileExtensionsDuplicateWorkItem.cs" />
+    <Compile Include="BacklogViewResources.cs" />
+    <Compile Include="BacklogPivotResources.cs" />
+    <Compile Include="CapacityPivotResources.cs" />
+    <Compile Include="DirectoryResources.cs" />
+    <Compile Include="SprintEditorResources.cs" />
+    <Compile Include="SprintsHubResources.cs" />
+    <Compile Include="WorkDetailsPanelResources.cs" />
+    <Compile Include="ColumnPreferences.cs" />
+    <Compile Include="ColumnPreferenceScope.cs" />
+    <Compile Include="JsonColumnConverter.cs" />
+    <Compile Include="JsonConverterColumnConverter.cs" />
+    <Compile Include="IUserSettings.cs" />
+    <Compile Include="UserSettings.cs" />
+    <Compile Include="TeamUserSettings.cs" />
+    <Compile Include="RequestedTeamIterationService.cs" />
+    <Compile Include="LegacyBacklogSettingsExtensions.cs" />
+    <Compile Include="TeamMembershipExpander.cs" />
+    <Compile Include="XmlModelBinder.cs" />
+    <Compile Include="WebServiceHelpers.cs" />
+    <Compile Include="WebServices\ProcessConfigurationService.cs" />
+    <Compile Include="WebServices\ProcessConfigurationService2.cs" />
+    <Compile Include="WebServices\ProcessConfigurationService3.cs" />
+    <Compile Include="WebServices\ProcessConfigurationService4.cs" />
+    <Compile Include="WebServices\ProcessManagementIntegrationService.cs" />
+    <Compile Include="WebServices\TeamConfigurationService.cs" />
+    <Compile Include="WebServices\TeamConfigurationWebServiceUtil.cs" />
+    <Compile Include="WebServices\TeamConfiguration.cs" />
+    <Compile Include="WebServices\TeamSettings.cs" />
+    <Compile Include="ViewModels\AddPanelViewModel.cs" />
+    <Compile Include="ViewModels\AggregatedCapacityDataViewModel.cs" />
+    <Compile Include="ViewModels\AgilePortfolioManagementNotificationViewModel.cs" />
+    <Compile Include="ViewModels\BacklogBoardViewModel.cs" />
+    <Compile Include="ViewModels\BacklogPivot.cs" />
+    <Compile Include="ViewModels\BacklogPivotFiltersViewModel.cs" />
+    <Compile Include="ViewModels\BurndownChartOptionsViewModel.cs" />
+    <Compile Include="ViewModels\CapacityOptionsViewModel.cs" />
+    <Compile Include="ViewModels\ChartOptionsViewModel.cs" />
+    <Compile Include="ViewModels\IterationBacklogOptionsViewModel.cs" />
+    <Compile Include="ViewModels\IterationBacklogViewModel.cs" />
+    <Compile Include="ViewModels\BacklogViewModel.cs" />
+    <Compile Include="ViewModels\CoreBacklogViewModel.cs" />
+    <Compile Include="ViewModels\CumulativeFlowDiagramViewModel.cs" />
+    <Compile Include="ViewModels\EffortDataViewModel.cs" />
+    <Compile Include="ViewModels\ForecastLinesViewModel.cs" />
+    <Compile Include="ViewModels\IterationPivot.cs" />
+    <Compile Include="ViewModels\IterationPivotFiltersViewModel.cs" />
+    <Compile Include="ViewModels\MappingPanelViewModel.cs" />
+    <Compile Include="ViewModels\MruTeamInfo.cs" />
+    <Compile Include="ViewModels\SavedNavigationSettings.cs" />
+    <Compile Include="ViewModels\SprintDatesOptionsViewModel.cs" />
+    <Compile Include="ViewModels\SprintViewViewModel.cs" />
+    <Compile Include="ViewModels\VelocityChartViewModel.cs" />
+    <Compile Include="Service\IRequestedTeamIterationService.cs" />
+    <Compile Include="Serializers\CustomJsonModelBinder`1.cs" />
+    <Compile Include="Controllers\ApiTeamChartController.cs" />
+    <Compile Include="Plugins\Common\Utils\ProjectBacklogPermissionUtils.cs" />
+    <Compile Include="Utility\ApiBacklogDataSource.cs" />
+    <Compile Include="Utility\AgileAdminHelpers.cs" />
+    <Compile Include="Utility\Result.cs" />
+    <Compile Include="Utility\TeamField.cs" />
+    <Compile Include="Utility\TeamFieldValue.cs" />
+    <Compile Include="Utility\AgileUtils.cs" />
+    <Compile Include="Utility\AgileExceptionUtils.cs" />
+    <Compile Include="Utility\RollupUtils.cs" />
+    <Compile Include="Utility\ISettingsUtilities.cs" />
+    <Compile Include="Utility\SettingsUtilities.cs" />
+    <Compile Include="Utility\FilterConstants.cs" />
+    <Compile Include="Utility\KanbanBoardProvisioningUtils.cs" />
+    <Compile Include="Utility\NoContentGutterHelper.cs" />
+    <Compile Include="Utility\QueryUtils.cs" />
+    <Compile Include="Utility\TeamMru.cs" />
+    <Compile Include="Utility\TfsWebContextExtensions.cs" />
+    <Compile Include="Utility\ViewDataConstants.cs" />
+    <Compile Include="Utility\TeamIterationsUtils.cs" />
+    <Compile Include="JobAgentPlugins\JobStepResult.cs" />
+    <Compile Include="JobAgentPlugins\Logic\CleanupDeletedTeamConfigurationJobStep.cs" />
+    <Compile Include="JobAgentPlugins\Logic\BaseJobStep.cs" />
+    <Compile Include="JobAgentPlugins\Logic\DeleteBoardsAndSettingsForDeletedTeamsJobStep.cs" />
+    <Compile Include="JobAgentPlugins\Logic\DeleteBoardsForDeletedBacklogLevelsJobStep.cs" />
+    <Compile Include="JobAgentPlugins\Logic\DeleteBoardsForDeletedBacklogLevelsResult.cs" />
+    <Compile Include="Extensions\AgileSettingsExtensions.cs" />
+    <Compile Include="Extensions\BacklogContextHelpers.cs" />
+    <Compile Include="Extensions\BacklogExtensions.cs" />
+    <Compile Include="Models\ChartOptions.cs" />
+    <Compile Include="Models\ProjectAdminWorkModel.cs" />
+    <Compile Include="Models\AgileInvalidIterationPathException.cs" />
+    <Compile Include="Models\BacklogContextErrorModel.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\CapacityModel.cs" />
+    <Compile Include="Models\BoardDataLimitReachedException.cs" />
+    <Compile Include="Models\AggregatedCapacityLimitExceededException.cs" />
+    <Compile Include="Models\Board.cs" />
+    <Compile Include="Models\BoardFactory.cs" />
+    <Compile Include="Models\BoardModel.cs" />
+    <Compile Include="Models\BoardMember.cs" />
+    <Compile Include="Models\LayoutOptions.cs" />
+    <Compile Include="Models\MemberLimit.cs" />
+    <Compile Include="Models\BoardNode.cs" />
+    <Compile Include="Models\IBoard.cs" />
+    <Compile Include="Models\IBoardMember.cs" />
+    <Compile Include="Models\IBoardNode.cs" />
+    <Compile Include="Models\DimensionLayoutStyleConstants.cs" />
+    <Compile Include="Models\IItem.cs" />
+    <Compile Include="Models\IItemSource.cs" />
+    <Compile Include="Models\FunctionReference.cs" />
+    <Compile Include="Models\BoardFunction.cs" />
+    <Compile Include="Models\FieldOrder.cs" />
+    <Compile Include="Models\FieldOrderData.cs" />
+    <Compile Include="Models\WorkItemSource.cs" />
+    <Compile Include="Models\HierarchyDataReader.cs" />
+    <Compile Include="Models\WorkItemSourceLimitInfo.cs" />
+    <Compile Include="Models\TabContributionsModel.cs" />
+    <Compile Include="Models\NoContentGutterModel.cs" />
+    <Compile Include="Models\NoContentGutterActionModel.cs" />
+    <Compile Include="Models\ProductBacklogGridOptions.cs" />
+    <Compile Include="Models\SettingsErrorModel.cs" />
+    <Compile Include="Models\SprintInformation.cs" />
+    <Compile Include="Models\TaskBoardData.cs" />
+    <Compile Include="Models\AdminWorkModel.cs" />
+    <Compile Include="Models\WorkItemData.cs" />
+    <Compile Include="Models\WorkItemNodes.cs" />
+    <Compile Include="Models\AggregateFieldValues.cs" />
+    <Compile Include="Models\PreviousFieldValues.cs" />
+    <Compile Include="Models\Results\MappingPanelQueryResults.cs" />
+    <Compile Include="Models\Results\ProductBacklogQueryResults.cs" />
+    <Compile Include="Models\GenericBoard\Filters\BoardFilterSettingsManager.cs" />
+    <Compile Include="Hubs\KanbanBoard\IKanbanBoardHubClient.cs" />
+    <Compile Include="Hubs\KanbanBoard\IKanbanBoardHubDispatcher.cs" />
+    <Compile Include="Hubs\KanbanBoard\KanbanBoardHubDispatcher.cs" />
+    <Compile Include="Hubs\KanbanBoard\KanbanBoardHub.cs" />
+    <Compile Include="Hubs\KanbanBoard\KanbanBoardChangeSubscriber.cs" />
+    <Compile Include="Hubs\Common\ParentChangeType.cs" />
+    <Compile Include="Hubs\Common\WorkItemChangedHelper.cs" />
+    <Compile Include="Hubs\Common\WorkItemUpdateEventForExtension.cs" />
+    <Compile Include="Hubs\Common\BacklogsHubDispatcher`1.cs" />
+    <Compile Include="Hubs\Common\IBacklogsHubClient.cs" />
+    <Compile Include="Hubs\Common\IBacklogsHubDispatcher.cs" />
+    <Compile Include="Hubs\Taskboard\ITaskboardHubDispatcher.cs" />
+    <Compile Include="Hubs\Taskboard\ITaskboardHubClient.cs" />
+    <Compile Include="Hubs\Taskboard\TaskboardChangeSubscriber.cs" />
+    <Compile Include="Hubs\Taskboard\TaskboardHubDispatcher.cs" />
+    <Compile Include="Hubs\Taskboard\TaskboardHub.cs" />
+    <Compile Include="Hubs\Taskboard\TaskboardWorkItemUpdateEvent.cs" />
+    <Compile Include="Hubs\Taskboard\TaskboardWorkItemColumnChangedEvent.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AgileAdminResources.resx" />
+    <EmbeddedResource Include="Resources\AgileControlsResources.resx" />
+    <EmbeddedResource Include="Resources\AgileControlsServerResources.resx" />
+    <EmbeddedResource Include="Resources\AgileEngagementResources.resx" />
+    <EmbeddedResource Include="Resources\AgileEngagementServerResources.resx" />
+    <EmbeddedResource Include="Resources\AgileExtensionsDuplicateWorkItem.resx" />
+    <EmbeddedResource Include="Resources\AgileHubsSharedResources.resx" />
+    <EmbeddedResource Include="Resources\AgileNavigationResources.resx" />
+    <EmbeddedResource Include="Resources\AgileProductBacklogResources.resx" />
+    <EmbeddedResource Include="Resources\AgileProductBacklogServerResources.resx" />
+    <EmbeddedResource Include="Resources\AgileResources.resx" />
+    <EmbeddedResource Include="Resources\AgileServerResources.resx" />
+    <EmbeddedResource Include="Resources\AgileSprintPlanningResources.resx" />
+    <EmbeddedResource Include="Resources\AgileSprintPlanningServerResources.resx" />
+    <EmbeddedResource Include="Resources\AgileTaskboardResources.resx" />
+    <EmbeddedResource Include="Resources\AgileTaskboardServerResources.resx" />
+    <EmbeddedResource Include="Resources\AgileViewResources.resx" />
+    <EmbeddedResource Include="Resources\BacklogsHub\BacklogViewResources.resx" />
+    <EmbeddedResource Include="Resources\BoardsHub\BoardDirectoryResources.resx" />
+    <EmbeddedResource Include="Resources\BoardsHub\BoardViewResources.resx" />
+    <EmbeddedResource Include="Resources\SprintsHub\BacklogPivotResources.resx" />
+    <EmbeddedResource Include="Resources\SprintsHub\CapacityPivotResources.resx" />
+    <EmbeddedResource Include="Resources\SprintsHub\DirectoryResources.resx" />
+    <EmbeddedResource Include="Resources\SprintsHub\SprintEditorResources.resx" />
+    <EmbeddedResource Include="Resources\SprintsHub\SprintsHubResources.resx" />
+    <EmbeddedResource Include="Resources\SprintsHub\WorkDetailsPanelResources.resx" />
+    <EmbeddedResource Include="Resources\TeamPanelResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

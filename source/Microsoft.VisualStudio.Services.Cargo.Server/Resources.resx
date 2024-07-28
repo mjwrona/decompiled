@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_CrateVersionHasTooManyLeadingZeroes" xml:space="preserve">
+    <value>Azure Artifacts does not allow more than {0} leading zeroes in {1}.</value>
+  </data>
+  <data name="Error_CrateVersionHasProhibitedCharacters" xml:space="preserve">
+    <value>Crate versions may only contain the following characters: ASCII alphanumerics (a-z, A-Z, 0-9), '-', '+', and '.'.</value>
+  </data>
+  <data name="CrateIdLocation_PublishManifest" xml:space="preserve">
+    <value>the publish manifest</value>
+  </data>
+  <data name="Error_InvalidCrateVersionAtPosition" xml:space="preserve">
+    <value>The crate version '{0}' is invalid at position {1}: {2}</value>
+  </data>
+  <data name="LabelKind_Prerelease" xml:space="preserve">
+    <value>prerelease label</value>
+  </data>
+  <data name="Error_CrateVersionHasTooManyPluses" xml:space="preserve">
+    <value>The '+' character may only be used once, to intoduce the build metadata label.</value>
+  </data>
+  <data name="CrateIdLocation_CargoToml" xml:space="preserve">
+    <value>Cargo.toml</value>
+  </data>
+  <data name="LabelKind_MajorMinorPatch" xml:space="preserve">
+    <value>major, minor, or patch components</value>
+  </data>
+  <data name="Error_IndexRowMissingIdentity" xml:space="preserve">
+    <value>The index row did not contain the package name and/or version.</value>
+  </data>
+  <data name="Error_MismatchedCrateName" xml:space="preserve">
+    <value>Expected the crate name to be {0}, but in {1}, it was {2}</value>
+  </data>
+  <data name="Error_CrateNameHasReservedName" xml:space="preserve">
+    <value>The name matches a reserved name.</value>
+  </data>
+  <data name="Error_UpstreamFailure" xml:space="preserve">
+    <value>Failed to retrieve data from the upstream package source '{0}': {1}</value>
+  </data>
+  <data name="Error_CargoTomlMissingElement" xml:space="preserve">
+    <value>The Cargo.toml in the .crate file is invalid: The required table or value '{0}' is missing.</value>
+  </data>
+  <data name="Error_IngestionManifestNoName" xml:space="preserve">
+    <value>The upload JSON did not contain the crate name</value>
+  </data>
+  <data name="Error_CrateMissingRequiredFile" xml:space="preserve">
+    <value>The .crate file does not contain {0}.</value>
+  </data>
+  <data name="Error_CargoTomlInvalidToml" xml:space="preserve">
+    <value>The Cargo.toml in the .crate file could not be parsed: {0}</value>
+  </data>
+  <data name="Error_IngestionManifestNoVersion" xml:space="preserve">
+    <value>The upload JSON did not contain the crate version</value>
+  </data>
+  <data name="Error_CrateVersionHasEmptySegment" xml:space="preserve">
+    <value>Crate versions may not contain empty segments.</value>
+  </data>
+  <data name="Error_CargoTomlWrongTypeElement" xml:space="preserve">
+    <value>The Cargo.toml in the .crate file is invalid: The table or value '{0}' had an unexpected type.</value>
+  </data>
+  <data name="Error_CrateNameHasInvalidCharacter" xml:space="preserve">
+    <value>Crate names may only contain letters, digits, '-', and '_' characters.</value>
+  </data>
+  <data name="Error_CrateVersionHasTooManyChars" xml:space="preserve">
+    <value>Azure Artifacts does not allow crate versions with more than {0} characters.</value>
+  </data>
+  <data name="Error_CrateVersionHasTooBigNumber" xml:space="preserve">
+    <value>Azure Artifacts does not allow numeric values greater than {0} in {1}.</value>
+  </data>
+  <data name="Error_PackageVersionNotFound" xml:space="preserve">
+    <value>The package '{0}' with version '{1}' was not found</value>
+  </data>
+  <data name="Error_MismatchedCrateVersion" xml:space="preserve">
+    <value>Expected the crate version to be {0}, but in {1}, it was {2}</value>
+  </data>
+  <data name="Error_UpstreamIngestion_CannotSkipIngestion" xml:space="preserve">
+    <value>For security reasons, an upstream package cannot be downloaded from a browser. Please use an official Cargo client.</value>
+  </data>
+  <data name="Error_CrateVersionHasUnparseableNumber" xml:space="preserve">
+    <value>Could not parse a numeric segment as a 64-bit unsigned decimal integer</value>
+  </data>
+  <data name="Error_PackageDoesNotMatchHash" xml:space="preserve">
+    <value>The .crate file downloaded from the upstream does not match the hash provided in the index.</value>
+  </data>
+  <data name="Error_CrateVersionHasLeadingZeroes" xml:space="preserve">
+    <value>Leading zeroes are not allowed in {0}.</value>
+  </data>
+  <data name="Error_CrateVersionHasWrongNumberOrTypeOfMajorMinorPatchSegments" xml:space="preserve">
+    <value>Crate versions must begin with exactly 3 numeric segments</value>
+  </data>
+  <data name="Error_CrateNameHasNonAsciiCharacter" xml:space="preserve">
+    <value>Crate names may only contain ASCII characters</value>
+  </data>
+  <data name="LabelKind_BuildMetadata" xml:space="preserve">
+    <value>build metadata label</value>
+  </data>
+  <data name="Error_CrateNameHasTooManyChars" xml:space="preserve">
+    <value>Azure Artifacts does not allow crate names with more than {0} characters.</value>
+  </data>
+  <data name="Error_CrateVersionUnparseable" xml:space="preserve">
+    <value>The crate version '{0}' is invalid: Crate versions must conform to the Semantic Versioning 2.0.0 specification.'</value>
+  </data>
+  <data name="Error_ManifestLengthExceeded" xml:space="preserve">
+    <value>The ingestion manifest JSON is too large. The maximum size is {0} bytes.</value>
+  </data>
+  <data name="Error_UpstreamReturnedNotFound" xml:space="preserve">
+    <value>The upstream URL '{0}' returned a "Not Found" response</value>
+  </data>
+  <data name="Error_IngestionManifestNull" xml:space="preserve">
+    <value>Upload JSON parsed as a 'null' JSON value</value>
+  </data>
+  <data name="Error_CrateNameHasNonLetterFirstCharacter" xml:space="preserve">
+    <value>Crate names must start with a letter</value>
+  </data>
+  <data name="CrateIdLocation_UpstreamIndexRow" xml:space="preserve">
+    <value>the index entry in the upstream</value>
+  </data>
+  <data name="Error_InvalidCrateNameAtPosition" xml:space="preserve">
+    <value>The crate name '{0}' is invalid at position {1}: {2}</value>
+  </data>
+</root>

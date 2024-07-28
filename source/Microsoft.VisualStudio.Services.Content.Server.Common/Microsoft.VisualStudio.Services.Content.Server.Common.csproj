@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Content.Server.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08823FA2-37CD-4AA4-BCC4-A60BF4CD43F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Content.Server.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlobStore\Common\ArtifactScopeType.cs" />
+    <Compile Include="BlobStore\Common\PackageAccountingConstants.cs" />
+    <Compile Include="BlobStore\Common\ArtifactScopeConstants.cs" />
+    <Compile Include="BlobStore\Common\ArtifactScopeHelper.cs" />
+    <Compile Include="Content\Common\BuildCacheConstants.cs" />
+    <Compile Include="Content\Common\IRandomProbabilityGenerator.cs" />
+    <Compile Include="Content\Common\RandomProbabilityGenerator.cs" />
+    <Compile Include="Content\Common\ArtifactsPartitionedJobBase.cs" />
+    <Compile Include="Content\Common\ArtifactsPartitionedJobSettings.cs" />
+    <Compile Include="Content\Common\ArtifactsPartitionedWaitedJob.cs" />
+    <Compile Include="Content\Common\JobHelper.cs" />
+    <Compile Include="Content\Common\JobParameters.cs" />
+    <Compile Include="Content\Common\MultiJobHelper.cs" />
+    <Compile Include="Content\Server\Common\ArtifactsControllerBase.cs" />
+    <Compile Include="Content\Server\Common\AsyncQueue`1.cs" />
+    <Compile Include="Content\Server\Common\AzureStorageConstants.cs" />
+    <Compile Include="Content\Server\Common\CancellationTokenHelper.cs" />
+    <Compile Include="Content\Server\Common\UtcClockService.cs" />
+    <Compile Include="Content\Server\Common\IClockService.cs" />
+    <Compile Include="Content\Server\Common\CompletedTask.cs" />
+    <Compile Include="Content\Server\Common\ArtifactHttpRequestMessageExtensions.cs" />
+    <Compile Include="Content\Server\Common\ExportFeedInfo.cs" />
+    <Compile Include="Content\Server\Common\IExceptionToStatusCodeMapper.cs" />
+    <Compile Include="Content\Server\Common\IHttpClientSingleton.cs" />
+    <Compile Include="Content\Server\Common\HttpClientSingleton.cs" />
+    <Compile Include="Content\Server\Common\LogStorageExceptionFilterAttribute.cs" />
+    <Compile Include="Content\Server\Common\Resources.cs" />
+    <Compile Include="Content\Server\Common\SharedFeatureEnabledConstants.cs" />
+    <Compile Include="Content\Server\Common\CpuPerformanceCounterProvider`1.cs" />
+    <Compile Include="Content\Server\Common\NoCpuSampleProvider.cs" />
+    <Compile Include="Content\Server\Common\CpuThrottlingException.cs" />
+    <Compile Include="Content\Server\Common\ICpuPerformanceCounterProvider.cs" />
+    <Compile Include="Content\Server\Common\DoubleExponentialCpuSmoothingProvider.cs" />
+    <Compile Include="Content\Server\Common\IConcurrencyLock.cs" />
+    <Compile Include="Content\Server\Common\NoLock.cs" />
+    <Compile Include="Content\Server\Common\SingleConcurrencyLock.cs" />
+    <Compile Include="Content\Server\Common\JAConcurrencyLock.cs" />
+    <Compile Include="Content\Server\Common\ITestDataAware.cs" />
+    <Compile Include="Content\Server\Common\Result`2.cs" />
+    <Compile Include="Content\Server\Common\HistogramHelper.cs" />
+    <Compile Include="Content\Server\Common\HttpResponseMessageExtensions.cs" />
+    <Compile Include="Content\Server\Common\IArtifactService.cs" />
+    <Compile Include="Content\Server\Common\PerfCounterConfiguration.cs" />
+    <Compile Include="Content\Server\Common\ConsistentHashShardManager`1.cs" />
+    <Compile Include="Content\Server\Common\ArtifactsServiceBase.cs" />
+    <Compile Include="Content\Server\Common\ISecretItemChangeListener.cs" />
+    <Compile Include="Content\Server\Common\IJobCheckpoint.cs" />
+    <Compile Include="Content\Server\Common\JobResultCheckpointManager`1.cs" />
+    <Compile Include="Content\Server\Common\IPhysicalNode.cs" />
+    <Compile Include="Content\Server\Common\IShardManager`1.cs" />
+    <Compile Include="Content\Server\Common\LinearShardManager`1.cs" />
+    <Compile Include="Content\Server\Common\MigratedKeyRange`1.cs" />
+    <Compile Include="Content\Server\Common\VirtualNodeContext`1.cs" />
+    <Compile Include="Content\Server\Common\PhysicalNodeContext`2.cs" />
+    <Compile Include="Content\Server\Common\VirtualNode`1.cs" />
+    <Compile Include="Content\Server\Common\VirtualNodeContextWithKeys`2.cs" />
+    <Compile Include="Content\Server\Common\StrongBoxConnectionString.cs" />
+    <Compile Include="Content\Server\Common\StrongBoxConnectionStringKeyComparer.cs" />
+    <Compile Include="Content\Server\Common\StrongBoxItemChangeHandler.cs" />
+    <Compile Include="Content\Server\Common\TaskCoordinator`1.cs" />
+    <Compile Include="Content\Server\Common\TeamFoundationRequestContextExtensions.cs" />
+    <Compile Include="Content\Server\Common\ThrottleInfo.cs" />
+    <Compile Include="Content\Server\Common\ThrottleHelper.cs" />
+    <Compile Include="Content\Server\Common\ContentLengthThrottleHelper.cs" />
+    <Compile Include="Content\Server\Common\CpuThrottleHelper.cs" />
+    <Compile Include="Content\Server\Common\CpuThrottlingActionFilterAttribute.cs" />
+    <Compile Include="Content\Server\Common\MaxContentLengthActionFilterAttribute.cs" />
+    <Compile Include="Content\Server\Common\ControllerMethodTraceFilterAttribute.cs" />
+    <Compile Include="Content\Server\Common\EnterLeaveTracePoint.cs" />
+    <Compile Include="Content\Server\Common\ServiceSharedTraceExtensions.cs" />
+    <Compile Include="Content\Server\Common\SetActivityLogAnonymousIdentifierAttribute.cs" />
+    <Compile Include="Content\Server\Common\SingleLocationTracePoint.cs" />
+    <Compile Include="Content\Server\Common\TraceFilterWithExceptionAttribute.cs" />
+    <Compile Include="Content\Server\Common\TraceData.cs" />
+    <Compile Include="Content\Server\Common\Offset.cs" />
+    <Compile Include="Content\Server\Common\ContentTracePoints.cs" />
+    <Compile Include="Content\Server\Common\Tracer.cs" />
+    <Compile Include="Content\Server\Common\TracerExtension.cs" />
+    <Compile Include="Content\Server\Common\VssRequestContextFork.cs" />
+    <Compile Include="Content\Server\Common\VssRequestPump.cs" />
+    <Compile Include="Content\Server\Common\ShardManager\ShardingConstants.cs" />
+    <Compile Include="Content\Server\Common\ShardManager\ShardingManagerConstants.cs" />
+    <Compile Include="Content\Server\Common\Migration\ParallelHostMigrationConfig.cs" />
+    <Compile Include="Content\Server\Common\Migration\IllegalHostMigrationSettingException.cs" />
+    <Compile Include="Content\Server\Common\Migration\IServiceHostAccess.cs" />
+    <Compile Include="Content\Server\Common\Migration\RequestContextBasedServiceHostAccess.cs" />
+    <Compile Include="Content\Server\Common\Migration\HostMigrationConfigManager.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\InvalidPartitionException.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\AutoJobFanoutEngine.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\IAutoJobFanoutEngine.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\ArtifactReservedJobIds.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\JobFanoutSettings.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\JobFanoutInfo.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\IJobParallelismProvider.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\RegistryBasedJobParallelismProvider.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\InvalidJobConfigurationException.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\InvalidPartitionSizeException.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\DynamicPartitionInfo.cs" />
+    <Compile Include="Content\Server\Common\JobFramework\JobConfig.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Server\Common\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

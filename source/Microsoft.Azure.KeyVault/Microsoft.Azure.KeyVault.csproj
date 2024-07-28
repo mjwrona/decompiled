@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.KeyVault.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BDA5870-0B0A-449A-8EF2-48F183036036}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.KeyVault</AssemblyName>
+    <ApplicationVersion>3.0.5.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure.KeyVault</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Rest.ClientRuntime">
+      <HintPath>lib\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure">
+      <HintPath>lib\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customized\Authentication\HttpBearerChallenge.cs" />
+    <Compile Include="Customized\Authentication\HttpBearerChallengeCache.cs" />
+    <Compile Include="Customized\Authentication\KeyVaultCredential.cs" />
+    <Compile Include="Generated\IKeyVaultClient.cs" />
+    <Compile Include="Generated\KeyVaultClient.cs" />
+    <Compile Include="Generated\KeyVaultClientExtensions.cs" />
+    <Compile Include="Customized\ObjectIdentifier.cs" />
+    <Compile Include="Customized\KeyIdentifier.cs" />
+    <Compile Include="Customized\SecretIdentifier.cs" />
+    <Compile Include="Customized\DeletedKeyIdentifier.cs" />
+    <Compile Include="Customized\DeletedSecretIdentifier.cs" />
+    <Compile Include="Customized\CertificateIdentifier.cs" />
+    <Compile Include="Customized\DeletedCertificateIdentifier.cs" />
+    <Compile Include="Customized\CertificateOperationIdentifier.cs" />
+    <Compile Include="Customized\CertificateIssuerIdentifier.cs" />
+    <Compile Include="Customized\StorageAccountIdentifier.cs" />
+    <Compile Include="Customized\SasDefinitionIdentifier.cs" />
+    <Compile Include="Customized\UriExtensions.cs" />
+    <Compile Include="Generated\SdkInfo_KeyVaultClient.cs" />
+    <Compile Include="Generated\Models\CertificateBundle.cs" />
+    <Compile Include="Customized\CertificateBundle.cs" />
+    <Compile Include="Generated\Models\CertificateItem.cs" />
+    <Compile Include="Generated\Models\CertificateOperation.cs" />
+    <Compile Include="Generated\Models\DeletedCertificateBundle.cs" />
+    <Compile Include="Generated\Models\DeletedCertificateItem.cs" />
+    <Compile Include="Generated\Models\DeletedKeyBundle.cs" />
+    <Compile Include="Generated\Models\DeletedKeyItem.cs" />
+    <Compile Include="Generated\Models\DeletedSecretBundle.cs" />
+    <Compile Include="Generated\Models\DeletedSecretItem.cs" />
+    <Compile Include="Generated\Models\IssuerBundle.cs" />
+    <Compile Include="Generated\Models\KeyBundle.cs" />
+    <Compile Include="Generated\Models\KeyItem.cs" />
+    <Compile Include="Customized\NewKeyParameters.cs" />
+    <Compile Include="Generated\Models\SasDefinitionItem.cs" />
+    <Compile Include="Generated\Models\SecretBundle.cs" />
+    <Compile Include="Generated\Models\SecretItem.cs" />
+    <Compile Include="Generated\Models\StorageAccountItem.cs" />
+    <Compile Include="Generated\Models\Action.cs" />
+    <Compile Include="Customized\ActionType.cs" />
+    <Compile Include="Generated\Models\ActionType.cs" />
+    <Compile Include="Generated\Models\AdministratorDetails.cs" />
+    <Compile Include="Generated\Models\Attributes.cs" />
+    <Compile Include="Generated\Models\BackupCertificateResult.cs" />
+    <Compile Include="Generated\Models\BackupKeyResult.cs" />
+    <Compile Include="Generated\Models\BackupSecretResult.cs" />
+    <Compile Include="Generated\Models\BackupStorageResult.cs" />
+    <Compile Include="Generated\Models\CertificateAttributes.cs" />
+    <Compile Include="Generated\Models\CertificateCreateParameters.cs" />
+    <Compile Include="Generated\Models\CertificateImportParameters.cs" />
+    <Compile Include="Generated\Models\CertificateIssuerItem.cs" />
+    <Compile Include="Generated\Models\CertificateIssuerSetParameters.cs" />
+    <Compile Include="Generated\Models\CertificateIssuerUpdateParameters.cs" />
+    <Compile Include="Generated\Models\CertificateMergeParameters.cs" />
+    <Compile Include="Generated\Models\CertificateOperationUpdateParameter.cs" />
+    <Compile Include="Generated\Models\CertificatePolicy.cs" />
+    <Compile Include="Generated\Models\CertificateRestoreParameters.cs" />
+    <Compile Include="Generated\Models\CertificateUpdateParameters.cs" />
+    <Compile Include="Generated\Models\Contact.cs" />
+    <Compile Include="Generated\Models\Contacts.cs" />
+    <Compile Include="Generated\Models\DeletedSasDefinitionBundle.cs" />
+    <Compile Include="Generated\Models\DeletedSasDefinitionItem.cs" />
+    <Compile Include="Generated\Models\DeletedStorageAccountItem.cs" />
+    <Compile Include="Generated\Models\DeletedStorageBundle.cs" />
+    <Compile Include="Generated\Models\DeletionRecoveryLevel.cs" />
+    <Compile Include="Generated\Models\Error.cs" />
+    <Compile Include="Generated\Models\IssuerAttributes.cs" />
+    <Compile Include="Generated\Models\IssuerCredentials.cs" />
+    <Compile Include="Generated\Models\IssuerParameters.cs" />
+    <Compile Include="Generated\Models\KeyAttributes.cs" />
+    <Compile Include="Generated\Models\KeyCreateParameters.cs" />
+    <Compile Include="Generated\Models\KeyImportParameters.cs" />
+    <Compile Include="Generated\Models\KeyOperationResult.cs" />
+    <Compile Include="Generated\Models\KeyOperationsParameters.cs" />
+    <Compile Include="Generated\Models\KeyProperties.cs" />
+    <Compile Include="Generated\Models\KeyRestoreParameters.cs" />
+    <Compile Include="Generated\Models\KeySignParameters.cs" />
+    <Compile Include="Generated\Models\KeyUpdateParameters.cs" />
+    <Compile Include="Generated\Models\KeyUsageType.cs" />
+    <Compile Include="Generated\Models\KeyVaultError.cs" />
+    <Compile Include="Generated\Models\KeyVaultErrorException.cs" />
+    <Compile Include="Generated\Models\KeyVerifyParameters.cs" />
+    <Compile Include="Generated\Models\KeyVerifyResult.cs" />
+    <Compile Include="Generated\Models\LifetimeAction.cs" />
+    <Compile Include="Generated\Models\OrganizationDetails.cs" />
+    <Compile Include="Generated\Models\Page.cs" />
+    <Compile Include="Generated\Models\PendingCertificateSigningRequestResult.cs" />
+    <Compile Include="Generated\Models\SasDefinitionAttributes.cs" />
+    <Compile Include="Generated\Models\SasDefinitionBundle.cs" />
+    <Compile Include="Generated\Models\SasDefinitionCreateParameters.cs" />
+    <Compile Include="Generated\Models\SasDefinitionUpdateParameters.cs" />
+    <Compile Include="Generated\Models\SasTokenType.cs" />
+    <Compile Include="Generated\Models\SecretAttributes.cs" />
+    <Compile Include="Generated\Models\SecretProperties.cs" />
+    <Compile Include="Generated\Models\SecretRestoreParameters.cs" />
+    <Compile Include="Generated\Models\SecretSetParameters.cs" />
+    <Compile Include="Generated\Models\SecretUpdateParameters.cs" />
+    <Compile Include="Generated\Models\StorageAccountAttributes.cs" />
+    <Compile Include="Generated\Models\StorageAccountCreateParameters.cs" />
+    <Compile Include="Generated\Models\StorageAccountRegenerteKeyParameters.cs" />
+    <Compile Include="Generated\Models\StorageAccountUpdateParameters.cs" />
+    <Compile Include="Generated\Models\StorageBundle.cs" />
+    <Compile Include="Generated\Models\StorageRestoreParameters.cs" />
+    <Compile Include="Generated\Models\SubjectAlternativeNames.cs" />
+    <Compile Include="Generated\Models\Trigger.cs" />
+    <Compile Include="Generated\Models\X509CertificateProperties.cs" />
+    <Compile Include="Customized\Authentication\ChallengeCacheHandler.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Orchestration.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{923B19B4-A01B-4C50-97A2-9998464B86F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Orchestration</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Orchestration</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImpromptuInterface">
+      <HintPath>lib\ImpromptuInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityDispatcherTypeAttribute.cs" />
+    <Compile Include="CompressionSettings.cs" />
+    <Compile Include="CompressionStyle.cs" />
+    <Compile Include="DefaultObjectCreator`1.cs" />
+    <Compile Include="FrameworkConstants.cs" />
+    <Compile Include="IOrchestrationTracer.cs" />
+    <Compile Include="ITaskActivityInvoker.cs" />
+    <Compile Include="JsonCreationConverter`1.cs" />
+    <Compile Include="NameValueObjectCreator`1.cs" />
+    <Compile Include="NameVersionObjectManager`1.cs" />
+    <Compile Include="NonDeterministicOrchestrationException.cs" />
+    <Compile Include="OrchestrationClock.cs" />
+    <Compile Include="OrchestrationContextImpl.cs" />
+    <Compile Include="OrchestrationException.cs" />
+    <Compile Include="OrchestrationFeatureFlags.cs" />
+    <Compile Include="OrchestrationRuntimeResult.cs" />
+    <Compile Include="OrchestrationRuntimeState.cs" />
+    <Compile Include="OrchestrationRuntimeStateDump.cs" />
+    <Compile Include="OrchestrationRuntime.cs" />
+    <Compile Include="OrchestrationSerializer.cs" />
+    <Compile Include="OrchestrationState.cs" />
+    <Compile Include="OrchestrationStatus.cs" />
+    <Compile Include="ParentInstance.cs" />
+    <Compile Include="ReflectionBasedTaskActivity.cs" />
+    <Compile Include="INameVersionInfo.cs" />
+    <Compile Include="NameVersionHelper.cs" />
+    <Compile Include="ObjectCreator`1.cs" />
+    <Compile Include="OrchestrationContext.cs" />
+    <Compile Include="OrchestrationFailureException.cs" />
+    <Compile Include="OrchestrationInstance.cs" />
+    <Compile Include="RetryInterceptor`1.cs" />
+    <Compile Include="RetryOptions.cs" />
+    <Compile Include="RetryProxy`1.cs" />
+    <Compile Include="ScheduleProxy.cs" />
+    <Compile Include="SingletonTaskActivityInvoker`1.cs" />
+    <Compile Include="SubOrchestrationFailedException.cs" />
+    <Compile Include="TaskActivity.cs" />
+    <Compile Include="AsyncTaskActivity`2.cs" />
+    <Compile Include="TaskActivity`2.cs" />
+    <Compile Include="TaskContext.cs" />
+    <Compile Include="TaskFailedExceptionDeserializationException.cs" />
+    <Compile Include="TaskFailedException.cs" />
+    <Compile Include="TaskFailureException.cs" />
+    <Compile Include="TaskMessage.cs" />
+    <Compile Include="TaskOrchestration.cs" />
+    <Compile Include="TaskOrchestration`2.cs" />
+    <Compile Include="TaskOrchestration`4.cs" />
+    <Compile Include="TaskOrchestrationExecutor.cs" />
+    <Compile Include="TypeMissingException.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Tracing\OrchestrationTraceSource.cs" />
+    <Compile Include="Tracing\TraceExtensions.cs" />
+    <Compile Include="Async\CurrentThreadTaskScheduler.cs" />
+    <Compile Include="Async\TaskSchedulerExtensions.cs" />
+    <Compile Include="TaskActivityDispatcherSharding\CompositeActivityShardLocator.cs" />
+    <Compile Include="TaskActivityDispatcherSharding\IActivityShardKey.cs" />
+    <Compile Include="TaskActivityDispatcherSharding\IActivityShardLocator.cs" />
+    <Compile Include="TaskActivityDispatcherSharding\ActivityShardLocatorRandom.cs" />
+    <Compile Include="History\ContinueAsNewEvent.cs" />
+    <Compile Include="History\EventRaisedEvent.cs" />
+    <Compile Include="History\EventType.cs" />
+    <Compile Include="History\ExecutionCompletedEvent.cs" />
+    <Compile Include="History\ExecutionStartedEvent.cs" />
+    <Compile Include="History\ExecutionTerminatedEvent.cs" />
+    <Compile Include="History\GenericEvent.cs" />
+    <Compile Include="History\HistoryEvent.cs" />
+    <Compile Include="History\HistoryEventJsonConverter.cs" />
+    <Compile Include="History\OrchestratorCompletedEvent.cs" />
+    <Compile Include="History\OrchestratorStartedEvent.cs" />
+    <Compile Include="History\SubOrchestrationInstanceCompletedEvent.cs" />
+    <Compile Include="History\SubOrchestrationInstanceCreatedEvent.cs" />
+    <Compile Include="History\SubOrchestrationInstanceFailedEvent.cs" />
+    <Compile Include="History\TaskCompletedEvent.cs" />
+    <Compile Include="History\TaskFailedEvent.cs" />
+    <Compile Include="History\TaskScheduledEvent.cs" />
+    <Compile Include="History\TimerCreatedEvent.cs" />
+    <Compile Include="History\TimerFiredEvent.cs" />
+    <Compile Include="Command\CreateSubOrchestrationAction.cs" />
+    <Compile Include="Command\CreateTimerOrchestratorAction.cs" />
+    <Compile Include="Command\OrchestrationCompleteOrchestratorAction.cs" />
+    <Compile Include="Command\OrchestratorAction.cs" />
+    <Compile Include="Command\OrchestrationActionConverter.cs" />
+    <Compile Include="Command\OrchestratorActionType.cs" />
+    <Compile Include="Command\ScheduleTaskOrchestratorAction.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

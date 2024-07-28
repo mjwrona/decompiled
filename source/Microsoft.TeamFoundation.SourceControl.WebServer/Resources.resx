@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FileDiffsInvalidFileParamsInput" xml:space="preserve">
+    <value>Invalid number of file diffs requested. Number of file diffs requested must be between 1 and {0}.</value>
+  </data>
+  <data name="InvalidGitStatusStateValue" xml:space="preserve">
+    <value>Invalid value for GitStatusState.</value>
+  </data>
+  <data name="ChangesetsAscendingOrderById" xml:space="preserve">
+    <value>ID asc</value>
+  </data>
+  <data name="SvgSanitizeLoadError" xml:space="preserve">
+    <value>Unexpected error occured while loading the svg for sanitization.</value>
+  </data>
+  <data name="InvalidQueryParam" xml:space="preserve">
+    <value>{0} is not a valid value for {1}. Try one of: {2}</value>
+  </data>
+  <data name="InvalidPullRequestQueryTooManyQueries" xml:space="preserve">
+    <value>Number of queries must be between 1 and {0}</value>
+  </data>
+  <data name="MustAcceptZip" xml:space="preserve">
+    <value>Accept header must specify application/zip.</value>
+  </data>
+  <data name="WebEditDisabled" xml:space="preserve">
+    <value>Your administrator has disabled web editing for this repository. You cannot add, delete, rename, or edit files via the web. Make your changes locally and then check them in.</value>
+  </data>
+  <data name="ZipFileExtension" xml:space="preserve">
+    <value>.zip</value>
+  </data>
+  <data name="ItemExistsException" xml:space="preserve">
+    <value>The item {0} already exists. </value>
+  </data>
+  <data name="ErrorItemPathWithRecursion" xml:space="preserve">
+    <value>Cannot specify a "recursionLevel" other than "None" when providing a single item "path". Use the "scopePath" query parameter filter instead to get a collection of items.</value>
+  </data>
+  <data name="CrossCollectionMergeBaseUnsupported" xml:space="preserve">
+    <value>Cross collection merge base calculations are currently unsupported.</value>
+  </data>
+  <data name="InvalidPullRequestDescription" xml:space="preserve">
+    <value>Invalid pull request description.</value>
+  </data>
+  <data name="RepositoryTypeNotSuppported" xml:space="preserve">
+    <value>The repository type '{0}' is not supported.</value>
+  </data>
+  <data name="FileDiffsCriteriaArgumentException" xml:space="preserve">
+    <value>FileDiffsCriteria cannot be null.</value>
+  </data>
+  <data name="RepositoryNameRequired" xml:space="preserve">
+    <value>A valid repository name is required.</value>
+  </data>
+  <data name="GitRefFavoriteInvalidType" xml:space="preserve">
+    <value>Invalid favorite type. Must be one of ({0}).</value>
+  </data>
+  <data name="DestroyedFileContentUnavailableException" xml:space="preserve">
+    <value>TF14124: The content for changeset {0} of the file '{1}' was destroyed. Please try again using a later version of this item.</value>
+  </data>
+  <data name="ChangesetRangeTooLarge" xml:space="preserve">
+    <value>Changeset range for baseChangeset:{0} to targetChangeset:{1} exceeds the limit of {2} changesets.</value>
+  </data>
+  <data name="InvalidLatestVersion" xml:space="preserve">
+    <value>Latest version error</value>
+  </data>
+  <data name="ErrorTfvcBranchNotFound" xml:space="preserve">
+    <value>The branch object {0} does not exist on the server, or you do not have permission to access it.</value>
+  </data>
+  <data name="AllChangesetChanges" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ErrorCommitNotFound" xml:space="preserve">
+    <value>Could not find commit "{0}" in the {1} repository.</value>
+  </data>
+  <data name="ErrorItemAndScopePaths" xml:space="preserve">
+    <value>Cannot specify an item "path" as well as "scopePath". Provide "path" to get a single item, or provide "scopePath" to get a collection of items.</value>
+  </data>
+  <data name="ErrorChangesetsNotSpecified" xml:space="preserve">
+    <value>Bad Parameters. The list of changesetIds cannot be null or empty.</value>
+  </data>
+  <data name="PullRequestTargetEqualSource" xml:space="preserve">
+    <value>A source and a target reference cannot be the same.</value>
+  </data>
+  <data name="ItemPath" xml:space="preserve">
+    <value>Item Path</value>
+  </data>
+  <data name="TreeDiffBaseTargetNotSpecified" xml:space="preserve">
+    <value>Specify the object ids for the base and target trees or commits. </value>
+  </data>
+  <data name="MismatchRepositoryId" xml:space="preserve">
+    <value>The repository ID in the pull request doesn't match the one in the URI.</value>
+  </data>
+  <data name="InvalidPullRequestMergeStatusUpdate" xml:space="preserve">
+    <value>You can only update the merge status to Queued.</value>
+  </data>
+  <data name="ContinuationTokenForBlobScopeNotSupported" xml:space="preserve">
+    <value>Continuation token is not applicable when the scope path is a blob. </value>
+  </data>
+  <data name="PullRequestCompletionOptionsTooLong" xml:space="preserve">
+    <value>Completion options have exceeded the maximum encoded length ({0}/{1}).</value>
+  </data>
+  <data name="ChangesetIdNotSpecified" xml:space="preserve">
+    <value>Must specify a valid Changeset ID</value>
+  </data>
+  <data name="UnsupportedRepoChangeType" xml:space="preserve">
+    <value>The repository change is not supported.</value>
+  </data>
+  <data name="ErrorBranchAndCommit" xml:space="preserve">
+    <value>Cannot enter both a branch name and commit ID.</value>
+  </data>
+  <data name="InvalidPullRequestTitle" xml:space="preserve">
+    <value>Invalid pull request title.</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Not found</value>
+  </data>
+  <data name="ErrorInvalidFromDateFormat" xml:space="preserve">
+    <value>Invalid date format for "From" date. Enter date format like '{0}'.</value>
+  </data>
+  <data name="FileDiffsMissingPath" xml:space="preserve">
+    <value>Invalid file diff requested. At least Path or OriginalPath must be provided for each file to compare.</value>
+  </data>
+  <data name="PullRequestStatusMalformed" xml:space="preserve">
+    <value>The pull request status payload was malformed.</value>
+  </data>
+  <data name="RequestProjectMismatch" xml:space="preserve">
+    <value>The provided project {0} does not match the request's project {1}</value>
+  </data>
+  <data name="IllegalChangeOnItemThatDoesNotExist" xml:space="preserve">
+    <value>Please specify the item version to perform the specified change ({0}).</value>
+  </data>
+  <data name="UnsupportedTemplateChangeType" xml:space="preserve">
+    <value>Change Type not supported for Template Content.</value>
+  </data>
+  <data name="TempWorkspaceComment" xml:space="preserve">
+    <value>This is a temporary workspace created by Azure DevOps Server for a web-based checkin.  This workspace is safe to manually delete.</value>
+  </data>
+  <data name="ChangesetToBeCreatedNotSpecified" xml:space="preserve">
+    <value>Please specify the changeset to be created of type TfvcChangeset in the request body. </value>
+  </data>
+  <data name="LinkHeaderForNextPage" xml:space="preserve">
+    <value>&amp;lt;{0}&amp;gt;;rel=\"next\"</value>
+  </data>
+  <data name="CreateProjectFolderComment" xml:space="preserve">
+    <value>Created $/{0}</value>
+  </data>
+  <data name="InvalidSvgNullDocument" xml:space="preserve">
+    <value>Input SVG has invalid/null root node. Cannot sanitize.</value>
+  </data>
+  <data name="ErrorInvalidFileType" xml:space="preserve">
+    <value>Invalid item type. Only 'file' items can be downloaded or viewed.</value>
+  </data>
+  <data name="MissingOrEmptyLabelName" xml:space="preserve">
+    <value>You must specify a non-empty string name when creating a label</value>
+  </data>
+  <data name="InvalidJsonBody" xml:space="preserve">
+    <value>The body of the request contains invalid Json.</value>
+  </data>
+  <data name="ErrorUpdatingRefs" xml:space="preserve">
+    <value>Refs could not be updated at this time. Please try your request again later.</value>
+  </data>
+  <data name="SvgSanitizeError" xml:space="preserve">
+    <value>Unexpected error occured while sanitizing the svg</value>
+  </data>
+  <data name="ErrorDescriptorNull" xml:space="preserve">
+    <value>Bad Parameters. The list of items to fetch cannot contain null elements</value>
+  </data>
+  <data name="InvalidVote" xml:space="preserve">
+    <value>TF401185: The vote of {0} is invalid. Only -10, -5, 0, 5, and 10 are supported, and all other values are reserved.</value>
+  </data>
+  <data name="TeamProjectRequired" xml:space="preserve">
+    <value>A team project ID or name is required in the URL or request body.</value>
+  </data>
+  <data name="ProjectCatalogNodeError" xml:space="preserve">
+    <value>The project catalog was not found for project with uri: {0} in host: {1}.</value>
+  </data>
+  <data name="LastMergeSourceCommitRequired" xml:space="preserve">
+    <value>You must specify a valid LastMergeSourceCommit to perform this operation.</value>
+  </data>
+  <data name="LimitedRefCriteriaIsNull" xml:space="preserve">
+    <value>Limited ref criteria must be provided even if exact matches, and namespaces are empty.</value>
+  </data>
+  <data name="BypassOptionNotAllowedWithAutoComplete" xml:space="preserve">
+    <value>The bypass option cannot be used with auto-complete.</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="ScopePathRequiredForPagingItems" xml:space="preserve">
+    <value>A valid {0} is required.</value>
+  </data>
+  <data name="GitRefFavoriteProjectMismatch" xml:space="preserve">
+    <value>Project Mismatch: The ref favorite you are creating must belong to a repository in the same project as you are directing this request.</value>
+  </data>
+  <data name="RequestMaxSizeExceeded" xml:space="preserve">
+    <value>The maximum request size of {0} bytes was exceeded.</value>
+  </data>
+  <data name="MergeNotSupported" xml:space="preserve">
+    <value>Merge strategy not supported.</value>
+  </data>
+  <data name="NoGuidSupplied" xml:space="preserve">
+    <value>(no guid supplied)</value>
+  </data>
+  <data name="InvalidPullRequestQueryTooManyItems" xml:space="preserve">
+    <value>{0} can not contain more than {1} items</value>
+  </data>
+  <data name="BranchesNoCommonCommits" xml:space="preserve">
+    <value>These branches do not have any commits in common.</value>
+  </data>
+  <data name="APINotFound" xml:space="preserve">
+    <value>API not found.</value>
+  </data>
+  <data name="TeamProjectDoesNotExist" xml:space="preserve">
+    <value>The team project {0} does not exist. </value>
+  </data>
+  <data name="GitImportTFVCFileTooLargeHistory" xml:space="preserve">
+    <value>TFVC history contains files greater than 50MB which cannot be migrated. Please import without history.</value>
+  </data>
+  <data name="InvalidIdentity" xml:space="preserve">
+    <value>The identity {0} is not recognized.</value>
+  </data>
+  <data name="GitImportTFVCImportSizeTooLarge" xml:space="preserve">
+    <value>The source path is larger than 1GB in size and cannot be imported.</value>
+  </data>
+  <data name="LatestChangeset" xml:space="preserve">
+    <value>latest</value>
+  </data>
+  <data name="RequestProjectScopeConflict" xml:space="preserve">
+    <value>VS403355: The provided scopePath {0} conflicts with the root of the request's project {1}</value>
+  </data>
+  <data name="InvalidShelvesetVersion" xml:space="preserve">
+    <value>Shelveset version error</value>
+  </data>
+  <data name="PathActionInvalidEncodingValue" xml:space="preserve">
+    <value>The encoding value {0} does not map to a supported code page.</value>
+  </data>
+  <data name="RevertNeedsSingleSource" xml:space="preserve">
+    <value>Exactly one source for a revert must be specified.</value>
+  </data>
+  <data name="GitRefsPaginateMyBranchesIsNotSupported" xml:space="preserve">
+    <value>Pagination is not supported when 'includeMyBranches' is requested.</value>
+  </data>
+  <data name="InvalidVersionSpecForChangeModel" xml:space="preserve">
+    <value>Invalid version spec {0} provided for change model.</value>
+  </data>
+  <data name="ErrorItemNotFoundFormat" xml:space="preserve">
+    <value>The item {0} does not exist at version "{1}", or you do not have permission to access it.</value>
+  </data>
+  <data name="GitRefUpdateStatusNotSuppported" xml:space="preserve">
+    <value>The GitRefUpdateStatus '{0}' is not supported.</value>
+  </data>
+  <data name="PathActionInvalidBinaryEncoding" xml:space="preserve">
+    <value>Binary encoding is not supported when supplying raw text content. Specify a valid text encoding value or provide base64 encoded content.</value>
+  </data>
+  <data name="ErrorItemBatchNotFound" xml:space="preserve">
+    <value>The items requested either do not exist on the server at the specified versions, or you do not have permission to access them.</value>
+  </data>
+  <data name="ErrorRepositoryWithNameIsNotOfExpectedType" xml:space="preserve">
+    <value>Unexpected version control repository type for repository {0} in project: {1}. Expected a "{2}" repository type but the actual type is "{3}".</value>
+  </data>
+  <data name="GitNoParentCommit" xml:space="preserve">
+    <value>TF401177: A parent could not be found for '{0}' (resolved to commit '{1}')</value>
+  </data>
+  <data name="AmbiguousVersion" xml:space="preserve">
+    <value>Ambiguous values for version</value>
+  </data>
+  <data name="InvalidObjectId" xml:space="preserve">
+    <value>An object ID must be 40 characters long and only have hex digits. Passed in object ID: {0}. Parameter name: {1}.</value>
+  </data>
+  <data name="PathActionInvalidUnchangedEncoding" xml:space="preserve">
+    <value>An explicit encoding value must be provided when supplying raw text content. Specify a valid text encoding value or provide base64 encoded content.</value>
+  </data>
+  <data name="InvalidImportRequestUpdate" xml:space="preserve">
+    <value>Update is only supported for status</value>
+  </data>
+  <data name="BaseChangesetHigherThanTargetChangesetException" xml:space="preserve">
+    <value>BaseChangeset should less than TargetChangeset</value>
+  </data>
+  <data name="InvalidMergeSourceError" xml:space="preserve">
+    <value>Merge Source version error</value>
+  </data>
+  <data name="ErrorCannotSpecifyScopeAndHierarchy" xml:space="preserve">
+    <value>Cannot specify both a scope and request hierarchy information, as it is unavailable.</value>
+  </data>
+  <data name="AmbiguousVersionOption" xml:space="preserve">
+    <value>Ambiguous values for version option </value>
+  </data>
+  <data name="NonEmptyFoldersNotSupported" xml:space="preserve">
+    <value>You can only add empty folders.</value>
+  </data>
+  <data name="UnsupportedChangeType" xml:space="preserve">
+    <value>The specified change type {0} is not supported.</value>
+  </data>
+  <data name="InvalidPolicyType" xml:space="preserve">
+    <value>The policy type id filter {0} is not valid</value>
+  </data>
+  <data name="AttachmentGzipUnsupportedWithoutLength" xml:space="preserve">
+    <value>Gzip compression is currently unsupported without the 'X-TFS-FileLength' header.</value>
+  </data>
+  <data name="InvalidParameters" xml:space="preserve">
+    <value>The combination of parameters is either not valid or not complete.</value>
+  </data>
+  <data name="MissingPullRequestRef" xml:space="preserve">
+    <value>Both a source and target reference is required.</value>
+  </data>
+  <data name="InvalidContinuationToken" xml:space="preserve">
+    <value>VS403659: The continuation token {0} is not valid.</value>
+  </data>
+  <data name="UnsupportedMediaType" xml:space="preserve">
+    <value>The requested media type is not supported by the current resource. </value>
+  </data>
+  <data name="ImportHistoryDurationTooLarge" xml:space="preserve">
+    <value>The number of days of history to import cannot exceed {0}.</value>
+  </data>
+  <data name="InvalidSvgParseErros" xml:space="preserve">
+    <value>Input SVG has parse errors (e.g: missing closing tag, wrongly nested tags). Cannot sanitize.</value>
+  </data>
+  <data name="CannotEditFolder" xml:space="preserve">
+    <value>Invalid Operation attempted: You cannot edit a folder.</value>
+  </data>
+  <data name="GitRefsFilterAndMyBranches" xml:space="preserve">
+    <value>The filter cannot be specified when includeMyBranches is true.</value>
+  </data>
+  <data name="ShelvesetToBeCreatedNotSpecified" xml:space="preserve">
+    <value>Please specify the shelveset to be created of type TfvcShelveset in the request body.</value>
+  </data>
+  <data name="ErrorRespositoryIdInvalid" xml:space="preserve">
+    <value>Bad parameters. A valid repository id is required.</value>
+  </data>
+  <data name="InvalidPathActionsArgument" xml:space="preserve">
+    <value>Exactly one value for PathActions is required.</value>
+  </data>
+  <data name="UnresolvableSha" xml:space="preserve">
+    <value>The objectId {0} did not resolve to an object in the repository {1}</value>
+  </data>
+  <data name="ErrorNoBranchesFormat" xml:space="preserve">
+    <value>VS403403: Cannot find any branches for the {0} repository.</value>
+  </data>
+  <data name="GitRefFavoriteIsNull" xml:space="preserve">
+    <value>Invalid input while creating Git Ref Favorite.</value>
+  </data>
+  <data name="InvalidUseRenameError" xml:space="preserve">
+    <value>Use Rename error</value>
+  </data>
+  <data name="InvalidPullRequestAutoCompleteSetById" xml:space="preserve">
+    <value>Invalid pull request auto complete set by id. Valid values are either the current user identity id, or an empty guid (to unset auto complete).</value>
+  </data>
+  <data name="ErrorSubModulesFileNotFoundFormat" xml:space="preserve">
+    <value>Item {0} at version "{1}" is a Git submodule, but no {2} file was found at the root of this repository.</value>
+  </data>
+  <data name="InvalidTipVersion" xml:space="preserve">
+    <value>Tip version error</value>
+  </data>
+  <data name="MaxFilePathsLimitExceeded" xml:space="preserve">
+    <value>Total file paths exceeded the allowed limit of {0}.</value>
+  </data>
+  <data name="InvalidPullRequestId" xml:space="preserve">
+    <value>Invalid pull request ID.</value>
+  </data>
+  <data name="InvalidSvgLargeFile" xml:space="preserve">
+    <value>Input file size is larger than 5MB. Cannot Sanitize.</value>
+  </data>
+  <data name="GitImportTFVCFileTooLarge" xml:space="preserve">
+    <value>TFVC to Git Import does not allow importing files greater than 50 MB. We recommend removing files greater than 50MB from TFVC and import without history.</value>
+  </data>
+  <data name="ErrorPushNotFound" xml:space="preserve">
+    <value>Unable to resolve push with identifier {0}.</value>
+  </data>
+  <data name="IllegalSourceServerItem" xml:space="preserve">
+    <value>The source server item cannot be specified for actions other than rename. </value>
+  </data>
+  <data name="InvalidPushCommitRefCount" xml:space="preserve">
+    <value>The parameters are incorrect. A posted push must contain exactly one commit and one refUpdate.</value>
+  </data>
+  <data name="ErrorChangesetBatchNotFound" xml:space="preserve">
+    <value>The changeset IDs you requested either do not exist or were not valid.</value>
+  </data>
+  <data name="UnsupportedNumberOfCommitsForMerge" xml:space="preserve">
+    <value>Only two-parent merges are currently supported</value>
+  </data>
+  <data name="CheckinFailedError" xml:space="preserve">
+    <value>Some of the changes in the changeset were invalid and rejected by the server. Please retry the operation after checking the changes. </value>
+  </data>
+  <data name="ErrorPathEmpty" xml:space="preserve">
+    <value>Bad Parameters. The path specified cannot be null or empty</value>
+  </data>
+  <data name="CannotVoteForAnother" xml:space="preserve">
+    <value>TF401186: You cannot record a vote for someone else (user {0}).</value>
+  </data>
+  <data name="CommitDescriptionFormat" xml:space="preserve">
+    <value>commit {0}</value>
+  </data>
+  <data name="InvalidConflictPatchProperties" xml:space="preserve">
+    <value>Only these properties can be updated using this operation: {0}.</value>
+  </data>
+  <data name="ErrorBranchNotFound" xml:space="preserve">
+    <value>Branch "{0}" does not exist in the {1} repository.</value>
+  </data>
+  <data name="CollectionRequired" xml:space="preserve">
+    <value>A collection ID is required in the request body.</value>
+  </data>
+  <data name="PullRequestDescriptionTooLong" xml:space="preserve">
+    <value>A description for a pull request must not be longer than {0} characters.</value>
+  </data>
+  <data name="InvalidOwnerId" xml:space="preserve">
+    <value>Owner ID: {0} is not a valid GUID.</value>
+  </data>
+  <data name="GitRefFavoritesRepositoryIsNull" xml:space="preserve">
+    <value>A repositoryId value is required as a query parameter when retrieving a list of ref favorites.</value>
+  </data>
+  <data name="AmbigousVersionType" xml:space="preserve">
+    <value>Ambiguous values for version type</value>
+  </data>
+  <data name="TfvcMovePathActionNotSupported" xml:space="preserve">
+    <value>Rename PathActions do not support moving an item from one folder to another. Only the file or folder name may be changed.</value>
+  </data>
+  <data name="InvalidPullRequestQueryType" xml:space="preserve">
+    <value>Query type {0} is not supported</value>
+  </data>
+  <data name="MustSetVoteToZero" xml:space="preserve">
+    <value>You can only reset votes to zero (NoVote) using this REST call. You cannot vote for another user.</value>
+  </data>
+  <data name="InvalidPullRequestToUpdateInformation" xml:space="preserve">
+    <value>The pull request to update was not valid.</value>
+  </data>
+  <data name="CherryPickNeedsSingleSource" xml:space="preserve">
+    <value>Exactly one source for a cherry-pick must be specified.</value>
+  </data>
+  <data name="ErrorInvalidGitVersionSpec" xml:space="preserve">
+    <value>Invalid version specifier "{0}".</value>
+  </data>
+  <data name="SccItemLatest" xml:space="preserve">
+    <value>Latest</value>
+  </data>
+  <data name="InvalidPullRequestUpdate" xml:space="preserve">
+    <value>You can only update reviewers, descriptions, titles, merge status, and status.</value>
+  </data>
+  <data name="ChangesetListInvalidEndDateFormat" xml:space="preserve">
+    <value>Invalid date format for "To" date. Enter date format like '{0}'.</value>
+  </data>
+  <data name="RepositoryNotFoundOrNoReadPermission" xml:space="preserve">
+    <value>The repository was not found or you do not have read permission.</value>
+  </data>
+  <data name="InvalidGitChangeContentType" xml:space="preserve">
+    <value>One amongst Content or Template should be specified.</value>
+  </data>
+  <data name="PullRequestStatusesPatchRemoveArbitraryPath" xml:space="preserve">
+    <value>JSON Patch remove operation for statuses doesn't support arbitrary path. Path should be a status ID and start with '/'.</value>
+  </data>
+  <data name="DisplayNameForInvalidIdentity" xml:space="preserve">
+    <value>User whose account no longer exists</value>
+  </data>
+  <data name="ErrorInvalidToDateFormat" xml:space="preserve">
+    <value>Invalid date format for "To" date. Enter date format like '{0}'.</value>
+  </data>
+  <data name="InvalidReviewer" xml:space="preserve">
+    <value>A valid reviewer must be supplied.</value>
+  </data>
+  <data name="WebEditEnabledSettingPath" xml:space="preserve">
+    <value>VersionControl/AdminOptions/Tfvc/WebEditEnabled</value>
+  </data>
+  <data name="InvalidRepositoryId" xml:space="preserve">
+    <value>The repository id {0} is not valid</value>
+  </data>
+  <data name="UnsupportedOrderingOfItems" xml:space="preserve">
+    <value>Internal server error. </value>
+  </data>
+  <data name="ChangesetListInvalidStartDateFormat" xml:space="preserve">
+    <value>Invalid date format for "From" date. Enter date format like '{0}'.</value>
+  </data>
+  <data name="CannotGetTreeAsText" xml:space="preserve">
+    <value>A Git tree cannot be returned with content type text/*</value>
+  </data>
+  <data name="UnexpectedFileIdForFileException" xml:space="preserve">
+    <value>The item {0} at version {1} has an unexpected file id.</value>
+  </data>
+  <data name="ErrorPathsNotSpecified" xml:space="preserve">
+    <value>Bad Parameters. List of item paths cannot be null or empty</value>
+  </data>
+  <data name="OldAndNewObjectIdsCannotBeEmpty" xml:space="preserve">
+    <value>Updating refs failed: new and old object ids for ref '{0}' cannot be empty.</value>
+  </data>
+  <data name="GitImportTFVCImportHistorySizeTooLarge" xml:space="preserve">
+    <value>The source with its history is larger than 1GB in size and cannot be imported. We recommend creating smaller Git repositories.</value>
+  </data>
+  <data name="ErrorDeletionNotSupportedOnPatch" xml:space="preserve">
+    <value>Repository deletion is only supported on HTTP DELETE.</value>
+  </data>
+  <data name="MismatchedProjectId" xml:space="preserve">
+    <value>The project ID in the URI does not match the project ID in the request.</value>
+  </data>
+  <data name="InvalidReviewerId" xml:space="preserve">
+    <value>A valid reviewer ID must be supplied.</value>
+  </data>
+  <data name="InvalidChangesetVersion" xml:space="preserve">
+    <value>Changeset ID must be provided</value>
+  </data>
+  <data name="MissingCherryPickRef" xml:space="preserve">
+    <value>A parent reference name and target reference name are required.</value>
+  </data>
+  <data name="UnresolvableToTree" xml:space="preserve">
+    <value>Object {0} was not found or didn't resolve to commit or tree object.</value>
+  </data>
+  <data name="ErrorTagNotFound" xml:space="preserve">
+    <value>Tag "{0}" does not exist in the {1} repository.</value>
+  </data>
+  <data name="ErrorGitTemplateNotFound" xml:space="preserve">
+    <value>Unable to find the requested Template</value>
+  </data>
+  <data name="GitRefUpdateModeNotSuppported" xml:space="preserve">
+    <value>The GitRefUpdateMode '{0}' is not supported.</value>
+  </data>
+  <data name="ErrorPreviousChangeRecursive" xml:space="preserve">
+    <value>The PreviousChange version option is not supported with recursion</value>
+  </data>
+  <data name="TopOutOfRangeException" xml:space="preserve">
+    <value>Specify valid Top value between 1 and 10000.</value>
+  </data>
+  <data name="MalformedGitRepositoryData" xml:space="preserve">
+    <value>The supplied repository data is malformed.</value>
+  </data>
+  <data name="MultiPathUpdateNotSupported" xml:space="preserve">
+    <value>Multiple path updates is not supported.</value>
+  </data>
+  <data name="VCErrorCommitNotFound" xml:space="preserve">
+    <value>Could not find commit {0}. Have you pushed this commit from your dev machine to the remote repository?</value>
+  </data>
+  <data name="GitImportTFVCRootNotAllowed" xml:space="preserve">
+    <value>‘$/’ is not valid. Please provide path to a TFVC repository, like $/Contoso or to any branch/folder inside the repository.</value>
+  </data>
+  <data name="InvalidContinuationTokenWithReason" xml:space="preserve">
+    <value>The continuation token {0} is not valid: {1}</value>
+  </data>
+  <data name="CannotCreateWithVotes" xml:space="preserve">
+    <value>TF401187: You cannot create a pull request with votes already placed.</value>
+  </data>
+  <data name="MissingRevertRef" xml:space="preserve">
+    <value>A parent reference name and target reference name are required.</value>
+  </data>
+  <data name="OnlyPatchVoteValue" xml:space="preserve">
+    <value>Only the Vote field can be modified using this HTTP verb.</value>
+  </data>
+  <data name="InvalidChangeVersion" xml:space="preserve">
+    <value>Change version not specified correctly.</value>
+  </data>
+  <data name="InvalidRefPatchProperties" xml:space="preserve">
+    <value>The only property which can be patched is isLocked.</value>
+  </data>
+  <data name="MissingVote" xml:space="preserve">
+    <value>A vote must be supplied.</value>
+  </data>
+  <data name="InvalidArgumentValue" xml:space="preserve">
+    <value>Invalid argument value.</value>
+  </data>
+  <data name="SccItemDeleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="CanOnlyResolveLfsToOctetStream" xml:space="preserve">
+    <value>The 'resolveLfs' parameter can only be used with an accept type of 'application/octet-stream'</value>
+  </data>
+  <data name="MissingReviewerFlagOrDecline" xml:space="preserve">
+    <value>Either isFlagged or hasDeclined must be set.</value>
+  </data>
+  <data name="GitInvalidRefName" xml:space="preserve">
+    <value>Invalid ref name {0}. Must start with {1} and be less than {2} characters long.</value>
+  </data>
+  <data name="BaseChangesetRequired" xml:space="preserve">
+    <value>BaseChangeset is required.</value>
+  </data>
+</root>

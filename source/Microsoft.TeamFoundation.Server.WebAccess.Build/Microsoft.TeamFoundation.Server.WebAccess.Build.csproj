@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Server.WebAccess.Build.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F9EDE0F-48D6-406F-84F7-D811F54DBE78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.Build</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.Build</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApiConverters">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApiConverters.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.FileContainer.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.FileContainer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestImpact.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.TestImpact.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestImpact.Server.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.TestImpact.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SignalR">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SignalR.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildAreaRegistration.cs" />
+    <Compile Include="BuildResources.cs" />
+    <Compile Include="BuildServerResources.cs" />
+    <Compile Include="AdminAgentPoolController.cs" />
+    <Compile Include="AdminAgentQueueController.cs" />
+    <Compile Include="AdminBuildQueueController.cs" />
+    <Compile Include="ApiBuildController.cs" />
+    <Compile Include="BuildAreaController.cs" />
+    <Compile Include="BuildController.cs" />
+    <Compile Include="BuildExtensions.cs" />
+    <Compile Include="RetryableJsonResult.cs" />
+    <Compile Include="BuildConfigurationModel.cs" />
+    <Compile Include="BuildCoverageModel.cs" />
+    <Compile Include="ModuleCoverageModel.cs" />
+    <Compile Include="BuildDetailModel.cs" />
+    <Compile Include="VersionControlDetailsModel.cs" />
+    <Compile Include="GitDetailsModel.cs" />
+    <Compile Include="AssociatedChangesetModel.cs" />
+    <Compile Include="AssociatedCommitModel.cs" />
+    <Compile Include="CustomSummaryInformationSection.cs" />
+    <Compile Include="BuildDetailViewModel.cs" />
+    <Compile Include="BuildExternalLinkType.cs" />
+    <Compile Include="BuildExternalLinkModel.cs" />
+    <Compile Include="BuildHistogramModel.cs" />
+    <Compile Include="BuildInformationModel.cs" />
+    <Compile Include="AgentQueueAdminViewModel.cs" />
+    <Compile Include="BuildTestImpactModel.cs" />
+    <Compile Include="TestImpactModel.cs" />
+    <Compile Include="BuildTestRunModel.cs" />
+    <Compile Include="BuildViewMode.cs" />
+    <Compile Include="BuildViewModel.cs" />
+    <Compile Include="BuildSettingsAdminViewModel.cs" />
+    <Compile Include="InformationNodeModel.cs" />
+    <Compile Include="ActivityTrackingInfoModel.cs" />
+    <Compile Include="ActivityPropertiesInfoModel.cs" />
+    <Compile Include="AgentScopeActivityTrackingInfoModel.cs" />
+    <Compile Include="BuildProjectInfoModel.cs" />
+    <Compile Include="BuildStepInfoModel.cs" />
+    <Compile Include="BuildMessageInfoModel.cs" />
+    <Compile Include="OpenedWorkItemInfoModel.cs" />
+    <Compile Include="ExternalLinkNodeModel.cs" />
+    <Compile Include="InformationNodeModelComparer.cs" />
+    <Compile Include="InformationNodeModelFactory.cs" />
+    <Compile Include="IntermediateLogNodeModel.cs" />
+    <Compile Include="QueuedBuildModel.cs" />
+    <Compile Include="BuildConstants.cs" />
+    <Compile Include="BuildHelpers.cs" />
+    <Compile Include="BuildTrace.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="InformationNodeHelpers.cs" />
+    <Compile Include="AssociatedWorkItem.cs" />
+    <Compile Include="CustomSummaryInformation.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildResources.resx" />
+    <EmbeddedResource Include="BuildServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

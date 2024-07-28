@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Wss" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:complexType name="SiteDataType">
+        <xs:sequence>
+        </xs:sequence>
+        <xs:attribute name="template" type="xs:string" msprop:nullValue="_throw" use="required" />
+        <xs:attribute name="language" type="xs:integer" msprop:nullValue="_throw" use="required" />
+    </xs:complexType>
+    <xs:complexType name="DocumentLibraryType">
+        <xs:sequence />
+        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="description" type="xs:string" use="required" msprop:nullValue="_empty" />
+        <xs:attribute name="isProcessGuidance" type="xs:boolean" use="optional" default="false" msprop:nullValue="_throw"/>
+    </xs:complexType>
+    <xs:complexType name="FileType">
+        <xs:sequence>
+        </xs:sequence>
+        <xs:attribute name="target" type="NonEmptyString" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="documentLibrary" type="NonEmptyString" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="source" type="NonEmptyString" msprop:nullValue="_throw" use="required" />
+        <xs:attribute name="queryId" type="xs:string" use="optional" msprop:nullValue="_throw" />
+    </xs:complexType>
+    <xs:complexType name="FolderType">
+        <xs:sequence />
+        <xs:attribute name="documentLibrary" type="xs:string" use="required" msprop:nullValue="_throw" />
+        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+    </xs:complexType>
+    <xs:complexType name="ActivateFeatureType">
+      <xs:sequence />
+      <xs:attribute name="featureId" type="GUID" use="required" msprop:nullValue="_throw" />
+      <xs:attribute name="optional" type="xs:boolean" use="optional" default="false" msprop:nullValue="_throw"/>
+    </xs:complexType>
+  <xs:element name="Portal">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="site" type="SiteDataType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="documentLibraries" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="documentLibrary" type="DocumentLibraryType" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="folders" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="folder" minOccurs="1" maxOccurs="unbounded" type="FolderType" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="files" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="file" type="FileType" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="activateFeatures" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="feature" type="ActivateFeatureType" minOccurs="1" maxOccurs="unbounded" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="NonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="GUID">
+      <xs:annotation>
+        <xs:documentation>The representation of a GUID, generally the id of an element.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+        <xs:pattern value="[a-fA-F0-9]{32}"/>
+        <xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+        <xs:pattern value="\([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\)"/>
+        <xs:pattern value="\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}"/>
+        <!-- 
+          - not used at the moment. We could include this more complicated pattern later if it's warranted
+          -
+        <xs:pattern value="\{0x[a-fA-F0-9]{1,8},0x[a-fA-F0-9]{1,4},0x[a-fA-F0-9]{1,4},\{0x[a-fA-F0-9]{1,2}(,0x[a-fA-F0-9]{1,2}){7}\}\}"/>
+        -->
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

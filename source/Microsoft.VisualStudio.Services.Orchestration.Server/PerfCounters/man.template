@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{231EE7BF-6963-4C67-88EF-39BF6829A8EE}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.VisualStudio.Services.Orchestration.Server.dll" providerName="MicrosoftVisualStudioServicesOrchestrationServer" providerType="userMode" symbol="MicrosoftVisualStudioServicesOrchestrationServer" callback="custom">
+        <counterSet guid="{B13E6FA6-F398-480E-B192-12456B2DC9A7}" name="TFS Services:Orchestration" description="Performance stats for orchestration dispatchers" instances="multipleAggregate" symbol="TFSServicesOrchestrationDispatcherStats" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_DispatcherStats" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Activities Executed/Sec" description="Activity Dispatcher activities executed/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_ActivitiesExecutedPerSec" />
+          <counter id="2" baseID="3" name="Average Activity Execution Time" description="Activity Dispatcher average execution time per activity" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageActivityExecutionTime" />
+          <counter id="3" name="Average Activity Execution Time Base" description="Base for the Average Activity Execution Time." type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageActivityExecutionTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="4" name="Orchestrations Executed/Sec" description="Orchestration Dispatcher orchestrations executed/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_OrchestrationsExecutedPerSec" />
+          <counter id="5" baseID="6" name="Average Orchestration Execution Time" description="Orchestration Dispatcher average execution time per orchestration" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationExecutionTime" />
+          <counter id="6" name="Average Orchestration Execution Time Base" description="Base for the Average Orchestration Execution Time." type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationExecutionTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="7" baseID="8" name="Average Orchestration Session Update Time" description="Orchestration Dispatcher average session update time" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationSessionUpdateTime" />
+          <counter id="8" name="Average Orchestration Session Update Time Base" description="Base for the Average Orchestration Session Update Time." type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationSessionUpdateTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="9" baseID="10" name="Average Activity Job Delay" description="Activity Dispatcher average job delay" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageActivityJobDelay" />
+          <counter id="10" name="Average Activity Job Delay Base" description="Base for the Activity Dispatcher Average Job Delay" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageActivityJobDelayBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="11" baseID="12" name="Average Activity Message Delay" description="Activity Dispatcher average activity message delay" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageActivityMessageDelay" />
+          <counter id="12" name="Average Activity Message Delay Base" description="Base for the Average Activity Message Delay" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageActivityMessageDelayBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="13" baseID="14" name="Average Orchestration Session Delay" description="Orchestration Dispatcher average orchestration session delay" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationSessionDelay" />
+          <counter id="14" name="Average Orchestration Session Delay Base" description="Base for the Average Orchestration Session Delay" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationSessionDelayBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="15" baseID="16" name="Average Orchestration Job Delay" description="Orchestration Dispatcher average orchestration job delay" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationJobDelay" />
+          <counter id="16" name="Average Orchestration Job Delay Base" description="Base for the Average Orchestration Job Delay" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_AverageOrchestrationJobDelayBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="17" name="Activities Messages Queued/Sec" description="Activity messages queued/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_ActivityMessagesQueuedPerSec" />
+          <counter id="18" name="Orchestration Sessions Queued/Sec" description="Orchestration sessions queued/sec" type="perf_counter_bulk_count" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Framework.Server.Perf_Orchestration_OrchestrationSessionsQueuedPerSec" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

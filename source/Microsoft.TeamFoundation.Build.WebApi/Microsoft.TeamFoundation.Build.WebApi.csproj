@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Build.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E02E73D0-FF08-40F6-A0F9-B64A1192E9DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Build.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Build.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildResourceIds.cs" />
+    <Compile Include="Build.cs" />
+    <Compile Include="BuildAgent.cs" />
+    <Compile Include="BuildCompletedEvent.cs" />
+    <Compile Include="BuildController.cs" />
+    <Compile Include="BuildDefinition.cs" />
+    <Compile Include="BuildDefinitionSourceProvider.cs" />
+    <Compile Include="BuildDeployment.cs" />
+    <Compile Include="BuildSummary.cs" />
+    <Compile Include="DeploymentEnvironmentApiData.cs" />
+    <Compile Include="DeploymentEnvironmentMetadata.cs" />
+    <Compile Include="BuildProcessTemplate.cs" />
+    <Compile Include="BuildRequest.cs" />
+    <Compile Include="BuildServer.cs" />
+    <Compile Include="ContinuousDeploymentDefinition.cs" />
+    <Compile Include="DropLocationReference.cs" />
+    <Compile Include="InformationNode.cs" />
+    <Compile Include="DefinitionReference.cs" />
+    <Compile Include="LogLocationReference.cs" />
+    <Compile Include="PropertyValue.cs" />
+    <Compile Include="RequestReference.cs" />
+    <Compile Include="QueueReference.cs" />
+    <Compile Include="RetentionPolicy.cs" />
+    <Compile Include="Schedule.cs" />
+    <Compile Include="ShallowReference.cs" />
+    <Compile Include="WorkspaceTemplate.cs" />
+    <Compile Include="WorkspaceMapping.cs" />
+    <Compile Include="AgentStatus.cs" />
+    <Compile Include="BuildPhaseStatus.cs" />
+    <Compile Include="BuildReason.cs" />
+    <Compile Include="BuildStatus.cs" />
+    <Compile Include="ControllerStatus.cs" />
+    <Compile Include="DefinitionType.cs" />
+    <Compile Include="GetOption.cs" />
+    <Compile Include="QueuePriority.cs" />
+    <Compile Include="QueueStatus.cs" />
+    <Compile Include="QueueType.cs" />
+    <Compile Include="ServiceHostStatus.cs" />
+    <Compile Include="DefinitionTriggerType.cs" />
+    <Compile Include="DefinitionQueueStatus.cs" />
+    <Compile Include="DeleteOptions.cs" />
+    <Compile Include="ScheduleDays.cs" />
+    <Compile Include="WorkspaceMappingType.cs" />
+    <Compile Include="ProcessTemplateType.cs" />
+    <Compile Include="DropLocationReferenceType.cs" />
+    <Compile Include="DeploymentEnvironmentKind.cs" />
+    <Compile Include="BuildNotFoundException.cs" />
+    <Compile Include="BuildRequestNotFoundException.cs" />
+    <Compile Include="BuildDefinitionDoesNotExistException.cs" />
+    <Compile Include="ConflictingBuildQueryParametersException.cs" />
+    <Compile Include="BuildDefinitionDisabledException.cs" />
+    <Compile Include="BuildRequestUpdateException.cs" />
+    <Compile Include="BuildRequestPropertyInvalidException.cs" />
+    <Compile Include="BuildControllerNotFoundException.cs" />
+    <Compile Include="BuildControllerDeletionException.cs" />
+    <Compile Include="BuildControllerUpdateException.cs" />
+    <Compile Include="BuildAgentNotFoundException.cs" />
+    <Compile Include="BuildAgentDeletionException.cs" />
+    <Compile Include="BuildAgentUpdateException.cs" />
+    <Compile Include="BuildServerNotFoundException.cs" />
+    <Compile Include="DefinitionNotFoundException.cs" />
+    <Compile Include="CannotDeleteDefinitionBuildExistsException.cs" />
+    <Compile Include="BuildProcessTemplateNotFoundException.cs" />
+    <Compile Include="BuildProcessTemplateDeletionException.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="NoBuildResourceAvailable.cs" />
+    <Compile Include="BuildHttpClient.cs" />
+    <Compile Include="BuildHttpClientBase.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,49 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Feed.WebApi.AzureArtifacts.ArtifactsFeed
+// Assembly: Microsoft.VisualStudio.Services.Feed.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 8DACB936-5231-4131-8ED8-082A1F46DC54
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.WebApi.dll
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Microsoft.VisualStudio.Services.Feed.WebApi.AzureArtifacts
+{
+  [DataContract]
+  public class ArtifactsFeed : FeedSecuredObject
+  {
+    [DataMember]
+    public Guid Id { get; set; }
+
+    [DataMember]
+    public string Name { get; set; }
+
+    [DataMember(IsRequired = false)]
+    public ProjectReference Project { get; set; }
+
+    [DataMember]
+    public bool IsDeleted { get; set; }
+
+    [DataMember]
+    public List<ViewIdentifier> Views { get; set; }
+
+    [DataMember(IsRequired = false, EmitDefaultValue = false)]
+    public Guid SelectedViewId { get; set; }
+
+    [DataMember]
+    public List<UpstreamSourceIdentifier> UpstreamSources { get; set; }
+
+    [DataMember]
+    public AccountMetadata AccountMetadata { get; set; }
+
+    [DataMember]
+    public int PermissionBitMask { get; set; }
+
+    [DataMember]
+    public bool IsBadgesEnabled { get; set; }
+
+    [DataMember]
+    public List<FeedPermission> Permissions { get; set; }
+  }
+}

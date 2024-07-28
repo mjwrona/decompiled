@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.CodeReview.Server.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89B7D57E-BFE4-4727-AE53-565440C0836D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.CodeReview.Server.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.CodeReview.Server.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.Discussion.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.Discussion.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.SignalR" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeReviewDetailHub.cs" />
+    <Compile Include="CodeReviewDispatcher.cs" />
+    <Compile Include="ICodeReviewDispatcher.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="EventServiceHelper.cs" />
+    <Compile Include="CodeFlowUrlHelper.cs" />
+    <Compile Include="DiscussionExtensions.cs" />
+    <Compile Include="ContinueDifferencePredicate`1.cs" />
+    <Compile Include="DiffChangeType.cs" />
+    <Compile Include="IDiffChange.cs" />
+    <Compile Include="LineChanges.cs" />
+    <Compile Include="DiffChange.cs" />
+    <Compile Include="EndOfLineTerminator.cs" />
+    <Compile Include="DiffLineTokenizer.cs" />
+    <Compile Include="DiffChangeHelper.cs" />
+    <Compile Include="WordPosition.cs" />
+    <Compile Include="DiffFinder`1.cs" />
+    <Compile Include="DiffSegmentType.cs" />
+    <Compile Include="DiffSegment.cs" />
+    <Compile Include="DiffOutput.cs" />
+    <Compile Include="Binary.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="Ed.cs" />
+    <Compile Include="Unified.cs" />
+    <Compile Include="UnixNormal.cs" />
+    <Compile Include="Rcs.cs" />
+    <Compile Include="Vss.cs" />
+    <Compile Include="DiffUtil.cs" />
+    <Compile Include="DiffOptions.cs" />
+    <Compile Include="DiffLineComparer.cs" />
+    <Compile Include="DiffSummary.cs" />
+    <Compile Include="DiffFile.cs" />
+    <Compile Include="DiffLine.cs" />
+    <Compile Include="DiffOptionFlags.cs" />
+    <Compile Include="DiffOutputType.cs" />
+    <Compile Include="VssOutputType.cs" />
+    <Compile Include="FileTypeUtil.cs" />
+    <Compile Include="UTF8Flags.cs" />
+    <Compile Include="LcsDiff`1.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

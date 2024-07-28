@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{05FACD51-3383-43FE-9101-9F8EF57503A8}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.Mention.Server.dll" providerName="MicrosoftTeamFoundationMentionServer" providerType="userMode" symbol="MicrosoftTeamFoundationMentionServer" callback="custom">
+        <counterSet guid="{D8AAD1A4-CD73-4CD9-89AD-D3E944D7DDD2}" name="TFS Services:Mention" description="Mention Stats for Azure DevOps Server" instances="globalAggregate" symbol="TFSServicesMentionStats" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_Mention" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Git Commit Mention Candidates / Sec" description="Count of mention candidates created by the git commit processing job." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionGitCommitMentionCandidatesPerSecond" />
+          <counter id="2" name="Discussion Commit Mention Candidates / Sec" description="Count of mention candidates created by the mention subscriber / second." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionDiscussionMentionCandidatesPerSecond" />
+          <counter id="3" name="Wit Discussion Commit Mention Candidates / Sec" description="Count of mention candidates created by the mention subscriber / second." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionWitDiscussionMentionCandidatesPerSecond" />
+          <counter id="4" baseID="5" name="Average Mention Candidates Processing Time" description="Average processing time taken to process a mention." type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionAverageMentionCandidatesProcessingTime" />
+          <counter id="5" name="Average Mention Candidates Processing Time Base" description="Aerage processing time taken to process a mention." type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionAverageMentionCandidatesProcessingTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="6" name="Mention Processing Failure / Sec" description="Track mention candidate processing failures per second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionProcessingFailuresPerSecond" />
+          <counter id="7" baseID="8" name="Average Wit Action Processing Time" description="Track average processing time taken to execute work item actions" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionAverageWitActionProcessingTime" />
+          <counter id="8" name="Average Wit Action Processing Time Base" description="Track average processing time taken to execute work item actions" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionAverageWitActionProcessingTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="9" name="Mention Wit Actions / Sec" description="Track mention wit actions per second." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionWitActionsPerSecond" />
+          <counter id="10" name="Mention Wit Action Failures / Sec" description="Track mention wit action failures per second." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionWitActionFailuresPerSecond" />
+          <counter id="11" name="Mention Email Actions / Sec" description="Track mention email actions per second." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionEmailActionsPerSecond" />
+          <counter id="12" name="Mention Email Action Failures / Sec" description="Track mention email action failures per second." type="perf_counter_counter" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionEmailActionFailuresPerSecond" />
+          <counter id="13" baseID="14" name="Average Email Action Processing Time" description="Track average processing time taken to execute email actions" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionAverageEmailActionProcessingTime" />
+          <counter id="14" name="Average Email Action Processing Time Base" description="Track average processing time taken to execute email actions" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Mention.Server.Perf_Service_MentionAverageEmailActionProcessingTimeBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

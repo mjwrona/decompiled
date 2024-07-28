@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Gallery.Web.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49D78C9A-BD4F-4ACC-9DFD-00BEC525D4ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Gallery.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Gallery.Web</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Markdig.Signed">
+      <HintPath>lib\Markdig.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CloudConnected.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CloudConnected.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.Types.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.Types.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SecurityRoles.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SecurityRoles.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>lib\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerSupportRequestController.cs" />
+    <Compile Include="SetXFrameOptionsAttribute.cs" />
+    <Compile Include="GalleryResources.cs" />
+    <Compile Include="HtmlSelfClosingGenericControl.cs" />
+    <Compile Include="GalleryWebConstants.cs" />
+    <Compile Include="GalleryUrlConstants.cs" />
+    <Compile Include="CommerceDataProvider.cs" />
+    <Compile Include="GalleryDataProviderService.cs" />
+    <Compile Include="GalleryPageMetadataProviderService.cs" />
+    <Compile Include="PageMetadataInputs.cs" />
+    <Compile Include="HostedGalleryPageMetadataHelper.cs" />
+    <Compile Include="OnPremGalleryPageMetadataHelper.cs" />
+    <Compile Include="PageMetadataHelperUtilities.cs" />
+    <Compile Include="PageContextProvider.cs" />
+    <Compile Include="ProductExtensionsProvider.cs" />
+    <Compile Include="JsonNetResult.cs" />
+    <Compile Include="CachedProductExtensionsService.cs" />
+    <Compile Include="IGalleryPageMetadataProvider.cs" />
+    <Compile Include="IGalleryPageMetadataHelper.cs" />
+    <Compile Include="ICommerceDataProvider.cs" />
+    <Compile Include="IGalleryDataProvider.cs" />
+    <Compile Include="IPageContextProvider.cs" />
+    <Compile Include="IProductExtensionsDataProvider.cs" />
+    <Compile Include="ExtensionOfferDetails.cs" />
+    <Compile Include="ValidateConnectedAuthTokenAttribute.cs" />
+    <Compile Include="GalleryEventId.cs" />
+    <Compile Include="GalleryCommonResources.cs" />
+    <Compile Include="GalleryPublisherUrlsConstants.cs" />
+    <Compile Include="VSGallery.cs" />
+    <Compile Include="SetUserTokenFilterAttribute.cs" />
+    <Compile Include="GalleryHtmlExtensions.cs" />
+    <Compile Include="GalleryPages.cs" />
+    <Compile Include="GalleryAreaController.cs" />
+    <Compile Include="VSMockDataProvider.cs" />
+    <Compile Include="VSDataProvider.cs" />
+    <Compile Include="GalleryController.cs" />
+    <Compile Include="PurchaseQuantityDetails.cs" />
+    <Compile Include="BaseExtensionItemComparer.cs" />
+    <Compile Include="IVSDataProvider.cs" />
+    <Compile Include="GalleryVSTabDataCacheService.cs" />
+    <Compile Include="GalleryAreaRegistration.cs" />
+    <Compile Include="GalleryWebModule.cs" />
+    <Compile Include="Helpers\URLHelper.cs" />
+    <Compile Include="Helpers\MarkdownService.cs" />
+    <Compile Include="Helpers\DateTimeWrapper.cs" />
+    <Compile Include="Helpers\ItemDetailsPageHelpers\BreadcrumbHelper.cs" />
+    <Compile Include="Helpers\ItemDetailsPageHelpers\BreadcrumbItem.cs" />
+    <Compile Include="Helpers\ItemDetailsPageHelpers\BreadcrumbProps.cs" />
+    <Compile Include="Utility\SSRViewDataConstants.cs" />
+    <Compile Include="Utility\InstrumentBlock.cs" />
+    <Compile Include="Utility\MarketPlaceIntelligenceFeature.cs" />
+    <Compile Include="Utility\MarketPlaceCustomerIntelligenceArea.cs" />
+    <Compile Include="Utility\MarketPlaceIntelligencePropertyName.cs" />
+    <Compile Include="Utility\Cookies.cs" />
+    <Compile Include="Utility\LocationUrlMemoryCache.cs" />
+    <Compile Include="Utility\LogUserInfoFilterAttribute.cs" />
+    <Compile Include="Utility\ViewDataConstants.cs" />
+    <Compile Include="Utility\GalleryFeatureFlags.cs" />
+    <Compile Include="Utility\GalleryUrls.cs" />
+    <Compile Include="Models\ItemTabsProps.cs" />
+    <Compile Include="Models\ItemDetailsResourcesSectionModel.cs" />
+    <Compile Include="Models\ItemDetailsMoreInfoModel.cs" />
+    <Compile Include="Models\ItemDetailsVersionModel.cs" />
+    <Compile Include="Models\OfferMeterEntry.cs" />
+    <Compile Include="Models\MeterPrice.cs" />
+    <Compile Include="Models\ItemBannerModel.cs" />
+    <Compile Include="Models\RnR.cs" />
+    <Compile Include="Models\ItemActionModel.cs" />
+    <Compile Include="Models\ItemDetailsSSRJsonIslandModel.cs" />
+    <Compile Include="Models\ExtensionPerCategory.cs" />
+    <Compile Include="Models\BaseExtensionItem.cs" />
+    <Compile Include="Models\VSExtensionItem.cs" />
+    <Compile Include="Models\VSTSExtensionItem.cs" />
+    <Compile Include="Models\ProductExtensions.cs" />
+    <Compile Include="Models\ValidCategory.cs" />
+    <Compile Include="Models\VSTabData.cs" />
+    <Compile Include="Models\VSTabViewDataKO.cs" />
+    <Compile Include="Models\VSSItem.cs" />
+    <Compile Include="Models\VSSItemScope.cs" />
+    <Compile Include="Models\VSSItemType.cs" />
+    <Compile Include="Models\Pricing.cs" />
+    <Compile Include="Models\VSSOffer.cs" />
+    <Compile Include="Models\OfferDuration.cs" />
+    <Compile Include="Models\VSSOfferViewDataKO.cs" />
+    <Compile Include="Models\SubscriptionButton.cs" />
+    <Compile Include="Models\IVSGallery.cs" />
+    <Compile Include="Models\VSSortByValue.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\VSAuthorInfo.cs" />
+    <Compile Include="Models\VSCategory.cs" />
+    <Compile Include="Models\VSCategoryKO.cs" />
+    <Compile Include="Models\VSFileInfo.cs" />
+    <Compile Include="Models\VSItem.cs" />
+    <Compile Include="Models\VSMetadataItem.cs" />
+    <Compile Include="Models\VSMetadataSelectorModel.cs" />
+    <Compile Include="Models\VSSearchResult.cs" />
+    <Compile Include="Models\CostCategoryType.cs" />
+    <Compile Include="Models\VSSearchResultsResponse.cs" />
+    <Compile Include="Models\VSTag.cs" />
+    <Compile Include="Models\VSTagSelectorInfo.cs" />
+    <Compile Include="Models\VSTagSelectorModel.cs" />
+    <Compile Include="Controllers\Models\PublisherDirectoryData.cs" />
+    <Compile Include="Controllers\Models\TokenRequestResult.cs" />
+    <Compile Include="Controllers\Models\GallerySessionToken.cs" />
+    <Compile Include="Controllers\Models\GallerySessionTokenJsonData.cs" />
+    <Compile Include="Controllers\Models\GalleryPublisherViewData.cs" />
+    <Compile Include="Controllers\Models\PublisherTenant.cs" />
+    <Compile Include="Controllers\Models\PublisherRoleData.cs" />
+    <Compile Include="Controllers\Models\PublisherFoundInTenantResult.cs" />
+    <Compile Include="Controllers\Models\PublishedExtensionResult.cs" />
+    <Compile Include="Controllers\Helpers\DetailsPageWorksWithStringComposer.cs" />
+    <Compile Include="Controllers\Helpers\DetailsSSRHelper.cs" />
+    <Compile Include="Controllers\Helpers\GalleryConnectServerActionHelper.cs" />
+    <Compile Include="Controllers\Helpers\GalleryImportOperationHelper.cs" />
+    <Compile Include="Controllers\Helpers\GalleryControllerHelper.cs" />
+    <Compile Include="Controllers\Helpers\GalleryDetailsActionHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GalleryCommonResources.resx" />
+    <EmbeddedResource Include="GalleryResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

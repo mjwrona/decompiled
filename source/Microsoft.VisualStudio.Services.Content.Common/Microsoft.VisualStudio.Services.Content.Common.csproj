@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Content.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A41690ED-5515-41A8-9C39-CFDCA367B876}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Content.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Content.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>lib\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Client.Interactive">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Client.Interactive.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Dataflow">
+      <HintPath>lib\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ServicePointExtensions.cs" />
+    <Compile Include="ConcurrentIteratorExceptionWrapper`1.cs" />
+    <Compile Include="IEnumeratorExceptionMapper.cs" />
+    <Compile Include="ConcurrentIteratorInvalidCursorException.cs" />
+    <Compile Include="CompositeCursor`2.cs" />
+    <Compile Include="CompositeCursorExtensions.cs" />
+    <Compile Include="ConcurrentIteratorWithCursorExtensions.cs" />
+    <Compile Include="ConcurrentIteratorWithCursor`3.cs" />
+    <Compile Include="AutoKillProcessHandle.cs" />
+    <Compile Include="CancellationTokenSourceExtensions.cs" />
+    <Compile Include="EnumUtilities.cs" />
+    <Compile Include="EquatableTuple`2.cs" />
+    <Compile Include="EquatableTuple.cs" />
+    <Compile Include="ThrowingFileSystem.cs" />
+    <Compile Include="Histogram.cs" />
+    <Compile Include="LogHistogram.cs" />
+    <Compile Include="PartitionStrategy.cs" />
+    <Compile Include="IteratorPartition.cs" />
+    <Compile Include="ByteArrayAsHexJsonConvertor.cs" />
+    <Compile Include="JsonNormalizer.cs" />
+    <Compile Include="JsonStream.cs" />
+    <Compile Include="JsonWrite.cs" />
+    <Compile Include="JsonWriterStream.cs" />
+    <Compile Include="JsonWrites.cs" />
+    <Compile Include="ULongJsonConverter.cs" />
+    <Compile Include="Kvp.cs" />
+    <Compile Include="LocatorRange.cs" />
+    <Compile Include="LocatorRangeBoundary.cs" />
+    <Compile Include="LocatorRangeType.cs" />
+    <Compile Include="PerformanceInfo.cs" />
+    <Compile Include="ReaderWriterLockSlimExtensionMethods.cs" />
+    <Compile Include="IReadOnlySet`1.cs" />
+    <Compile Include="ReadOnlySet`1.cs" />
+    <Compile Include="ServiceInstanceTypes.cs" />
+    <Compile Include="ShardableLocator.cs" />
+    <Compile Include="ShardableLocatorRange.cs" />
+    <Compile Include="ShardableLocatorRangeBoundary.cs" />
+    <Compile Include="StringExtentions.cs" />
+    <Compile Include="ThreadLocalRandom.cs" />
+    <Compile Include="ArtifactBillingException.cs" />
+    <Compile Include="ConcurrentIterator.cs" />
+    <Compile Include="TryAddValueAsyncFunc`1.cs" />
+    <Compile Include="ConcurrentIterator`1.cs" />
+    <Compile Include="ConcurrentIterator`2.cs" />
+    <Compile Include="ConcurrentIteratorExtensions.cs" />
+    <Compile Include="ConcurrentIteratorSelect`2.cs" />
+    <Compile Include="ConcurrentIteratorSelectAsync`2.cs" />
+    <Compile Include="ConcurrentIteratorWhere`1.cs" />
+    <Compile Include="ConcurrentIteratorWrapper`2.cs" />
+    <Compile Include="ConcurrentIteratorWrapperAsync`2.cs" />
+    <Compile Include="ConcurrentIteratorSelectMany`2.cs" />
+    <Compile Include="ConcurrentIteratorSelectManyAsync`2.cs" />
+    <Compile Include="ConcurrentIteratorTake`1.cs" />
+    <Compile Include="ConcurrentIteratorAlreadyStartedException.cs" />
+    <Compile Include="ForkedConcurrentIterator`1.cs" />
+    <Compile Include="IConcurrentIterator`1.cs" />
+    <Compile Include="IConcurrentIteratorWithCursor`2.cs" />
+    <Compile Include="ResetStartConcurrentIterator`1.cs" />
+    <Compile Include="AsyncFile.cs" />
+    <Compile Include="NonSwallowingActionBlock.cs" />
+    <Compile Include="NonSwallowingTransformBlock.cs" />
+    <Compile Include="NonSwallowingTransformBlockUtils.cs" />
+    <Compile Include="NonSwallowingTransformManyBlock.cs" />
+    <Compile Include="AzureGeoRegion.cs" />
+    <Compile Include="AzureStorageGeoRedundancyType.cs" />
+    <Compile Include="EqualityHelper.cs" />
+    <Compile Include="ExpirationDateOptions.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FileLink.cs" />
+    <Compile Include="FileStreamUtils.cs" />
+    <Compile Include="FileSystem.cs" />
+    <Compile Include="IFileSystem.cs" />
+    <Compile Include="TempFile.cs" />
+    <Compile Include="FileVersionHelpers`1.cs" />
+    <Compile Include="HexUtilities.cs" />
+    <Compile Include="ArtifactHttpClient.cs" />
+    <Compile Include="ArtifactHttpClientFactory.cs" />
+    <Compile Include="ArtifactHttpRetryMessageHandler.cs" />
+    <Compile Include="AsyncHttpRetryHelper`1.cs" />
+    <Compile Include="AsyncHttpRetryHelper.cs" />
+    <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="IArtifactHttpClient.cs" />
+    <Compile Include="IArtifactVersionHttpClient.cs" />
+    <Compile Include="IClock.cs" />
+    <Compile Include="UtcClock.cs" />
+    <Compile Include="TimeZoneClock.cs" />
+    <Compile Include="UtcConversionExtensions.cs" />
+    <Compile Include="IEnvironment.cs" />
+    <Compile Include="IHashCount.cs" />
+    <Compile Include="InUseDetection.cs" />
+    <Compile Include="ByteArrayAsBase64JsonConvertor.cs" />
+    <Compile Include="ByteArrayAsNumberArrayJsonConvertor.cs" />
+    <Compile Include="JsonEnumerator.cs" />
+    <Compile Include="JsonProperty.cs" />
+    <Compile Include="JsonSerializer.cs" />
+    <Compile Include="Locator.cs" />
+    <Compile Include="NotAuthorizedException.cs" />
+    <Compile Include="NumberConversionHelper.cs" />
+    <Compile Include="PagedEnumerator`1.cs" />
+    <Compile Include="PathOptions.cs" />
+    <Compile Include="PutBlobUsingHttpException.cs" />
+    <Compile Include="RealEnvironment.cs" />
+    <Compile Include="RetrievalOptions.cs" />
+    <Compile Include="RunOnce`1.cs" />
+    <Compile Include="RunOnce`2.cs" />
+    <Compile Include="RunOnceDisposable`2.cs" />
+    <Compile Include="ServicePointConstants.cs" />
+    <Compile Include="ServicePointHelper.cs" />
+    <Compile Include="SizeOptions.cs" />
+    <Compile Include="StrictEncodingWithBOM.cs" />
+    <Compile Include="StrictEncodingWithoutBOM.cs" />
+    <Compile Include="EquatableTaggedUnion`2.cs" />
+    <Compile Include="EquatableTaggedUnion`3.cs" />
+    <Compile Include="EquatableTaggedUnion`4.cs" />
+    <Compile Include="EquatableTaggedUnionValue`2.cs" />
+    <Compile Include="EquatableTaggedUnionValue`3.cs" />
+    <Compile Include="EquatableTaggedUnionValue`4.cs" />
+    <Compile Include="ITaggedUnion`2.cs" />
+    <Compile Include="ITaggedUnion`3.cs" />
+    <Compile Include="ITaggedUnion`4.cs" />
+    <Compile Include="IEquatableTaggedUnion`2.cs" />
+    <Compile Include="IEquatableTaggedUnion`3.cs" />
+    <Compile Include="IEquatableTaggedUnion`4.cs" />
+    <Compile Include="TaggedUnion`2.cs" />
+    <Compile Include="TaggedUnion`3.cs" />
+    <Compile Include="TaggedUnion`4.cs" />
+    <Compile Include="TaggedUnionExtensions.cs" />
+    <Compile Include="TaggedUnionValue`2.cs" />
+    <Compile Include="TaggedUnionValue`3.cs" />
+    <Compile Include="TaggedUnionValue`4.cs" />
+    <Compile Include="IllegalTargetBlockStateException.cs" />
+    <Compile Include="TargetBlockExtensions.cs" />
+    <Compile Include="TaskSafety.cs" />
+    <Compile Include="ThreadPoolHelper.cs" />
+    <Compile Include="VolumeHelper.cs" />
+    <Compile Include="OSUtilities.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidDomainRequestException.cs" />
+    <Compile Include="MultiDomainExceptions\DomainNotFoundException.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidDomainIdException.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidDomainShardListException.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidShardSetUrlException.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidContainerSetIdException.cs" />
+    <Compile Include="MultiDomainExceptions\DomainIdDeserializationException.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidProjectException.cs" />
+    <Compile Include="MultiDomainExceptions\EmptyPartitionKeyException.cs" />
+    <Compile Include="MultiDomainExceptions\InvalidPartitionKeyException.cs" />
+    <Compile Include="MultiDomainExceptions\DuplicateDomainDataException.cs" />
+    <Compile Include="Authentication\AadAcquireTokenException.cs" />
+    <Compile Include="Authentication\IAadErrorHandlingPolicy.cs" />
+    <Compile Include="Authentication\AadErrorHandlingPolicy.cs" />
+    <Compile Include="Authentication\LocalTokenCacheArgs.cs" />
+    <Compile Include="Authentication\ITestableAuthenticationContext.cs" />
+    <Compile Include="Authentication\TestableAuthenticationContext.cs" />
+    <Compile Include="Authentication\VsoAadAuthority.cs" />
+    <Compile Include="Authentication\VsoAadConstants.cs" />
+    <Compile Include="Authentication\VsoCredentialHelper.cs" />
+    <Compile Include="Authentication\CredentialProvider\CredentialProviderExeption.cs" />
+    <Compile Include="Authentication\CredentialProvider\ICredentialProviderLoader.cs" />
+    <Compile Include="Authentication\CredentialProvider\CredentialProviderLoader.cs" />
+    <Compile Include="Authentication\CredentialProvider\CredentialProviderManager.cs" />
+    <Compile Include="Authentication\CredentialProvider\RequestStatus.cs" />
+    <Compile Include="Authentication\CredentialProvider\CredentialResponse.cs" />
+    <Compile Include="Authentication\CredentialProvider\ICredentialProvider.cs" />
+    <Compile Include="Authentication\CredentialProvider\PluginCredentialProvider.cs" />
+    <Compile Include="Operations\SecureStringConverter.cs" />
+    <Compile Include="Operations\SecureStringFactory.cs" />
+    <Compile Include="Tracing\AppTraceListener.cs" />
+    <Compile Include="Tracing\ErrorDetectionListener.cs" />
+    <Compile Include="Tracing\ArtifactServicesTraceSource.cs" />
+    <Compile Include="Tracing\CallbackAppTraceSource.cs" />
+    <Compile Include="Tracing\ConsoleMessageUtil.cs" />
+    <Compile Include="Tracing\ConsoleTraceListener.cs" />
+    <Compile Include="Tracing\FileTraceListener.cs" />
+    <Compile Include="Tracing\HttpRequestTraceDetails.cs" />
+    <Compile Include="Tracing\IAppTraceSource.cs" />
+    <Compile Include="Tracing\InMemoryLog.cs" />
+    <Compile Include="Tracing\InMemoryLogMessage.cs" />
+    <Compile Include="Tracing\InMemoryTraceListener.cs" />
+    <Compile Include="Tracing\NoopAppTraceSource.cs" />
+    <Compile Include="Tracing\SafeStringFormat.cs" />
+    <Compile Include="Tracing\SafeStringFormatDateTimeExtensions.cs" />
+    <Compile Include="Tracing\SafeStringFormatIFormattableExtensions.cs" />
+    <Compile Include="Tracing\SafeStringFormatStringBuilderExtensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EditExternallyConfiguredConsumer" xml:space="preserve">
+    <value>This subscription is being managed by the consumer service.  To modify settings for this subscription, visit {0}.</value>
+  </data>
+  <data name="ServiceHooksAdminPageTitle" xml:space="preserve">
+    <value>Service Hooks</value>
+  </data>
+  <data name="StringTooLong" xml:space="preserve">
+    <value>The string of length {0} exceeds the maximum allowed length of {1}</value>
+  </data>
+  <data name="StateDisabledByUser" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="CreateExternallyConfiguredConsumer" xml:space="preserve">
+    <value>Subscriptions for this service are managed by the consumer service.  To create a new subscription visit {0}.</value>
+  </data>
+  <data name="StringDoesNotMatchPattern" xml:space="preserve">
+    <value>Value does not match the required pattern '{0}'. Check to ensure there are no missing or invalid characters.</value>
+  </data>
+  <data name="ConfirmDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete the selected subscriptions?</value>
+  </data>
+  <data name="StringTooShort" xml:space="preserve">
+    <value>The string of length {0} does not meet the minimum required length of {1}</value>
+  </data>
+  <data name="StateEnabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="DeletingSubscriptionsMessage" xml:space="preserve">
+    <value>Deleting subscriptions...</value>
+  </data>
+  <data name="NotificationStatusProcessingText" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="DetailedLoggingLabel" xml:space="preserve">
+    <value>Detailed logging:</value>
+  </data>
+  <data name="ErrorDetailLabel" xml:space="preserve">
+    <value>Error Details</value>
+  </data>
+  <data name="PeriodLabel" xml:space="preserve">
+    <value>Last {0} days</value>
+  </data>
+  <data name="PeriodTitle" xml:space="preserve">
+    <value>View notifications sent during a specified period</value>
+  </data>
+  <data name="RequestTabTitle" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="ActionColumnHeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="NumberValueIsRequired" xml:space="preserve">
+    <value>A value is required.</value>
+  </data>
+  <data name="GuidValueIsRequired" xml:space="preserve">
+    <value>A GUID/UUID is required.</value>
+  </data>
+  <data name="RefreshTitle" xml:space="preserve">
+    <value>Refresh all subscriptions</value>
+  </data>
+  <data name="LatestResourceVersion" xml:space="preserve">
+    <value>[Latest]</value>
+  </data>
+  <data name="ValidatorFieldRequired" xml:space="preserve">
+    <value>The "{0}" field is required.</value>
+  </data>
+  <data name="WizardNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="SubscriptionNameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DefaultActionInputsHeaderLabel" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="TestSubscriptionLinkText" xml:space="preserve">
+    <value>Test subscription...</value>
+  </data>
+  <data name="WizardPreviousButtonText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="NoSubscriptions" xml:space="preserve">
+    <value>There are no subscriptions and you do not have sufficient permissions to create a subscription.</value>
+  </data>
+  <data name="StateColumnHeaderText" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="NotificationsAttempted" xml:space="preserve">
+    <value>attempted</value>
+  </data>
+  <data name="TestNotificationPageTitle" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="EditSubscriptionDialogTitle" xml:space="preserve">
+    <value>Edit Service Hooks Subscription</value>
+  </data>
+  <data name="NotificationFilteredErrorMessage" xml:space="preserve">
+    <value>Not delivered because event didn't match the specified filter or the subscription owner doesn't have sufficient permissions.</value>
+  </data>
+  <data name="StateEnabledRestricted" xml:space="preserve">
+    <value>Enabled (restricted)</value>
+  </data>
+  <data name="ChooseEventTypeTitle" xml:space="preserve">
+    <value>Choose the event type for this subscription</value>
+  </data>
+  <data name="AllEvents" xml:space="preserve">
+    <value>All events</value>
+  </data>
+  <data name="NotificationDetailsRequestHeaderLabel" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="SentAt" xml:space="preserve">
+    <value>Sent at: {0}</value>
+  </data>
+  <data name="HistoryDialogPageTitle" xml:space="preserve">
+    <value>{0} &gt; {1} ({2})</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="ResourceVersionHeaderText" xml:space="preserve">
+    <value>Resource Version</value>
+  </data>
+  <data name="WizardCosumerPageTitle" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="RequiredInput" xml:space="preserve">
+    <value>required</value>
+  </data>
+  <data name="AlertDialogTitle" xml:space="preserve">
+    <value>Alert</value>
+  </data>
+  <data name="WhenColumnHeaderText" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="CreateFirstSubscriptionLabel" xml:space="preserve">
+    <value>Create subscription</value>
+  </data>
+  <data name="EditSubscription" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="NotificationDetailsSummaryHeaderLabel" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="CreatedText" xml:space="preserve">
+    <value>Created by:</value>
+  </data>
+  <data name="LoggingExpired" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="FieldIsValid" xml:space="preserve">
+    <value>Field is valid</value>
+  </data>
+  <data name="DisableSelectedTitle" xml:space="preserve">
+    <value>Disable the selected subscription</value>
+  </data>
+  <data name="EventTabTitle" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="HooksHistoryGridLabel" xml:space="preserve">
+    <value>Service Hook History</value>
+  </data>
+  <data name="ActionDescriptionColumnHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ConfirmRevertMessage" xml:space="preserve">
+    <value>Are you sure you want to undo changes to the selected subscriptions?</value>
+  </data>
+  <data name="EventFilterColumnHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ConsumerActionLabel" xml:space="preserve">
+    <value>Perform this action</value>
+  </data>
+  <data name="NoPermissionToViewSubscriptions" xml:space="preserve">
+    <value>You do not have sufficient permissions to view or configure subscriptions.</value>
+  </data>
+  <data name="NotificationStatusFailedText" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="TeamColumnHeaderText" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="DiscoverMoreIntegrationsUrl" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=397304</value>
+  </data>
+  <data name="EnableSelected" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="CloseButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LearnMoreAboutThisServiceLinkText" xml:space="preserve">
+    <value>Learn more about this service</value>
+  </data>
+  <data name="DisableSelected" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="ServiceHooksAdminPageMessageProject" xml:space="preserve">
+    <value>&lt;a href='{0}'&gt;Click here&lt;/a&gt; to manage subscriptions for the default team.</value>
+  </data>
+  <data name="NumberTooSmall" xml:space="preserve">
+    <value>The value {0} is less than the minimum allowed value of {1}</value>
+  </data>
+  <data name="DeleteSelected" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="StringValueIsRequired" xml:space="preserve">
+    <value>A value is required.</value>
+  </data>
+  <data name="NumberTooLarge" xml:space="preserve">
+    <value>The value {0} exceeds the maximum allowed value of {1}</value>
+  </data>
+  <data name="ServicesHooksGridLabel" xml:space="preserve">
+    <value>Service Hooks Subscriptions</value>
+  </data>
+  <data name="LoggingExpiresNever" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="WizardConsumerSupportedActions" xml:space="preserve">
+    <value>Supported actions:</value>
+  </data>
+  <data name="DiscoverMoreIntegrationsLinkText" xml:space="preserve">
+    <value>Discover more integrations</value>
+  </data>
+  <data name="ServiceHooksPageTitle" xml:space="preserve">
+    <value>My Service Hooks</value>
+  </data>
+  <data name="WizardActionPageTitle" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="WizardCosumerSupportedEvents" xml:space="preserve">
+    <value>Supported events:</value>
+  </data>
+  <data name="ClickToEnableNotificationDetailedLogging" xml:space="preserve">
+    <value>Click to enable detailed logging</value>
+  </data>
+  <data name="LoadingSubscriptionsMessage" xml:space="preserve">
+    <value>Loading subscriptions...</value>
+  </data>
+  <data name="NotificationStatusRequestInProgressText" xml:space="preserve">
+    <value>Request In Progress</value>
+  </data>
+  <data name="SubscriptionErrorDialogTitle" xml:space="preserve">
+    <value>Subscription Error</value>
+  </data>
+  <data name="UriValueIsRequired" xml:space="preserve">
+    <value>A URI is required.</value>
+  </data>
+  <data name="ThereAreNoNotifications" xml:space="preserve">
+    <value>There are no notifications for this subscription.</value>
+  </data>
+  <data name="WizardCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ConfirmCancel" xml:space="preserve">
+    <value>You have changes to this subscription that will be lost if you cancel.  Do you want to continue?</value>
+  </data>
+  <data name="Last1Day" xml:space="preserve">
+    <value>Last 1 day</value>
+  </data>
+  <data name="WizardEventPageSubtitle" xml:space="preserve">
+    <value>Select an event to trigger on and configure any filters.</value>
+  </data>
+  <data name="EditSubscriptionTitle" xml:space="preserve">
+    <value>Edit the selected subscription...</value>
+  </data>
+  <data name="NotificationStatusFilteredText" xml:space="preserve">
+    <value>Failed (Filtered)</value>
+  </data>
+  <data name="NewSubscriptionDialogTitle" xml:space="preserve">
+    <value>New Service Hooks Subscription</value>
+  </data>
+  <data name="SubscriptionHistory" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="DefaultEventInputsHeaderLabel" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="ErrorMessageLabel" xml:space="preserve">
+    <value>Error Message</value>
+  </data>
+  <data name="MessageLabel" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="ServiceHooks" xml:space="preserve">
+    <value>Service Hooks</value>
+  </data>
+  <data name="WizardFinishButtonText" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="ConfirmRefreshMessage" xml:space="preserve">
+    <value>You have unsaved changes. Are you sure you wish to refresh? Unsaved changes will be lost.</value>
+  </data>
+  <data name="NotificationsSucceeded" xml:space="preserve">
+    <value>succeeded</value>
+  </data>
+  <data name="SummaryTabTitle" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="WizardActionPageSubtitle" xml:space="preserve">
+    <value>Select and configure the action to perform.</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ServiceHooksAdminPageMessage" xml:space="preserve">
+    <value>Integrate with your favorite services by notifying them when events happen in your project.</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="ResponseTabTitle" xml:space="preserve">
+    <value>Response</value>
+  </data>
+  <data name="LoadingNotifications" xml:space="preserve">
+    <value>Loading notifications...</value>
+  </data>
+  <data name="ChooseConsumerActionLabel" xml:space="preserve">
+    <value>Choose an action</value>
+  </data>
+  <data name="NotificationStatusQueuedText" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="ServiceHooksAdminPageMessageTeam" xml:space="preserve">
+    <value>&lt;a href='{0}'&gt;Click here&lt;/a&gt; to manage subscriptions for the project.</value>
+  </data>
+  <data name="NotificationsFailed" xml:space="preserve">
+    <value>failed</value>
+  </data>
+  <data name="NotificationStatusSucceededText" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="HistoryDialogTitle" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="NotificationsLoading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="WizardConsumerPageSubtitle" xml:space="preserve">
+    <value>Select a service to integrate with.</value>
+  </data>
+  <data name="Period1Day" xml:space="preserve">
+    <value>Last 1 day</value>
+  </data>
+  <data name="WizardTestButtonText" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="NotificationDetailsResponseHeaderLabel" xml:space="preserve">
+    <value>Response</value>
+  </data>
+  <data name="PeriodLabelAll" xml:space="preserve">
+    <value>All notifications</value>
+  </data>
+  <data name="SubscriptionHistoryTitle" xml:space="preserve">
+    <value>View notification history for subscription...</value>
+  </data>
+  <data name="NewSubscription" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="EventColumnHeaderText" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="LoggingExpiresOn" xml:space="preserve">
+    <value>On (expires {0})</value>
+  </data>
+  <data name="OwnerColumnHeaderText" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="ConsumerColumnHeaderText" xml:space="preserve">
+    <value>Consumer</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="StatusColumnHeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Status7DaysColumnHeaderText" xml:space="preserve">
+    <value>7 Day Status</value>
+  </data>
+  <data name="OptionalInput" xml:space="preserve">
+    <value>optional</value>
+  </data>
+  <data name="NewSubscriptionTitle" xml:space="preserve">
+    <value>Create a new subscription...</value>
+  </data>
+  <data name="PrivacyDisclaimer" xml:space="preserve">
+    <value>Remember that selected events are visible to users of the target service, even if they don't have permission to view the related artifact.</value>
+  </data>
+  <data name="WizardEventPageTitle" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="TestNotificationDialogTitle" xml:space="preserve">
+    <value>Test Notification</value>
+  </data>
+  <data name="DeleteSelectedTitle" xml:space="preserve">
+    <value>Delete the selected subscriptions</value>
+  </data>
+  <data name="EventTriggerLabel" xml:space="preserve">
+    <value>Trigger on this type of event</value>
+  </data>
+  <data name="Last7Days" xml:space="preserve">
+    <value>Last 7 days</value>
+  </data>
+  <data name="Last2Days" xml:space="preserve">
+    <value>Last 2 days</value>
+  </data>
+  <data name="StateInactiveIdentity" xml:space="preserve">
+    <value>Disabled ({0} has left the project)</value>
+  </data>
+  <data name="HistoryDetailsDialogPageTitle" xml:space="preserve">
+    <value>Notification Details</value>
+  </data>
+  <data name="StateDisabledBySystem" xml:space="preserve">
+    <value>Disabled (due to failures)</value>
+  </data>
+  <data name="ServicesHooksConsumerGridLabel" xml:space="preserve">
+    <value>Service Hooks Consumer details</value>
+  </data>
+  <data name="ModifiedText" xml:space="preserve">
+    <value>Modified by:</value>
+  </data>
+  <data name="StateInactiveIdentityUnknownUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+</root>

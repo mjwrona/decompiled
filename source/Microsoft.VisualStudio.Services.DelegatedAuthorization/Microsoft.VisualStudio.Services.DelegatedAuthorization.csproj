@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.DelegatedAuthorization.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF0ABBD8-A690-4812-9CF2-1452556027CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.DelegatedAuthorization</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.DelegatedAuthorization</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Configuration" />
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DelegatedAuthorizationCertificateManager.cs" />
+    <Compile Include="DelegatedAuthorizationContants.cs" />
+    <Compile Include="DelegatedAuthorizationRegistrationServiceAdapter.cs" />
+    <Compile Include="DelegatedAuthorizationSecurity.cs" />
+    <Compile Include="IDelegatedAuthorizationExtension.cs" />
+    <Compile Include="IDelegatedAuthorizationRegistrationServiceAdapter.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationBase.cs" />
+    <Compile Include="IDelegatedAuthorizationNotificationService.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationNotificationService.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationRegistrationService.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationService.cs" />
+    <Compile Include="ExchangeAppTokenValidator.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationServiceBase.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationServiceError.cs" />
+    <Compile Include="PlatformDelegatedAuthorizationServiceException.cs" />
+    <Compile Include="RegistrationExtensions.cs" />
+    <Compile Include="AppTokenPairsController.cs" />
+    <Compile Include="AuthorizationsController.cs" />
+    <Compile Include="CloneExtensions.cs" />
+    <Compile Include="OAuth2TokenController.cs" />
+    <Compile Include="SessionTokenTracing.cs" />
+    <Compile Include="RegistrationSecretController.cs" />
+    <Compile Include="PersonalAccessTokensController.cs" />
+    <Compile Include="SessionTokenLifetimePolicyFactory.cs" />
+    <Compile Include="SessionTokenLifetimePolicy.cs" />
+    <Compile Include="RegistrationValidator.cs" />
+    <Compile Include="RestApiResourceProvider.cs" />
+    <Compile Include="AccessTokenController.cs" />
+    <Compile Include="HostAuthorizationController.cs" />
+    <Compile Include="AppSessionTokenController.cs" />
+    <Compile Include="ClientRegistrationController.cs" />
+    <Compile Include="ClientRegistration2Controller.cs" />
+    <Compile Include="SessionTokenController.cs" />
+    <Compile Include="DelegatedAuthorizationControllerBase.cs" />
+    <Compile Include="TokenValidationResult.cs" />
+    <Compile Include="PlatformTokenExpirationService.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="DelegatedAuthorizationResources.cs" />
+    <Compile Include="DataAccess\AccessTokenData.cs" />
+    <Compile Include="DataAccess\AccessTokenKey.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyPage.cs" />
+    <Compile Include="DataAccess\CustomSqlError.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent2.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent3.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent4.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent5.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent6.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent7.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent8.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent9.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent10.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent11.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent12.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent13.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent14.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent15.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent16.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent17.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent18.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent19.cs" />
+    <Compile Include="DataAccess\DelegatedAuthorizationComponent20.cs" />
+    <Compile Include="DataAccess\RegistrationBinder.cs" />
+    <Compile Include="DataAccess\RegistrationBinder2.cs" />
+    <Compile Include="DataAccess\RegistrationBinder3.cs" />
+    <Compile Include="DataAccess\RegistrationBinder4.cs" />
+    <Compile Include="DataAccess\RegistrationBinder5.cs" />
+    <Compile Include="DataAccess\RegistrationRedirectLocationBinder.cs" />
+    <Compile Include="DataAccess\AuthorizationBinder.cs" />
+    <Compile Include="DataAccess\AuthorizationBinder2.cs" />
+    <Compile Include="DataAccess\AuthorizationBinder3.cs" />
+    <Compile Include="DataAccess\AccessTokenBinder.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyBinder.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyBinder2.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyBinder3.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyBinder4.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyBinder5.cs" />
+    <Compile Include="DataAccess\AccessTokenKeyBinder6.cs" />
+    <Compile Include="DataAccess\NextRowNumberBinder.cs" />
+    <Compile Include="DataAccess\AccessTokenHashStringBinder.cs" />
+    <Compile Include="DataAccess\HostAuthorizationBinder.cs" />
+    <Compile Include="DataAccess\PublicAuthorizationIdBinder.cs" />
+    <Compile Include="DataAccess\RegistrationRedirectLocation.cs" />
+    <Compile Include="DataAccess\TokenExpirationComponent.cs" />
+    <Compile Include="DataAccess\TokenExpirationComponent2.cs" />
+    <Compile Include="DataAccess\RegistrationRedirectLocationTabledValuedParameters.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

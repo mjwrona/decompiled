@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DuplicateServerUri" xml:space="preserve">
+    <value>TF15039: The proxy configuration file has duplicate {0} node.</value>
+  </data>
+  <data name="ProxyClientRedirectException" xml:space="preserve">
+    <value>TF15021: Redirecting the client to the Azure DevOps Source Control server.</value>
+  </data>
+  <data name="ConfigMissingServerUriNode" xml:space="preserve">
+    <value>TF15030: The configuration file was missing the server Uri node.  Expected a node such as &lt;uri&gt;https://sourceControlServer:1234/SourceControl&lt;/uri&gt;</value>
+  </data>
+  <data name="RequestFileIdMissing" xml:space="preserve">
+    <value>TF15006: The request file ID was missing or empty.</value>
+  </data>
+  <data name="ErrorReadingProxyStats" xml:space="preserve">
+    <value>TF15038: An error occurred while reading proxy statistics xml file. The Performance Counter values are defaulted to 0.</value>
+  </data>
+  <data name="ConfigurationNumericValueOutOfRange" xml:space="preserve">
+    <value>TF15027: The value provided for the "{0}" configuration node is invalid.  The value should be in the range from {1} to {2}.  Using the default value: {3}.</value>
+  </data>
+  <data name="FileCacheRootNotAbsolute" xml:space="preserve">
+    <value>TF15003: The cache root specified in the fileCacheRoot configuration value must be an absolute (rooted) path.  File caching will be disabled.</value>
+  </data>
+  <data name="UnknownErrorInGet" xml:space="preserve">
+    <value>TF15017: An unknown error occurred while performing a get operation.</value>
+  </data>
+  <data name="DuplicateServer" xml:space="preserve">
+    <value>TF15039: The proxy configuration file has a duplicate node. The duplicated Id is: {0}.</value>
+  </data>
+  <data name="ApplicationTierTimeout" xml:space="preserve">
+    <value>TF15026: The application tier failed to respond to the request in a timely manner.</value>
+  </data>
+  <data name="InvalidCacheRoot" xml:space="preserve">
+    <value>TF15022: Invalid CacheRoot folder.</value>
+  </data>
+  <data name="ConfigValueNotNumeric" xml:space="preserve">
+    <value>TF15031: Configuration value "{0}" must be numeric.  The value read was: "{1}".  Using the default value "{2}"</value>
+  </data>
+  <data name="ServerNotInitialized" xml:space="preserve">
+    <value>TF15016: Server not initialized.</value>
+  </data>
+  <data name="ConfigInvalidUriFormat" xml:space="preserve">
+    <value>TF15029: Unable to parse the Uri node of the configuration file.  Expected a valid absolute Uri but read "{0}".</value>
+  </data>
+  <data name="ErrorDeterminingCacheCleanupList" xml:space="preserve">
+    <value>TF15037: An error occurred while determining cache cleanup list for : {0}</value>
+  </data>
+  <data name="ErrorInitializingPerformanceCounters" xml:space="preserve">
+    <value>TF400031: An error occurred initializing performance counters. Try running the following command: TFSConfig perfcounters /load /type:proxy from an administrative command prompt to fix the problem</value>
+  </data>
+  <data name="InvalidCacheLimit" xml:space="preserve">
+    <value>TF15023: Invalid CacheLimit.</value>
+  </data>
+  <data name="SystemStartMessage" xml:space="preserve">
+    <value>The VSTF Proxy Server started at {0}</value>
+  </data>
+  <data name="RequestFileIdMalformed" xml:space="preserve">
+    <value>TF15005: The request file ID was malformed.</value>
+  </data>
+  <data name="ErrorDownloadingFromMidTier" xml:space="preserve">
+    <value>TF15042: Unable to download the file from the server : {0}</value>
+  </data>
+  <data name="ErrorCommitingToCache" xml:space="preserve">
+    <value>TF15018: An error occurred while committing the files to the cache.</value>
+  </data>
+  <data name="ProxyInstanceSuffix" xml:space="preserve">
+    <value>VersionControlProxy</value>
+  </data>
+  <data name="RequestExpired" xml:space="preserve">
+    <value>TF15004: The download request signature has expired.</value>
+  </data>
+  <data name="RequestServerIdMissing" xml:space="preserve">
+    <value>TF15007: The request server ID was missing or empty.</value>
+  </data>
+  <data name="ConfigFileHasNoServers" xml:space="preserve">
+    <value>TF15032: The proxy configuration file has no registered servers.</value>
+  </data>
+  <data name="RequestTimestampMalformed" xml:space="preserve">
+    <value>TF15010: The request timestamp is malformed.</value>
+  </data>
+  <data name="InvalidCacheLimitPercent" xml:space="preserve">
+    <value>TF15024: Invalid CacheLimitPercent. Value should be in the range of 0-100</value>
+  </data>
+  <data name="MissingMetadataVariable" xml:space="preserve">
+    <value>TF15034: The metadata file {0} was missing the required value: {1}</value>
+  </data>
+  <data name="MetadataFormatWrong" xml:space="preserve">
+    <value>TF15015: Metadata file not in expected format: {0}</value>
+  </data>
+  <data name="CacheCleanupComplete" xml:space="preserve">
+    <value>Cache cleanup completed in {0} ms</value>
+  </data>
+  <data name="RequestTimestampMissing" xml:space="preserve">
+    <value>TF15011: The request timestamp was missing or empty.</value>
+  </data>
+  <data name="ReadSchemaFailed" xml:space="preserve">
+    <value>TF15041: Error occurred while trying to retrieve ProxyConfig.xsd.</value>
+  </data>
+  <data name="RequestSignatureMissing" xml:space="preserve">
+    <value>TF15008: The request signature was missing or empty</value>
+  </data>
+  <data name="StartingCacheCleanup" xml:space="preserve">
+    <value>Starting cache cleanup. CurrentCacheSize : {0}, CacheLimit : {1}, Space To Free up : {2}</value>
+  </data>
+  <data name="ProxyCacheMissBecameHitException" xml:space="preserve">
+    <value>TF15020: A proxy cache miss turned into a cache hit.  Performing second chance cache hit detection.</value>
+  </data>
+  <data name="ErrorProcessingProxyConfig" xml:space="preserve">
+    <value>TF15043: A critical error occurred while processing Proxy.config. Shutting down the current AppDomain</value>
+  </data>
+  <data name="RequestSignatureValidationFailed" xml:space="preserve">
+    <value>TF15009: The server could not validate the request signature.</value>
+  </data>
+  <data name="UnableToStartDownloadThread" xml:space="preserve">
+    <value>TF15019: An error occurred while attempting to start the download thread.</value>
+  </data>
+  <data name="ErrorDownloadingFromAppTier" xml:space="preserve">
+    <value>TF15028: An error occurred while downloading a file from the application tier.</value>
+  </data>
+  <data name="VerifyCryptoFolderPermission" xml:space="preserve">
+    <value>TF243000: Verify that the Azure DevOps service account has full permission to MachineKeys folder on server (for example, C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys).</value>
+  </data>
+  <data name="SystemStopMessage" xml:space="preserve">
+    <value>The VSTF Proxy Server stopped at {0}</value>
+  </data>
+  <data name="UserAgent" xml:space="preserve">
+    <value>Azure DevOps Server Source Control Proxy</value>
+  </data>
+  <data name="UnknownProxyException" xml:space="preserve">
+    <value>TF15012: Unknown proxy exception.</value>
+  </data>
+  <data name="ErrorComputingFolderStatistics" xml:space="preserve">
+    <value>TF15036: An error occurred while computing statistics for : {0}</value>
+  </data>
+  <data name="UnknownRepository" xml:space="preserve">
+    <value>TF15013: The requested Azure DevOps Server is not registered with the proxy server.</value>
+  </data>
+  <data name="DefaultCacheLimit" xml:space="preserve">
+    <value>TF15035: CacheLimit calculation resulted in invalid value : {0}, defaulting to 1GB limit</value>
+  </data>
+  <data name="InvalidCacheDeletionPercent" xml:space="preserve">
+    <value>TF15025: Invalid CacheDeletionPercent. Value should be in the range of 0-100</value>
+  </data>
+  <data name="ProxyStatsMissingNode" xml:space="preserve">
+    <value>TF15033: The proxy statistics XML file is missing the {0} node.  Statistics for this server will not be used.</value>
+  </data>
+  <data name="ErrorLoadingCollection" xml:space="preserve">
+    <value>TF243001: An error occurred initializing the proxy for the team project collection at {0}. The message returned from the server was: {1}</value>
+  </data>
+  <data name="TamperedProxyStatisticsFile" xml:space="preserve">
+    <value>TF15040: The statistics file has been tampered. TotalDownloadRequests cannot be less than TotalCacheHits. CacheHit and TotalDownloadRequests performance counters will be reset to zero.</value>
+  </data>
+  <data name="CommitPathNotSet" xml:space="preserve">
+    <value>TF15014: CommitPath not set - unable to commit file to proxy</value>
+  </data>
+</root>

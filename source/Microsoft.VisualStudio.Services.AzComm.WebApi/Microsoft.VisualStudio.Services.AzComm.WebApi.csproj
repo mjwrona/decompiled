@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.AzComm.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D070261-1143-413D-97D8-69B5A282BFF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.AzComm.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.AzComm</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzCommResourceIds.cs" />
+    <Compile Include="AzCommResourceVersions.cs" />
+    <Compile Include="Migration\Rest\Contracts\AzureResourceAccount.cs" />
+    <Compile Include="Migration\Rest\Contracts\AzureSubscriptionInternal.cs" />
+    <Compile Include="Migration\Rest\Contracts\DualWriteDefaultAccessLevelRequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\DualWriteSubscriptionRequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\DualWriteARARequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\DualWriteSRURequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\DataMigrationRequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\DualWriteTagsRequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\StaleOrganizationRequest.cs" />
+    <Compile Include="Migration\Rest\Contracts\SubscriptionResourceUsage.cs" />
+    <Compile Include="Migration\Rest\Contracts\AccountProviderNamespace.cs" />
+    <Compile Include="Migration\Rest\Contracts\AzCommMeterType.cs" />
+    <Compile Include="Migration\Rest\Contracts\OperationResult.cs" />
+    <Compile Include="Migration\Rest\Contracts\SubscriptionSource.cs" />
+    <Compile Include="Migration\Rest\Contracts\SubscriptionStatus.cs" />
+    <Compile Include="Rest\Contracts\BillingGetResponse.cs" />
+    <Compile Include="Rest\Contracts\BillingOperations.cs" />
+    <Compile Include="Rest\Contracts\BillingSetupRequest.cs" />
+    <Compile Include="Rest\Contracts\DefaultLicenseTypeGetResponse.cs" />
+    <Compile Include="WebApi\AzCommHttpClient.cs" />
+    <Compile Include="WebApi\AzCommHttpClientBase.cs" />
+    <Compile Include="WebApi\AzCommMigrationHttpClient.cs" />
+    <Compile Include="WebApi\AzCommWebApiResources.cs" />
+    <Compile Include="WebApi\HttpClients\MeterUsage2HttpClient.cs" />
+    <Compile Include="WebApi\Enums\BillingMode.cs" />
+    <Compile Include="WebApi\Enums\MeterTrialState.cs" />
+    <Compile Include="WebApi\Enums\MeterKind.cs" />
+    <Compile Include="WebApi\Enums\ValidationErrorReason.cs" />
+    <Compile Include="WebApi\Enums\UsageReportOperation.cs" />
+    <Compile Include="WebApi\Enums\CSM\SubscriptionState.cs" />
+    <Compile Include="WebApi\Contracts\AzureSubscriptionDetailsGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\AzureSubscriptionsGetRequest.cs" />
+    <Compile Include="WebApi\Contracts\AzureSubscriptionInfoGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\AzureSubscriptionsGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\DefaultLicenseTypeUpdateRequest.cs" />
+    <Compile Include="WebApi\Contracts\MeterConfigProperties.cs" />
+    <Compile Include="WebApi\Contracts\SubscriptionFreeQuantityRequest.cs" />
+    <Compile Include="WebApi\Contracts\SubscriptionMeterResourceGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\MeterResourceGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\MeterResourceUpdateRequest.cs" />
+    <Compile Include="WebApi\Contracts\MeterUsage2GetResponse.cs" />
+    <Compile Include="WebApi\Contracts\MeterUsageGetRequest.cs" />
+    <Compile Include="WebApi\Contracts\MeterQuantityChangeEvent.cs" />
+    <Compile Include="WebApi\Contracts\SubscriptionGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\UpdateBillingModeRequest.cs" />
+    <Compile Include="WebApi\Contracts\MeterUsageGetResponse.cs" />
+    <Compile Include="WebApi\Contracts\MeterUsageReportRequest.cs" />
+    <Compile Include="WebApi\Contracts\MeterResourceUpdateResponse.cs" />
+    <Compile Include="WebApi\Contracts\CSM\CsmSubscriptionRequest.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

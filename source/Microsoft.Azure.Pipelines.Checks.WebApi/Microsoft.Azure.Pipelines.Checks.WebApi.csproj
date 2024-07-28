@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Pipelines.Checks.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D50554C5-9649-4D9A-BE40-97D966B27184}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.Checks.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.Checks.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Pipelines.Approval.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Approval.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.TaskCheck.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.TaskCheck.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalCheckConfiguration.cs" />
+    <Compile Include="CheckConfiguration.cs" />
+    <Compile Include="CheckEvaluationOrder.cs" />
+    <Compile Include="CheckConfigurationExpandParameter.cs" />
+    <Compile Include="ChecksConfigurationExtension.cs" />
+    <Compile Include="CheckConfigurationJsonConverter.cs" />
+    <Compile Include="CheckConfigurationRef.cs" />
+    <Compile Include="CheckData.cs" />
+    <Compile Include="CheckConfigurationData.cs" />
+    <Compile Include="CheckDefinitionData.cs" />
+    <Compile Include="CheckIcon.cs" />
+    <Compile Include="CheckIssue.cs" />
+    <Compile Include="CheckIssueType.cs" />
+    <Compile Include="CheckIssueData.cs" />
+    <Compile Include="CheckRun.cs" />
+    <Compile Include="CheckRunFilter.cs" />
+    <Compile Include="CheckRunResult.cs" />
+    <Compile Include="CheckRunStatus.cs" />
+    <Compile Include="CheckRunUpdate.cs" />
+    <Compile Include="CheckSuite.cs" />
+    <Compile Include="CheckSuiteContext.cs" />
+    <Compile Include="CheckSuiteRef.cs" />
+    <Compile Include="CheckSuiteExpandParameter.cs" />
+    <Compile Include="CheckSuiteRequest.cs" />
+    <Compile Include="CheckSuiteUpdatedEvent.cs" />
+    <Compile Include="CheckSuiteUpdateParameter.cs" />
+    <Compile Include="CheckType.cs" />
+    <Compile Include="GenericCheckConfiguration.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="ResourceCheckIssue.cs" />
+    <Compile Include="TaskCheckConfiguration.cs" />
+    <Compile Include="TimeZone.cs" />
+    <Compile Include="DeleteCheckSuitesEvent.cs" />
+    <Compile Include="CheckConfigurationNotFoundException.cs" />
+    <Compile Include="InvalidCheckConfigurationException.cs" />
+    <Compile Include="InvalidCheckTypeException.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="CheckRunExistsException.cs" />
+    <Compile Include="CheckRunRequestNotFoundException.cs" />
+    <Compile Include="CheckSuiteRequestNotFoundException.cs" />
+    <Compile Include="CheckSuiteRequestIdExistsException.cs" />
+    <Compile Include="InvalidCheckRunContextException.cs" />
+    <Compile Include="CheckSuiteIsAlreadyCompleted.cs" />
+    <Compile Include="CheckSuiteBypassException.cs" />
+    <Compile Include="InvalidCheckRunUpdateException.cs" />
+    <Compile Include="CheckCannotBeRerunException.cs" />
+    <Compile Include="CheckSuiteUpdateException.cs" />
+    <Compile Include="GenericDatabaseUpdateErrorException.cs" />
+    <Compile Include="PipelinesChecksHttpClientBase.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="EventConstants.cs" />
+    <Compile Include="PipelinesChecksHttpClient.cs" />
+    <Compile Include="ResourceType.cs" />
+    <Compile Include="ResourceTypeNames.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

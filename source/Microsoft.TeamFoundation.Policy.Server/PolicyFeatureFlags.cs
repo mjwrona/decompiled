@@ -1,0 +1,19 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Policy.Server.PolicyFeatureFlags
+// Assembly: Microsoft.TeamFoundation.Policy.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: C7B03386-B27B-4823-BB4F-89F7D7E42DDD
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Policy.Server.dll
+
+namespace Microsoft.TeamFoundation.Policy.Server
+{
+  public class PolicyFeatureFlags
+  {
+    public const string EnterpriseManagedPolicies = "Policy.EnterpriseManagedPolicies";
+    public const string EnableCachedPolicyEvaluation = "Policy.EnableCachedPolicyEvaluation";
+    public const string EnableCachedPolicyABTesting = "Policy.EnableCachedPolicyABTesting";
+    public const string EnableCachedPolicyABTestingWithSerialization = "Policy.EnableCachedPolicyABTestingWithSerialization";
+    public const string EnablePolicyByScopeSprocV2 = "Policy.EnablePolicyByScopeSprocV2";
+    public const string EnableHiddenPolicies = "Policy.HiddenPolicies";
+    public const string PolicyEventBasedCacheEnabled = "Policy.EventBasedCacheEnabled";
+  }
+}

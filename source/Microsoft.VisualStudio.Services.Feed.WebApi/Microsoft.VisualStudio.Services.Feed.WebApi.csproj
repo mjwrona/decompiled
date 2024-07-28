@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9742EA38-D868-45BB-AA4E-5CAAC3E88877}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Feed.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Feed.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildPackage.cs" />
+    <Compile Include="ChangeType.cs" />
+    <Compile Include="FeedView.cs" />
+    <Compile Include="FeedCore.cs" />
+    <Compile Include="Feed.cs" />
+    <Compile Include="FeedUpdate.cs" />
+    <Compile Include="FeedCapabilities.cs" />
+    <Compile Include="FeedChange.cs" />
+    <Compile Include="FeedViewType.cs" />
+    <Compile Include="GlobalRole.cs" />
+    <Compile Include="GlobalPermission.cs" />
+    <Compile Include="FeedIdsResult.cs" />
+    <Compile Include="FeedPermission.cs" />
+    <Compile Include="FeedPermissionConstants.cs" />
+    <Compile Include="FeedPermissionsLevelConstants.cs" />
+    <Compile Include="FeedRetentionPolicy.cs" />
+    <Compile Include="FeedRole.cs" />
+    <Compile Include="FeedRoleConstants.cs" />
+    <Compile Include="FeedChangesResponse.cs" />
+    <Compile Include="FeedSecuredObject.cs" />
+    <Compile Include="FeedVisibility.cs" />
+    <Compile Include="MinimalPackageVersion.cs" />
+    <Compile Include="IPackageInfo.cs" />
+    <Compile Include="Package.cs" />
+    <Compile Include="PackageChange.cs" />
+    <Compile Include="PackageChangesResponse.cs" />
+    <Compile Include="PackageDependency.cs" />
+    <Compile Include="PackageVersionMetricsQuery.cs" />
+    <Compile Include="PackageFile.cs" />
+    <Compile Include="PackageMetrics.cs" />
+    <Compile Include="PackageMetricsQuery.cs" />
+    <Compile Include="PackageVersion.cs" />
+    <Compile Include="PackageVersionChange.cs" />
+    <Compile Include="PackageVersionMetrics.cs" />
+    <Compile Include="PackageVersionProvenance.cs" />
+    <Compile Include="Provenance.cs" />
+    <Compile Include="ProvenanceSourceConstants.cs" />
+    <Compile Include="InternalBuildProvenanceKeys.cs" />
+    <Compile Include="InternalReleaseProvenanceKeys.cs" />
+    <Compile Include="ExternalProvenanceKeys.cs" />
+    <Compile Include="CommonProvenanceKeys.cs" />
+    <Compile Include="ProtocolMetadata.cs" />
+    <Compile Include="RecycleBinPackageVersion.cs" />
+    <Compile Include="UpstreamSourceType.cs" />
+    <Compile Include="UpstreamStatus.cs" />
+    <Compile Include="UpstreamStatusDetail.cs" />
+    <Compile Include="UpstreamSource.cs" />
+    <Compile Include="InvalidFeedNameException.cs" />
+    <Compile Include="InvalidFeedViewNameException.cs" />
+    <Compile Include="InvalidFeedDescriptionException.cs" />
+    <Compile Include="InvalidUpstreamSourceException.cs" />
+    <Compile Include="FeedNeedsPermissionsException.cs" />
+    <Compile Include="FeedIdNotFoundException.cs" />
+    <Compile Include="FeedNameAlreadyExistsException.cs" />
+    <Compile Include="FeedNotReleasedException.cs" />
+    <Compile Include="PermissionRemovalFailedException.cs" />
+    <Compile Include="ViewInvalidRoleException.cs" />
+    <Compile Include="PermissionInvalidRoleException.cs" />
+    <Compile Include="PackageNotFoundException.cs" />
+    <Compile Include="PackageVersionNotFoundException.cs" />
+    <Compile Include="ProtocolNotSupportedException.cs" />
+    <Compile Include="ProvenanceNotFoundException.cs" />
+    <Compile Include="InvalidPackageVersionException.cs" />
+    <Compile Include="InvalidAliasException.cs" />
+    <Compile Include="UnallowedUserIdException.cs" />
+    <Compile Include="InvalidPackageVersionPatchException.cs" />
+    <Compile Include="PackageLimitExceededException.cs" />
+    <Compile Include="InvalidPackageIdException.cs" />
+    <Compile Include="InvalidUserInputException.cs" />
+    <Compile Include="PackagesCollectionWithDifferentIdsException.cs" />
+    <Compile Include="NoLatestVersionWasFoundException.cs" />
+    <Compile Include="PackageVersionDeletedException.cs" />
+    <Compile Include="DatabaseStateIsNoLongerValidException.cs" />
+    <Compile Include="GenericDatabaseFailureException.cs" />
+    <Compile Include="UnknownDatabaseErrorOcurredException.cs" />
+    <Compile Include="FeedViewNameAlreadyExistsException.cs" />
+    <Compile Include="FeedViewNotFoundException.cs" />
+    <Compile Include="FeedViewNotReleasedException.cs" />
+    <Compile Include="FeedIsReadOnlyException.cs" />
+    <Compile Include="IncompatibleQueryParametersException.cs" />
+    <Compile Include="InvalidFeedCapabilitiesException.cs" />
+    <Compile Include="SecurityNamespaceNullException.cs" />
+    <Compile Include="IdentityNullException.cs" />
+    <Compile Include="ServiceConnectionNotSupportedException.cs" />
+    <Compile Include="FeedHttpClient.cs" />
+    <Compile Include="FeedWebApiConstants.cs" />
+    <Compile Include="FeedHttpClientBase.cs" />
+    <Compile Include="FeedBatchData.cs" />
+    <Compile Include="FeedBatchOperationData.cs" />
+    <Compile Include="FeedBatchOperation.cs" />
+    <Compile Include="ProjectReference.cs" />
+    <Compile Include="SaveCachedPackagesData.cs" />
+    <Compile Include="FeedBatchDataConverter.cs" />
+    <Compile Include="GlobalRoleConstants.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="AzureArtifacts\DeletedPackageVersion.cs" />
+    <Compile Include="AzureArtifacts\FeedListData.cs" />
+    <Compile Include="AzureArtifacts\ArtifactsFeed.cs" />
+    <Compile Include="AzureArtifacts\ViewIdentifier.cs" />
+    <Compile Include="AzureArtifacts\UpstreamSourceIdentifier.cs" />
+    <Compile Include="AzureArtifacts\AccountMetadata.cs" />
+    <Compile Include="AzureArtifacts\MinimalPackage.cs" />
+    <Compile Include="AzureArtifacts\SkeletalPackageVersion.cs" />
+    <Compile Include="AzureArtifacts\PackageListDataItem.cs" />
+    <Compile Include="AzureArtifacts\FeedIdentifier.cs" />
+    <Compile Include="AzureArtifacts\CreateFeedAdditionalData.cs" />
+    <Compile Include="AzureArtifacts\FeedMessage.cs" />
+    <Compile Include="AzureArtifacts\MessageType.cs" />
+    <Compile Include="AzureArtifacts\PackageDetails.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

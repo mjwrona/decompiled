@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Core.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBD821AE-FA4B-49AB-A607-34FD5C428CA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Core.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Core.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectedServiceHttpClient.cs" />
+    <Compile Include="CoreConstants.cs" />
+    <Compile Include="TeamProjectCapabilitiesConstants.cs" />
+    <Compile Include="QueryParamConstants.cs" />
+    <Compile Include="TfsRequestContextItemsKeys.cs" />
+    <Compile Include="TfsSettingsScopeNames.cs" />
+    <Compile Include="QueryParamHelper.cs" />
+    <Compile Include="ContentValidationHttpClient.cs" />
+    <Compile Include="ProcessHttpClient.cs" />
+    <Compile Include="ProjectHttpClientBase.cs" />
+    <Compile Include="ProxyHttpClient.cs" />
+    <Compile Include="TeamHttpClientBase.cs" />
+    <Compile Include="TemporaryDataHttpClient.cs" />
+    <Compile Include="IdentityMruHttpClient.cs" />
+    <Compile Include="ConnectedServiceKind.cs" />
+    <Compile Include="ConnectionServiceData.cs" />
+    <Compile Include="WebApiConnectedService.cs" />
+    <Compile Include="WebApiConnectedServiceDetails.cs" />
+    <Compile Include="WebApiConnectedServiceRef.cs" />
+    <Compile Include="WebApiProject.cs" />
+    <Compile Include="WebApiProjectCollection.cs" />
+    <Compile Include="WebApiProjectCollectionRef.cs" />
+    <Compile Include="WebApiTeam.cs" />
+    <Compile Include="WebApiTeamRef.cs" />
+    <Compile Include="ProjectCollectionHttpClient.cs" />
+    <Compile Include="ProjectCompatHttpClientBase.cs" />
+    <Compile Include="ProjectException.cs" />
+    <Compile Include="ProjectDoesNotExistException.cs" />
+    <Compile Include="ProjectDoesNotExistWithNameException.cs" />
+    <Compile Include="ProjectAlreadyExistsException.cs" />
+    <Compile Include="ProjectNameNotRecognizedException.cs" />
+    <Compile Include="ProjectWorkPendingException.cs" />
+    <Compile Include="InvalidProjectNameException.cs" />
+    <Compile Include="EmptyProjectNameException.cs" />
+    <Compile Include="InvalidProjectDeleteException.cs" />
+    <Compile Include="InvalidProjectCreateException.cs" />
+    <Compile Include="ProjectHttpClient.cs" />
+    <Compile Include="InvalidProxyUriException.cs" />
+    <Compile Include="TaggingHelper.cs" />
+    <Compile Include="TaggingHttpClient.cs" />
+    <Compile Include="TaggingWebApiConstants.cs" />
+    <Compile Include="WebApiCreateTagRequestData.cs" />
+    <Compile Include="WebApiTagDefinition.cs" />
+    <Compile Include="WebApiTagDefinitionList.cs" />
+    <Compile Include="TeamCompatHttpClientBase.cs" />
+    <Compile Include="TeamNotFoundException.cs" />
+    <Compile Include="DefaultTeamNotFoundException.cs" />
+    <Compile Include="InvalidTeamNameException.cs" />
+    <Compile Include="InvalidTeamDescriptionException.cs" />
+    <Compile Include="TeamAlreadyExistsException.cs" />
+    <Compile Include="TeamSecurityException.cs" />
+    <Compile Include="TeamUpdateInvalidPermissionException.cs" />
+    <Compile Include="CreateTeamInputValuesException.cs" />
+    <Compile Include="UpdateTeamInputValuesException.cs" />
+    <Compile Include="DeleteTeamInputValuesException.cs" />
+    <Compile Include="TeamHttpClient.cs" />
+    <Compile Include="TFStringComparer.cs" />
+    <Compile Include="IdentityData.cs" />
+    <Compile Include="ProcessType.cs" />
+    <Compile Include="Process.cs" />
+    <Compile Include="ProcessReference.cs" />
+    <Compile Include="ProcessCustomizationType.cs" />
+    <Compile Include="ProjectAvatar.cs" />
+    <Compile Include="ProjectInfo.cs" />
+    <Compile Include="ProjectProperty.cs" />
+    <Compile Include="ProjectProperties.cs" />
+    <Compile Include="ProjectState.cs" />
+    <Compile Include="ProjectVisibility.cs" />
+    <Compile Include="ProjectHttpHeaders.cs" />
+    <Compile Include="ProjectChangeType.cs" />
+    <Compile Include="ProjectMessage.cs" />
+    <Compile Include="ProjectMessageConstants.cs" />
+    <Compile Include="Proxy.cs" />
+    <Compile Include="ProxyAuthorization.cs" />
+    <Compile Include="SourceControlTypes.cs" />
+    <Compile Include="TeamProject.cs" />
+    <Compile Include="TeamProjectCollection.cs" />
+    <Compile Include="TeamProjectCollectionReference.cs" />
+    <Compile Include="TeamProjectReference.cs" />
+    <Compile Include="TemporaryDataCreatedDTO.cs" />
+    <Compile Include="TemporaryDataDTO.cs" />
+    <Compile Include="CategorizedWebApiTeams.cs" />
+    <Compile Include="IdentityRefOrJValueConverter.cs" />
+    <Compile Include="WebApiResources.cs" />
+    <Compile Include="Types\TeamContext.cs" />
+    <Compile Include="Team\UpdateTeam.cs" />
+    <Compile Include="Internal\CssUtils.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebApiResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

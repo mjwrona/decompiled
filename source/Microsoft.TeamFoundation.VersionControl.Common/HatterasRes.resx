@@ -1,0 +1,2768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OnlyOneWorkspace" xml:space="preserve">
+    <value>All specified files must reside in the same workspace.  Workspace {0} contains {1}.</value>
+  </data>
+  <data name="MergeContentSummary" xml:space="preserve">
+    <value>{0}: {1} local, {2} server, {3} both, and {4} conflicting</value>
+  </data>
+  <data name="ConflictTagTarget" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="ConfigureNoPromptBad" xml:space="preserve">
+    <value>The configure command does not support /noprompt.</value>
+  </data>
+  <data name="WorkItemUpdateErrorMessagePlural" xml:space="preserve">
+    <value>Failed to update the following work items:
+</value>
+  </data>
+  <data name="PropertyChangesNotSupported" xml:space="preserve">
+    <value>TF400299: The Azure DevOps Server to which your team project is connected does not support operations related to property changes.</value>
+  </data>
+  <data name="GitPermissionGenericRead" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="CannotCloakPathWithNoMappedParent" xml:space="preserve">
+    <value>'{0}' cannot be cloaked because it does not have a mapped parent.</value>
+  </data>
+  <data name="EmbeddedWildcardsNotAllowed" xml:space="preserve">
+    <value>Embedded wildcards (* and ?) are not allowed in the {0} option.  The wildcard * may be used by itself.</value>
+  </data>
+  <data name="ItemTypeFile" xml:space="preserve">
+    <value>file</value>
+  </data>
+  <data name="UnifiedDiffSourceLabel" xml:space="preserve">
+    <value>original {0:yyyy-MM-dd HH:mm:ss.fffffff zzz}</value>
+  </data>
+  <data name="VersionControlNotRegistered" xml:space="preserve">
+    <value>TF10109: Source control cannot locate the source control service on Azure DevOps Server {0}. Check that you have a network connection and that your Azure DevOps Server is available. If the problem persists, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="InvalidExtensionMustStartWithPeriod" xml:space="preserve">
+    <value>Extension "{0}" must start with a period</value>
+  </data>
+  <data name="MissingBaseline" xml:space="preserve">
+    <value>TF400122: The unmodified file content for {0} could not be restored from the baseline directory because it is missing. You must perform a get on this item to download its content.</value>
+  </data>
+  <data name="CheckinNotesNotInRoot" xml:space="preserve">
+    <value>TF10118: Version control settings cannot be configured for $/.  You must specify a valid Team Project.</value>
+  </data>
+  <data name="ChangeTypeUndelete" xml:space="preserve">
+    <value>undelete</value>
+  </data>
+  <data name="DiffRepositoryLabel" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="WorkItemQueryDisplayName" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="WorkItemUpdateAssociateFailed" xml:space="preserve">
+    <value>failed to associate work item: {0}</value>
+  </data>
+  <data name="NoCloakedFolderMatches" xml:space="preserve">
+    <value>{0} does not match any cloak.</value>
+  </data>
+  <data name="CannotFindRegistrationInformation" xml:space="preserve">
+    <value>TF10110: The Azure DevOps source control server information is not registered or not available.</value>
+  </data>
+  <data name="ChangesetNotFound" xml:space="preserve">
+    <value>Changeset {0} does not exist.</value>
+  </data>
+  <data name="ResolvedConflict" xml:space="preserve">
+    <value>Resolved {0} as {1}</value>
+  </data>
+  <data name="IgnoringDeletionId" xml:space="preserve">
+    <value>TF10119: Warning {0} - Ignoring deletion ID {1}</value>
+  </data>
+  <data name="WorkspaceVersionTableUnknownSchema" xml:space="preserve">
+    <value>The workspace version table contains an unknown schema version.</value>
+  </data>
+  <data name="PcwNodeBadAttributeValue" xml:space="preserve">
+    <value>"{0}" xml node contains an invalid value of "{2}" for the "{1}" attribute</value>
+  </data>
+  <data name="AutoResolvedAllReCheckin" xml:space="preserve">
+    <value>No files checked in due to conflicting changes. These conflicting changes have been automatically resolved. Please try the check-in again if there are changes remaining.</value>
+  </data>
+  <data name="ConflictTagShelveset" xml:space="preserve">
+    <value>Shelveset</value>
+  </data>
+  <data name="ConflictMergeSourceIsDeletedPath" xml:space="preserve">
+    <value>{0} could not be merged because it has been deleted in the source branch.</value>
+  </data>
+  <data name="BaselineHashValueDoesNotMatch" xml:space="preserve">
+    <value>The hash value of the baseline content does not match the hash value in the local version table.</value>
+  </data>
+  <data name="UnableToEditNonExistentWorkspace" xml:space="preserve">
+    <value>The workspace {0} does not exist.  Please specify an existing workspace or /{1} to create one.</value>
+  </data>
+  <data name="ConflictTagServer" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="ProxyStatus" xml:space="preserve">
+    <value>Status: {0}</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HistoryBriefChangeWidth" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="ConflictTagSource" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="ItemPermissionUnlockOther" xml:space="preserve">
+    <value>Unlock other users' changes</value>
+  </data>
+  <data name="PcwDuplicateProjectNameError" xml:space="preserve">
+    <value>Duplicate name for the source control folder on the Azure DevOps Server {0}</value>
+  </data>
+  <data name="ConflictGetCollisionPath" xml:space="preserve">
+    <value>{0} could not be retrieved because the name conflicts with another item in your workspace.</value>
+  </data>
+  <data name="OptionNotAllowed" xml:space="preserve">
+    <value>The option {0} is not allowed.</value>
+  </data>
+  <data name="LocalToServerReadOnly" xml:space="preserve">
+    <value>Marking unedited items with the read-only bit...</value>
+  </data>
+  <data name="WorkingFoldersChangeGetPrompt" xml:space="preserve">
+    <value>One or more working folders in version control have changed. Do you want to get the latest files from version control to update your workspace?</value>
+  </data>
+  <data name="NoWorkspaceInCacheMatches" xml:space="preserve">
+    <value>No workspace in the cache matches {0} for server {1}.</value>
+  </data>
+  <data name="SetPermissionOptionNotAllowed" xml:space="preserve">
+    <value>The {0} option cannot be used when setting permissions.</value>
+  </data>
+  <data name="ChangeTypeFileType" xml:space="preserve">
+    <value>encoding</value>
+  </data>
+  <data name="PendingDeleteConflictChange" xml:space="preserve">
+    <value>TF203069: {0} could not be deleted because that change conflicts with one or more other pending changes to that item. To delete it, undo all pending changes to that item, delete it, and then check in the change.</value>
+  </data>
+  <data name="NoPendingChanges" xml:space="preserve">
+    <value>There are no pending changes.</value>
+  </data>
+  <data name="ConflictTagGeneratedBase" xml:space="preserve">
+    <value>Generated base file</value>
+  </data>
+  <data name="NoMatchingWorkspaceFoundInRepository" xml:space="preserve">
+    <value>No workspace matching {0} on computer {1} found in Azure DevOps Server {2}.</value>
+  </data>
+  <data name="ConflictMergeSourceAndTargetChangedPath" xml:space="preserve">
+    <value>{0} could not be merged because the source and target both have changes.</value>
+  </data>
+  <data name="NewNameOptionRequired" xml:space="preserve">
+    <value>The /{0} option is required when the {1} resolution is specified.</value>
+  </data>
+  <data name="ChangesetOptionUnavailableWhenBrowsing" xml:space="preserve">
+    <value>You must provide a changeset number to use the /comment or /notes options.</value>
+  </data>
+  <data name="PcwGitNotDefined" xml:space="preserve">
+    <value>The process template you are using does not support Git. Please use a template that does support Git.</value>
+  </data>
+  <data name="InvalidPathTooManyDotDots" xml:space="preserve">
+    <value>TF10129: The path {0} contains too many instances of '..' (it goes above the root). Type or select a different path.</value>
+  </data>
+  <data name="DestroyNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the Destroy command.</value>
+  </data>
+  <data name="ThirdPartyToolAssemblyNotFound" xml:space="preserve">
+    <value>Cannot find an appropriate tool implementation in {0}.</value>
+  </data>
+  <data name="UnableToDownloadBaseline" xml:space="preserve">
+    <value>TF400297: An error occurred while downloading unmodified file content to the baseline directory. Additional information: {0}</value>
+  </data>
+  <data name="PcwLogSettingGetLatestOnCheckout" xml:space="preserve">
+    <value>Changing project setting GetLatestOnCheckout to "{0}"</value>
+  </data>
+  <data name="LabelNotEnoughArguments" xml:space="preserve">
+    <value>You must specify an item, /comment, or /owner.</value>
+  </data>
+  <data name="UnifiedDiffTargetLabel" xml:space="preserve">
+    <value>modified {0:yyyy-MM-dd HH:mm:ss.fffffff zzz}</value>
+  </data>
+  <data name="PolicyLoadError" xml:space="preserve">
+    <value>Error loading the {0} policy. Installation instructions: {1}</value>
+  </data>
+  <data name="PcwGetLatestOnCheckoutRequiredInvalid" xml:space="preserve">
+    <value>The "get_latest_on_checkout" xml node contains an invalid value of "{0}" for the "required" attribute.</value>
+  </data>
+  <data name="CouldNotParseParameter" xml:space="preserve">
+    <value>Could not parse {0} parameter {1}</value>
+  </data>
+  <data name="TfIgnoreHeader" xml:space="preserve">
+    <value>################################################################################
+# This .tfignore file was automatically created by Microsoft(R) Visual Studio.
+#
+# Local items matching filespecs in this file will not be added to version
+# control. This file can be checked in to share exclusions with others.
+#
+# Wildcard characters are * and ?. Patterns are matched recursively unless the
+# pattern is prefixed by the \ character.
+#
+# You can prepend a path to a pattern to make it more specific. If you do,
+# wildcard characters are not permitted in the path portion.
+#
+# The # character at the beginning of a line indicates a comment.
+#
+# The ! prefix negates a pattern. This can be used to re-include an item after
+# it was excluded by a .tfignore file higher in the tree, or by the Team
+# Project Collection's global exclusions list.
+#
+# The / character is interpreted as a \ character on Windows platforms.
+#
+# Examples:
+#
+#  # Excludes all files ending in .txt in Alpha\Beta and all its subfolders.
+#  Alpha\Beta\*.txt
+#
+#  # Excludes all files ending in .cpp in this folder only.
+#  \*.cpp
+#
+#  # Excludes all files ending in .cpp in this folder and all subfolders.
+#  *.cpp
+#
+#  # If "Contoso" is a folder, then Contoso and all its children are excluded.
+#  # If it is a file, then only the "Contoso" in this folder is excluded.
+#  \Contoso
+#
+#  # If Help.exe is excluded by a higher .tfignore file or by the Team Project
+#  # Collection global exclusions list, then this pattern re-includes it in
+#  # this folder only.
+#  !\Help.exe    
+#
+################################################################################</value>
+  </data>
+  <data name="MappingCreationCancelled" xml:space="preserve">
+    <value>TF10133: An attempt to create a working folder mapping was canceled.  The current source control operation was canceled.</value>
+  </data>
+  <data name="Indeterminate" xml:space="preserve">
+    <value>Indeterminate</value>
+  </data>
+  <data name="InvalidProxyUrl" xml:space="preserve">
+    <value>TF15044: Unable to connect to this Azure DevOps Proxy Server: {0}.
+
+Possible reasons for failure include:
+- The Azure DevOps Proxy Server name, port number or protocol is incorrect.
+- The Azure DevOps Proxy Server is offline.
+- Password is expired or incorrect.
+
+For further information, contact the Azure DevOps Proxy administrator.</value>
+  </data>
+  <data name="InvalidExtensionTooLong" xml:space="preserve">
+    <value>Extension "{0}" is too long</value>
+  </data>
+  <data name="PcwLogNoNodesFound" xml:space="preserve">
+    <value>No xml nodes of type "{0}" were found in the task xml</value>
+  </data>
+  <data name="CheckingInPendingChange" xml:space="preserve">
+    <value>Checking in {0}: {1}</value>
+  </data>
+  <data name="GitPermissionForcePush" xml:space="preserve">
+    <value>Rewrite and destroy history (force push)</value>
+  </data>
+  <data name="HelpTopicNotAvailable" xml:space="preserve">
+    <value>Help for topic {0} is not available</value>
+  </data>
+  <data name="DefaultLocalItemExclusions" xml:space="preserve">
+    <value>bin;bld;ClientBin;Debug;obj;AppPackages;Release;TestResults;FakesAssemblies;*.*~;*.appx;*.appxrecipe;*.build.csdef;*.cache;*.cer;*.class;*.dbmdl;*.dll;*.docstates;*.docstates.suo;*.DS_Store;*.err;*.exe;*.ilk;*.ipch;*.lastbuildstate;*.lce;*.ldf;*.lib;*.log;*.mdf;*.msscci;*.ncb;*.obj;*.opensdf;*.pch;*.pdb;*.pri;*.res;*.resources;*.sdf;*.suo;*.svn;*.swp;*.temp;*.tfOrig*;*.tlog;*.tmp;*.trx;*.user;*.unsuccessfulbuild;*.v11.suo;*.vcxproj.user;*.vsix;*.vsmdi;*.vspscc;*.vssettings;*.vssscc;*.wrn;*.xap;.metadata</value>
+  </data>
+  <data name="ItemExistsException" xml:space="preserve">
+    <value>The item {0} already exists.</value>
+  </data>
+  <data name="WorkspaceIsDeleted" xml:space="preserve">
+    <value>The workspace {0} has been deleted.</value>
+  </data>
+  <data name="DeleteShelvesetQuestion_YN" xml:space="preserve">
+    <value>Are you sure you want to delete the shelveset {0}?</value>
+  </data>
+  <data name="VersionSpecOnlyTwoValid" xml:space="preserve">
+    <value>TF204021: You may only specify 2 version specifiers as the start and end range.</value>
+  </data>
+  <data name="PendingChangesInvalidPageSize" xml:space="preserve">
+    <value>The page size value must be 0 or greater. If the value is 0, then last change must be null to indicate paging should not be used.</value>
+  </data>
+  <data name="IgnoringItem" xml:space="preserve">
+    <value>Ignoring {0}</value>
+  </data>
+  <data name="PcwIsGlobalPermission" xml:space="preserve">
+    <value>"{0}" is a global source control permission.  Only item-level permissions can be granted in a methodology template.</value>
+  </data>
+  <data name="LockOwnerName" xml:space="preserve">
+    <value>Lock owner name</value>
+  </data>
+  <data name="AColon" xml:space="preserve">
+    <value>{0}:</value>
+  </data>
+  <data name="UnshelveConflictGetCollisionPathFull" xml:space="preserve">
+    <value>A different item with the path {0} existed in the original workspace.</value>
+  </data>
+  <data name="RenameWorkingFolderException" xml:space="preserve">
+    <value>TF14097: Cannot rename {0} when it has a working folder mapping assigned to it.</value>
+  </data>
+  <data name="LabelUpdated" xml:space="preserve">
+    <value>Updated label {0}</value>
+  </data>
+  <data name="ValidationFailed" xml:space="preserve">
+    <value>Validation failed.</value>
+  </data>
+  <data name="NoProxySetting" xml:space="preserve">
+    <value>No proxy server has been configured for this client.</value>
+  </data>
+  <data name="GetGet" xml:space="preserve">
+    <value>get</value>
+  </data>
+  <data name="NoTargetFile" xml:space="preserve">
+    <value>[no target file]</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="PcwLogChoseNoFolder" xml:space="preserve">
+    <value>User chose no folder creation</value>
+  </data>
+  <data name="InvalidPermissionValue" xml:space="preserve">
+    <value>TF204019: The permission {0} is not supported. You must supply one or more of the values ({1}) to update these permissions.</value>
+  </data>
+  <data name="ItemAtVersionNotFoundInRepository" xml:space="preserve">
+    <value>The specified version of item {0} was not found in source control.</value>
+  </data>
+  <data name="PcwGetLatestOnCheckoutMultiplyDefined" xml:space="preserve">
+    <value>The "get_latest_on_checkout" xml node appears multiple times - please remove all but one.</value>
+  </data>
+  <data name="CheckinNotes" xml:space="preserve">
+    <value>Check-in Notes</value>
+  </data>
+  <data name="GitPermissionGenericContribute" xml:space="preserve">
+    <value>Contribute</value>
+  </data>
+  <data name="ConflictNotResolved" xml:space="preserve">
+    <value>Conflict for {0} was not resolved</value>
+  </data>
+  <data name="UnableToDetermineRepository" xml:space="preserve">
+    <value>Unable to determine the source control server.</value>
+  </data>
+  <data name="LockUnchanged" xml:space="preserve">
+    <value>unchanged</value>
+  </data>
+  <data name="LocalInformation" xml:space="preserve">
+    <value>Local information:</value>
+  </data>
+  <data name="ChangesetInvalid" xml:space="preserve">
+    <value>{0} is not a valid changeset number.  Please specify a number between 1 and 2147483647.</value>
+  </data>
+  <data name="MergeAssociatedPendingChange" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="PolicyViolations" xml:space="preserve">
+    <value>TF10139: The following check-in policies have not been satisfied</value>
+  </data>
+  <data name="UnshelveGetConflictFull" xml:space="preserve">
+    <value>There were changes committed between the unshelved version and original workspace version of {0}.</value>
+  </data>
+  <data name="LabelsNotFound" xml:space="preserve">
+    <value>No labels found.</value>
+  </data>
+  <data name="WorkingFolders" xml:space="preserve">
+    <value>Working folders</value>
+  </data>
+  <data name="OptionNotAllowedOnPendBranch" xml:space="preserve">
+    <value>The {0} option is only permitted when /checkin is used.</value>
+  </data>
+  <data name="WorkItemUpdateAssociated" xml:space="preserve">
+    <value>associated work item: {0}</value>
+  </data>
+  <data name="VersionedItemTypeLocalizedName" xml:space="preserve">
+    <value>Versioned Item</value>
+  </data>
+  <data name="PcwGitMultiplyDefined" xml:space="preserve">
+    <value>The "git" xml node appears multiple times - please remove all but one.</value>
+  </data>
+  <data name="ChangeTypeLock" xml:space="preserve">
+    <value>lock</value>
+  </data>
+  <data name="ChangeTypeNone" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="ChangeTypeEdit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="LabelDeleted" xml:space="preserve">
+    <value>Deleted label {0}</value>
+  </data>
+  <data name="DiffFolderAndFile" xml:space="preserve">
+    <value>Cannot diff a folder against a file.</value>
+  </data>
+  <data name="DestroyedFileContentUnavailableException" xml:space="preserve">
+    <value>TF14124: The content for changeset {0} of the file '{1}' was destroyed. Please try again using a later version of this item.</value>
+  </data>
+  <data name="IgnoringVersionRangeStart" xml:space="preserve">
+    <value>Warning {0} - Ignoring version range start of {1}, only using version {2}</value>
+  </data>
+  <data name="VersionedItem" xml:space="preserve">
+    <value>Version {0} of {1}</value>
+  </data>
+  <data name="CannotSpecifyInheritWithPerms" xml:space="preserve">
+    <value>Please specify only the inherit setting or the user or group permissions.</value>
+  </data>
+  <data name="PolicyViolationsApplied" xml:space="preserve">
+    <value>TF10140: The following check-in policies were not satisfied</value>
+  </data>
+  <data name="CannotCreateOrModifyPropertyWithTFSPrefix" xml:space="preserve">
+    <value>TF204009: You cannot create, update, or delete a property that begins with the 'TFS:' prefix.</value>
+  </data>
+  <data name="ProxySiteDefault" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="PermissionFormat" xml:space="preserve">
+    <value>{0}: {1} ({2}: {3})</value>
+  </data>
+  <data name="InvalidStopAtSpec" xml:space="preserve">
+    <value>TF10147: /stopat must not be a label or workspace version specifier.</value>
+  </data>
+  <data name="ConflictGetPendingDeletePath" xml:space="preserve">
+    <value>{0} could not be retrieved because you have a conflicting pending delete.</value>
+  </data>
+  <data name="WorkItems" xml:space="preserve">
+    <value>Work Items</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="DetectedChanges" xml:space="preserve">
+    <value>Detected Changes:</value>
+  </data>
+  <data name="ProxyTooManyArguments" xml:space="preserve">
+    <value>You may not specify arguments for this command without specifying an option.</value>
+  </data>
+  <data name="RollbackTargetVersionHasChangesPath" xml:space="preserve">
+    <value>Cannot rollback {0} because the target version has conflicting changes.</value>
+  </data>
+  <data name="NoChangesShelved" xml:space="preserve">
+    <value>No changes shelved.</value>
+  </data>
+  <data name="PcwLogSettingExclusiveCheckout" xml:space="preserve">
+    <value>Changing project setting ExclusiveCheckout to "{0}"</value>
+  </data>
+  <data name="ResolveEncodingsDontMatch" xml:space="preserve">
+    <value>The encodings for the files being merged must match or an encoding conversion must be specified.</value>
+  </data>
+  <data name="PcwNewEmptyFolderCreated" xml:space="preserve">
+    <value>A new empty folder {0} will be created in Team Foundation Version Control</value>
+  </data>
+  <data name="ChangeAlreadyPendingException" xml:space="preserve">
+    <value>The item {0} already has pending changes.</value>
+  </data>
+  <data name="WorkItemHeaderAssignedTo" xml:space="preserve">
+    <value>Assigned To</value>
+  </data>
+  <data name="FileExists" xml:space="preserve">
+    <value>The file {0} already exists.</value>
+  </data>
+  <data name="InvalidOperation" xml:space="preserve">
+    <value>Operation must be either {0} or {1}</value>
+  </data>
+  <data name="Workspace" xml:space="preserve">
+    <value>Workspace</value>
+  </data>
+  <data name="CannotUseXmlWithCachedWorkspaces" xml:space="preserve">
+    <value>The XML format is not valid when listing all workspaces on this computer.  To use the XML format, please specify the /collection option.</value>
+  </data>
+  <data name="WorkItemHeaderType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SourceControlSystemDescriptionTFVC" xml:space="preserve">
+    <value>Team Foundation Version Control (TFVC) uses a single, centralized server repository to track and version files.  Local changes are always checked in to the central server where other developers can get the latest changes.</value>
+  </data>
+  <data name="DeleteProxyNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the DeleteProxy command.</value>
+  </data>
+  <data name="InvalidLocalItemParameter" xml:space="preserve">
+    <value>The localitem value is invalid. The local item {1} is a sub item of {0}.</value>
+  </data>
+  <data name="SourceControlSystemDescriptionGit" xml:space="preserve">
+    <value>Git is a Distributed Version Control System (DVCS) that uses a local repository to track and version files.  Changes are shared with other developers by pushing and pulling changes through a remote, shared repository.</value>
+  </data>
+  <data name="NoTheirFileForConflict" xml:space="preserve">
+    <value>This conflict has no "Their" file.</value>
+  </data>
+  <data name="ShelvedChange" xml:space="preserve">
+    <value>Shelved Change: {0}</value>
+  </data>
+  <data name="PcwGitRepositoryCreated" xml:space="preserve">
+    <value>A new empty Git repository will be created on the server</value>
+  </data>
+  <data name="ChangesUndoneByCheckin" xml:space="preserve">
+    <value>The following changes were not checked in because the items were not modified.</value>
+  </data>
+  <data name="NoFile" xml:space="preserve">
+    <value>[no file]</value>
+  </data>
+  <data name="InvalidCacheFile" xml:space="preserve">
+    <value>The cache file {0} is not valid and cannot be loaded.
+Please correct or delete the file.
+</value>
+  </data>
+  <data name="CannotUseDetailedWithCachedWorkspaces" xml:space="preserve">
+    <value>The detailed format is not valid when listing all workspaces on this computer.  To use the detailed format, please specify the /collection option.</value>
+  </data>
+  <data name="ServerToLocalCreatingPropertiesTable" xml:space="preserve">
+    <value>Creating the workspace properties table...</value>
+  </data>
+  <data name="VersionSpecInvalidDeletionId" xml:space="preserve">
+    <value>TF10146: The deletion id given ({0}) is not a supported deletion number.</value>
+  </data>
+  <data name="ConflictGetDeleted" xml:space="preserve">
+    <value>The item has already been deleted.</value>
+  </data>
+  <data name="ContextDiffSourceLabel" xml:space="preserve">
+    <value>original {0:ddd MMM d HH:mm:ss yyyy}</value>
+  </data>
+  <data name="ConflictMergeSourceRenamed" xml:space="preserve">
+    <value>The source item has been renamed.</value>
+  </data>
+  <data name="NoSourceFile" xml:space="preserve">
+    <value>[no source file]</value>
+  </data>
+  <data name="AtleastOneSourceAndOneOrMoreTarget" xml:space="preserve">
+    <value>Specify at least one source item and one or more target items.</value>
+  </data>
+  <data name="ChangesetSpecifyAtMostOne" xml:space="preserve">
+    <value>Please specify only one changeset number.</value>
+  </data>
+  <data name="WorkItemUpdateError" xml:space="preserve">
+    <value>
+ID {0}. Reason: {1}</value>
+  </data>
+  <data name="LocalToServerReconcile" xml:space="preserve">
+    <value>Reconciling your local workspace to the server...</value>
+  </data>
+  <data name="PolicyFailuresOverridden" xml:space="preserve">
+    <value>The policies have been overridden.</value>
+  </data>
+  <data name="DeletionId" xml:space="preserve">
+    <value>Deletion ID</value>
+  </data>
+  <data name="WorkspacePermissionUse" xml:space="preserve">
+    <value>Use the workspace</value>
+  </data>
+  <data name="CouldNotDetermineProxySite" xml:space="preserve">
+    <value>Could not determine the site this proxy belongs in.</value>
+  </data>
+  <data name="ShelvesetPropertyOperationsNotSupported" xml:space="preserve">
+    <value>TF400028: Shelveset property operations are not valid on the version of Azure DevOps Server on which your team project is hosted.</value>
+  </data>
+  <data name="UnshelveWithMergeNotSupported" xml:space="preserve">
+    <value>TF400016: Unshelve with Merge is not supported on the version of Azure DevOps Server on which your team project is hosted.</value>
+  </data>
+  <data name="PolicyLoadErrorMoreInfo" xml:space="preserve">
+    <value>Error loading the {0} policy ({1}). Installation instructions: {2}</value>
+  </data>
+  <data name="ServerSettingsNotSupported" xml:space="preserve">
+    <value>TF400027: The Azure DevOps Server to which your team project is connected does not support querying or setting version control settings.</value>
+  </data>
+  <data name="LocalWorkspaceRequired" xml:space="preserve">
+    <value>Workspace {0} does not reside on this computer.  If this computer was recently renamed, the workspace may be updated by running 'tf workspaces /updateComputerName:oldComputerName'.</value>
+  </data>
+  <data name="GetDelete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="InvalidArgumentsPctPct" xml:space="preserve">
+    <value>Arguments may not contain %%</value>
+  </data>
+  <data name="CannotCreateFilesInRootException" xml:space="preserve">
+    <value>TF10149: You cannot create files in the root folder. Create a team project and then add the files under the team project folder.</value>
+  </data>
+  <data name="GlobalPermissionAdminShelvesets" xml:space="preserve">
+    <value>Administer shelved changes</value>
+  </data>
+  <data name="Invalid8Dot3Path" xml:space="preserve">
+    <value>TF203013: The path {0} is in the DOS (8.3) short path format and is not supported. Enter a full path to the item and try again.</value>
+  </data>
+  <data name="ArgumentsMustNotContain" xml:space="preserve">
+    <value>TF10098: {0} arguments cannot contain {1}</value>
+  </data>
+  <data name="ServerOptionRequiredForUpdateOptions" xml:space="preserve">
+    <value>The /collection option must be specified whenever /updateComputerName or /updateUserName is specified.</value>
+  </data>
+  <data name="ProxyUrl" xml:space="preserve">
+    <value>Proxy URL: {0}</value>
+  </data>
+  <data name="QueryProxiesNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the QueryProxies command.</value>
+  </data>
+  <data name="ItemPermissionCheckin" xml:space="preserve">
+    <value>Check in</value>
+  </data>
+  <data name="LockOwnerIdentity" xml:space="preserve">
+    <value>Lock owner identity</value>
+  </data>
+  <data name="UnMergedItems" xml:space="preserve">
+    <value>Un-Merged items</value>
+  </data>
+  <data name="AllFilesUpToDate" xml:space="preserve">
+    <value>All files are up to date.</value>
+  </data>
+  <data name="MergesMergedInHeader" xml:space="preserve">
+    <value>Merged in Changeset</value>
+  </data>
+  <data name="NoPropertiesOnItem" xml:space="preserve">
+    <value>There are no properties present on this item.</value>
+  </data>
+  <data name="FoundProxySiteName" xml:space="preserve">
+    <value>Automatically determined the proxy site: {0}</value>
+  </data>
+  <data name="HistoryBriefUserWidth" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="LocalToServerUpdateWorkspace" xml:space="preserve">
+    <value>Changing the location of your workspace on the server...</value>
+  </data>
+  <data name="ServerToLocalDeletingExisting" xml:space="preserve">
+    <value>Removing colliding metadata for the local workspace...</value>
+  </data>
+  <data name="TargetLocalPendingPath" xml:space="preserve">
+    <value>{1} cannot be retrieved because the target {0} has a pending change ({2}).</value>
+  </data>
+  <data name="NoConflictsMatchingItemSpecs" xml:space="preserve">
+    <value>There are no conflicts matching the specified items.</value>
+  </data>
+  <data name="MustBeLocalWorkstation" xml:space="preserve">
+    <value>Only available for the local workstation.</value>
+  </data>
+  <data name="ConflictTagOriginalWorkspace" xml:space="preserve">
+    <value>Original Workspace</value>
+  </data>
+  <data name="WorkingFoldersChangeWarning" xml:space="preserve">
+    <value>One or more working folders in version control have changed. You must perform a get operation to update your workspace.</value>
+  </data>
+  <data name="ConflictMergeSourceAndTargetChanged" xml:space="preserve">
+    <value>The source and target both have changes.</value>
+  </data>
+  <data name="DestroyAffectedQuestion_YNA" xml:space="preserve">
+    <value>This destroy operation will destroy pending changes (in workspaces or shelvesets).
+To discover the list of pending changes please rerun 'tf destroy' with /preview.
+Do you still wish to destroy '{0}'?</value>
+  </data>
+  <data name="WorkItemUpdateHistoryForAssociatedWithComment" xml:space="preserve">
+    <value>Associated with changeset {0}: {1}</value>
+  </data>
+  <data name="ResourcePendingChangeWarning" xml:space="preserve">
+    <value>opened for {0} in {1}</value>
+  </data>
+  <data name="GetUnableToRefresh" xml:space="preserve">
+    <value>Warning - Unable to refresh {0} because you have a pending edit.</value>
+  </data>
+  <data name="ChangeTypeSourceRename" xml:space="preserve">
+    <value>source rename</value>
+  </data>
+  <data name="ProxySeparator" xml:space="preserve">
+    <value>===================================================================</value>
+  </data>
+  <data name="HistoryTakesOneItem" xml:space="preserve">
+    <value>The history command takes exactly one item.</value>
+  </data>
+  <data name="ShelvesetNameRequired" xml:space="preserve">
+    <value>Please specify a shelveset name.</value>
+  </data>
+  <data name="WorkspaceItemNotFound" xml:space="preserve">
+    <value>The item {0} could not be found in your workspace, or you do not have permission to access it.</value>
+  </data>
+  <data name="ItemPermissionManageBranch" xml:space="preserve">
+    <value>Manage branch</value>
+  </data>
+  <data name="ProxyGlobalDefault" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="PortfolioExplorerNodeName" xml:space="preserve">
+    <value>Source Control</value>
+  </data>
+  <data name="ConflictCheckinNewerVersionPath" xml:space="preserve">
+    <value>{0} could not be checked in because a newer version exists on the server.</value>
+  </data>
+  <data name="UndeleteOneItemNewName" xml:space="preserve">
+    <value>Only one item may be specified when the /newname option is also specified.</value>
+  </data>
+  <data name="RepositoryPathTooLongDetailed" xml:space="preserve">
+    <value>TF400951: The operation failed. You must use Visual Studio 2012 Update 1 or a later version to work with paths that are longer than 259 characters. The item {0} exceeds 259 characters.</value>
+  </data>
+  <data name="LocalToServerDeleteBaselines" xml:space="preserve">
+    <value>Deleting unused baseline folders...</value>
+  </data>
+  <data name="VersionSpecSpecifyOnlyOneDeletionId" xml:space="preserve">
+    <value>You can only specify one deletion id.</value>
+  </data>
+  <data name="NoLocalChangesNoWorkspacePermission" xml:space="preserve">
+    <value>The operation completed successfully.  Because you do not have Use permission on the workspace {0}, you must perform a separate get operation in that workspace to update it with the changes that have been made on the server.</value>
+  </data>
+  <data name="ItemNotFoundRecursive" xml:space="preserve">
+    <value>No matching items found in {0} at the specified version, or you do not have permission to access them.</value>
+  </data>
+  <data name="MultipleFilesMatchQuestion_YN" xml:space="preserve">
+    <value>For {0} there are {1} files to be displayed.  Do you want to continue?</value>
+  </data>
+  <data name="NoTeamProjectForPath" xml:space="preserve">
+    <value>There is no team project for {0}.</value>
+  </data>
+  <data name="ItemPermissionUndoOther" xml:space="preserve">
+    <value>Undo other users' changes</value>
+  </data>
+  <data name="CannotAutoMergePropertyConflicts" xml:space="preserve">
+    <value>TF400550: Conflicts that contain property changes cannot be resolved as AutoMerge using this version of the client. Please resolve this conflict using another resolution option or a client that fully supports the property change type.</value>
+  </data>
+  <data name="NoWorkingFolderMappings" xml:space="preserve">
+    <value>This workspace has no working folder mappings.</value>
+  </data>
+  <data name="PcwVersionControlCreation" xml:space="preserve">
+    <value>Version Control</value>
+  </data>
+  <data name="LaunchingHelp" xml:space="preserve">
+    <value>Please wait ... launching help viewer for topic {0}</value>
+  </data>
+  <data name="MustSpecifyPropertyName" xml:space="preserve">
+    <value>Please specify a property name.</value>
+  </data>
+  <data name="NoFileMatches" xml:space="preserve">
+    <value>{0}: No file matches.</value>
+  </data>
+  <data name="MergedItems" xml:space="preserve">
+    <value>Merged items</value>
+  </data>
+  <data name="CannotExecuteThirdPartyToolAssembly" xml:space="preserve">
+    <value>Cannot execute the configured tool.</value>
+  </data>
+  <data name="InvalidPolicy" xml:space="preserve">
+    <value>[Invalid Policy]</value>
+  </data>
+  <data name="FileTypeBinary" xml:space="preserve">
+    <value>Binary</value>
+  </data>
+  <data name="ResourcePendingChangeWarningRelatedItem" xml:space="preserve">
+    <value>{0} opened for {1} in {2}</value>
+  </data>
+  <data name="PcwLoadingTeamProjectFolders" xml:space="preserve">
+    <value>[Loading list of team project folders...]</value>
+  </data>
+  <data name="VersionSpecTooManyVersionsSpecified" xml:space="preserve">
+    <value>You can only specify one version specification.</value>
+  </data>
+  <data name="ConflictNotResolvedNeedAutoMergeForced" xml:space="preserve">
+    <value>Conflict for {0} was not resolved. Specify the /auto:AutoMergeForced option to resolve this conflict as AutoMerge.</value>
+  </data>
+  <data name="GetConflictMove" xml:space="preserve">
+    <value>Conflict {0} - Unable to perform the {1} operation because you have a conflicting {2} (to be moved from {3})</value>
+  </data>
+  <data name="ConflictMergeCollision" xml:space="preserve">
+    <value>The name conflicts with another item in the target branch.</value>
+  </data>
+  <data name="LabelsTooManyArguments" xml:space="preserve">
+    <value>Too many arguments for the "labels" command.</value>
+  </data>
+  <data name="CouldNotReachProxy" xml:space="preserve">
+    <value>An Azure DevOps Server proxy could not be found at the provided URL: {0}
+The proxy will be added to the server, but you should check the URL to see if it is correct.</value>
+  </data>
+  <data name="ThreewayMergeInvalidEncodingForFile" xml:space="preserve">
+    <value>TF500234: The {0} file {1} could not be read with the encoding {2}.  Please merge the changes with the configured merge tool instead.  To prevent this error from reoccuring, you must ensure that the contents of the file are valid for the encoding specified in Azure DevOps Server before checking in.  If the encoding specified in Azure DevOps Server is incorrect, you can pend an encoding change to correct it.</value>
+  </data>
+  <data name="RollbackNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the Rollback command.</value>
+  </data>
+  <data name="FileDiffNotValid" xml:space="preserve">
+    <value>The /{0} option cannot be specified with a file diff.</value>
+  </data>
+  <data name="PolicyOverrideCommentRequired" xml:space="preserve">
+    <value>A comment explaining the policy override must be specified with the /override option.</value>
+  </data>
+  <data name="QueryMergeRelationshipsNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support querying merge relationships.</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>VS403420: The item {0} does not exist at the specified version, or you do not have permission to access it.</value>
+  </data>
+  <data name="QueueForEditNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support queuing pending edit requests for later replay.</value>
+  </data>
+  <data name="VersionSpecIndicator" xml:space="preserve">
+    <value>TF10144: '{0}' is not a supported version specification type.</value>
+  </data>
+  <data name="WorkspacePermissionsProfileIndeterminate" xml:space="preserve">
+    <value>Could not be retrieved</value>
+  </data>
+  <data name="DestroyStopAtNotValidWithoutKeepHistory" xml:space="preserve">
+    <value>You must specify /keephistory if you specify /stopat.</value>
+  </data>
+  <data name="ShelvesetCreated" xml:space="preserve">
+    <value>Shelveset {0} created.</value>
+  </data>
+  <data name="SuccessfulAddProxy" xml:space="preserve">
+    <value>Added proxy {0} to the server.</value>
+  </data>
+  <data name="SpecifyOneUrl" xml:space="preserve">
+    <value>Specify one url.</value>
+  </data>
+  <data name="ResourceAccessExceptionWorkspace" xml:space="preserve">
+    <value>TF204017: The operation cannot be completed because the user ({0}) does not have one or more required permissions ({1}) for workspace {2}.</value>
+  </data>
+  <data name="ConflictGetPendingChange" xml:space="preserve">
+    <value>You have a conflicting pending change.</value>
+  </data>
+  <data name="AddNoFileSpecified" xml:space="preserve">
+    <value>You must provide at least 1 file or folder when using the add command in a server workspace or with the /noignore option.</value>
+  </data>
+  <data name="BranchesNoTree" xml:space="preserve">
+    <value>TF10101: Item {0} is not used in any branch trees.</value>
+  </data>
+  <data name="AColonBEqualsC" xml:space="preserve">
+    <value>{0}: {1} = {2}</value>
+  </data>
+  <data name="GetLocalPending" xml:space="preserve">
+    <value>Warning {0} - Unable to perform the {1} operation because you have a pending {2} on a different item at the destination</value>
+  </data>
+  <data name="WorkspaceDiffNotSupported" xml:space="preserve">
+    <value>TF204000: Workspace difference calculation requires TFS 2010 or later.</value>
+  </data>
+  <data name="InvalidPathMissingRoot" xml:space="preserve">
+    <value>TF10125: The path '{0}' must start with $/</value>
+  </data>
+  <data name="ServerToLocalUpdateWorkspace" xml:space="preserve">
+    <value>Changing the location of your workspace on the server...</value>
+  </data>
+  <data name="ItemNotFoundInWorkspace" xml:space="preserve">
+    <value>Item {0} was not found in the current workspace.</value>
+  </data>
+  <data name="ProblemsParsingIgnoring" xml:space="preserve">
+    <value>Ignoring {0} - There were parsing problems: {1}</value>
+  </data>
+  <data name="PendingChangesModified" xml:space="preserve">
+    <value>One or more of the pending changes no longer exists or was modified. The list of pending changes has been refreshed and is now current. Please inspect the list of pending changes and try your operation again.</value>
+  </data>
+  <data name="UnshelvingPendingChange" xml:space="preserve">
+    <value>Unshelving {0}: {1}</value>
+  </data>
+  <data name="QueueUpdateOverloadNotSupportedWithLocalWorkspaces" xml:space="preserve">
+    <value>This overload of UpdateLocalVersionQueue.QueueUpdate is not supported when queuing local version updates for a local workspace.</value>
+  </data>
+  <data name="OutputRequiresPropertyNameNoRecursion" xml:space="preserve">
+    <value>In order to output a property value to a file the recursive flag cannot be present and exactly one property name must be specified.</value>
+  </data>
+  <data name="WildcardNotAllowedException" xml:space="preserve">
+    <value>The parameter {0} may not contain wildcards.</value>
+  </data>
+  <data name="CheckinNoteFieldNotValidForChangeset" xml:space="preserve">
+    <value>TF10112: The check-in note field '{0}' is not supported for changeset {1}.</value>
+  </data>
+  <data name="CannotCompareLabels" xml:space="preserve">
+    <value>TF500223: The Compare Labels command cannot be used with this version of the database. Please compare labels with another option or a database that fully supports the Compare Labels command.</value>
+  </data>
+  <data name="MergesMergedInWidth" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="LabelScopeWildcard" xml:space="preserve">
+    <value>The label scope may not contain wildcards.</value>
+  </data>
+  <data name="GlobalPermissionOptionNotAllowed" xml:space="preserve">
+    <value>The {0} option cannot be used when viewing or setting global permissions.</value>
+  </data>
+  <data name="FileNotFoundInRepository" xml:space="preserve">
+    <value>File {0} was not found in source control.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="AttemptProxyAutoConfigure" xml:space="preserve">
+    <value>Attempting to automatically configure the proxy setting.</value>
+  </data>
+  <data name="IgnoringVersions" xml:space="preserve">
+    <value>Ignoring the version specification for {0}. The version specification is not needed for this operation.</value>
+  </data>
+  <data name="PcwExclusiveCheckoutMultiplyDefined" xml:space="preserve">
+    <value>The "exclusive_checkout" xml node appears multiple times - please remove all but one.</value>
+  </data>
+  <data name="ResourceAccessException" xml:space="preserve">
+    <value>TF14098: Access Denied: User {0} needs {1} permission(s) for {2}.</value>
+  </data>
+  <data name="MissingPendingChangeForUncommittedItem" xml:space="preserve">
+    <value>Could not write local version data for the uncommitted item {0} because no pending add or branch exists on that item.</value>
+  </data>
+  <data name="GatedCheckinShelvesetQueued" xml:space="preserve">
+    <value>Your shelveset has been submitted for validation by build pipeline {0}.</value>
+  </data>
+  <data name="ConflictGetPendingDelete" xml:space="preserve">
+    <value>You have a conflicting pending delete.</value>
+  </data>
+  <data name="GlobalPermissionAdminWorkspaces" xml:space="preserve">
+    <value>Administer workspaces</value>
+  </data>
+  <data name="SourceControlSystemNameTFVC" xml:space="preserve">
+    <value>Team Foundation Version Control</value>
+  </data>
+  <data name="PolicyWarnings" xml:space="preserve">
+    <value>Policy Warnings</value>
+  </data>
+  <data name="ItemPermissionRead" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="ItemPermissionLock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="DestroyedItem" xml:space="preserve">
+    <value>Destroyed: {0}</value>
+  </data>
+  <data name="CreatingFolderOperation" xml:space="preserve">
+    <value>Creating folder: {0}</value>
+  </data>
+  <data name="InternalPolicyError" xml:space="preserve">
+    <value>Internal error in {0}. {1}</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="NoChangesetWithLatestOption" xml:space="preserve">
+    <value>A changeset number cannot be specified when using the /latest option.</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright (c) Microsoft Corporation.  All rights reserved.</value>
+  </data>
+  <data name="InvalidServerResponse" xml:space="preserve">
+    <value>Please contact your administrator.  There was an error contacting the server.
+Technical information (for administrator):
+  {0}</value>
+  </data>
+  <data name="WorkItemUpdateErrorMessageSingular" xml:space="preserve">
+    <value>Failed to update the following work item:
+</value>
+  </data>
+  <data name="InvalidResourceDefinition" xml:space="preserve">
+    <value>Resource {0} is improperly defined.</value>
+  </data>
+  <data name="ConflictGetCollision" xml:space="preserve">
+    <value>The name conflicts with another item in your workspace.</value>
+  </data>
+  <data name="AllowInherited" xml:space="preserve">
+    <value>Allow (Inherited)</value>
+  </data>
+  <data name="UnableToLoadLocalPropertiesTable" xml:space="preserve">
+    <value>TF400017: The workspace properties table for the local workspace {0} could not be opened. {1}</value>
+  </data>
+  <data name="NoLocalChangesRemoteWorkspace" xml:space="preserve">
+    <value>The operation completed successfully.  Because the workspace {0} is not on this computer, you must perform a separate get operation in that workspace to update it with the changes that have been made on the server.</value>
+  </data>
+  <data name="InvalidCommandInvalidPath" xml:space="preserve">
+    <value>Command "{0}" is not a valid path.</value>
+  </data>
+  <data name="ChangesSummary" xml:space="preserve">
+    <value>{0} change(s), {1} detected change(s)</value>
+  </data>
+  <data name="NoBaseFileForPendingChange" xml:space="preserve">
+    <value>The pending change for {0} has no base file.</value>
+  </data>
+  <data name="ResolveCannotMergeBinaryFiles" xml:space="preserve">
+    <value>Binary files cannot be merged unless an encoding override is specified.</value>
+  </data>
+  <data name="FileOrFolderNotFound" xml:space="preserve">
+    <value>File (or folder) {0} does not exist.</value>
+  </data>
+  <data name="UndoingOperation" xml:space="preserve">
+    <value>Undoing {0}: {1}</value>
+  </data>
+  <data name="NoLocalFileForPendingChange" xml:space="preserve">
+    <value>There is no local file associated with a pending change on {0}.  This can occur when multiple changes have been applied to the same local file through different workspace mappings.  Undo this pending change and try again.</value>
+  </data>
+  <data name="AttributeOperationsNotSupported" xml:space="preserve">
+    <value>TF204010: Attribute operations are not valid on the version of Azure DevOps Server on which your team project is hosted.</value>
+  </data>
+  <data name="PropertyNameEmpty" xml:space="preserve">
+    <value>TF400301: You must provide a name for the property.</value>
+  </data>
+  <data name="DestroyedContentUnavailableException" xml:space="preserve">
+    <value>TF14124: The content for this version of the file was destroyed. Please try again using a later version of this item.</value>
+  </data>
+  <data name="InvalidOperationStatus" xml:space="preserve">
+    <value>Invalid OperationStatus: Desired: {0} Current: {1}</value>
+  </data>
+  <data name="ChangeRequestMustBeLocalNonRecursive" xml:space="preserve">
+    <value>TF400021: The changeRequests parameter must contain local non-recursive paths. Instead it has: {0}</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="MergesAuthorWidth" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="ExternalAutomergeFailed" xml:space="preserve">
+    <value>Could not automatically resolve changes in the external tool.</value>
+  </data>
+  <data name="GlobalResourceAccessException" xml:space="preserve">
+    <value>TF14044: Access Denied: User {0} needs the {1} global permission(s).</value>
+  </data>
+  <data name="SourceAndTargetRequired" xml:space="preserve">
+    <value>Exactly two items (source and target) are required.  Either local or server paths may be used.</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>TF10132: {0} is not a supported user name.</value>
+  </data>
+  <data name="WrongNumberOfArgsForBuiltIn" xml:space="preserve">
+    <value>Wrong number of arguments for built-in interpreter command {0}.</value>
+  </data>
+  <data name="DownloadTimedOut" xml:space="preserve">
+    <value>TF400307: The download operation timed out after waiting {0} seconds for a response from the server.</value>
+  </data>
+  <data name="PendingOperation" xml:space="preserve">
+    <value>Pending {0}: {1}</value>
+  </data>
+  <data name="LockCheckinShort" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="MustSpecifyIdentityWithPerms" xml:space="preserve">
+    <value>Specify a user or group with the permission settings.</value>
+  </data>
+  <data name="NoLocalMatchingWorkspaceFound" xml:space="preserve">
+    <value>No workspace matching {0} found on this computer.</value>
+  </data>
+  <data name="ConflictMergeCollisionPath" xml:space="preserve">
+    <value>{0} could not be merged because the name conflicts with another item in the target branch.</value>
+  </data>
+  <data name="LabelDeleteArguments" xml:space="preserve">
+    <value>You may only specify one argument for /delete.</value>
+  </data>
+  <data name="GitPermissionCreateTag" xml:space="preserve">
+    <value>Tag creation</value>
+  </data>
+  <data name="ItemPermissionCheckinOther" xml:space="preserve">
+    <value>Check in other users' changes</value>
+  </data>
+  <data name="PcwSccSpecifySettings" xml:space="preserve">
+    <value>Specify Source Control Settings</value>
+  </data>
+  <data name="GetWritable" xml:space="preserve">
+    <value>Warning {0} - Unable to perform the {1} operation because the file already exists locally</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>Identity</value>
+  </data>
+  <data name="CantDeleteNonEmptyDirPath" xml:space="preserve">
+    <value>{0} cannot be deleted because it is not empty.</value>
+  </data>
+  <data name="ProxyNotResponding" xml:space="preserve">
+    <value>The source control proxy '{0}' is not responding, so the request will be sent to the main server.  Please verify your settings.</value>
+  </data>
+  <data name="InvalidArgumentsStandAlonePct" xml:space="preserve">
+    <value>Arguments may not contain stand-alone %</value>
+  </data>
+  <data name="CouldNotRetrieveACL" xml:space="preserve">
+    <value>The access control list for the item {0} could not be retrieved. The item may not exist on the server, or you do not have permission to access it.</value>
+  </data>
+  <data name="GitSubgroupIdentifier" xml:space="preserve">
+    <value>git</value>
+  </data>
+  <data name="ChangeTypeProperty" xml:space="preserve">
+    <value>property</value>
+  </data>
+  <data name="SpecifyOneWorkspace" xml:space="preserve">
+    <value>Specify one workspace.</value>
+  </data>
+  <data name="TotalChanges" xml:space="preserve">
+    <value>{0} change(s)</value>
+  </data>
+  <data name="NoAvailableOutputStream" xml:space="preserve">
+    <value>There is no available output stream.</value>
+  </data>
+  <data name="CannotUndoRenameDueToChildConflictMessage" xml:space="preserve">
+    <value>TF400026: Cannot undo the rename of item {0} because a conflict exists at {1}. Please resolve all conflicts at or under the root of the item before undoing the rename.</value>
+  </data>
+  <data name="ItemsIgnoredBecauseOfExclusions" xml:space="preserve">
+    <value>Items matching the following exclusions were ignored: {0}</value>
+  </data>
+  <data name="ComparingLocalToLatest" xml:space="preserve">
+    <value>Comparing local to latest: {0}</value>
+  </data>
+  <data name="ShelvesetNotFoundException" xml:space="preserve">
+    <value>The shelveset {0} could not be found.</value>
+  </data>
+  <data name="BadOptionWorkspaceEdit" xml:space="preserve">
+    <value>Option {0} cannot be used when editing a workspace.</value>
+  </data>
+  <data name="CheckinNoteRequiredValue" xml:space="preserve">
+    <value>A value must be specified for the check-in note.</value>
+  </data>
+  <data name="ChangesetFormat" xml:space="preserve">
+    <value>Changeset {0}</value>
+  </data>
+  <data name="UnableToFindVersionControlRegistration" xml:space="preserve">
+    <value>Unable to retrieve the registration information for Source Control.</value>
+  </data>
+  <data name="ConflictGetDeletedPath" xml:space="preserve">
+    <value>{0} could not be retrieved because it has already been deleted.</value>
+  </data>
+  <data name="WorkspaceAndServerFormat" xml:space="preserve">
+    <value>{0} [{1}]</value>
+  </data>
+  <data name="PropertyDoesNotExist" xml:space="preserve">
+    <value>A property name {0} does not exist on {1}.</value>
+  </data>
+  <data name="VersionSpecEmpty" xml:space="preserve">
+    <value>Please provide a version specification.</value>
+  </data>
+  <data name="DiffLabel" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="DiffIndex" xml:space="preserve">
+    <value>File: {0}</value>
+  </data>
+  <data name="Cloaked" xml:space="preserve">
+    <value>Cloaked</value>
+  </data>
+  <data name="ShelvesetUpdateOperationsNotSuppoerted" xml:space="preserve">
+    <value>TF400029: Shelveset meta-data other than the Properties bag cannot be updated against the version of Azure DevOps Server on which your team project is hosted.</value>
+  </data>
+  <data name="NoConnectionsFound" xml:space="preserve">
+    <value>No connections found matching {0}.</value>
+  </data>
+  <data name="LocalWorkspacesNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support local workspaces.</value>
+  </data>
+  <data name="AddedItemMissingLocally" xml:space="preserve">
+    <value>The item {0} has a pending add but does not exist locally.</value>
+  </data>
+  <data name="RequiresOneValue" xml:space="preserve">
+    <value>Option {0} requires exactly one value.</value>
+  </data>
+  <data name="WorkspaceOwnerEmpty" xml:space="preserve">
+    <value>Specify a workspace owner.</value>
+  </data>
+  <data name="ArgumentsMustContain" xml:space="preserve">
+    <value>{0} arguments must contain {1}</value>
+  </data>
+  <data name="PendingLocalVersionMismatch" xml:space="preserve">
+    <value>The version of the local file is different from the pending change version.</value>
+  </data>
+  <data name="LocalToServerRefresh" xml:space="preserve">
+    <value>Refreshing your workspace...</value>
+  </data>
+  <data name="MergeForceRequiresVersion" xml:space="preserve">
+    <value>A version or version range must be specified when using the /force option.</value>
+  </data>
+  <data name="PartialMergeIndicator" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="NoPropertiesSaved" xml:space="preserve">
+    <value>No properties saved.</value>
+  </data>
+  <data name="PropertyChangesScopedByProjectNotSupported" xml:space="preserve">
+    <value>TF402397: The Azure DevOps Server to which your team project is connected does not support operations related to property changes that are project scoped.</value>
+  </data>
+  <data name="WorkItemUpdateResolved" xml:space="preserve">
+    <value>resolved work item: {0}</value>
+  </data>
+  <data name="MergeConflictsSuppressed" xml:space="preserve">
+    <value>{0} conflicts occurred. To list each conflict in the summary, specify /format:detailed.</value>
+  </data>
+  <data name="ItemTypeFolder" xml:space="preserve">
+    <value>folder</value>
+  </data>
+  <data name="WorkItemHeaderID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="ServerToLocalReadOnly" xml:space="preserve">
+    <value>Removing the read-only bit from unedited items...</value>
+  </data>
+  <data name="NoChangesFoundToPend" xml:space="preserve">
+    <value>No matching changes found to pend.</value>
+  </data>
+  <data name="GetSourceWritableNewTarget" xml:space="preserve">
+    <value>Warning {0} - Unable to perform the {1} operation because the source file {2} is writable</value>
+  </data>
+  <data name="ShelvesetIllegalOwner" xml:space="preserve">
+    <value>Cannot create a shelveset owned by a different user.</value>
+  </data>
+  <data name="FullyQualifiedUserNameRequired" xml:space="preserve">
+    <value>The user name {0} is not a fully-qualified user name.</value>
+  </data>
+  <data name="Checkin" xml:space="preserve">
+    <value>Checkin</value>
+  </data>
+  <data name="PendingChangeIsNotAShelvedFile" xml:space="preserve">
+    <value>A shelved pending change on a file is required: {0}</value>
+  </data>
+  <data name="GitRepositoryNotFound" xml:space="preserve">
+    <value>Git Repository Not Found</value>
+  </data>
+  <data name="PcwNone" xml:space="preserve">
+    <value>[None]</value>
+  </data>
+  <data name="ChangeTypeAdd" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="FileInUseEncodingFailure" xml:space="preserve">
+    <value>TF204018: Could not check the file's encoding because the file {0} is in use.</value>
+  </data>
+  <data name="MultipleWorkingFoldersForPath" xml:space="preserve">
+    <value>The working folders for workspace {0} already contain a setting for {1}.</value>
+  </data>
+  <data name="VssProviderInterOpUnavailable" xml:space="preserve">
+    <value>Unable to obtain Source Control Provider interface.</value>
+  </data>
+  <data name="WorkspaceItemNotFoundRecursive" xml:space="preserve">
+    <value>No matching items found in {0} in your workspace, or you do not have permission to access them.</value>
+  </data>
+  <data name="CanNotChangeRootFolderException" xml:space="preserve">
+    <value>TF14005: Changes cannot be made to the root folder.</value>
+  </data>
+  <data name="CheckinNoteFieldNameEmpty" xml:space="preserve">
+    <value>TF10111: You must provide a name for the check-in note.</value>
+  </data>
+  <data name="BranchSource" xml:space="preserve">
+    <value>[branch source]</value>
+  </data>
+  <data name="GatedCheckinQueued" xml:space="preserve">
+    <value>Your check-in has been placed into shelveset {0} and submitted for validation by build pipeline {1}.</value>
+  </data>
+  <data name="CleanOrPromoteRequired" xml:space="preserve">
+    <value>Either the /clean or /promote option is required.</value>
+  </data>
+  <data name="ChangeNotACandidateDelete" xml:space="preserve">
+    <value>The pending change is not a candidate delete.</value>
+  </data>
+  <data name="NewMappingMatchesMultipleExistingMappings" xml:space="preserve">
+    <value>The requested mapping matches an existing mapping on server path ({0} to {1}) as well as a different mapping on local path ({2} to {3}) - remove one or both of these mappings before attempting to create this new mapping.  This helps to prevent unintentionally destroying multiple existing mappings with a single command.</value>
+  </data>
+  <data name="CompareLabelsTooManyArguments" xml:space="preserve">
+    <value>Too many arguments for the "compareLabels" command.</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="DiffLocalLabel" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="CommandContinuationError" xml:space="preserve">
+    <value>The previous command should have been continued but was not.</value>
+  </data>
+  <data name="GetNamespaceConflict" xml:space="preserve">
+    <value>Conflict {0} - Unable to perform the {1} operation because you have a pending {2} on a different item at the destination</value>
+  </data>
+  <data name="FileIsWritable" xml:space="preserve">
+    <value>A non version controlled file or writable file by the same name already exists locally.</value>
+  </data>
+  <data name="FileDoesNotExist" xml:space="preserve">
+    <value>The file {0} does not exist.</value>
+  </data>
+  <data name="WarnMappingCouldNotRelativize" xml:space="preserve">
+    <value>Could not generate relative path equivalent for '{0}'</value>
+  </data>
+  <data name="ItemPermissionPendChange" xml:space="preserve">
+    <value>Pend a change in a server workspace</value>
+  </data>
+  <data name="ItemPermissionLabel" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="ItemPermissionMerge" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="ConflictCheckinNewerVersion" xml:space="preserve">
+    <value>A newer version exists on the server.</value>
+  </data>
+  <data name="WildcardNotAllowedForRenameSource" xml:space="preserve">
+    <value>You may not specify a wildcard as a source if the target is not a folder in source control.</value>
+  </data>
+  <data name="CloakedIndicator" xml:space="preserve">
+    <value>(cloaked)</value>
+  </data>
+  <data name="IgnoreOptionsNotPassed" xml:space="preserve">
+    <value>Warning: invoking an external tool for diff: options /ignoreeol, /ignorespace, and /ignorecase are not passed to external tools.</value>
+  </data>
+  <data name="CheckinDatesNotSupported" xml:space="preserve">
+    <value>TF203097: You attempted to either reset the check-in dates in a team project collection or to check in one or more items while specifying a date and time stamp. The attempt failed because this operation is supported only on Team Foundation Server 2010 (with hotfix KB 2402815) or later.</value>
+  </data>
+  <data name="ProxyLastConfigureTime" xml:space="preserve">
+    <value>Last Configuration: {0}</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Visual Studio</value>
+  </data>
+  <data name="UnshelveMergeConflictBrief" xml:space="preserve">
+    <value>The workspace and shelveset both have changes.</value>
+  </data>
+  <data name="RollbackTargetDeleted" xml:space="preserve">
+    <value>The target version is deleted.</value>
+  </data>
+  <data name="RollbackTargetVersionHasChanges" xml:space="preserve">
+    <value>The target version has conflicting changes. </value>
+  </data>
+  <data name="ItemPermissionReviseOther" xml:space="preserve">
+    <value>Revise other users' changes</value>
+  </data>
+  <data name="CheckInOptions2NotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server for this workspace does not support one or more of the checkin options you have selected.</value>
+  </data>
+  <data name="UnableToLoadPendingChangesTable" xml:space="preserve">
+    <value>TF400019: The pending changes table for the local workspace {0} could not be opened. {1}</value>
+  </data>
+  <data name="NewNameOptionNotValid" xml:space="preserve">
+    <value>The /{0} option is only valid when the {1} or {2} resolution is specified.</value>
+  </data>
+  <data name="PcwCheckinNoteRequiredInvalid" xml:space="preserve">
+    <value>The "checkin_note" xml node with "label" attribute of "{0}" contains an invalid value of "{1}" for the "required" attribute.</value>
+  </data>
+  <data name="SuccessfulDeleteProxy" xml:space="preserve">
+    <value>Successfully deleted proxy {0} from the server.</value>
+  </data>
+  <data name="DefaultLocalItemExclusionsForFolderDiff" xml:space="preserve">
+    <value>!bin\;!bld\;!ClientBin\;!Debug\;!obj\;!AppPackages\;!Release\;!TestResults\;!*.*~!*.appx!*.appxrecipe;!*.cache!*.cer!*.dbmdl!*.dll!*.docstates!*.docstates.suo;!*.err!*.exe!*.ilk!*.ipch!*.lastbuildstate!*.lce!*.ldf!*.lib!*.log!*.mdf!*.msscci!*.ncb!*.obj!*.opensdf!*.pch!*.pdb!*.pri!*.res!*.resources!*.sdf!*.suo!*.swp!*.temp!*.tfOrig*!*.tlog!*.tmp!*.trx!*.user!*.unsuccessfulbuild!*.v11.suo!*.vcxproj.user!*.vsix!*.vsmdi!*.vspscc!*.vssettings!*.vssscc!*.wrn!*.xap;!.metadata\</value>
+  </data>
+  <data name="SetFileTimeToCheckinGetPrompt" xml:space="preserve">
+    <value>Do you want to download the latest version of files so that the file times in your workspace are updated to the checkin time?</value>
+  </data>
+  <data name="UnableToLoadLocalVersionTable" xml:space="preserve">
+    <value>TF400018: The local version table for the local workspace {0} could not be opened. {1}</value>
+  </data>
+  <data name="AmbiguousVersion" xml:space="preserve">
+    <value>TF10097: The information about the version of the file is ambiguous. Specify a different file version and try again.</value>
+  </data>
+  <data name="MaxPathLengthTooManyArguments" xml:space="preserve">
+    <value>Too many arguments for the "maxpathlength" command.</value>
+  </data>
+  <data name="CreateWorkspace" xml:space="preserve">
+    <value>Add Workspace</value>
+  </data>
+  <data name="DestroyNotEnoughArguments" xml:space="preserve">
+    <value>Specify the items to be destroyed.</value>
+  </data>
+  <data name="FolderNameEmpty" xml:space="preserve">
+    <value>The folder name cannot be empty.</value>
+  </data>
+  <data name="VersionControlServerDidNotMatch" xml:space="preserve">
+    <value>The VersionControlServer with which this pending change is associated does not match the VersionControlServer provided when the collection was created.</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="ChangesetLinkLocalizedName" xml:space="preserve">
+    <value>Changeset</value>
+  </data>
+  <data name="MappingConflictNoTeamProject" xml:space="preserve">
+    <value>Cannot map server path, {0}, because it is not rooted beneath a team project.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="ItemsFromOneWorkspace" xml:space="preserve">
+    <value>All items specified must be from the same workspace.</value>
+  </data>
+  <data name="DeletionIdNotAllowed" xml:space="preserve">
+    <value>A deletionId is not allowed for this operation.</value>
+  </data>
+  <data name="NoUriForUncommittedChangeset" xml:space="preserve">
+    <value>An artifact URI cannot be created for an uncommitted changeset.</value>
+  </data>
+  <data name="CheckinNoteNameEmpty" xml:space="preserve">
+    <value>TF10114: You must provide a name for the check-in note.</value>
+  </data>
+  <data name="ExceptionTypeAndMessage" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="NoMergesFound" xml:space="preserve">
+    <value>No merges found.</value>
+  </data>
+  <data name="GetPendingChangesForWorkspaceNotSupported" xml:space="preserve">
+    <value>TF204007: The Azure DevOps Server to which your team project is connected does not support this overload of the GetPendingChanges method.</value>
+  </data>
+  <data name="TrackMergesNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support tracking merges.</value>
+  </data>
+  <data name="ShelvesetHasNoPendingChangesMatching" xml:space="preserve">
+    <value>Shelveset {0} has no pending changes matching pattern(s): {1}</value>
+  </data>
+  <data name="PartialRenameConflictException" xml:space="preserve">
+    <value>TF14059: Unable to process the pending changes requested. The set of pending renames would cause a name collision for {0}.</value>
+  </data>
+  <data name="ItemIsADirectory" xml:space="preserve">
+    <value>{0} is a directory.</value>
+  </data>
+  <data name="ItemIsCloaked" xml:space="preserve">
+    <value>The item {0} is cloaked.</value>
+  </data>
+  <data name="PcwExclusiveCheckoutRequiredInvalid" xml:space="preserve">
+    <value>The "exclusive_checkout" xml node contains an invalid value of "{0}" for the "required" attribute.</value>
+  </data>
+  <data name="WildcardNotAllowedForRenameTarget" xml:space="preserve">
+    <value>You may not specify a wildcard as the target.</value>
+  </data>
+  <data name="UndoEditQuestion_YNA" xml:space="preserve">
+    <value>Undo your changes to {0}?</value>
+  </data>
+  <data name="RecursionTypesMustMatch" xml:space="preserve">
+    <value>The recursion type of {0} and {1} must match.</value>
+  </data>
+  <data name="DiffRepositoryLabelFull" xml:space="preserve">
+    <value>Server: {0};{1}</value>
+  </data>
+  <data name="UnversionedAttributesNotSupported" xml:space="preserve">
+    <value>TF400310: Setting attributes on unversioned items are not valid on the version of Azure DevOps Server on which your team project is hosted.</value>
+  </data>
+  <data name="DiffAgainstFolder" xml:space="preserve">
+    <value>against folder: {0}</value>
+  </data>
+  <data name="PerformingGetLatestOnWorkspace" xml:space="preserve">
+    <value>Performing get latest on workspace {0}.</value>
+  </data>
+  <data name="NoProxyRecordsFound" xml:space="preserve">
+    <value>No proxy records were found.</value>
+  </data>
+  <data name="InvalidShelvesetName" xml:space="preserve">
+    <value>TF10131: The shelveset name {0} contains more than 64 characters, contains one of the following characters: "/:&lt;&gt;\|*?; or ends with a space.  Type a valid name and try again.</value>
+  </data>
+  <data name="UnshelveMergeConflictFull" xml:space="preserve">
+    <value>{0} ({1}) -&gt; {2} ({3})</value>
+  </data>
+  <data name="UndoItemExistsLocally" xml:space="preserve">
+    <value>TF400024: The change on {0} cannot be undone because a file already exists at {1}. The file must be deleted from disk for the undo to succeed.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ServerToLocalCreatingLocalVersionTable" xml:space="preserve">
+    <value>Creating and populating the local version table...</value>
+  </data>
+  <data name="LockCheckOut" xml:space="preserve">
+    <value>check-out</value>
+  </data>
+  <data name="PcwCheckinNoteDefinedMultipleTimes" xml:space="preserve">
+    <value>Multiple "checkin_note" xml nodes have the same "label" attribute of "{0}" - please remove all but one.</value>
+  </data>
+  <data name="NotCloaked" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="WorkspacePermissionAdminister" xml:space="preserve">
+    <value>Administer the workspace</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CannotTakeCheckoutLockInLocalWorkspace" xml:space="preserve">
+    <value>TF400022: The item {0} cannot be locked for checkout in workspace {1}. Checkout locks are not supported in local workspaces.</value>
+  </data>
+  <data name="Allow" xml:space="preserve">
+    <value>Allow</value>
+  </data>
+  <data name="RootInheritanceException" xml:space="preserve">
+    <value>You may not set the inheritance property on the root folder.</value>
+  </data>
+  <data name="Merge" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="InvalidCacheDir" xml:space="preserve">
+    <value>The cache directory {0} is not a valid path:  {1}</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="ReconcileFailed" xml:space="preserve">
+    <value>TF400023: The local workspace could not be reconciled with the server.</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="CannotDeleteOnPartialUnshelve" xml:space="preserve">
+    <value>TF10148: Some changes contained within the shelveset {0} were not unshelved. To remove the shelveset from the server delete the shelveset directly.</value>
+  </data>
+  <data name="Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="ResolveAndReCheckin" xml:space="preserve">
+    <value>TF10141: No files checked in: resolve the conflicts and try again.</value>
+  </data>
+  <data name="RollbackTargetDeletedPath" xml:space="preserve">
+    <value>Cannot rollback {0} because the target version is deleted. </value>
+  </data>
+  <data name="ProxyName" xml:space="preserve">
+    <value>Friendly Name: {0}</value>
+  </data>
+  <data name="ProxySite" xml:space="preserve">
+    <value>Site: {0}</value>
+  </data>
+  <data name="NoPendingChangesMatchingItemSpecs" xml:space="preserve">
+    <value>There are no pending changes matching the specified items.</value>
+  </data>
+  <data name="ServerToLocalProcessingBaselines" xml:space="preserve">
+    <value>Compressing and downloading baselines...</value>
+  </data>
+  <data name="NoInconsistenciesFound" xml:space="preserve">
+    <value>No inconsistencies were found to clean up.</value>
+  </data>
+  <data name="ChangeTypeRollback" xml:space="preserve">
+    <value>rollback</value>
+  </data>
+  <data name="UnshelveMoveCannotHaveFilespecs" xml:space="preserve">
+    <value>The /move option can only be used without specifying any items.</value>
+  </data>
+  <data name="UnableToDetermineWorkspace" xml:space="preserve">
+    <value>Unable to determine the workspace. You may be able to correct this by running 'tf workspaces /collection:TeamProjectCollectionUrl'.</value>
+  </data>
+  <data name="ItemSpecNotAllowedForCheckInShelveset" xml:space="preserve">
+    <value>Items cannot be specified with the /shelveset option.</value>
+  </data>
+  <data name="PendingChangeToolTipVersion" xml:space="preserve">
+    <value>Version:     {0}</value>
+  </data>
+  <data name="FailedToCreateMapping" xml:space="preserve">
+    <value>Failed To Create Mapping</value>
+  </data>
+  <data name="ConflictTagBase" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="BranchUnreadable" xml:space="preserve">
+    <value>[no permission to read this branch item]</value>
+  </data>
+  <data name="SolutionSpansWorkspaces" xml:space="preserve">
+    <value>Solution would span multiple workspaces.
+
+Conflicting Project: {0}
+Project Workspace  : {1}
+Solution Workspace : {2}</value>
+  </data>
+  <data name="ItemNotMappedException" xml:space="preserve">
+    <value>No appropriate mapping exists for {0}.</value>
+  </data>
+  <data name="ConflictingWorkingFolders" xml:space="preserve">
+    <value>The path {0} is already mapped in workspace {1}.</value>
+  </data>
+  <data name="ServerInformation" xml:space="preserve">
+    <value>Server information:</value>
+  </data>
+  <data name="ItemPermissionLabelOther" xml:space="preserve">
+    <value>Administer labels</value>
+  </data>
+  <data name="NoItemsFound" xml:space="preserve">
+    <value>No items match {0}</value>
+  </data>
+  <data name="ServerUrl" xml:space="preserve">
+    <value>Server Url</value>
+  </data>
+  <data name="OptionNotAllowedInServerWorkspace" xml:space="preserve">
+    <value>The option {0} is not allowed in a server workspace.</value>
+  </data>
+  <data name="Conflict" xml:space="preserve">
+    <value>Conflict: {0}</value>
+  </data>
+  <data name="NoPropertiesToDeleteMessage" xml:space="preserve">
+    <value>{0}: No properties found to delete.</value>
+  </data>
+  <data name="CommittedBy" xml:space="preserve">
+    <value>Checked in by</value>
+  </data>
+  <data name="VersionSpecNotAllowed" xml:space="preserve">
+    <value>A version specifier is not allowed for this operation.</value>
+  </data>
+  <data name="GetStatusSummary" xml:space="preserve">
+    <value>---- Summary: {0} conflicts, {1} warnings, {2} errors ----</value>
+  </data>
+  <data name="DestroyAffectedPendingChanges" xml:space="preserve">
+    <value>The following pending changes will be deleted by destroying '{0}':</value>
+  </data>
+  <data name="NoChangesToMerge" xml:space="preserve">
+    <value>There are no changes to merge.</value>
+  </data>
+  <data name="InvalidExtensionTooShort" xml:space="preserve">
+    <value>Extension "{0}" is too short</value>
+  </data>
+  <data name="ItemNotFoundInRepositoryAtVersion" xml:space="preserve">
+    <value>Item {0} was not found in source control at version {1}.</value>
+  </data>
+  <data name="ChangesetEmpty" xml:space="preserve">
+    <value>Please specify a changeset.</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Last modified</value>
+  </data>
+  <data name="CannotAddSolutionToSourceControl" xml:space="preserve">
+    <value>TF10105: Source control cannot add the solution: {0}</value>
+  </data>
+  <data name="CheckinNoteNameInvalid" xml:space="preserve">
+    <value>'{0}' contains invalid characters for a check-in note name.</value>
+  </data>
+  <data name="WorkspaceMappingsHaveChangedTitle" xml:space="preserve">
+    <value>Workspace Modified</value>
+  </data>
+  <data name="UserWildcardInvalidWithWorkspaceOption" xml:space="preserve">
+    <value>TF10143: Specifying /user:* is not supported when also specifying the /workspace option.</value>
+  </data>
+  <data name="CheckedIn" xml:space="preserve">
+    <value>Changeset #{0} checked in.</value>
+  </data>
+  <data name="MustSpecifyAtLeastOnePath" xml:space="preserve">
+    <value>Specify at least one local or server path.</value>
+  </data>
+  <data name="AddProxyNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the AddProxy command.</value>
+  </data>
+  <data name="NotALocalPath" xml:space="preserve">
+    <value>The path '{0}' is not a local path.</value>
+  </data>
+  <data name="DiffNonCommonFile" xml:space="preserve">
+    <value>{0} : [file found only in: {1}]</value>
+  </data>
+  <data name="FileIsWritablePath" xml:space="preserve">
+    <value>{0} could not be retrieved because a writable file by the same name exists locally.</value>
+  </data>
+  <data name="DirItems" xml:space="preserve">
+    <value>{0} item(s)</value>
+  </data>
+  <data name="ProxyAutoConfigured" xml:space="preserve">
+    <value>Auto-Configured: {0}</value>
+  </data>
+  <data name="GlobalPermissionCreateWorkspace" xml:space="preserve">
+    <value>Create a workspace</value>
+  </data>
+  <data name="DestroyAffectedShelvedChanges" xml:space="preserve">
+    <value>The following shelved changes will be deleted by destroying '{0}':</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="PcwLogChoseNewFolder" xml:space="preserve">
+    <value>User chose to create new empty folder {0}</value>
+  </data>
+  <data name="WorkingFoldersOnlyForLocalWorkspaces" xml:space="preserve">
+    <value>The WorkspaceInfo.Folders property is only available for WorkspaceInfo objects with a Location of WorkspaceLocation.Local.</value>
+  </data>
+  <data name="MergesDateHeader" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Computer" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="NoGlobalPermissions" xml:space="preserve">
+    <value>There are no global permissions explicitly set for the specified user(s).</value>
+  </data>
+  <data name="PcwNoFolderCreated" xml:space="preserve">
+    <value>No folder will be created</value>
+  </data>
+  <data name="GetReplacing" xml:space="preserve">
+    <value>Replacing {0}</value>
+  </data>
+  <data name="OptionRequiresAtLeastOneItem" xml:space="preserve">
+    <value>Option {0} requires at least one item.  Either local or server paths may be used.</value>
+  </data>
+  <data name="PcwLogChoseBranch" xml:space="preserve">
+    <value>User chose to create folder {0} as a branch of existing folder {1}</value>
+  </data>
+  <data name="ConflictCheckinCollisionPath" xml:space="preserve">
+    <value>{0} could not be checked in because another item with the same name exists on the server.</value>
+  </data>
+  <data name="NoMatchingTeamProject" xml:space="preserve">
+    <value>There is no team project named '{0}' in source control.</value>
+  </data>
+  <data name="MultipleWorkspacesSameSpec" xml:space="preserve">
+    <value>Multiple identities found matching workspace name '{0}' and owner name '{1}'. Please specify one of the following workspace specs:
+
+{2}</value>
+  </data>
+  <data name="MultipleWorkspacesSameName" xml:space="preserve">
+    <value>Multiple workspaces exist with the name {0}.
+Please specify the Azure DevOps Server or qualify the name with the owner.</value>
+  </data>
+  <data name="PermissionActionNotSupportedOnPreFrameworkServer" xml:space="preserve">
+    <value>This operation can only be performed against Microsoft Visual Studio Team Foundation Server 2010 and newer servers.</value>
+  </data>
+  <data name="PcwLogAllowingPermissions" xml:space="preserve">
+    <value>Allowing permission(s) {0} to group {1}</value>
+  </data>
+  <data name="FirstArgumentRepositoryFolder" xml:space="preserve">
+    <value>The first path argument must be a source control folder.</value>
+  </data>
+  <data name="BranchObjectsNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support branch objects.</value>
+  </data>
+  <data name="UnableToFormReplacementTeamProjectName" xml:space="preserve">
+    <value>Unable to form a replacement team project name with length {0}.</value>
+  </data>
+  <data name="ExitCode" xml:space="preserve">
+    <value>ExitCode: {0}</value>
+  </data>
+  <data name="CannotRenameDueToChildConflictMessage" xml:space="preserve">
+    <value>TF400025: Cannot rename item {0} because a conflict exists at {1}. Please resolve all conflicts at or under the root of the item before pending the rename.</value>
+  </data>
+  <data name="PolicyFailureNoMessage" xml:space="preserve">
+    <value>The policy failed but did not provide a failure message.</value>
+  </data>
+  <data name="ChangesetSpecifyOne" xml:space="preserve">
+    <value>Please specify exactly one changeset number when using /noprompt.</value>
+  </data>
+  <data name="NoPendingChangesMatchingItemSpec" xml:space="preserve">
+    <value>No pending changes were found for {0}.</value>
+  </data>
+  <data name="TemplateWorkspaceNameEmpty" xml:space="preserve">
+    <value>Specify a template workspace name.</value>
+  </data>
+  <data name="FolderEditException" xml:space="preserve">
+    <value>TF14040: The folder {0} may not be checked out.</value>
+  </data>
+  <data name="ProxyDefaults" xml:space="preserve">
+    <value>Defaults: {0}</value>
+  </data>
+  <data name="NoAddsDetected" xml:space="preserve">
+    <value>There were no adds detected.</value>
+  </data>
+  <data name="GetChangesForChangesetNotSupported" xml:space="preserve">
+    <value>TF204007: The Azure DevOps Server to which your team project is connected does not support the GetChangesForChangeset method.</value>
+  </data>
+  <data name="CheckinNoteRequiredFormattedFailedMessage" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="UnshelveGetConflictBrief" xml:space="preserve">
+    <value>There were changes committed between the unshelved version and original workspace version.</value>
+  </data>
+  <data name="InvalidFileTypeException" xml:space="preserve">
+    <value>The file encoding {0} is not a valid encoding.</value>
+  </data>
+  <data name="ItemNotDoesNotExistAtChangeset" xml:space="preserve">
+    <value>The item {0} does not exist at changeset version {1}.</value>
+  </data>
+  <data name="SpecifyLocalFolderOrRepositoryFolder" xml:space="preserve">
+    <value>Specify one local or server folder.</value>
+  </data>
+  <data name="PcwUnknownPermission" xml:space="preserve">
+    <value>TF10136: "{0}" is not a recognized source control permission.</value>
+  </data>
+  <data name="CheckinNoteNameTooLong" xml:space="preserve">
+    <value>TF10115: '{0}' is too long for a check-in note name.</value>
+  </data>
+  <data name="CheckInShelvesetNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the CheckInShelveset command.</value>
+  </data>
+  <data name="CorruptBaseline" xml:space="preserve">
+    <value>TF400121: The unmodified file content for {0} could not be restored from the baseline directory because it is corrupt. You must perform a get on this item to download its content. Additional information: {1}</value>
+  </data>
+  <data name="SecondArgumentLocalFolder" xml:space="preserve">
+    <value>The second path argument must be a local folder.</value>
+  </data>
+  <data name="GitPermissionAdminister" xml:space="preserve">
+    <value>Administer</value>
+  </data>
+  <data name="MergeConflict" xml:space="preserve">
+    <value>Conflict ({0}): {1} -&gt; {2}</value>
+  </data>
+  <data name="UnsupportedContentType" xml:space="preserve">
+    <value>The server returned content type {0}, which is not supported.</value>
+  </data>
+  <data name="ProxyNotRespondingWithMessage" xml:space="preserve">
+    <value>The source control proxy '{0}' is not responding, so the request will be sent to the main server.  Please verify your settings.
+Additional information:
+  {1}</value>
+  </data>
+  <data name="SpecifySourceAndDestination" xml:space="preserve">
+    <value>Specify two names: the source and the target.</value>
+  </data>
+  <data name="SpecifyWorkspaceEditOption" xml:space="preserve">
+    <value>Specify at least one of the following options: /{0}, /{1}, /{2}, /{3}, /{4}, /{5}, or /{6}.</value>
+  </data>
+  <data name="ArtifactNotFound" xml:space="preserve">
+    <value>TF10099: {0} was not found on the Azure DevOps Server.</value>
+  </data>
+  <data name="NoBestProxiesFound" xml:space="preserve">
+    <value>No recommended proxies were found for your site.</value>
+  </data>
+  <data name="PropertyValueEmpty" xml:space="preserve">
+    <value>TF400300: You must provide a value for property '{0}'.</value>
+  </data>
+  <data name="InvalidExtensionEmpty" xml:space="preserve">
+    <value>Extension must not be empty</value>
+  </data>
+  <data name="CompareLabelsTooFewArguments" xml:space="preserve">
+    <value>Too few arguments for the "compareLabels" command.</value>
+  </data>
+  <data name="GetDeleting" xml:space="preserve">
+    <value>Deleting {0}</value>
+  </data>
+  <data name="ShelvesetDeletedDisplayName" xml:space="preserve">
+    <value>Shelveset deleted</value>
+  </data>
+  <data name="FoundDirectoryExpectedFile" xml:space="preserve">
+    <value>A directory by the same name exists locally.</value>
+  </data>
+  <data name="ConflictCheckinDeletedPath" xml:space="preserve">
+    <value>{0} could not be checked in because it has been deleted from the server.</value>
+  </data>
+  <data name="NoChangesUnshelved" xml:space="preserve">
+    <value>No changes unshelved.</value>
+  </data>
+  <data name="NoMatchingChanges" xml:space="preserve">
+    <value>There is no pending change for '{0}'.</value>
+  </data>
+  <data name="InvalidShelveset" xml:space="preserve">
+    <value>Invalid shelveset specification: {0}</value>
+  </data>
+  <data name="DownloadConnectionFailed" xml:space="preserve">
+    <value>The connection to download the file could not be established.</value>
+  </data>
+  <data name="BranchedFromVersion" xml:space="preserve">
+    <value>Branched from version {0}</value>
+  </data>
+  <data name="GetNamespaceConflictMove" xml:space="preserve">
+    <value>Conflict {0} - Unable to perform the {1} operation because you have a pending {2} on a different item at the destination (to be moved from {3})</value>
+  </data>
+  <data name="CannotAddProjectToSourceControl" xml:space="preserve">
+    <value>TF10104: Source control cannot add the project: {0}</value>
+  </data>
+  <data name="TargetCloakedException" xml:space="preserve">
+    <value>TF203080: The item {0} cannot be moved into an unmapped location because it (or one of its children) is checked out.</value>
+  </data>
+  <data name="RollbackNoVersionsSpecified" xml:space="preserve">
+    <value>TF204005: No versions were specified for the tf rollback command. Specify versions and try again.</value>
+  </data>
+  <data name="RemoveConnection_YNA" xml:space="preserve">
+    <value>Do you want to remove Azure DevOps Server {0}?</value>
+  </data>
+  <data name="Changeset" xml:space="preserve">
+    <value>Changeset</value>
+  </data>
+  <data name="DiffNonCommonFolder" xml:space="preserve">
+    <value>{0} : [folder found only under: {1}]</value>
+  </data>
+  <data name="NoItemsToDestroy" xml:space="preserve">
+    <value>There were no items to destroy.</value>
+  </data>
+  <data name="LocalItem" xml:space="preserve">
+    <value>Local item</value>
+  </data>
+  <data name="ServerDoesNotSupportChangingWorkspaceOwner" xml:space="preserve">
+    <value>The Azure DevOps Server for this workspace does not support changing the owner of a workspace.</value>
+  </data>
+  <data name="LocalPath" xml:space="preserve">
+    <value>Local path</value>
+  </data>
+  <data name="DiffFolder" xml:space="preserve">
+    <value>Diff folder   : {0}</value>
+  </data>
+  <data name="DestroyQuestion_YNA" xml:space="preserve">
+    <value>Do you want to destroy {0} and all of its children?</value>
+  </data>
+  <data name="PcwLogDenyingPermissions" xml:space="preserve">
+    <value>Denying permission(s) {0} to group {1}</value>
+  </data>
+  <data name="GetTargetIsDir" xml:space="preserve">
+    <value>Warning {0} - Unable to get because a directory already exists.</value>
+  </data>
+  <data name="WorkspaceInfoNotFromServer" xml:space="preserve">
+    <value>The workspace represented by this WorkspaceInfo resides on a different team project collection.</value>
+  </data>
+  <data name="ServerDoesNotSupportChangingWorkspacePermissions" xml:space="preserve">
+    <value>The Azure DevOps Server for this workspace does not support changing the permissions of a workspace.</value>
+  </data>
+  <data name="ConflictTagLocal" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="NoServerUrl" xml:space="preserve">
+    <value>You must specify a server url.</value>
+  </data>
+  <data name="PolicyDataCorrupted" xml:space="preserve">
+    <value>TF10138: The check-in policy settings for {0} are corrupted.</value>
+  </data>
+  <data name="BaselineLengthDoesNotMatch" xml:space="preserve">
+    <value>The length of the baseline content does not match the length in the local version table.</value>
+  </data>
+  <data name="PcwSccSourceControl" xml:space="preserve">
+    <value>Source Control</value>
+  </data>
+  <data name="MoreThanOneRepositorySpecified" xml:space="preserve">
+    <value>The server option specifies a different Azure DevOps Server than the path arguments ({0}).</value>
+  </data>
+  <data name="LocalPathTooLong" xml:space="preserve">
+    <value>Local path {0} is too long.  The item will not be retrieved</value>
+  </data>
+  <data name="PolicyFailureTooManyPendingChanges" xml:space="preserve">
+    <value>TF204012: Your files could not be checked in because you tried to check in a large number of files, some of which are subject to check-in policies. If possible, check in fewer files, or use the override option to bypass the check-in policies.</value>
+  </data>
+  <data name="ShelvesetContainsNoChanges" xml:space="preserve">
+    <value>The shelveset {0} contains no changes.</value>
+  </data>
+  <data name="RemapNotAvailableWithFilterCallback" xml:space="preserve">
+    <value>TF204008: You cannot use the Remap option with a filter callback.</value>
+  </data>
+  <data name="TeamProjectCollection" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="QueueForEditRequiresServerWorkspace" xml:space="preserve">
+    <value>The Workspace.QueueForEdit method is only supported with server workspaces (WorkspaceLocation.Server).</value>
+  </data>
+  <data name="WorkItemUpdateHistoryForResolvedWithComment" xml:space="preserve">
+    <value>Resolved with changeset {0}: {1}</value>
+  </data>
+  <data name="PcwNetworkFailureError" xml:space="preserve">
+    <value>Unable to connect to the specified source control server
+on the Azure DevOps Server {0}.</value>
+  </data>
+  <data name="NoChangesToUndo" xml:space="preserve">
+    <value>No pending changes to undo.</value>
+  </data>
+  <data name="UpdatingWorkItems" xml:space="preserve">
+    <value>Updating {0} work item(s)</value>
+  </data>
+  <data name="DeletedShelveset" xml:space="preserve">
+    <value>Deleted shelveset {0}.</value>
+  </data>
+  <data name="InvalidPathInvalidFolderStartChar" xml:space="preserve">
+    <value>TF10124: The path '{0}' cannot start with {1}. Remove the {1} and try again.</value>
+  </data>
+  <data name="IdentityNotFoundException" xml:space="preserve">
+    <value>TF14045: The identity {0} is not a recognized identity.</value>
+  </data>
+  <data name="CannotDiffFileWithFolder" xml:space="preserve">
+    <value>TF10108: Source control cannot compare a file with a folder. Select two files and try again.</value>
+  </data>
+  <data name="ChangeTypeRename" xml:space="preserve">
+    <value>rename</value>
+  </data>
+  <data name="LockOwner" xml:space="preserve">
+    <value>Lock owner</value>
+  </data>
+  <data name="WorkItemQueryTitleDisplayName" xml:space="preserve">
+    <value> ({0})</value>
+  </data>
+  <data name="MergesChangesetHeader" xml:space="preserve">
+    <value>Changeset</value>
+  </data>
+  <data name="CheckinNoteRequiredForOneNote" xml:space="preserve">
+    <value>TF10117: The following check-in note does not pass check-in requirement:</value>
+  </data>
+  <data name="DepthOneMappingsNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support one-level mapping depth.</value>
+  </data>
+  <data name="MustSpecifyAtLeastOneLocalPath" xml:space="preserve">
+    <value>Specify at least one local path.</value>
+  </data>
+  <data name="UnrecognizedCommand" xml:space="preserve">
+    <value>Unrecognized command: {0}.</value>
+  </data>
+  <data name="ConflictMergeSourceIsUndeletedPath" xml:space="preserve">
+    <value>{0} could not be merged because it has been undeleted in the source branch.</value>
+  </data>
+  <data name="InvalidExtensionIllegalCharacters" xml:space="preserve">
+    <value>Extension "{0}" contains illegal characters</value>
+  </data>
+  <data name="VersionSpecRangeNotPermitted" xml:space="preserve">
+    <value>Version specification range is not permitted for this operation.</value>
+  </data>
+  <data name="GetChangesWithPropertiesNotSupported" xml:space="preserve">
+    <value>TF204010: GetChangeset with properties method is not valid on the server on which your team project is hosted.</value>
+  </data>
+  <data name="SettingsSubgroupIdentifier" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="WorkspaceNameEmpty" xml:space="preserve">
+    <value>Specify a workspace name.</value>
+  </data>
+  <data name="WorkingFolderWildcard" xml:space="preserve">
+    <value>TF203003: You cannot specify a wildcard character for this working folder. The only wildcard character allowed is an '*' to map an Azure DevOps Server folder and its immediate child items to your workspace.</value>
+  </data>
+  <data name="SkippingNonFileShelvedChange" xml:space="preserve">
+    <value>'{0}' is not a file.</value>
+  </data>
+  <data name="TargetLocalPending" xml:space="preserve">
+    <value>The target has a pending change.</value>
+  </data>
+  <data name="AutoMergeDisallowedException" xml:space="preserve">
+    <value>The auto merge option is not supported for the conflict on item {0}.</value>
+  </data>
+  <data name="PolicyOverrideReason" xml:space="preserve">
+    <value>Override Reason</value>
+  </data>
+  <data name="DiffRepositoryShelveset" xml:space="preserve">
+    <value>Shelved Change</value>
+  </data>
+  <data name="GetConflict" xml:space="preserve">
+    <value>Conflict {0} - Unable to perform the {1} operation because you have a conflicting {2}</value>
+  </data>
+  <data name="CommandCanceled" xml:space="preserve">
+    <value>Command canceled.</value>
+  </data>
+  <data name="NoPermissions" xml:space="preserve">
+    <value>There are no permissions set for this item.</value>
+  </data>
+  <data name="MergeSaved" xml:space="preserve">
+    <value>Merged file saved in {0}</value>
+  </data>
+  <data name="ErrorReadingConfig" xml:space="preserve">
+    <value>Error reading config file: {0} ({1}).</value>
+  </data>
+  <data name="MustSpecifyRepositoryFolderLocalFolder" xml:space="preserve">
+    <value>Specify the source control folder and then local folder (exactly two arguments).</value>
+  </data>
+  <data name="StaleVersion" xml:space="preserve">
+    <value>newer version exists in source control</value>
+  </data>
+  <data name="PropertiesCommandObsolete" xml:space="preserve">
+    <value>The {0} command has been deprecated.  Please use the 'tf info' command instead.</value>
+  </data>
+  <data name="RenamedInVersion" xml:space="preserve">
+    <value>Renamed in version {0}</value>
+  </data>
+  <data name="MergesAuthorHeader" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="FilesDiffer" xml:space="preserve">
+    <value>{0}: files differ</value>
+  </data>
+  <data name="MergesNothingAvailable" xml:space="preserve">
+    <value>No merge history entries were found for the target item.</value>
+  </data>
+  <data name="CheckinNoteRequiredForMultipleNotes" xml:space="preserve">
+    <value>TF10116: The following check-in notes do not pass check-in requirement:</value>
+  </data>
+  <data name="GetGetting" xml:space="preserve">
+    <value>Getting {0}</value>
+  </data>
+  <data name="MustSpecifyAServerPath" xml:space="preserve">
+    <value>Specify a server path.</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="FileType" xml:space="preserve">
+    <value>File type</value>
+  </data>
+  <data name="BinaryValue" xml:space="preserve">
+    <value>&lt;Binary Value&gt;</value>
+  </data>
+  <data name="OfflineUndoNoLocalVersionEntry" xml:space="preserve">
+    <value>TF400020: The content for the undone item {0} is not available locally. You must perform a get on this item to retrieve its content.</value>
+  </data>
+  <data name="CreatedTeamProjectFolder" xml:space="preserve">
+    <value>Created team project folder {0} via the Team Project Creation Wizard</value>
+  </data>
+  <data name="InvalidArgumentsPctOutOfRange" xml:space="preserve">
+    <value>Arguments may not contain % followed by character not in the range 1 .. 9</value>
+  </data>
+  <data name="CannotDecreaseMaxPathLength" xml:space="preserve">
+    <value>TF500224: The maximum allowed server path length has been decreased on the server which is not supported. Please contact your administrator or delete your workspace.</value>
+  </data>
+  <data name="GlobalPermissionAdminConnections" xml:space="preserve">
+    <value>Administer source control connections</value>
+  </data>
+  <data name="ServerToLocalRefresh" xml:space="preserve">
+    <value>Refreshing your workspace...</value>
+  </data>
+  <data name="DeleteWorkspaceQuestion_YN" xml:space="preserve">
+    <value>A deleted workspace cannot be recovered.
+Workspace '{1}' on server '{2}' has {0} pending change(s).
+Are you sure you want to delete the workspace?</value>
+  </data>
+  <data name="CantDeleteNonEmptyDir" xml:space="preserve">
+    <value>The directory cannot be deleted because it is not empty.</value>
+  </data>
+  <data name="LockCheckin" xml:space="preserve">
+    <value>check-in</value>
+  </data>
+  <data name="InvalidPathNoHatterasItem" xml:space="preserve">
+    <value>TF10127: The path does not include a source control item. Type or select a different path.</value>
+  </data>
+  <data name="ConflictMergeSourceIsUndeleted" xml:space="preserve">
+    <value>The item has been undeleted in the source branch.</value>
+  </data>
+  <data name="VCSubgroupIdentifier" xml:space="preserve">
+    <value>vc</value>
+  </data>
+  <data name="WorkItemUpdateHistoryForAssociated" xml:space="preserve">
+    <value>Associated with changeset {0}.</value>
+  </data>
+  <data name="OwnerEmpty" xml:space="preserve">
+    <value>Please specify an owner.</value>
+  </data>
+  <data name="ResolveRequiresOneResolutionMessage" xml:space="preserve">
+    <value>TF400056: When calling ResolveConflicts please make sure that all conflicts have the same resolution type.</value>
+  </data>
+  <data name="ResolveOneItemNewName" xml:space="preserve">
+    <value>Only one conflict may be resolved when the /newname option is also specified.
+The new name cannot contain wildcards.</value>
+  </data>
+  <data name="UploadTimedOut" xml:space="preserve">
+    <value>TF400307: The upload operation timed out after waiting {0} seconds for a response from the server.</value>
+  </data>
+  <data name="MappingConflictServerPath" xml:space="preserve">
+    <value>Cannot simultaneously map server path, {0},
+to local path, {1},
+and to local path, {2}.
+Please correct one or both of these mappings.</value>
+  </data>
+  <data name="ProxyDefaultsList" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="EditWorkspace" xml:space="preserve">
+    <value>Edit Workspace {0}</value>
+  </data>
+  <data name="LabelNameIllegal" xml:space="preserve">
+    <value>The label name '{0}' is not legal.</value>
+  </data>
+  <data name="LabelScopeIllegal" xml:space="preserve">
+    <value>The label scope '{0}' is not legal.</value>
+  </data>
+  <data name="MergesChangesetWidth" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="SetFileTime" xml:space="preserve">
+    <value>File Time</value>
+  </data>
+  <data name="WildcardsNotAllowedForOption" xml:space="preserve">
+    <value>This command does not support wildcards for the /{0} option.</value>
+  </data>
+  <data name="CannotChangeWorkspaceOwnerAndPermissionsSimultaneously" xml:space="preserve">
+    <value>The owner of a workspace and the permissions of a workspace cannot be changed in a single action.</value>
+  </data>
+  <data name="ConflictMergeSourceIsDeleted" xml:space="preserve">
+    <value>The item has been deleted in the source branch.</value>
+  </data>
+  <data name="PendingChangeToolTipChanges" xml:space="preserve">
+    <value>Changes: {0}</value>
+  </data>
+  <data name="NoConflictsToResolve" xml:space="preserve">
+    <value>There are no conflicts to resolve.</value>
+  </data>
+  <data name="BranchesNoForwardProgress" xml:space="preserve">
+    <value>Not making any forward progress on branches history query response.</value>
+  </data>
+  <data name="IncompatibleChangeException" xml:space="preserve">
+    <value>TF14050: Cannot change item {0} because it already has a pending change that is not compatible.</value>
+  </data>
+  <data name="PolicyActive" xml:space="preserve">
+    <value>Policies cannot be edited after being initialized for evaluation.</value>
+  </data>
+  <data name="GetReplacingMove" xml:space="preserve">
+    <value>Replacing {0} (moved from {1})</value>
+  </data>
+  <data name="ProxyDescription" xml:space="preserve">
+    <value>Description: {0}</value>
+  </data>
+  <data name="PendingChangeToolTipFolder" xml:space="preserve">
+    <value>Folder:  {0}</value>
+  </data>
+  <data name="PressEnterKey" xml:space="preserve">
+    <value>Press the Enter key to continue.</value>
+  </data>
+  <data name="ChangesetModified" xml:space="preserve">
+    <value>Changeset {0} has been modified.</value>
+  </data>
+  <data name="DiffLocalLabelFull" xml:space="preserve">
+    <value>Local: {0};{1}</value>
+  </data>
+  <data name="WarnMappingHadNameConflict" xml:space="preserve">
+    <value>A naming conflict resulted in the rename of '{0}' to '{1}'</value>
+  </data>
+  <data name="CannotDiffBinaryFiles" xml:space="preserve">
+    <value>TF10107: Source control cannot compare binary files.</value>
+  </data>
+  <data name="CannotRollbackMultiplePaths" xml:space="preserve">
+    <value>TF204002: You can roll back only one path at a time.</value>
+  </data>
+  <data name="InvalidValueRange" xml:space="preserve">
+    <value>Value must be between {0} and {1}.</value>
+  </data>
+  <data name="WorkItemUpdateHistoryForResolved" xml:space="preserve">
+    <value>Resolved with changeset {0}.</value>
+  </data>
+  <data name="DiffSeparator" xml:space="preserve">
+    <value>===================================================================</value>
+  </data>
+  <data name="PropertyOperationsNotSupported" xml:space="preserve">
+    <value>TF400309: Properties operations are not valid on the version of Azure DevOps Server on which your team project is hosted.</value>
+  </data>
+  <data name="ResolveForceRequiresAutoMerge" xml:space="preserve">
+    <value>The {0} option is only valid when used with the AcceptMerge resolution.</value>
+  </data>
+  <data name="ItemChangesetIndeterminate" xml:space="preserve">
+    <value>The item {0} is in an indeterminate state.  Perform a get operation to correct this.</value>
+  </data>
+  <data name="PcwNodeMissingRequiredAttribute" xml:space="preserve">
+    <value>"{0}" xml node is missing required attribute "{1}"</value>
+  </data>
+  <data name="DateFormatLong" xml:space="preserve">
+    <value>{0:F}</value>
+  </data>
+  <data name="SetFileTimeToCheckinGetWarning" xml:space="preserve">
+    <value>You must perform a forced get so that the file times in your workspace are updated to the checkin time.</value>
+  </data>
+  <data name="ProxiesFound" xml:space="preserve">
+    <value>{0} proxies found.</value>
+  </data>
+  <data name="GetGettingMove" xml:space="preserve">
+    <value>Getting {0} (moved from {1})</value>
+  </data>
+  <data name="InvalidArgumentsDigitNonWS" xml:space="preserve">
+    <value>Arguments may not contain %n (n = 1 .. 9) followed by non-whitespace</value>
+  </data>
+  <data name="WorkspacePermissionRead" xml:space="preserve">
+    <value>View workspace information</value>
+  </data>
+  <data name="NoShelvesetsFoundMatching" xml:space="preserve">
+    <value>No shelvesets found matching {0}</value>
+  </data>
+  <data name="MergeTarget" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="PolicyInternalErrorNull" xml:space="preserve">
+    <value>Policy Internal Error: Policy returned a null failure</value>
+  </data>
+  <data name="ConflictLabel" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="UndoMovedTo" xml:space="preserve">
+    <value>(moved to {0})</value>
+  </data>
+  <data name="ComputerNameEmpty" xml:space="preserve">
+    <value>Please specify a computer name.</value>
+  </data>
+  <data name="MergesTakesTargetOptionalSource" xml:space="preserve">
+    <value>The merges command must be run with either one or two items.</value>
+  </data>
+  <data name="CheckinNoteFieldUnknown" xml:space="preserve">
+    <value>The field '{0}' does not exist.</value>
+  </data>
+  <data name="ConflictGetPendingChangePath" xml:space="preserve">
+    <value>{0} could not be retrieved because you have a conflicting pending change.</value>
+  </data>
+  <data name="TeamFoundationServerNameMissing" xml:space="preserve">
+    <value>An Azure DevOps Server name must be supplied.</value>
+  </data>
+  <data name="TFVCNotEnabledForTeamProject" xml:space="preserve">
+    <value>TF401191: A version control folder for the team project '{0}' could not be created because another source control system is enabled for that team project.</value>
+  </data>
+  <data name="RepositoryNotFoundWithInfo" xml:space="preserve">
+    <value>Azure DevOps Server {0} does not exist or is not accessible at this time.
+Technical information (for administrator):
+  {1}</value>
+  </data>
+  <data name="NoBaseFileForConflict" xml:space="preserve">
+    <value>This conflict has no "Base" file.</value>
+  </data>
+  <data name="AutoResolvedConflict" xml:space="preserve">
+    <value>Automatically resolved conflict: {0} as {1}</value>
+  </data>
+  <data name="PathIsNotAFile" xml:space="preserve">
+    <value>The path {0} is not a file.</value>
+  </data>
+  <data name="PolicyAssemblyNotRegistered" xml:space="preserve">
+    <value>The policy assembly '{0}' is not registered.</value>
+  </data>
+  <data name="SourceItem" xml:space="preserve">
+    <value>Source item</value>
+  </data>
+  <data name="GetChangesForChangesetWithPropertiesNotSupported" xml:space="preserve">
+    <value>TF204010: GetChangesForChangeset with properties method is not valid on the server on which your team project is hosted.</value>
+  </data>
+  <data name="InvalidWorkspaceName" xml:space="preserve">
+    <value>TF10131: The workspace name {0} contains more than 64 characters, contains one of the following characters: "/:&lt;&gt;\|*?; or ends with a space.  Type a valid name and try again.</value>
+  </data>
+  <data name="WrongPolicyType" xml:space="preserve">
+    <value>The policy instance does not match the policy type.</value>
+  </data>
+  <data name="RepositoryPathTooLong" xml:space="preserve">
+    <value>TF400959: The limit of {1} characters for a directory, or {2} for a directory and file name, was exceeded by the path for '{0}'.</value>
+  </data>
+  <data name="ChangeTypeBranch" xml:space="preserve">
+    <value>branch</value>
+  </data>
+  <data name="ValidationSucceeded" xml:space="preserve">
+    <value>Validation was successful.</value>
+  </data>
+  <data name="MergePended" xml:space="preserve">
+    <value>{0}: {1} -&gt; {2}</value>
+  </data>
+  <data name="PendingParentDeleteException" xml:space="preserve">
+    <value>TF14092: The item {0} cannot be changed. A parent of this item has a pending delete which must be checked in first.</value>
+  </data>
+  <data name="QueryProxyRecords" xml:space="preserve">
+    <value>Querying server for list of proxy records.</value>
+  </data>
+  <data name="NoFilesCheckedIn" xml:space="preserve">
+    <value>No files checked in.</value>
+  </data>
+  <data name="NoChangesLeftToCheckin" xml:space="preserve">
+    <value>There are no remaining changes to check in.</value>
+  </data>
+  <data name="Shelveset" xml:space="preserve">
+    <value>Shelveset</value>
+  </data>
+  <data name="ConflictCheckinDeleted" xml:space="preserve">
+    <value>The item has been deleted from the server.</value>
+  </data>
+  <data name="NoItemsFoundUnder" xml:space="preserve">
+    <value>No items found under {0}</value>
+  </data>
+  <data name="WorkspacePermissionCheckIn" xml:space="preserve">
+    <value>Check in changes to the workspace</value>
+  </data>
+  <data name="PoliciesOnlyOnTeamProjects" xml:space="preserve">
+    <value>TF10137: Check-in policies may only be associated with team projects.</value>
+  </data>
+  <data name="FileNotAvailable" xml:space="preserve">
+    <value>The file {0} is not available.</value>
+  </data>
+  <data name="NoConfiguredCompareToolFor" xml:space="preserve">
+    <value>No configured compare tool found for file {0}.</value>
+  </data>
+  <data name="PendingChildException" xml:space="preserve">
+    <value>TF14060: The item {0} cannot be deleted.  One or more children have pending changes.</value>
+  </data>
+  <data name="FindProxiesForSite" xml:space="preserve">
+    <value>Finding recommended proxies for your site: {0}</value>
+  </data>
+  <data name="ChangeTypeDelete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="RepeatedProjectRevisionId" xml:space="preserve">
+    <value>The new project revision ID {0} was repeated in consecutive attempts to reconcile.</value>
+  </data>
+  <data name="ConflictMergeSourceRenamedPath" xml:space="preserve">
+    <value>The source item for {0} has been renamed.</value>
+  </data>
+  <data name="LabelNameEmpty" xml:space="preserve">
+    <value>Please specify a label name.</value>
+  </data>
+  <data name="CheckInParametersCannotHaveBothPendingChangesAndItemSpecs" xml:space="preserve">
+    <value>Values for PendingChanges and ItemSpecs cannot both be provided on a WorkspaceCheckInParameters object.</value>
+  </data>
+  <data name="Inherit" xml:space="preserve">
+    <value>Inherit</value>
+  </data>
+  <data name="LocalWorkspaceTransactionAlreadyRunning" xml:space="preserve">
+    <value>TF401051: A local workspace transaction is already running on this thread. The second transaction has been automatically aborted.</value>
+  </data>
+  <data name="BranchesRequiresAtLeastOneItem" xml:space="preserve">
+    <value>TF10102: The branches command requires at least one item.  Type or select either a local or server path to the item.</value>
+  </data>
+  <data name="DateFormatShort" xml:space="preserve">
+    <value>{0:d}</value>
+  </data>
+  <data name="IgnoringOption" xml:space="preserve">
+    <value>Ignoring the /{0} option.</value>
+  </data>
+  <data name="DownloadCorrupted" xml:space="preserve">
+    <value>The downloaded file is corrupt.  Please get the file again.</value>
+  </data>
+  <data name="NoMappedFolderMatches" xml:space="preserve">
+    <value>{0} does not match any mapping.</value>
+  </data>
+  <data name="CreateBranchNotSupported" xml:space="preserve">
+    <value>TF204006: The Azure DevOps Server to which your team project is connected does not support the CreateBranch method.</value>
+  </data>
+  <data name="PcwNetworkFailureExplanation" xml:space="preserve">
+    <value>The Team Project Creation Wizard was unable to connect to the Azure DevOps Server {0}.
+Without a connection, the wizard was unable to create the team project root
+directory on the server.</value>
+  </data>
+  <data name="CannotLoadThirdPartyToolAssembly" xml:space="preserve">
+    <value>Cannot load the configured tool.</value>
+  </data>
+  <data name="GetLocalPendingMove" xml:space="preserve">
+    <value>Warning {0} - Unable to perform the {1} operation because you have a pending {2} on a different item at the destination (to be moved from {3})</value>
+  </data>
+  <data name="ConflictTagOriginal" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="PolicyWarningMessages" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="ExhaustedAllProxies" xml:space="preserve">
+    <value>Could not connect to any recommended proxy.</value>
+  </data>
+  <data name="MustSpecifyPropertyValue" xml:space="preserve">
+    <value>Please specify a property value or use the /valueFile option.</value>
+  </data>
+  <data name="HttpStatusInfo" xml:space="preserve">
+    <value>HTTP code {0}: {1}</value>
+  </data>
+  <data name="CheckinNoteFieldValueEmpty" xml:space="preserve">
+    <value>TF10113: You must provide a value for check-in note field '{0}'.</value>
+  </data>
+  <data name="GitPermissionCreateBranch" xml:space="preserve">
+    <value>Branch creation</value>
+  </data>
+  <data name="ContextDiffTargetLabel" xml:space="preserve">
+    <value>modified {0:ddd MMM d HH:mm:ss yyyy}</value>
+  </data>
+  <data name="HistoryBriefChangesetWidth" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="LocalVersionTableTooLarge" xml:space="preserve">
+    <value>TF401190: The local workspace {0} has {1} items in it, which exceeds the recommended limit of {2} items. To improve performance, either reduce the number of items in the workspace, or convert the workspace to a server workspace.</value>
+  </data>
+  <data name="InvalidPathNoCommonParent" xml:space="preserve">
+    <value>TF10126: The path '{0}' has no parent in common with '{1}'</value>
+  </data>
+  <data name="PendingLocalVersionMismatchPath" xml:space="preserve">
+    <value>{0} could not be checked in. The version of the local file is different from the pending change version.</value>
+  </data>
+  <data name="PcwDuplicateProjectNameExplanation" xml:space="preserve">
+    <value>
+The name you typed for the new team project is already in use as a site on the source control
+server. The team project name must be unique on all Azure DevOps Servers used by the new
+project.</value>
+  </data>
+  <data name="ItemNotFoundInRepository" xml:space="preserve">
+    <value>Item {0} was not found in source control.</value>
+  </data>
+  <data name="ServerItem" xml:space="preserve">
+    <value>Server item</value>
+  </data>
+  <data name="ServerPath" xml:space="preserve">
+    <value>Server path</value>
+  </data>
+  <data name="NeedReadPermissionToDownload" xml:space="preserve">
+    <value>TF204001: The item {0} cannot be downloaded. Read permission is required to retrieve the content.</value>
+  </data>
+  <data name="GlobalPermissionAdminConfiguration" xml:space="preserve">
+    <value>Administer source control configurations</value>
+  </data>
+  <data name="ConflictTagUnShelved" xml:space="preserve">
+    <value>Unshelved</value>
+  </data>
+  <data name="EnabledOptionValueNotBoolean" xml:space="preserve">
+    <value>The value specified for the /enabled option must be a boolean.</value>
+  </data>
+  <data name="AColonB" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="MustConfigureProxySetting" xml:space="preserve">
+    <value>Must configure the proxy setting before this operation can be performed.</value>
+  </data>
+  <data name="HistoryNothingAvailable" xml:space="preserve">
+    <value>No history entries were found for the item and version combination specified.</value>
+  </data>
+  <data name="ClickToAddWorkingFolder" xml:space="preserve">
+    <value>Click here to enter a new working folder</value>
+  </data>
+  <data name="PcwLogCreatingCheckinNote" xml:space="preserve">
+    <value>Creating check-in note - label="{0}" required="{1}" order="{2}"</value>
+  </data>
+  <data name="WorkItemHeaderState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="ConflictingWorkspaceInTheCache" xml:space="preserve">
+    <value>Local path {0} is mapped both in workspace {1} on server {2} and workspace {3} on server {4}. Removing workspace {3} on server {4} from the cache. Please remove conflicting mappings.</value>
+  </data>
+  <data name="NoMatchingChangesToShelve" xml:space="preserve">
+    <value>There are no matching pending changes to shelve.</value>
+  </data>
+  <data name="HelpNotAvailable" xml:space="preserve">
+    <value>Help is not available</value>
+  </data>
+  <data name="WorkItemHeaderTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ItemPermissionAdminProjectRights" xml:space="preserve">
+    <value>Manage permissions</value>
+  </data>
+  <data name="SourceControlSystemNameGit" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="PcwNetworkFailureUserAction" xml:space="preserve">
+    <value>Contact the administrator for the Azure DevOps Server {0}
+to confirm that the server is available on the network.
+Also, you might find additional helpful information in the project creation log.
+The log shows each action taken by the wizard at the time of the failure and
+may include additional details about the error.
+</value>
+  </data>
+  <data name="LocalWorkspaceMustBeLocal" xml:space="preserve">
+    <value>TF400285: This operation cannot be performed on a local workspace that does not reside on this computer.</value>
+  </data>
+  <data name="RenameSourceUnreadable" xml:space="preserve">
+    <value>[no permission to read the source of this item]</value>
+  </data>
+  <data name="UnshelveConflictGetCollisionPathBrief" xml:space="preserve">
+    <value>A different item with the same path existed in the original workspace.</value>
+  </data>
+  <data name="InvalidCommandEmpty" xml:space="preserve">
+    <value>Command must not be empty</value>
+  </data>
+  <data name="WorkItemUpdateResolveFailed" xml:space="preserve">
+    <value>failed to resolve work item: {0}</value>
+  </data>
+  <data name="ShelvingPendingChange" xml:space="preserve">
+    <value>Shelving {0}: {1}</value>
+  </data>
+  <data name="PendingChangeToolTipName" xml:space="preserve">
+    <value>Name:    {0}</value>
+  </data>
+  <data name="TooManyItemsSpecified" xml:space="preserve">
+    <value>Too many items specified.</value>
+  </data>
+  <data name="QueryLocalVersionsNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support the QueryLocalVersions command.</value>
+  </data>
+  <data name="PcwLogChoseGit" xml:space="preserve">
+    <value>User chose to create new Git repository</value>
+  </data>
+  <data name="ExtendedMergesNotSupported" xml:space="preserve">
+    <value>TF204000: The Azure DevOps Server to which your team project is connected does not support requesting extended merge information.</value>
+  </data>
+  <data name="PcwDuplicateProjectNameUserAction" xml:space="preserve">
+    <value>
+1. Close the Project Creation Wizard.
+
+2. Restart the Project Creation Wizard.
+
+3. Type a unique name for the new team project.
+</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ResubmittingCheckin" xml:space="preserve">
+    <value>Re-submitting check-in...</value>
+  </data>
+  <data name="VersionSpecInvalidTip" xml:space="preserve">
+    <value>The version specification for tip can only be T or t.</value>
+  </data>
+  <data name="LockNone" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="GetLatestOnCheckoutLocalWorkspaceWarning" xml:space="preserve">
+    <value>Get latest on checkout is not supported in local workspaces. Checking out the local version.</value>
+  </data>
+  <data name="ReservedPathName" xml:space="preserve">
+    <value>TF10130: '{0}' is a reserved name and may not be included in a path.</value>
+  </data>
+  <data name="ProxySuccessfulConfigure" xml:space="preserve">
+    <value>Successfully configured proxy {0}.</value>
+  </data>
+  <data name="SpecifyLockLevel" xml:space="preserve">
+    <value>Specify the lock with the /lock option.</value>
+  </data>
+  <data name="LockCheckOutShort" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="InvalidUpdateLocalValue" xml:space="preserve">
+    <value>Invalid value for updatelocal option.</value>
+  </data>
+  <data name="VersionSpecInvalidDateTime" xml:space="preserve">
+    <value>TF204020: The version specification is not in a supported date or time format.</value>
+  </data>
+  <data name="SetFileTimeNotSupported" xml:space="preserve">
+    <value>TF400038: The Azure DevOps Server to which your team project is connected does not support setting the file time option on a workspace.</value>
+  </data>
+  <data name="ServerToLocalCreatingPendingChangesTable" xml:space="preserve">
+    <value>Creating and populating the pending changes table...</value>
+  </data>
+  <data name="NoWorkingFolderFor" xml:space="preserve">
+    <value>There is no working folder mapping for {0}.</value>
+  </data>
+  <data name="InvalidExtensionOnlyOnePeriod" xml:space="preserve">
+    <value>Extension "{0}" must contain only one period</value>
+  </data>
+  <data name="NoFilesSpecified" xml:space="preserve">
+    <value>No files specified.</value>
+  </data>
+  <data name="ConflictCheckinCollision" xml:space="preserve">
+    <value>Another item with the same name exists on the server.</value>
+  </data>
+  <data name="CannotDestroyRootException" xml:space="preserve">
+    <value>TF14129: You cannot destroy the root directory '{0}' of the repository.</value>
+  </data>
+  <data name="PcwBranchFolderCreated" xml:space="preserve">
+    <value>Folder {0} will be created as a branch of {1}</value>
+  </data>
+  <data name="GitPermissionManageNote" xml:space="preserve">
+    <value>Note management</value>
+  </data>
+  <data name="ConflictMergeTargetIsDeleted" xml:space="preserve">
+    <value>The item has been deleted in the target branch.</value>
+  </data>
+  <data name="DenyInherited" xml:space="preserve">
+    <value>Deny (Inherited)</value>
+  </data>
+  <data name="ServerItemRequiredException" xml:space="preserve">
+    <value>The item {0} must be a server item.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Deny" xml:space="preserve">
+    <value>Deny</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name </value>
+  </data>
+  <data name="Lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="InvalidProjectPendingChangeException" xml:space="preserve">
+    <value>TF10169: Unsupported pending change attempted on team project folder {0}.  Use the Project Creation Wizard in Team Explorer to create a project or the Team Project deletion tool to delete one.</value>
+  </data>
+  <data name="QueryMergeCandidatesOptionsNotSupported" xml:space="preserve">
+    <value>TF400039: The Azure DevOps Server to which your team project is connected does not support passing options to the QueryMergeCandidates command.</value>
+  </data>
+  <data name="RollbackInvalidSpecForChangeset" xml:space="preserve">
+    <value>TF204004: You cannot provide a workspace spec or a label spec argument with the /changeset option.</value>
+  </data>
+  <data name="LabelCreated" xml:space="preserve">
+    <value>Created label {0}</value>
+  </data>
+  <data name="ConflictMergeTargetIsDeletedPath" xml:space="preserve">
+    <value>{0} could not be merged because it has been deleted in the target branch.</value>
+  </data>
+  <data name="EmptyPermissionsOrInheritanceError" xml:space="preserve">
+    <value>TF14026: You must specify at least one permission in the add, deny, or remove list or set the inheritance flag.</value>
+  </data>
+  <data name="ChangeTypeMerge" xml:space="preserve">
+    <value>merge</value>
+  </data>
+  <data name="NoDeletesDetected" xml:space="preserve">
+    <value>There were no deletes detected.</value>
+  </data>
+  <data name="VersionSpecPathEmpty" xml:space="preserve">
+    <value>Please specify a path with the version specifier.</value>
+  </data>
+  <data name="NoChangesToRollback" xml:space="preserve">
+    <value>TF204003: No changes to roll back.</value>
+  </data>
+  <data name="ItemCloakedException" xml:space="preserve">
+    <value>The item {0} has been cloaked.</value>
+  </data>
+  <data name="UnlabelMissingArguments" xml:space="preserve">
+    <value>You must specify a label name and one or more items to remove from the label.</value>
+  </data>
+</root>

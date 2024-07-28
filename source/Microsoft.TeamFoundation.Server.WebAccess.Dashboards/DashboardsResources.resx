@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WidgetNotificationStakeholder_ScreenReaderSupportText" xml:space="preserve">
+    <value>As a stakeholder, you cannot access {0} widget. Click to open a dialog box that has more details.</value>
+  </data>
+  <data name="WidgetCatalog_AnnounceSingleSearchResultFormat" xml:space="preserve">
+    <value>Found 1 result containing {0}</value>
+  </data>
+  <data name="AutoRefreshOneMinuteTooltip" xml:space="preserve">
+    <value>Updating in 1 minute</value>
+  </data>
+  <data name="DeleteDashboardDialogTitle" xml:space="preserve">
+    <value>Delete dashboard</value>
+  </data>
+  <data name="DeleteDashboardDialogCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="WidgetNotificationError_ScreenReaderSupportText" xml:space="preserve">
+    <value>{0} widget failed to load. Click to open a dialog box that has error details.</value>
+  </data>
+  <data name="AutoRefreshAriaLabelFormat" xml:space="preserve">
+    <value>Auto Refresh for {0} dashboard</value>
+  </data>
+  <data name="WidgetHostAdapter_PreloadError" xml:space="preserve">
+    <value>{0}: This widget could not perform a pre-load operation: {1}"</value>
+  </data>
+  <data name="Announce_DashboardHasNoWidgets" xml:space="preserve">
+    <value>No widgets on dashboard</value>
+  </data>
+  <data name="ErrorWidgetCountExceeded" xml:space="preserve">
+    <value>You cannot add more than {0} widgets to a dashboard.</value>
+  </data>
+  <data name="ConfigHost_EventNotSupported" xml:space="preserve">
+    <value>The event {0} is not supported with the notify method.</value>
+  </data>
+  <data name="AdminDashboardsHub" xml:space="preserve">
+    <value>Dashboards</value>
+  </data>
+  <data name="Widget_Load_Invalid_WidgetStatus" xml:space="preserve">
+    <value>The {0} method in the widget should return a valid widget status. Please contact the widget author for more details.</value>
+  </data>
+  <data name="WidgetHostAdapter_ContributionLoadError" xml:space="preserve">
+    <value>{0}: The contribution describing this widget could not be loaded: {1}</value>
+  </data>
+  <data name="Dashboard_Timer_Initialized" xml:space="preserve">
+    <value>Updated less than a minute ago</value>
+  </data>
+  <data name="TeamFilterPlaceholder" xml:space="preserve">
+    <value>Filter by team</value>
+  </data>
+  <data name="ManageDashboardsDialogAllOperationsNotPermitted" xml:space="preserve">
+    <value>You do not have permissions to perform all operations. Contact your team adminstrator for permissions.</value>
+  </data>
+  <data name="WidgetNotificationConfigure_ScreenReaderSupportText" xml:space="preserve">
+    <value>{0} widget has not been configured. Talk to your team admin to get this widget configured.</value>
+  </data>
+  <data name="BrowseAllDashboardsText" xml:space="preserve">
+    <value>Browse all dashboards</value>
+  </data>
+  <data name="NewDashboardLabelName" xml:space="preserve">
+    <value>Dashboard title</value>
+  </data>
+  <data name="Announce_LoadingWidgets" xml:space="preserve">
+    <value>Loading {0} widgets</value>
+  </data>
+  <data name="NewDashboardExperience_BrowseAllText" xml:space="preserve">
+    <value>Browse all dashboards</value>
+  </data>
+  <data name="BladeMenu_ServerSaveFail" xml:space="preserve">
+    <value>VS403628: Saving settings to the server failed: {0}.</value>
+  </data>
+  <data name="WidgetHost_MissingContributionData" xml:space="preserve">
+    <value>VS403627: The widget {0} could not be loaded as the contribution data was missing from the marketplace</value>
+  </data>
+  <data name="ConfigHost_onSaveBadData" xml:space="preserve">
+    <value>onSave method implemented by the widget configuration returns data in the wrong format. Please contact the widget author for more details.</value>
+  </data>
+  <data name="DashboardManager_List_AutorefreshTitle" xml:space="preserve">
+    <value>Auto-refresh</value>
+  </data>
+  <data name="ErrorMessage_ErrorDetails" xml:space="preserve">
+    <value>Error details:</value>
+  </data>
+  <data name="ExtentionDisabledWidget_DialogContentText" xml:space="preserve">
+    <value>This widget has been disabled or removed by an administrator.​</value>
+  </data>
+  <data name="AnalyticsNotEnabled_DialogContentTextLastPart" xml:space="preserve">
+    <value> to access this widget.</value>
+  </data>
+  <data name="MoveWidgetLeft" xml:space="preserve">
+    <value>Move widget left</value>
+  </data>
+  <data name="MoveWidgetDown" xml:space="preserve">
+    <value>Move widget down</value>
+  </data>
+  <data name="WidgetEditMenuDeleteButtonTooltipText" xml:space="preserve">
+    <value>Delete widget from this dashboard</value>
+  </data>
+  <data name="LightboxButton_AriaLabel" xml:space="preserve">
+    <value>Open the detailed view of the widget</value>
+  </data>
+  <data name="AdminDashboardsSecuritySubTitle" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="DisabledWidget_DialogHeading" xml:space="preserve">
+    <value>Access not supported</value>
+  </data>
+  <data name="ManagePermissionsDialogOptionDelete" xml:space="preserve">
+    <value>Delete dashboards</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPositionConflict_DeleteAction" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPositionConflict_MoveAction" xml:space="preserve">
+    <value>move</value>
+  </data>
+  <data name="StakeholderView_DialogHeading" xml:space="preserve">
+    <value>Stakeholder license access</value>
+  </data>
+  <data name="CloseCatalog" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ManageDashboardsDialogInsufficientPermissions" xml:space="preserve">
+    <value>You do not have permissions to manage dashboards. Contact your admin to grant you permissions.</value>
+  </data>
+  <data name="NewDashboardExperience_RefreshDashboard" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="NewDashboardDialogTeamFieldLabel" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="VisualHostMenu_ViewAsTabularData" xml:space="preserve">
+    <value>View as tabular data</value>
+  </data>
+  <data name="DashboardDirectoryPicker_DisabledNewDashboardTooltip" xml:space="preserve">
+    <value>You don’t have permission to create a dashboard</value>
+  </data>
+  <data name="NewDashboardDialogSelectATeam" xml:space="preserve">
+    <value>Select a team</value>
+  </data>
+  <data name="WidgetError_Timeout" xml:space="preserve">
+    <value>Widget took too long to load</value>
+  </data>
+  <data name="WidgetCatalog_NetworkError" xml:space="preserve">
+    <value>Error downloading widget catalog</value>
+  </data>
+  <data name="DashboardDialogNameFieldDescription" xml:space="preserve">
+    <value>Enter a name</value>
+  </data>
+  <data name="Refresh_Link" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ManagePermissionsDialogOptionCreate" xml:space="preserve">
+    <value>Create dashboards</value>
+  </data>
+  <data name="Error_DashboardOutOfSync" xml:space="preserve">
+    <value>Your dashboard is out of sync. You need to {0} the page before making changes.</value>
+  </data>
+  <data name="DisabledWidgets_DialogLicenseTypesLinkText_AzureDevOps" xml:space="preserve">
+    <value>Learn more about the different types of projects and access levels for Azure DevOps</value>
+  </data>
+  <data name="InvalidWidget_Message" xml:space="preserve">
+    <value>Something went wrong :(</value>
+  </data>
+  <data name="EditModeBannerText" xml:space="preserve">
+    <value>Add, edit, move or resize your widgets</value>
+  </data>
+  <data name="MyEmptyMessage" xml:space="preserve">
+    <value>Your favorite dashboards are just a click away. Use the {0} to favorite dashboards, so they appear here.</value>
+  </data>
+  <data name="ManagePermissionsDialogOptionManage" xml:space="preserve">
+    <value>View, Edit and Manage dashboards</value>
+  </data>
+  <data name="QueryLinks_Title" xml:space="preserve">
+    <value>Query Links</value>
+  </data>
+  <data name="DashboardManager_SaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="LoadingMessage" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="MoveWidgetRight" xml:space="preserve">
+    <value>Move widget right</value>
+  </data>
+  <data name="ErrorWidgetSettingsVersionInvalid" xml:space="preserve">
+    <value>Saving configuration failed. Please contact the widget author for more details. Reason: The settings version {{{0}}} is invalid for the widget. The major, minor and patch should be positive numbers.</value>
+  </data>
+  <data name="DirectoryViewMinePivotName" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="ErrorWidgetSettingsVersionDowngrade" xml:space="preserve">
+    <value>Saving configuration failed. Please contact the widget author for more details. Reason: The new version {{{0}}} for the settings cannot be lower than the previous one {{{1}}}.</value>
+  </data>
+  <data name="MenuCancelNewDashboard" xml:space="preserve">
+    <value>Cancel adding a new Dashboard</value>
+  </data>
+  <data name="SaveConfiguration" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ErrorMessage_LoadDashboard" xml:space="preserve">
+    <value>VS403626: We were unable to load your dashboard.</value>
+  </data>
+  <data name="ManageDashboardDialogTitle" xml:space="preserve">
+    <value>Settings for {0}</value>
+  </data>
+  <data name="ManageDashboardsDialogCancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DashboardDirectoryContextMenu_DisabledSecurityTooltip" xml:space="preserve">
+    <value>You don’t have permission to manage dashboard permissions</value>
+  </data>
+  <data name="ManageDashboardDialog_EditDisabled" xml:space="preserve">
+    <value>You do not have permissions to manage this dashboard. Contact your team admin to grant you permissions.</value>
+  </data>
+  <data name="EditModeBannerButtonText" xml:space="preserve">
+    <value>Done Editing</value>
+  </data>
+  <data name="WidgetHostAdapter_ReloadError" xml:space="preserve">
+    <value>{0}: This widget could not reload: {1}"</value>
+  </data>
+  <data name="DefaultGroupHeader" xml:space="preserve">
+    <value>A to Z</value>
+  </data>
+  <data name="BladeConfigurationTitle" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="ManagePermissionsLegend" xml:space="preserve">
+    <value>Select dashboard permissions for members of your team. </value>
+  </data>
+  <data name="DashboardNameForPageTitle" xml:space="preserve">
+    <value>{0} dashboard</value>
+  </data>
+  <data name="ManagerRemoveDashboardAriaLabelFormat" xml:space="preserve">
+    <value>Remove {0} dashboard</value>
+  </data>
+  <data name="DeleteWidgetOnDashboardTitle" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Dashboard_Timer_Updated_hours" xml:space="preserve">
+    <value>Updated 1 hour ago</value>
+  </data>
+  <data name="LightboxButtonTooltipText" xml:space="preserve">
+    <value>Expand view</value>
+  </data>
+  <data name="DashboardInlineEditor_AnnounceSuccessfullyCreatedMessage" xml:space="preserve">
+    <value>Created dashboard</value>
+  </data>
+  <data name="SearchNoResultsText" xml:space="preserve">
+    <value>No results found</value>
+  </data>
+  <data name="DashboardInlineEditor_AnnounceSuccessfullyAddedMessage" xml:space="preserve">
+    <value>New dashboard is added to list</value>
+  </data>
+  <data name="AnalyticsNotEnabled_SettingsPageLinkText" xml:space="preserve">
+    <value>enable Analytics</value>
+  </data>
+  <data name="DashboardEditMenuOpenEditMode" xml:space="preserve">
+    <value>Edit Dashboard</value>
+  </data>
+  <data name="DataQuality_Title" xml:space="preserve">
+    <value>Data Quality</value>
+  </data>
+  <data name="BladeDialogClosedAnnouncement" xml:space="preserve">
+    <value>Dialog Closed</value>
+  </data>
+  <data name="ManageDashboardDialogSubtext" xml:space="preserve">
+    <value>Change the name or the description to help others quickly find this dashboard, as well as manage permissions.</value>
+  </data>
+  <data name="StakeholderView_DialogSubHeading" xml:space="preserve">
+    <value>You have been assigned a stakeholder license by your administrator.</value>
+  </data>
+  <data name="ValidationErrorOnConfigurationSave" xml:space="preserve">
+    <value>You have errors in your configuration settings. Please correct the errors and try again.</value>
+  </data>
+  <data name="AnalyticsNotEnabled_DialogContentTextFirstPart" xml:space="preserve">
+    <value>This widget is powered by Analytics. Analytics is not enabled for this project collection. Please </value>
+  </data>
+  <data name="SearchTextPlaceholder" xml:space="preserve">
+    <value>Search dashboards</value>
+  </data>
+  <data name="Announce_LoadingSingleWidget" xml:space="preserve">
+    <value>Loading 1 widget</value>
+  </data>
+  <data name="BladeMenu_CustomCallbackWidgetStateRequest_OldRequest" xml:space="preserve">
+    <value>VS403629: Request was cancelled as another request for widget state was made</value>
+  </data>
+  <data name="WidgetHostAdapter_LoadError" xml:space="preserve">
+    <value>{0}: This widget could not load: {1}"</value>
+  </data>
+  <data name="DashboardManager_CreateNewDashboardLabel" xml:space="preserve">
+    <value>Create new dashboard</value>
+  </data>
+  <data name="BladeConfigurationWidgetSizeLabel" xml:space="preserve">
+    <value>{0} x {1}</value>
+  </data>
+  <data name="MineGroupHeader" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="WidgetHost_NotifyBeforePreview" xml:space="preserve">
+    <value>The widget preview cannot be updated via the notify method till it has completed initializing.</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPositionConflict_UpdateWidgetAction" xml:space="preserve">
+    <value>update</value>
+  </data>
+  <data name="ManagePermissionsDialogDescriptionEdit" xml:space="preserve">
+    <value>Allows team members to modify widgets and settings on dashboards.</value>
+  </data>
+  <data name="ManagePermissionsDialogDescriptionNone" xml:space="preserve">
+    <value>Allows team members to view dashboards.</value>
+  </data>
+  <data name="DeleteDashboardDialogConfirmationMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this dashboard?</value>
+  </data>
+  <data name="Dashboards_Title" xml:space="preserve">
+    <value>Dashboards</value>
+  </data>
+  <data name="WidgetNotificationErrorAltText" xml:space="preserve">
+    <value>"Doctor with stethoscope on a red error icon, indicating a widget error."</value>
+  </data>
+  <data name="DashboardsCommandBar_DisabledConfigureTooltip" xml:space="preserve">
+    <value>You don’t have permission to configure the dashboard</value>
+  </data>
+  <data name="XamlDefinitions" xml:space="preserve">
+    <value>XAML pipelines</value>
+  </data>
+  <data name="NewDashboardDialogOKButtonText" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="DashboardDialogCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPositionConflict" xml:space="preserve">
+    <value>Failed to {0} widgets. Changes have been made to the dashboard by another user. {1} and try again.</value>
+  </data>
+  <data name="WidgetNotificationConfigure_ScreenReaderSupportText_Admin" xml:space="preserve">
+    <value>{0} widget has not been configured. Click to configure.</value>
+  </data>
+  <data name="WidgetNotificationErrorTitle" xml:space="preserve">
+    <value>Widget failed to load</value>
+  </data>
+  <data name="ConfigHost_NoOnSave" xml:space="preserve">
+    <value>A widget configuration should implement the onSave method. Please contact the widget author for more details.</value>
+  </data>
+  <data name="BladeCatalogTitle" xml:space="preserve">
+    <value>Add Widget</value>
+  </data>
+  <data name="InvalidWidgetSizeText" xml:space="preserve">
+    <value>Please select a valid widget size.</value>
+  </data>
+  <data name="WidgetContextMenu_DisabledDeleteTooltip" xml:space="preserve">
+    <value>You don’t have permission to delete the widget</value>
+  </data>
+  <data name="DirectoryView_SearchWatermark" xml:space="preserve">
+    <value>Filter dashboards</value>
+  </data>
+  <data name="NewDashboardDialogTitle" xml:space="preserve">
+    <value>Create a dashboard</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPositionConflict_AddAction" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="NoResultsFound" xml:space="preserve">
+    <value>No results found.</value>
+  </data>
+  <data name="Dashboard_Timer_Updating" xml:space="preserve">
+    <value>Updating ...</value>
+  </data>
+  <data name="DashboardZeroData_PrimaryText" xml:space="preserve">
+    <value>This project doesn't have any dashboards yet!</value>
+  </data>
+  <data name="NewDashboardExperience_EditDashboard" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="TeamFilterNoTeamsFound" xml:space="preserve">
+    <value>No teams found</value>
+  </data>
+  <data name="ConfigHostAdapter_UnsupportedAPI" xml:space="preserve">
+    <value>VS403686: This widget configuration signalled an unsupported format on a notify()."</value>
+  </data>
+  <data name="StakeholderView_DialogLicenseTypesLinkText" xml:space="preserve">
+    <value>What are the license types for {0}?</value>
+  </data>
+  <data name="PivotDataLoadFailed" xml:space="preserve">
+    <value>VS403632: Loading the data failed. Please refresh the page to try again.</value>
+  </data>
+  <data name="DashboardEditMenuCloseEditMode" xml:space="preserve">
+    <value>Close Edit Mode</value>
+  </data>
+  <data name="DisabledWidgets_DialogLicenseTypesLinkText_VSTS" xml:space="preserve">
+    <value>Learn more about the different types of projects and access levels for Azure DevOps Services</value>
+  </data>
+  <data name="ManageDashboardDialog_SecurityDialogLink" xml:space="preserve">
+    <value>Manage permissions for this dashboard</value>
+  </data>
+  <data name="ErrorMessage_PermissionDenied" xml:space="preserve">
+    <value>You don't have the right permissions to make changes to the dashboard. {0} the page to try again.</value>
+  </data>
+  <data name="ConfigureWidgetOnDashboardTitle" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="BuildDefinitions" xml:space="preserve">
+    <value>Build pipelines</value>
+  </data>
+  <data name="VisualHostMenu_GetQueryLinks" xml:space="preserve">
+    <value>Get Query Links</value>
+  </data>
+  <data name="DashboardDialogDescriptionField" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Navigation_NewDashboardActionText" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="MenuAddNewDashboard" xml:space="preserve">
+    <value>Add a new Dashboard</value>
+  </data>
+  <data name="Dashboard_Timer_Updated_minutes" xml:space="preserve">
+    <value>Updated {0} minutes ago</value>
+  </data>
+  <data name="NewDashboardExperience_NewDashboard" xml:space="preserve">
+    <value>New dashboard</value>
+  </data>
+  <data name="DashboardZeroData_NoWidgets_SecondaryText" xml:space="preserve">
+    <value>Add one or more widgets to gain visibility into your team's progress.</value>
+  </data>
+  <data name="WidgetLightboxConfigureButtonTooltipText" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="ConfigHostAdapter_LoadFailure" xml:space="preserve">
+    <value>{0}: This widget configuration reported an error: {1}"</value>
+  </data>
+  <data name="ConfigHost_onSaveRejectedPromise" xml:space="preserve">
+    <value>Calling onSave method implemented by the widget configuration returns a failure. Please contact the widget author for more details.</value>
+  </data>
+  <data name="DataQuality_Latency" xml:space="preserve">
+    <value>Latency (s)</value>
+  </data>
+  <data name="NewDashboardExperience_RefreshDashboardLabel" xml:space="preserve">
+    <value>Refresh Dashboard</value>
+  </data>
+  <data name="SavingConfiguration" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="WidgetCatalog_GalleryLinkText" xml:space="preserve">
+    <value>Extension Gallery</value>
+  </data>
+  <data name="WidgetCatalog_SortDescending" xml:space="preserve">
+    <value>Z-A</value>
+  </data>
+  <data name="AutoRefreshMinutesTooltip" xml:space="preserve">
+    <value>Updating in {0} minutes</value>
+  </data>
+  <data name="ExtensionDisabledWidget_DialogHeading" xml:space="preserve">
+    <value>Widget unavailable</value>
+  </data>
+  <data name="DirectoryViewAllPivotName" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="DashboardZeroData_NoWidgets_PrimaryText" xml:space="preserve">
+    <value>This dashboard doesn't have widgets just yet!</value>
+  </data>
+  <data name="WidgetNotificationConfigureDialogTitle" xml:space="preserve">
+    <value>Insufficient permissions</value>
+  </data>
+  <data name="ErrorMessage_DashboardGroup" xml:space="preserve">
+    <value>VS403625: We were unable to load your dashboards. Please refresh the page and try again.</value>
+  </data>
+  <data name="DashboardContextMenu_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DashboardDialogSaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="DashboardContextMenu_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="WidgetCatalog_AddButtonTitle" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="CopyToDashboardTitle" xml:space="preserve">
+    <value>Copy to dashboard</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPosition" xml:space="preserve">
+    <value>Failed to save widget position. Please ensure there are no errors on Widgets, reload the page and try again. If this continues, contact your administrator.</value>
+  </data>
+  <data name="NewDashboardExperience_EditDashboardLabel" xml:space="preserve">
+    <value>Edit Dashboard</value>
+  </data>
+  <data name="WidgetCatalog_GalleryLink" xml:space="preserve">
+    <value>Don't see a widget? Explore the {0}</value>
+  </data>
+  <data name="MyDashboards_TeamColumn" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="DisabledWidget_DialogContentText_DialogSubHeading" xml:space="preserve">
+    <value>You aren't logged in as a member of this team project.</value>
+  </data>
+  <data name="ManageDashboardsDialogTitleText" xml:space="preserve">
+    <value>Manage Dashboards</value>
+  </data>
+  <data name="WidgetContextMenu_DisabledCopyTooltip" xml:space="preserve">
+    <value>You don’t have permission to copy the widget</value>
+  </data>
+  <data name="AllGroupHeader" xml:space="preserve">
+    <value>All dashboards</value>
+  </data>
+  <data name="NewDashboardExperience_DoneEditingDashboard" xml:space="preserve">
+    <value>Exit edit mode</value>
+  </data>
+  <data name="WidgetCatalog_AnnouncePluralSearchResultFormat" xml:space="preserve">
+    <value>Found {0} results containing {1}</value>
+  </data>
+  <data name="WidgetConfiguration_NoReload" xml:space="preserve">
+    <value>A configurable widget should implement the reload method. Please contact the widget author for more details.</value>
+  </data>
+  <data name="DashboardContextMenu_Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="Config_NotifyChangeEvent_BadData" xml:space="preserve">
+    <value>VS403630: The custom settings from the widget configuration view were in an invalid state when notify() was called. The custom data passed was either NULL or did not have a property "data". The contribution id: {0}</value>
+  </data>
+  <data name="WidgetNotificationError_MoreDetails" xml:space="preserve">
+    <value>More details</value>
+  </data>
+  <data name="AutoRefreshAltText" xml:space="preserve">
+    <value>Auto Refresh</value>
+  </data>
+  <data name="WidgetNotificationErrorDialogTitle" xml:space="preserve">
+    <value>Widget error</value>
+  </data>
+  <data name="AnalyticsNotEnabled_DialogHeading" xml:space="preserve">
+    <value>Analytics widget unavailable</value>
+  </data>
+  <data name="Widget_Noload" xml:space="preserve">
+    <value>A widget should implement the load method. Please contact the widget author for more details.</value>
+  </data>
+  <data name="ManagePermissionsDialogOptionEdit" xml:space="preserve">
+    <value>Edit dashboards</value>
+  </data>
+  <data name="ManagePermissionsDialogOptionNone" xml:space="preserve">
+    <value>View dashboards</value>
+  </data>
+  <data name="TeamProfileCard_Prefix" xml:space="preserve">
+    <value>Team:</value>
+  </data>
+  <data name="QueryLinks_QueryName" xml:space="preserve">
+    <value>Query Name</value>
+  </data>
+  <data name="ManageDashboardDialog_SecuritySectionLabel" xml:space="preserve">
+    <value>Only team admins can set a team's permissions for a dashboard. The permissions set here will only affect this dashboard.</value>
+  </data>
+  <data name="DisabledWidget_DialogMessage" xml:space="preserve">
+    <value>Only logged in members can view this widget.</value>
+  </data>
+  <data name="LoadingDashboardsText" xml:space="preserve">
+    <value>Loading dashboards</value>
+  </data>
+  <data name="SearchResultsLoadingText" xml:space="preserve">
+    <value>Searching dashboards</value>
+  </data>
+  <data name="WidgetCatalog_SortByTitle" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="ManagePermissionsLearnMoreFwLink" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="DashboardsCommandBar_DisabledEditTooltip" xml:space="preserve">
+    <value>You don’t have permission to edit the dashboard</value>
+  </data>
+  <data name="DashboardDirectoryContextMenu_DisabledDeleteTooltip" xml:space="preserve">
+    <value>You don’t have permission to delete the dashboard</value>
+  </data>
+  <data name="AllDashboardsHeading" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="NewDashboardExperience_DashboardsBreadcrumb" xml:space="preserve">
+    <value>Dashboards</value>
+  </data>
+  <data name="MyFavoritesText" xml:space="preserve">
+    <value>My favorites</value>
+  </data>
+  <data name="ExternalContentErrorFormat" xml:space="preserve">
+    <value>{0} has a problem. </value>
+  </data>
+  <data name="ManagePermissionsDialogDescriptionCreate" xml:space="preserve">
+    <value>Allows team members to create dashboards.</value>
+  </data>
+  <data name="NoDashboardFound" xml:space="preserve">
+    <value>No dashboards for the team.</value>
+  </data>
+  <data name="MyDashboardsHeading" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="ConfirmCancelDialogText" xml:space="preserve">
+    <value>You have unsaved changes made which will be lost. Are you sure you want to discard these changes?</value>
+  </data>
+  <data name="Manager_Input_AriaLabel" xml:space="preserve">
+    <value>Dashboard Name</value>
+  </data>
+  <data name="WidgetContextMenu_DisabledConfigureTooltip" xml:space="preserve">
+    <value>You don’t have permission to edit the widget</value>
+  </data>
+  <data name="ErrorMessage_Configuration_NameWidget" xml:space="preserve">
+    <value>Name should be between {0} and {1} characters</value>
+  </data>
+  <data name="HubTitle" xml:space="preserve">
+    <value>Dashboards_Hub</value>
+  </data>
+  <data name="NewDashboardsExperience_ManageDashboards_Label" xml:space="preserve">
+    <value>Manage dashboards</value>
+  </data>
+  <data name="ManageDashboardDialog_SecuritySectionHeading" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="DisabledWidget_ScreenReaderSupportText" xml:space="preserve">
+    <value>The extension for {0} widget has been disabled or removed by an organization administrator.</value>
+  </data>
+  <data name="BuildPicker_EmptyWatermark" xml:space="preserve">
+    <value>Select a build pipeline</value>
+  </data>
+  <data name="AddWidgetButtonText" xml:space="preserve">
+    <value>Add a widget</value>
+  </data>
+  <data name="WidgetCatalog_AnnounceWidgetAddedFormat" xml:space="preserve">
+    <value>{0} widget was successfully added to the dashboard in column {1}, row {2}</value>
+  </data>
+  <data name="DashboardDialogNameField" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DirectoryTabs_MineTabKey" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="MenuOverflowTooltip" xml:space="preserve">
+    <value>Click here to see additional dashboard</value>
+  </data>
+  <data name="ErrorMessage_UpdateWidgetPositionConflict_Refresh" xml:space="preserve">
+    <value>Refresh the page</value>
+  </data>
+  <data name="DeleteDashboardAccessDeniedError" xml:space="preserve">
+    <value>You do not have permissions to delete this dashboard. Contact your team admin to grant you permissions.</value>
+  </data>
+  <data name="MyDashboards_DescriptionColumn" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="VisualHostMenu_CheckDataQuality" xml:space="preserve">
+    <value>Check data quality</value>
+  </data>
+  <data name="ManageDashboardsDialogNewDashboardPlaceholderText" xml:space="preserve">
+    <value>Enter a title</value>
+  </data>
+  <data name="MenuDashboardNamePlaceHolder" xml:space="preserve">
+    <value>Enter dashboard title</value>
+  </data>
+  <data name="WidgetEditMenuConfigureButtonAriaLabelFormat" xml:space="preserve">
+    <value>Configure {0} widget</value>
+  </data>
+  <data name="WidgetCatalog_SortAscending" xml:space="preserve">
+    <value>A-Z</value>
+  </data>
+  <data name="CloseConfiguration" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ConfigHostAdapter_ContributionLoadError" xml:space="preserve">
+    <value>{0}: The contribution describing this widget configuration could not be loaded: {1}</value>
+  </data>
+  <data name="AutoRefreshLessThanOneMinuteTooltip" xml:space="preserve">
+    <value>Updating in less than a minute</value>
+  </data>
+  <data name="WidgetCatalog_Instructions" xml:space="preserve">
+    <value>Use the Up and Down arrows to choose a widget. Press enter or space to add the widget to the dashboard. Press the right arrow key to learn more about the widget.</value>
+  </data>
+  <data name="DashboardDialogNameFieldErrorMessage" xml:space="preserve">
+    <value>Dashboard name must be less than 32 characters</value>
+  </data>
+  <data name="WidgetConfiguration_ContextError" xml:space="preserve">
+    <value>Widget context must be set before saving</value>
+  </data>
+  <data name="ManagePermissionsDialogDescriptionDelete" xml:space="preserve">
+    <value>Allows team members to delete dashboards.</value>
+  </data>
+  <data name="WidgetCatalog_LearnMore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="AdminDashboardsSecurityDescription" xml:space="preserve">
+    <value>Only team admins can set a team's permissions for all dashboards. The permissions set here affect all dashboards for this team.</value>
+  </data>
+  <data name="ErrorMessage_CreateNewDashboard" xml:space="preserve">
+    <value>We were unable to create a new dashboard. Dashboard must contain between {0} and {1} characters and you can create a maximum of {2} dashboards.</value>
+  </data>
+  <data name="DashboardDialogDescriptionFieldDescription" xml:space="preserve">
+    <value>Enter a description</value>
+  </data>
+  <data name="DashboardManager_DashboardsTabName" xml:space="preserve">
+    <value>Dashboards</value>
+  </data>
+  <data name="Dashboard_Timer_Updated_one_minute" xml:space="preserve">
+    <value>Updated 1 minute ago</value>
+  </data>
+  <data name="WidgetCatalog_PublisherTemplate" xml:space="preserve">
+    <value>By {0}</value>
+  </data>
+  <data name="DashboardZeroData_SecondaryText" xml:space="preserve">
+    <value>Please come back later to view all the dashboards in this project.</value>
+  </data>
+  <data name="WidgetNotificationDialogClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ManagePermissionsDialogDescriptionManage" xml:space="preserve">
+    <value>Allows team members to view dashboards, create dashboards, delete dashboards and modify widgets on dashboards.</value>
+  </data>
+  <data name="WidgetEditMenuConfigureButtonTooltipText" xml:space="preserve">
+    <value>Configure Widget</value>
+  </data>
+  <data name="ConfigHost_NoLoadImplemented" xml:space="preserve">
+    <value>The widget configuration has not implemented the load method. Please contact the widget author for more details.</value>
+  </data>
+  <data name="Configuration_MoreInfoLabelFormat" xml:space="preserve">
+    <value>More info on {0} configuration</value>
+  </data>
+  <data name="FavoriteNameSeperator" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MoveWidgetUp" xml:space="preserve">
+    <value>Move widget up</value>
+  </data>
+  <data name="ErrorCreateDashboardNameAlreadyExists" xml:space="preserve">
+    <value>Dashboard name is already in use. Try a different name.</value>
+  </data>
+  <data name="ErrorCreateDashboardTooManyDashboard" xml:space="preserve">
+    <value>Cannot add new dashboard. You can only create {0} dashboards. Delete an existing dashboard to add a new one.</value>
+  </data>
+  <data name="ManageDashboardsDialog_RefreshLink" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="MyDashboards_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TabularData_Title" xml:space="preserve">
+    <value>Tabular Data View</value>
+  </data>
+  <data name="WidgetEditMenuDeleteButtonAriaLabelFormat" xml:space="preserve">
+    <value>Delete {0} widget from this dashboard</value>
+  </data>
+  <data name="BladeConfigurationWidgetSize" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="BladeConfigurationWidgetName" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="DirectoryTabs_AllTabKey" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="DashboardManager_PermissionsTabName" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="DashboardDialogDescriptionFieldErrorMessage" xml:space="preserve">
+    <value>Description must be less than 128 characters</value>
+  </data>
+  <data name="QueryLinks_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FavoriteGroupHeader" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="BladeCatalog_NoResultsFound" xml:space="preserve">
+    <value>No results found</value>
+  </data>
+  <data name="DataQuality_Entity" xml:space="preserve">
+    <value>Entity</value>
+  </data>
+  <data name="StakeholderView_DialogMessage" xml:space="preserve">
+    <value>As a stakeholder, you can add and edit work items and bugs. You can also view dashboards, backlogs, and Kanban boards. Other features like source code and builds require a different license type.</value>
+  </data>
+  <data name="NewDashboardExperience_AddWidget" xml:space="preserve">
+    <value>Add widget</value>
+  </data>
+  <data name="ManageDashboardsDialogAutoRefresh" xml:space="preserve">
+    <value>Auto-refresh dashboard</value>
+  </data>
+  <data name="CancelConfiguration" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DashboardManager_List_NameTitle" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Grid_AnnounceWidgetRemovedFormat" xml:space="preserve">
+    <value>{0} widget was successfully removed from the dashboard in column {1}, row {2}</value>
+  </data>
+  <data name="DeleteDashboardDialogDeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ManageDashboardsDialogDoneText" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ViewContextMenu_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="NewDashboardDialogTeamsLoading" xml:space="preserve">
+    <value>Loading Teams</value>
+  </data>
+  <data name="ManageDashboardTooltip" xml:space="preserve">
+    <value>Manage your dashboards</value>
+  </data>
+  <data name="ErrorMessage_CreateNewDashboard_Details" xml:space="preserve">
+    <value>VS403631: We were unable to create a new dashboard. Details: {0}</value>
+  </data>
+  <data name="AutoRefreshSelected" xml:space="preserve">
+    <value>Automatically refresh the dashboard every {0} minutes</value>
+  </data>
+  <data name="WidgetNotificationConfigureDialogMessage" xml:space="preserve">
+    <value>You do not have sufficient permissions to configure widgets for this team. You must either be a team administrator or a project administrator.</value>
+  </data>
+  <data name="DashboardManager_CreateNewDashboard_ButtonText" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="AddWidgetDialogSearchBoxWatermark" xml:space="preserve">
+    <value>Search widgets</value>
+  </data>
+</root>

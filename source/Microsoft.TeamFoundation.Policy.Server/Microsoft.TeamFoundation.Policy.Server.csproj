@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Policy.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A22C639B-3284-405E-8C3A-99A11FAEE6A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Policy.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Policy.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PolicyCountByScopeBinder.cs" />
+    <Compile Include="IPolicySettingsAuditDetailsProvider.cs" />
+    <Compile Include="PolicyServicePerfCounters.cs" />
+    <Compile Include="PolicyConfigurationNotifications.cs" />
+    <Compile Include="PolicyComponentFacadeVersioned.cs" />
+    <Compile Include="IPolicyConfigurationBasicCacheService.cs" />
+    <Compile Include="PolicyConfigurationBasicCacheService.cs" />
+    <Compile Include="IPolicyConfigurationVersionedCacheService.cs" />
+    <Compile Include="PolicyConfigurationVersionedCacheService.cs" />
+    <Compile Include="ActivePolicyEvaluation`1.cs" />
+    <Compile Include="ActivePolicyEvaluationSet`1.cs" />
+    <Compile Include="PolicyEvaluationRecordBinder.cs" />
+    <Compile Include="PolicyApiController.cs" />
+    <Compile Include="PolicyConfigurationsController.cs" />
+    <Compile Include="PolicyRevisionsController.cs" />
+    <Compile Include="PolicyEvaluationsController.cs" />
+    <Compile Include="PolicyTypesController.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="IDynamicEvaluationPolicy.cs" />
+    <Compile Include="ITeamFoundationPolicyArtifactExtension.cs" />
+    <Compile Include="ITeamFoundationPolicyService.cs" />
+    <Compile Include="PolicyFailures.cs" />
+    <Compile Include="ITeamFoundationPolicyTarget.cs" />
+    <Compile Include="PolicyConfigurationNotification.cs" />
+    <Compile Include="PolicyConfigurationCreatedNotification.cs" />
+    <Compile Include="PolicyConfigurationUpdatedNotification.cs" />
+    <Compile Include="PolicyConfigurationDeletedNotification.cs" />
+    <Compile Include="PolicyEvaluationUpdateNotification.cs" />
+    <Compile Include="PolicyNotification.cs" />
+    <Compile Include="PolicyActionResult.cs" />
+    <Compile Include="PolicyCheckResult`1.cs" />
+    <Compile Include="PolicyCheckResult.cs" />
+    <Compile Include="PolicyEvaluationResult.cs" />
+    <Compile Include="PolicyEvaluationTransaction`1.cs" />
+    <Compile Include="PolicyNotificationResult`1.cs" />
+    <Compile Include="PolicyNotificationResult.cs" />
+    <Compile Include="PolicyTemplateCache.cs" />
+    <Compile Include="TeamFoundationPolicyService.cs" />
+    <Compile Include="PolicyConfigurationNotFoundException.cs" />
+    <Compile Include="PolicyTypeCannotBeChangedException.cs" />
+    <Compile Include="PolicyChangeRejectedByPolicyException.cs" />
+    <Compile Include="CannotCreateNewDeprecatedScopeException.cs" />
+    <Compile Include="CannotCreateUnknownScopeException.cs" />
+    <Compile Include="PolicyOperationFailedException.cs" />
+    <Compile Include="PolicyTypeNotFoundException.cs" />
+    <Compile Include="PolicyEvaluationNotFoundException.cs" />
+    <Compile Include="PolicySettingsFormatException.cs" />
+    <Compile Include="PolicySettingsTooLargeException.cs" />
+    <Compile Include="CustomPolicyException.cs" />
+    <Compile Include="PolicyImplementationException.cs" />
+    <Compile Include="ArtifactNotFoundException.cs" />
+    <Compile Include="PolicyConfigurationUpdatedByAnotherRequestExceptio.cs" />
+    <Compile Include="PolicyNeedsPermissionException.cs" />
+    <Compile Include="ITeamFoundationPolicy.cs" />
+    <Compile Include="TeamFoundationPolicyEvaluationRecordContext.cs" />
+    <Compile Include="BrokenPolicyEvaluationRecordContext.cs" />
+    <Compile Include="TeamFoundationPolicy`3.cs" />
+    <Compile Include="TeamFoundationPolicy`2.cs" />
+    <Compile Include="FeatureAvailabilityFlags.cs" />
+    <Compile Include="ConfigurationScopesByVersion.cs" />
+    <Compile Include="PolicyCountByScopeRecord.cs" />
+    <Compile Include="PolicyConfigurationsContinuationToken.cs" />
+    <Compile Include="PolicyModelExtensions.cs" />
+    <Compile Include="PolicyBaseComponent.cs" />
+    <Compile Include="PolicyConfigurationRecord.cs" />
+    <Compile Include="PolicyConfigurationBinder.cs" />
+    <Compile Include="IPolicyComponent.cs" />
+    <Compile Include="PolicyComponent.cs" />
+    <Compile Include="PolicyConstants.cs" />
+    <Compile Include="PolicyFeatureFlags.cs" />
+    <Compile Include="PolicyDatabaseConstraints.cs" />
+    <Compile Include="PolicyTracePoints.cs" />
+    <Compile Include="PolicyRegistryPaths.cs" />
+    <Compile Include="PolicyCustomerIntelligenceInfo.cs" />
+    <Compile Include="VirtualResultCollection`1.cs" />
+    <Compile Include="PolicyResources.cs" />
+    <Compile Include="Utils\PolicyEvaluationABTestingUtil.cs" />
+    <Compile Include="Framework\ActivePolicyEvaluationCacheItem.cs" />
+    <Compile Include="Framework\ActivePolicyEvaluationCache.cs" />
+    <Compile Include="Framework\IActivePolicyEvaluationCache.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PerfCounters\man.template" />
+    <EmbeddedResource Include="PolicyResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

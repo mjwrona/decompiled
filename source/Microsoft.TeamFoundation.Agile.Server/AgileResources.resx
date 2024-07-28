@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChartDoesNotExistExceptionMessage" xml:space="preserve">
+    <value>TF1530009: The chart does not exist.</value>
+  </data>
+  <data name="ProductBacklogReorderHelper_ParentIsInCompleteState" xml:space="preserve">
+    <value>VS402649: One or more work items cannot be reordered because the hierarchy is in an invalid state. The item is active but the parent is closed.</value>
+  </data>
+  <data name="NoPermissionReadTeamException" xml:space="preserve">
+    <value>You have no permission to read team(s) : {0}</value>
+  </data>
+  <data name="ProductBacklogReorderHelper_InvalidIterationId" xml:space="preserve">
+    <value>The work item(s) cannot be reordered because the iteration id is not recognized. Verify the iteration id and then try the operation again. Id is a GUID.</value>
+  </data>
+  <data name="MissingOrderByField" xml:space="preserve">
+    <value>VS403198: Missing OrderBy field for team {0}.</value>
+  </data>
+  <data name="BoardUpdateFailureExceptionMessage" xml:space="preserve">
+    <value>TF401503: Errors occurred during board update.\r\nContact administrator or support with following information.\r\nException message: {0}\r\nCallstack: {1}</value>
+  </data>
+  <data name="FailedToCreateIterationPaths" xml:space="preserve">
+    <value>TF401372: Failed to create iteration paths.</value>
+  </data>
+  <data name="CapacityMultipleCapacitiesNotSupported" xml:space="preserve">
+    <value>Team members cannot have more than one activity.</value>
+  </data>
+  <data name="BacklogFieldValueCannotBeNullMessage" xml:space="preserve">
+    <value>TF401367: Backlog field values cannot be null.</value>
+  </data>
+  <data name="TaskboardColumnMappingEmptyException" xml:space="preserve">
+    <value>Taskboard column mapping is not provided for column {0}. Mapping between state and workItemType for each column is required.</value>
+  </data>
+  <data name="BacklogFieldValueAllowOneDefaultMessage" xml:space="preserve">
+    <value>TF401366: Backlog field values only allows one default value.</value>
+  </data>
+  <data name="TaskboardColumnWorkItemTypeStateMappingMissing" xml:space="preserve">
+    <value>Taskbacklog work item type '{0}' state '{1}' is not mapped, fix the column mapping to include state for this work item type.</value>
+  </data>
+  <data name="Taskboard-ColumnNamesNotUnique" xml:space="preserve">
+    <value>Column name '{0}' is already defined in the list of columns, use a unique name.</value>
+  </data>
+  <data name="CumulativeFlowSettingsFutureDateMessage" xml:space="preserve">
+    <value>TF1530011: The start date you specified is not valid. You cannot specify today or a date in the future.</value>
+  </data>
+  <data name="UpdateBoardRows_UserIsNotTeamAdmin" xml:space="preserve">
+    <value>VS402634: You must be team administrator to update board rows </value>
+  </data>
+  <data name="ProductBacklogReorderHelper_InvalidTypes" xml:space="preserve">
+    <value>VS402641: The work item(s) cannot be reordered because they would not respect the correct work item type hierarchy.</value>
+  </data>
+  <data name="InvalidIterationPathMessage" xml:space="preserve">
+    <value>TF401377: Invalid iteration path: {0}</value>
+  </data>
+  <data name="BacklogIdInPostOperationExceptionMessage" xml:space="preserve">
+    <value>TF401384: A backlog id was provided in the create operation. Try patch operation with backlog id.</value>
+  </data>
+  <data name="ProjectDoesNotExistExceptionMessage" xml:space="preserve">
+    <value>TF401380: The project does not exist.</value>
+  </data>
+  <data name="MissingCategory" xml:space="preserve">
+    <value>VS403259: Missing backlog level for a team {0}.</value>
+  </data>
+  <data name="GetBoardUserSettings_GetFailed" xml:space="preserve">
+    <value>Board user settings read failed. Error message: {0}</value>
+  </data>
+  <data name="ReorderWorkItemsOperationsNullOrEmpty" xml:space="preserve">
+    <value>operations is null or empty.</value>
+  </data>
+  <data name="ProductBacklogReorderHelper_BacklogChanged" xml:space="preserve">
+    <value>TF400486: Unable to complete the operation because you or another user has modified, removed, or re-parented items, or you are trying to reorder an item outside of its immediate parent.</value>
+  </data>
+  <data name="BoardBadgeClickToSeeTheBoard" xml:space="preserve">
+    <value>Click to see the board</value>
+  </data>
+  <data name="BoardBadgeLeftText" xml:space="preserve">
+    <value>Azure Boards</value>
+  </data>
+  <data name="GetParentChildWIMap_GetFailed" xml:space="preserve">
+    <value>Failed to read parent workitem filter data. Error message: {0}</value>
+  </data>
+  <data name="TeamFieldValuesDefaultValueNotFound" xml:space="preserve">
+    <value>The default team field value must be one of this team's allowed team field values.</value>
+  </data>
+  <data name="BacklogDoesNotExistExceptionMessage" xml:space="preserve">
+    <value>TF401364: Backlog does not exist: {0}</value>
+  </data>
+  <data name="TaskboardWorkItemInvalidIterationException" xml:space="preserve">
+    <value>Work item '{0}' iteration '{1}' does not match the sprint iteration '{2}'.</value>
+  </data>
+  <data name="SetBoardSettings_DeletedColumnHasItems" xml:space="preserve">
+    <value>TF401017: You cannot delete column: {0}.  This column has {1} items in it. You must first move the items to another column, then try deleting the column again.</value>
+  </data>
+  <data name="UpdateBoardCardSettings_InvalidBoardCardSettings" xml:space="preserve">
+    <value>TF1530014: The card settings are invalid. Error message: {0}</value>
+  </data>
+  <data name="TaskboardColumnMinColumnLimitException" xml:space="preserve">
+    <value>Taskboard columns count {0} is less than the minimum columns {1} allowed.</value>
+  </data>
+  <data name="TaskboardColumnInvalidException" xml:space="preserve">
+    <value>Taskboard column '{0}' is not a valid column. Check the list of available column for this taskboard and try again.</value>
+  </data>
+  <data name="UpdateBoardCardRules_InvalidBoardCardRules" xml:space="preserve">
+    <value>TF1530017: The card rules are invalid. Error message: {0}</value>
+  </data>
+  <data name="BacklogContextNotSet" xml:space="preserve">
+    <value>We weren't able to determine which backlog you're on.</value>
+  </data>
+  <data name="BacklogCapacityInvalidUser" xml:space="preserve">
+    <value>TF401388: Invalid user in capacity {0}</value>
+  </data>
+  <data name="TeamSettings_CurrentIterationNotFound" xml:space="preserve">
+    <value>No current iteration was found. No iteration contains today's date.</value>
+  </data>
+  <data name="ViewPropertiesFormatException" xml:space="preserve">
+    <value>The view properties are not in a valid format, for the specified type of the view.</value>
+  </data>
+  <data name="BacklogFieldValueDuplicateId" xml:space="preserve">
+    <value>TF401385: Backlog field value ids are not unique</value>
+  </data>
+  <data name="InvalidProjectPermissionExceptionMessage" xml:space="preserve">
+    <value>TF401379: User: {0} does not have access to this project</value>
+  </data>
+  <data name="BacklogCapacityInvalidCapacityPerDay" xml:space="preserve">
+    <value>TF401387: CapacityPerDay is not valid</value>
+  </data>
+  <data name="FailedToDeleteBacklogExceptionMessage" xml:space="preserve">
+    <value>TF401405: Failed to delete backlog: {0}</value>
+  </data>
+  <data name="TaskboardColumnInvalidForStateException" xml:space="preserve">
+    <value>Taskboard column '{0}' is not mapped to current work item state '{1}'. Change the work item state to mapped column before changing the column.</value>
+  </data>
+  <data name="TaskboardColumnWorkItemTypeStateInvalid" xml:space="preserve">
+    <value>State '{0}' is not a valid state for work item type '{1}'</value>
+  </data>
+  <data name="UpdateBoardFilterSettings_InvalidBoardFilter" xml:space="preserve">
+    <value>The filter settings are invalid. Error message: {0}</value>
+  </data>
+  <data name="ViewTypeDoesNotExistException" xml:space="preserve">
+    <value>The view type does not exist.</value>
+  </data>
+  <data name="BacklogHubContextInvalid" xml:space="preserve">
+    <value>{0} is not a valid category of backlog items.</value>
+  </data>
+  <data name="BacklogFilterContextInvalid" xml:space="preserve">
+    <value>{0} is not a valid filter for the {1} category.</value>
+  </data>
+  <data name="BacklogCapacityInvalidWeekend" xml:space="preserve">
+    <value>TF401386: Invalid weekend in capacity</value>
+  </data>
+  <data name="TaskboardColumnUpdateUserIsNotTeamAdminException" xml:space="preserve">
+    <value>User needs to be team admin to update the taskboard columns.</value>
+  </data>
+  <data name="TaskboardColumnNotFoundException" xml:space="preserve">
+    <value>Taskboard column specified does not exist.</value>
+  </data>
+  <data name="ChartUpdateFailureExceptionMessage" xml:space="preserve">
+    <value>TF1530010: Errors occurred during chart update.\r\nContact administrator or support with following information.\r\nException message: {0}\r\nCallstack: {1}</value>
+  </data>
+  <data name="TaskboardColumnWorkItemTypeInvalid" xml:space="preserve">
+    <value>WorkItemType '{0}' is not a valid taskbacklog work item type. </value>
+  </data>
+  <data name="ReorderAboveNestedWorkItemException" xml:space="preserve">
+    <value>Work item {0} can't be reordered/added above work item {1} because work item {1}'s parent is on the same category. Work item {0} will be put back in its original position or added to the end. Please remove the link between {1} and its parent or change the link type to 'Related' to fix the issue. </value>
+  </data>
+  <data name="InvalidDefaultIterationParameters" xml:space="preserve">
+    <value>TF403087: Invalid parameters, do not specify both a defaultIteration and defaultIterationMacro</value>
+  </data>
+  <data name="InvalidMemberExceptionMessage" xml:space="preserve">
+    <value>TF401378: Invalid member: {0}</value>
+  </data>
+  <data name="UpdateBoardCardSettings_UserIsNotTeamAdmin" xml:space="preserve">
+    <value>TF1530013: You must be team administrator to update board card settings</value>
+  </data>
+  <data name="CapacityContainsMemberGroupExceptionMessage" xml:space="preserve">
+    <value>TF401382: Capacity contains a group: {0}</value>
+  </data>
+  <data name="Taskboard-ColumnIdNotfound" xml:space="preserve">
+    <value>Specified column with id '0' does not exist, if this is a new column do not pass the id.</value>
+  </data>
+  <data name="GetParentChildWIMap_LimiExceeded" xml:space="preserve">
+    <value>Unable to process the request since the total number of child work items sent  in the request is higher than the server limit {0}. Try removing some of the child items to progress.</value>
+  </data>
+  <data name="FailedToCreateMembers" xml:space="preserve">
+    <value>TF401373: Failed to create members.</value>
+  </data>
+  <data name="ProjectIdIsNotGuidExceptionMessage" xml:space="preserve">
+    <value>TF401283: Project id is not a guid</value>
+  </data>
+  <data name="UpdateBoardCardRules_UpdateBoardFailed" xml:space="preserve">
+    <value>TF1530018: Update board rules Failed. Please try again.</value>
+  </data>
+  <data name="UpdateBoardCardRules_invalidTagName" xml:space="preserve">
+    <value>{0} is not a valid tag in the system.</value>
+  </data>
+  <data name="ProductBacklogReorderHelper_InvalidReorderIds" xml:space="preserve">
+    <value>TF400488: The work item(s) cannot be reordered because one or more IDs are invalid. Verify the IDs and then try the operation again.</value>
+  </data>
+  <data name="InvalidDateRangeExceptionMessage" xml:space="preserve">
+    <value>TF401376: Invalid date range. End date: {1} has to be equal or greater than start date: {0}</value>
+  </data>
+  <data name="TaskboardColumnLastColumnToStateInvalid" xml:space="preserve">
+    <value>Last column {0} is not mapped to work item type {1}'s completed state category state {2}.</value>
+  </data>
+  <data name="UpdateBoardFilterSettings_UpdateBoardFailed" xml:space="preserve">
+    <value>Update board filter settings failed. Please try again.</value>
+  </data>
+  <data name="FailedToCreateCapacity" xml:space="preserve">
+    <value>TF401371: Failed to create capacity.</value>
+  </data>
+  <data name="InvalidBacklogNameExceptionMessage" xml:space="preserve">
+    <value>TF401381: The backlog name: {0} is invalid</value>
+  </data>
+  <data name="TaskboardInvalidTeamIterationException" xml:space="preserve">
+    <value>Taskboard iteration {0} is not a valid team iteration. Team should signup for this iteration first.</value>
+  </data>
+  <data name="InvalidBacklogFieldValueMessage" xml:space="preserve">
+    <value>TF401375: Invalid backlog field values specified : {0}</value>
+  </data>
+  <data name="UpdateChartSettings_UserIsNotTeamAdmin" xml:space="preserve">
+    <value>TF1530012: You must be team administrator to update chart settings</value>
+  </data>
+  <data name="GeneralInvalidDataMessage" xml:space="preserve">
+    <value>TF401509: The data you specified is not valid. </value>
+  </data>
+  <data name="FailedToGetBacklogExceptionMessage" xml:space="preserve">
+    <value>TF401406: Failed to get backlog: {0}</value>
+  </data>
+  <data name="TaskboardColumnFirstColumnToStateInvalid" xml:space="preserve">
+    <value>First column {0} is not mapped to work item type {1} first state {2}.</value>
+  </data>
+  <data name="FailedToUpdateBacklogName" xml:space="preserve">
+    <value>TF401374: Failed to update backlog name: {0} for id: {1}</value>
+  </data>
+  <data name="FailedToCreateBacklogExceptionMessage" xml:space="preserve">
+    <value>TF401369: Failed to create backlog: {0}</value>
+  </data>
+  <data name="BoardIdOrNameDoesNotExist" xml:space="preserve">
+    <value>VS403365: Board '{0}' does not exist.</value>
+  </data>
+  <data name="CumulativeFlowSettingsInvalidValue" xml:space="preserve">
+    <value>1530019: The cumulative flow chart settings is invalid. At least one valid setting value is needed.</value>
+  </data>
+  <data name="TeamFieldValuesNoTeamFieldValuesSelected" xml:space="preserve">
+    <value>There are no team field values specified for your team. You must specify at least one team field value to enable features such as your product backlog or the task board.</value>
+  </data>
+  <data name="TaskboardColumnNotCustomizedException" xml:space="preserve">
+    <value>Taskboard columns are not added. Customize the taskboard columns before accessing it.</value>
+  </data>
+  <data name="BacklogFieldValueRequireDefaultMessage" xml:space="preserve">
+    <value>TF401368: Backlog field values require a default value.</value>
+  </data>
+  <data name="UpdateBoardCardRules_isEnabledBoolean" xml:space="preserve">
+    <value>isEnabled field should either be true or false.</value>
+  </data>
+  <data name="Taskboard-ColumnNameInvalid" xml:space="preserve">
+    <value>The name '{0}' is invalid. Names cannot be empty, exceed {1} characters or contain the following characters: {2}.</value>
+  </data>
+  <data name="UpdateBoardCardRules_UserIsNotTeamAdmin" xml:space="preserve">
+    <value>TF1530016: You must be team administrator to update board card rules</value>
+  </data>
+  <data name="TaskboardColumnUpdateException" xml:space="preserve">
+    <value>Taskboard columns where updated by another user, read the new columns and try again.</value>
+  </data>
+  <data name="UpdateBoardOptions_UserIsNotTeamAdmin" xml:space="preserve">
+    <value>VS402822: You must be team administrator to update board options.</value>
+  </data>
+  <data name="UpdateBoardCardSettings_UpdateBoardFailed" xml:space="preserve">
+    <value>TF1530015: Update board Failed. Please try again.</value>
+  </data>
+  <data name="TeamDoesNotExistException" xml:space="preserve">
+    <value>TF401501: The team does not exist in this timeline.</value>
+  </data>
+  <data name="TaskboardColumnMaxLimitExceededException" xml:space="preserve">
+    <value>Taskbord columns count {0} is greater than the maximum number of columns allowed of {1}.</value>
+  </data>
+  <data name="FailedToCreateBacklogFieldValues" xml:space="preserve">
+    <value>TF401370: Failed to create backlog field values.</value>
+  </data>
+  <data name="BacklogWithNameAlreadyExistsExceptionMessage" xml:space="preserve">
+    <value>TF401383: Failed to create backlog with name '{0}', it already exists</value>
+  </data>
+  <data name="TaskboardColumnDuplicateColumnIdException" xml:space="preserve">
+    <value>Taskboard column with id {0} has already been used in this collection. Column ids should be unique.</value>
+  </data>
+  <data name="InvalidDateMessage" xml:space="preserve">
+    <value>TF401508: The date you specified is not valid. You must provide the date in the following format: mm/dd/yyyy.</value>
+  </data>
+  <data name="TaskboardColumnWorkItemTypeMappingMissing" xml:space="preserve">
+    <value>Taskbacklog work item type '{0}' states are not mapped, fix the column mapping to include state for this work item type.</value>
+  </data>
+  <data name="BoardBadgeCustomColumnsSetIncorrectly" xml:space="preserve">
+    <value>You can only supply custom columns if column options mode is set to CustomColumns</value>
+  </data>
+  <data name="BoardValidationFailureExceptionMessage" xml:space="preserve">
+    <value>TF401502: Board validation failed. {0}</value>
+  </data>
+  <data name="InvalidIterationMacroMessage" xml:space="preserve">
+    <value>TF403086: Invalid iteration macro: {0}</value>
+  </data>
+  <data name="TaskboardColumnMappingInvalidException" xml:space="preserve">
+    <value>Taskboard columns mapping is not valid. Fix the column mapping.</value>
+  </data>
+  <data name="UpdateBoardUserSettings_UpdateFailed" xml:space="preserve">
+    <value>Board user settings update failed. Error message: {0}</value>
+  </data>
+  <data name="UpdateBoardColumns_UserIsNotTeamAdmin" xml:space="preserve">
+    <value>TF401504: You must be team administrator to update board columns </value>
+  </data>
+  <data name="ReorderUnderNestedWorkItemException" xml:space="preserve">
+    <value>Work item {0} can't be reordered under work item {1} because work item {1}'s parent is on the same category. Please remove the link between {1} and its parent or change the link type to 'Related' to fix the issue. </value>
+  </data>
+  <data name="SetBoardSettings_DeletedRowHasItems" xml:space="preserve">
+    <value>You cannot delete row: [{0}].  This row has item in it. You must first move the items to another row, then try deleting the row again.</value>
+  </data>
+  <data name="BacklogLevelInvisible" xml:space="preserve">
+    <value>TF401505: The requested backlog is hidden for the team. Level: {0}</value>
+  </data>
+  <data name="ReorderNestedWorkItemException" xml:space="preserve">
+    <value>Work item {0} can't be reordered because its parent is on the same category. Please remove the link between {0} and its parent or change the link type to 'Related' to fix the issue. </value>
+  </data>
+  <data name="BoardDoesNotExistExceptionMessage" xml:space="preserve">
+    <value>TF401501: The board does not exist.</value>
+  </data>
+</root>

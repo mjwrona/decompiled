@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Storage.File.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{338ACD4A-06AC-42CF-B952-262ADDAFD956}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Storage.File</AssemblyName>
+    <ApplicationVersion>11.2.3.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure.Storage</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Auth\FileSharedAccessSignatureHelper.cs" />
+    <Compile Include="Core\Util\FileCommonUtility.cs" />
+    <Compile Include="File\CloudFile.cs" />
+    <Compile Include="File\CloudFileClient.cs" />
+    <Compile Include="File\CloudFileDirectory.cs" />
+    <Compile Include="File\CloudFileShare.cs" />
+    <Compile Include="File\CloudFileStream_old.cs" />
+    <Compile Include="File\FileReadStream.cs" />
+    <Compile Include="File\FileReadStream_old.cs" />
+    <Compile Include="File\FileWriteStream.cs" />
+    <Compile Include="File\FileAccountExtensions.cs" />
+    <Compile Include="File\CloseFileHandleResultSegment.cs" />
+    <Compile Include="File\CloudFileAttributes.cs" />
+    <Compile Include="File\CloudFileNtfsAttributes.cs" />
+    <Compile Include="File\CloudFileNtfsAttributesHelper.cs" />
+    <Compile Include="File\DeleteShareSnapshotsOption.cs" />
+    <Compile Include="File\FileContinuationToken.cs" />
+    <Compile Include="File\FileDirectoryProperties.cs" />
+    <Compile Include="File\FileHandle.cs" />
+    <Compile Include="File\FileHandleResultSegment.cs" />
+    <Compile Include="File\FileProperties.cs" />
+    <Compile Include="File\FileRange.cs" />
+    <Compile Include="File\FileReadStreamBase.cs" />
+    <Compile Include="File\FileRequestOptions.cs" />
+    <Compile Include="File\FileResultSegment.cs" />
+    <Compile Include="File\FileSharePermissions.cs" />
+    <Compile Include="File\FileShareProperties.cs" />
+    <Compile Include="File\FileSharePublicAccessType.cs" />
+    <Compile Include="File\FileWriteStreamBase.cs" />
+    <Compile Include="File\CloudFileStream.cs" />
+    <Compile Include="File\IListFileItem.cs" />
+    <Compile Include="File\SharedAccessFileHeaders.cs" />
+    <Compile Include="File\SharedAccessFilePermissions.cs" />
+    <Compile Include="File\SharedAccessFilePolicies.cs" />
+    <Compile Include="File\SharedAccessFilePolicy.cs" />
+    <Compile Include="File\CopyState.cs" />
+    <Compile Include="File\CopyStatus.cs" />
+    <Compile Include="File\ShareListingDetails.cs" />
+    <Compile Include="File\ShareResultSegment.cs" />
+    <Compile Include="File\FileCopyOptions.cs" />
+    <Compile Include="File\Protocol\DirectoryHttpRequestMessageFactory.cs" />
+    <Compile Include="File\Protocol\DirectoryHttpResponseParsers.cs" />
+    <Compile Include="File\Protocol\FileHttpRequestMessageFactory.cs" />
+    <Compile Include="File\Protocol\FileRequestMessageExtensions.cs" />
+    <Compile Include="File\Protocol\FileHttpResponseParsers.cs" />
+    <Compile Include="File\Protocol\ShareHttpRequestMessageFactory.cs" />
+    <Compile Include="File\Protocol\ShareHttpResponseParsers.cs" />
+    <Compile Include="File\Protocol\FileAccessPolicyResponse.cs" />
+    <Compile Include="File\Protocol\FileErrorCodeStrings.cs" />
+    <Compile Include="File\Protocol\FileListingContext.cs" />
+    <Compile Include="File\Protocol\FileRangeWrite.cs" />
+    <Compile Include="File\Protocol\FileRequest.cs" />
+    <Compile Include="File\Protocol\FileServiceProperties.cs" />
+    <Compile Include="File\Protocol\FileShareEntry.cs" />
+    <Compile Include="File\Protocol\IListFileEntry.cs" />
+    <Compile Include="File\Protocol\ListFileDirectoryEntry.cs" />
+    <Compile Include="File\Protocol\ListFileEntry.cs" />
+    <Compile Include="File\Protocol\ListFilesAndDirectoriesResponse.cs" />
+    <Compile Include="File\Protocol\ListHandlesResponse.cs" />
+    <Compile Include="File\Protocol\ListRangesResponse.cs" />
+    <Compile Include="File\Protocol\ListSharesResponse.cs" />
+    <Compile Include="File\Protocol\ShareStats.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

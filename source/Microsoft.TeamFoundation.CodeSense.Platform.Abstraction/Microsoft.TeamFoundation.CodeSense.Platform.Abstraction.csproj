@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.CodeSense.Platform.Abstraction.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43F740BD-6FD7-4883-818D-D6B06AA095B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.CodeSense.Platform.Abstraction</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.CodeSense.Platform.Abstraction</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.CodeSense.Shared.Hosted">
+      <HintPath>lib\Microsoft.TeamFoundation.CodeSense.Shared.Hosted.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeLensCIArea.cs" />
+    <Compile Include="CodeLensCIFeature.cs" />
+    <Compile Include="CodeLensCIProperty.cs" />
+    <Compile Include="CodeLensCILevel.cs" />
+    <Compile Include="CodeLensCILoggerService.cs" />
+    <Compile Include="CodeLensKpiArea.cs" />
+    <Compile Include="CodeLensKpiName.cs" />
+    <Compile Include="CodeLensKpiLoggerService.cs" />
+    <Compile Include="ICodeLensCILoggerService.cs" />
+    <Compile Include="ICodeLensLayerCakeSettings.cs" />
+    <Compile Include="LayerCakeCISettings.cs" />
+    <Compile Include="ICodeLensKpiLoggerService.cs" />
+    <Compile Include="ITeamFoundationSecurityServiceProxy.cs" />
+    <Compile Include="ITfsVersionControlClient.cs" />
+    <Compile Include="CodeLensExtension.cs" />
+    <Compile Include="RegistryServiceExtensions.cs" />
+    <Compile Include="TeamFoundationSecurityServiceProxy.cs" />
+    <Compile Include="TraceLayer.cs" />
+    <Compile Include="TraceArea.cs" />
+    <Compile Include="TracingExtensions.cs" />
+    <Compile Include="CodeSenseTraceWatch.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

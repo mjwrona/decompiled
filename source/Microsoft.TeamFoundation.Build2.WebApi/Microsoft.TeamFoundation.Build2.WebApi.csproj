@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Build2.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E74D85D6-935D-4269-AD46-AF6B9AA2689F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Build2.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Build.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentTargetExecutionType.cs" />
+    <Compile Include="WellKnownArtifactResourceTypes.cs" />
+    <Compile Include="ArtifactResourceTypes.cs" />
+    <Compile Include="BuildDefinitionExtensions.cs" />
+    <Compile Include="BuildDefinitionHelpers.cs" />
+    <Compile Include="BuildHttpClient.cs" />
+    <Compile Include="BuildHttpClientCompatBase.cs" />
+    <Compile Include="BuildIssueKeys.cs" />
+    <Compile Include="WellKnownBuildKeys.cs" />
+    <Compile Include="BuildOrchestrationType.cs" />
+    <Compile Include="BuildPermissions.cs" />
+    <Compile Include="BuildResourceIds.cs" />
+    <Compile Include="BuildVariables.cs" />
+    <Compile Include="WellKnownBuildVariables.cs" />
+    <Compile Include="AgentPoolQueue.cs" />
+    <Compile Include="AgentPoolQueueTarget.cs" />
+    <Compile Include="AgentSpecification.cs" />
+    <Compile Include="AgentTargetExecutionOptions.cs" />
+    <Compile Include="AgentTargetExecutionOptionsJsonConverter.cs" />
+    <Compile Include="ArtifactResource.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="Build.cs" />
+    <Compile Include="BuildArtifact.cs" />
+    <Compile Include="BuildBadge.cs" />
+    <Compile Include="BuildDefinition.cs" />
+    <Compile Include="BuildDefinitionReference.cs" />
+    <Compile Include="BuildDefinitionRevision.cs" />
+    <Compile Include="TaskDefinitionReference.cs" />
+    <Compile Include="BuildDefinitionStep.cs" />
+    <Compile Include="BuildDefinitionTemplate.cs" />
+    <Compile Include="BuildDefinitionVariable.cs" />
+    <Compile Include="BuildLog.cs" />
+    <Compile Include="BuildLogReference.cs" />
+    <Compile Include="BuildMetric.cs" />
+    <Compile Include="BuildOption.cs" />
+    <Compile Include="BuildOptionGroupDefinition.cs" />
+    <Compile Include="BuildOptionDefinition.cs" />
+    <Compile Include="BuildOptionDefinitionReference.cs" />
+    <Compile Include="BuildOptionInputDefinition.cs" />
+    <Compile Include="BuildProcess.cs" />
+    <Compile Include="BuildProcessJsonConverter.cs" />
+    <Compile Include="BuildProcessResources.cs" />
+    <Compile Include="ResourceReference.cs" />
+    <Compile Include="AgentPoolQueueReference.cs" />
+    <Compile Include="ServiceEndpointReference.cs" />
+    <Compile Include="SecureFileReference.cs" />
+    <Compile Include="BuildRepository.cs" />
+    <Compile Include="BuildReportMetadata.cs" />
+    <Compile Include="BuildRequestValidationResult.cs" />
+    <Compile Include="BuildReference.cs" />
+    <Compile Include="BuildResourceUsage.cs" />
+    <Compile Include="BuildRetentionHistory.cs" />
+    <Compile Include="BuildRetentionSample.cs" />
+    <Compile Include="BuildSettings.cs" />
+    <Compile Include="BuildTrigger.cs" />
+    <Compile Include="ContinuousIntegrationTrigger.cs" />
+    <Compile Include="GatedCheckInTrigger.cs" />
+    <Compile Include="ScheduleTrigger.cs" />
+    <Compile Include="PullRequestTrigger.cs" />
+    <Compile Include="BuildCompletionTrigger.cs" />
+    <Compile Include="BuildTriggerJsonConverter.cs" />
+    <Compile Include="MappingDetails.cs" />
+    <Compile Include="BuildWorkspace.cs" />
+    <Compile Include="Change.cs" />
+    <Compile Include="DefinitionReference.cs" />
+    <Compile Include="DefinitionResourceReference.cs" />
+    <Compile Include="Demand.cs" />
+    <Compile Include="DemandEquals.cs" />
+    <Compile Include="DemandExists.cs" />
+    <Compile Include="DemandJsonConverter.cs" />
+    <Compile Include="Dependency.cs" />
+    <Compile Include="BuildDefinitionReference3_2.cs" />
+    <Compile Include="DesignerProcess.cs" />
+    <Compile Include="DesignerProcessTarget.cs" />
+    <Compile Include="DockerProcess.cs" />
+    <Compile Include="DockerProcessTarget.cs" />
+    <Compile Include="Folder.cs" />
+    <Compile Include="Forks.cs" />
+    <Compile Include="Issue.cs" />
+    <Compile Include="JustInTimeProcess.cs" />
+    <Compile Include="MultipleAgentExecutionOptions.cs" />
+    <Compile Include="Phase.cs" />
+    <Compile Include="PhaseTarget.cs" />
+    <Compile Include="PhaseTargetJsonConverter.cs" />
+    <Compile Include="PipelineGeneralSettings.cs" />
+    <Compile Include="RetentionSetting.cs" />
+    <Compile Include="ProjectRetentionSetting.cs" />
+    <Compile Include="UpdateRetentionSettingModel.cs" />
+    <Compile Include="UpdateProjectRetentionSettingModel.cs" />
+    <Compile Include="PropertyValue.cs" />
+    <Compile Include="PullRequest.cs" />
+    <Compile Include="RepositoryWebhook.cs" />
+    <Compile Include="RequestReference.cs" />
+    <Compile Include="RetentionLease.cs" />
+    <Compile Include="NewRetentionLease.cs" />
+    <Compile Include="RetentionLeaseUpdate.cs" />
+    <Compile Include="MinimalRetentionLease.cs" />
+    <Compile Include="RetentionPolicy.cs" />
+    <Compile Include="Schedule.cs" />
+    <Compile Include="ServerTarget.cs" />
+    <Compile Include="ServerTargetExecutionOptions.cs" />
+    <Compile Include="ServerTargetExecutionOptionsJsonConverter.cs" />
+    <Compile Include="ShallowReference.cs" />
+    <Compile Include="SourceProviderAttributes.cs" />
+    <Compile Include="SupportedTrigger.cs" />
+    <Compile Include="SupportLevel.cs" />
+    <Compile Include="SourceProviderAvailability.cs" />
+    <Compile Include="SourceProviderCapabilities.cs" />
+    <Compile Include="TriggerCapabilities.cs" />
+    <Compile Include="TriggerNotificationTypes.cs" />
+    <Compile Include="SourceRelatedWorkItem.cs" />
+    <Compile Include="SourceRepository.cs" />
+    <Compile Include="SourceRepositories.cs" />
+    <Compile Include="SourceRepositoryItem.cs" />
+    <Compile Include="SvnMappingDetails.cs" />
+    <Compile Include="SvnWorkspace.cs" />
+    <Compile Include="TaskAgentPoolReference.cs" />
+    <Compile Include="TaskOrchestrationPlanGroupReference.cs" />
+    <Compile Include="TaskOrchestrationPlanReference.cs" />
+    <Compile Include="TaskReference.cs" />
+    <Compile Include="Timeline.cs" />
+    <Compile Include="TimelineAttempt.cs" />
+    <Compile Include="TimelineRecord.cs" />
+    <Compile Include="TimelineReference.cs" />
+    <Compile Include="UpdateStageParameters.cs" />
+    <Compile Include="UpdateTagParameters.cs" />
+    <Compile Include="VariableGroup.cs" />
+    <Compile Include="VariableGroupReference.cs" />
+    <Compile Include="VariableMultipliersAgentExecutionOptions.cs" />
+    <Compile Include="VariableMultipliersServerExecutionOptions.cs" />
+    <Compile Include="WorkspaceTemplate.cs" />
+    <Compile Include="WorkspaceMapping.cs" />
+    <Compile Include="BuildAgentReference.cs" />
+    <Compile Include="BuildAgent.cs" />
+    <Compile Include="XamlBuildControllerReference.cs" />
+    <Compile Include="BuildController.cs" />
+    <Compile Include="BuildDefinitionSourceProvider.cs" />
+    <Compile Include="BuildDeployment.cs" />
+    <Compile Include="BuildSummary.cs" />
+    <Compile Include="BuildProcessTemplate.cs" />
+    <Compile Include="BuildServer.cs" />
+    <Compile Include="ContinuousDeploymentDefinition.cs" />
+    <Compile Include="Deployment.cs" />
+    <Compile Include="DeploymentBuild.cs" />
+    <Compile Include="DeploymentDeploy.cs" />
+    <Compile Include="DeploymentTest.cs" />
+    <Compile Include="InformationNode.cs" />
+    <Compile Include="XamlBuildDefinition.cs" />
+    <Compile Include="XamlBuildReference.cs" />
+    <Compile Include="XamlBuildServerReference.cs" />
+    <Compile Include="XamlDefinitionReference.cs" />
+    <Compile Include="YamlBuild.cs" />
+    <Compile Include="YamlProcess.cs" />
+    <Compile Include="DefinitionMetrics.cs" />
+    <Compile Include="WellKnownDefinitionMetrics.cs" />
+    <Compile Include="DefinitionReferenceJsonConverter.cs" />
+    <Compile Include="EndpointData.cs" />
+    <Compile Include="WellKnownEndpointData.cs" />
+    <Compile Include="AgentStatus.cs" />
+    <Compile Include="AuditAction.cs" />
+    <Compile Include="BuildAuthorizationScope.cs" />
+    <Compile Include="BuildOptionInputType.cs" />
+    <Compile Include="BuildPhaseStatus.cs" />
+    <Compile Include="BuildQueryOrder.cs" />
+    <Compile Include="DefinitionQueryOrder.cs" />
+    <Compile Include="FolderQueryOrder.cs" />
+    <Compile Include="BuildReason.cs" />
+    <Compile Include="BuildResult.cs" />
+    <Compile Include="BuildStatus.cs" />
+    <Compile Include="ControllerStatus.cs" />
+    <Compile Include="DefinitionType.cs" />
+    <Compile Include="DefinitionQuality.cs" />
+    <Compile Include="GetOption.cs" />
+    <Compile Include="IssueType.cs" />
+    <Compile Include="QueryDeletedOption.cs" />
+    <Compile Include="QueuePriority.cs" />
+    <Compile Include="QueueOptions.cs" />
+    <Compile Include="RepositoryCleanOptions.cs" />
+    <Compile Include="ResultSet.cs" />
+    <Compile Include="ServiceHostStatus.cs" />
+    <Compile Include="TaskResult.cs" />
+    <Compile Include="TimelineRecordState.cs" />
+    <Compile Include="StageUpdateType.cs" />
+    <Compile Include="DefinitionTriggerType.cs" />
+    <Compile Include="DefinitionQueueStatus.cs" />
+    <Compile Include="DeleteOptions.cs" />
+    <Compile Include="ScheduleDays.cs" />
+    <Compile Include="WorkspaceMappingType.cs" />
+    <Compile Include="ProcessTemplateType.cs" />
+    <Compile Include="ValidationResult.cs" />
+    <Compile Include="BuildEvent.cs" />
+    <Compile Include="BuildEvents.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="BuildException.cs" />
+    <Compile Include="AgentsNotFoundException.cs" />
+    <Compile Include="ArtifactExistsException.cs" />
+    <Compile Include="ArtifactNotFoundException.cs" />
+    <Compile Include="ArtifactTypeNotSupportedException.cs" />
+    <Compile Include="BranchNotFoundException.cs" />
+    <Compile Include="BuildControllerNotFoundException.cs" />
+    <Compile Include="BuildEventNotFoundException.cs" />
+    <Compile Include="BuildEventPermissionException.cs" />
+    <Compile Include="BuildExistsException.cs" />
+    <Compile Include="BuildLogNotFoundException.cs" />
+    <Compile Include="BuildNotFoundException.cs" />
+    <Compile Include="BuildNumberFormatException.cs" />
+    <Compile Include="BuildOptionNotSupportedException.cs" />
+    <Compile Include="BuildOrchestrationExistsException.cs" />
+    <Compile Include="BuildRepositoryTypeNotSupportedException.cs" />
+    <Compile Include="BuildRequestValidationFailedException.cs" />
+    <Compile Include="BuildRequestValidationWarningException.cs" />
+    <Compile Include="BuildEventStatusInvalidChangeException.cs" />
+    <Compile Include="BuildStatusInvalidChangeException.cs" />
+    <Compile Include="CannotDeleteRetainedBuildException.cs" />
+    <Compile Include="CouldNotRetrieveSourceVersionDisplayUrlException.cs" />
+    <Compile Include="DefinitionDisabledException.cs" />
+    <Compile Include="DefinitionExistsException.cs" />
+    <Compile Include="FolderExistsException.cs" />
+    <Compile Include="FolderNotFoundException.cs" />
+    <Compile Include="DefinitionNotFoundException.cs" />
+    <Compile Include="DefinitionNotMatchedException.cs" />
+    <Compile Include="DefinitionTemplateExistsException.cs" />
+    <Compile Include="DefinitionTemplateNotFoundException.cs" />
+    <Compile Include="DefinitionTypeNotSupportedException.cs" />
+    <Compile Include="DuplicateBuildSpecException.cs" />
+    <Compile Include="EndpointAccessDeniedException.cs" />
+    <Compile Include="ExternalSourceProviderException.cs" />
+    <Compile Include="SecureFileAccessDeniedException.cs" />
+    <Compile Include="InvalidArtifactDataException.cs" />
+    <Compile Include="InvalidBuildException.cs" />
+    <Compile Include="InvalidBuildQueryException.cs" />
+    <Compile Include="InvalidContinuationTokenException.cs" />
+    <Compile Include="InvalidDefinitionException.cs" />
+    <Compile Include="CannotDeleteDefinitionWithRetainedBuildsException.cs" />
+    <Compile Include="CannotRestoreDeletedDraftWithoutRestoringParentExc.cs" />
+    <Compile Include="InvalidFolderException.cs" />
+    <Compile Include="InvalidDefinitionQueryException.cs" />
+    <Compile Include="InvalidFolderQueryException.cs" />
+    <Compile Include="InvalidEndpointUrlException.cs" />
+    <Compile Include="InvalidLogLocationException.cs" />
+    <Compile Include="InvalidProjectException.cs" />
+    <Compile Include="InvalidSourceLabelFormatException.cs" />
+    <Compile Include="InvalidTemplateException.cs" />
+    <Compile Include="MetaTaskDefinitionMissingException.cs" />
+    <Compile Include="MissingEndpointInformationException.cs" />
+    <Compile Include="MissingRepositoryException.cs" />
+    <Compile Include="MissingTasksForDefinition.cs" />
+    <Compile Include="NotSupportedOnXamlBuildException.cs" />
+    <Compile Include="OrchestrationTypeNotSupportedException.cs" />
+    <Compile Include="ProcessTemplateDeletedException.cs" />
+    <Compile Include="ProcessTemplateNotFoundException.cs" />
+    <Compile Include="ProjectConflictException.cs" />
+    <Compile Include="QueueExistsException.cs" />
+    <Compile Include="QueueNotFoundException.cs" />
+    <Compile Include="RecreatingSubscriptionFailedException.cs" />
+    <Compile Include="ReportFormatTypeNotSupportedException.cs" />
+    <Compile Include="ReportStreamNotSupportedException.cs" />
+    <Compile Include="RepositoryInformationInvalidException.cs" />
+    <Compile Include="RequestContentException.cs" />
+    <Compile Include="RestApiToBeDeprecatedException.cs" />
+    <Compile Include="RetentionLeaseNotFoundException.cs" />
+    <Compile Include="RetentionLeaseUpdateIsNull.cs" />
+    <Compile Include="RouteIdConflictException.cs" />
+    <Compile Include="TimelineNotFoundException.cs" />
+    <Compile Include="VariableNameIsReservedException.cs" />
+    <Compile Include="VariableGroupsAccessDeniedException.cs" />
+    <Compile Include="MetricAggregationTypeNotSupportedException.cs" />
+    <Compile Include="DefinitionTriggerAlreadyExistsException.cs" />
+    <Compile Include="InvalidDefinitionInTriggerSourceException.cs" />
+    <Compile Include="CycleDetectedInProvidedBuildCompletionTriggersExce.cs" />
+    <Compile Include="UnsupportedBuildCompletionTriggerChainException.cs" />
+    <Compile Include="CannotUpdateTriggeredByBuildException.cs" />
+    <Compile Include="InvalidTimelineRecordStateChange.cs" />
+    <Compile Include="InvalidGitVersionSpec.cs" />
+    <Compile Include="AmbiguousDefinitionNameException.cs" />
+    <Compile Include="DataProviderException.cs" />
+    <Compile Include="RemoveLeaseAccessDeniedException.cs" />
+    <Compile Include="RateLimitExceededException.cs" />
+    <Compile Include="BuildScheduleDataCorruptedException.cs" />
+    <Compile Include="BuildHttpClientBase.cs" />
+    <Compile Include="IVariableMultiplierExecutionOptions.cs" />
+    <Compile Include="Links.cs" />
+    <Compile Include="MetricAggregationTypes.cs" />
+    <Compile Include="WellKnownMetricAggregationTypes.cs" />
+    <Compile Include="PhaseTargetType.cs" />
+    <Compile Include="ProcessType.cs" />
+    <Compile Include="ReportTypes.cs" />
+    <Compile Include="WellKnownReportTypes.cs" />
+    <Compile Include="WellKnownRepositoryProperties.cs" />
+    <Compile Include="RepositoryProperties.cs" />
+    <Compile Include="RepositoryTypes.cs" />
+    <Compile Include="WellKnownRepositoryTypes.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="SerializationHelper.cs" />
+    <Compile Include="ServerTargetExecutionType.cs" />
+    <Compile Include="SettingsSourceType.cs" />
+    <Compile Include="TypePropertyJsonConverter`1.cs" />
+    <Compile Include="WellKnownBuildOptions.cs" />
+    <Compile Include="WellKnownDataProviderKeys.cs" />
+    <Compile Include="BuildTemplateCategories.cs" />
+    <Compile Include="XamlBuildHttpClient.cs" />
+    <Compile Include="Events\BuildArtifactAddedEvent.cs" />
+    <Compile Include="Events\BuildChangesCalculatedEvent.cs" />
+    <Compile Include="Events\BuildCompletedEvent.cs" />
+    <Compile Include="Events\BuildDefinitionChangedEvent.cs" />
+    <Compile Include="Events\BuildDefinitionChangingEvent.cs" />
+    <Compile Include="Events\BuildDeletedEvent.cs" />
+    <Compile Include="Events\BuildDestroyedEvent.cs" />
+    <Compile Include="Events\BuildPollingSummaryEvent.cs" />
+    <Compile Include="Events\BuildQueuedEvent.cs" />
+    <Compile Include="Events\BuildsDeletedEvent.cs" />
+    <Compile Include="Events\BuildsDeletedEvent1.cs" />
+    <Compile Include="Events\BuildStartedEvent.cs" />
+    <Compile Include="Events\BuildTagsAddedEvent.cs" />
+    <Compile Include="Events\BuildUpdatedEvent.cs" />
+    <Compile Include="Events\ConsoleLogEvent.cs" />
+    <Compile Include="Events\RealtimeBuildEvent.cs" />
+    <Compile Include="Events\SyncBuildCompletedEvent.cs" />
+    <Compile Include="Events\SyncBuildStartedEvent.cs" />
+    <Compile Include="Events\TaskOrchestrationPlanGroupsStartedEvent.cs" />
+    <Compile Include="Events\TimelineRecordsUpdatedEvent.cs" />
+    <Compile Include="Contracts\PipelineTriggerSettings.cs" />
+    <Compile Include="Internals\BuildDefinition3_2.cs" />
+    <Compile Include="Internals\BuildDefinition3_2Extensions.cs" />
+    <Compile Include="Internals\BuildDefinitionTemplate3_2.cs" />
+    <Compile Include="Internals\BuildDefinitionTemplate3_2Extensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

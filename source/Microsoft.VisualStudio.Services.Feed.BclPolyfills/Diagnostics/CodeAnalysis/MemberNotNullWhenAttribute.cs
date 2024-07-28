@@ -1,0 +1,34 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+// Assembly: Microsoft.VisualStudio.Services.Feed.BclPolyfills, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 22B1AF8C-B841-48B3-9E2E-229EAA8AFCE1
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll
+
+
+#nullable enable
+namespace System.Diagnostics.CodeAnalysis
+{
+  [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property, AllowMultiple = true, Inherited = false)]
+  public class MemberNotNullWhenAttribute : Attribute
+  {
+    public MemberNotNullWhenAttribute(bool returnValue, params string[] members)
+    {
+      this.ReturnValue = returnValue;
+      this.Members = members;
+      // ISSUE: explicit constructor call
+      base.\u002Ector();
+    }
+
+    public bool ReturnValue { get; }
+
+    public string[] Members { get; }
+
+    public MemberNotNullWhenAttribute(bool returnValue, string member)
+      : this((returnValue ? 1 : 0) != 0, new string[1]
+      {
+        member
+      })
+    {
+    }
+  }
+}

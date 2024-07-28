@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Analytics.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2A4B2DA-6FF2-4E3E-9FDE-3707F41CD69A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Analytics.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Analytics.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Analytics\ResourceIds.cs" />
+    <Compile Include="AnalyticsHttpClient.cs" />
+    <Compile Include="AnalyticsSecurityNamespace.cs" />
+    <Compile Include="AnalyticsViewsSecurityNamespace.cs" />
+    <Compile Include="AnalyticsView.cs" />
+    <Compile Include="AnalyticsViewCreateParameters.cs" />
+    <Compile Include="AnalyticsViewDoesNotExistException.cs" />
+    <Compile Include="AnalyticsViewAccessDeniedException.cs" />
+    <Compile Include="AnalyticsViewCreationFailedException.cs" />
+    <Compile Include="AnalyticsViewSchemaGenerationFailedException.cs" />
+    <Compile Include="AnalyticsViewsODataMetadataReadException.cs" />
+    <Compile Include="AnalyticsViewValidationException.cs" />
+    <Compile Include="AnalyticsViewDataNotFoundException.cs" />
+    <Compile Include="AnalyticsViewExpandFlags.cs" />
+    <Compile Include="AnalyticsViewMessage.cs" />
+    <Compile Include="AnalyticsViewMessageType.cs" />
+    <Compile Include="AnalyticsViewQuery.cs" />
+    <Compile Include="AnalyticsViewReplaceParameters.cs" />
+    <Compile Include="AnalyticsViewScope.cs" />
+    <Compile Include="AnalyticsViewScopeType.cs" />
+    <Compile Include="AnalyticsViewType.cs" />
+    <Compile Include="AnalyticsViewVisibility.cs" />
+    <Compile Include="ODataJsonSchema.cs" />
+    <Compile Include="ODataMashupFunction.cs" />
+    <Compile Include="ODataJsonSchemaType.cs" />
+    <Compile Include="ODataJsonSchemaFormat.cs" />
+    <Compile Include="AnalyticsViewWorkItemsDefinition.cs" />
+    <Compile Include="AreaPathFilter.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="FieldFilter.cs" />
+    <Compile Include="FieldValuesOperator.cs" />
+    <Compile Include="FieldOperation.cs" />
+    <Compile Include="FieldSet.cs" />
+    <Compile Include="FieldType.cs" />
+    <Compile Include="FilterValues`1.cs" />
+    <Compile Include="HistoryConfiguration.cs" />
+    <Compile Include="HistoryType.cs" />
+    <Compile Include="ProjectTeamFilter.cs" />
+    <Compile Include="TrendGranularity.cs" />
+    <Compile Include="TrendGranularityType.cs" />
+    <Compile Include="ValueMode.cs" />
+    <Compile Include="CamelCaseStringEnumConverter.cs" />
+    <Compile Include="StageExceptionBase.cs" />
+    <Compile Include="StageStreamDisabledException.cs" />
+    <Compile Include="StageTableInMaintenanceException.cs" />
+    <Compile Include="StageStreamNotFoundException.cs" />
+    <Compile Include="StageStreamThrottledException.cs" />
+    <Compile Include="StageKeysOnlyNotSupportedException.cs" />
+    <Compile Include="StageFailedException.cs" />
+    <Compile Include="AnalyticsStateInvalidTransitionException.cs" />
+    <Compile Include="AnalyticsStateInvalidStateException.cs" />
+    <Compile Include="ExtensionConstants.cs" />
+    <Compile Include="AnalyticsODataClient.cs" />
+    <Compile Include="AnalyticsHttpClientBase.cs" />
+    <Compile Include="AnalyticsViewsHttpClient.cs" />
+    <Compile Include="ProcessFieldTypeNames.cs" />
+    <Compile Include="StagePostEnvelope.cs" />
+    <Compile Include="StageTableNames.cs" />
+    <Compile Include="AnalyticsWebApiResources.cs" />
+    <Compile Include="Contracts\AnalyticsHeaders.cs" />
+    <Compile Include="Contracts\ProviderSyncDataCondition.cs" />
+    <Compile Include="Contracts\AnalyticsStateDetails.cs" />
+    <Compile Include="Contracts\IngestResult.cs" />
+    <Compile Include="Contracts\AnalyticsState.cs" />
+    <Compile Include="Contracts\StageShardInvalid.cs" />
+    <Compile Include="Contracts\StageStreamInfo.cs" />
+    <Compile Include="Contracts\StageProviderShardInfo.cs" />
+    <Compile Include="Contracts\StageTableInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

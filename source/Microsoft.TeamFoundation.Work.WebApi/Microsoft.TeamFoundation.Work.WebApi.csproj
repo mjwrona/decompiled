@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Work.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70E015A7-EDEE-4AED-85C1-864B7BBA2F87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Work.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Work.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoardApiConstants.cs" />
+    <Compile Include="TaskboardApiConstants.cs" />
+    <Compile Include="BacklogApiConstants.cs" />
+    <Compile Include="ReorderWorkItemsConstants.cs" />
+    <Compile Include="WorkWebConstants.cs" />
+    <Compile Include="PredefinedQueriesContants.cs" />
+    <Compile Include="AutomationRulesConstants.cs" />
+    <Compile Include="TeamSettingsApiConstants.cs" />
+    <Compile Include="ScaledAgileApiConstants.cs" />
+    <Compile Include="ChartImagesApiConstants.cs" />
+    <Compile Include="BacklogColumn.cs" />
+    <Compile Include="BacklogConfiguration.cs" />
+    <Compile Include="BacklogFields.cs" />
+    <Compile Include="BacklogLevelConfiguration.cs" />
+    <Compile Include="BacklogType.cs" />
+    <Compile Include="BacklogLevelWorkItems.cs" />
+    <Compile Include="WorkItemTypeStateInfo.cs" />
+    <Compile Include="ReorderOperation.cs" />
+    <Compile Include="ReorderResult.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="FieldSetting.cs" />
+    <Compile Include="BoardCardSettings.cs" />
+    <Compile Include="attribute.cs" />
+    <Compile Include="Rule.cs" />
+    <Compile Include="BoardCardRuleSettings.cs" />
+    <Compile Include="BoardChart.cs" />
+    <Compile Include="BoardChartReference.cs" />
+    <Compile Include="BoardColumn.cs" />
+    <Compile Include="BoardColumnType.cs" />
+    <Compile Include="BoardFields.cs" />
+    <Compile Include="BoardFilterSettings.cs" />
+    <Compile Include="FilterModel.cs" />
+    <Compile Include="BoardReference.cs" />
+    <Compile Include="ShallowReference.cs" />
+    <Compile Include="BoardRow.cs" />
+    <Compile Include="BoardSuggestedValue.cs" />
+    <Compile Include="BoardUserSettings.cs" />
+    <Compile Include="FilterClause.cs" />
+    <Compile Include="FilterGroup.cs" />
+    <Compile Include="ParentChildWIMap.cs" />
+    <Compile Include="IdentityDisplayFormat.cs" />
+    <Compile Include="CardFieldSettings.cs" />
+    <Compile Include="CardSettings.cs" />
+    <Compile Include="DeliveryViewData.cs" />
+    <Compile Include="TimelineCriteriaStatus.cs" />
+    <Compile Include="TimelineCriteriaStatusCode.cs" />
+    <Compile Include="WorkItemColor.cs" />
+    <Compile Include="TimelineTeamData.cs" />
+    <Compile Include="TimelineTeamStatus.cs" />
+    <Compile Include="TimelineTeamStatusCode.cs" />
+    <Compile Include="TimelineTeamIteration.cs" />
+    <Compile Include="TimelineIterationStatus.cs" />
+    <Compile Include="TimelineIterationStatusCode.cs" />
+    <Compile Include="BacklogLevel.cs" />
+    <Compile Include="FieldType.cs" />
+    <Compile Include="FieldInfo.cs" />
+    <Compile Include="Marker.cs" />
+    <Compile Include="CreatePlan.cs" />
+    <Compile Include="UpdatePlan.cs" />
+    <Compile Include="Plan.cs" />
+    <Compile Include="PlanPermissions.cs" />
+    <Compile Include="PlanMetadata.cs" />
+    <Compile Include="PlanPropertyCollection.cs" />
+    <Compile Include="DeliveryViewPropertyCollection.cs" />
+    <Compile Include="TeamBacklogMapping.cs" />
+    <Compile Include="PlanType.cs" />
+    <Compile Include="PlanUserPermissions.cs" />
+    <Compile Include="PlanViewData.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="Activity.cs" />
+    <Compile Include="CapacityContractBase.cs" />
+    <Compile Include="TeamMemberCapacity.cs" />
+    <Compile Include="TeamMemberCapacityIdentityRef.cs" />
+    <Compile Include="CapacityPatch.cs" />
+    <Compile Include="TeamCapacity.cs" />
+    <Compile Include="TeamCapacityTotals.cs" />
+    <Compile Include="IterationCapacity.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="IterationWorkItems.cs" />
+    <Compile Include="FieldReference.cs" />
+    <Compile Include="TeamFieldValue.cs" />
+    <Compile Include="TeamFieldValues.cs" />
+    <Compile Include="TeamFieldValuesPatch.cs" />
+    <Compile Include="BugsBehavior.cs" />
+    <Compile Include="TeamSetting.cs" />
+    <Compile Include="TeamSettingsPatch.cs" />
+    <Compile Include="TeamSettingsDataContractBase.cs" />
+    <Compile Include="TeamSettingsDaysOff.cs" />
+    <Compile Include="TeamSettingsDaysOffPatch.cs" />
+    <Compile Include="TeamIterationAttributes.cs" />
+    <Compile Include="TeamSettingsIteration.cs" />
+    <Compile Include="TimeFrame.cs" />
+    <Compile Include="TimeFrameOptions.cs" />
+    <Compile Include="WorkHttpClientBase.cs" />
+    <Compile Include="DeliveryViewFilter.cs" />
+    <Compile Include="PlanViewFilter.cs" />
+    <Compile Include="PredefinedQueryIdentifiers.cs" />
+    <Compile Include="PredefinedQuery.cs" />
+    <Compile Include="WorkCompatHttpClientBase.cs" />
+    <Compile Include="WorkHttpClient.cs" />
+    <Compile Include="AgileResources.cs" />
+    <Compile Include="Exceptions\InvalidTeamSettingsForUpdateException.cs" />
+    <Compile Include="Exceptions\TeamFieldArgumentNullException.cs" />
+    <Compile Include="Exceptions\NoTeamFieldValuesSelectedException.cs" />
+    <Compile Include="Exceptions\DuplicateTeamFieldValuesException.cs" />
+    <Compile Include="Exceptions\NoDefaultTeamFieldValueException.cs" />
+    <Compile Include="Exceptions\InvalidTeamSettingsIterationException.cs" />
+    <Compile Include="Exceptions\BoardPageWorkItemsLimitException.cs" />
+    <Compile Include="Exceptions\ChartOptionInvalidJsonException.cs" />
+    <Compile Include="Exceptions\SetBoardCardRulesInvalidArgumentException.cs" />
+    <Compile Include="Exceptions\ReorderWorkItemsInvalidOperationsException.cs" />
+    <Compile Include="Exceptions\ViewTypeDoesNotExistException.cs" />
+    <Compile Include="Exceptions\ViewPropertiesFormatException.cs" />
+    <Compile Include="Exceptions\ViewPropertiesMissingException.cs" />
+    <Compile Include="Exceptions\TeamDoesNotExistException.cs" />
+    <Compile Include="Exceptions\NoPermissionReadTeamException.cs" />
+    <Compile Include="Exceptions\CardSettingsInvalidFormatException.cs" />
+    <Compile Include="Exceptions\ViewRevisionMismatchException.cs" />
+    <Compile Include="Exceptions\CardSettingsDuplicateAdditionalFieldsException.cs" />
+    <Compile Include="Exceptions\CardSettingsInvalidFieldIdentifierException.cs" />
+    <Compile Include="Exceptions\CardSettingsMaxAdditionalFieldsExceededException.cs" />
+    <Compile Include="Exceptions\CardSettingsInvalidAdditionalFieldException.cs" />
+    <Compile Include="Exceptions\ScaledAgileInvalidPermissionException.cs" />
+    <Compile Include="Exceptions\PlanLimitExceededException.cs" />
+    <Compile Include="Exceptions\ScaledAgileViewDefinitionInvalidException.cs" />
+    <Compile Include="Exceptions\ViewNotFoundException.cs" />
+    <Compile Include="Contracts\BoardBadgeColumnOptions.cs" />
+    <Compile Include="Contracts\BoardBadge.cs" />
+    <Compile Include="Contracts\ProcessConfiguration.cs" />
+    <Compile Include="Contracts\CategoryConfiguration.cs" />
+    <Compile Include="Contracts\AutomationRules\TeamAutomationRulesSettingsRequestModel.cs" />
+    <Compile Include="Contracts\Taskboard\TaskboardColumn.cs" />
+    <Compile Include="Contracts\Taskboard\ITaskboardColumn.cs" />
+    <Compile Include="Contracts\Taskboard\TaskboardColumns.cs" />
+    <Compile Include="Contracts\Taskboard\TaskboardColumnMapping.cs" />
+    <Compile Include="Contracts\Taskboard\ITaskboardColumnMapping.cs" />
+    <Compile Include="Contracts\Taskboard\TaskboardWorkItemColumn.cs" />
+    <Compile Include="Contracts\Taskboard\UpdateTaskboardWorkItemColumn.cs" />
+    <Compile Include="Contracts\Taskboard\UpdateTaskboardColumn.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgileResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

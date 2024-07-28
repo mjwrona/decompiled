@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Bcl.AsyncInterfaces.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7730B7C7-9FE2-41E0-A779-2453A9015BA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Bcl.AsyncInterfaces</AssemblyName>
+    <ApplicationVersion>7.0.0.0</ApplicationVersion>
+    <RootNamespace>System</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>lib\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAsyncDisposable.cs" />
+    <Compile Include="Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="Runtime\CompilerServices\AsyncIteratorMethodBuilder.cs" />
+    <Compile Include="Runtime\CompilerServices\AsyncIteratorStateMachineAttribute.cs" />
+    <Compile Include="Runtime\CompilerServices\ConfiguredAsyncDisposable.cs" />
+    <Compile Include="Runtime\CompilerServices\ConfiguredCancelableAsyncEnumerable`1.cs" />
+    <Compile Include="Runtime\CompilerServices\EnumeratorCancellationAttribute.cs" />
+    <Compile Include="Runtime\InteropServices\LibraryImportAttribute.cs" />
+    <Compile Include="Runtime\InteropServices\StringMarshalling.cs" />
+    <Compile Include="Threading\Tasks\TaskAsyncEnumerableExtensions.cs" />
+    <Compile Include="Threading\Tasks\Sources\ManualResetValueTaskSourceCore`1.cs" />
+    <Compile Include="Threading\Tasks\Sources\ManualResetValueTaskSourceCoreShared.cs" />
+    <Compile Include="Collections\Generic\IAsyncEnumerable`1.cs" />
+    <Compile Include="Collections\Generic\IAsyncEnumerator`1.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\AllowNullAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\DisallowNullAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\MaybeNullAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\NotNullAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\MaybeNullWhenAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\NotNullWhenAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\DoesNotReturnAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\DoesNotReturnIfAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\MemberNotNullAttribute.cs" />
+    <Compile Include="Diagnostics\CodeAnalysis\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

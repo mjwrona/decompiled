@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="NoTeamBacklogError" xml:space="preserve">
+    <value>The selected team does not have a backlog iteration configured. Please configure one in team settings</value>
+  </data>
+  <data name="Sprints" xml:space="preserve">
+    <value>Sprints</value>
+  </data>
+  <data name="NoCreateNodePermission" xml:space="preserve">
+    <value>TF50309: You do not have sufficient permissions to create a new iteration under the location 'insert location'. The 'Create child nodes' permission is required.</value>
+  </data>
+  <data name="EndDateFieldLabel" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="SelectedIterationUnsetWorkingDaysText" xml:space="preserve">
+    <value>There are no dates for this sprint</value>
+  </data>
+  <data name="ParentIterationFieldTitle" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="NameInvalidCharactersErrorMessage" xml:space="preserve">
+    <value>Name cannot contain any of the following characters: \, /, $, ?, *, :, ", &amp;, &lt;, &gt;, #, %, |, +</value>
+  </data>
+  <data name="NameAlreadyExistsErrorMessage" xml:space="preserve">
+    <value>A node with this name already exists</value>
+  </data>
+  <data name="SelectIterationToggleText" xml:space="preserve">
+    <value>Select existing iteration</value>
+  </data>
+  <data name="CreateIterationToggleText" xml:space="preserve">
+    <value>Create new iteration</value>
+  </data>
+  <data name="NoManagableTeams" xml:space="preserve">
+    <value>You do not have sufficient permissions to configure a sprint. You must be either a team or project administrator to start a new sprint for a team.</value>
+  </data>
+  <data name="IterationDoesNotExistErrorMessage" xml:space="preserve">
+    <value>This path does not exist</value>
+  </data>
+  <data name="SelectIterationFieldTitle" xml:space="preserve">
+    <value>Iteration</value>
+  </data>
+  <data name="SelectedIterationWorkingDaysText" xml:space="preserve">
+    <value>There are {0} in this sprint</value>
+  </data>
+  <data name="NameFieldLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SelectIterationExtraInfoText" xml:space="preserve">
+    <value>Your sprint name and duration are defined by the iteration path field. you can select an existing iteration or add a new one to the project.</value>
+  </data>
+  <data name="IterationAlreadySelectedErrorMessage" xml:space="preserve">
+    <value>This iteration already belongs to an existing sprint</value>
+  </data>
+  <data name="CouldNotLoadTeamIterations" xml:space="preserve">
+    <value>Could not load iterations for the selected team</value>
+  </data>
+  <data name="SelectedNodeNotDescendantError" xml:space="preserve">
+    <value>The selected node is not a descendant of the configured backlog iteration. Please select another node</value>
+  </data>
+  <data name="RootIterationSelectedMessage" xml:space="preserve">
+    <value>This iteration cannot be used to create a sprint</value>
+  </data>
+  <data name="EditSprint" xml:space="preserve">
+    <value>Edit Sprint</value>
+  </data>
+  <data name="StartDateFieldLabel" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="RequiredErrorMessage" xml:space="preserve">
+    <value>This field is required</value>
+  </data>
+  <data name="CouldNotLoadProjectIterations" xml:space="preserve">
+    <value>Could not load project iterations</value>
+  </data>
+  <data name="LocationFieldLabel" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="NameTooLongErrorMessage" xml:space="preserve">
+    <value>Name cannot be longer than {0} characters</value>
+  </data>
+  <data name="DialogMessage" xml:space="preserve">
+    <value>No future sprints found. Create a new sprint</value>
+  </data>
+  <data name="CreateButtonText" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="NameInvalidNameErrorMessage" xml:space="preserve">
+    <value>Name is invalid. Please specify another name</value>
+  </data>
+  <data name="WorkingDaysText" xml:space="preserve">
+    <value>{0} working days</value>
+  </data>
+  <data name="TeamHeaderTitle" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="CouldNotLoadTeamSettings" xml:space="preserve">
+    <value>Could not load settings for the selected team</value>
+  </data>
+  <data name="TeamExtraInfoText" xml:space="preserve">
+    <value>These are the teams you have 'manage' permissions for as a team or project administrator</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+</root>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Test.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40837D71-A52C-4BA6-A6C4-1AD49F7658D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Test.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Test.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RunFilter.cs" />
+    <Compile Include="TestAutomationRunSlice.cs" />
+    <Compile Include="TestRunInformation.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageType.cs" />
+    <Compile Include="AutomatedTestRunSliceType.cs" />
+    <Compile Include="AutomatedTestRunSliceStatus.cs" />
+    <Compile Include="ShallowReference.cs" />
+    <Compile Include="TestAgentsQuery.cs" />
+    <Compile Include="TestExecutionServiceCommand.cs" />
+    <Compile Include="TestExecutionCommandMessage.cs" />
+    <Compile Include="TestExecutionCommand.cs" />
+    <Compile Include="TestMetadata.cs" />
+    <Compile Include="SlicedTestData.cs" />
+    <Compile Include="ITestHttpClient.cs" />
+    <Compile Include="TestAgent.cs" />
+    <Compile Include="TestExecutionControlOptions.cs" />
+    <Compile Include="TestHttpClient.cs" />
+    <Compile Include="TestExecutionServiceException.cs" />
+    <Compile Include="TestExecutionAccessDeniedException.cs" />
+    <Compile Include="TestExecutionObjectAlreadyExistsException.cs" />
+    <Compile Include="TestExecutionServiceInvalidOperationException.cs" />
+    <Compile Include="TestExecutionObjectNotFoundException.cs" />
+    <Compile Include="TestExecutionRunResourceNotFoundException.cs" />
+    <Compile Include="TestEnvironmentAlreadyExistsException.cs" />
+    <Compile Include="TestExecutionServiceResourceIds.cs" />
+    <Compile Include="DistributedTestRun.cs" />
+    <Compile Include="DistributedTestRunCreateModel.cs" />
+    <Compile Include="RunProperties.cs" />
+    <Compile Include="TestReportingSettings.cs" />
+    <Compile Include="TfsSpecificProperties.cs" />
+    <Compile Include="TestCase.cs" />
+    <Compile Include="TestRunExecutionConfiguration.cs" />
+    <Compile Include="RerunProperties.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

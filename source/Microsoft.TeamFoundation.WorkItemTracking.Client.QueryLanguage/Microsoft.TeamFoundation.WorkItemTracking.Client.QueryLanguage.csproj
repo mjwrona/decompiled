@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C17A067-1365-4688-9F6A-43A94AB570CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.WorkItemTracking.Client.Wiql</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\WorkItemTracking\Client\QueryLanguage\NodeParameters.cs" />
+    <Compile Include="WiqlConstants.cs" />
+    <Compile Include="LinkQueryMode.cs" />
+    <Compile Include="IExternal.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="DataType.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="Arithmetic.cs" />
+    <Compile Include="NodeType.cs" />
+    <Compile Include="Priority.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodeEnumerator.cs" />
+    <Compile Include="NodeAndOperator.cs" />
+    <Compile Include="NodeArithmetic.cs" />
+    <Compile Include="NodeBoolConst.cs" />
+    <Compile Include="NodeBoolValue.cs" />
+    <Compile Include="NodeCondition.cs" />
+    <Compile Include="NodeEverOperator.cs" />
+    <Compile Include="NodeFieldList.cs" />
+    <Compile Include="NodeFieldName.cs" />
+    <Compile Include="NodeItem.cs" />
+    <Compile Include="NodeList.cs" />
+    <Compile Include="NodeMode.cs" />
+    <Compile Include="NodeName.cs" />
+    <Compile Include="NodeNotOperator.cs" />
+    <Compile Include="NodeNumber.cs" />
+    <Compile Include="NodeOperation.cs" />
+    <Compile Include="NodeOrOperator.cs" />
+    <Compile Include="NodeSelect.cs" />
+    <Compile Include="NodeString.cs" />
+    <Compile Include="NodeTableName.cs" />
+    <Compile Include="NodeValueList.cs" />
+    <Compile Include="NodeVariable.cs" />
+    <Compile Include="NodeVariableList.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="SyntaxError.cs" />
+    <Compile Include="SyntaxException.cs" />
+    <Compile Include="ConditionalOperators.cs" />
+    <Compile Include="ArithmeticalOperators.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="ResourceStrings.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

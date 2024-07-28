@@ -1,0 +1,33 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.CodeReview.Server.CodeReviewIterationNotFoundException
+// Assembly: Microsoft.VisualStudio.Services.CodeReview.Server, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 2BCB2866-BDCB-4FDE-9EA3-48DFA660C131
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.CodeReview.Server.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using System;
+using System.Data.SqlClient;
+
+namespace Microsoft.VisualStudio.Services.CodeReview.Server
+{
+  [Serializable]
+  public class CodeReviewIterationNotFoundException : TeamFoundationServiceException
+  {
+    public int IterationId { get; private set; }
+
+    public CodeReviewIterationNotFoundException(int iterationId)
+      : base(CodeReviewResources.IterationNotFoundException((object) iterationId))
+    {
+      this.IterationId = iterationId;
+    }
+
+    public CodeReviewIterationNotFoundException(
+      IVssRequestContext requestContext,
+      SqlException ex,
+      SqlError sqlError)
+      : this(TeamFoundationServiceException.ExtractInt(sqlError, "iterationId"))
+    {
+      this.IterationId = TeamFoundationServiceException.ExtractInt(sqlError, "iterationId");
+    }
+  }
+}

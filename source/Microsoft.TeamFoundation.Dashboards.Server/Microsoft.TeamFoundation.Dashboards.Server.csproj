@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Dashboards.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35324BD1-F876-4636-8916-CECDD9BE0354}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Dashboards.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Dashboards</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service">
+      <HintPath>lib\Microsoft.Azure.Devops.Teams.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Charting.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Charting.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Dashboards.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Dashboards.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Dashboards.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Dashboards.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Reporting.DataServices">
+      <HintPath>lib\Microsoft.TeamFoundation.Reporting.DataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="GalleryHelper.cs" />
+    <Compile Include="IDashboardSecurityManager.cs" />
+    <Compile Include="DashboardSecurityManager.cs" />
+    <Compile Include="DashboardTracePoints.cs" />
+    <Compile Include="TelemetryLayers.cs" />
+    <Compile Include="DashboardResources.cs" />
+    <Compile Include="Telemetry\TelemetryCollector.cs" />
+    <Compile Include="Telemetry\TelemetryFeatures.cs" />
+    <Compile Include="Telemetry\TelemetryProperties.cs" />
+    <Compile Include="DataAccess\DashboardGroupBinder.cs" />
+    <Compile Include="DataAccess\DashboardGroupBinder2.cs" />
+    <Compile Include="DataAccess\DashboardGroupBinder3.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent2.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent3.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent5.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent7.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent8.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent9.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlResourceComponent12.cs" />
+    <Compile Include="DataAccess\DashboardsMonitoringRecord.cs" />
+    <Compile Include="DataAccess\DashboardMonitoringSqlResourceComponent.cs" />
+    <Compile Include="DataAccess\WidgetBinder.cs" />
+    <Compile Include="DataAccess\WidgetBinder2.cs" />
+    <Compile Include="DataAccess\WidgetsETagBinder.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent4.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent5.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent6.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent9.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent11.cs" />
+    <Compile Include="DataAccess\WidgetSqlResourceComponent12.cs" />
+    <Compile Include="DataAccess\WidgetSqlError.cs" />
+    <Compile Include="DataAccess\DashboardGroupSqlError.cs" />
+    <Compile Include="DataAccess\Monitoring\DashboardsMonitoringRecordBinder.cs" />
+    <Compile Include="Security\DashboardSecuredObjectImplementation.cs" />
+    <Compile Include="Security\DashboardSecuredObjectFactory.cs" />
+    <Compile Include="Security\DashboardGroupPrivileges.cs" />
+    <Compile Include="Model\DashboardGroupEntryDataModel.cs" />
+    <Compile Include="Model\DashboardGroupEntryDataModel2.cs" />
+    <Compile Include="Model\DashboardExtension.cs" />
+    <Compile Include="Model\WidgetDataModel.cs" />
+    <Compile Include="Model\DashboardWidgetsDataModel.cs" />
+    <Compile Include="Model\WidgetExtension.cs" />
+    <Compile Include="Model\RestResponse\WidgetTypesResponseExtension.cs" />
+    <Compile Include="Model\RestResponse\WidgetResponseExtension.cs" />
+    <Compile Include="Model\RestResponse\DashboardGroupEntryResponseExtension.cs" />
+    <Compile Include="Model\RestResponse\DashboardResponseExtension.cs" />
+    <Compile Include="Model\RestResponse\DashboardGroupResponseExtension.cs" />
+    <Compile Include="Services\DashboardSettings.cs" />
+    <Compile Include="Services\ProjectDashboardConsumer.cs" />
+    <Compile Include="Services\CopyDashboardParameterHandler.cs" />
+    <Compile Include="Services\CycleOrLeadTimeWidgetAdapter.cs" />
+    <Compile Include="Services\BurndownWidgetAdapter.cs" />
+    <Compile Include="Services\ProjecTeamFilterWrapper.cs" />
+    <Compile Include="Services\ProjectTeamFilter.cs" />
+    <Compile Include="Services\SprintBurndownWidgetAdapter.cs" />
+    <Compile Include="Services\MarkdownWidgetAdapter.cs" />
+    <Compile Include="Services\LegacySprintBurndownWidgetAdapter.cs" />
+    <Compile Include="Services\SprintOverviewWidgetAdapter.cs" />
+    <Compile Include="Services\TestPlansChartWidgetAdapter.cs" />
+    <Compile Include="Services\TestResultsTrendsAdvancedWidgetAdapter.cs" />
+    <Compile Include="Services\TestResultsTrendsWidgetAdapter.cs" />
+    <Compile Include="Services\VelocityWidgetAdapter.cs" />
+    <Compile Include="Services\WidgetContributionConstants.cs" />
+    <Compile Include="Services\IDashboardMetadataService.cs" />
+    <Compile Include="Services\DashboardMetadataService.cs" />
+    <Compile Include="Services\CrossProjectSettingsPayloadFilter.cs" />
+    <Compile Include="Services\CrossProjectWidgetConfiguration.cs" />
+    <Compile Include="Services\ProjectTeamTuple.cs" />
+    <Compile Include="Services\DashboardConsumerFactory.cs" />
+    <Compile Include="Services\DashboardOwner.cs" />
+    <Compile Include="Services\DefaultDashboardFactory.cs" />
+    <Compile Include="Services\IDashboardConsumer.cs" />
+    <Compile Include="Services\DashboardPermission.cs" />
+    <Compile Include="Services\TeamDashboardConsumer.cs" />
+    <Compile Include="Services\IDashboardFeatureMonitoringService.cs" />
+    <Compile Include="Services\DashboardFeatureMonitoringService.cs" />
+    <Compile Include="Services\WidgetMetadataService.cs" />
+    <Compile Include="Services\IWidgetTypesService.cs" />
+    <Compile Include="Services\IWidgetMetadataService.cs" />
+    <Compile Include="Services\IDashboardService.cs" />
+    <Compile Include="Services\UpdateWidgetsBehavior.cs" />
+    <Compile Include="Services\DashboardService.cs" />
+    <Compile Include="Services\WidgetTypesService.cs" />
+    <Compile Include="Services\CopyWidgetAdapterFactory.cs" />
+    <Compile Include="Services\WidgetAdapterBase.cs" />
+    <Compile Include="Services\IWidgetAdapter.cs" />
+    <Compile Include="Services\ProjectBasedWidgetAdapter.cs" />
+    <Compile Include="Services\TeamBasedWidgetAdapter.cs" />
+    <Compile Include="Services\CopyWidgetAdapters\QueryAdapters\QueryResultsWidgetAdapter.cs" />
+    <Compile Include="Services\CopyWidgetAdapters\QueryAdapters\QueryTileWidgetAdapter.cs" />
+    <Compile Include="Services\CopyWidgetAdapters\QueryAdapters\TcmWidgetAdapter.cs" />
+    <Compile Include="Services\CopyWidgetAdapters\QueryAdapters\WitChartWidgetAdapter.cs" />
+    <Compile Include="Controllers\DashboardApiv2ControllerBase.cs" />
+    <Compile Include="Controllers\Dashboardv2Controller.cs" />
+    <Compile Include="Controllers\Dashboardv3Controller.cs" />
+    <Compile Include="Controllers\Widgetv2Controller.cs" />
+    <Compile Include="Controllers\DashboardApiControllerBase.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DashboardGroupController.cs" />
+    <Compile Include="Controllers\WidgetTypesController.cs" />
+    <Compile Include="Controllers\WidgetController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DashboardResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

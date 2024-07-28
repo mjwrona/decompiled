@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+
+  <xs:simpleType name="NonEmptyIDString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <!-- Group name can only be 256, but we're allowing 513 to support long domain names.  Also, member names can be 513. -->
+      <xs:maxLength value="513" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NonEmptyCssString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <!-- max length of a single css node is 255 characters, but it can be 14 levels deep.  14x255 = 3570 -->
+      <xs:maxLength value="3570" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="groups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="group" minOccurs="1" nillable="false">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="permissions" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="permission" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence />
+                        <xs:attribute name="name" type="xs:string" use="required" msprop:nullValue="_throw" />
+                        <xs:attribute name="class" type="xs:string" msprop:nullValue="_throw" use="required" />
+                        <xs:attribute name="allow" type="xs:boolean" use="optional" default="true" msprop:nullValue="_throw" />
+                        <xs:attribute name="path" type="xs:string" use="optional" msprop:nullValue="_throw" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="uniquePermissionName">
+                  <xs:selector xpath="permission"/>
+                  <xs:field xpath="@name"/>
+                  <xs:field xpath="@class"/>
+                </xs:unique>
+              </xs:element>
+              <xs:element name="members" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="member" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence />
+                        <xs:attribute name="name" type="NonEmptyIDString" use="required" msprop:nullValue="_throw" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="uniqueMemberName">
+                  <xs:selector xpath="member"/>
+                  <xs:field xpath="@name"/>
+                </xs:unique>
+              </xs:element>
+            
+              <xs:element name="teamSettings" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="iterationPaths" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="iterationPath" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="path" type="NonEmptyCssString" use="required" msprop:nullValue="_throw" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="backlogPath" type="NonEmptyCssString" use="required" msprop:nullValue="_throw" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="areaPath" type="NonEmptyCssString" use="optional" msprop:nullValue="_throw" />
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="NonEmptyIDString" use="required" msprop:nullValue="_throw" />
+            <xs:attribute name="description" type="xs:string" use="optional" msprop:nullValue="_throw" />
+            <xs:attribute name="isTeam" type="xs:boolean" use="optional" msprop:nullValue="_throw" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="uniqueGroupName">
+      <xs:selector xpath="group"/>
+      <xs:field xpath="@name"/>
+    </xs:unique>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,33 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Work.WebApi.UpdatePlan
+// Assembly: Microsoft.TeamFoundation.Work.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 0C4CCFA0-0616-4E48-A4F0-952E1CB10B12
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Work.WebApi.dll
+
+using System;
+using System.Runtime.Serialization;
+
+namespace Microsoft.TeamFoundation.Work.WebApi
+{
+  [DataContract]
+  public class UpdatePlan
+  {
+    [DataMember]
+    public PlanType Type { get; set; }
+
+    [DataMember(Name = "revision")]
+    public int Revision { get; set; }
+
+    [DataMember(Name = "name", EmitDefaultValue = false)]
+    public string Name { get; set; }
+
+    [DataMember(Name = "description", EmitDefaultValue = false)]
+    public string Description { get; set; }
+
+    [DataMember(Name = "properties", EmitDefaultValue = false)]
+    public object Properties { get; set; }
+
+    [Obsolete("This property is deprecated and will not be populated. Use Properties.CardSettings instead")]
+    public CardSettings CardSettings { get; set; }
+  }
+}

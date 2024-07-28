@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Server.WebAccess.Admin.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71B6CB15-0E93-44CB-BE49-793084B0F741}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.Admin</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Settings">
+      <HintPath>lib\Microsoft.Azure.Boards.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.WebApi.Common">
+      <HintPath>lib\Microsoft.Azure.Boards.WebApi.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server">
+      <HintPath>lib\Microsoft.Azure.Devops.Tags.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service">
+      <HintPath>lib\Microsoft.Azure.Devops.Teams.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.AdminEngagement.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.AdminEngagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Agile.Web">
+      <HintPath>lib\Microsoft.TeamFoundation.Agile.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.ConnectedService.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.ConnectedService.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Dashboards.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Dashboards.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Git.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.ReleaseManagement.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.ReleaseManagement.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Analytics.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Analytics.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Analytics.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Analytics.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>lib\System.Web.WebPages.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\Server\WebAccess\WorkItemTracking\Common\Models\TeamViewModel.cs" />
+    <Compile Include="AdminAreaRegistration.cs" />
+    <Compile Include="AdminDataSource.cs" />
+    <Compile Include="AdminAreaController.cs" />
+    <Compile Include="AdminAreasController.cs" />
+    <Compile Include="TeamFieldData.cs" />
+    <Compile Include="AdminBaseClassificationController.cs" />
+    <Compile Include="AdminEmailConfirmationController.cs" />
+    <Compile Include="AdminHomeController.cs" />
+    <Compile Include="AdminIterationsController.cs" />
+    <Compile Include="AdminIterationsData.cs" />
+    <Compile Include="AdminLicensesController.cs" />
+    <Compile Include="AdminProcessController.cs" />
+    <Compile Include="AdminSecurityController.cs" />
+    <Compile Include="AdminServicesController.cs" />
+    <Compile Include="AdminStartController.cs" />
+    <Compile Include="ApiBrowseController.cs" />
+    <Compile Include="ApiClassificationController.cs" />
+    <Compile Include="ApiIdentityController.cs" />
+    <Compile Include="SearchIdentityType.cs" />
+    <Compile Include="ApiLicensesController.cs" />
+    <Compile Include="ApiProcessController.cs" />
+    <Compile Include="ApiProjectController.cs" />
+    <Compile Include="ApiSecurityController.cs" />
+    <Compile Include="ApiServicesController.cs" />
+    <Compile Include="ApiStartController.cs" />
+    <Compile Include="UserHubController.cs" />
+    <Compile Include="ViewDataConstants.cs" />
+    <Compile Include="ShowProjectVisibilityOptions.cs" />
+    <Compile Include="PermissionExtenstions.cs" />
+    <Compile Include="TracePermissionExtensions.cs" />
+    <Compile Include="AdminNavigationResources.cs" />
+    <Compile Include="AdminServerResources.cs" />
+    <Compile Include="AdminResources.cs" />
+    <Compile Include="AnalyticsViewsSecurityNamespace.cs" />
+    <Compile Include="AnalyticsViewsPermissionsManager.cs" />
+    <Compile Include="ProcessPermissionsManager.cs" />
+    <Compile Include="MetaTaskPermissionsManager.cs" />
+    <Compile Include="MetaTaskPermissions.cs" />
+    <Compile Include="OrganizationPermissionsManager.cs" />
+    <Compile Include="AdminExtensions.cs" />
+    <Compile Include="AreaIterationsMode.cs" />
+    <Compile Include="BillingInformationModel.cs" />
+    <Compile Include="LicenceData.cs" />
+    <Compile Include="BuildData.cs" />
+    <Compile Include="BrowseControlModel.cs" />
+    <Compile Include="ClassificationNodeOperationData.cs" />
+    <Compile Include="ProcessViewModel.cs" />
+    <Compile Include="CollectionViewModel.cs" />
+    <Compile Include="ConnectedServiceViewModel.cs" />
+    <Compile Include="CreateProjectData.cs" />
+    <Compile Include="CreateProjectModel.cs" />
+    <Compile Include="DeleteProjectModel.cs" />
+    <Compile Include="EmailConfirmationModel.cs" />
+    <Compile Include="ImageModel.cs" />
+    <Compile Include="TraceLicenseModel.cs" />
+    <Compile Include="LicenseModel.cs" />
+    <Compile Include="AdminLicensesViewModel.cs" />
+    <Compile Include="ManageViewModel.cs" />
+    <Compile Include="PermissionsModel.cs" />
+    <Compile Include="PermissionModel.cs" />
+    <Compile Include="PermissionUpdates.cs" />
+    <Compile Include="PermissionUpdate.cs" />
+    <Compile Include="ProcessTemplatesModel.cs" />
+    <Compile Include="ProcessTemplateDescriptorModel.cs" />
+    <Compile Include="SecurityModel.cs" />
+    <Compile Include="TracePermissionModel.cs" />
+    <Compile Include="AreaPermissionsManager.cs" />
+    <Compile Include="BuildPermissionsManager.cs" />
+    <Compile Include="CollectionPermissionsManager.cs" />
+    <Compile Include="DashboardSecurityConstants.cs" />
+    <Compile Include="DashboardToken.cs" />
+    <Compile Include="DashboardPermissionsManager.cs" />
+    <Compile Include="CssPermissionsManager.cs" />
+    <Compile Include="GitPermissionsManager.cs" />
+    <Compile Include="GroupedPermission.cs" />
+    <Compile Include="GroupedPermissionsManager.cs" />
+    <Compile Include="IterationPermissionsManager.cs" />
+    <Compile Include="ProjectPermissionsManager.cs" />
+    <Compile Include="ReleaseManagementPermissionsManager.cs" />
+    <Compile Include="SecurityNamespacePermissionSet.cs" />
+    <Compile Include="SystemPermissionsHelper.cs" />
+    <Compile Include="SettableAction.cs" />
+    <Compile Include="NamespacePermissionSetConstants.cs" />
+    <Compile Include="SecurityNamespacePermissionsManager.cs" />
+    <Compile Include="SecurityNamespacePermissionsManagerFactory.cs" />
+    <Compile Include="ISecurityNamespacePermissionsManagerFactory.cs" />
+    <Compile Include="VersionControlPermissionsManager.cs" />
+    <Compile Include="WitQueryFolderPermissionsManager.cs" />
+    <Compile Include="PlanPermissionsManager.cs" />
+    <Compile Include="IdentityHelpers.cs" />
+    <Compile Include="LicenseHelpers.cs" />
+    <Compile Include="Utils\AadOAuthStateParameters.cs" />
+    <Compile Include="Utils\AadOAuthStrongBoxParameters.cs" />
+    <Compile Include="Utils\TraceConstants.cs" />
+    <Compile Include="Utils\TaskWellKnownSecurityIds.cs" />
+    <Compile Include="Utils\TaskWellKnownIdentityDescriptors.cs" />
+    <Compile Include="Utils\FilterConstants.cs" />
+    <Compile Include="Utils\TeamSettingsControlHelpers.cs" />
+    <Compile Include="Utils\BugsBehaviorControlStateOptions.cs" />
+    <Compile Include="Utils\BugsBehaviorSettingUIStateEnum.cs" />
+    <Compile Include="Serializers\ProcessMigrationModelBinder.cs" />
+    <Compile Include="Models\MigrateProjectsModel.cs" />
+    <Compile Include="Models\ProcessSuccessModel.cs" />
+    <Compile Include="Models\SelectMigrateTargetModel.cs" />
+    <Compile Include="Models\ProjectMember.cs" />
+    <Compile Include="Models\ProjectMembershipModel.cs" />
+    <Compile Include="Controllers\ApiImageController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AdminNavigationResources.resx" />
+    <EmbeddedResource Include="Resources\AdminResources.resx" />
+    <EmbeddedResource Include="Resources\AdminServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

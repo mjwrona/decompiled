@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Content.Server.Azure.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD442A10-A353-4BB2-8D45-393647C9A087}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Content.Server.Azure</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Content.Server.Azure</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Cosmos.Table">
+      <HintPath>lib\Microsoft.Azure.Cosmos.Table.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Blob">
+      <HintPath>lib\Microsoft.Azure.Storage.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks.Dataflow">
+      <HintPath>lib\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzureCloudBlobClientProvider.cs" />
+    <Compile Include="AzureBlobContainerFactoryBasic.cs" />
+    <Compile Include="CloudBlobClientAdapter.cs" />
+    <Compile Include="BlobResultSegmentWrapper.cs" />
+    <Compile Include="ActivityLogPerfTimer.cs" />
+    <Compile Include="CloudBlockBlobWrapper.cs" />
+    <Compile Include="IAzureCloudBlobClientProvider.cs" />
+    <Compile Include="IBlobResultSegment.cs" />
+    <Compile Include="ICloudBlobClient.cs" />
+    <Compile Include="MemoryBlobAccount.cs" />
+    <Compile Include="MemoryBlobContainer.cs" />
+    <Compile Include="MemoryBlob.cs" />
+    <Compile Include="MemoryBlobReference.cs" />
+    <Compile Include="MemoryBlobContainerReference.cs" />
+    <Compile Include="IBlobOperationListener.cs" />
+    <Compile Include="NoOpBlobOperationListener.cs" />
+    <Compile Include="ExpandedTableStorageException.cs" />
+    <Compile Include="ExpectedExpandedTableStorageException.cs" />
+    <Compile Include="IAzureBlobContainerFactory.cs" />
+    <Compile Include="StorageAccountConfigurationFacade.cs" />
+    <Compile Include="TableHttpRequestTracingEnabler.cs" />
+    <Compile Include="TableStorageExceptionExtensions.cs" />
+    <Compile Include="VssRequestPumpProcessorTableExtensions.cs" />
+    <Compile Include="VssRequestPumpProcessorStorageExtensions.cs" />
+    <Compile Include="GetContainerBlobsOrTableEntriesJob.cs" />
+    <Compile Include="GetContainerBlobsOrTableEntriesJobParameter.cs" />
+    <Compile Include="AzureCloudTableClientProvider.cs" />
+    <Compile Include="AzureTableMigratorCheckpointService.cs" />
+    <Compile Include="RangeFilterExtensions.cs" />
+    <Compile Include="IAzureCloudTableClientProvider.cs" />
+    <Compile Include="IAzureTableMigratorCheckpointService.cs" />
+    <Compile Include="IValue.cs" />
+    <Compile Include="BooleanValue.cs" />
+    <Compile Include="StringValue.cs" />
+    <Compile Include="DateTimeValue.cs" />
+    <Compile Include="ITableErrorPolicy.cs" />
+    <Compile Include="ProcessedTableOperationResult.cs" />
+    <Compile Include="TableBatchOperationExecutor.cs" />
+    <Compile Include="TableBatchOperationFactory.cs" />
+    <Compile Include="TableExceptionHandlingAction.cs" />
+    <Compile Include="TableErrorPolicyDeleteDefaultPolicy.cs" />
+    <Compile Include="TableErrorPolicyInsertAbortOnAnyConflictPolicy.cs" />
+    <Compile Include="TableErrorPolicyInsertIgnoreConflictPolicy.cs" />
+    <Compile Include="TableErrorPolicyInsertPolicyBase.cs" />
+    <Compile Include="TableErrorPolicyReplaceDefaultPolicy.cs" />
+    <Compile Include="TableErrorPolicyThrow.cs" />
+    <Compile Include="PartitionRangeExactRowQuery`1.cs" />
+    <Compile Include="ITableEntityWithColumns.cs" />
+    <Compile Include="ITableEntityWithColumnsExtensions.cs" />
+    <Compile Include="PartitionScanQuery`1.cs" />
+    <Compile Include="PartitionSpecificRowsQuery`1.cs" />
+    <Compile Include="PartitionSpecificRowsQuery.cs" />
+    <Compile Include="TableBatchOperationDescriptor.cs" />
+    <Compile Include="AzureBlobContainerFactory.cs" />
+    <Compile Include="AzureCloudTableAdapter.cs" />
+    <Compile Include="AzureCloudTableClientAdapter.cs" />
+    <Compile Include="AzureCloudTableClientFactory.cs" />
+    <Compile Include="AzureContainerFactory.cs" />
+    <Compile Include="TableBatchOperationResult.cs" />
+    <Compile Include="CloudBlobContainerWrapper.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="BooleanFilter`1.cs" />
+    <Compile Include="BooleanOperator.cs" />
+    <Compile Include="ComparisonFilter`1.cs" />
+    <Compile Include="ComparisonOperator.cs" />
+    <Compile Include="EnumExtension.cs" />
+    <Compile Include="EqualFilter`1.cs" />
+    <Compile Include="ICloudBlobContainer.cs" />
+    <Compile Include="ICloudBlockBlob.cs" />
+    <Compile Include="ICloudBlockBlobExtensions.cs" />
+    <Compile Include="KnownBoundsFilter.cs" />
+    <Compile Include="PartitionKeyFilter.cs" />
+    <Compile Include="RowKeyFilter.cs" />
+    <Compile Include="IColumn.cs" />
+    <Compile Include="INonUserColumn.cs" />
+    <Compile Include="IUserColumn.cs" />
+    <Compile Include="UserColumn.cs" />
+    <Compile Include="PartitionKeyColumn.cs" />
+    <Compile Include="RowKeyColumn.cs" />
+    <Compile Include="TimestampColumn.cs" />
+    <Compile Include="DomainColumn.cs" />
+    <Compile Include="PartitionKey.cs" />
+    <Compile Include="RowKey.cs" />
+    <Compile Include="TableShardPrimaryKey.cs" />
+    <Compile Include="IColumnValue`1.cs" />
+    <Compile Include="BooleanColumnValue`1.cs" />
+    <Compile Include="StringColumnValue`1.cs" />
+    <Compile Include="DateTimeColumnValue`1.cs" />
+    <Compile Include="PartitionKeyColumnValue.cs" />
+    <Compile Include="RowKeyColumnValue.cs" />
+    <Compile Include="TimestampColumnValue.cs" />
+    <Compile Include="DomainColumnValue.cs" />
+    <Compile Include="IFilter`1.cs" />
+    <Compile Include="IFilterExtensions.cs" />
+    <Compile Include="SqlDataConverter.cs" />
+    <Compile Include="SQLTableData.cs" />
+    <Compile Include="SqlOperationData.cs" />
+    <Compile Include="SqlOperation.cs" />
+    <Compile Include="SqlOperationResult.cs" />
+    <Compile Include="SqlEntity.cs" />
+    <Compile Include="SqlProperty.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="ASTableException.cs" />
+    <Compile Include="SQLETagMismatchException.cs" />
+    <Compile Include="SQLEntityNotFoundException.cs" />
+    <Compile Include="SQLEntityAlreadyExistsException.cs" />
+    <Compile Include="SQLTableAdapter.cs" />
+    <Compile Include="SqlTableOperationDescriptor.cs" />
+    <Compile Include="SQLTableClientFactory.cs" />
+    <Compile Include="SqlTableEntity.cs" />
+    <Compile Include="ASTableComponent.cs" />
+    <Compile Include="ASTableComponent2.cs" />
+    <Compile Include="ASTableComponent3.cs" />
+    <Compile Include="OperationResultColumns.cs" />
+    <Compile Include="EntityColumns.cs" />
+    <Compile Include="PropertyColumns.cs" />
+    <Compile Include="TableExtensions.cs" />
+    <Compile Include="TableMigrationConcurrencySetting.cs" />
+    <Compile Include="TableMigrationJobLevelConcurrencyType.cs" />
+    <Compile Include="TableMigrationResult.cs" />
+    <Compile Include="TableMigrationTimeTracker.cs" />
+    <Compile Include="TimeTrackingKeyType.cs" />
+    <Compile Include="ITrackingKey.cs" />
+    <Compile Include="TrackingKeyBase.cs" />
+    <Compile Include="UncategoriedTrackingKey.cs" />
+    <Compile Include="StorageAccountTrackingKey.cs" />
+    <Compile Include="PrefixTrackingKey.cs" />
+    <Compile Include="TableEntityTableOperationDescriptor.cs" />
+    <Compile Include="TableRowTableOperationDescriptor.cs" />
+    <Compile Include="TableOperationDescriptor.cs" />
+    <Compile Include="NotEqualFilter`1.cs" />
+    <Compile Include="NullFilter`1.cs" />
+    <Compile Include="PartitionRangeRowRangeQuery`1.cs" />
+    <Compile Include="PartitionRangeSpecificRowsQuery`1.cs" />
+    <Compile Include="PartitionScanRowExactQuery`1.cs" />
+    <Compile Include="PartitionScanRowExactQuery.cs" />
+    <Compile Include="PartitionScanRowRangeQuery`1.cs" />
+    <Compile Include="PointQuery`1.cs" />
+    <Compile Include="PointQuery.cs" />
+    <Compile Include="Query`1.cs" />
+    <Compile Include="QueryExtensions.cs" />
+    <Compile Include="RangeBoundaryType.cs" />
+    <Compile Include="RangeBoundaryBase`1.cs" />
+    <Compile Include="RangeMinimumBoundary`1.cs" />
+    <Compile Include="RangeMaximumBoundary`1.cs" />
+    <Compile Include="RangeFilter`1.cs" />
+    <Compile Include="RowRangeQuery`1.cs" />
+    <Compile Include="TableConstants.cs" />
+    <Compile Include="TableScanQuery`1.cs" />
+    <Compile Include="ITable.cs" />
+    <Compile Include="ITableEntityConstantRowKey.cs" />
+    <Compile Include="ITableQueryContinuationToken.cs" />
+    <Compile Include="IResultSegment`1.cs" />
+    <Compile Include="ITableClient.cs" />
+    <Compile Include="ITableClientFactory.cs" />
+    <Compile Include="OrderedUpdateableClientList.cs" />
+    <Compile Include="ShardingAzureCloudTableClientFactory.cs" />
+    <Compile Include="StorageAccountUtilities.cs" />
+    <Compile Include="AzureStorageAccountInfo.cs" />
+    <Compile Include="CannotReadStorageAccountException.cs" />
+    <Compile Include="ExpandedStorageException.cs" />
+    <Compile Include="ExpectedExpandedStorageException.cs" />
+    <Compile Include="TablePhysicalNode.cs" />
+    <Compile Include="TableOperationResult.cs" />
+    <Compile Include="TableShardManagerExtensions.cs" />
+    <Compile Include="ConcurrencyStrategy.cs" />
+    <Compile Include="MigratingOperationSettings.cs" />
+    <Compile Include="SourceTableStorage.cs" />
+    <Compile Include="TableLoader.cs" />
+    <Compile Include="AzureTableMigrator.cs" />
+    <Compile Include="TableCopyDeleteCheckpointBehavior.cs" />
+    <Compile Include="PartitionDetailsForSyncDelete.cs" />
+    <Compile Include="EntitiesProcessed.cs" />
+    <Compile Include="CopyStats.cs" />
+    <Compile Include="DeleteStats.cs" />
+    <Compile Include="TableBackedStorageMigration.cs" />
+    <Compile Include="LoggerWrapper.cs" />
+    <Compile Include="OperationTracer.cs" />
+    <Compile Include="AccountPrefixTracer.cs" />
+    <Compile Include="TestUtilities.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Table\AzureTableMigrationHelper.cs" />
+    <Compile Include="Table\MemImpl\MemoryRow.cs" />
+    <Compile Include="Table\MemImpl\MemoryPartition.cs" />
+    <Compile Include="Table\MemImpl\MemoryTable.cs" />
+    <Compile Include="Table\MemImpl\MemoryTableClientFactory.cs" />
+    <Compile Include="Table\MemImpl\MemoryTableStorage.cs" />
+    <Compile Include="Table\MemImpl\MemoryTableAdapter.cs" />
+    <Compile Include="Table\MemImpl\MemoryTableLoader.cs" />
+    <Compile Include="Table\AzureImpl\AzureTableLoader.cs" />
+    <Compile Include="Orchestration\ArtifactImportException.cs" />
+    <Compile Include="Orchestration\IASTableRetriever.cs" />
+    <Compile Include="Orchestration\ASTableRetriever.cs" />
+    <Compile Include="Orchestration\InMemoryASTableRetriever.cs" />
+    <Compile Include="Orchestration\AzureTableUploader.cs" />
+    <Compile Include="Orchestration\DataTransferContext.cs" />
+    <Compile Include="Orchestration\ImportSettings.cs" />
+    <Compile Include="Common\IStorageAccountConfigurationService.cs" />
+    <Compile Include="Common\StorageAccountConfigurationService.cs" />
+    <Compile Include="Common\StorageExceptionMapper.cs" />
+    <Compile Include="Blob\BlobPropertyExtensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="stmt_ListPartitionKeys.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

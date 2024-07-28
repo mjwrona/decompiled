@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.DevSecOps.Sdk.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE723235-183A-4A39-A057-75931F60A118}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.DevSecOps.Sdk.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.DevSecOps.Sdk.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.DevSecOps.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.DevSecOps.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.DevSecOps.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.DevSecOps.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IResourceMetadataCacheService.cs" />
+    <Compile Include="InstanceIds.cs" />
+    <Compile Include="ISecretsScannerService.cs" />
+    <Compile Include="SuppressionStates.cs" />
+    <Compile Include="Experiments.cs" />
+    <Compile Include="AbstractSecretScanDecisionPointListener.cs" />
+    <Compile Include="HighConfidenceSecretKinds.cs" />
+    <Compile Include="JsonFormatter.cs" />
+    <Compile Include="ServiceInstanceTypes.cs" />
+    <Compile Include="FrameworkStreamScannerService.cs" />
+    <Compile Include="DevSecOpsSdkClientTraceInfo.cs" />
+    <Compile Include="BlockType.cs" />
+    <Compile Include="BypassType.cs" />
+    <Compile Include="CacheType.cs" />
+    <Compile Include="PipelineType.cs" />
+    <Compile Include="FrameworkFileDiffEvaluator.cs" />
+    <Compile Include="CommitSuppressionEvaluator.cs" />
+    <Compile Include="GitLocalRepository.cs" />
+    <Compile Include="IStreamScannerService.cs" />
+    <Compile Include="IRemoteRepository.cs" />
+    <Compile Include="IResourceMetadataCacheValue.cs" />
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="RequestContextExtensions.cs" />
+    <Compile Include="ResourceMetadataCacheValue.cs" />
+    <Compile Include="ResourceMetadataCacheKey.cs" />
+    <Compile Include="ResourceMetadataCacheService.cs" />
+    <Compile Include="SecretsScannerWrapper.cs" />
+    <Compile Include="SdkConstants.cs" />
+    <Compile Include="TelemetryHelper.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="ViolationExtensions.cs" />
+    <Compile Include="ViolationsProcessor.cs" />
+    <Compile Include="DevSecOpsSdkResources.cs" />
+    <Compile Include="Interfaces\IScanService.cs" />
+    <Compile Include="Scanning\IndexOfSniffer.cs" />
+    <Compile Include="Scanning\ISniffer.cs" />
+    <Compile Include="Extensions\SecretScanStringBase`1.cs" />
+    <Compile Include="Extensions\PipelineHelper.cs" />
+    <Compile Include="Extensions\BuildDefinitionPipelineHelper.cs" />
+    <Compile Include="Extensions\SecretScanBatchBase`1.cs" />
+    <Compile Include="Extensions\WorkItemPipelineHelper.cs" />
+    <Compile Include="Extensions\SecretScanSubscriberBase`1.cs" />
+    <Compile Include="Extensions\ReleaseDefinitionPipelineHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{F51B427A-DDEB-4E69-B1B0-33777A5893B9}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.FileContainer.Server.dll" providerName="MicrosoftTeamFoundationFileContainerServer" providerType="userMode" symbol="MicrosoftTeamFoundationFileContainerServer" callback="custom">
+        <counterSet guid="{02D8809C-E225-4510-9EAF-E6616EAF18BC}" name="TFS File Container Service" description="TFS File Container Service Counters." instances="globalAggregate" symbol="TFSFileContainer" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Total Uploads" description="Number of uploads serviced by the File Container Service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_TotalUploads" />
+          <counter id="2" name="Uploads/Sec" description="Uploads per second serviced by the File Container Service." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_UploadSec" />
+          <counter id="3" name="Total Bytes Uploaded" description="Number of bytes uploaded to the File Container Service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_TotalBytesUploaded" />
+          <counter id="4" name="Bytes Uploaded/Sec" description="Bytes uploaded per second to the File Container Service." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_BytesUploadedSec" />
+          <counter id="5" name="Total Downloads" description="Number of downloads serviced by the File Container Service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_TotalDownloads" />
+          <counter id="6" name="Downloads/Sec" description="Downloads per second serviced by the File Container Service." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_DownloadSec" />
+          <counter id="7" name="Total Bytes Downloaded" description="Number of bytes downloaded to the File Container Service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_TotalBytesDownloaded" />
+          <counter id="8" name="Bytes Downloaded/Sec" description="Bytes downloaded per second to the File Container Service." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_BytesDownloadedSec" />
+          <counter id="9" name="Total Uploaded Chunks" description="Total number of file chunks uploaded to the File Container Service." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Framework.Server.Perf_FCS_TotalUploadChunks" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

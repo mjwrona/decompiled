@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Server.WebAccess.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{160E4145-C34B-43D6-8EEF-6FF2EED5CBB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Settings">
+      <HintPath>lib\Microsoft.Azure.Boards.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service">
+      <HintPath>lib\Microsoft.Azure.Devops.Teams.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Charting.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Charting.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Git.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.TfsCommon">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.TfsCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Utils">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CloudConnected.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CloudConnected.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>lib\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\Server\Types\CollectionAvatarFailureException.cs" />
+    <Compile Include="Microsoft\TeamFoundation\Server\Types\IdentityImageFailureException.cs" />
+    <Compile Include="LegacyContent.cs" />
+    <Compile Include="BundleInfo.cs" />
+    <Compile Include="LegacyPlatformShim.cs" />
+    <Compile Include="ILegacyPlatformShimService.cs" />
+    <Compile Include="LegacyPlatformShimService.cs" />
+    <Compile Include="PublicContributedHubRequestRestrictionsAttribute.cs" />
+    <Compile Include="RemoveMruEntryOnRenamedProjectAttribute.cs" />
+    <Compile Include="WebAccessPluginModule.cs" />
+    <Compile Include="WebAccessPluginBase.cs" />
+    <Compile Include="WebAccessPluginFatEntry.cs" />
+    <Compile Include="WebAccessPluginEntry.cs" />
+    <Compile Include="RegisterHubMruPageAttribute.cs" />
+    <Compile Include="IClientHostCapabilities.cs" />
+    <Compile Include="BrowserClientHostCapabilities.cs" />
+    <Compile Include="IdeClientHostCapabilities.cs" />
+    <Compile Include="ClientRedirectResult.cs" />
+    <Compile Include="CustomRedirectResult.cs" />
+    <Compile Include="SeeOtherRedirectResult.cs" />
+    <Compile Include="TemporaryRedirectResult.cs" />
+    <Compile Include="PolicyModel.cs" />
+    <Compile Include="ICollectionAvatarService.cs" />
+    <Compile Include="CollectionAvatarService.cs" />
+    <Compile Include="SpsClientHelper.cs" />
+    <Compile Include="TeamContextExtensions.cs" />
+    <Compile Include="SecuredTeamContext.cs" />
+    <Compile Include="RequireHostedAttribute.cs" />
+    <Compile Include="RequiresHostedException.cs" />
+    <Compile Include="GitUrlGenerator.cs" />
+    <Compile Include="ConfigurationExtensions.cs" />
+    <Compile Include="CustomizationExtensions.cs" />
+    <Compile Include="UrlHelperExtensions.cs" />
+    <Compile Include="IChangesMRUNavigationContext.cs" />
+    <Compile Include="ITfsController.cs" />
+    <Compile Include="DemandFeatureAttribute.cs" />
+    <Compile Include="FeatureContext.cs" />
+    <Compile Include="FeatureMode.cs" />
+    <Compile Include="AccountAadInformationModel.cs" />
+    <Compile Include="AccountSettingsModel.cs" />
+    <Compile Include="IdentityViewModelBase.cs" />
+    <Compile Include="IdentityViewModelProperties.cs" />
+    <Compile Include="DirectoryEntityViewModel.cs" />
+    <Compile Include="DirectoryEntityViewModelException.cs" />
+    <Compile Include="GroupIdentityViewModel.cs" />
+    <Compile Include="TeamIdentityViewModel.cs" />
+    <Compile Include="UserIdentityViewModelBase.cs" />
+    <Compile Include="UserIdentityViewModel.cs" />
+    <Compile Include="ServicePrincipalIdentityViewModel.cs" />
+    <Compile Include="JumpPointModelBase.cs" />
+    <Compile Include="CollectionJumpPointModel.cs" />
+    <Compile Include="ProjectJumpPointModel.cs" />
+    <Compile Include="TeamJumpPointModel.cs" />
+    <Compile Include="NavigationContextModel.cs" />
+    <Compile Include="NewsItem.cs" />
+    <Compile Include="TfsUserContext.cs" />
+    <Compile Include="TfsTeamContext.cs" />
+    <Compile Include="TeamProjectModel.cs" />
+    <Compile Include="UserPreferencesModel.cs" />
+    <Compile Include="UserProfileModel.cs" />
+    <Compile Include="RepoMRUNavigationContextEntry.cs" />
+    <Compile Include="RepoMRUNavigationContextEntryConverter.cs" />
+    <Compile Include="MRUNavigationContextEntry.cs" />
+    <Compile Include="MRUNavigationContextEntryConverter.cs" />
+    <Compile Include="MRUNavigationContextEntryManager.cs" />
+    <Compile Include="RequireInheritedCustomizationEnabledAttribute.cs" />
+    <Compile Include="RequireOnPremiseAttribute.cs" />
+    <Compile Include="RequireProjectAttribute.cs" />
+    <Compile Include="RequiresOnPremiseException.cs" />
+    <Compile Include="RequireTeamAttribute.cs" />
+    <Compile Include="WellKnownHubGroup.cs" />
+    <Compile Include="RegisterGitRoutes.cs" />
+    <Compile Include="WebAccessServerResources.cs" />
+    <Compile Include="RequireAccountAdminAttribute.cs" />
+    <Compile Include="ActivityIdAttribute.cs" />
+    <Compile Include="RequireDeploymentAdminAttribute.cs" />
+    <Compile Include="DataContractJsonResult.cs" />
+    <Compile Include="JsonDeserializationCallback`1.cs" />
+    <Compile Include="JsonSerializationCallback`1.cs" />
+    <Compile Include="JsonConverterWithCallbacks`1.cs" />
+    <Compile Include="JsonExtensions.cs" />
+    <Compile Include="JsonModelBinder.cs" />
+    <Compile Include="JsonDeserializationJSCallback`1.cs" />
+    <Compile Include="JsonSerializationJSCallback`1.cs" />
+    <Compile Include="JsonConverterJsSerializerWithCallbacks`1.cs" />
+    <Compile Include="ServerViewDataConstants.cs" />
+    <Compile Include="TeamProjectSettings.cs" />
+    <Compile Include="EmailTelemetryUtils.cs" />
+    <Compile Include="TfsAreaController.cs" />
+    <Compile Include="TfsController.cs" />
+    <Compile Include="TfsViewMasterPage`1.cs" />
+    <Compile Include="TfsViewMasterPage.cs" />
+    <Compile Include="TfsViewPage`1.cs" />
+    <Compile Include="TfsViewPage.cs" />
+    <Compile Include="TfsViewUserControl`1.cs" />
+    <Compile Include="TfsViewUserControl.cs" />
+    <Compile Include="TfsWebContext.cs" />
+    <Compile Include="TfsWebContextExtensions.cs" />
+    <Compile Include="ChartingExtensions.cs" />
+    <Compile Include="ChartConfigurationBundle.cs" />
+    <Compile Include="ChartPinningState.cs" />
+    <Compile Include="CommonExtensions.cs" />
+    <Compile Include="ExtensionContributionUtility.cs" />
+    <Compile Include="DictionaryModelBinder.cs" />
+    <Compile Include="HtmlTextWriterExtensions.cs" />
+    <Compile Include="IdentityImageUtility.cs" />
+    <Compile Include="IdentityManagementHelpers.cs" />
+    <Compile Include="InvalidArgumentValueException.cs" />
+    <Compile Include="IValidatable.cs" />
+    <Compile Include="NewsFeedService.cs" />
+    <Compile Include="ProfileImageUtility.cs" />
+    <Compile Include="ProjectComparer.cs" />
+    <Compile Include="StreamWrapper.cs" />
+    <Compile Include="TeamDoesNotExistWithNameException.cs" />
+    <Compile Include="TfsHelpers.cs" />
+    <Compile Include="TfsLocator.cs" />
+    <Compile Include="UrlUtilities.cs" />
+    <Compile Include="FeatureAvailabilityFlags.cs" />
+    <Compile Include="TfsWebAccessBootstrapFeatureFlags.cs" />
+    <Compile Include="LicenseFeatureIds.cs" />
+    <Compile Include="ProjectVisibilityConstants.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="AexServiceConstants.cs" />
+    <Compile Include="BoardsConstants.cs" />
+    <Compile Include="TfsServiceRouteAreas.cs" />
+    <Compile Include="WebAccessModule.cs" />
+    <Compile Include="TfsWebPageGlobalContext.cs" />
+    <Compile Include="Navigation\HeaderActionHelpers.cs" />
+    <Compile Include="Navigation\AdminSettingsContext.cs" />
+    <Compile Include="Navigation\ExtensionsContext.cs" />
+    <Compile Include="Navigation\MenuBarHeaderItemContext.cs" />
+    <Compile Include="Navigation\RightMenuBarContext.cs" />
+    <Compile Include="Navigation\HeaderCommand.cs" />
+    <Compile Include="Navigation\HeaderAction.cs" />
+    <Compile Include="Navigation\HeaderItemContext.cs" />
+    <Compile Include="Navigation\HeaderRightMenuItems.cs" />
+    <Compile Include="Navigation\HeaderPermissionChecks.cs" />
+    <Compile Include="Navigation\TfsHeaderContext.cs" />
+    <Compile Include="Navigation\HelpContext.cs" />
+    <Compile Include="Navigation\SearchContext.cs" />
+    <Compile Include="Navigation\ProvideASuggestionContext.cs" />
+    <Compile Include="Navigation\UserContext.cs" />
+    <Compile Include="Navigation\UserSettingsContext.cs" />
+    <Compile Include="Navigation\HubsConstants.cs" />
+    <Compile Include="Admin\MembershipModel.cs" />
+    <Compile Include="Routing\TfsRouteHelpers.cs" />
+    <Compile Include="Routing\WebApiVersionAttribute.cs" />
+    <Compile Include="Html\AccountAadInformationExtensions.cs" />
+    <Compile Include="Html\AccountTrialExtensions.cs" />
+    <Compile Include="Html\CommonHtmlExtensions.cs" />
+    <Compile Include="Html\SplitterSettings.cs" />
+    <Compile Include="Html\ControlExtensions.cs" />
+    <Compile Include="Html\HomePageExtensions.cs" />
+    <Compile Include="Html\LicenseExtensions.cs" />
+    <Compile Include="Html\GetTargetRouteParametersDelegate.cs" />
+    <Compile Include="Html\NavigationExtensions.cs" />
+    <Compile Include="Html\StakeholderExtensions.cs" />
+    <Compile Include="Controllers\ApiCommonController.cs" />
+    <Compile Include="Controllers\ImageExtensions.cs" />
+    <Compile Include="Controllers\ApiCustomerIntelligenceController.cs" />
+    <Compile Include="Controllers\ApiFavoritesController.cs" />
+    <Compile Include="Controllers\ApiHomeController.cs" />
+    <Compile Include="Controllers\ApiJobController.cs" />
+    <Compile Include="Controllers\ApiTeamsController.cs" />
+    <Compile Include="Controllers\ApiWebSettingsController.cs" />
+    <Compile Include="Controllers\CompatibilityController.cs" />
+    <Compile Include="Controllers\ETaggedResult.cs" />
+    <Compile Include="Controllers\AzureTfsExtController.cs" />
+    <Compile Include="Controllers\MruController.cs" />
+    <Compile Include="Controllers\PermaLinkController.cs" />
+    <Compile Include="ProjectResources\ProjectModelResources.cs" />
+    <Compile Include="Models\AccountTrialModeModel.cs" />
+    <Compile Include="Models\AdPageModel.cs" />
+    <Compile Include="Models\GettingStartedModel.cs" />
+    <Compile Include="Models\JobProgressState.cs" />
+    <Compile Include="Models\JobProgressModel.cs" />
+    <Compile Include="Models\NewsResult.cs" />
+    <Compile Include="Models\NotificationMessageModel.cs" />
+    <Compile Include="Models\MessageAreaType.cs" />
+    <Compile Include="Models\ProjectCollectionModel.cs" />
+    <Compile Include="Models\ResourceModel.cs" />
+    <Compile Include="Models\ResourceUsageModel.cs" />
+    <Compile Include="Models\ResponsiveGridCellModel.cs" />
+    <Compile Include="Models\IdentityModelExtensions.cs" />
+    <Compile Include="Models\TeamData.cs" />
+    <Compile Include="Mail\EmailRecipients.cs" />
+    <Compile Include="Mail\MailSender.cs" />
+    <Compile Include="Mail\MailMessage.cs" />
+    <Compile Include="Utils\ExceptionLogger.cs" />
+    <Compile Include="Utils\DirectoryDiscoveryServiceHelper.cs" />
+    <Compile Include="Utils\Performance\SamplePerformanceDataAttribute.cs" />
+    <Compile Include="Configuration\RemoveMruEntryonDeletedProjectTeamAttribute.cs" />
+    <Compile Include="Configuration\BuiltinPluginManager.cs" />
+    <Compile Include="ErrorHandler\ProjectNotFoundExceptionHandler.cs" />
+    <Compile Include="ErrorHandler\AuthExceptionData.cs" />
+    <Compile Include="ErrorHandler\OrganizationTakeOverData.cs" />
+    <Compile Include="ErrorHandler\RequestAccessAuthorizationExceptionHandler.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectResources\ProjectModelResources.resx" />
+    <EmbeddedResource Include="WebAccessServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

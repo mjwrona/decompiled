@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.CodeReview.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6940EE8D-4398-41EF-9A39-B657AF740DCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.CodeReview.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.CodeReview.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.Discussion.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.Discussion.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeArtifact.cs" />
+    <Compile Include="ChangeArtifactBuilder.cs" />
+    <Compile Include="CodeReviewChangeTracker.cs" />
+    <Compile Include="CodeReviewHttpClient.cs" />
+    <Compile Include="CodeReviewSdkArtifactId.cs" />
+    <Compile Include="ArtifactVisit.cs" />
+    <Compile Include="ArtifactStats.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="ChangeEntry.cs" />
+    <Compile Include="ChangeEntryFileInfo.cs" />
+    <Compile Include="ChangeEntryFileType.cs" />
+    <Compile Include="ChangeType.cs" />
+    <Compile Include="CodeReviewExtendedProperties.cs" />
+    <Compile Include="CommentThreadContext.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="IterationContext.cs" />
+    <Compile Include="CommentTrackingCriteria.cs" />
+    <Compile Include="ReviewFileContentInfo.cs" />
+    <Compile Include="ReviewFileType.cs" />
+    <Compile Include="DownloadContentsCriteria.cs" />
+    <Compile Include="IterationChanges.cs" />
+    <Compile Include="Review.cs" />
+    <Compile Include="ReviewStatus.cs" />
+    <Compile Include="Iteration.cs" />
+    <Compile Include="CommentThread.cs" />
+    <Compile Include="CommentThreadConverter.cs" />
+    <Compile Include="CommentThreadType.cs" />
+    <Compile Include="Reviewer.cs" />
+    <Compile Include="ReviewerKind.cs" />
+    <Compile Include="ReviewFilesZipContent.cs" />
+    <Compile Include="ReviewFilesZipContentMetadata.cs" />
+    <Compile Include="ReviewSearchCriteria.cs" />
+    <Compile Include="ReviewSettings.cs" />
+    <Compile Include="StatusContext.cs" />
+    <Compile Include="NotificationContext.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="MetaState.cs" />
+    <Compile Include="DefaultReviewerStates.cs" />
+    <Compile Include="IterationListNotCompleteException.cs" />
+    <Compile Include="InvalidChangeTypeException.cs" />
+    <Compile Include="ChangesExtension.cs" />
+    <Compile Include="ReviewFileContentExtensions.cs" />
+    <Compile Include="CommentExtension.cs" />
+    <Compile Include="ReviewerExtensions.cs" />
+    <Compile Include="ReviewExtensions.cs" />
+    <Compile Include="CodeReviewHttpClientBase.cs" />
+    <Compile Include="VisitsHttpClient.cs" />
+    <Compile Include="CodeReviewConstants.cs" />
+    <Compile Include="CodeReviewClientTraceInfo.cs" />
+    <Compile Include="CodeReviewCustomHeaders.cs" />
+    <Compile Include="CodeReviewDiscussionConstants.cs" />
+    <Compile Include="AttachmentProperties.cs" />
+    <Compile Include="CodeReviewPolicyConstants.cs" />
+    <Compile Include="ReviewerState.cs" />
+    <Compile Include="CodeReviewWebAPIResources.cs" />
+    <Compile Include="Subscription\Events\CodeReviewCreatedEvent.cs" />
+    <Compile Include="Subscription\Events\ContributedEventNames.cs" />
+    <Compile Include="Subscription\Events\CodeReviewEvent.cs" />
+    <Compile Include="Subscription\Events\CodeReviewShareEvent.cs" />
+    <Compile Include="Subscription\Events\CodeReviewUpdatedEvent.cs" />
+    <Compile Include="Subscription\Events\EventReviewer.cs" />
+    <Compile Include="Subscription\Events\ICodeReviewEvent.cs" />
+    <Compile Include="Subscription\Events\IterationsChangedEvent.cs" />
+    <Compile Include="Subscription\Events\ReviewersChangedEvent.cs" />
+    <Compile Include="Events\AttachmentAddedNotification.cs" />
+    <Compile Include="Events\AttachmentDeletedNotification.cs" />
+    <Compile Include="Events\AttachmentNotification.cs" />
+    <Compile Include="Events\CodeReviewEventNotification.cs" />
+    <Compile Include="Events\EventType.cs" />
+    <Compile Include="Events\CommentNotification.cs" />
+    <Compile Include="Events\PropertiesNotification.cs" />
+    <Compile Include="Events\ResourceType.cs" />
+    <Compile Include="Events\ReviewPublishedNotification.cs" />
+    <Compile Include="Events\ReviewDeletedNotification.cs" />
+    <Compile Include="Events\ReviewersAddedNotification.cs" />
+    <Compile Include="Events\ReviewNotification.cs" />
+    <Compile Include="Events\IterationAddedNotification.cs" />
+    <Compile Include="Events\IterationDeletedNotification.cs" />
+    <Compile Include="Events\IterationNotification.cs" />
+    <Compile Include="Events\IterationUpdatedNotification.cs" />
+    <Compile Include="Events\ReviewersNotification.cs" />
+    <Compile Include="Events\ReviewersRemovedNotification.cs" />
+    <Compile Include="Events\ReviewersStateUpdatedNotification.cs" />
+    <Compile Include="Events\ReviewUpdatedNotification.cs" />
+    <Compile Include="Events\ShareReviewNotification.cs" />
+    <Compile Include="Events\StatusesDeletedNotification.cs" />
+    <Compile Include="Events\StatusAddedNotification.cs" />
+    <Compile Include="Events\StatusNotification.cs" />
+    <Compile Include="Events\StatusUpdatedNotification.cs" />
+    <Compile Include="Events\ToolContext.cs" />
+    <Compile Include="Events\UserAction.cs" />
+    <Compile Include="Policy\CodeReviewPolicyConfiguration.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

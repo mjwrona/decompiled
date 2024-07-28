@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ReleaseManagement2.Artifact.Extensions.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49B22E18-4D8C-4900-A96F-97F927C0AA57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ReleaseManagement2.Artifact.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ReleaseManagement.Artifact.Extensions</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Bitbucket.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Common" />
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement2.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement2.Data" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="NuGet.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArtifactSourceExtensions.cs" />
+    <Compile Include="ArtifactTypeUtility.cs" />
+    <Compile Include="ExtensionArtifactsRetriever.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="FirstPartyArtifactTypeBase.cs" />
+    <Compile Include="InvalidRepositoryException.cs" />
+    <Compile Include="NullArtifact.cs" />
+    <Compile Include="ProjectHelper.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="ExternalConnection.cs" />
+    <Compile Include="WellKnownInputDescriptors.cs" />
+    <Compile Include="Tfvc\ITfvcClient.cs" />
+    <Compile Include="Tfvc\TfvcArtifact.cs" />
+    <Compile Include="Tfvc\TfvcClient.cs" />
+    <Compile Include="Tfvc\TfvcHelper.cs" />
+    <Compile Include="Jenkins\JenkinsArtifact.cs" />
+    <Compile Include="Jenkins\JenkinsArtifactData.cs" />
+    <Compile Include="Jenkins\JenkinsJobTypes.cs" />
+    <Compile Include="Git\GitArtifact.cs" />
+    <Compile Include="Git\GitData.cs" />
+    <Compile Include="Git\GitHelper.cs" />
+    <Compile Include="Git\IGitData.cs" />
+    <Compile Include="GitHub\GitHubArtifact.cs" />
+    <Compile Include="GitHub\GitHubEndpointHelper.cs" />
+    <Compile Include="GitHub\InputQueryValueUtilities.cs" />
+    <Compile Include="GitHub\GitHubHelper.cs" />
+    <Compile Include="Converters\TfvcChangesetRefConverter.cs" />
+    <Compile Include="Converters\GitCommitRefConverter.cs" />
+    <Compile Include="Converters\BuildChangeConverter.cs" />
+    <Compile Include="Converters\ReleaseWorkItemConverter.cs" />
+    <Compile Include="Build\BuildArtifact.cs" />
+    <Compile Include="DockerHub\DockerHubHelper.cs" />
+    <Compile Include="AzureContainerRepository\AzureContainerRepositoryHelper.cs" />
+    <Compile Include="Microsoft\VisualStudio\Services\ReleaseManagement\Data\Utilities\BuildExtensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

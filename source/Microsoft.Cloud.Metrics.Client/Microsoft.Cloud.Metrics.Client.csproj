@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Cloud.Metrics.Client.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19ACFCCE-69BD-40C5-8EB3-DC27F31BC97E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Cloud.Metrics.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>2.2023.705.2051</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Cloud.Metrics.Client</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>lib\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MdmEnvironment.cs" />
+    <Compile Include="ConnectionInfo.cs" />
+    <Compile Include="Datapoint`1.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IMonitoringAccountAcls.cs" />
+    <Compile Include="MetricConfigurationManager.cs" />
+    <Compile Include="MetricDefinitionV2.cs" />
+    <Compile Include="MetricsClientException.cs" />
+    <Compile Include="MetricsServerRelativeUris.cs" />
+    <Compile Include="MonitoringAccountAcls.cs" />
+    <Compile Include="MonitorHealthStatus.cs" />
+    <Compile Include="ProductionGlobalEnvironmentResolver.cs" />
+    <Compile Include="TimeSeries`2.cs" />
+    <Compile Include="TimeSeriesDefinition`1.cs" />
+    <Compile Include="TimeSeriesErrorCode.cs" />
+    <Compile Include="Utility\CertificateHelper.cs" />
+    <Compile Include="Utility\ClientAssemblyMigration.cs" />
+    <Compile Include="Utility\ClientAssemblyMigrationSerializationBinder.cs" />
+    <Compile Include="Utility\ConfigFileValidator.cs" />
+    <Compile Include="Utility\FileNamePathHelper.cs" />
+    <Compile Include="Utility\FileOperationHelper.cs" />
+    <Compile Include="Utility\FilteredQueryResponseDeserializer.cs" />
+    <Compile Include="Utility\HttpClientHelper.cs" />
+    <Compile Include="Utility\MetricQueryResponseDeserializer.cs" />
+    <Compile Include="Utility\MultipleStampsQueryResponseSerializer.cs" />
+    <Compile Include="Utility\SpecialCharsHelper.cs" />
+    <Compile Include="Utility\TracingFieldNames.cs" />
+    <Compile Include="Utility\UnixEpochHelper.cs" />
+    <Compile Include="Utility\UserAccessTokenRefresher.cs" />
+    <Compile Include="Utility\VersionComparer.cs" />
+    <Compile Include="ThirdParty\IStampLocator.cs" />
+    <Compile Include="ThirdParty\StampLocator.cs" />
+    <Compile Include="ThirdParty\StampLocatorActivity.cs" />
+    <Compile Include="Query\AggregationType.cs" />
+    <Compile Include="Query\DiagnosticInfo.cs" />
+    <Compile Include="Query\FilteredTimeSeries.cs" />
+    <Compile Include="Query\FilteredTimeSeriesQueryRequest.cs" />
+    <Compile Include="Query\FilteredTimeSeriesQueryResponse.cs" />
+    <Compile Include="Query\FilteredTimeSeriesQueryResponseErrorCode.cs" />
+    <Compile Include="Query\IFilteredTimeSeries.cs" />
+    <Compile Include="Query\IFilteredTimeSeriesQueryResponse.cs" />
+    <Compile Include="Query\IQueryResult.cs" />
+    <Compile Include="Query\IQueryResultListV3.cs" />
+    <Compile Include="Query\IQueryResultV3.cs" />
+    <Compile Include="Query\KqlMRequest.cs" />
+    <Compile Include="Query\PropertyAggregationType.cs" />
+    <Compile Include="Query\PropertyDefinition.cs" />
+    <Compile Include="Query\Operator.cs" />
+    <Compile Include="Query\QueryFilter.cs" />
+    <Compile Include="Query\QueryResult.cs" />
+    <Compile Include="Query\QueryResultListV3.cs" />
+    <Compile Include="Query\QueryResultQualityInfo.cs" />
+    <Compile Include="Query\QueryResultsList.cs" />
+    <Compile Include="Query\Reducer.cs" />
+    <Compile Include="Query\OrderBy.cs" />
+    <Compile Include="Query\SelectionType.cs" />
+    <Compile Include="Query\SelectionClause.cs" />
+    <Compile Include="Query\SelectionClauseV3.cs" />
+    <Compile Include="Query\ValidateKqlmQueryRequest.cs" />
+    <Compile Include="Query\Kqlm\ExecutionMessage.cs" />
+    <Compile Include="Query\Kqlm\IExecutionMessage.cs" />
+    <Compile Include="Query\Kqlm\IKqlmQueryResult.cs" />
+    <Compile Include="Query\Kqlm\IResultsMetadata.cs" />
+    <Compile Include="Query\Kqlm\ITimeSeriesData.cs" />
+    <Compile Include="Query\Kqlm\ITimeSeriesSet.cs" />
+    <Compile Include="Query\Kqlm\KqlMdmQueryRequest.cs" />
+    <Compile Include="Query\Kqlm\KqlmQueryResult.cs" />
+    <Compile Include="Query\Kqlm\QueryState.cs" />
+    <Compile Include="Query\Kqlm\ResultsMetadata.cs" />
+    <Compile Include="Query\Kqlm\TimeSeriesData.cs" />
+    <Compile Include="Query\Kqlm\TimeSeriesSet.cs" />
+    <Compile Include="PreaggregateFiltersManagement\PreaggregateDimensionFilterValues.cs" />
+    <Compile Include="PreaggregateFiltersManagement\PreaggregateFilters.cs" />
+    <Compile Include="PreaggregateFiltersManagement\PreaggregateFiltersManager.cs" />
+    <Compile Include="PreaggregateFiltersManagement\RawPreaggregateFilterQueryArguments.cs" />
+    <Compile Include="Monitors\BaseOperationResponse.cs" />
+    <Compile Include="Monitors\CreateOperationResponse.cs" />
+    <Compile Include="Monitors\ErrorContent.cs" />
+    <Compile Include="Monitors\ErrorResponse.cs" />
+    <Compile Include="Monitors\GetOperationResponse.cs" />
+    <Compile Include="Monitors\IMonitorConfigurationManager.cs" />
+    <Compile Include="Monitors\IMonitorReader.cs" />
+    <Compile Include="Monitors\MonitorConfigurationManager.cs" />
+    <Compile Include="Monitors\MonitorIdentifier.cs" />
+    <Compile Include="Monitors\MonitorReader.cs" />
+    <Compile Include="Monitors\OperationItem.cs" />
+    <Compile Include="Monitors\OperationStatus.cs" />
+    <Compile Include="Monitors\ResponseStatus.cs" />
+    <Compile Include="MetricsStreaming\JobExecutionInfoItem.cs" />
+    <Compile Include="MetricsStreaming\JobExecutionStatus.cs" />
+    <Compile Include="MetricsStreaming\ListStreamingBloomfilterResponse.cs" />
+    <Compile Include="MetricsStreaming\ListStreamingRuleResponse.cs" />
+    <Compile Include="MetricsStreaming\RuleOnboardingAllowDefinition.cs" />
+    <Compile Include="MetricsStreaming\StreamingBloomfilter.cs" />
+    <Compile Include="MetricsStreaming\StreamingBloomfilterData.cs" />
+    <Compile Include="MetricsStreaming\StreamingBloomfilterManager.cs" />
+    <Compile Include="MetricsStreaming\StreamingBloomfilterRequest.cs" />
+    <Compile Include="MetricsStreaming\StreamingBloomfilterResponseItem.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleAndBloomfilterRequest.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleAndBloomfilterResponse.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleManager.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleRequest.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleResponseItem.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleStatusResponse.cs" />
+    <Compile Include="MetricsStreaming\StreamingRuleValidationRequest.cs" />
+    <Compile Include="MetricsStreaming\Exceptions\InvalidStreamingRuleException.cs" />
+    <Compile Include="MetricsStreaming\Bloomfilter\BloomFilter`1.cs" />
+    <Compile Include="MetricsStreaming\Bloomfilter\Converters.cs" />
+    <Compile Include="MetricsStreaming\Bloomfilter\JenkinsHash.cs" />
+    <Compile Include="MetricsExtension\DiagnosticHeartbeat.cs" />
+    <Compile Include="MetricsExtension\DiagnosticHeartbeatReader.cs" />
+    <Compile Include="MetricsExtension\IDiagnosticHeartbeat.cs" />
+    <Compile Include="MetricsExporter\DataSourceInfo.cs" />
+    <Compile Include="MetricsExporter\GenevaLogsInfo.cs" />
+    <Compile Include="MetricsExporter\JobDefinitionDetailsEntityResponse.cs" />
+    <Compile Include="MetricsExporter\JobDefinitionRequest.cs" />
+    <Compile Include="MetricsExporter\JobDefinitionResponse.cs" />
+    <Compile Include="MetricsExporter\JobStatus.cs" />
+    <Compile Include="MetricsExporter\MetricsExporterClient.cs" />
+    <Compile Include="MetricsExperience\IMonitoringAccountExperienceManager.cs" />
+    <Compile Include="MetricsExperience\MonitoringAccountExperienceManager.cs" />
+    <Compile Include="MetricEnrichmentRuleManagement\MetricEnrichmentRule.cs" />
+    <Compile Include="MetricEnrichmentRuleManagement\MetricEnrichmentRuleManager.cs" />
+    <Compile Include="MetricEnrichmentRuleManagement\MetricEnrichmentRuleTransformationDefinition.cs" />
+    <Compile Include="MetricEnrichmentRuleManagement\MetricEnrichmentTransformationType.cs" />
+    <Compile Include="MetricEnrichmentRuleManagement\StampLevelMetricEnrichmentRuleManager.cs" />
+    <Compile Include="Logging\ConsoleLogEngine.cs" />
+    <Compile Include="Logging\EventSourceLogEngine.cs" />
+    <Compile Include="Logging\LoggerLevel.cs" />
+    <Compile Include="Logging\ILogEngine.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Metrics\DimensionFilter.cs" />
+    <Compile Include="Metrics\IExportValidator.cs" />
+    <Compile Include="Metrics\ILocalAggregatedMetric.cs" />
+    <Compile Include="Metrics\ILocalMetricReader.cs" />
+    <Compile Include="Metrics\ILocalRawMetric.cs" />
+    <Compile Include="Metrics\IMetricReader.cs" />
+    <Compile Include="Metrics\IStatementContextInformation.cs" />
+    <Compile Include="Metrics\LocalAggregatedMetric.cs" />
+    <Compile Include="Metrics\LocalMetricReader.cs" />
+    <Compile Include="Metrics\LocalRawMetric.cs" />
+    <Compile Include="Metrics\MetricReader.cs" />
+    <Compile Include="Metrics\OboMetricReader.cs" />
+    <Compile Include="Metrics\PreAggregateUsage.cs" />
+    <Compile Include="Metrics\QueryLanguageResponseToDatatable.cs" />
+    <Compile Include="Metrics\RawMetricEventType.cs" />
+    <Compile Include="Metrics\SamplingType.cs" />
+    <Compile Include="Metrics\StatementContextInformation.cs" />
+    <Compile Include="Metrics\StatementProcessingErrorCode.cs" />
+    <Compile Include="Metrics\StatementProcessingErrorCodeExtension.cs" />
+    <Compile Include="Metrics\MessageSeverity.cs" />
+    <Compile Include="Metrics\StatementProcessingMessage.cs" />
+    <Compile Include="Metrics\ValidateKqlmQueryResult.cs" />
+    <Compile Include="Metrics\ValidationMessage.cs" />
+    <Compile Include="Metrics\Etw\ActiveCollector.cs" />
+    <Compile Include="Metrics\Etw\ClockType.cs" />
+    <Compile Include="Metrics\Etw\CollectorConfiguration.cs" />
+    <Compile Include="Metrics\Etw\EtlBacklogConfig.cs" />
+    <Compile Include="Metrics\Etw\EtwPayloadManipulationUtils.cs" />
+    <Compile Include="Metrics\Etw\EtwSessionManager.cs" />
+    <Compile Include="Metrics\Etw\EtwTraceLevel.cs" />
+    <Compile Include="Metrics\Etw\IEtlDispatcher.cs" />
+    <Compile Include="Metrics\Etw\EtlCompletionStatus.cs" />
+    <Compile Include="Metrics\Etw\IEtlSubscriber.cs" />
+    <Compile Include="Metrics\Etw\NativeMethods.cs" />
+    <Compile Include="Metrics\Etw\ProviderConfiguration.cs" />
+    <Compile Include="Metrics\Etw\RawListener.cs" />
+    <Compile Include="Metrics\Etw\SessionType.cs" />
+    <Compile Include="Metrics\Etw\TraceBufferContext.cs" />
+    <Compile Include="Metrics\Etw\TraceEvent.cs" />
+    <Compile Include="Metrics\Etw\TraceEventHeader.cs" />
+    <Compile Include="Configuration\AccountNotFoundException.cs" />
+    <Compile Include="Configuration\ApPkiAcl.cs" />
+    <Compile Include="Configuration\Certificate.cs" />
+    <Compile Include="Configuration\CertificateV2.cs" />
+    <Compile Include="Configuration\CompositeExpression.cs" />
+    <Compile Include="Configuration\CompositeMetricConfiguration.cs" />
+    <Compile Include="Configuration\CompositeMetricSource.cs" />
+    <Compile Include="Configuration\ComputedSamplingTypeExpression.cs" />
+    <Compile Include="Configuration\ConfigurationUpdateResult.cs" />
+    <Compile Include="Configuration\ConfigurationUpdateResultList.cs" />
+    <Compile Include="Configuration\ValidationType.cs" />
+    <Compile Include="Configuration\ConfigurationValidationException.cs" />
+    <Compile Include="Configuration\DistinctCountConfiguration.cs" />
+    <Compile Include="Configuration\DsmsAcl.cs" />
+    <Compile Include="Configuration\FilteringConfiguration.cs" />
+    <Compile Include="Configuration\ICompositeMetricConfiguration.cs" />
+    <Compile Include="Configuration\IComputedSamplingTypeExpression.cs" />
+    <Compile Include="Configuration\IConfigurationUpdateResult.cs" />
+    <Compile Include="Configuration\IDistinctCountConfiguration.cs" />
+    <Compile Include="Configuration\IExpression.cs" />
+    <Compile Include="Configuration\IFilteringConfiguration.cs" />
+    <Compile Include="Configuration\IMetricConfiguration.cs" />
+    <Compile Include="Configuration\IMetricConfigurationManager.cs" />
+    <Compile Include="Configuration\IMinMaxConfiguration.cs" />
+    <Compile Include="Configuration\IMonitoringAccount.cs" />
+    <Compile Include="Configuration\IMonitoringAccountConfigurationManager.cs" />
+    <Compile Include="Configuration\IPercentileConfiguration.cs" />
+    <Compile Include="Configuration\IPermission.cs" />
+    <Compile Include="Configuration\IPermissionV2.cs" />
+    <Compile Include="Configuration\IPreaggregation.cs" />
+    <Compile Include="Configuration\IPublicationConfiguration.cs" />
+    <Compile Include="Configuration\IRawMetricConfiguration.cs" />
+    <Compile Include="Configuration\IRollupConfiguration.cs" />
+    <Compile Include="Configuration\IVirtualSyncOptions.cs" />
+    <Compile Include="Configuration\KeyVaultAcl.cs" />
+    <Compile Include="Configuration\ManagedIdentityByObjectId.cs" />
+    <Compile Include="Configuration\ManagedIdentityByResourceType.cs" />
+    <Compile Include="Configuration\ManagedIdentityObjectIdAcl.cs" />
+    <Compile Include="Configuration\ManagedIdentityResourceTypeAcl.cs" />
+    <Compile Include="Configuration\MetricConfigurationManager.cs" />
+    <Compile Include="Configuration\MetricNotFoundException.cs" />
+    <Compile Include="Configuration\MinMaxConfiguration.cs" />
+    <Compile Include="Configuration\MonitoringAccount.cs" />
+    <Compile Include="Configuration\MonitoringAccountConfigurationManager.cs" />
+    <Compile Include="Configuration\OperationStatus.cs" />
+    <Compile Include="Configuration\PercentileConfiguration.cs" />
+    <Compile Include="Configuration\Preaggregation.cs" />
+    <Compile Include="Configuration\PublicationConfiguration.cs" />
+    <Compile Include="Configuration\RawMetricConfiguration.cs" />
+    <Compile Include="Configuration\Role.cs" />
+    <Compile Include="Configuration\RoleConfiguration.cs" />
+    <Compile Include="Configuration\RollupConfiguration.cs" />
+    <Compile Include="Configuration\SecurityGroup.cs" />
+    <Compile Include="Configuration\SecurityGroupV2.cs" />
+    <Compile Include="Configuration\UserPermission.cs" />
+    <Compile Include="Configuration\UserPermissionV2.cs" />
+    <Compile Include="Configuration\VirtualSyncOptions.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

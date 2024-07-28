@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Search.Server.EventHandler.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7407BC1-36CF-4DF6-88CF-110071B8B505}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Server.EventHandler</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Server.EventHandler</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platform">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Server.DataAccess">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Server.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ICoreResourceManagementService.cs" />
+    <Compile Include="IIndexingUnitChangeEventHandler.cs" />
+    <Compile Include="IIndexingUnitChangeEventProcessor.cs" />
+    <Compile Include="IndexingUnitChangeEventHandler.cs" />
+    <Compile Include="IndexingUnitChangeEventPrerequisitesExtensions.cs" />
+    <Compile Include="IndexingUnitChangeEventProcessor.cs" />
+    <Compile Include="TeamFoundationCallbackTaskArgs.cs" />
+    <Compile Include="IndexingUnitLockManager.cs" />
+    <Compile Include="JobRunStatus.cs" />
+    <Compile Include="JobThrottleStatus.cs" />
+    <Compile Include="JobQueueController.cs" />
+    <Compile Include="CodeReindexingStatusEvaluator.cs" />
+    <Compile Include="WorkItemReindexingStatusEvaluator.cs" />
+    <Compile Include="IReindexingStatusEvaluator.cs" />
+    <Compile Include="IReindexingStatusService.cs" />
+    <Compile Include="ReindexingStatusService.cs" />
+    <Compile Include="IJobResourceUtilizationController.cs" />
+    <Compile Include="CoreJobResourceUtilizationController.cs" />
+    <Compile Include="JobResourcesRequest.cs" />
+    <Compile Include="JobResourcesResponse.cs" />
+    <Compile Include="JobResourceUtilizationController.cs" />
+    <Compile Include="CoreResourceManagementService.cs" />
+    <Compile Include="ResourceCalculators\BaseJobResourcesCalculator.cs" />
+    <Compile Include="ResourceCalculators\NullJobResourcesCalculator.cs" />
+    <Compile Include="ResourceCalculators\ResourceCalculatorRegistryService.cs" />
+    <Compile Include="ResourceCalculators\SimpleJobResourcesCalculator.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

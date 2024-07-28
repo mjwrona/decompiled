@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.TestImpact.Server.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F6850DB-77FC-4958-A2A2-B1A74FB8DA93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.TestImpact.Server.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.TestImpact.Server.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestImpact.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.TestImpact.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ReleaseManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ReleaseManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Tcm.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildImpactedTests.cs" />
+    <Compile Include="ClientTestInfo.cs" />
+    <Compile Include="CodeChangeReason.cs" />
+    <Compile Include="MethodKind.cs" />
+    <Compile Include="MethodAccess.cs" />
+    <Compile Include="CodeChange.cs" />
+    <Compile Include="SqlMessageCode.cs" />
+    <Compile Include="CodeChangesDataBase.cs" />
+    <Compile Include="DefinitionInfoDatabase.cs" />
+    <Compile Include="DefinitionRunDatabase.cs" />
+    <Compile Include="ImpactDatabase.cs" />
+    <Compile Include="ImpactDatabase2.cs" />
+    <Compile Include="ImpactDatabase3.cs" />
+    <Compile Include="TestImpactServiceDatabaseBase.cs" />
+    <Compile Include="ICodeChangesDataBaseComponent.cs" />
+    <Compile Include="IDefinitionInfoDatabaseComponent.cs" />
+    <Compile Include="IDefinitionRunDatabaseComponent.cs" />
+    <Compile Include="IImpactDataBaseComponent.cs" />
+    <Compile Include="TestManagementRunHelper.cs" />
+    <Compile Include="TestManagementResultHelper.cs" />
+    <Compile Include="ITestManagementRunHelper.cs" />
+    <Compile Include="ITestManagementResultHelper.cs" />
+    <Compile Include="BuildsDeletedEventHandlerJobInput.cs" />
+    <Compile Include="TestImpactBuildEventListner.cs" />
+    <Compile Include="DefinitionInfo.cs" />
+    <Compile Include="InvalidProjectNameException.cs" />
+    <Compile Include="AccessDeniedException.cs" />
+    <Compile Include="InvalidDefinitionRunIdException.cs" />
+    <Compile Include="TestImpactServiceSqlException.cs" />
+    <Compile Include="TestImpactObjectNotFoundSqlException.cs" />
+    <Compile Include="SecurityManager.cs" />
+    <Compile Include="TestBuildChangesCatalogService.cs" />
+    <Compile Include="TestImpactRequestContext.cs" />
+    <Compile Include="TfsTestImpactCatalogService.cs" />
+    <Compile Include="ITestBuildChangesCatalogService.cs" />
+    <Compile Include="ITfsTestImpactCatalogService.cs" />
+    <Compile Include="AssociationOption.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="TestBuild.cs" />
+    <Compile Include="TestImpactDatabase.cs" />
+    <Compile Include="TestImpactServer.cs" />
+    <Compile Include="TestImpactServiceConstants.cs" />
+    <Compile Include="TestResultCodeSignatures.cs" />
+    <Compile Include="TestSignatureData.cs" />
+    <Compile Include="FileTypeInfo.cs" />
+    <Compile Include="ImpactedTestsEqualityComparer.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="TestImpactServiceCIArea.cs" />
+    <Compile Include="TestImpactServiceCIFeature.cs" />
+    <Compile Include="TestImpactServiceCIProperty.cs" />
+    <Compile Include="TestImpactServiceCIStrings.cs" />
+    <Compile Include="CILogger.cs" />
+    <Compile Include="ICILogger.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

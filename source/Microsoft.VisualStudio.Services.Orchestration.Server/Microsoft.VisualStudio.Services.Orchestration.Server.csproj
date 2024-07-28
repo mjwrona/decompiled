@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Orchestration.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F09FDCCC-E286-40EB-9329-74A285AE7E06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Orchestration.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Orchestration.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Orchestration\Tracing\OrchestrationTraceListener.cs" />
+    <Compile Include="DispatcherDescriptor.cs" />
+    <Compile Include="ActivityDispatcherDescriptor.cs" />
+    <Compile Include="OrchestrationDispatcherDescriptor.cs" />
+    <Compile Include="OrchestrationComponent.cs" />
+    <Compile Include="OrchestrationComponent2.cs" />
+    <Compile Include="OrchestrationComponent3.cs" />
+    <Compile Include="OrchestrationComponent4.cs" />
+    <Compile Include="OrchestrationComponent5.cs" />
+    <Compile Include="OrchestrationComponent6.cs" />
+    <Compile Include="OrchestrationComponent7.cs" />
+    <Compile Include="OrchestrationComponent8.cs" />
+    <Compile Include="OrchestrationComponent9.cs" />
+    <Compile Include="OrchestrationComponent10.cs" />
+    <Compile Include="OrchestrationComponent11.cs" />
+    <Compile Include="OrchestrationComponent12.cs" />
+    <Compile Include="OrchestrationComponent13.cs" />
+    <Compile Include="OrchestrationComponent14.cs" />
+    <Compile Include="OrchestrationComponent15.cs" />
+    <Compile Include="OrchestrationComponent16.cs" />
+    <Compile Include="OrchestrationComponent17.cs" />
+    <Compile Include="OrchestrationTracer.cs" />
+    <Compile Include="OrchestrationServiceException.cs" />
+    <Compile Include="OrchestrationHubExistsException.cs" />
+    <Compile Include="OrchestrationHubNotFoundException.cs" />
+    <Compile Include="OrchestrationSessionExistsException.cs" />
+    <Compile Include="OrchestrationSessionNotFoundException.cs" />
+    <Compile Include="IOrchestrationRuntimeExtension.cs" />
+    <Compile Include="IOrchestrationHubExtension.cs" />
+    <Compile Include="IOrchestrationService.cs" />
+    <Compile Include="IOrchestrationServiceClient.cs" />
+    <Compile Include="ITeamFoundationSqlNotificationServiceExtensions.cs" />
+    <Compile Include="OrchestrationServiceExtensions.cs" />
+    <Compile Include="VssAsyncAutoResetEvent.cs" />
+    <Compile Include="VssAsyncManualResetEvent.cs" />
+    <Compile Include="VssTaskActivityInvoker`1.cs" />
+    <Compile Include="ActivityDispatcherPerformanceCounters.cs" />
+    <Compile Include="OrchestrationDispatcherPerformanceCounters.cs" />
+    <Compile Include="OrchestrationHubDescription.cs" />
+    <Compile Include="OrchestrationConstants.cs" />
+    <Compile Include="OrchestrationHubDispatcherType.cs" />
+    <Compile Include="OrchestrationHubMessageCount.cs" />
+    <Compile Include="OrchestrationMessage.cs" />
+    <Compile Include="OrchestrationRuntimeExtensions.cs" />
+    <Compile Include="OrchestrationRuntimeInstance.cs" />
+    <Compile Include="OrchestrationSession.cs" />
+    <Compile Include="OrchestrationService.cs" />
+    <Compile Include="OrchestrationSqlNotifications.cs" />
+    <Compile Include="OrchestrationRuntimeFactory.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="OrchestrationResources.cs" />
+    <Compile Include="DataAccess\ActivityDispatcherDescriptorBinder.cs" />
+    <Compile Include="DataAccess\OrchestrationSessionNextRun.cs" />
+    <Compile Include="DataAccess\OrchestrationNextSessionRunBuinder.cs" />
+    <Compile Include="DataAccess\CustomSqlError.cs" />
+    <Compile Include="DataAccess\OrchestrationHubDescriptionBinder.cs" />
+    <Compile Include="DataAccess\OrchestrationHubDescriptionBinder2.cs" />
+    <Compile Include="DataAccess\OrchestrationHubMessageCountBinder.cs" />
+    <Compile Include="DataAccess\OrchestrationMessageBinder.cs" />
+    <Compile Include="DataAccess\OrchestrationMessage2Binder.cs" />
+    <Compile Include="DataAccess\OrchestrationSessionBinder.cs" />
+    <Compile Include="DataAccess\OrchestrationSessionBinder2.cs" />
+    <Compile Include="DataAccess\OrchestrationStateBinder.cs" />
+    <Compile Include="DataAccess\RunnableOrchestrationSession.cs" />
+    <Compile Include="DataAccess\RunnableOrchestrationSessionsBatch.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OrchestrationResources.resx" />
+    <EmbeddedResource Include="PerfCounters\man.template" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

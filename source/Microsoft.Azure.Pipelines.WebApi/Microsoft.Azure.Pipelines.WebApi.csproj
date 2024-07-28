@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Pipelines.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF4F5299-2E07-4F24-A249-08913A6076DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentPoolQueue.cs" />
+    <Compile Include="Artifact.cs" />
+    <Compile Include="BuildResourceParameters.cs" />
+    <Compile Include="ContainerResourceParameters.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="ContainerResource.cs" />
+    <Compile Include="GetArtifactExpandOptions.cs" />
+    <Compile Include="GetLogExpandOptions.cs" />
+    <Compile Include="GitHubEnterpriseRepository.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LogCollection.cs" />
+    <Compile Include="PipelineBase.cs" />
+    <Compile Include="PipelineReference.cs" />
+    <Compile Include="PipelineResource.cs" />
+    <Compile Include="RepositoryResourceParameters.cs" />
+    <Compile Include="PipelineResourceParameters.cs" />
+    <Compile Include="PackageResourceParameters.cs" />
+    <Compile Include="PreviewRun.cs" />
+    <Compile Include="RepositoryTypeJsonConverter`1.cs" />
+    <Compile Include="Run.cs" />
+    <Compile Include="RunPipelineParameters.cs" />
+    <Compile Include="RunPipelineVariableParameters.cs" />
+    <Compile Include="RunReference.cs" />
+    <Compile Include="RunResources.cs" />
+    <Compile Include="RunResourcesParameters.cs" />
+    <Compile Include="RunResult.cs" />
+    <Compile Include="RepositoryResource.cs" />
+    <Compile Include="RunState.cs" />
+    <Compile Include="ServiceConnection.cs" />
+    <Compile Include="SignalRConnection.cs" />
+    <Compile Include="Stage.cs" />
+    <Compile Include="StageOld.cs" />
+    <Compile Include="StageState.cs" />
+    <Compile Include="StageResult.cs" />
+    <Compile Include="CreateServiceConnectionParameters.cs" />
+    <Compile Include="CreateRepositoryParametersJsonConverter.cs" />
+    <Compile Include="GitHubRepository.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="JobState.cs" />
+    <Compile Include="JobResult.cs" />
+    <Compile Include="CreateGitHubRepositoryParameters.cs" />
+    <Compile Include="CreateAzureReposGitRepositoryParameters.cs" />
+    <Compile Include="AzureReposGitRepository.cs" />
+    <Compile Include="CreateRepositoryParameters.cs" />
+    <Compile Include="UnknownCreateRepositoryParameters.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="RepositoryChangeIndentity.cs" />
+    <Compile Include="RepositoryChange.cs" />
+    <Compile Include="RepositoryType.cs" />
+    <Compile Include="RepositoryWebhook.cs" />
+    <Compile Include="ConfigurationType.cs" />
+    <Compile Include="ConfigurationTypeJsonConverter`1.cs" />
+    <Compile Include="CreateYamlPipelineConfigurationParameters.cs" />
+    <Compile Include="CreatePipelineConfigurationParameters.cs" />
+    <Compile Include="UnknownCreatePipelineConfigurationParameters.cs" />
+    <Compile Include="CreatePipelineParameters.cs" />
+    <Compile Include="DesignerJsonConfiguration.cs" />
+    <Compile Include="Pipeline.cs" />
+    <Compile Include="PipelineConfiguration.cs" />
+    <Compile Include="CreatePipelineConfigurationParametersJsonConverter.cs" />
+    <Compile Include="PipelineConfigurationJsonConverter.cs" />
+    <Compile Include="TaskAgentPoolReference.cs" />
+    <Compile Include="Variable.cs" />
+    <Compile Include="YamlConfiguration.cs" />
+    <Compile Include="ArtifactNotFoundException.cs" />
+    <Compile Include="ConnectionFailureException.cs" />
+    <Compile Include="InvalidRunPipelineRequestException.cs" />
+    <Compile Include="PipelineExistsException.cs" />
+    <Compile Include="InvalidRepositoryInformationException.cs" />
+    <Compile Include="PipelineValidationException.cs" />
+    <Compile Include="LogNotFoundException.cs" />
+    <Compile Include="RunOrchestrationExistsException.cs" />
+    <Compile Include="UnsupportedSortExpressionException.cs" />
+    <Compile Include="InvalidContinuationTokenException.cs" />
+    <Compile Include="RunNotFoundException.cs" />
+    <Compile Include="UnsupportedRepositoryTypeException.cs" />
+    <Compile Include="UnsupportedConfigurationTypeException.cs" />
+    <Compile Include="PipelineNotFoundException.cs" />
+    <Compile Include="FlagsEnum.cs" />
+    <Compile Include="PipelinesHttpClient.cs" />
+    <Compile Include="PipelinesHttpClientBase.cs" />
+    <Compile Include="KnownFlagsEnumTypeConverter.cs" />
+    <Compile Include="ReferenceLinksExtensions.cs" />
+    <Compile Include="UnknownEnum.cs" />
+    <Compile Include="UnknownEnumJsonConverter.cs" />
+    <Compile Include="PipelinesArea.cs" />
+    <Compile Include="PipelinesResources.cs" />
+    <Compile Include="PipelinesWebApiResources.cs" />
+    <Compile Include="Contracts\Links.cs" />
+    <Compile Include="Contracts\RepositoryJsonConverter.cs" />
+    <Compile Include="Contracts\StreamingData.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

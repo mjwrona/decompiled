@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Artifact_Unauthorized" xml:space="preserve">
+    <value>Make sure you have sufficient permissions to access the file.</value>
+  </data>
+  <data name="CheckoutSubmodulesInput" xml:space="preserve">
+    <value>Checkout submodules</value>
+  </data>
+  <data name="JenkinsConnectionNotAvailable" xml:space="preserve">
+    <value>VS402929: There was a problem connecting to the Jenkins server {0}. Check the server and try again.</value>
+  </data>
+  <data name="NoEndpointAuthorizationPresent" xml:space="preserve">
+    <value>No service connection authorization was present while preparing artifact details.</value>
+  </data>
+  <data name="DisplayNameForDefaultVersionSpecificCommit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="DisplayNameForRepositoryName" xml:space="preserve">
+    <value>Repository</value>
+  </data>
+  <data name="ServiceEndPointIdNotPresent" xml:space="preserve">
+    <value>No service connection is specified. Make sure to specify a valid service connection and try again.</value>
+  </data>
+  <data name="ProjectIdNotPresent" xml:space="preserve">
+    <value>Project ID is missing. Make sure to pass a valid project to retrieve the build pipelines.</value>
+  </data>
+  <data name="InputTypeNotSupported" xml:space="preserve">
+    <value>VS402916: Input type '{0}' is not supported.</value>
+  </data>
+  <data name="SubmoduleCheckoutRecursionLevelInput" xml:space="preserve">
+    <value>Recursion level</value>
+  </data>
+  <data name="IsMultiDefinitionTypeDisplayName" xml:space="preserve">
+    <value>IsMultiDefinitionType</value>
+  </data>
+  <data name="ReportBuildStartedDescription" xml:space="preserve">
+    <value>{0} build running</value>
+  </data>
+  <data name="TaskInputTypeMismatch" xml:space="preserve">
+    <value>Task input {0}'s type is different from the corresponding artifact input.</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="ArtifactTypeNotSupported" xml:space="preserve">
+    <value>Failed to fetch the content of the artifact of type {0}.</value>
+  </data>
+  <data name="RepositoryIdNotPresent" xml:space="preserve">
+    <value>Repository ID is missing. Make sure to pass a valid repository to retrieve the build pipelines.</value>
+  </data>
+  <data name="JenkinsUnauthorized" xml:space="preserve">
+    <value>VS402919: Unauthorized access to the Jenkins service connection.</value>
+  </data>
+  <data name="NoArtifactVersionsForBranchAvailable" xml:space="preserve">
+    <value>No artifact versions are available for branch: {0}</value>
+  </data>
+  <data name="CannotGetCommitsAsBuildDefinitionChanged" xml:space="preserve">
+    <value>The commit difference cannot be calculated as the build pipeline and build source repositories are not the same</value>
+  </data>
+  <data name="PublishDeploymentDetailsToAzureBoardWorkItemsError" xml:space="preserve">
+    <value>PublishDeploymentDetailsToAzureBoardWorkItems: Failed to update work item with error: {0}</value>
+  </data>
+  <data name="DescriptionForRepositoryName" xml:space="preserve">
+    <value>Name of the repository</value>
+  </data>
+  <data name="CheckoutSubmoduleAllNestedLabel" xml:space="preserve">
+    <value>Any nested submodules within</value>
+  </data>
+  <data name="GitHubRepoError" xml:space="preserve">
+    <value>VS402927: There was a problem retrieving the repositories (GitHub error code: {0})</value>
+  </data>
+  <data name="DescriptionForProject" xml:space="preserve">
+    <value>Name of the project that contains the build pipeline</value>
+  </data>
+  <data name="FileSizeIsTooLarge" xml:space="preserve">
+    <value>Downloading files larger than 2 MB is not supported.</value>
+  </data>
+  <data name="CheckoutDepthInput" xml:space="preserve">
+    <value>Shallow fetch depth</value>
+  </data>
+  <data name="DescriptionForArtifacts" xml:space="preserve">
+    <value>Artifacts for a build</value>
+  </data>
+  <data name="ExpectedRepositoryNotFound" xml:space="preserve">
+    <value>Selected project does not have the {0} repository.</value>
+  </data>
+  <data name="WorkItemLinkUriFormat" xml:space="preserve">
+    <value>vstfs:///ReleaseManagement/ReleaseEnvironment/{0}:{1}:{2}</value>
+  </data>
+  <data name="ProjectDetailsNotAvailable" xml:space="preserve">
+    <value>No project identifier is available in {0}. Make sure that project identifier {1} is available and try again.</value>
+  </data>
+  <data name="NugetArtifactPackageDescription" xml:space="preserve">
+    <value>Name of the package that produces the artifact.</value>
+  </data>
+  <data name="CannotResolveBranchFilterVariable" xml:space="preserve">
+    <value>Cannot find a value for the source branch variable: {0}. Make sure that the variable is not marked as secret.</value>
+  </data>
+  <data name="TfsGitSourceProviderFailedToDeleteLabel" xml:space="preserve">
+    <value>Failed to delete ref {0}.</value>
+  </data>
+  <data name="DownloadArtifactTaskNameFormat" xml:space="preserve">
+    <value>Download artifact - {0}</value>
+  </data>
+  <data name="TfsGitSourceProviderFailedToCreateLabel" xml:space="preserve">
+    <value>Failed to create ref {0} at {1}.</value>
+  </data>
+  <data name="MappingTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ServerPathLabel" xml:space="preserve">
+    <value>Server Path</value>
+  </data>
+  <data name="NoArtifactTypeError" xml:space="preserve">
+    <value>No artifact type was provided. The artifact cannot be browsed.</value>
+  </data>
+  <data name="ServiceEndpointMissing" xml:space="preserve">
+    <value>No service connection is available in current values for input type {0}.</value>
+  </data>
+  <data name="TfsOnPremArtifactServiceName" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="ServiceEndPointDescription" xml:space="preserve">
+    <value>Name of the Jenkins service connection that contains the artifact</value>
+  </data>
+  <data name="ServiceConnectionsUsedForCustomArtifacts" xml:space="preserve">
+    <value>Service connection used to upload to custom storage location.</value>
+  </data>
+  <data name="JenkinsJobIdNotPresent" xml:space="preserve">
+    <value>VS402922: No job ID is specified. Make sure to specify a valid job ID and try again.</value>
+  </data>
+  <data name="DescriptionForMulitpleBuildDefinitions" xml:space="preserve">
+    <value>Names of the build pipelines that publishes the artifacts</value>
+  </data>
+  <data name="InvalidBuildNumber" xml:space="preserve">
+    <value>Build with buildNumber {0} is not valid for project {1}</value>
+  </data>
+  <data name="DefaultBranchDisplayName" xml:space="preserve">
+    <value>Default branch</value>
+  </data>
+  <data name="SubversionTagOrBranchDescription" xml:space="preserve">
+    <value>Specify trunk, or a branch root folder, or a tag root folder. Example: branches/releases/v14.0</value>
+  </data>
+  <data name="NoSpecificVersionValueAvailableForSpecificVersionType" xml:space="preserve">
+    <value>No specific version value is available for specificVersionType default version type</value>
+  </data>
+  <data name="BuildDefinitionIdNotPresent" xml:space="preserve">
+    <value>VS402921: The build pipeline ID is missing. Make sure to pass a valid ID to retrieve the artifacts. Alternatively, the build ID can be passed to retrieve artifacts specific to the build ID.</value>
+  </data>
+  <data name="JenkinsJobName" xml:space="preserve">
+    <value>Source (job)</value>
+  </data>
+  <data name="DataSourceBindingMissing" xml:space="preserve">
+    <value>No data source binding is available for input type {0}.</value>
+  </data>
+  <data name="DisplayNameForArtifacts" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="TfsOnPremArtifactProjectDescription" xml:space="preserve">
+    <value>Name of the project in on-premises DevOps.</value>
+  </data>
+  <data name="NoArtifactVersionsForBranchAndTagsAvailable" xml:space="preserve">
+    <value>No artifact versions are available for branch: {0} and tags: {1}</value>
+  </data>
+  <data name="XamlBuild_ArtifactExtensionDisplayName" xml:space="preserve">
+    <value>XamlBuild</value>
+  </data>
+  <data name="TaskInputPopulatedFromNonEndpointTypeartifactInput" xml:space="preserve">
+    <value>The task input {0} is populated from an input which is not of type service connection.</value>
+  </data>
+  <data name="AutoTriggerWillNotHappenWarning" xml:space="preserve">
+    <value>Automatically triggered deployments will fail for this selection.</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Unknown error</value>
+  </data>
+  <data name="TfvcDisplayName" xml:space="preserve">
+    <value>TFVC</value>
+  </data>
+  <data name="RepositoryDetailsMissing" xml:space="preserve">
+    <value>Repository details are not available</value>
+  </data>
+  <data name="EnsureViewBuidPermissionForProjectCollectionServiceAccounts" xml:space="preserve">
+    <value>Also make sure that project collection service accounts have permission to view the build.</value>
+  </data>
+  <data name="DisplayNameForDefaultVersion" xml:space="preserve">
+    <value>Default version</value>
+  </data>
+  <data name="RepositoryDetailsNotAvailable" xml:space="preserve">
+    <value>VS402935: No repository identifier is available in {0}. Make sure that repository identifier {1} is available and try again.</value>
+  </data>
+  <data name="DefaultBranchDescription" xml:space="preserve">
+    <value>Branch to checkout</value>
+  </data>
+  <data name="LocalPathLabel" xml:space="preserve">
+    <value>Local Path</value>
+  </data>
+  <data name="TfsOnPremArtifactProjectName" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ArtifactDataSourceBindingNotFound" xml:space="preserve">
+    <value>VS403960: Data source binding {0} for artifact extension {1} has not been defined.</value>
+  </data>
+  <data name="BuildArtifactDisplayName" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="JenkinsErrorInParsingResponse" xml:space="preserve">
+    <value>VS402918: Unexpected error while parsing Jenkins response : '{0}'</value>
+  </data>
+  <data name="InvalidServiceEndpointId" xml:space="preserve">
+    <value>VS402923: Service connection ID is invalid. Expected a GUID. Actual: {0}</value>
+  </data>
+  <data name="DisplayNameForDefaultVersionTags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="NoVersionFound" xml:space="preserve">
+    <value>No version was found for the pipeline. Make sure that the version exists</value>
+  </data>
+  <data name="TfvcProjectDescription" xml:space="preserve">
+    <value>Projects that support TFS Version Control</value>
+  </data>
+  <data name="SpecificChangesetType" xml:space="preserve">
+    <value>Specific changeset</value>
+  </data>
+  <data name="ExternalTfsUnauthorized" xml:space="preserve">
+    <value>VS403958: Unauthorized access to the external DevOps service connection.</value>
+  </data>
+  <data name="InvalidProject" xml:space="preserve">
+    <value>Project ID specified is invalid</value>
+  </data>
+  <data name="DescriptionForDefaultVersionSpecificCommit" xml:space="preserve">
+    <value>Default to a specific commit</value>
+  </data>
+  <data name="InputsMissing" xml:space="preserve">
+    <value>Missing information for {0} in current values.</value>
+  </data>
+  <data name="DisplayNameForDefaultVersionSpecificChangeset" xml:space="preserve">
+    <value>Changeset</value>
+  </data>
+  <data name="LatestWithBranchAndTagsType" xml:space="preserve">
+    <value>Latest from a specific branch with tags</value>
+  </data>
+  <data name="NugetArtifactServiceName" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="BranchNotFoundError" xml:space="preserve">
+    <value>Selected repository {0} does not have any branch.</value>
+  </data>
+  <data name="BranchDetailsMissing" xml:space="preserve">
+    <value>Branch details are not available</value>
+  </data>
+  <data name="TfsOnPremArtifactBuildDescription" xml:space="preserve">
+    <value>Name of the build pipeline that produces the artifact.</value>
+  </data>
+  <data name="ReportBuildStatusDescription" xml:space="preserve">
+    <value>{0} build {1}</value>
+  </data>
+  <data name="CheckoutSubmoduleTopLevelOnlyLabel" xml:space="preserve">
+    <value>Top-level submodules only</value>
+  </data>
+  <data name="TfsOnPremArtifactBuildName" xml:space="preserve">
+    <value>Source (build pipeline)</value>
+  </data>
+  <data name="GitHubCommitsError" xml:space="preserve">
+    <value>There was a problem retrieving commits ({0})</value>
+  </data>
+  <data name="FileSizeIsTooLargeThan4" xml:space="preserve">
+    <value>Downloading files larger than 4 MB is not supported</value>
+  </data>
+  <data name="DescriptionForDefaultVersionSpecificChangeset" xml:space="preserve">
+    <value>Default to a specific changeset</value>
+  </data>
+  <data name="JenkinsErrorInAccess" xml:space="preserve">
+    <value>VS402917: Error retrieving details from Jenkins.</value>
+  </data>
+  <data name="NoEndpointPresent" xml:space="preserve">
+    <value>No service connection was present while preparing artifact details.</value>
+  </data>
+  <data name="AuthorizationSchemeNotUserNamePassword" xml:space="preserve">
+    <value>VS402924: Authorization scheme is invalid. Expected: UserNamePassword. Actual: {0}</value>
+  </data>
+  <data name="ProblemConnectingService" xml:space="preserve">
+    <value>VS402928: There was a problem connecting to the service. Check the service connection.</value>
+  </data>
+  <data name="GitHubCreateStatusError" xml:space="preserve">
+    <value>An error occurred while creating GitHub status '{0}' for repository '{1}' at commit '{2}': {3}</value>
+  </data>
+  <data name="DisplayNameForProject" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ArtifactItemPathNotPresent" xml:space="preserve">
+    <value>The item path of the artifact was missing in the input values.</value>
+  </data>
+  <data name="BuildAssociatedWithPreviousRelease" xml:space="preserve">
+    <value>Build associated with previous release</value>
+  </data>
+  <data name="NoBuildForMultipleBuildDefinitions" xml:space="preserve">
+    <value>VS402920: No build found for the build pipeline IDs '{0}'. Specify a valid build pipeline and try again.</value>
+  </data>
+  <data name="DescriptionForBuildDefinition" xml:space="preserve">
+    <value>Name or ID of the build pipeline that publishes the artifact</value>
+  </data>
+  <data name="BranchDetailsNotAvailable" xml:space="preserve">
+    <value>No branch identifier is available in {0}. Make sure that the branch identifier {1} is available and try again.</value>
+  </data>
+  <data name="DisplayNameForBuildDefinition" xml:space="preserve">
+    <value>Source (build pipeline)</value>
+  </data>
+  <data name="SubversionArtifactDisplayName" xml:space="preserve">
+    <value>Subversion</value>
+  </data>
+  <data name="SpecificCommitType" xml:space="preserve">
+    <value>Specific commit from default branch</value>
+  </data>
+  <data name="DescriptionForDefaultVersionSpecific" xml:space="preserve">
+    <value>Default to a specific version</value>
+  </data>
+  <data name="GitHubArtifactDisplayName" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="ExternalTfsBuildArtifactDisplayName" xml:space="preserve">
+    <value>External TFS Build</value>
+  </data>
+  <data name="GitHubBranchesError" xml:space="preserve">
+    <value>VS402926: There was a problem retrieving the branches (GitHub error code: {0})</value>
+  </data>
+  <data name="RepositoryInformationMissing" xml:space="preserve">
+    <value>The repository information was not found for '{0}'</value>
+  </data>
+  <data name="ProjectDetailsMissing" xml:space="preserve">
+    <value>Project details are not available</value>
+  </data>
+  <data name="TfsGitSourceProviderReportBuildStatusSuccess" xml:space="preserve">
+    <value>Set build status for commit {0}.</value>
+  </data>
+  <data name="InconsistentSourceRepository" xml:space="preserve">
+    <value>The source repository is different for '{0}': '{1}' and '{2}': '{3}'</value>
+  </data>
+  <data name="TfsGitSourceProviderDeletedLabel" xml:space="preserve">
+    <value>Deleted ref {0}.</value>
+  </data>
+  <data name="DisplayNameForMulitpleBuildDefinitions" xml:space="preserve">
+    <value>Source (build pipelines)</value>
+  </data>
+  <data name="DescriptionForDefaultVersionTags" xml:space="preserve">
+    <value>Default to the latest version with tags</value>
+  </data>
+  <data name="FetchingRepositoriesTraceMessage" xml:space="preserve">
+    <value>Fetching Repositories: {0} Other Details: {1}</value>
+  </data>
+  <data name="DescriptionForDefaultVersion" xml:space="preserve">
+    <value>The default version will be deployed when new releases are created. The version can be changed for manually created releases at the time of release creation</value>
+  </data>
+  <data name="GitArtifactDisplayName" xml:space="preserve">
+    <value>Azure Repos Git</value>
+  </data>
+  <data name="JenkinsArtifactDisplayName" xml:space="preserve">
+    <value>Jenkins</value>
+  </data>
+  <data name="BuildDefinitionDetailsNotAvailable" xml:space="preserve">
+    <value>No build pipeline identifier is available in {0}. Make sure that build pipeline identifier {1} is available and try again.</value>
+  </data>
+  <data name="BuildDoesNotExistErrorMessage" xml:space="preserve">
+    <value>{0} is not a valid Build ID or BuildNumber. Make sure that the build succeeded or partially succeeded and is not deleted.</value>
+  </data>
+  <data name="DisplayNameForSubversionMappings" xml:space="preserve">
+    <value>Mappings</value>
+  </data>
+  <data name="ArtifactTypeNotBrowsableError" xml:space="preserve">
+    <value>This artifact cannot be browsed.</value>
+  </data>
+  <data name="Build_ArtifactExtensionDisplayName" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="JenkinsJobDescription" xml:space="preserve">
+    <value>Name of the job that publishes the artifact. &lt;br&gt; Commits associated with the Jenkins job will be extracted and stored to make them available with releases.</value>
+  </data>
+  <data name="FileSize0IsTooLarge" xml:space="preserve">
+    <value>Downloading files larger than {0} MB is not supported.</value>
+  </data>
+  <data name="InvalidProjectId" xml:space="preserve">
+    <value>Project ID for the build artifact with version {0} is invalid.</value>
+  </data>
+  <data name="InvalidBuildId" xml:space="preserve">
+    <value>VS402925: Build ID '{0}' is invalid. Make sure that the build ID is valid and try again.</value>
+  </data>
+  <data name="NugetArtifactServiceDescription" xml:space="preserve">
+    <value>Name of the Nuget service connection that contains the artifact.</value>
+  </data>
+  <data name="GitArtifactDisplayNameOld" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="TfsGitSourceProviderCreatedLabel" xml:space="preserve">
+    <value>Created ref {0} at {1}.</value>
+  </data>
+  <data name="ReportBuildQueuedDescription" xml:space="preserve">
+    <value>{0} build queued</value>
+  </data>
+  <data name="ExternalGitArtifactDisplayName" xml:space="preserve">
+    <value>Other Git</value>
+  </data>
+  <data name="ServiceConnectionDescriptionGitHub" xml:space="preserve">
+    <value>Name of the GitHub service connection that contains the artifact.</value>
+  </data>
+  <data name="SpecificArtifactVersionNotAvailable" xml:space="preserve">
+    <value>Specific artifact version: {0} is not available</value>
+  </data>
+  <data name="MultipleBuildsFoundErrorMessage" xml:space="preserve">
+    <value>Multiple builds found matching the build number: {0}. Try giving exact build ID.</value>
+  </data>
+  <data name="ExternalTfsErrorInAccess" xml:space="preserve">
+    <value>VS403959: Error retrieving details from the external DevOps service connection.</value>
+  </data>
+  <data name="DescriptionForDefaultVersionBranch" xml:space="preserve">
+    <value>The latest artifact from the selected branch will be included in the release. You can specify a branch in two ways:
+&lt;li&gt;By clicking on the drop-down icon and choosing a branch from the drop-down list.&lt;/li&gt;
+&lt;li&gt;By typing a variable which contains a branch name. For example, if variable $(currentReleaseBranch) contains the value "releases/5" then you can enter this variable in the branch field. The value of variable at the time of release creation will be used to select the branch. Variables from variable groups can be used across multiple release pipelines.&lt;/li&gt;</value>
+  </data>
+  <data name="CannotGetCommitsAsBuildSourcesAreDifferent" xml:space="preserve">
+    <value>The commit difference cannot be calculated as the build source repositories are not same</value>
+  </data>
+  <data name="IsMultiDefinitionTypeDescription" xml:space="preserve">
+    <value>Represents whether multiple definitions are supported or not</value>
+  </data>
+  <data name="DisplayNameForDefaultVersionBranch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="NoArtifactVersionsAvailable" xml:space="preserve">
+    <value>No artifact versions are available</value>
+  </data>
+  <data name="CheckoutFromLFSDescription" xml:space="preserve">
+    <value>When "Checkout files from LFS" is selected, the agent will be prepared for fetching and checking out Git-LFS tracked files.</value>
+  </data>
+  <data name="InvalidSpecificVersionMentioned" xml:space="preserve">
+    <value>Invalid specific version {0} mentioned</value>
+  </data>
+  <data name="InvalidRepository" xml:space="preserve">
+    <value>Repository ID: {0} associated with build pipeline: {1} is invalid. Make sure the repository specified in the build pipeline is correct and try again.</value>
+  </data>
+  <data name="MappingDetailsNotAvailable" xml:space="preserve">
+    <value>VS402918: No repository code mapping details were found. Make sure that repository code mapping is provided.</value>
+  </data>
+  <data name="DownloadCustomArtifactTaskNameFormat" xml:space="preserve">
+    <value>Download artifact - {0} ({1})</value>
+  </data>
+  <data name="NoBranchesFound" xml:space="preserve">
+    <value>No branches were found for the given repository: {0}</value>
+  </data>
+  <data name="CheckoutDepthDescription" xml:space="preserve">
+    <value>Limits fetching to the specified number of commits from the tip of each remote branch history.</value>
+  </data>
+  <data name="NoArtifactVersionsForTagsAvailable" xml:space="preserve">
+    <value>No artifact versions are available for tags: {0}</value>
+  </data>
+  <data name="NoBuildForBuildDefinition" xml:space="preserve">
+    <value>VS402920: No build found for the build pipeline ID '{0}'. Specify a valid build pipeline and try again.</value>
+  </data>
+  <data name="DisplayNameForTagOrBranch" xml:space="preserve">
+    <value>Default branch or tag</value>
+  </data>
+  <data name="RepositoryDescription" xml:space="preserve">
+    <value>Repository to pull</value>
+  </data>
+  <data name="RepositoryIdNotValid" xml:space="preserve">
+    <value>Repository ID: {0} is not valid. Make sure the specified repository is correct and try again.</value>
+  </data>
+  <data name="NugetArtifactPackageName" xml:space="preserve">
+    <value>Source (package)</value>
+  </data>
+  <data name="ServiceConnectionDescriptionSubversion" xml:space="preserve">
+    <value>Name of the Subversion service connection.</value>
+  </data>
+  <data name="DisplayNameForDefaultVersionSpecific" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="FileNotFoundInArtifact" xml:space="preserve">
+    <value>The item {0} could not be found.</value>
+  </data>
+  <data name="RepositoryLabel" xml:space="preserve">
+    <value>Source (repository)</value>
+  </data>
+  <data name="LatestWithBuildDefinitionBranchAndTagsType" xml:space="preserve">
+    <value>Latest from the build pipeline default branch with tags</value>
+  </data>
+  <data name="CheckoutFromLFSInput" xml:space="preserve">
+    <value>Checkout files from LFS</value>
+  </data>
+  <data name="SpecificVersionType" xml:space="preserve">
+    <value>Specific version</value>
+  </data>
+  <data name="TfsOnPremArtifactServiceDescription" xml:space="preserve">
+    <value>Name of the on-premises DevOps service connection that contains the artifact.</value>
+  </data>
+  <data name="BuildAssociatedWithCurrentRelease" xml:space="preserve">
+    <value>Build associated with current release</value>
+  </data>
+</root>

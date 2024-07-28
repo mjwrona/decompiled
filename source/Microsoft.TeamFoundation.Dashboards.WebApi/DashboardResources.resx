@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorInvalidDashboardPosition" xml:space="preserve">
+    <value>VS402440: Invalid dashboard position passed: {0}. Dashboard position should be greater than 0.</value>
+  </data>
+  <data name="ErrorDashboardPositionCollision" xml:space="preserve">
+    <value>VS402435: Some positions of the dashboard are colliding with positions of other dashboards.</value>
+  </data>
+  <data name="ErrorEmptyWidgetName" xml:space="preserve">
+    <value>VS402415: Name of the widget cannot be empty.</value>
+  </data>
+  <data name="ErrorTeamAdminOnlyAccess" xml:space="preserve">
+    <value>VS402429: Only team administrators have access to modify dashboard resources.</value>
+  </data>
+  <data name="ErrorWidgetCountExceeded" xml:space="preserve">
+    <value>VS402427: The requested operation would result in more than allowed number of widgets. Allowed: {0}, Current: {1}, With requested:{2}.</value>
+  </data>
+  <data name="ErrorNoMetaDataFoundInCatalog" xml:space="preserve">
+    <value>VS402439: No widget metadata can be found in the catalog</value>
+  </data>
+  <data name="ErrorLimitExceeded" xml:space="preserve">
+    <value>VS402432: {0} is not within the acceptable range [{1},{2}]. Value: {3}.</value>
+  </data>
+  <data name="ErrorWidgetSettingsVersionInvalid" xml:space="preserve">
+    <value>VS403053: The new version {0} for the settings is invalid for the widget. The major, minor and patch should be positive numbers.</value>
+  </data>
+  <data name="ErrorWidgetSettingsVersionDowngrade" xml:space="preserve">
+    <value>VS403056:The new version {0} for the settings cannot be lower than the previous one {1}</value>
+  </data>
+  <data name="ErrorInvalidMetaDataConfigurationFromCatalog" xml:space="preserve">
+    <value>VS402438: Metadata for {0} was not found in catalog.</value>
+  </data>
+  <data name="ErrorWidgetServiceUnavailable" xml:space="preserve">
+    <value>VS403281: This widget depends on {0} which is currently unavailable. Please refresh the dashboard and try again.</value>
+  </data>
+  <data name="ErrorDeletingLastDashboard" xml:space="preserve">
+    <value>VS402433: Attempting to delete the last dashboard for the team.</value>
+  </data>
+  <data name="ErrorDashboardsDoNotExist" xml:space="preserve">
+    <value>VS402430: Some of the dashboards sent for update do not exist. Missing dashboards: {0}.</value>
+  </data>
+  <data name="ErrorDashboardNameMoreThanMaxLength" xml:space="preserve">
+    <value>VS402422: The dashboard name is longer than the allowed length. Max length allowed: {0}, Requested: {1}.</value>
+  </data>
+  <data name="ErrorEmptyDashboardName" xml:space="preserve">
+    <value>VS402419: Name of the dashboard cannot be empty.</value>
+  </data>
+  <data name="ErrorDashboardCountExceeded" xml:space="preserve">
+    <value>VS402426: The requested operation would result in more than allowed number of dashboards. Allowed: {0}, Current: {1}, With requested:{2}.</value>
+  </data>
+  <data name="ErrorCannotHaveWidgetId" xml:space="preserve">
+    <value>VS402413: New Widget cannot have a widget Id</value>
+  </data>
+  <data name="ErrorWidgetDoesNotExist" xml:space="preserve">
+    <value>VS402411: Widget does not exist. It may have been deleted by another user. ID: {0}.</value>
+  </data>
+  <data name="ErrorAccessDenied" xml:space="preserve">
+    <value>VS403200: User '{0}' is denied '{1}' permission on dashboard resources.</value>
+  </data>
+  <data name="ErrorDashboardDoesNotExist" xml:space="preserve">
+    <value>VS402410: This dashboard no longer exists or you do not have permissions to view it. ID: {0}</value>
+  </data>
+  <data name="ErrorWidgetsDoNotExist" xml:space="preserve">
+    <value>VS402431: Some of the widgets sent for update do not exist. Missing Widgets: {0}.</value>
+  </data>
+  <data name="ErrorWidgetSizeNotSupported" xml:space="preserve">
+    <value>VS402508: The supplied widget uses a size ({0} x {1}) which is not supported for widgets of that type.</value>
+  </data>
+  <data name="ErrorMoreThanMaxLength" xml:space="preserve">
+    <value>VS402422: The widget {0} is longer than the allowed length. Max length allowed: {1}, Requested: {2}.</value>
+  </data>
+  <data name="ErrorDashboardDescriptionMoreThanMaxLength" xml:space="preserve">
+    <value>VS403360: The dashboard description is longer than the allowed length. Max length allowed: {0}, Requested: {1}.</value>
+  </data>
+  <data name="ErrorCannotHaveDashboardId" xml:space="preserve">
+    <value>VS402417: New dashboard cannot have a dashboard Id</value>
+  </data>
+  <data name="ErrorDuplicateDashboardName" xml:space="preserve">
+    <value>VS403345: Duplicate name on dashboard. Each dashboard held by a team must use a distinct name.</value>
+  </data>
+  <data name="ErrorMissingWidgetId" xml:space="preserve">
+    <value>VS402416: Widget Id missing for updating widget.</value>
+  </data>
+  <data name="ErrorWidgetCollision" xml:space="preserve">
+    <value>VS402428: Failed to add widget. Refresh your dashboard and try again.</value>
+  </data>
+</root>

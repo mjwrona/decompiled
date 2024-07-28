@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Proxy.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E831AA9-BF4A-4208-8AC7-126B99B1C31A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Proxy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.WorkItemTracking.Proxy</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArtifactWorkItemIds.cs" />
+    <Compile Include="ClientService.cs" />
+    <Compile Include="RequestHeader.cs" />
+    <Compile Include="ClientService3.cs" />
+    <Compile Include="ClientServiceStreamingProxy.cs" />
+    <Compile Include="ConfigurationSettingsService.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="FileAttachment.cs" />
+    <Compile Include="MetadataRowSetNames.cs" />
+    <Compile Include="IMetadataRowSets.cs" />
+    <Compile Include="PagedItemsRowSetNames.cs" />
+    <Compile Include="IPagedItemsRowSets.cs" />
+    <Compile Include="IRowSet.cs" />
+    <Compile Include="WorkItemRowSetNames.cs" />
+    <Compile Include="IWorkItemRowSets.cs" />
+    <Compile Include="LongRowSetCols.cs" />
+    <Compile Include="LongRowSetKey.cs" />
+    <Compile Include="LongRowSetData.cs" />
+    <Compile Include="LongRowSetKeyComparator.cs" />
+    <Compile Include="LongRowSet.cs" />
+    <Compile Include="MetadataRowSets.cs" />
+    <Compile Include="MetadataTableHaveEntry.cs" />
+    <Compile Include="IRowSetsNative.cs" />
+    <Compile Include="IRowSetNative.cs" />
+    <Compile Include="ISerializeRow.cs" />
+    <Compile Include="MetadataRowSetsNative.cs" />
+    <Compile Include="RowSetNative.cs" />
+    <Compile Include="PagedItemsRowSets.cs" />
+    <Compile Include="AccessControlEntryData.cs" />
+    <Compile Include="AccessControlEntryExtendedData.cs" />
+    <Compile Include="AccessControlListMetadata.cs" />
+    <Compile Include="ClientService2.cs" />
+    <Compile Include="ClientService4.cs" />
+    <Compile Include="ClientService5.cs" />
+    <Compile Include="ClientService6.cs" />
+    <Compile Include="ClientService8.cs" />
+    <Compile Include="ClientService7.cs" />
+    <Compile Include="ConstantRecord.cs" />
+    <Compile Include="ConstantRecordSearchFactor.cs" />
+    <Compile Include="ExtendedAccessControlListData.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="IdentityDescriptorData.cs" />
+    <Compile Include="IdRevisionPair.cs" />
+    <Compile Include="QuerySortOrderEntry.cs" />
+    <Compile Include="RequiredPermissions.cs" />
+    <Compile Include="RowSetCollection.cs" />
+    <Compile Include="WorkItemId.cs" />
+    <Compile Include="WorkItemLinkChange.cs" />
+    <Compile Include="RetryTypes.cs" />
+    <Compile Include="RetryHandler.cs" />
+    <Compile Include="RowSet.cs" />
+    <Compile Include="RowSetColumn.cs" />
+    <Compile Include="RowSetRow.cs" />
+    <Compile Include="WorkItemRelation.cs" />
+    <Compile Include="WorkItemRowSets.cs" />
+    <Compile Include="WorkItemServer.cs" />
+    <Compile Include="ResourceStrings.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

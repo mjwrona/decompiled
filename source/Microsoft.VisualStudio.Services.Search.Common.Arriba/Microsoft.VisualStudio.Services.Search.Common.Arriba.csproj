@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.Common.Arriba.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4126205-6DCC-4EDF-8754-AE20600716CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Common.Arriba</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Common.Arriba</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Operator.cs" />
+    <Compile Include="OperatorExtensions.cs" />
+    <Compile Include="Model\CodeQueryAdvancedParser.cs" />
+    <Compile Include="Model\QueryParser.cs" />
+    <Compile Include="Model\QueryScanner.cs" />
+    <Compile Include="Model\Token.cs" />
+    <Compile Include="Model\TokenType.cs" />
+    <Compile Include="Expressions\AndExpression.cs" />
+    <Compile Include="Expressions\CodeElementFilterExpression.cs" />
+    <Compile Include="Expressions\EmptyExpression.cs" />
+    <Compile Include="Expressions\ExpressionExtensions.cs" />
+    <Compile Include="Expressions\IExpression.cs" />
+    <Compile Include="Expressions\EnumerableExpression.cs" />
+    <Compile Include="Expressions\MissingFieldExpression.cs" />
+    <Compile Include="Expressions\NotExpression.cs" />
+    <Compile Include="Expressions\OrExpression.cs" />
+    <Compile Include="Expressions\TermExpression.cs" />
+    <Compile Include="Expressions\TermsExpression.cs" />
+    <Compile Include="Expressions\RelevanceExpression.cs" />
+    <Compile Include="Expressions\Relevance\FieldBoostExpression.cs" />
+    <Compile Include="Expressions\Relevance\DecayFunction.cs" />
+    <Compile Include="Expressions\Relevance\FunctionDecayExpression`2.cs" />
+    <Compile Include="Expressions\Relevance\IRelevanceExpression.cs" />
+    <Compile Include="Expressions\Relevance\TermBoostExpression.cs" />
+    <Compile Include="Correctors\CompositeTermCorrector.cs" />
+    <Compile Include="Correctors\CorrectorTraverser.cs" />
+    <Compile Include="Correctors\ICorrector.cs" />
+    <Compile Include="Correctors\TermCorrector.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

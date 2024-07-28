@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.BlobStore.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D89CD6F4-669F-4121-893F-BACEA438E703}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.BlobStore.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing" />
+    <Reference Include="Microsoft.Azure.Storage.Blob" />
+    <Reference Include="Microsoft.Azure.Storage.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Dataflow" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobIdentifierHexConverter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobIdentifierHexOrNullConverter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DomainRole.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ISecuredDomainRequest.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\EdgeCacheUrlBuilder.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ContentDoesNotMatchException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ContentSizeException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ContentResourceContentionTimeoutException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ProviderException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IUrlSigner.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\NullableExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ObjectExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\InstrumentationManifest.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\InstrumentationManifestException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IPerformanceDataFacade.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ManifestCounters.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\NoopPerfCounter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\NoopPerformanceDataFacade.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PerfCounter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PerfCounterSet.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PerformanceDataFacade.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ReceiptSecretConstants.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ReferenceAuditEventData.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobNamespace.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\KeepUntilSecurityNamespace.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\VsoHashAlgorithm.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\AzureStorageOperationTraceAdapter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobBlockHash.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobDedupLevel.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobIdentifierHelperExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobIdentifierWithBlocks.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\EdgeCache.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\EdgeCacheHelper.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobIdWithHeaders.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BlobReference.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\KeepUntilBlobReference.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IdBlobReference.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IdBlobReferenceExtentions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BloomFilterCheckResult.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\BloomFilter`1.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ContentRangeHeaderNotFoundException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ChunkBlobHasher.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ChunkCompression.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ChunkerHelper.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ChunkedFileDownloadResult.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ClientSettingKey.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ClientSettingsConstants.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\InvalidProjectDomainIdException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ProjectDomainIdAlreadyExistsException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\RestrictedAccessException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ProjectDomainCreationException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ByteDomainId.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DomainIdFactory.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DomainIdJsonConverter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IDomainId.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IMultiDomainInfo.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\MultiDomainInfo.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\TypeConverter`1.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PhysicalDomainInfo.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ProjectDomainId.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ProjectDomainInfo.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ShardSetDomainId.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ShardSetDomainInfo.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\WellKnownDomainIds.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\StreamChunker.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IDedupProcessingQueue.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupBlobHasher.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ArraySegmentExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupCompressedBuffer.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupConstants.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupIdentifierExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupIdentifierJsonConvertor.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupIdentifierTypeConverter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupVolumeChunkStore.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DataPortResult.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupHashComparer.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupDataPortExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DefaultDownloader.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ArtifactPublishOptions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\FileBlobDescriptor.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\FileBlobType.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\FileBlobDescriptorConstants.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\GlobFactory.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Helpers.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\MultiBlockBlobCallback.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\MultiBlockBlobCallbackAsync.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\MultiBlockBlobSealCallback.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\MultiBlockBlobSealCallbackAsync.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\SingleBlockBlobCallback.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\SingleBlockBlobCallbackAsync.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IBlobHasher.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DownloadResult.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IDownloader.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IDropFile.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IDropFileWithDownloadUri.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\KeepUntilReceipt.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ListOfFiles.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\NodeBlobHasher.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ManagedParallelBlobDownloader.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ParallelHttpDownload.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DownloadConfigurationConverter.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\IPoolHandle`1.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ByteArrayPool.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Pool`1.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\EdgeType.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PreauthenticatedUri.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\NullablePreauthenticatedUriExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PrecomputedHashesGenerator.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PageItem.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PageItemType.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\ProofHelper.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\StorageReadAccessSecondaryRegionHelper.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\StreamExtensions.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\StreamRange.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\StreamWithRange.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\SummaryKeepUntilReceipt.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\VsoHash.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\XpressManaged.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\XpressNative.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\DedupTreeBuilder.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\PipelineArtifactConstants.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Resources.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Exceptions\ContentMissingException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Exceptions\FileAlreadyExistsException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Exceptions\RegistryAlreadyExistsException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Exceptions\MismatchedHashTypeException.cs" />
+    <Compile Include="VisualStudio\Services\BlobStore\Common\Exceptions\MaxRequestContentLengthException.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupChunkingAlgorithm.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupHashingAlgorithm.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupCompressionAlgorithm.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupStream.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupHash.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupStreamEntry.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupChunkFlags.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupChunk.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupDataPortRequestStatus.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupDataPortVolumeStatus.cs" />
+    <Compile Include="DataDeduplication\Interop\IDedupDataPort.cs" />
+    <Compile Include="DataDeduplication\Interop\IDedupDataPortManager.cs" />
+    <Compile Include="DataDeduplication\Interop\DedupDataPortManagerOptions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

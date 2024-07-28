@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.Azure.Pipelines.Deployment.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{920B8F8F-C6A6-4010-B2A4-97EB906AABA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.Deployment.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.Deployment.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeploymentHttpClient.cs" />
+    <Compile Include="DeploymentResourceIds.cs" />
+    <Compile Include="DeploymentWebApiResources.cs" />
+    <Compile Include="Exceptions\DeploymentException.cs" />
+    <Compile Include="Exceptions\ArtifactMetadataException.cs" />
+    <Compile Include="Exceptions\NoteNotFoundException.cs" />
+    <Compile Include="Exceptions\NoteExistsException.cs" />
+    <Compile Include="Exceptions\OccurrenceNotFoundException.cs" />
+    <Compile Include="Exceptions\OccurrenceTagExistsException.cs" />
+    <Compile Include="Exceptions\InvalidParameterException.cs" />
+    <Compile Include="Exceptions\InvalidUniqueResourceIdentifierException.cs" />
+    <Compile Include="Contracts\BaseMetadataDetails.cs" />
+    <Compile Include="Contracts\RelatedUrl.cs" />
+    <Compile Include="Contracts\DeploymentDetails.cs" />
+    <Compile Include="Contracts\PipelineRunInfo.cs" />
+    <Compile Include="Contracts\Platform.cs" />
+    <Compile Include="Contracts\VulnerabilityDetails.cs" />
+    <Compile Include="Contracts\VulnerabilityDetail.cs" />
+    <Compile Include="Contracts\PackageVersion.cs" />
+    <Compile Include="Contracts\WindowsDetail.cs" />
+    <Compile Include="Contracts\KnowledgeBase.cs" />
+    <Compile Include="Contracts\PackageIssue.cs" />
+    <Compile Include="Contracts\CVSSv3.cs" />
+    <Compile Include="Contracts\VersionKind.cs" />
+    <Compile Include="Contracts\Severity.cs" />
+    <Compile Include="Contracts\AttackVector.cs" />
+    <Compile Include="Contracts\AttackComplexity.cs" />
+    <Compile Include="Contracts\PrivilegesRequired.cs" />
+    <Compile Include="Contracts\UserInteraction.cs" />
+    <Compile Include="Contracts\Scope.cs" />
+    <Compile Include="Contracts\Impact.cs" />
+    <Compile Include="Contracts\ImageDetails.cs" />
+    <Compile Include="Contracts\ImageLayer.cs" />
+    <Compile Include="Contracts\ImageFingerprint.cs" />
+    <Compile Include="Contracts\AttestationDetails.cs" />
+    <Compile Include="Contracts\Signature.cs" />
+    <Compile Include="Contracts\Grafeas\V1\AttestationOccurrence.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Signature.cs" />
+    <Compile Include="Contracts\Grafeas\V1\DeploymentOccurrence.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Platform.cs" />
+    <Compile Include="Contracts\Grafeas\V1\ImageOccurrence.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Fingerprint.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Layer.cs" />
+    <Compile Include="Contracts\Grafeas\V1\ArtifactProvenance.cs" />
+    <Compile Include="Contracts\Grafeas\V1\VulnerabilityOccurrence.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Severity.cs" />
+    <Compile Include="Contracts\Grafeas\V1\PackageIssue.cs" />
+    <Compile Include="Contracts\Grafeas\V1\RelatedUrl.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Version.cs" />
+    <Compile Include="Contracts\Grafeas\V1\VersionKind.cs" />
+    <Compile Include="Contracts\Grafeas\V1\BuildOccurrence.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Occurrence.cs" />
+    <Compile Include="Contracts\Grafeas\V1\NoteKind.cs" />
+    <Compile Include="Contracts\Grafeas\V1\BuildProvenance.cs" />
+    <Compile Include="Contracts\Grafeas\V1\BuildArtifact.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Source.cs" />
+    <Compile Include="Contracts\Grafeas\V1\FileHashes.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Hash.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Command.cs" />
+    <Compile Include="Contracts\Grafeas\V1\Artifact.cs" />
+    <Compile Include="Contracts\Grafeas\V1\SourceContext.cs" />
+    <Compile Include="Contracts\Grafeas\V1\AliasContext.cs" />
+    <Compile Include="Contracts\Grafeas\V1\CloudRepoSourceContext.cs" />
+    <Compile Include="Contracts\Grafeas\V1\GerritSourceContext.cs" />
+    <Compile Include="Contracts\Grafeas\V1\GitSourceContext.cs" />
+    <Compile Include="Contracts\Grafeas\V1\RepoId.cs" />
+    <Compile Include="Contracts\Grafeas\V1\ProjectRepoId.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

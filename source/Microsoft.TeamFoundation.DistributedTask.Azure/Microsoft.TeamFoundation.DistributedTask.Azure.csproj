@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.DistributedTask.Azure.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{810391A9-3335-4D59-A1AE-94BE61B1D662}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Azure</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask.Azure</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.AzureSdk">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.AzureSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzureMonitorClient.cs" />
+    <Compile Include="AzureVirtualMachineClient.cs" />
+    <Compile Include="AzureVirtualMachineScaleSetClient.cs" />
+    <Compile Include="IAzureMonitorClient.cs" />
+    <Compile Include="IAzureVirtualMachineClient.cs" />
+    <Compile Include="IAzureVirtualMachineScaleSetClient.cs" />
+    <Compile Include="ICanExpire.cs" />
+    <Compile Include="Models\AutoscaleSettingResourceReference.cs" />
+    <Compile Include="Models\AutoscaleSettingResource.cs" />
+    <Compile Include="Models\AutoscaleSettingResourceProperties.cs" />
+    <Compile Include="Models\MachineInstances.cs" />
+    <Compile Include="Models\Sku.cs" />
+    <Compile Include="Models\RunCommandInput.cs" />
+    <Compile Include="Models\RunCommandInputParameter.cs" />
+    <Compile Include="Models\VirtualMachineReimageRequestBody.cs" />
+    <Compile Include="Models\VirtualMachineReimageOsProfile.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetExtension.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetExtensionProperties.cs" />
+    <Compile Include="Models\ExtensionSettings.cs" />
+    <Compile Include="Models\CustomScriptExtensionSettings.cs" />
+    <Compile Include="Models\PipelinesExtensionSettings.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetProperties.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetVMProfile.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetExtensionProfile.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetOSProfile.cs" />
+    <Compile Include="Models\LinuxConfiguration.cs" />
+    <Compile Include="Models\WindowsConfiguration.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetUpgradePolicy.cs" />
+    <Compile Include="Models\VirtualMachineAutomaticOSUpgradePolicy.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetUpgradeMode.cs" />
+    <Compile Include="Models\OrchestrationMode.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetStorageProfile.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetStorageProfileDiffDiskSettin.cs" />
+    <Compile Include="Models\DiffDiskSettingsOption.cs" />
+    <Compile Include="Models\DiffDiskSettingsPlacement.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetStorageProfileImageReference.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetOSDisk.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetOSDiskManagedDisk.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetOSDiskImage.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetReference.cs" />
+    <Compile Include="Models\VirtualMachineScaleSet.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetVM.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetVMInstanceView.cs" />
+    <Compile Include="Models\PowerState.cs" />
+    <Compile Include="Models\VirtualMachineExtensionInstanceView.cs" />
+    <Compile Include="Models\InstanceViewStatus.cs" />
+    <Compile Include="Models\VirtualMachineScaleSetVMProperties.cs" />
+    <Compile Include="Models\OSProfile.cs" />
+    <Compile Include="Models\ProvisioningState.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

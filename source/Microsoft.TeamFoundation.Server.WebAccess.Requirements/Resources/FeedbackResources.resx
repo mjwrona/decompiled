@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="FeedbackTitleWatermark" xml:space="preserve">
+    <value>Enter title</value>
+  </data>
+  <data name="FeedbackEmailPreview_EmailBodyTooLong" xml:space="preserve">
+    <value>TF400275: You have exceeded the allowed word count for the body of the email. Reduce the content size and try again.</value>
+  </data>
+  <data name="FeedbackRequest_StepNumber_Label" xml:space="preserve">
+    <value>Item: {0}</value>
+  </data>
+  <data name="ProvideFeedback" xml:space="preserve">
+    <value>Provide feedback</value>
+  </data>
+  <data name="EmailFooterHeaderFormat" xml:space="preserve">
+    <value>We have sent this notification on behalf of &lt;a href="mailto:{0}"&gt;{1}&lt;/a&gt;</value>
+  </data>
+  <data name="FeedbackEmailTemplate" xml:space="preserve">
+    <value>&lt;div&gt;
+    &lt;p&gt;${FeedbackResources.EmailTemplate_WeWantYourFeedback}&lt;/p&gt;
+
+    &lt;ol&gt;
+        {{each FeedbackItems}}
+        &lt;li&gt;${$value.title}&lt;/li&gt;
+        {{/each}}
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;a id="start-session-link" href="${StartFeedbackSessionUrl}" style="font-size: 150%"&gt;${FeedbackResources.EmailTemplate_StartYourSession}&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;${FeedbackResources.EmailTemplate_IfNotInstalled} &lt;a href="${InstallFeedbackToolUrl}"&gt;${FeedbackResources.EmailTemplate_Install}&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;${FeedbackResources.EmailTemplate_Thanks}&lt;br /&gt;
+        ${Name}&lt;/p&gt;
+
+    &lt;p&gt;&lt;i&gt;${FeedbackResources.EmailTemplate_StartSessionUrl_IfFailThenCopyUrl} &lt;/i&gt;(&lt;span id="start-session-link-url"&gt;${FeedbackResources.EmailTemplate_StartSessionUrl_ToBeGenerated}&lt;/span&gt;) &lt;i&gt;${FeedbackResources.EmailTemplate_StartSessionUrl_PasteAndLaunch}&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+</value>
+  </data>
+  <data name="MissingTitleError" xml:space="preserve">
+    <value>You must specify a valid title for the feedback request item.</value>
+  </data>
+  <data name="InstructionsLabel" xml:space="preserve">
+    <value>Instructions</value>
+  </data>
+  <data name="FeedbackRequest_SelectStakeholders_Label" xml:space="preserve">
+    <value>Select Stakeholders</value>
+  </data>
+  <data name="FeedbackWorkItemCreationFailed" xml:space="preserve">
+    <value>TF400384: Unable to create feedback request work items.  Try again and if the problem persists, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="EmailSentTo" xml:space="preserve">
+    <value>Feedback has been requested from the following recipient(s): {0}.</value>
+  </data>
+  <data name="AppTypeLabel" xml:space="preserve">
+    <value>Application Type</value>
+  </data>
+  <data name="ProvideAppDetailsTooltip" xml:space="preserve">
+    <value>Provide the details your stakeholder needs to launch the application to give feedback on. The Feedback Client will display your exact launch instructions and the link for launching the specified application.  Examples of instructions to provide your stakeholder include: login credentials, specific navigation steps to follow, or general context of the application being tested.</value>
+  </data>
+  <data name="ExpandFeedbackItemLabel" xml:space="preserve">
+    <value>Expand feedback request item</value>
+  </data>
+  <data name="FeedbackRequest_Error_FailedProvidersReselectOnly" xml:space="preserve">
+    <value>TF400597: Cannot find email addresses for the following recipient(s): '{0}'. Click Back and select other recipients.</value>
+  </data>
+  <data name="FeedbackEmailPreview_MissingEmailSubject" xml:space="preserve">
+    <value>You must specify a valid subject in the Subject box.</value>
+  </data>
+  <data name="ReadFeedbackConfigurationFailed" xml:space="preserve">
+    <value>TF400386: An error occurred attempting to retrieve the configuration to send feedback requests. Requests cannot be sent until the issue is resolved. Contact your system administrator to resolve the issue.</value>
+  </data>
+  <data name="EmailTemplate_WeWantYourFeedback" xml:space="preserve">
+    <value>We want your feedback for the following items:</value>
+  </data>
+  <data name="FileUrlLaunchPrompt" xml:space="preserve">
+    <value>Your browser does not support launching network files directly. To launch this file, you need to copy the following link to your file explorer program:</value>
+  </data>
+  <data name="FeedbackRequestItemsTooltip" xml:space="preserve">
+    <value>You can specify from {0} to {1} items to collect feedback. Specify each item to scope the feedback for the individual areas of the application that meet your needs. Or, you may specify one item that collects feedback for multiple areas.</value>
+  </data>
+  <data name="ClientAppLabel" xml:space="preserve">
+    <value>Client Application</value>
+  </data>
+  <data name="AppStartInfoRequiredError" xml:space="preserve">
+    <value>You must specify information to start the application.</value>
+  </data>
+  <data name="FeedbackRequest_Error_MailerDaemon" xml:space="preserve">
+    <value>Feedback request message was not delivered to the following recipients: {0}.</value>
+  </data>
+  <data name="TeamFormat" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="DialogTitle" xml:space="preserve">
+    <value>Request feedback</value>
+  </data>
+  <data name="NotesCountLabel" xml:space="preserve">
+    <value>{0}/1024 characters</value>
+  </data>
+  <data name="FeedbackRequest_Feedback_Description" xml:space="preserve">
+    <value>Scope the feedback request to only the areas of the product you care about.  You can request feedback on one to five items.</value>
+  </data>
+  <data name="FeedbackRequest_Error_EmailSettings" xml:space="preserve">
+    <value>Cannot send feedback request because of the following error: '{0}' Contact your Azure DevOps Server administrator to correct the error and try again.</value>
+  </data>
+  <data name="FeedbackRequest_Application_Description" xml:space="preserve">
+    <value>Microsoft Feedback Client will display a link to launch the specified application and your exact instructions, which might include login credentials, specific navigations steps to follow, or general context of the application to review.</value>
+  </data>
+  <data name="EmailTemplate_StartSessionUrl_PasteAndLaunch" xml:space="preserve">
+    <value>and paste it into a browser address bar to start the session.</value>
+  </data>
+  <data name="FeedbackRequest_SelectStackholders_Description" xml:space="preserve">
+    <value>The people you select will receive an email request that includes a link to launch Microsoft Feedback Client, the tool stakeholders use to provide feedback.</value>
+  </data>
+  <data name="DefaultSubject" xml:space="preserve">
+    <value>Requesting your feedback</value>
+  </data>
+  <data name="ToLabel" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="FeedbackMetadataLoadingFailed" xml:space="preserve">
+    <value>TF400381: An error occurred attempting to load the required metadata to request feedback work items. Try again or contact your system administrator.</value>
+  </data>
+  <data name="FeedbackNotificationFormat" xml:space="preserve">
+    <value>Feedback item(s) {0} created</value>
+  </data>
+  <data name="NewFeedbackRequest" xml:space="preserve">
+    <value>You have a new feedback request!</value>
+  </data>
+  <data name="ApplicationLaunchIntructionWatermarkLabel" xml:space="preserve">
+    <value>Instructions to launch the application listed above</value>
+  </data>
+  <data name="DetailsLabel" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="FeedbackRequest_Feedback_Label" xml:space="preserve">
+    <value>Tell Stakeholders How to Focus Their Feedback</value>
+  </data>
+  <data name="FeedbackRequest_Application_Label" xml:space="preserve">
+    <value>Tell Stakeholders How to Access the Application</value>
+  </data>
+  <data name="ToAddressesRequiredError" xml:space="preserve">
+    <value>You must specify at least one email address in the "To" field.</value>
+  </data>
+  <data name="WebAppLabel" xml:space="preserve">
+    <value>Web Application</value>
+  </data>
+  <data name="OpenNetworkFileDialogTitle" xml:space="preserve">
+    <value>Open Network File</value>
+  </data>
+  <data name="BackButtonLabel" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="FeedbackRequest_Error_FailedProviders" xml:space="preserve">
+    <value>TF400596: Cannot find email addresses for the following recipient(s): '{0}'. Type the email addresses and then click Send.</value>
+  </data>
+  <data name="SubjectLabel" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="FeedbackEmailPreview_MissingEmailBody" xml:space="preserve">
+    <value>You must specify a valid message in the message body box.</value>
+  </data>
+  <data name="IdentitiesRequiredError" xml:space="preserve">
+    <value>You must specify at least one user in the "To" field.</value>
+  </data>
+  <data name="ProvideFeedbackFormat" xml:space="preserve">
+    <value>&lt;a href="mailto:{0}"&gt;{1}&lt;/a&gt;: Please provide your feedback on '{2}'</value>
+  </data>
+  <data name="RequestItemTitleError" xml:space="preserve">
+    <value>You must specify text for the "Title" field.</value>
+  </data>
+  <data name="FeedbackRequest_AppType_RemoteMachine_LaunchUrlWatermark" xml:space="preserve">
+    <value>Enter the name of the remote computer</value>
+  </data>
+  <data name="ModernFeedbackEmailTemplate" xml:space="preserve">
+    <value>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta charset="utf-8" /&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+        &lt;style&gt;
+          /* CLIENT-SPECIFIC STYLES */
+          body, table, td, a{{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}} /* Prevent WebKit and Windows mobile changing default text sizes */
+          table, td{{mso-table-lspace: 0pt; mso-table-rspace: 0pt;}} /* Remove spacing between tables in Outlook 2007 and up */
+          img{{-ms-interpolation-mode: bicubic;}} /* Allow smoother rendering of resized image in Internet Explorer */
+          /* RESET STYLES */
+          img{{border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none;}}
+          table{{border-collapse: collapse !important;}}
+          /* iOS BLUE LINKS */
+          a[x-apple-data-detectors] {{
+          color: inherit !important;
+          text-decoration: none !important;
+          font-size: inherit !important;
+          font-family: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          }}
+          /* BASE STYLES */
+          body{{
+          height: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+          }}
+          h1, h2, h3, h4, table, td, th, a, p, span, div, i, em, li, ul, .img-block, img, .comment {{
+          font-family: Segoe UI, Helvetica, Arial, sans-serif;
+          }}
+          a {{
+          text-decoration: none;
+          color: #007ACC;
+          /*   word-break: break-all; */
+          }}
+          a:visited {{
+          /*   color: red; */
+          }}
+          td {{
+          font-size: 16px;
+          }}
+          p {{
+          margin: 0;
+          }}
+          /* buttons */
+          .btn-primary:hover {{
+          border-color: #005faa !important;
+          }}
+          .btn-default:hover {{
+          border-color: #aeaeae !important;
+          }}
+
+          .btn-primary:active {{
+          border-color: #005faa !important;
+          background: #005faa !important;
+          }}
+          .btn-default:active {{
+          border-color: #aeaeae !important;
+          background: #aeaeae !important;
+          }}
+          .img-block {{
+          display: block;
+          color: #ccc;
+          font-size: 10px;
+          max-width: 100%;
+          }}
+          .img-padding {{
+          padding: 0 20px 0 0;
+          }}
+          .subhead {{
+          font-size: 16px;
+          padding-bottom: 8px;
+          }}
+          .comment {{
+          color: #333333;
+          font-size: 14px;
+          border-radius: 5px;
+          text-align: left;
+          }}
+          .comment-gfx {{
+          padding-top: 20px;
+          }}
+          .note {{
+          font-size: 13px;
+          }}
+
+          /* INFO TABLE */
+          .activity-table {{
+          display: table;
+          }}
+          .active {{
+          background: #CEF1DE;font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 14px; color: #333333; padding: 2px 4px; display: inline-block;
+          }}
+          .inactive {{
+          background: #eeeeee;font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 14px;text-decoration: line-through;color: #666666;padding: 2px 4px;display: inline-block;
+          /*   border-radius: 5px; */
+          }}
+          .row-label {{
+          font-family: Segoe UI, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #333;
+          padding: 2px 4px;
+          line-height: 16px;
+          text-align: left;
+          }}
+
+          /* LISTS */
+          .num {{
+          background: #f2f2f2;
+          /*   border-radius: 5px; */
+          height: 20px;
+          padding: 0 7px;
+          font-size: 14px;
+          font-size: 1em;
+          }}
+          .code li {{
+          font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+          font-size: 14px;
+          text-align: left;
+          }}
+          .list li {{
+          padding: 5px;
+          /*   word-break: break-all; */
+          }}
+          .data {{
+          word-break: break-all;
+          font-family:monospace;
+          }}
+          .red {{
+          color: red;
+          }}
+          ul, ol {{
+          padding: 0 20px;
+          }}
+          ul {{
+          list-style-type: circle;
+          }}
+          .anchors {{
+          list-style-type: square;
+          }}
+          ul ul, ol ul {{
+          padding: 0 30px;
+          }}
+
+          /* OTHER */
+          .author {{
+          font-size: 13px;
+          color: #666;
+          font-style: italic;
+          padding: 5px 0 0;
+          }}
+          .code {{
+          padding:0;
+          list-style:none;
+          color: #666666;
+          }}
+          .code li {{
+          font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+          }}
+
+          .foot-logo {{
+          /*     padding: 15px 0 0px; */
+          /*     opacity: .7; */
+          }}
+
+          /* MOBILE STYLES */
+          @media screen and (max-width: 525px) {{
+          .container {{
+          padding: 0!important;
+          }}
+          .header {{
+          padding: 10px 30px !important;
+          }}
+          .mobile-sm-txt {{
+          font-size: 14px !important;
+          }}
+          .mobile-sm-txt span {{
+          display: block;
+          }}
+
+          /* ALLOWS FOR FLUID TABLES */
+          .wrapper {{
+          width: 100% !important;
+          max-width: 100% !important;
+          }}
+
+          /* ADJUSTS LAYOUT OF LOGO IMAGE */
+          .logo img {{
+          margin: 0 auto !important;
+          }}
+
+          /* HIDE CONTENT ON MOBILE */
+          .mobile-hide {{
+          display: none !important;
+          }}
+
+          /* GIVE IMAGES MAX WIDTH SO THEY SQUISH NICE */
+          .img-max {{
+          max-width: 100% !important;
+          width: 100% !important;
+          height: auto !important;
+          }}
+
+          /* FULL-WIDTH TABLES */
+          .responsive-table {{
+          width: 100% !important;
+          }}
+
+          /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+          .padding {{
+          padding: 10px 5% 15px 5% !important;
+          }}
+          .img-padding {{
+          padding: 0 0 10px 0;
+          }}
+          .padding-meta {{
+          padding: 20px !important;
+          }}
+
+          .no-padding {{
+          padding: 0 !important;
+          }}
+          /*     .section-padding {{
+          padding: 50px 15px 50px 15px !important;
+          }} */
+
+          /* CONTENT */
+          .comment {{
+          padding: 16px 22px !important;
+          }}
+          .logo {{
+          margin: 0 auto;
+          padding: 10px 0 10px 5% !important;
+          }}
+          .gfx-promo {{
+          padding-bottom: 20px;
+          width: 40% !important;
+          }}
+          .gfx-promo img {{
+          width: 100%;
+          }}
+
+          /* ADJUST BUTTONS ON MOBILE */
+          .mobile-button-container {{
+          margin: 0 auto;
+          width: 100% !important;
+          margin-bottom: 10px !important;
+          }}
+          .mobile-button {{
+          padding: 10px !important;
+          border: 0 !important;
+          font-size: 16px !important;
+          display: block !important;
+          }}
+          .mobile-center {{
+          text-align: center !important;
+          margin: 0 auto;
+          }}
+          .mobile-promos {{
+          text-align: center !important;
+          padding: 30px !important;
+          }}
+
+          .foot-logo {{
+          padding: 5px 0 25px !important;
+          }}
+
+          }}
+          /* EXTRA SMALL - PHONE */
+          @media screen and (max-width: 413px) {{
+          body[class="body-padding"] {{
+          padding: 0 !important;
+          }}
+          /* HIDE CONTENT ON MOBILE */
+          td[class="mobile-hide-xs"], td[class="mobile-hide-xs comment-gfx"]{{
+          display:none;
+          }}
+          /* ADJUST BUTTONS ON MOBILE */
+          /*     td[class="mobile-wrapper"]{{
+          padding: 10px 5% 15px 5% !important;
+          }} */
+          table[class="mobile-button-container"]{{
+          margin:0 auto;
+          width:100% !important;
+          }}
+
+          }}
+          /* ANDROID CENTER FIX */
+          div[style*="margin: 16px 0;"] {{ margin: 0 !important; }}
+        &lt;/style&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container" style="font-family: Segoe UI, Helvetica, Arial, sans-serif;  color:#444444; font-size:14px; padding: 10px;"&gt;
+      &lt;table bgcolor="#F8F8F8" border="0" cellpadding="0" cellspacing="0" width="100%" class=""&gt;
+        &lt;tr&gt;
+          &lt;td style=""&gt;&lt;/td&gt;
+          &lt;td width="660" style="background: #ffffff;"&gt;
+            &lt;!--[if (gte mso 9)|(IE)]&gt; 
+&lt;table border="0" cellpadding="0" cellspacing="0" style="width:660px; height:0;"&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; 
+&lt;![endif]--&gt;
+            &lt;!-- INNER WRAPPER --&gt;
+            &lt;table border="0" cellpadding="0" cellspacing="0" style="min-width: 100%;"&gt;
+              &lt;!-- HEADER --&gt;
+              &lt;tr&gt;
+                &lt;td style="padding: 0 35px; background:#0078CF;"&gt;
+                  &lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-height:45px;" class="responsive-table"&gt;
+                    &lt;tr&gt;
+                      &lt;td&gt;
+                        &lt;table border="0" cellpadding="0" cellspacing="0" class="logo"&gt;
+                          &lt;tr&gt;
+                            &lt;td align="" valign="top" style="padding: 9px 0;width:30px;"&gt;
+                              &lt;img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/logo-vsts.png" width="30" height="30" alt="Team Services" class="img-block" style="color: #ffffff;" /&gt;
+                            &lt;/td&gt;
+                            &lt;td color="#ffffff" style="padding: 0 5px 2px 9px; text-align: left; color: #ffffff; font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 400;"&gt;{0}&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;!-- /HEADER --&gt;
+
+              &lt;!-- CONTENT --&gt;
+              &lt;tr&gt;
+                &lt;td bgcolor="" valign="middle" class="padding-meta" style="padding: 30px 30px 30px 30px; background:white; border-bottom: 2px solid #e8e8e8;"&gt;
+                  &lt;!-- Title --&gt;
+                  &lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+                    &lt;tr&gt;
+                      &lt;td style="padding: 0 0 15px; font-size: 18px"&gt;
+                        &lt;h1 style="font-size: 22px; font-weight:500; margin:0;"&gt;{1}&lt;/h1&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                  &lt;!-- Title --&gt;
+
+                  &lt;!-- Feedback Info --&gt;
+                  &lt;table border="0" cellspacing="0" cellpadding="0" style="background:#dddddd;width: 100%;"&gt;
+                    &lt;tr&gt;
+                      &lt;td style="padding:15px;font-size: 14px;color: #444444;max-width: 590px;word-wrap:break-word;"&gt;
+                        {2}
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td style="padding: 0 15px; font-weight:500;font-size: 14px;color: #444444;max-width: 590px;word-wrap: break-word;"&gt;
+                        &lt;h4 style="margin:0px;"&gt;{3}&lt;/h4&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td style="padding: 0px 15px 15px 15px;font-size: 14px;color: #444444;max-width: 590px;word-wrap: break-word;"&gt;
+                        {4}
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                  &lt;!-- Feedback Info --&gt;
+
+                  &lt;!-- Provide Feedback --&gt;
+                  &lt;table style="width: auto;" border="0" cellspacing="0" cellpadding="0"&gt;
+                    &lt;tr&gt;
+                      &lt;td align=""&gt;
+                        &lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+                          &lt;tr&gt;
+                            &lt;td align="" style="font-size:16px;padding-top:40px;" class="padding"&gt;
+                              &lt;table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container" align="left"&gt;
+                                &lt;tr&gt;
+                                  &lt;td align="center" bgcolor="#007acc" style="padding: 10px 20px;color: #ffffff;"&gt;
+                                    &lt;a href="{5}" target="_blank" style="color: #ffffff;"&gt;{6}&lt;/a&gt;
+                                  &lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/table&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                  &lt;!-- Provide Feedback --&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;!-- CONTENT --&gt;
+
+              &lt;!-- TIP --&gt;
+              &lt;tr&gt;
+                &lt;td bgcolor="" valign="middle" class="padding-meta" style="padding: 20px 30px 20px 30px; background:white; border-bottom: 2px solid #e8e8e8;"&gt;
+                  &lt;!-- SUBSECTION --&gt;
+                  &lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+                    &lt;tr&gt;
+                      &lt;td style="padding: 0 0 15px;font-size: 18px;color:#444444;"&gt;
+                        {7}
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+
+                  &lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+                    &lt;tr&gt;
+                      &lt;td style="font-size: 14px"&gt;
+                        {8}
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;!-- TIP --&gt;
+
+              &lt;!-- FOOTER --&gt;
+              &lt;tr&gt;
+                &lt;td class="mobile-center" style="padding: 0 30px; text-align: left; background:#dddddd;" &gt;
+                  &lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="responsive-table"&gt;
+                    &lt;tr&gt;
+                      &lt;td colspan="2" class="mobile-center" style="padding-top: 15px; font-size: 12px; line-height: 18px; font-family: Segoe UI, Helvetica, Arial, sans-serif;  color:#444444; text-align: left;"&gt;
+                        {9}
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td&gt;
+                        &lt;table style="width: auto;" align="left" border="0" cellspacing="0" cellpadding="0" class="responsive-table"&gt;
+                          &lt;tr&gt;
+                            &lt;td class="mobile-center" style="padding: 15px 0; font-size: 12px; line-height: 18px; font-family: Segoe UI, Helvetica, Arial, sans-serif;  color:#444444; text-align: left;"&gt;
+                              &lt;a target="_blank" href="https://aka.ms/fb-getstarted"&gt;{10}&lt;/a&gt;  |  &lt;a target="_blank" href="https://aka.ms/fb-learnmore"&gt;{11}&lt;/a&gt;  |  &lt;a target="_blank" href="https://aka.ms/fb-support"&gt;{12}&lt;/a&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                        &lt;table style="width: auto;" align="right" border="0" cellspacing="0" cellpadding="0" class="responsive-table"&gt;
+                          &lt;tr&gt;
+                            &lt;td class="mobile-center foot-logo" style="padding: 15px 0; text-align: right;"&gt;
+                              &lt;img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/logo-ms.png" width="77" height="15" alt="Microsoft" style="font-size: 12px; font-family: Segoe UI, Helvetica, Arial, sans-serif;  color:#999999; display:inline-block;" /&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;!-- FOOTER --&gt;
+            &lt;/table&gt;
+            &lt;/td&gt;
+          &lt;td style=""&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</value>
+  </data>
+  <data name="CannotCreatePage" xml:space="preserve">
+    <value>Cannot create the requested page because of an invalid page index {0}.</value>
+  </data>
+  <data name="DeleteFeedbackItemLinkLabel" xml:space="preserve">
+    <value>Delete feedback request item</value>
+  </data>
+  <data name="WorkItemLinkSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="TitleLabel" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="FeedbackRequest_AppType_WebApp_LaunchUrlWatermark" xml:space="preserve">
+    <value>Enter a URL. For example, "http://cpandl.com"</value>
+  </data>
+  <data name="RemoteAppWatermarkLabel" xml:space="preserve">
+    <value>Enter the name of the remote computer</value>
+  </data>
+  <data name="RequestItemDetailsWatermarkLabel" xml:space="preserve">
+    <value>Provide details to scope the feedback for stakeholders.</value>
+  </data>
+  <data name="FeedbackRelatedLinkCreationFailed" xml:space="preserve">
+    <value>TF400382: Unable to add links between the created feedback work items. Although the feedback request work items were created, email notifications were not sent. To recover, you can manually email the stakeholders and create the related links between work items.</value>
+  </data>
+  <data name="FeedbackRequestDescriptionFormat" xml:space="preserve">
+    <value>*---------------------------------------------------------------&lt;br&gt;* This is auto-generated content. Please do not edit it.&lt;br&gt;*---------------------------------------------------------------&lt;br&gt;{0}&lt;br&gt;*---------------------------------------------------------------</value>
+  </data>
+  <data name="AddFeedbackItemLinkLabel" xml:space="preserve">
+    <value>Add feedback item</value>
+  </data>
+  <data name="ClientAppWatermarkLabel" xml:space="preserve">
+    <value>Enter an application path. For example: C:\Windows\notepad.exe</value>
+  </data>
+  <data name="FeedbackRequest_DeleteItem_Label" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="FeedbackRequest_Form_Cancel_Confirmation" xml:space="preserve">
+    <value>Leaving this page will discard all changes to the feedback request form. Do you want to exit the request?</value>
+  </data>
+  <data name="WebAppWatermarkLabel" xml:space="preserve">
+    <value>Enter a URL. For example: https://www.microsoft.com</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="FeedbackItemTitleLabel" xml:space="preserve">
+    <value>Title of feedback item</value>
+  </data>
+  <data name="FeedbackRequest_Introduction_Label" xml:space="preserve">
+    <value>Request stakeholders to provide feedback on an application that your team has built or plans to build. See the &lt;a target="_blank" href="{0}"&gt;Privacy Statement&lt;/a&gt; for more information.</value>
+  </data>
+  <data name="EmailTemplate_StartYourSession" xml:space="preserve">
+    <value>Start your feedback session</value>
+  </data>
+  <data name="QuickTip" xml:space="preserve">
+    <value>Quick Tip!</value>
+  </data>
+  <data name="OpenNetworkFileDialog_CloseButton_Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LinksControlStoryboardLink" xml:space="preserve">
+    <value>Storyboard: {0}</value>
+  </data>
+  <data name="EmailTemplate_StartSessionUrl_ToBeGenerated" xml:space="preserve">
+    <value>to be generated once you click Send</value>
+  </data>
+  <data name="FeedbackRequest_Error_NoFeedbackRequestWITD" xml:space="preserve">
+    <value>TF400327: The work item type for feedback request items is not present. Contact your Azure DevOps Server administrator to correct the configuration.</value>
+  </data>
+  <data name="RemoteMachineLabel" xml:space="preserve">
+    <value>Remote Machine</value>
+  </data>
+  <data name="AppLaunchInstrLabel" xml:space="preserve">
+    <value>Launch Instructions</value>
+  </data>
+  <data name="EmailTip" xml:space="preserve">
+    <value>Users with stakeholder access can use the "Connected" mode of "Test &amp; Feedback" extension to view all pending requests at one place.</value>
+  </data>
+  <data name="FeedbackLabel" xml:space="preserve">
+    <value>Feedback on</value>
+  </data>
+  <data name="PreviewButtonLabel" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="FeedbackRequestEmailFailed" xml:space="preserve">
+    <value>TF400383: An error occurred while attempting to email the feedback request to stakeholders. Although the feedback request work items were created, email notifications were not sent. To recover, you can manually email the stakeholders.</value>
+  </data>
+  <data name="Instructions" xml:space="preserve">
+    <value>Instructions</value>
+  </data>
+  <data name="EmailTemplate_Install" xml:space="preserve">
+    <value>install the feedback tool</value>
+  </data>
+  <data name="NoValidIdentitiesFound" xml:space="preserve">
+    <value>TF400064: No valid email addresses resolved.  At least one valid email address is required to complete the request for feedback.</value>
+  </data>
+  <data name="Error_TfsEmailNotConfigured" xml:space="preserve">
+    <value>TF400264: Azure DevOps Server is not configured to send email notifications. Contact your Azure DevOps Server administrator to configure email notifications. Then, refresh the webpage and create the feedback request.</value>
+  </data>
+  <data name="FeedbackEmailPreview_MissingEmailTo" xml:space="preserve">
+    <value>You must specify a valid email address in the To box.</value>
+  </data>
+  <data name="FeedbackWorkItemHistoryUpdateFailed" xml:space="preserve">
+    <value>TF400385: Unable to update work item history with email notifications that were sent. Although the feedback request work items were created and the email notifications were sent, the work item history was not updated with the email notification event. To recover, you can manually modify the work items to indicate that an email was sent.</value>
+  </data>
+  <data name="SubjectWatermark" xml:space="preserve">
+    <value>Enter subject</value>
+  </data>
+  <data name="NoInstructions" xml:space="preserve">
+    <value>&lt;i&gt;No instructions have been provided.&lt;/i&gt;</value>
+  </data>
+  <data name="FeedbackRequest_Error_DueDateInThePast" xml:space="preserve">
+    <value>TF400153: You cannot specify a Due Date that is prior to today's date.</value>
+  </data>
+  <data name="EmailTemplate_IfNotInstalled" xml:space="preserve">
+    <value>If the feedback tool is not already installed on your machine,</value>
+  </data>
+  <data name="SendButtonLabel" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="DefaultEmailSubject" xml:space="preserve">
+    <value>{0} is inviting you to provide feedback on team project {1}</value>
+  </data>
+  <data name="CollapseFeedbackItemLabel" xml:space="preserve">
+    <value>Collapse feedback request item</value>
+  </data>
+  <data name="EmailTemplate_StartSessionUrl_IfFailThenCopyUrl" xml:space="preserve">
+    <value>If clicking the "Start your feedback session" link fails to launch the feedback session, copy the following URL</value>
+  </data>
+  <data name="FeedbackRequest_AppType_ClientApp_LaunchUrlWatermark" xml:space="preserve">
+    <value>Enter an application path.  For example, "C:\Windows\notepad.exe"</value>
+  </data>
+  <data name="EmailTemplate_Thanks" xml:space="preserve">
+    <value>Thanks,</value>
+  </data>
+  <data name="GetStarted" xml:space="preserve">
+    <value>Get Started</value>
+  </data>
+</root>

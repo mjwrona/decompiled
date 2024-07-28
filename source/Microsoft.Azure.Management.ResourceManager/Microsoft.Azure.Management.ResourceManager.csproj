@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Management.ResourceManager.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4304160E-7DF4-4DDD-BAA8-A9253559F3AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Management.ResourceManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Management.ResourceManager</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Rest.ClientRuntime">
+      <HintPath>lib\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure">
+      <HintPath>lib\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeploymentOperations.cs" />
+    <Compile Include="DeploymentOperationsExtensions.cs" />
+    <Compile Include="DeploymentScriptsClient.cs" />
+    <Compile Include="DeploymentScriptsOperations.cs" />
+    <Compile Include="DeploymentScriptsOperationsExtensions.cs" />
+    <Compile Include="DeploymentsOperations.cs" />
+    <Compile Include="DeploymentsOperationsExtensions.cs" />
+    <Compile Include="FeatureClient.cs" />
+    <Compile Include="FeaturesOperations.cs" />
+    <Compile Include="FeaturesOperationsExtensions.cs" />
+    <Compile Include="IDeploymentOperations.cs" />
+    <Compile Include="IDeploymentScriptsClient.cs" />
+    <Compile Include="IDeploymentScriptsOperations.cs" />
+    <Compile Include="IDeploymentsOperations.cs" />
+    <Compile Include="IFeatureClient.cs" />
+    <Compile Include="IFeaturesOperations.cs" />
+    <Compile Include="IManagementLinkClient.cs" />
+    <Compile Include="IManagementLockClient.cs" />
+    <Compile Include="IManagementLocksOperations.cs" />
+    <Compile Include="IOperations.cs" />
+    <Compile Include="IPolicyAssignmentsOperations.cs" />
+    <Compile Include="IPolicyClient.cs" />
+    <Compile Include="IPolicyDefinitionsOperations.cs" />
+    <Compile Include="IPolicySetDefinitionsOperations.cs" />
+    <Compile Include="IProvidersOperations.cs" />
+    <Compile Include="IResourceGroupsOperations.cs" />
+    <Compile Include="IResourceLinksOperations.cs" />
+    <Compile Include="IResourceManagementClient.cs" />
+    <Compile Include="IResourcesOperations.cs" />
+    <Compile Include="ISubscriptionClient.cs" />
+    <Compile Include="ISubscriptionsOperations.cs" />
+    <Compile Include="ITagsOperations.cs" />
+    <Compile Include="ITenantsOperations.cs" />
+    <Compile Include="ManagementLinkClient.cs" />
+    <Compile Include="ManagementLockClient.cs" />
+    <Compile Include="ManagementLocksOperations.cs" />
+    <Compile Include="ManagementLocksOperationsExtensions.cs" />
+    <Compile Include="Operations.cs" />
+    <Compile Include="OperationsExtensions.cs" />
+    <Compile Include="PolicyAssignmentsOperations.cs" />
+    <Compile Include="PolicyAssignmentsOperationsExtensions.cs" />
+    <Compile Include="PolicyClient.cs" />
+    <Compile Include="PolicyDefinitionsOperations.cs" />
+    <Compile Include="PolicyDefinitionsOperationsExtensions.cs" />
+    <Compile Include="PolicySetDefinitionsOperations.cs" />
+    <Compile Include="PolicySetDefinitionsOperationsExtensions.cs" />
+    <Compile Include="ProvidersOperations.cs" />
+    <Compile Include="ProvidersOperationsExtensions.cs" />
+    <Compile Include="ResourceGroupsOperations.cs" />
+    <Compile Include="ResourceGroupsOperationsExtensions.cs" />
+    <Compile Include="ResourceLinksOperations.cs" />
+    <Compile Include="ResourceLinksOperationsExtensions.cs" />
+    <Compile Include="ResourceManagementClient.cs" />
+    <Compile Include="ResourcesOperations.cs" />
+    <Compile Include="ResourcesOperationsExtensions.cs" />
+    <Compile Include="SdkInfo.cs" />
+    <Compile Include="SubscriptionClient.cs" />
+    <Compile Include="SubscriptionsOperations.cs" />
+    <Compile Include="SubscriptionsOperationsExtensions.cs" />
+    <Compile Include="TagsOperations.cs" />
+    <Compile Include="TagsOperationsExtensions.cs" />
+    <Compile Include="TenantsOperations.cs" />
+    <Compile Include="TenantsOperationsExtensions.cs" />
+    <Compile Include="SafeJsonConvertWrapper.cs" />
+    <Compile Include="Models\AliasPathType.cs" />
+    <Compile Include="Models\AliasType.cs" />
+    <Compile Include="Models\AzureCliScript.cs" />
+    <Compile Include="Models\AzurePowerShellScript.cs" />
+    <Compile Include="Models\AzureResourceBase.cs" />
+    <Compile Include="Models\BasicDependency.cs" />
+    <Compile Include="Models\ChangeType.cs" />
+    <Compile Include="Models\ChangeTypeEnumExtension.cs" />
+    <Compile Include="Models\CleanupOptions.cs" />
+    <Compile Include="Models\DebugSetting.cs" />
+    <Compile Include="Models\DefaultErrorResponse.cs" />
+    <Compile Include="Models\DefaultErrorResponseException.cs" />
+    <Compile Include="Models\Dependency.cs" />
+    <Compile Include="Models\Deployment.cs" />
+    <Compile Include="Models\DeploymentExportResult.cs" />
+    <Compile Include="Models\DeploymentExtended.cs" />
+    <Compile Include="Models\DeploymentExtendedFilter.cs" />
+    <Compile Include="Models\DeploymentMode.cs" />
+    <Compile Include="Models\DeploymentModeEnumExtension.cs" />
+    <Compile Include="Models\DeploymentOperation.cs" />
+    <Compile Include="Models\DeploymentOperationProperties.cs" />
+    <Compile Include="Models\DeploymentProperties.cs" />
+    <Compile Include="Models\DeploymentPropertiesExtended.cs" />
+    <Compile Include="Models\DeploymentScript.cs" />
+    <Compile Include="Models\DeploymentScriptUpdateParameter.cs" />
+    <Compile Include="Models\DeploymentsWhatIfAtSubscriptionScopeHeaders.cs" />
+    <Compile Include="Models\DeploymentsWhatIfHeaders.cs" />
+    <Compile Include="Models\DeploymentValidateResult.cs" />
+    <Compile Include="Models\DeploymentWhatIf.cs" />
+    <Compile Include="Models\DeploymentWhatIfProperties.cs" />
+    <Compile Include="Models\DeploymentWhatIfSettings.cs" />
+    <Compile Include="Models\EnforcementMode.cs" />
+    <Compile Include="Models\EnvironmentVariable.cs" />
+    <Compile Include="Models\ErrorAdditionalInfo.cs" />
+    <Compile Include="Models\ErrorResponse.cs" />
+    <Compile Include="Models\ExportTemplateRequest.cs" />
+    <Compile Include="Models\FeatureProperties.cs" />
+    <Compile Include="Models\FeatureResult.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\FilterEnumExtension.cs" />
+    <Compile Include="Models\GenericResource.cs" />
+    <Compile Include="Models\GenericResourceFilter.cs" />
+    <Compile Include="Models\HttpMessage.cs" />
+    <Compile Include="Models\Identity.cs" />
+    <Compile Include="Models\IdentityUserAssignedIdentitiesValue.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\LockLevel.cs" />
+    <Compile Include="Models\ManagedServiceIdentity.cs" />
+    <Compile Include="Models\ManagedServiceIdentityType.cs" />
+    <Compile Include="Models\ManagementLockObject.cs" />
+    <Compile Include="Models\ManagementLockOwner.cs" />
+    <Compile Include="Models\OnErrorDeployment.cs" />
+    <Compile Include="Models\OnErrorDeploymentExtended.cs" />
+    <Compile Include="Models\OnErrorDeploymentType.cs" />
+    <Compile Include="Models\OnErrorDeploymentTypeEnumExtension.cs" />
+    <Compile Include="Models\Operation.cs" />
+    <Compile Include="Models\OperationDisplay.cs" />
+    <Compile Include="Models\Page`1.cs" />
+    <Compile Include="Models\Page1`1.cs" />
+    <Compile Include="Models\ParameterDefinitionsValue.cs" />
+    <Compile Include="Models\ParameterDefinitionsValueMetadata.cs" />
+    <Compile Include="Models\ParametersLink.cs" />
+    <Compile Include="Models\ParameterType.cs" />
+    <Compile Include="Models\ParameterValuesValue.cs" />
+    <Compile Include="Models\Plan.cs" />
+    <Compile Include="Models\PolicyAssignment.cs" />
+    <Compile Include="Models\PolicyDefinition.cs" />
+    <Compile Include="Models\PolicyDefinitionGroup.cs" />
+    <Compile Include="Models\PolicyDefinitionReference.cs" />
+    <Compile Include="Models\PolicyMode.cs" />
+    <Compile Include="Models\PolicySetDefinition.cs" />
+    <Compile Include="Models\PolicySku.cs" />
+    <Compile Include="Models\PolicyType.cs" />
+    <Compile Include="Models\PropertyChangeType.cs" />
+    <Compile Include="Models\PropertyChangeTypeEnumExtension.cs" />
+    <Compile Include="Models\Provider.cs" />
+    <Compile Include="Models\ProviderResourceType.cs" />
+    <Compile Include="Models\Resource.cs" />
+    <Compile Include="Models\ResourceGroup.cs" />
+    <Compile Include="Models\ResourceGroupExportResult.cs" />
+    <Compile Include="Models\ResourceGroupFilter.cs" />
+    <Compile Include="Models\ResourceGroupPatchable.cs" />
+    <Compile Include="Models\ResourceGroupProperties.cs" />
+    <Compile Include="Models\ResourceIdentityType.cs" />
+    <Compile Include="Models\ResourceIdentityTypeEnumExtension.cs" />
+    <Compile Include="Models\ResourceLink.cs" />
+    <Compile Include="Models\ResourceLinkFilter.cs" />
+    <Compile Include="Models\ResourceLinkProperties.cs" />
+    <Compile Include="Models\ResourceManagementErrorWithDetails.cs" />
+    <Compile Include="Models\ResourceProviderOperationDisplayProperties.cs" />
+    <Compile Include="Models\ResourcesMoveInfo.cs" />
+    <Compile Include="Models\ScopedDeployment.cs" />
+    <Compile Include="Models\ScriptLog.cs" />
+    <Compile Include="Models\ScriptLogsList.cs" />
+    <Compile Include="Models\ScriptProvisioningState.cs" />
+    <Compile Include="Models\ScriptStatus.cs" />
+    <Compile Include="Models\Sku.cs" />
+    <Compile Include="Models\SpendingLimit.cs" />
+    <Compile Include="Models\SpendingLimitEnumExtension.cs" />
+    <Compile Include="Models\SubResource.cs" />
+    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="Models\SubscriptionPolicies.cs" />
+    <Compile Include="Models\SubscriptionState.cs" />
+    <Compile Include="Models\SubscriptionStateEnumExtension.cs" />
+    <Compile Include="Models\TagCount.cs" />
+    <Compile Include="Models\TagDetails.cs" />
+    <Compile Include="Models\Tags.cs" />
+    <Compile Include="Models\TagsPatchResource.cs" />
+    <Compile Include="Models\TagsResource.cs" />
+    <Compile Include="Models\TagValue.cs" />
+    <Compile Include="Models\TargetResource.cs" />
+    <Compile Include="Models\TemplateHashResult.cs" />
+    <Compile Include="Models\TemplateLink.cs" />
+    <Compile Include="Models\TenantIdDescription.cs" />
+    <Compile Include="Models\UserAssignedIdentity.cs" />
+    <Compile Include="Models\WhatIfChange.cs" />
+    <Compile Include="Models\WhatIfOperationResult.cs" />
+    <Compile Include="Models\WhatIfPropertyChange.cs" />
+    <Compile Include="Models\WhatIfResultFormat.cs" />
+    <Compile Include="Models\WhatIfResultFormatEnumExtension.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

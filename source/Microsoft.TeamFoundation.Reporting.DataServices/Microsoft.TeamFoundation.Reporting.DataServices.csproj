@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Reporting.DataServices.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4CB15A3-E463-4752-858C-4BAE57418A6E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Reporting.DataServices</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Reporting.DataServices</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Charting.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Dashboards.Common" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartingFeatureState.cs" />
+    <Compile Include="ReportingConstants.cs" />
+    <Compile Include="DataServicesTimeoutPolicy.cs" />
+    <Compile Include="DataServicesLimitPolicy.cs" />
+    <Compile Include="ReportingRestResources.cs" />
+    <Compile Include="ReportingLayers.cs" />
+    <Compile Include="ReportingLocationIds.cs" />
+    <Compile Include="ReportingTracePointRange.cs" />
+    <Compile Include="ReportingTracePointAllocations.cs" />
+    <Compile Include="DataServicesPermission.cs" />
+    <Compile Include="DefaultDateRanges.cs" />
+    <Compile Include="IHistoryRange.cs" />
+    <Compile Include="IDateRange.cs" />
+    <Compile Include="IFixedIntervalDateRange.cs" />
+    <Compile Include="DateRangeBase.cs" />
+    <Compile Include="FixedIntervalDateRange.cs" />
+    <Compile Include="WeeklyDateRange.cs" />
+    <Compile Include="MonthlyDateRange.cs" />
+    <Compile Include="IDataServicesFilteredDataProvider.cs" />
+    <Compile Include="TransformSecurityInformation.cs" />
+    <Compile Include="ChartConfigurationAlreadyCreatedException.cs" />
+    <Compile Include="TransformOptionsAlreadyCreatedException.cs" />
+    <Compile Include="TransformOptionsDoesNotExistException.cs" />
+    <Compile Include="ChartConfigurationDoesNotExistException.cs" />
+    <Compile Include="InvalidColorConfigurationException.cs" />
+    <Compile Include="TooManyChartsPerGroupException.cs" />
+    <Compile Include="TooManyColorsPerChartException.cs" />
+    <Compile Include="TooManyOptionsPerTransformException.cs" />
+    <Compile Include="InvalidChartConfigurationException.cs" />
+    <Compile Include="DataServiceIsNotRegistered.cs" />
+    <Compile Include="ChartScopeProviderNotFoundException.cs" />
+    <Compile Include="ChartProviderNotEnabledException.cs" />
+    <Compile Include="TransformFilterValueNotFound.cs" />
+    <Compile Include="InvalidTransformOptionsException.cs" />
+    <Compile Include="InvalidChartGroupException.cs" />
+    <Compile Include="UnrecognizedChartRangeOptionException.cs" />
+    <Compile Include="ChartDataExceedsAllowedLimitsException.cs" />
+    <Compile Include="ICountLoad.cs" />
+    <Compile Include="LoadCounter.cs" />
+    <Compile Include="TrendDateTimeHelper.cs" />
+    <Compile Include="HistoryRange.cs" />
+    <Compile Include="IProvideChartingData.cs" />
+    <Compile Include="ChartProviderBase.cs" />
+    <Compile Include="IDataServiceCapabilityProvider.cs" />
+    <Compile Include="FeatureProviderInfo.cs" />
+    <Compile Include="FeatureProviderScopes.cs" />
+    <Compile Include="FeatureProviderAssemblies.cs" />
+    <Compile Include="FeatureProviderTypes.cs" />
+    <Compile Include="IFeatureProviderRegistryService.cs" />
+    <Compile Include="FeatureProviderRegistryService.cs" />
+    <Compile Include="IDataServiceCapabilitiesService.cs" />
+    <Compile Include="DataServiceCapabilitiesService.cs" />
+    <Compile Include="ChartDimensionality.cs" />
+    <Compile Include="FactoryHelper.cs" />
+    <Compile Include="TelemetryHelper.cs" />
+    <Compile Include="IDataServicesDataTransformer.cs" />
+    <Compile Include="IDataServicesSecurityProvider.cs" />
+    <Compile Include="IDataServicesSecurityProvider2.cs" />
+    <Compile Include="IDataServicesService.cs" />
+    <Compile Include="IProvideFilteredData`1.cs" />
+    <Compile Include="IInterpretTimedData`1.cs" />
+    <Compile Include="IInterpretRecord`1.cs" />
+    <Compile Include="IInterpretQueryText.cs" />
+    <Compile Include="TransformInstructions`1.cs" />
+    <Compile Include="ITabulator`1.cs" />
+    <Compile Include="ReportingResources.cs" />
+    <Compile Include="Routing\ChartConfigurationRoutes.cs" />
+    <Compile Include="Routing\DataServiceCapabilitiesRoutes.cs" />
+    <Compile Include="Routing\TransformQueryRoutes.cs" />
+    <Compile Include="Model\OrderDirection.cs" />
+    <Compile Include="Model\OrderProperty.cs" />
+    <Compile Include="Model\RangeOptionNames.cs" />
+    <Compile Include="Model\ChartType.cs" />
+    <Compile Include="Model\ChartColors.cs" />
+    <Compile Include="FeatureUtilities\DefaultChartSecuredObject.cs" />
+    <Compile Include="FeatureUtilities\DateTimeExtensionMethods.cs" />
+    <Compile Include="DataAccess\ReportingSqlConstants.cs" />
+    <Compile Include="DataAccess\ReportingSqlError.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent2.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent3.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent4.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent5.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent6.cs" />
+    <Compile Include="DataAccess\GroupKeyHelper.cs" />
+    <Compile Include="DataAccess\ChartConfigurationSqlResourceComponent7.cs" />
+    <Compile Include="DataAccess\Traditional\Binders\ChartConfigurationBinder.cs" />
+    <Compile Include="DataAccess\Traditional\Binders\ChartConfigurationBinder2.cs" />
+    <Compile Include="DataAccess\Traditional\Binders\ChartIdBinder.cs" />
+    <Compile Include="DataAccess\Traditional\Binders\ColorConfigurationBinder.cs" />
+    <Compile Include="DataAccess\DataModel\ChartConfigurationDataModel.cs" />
+    <Compile Include="DataAccess\DataModel\TransformOptionsDataModel.cs" />
+    <Compile Include="Services\IChartTransformer.cs" />
+    <Compile Include="Services\IDataTransformPipeline.cs" />
+    <Compile Include="Services\DataTransformPipelineBase`1.cs" />
+    <Compile Include="Services\AgregatedRecordLabelComparer.cs" />
+    <Compile Include="Services\AgregatedRecordValueComparer.cs" />
+    <Compile Include="Services\CaseInsensitiveStringOrObjectComparar.cs" />
+    <Compile Include="Services\ChartConfigurationService.cs" />
+    <Compile Include="Services\ChartsDeletedNotification.cs" />
+    <Compile Include="Services\ComparisonHelper.cs" />
+    <Compile Include="Services\DataServicesDataTransformer`1.cs" />
+    <Compile Include="Services\DataTransformService.cs" />
+    <Compile Include="Services\IChartConfigurationService.cs" />
+    <Compile Include="Services\AggregationMediator.cs" />
+    <Compile Include="Services\IAggregationStrategy`1.cs" />
+    <Compile Include="Services\CountAggregationStrategy`1.cs" />
+    <Compile Include="Services\SumAggregationStrategy`1.cs" />
+    <Compile Include="Services\ResultsTable.cs" />
+    <Compile Include="Services\ChartingJsonWriter.cs" />
+    <Compile Include="Services\IDataServicesWriter.cs" />
+    <Compile Include="Services\IDataTransformService.cs" />
+    <Compile Include="Services\JsonDataFormatter.cs" />
+    <Compile Include="Services\FormattedRecord.cs" />
+    <Compile Include="Services\JsonDataTableWriter.cs" />
+    <Compile Include="Services\Tabulator`1.cs" />
+    <Compile Include="Controllers\ChartingProjectControllerBase.cs" />
+    <Compile Include="Controllers\ControllerHelpers.cs" />
+    <Compile Include="Controllers\ReportingTransformQueryController.cs" />
+    <Compile Include="Controllers\ChartingCollectionControllerBase.cs" />
+    <Compile Include="Controllers\ReportingChartConfigurationController.cs" />
+    <Compile Include="Controllers\ReportingDataServiceCapabilitiesController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

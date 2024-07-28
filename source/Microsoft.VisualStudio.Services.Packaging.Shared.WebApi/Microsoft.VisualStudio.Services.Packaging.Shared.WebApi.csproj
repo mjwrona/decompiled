@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CAFCC15-0310-4A3B-9850-4F9409430B12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Packaging.Shared.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Packaging.Shared.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PackagingSecuredObjectExtensions.cs" />
+    <Compile Include="RawPackageNameEntry.cs" />
+    <Compile Include="UpstreamVersionVisibility.cs" />
+    <Compile Include="UpstreamingBehavior.cs" />
+    <Compile Include="Base64UrlStringCodec.cs" />
+    <Compile Include="BasePackagesBatchRequestConverter.cs" />
+    <Compile Include="InvalidPackagesException.cs" />
+    <Compile Include="HttpClientExtensions.cs" />
+    <Compile Include="HttpResponseMessageExtensions.cs" />
+    <Compile Include="ResourceIds.cs" />
+    <Compile Include="BatchOperationData.cs" />
+    <Compile Include="BatchOperationType.cs" />
+    <Compile Include="CommonBatchOperationTypes.cs" />
+    <Compile Include="OperationTypeParser.cs" />
+    <Compile Include="BatchPromoteData.cs" />
+    <Compile Include="IBatchOperationType.cs" />
+    <Compile Include="IPackagesBatchRequest.cs" />
+    <Compile Include="MinimalPackageDetails.cs" />
+    <Compile Include="PackagingSourceType.cs" />
+    <Compile Include="UpstreamSourceInfo.cs" />
+    <Compile Include="PackagingSecuredObject.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Types\BatchListData.cs" />
+    <Compile Include="Types\PackageOrigin.cs" />
+    <Compile Include="Types\ProblemPackage.cs" />
+    <Compile Include="Types\ProblemPackageReason.cs" />
+    <Compile Include="Types\UpstreamVersionsData.cs" />
+    <Compile Include="Types\UpstreamVersionsDataVersion.cs" />
+    <Compile Include="Types\UpstreamVersionsDataVersionLocalInstance.cs" />
+    <Compile Include="Types\UpstreamVersionsDataVersionUpstream.cs" />
+    <Compile Include="Types\IPackageVersionDeletionState.cs" />
+    <Compile Include="Types\IPackageVersionDetails.cs" />
+    <Compile Include="Types\IRecycleBinPackageVersionDetails.cs" />
+    <Compile Include="Storage\MinimalPackage.cs" />
+    <Compile Include="Storage\PackageVersionWithSize.cs" />
+    <Compile Include="Exceptions\CannotMixFilesFromDifferentUpstreamsException.cs" />
+    <Compile Include="Exceptions\IngestionProhibitedException.cs" />
+    <Compile Include="Exceptions\InvalidUpstreamSourceDuplicateVersionsException.cs" />
+    <Compile Include="Exceptions\PackageBlockedException.cs" />
+    <Compile Include="Exceptions\ReadOnlyFeedOperationException.cs" />
+    <Compile Include="Exceptions\HttpMethodNotAllowedException.cs" />
+    <Compile Include="Exceptions\InvalidEmailException.cs" />
+    <Compile Include="Exceptions\InvalidPackageException.cs" />
+    <Compile Include="Exceptions\InvalidProjectUrlException.cs" />
+    <Compile Include="Exceptions\InvalidPublishRequestException.cs" />
+    <Compile Include="Exceptions\InvalidRequiresExternalException.cs" />
+    <Compile Include="Exceptions\PackageBlockedPublishException.cs" />
+    <Compile Include="Exceptions\PackageContentBlobNotFoundException.cs" />
+    <Compile Include="Exceptions\PackageExistsIngestingFromUpstreamException.cs" />
+    <Compile Include="Exceptions\InvalidUserRequestException.cs" />
+    <Compile Include="Exceptions\PackageExistsAsDeletedException.cs" />
+    <Compile Include="Exceptions\ServiceCanceledDueToClientException.cs" />
+    <Compile Include="Exceptions\TooManyVersionsException.cs" />
+    <Compile Include="Exceptions\UnsupportedMediaTypeException.cs" />
+    <Compile Include="Exceptions\UpstreamBlockedException.cs" />
+    <Compile Include="Exceptions\BatchRequestLengthOutOfRangeException.cs" />
+    <Compile Include="Exceptions\PackageAlreadyExistsException.cs" />
+    <Compile Include="Exceptions\PackageDeletedException.cs" />
+    <Compile Include="Exceptions\PackageNotDeletedException.cs" />
+    <Compile Include="Exceptions\PackageNotFoundException.cs" />
+    <Compile Include="Exceptions\PackagePermanentlyDeletedException.cs" />
+    <Compile Include="Exceptions\PackagingClientWarningExceptionDataConstants.cs" />
+    <Compile Include="Exceptions\PotentiallyDangerousRequestException.cs" />
+    <Compile Include="Exceptions\ReadOnlyViewOperationException.cs" />
+    <Compile Include="Exceptions\RequiredArgumentMissingException.cs" />
+    <Compile Include="Exceptions\UpstreamSourceNotFoundException.cs" />
+    <Compile Include="Exceptions\UpstreamProjectDoesNotExistException.cs" />
+    <Compile Include="Exceptions\UpstreamOrganizationNotAccessibleException.cs" />
+    <Compile Include="Exceptions\UpstreamUnexpectedPackageDataException.cs" />
+    <Compile Include="Exceptions\ViewOperationException.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

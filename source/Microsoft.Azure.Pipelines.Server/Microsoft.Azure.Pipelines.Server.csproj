@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Pipelines.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0C8F400-2F55-478F-9BA4-CE231E968FC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Pipelines.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="IPipelinesLogService.cs" />
+    <Compile Include="IPipelinesProjectInstaller.cs" />
+    <Compile Include="IPipelinesService.cs" />
+    <Compile Include="IPipelinesServiceExtensions.cs" />
+    <Compile Include="IVssRequestContextExtensions.cs" />
+    <Compile Include="PipelinesLogService.cs" />
+    <Compile Include="PipelinesService.cs" />
+    <Compile Include="PipelinesTraceConstants.cs" />
+    <Compile Include="SignedContentConstants.cs" />
+    <Compile Include="TimelineRecordExtensions.cs" />
+    <Compile Include="TraceExtensions.cs" />
+    <Compile Include="PipelinesServerResources.cs" />
+    <Compile Include="ObjectModel\Artifact.cs" />
+    <Compile Include="ObjectModel\ArtifactResource.cs" />
+    <Compile Include="ObjectModel\BitBucketRepository.cs" />
+    <Compile Include="ObjectModel\BuildResourceParameters.cs" />
+    <Compile Include="ObjectModel\ConfigurationType.cs" />
+    <Compile Include="ObjectModel\AzureReposGitRepository.cs" />
+    <Compile Include="ObjectModel\Connection.cs" />
+    <Compile Include="ObjectModel\ContainerResourceParameters.cs" />
+    <Compile Include="ObjectModel\Container.cs" />
+    <Compile Include="ObjectModel\ContainerResource.cs" />
+    <Compile Include="ObjectModel\CreateAzureReposGitRepositoryParameters.cs" />
+    <Compile Include="ObjectModel\CreateGitHubRepositoryParameters.cs" />
+    <Compile Include="ObjectModel\CreatePipelineConfigurationParameters.cs" />
+    <Compile Include="ObjectModel\CreatePipelineParameters.cs" />
+    <Compile Include="ObjectModel\CreateRepositoryParameters.cs" />
+    <Compile Include="ObjectModel\CreateServiceConnectionParameters.cs" />
+    <Compile Include="ObjectModel\CreateJustInTimePipelineConfigurationParameters.cs" />
+    <Compile Include="ObjectModel\CreateYamlPipelineConfigurationParameters.cs" />
+    <Compile Include="ObjectModel\GitHubEnterpriseRepository.cs" />
+    <Compile Include="ObjectModel\Job.cs" />
+    <Compile Include="ObjectModel\JobResult.cs" />
+    <Compile Include="ObjectModel\JobState.cs" />
+    <Compile Include="ObjectModel\JustInTimeConfiguration.cs" />
+    <Compile Include="ObjectModel\JustInTimeConfigurationFile.cs" />
+    <Compile Include="ObjectModel\StatusCallbackInfo.cs" />
+    <Compile Include="ObjectModel\JustInTimeContext.cs" />
+    <Compile Include="ObjectModel\OrderByExpression`1.cs" />
+    <Compile Include="ObjectModel\PackageResourceParameters.cs" />
+    <Compile Include="ObjectModel\PipelineSortField.cs" />
+    <Compile Include="ObjectModel\PipelineOrderByExpressionConverter.cs" />
+    <Compile Include="ObjectModel\PipelineOrderByExpression.cs" />
+    <Compile Include="ObjectModel\PipelineReference.cs" />
+    <Compile Include="ObjectModel\QueryPipelinesParameters.cs" />
+    <Compile Include="ObjectModel\RepositoryResource.cs" />
+    <Compile Include="ObjectModel\RepositoryResourceParameters.cs" />
+    <Compile Include="ObjectModel\Run.cs" />
+    <Compile Include="ObjectModel\PipelineConfiguration.cs" />
+    <Compile Include="ObjectModel\PipelineConfigurationJsonConverter.cs" />
+    <Compile Include="ObjectModel\DesignerJsonConfiguration.cs" />
+    <Compile Include="ObjectModel\GitHubRepository.cs" />
+    <Compile Include="ObjectModel\Repository.cs" />
+    <Compile Include="ObjectModel\RepositoryType.cs" />
+    <Compile Include="ObjectModel\RunExpansion.cs" />
+    <Compile Include="ObjectModel\RunPipelineParameters.cs" />
+    <Compile Include="ObjectModel\RunResourcesParameters.cs" />
+    <Compile Include="ObjectModel\PipelineResourceParameters.cs" />
+    <Compile Include="ObjectModel\Pipeline.cs" />
+    <Compile Include="ObjectModel\PipelineResource.cs" />
+    <Compile Include="ObjectModel\RunResources.cs" />
+    <Compile Include="ObjectModel\RunResult.cs" />
+    <Compile Include="ObjectModel\RunState.cs" />
+    <Compile Include="ObjectModel\SortDirection.cs" />
+    <Compile Include="ObjectModel\SortExpression`1.cs" />
+    <Compile Include="ObjectModel\Stage.cs" />
+    <Compile Include="ObjectModel\StageOld.cs" />
+    <Compile Include="ObjectModel\StageResult.cs" />
+    <Compile Include="ObjectModel\StageState.cs" />
+    <Compile Include="ObjectModel\Variable.cs" />
+    <Compile Include="ObjectModel\WebsocketConnection.cs" />
+    <Compile Include="ObjectModel\WebsocketResponse.cs" />
+    <Compile Include="ObjectModel\YamlConfiguration.cs" />
+    <Compile Include="Notifications\PipelinesNotificationsConstants.cs" />
+    <Compile Include="Notifications\RunStateChangedEvent.cs" />
+    <Compile Include="Notifications\RunStateChangedEventOld.cs" />
+    <Compile Include="Notifications\JobStateChangedEvent.cs" />
+    <Compile Include="Notifications\StageStateChangedEvent.cs" />
+    <Compile Include="Notifications\StageStateChangedEventOld.cs" />
+    <Compile Include="Migration\ExternalPipelinesService.cs" />
+    <Compile Include="Migration\ExternalRunsService.cs" />
+    <Compile Include="Migration\IExternalPipelinesService.cs" />
+    <Compile Include="Migration\IExternalRunProvider.cs" />
+    <Compile Include="Migration\IExternalPipelineProvider.cs" />
+    <Compile Include="Migration\IExternalRunsService.cs" />
+    <Compile Include="Migration\IExternalYamlConfigurationService.cs" />
+    <Compile Include="DataAccess\PipelineBinder.cs" />
+    <Compile Include="DataAccess\PipelinesComponent.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PipelinesServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

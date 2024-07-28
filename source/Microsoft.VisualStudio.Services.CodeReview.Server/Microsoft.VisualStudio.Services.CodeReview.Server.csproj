@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.CodeReview.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BE8BEBF-65C2-470C-9F35-0E765A70EC7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.CodeReview.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.CodeReview.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.Discussion.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.Discussion.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.Discussion.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.Discussion.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachmentBinder.cs" />
+    <Compile Include="ChangeEntryBinder.cs" />
+    <Compile Include="ChangeEntryFileDataBinder.cs" />
+    <Compile Include="PriorReviewUpdatedTimestampBinder.cs" />
+    <Compile Include="ReviewUpdatedTimestampBinder.cs" />
+    <Compile Include="ReviewFileContentInfoBinder.cs" />
+    <Compile Include="IterationBinder.cs" />
+    <Compile Include="LastUpdatedTimestampBinder.cs" />
+    <Compile Include="ReviewBinder.cs" />
+    <Compile Include="ReviewerBinder.cs" />
+    <Compile Include="DelegatedVoteBinder.cs" />
+    <Compile Include="StatusBinder.cs" />
+    <Compile Include="ArtifactVisitBinder.cs" />
+    <Compile Include="StatusContextBinder.cs" />
+    <Compile Include="ChangeEntryTable.cs" />
+    <Compile Include="ContentHashTable.cs" />
+    <Compile Include="ContentMetadataTable.cs" />
+    <Compile Include="CodeReviewNotFoundException.cs" />
+    <Compile Include="CodeReviewNotActiveException.cs" />
+    <Compile Include="CodeReviewInvalidStatusChangeException.cs" />
+    <Compile Include="CodeReviewUnexpectedDiffFileIdException.cs" />
+    <Compile Include="CodeReviewArgumentNullException.cs" />
+    <Compile Include="CodeReviewArgumentEmptyException.cs" />
+    <Compile Include="CodeReviewReviewerSaveFailedUponNullException.cs" />
+    <Compile Include="CodeReviewIterationNotFoundException.cs" />
+    <Compile Include="CodeReviewIterationArgumentNullException.cs" />
+    <Compile Include="CodeReviewIterationAlreadyExistsException.cs" />
+    <Compile Include="CodeReviewIterationMismatchedIdsException.cs" />
+    <Compile Include="CodeReviewIterationMustBeOfUnpublishedTypeExceptio.cs" />
+    <Compile Include="CodeReviewIterationCannotBeUnpublishedException.cs" />
+    <Compile Include="CodeReviewUnpublishedIterationAlreadyExistsExcepti.cs" />
+    <Compile Include="CodeReviewIterationCannotBePublishedException.cs" />
+    <Compile Include="CodeReviewOperationFailedException.cs" />
+    <Compile Include="CodeReviewChangesAlreadyExistException.cs" />
+    <Compile Include="CodeReviewChangesWithContentHashNotFoundException.cs" />
+    <Compile Include="CodeReviewActionRejectedByPolicyException.cs" />
+    <Compile Include="CodeReviewActionRejectedByPullRequestException.cs" />
+    <Compile Include="CodeReviewFileNotFoundException.cs" />
+    <Compile Include="CodeReviewInvalidPathException.cs" />
+    <Compile Include="CodeReviewInvalidProviderException.cs" />
+    <Compile Include="CodeReviewProviderAlreadyExistsException.cs" />
+    <Compile Include="CommentThreadNotFoundException.cs" />
+    <Compile Include="CodeReviewCommentThreadCreateIdException.cs" />
+    <Compile Include="CodeReviewContentUploadNotAllowedException.cs" />
+    <Compile Include="ChangeEntriesWithBothSetAndUnSetChangeTrackingIdsE.cs" />
+    <Compile Include="ReviewerCannotBeAssociatedWithUnpublishedIteration.cs" />
+    <Compile Include="ReviewerCannotVoteWithoutPublishedIterationExcepti.cs" />
+    <Compile Include="CodeReviewAttachmentCannotBeCreatedBeforeFileUploa.cs" />
+    <Compile Include="CodeReviewAttachmentNotFoundException.cs" />
+    <Compile Include="CodeReviewMaxAttachmentCountException.cs" />
+    <Compile Include="CodeReviewMaxCommentCountException.cs" />
+    <Compile Include="CodeReviewStatusNotFoundException.cs" />
+    <Compile Include="CodeReviewTooManyStatusRecords.cs" />
+    <Compile Include="CodeReviewPropertiesPatchFailedException.cs" />
+    <Compile Include="CodeReviewContinuationTokenInvalidException.cs" />
+    <Compile Include="CodeReviewInsufficientPermissions.cs" />
+    <Compile Include="CodeReviewExceededMaxAllowedFileSizeException.cs" />
+    <Compile Include="CodeReviewExceededMaxAllowedZipPackageSizeExceptio.cs" />
+    <Compile Include="CodeReviewContentHashNotAssociatedWithReviewExcept.cs" />
+    <Compile Include="CodeReviewFileWithSameContentHashInPackageExceptio.cs" />
+    <Compile Include="CodeReviewNoFilesFoundToUploadInPackageException.cs" />
+    <Compile Include="ICodeReviewAttachmentService.cs" />
+    <Compile Include="ICodeReviewCommentService.cs" />
+    <Compile Include="ICodeReviewDiffCacheService.cs" />
+    <Compile Include="ICodeReviewContentService.cs" />
+    <Compile Include="ICodeReviewVisitService.cs" />
+    <Compile Include="ViewedStatus.cs" />
+    <Compile Include="ICodeReviewSettingService.cs" />
+    <Compile Include="ICodeReviewShareService.cs" />
+    <Compile Include="ICodeReviewStatusService.cs" />
+    <Compile Include="DiffCacheJobData.cs" />
+    <Compile Include="DiffCacheObject.cs" />
+    <Compile Include="DiffCacheEntry.cs" />
+    <Compile Include="PackageFileContentMetadata.cs" />
+    <Compile Include="ServerConstants.cs" />
+    <Compile Include="FeatureAvailabilityFlags.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="TrackingContext.cs" />
+    <Compile Include="TrackingVersion.cs" />
+    <Compile Include="TrackingSnapshotVersion.cs" />
+    <Compile Include="TrackingSide.cs" />
+    <Compile Include="TrackingTarget.cs" />
+    <Compile Include="ReviewScope.cs" />
+    <Compile Include="TrackingFileSnapshot.cs" />
+    <Compile Include="TrackingFileSnapshotPair.cs" />
+    <Compile Include="TrackingManager.cs" />
+    <Compile Include="DefaultReviewArtifactId.cs" />
+    <Compile Include="DelegatedVote.cs" />
+    <Compile Include="ContentAccessMetadata.cs" />
+    <Compile Include="ChangeEntryStream.cs" />
+    <Compile Include="ICodeReviewService.cs" />
+    <Compile Include="ICodeReviewIterationService.cs" />
+    <Compile Include="ICodeReviewReviewerService.cs" />
+    <Compile Include="ReviewsContinuationToken.cs" />
+    <Compile Include="UpdateTimestamps.cs" />
+    <Compile Include="IReviewNotificationContentProvider.cs" />
+    <Compile Include="CodeReviewAttachmentService.cs" />
+    <Compile Include="CodeReviewCommentService.cs" />
+    <Compile Include="CodeReviewDiffCacheService.cs" />
+    <Compile Include="CodeReviewContentService.cs" />
+    <Compile Include="CodeReviewVisitService.cs" />
+    <Compile Include="CodeReviewSettingService.cs" />
+    <Compile Include="CodeReviewShareService.cs" />
+    <Compile Include="CodeReviewStatusService.cs" />
+    <Compile Include="AttachmentDictionaryComparer.cs" />
+    <Compile Include="CommentHelper.cs" />
+    <Compile Include="CommentTrackingUtility.cs" />
+    <Compile Include="CodeReviewRequestContextCacheUtil.cs" />
+    <Compile Include="DataspaceHelper.cs" />
+    <Compile Include="CodeReviewReferenceLinksUtility.cs" />
+    <Compile Include="IReviewContentProvider.cs" />
+    <Compile Include="ContentInfo.cs" />
+    <Compile Include="ICodeReviewSecurityExtension.cs" />
+    <Compile Include="IArtifactProvider.cs" />
+    <Compile Include="CodeReviewServiceBase.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="CodeReviewComponent.cs" />
+    <Compile Include="CodeReviewIterationService.cs" />
+    <Compile Include="CodeReviewReviewerService.cs" />
+    <Compile Include="FileChangeUtilities.cs" />
+    <Compile Include="IdentityHelper.cs" />
+    <Compile Include="IterationDictionaryComparer.cs" />
+    <Compile Include="ReviewFilesUtility.cs" />
+    <Compile Include="ReviewSecurityEvaluator.cs" />
+    <Compile Include="TelemetryHelper.cs" />
+    <Compile Include="ValidationHelper.cs" />
+    <Compile Include="VirtualResultCollection`1.cs" />
+    <Compile Include="ArtifactPropertyKinds.cs" />
+    <Compile Include="PropertiesController.cs" />
+    <Compile Include="ReviewAttachmentsController.cs" />
+    <Compile Include="ArtifactStatsBatchController.cs" />
+    <Compile Include="ArtifactVisitsController.cs" />
+    <Compile Include="ArtifactVisitsBatchController.cs" />
+    <Compile Include="ChangesContentController.cs" />
+    <Compile Include="ChangesController.cs" />
+    <Compile Include="CodeReviewApiControllerBase.cs" />
+    <Compile Include="CommentLikesController.cs" />
+    <Compile Include="CommentsController.cs" />
+    <Compile Include="CommentThreadsController.cs" />
+    <Compile Include="ContentsBatchController.cs" />
+    <Compile Include="ReviewSettingsController.cs" />
+    <Compile Include="StatusesController.cs" />
+    <Compile Include="IterationsController.cs" />
+    <Compile Include="ReviewersController.cs" />
+    <Compile Include="ReviewsBatchController.cs" />
+    <Compile Include="ReviewsController.cs" />
+    <Compile Include="CodeReviewService.cs" />
+    <Compile Include="IdentityExtensions.cs" />
+    <Compile Include="CodeReviewResources.cs" />
+    <Compile Include="WebServer\ShareReviewController.cs" />
+    <Compile Include="Utils\EventServiceHelper.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Dashboards.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{569F568E-E2CC-4A5A-960F-08093C77DDB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Dashboards.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Dashboards.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DashboardsPrivileges.cs" />
+    <Compile Include="DashboardConstants.cs" />
+    <Compile Include="DashboardRouteTemplates.cs" />
+    <Compile Include="DashboardRestResourceNames.cs" />
+    <Compile Include="DashboardsLocationIds.cs" />
+    <Compile Include="Links.cs" />
+    <Compile Include="DashboardHttpClient.cs" />
+    <Compile Include="DashboardCompatHttpClientBase.cs" />
+    <Compile Include="DashboardSecuredObject.cs" />
+    <Compile Include="DashboardResources.cs" />
+    <Compile Include="InsufficientPermissionsException.cs" />
+    <Compile Include="DashboardsDoNotExistException.cs" />
+    <Compile Include="EmptyDashboardNameException.cs" />
+    <Compile Include="DashboardNameLengthExceededException.cs" />
+    <Compile Include="DashboardDescriptionLengthExceededException.cs" />
+    <Compile Include="DuplicateDashboardNameException.cs" />
+    <Compile Include="DashboardInvalidPositionException.cs" />
+    <Compile Include="DashboardEntryExistsException.cs" />
+    <Compile Include="DashboardDoesNotExistException.cs" />
+    <Compile Include="CreateDashboardWithExistingIdException.cs" />
+    <Compile Include="DashboardCountLimitExceededException.cs" />
+    <Compile Include="DashboardPositionCollisionException.cs" />
+    <Compile Include="LastDashboardCannotBeDeletedException.cs" />
+    <Compile Include="WidgetExistsException.cs" />
+    <Compile Include="WidgetWithoutIdException.cs" />
+    <Compile Include="WidgetSizeNotSupportedException.cs" />
+    <Compile Include="WidgetTypeDoesNotExistException.cs" />
+    <Compile Include="EmptyWidgetNameException.cs" />
+    <Compile Include="WidgetNameLengthExceededException.cs" />
+    <Compile Include="WidgetSettingsLengthExceededException.cs" />
+    <Compile Include="WidgetTypeLengthExceededException.cs" />
+    <Compile Include="WidgetSizeDimensionExceededException.cs" />
+    <Compile Include="WidgetPositionDimensionExceededException.cs" />
+    <Compile Include="WidgetSettingsVersionInvalidException.cs" />
+    <Compile Include="WidgetDoesNotExistException.cs" />
+    <Compile Include="WidgetETagConflictException.cs" />
+    <Compile Include="WidgetConflictOnCopyException.cs" />
+    <Compile Include="CreateWidgetWithExistingIdException.cs" />
+    <Compile Include="WidgetCollisionException.cs" />
+    <Compile Include="WidgetLimitExceededException.cs" />
+    <Compile Include="NoMetaDataFoundInCatalogException.cs" />
+    <Compile Include="WidgetServiceUnavailableException.cs" />
+    <Compile Include="DashboardHttpClientBase.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="DashboardGroup.cs" />
+    <Compile Include="DashboardGroupEntry.cs" />
+    <Compile Include="DashboardGroupEntryComparer.cs" />
+    <Compile Include="GroupMemberPermission.cs" />
+    <Compile Include="DashboardGroupEntryResponse.cs" />
+    <Compile Include="DashboardResponse.cs" />
+    <Compile Include="WidgetMetadataResponse.cs" />
+    <Compile Include="WidgetResponse.cs" />
+    <Compile Include="WidgetTypesResponse.cs" />
+    <Compile Include="DashboardScope.cs" />
+    <Compile Include="WidgetScope.cs" />
+    <Compile Include="SemanticVersion.cs" />
+    <Compile Include="TeamDashboardPermission.cs" />
+    <Compile Include="Widget.cs" />
+    <Compile Include="WidgetComparer.cs" />
+    <Compile Include="WidgetConfigurationMetadata.cs" />
+    <Compile Include="WidgetMetadata.cs" />
+    <Compile Include="LightboxOptions.cs" />
+    <Compile Include="WidgetPosition.cs" />
+    <Compile Include="WidgetSize.cs" />
+    <Compile Include="WidgetsVersionedList.cs" />
+    <Compile Include="CopyDashboardOptions.cs" />
+    <Compile Include="CopyDashboardResponse.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DashboardResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

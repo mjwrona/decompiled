@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Agile.Web.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3413F774-2819-45F0-B638-A4AE662CD9B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Agile.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Agile.Web</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.Agile.Common" />
+    <Reference Include="Microsoft.Azure.Boards.Charts" />
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.LegacyInterfaces">
+      <HintPath>lib\Microsoft.Azure.Boards.LegacyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.RecentActivity" />
+    <Reference Include="Microsoft.Azure.Boards.WebApi.Common" />
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server" />
+    <Reference Include="Microsoft.Azure.Devops.Teams.Service" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Agile.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Agile.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Mention.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Mention.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform" />
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Work.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Web">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\WorkItemTracking\Web\Controllers\TeamAutomationRulesSettingsController.cs" />
+    <Compile Include="BacklogConfigurationExtensions.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Utilities\AgileCustomerIntelligenceArea.cs" />
+    <Compile Include="Utilities\AgileCustomerIntelligencePropertyName.cs" />
+    <Compile Include="Utilities\AgileCustomerIntelligencePropertyValue.cs" />
+    <Compile Include="Utilities\BoardCardRulesValidator.cs" />
+    <Compile Include="Utilities\BoardCardSettingsValidator.cs" />
+    <Compile Include="Utilities\BoardHierarchyDataHelper.cs" />
+    <Compile Include="Utilities\BoardParentWIFilterHelper.cs" />
+    <Compile Include="Utilities\ICardSettingsUtils.cs" />
+    <Compile Include="Utilities\CardSettingsUtils.cs" />
+    <Compile Include="Utilities\DeliveryViewFilterBuilder.cs" />
+    <Compile Include="Utilities\DeliveryTimelineCriteriaValidator.cs" />
+    <Compile Include="Utilities\DeliveryTimelineDataProvider.cs" />
+    <Compile Include="Utilities\DeliveryTimelineTelemetryConstants.cs" />
+    <Compile Include="Utilities\DeliveryTimelinePropertyConstants.cs" />
+    <Compile Include="Utilities\DeliveryTimelineSettings.cs" />
+    <Compile Include="Utilities\FilterClauseValidator.cs" />
+    <Compile Include="Utilities\IBoardParentWIFilterHelper.cs" />
+    <Compile Include="Utilities\ICardFieldDefinition.cs" />
+    <Compile Include="Utilities\ParseHelper.cs" />
+    <Compile Include="Utilities\PlanCriteriaUtils.cs" />
+    <Compile Include="Utilities\PlanDataUtils.cs" />
+    <Compile Include="Utilities\PlanWorkItemPayload.cs" />
+    <Compile Include="Utilities\PlanWorkItemHierarchy.cs" />
+    <Compile Include="Utilities\PlanFilterHelper.cs" />
+    <Compile Include="Utilities\PlanSecurityGroupConstants.cs" />
+    <Compile Include="Utilities\PlanPermissionsBitFlags.cs" />
+    <Compile Include="Utilities\PlanPermissionHelper.cs" />
+    <Compile Include="Utilities\PlanSettings.cs" />
+    <Compile Include="Utilities\PlanUtils.cs" />
+    <Compile Include="Utilities\PlanViewDataFactory.cs" />
+    <Compile Include="Utilities\ScaledAgileCardSettingsValidator.cs" />
+    <Compile Include="Utilities\WITCardFieldDefinition.cs" />
+    <Compile Include="Services\ScaledAgileView.cs" />
+    <Compile Include="Services\ScaledAgileViewConfiguration.cs" />
+    <Compile Include="Services\ScaledAgileViewProperty.cs" />
+    <Compile Include="Services\ScaledAgileCardSettings.cs" />
+    <Compile Include="Services\IScaledAgileViewService.cs" />
+    <Compile Include="Services\ScaledAgileViewService.cs" />
+    <Compile Include="Routing\BacklogConfigurationRouting.cs" />
+    <Compile Include="Routing\BacklogRouting.cs" />
+    <Compile Include="Routing\BoardCardSettingsRouting.cs" />
+    <Compile Include="Routing\BoardCardStyleSettingsRouting.cs" />
+    <Compile Include="Routing\ChartImageRouting.cs" />
+    <Compile Include="Routing\BoardChartRouting.cs" />
+    <Compile Include="Routing\BoardParentRouting.cs" />
+    <Compile Include="Routing\BoardBadgeRouting.cs" />
+    <Compile Include="Routing\BoardUserSettingsRouting.cs" />
+    <Compile Include="Routing\BoardSuggestedValueRouting.cs" />
+    <Compile Include="Routing\BoardRowRouting.cs" />
+    <Compile Include="Routing\BoardColumnRouting.cs" />
+    <Compile Include="Routing\IterationCapacityRouting.cs" />
+    <Compile Include="Routing\PredefinedQueriesRoutes.cs" />
+    <Compile Include="Routing\ProcessConfigurationRouting.cs" />
+    <Compile Include="Routing\ReorderWorkItemsRouting.cs" />
+    <Compile Include="Routing\TaskboardColumnRoute.cs" />
+    <Compile Include="Routing\TeamSettingsRouting.cs" />
+    <Compile Include="Routing\ScaledAgileRouting.cs" />
+    <Compile Include="Routing\BoardRouting.cs" />
+    <Compile Include="Routing\AutomationRulesRoutes.cs" />
+    <Compile Include="Data\DeletedViewIdsBinder.cs" />
+    <Compile Include="Data\ScaledAgileViewErrorCodes.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent10.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent9.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent8.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent7.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent6.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent5.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent4.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent3.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent2.cs" />
+    <Compile Include="Data\ScaledAgileViewComponent.cs" />
+    <Compile Include="Data\ShallowScaledAgileViewRecord.cs" />
+    <Compile Include="Data\FullScaledAgileViewRecord.cs" />
+    <Compile Include="Data\FullScaledAgileViewRecord2.cs" />
+    <Compile Include="Data\ScaledAgileViewPropertyRecord2.cs" />
+    <Compile Include="Data\ScaledAgileViewPropertyRecord.cs" />
+    <Compile Include="Data\FullScaledAgileViewRecordBinder3.cs" />
+    <Compile Include="Data\FullScaledAgileViewRecordBinder2.cs" />
+    <Compile Include="Data\FullScaledAgileViewRecordBinder.cs" />
+    <Compile Include="Data\ShallowScaledAgileViewRecordBinder4.cs" />
+    <Compile Include="Data\ShallowScaledAgileViewRecordBinder3.cs" />
+    <Compile Include="Data\ShallowScaledAgileViewRecordBinder2.cs" />
+    <Compile Include="Data\ShallowScaledAgileViewRecordBinder.cs" />
+    <Compile Include="Data\ScaledAgileViewPropertyRecordBinder2.cs" />
+    <Compile Include="Data\ScaledAgileViewPropertyRecordBinder.cs" />
+    <Compile Include="Controller\BacklogsController.cs" />
+    <Compile Include="Controller\BoardCardStyleSettingsApiController.cs" />
+    <Compile Include="Controller\BoardCardStyleSettingsApi5_1Controller.cs" />
+    <Compile Include="Controller\BoardParentApiController.cs" />
+    <Compile Include="Controller\BoardBadgeController.cs" />
+    <Compile Include="Controller\ChartImagesApiController.cs" />
+    <Compile Include="Controller\ReorderWorkItemsController.cs" />
+    <Compile Include="Controller\IBoardsRestApiHelper.cs" />
+    <Compile Include="Controller\BoardsRestApiHelper.cs" />
+    <Compile Include="Controller\BoardUserSettingsApiController.cs" />
+    <Compile Include="Controller\BoardRowsApiController.cs" />
+    <Compile Include="Controller\BoardCardSettingsApiController.cs" />
+    <Compile Include="Controller\BoardCardSettingsApiControllerApi5_1Controller.cs" />
+    <Compile Include="Controller\BoardColumnSuggestedValuesApiController.cs" />
+    <Compile Include="Controller\BoardRowSuggestedValuesApiController.cs" />
+    <Compile Include="Controller\BoardSuggestedValuesApiControllerBase.cs" />
+    <Compile Include="Controller\BacklogConfigurationApiController.cs" />
+    <Compile Include="Controller\PredefinedQueriesController.cs" />
+    <Compile Include="Controller\ProcessConfigurationApiController.cs" />
+    <Compile Include="Controller\DeliveryViewApiController.cs" />
+    <Compile Include="Controller\ScaledAgileApiControllerBase.cs" />
+    <Compile Include="Controller\PlansApiController.cs" />
+    <Compile Include="Controller\Capacity2ApiController.cs" />
+    <Compile Include="Controller\Capacity3ApiController.cs" />
+    <Compile Include="Controller\CapacityApiControllerBase.cs" />
+    <Compile Include="Controller\IterationWorkItemsApiController.cs" />
+    <Compile Include="Controller\CapacityApiController.cs" />
+    <Compile Include="Controller\TeamSettingsTeamDaysOffApiController.cs" />
+    <Compile Include="Controller\TeamFieldValuesApiController.cs" />
+    <Compile Include="Controller\TeamSettingsApiController.cs" />
+    <Compile Include="Controller\BoardChartsApiController.cs" />
+    <Compile Include="Controller\BoardColumnsApiController.cs" />
+    <Compile Include="Controller\BoardsApiController.cs" />
+    <Compile Include="Controller\BoardsApiControllerBase.cs" />
+    <Compile Include="Controller\IterationCapacityApiController.cs" />
+    <Compile Include="Controller\TeamSettingsApiControllerBase.cs" />
+    <Compile Include="Controller\TeamSettingsIterationsApiController.cs" />
+    <Compile Include="Controller\AgileResourceUtils.cs" />
+    <Compile Include="Controller\SecurityUtils.cs" />
+    <Compile Include="Controller\TaggingServiceUtils.cs" />
+    <Compile Include="Controller\TeamSettingUtils.cs" />
+    <Compile Include="Controller\TelemetryUtils.cs" />
+    <Compile Include="Controller\UpdateColumnSettingChanges.cs" />
+    <Compile Include="Controller\AgileCustomerIntelligenceArea.cs" />
+    <Compile Include="Controller\BoardCustomerIntelligencePropertyName.cs" />
+    <Compile Include="Controller\TraceConstants.cs" />
+    <Compile Include="Controller\Taskboard\TaskboardColumnController.cs" />
+    <Compile Include="Controller\Taskboard\TaskboardWorkItemController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

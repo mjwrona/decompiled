@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Build2.WebApiConverters.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5823E7F1-8E5D-411A-B7E9-82C72EFF642A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Build2.WebApiConverters</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Build2.WebApiConverters</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Routes">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.Routes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentPoolQueueExtensions.cs" />
+    <Compile Include="AgentSpecificationExtensions.cs" />
+    <Compile Include="BuildArtifactExtensions.cs" />
+    <Compile Include="BuildDefinitionExtensions.cs" />
+    <Compile Include="BuildDefinitionStepExtensions.cs" />
+    <Compile Include="BuildDefinitionTemplateExtensions.cs" />
+    <Compile Include="BuildDefinitionVariableExtensions.cs" />
+    <Compile Include="BuildExtensions.cs" />
+    <Compile Include="BuildLogReferenceExtensions.cs" />
+    <Compile Include="BuildMetricExtensions.cs" />
+    <Compile Include="BuildOptionDefinitionExtensions.cs" />
+    <Compile Include="BuildOptionExtensions.cs" />
+    <Compile Include="BuildProcessExtensions.cs" />
+    <Compile Include="BuildProcessResourcesExtensions.cs" />
+    <Compile Include="JustInTimeProcessExtensions.cs" />
+    <Compile Include="MinimalBuildRepositoryExtensions.cs" />
+    <Compile Include="DesignerProcessTargetExtensions.cs" />
+    <Compile Include="BuildRepositoryExtensions.cs" />
+    <Compile Include="BuildRequestValidationResultExtensions.cs" />
+    <Compile Include="BuildTriggerExtensions.cs" />
+    <Compile Include="ChangeExtensions.cs" />
+    <Compile Include="DefinitionTriggerTypeExtensions.cs" />
+    <Compile Include="DemandExtensions.cs" />
+    <Compile Include="DependencyExtensions.cs" />
+    <Compile Include="DockerProcessExtensions.cs" />
+    <Compile Include="FolderExtensions.cs" />
+    <Compile Include="ForksExtensions.cs" />
+    <Compile Include="IdentityRefExtensions.cs" />
+    <Compile Include="PhaseExtensions.cs" />
+    <Compile Include="PhaseTargetExtensions.cs" />
+    <Compile Include="PipelineGeneralSettingsExtensions.cs" />
+    <Compile Include="PipelineRetentionSettingsExtensions.cs" />
+    <Compile Include="ProjectHelpers.cs" />
+    <Compile Include="RepositoryWebhookExtensions.cs" />
+    <Compile Include="RetentionLeaseExtensions.cs" />
+    <Compile Include="RententionPolicyExtensions.cs" />
+    <Compile Include="ScheduleExtensions.cs" />
+    <Compile Include="SourceProviderAttributesExtensions.cs" />
+    <Compile Include="SourceRepositoryItemExtensions.cs" />
+    <Compile Include="SourceRepositoryExtensions.cs" />
+    <Compile Include="TaskOrchestrationPlanReferenceExtensions.cs" />
+    <Compile Include="VariableGroupExtensions.cs" />
+    <Compile Include="WebApiBatchConverter.cs" />
+    <Compile Include="AgentPoolQueueCache.cs" />
+    <Compile Include="BuildRepositoryNameAndUrl.cs" />
+    <Compile Include="BuildRepositoryCache.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

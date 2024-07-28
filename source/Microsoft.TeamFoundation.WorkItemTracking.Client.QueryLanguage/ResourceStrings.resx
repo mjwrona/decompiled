@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExpectingSelect" xml:space="preserve">
+    <value> Expecting SELECT.</value>
+  </data>
+  <data name="InvalidLongTextSearchForWhitespace" xml:space="preserve">
+    <value>Searches on large text fields cannot be white space only.</value>
+  </data>
+  <data name="InvalidLinkTypeNameRecursive" xml:space="preserve">
+    <value>The specified link type can not be used with recursive tree query.</value>
+  </data>
+  <data name="NonSortableField" xml:space="preserve">
+    <value>The specified field cannot be sorted by.</value>
+  </data>
+  <data name="WrongTypeForArithmetic" xml:space="preserve">
+    <value>TF51015: The add or subtract operators can only be used with dates or numerical constants.</value>
+  </data>
+  <data name="DuplicateRecursive" xml:space="preserve">
+    <value>The query statement contains a duplicate RECURSIVE element.</value>
+  </data>
+  <data name="ExpectingComparisonOperator" xml:space="preserve">
+    <value> Expecting comparison operator.</value>
+  </data>
+  <data name="UnknownVariableType" xml:space="preserve">
+    <value>Unknown variable type.</value>
+  </data>
+  <data name="FieldConditionsInLinkQueries" xml:space="preserve">
+    <value>TF212024: To find work items by comparing fields of linked work items, you can only specify fields that belong to the same endpoint of the work item link. You cannot compare fields that belong to different endpoints of a linked work item.</value>
+  </data>
+  <data name="InvalidConditionForNodeField" xml:space="preserve">
+    <value>The specified operator cannot be used with Project field.</value>
+  </data>
+  <data name="EmptyName" xml:space="preserve">
+    <value>Empty identifier is not allowed.</value>
+  </data>
+  <data name="ExpectingClosingQuote" xml:space="preserve">
+    <value> Expecting closing quote.</value>
+  </data>
+  <data name="InOperatorWithTreePathField" xml:space="preserve">
+    <value>Operator IN is not supported for the Area Path field.</value>
+  </data>
+  <data name="NotSupportedTreeQuery" xml:space="preserve">
+    <value>The specified query can not be executed using recursive tree query.</value>
+  </data>
+  <data name="ContainsWorksForStringsOnly" xml:space="preserve">
+    <value>Operator CONTAINS can be used with string type fields only.</value>
+  </data>
+  <data name="InvalidRightExpressionInCondition" xml:space="preserve">
+    <value>Expecting constant, field name, or variable.</value>
+  </data>
+  <data name="ExpectingBoolean" xml:space="preserve">
+    <value>TF51004: The query statement is missing a boolean expression in an expected place.</value>
+  </data>
+  <data name="ProjectMacroUndefined" xml:space="preserve">
+    <value>Queries with an @project clause can only be executed on the project specific WIQL endpoint.</value>
+  </data>
+  <data name="InvalidConditionalOperator" xml:space="preserve">
+    <value>The specified conditional operator is not supported.</value>
+  </data>
+  <data name="InvalidConditionForEmptyString" xml:space="preserve">
+    <value>The specified operator cannot be used in conjunction with an empty string.</value>
+  </data>
+  <data name="ExpectingValue" xml:space="preserve">
+    <value> Expecting constant value.</value>
+  </data>
+  <data name="TooComplexEverOperator" xml:space="preserve">
+    <value>TF51010: The query contains a value for the EVER operator that is not supported.</value>
+  </data>
+  <data name="ExpectingConst" xml:space="preserve">
+    <value> Expecting constant.</value>
+  </data>
+  <data name="NoError" xml:space="preserve">
+    <value>No Error</value>
+  </data>
+  <data name="StringIsNotANumber" xml:space="preserve">
+    <value>Numeric node is initialized by non-numeric string.</value>
+  </data>
+  <data name="ExpectingMode" xml:space="preserve">
+    <value>Expecting MODE.</value>
+  </data>
+  <data name="ExpectingDate" xml:space="preserve">
+    <value> Expecting date-time.</value>
+  </data>
+  <data name="UnknownMode" xml:space="preserve">
+    <value>Unknown MODE parameter.</value>
+  </data>
+  <data name="FromIsNotSpecifiedFoundInFields" xml:space="preserve">
+    <value>TF401046: The query statement is missing a FROM clause. The SELECT field list may be improperly formatted.</value>
+  </data>
+  <data name="FieldDoesNotExistInTheTable" xml:space="preserve">
+    <value>TF51005: The query references a field that does not exist.</value>
+  </data>
+  <data name="ExpectingCondition" xml:space="preserve">
+    <value> Expecting conditional expression.</value>
+  </data>
+  <data name="ExpectingTableName" xml:space="preserve">
+    <value> Expecting table name.</value>
+  </data>
+  <data name="EverNotEqualOperator" xml:space="preserve">
+    <value>TF51003: The EVER operator can only be used in conjunction with the "=" or "contains" operators.</value>
+  </data>
+  <data name="DateConstantFormat" xml:space="preserve">
+    <value>TF51000: An unsupported date format.</value>
+  </data>
+  <data name="ExpectingClosingSquareBracket" xml:space="preserve">
+    <value> Expecting closing square bracket.</value>
+  </data>
+  <data name="InvalidNodeType" xml:space="preserve">
+    <value>Unsupported node type.</value>
+  </data>
+  <data name="InvalidFieldPrefixInLinkQueries" xml:space="preserve">
+    <value>TF400578: You must specify either "Source" or "Target" as the prefix of a field that references a linked work item. For example: Source.[System.TeamProject].</value>
+  </data>
+  <data name="ExpectingBy" xml:space="preserve">
+    <value> Expecting BY.</value>
+  </data>
+  <data name="DetailedMessage" xml:space="preserve">
+    <value>{0} The error is caused by «{1}».</value>
+  </data>
+  <data name="DuplicateOrderBy" xml:space="preserve">
+    <value>A duplicate ORDER BY part of SELECT query has been found.</value>
+  </data>
+  <data name="TreeQueryNeedsOneLinkType" xml:space="preserve">
+    <value>Tree query must contain one and only one link type.</value>
+  </data>
+  <data name="DuplicateFrom" xml:space="preserve">
+    <value>A duplicate FROM part of SELECT query has been found.</value>
+  </data>
+  <data name="DuplicateAsOf" xml:space="preserve">
+    <value>TF51002: The query statement contains a duplicate ASOF element.</value>
+  </data>
+  <data name="EverWithLinkQuery" xml:space="preserve">
+    <value>The EVER operator can not be used inside link queries.</value>
+  </data>
+  <data name="InvalidConditionForLinkType" xml:space="preserve">
+    <value>The operator can not be used with Link Type field.</value>
+  </data>
+  <data name="ProjectNotFound" xml:space="preserve">
+    <value>The project specified is not found in hierarchy.</value>
+  </data>
+  <data name="IterationPathIsNotFoundInHierarchy" xml:space="preserve">
+    <value>TF51011: The specified iteration path does not exist.</value>
+  </data>
+  <data name="EverWithDatePrecision" xml:space="preserve">
+    <value>The EVER operator cannot be used to query a date type field using date precision.</value>
+  </data>
+  <data name="MacroUndefined" xml:space="preserve">
+    <value>The macro '@{0}' is not defined.</value>
+  </data>
+  <data name="InvalidProjectName" xml:space="preserve">
+    <value>Project names cannot contain backslash.</value>
+  </data>
+  <data name="InvalidConditionForTreeField" xml:space="preserve">
+    <value>The specified operator cannot be used with area path fields.</value>
+  </data>
+  <data name="UnknownOrIncompatibleTypesInTheList" xml:space="preserve">
+    <value>The list contains unknown or incompatible types.</value>
+  </data>
+  <data name="WrongTypeForArithmeticRightOperand" xml:space="preserve">
+    <value>TF51016: The value for an add or subtract operator must be a number.</value>
+  </data>
+  <data name="AreaPathIsNotFoundInHierarchy" xml:space="preserve">
+    <value>TF51011: The specified area path does not exist.</value>
+  </data>
+  <data name="ExpectingRightBracket" xml:space="preserve">
+    <value> Expecting right bracket.</value>
+  </data>
+  <data name="ExpectingFieldOrExpression" xml:space="preserve">
+    <value> Expecting field name or expression.</value>
+  </data>
+  <data name="ExpectingNumberAfterOp" xml:space="preserve">
+    <value>Expecting a number after '{0}'</value>
+  </data>
+  <data name="NonZeroTime" xml:space="preserve">
+    <value>You cannot supply a time with the date when running a query using date precision.</value>
+  </data>
+  <data name="ExpectingEndOfString" xml:space="preserve">
+    <value> Expecting end of string.</value>
+  </data>
+  <data name="MixedPrefixes" xml:space="preserve">
+    <value>The link query can not mix expression with different prefixes.</value>
+  </data>
+  <data name="UnderCanBeUsedForTreePathFieldOnly" xml:space="preserve">
+    <value>TF51012: The UNDER operator can only be used with classification fields.</value>
+  </data>
+  <data name="OrderByLinkField" xml:space="preserve">
+    <value>The work item link field can not be used inside work item query.</value>
+  </data>
+  <data name="InvalidFieldTypeForCondition" xml:space="preserve">
+    <value>TF212025: You cannot compare long text, HTML, or history fields to other fields in the WHERE clause of a work item query.</value>
+  </data>
+  <data name="NonQueryableField" xml:space="preserve">
+    <value>The specified field can not be returned as a result of query.</value>
+  </data>
+  <data name="ExpectingEmptyAfterIsNot" xml:space="preserve">
+    <value>Expecting 'empty' after 'is not'</value>
+  </data>
+  <data name="ModeOnWorkItems" xml:space="preserve">
+    <value>The MODE keyword can not be used inside work item query.</value>
+  </data>
+  <data name="RecursiveOnWorkItems" xml:space="preserve">
+    <value>The RECURSIVE keyword can not be used when querying work items.</value>
+  </data>
+  <data name="InvalidConditionForLongTextField" xml:space="preserve">
+    <value>The specified operator cannot be used with long-text fields.</value>
+  </data>
+  <data name="GroupByIsNotSupported" xml:space="preserve">
+    <value>GROUP BY is not supported yet.</value>
+  </data>
+  <data name="IncompatibleConditionPartsType" xml:space="preserve">
+    <value>TF212023: You cannot compare fields with different data types in the WHERE clause of a work item query.</value>
+  </data>
+  <data name="ExpectingEmptyNotEmptyAfterIs" xml:space="preserve">
+    <value>Expecting either 'empty' or 'not empty' after 'is'</value>
+  </data>
+  <data name="TableDoesNotExist" xml:space="preserve">
+    <value>TF51009: The query specifies an unknown table.</value>
+  </data>
+  <data name="FromIsNotSpecified" xml:space="preserve">
+    <value>TF51006: The query statement is missing a FROM clause.</value>
+  </data>
+  <data name="DuplicateOrderByField" xml:space="preserve">
+    <value>The ORDER BY list can not contain duplicate fields.</value>
+  </data>
+  <data name="ExpectingExpression" xml:space="preserve">
+    <value> Expecting expression.</value>
+  </data>
+  <data name="UnknownFieldType" xml:space="preserve">
+    <value>TF51013: The field specified has an unsupported type.</value>
+  </data>
+  <data name="DuplicateWhere" xml:space="preserve">
+    <value>A duplicate  WHERE part of SELECT query has been found.</value>
+  </data>
+  <data name="InvalidLinkTypeName" xml:space="preserve">
+    <value>The value is not a valid name of Link Type.</value>
+  </data>
+  <data name="VariableDoesNotExist" xml:space="preserve">
+    <value>The specified variable does not exist.</value>
+  </data>
+  <data name="PathMustBeAStringNotStartingWithBackslash" xml:space="preserve">
+    <value>TF51008: Classification paths cannot start with a backslash.</value>
+  </data>
+  <data name="DuplicateGroupBy" xml:space="preserve">
+    <value>A duplicate GROUP BY part of SELECT query has been found.</value>
+  </data>
+  <data name="ExpectingFieldName" xml:space="preserve">
+    <value> Expecting field name.</value>
+  </data>
+  <data name="ExpectingFieldList" xml:space="preserve">
+    <value> Expecting field list.</value>
+  </data>
+  <data name="ExpectingLeftBracket" xml:space="preserve">
+    <value> Expecting left bracket.</value>
+  </data>
+</root>

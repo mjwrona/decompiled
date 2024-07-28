@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Wiki.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D450300-1A30-49DA-B455-F98CC9C998B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Wiki.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Wiki.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WikiCompatHttpClientBase.cs" />
+    <Compile Include="IBaseResource.cs" />
+    <Compile Include="WikiCreateBaseParameters.cs" />
+    <Compile Include="WikiUpdateParameters.cs" />
+    <Compile Include="WikiV2.cs" />
+    <Compile Include="WikiType.cs" />
+    <Compile Include="WikiCreateParametersV2.cs" />
+    <Compile Include="WikiPageMove.cs" />
+    <Compile Include="WikiCreateParameters.cs" />
+    <Compile Include="WikiPageCreateOrUpdateParameters.cs" />
+    <Compile Include="WikiPageMoveParameters.cs" />
+    <Compile Include="WikiPageMoveResponse.cs" />
+    <Compile Include="WikiPageResponse.cs" />
+    <Compile Include="WikiPageViewStats.cs" />
+    <Compile Include="WikiAttachmentResponse.cs" />
+    <Compile Include="WikiAttachment.cs" />
+    <Compile Include="WikiPage.cs" />
+    <Compile Include="Wiki.cs" />
+    <Compile Include="WikiPageStat.cs" />
+    <Compile Include="WikiPageDetail.cs" />
+    <Compile Include="WikiHttpClient.cs" />
+    <Compile Include="WikiConstants.cs" />
+    <Compile Include="WikiUpdatedNotificationMessage.cs" />
+    <Compile Include="WikiNotificationConstants.cs" />
+    <Compile Include="Shared\WikiSecuredObject.cs" />
+    <Compile Include="Contracts\WikiPagesBatchRequest.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.DistributedTask.Elastic.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD148EA1-096F-4D71-9372-C93FC43685B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Elastic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask.Elastic</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Azure">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.AzureSdk">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.AzureSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Server" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cloud" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElasticConstants.cs" />
+    <Compile Include="ElasticAgentExtensions.cs" />
+    <Compile Include="ElasticNodeExtensions.cs" />
+    <Compile Include="ElasticHelpers.cs" />
+    <Compile Include="NodeObserver.cs" />
+    <Compile Include="PoolState.cs" />
+    <Compile Include="ScaleSetExtensions.cs" />
+    <Compile Include="ElasticPoolConfigurationJobBase.cs" />
+    <Compile Include="ElasticPoolSizingJobBase.cs" />
+    <Compile Include="FlexibleElasticPoolConfigurationJob.cs" />
+    <Compile Include="FlexibleElasticPoolSizingJob.cs" />
+    <Compile Include="AzureVIrtualMachineResourceService.cs" />
+    <Compile Include="IAzureVirtualMachineResourceService.cs" />
+    <Compile Include="ElasticNodeService.cs" />
+    <Compile Include="ElasticPoolLogService.cs" />
+    <Compile Include="IElasticNodeService.cs" />
+    <Compile Include="ElasticExceptionMapper.cs" />
+    <Compile Include="ElasticPoolDeleteListener.cs" />
+    <Compile Include="IVssRequestContextExtensions.cs" />
+    <Compile Include="ElasticPoolService.cs" />
+    <Compile Include="ElasticPoolServiceSecurityToken.cs" />
+    <Compile Include="VirtualMachineScaleSetAlreadyTaggedForUseException.cs" />
+    <Compile Include="ElasticPoolException.cs" />
+    <Compile Include="InvalidServiceEndpointException.cs" />
+    <Compile Include="ServiceEndpointDoesNotExistException.cs" />
+    <Compile Include="IElasticPoolLogService.cs" />
+    <Compile Include="IElasticPoolService.cs" />
+    <Compile Include="ElasticPoolConfigurationJob.cs" />
+    <Compile Include="ElasticPoolSizingJob.cs" />
+    <Compile Include="AzureMonitorResourceService.cs" />
+    <Compile Include="IAzureMonitorResourceService.cs" />
+    <Compile Include="IAzureVirtualMachineScaleSetResourceServiceInterna.cs" />
+    <Compile Include="IAzureVirtualMachineScaleSetResourceService.cs" />
+    <Compile Include="ResourceServiceBase`1.cs" />
+    <Compile Include="AzureVirtualMachineScaleSetResourceService.cs" />
+    <Compile Include="ElasticResources.cs" />
+    <Compile Include="Tracing\ElasticPoolTracingInterceptor.cs" />
+    <Compile Include="Controllers\ElasticNodesController.cs" />
+    <Compile Include="Controllers\ElasticApiController.cs" />
+    <Compile Include="Controllers\ElasticPoolLogsController.cs" />
+    <Compile Include="Controllers\ElasticPoolsController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ElasticResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

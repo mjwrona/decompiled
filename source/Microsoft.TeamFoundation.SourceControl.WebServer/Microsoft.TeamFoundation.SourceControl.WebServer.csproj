@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.SourceControl.WebServer.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EA025B8-DF87-4A87-A9A7-FFD7A1475CC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.SourceControl.WebServer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.SourceControl.WebServer</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>lib\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.Linking">
+      <HintPath>lib\Microsoft.Azure.Boards.Linking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.RecentActivity">
+      <HintPath>lib\Microsoft.Azure.Boards.RecentActivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server">
+      <HintPath>lib\Microsoft.Azure.Devops.Tags.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Work.RemoteServices">
+      <HintPath>lib\Microsoft.Azure.Devops.Work.RemoteServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Diff">
+      <HintPath>lib\Microsoft.TeamFoundation.Diff.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Git.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Policy.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Policy.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common.Integration">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.Integration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.CodeReview.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.CodeReview.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.SignalR">
+      <HintPath>lib\Microsoft.VisualStudio.Services.SignalR.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerIntelligenceInfo.cs" />
+    <Compile Include="GitRestRegistryPaths.cs" />
+    <Compile Include="GitRestFeatureFlags.cs" />
+    <Compile Include="TfvcRestResourceGroups.cs" />
+    <Compile Include="AdvSecEstimateOrgController.cs" />
+    <Compile Include="AdvSecEstimateProjectController.cs" />
+    <Compile Include="AdvSecEstimateRepoController.cs" />
+    <Compile Include="AdvSecEnablementController.cs" />
+    <Compile Include="AdvSecPermissionsController.cs" />
+    <Compile Include="GitBillableCommittersController.cs" />
+    <Compile Include="GitRevertConflictsController.cs" />
+    <Compile Include="GitImportRequestsController.cs" />
+    <Compile Include="GitCherryPickConflictsController.cs" />
+    <Compile Include="GitReverts2Controller.cs" />
+    <Compile Include="GitRevertsController.cs" />
+    <Compile Include="GitBlobsController.cs" />
+    <Compile Include="GitCherryPicks2Controller.cs" />
+    <Compile Include="GitCherryPicksController.cs" />
+    <Compile Include="GitMergeController.cs" />
+    <Compile Include="GitRecycleBinRepositoriesController.cs" />
+    <Compile Include="GitFileDiffsController.cs" />
+    <Compile Include="GitFilePathsController.cs" />
+    <Compile Include="GitMergeBasesController.cs" />
+    <Compile Include="GitForkSyncRequestsController.cs" />
+    <Compile Include="GitForksController.cs" />
+    <Compile Include="GitCherryPickRelationshipsController.cs" />
+    <Compile Include="GitRefsFavoritesForProjectController.cs" />
+    <Compile Include="GitRepositoryStatsController.cs" />
+    <Compile Include="GitBranchStats2Controller.cs" />
+    <Compile Include="GitBranchStatsController.cs" />
+    <Compile Include="GitChangesController.cs" />
+    <Compile Include="GitCommitDiffsController.cs" />
+    <Compile Include="GitCommitsController.cs" />
+    <Compile Include="GitCommits2Controller.cs" />
+    <Compile Include="GitDeletedRepositoriesController.cs" />
+    <Compile Include="GitItemsBatchController.cs" />
+    <Compile Include="GitItemsController.cs" />
+    <Compile Include="GitImportRepositoryValidationsController.cs" />
+    <Compile Include="GitAnnotatedTagsController.cs" />
+    <Compile Include="GitTemplatesController.cs" />
+    <Compile Include="GitPolicyConfigurationsController.cs" />
+    <Compile Include="GitPullRequestIterationStatusesController.cs" />
+    <Compile Include="GitPullRequestIterationStatuses2Controller.cs" />
+    <Compile Include="GitPullRequestLabelsController.cs" />
+    <Compile Include="GitPullRequestsBaseController.cs" />
+    <Compile Include="GitPullRequestConflictsController.cs" />
+    <Compile Include="GitTreeDiffsController.cs" />
+    <Compile Include="GitPullRequestStatusesBaseController.cs" />
+    <Compile Include="GitPullRequestStatuses2Controller.cs" />
+    <Compile Include="GitPullRequestStatusesController.cs" />
+    <Compile Include="GitPullRequestThreadsController.cs" />
+    <Compile Include="GitPullRequestThreadCommentsController.cs" />
+    <Compile Include="GitPullRequestCommentLikesController.cs" />
+    <Compile Include="GitPullRequestIterations3Controller.cs" />
+    <Compile Include="GitPullRequestIterations2Controller.cs" />
+    <Compile Include="GitPullRequestIterationsController.cs" />
+    <Compile Include="GitPullRequestIterationChangesController.cs" />
+    <Compile Include="GitRefsFavoritesController.cs" />
+    <Compile Include="GitPullRequestReviewersController.cs" />
+    <Compile Include="GitPullRequests2Controller.cs" />
+    <Compile Include="GitPullRequests3Controller.cs" />
+    <Compile Include="GitPullRequestsController.cs" />
+    <Compile Include="GitSuggestionsController.cs" />
+    <Compile Include="GitPullRequestWorkItemsController.cs" />
+    <Compile Include="GitPushes3Controller.cs" />
+    <Compile Include="GitPushes2Controller.cs" />
+    <Compile Include="GitPushesController.cs" />
+    <Compile Include="GitLimitedRefCriteriaController.cs" />
+    <Compile Include="GitRefsBatchController.cs" />
+    <Compile Include="GitRefs2Controller.cs" />
+    <Compile Include="GitRefsController.cs" />
+    <Compile Include="GitRepositoriesController.cs" />
+    <Compile Include="GitStatusesController.cs" />
+    <Compile Include="GitStatuses2Controller.cs" />
+    <Compile Include="GitTreesController.cs" />
+    <Compile Include="TfvcApiController.cs" />
+    <Compile Include="TfvcBranchesController.cs" />
+    <Compile Include="TfvcChangesetChangesController.cs" />
+    <Compile Include="TfvcChangesetsBatchController.cs" />
+    <Compile Include="TfvcChangesets3Controller.cs" />
+    <Compile Include="TfvcChangesets2Controller.cs" />
+    <Compile Include="TfvcChangesetsController.cs" />
+    <Compile Include="TfvcChangesetWorkItemsController.cs" />
+    <Compile Include="TfvcItemBatchController.cs" />
+    <Compile Include="TfvcItemsController.cs" />
+    <Compile Include="TfvcLabelItemsController.cs" />
+    <Compile Include="TfvcLabelsController.cs" />
+    <Compile Include="TfvcProjectInfoController.cs" />
+    <Compile Include="TfvcQueryTfvcStatisticsController.cs" />
+    <Compile Include="TfvcShelvesetChangesController.cs" />
+    <Compile Include="TfvcShelvesetsController.cs" />
+    <Compile Include="TfvcShelvesetWorkItemsController.cs" />
+    <Compile Include="InvalidArgumentValueException.cs" />
+    <Compile Include="InvalidVersionException.cs" />
+    <Compile Include="ItemBatchNotFoundException.cs" />
+    <Compile Include="InvalidItemAtRootException.cs" />
+    <Compile Include="BranchNotFoundException.cs" />
+    <Compile Include="ChangesetBatchNotFoundException.cs" />
+    <Compile Include="ProjectCatalogNodeMissingException.cs" />
+    <Compile Include="WebEditingDisabledException.cs" />
+    <Compile Include="GitFilePathsMaxCountExceededException.cs" />
+    <Compile Include="CheckInGatedBuildException.cs" />
+    <Compile Include="GitQueryCommitsCriteriaModelBinder.cs" />
+    <Compile Include="GitVersionDescriptorModelBinder.cs" />
+    <Compile Include="DiffGenerator.cs" />
+    <Compile Include="GitConflictModelExtensions.cs" />
+    <Compile Include="GitAsyncOperationModelExtensions.cs" />
+    <Compile Include="GitPullRequestModelExtensions.cs" />
+    <Compile Include="IterationCommitsData.cs" />
+    <Compile Include="IdentitiesLookupType.cs" />
+    <Compile Include="GitModelExtensions.cs" />
+    <Compile Include="GitCommitTranslator.cs" />
+    <Compile Include="StreamWrapper.cs" />
+    <Compile Include="TeamProjectVersionControlInfoUtil.cs" />
+    <Compile Include="TfsModelExtensions.cs" />
+    <Compile Include="WebApiConstants.cs" />
+    <Compile Include="WebApiTraceLayers.cs" />
+    <Compile Include="VersionControlFileReader.cs" />
+    <Compile Include="ChangeVersionSpec.cs" />
+    <Compile Include="GitVersionSpecCommon.cs" />
+    <Compile Include="GitVersionSpec.cs" />
+    <Compile Include="GitBranchVersionSpec.cs" />
+    <Compile Include="GitTagVersionSpec.cs" />
+    <Compile Include="GitCommitVersionSpec.cs" />
+    <Compile Include="MergeSourceVersionSpec.cs" />
+    <Compile Include="PreviousVersionSpec.cs" />
+    <Compile Include="ShelvesetVersionSpec.cs" />
+    <Compile Include="TipVersionSpec.cs" />
+    <Compile Include="ZipFileStreamEntry.cs" />
+    <Compile Include="ZipFileStreamResult.cs" />
+    <Compile Include="GitUrlGenerator.cs" />
+    <Compile Include="GitVersionControlProvider.cs" />
+    <Compile Include="StoredFile.cs" />
+    <Compile Include="TfsVersionControlProvider.cs" />
+    <Compile Include="VersionControlProvider.cs" />
+    <Compile Include="VersionControlSettings.cs" />
+    <Compile Include="TfvcVersionDescriptorModelBinder.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="ContinuationTokenHelper.cs" />
+    <Compile Include="GitLinkedContentUtility.cs" />
+    <Compile Include="GitStatusStateMapper.cs" />
+    <Compile Include="GitPermissionsUtility.cs" />
+    <Compile Include="GitPushUtility.cs" />
+    <Compile Include="GitToGitImportValidator.cs" />
+    <Compile Include="TfvcToGitImportClient.cs" />
+    <Compile Include="GitImportValidationUtility.cs" />
+    <Compile Include="GitPullRequestFileUtility.cs" />
+    <Compile Include="GitPullRequestLinksUtility.cs" />
+    <Compile Include="GitReferenceLinksUtility.cs" />
+    <Compile Include="GitCommitUtility.cs" />
+    <Compile Include="GitFileUtility.cs" />
+    <Compile Include="GitItemUtility.cs" />
+    <Compile Include="GitRemoteUrlUtility.cs" />
+    <Compile Include="GitVersionParser.cs" />
+    <Compile Include="ITfvcToGitImportClient.cs" />
+    <Compile Include="TfvcToGitImportValidator.cs" />
+    <Compile Include="GitItemsContinuationToken.cs" />
+    <Compile Include="PullRequestCommitsContinuationToken.cs" />
+    <Compile Include="RouteValuesFactory.cs" />
+    <Compile Include="IdentityLookupHelper.cs" />
+    <Compile Include="SanitizeSvgUtility.cs" />
+    <Compile Include="InvalidSvgException.cs" />
+    <Compile Include="SvgSanitizeException.cs" />
+    <Compile Include="TfvcChangesContinuationToken.cs" />
+    <Compile Include="TfvcItemsByChangesetContinuationToken.cs" />
+    <Compile Include="TfvcItemsContinuationToken.cs" />
+    <Compile Include="TfvcFileStatsUtility.cs" />
+    <Compile Include="VersionControlProcessTemplateUtility.cs" />
+    <Compile Include="RangeStream.cs" />
+    <Compile Include="TeamFoundationRequestContextExtensions.cs" />
+    <Compile Include="TfvcBranchesUtility.cs" />
+    <Compile Include="TfvcChangesetUtility.cs" />
+    <Compile Include="TfvcCommonUtility.cs" />
+    <Compile Include="TfvcFileUtility.cs" />
+    <Compile Include="TfvcItemUtility.cs" />
+    <Compile Include="TfvcLabelUtility.cs" />
+    <Compile Include="TfvcReferenceLinksUtility.cs" />
+    <Compile Include="TfvcShelvesetUtility.cs" />
+    <Compile Include="TfvcVersionSpecUtility.cs" />
+    <Compile Include="TfvcWorkspaceUtil.cs" />
+    <Compile Include="VersionControlFileUtility.cs" />
+    <Compile Include="WebLinksUtility.cs" />
+    <Compile Include="RemoteUrlRouteConstants.cs" />
+    <Compile Include="WebRegistryUtils.cs" />
+    <Compile Include="VersionDescriptorModelBinder`1.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Legacy\LegacyGitModelExtensions.cs" />
+    <Compile Include="Legacy\LegacyTfsModelExtensions.cs" />
+    <Compile Include="ObjectModel\GitConflictsContinuationToken.cs" />
+    <Compile Include="ObjectModel\GitPullRequestCodeReviewModelExtensions.cs" />
+    <Compile Include="Hub\IPullRequestDetailDispatcher.cs" />
+    <Compile Include="Hub\PullRequestDetailDispatcher.cs" />
+    <Compile Include="Hub\PullRequestDetailHub.cs" />
+    <Compile Include="Hub\IPullRequestDetailClient.cs" />
+    <Compile Include="Controllers\Git\GitCommitsBaseController.cs" />
+    <Compile Include="Controllers\Git\GitCommitsBatchController.cs" />
+    <Compile Include="Controllers\Git\GitCommitsBatch2Controller.cs" />
+    <Compile Include="Controllers\Git\GitPullRequestCommitsController.cs" />
+    <Compile Include="Controllers\Git\GitPullRequestQueryController.cs" />
+    <Compile Include="Controllers\Git\PullRequest\GitPullRequestAttachmentsController.cs" />
+    <Compile Include="Controllers\Git\PullRequest\GitPullRequestPropertiesController.cs" />
+    <Compile Include="Controllers\Git\PullRequest\GitPullRequestShareController.cs" />
+    <Compile Include="Microsoft\TeamFoundation\Git\Server\GitApiController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

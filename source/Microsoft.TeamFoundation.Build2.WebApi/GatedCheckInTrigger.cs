@@ -1,0 +1,46 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Build.WebApi.GatedCheckInTrigger
+// Assembly: Microsoft.TeamFoundation.Build2.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 0683407D-7C61-4505-8CA6-86AD7E3B6BCA
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Build2.WebApi.dll
+
+using Microsoft.VisualStudio.Services.WebApi;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Microsoft.TeamFoundation.Build.WebApi
+{
+  [DataContract]
+  public sealed class GatedCheckInTrigger : BuildTrigger
+  {
+    [DataMember(Name = "PathFilters", EmitDefaultValue = false)]
+    private List<string> m_pathFilters;
+
+    public GatedCheckInTrigger()
+      : this((ISecuredObject) null)
+    {
+    }
+
+    internal GatedCheckInTrigger(ISecuredObject securedObject)
+      : base(DefinitionTriggerType.GatedCheckIn, securedObject)
+    {
+    }
+
+    [DataMember(EmitDefaultValue = false)]
+    public bool RunContinuousIntegration { get; set; }
+
+    [DataMember(EmitDefaultValue = false)]
+    public bool UseWorkspaceMappings { get; set; }
+
+    public List<string> PathFilters
+    {
+      get
+      {
+        if (this.m_pathFilters == null)
+          this.m_pathFilters = new List<string>();
+        return this.m_pathFilters;
+      }
+      internal set => this.m_pathFilters = value;
+    }
+  }
+}

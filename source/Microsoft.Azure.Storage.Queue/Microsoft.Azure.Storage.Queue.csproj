@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Azure.Storage.Queue.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7657D120-98C7-47C3-B6AE-A0EF261374B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Storage.Queue</AssemblyName>
+    <ApplicationVersion>11.2.3.0</ApplicationVersion>
+    <RootNamespace>Microsoft.Azure.Storage</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>lib\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Auth\QueueSharedAccessSignatureHelper.cs" />
+    <Compile Include="Queue\CloudQueue.cs" />
+    <Compile Include="Queue\CloudQueueClient.cs" />
+    <Compile Include="Queue\CloudQueueEncryptedMessage.cs" />
+    <Compile Include="Queue\CloudQueueMessage.cs" />
+    <Compile Include="Queue\QueueEncryptionPolicy.cs" />
+    <Compile Include="Queue\QueueAccountExtensions.cs" />
+    <Compile Include="Queue\MessageUpdateFields.cs" />
+    <Compile Include="Queue\QueueContinuationToken.cs" />
+    <Compile Include="Queue\QueueMessageType.cs" />
+    <Compile Include="Queue\QueueRequestOptions.cs" />
+    <Compile Include="Queue\QueueResultSegment.cs" />
+    <Compile Include="Queue\SharedAccessQueuePermissions.cs" />
+    <Compile Include="Queue\SharedAccessQueuePolicies.cs" />
+    <Compile Include="Queue\SharedAccessQueuePolicy.cs" />
+    <Compile Include="Queue\Protocol\QueueHttpRequestMessageFactory.cs" />
+    <Compile Include="Queue\Protocol\QueueHttpResponseParsers.cs" />
+    <Compile Include="Queue\Protocol\GetMessagesResponse.cs" />
+    <Compile Include="Queue\Protocol\ListQueuesResponse.cs" />
+    <Compile Include="Queue\Protocol\QueueAccessPolicyResponse.cs" />
+    <Compile Include="Queue\Protocol\QueueEntry.cs" />
+    <Compile Include="Queue\Protocol\QueueErrorCodeStrings.cs" />
+    <Compile Include="Queue\Protocol\QueueListingContext.cs" />
+    <Compile Include="Queue\Protocol\QueueListingDetails.cs" />
+    <Compile Include="Queue\Protocol\QueueMessage.cs" />
+    <Compile Include="Queue\Protocol\QueuePermissions.cs" />
+    <Compile Include="Queue\Protocol\QueueRequest.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

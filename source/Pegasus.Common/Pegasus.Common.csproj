@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Pegasus.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E200494-1807-4F2B-B6B9-69A8AEAD9E16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Pegasus.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>4.0.14.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Pegasus.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheKey.cs" />
+    <Compile Include="Cursor.cs" />
+    <Compile Include="ILexical.cs" />
+    <Compile Include="IParseResult`1.cs" />
+    <Compile Include="LexicalElement.cs" />
+    <Compile Include="ListNode.cs" />
+    <Compile Include="ListNode`1.cs" />
+    <Compile Include="ParseDelegate`1.cs" />
+    <Compile Include="ParseResult`1.cs" />
+    <Compile Include="GitVersionInformation.cs" />
+    <Compile Include="Tracing\DiagnosticsTracer.cs" />
+    <Compile Include="Tracing\ITracer.cs" />
+    <Compile Include="Tracing\NullTracer.cs" />
+    <Compile Include="Highlighting\HighlightedSegment`1.cs" />
+    <Compile Include="Highlighting\HighlightRuleCollection`1.cs" />
+    <Compile Include="Highlighting\HighlightRule`1.cs" />
+    <Compile Include="Highlighting\SyntaxHighlighter`1.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

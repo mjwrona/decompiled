@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QuickAlertsHeader" xml:space="preserve">
+    <value>Create new alert when</value>
+  </data>
+  <data name="DeliveryTypeSoap" xml:space="preserve">
+    <value>SOAP</value>
+  </data>
+  <data name="AdvancedAlertManagementPageLink" xml:space="preserve">
+    <value>Team alerts can be managed from the &lt;a&gt;Advanced Alerts Management Page&lt;/a&gt;</value>
+  </data>
+  <data name="AlertEditorDialogAlertNameWithIdFormat" xml:space="preserve">
+    <value>{0} [{1}] {2}</value>
+  </data>
+  <data name="OperatorEqualTo" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="AlertDeleteErrorFormat" xml:space="preserve">
+    <value>Failed to delete one or more alerts: {0}</value>
+  </data>
+  <data name="EditEmailAddressesDialogTitle" xml:space="preserve">
+    <value>Edit email addresses</value>
+  </data>
+  <data name="OpenAlert" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="ConfirmDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete the selected alerts?</value>
+  </data>
+  <data name="MyNotificationAddressLegendText" xml:space="preserve">
+    <value>Send my alerts to</value>
+  </data>
+  <data name="Alerts" xml:space="preserve">
+    <value>Alerts</value>
+  </data>
+  <data name="AlertTemplate" xml:space="preserve">
+    <value>Alert template</value>
+  </data>
+  <data name="NewAlert" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="AlertsSavedSuccessfullyMessage" xml:space="preserve">
+    <value>Alert(s) were saved successfully</value>
+  </data>
+  <data name="MyCurrentSubscriptionsLabel" xml:space="preserve">
+    <value>My current subscriptions</value>
+  </data>
+  <data name="BasicAlertsLegendText" xml:space="preserve">
+    <value>Send me an email alert when</value>
+  </data>
+  <data name="DefaultAddressFormat" xml:space="preserve">
+    <value>{0} [default]</value>
+  </data>
+  <data name="TeamAlert" xml:space="preserve">
+    <value>Team alert</value>
+  </data>
+  <data name="AlertEditorDialogTitle" xml:space="preserve">
+    <value>Alert editor</value>
+  </data>
+  <data name="NamedTeamCategorizedAlertsFormat" xml:space="preserve">
+    <value>{0} alerts for {1}</value>
+  </data>
+  <data name="RefreshTitle" xml:space="preserve">
+    <value>Refresh all alerts</value>
+  </data>
+  <data name="SaveAll" xml:space="preserve">
+    <value>Save all</value>
+  </data>
+  <data name="CustomAlerts" xml:space="preserve">
+    <value>Custom alerts</value>
+  </data>
+  <data name="MyAlerts" xml:space="preserve">
+    <value>My Alerts</value>
+  </data>
+  <data name="FieldNameDefinitionName" xml:space="preserve">
+    <value>Definition name</value>
+  </data>
+  <data name="LogicalOperatorAnd" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="AlertDialogSaveAndCloseButtonText" xml:space="preserve">
+    <value>Save and close</value>
+  </data>
+  <data name="RevertTitle" xml:space="preserve">
+    <value>Undo changes to the selected alerts</value>
+  </data>
+  <data name="RefreshingAlertsMessage" xml:space="preserve">
+    <value>Refreshing alerts...</value>
+  </data>
+  <data name="QuickAlertsOtherItem" xml:space="preserve">
+    <value>Other...</value>
+  </data>
+  <data name="AlertNameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TeamAlerts" xml:space="preserve">
+    <value>Team alerts</value>
+  </data>
+  <data name="CategoryUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Revert" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="AlertFormatColumn" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="AllAlerts" xml:space="preserve">
+    <value>All Alerts</value>
+  </data>
+  <data name="EditEmailAddressesDialogInstructionLabel" xml:space="preserve">
+    <value>Enter email addresses in the form "username@host" or "Display Name &lt;username@host&gt;". Separate multiple email addresses with a semi-colon (;) or comma (,)</value>
+  </data>
+  <data name="BasicAlerts" xml:space="preserve">
+    <value>Basic alerts</value>
+  </data>
+  <data name="EditCustomEmailAddressDialogInstructionLabel" xml:space="preserve">
+    <value>Enter email address in the form "username@host" or "Display Name &lt;username@host&gt;".</value>
+  </data>
+  <data name="AlertsTeamNodeFormat" xml:space="preserve">
+    <value>{0} alerts</value>
+  </data>
+  <data name="ValidatorSoapAddressRequired" xml:space="preserve">
+    <value>Must specify a valid SOAP endpoint (URI)</value>
+  </data>
+  <data name="NewAlertDialogTitle" xml:space="preserve">
+    <value>Select new alert template</value>
+  </data>
+  <data name="LogicalOperatorOr" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="SubscriptionSaveConfirmation" xml:space="preserve">
+    <value> Are you sure you want to save the subscription(s)?</value>
+  </data>
+  <data name="CategoryWorkItem" xml:space="preserve">
+    <value>Work Item</value>
+  </data>
+  <data name="SavingAlertsMessage" xml:space="preserve">
+    <value>Saving alerts...</value>
+  </data>
+  <data name="AlertScopeLabel" xml:space="preserve">
+    <value>Scope (who can view and manage this alert)</value>
+  </data>
+  <data name="SubscriberLabel" xml:space="preserve">
+    <value>Subscriber</value>
+  </data>
+  <data name="CustomAddressesRadioLabel" xml:space="preserve">
+    <value>Send to the following email addresses</value>
+  </data>
+  <data name="ConfirmRevertMessage" xml:space="preserve">
+    <value>Are you sure you want to undo changes to the selected alerts?</value>
+  </data>
+  <data name="FieldNameTeamProject" xml:space="preserve">
+    <value>Team project</value>
+  </data>
+  <data name="EditLinkText" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="CategorizedAlertsUserNodeFormat" xml:space="preserve">
+    <value>{0} alerts for {1}</value>
+  </data>
+  <data name="ValidatorNameExceedsMaxLength" xml:space="preserve">
+    <value>Alert name cannot exceed 200 characters</value>
+  </data>
+  <data name="MembersEmail" xml:space="preserve">
+    <value>[Members' default alert address]</value>
+  </data>
+  <data name="AlertEditorNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="RevertingAlertsMessage" xml:space="preserve">
+    <value>Reverting alerts...</value>
+  </data>
+  <data name="DeliveryScheduleDaily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="MyCategorizedAlertsFormat" xml:space="preserve">
+    <value>My {0} alerts</value>
+  </data>
+  <data name="TeamsAlertsFilterShowOption" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="CategoryGitPush" xml:space="preserve">
+    <value>Push</value>
+  </data>
+  <data name="TeamAlertsTitleFormat" xml:space="preserve">
+    <value>Team alerts for {0}</value>
+  </data>
+  <data name="AlertCategory" xml:space="preserve">
+    <value>Alert category</value>
+  </data>
+  <data name="DeliveryTypeEmailPlainText" xml:space="preserve">
+    <value>Plain text</value>
+  </data>
+  <data name="AlertSaveErrorFormat" xml:space="preserve">
+    <value>Failed to save one or more alerts: {0}</value>
+  </data>
+  <data name="DeleteSelected" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="AlertEditorFormatLabel" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="InvalidOperator" xml:space="preserve">
+    <value>Invalid operator : {0}</value>
+  </data>
+  <data name="AlertTemplateNameColumn" xml:space="preserve">
+    <value>Template name</value>
+  </data>
+  <data name="InvalidMailSettingsMessage" xml:space="preserve">
+    <value>TF400663: Mail settings are not configured on this server. Please contact your administrator.</value>
+  </data>
+  <data name="CategoryCodeReview" xml:space="preserve">
+    <value>Code review</value>
+  </data>
+  <data name="CategoryNodeFormat" xml:space="preserve">
+    <value>{0} Alerts</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="DeliveryScheduleWeekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="EditEmailAddressesDialogDefaultLabel" xml:space="preserve">
+    <value>Enter email addresses</value>
+  </data>
+  <data name="DefaultAddressesRadioLabel" xml:space="preserve">
+    <value>Send to my preferred email</value>
+  </data>
+  <data name="CategoryCheckin" xml:space="preserve">
+    <value>Checkin</value>
+  </data>
+  <data name="ConfirmRefreshMessage" xml:space="preserve">
+    <value>You have unsaved changes. Are you sure you wish to refresh? Unsaved changes will be lost.</value>
+  </data>
+  <data name="ManageAlertsDialogTitle" xml:space="preserve">
+    <value>Manage My alerts</value>
+  </data>
+  <data name="LoadingAlertsMessage" xml:space="preserve">
+    <value>Loading alerts...</value>
+  </data>
+  <data name="DeliveryScheduleImmediate" xml:space="preserve">
+    <value>Immediate</value>
+  </data>
+  <data name="AlertSubscriberColumn" xml:space="preserve">
+    <value>Subscriber</value>
+  </data>
+  <data name="BasicAlertsNoNotificationAddressAction" xml:space="preserve">
+    <value>Click here to specify your email address...</value>
+  </data>
+  <data name="EditCustomEmailAddressDialogTitle" xml:space="preserve">
+    <value>Edit my notification email address</value>
+  </data>
+  <data name="EditCustomEmailAddressDialogLabel" xml:space="preserve">
+    <value>Send my alerts to the following email address</value>
+  </data>
+  <data name="NewAlertTitle" xml:space="preserve">
+    <value>Create a new alert...</value>
+  </data>
+  <data name="ValidatorEmailRequired" xml:space="preserve">
+    <value>Must specify one or more email addresses</value>
+  </data>
+  <data name="AlertsAdminPageTitle" xml:space="preserve">
+    <value>Alerts management</value>
+  </data>
+  <data name="BasicAlertDisplayedNameFormat" xml:space="preserve">
+    <value>{0} [system alert]</value>
+  </data>
+  <data name="OperatorUnder" xml:space="preserve">
+    <value>Under</value>
+  </data>
+  <data name="BasicAlertsNoNotificationAddressText" xml:space="preserve">
+    <value>You cannot currently create any basic alert subscriptions because you have not specified a default alert email address.</value>
+  </data>
+  <data name="DefaultAlertAddress" xml:space="preserve">
+    <value>[Default alert address]</value>
+  </data>
+  <data name="AlertCategoryColumn" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="AlertEditorFilterGroupLabel" xml:space="preserve">
+    <value>Alert filters</value>
+  </data>
+  <data name="InvalidField" xml:space="preserve">
+    <value>Invalid field name : {0}</value>
+  </data>
+  <data name="SubscriberAlertsCountFormat" xml:space="preserve">
+    <value>Showing {0} of {1} alerts for {2}</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="DeletingAlertsMessage" xml:space="preserve">
+    <value>Deleting alerts...</value>
+  </data>
+  <data name="AllMyTeamsAlerts" xml:space="preserve">
+    <value>All My Teams Alerts</value>
+  </data>
+  <data name="AlertSendToColumn" xml:space="preserve">
+    <value>Send To</value>
+  </data>
+  <data name="CategoryBuild" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="AlertsCountFormat" xml:space="preserve">
+    <value>Showing {0} of {1} alerts</value>
+  </data>
+  <data name="TeamCategorizedAlertsFormat" xml:space="preserve">
+    <value>Team {0} alerts</value>
+  </data>
+  <data name="MyAlert" xml:space="preserve">
+    <value>My alert</value>
+  </data>
+  <data name="AlertsUserNodeFormat" xml:space="preserve">
+    <value>{0} alerts</value>
+  </data>
+  <data name="AlertDialogCloseButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="AllCategorizedAlertsFormat" xml:space="preserve">
+    <value>All {0} alerts</value>
+  </data>
+  <data name="DeleteSelectedTitle" xml:space="preserve">
+    <value>Delete the selected alerts</value>
+  </data>
+  <data name="ValidatorNameRequired" xml:space="preserve">
+    <value>Must specify a name for this alert</value>
+  </data>
+  <data name="AlertEditorAddressLabel" xml:space="preserve">
+    <value>Send to</value>
+  </data>
+  <data name="SaveAllTitle" xml:space="preserve">
+    <value>Save all modified alerts</value>
+  </data>
+  <data name="DeliveryTypeEmailHtml" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="OperatorChanges" xml:space="preserve">
+    <value>Changes</value>
+  </data>
+  <data name="DeleteAlert" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="TeamsAlertsFilterHideOption" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="NoNotificationAddress" xml:space="preserve">
+    <value>[No default email address]</value>
+  </data>
+  <data name="InvalidEmailAddressFormat" xml:space="preserve">
+    <value>The following email address is not valid: '{0}'. Please specify a valid email address in the form 'user@host' or 'Display name &lt;user@host&gt;'</value>
+  </data>
+  <data name="CategoryGitPullRequest" xml:space="preserve">
+    <value>Pull Request</value>
+  </data>
+</root>

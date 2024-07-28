@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.VersionControl.ClientSlim.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E98C6C58-6231-4F54-A254-FEB17DFBE4CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.VersionControl.ClientSlim</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.VersionControl.Client</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangesetVersionSpec.cs" />
+    <Compile Include="DateVersionSpec.cs" />
+    <Compile Include="AcceptMergeNamespaceConflictRequiresDestinationExc.cs" />
+    <Compile Include="AcceptMergeVersionConflictRequiresDestinationExcep.cs" />
+    <Compile Include="AcceptYoursRenameTheirsRequiresDestinationExceptio.cs" />
+    <Compile Include="ArtifactIdentifierRequiredException.cs" />
+    <Compile Include="AuthorizationException.cs" />
+    <Compile Include="AutoMergeDisallowedException.cs" />
+    <Compile Include="BadChecksumException.cs" />
+    <Compile Include="BranchSourceNotCommittedException.cs" />
+    <Compile Include="CannotBranchDestroyedContentException.cs" />
+    <Compile Include="CannotChangeRootFolderException.cs" />
+    <Compile Include="CannotChangeWorkspaceOwnerException.cs" />
+    <Compile Include="CannotCheckinAllWithEditException.cs" />
+    <Compile Include="CannotCheckinDependantRenameException.cs" />
+    <Compile Include="CannotCheckinPartialUndeleteException.cs" />
+    <Compile Include="CannotCheckinRenameAsPendingAddConflictsException.cs" />
+    <Compile Include="CannotCheckinRenameDueToChildConflictException.cs" />
+    <Compile Include="CannotCreateFilesInRootException.cs" />
+    <Compile Include="CannotCreateParentFolderException.cs" />
+    <Compile Include="CannotDeleteTeamProjectFolderException.cs" />
+    <Compile Include="CannotDestroyRootException.cs" />
+    <Compile Include="CannotFindLatestChangesetException.cs" />
+    <Compile Include="CannotLockException.cs" />
+    <Compile Include="CannotMergeDestroyedFileException.cs" />
+    <Compile Include="CannotMergeUnderSourceException.cs" />
+    <Compile Include="CannotMergeWithExistingConflictException.cs" />
+    <Compile Include="CannotMergeWithWorkspaceSpecAndPendingDeleteExcept.cs" />
+    <Compile Include="CannotMoveToRootException.cs" />
+    <Compile Include="CannotPendChangeOnDestroyedFileException.cs" />
+    <Compile Include="CannotPendEditOnDeletedFileWithGetLatestException.cs" />
+    <Compile Include="CannotPendEditOnRenamedFileWithGetLatestException.cs" />
+    <Compile Include="CannotRenameBackToOriginalSourceException.cs" />
+    <Compile Include="CannotRenameDueToChildConflictException.cs" />
+    <Compile Include="CannotResolveAcceptMergeWithNonexistentVersionExce.cs" />
+    <Compile Include="CannotResolveBecauseShelvesetDeletedException.cs" />
+    <Compile Include="CannotResolveConflictAsAutoMerge.cs" />
+    <Compile Include="CannotResolveDeletedItemWithAcceptMergeException.cs" />
+    <Compile Include="CannotResolveDueToRenameAndDelete.cs" />
+    <Compile Include="CannotResolveToPartialUndeleteException.cs" />
+    <Compile Include="CannotSetMappingOnRenameException.cs" />
+    <Compile Include="CannotShelvePartialUndeleteException.cs" />
+    <Compile Include="CannotSpecifyNewNameException.cs" />
+    <Compile Include="CannotTakeCheckoutLockInLocalWorkspaceException.cs" />
+    <Compile Include="CannotUndeleteTeamProjectFolderException.cs" />
+    <Compile Include="CannotUndoItemExistingLockConflictsException.cs" />
+    <Compile Include="CannotUndoRenameDueToChildConflictException.cs" />
+    <Compile Include="CannotUnlockException.cs" />
+    <Compile Include="ChangeAlreadyPendingException.cs" />
+    <Compile Include="ChangesetAuthorMustBeNonGroupException.cs" />
+    <Compile Include="ChangesetNotFoundException.cs" />
+    <Compile Include="CheckoutLockRequiredException.cs" />
+    <Compile Include="CheckoutLocksDisabledException.cs" />
+    <Compile Include="ContentNotUploadedException.cs" />
+    <Compile Include="ContentRequiredException.cs" />
+    <Compile Include="CouldNotAddProxyException.cs" />
+    <Compile Include="CouldNotDeleteProxyException.cs" />
+    <Compile Include="CreateBranchObjectException.cs" />
+    <Compile Include="DateVersionSpecBeforeBeginningOfRepositoryExceptio.cs" />
+    <Compile Include="DeltaException.cs" />
+    <Compile Include="DestroyedContentUnavailableException.cs" />
+    <Compile Include="DuplicateChangeException.cs" />
+    <Compile Include="DuplicateCheckinNoteFieldException.cs" />
+    <Compile Include="DuplicateExtensionException.cs" />
+    <Compile Include="DuplicateFileTypeException.cs" />
+    <Compile Include="DuplicateItemFoundException.cs" />
+    <Compile Include="DuplicateItemsInCheckInRequestException.cs" />
+    <Compile Include="DuplicateServerItemException.cs" />
+    <Compile Include="DuplicateWorkingFolderException.cs" />
+    <Compile Include="EmptyCheckInException.cs" />
+    <Compile Include="ExistingParentFileException.cs" />
+    <Compile Include="FeatureNotSupportedException.cs" />
+    <Compile Include="FileIdNotFoundException.cs" />
+    <Compile Include="FolderContentException.cs" />
+    <Compile Include="FolderEditException.cs" />
+    <Compile Include="FutureDateException.cs" />
+    <Compile Include="GenericException.cs" />
+    <Compile Include="GetLatestOnCheckoutDisabledException.cs" />
+    <Compile Include="IdentityDeletedException.cs" />
+    <Compile Include="IdentityNotFoundException.cs" />
+    <Compile Include="IllegalCommentException.cs" />
+    <Compile Include="IllegalComputerNameException.cs" />
+    <Compile Include="IllegalFieldNameException.cs" />
+    <Compile Include="IllegalIdentityException.cs" />
+    <Compile Include="IllegalLabelNameException.cs" />
+    <Compile Include="IllegalPolicyNameException.cs" />
+    <Compile Include="IllegalServerItemException.cs" />
+    <Compile Include="IllegalShelvesetException.cs" />
+    <Compile Include="IllegalShelvesetOwnerException.cs" />
+    <Compile Include="IllegalUrlException.cs" />
+    <Compile Include="IllegalVersionException.cs" />
+    <Compile Include="IllegalWorkspaceException.cs" />
+    <Compile Include="IncompatibleChangeException.cs" />
+    <Compile Include="IncompatibleCompressionFormatException.cs" />
+    <Compile Include="IncompletePendingChangeException.cs" />
+    <Compile Include="IncompleteUploadException.cs" />
+    <Compile Include="InconsistentRequestTypesException.cs" />
+    <Compile Include="IncorrectSizeException.cs" />
+    <Compile Include="InvalidAcceptYoursException.cs" />
+    <Compile Include="InvalidAcceptYoursRenameTheirsException.cs" />
+    <Compile Include="InvalidBranchCheckinOptionException.cs" />
+    <Compile Include="InvalidCheckinDateException.cs" />
+    <Compile Include="InvalidCheckinTicketException.cs" />
+    <Compile Include="InvalidConflictIdException.cs" />
+    <Compile Include="InvalidExtensionException.cs" />
+    <Compile Include="InvalidFileIdException.cs" />
+    <Compile Include="InvalidIdentityException.cs" />
+    <Compile Include="InvalidProjectPendingChangeException.cs" />
+    <Compile Include="InvalidResolutionException.cs" />
+    <Compile Include="InvalidSqlDateException.cs" />
+    <Compile Include="InvalidVersionSpecException.cs" />
+    <Compile Include="InvalidVersionSpecForOperationException.cs" />
+    <Compile Include="ItemCloakedException.cs" />
+    <Compile Include="ItemDeletedException.cs" />
+    <Compile Include="ItemExistsException.cs" />
+    <Compile Include="ItemLockedException.cs" />
+    <Compile Include="ItemNotCheckedOutException.cs" />
+    <Compile Include="ItemNotFoundException.cs" />
+    <Compile Include="ItemNotMappedException.cs" />
+    <Compile Include="ItemRequiredException.cs" />
+    <Compile Include="LabelDuplicateItemException.cs" />
+    <Compile Include="LabelExistsException.cs" />
+    <Compile Include="LabelHasChildrenException.cs" />
+    <Compile Include="LabelNotFoundException.cs" />
+    <Compile Include="LabelNotUniqueException.cs" />
+    <Compile Include="LabelOwnerChangeException.cs" />
+    <Compile Include="LabelPendingAddException.cs" />
+    <Compile Include="LatestVersionDeletedException.cs" />
+    <Compile Include="LocalItemOutOfDateException.cs" />
+    <Compile Include="LocalItemRequiredException.cs" />
+    <Compile Include="LocalPathTooLongException.cs" />
+    <Compile Include="LocalVersionNotFoundException.cs" />
+    <Compile Include="LocalWorkspaceRequiredException.cs" />
+    <Compile Include="LongPathInWorkspaceRequires2012QU1Exception.cs" />
+    <Compile Include="MappingException.cs" />
+    <Compile Include="MaxRowsEvaluatedException.cs" />
+    <Compile Include="MergeConflictExistsException.cs" />
+    <Compile Include="MergeDoNotHaveTargetLocallyException.cs" />
+    <Compile Include="MergeEditDeleteException.cs" />
+    <Compile Include="MergeTargetCloakedException.cs" />
+    <Compile Include="MergeTargetFileSourceDirectoryException.cs" />
+    <Compile Include="MergeTargetNotMappedException.cs" />
+    <Compile Include="MergeTargetPathAlreadyHasPendingMergeException.cs" />
+    <Compile Include="MergeTargetPathHasIncompatiblePendingChangeExcepti.cs" />
+    <Compile Include="MergeTargetPathHasNamespacePendingChangeConflictEx.cs" />
+    <Compile Include="MissingParentIsRenameOrUndeleteException.cs" />
+    <Compile Include="MustUndeleteParentException.cs" />
+    <Compile Include="NoChangesToShelveException.cs" />
+    <Compile Include="NoLockExistsException.cs" />
+    <Compile Include="NoMergeRelationshipException.cs" />
+    <Compile Include="NotAllowedOnFolderException.cs" />
+    <Compile Include="NotPermittedForLocalWorkspaceException.cs" />
+    <Compile Include="NotWorkspaceOwnerException.cs" />
+    <Compile Include="OwnerRequiredException.cs" />
+    <Compile Include="PartialRenameConflictException.cs" />
+    <Compile Include="PendingChangeChangedException.cs" />
+    <Compile Include="PendingChangeContentNotFoundException.cs" />
+    <Compile Include="PendingChangeMergeConflictExistsException.cs" />
+    <Compile Include="PendingChildException.cs" />
+    <Compile Include="PendingDeleteConflictChangeException.cs" />
+    <Compile Include="PendingLocalVersionMismatchException.cs" />
+    <Compile Include="PendingParentDeleteException.cs" />
+    <Compile Include="PluginHasMultipleInterfacesException.cs" />
+    <Compile Include="ReconcileBlockedByProjectRenameException.cs" />
+    <Compile Include="RenameWorkingFolderException.cs" />
+    <Compile Include="RepositoryPathTooLongDetailedException.cs" />
+    <Compile Include="RepositoryPathTooLongDueToDeletedItemsException.cs" />
+    <Compile Include="RepositoryPathTooLongException.cs" />
+    <Compile Include="ReservedAnnotationException.cs" />
+    <Compile Include="ResourceAccessException.cs" />
+    <Compile Include="RollbackInvalidOptionException.cs" />
+    <Compile Include="RollbackInvalidVersionSpecException.cs" />
+    <Compile Include="RootInheritanceException.cs" />
+    <Compile Include="SecurityConfigurationException.cs" />
+    <Compile Include="SecurityException.cs" />
+    <Compile Include="ServerItemException.cs" />
+    <Compile Include="ServerItemRequiredException.cs" />
+    <Compile Include="ShelveMergeConflictExistsException.cs" />
+    <Compile Include="ShelvedChangeNotFoundException.cs" />
+    <Compile Include="ShelvesetExistsException.cs" />
+    <Compile Include="ShelvesetNotFoundException.cs" />
+    <Compile Include="ShelvingPartialRenameConflictException.cs" />
+    <Compile Include="TargetCloakedException.cs" />
+    <Compile Include="TargetHasPendingChangeException.cs" />
+    <Compile Include="TargetIsChildException.cs" />
+    <Compile Include="TeamFoundationVersionControlNotEnabledForTeamProje.cs" />
+    <Compile Include="TeamProjectCannotDeleteException.cs" />
+    <Compile Include="TeamProjectNotEmptyException.cs" />
+    <Compile Include="TeamProjectNotFoundException.cs" />
+    <Compile Include="TrackMergesExceededMaxBranchesLimitException.cs" />
+    <Compile Include="UndeleteAboveUnrelatedItemException.cs" />
+    <Compile Include="UndeleteNewNameNotSupportedException.cs" />
+    <Compile Include="UnshelvingPartialRenameException.cs" />
+    <Compile Include="VersionConflictException.cs" />
+    <Compile Include="VersionControlException.cs" />
+    <Compile Include="WebMethodNotSupportedException.cs" />
+    <Compile Include="WildcardNotAllowedException.cs" />
+    <Compile Include="WorkingFolderCreationException.cs" />
+    <Compile Include="WorkingFolderException.cs" />
+    <Compile Include="WorkingFolderInUseException.cs" />
+    <Compile Include="WorkspaceCreationException.cs" />
+    <Compile Include="WorkspaceDeletionException.cs" />
+    <Compile Include="WorkspaceException.cs" />
+    <Compile Include="WorkspaceExistsException.cs" />
+    <Compile Include="WorkspaceNotFoundException.cs" />
+    <Compile Include="WorkspaceRequiresComputerNameException.cs" />
+    <Compile Include="LabelVersionSpec.cs" />
+    <Compile Include="LatestVersionSpec.cs" />
+    <Compile Include="VersionSpec.cs" />
+    <Compile Include="WorkspaceVersionSpec.cs" />
+    <Compile Include="RepositoryNotFoundException.cs" />
+    <Compile Include="WorkItemUpdateException.cs" />
+    <Compile Include="GatedCheckinException.cs" />
+    <Compile Include="ShelveException.cs" />
+    <Compile Include="UnshelveException.cs" />
+    <Compile Include="MappingConflictException.cs" />
+    <Compile Include="InvalidFileTypeException.cs" />
+    <Compile Include="BaselineUnavailableException.cs" />
+    <Compile Include="DepthOneMappingsNotSupportedException.cs" />
+    <Compile Include="WorkspaceVersionTableException.cs" />
+    <Compile Include="InvalidPendingChangeTableException.cs" />
+    <Compile Include="InvalidWorkspacePropertiesTableException.cs" />
+    <Compile Include="InvalidQueuedEditsTableException.cs" />
+    <Compile Include="UnableToLoadLocalPropertiesTableException.cs" />
+    <Compile Include="UnableToLoadLocalVersionTableException.cs" />
+    <Compile Include="UnableToLoadPendingChangesTableException.cs" />
+    <Compile Include="LocalWorkspaceTransactionAlreadyRunningException.cs" />
+    <Compile Include="MultipleWorkspacesFoundException.cs" />
+    <Compile Include="MissingBaselineException.cs" />
+    <Compile Include="ThirdPartyAssemblyToolException.cs" />
+    <Compile Include="ThirdPartyAutomergeToolException.cs" />
+    <Compile Include="ResolveRequiresOneResolutionException.cs" />
+    <Compile Include="UploadFileException.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

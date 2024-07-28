@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{F2F7BB5A-0247-404A-96F6-D202146A6F40}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.VisualStudio.Services.Analytics.Sdk.Plugins.dll" providerName="MicrosoftVisualStudioServicesAnalyticsSdkPlugins" providerType="userMode" symbol="MicrosoftVisualStudioServicesAnalyticsSdkPlugins" callback="custom">
+        <counterSet guid="{8e72fc92-6733-43cc-a17b-6e7fded87ca8}" name="Analytics Plugins" description="Analytics Plugins Performance Counters" instances="multipleAggregate" symbol="AnalyticsPluginsPerfCounters" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Average Retrieve Records Base" description="Base for retrieve records averages" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters.AverageRetrieveRecordsBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="2" baseID="1" name="Average Retrieve Records Result Count" description="Average count of items returned from retrieve records" type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters.AverageRetrieveRecordsResultCount" />
+          <counter id="3" baseID="1" name="Average Retrieve Records Time" description="Average time to retrieve records" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters.AverageRetrieveRecordsTime" />
+          <counter id="4" name="Average Stage Records Base" description="Base stage records averages" type="perf_average_base" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters.AverageStageRecordsBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="5" baseID="4" name="Average Stage Records Result Count" description="Average count of items returned from stage records" type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters.AverageStageRecordsResultCount" />
+          <counter id="6" baseID="4" name="Average Stage Records Time" description="Average time to stage records" type="perf_average_timer" detailLevel="standard" aggregate="sum" uri="Microsoft.TeamFoundation.Analytics.Plugins.PerformanceCounters.AverageStageRecordsTime" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

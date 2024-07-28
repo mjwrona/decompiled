@@ -1,0 +1,45 @@
+﻿
+#
+# Summary: This is the pre-steps template for the system-defined job decorator
+#
+
+steps:
+
+# Debug
+- ${{ if eq('true', variables['system.debugContext']) }}:
+  - task: 6c731c3c-3c68-459a-a5c9-bde6e6595b5b@3 # Bash
+    displayName: Pipeline decorator context (macOS/Linux)
+    condition: and(succeeded(), in(variables['agent.os'], 'Darwin', 'Linux'))
+    inputs:
+      targetType: inline
+      script: |
+        cat << "EOF"
+        resources=${{ convertToJson(resources) }}
+
+        job=${{ convertToJson(job) }}
+        EOF
+  - task: e213ff0f-5d5c-4791-802d-52ea3e7be1f1@2 # PowerShell
+    displayName: Pipeline decorator context (Windows)
+    condition: and(succeeded(), eq(variables['agent.os'], 'Windows_NT'))
+    inputs:
+      targetType: inline
+      script: |
+        Write-Host @'
+        resources=${{ convertToJson(resources) }}
+
+        job=${{ convertToJson(job) }}
+        '@
+
+# Only yaml pipelines contain a "self" repository
+- ${{ if resources.repositories.self }}:
+
+  # Inject "checkout"
+  - ${{ if not(containsValue(job.steps.*.task.id, '6d15af64-176c-496d-b583-fd2ae21d4df4')) }}:
+    - task: 6d15af64-176c-496d-b583-fd2ae21d4df4@1
+      inputs:
+        repository: self
+
+        # Merge the default checkout options
+        # todo: remove this when the feature flag DistributedTask.IncludeCheckoutOptions is removed
+        ${{ each pair in resources.repositories.self.checkoutOptions }}:
+          ${{ pair.key }}: ${{ pair.value }}

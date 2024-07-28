@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Feed.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFCCC113-2D2C-4213-9742-18BB039EB0C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Feed.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Feed.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.BclPolyfills">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.CrossProtocol.Internal.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\Common\FeedSecuredObjectFactory.cs" />
+    <Compile Include="IBatchSplitter.cs" />
+    <Compile Include="BatchSplitter.cs" />
+    <Compile Include="GeneralExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="ChangeProcessingJob.cs" />
+    <Compile Include="IChangeProvider.cs" />
+    <Compile Include="Changes.cs" />
+    <Compile Include="IChange.cs" />
+    <Compile Include="IChangeProcessorProvider.cs" />
+    <Compile Include="ITokenProvider.cs" />
+    <Compile Include="FeedCacheService.cs" />
+    <Compile Include="FeedMessageSubscriber.cs" />
+    <Compile Include="FeedSqlNotificationMessage.cs" />
+    <Compile Include="IFeedCacheService.cs" />
+    <Compile Include="ConcurrencyLimitingInvoker.cs" />
+    <Compile Include="FeatureFlagFeedSettingProvider.cs" />
+    <Compile Include="FeatureFlagFeedSettingDefinition.cs" />
+    <Compile Include="FeatureFlagFeedDefinitionProvider.cs" />
+    <Compile Include="FeedIdentity.cs" />
+    <Compile Include="FeedIdentityExtensions.cs" />
+    <Compile Include="FeedException.cs" />
+    <Compile Include="IAsyncInvoker.cs" />
+    <Compile Include="ProjectFeedsConversionHelper.cs" />
+    <Compile Include="RawFeedIdentity.cs" />
+    <Compile Include="SplitBatchInvoker`1.cs" />
+    <Compile Include="SplitBatchInvokerExtensions.cs" />
+    <Compile Include="FeedModelExtensions.cs" />
+    <Compile Include="FeedModelSecuredObjectExtensions.cs" />
+    <Compile Include="ProjectScopedFeedSecuredObject.cs" />
+    <Compile Include="WellKnownSources.cs" />
+    <Compile Include="UpstreamMatchValidationResult.cs" />
+    <Compile Include="WellKnownUpstreamSource.cs" />
+    <Compile Include="FeedConstants.cs" />
+    <Compile Include="FeedTracepoints.cs" />
+    <Compile Include="FeedIndexTracepoints.cs" />
+    <Compile Include="FeedChangeTracepoints.cs" />
+    <Compile Include="ProvenanceTracepoints.cs" />
+    <Compile Include="FeedWebAccessTracepoints.cs" />
+    <Compile Include="FeedRecycleBinTracepoints.cs" />
+    <Compile Include="FeedSqlNotificationEventClasses.cs" />
+    <Compile Include="ProjectSqlNotificationEventClasses.cs" />
+    <Compile Include="FeedCacheConstants.cs" />
+    <Compile Include="FeedEventTypes.cs" />
+    <Compile Include="FeedArtifactTypes.cs" />
+    <Compile Include="FeedAvailabilityConstants.cs" />
+    <Compile Include="FeedSecurityHelper.cs" />
+    <Compile Include="BasePackagingOperation.cs" />
+    <Compile Include="IPackagingOperations.cs" />
+    <Compile Include="ProtocolPackageVersionIdentity.cs" />
+    <Compile Include="PackageVersionIdentity.cs" />
+    <Compile Include="WellKnownSourceProvider.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Utils\CrossCollectionLocationData\CrossCollectionLocationDataHttpClient.cs" />
+    <Compile Include="Utils\CrossCollectionLocationData\ICrossCollectionLocationDataService.cs" />
+    <Compile Include="Utils\CrossCollectionLocationData\CrossCollectionLocationDataService.cs" />
+    <Compile Include="Notification\PackagePublishNotificationMessage.cs" />
+    <Compile Include="Notification\FeedChangeType.cs" />
+    <Compile Include="Notification\FeedChangedEvent.cs" />
+    <Compile Include="Notification\PackageEventData.cs" />
+    <Compile Include="Notification\PackageArtifactUtils.cs" />
+    <Compile Include="Notification\PackageChangeType.cs" />
+    <Compile Include="Notification\PackageVersionNotificationData.cs" />
+    <Compile Include="Notification\PackageChangedEvent.cs" />
+    <Compile Include="Notification\DeprecatedPackageChangedEvent.cs" />
+    <Compile Include="DataImport\DataImportFeedBinder.cs" />
+    <Compile Include="DataImport\FeedDataImportSqlResourceComponent.cs" />
+    <Compile Include="DataImport\FeedDataImportSqlResourceComponent2.cs" />
+    <Compile Include="ClientServices\FrameworkCachedPackagesInternalClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedChangeClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedInternalClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedIndexClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedIndexInternalClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedMetricsInternalClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedRecycleBinClientService.cs" />
+    <Compile Include="ClientServices\IFeedChangeClientService.cs" />
+    <Compile Include="ClientServices\IFeedInternalClientService.cs" />
+    <Compile Include="ClientServices\IFeedIndexInternalClientService.cs" />
+    <Compile Include="ClientServices\IFeedIndexClientService.cs" />
+    <Compile Include="ClientServices\ICachedPackagesInternalClientService.cs" />
+    <Compile Include="ClientServices\FrameworkFeedClientService.cs" />
+    <Compile Include="ClientServices\IFeedClientService.cs" />
+    <Compile Include="ClientServices\IFeedMetricsInternalClientService.cs" />
+    <Compile Include="ClientServices\IFeedRecycleBinClientService.cs" />
+    <Compile Include="ChangeProcessing\Exceptions\MissingRequiredDataException.cs" />
+    <Compile Include="ChangeProcessing\Telemetry\JobTelemetryData.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="stmt_GetFeedForDataImport.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

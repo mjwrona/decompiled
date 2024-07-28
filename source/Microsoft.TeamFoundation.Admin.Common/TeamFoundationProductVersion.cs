@@ -1,0 +1,26 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.TeamFoundation.Admin.TeamFoundationProductVersion
+// Assembly: Microsoft.TeamFoundation.Admin.Common, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: B4DC7473-FE52-49C1-BB5D-1E769BB5001D
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Admin.Common.dll
+
+using Microsoft.TeamFoundation.Framework.Server;
+using System.Diagnostics;
+
+namespace Microsoft.TeamFoundation.Admin
+{
+  internal static class TeamFoundationProductVersion
+  {
+    private static string s_version;
+
+    public static string ProductVersion
+    {
+      get
+      {
+        if (TeamFoundationProductVersion.s_version == null)
+          TeamFoundationProductVersion.s_version = FileVersionInfo.GetVersionInfo(typeof (IVssRequestContext).Assembly.Location).ProductVersion;
+        return TeamFoundationProductVersion.s_version;
+      }
+    }
+  }
+}

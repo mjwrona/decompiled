@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Server.DataServices.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B63E102A-65A3-4933-80FE-CA1C1755622B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Server.DataServices</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Boards.CssNodes">
+      <HintPath>lib\Microsoft.Azure.Boards.CssNodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Boards.ProcessTemplates">
+      <HintPath>lib\Microsoft.Azure.Boards.ProcessTemplates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devops.Tags.Server">
+      <HintPath>lib\Microsoft.Azure.Devops.Tags.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Server\Core\WebServices\MethodologyDownloadHandler.cs" />
+    <Compile Include="Server\Core\WebServices\MethodologyUploadHandler.cs" />
+    <Compile Include="WorkItemTracking\Server\ApiStackRouter.cs" />
+    <Compile Include="WorkItemTracking\Server\AttachFileHandler.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService2.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService3.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService4.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService5.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService6.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService8.cs" />
+    <Compile Include="WorkItemTracking\Server\ClientService7.cs" />
+    <Compile Include="WorkItemTracking\Server\XmlComparisonUtils.cs" />
+    <Compile Include="WorkItemTracking\Server\ConfigurationSettingsService.cs" />
+    <Compile Include="WorkItemTracking\Server\Constants.cs" />
+    <Compile Include="WorkItemTracking\Server\WorkItemViewerConstants.cs" />
+    <Compile Include="WorkItemTracking\Server\WorkItemTrackingFaultCodes.cs" />
+    <Compile Include="WorkItemTracking\Server\ExceptionManager.cs" />
+    <Compile Include="WorkItemTracking\Server\ExternalServices.cs" />
+    <Compile Include="WorkItemTracking\Server\IntegrationService.cs" />
+    <Compile Include="WorkItemTracking\Server\MetadataTableHaveEntry.cs" />
+    <Compile Include="WorkItemTracking\Server\RequestCancelableScope.cs" />
+    <Compile Include="WorkItemTracking\Server\RequestHeader.cs" />
+    <Compile Include="WorkItemTracking\Server\WorkItemTrackingWebService.cs" />
+    <Compile Include="WorkItemTracking\Server\ResourceStrings.cs" />
+    <Compile Include="WorkItemTracking\Server\Compatibility\QueryExpressionDeserializer.cs" />
+    <Compile Include="WorkItemTracking\Server\Compatibility\QueryResultSerializer.cs" />
+    <Compile Include="WorkItemTracking\Server\Compatibility\QueryWiqlDeserializer.cs" />
+    <Compile Include="WorkItemTracking\Server\Requirements\StoryboardPage.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\ColumnLongTextFieldEntryCollection.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\IEnumerableWrapper`1.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\IUpdateHandler.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\PayloadCompatibilityUtils.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\QueryItemPayloadTableConverter.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemCompatTracePoints.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\FieldEntryExtensions.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\TypeHelper.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemTypeRenameHandler.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemDestroyHandler.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemSerializer.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateElementExtensions.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateDeserializer.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateDeserializeResult.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateHandler.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateResultSerializer.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateSerializer.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateWrapper.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\XElementExtensions.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemLinkUpdateResultExtensions.cs" />
+    <Compile Include="WorkItemTracking\Server\DataServices\Compatibility\WorkItemUpdateWrapperOrderedResultCollection.cs" />
+    <Compile Include="Build\Server\BuildCompletionEvent.cs" />
+    <Compile Include="Build\Server\BuildCompletionEvent2.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

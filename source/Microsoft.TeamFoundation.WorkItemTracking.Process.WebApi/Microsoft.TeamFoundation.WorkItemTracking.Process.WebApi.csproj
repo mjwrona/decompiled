@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE99DC0D-C360-41CD-9056-BA3F967357A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.Models</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\TeamFoundation\WorkItemTracking\Process\WebApi\WorkItemTrackingProcessHttpClient.cs" />
+    <Compile Include="Microsoft\TeamFoundation\WorkItemTracking\Process\WebApi\WitConstants.cs" />
+    <Compile Include="Microsoft\TeamFoundation\WorkItemTracking\Process\WebApi\WorkItemTrackingProcessHttpClientCompatBase.cs" />
+    <Compile Include="CustomizationType.cs" />
+    <Compile Include="GetBehaviorsExpand.cs" />
+    <Compile Include="ProcessBehavior.cs" />
+    <Compile Include="ProcessBehaviorCreateRequest.cs" />
+    <Compile Include="ProcessBehaviorField.cs" />
+    <Compile Include="ProcessBehaviorReference.cs" />
+    <Compile Include="ProcessBehaviorUpdateRequest.cs" />
+    <Compile Include="WorkItemTypeBehavior.cs" />
+    <Compile Include="IBasicFieldProperties.cs" />
+    <Compile Include="IFieldRuleProperties.cs" />
+    <Compile Include="Control.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="FormLayout.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Page.cs" />
+    <Compile Include="PageType.cs" />
+    <Compile Include="Section.cs" />
+    <Compile Include="WitContribution.cs" />
+    <Compile Include="FieldModel.cs" />
+    <Compile Include="FieldRuleModel.cs" />
+    <Compile Include="ProcessClass.cs" />
+    <Compile Include="ProcessModel.cs" />
+    <Compile Include="ProcessProperties.cs" />
+    <Compile Include="RuleActionModel.cs" />
+    <Compile Include="RuleConditionModel.cs" />
+    <Compile Include="WorkItemBehavior.cs" />
+    <Compile Include="WorkItemBehaviorField.cs" />
+    <Compile Include="WorkItemBehaviorReference.cs" />
+    <Compile Include="WorkItemTypeClass.cs" />
+    <Compile Include="WorkItemTypeModel.cs" />
+    <Compile Include="PickList.cs" />
+    <Compile Include="PickListMetadata.cs" />
+    <Compile Include="CreateProcessModel.cs" />
+    <Compile Include="GetProcessExpandLevel.cs" />
+    <Compile Include="ProcessInfo.cs" />
+    <Compile Include="ProjectReference.cs" />
+    <Compile Include="UpdateProcessModel.cs" />
+    <Compile Include="CreateProcessRuleRequest.cs" />
+    <Compile Include="ProcessRule.cs" />
+    <Compile Include="RuleAction.cs" />
+    <Compile Include="RuleActionType.cs" />
+    <Compile Include="RuleCondition.cs" />
+    <Compile Include="RuleConditionType.cs" />
+    <Compile Include="UpdateProcessRuleRequest.cs" />
+    <Compile Include="HideStateModel.cs" />
+    <Compile Include="WorkItemStateInputModel.cs" />
+    <Compile Include="WorkItemStateResultModel.cs" />
+    <Compile Include="CreateProcessWorkItemTypeRequest.cs" />
+    <Compile Include="GetWorkItemTypeExpand.cs" />
+    <Compile Include="ProcessWorkItemType.cs" />
+    <Compile Include="UpdateProcessWorkItemTypeRequest.cs" />
+    <Compile Include="AddProcessWorkItemTypeFieldRequest.cs" />
+    <Compile Include="FieldType.cs" />
+    <Compile Include="ProcessWorkItemTypeField.cs" />
+    <Compile Include="UpdateProcessWorkItemTypeFieldRequest.cs" />
+    <Compile Include="ProcessWorkItemTypeFieldsExpandLevel.cs" />
+    <Compile Include="IFieldLockingProperties.cs" />
+    <Compile Include="Process\ProcessFieldUsageInfo.cs" />
+    <Compile Include="Process\Field.cs" />
+    <Compile Include="Process\FieldProperties.cs" />
+    <Compile Include="Process\Default.cs" />
+    <Compile Include="Process\UsageProperties.cs" />
+    <Compile Include="Process\FieldUsage.cs" />
+    <Compile Include="Process\WorkItemType.cs" />
+    <Compile Include="Process\LayoutGroup.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

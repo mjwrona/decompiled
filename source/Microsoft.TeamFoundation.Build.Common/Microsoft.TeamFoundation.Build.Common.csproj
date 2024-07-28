@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Build.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEF963B4-ECCC-43EF-8CB8-89A81E5748E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Build.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Build.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>lib\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Validate`1.cs" />
+    <Compile Include="ValidateType`1.cs" />
+    <Compile Include="ArgumentValidation.cs" />
+    <Compile Include="AzureProfileXNames.cs" />
+    <Compile Include="AzureDeploymentSlot.cs" />
+    <Compile Include="AzureCloudAppProfile.cs" />
+    <Compile Include="BuildArtifactConstants.cs" />
+    <Compile Include="BuildCommonUtil.cs" />
+    <Compile Include="BuildServiceHostLabStatus.cs" />
+    <Compile Include="ServiceAction.cs" />
+    <Compile Include="CleanupPolicy.cs" />
+    <Compile Include="BuildPropertyKinds.cs" />
+    <Compile Include="BuildConstants.cs" />
+    <Compile Include="BuildServiceConstants.cs" />
+    <Compile Include="BuildWellKnownBatchIds.cs" />
+    <Compile Include="BuildWellKnownGroups.cs" />
+    <Compile Include="GatedCheckInErrorCode.cs" />
+    <Compile Include="MachinePoolProperties.cs" />
+    <Compile Include="MachinePoolDefaults.cs" />
+    <Compile Include="RegistryKeys.cs" />
+    <Compile Include="BuildArtifactUris.cs" />
+    <Compile Include="BuildTemplateUris.cs" />
+    <Compile Include="BuildContainerPath.cs" />
+    <Compile Include="BuildFeatureFlags.cs" />
+    <Compile Include="BuildDefinitionSubscriptionType.cs" />
+    <Compile Include="BuildNotificationConstants.cs" />
+    <Compile Include="BuildParameter.cs" />
+    <Compile Include="BuildParameterType.cs" />
+    <Compile Include="BuildParameterException.cs" />
+    <Compile Include="BuildParameterSerializationException.cs" />
+    <Compile Include="BuildParameterNotFoundException.cs" />
+    <Compile Include="DropType.cs" />
+    <Compile Include="BuildPath.cs" />
+    <Compile Include="BuildSecurity.cs" />
+    <Compile Include="AdministrationPermissions.cs" />
+    <Compile Include="BuildPermissions.cs" />
+    <Compile Include="PermissionStringConstants.cs" />
+    <Compile Include="BuildSourceProviders.cs" />
+    <Compile Include="BuildSourceVersion.cs" />
+    <Compile Include="CertHelper.cs" />
+    <Compile Include="BuildTypeConstants.cs" />
+    <Compile Include="BuildTypeInfo.cs" />
+    <Compile Include="LegacyBuildTypeHelper.cs" />
+    <Compile Include="InformationTypes.cs" />
+    <Compile Include="InformationFields.cs" />
+    <Compile Include="ErrorWarningTypes.cs" />
+    <Compile Include="DeploymentInformationTypes.cs" />
+    <Compile Include="CheckInOutcomeValues.cs" />
+    <Compile Include="CommonInformationHelper.cs" />
+    <Compile Include="ConfigurationHelper.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="HostedBuildSettings.cs" />
+    <Compile Include="LabCompatibilityResult.cs" />
+    <Compile Include="LabCompatibilityUtils.cs" />
+    <Compile Include="LsaPolicy.cs" />
+    <Compile Include="RegistryWatcher.cs" />
+    <Compile Include="ServiceConstants.cs" />
+    <Compile Include="ElasticBuildAuthorization.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="VariableMatch.cs" />
+    <Compile Include="XamlHelper.cs" />
+    <Compile Include="XamlNamespaceComparer.cs" />
+    <Compile Include="BuildTypeResource.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildTypeResource.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

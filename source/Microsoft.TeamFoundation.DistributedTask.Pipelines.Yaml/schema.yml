@@ -1,0 +1,2688 @@
+﻿definitions:
+
+  ########################################
+  # Pipeline types
+  ########################################
+
+  pipeline:
+    schemas:
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: stages
+        type: stages
+        data:
+          description: "Stages are groups of jobs that can run without human intervention"
+          required: true
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where jobs in this pipeline will run unless otherwise specified"
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: extends
+        type: extends
+        data:
+          description: "Extends a template"
+          required: true
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where jobs in this pipeline will run unless otherwise specified"
+      transform:
+        ${{ each pair in value }}:
+          ${{ if notIn(pair.key, 'extends', 'resources') }}:   
+            ${{ pair.key }}: ${{ pair.value }}
+        ${{ if value.extends.resources }}:
+          resources: ${{ value.extends.resources }}
+        ${{ if value.extends.variables }}:
+          variables: ${{ value.extends.variables }}
+        ${{ if value.extends.stages }}:
+          stages: ${{ value.extends.stages }}
+        ${{ if value.extends.jobs }}:
+            stages:
+            - stage: __default
+              jobs: ${{ value.extends.jobs }}
+        ${{ if value.extends.steps }}:
+           stages:
+           - stage: __default
+             jobs:
+             - job: Job
+               steps:
+                 - ${{ if value.extends.steps }}:
+                   - ${{ value.extends.steps }}
+    # Implicit stage (jobs):
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: jobs
+        type: jobs
+        data:
+          description: "Jobs represent units of work which can be assigned to a single agent or server"
+          required: true
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where jobs in this pipeline will run unless otherwise specified"
+      transform:
+        ${{ each pair in value }}:
+          ${{ if ne(pair.key, 'jobs') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+          # todo: switch to else
+          ${{ if eq(pair.key, 'jobs') }}:
+            stages:
+            - stage: __default
+              jobs: ${{ value.jobs }}
+    # Implicit stage (phases):
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: phases
+        type: phases
+        data:
+          description: "Phases which make up the pipeline"
+          deprecationMessage: "This option is deprecated, use `jobs` instead"
+          required: true
+      transform:
+        ${{ each pair in value }}:
+          ${{ if ne(pair.key, 'phases') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+          # todo: switch to else
+          ${{ if eq(pair.key, 'phases') }}:
+            stages:
+            - stage: __default
+              jobs: ${{ value.phases }}
+    # Implicit job:
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: strategy
+        type: jobStrategy
+        data:
+          description: "Execution strategy for this job"
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where this job will run"
+      - name: container
+        type: jobContainer
+        data:
+          description: "Container resource name"
+      - name: services
+        type: jobServices
+      - name: workspace
+        type: jobWorkspace
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run in this job"
+          required: true
+      transform:
+        ${{ each pair in value }}:
+          ${{ if notIn(pair.key, 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+        stages:
+        - stage: __default
+          jobs:
+          - job: Job
+            ${{ each pair in value }}:
+              ${{ if in(pair.key, 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps') }}:
+                ${{ pair.key }}: ${{ pair.value }}
+    # Implicit agent phase
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: queue
+        type: phaseQueueTarget
+        data:
+          description: "Queue where this phase will run"
+          deprecationMessage: "This option is deprecated, use pool instead"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run in this phase"
+          required: true
+      data:
+        deprecationMessage: "This option is deprecated, use `job` (inside `jobs`) instead"
+      transform:
+        ${{ each pair in value }}:
+          ${{ if notIn(pair.key, 'continueOnError', 'queue', 'steps') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+        stages:
+        - stage: __default
+          jobs:
+          - job: Job
+            ${{ if value.continueOnError }}:
+              continueOnError: ${{ value.continueOnError }}
+            ${{ if value.queue }}:
+              ${{ insert }}: ${{ transform('phaseQueueTargetToJobProperties', value.queue) }}
+            ${{ if value.steps }}:
+              steps: ${{ value.steps }}
+    # Implicit server phase
+    - structure: mapping
+      inherits: pipelineBase
+      properties:
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: server
+        type: phaseServerTarget
+        data:
+          description: "True if this is an agent-less phase (runs on server)"
+          deprecationMessage: "This option is deprecated, use pool:server instead"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run in this phase"
+          required: true
+      data:
+        deprecationMessage: "This option is deprecated, use `job` (inside `jobs`) instead"
+      transform:
+        ${{ each pair in value }}:
+          ${{ if notIn(pair.key, 'continueOnError', 'server', 'steps') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+        stages:
+        - stage: __default
+          jobs:
+          - job: Job
+            ${{ if value.continueOnError }}:
+              continueOnError: ${{ value.continueOnError }}
+            ${{ if value.server }}:
+              ${{ insert }}: ${{ transform('phaseServerTargetToJobProperties', value.server) }}
+            ${{ if value.steps }}:
+              steps: ${{ value.steps }}
+
+  pipelineBase:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: name
+        type: string_allowExpressions
+        data:
+          description: "Pipeline name"
+      - name: appendCommitMessageToRunName
+        type: boolean
+        data:
+          description: "Append the commit message to the build number"
+      - name: trigger
+        type: trigger
+        data:
+          description: "Continuous integration triggers"
+      - name: parameters
+        type: pipelineTemplateParameters
+        data:
+          description: "Pipeline template parameters"
+      - name: pr
+        type: pr
+        data:
+          description: "Pull request triggers"
+      - name: schedules
+        type: schedules
+      - name: resources
+        type: resources
+        data:
+          description: "Containers and repositories used in the build"
+      - name: variables
+        type: variables
+        data:
+          description: "Variables for this pipeline"
+      - name: lockBehavior
+        type: lockBehavior
+        data:
+          description: "Behavior lock requests from this stage should exhibit in relation to other exclusive lock requests"
+
+  pipelineTrigger:
+    schemas:
+    - structure: mapping
+      inherits: pipelineAnyBase
+      properties:
+      - name: trigger
+        type: trigger
+        data:
+          description: "Continuous integration triggers"
+      transform:
+        ${{ if value.trigger }}:
+          trigger: ${{ value.trigger }}
+
+  pipelineParameters:
+    schemas:
+    - structure: mapping
+      inherits: pipelineAnyBase
+      properties:
+      - name: parameters
+        type: pipelineTemplateParameters
+        data:
+          description: "Pipeline template parameters"
+      transform:
+        ${{ if value.parameters }}:
+          parameters: ${{ value.parameters }}
+
+  pipelinePR:
+    schemas:
+    - structure: mapping
+      inherits: pipelineAnyBase
+      properties:
+      - name: pr
+        type: pr
+        data:
+          description: "Pull request triggers"
+      transform:
+        ${{ if value.pr }}:
+          pr: ${{ value.pr }}
+
+  pipelineSchedules:
+    schemas:
+    - structure: mapping
+      inherits: pipelineAnyBase
+      properties:
+      - name: schedules
+        type: schedules
+      transform:
+        ${{ if value.schedules }}:
+          schedules: ${{ value.schedules }}
+
+
+  pipelineAnyBase:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: name
+        type: any_allowExpressions
+        data:
+          description: "Pipeline name"
+      - name: appendCommitMessageToRunName
+        type: any_allowExpressions
+        data:
+          description: "Append the commit message to the build number"
+      - name: trigger
+        type: any_allowExpressions
+        data:
+          description: "Continuous integration triggers"
+      - name: parameters
+        type: any_allowExpressions
+        data:
+          description: "Pipeline template parameters"
+      - name: pr
+        type: any_allowExpressions
+        data:
+          description: "Pull request triggers"
+      - name: schedules
+        type: any_allowExpressions
+      - name: resources
+        type: any_allowExpressions
+        data:
+          description: "Containers and repositories used in the build"
+      - name: variables
+        type: any_allowExpressions
+        data:
+          description: "Variables for the entire pipeline"
+      - name: stages
+        type: any_allowExpressions
+      - name: jobs
+        type: any_allowExpressions
+        data:
+          description: "Jobs which make up the pipeline"
+      - name: extends
+        type: any_allowExpressions
+        data:
+          description: "Extends a template"
+      - name: phases
+        type: any_allowExpressions
+        data:
+          description: "Phases which make up the pipeline"
+          deprecationMessage: "This option is deprecated, use `jobs` instead"
+      - name: strategy
+        type: any_allowExpressions  # job properties
+        data:
+          description: "Execution strategy for the job"
+      - name: continueOnError
+        type: any_allowExpressions
+        data:
+          description: "Continue running even on failure?"
+      - name: pool
+        type: any_allowExpressions
+        data:
+          description: "Pool where this job will run"
+      - name: container
+        type: any_allowExpressions
+        data:
+          description: "Container resource name"
+      - name: services
+        type: any_allowExpressions
+      - name: workspace
+        type: any_allowExpressions
+      - name: steps
+        type: any_allowExpressions
+        data:
+          description: "A list of steps to run"
+      - name: queue
+        type: any_allowExpressions     # agent phase
+        data:
+          description: "Queue where this phase will run"
+          deprecationMessage: "This option is deprecated, use pool instead"
+      - name: server
+        type: any_allowExpressions    # agentless phase
+        data:
+          description: "True if this is an agent-less phase (runs on server)"
+          deprecationMessage: "This option is deprecated, use pool:server instead"
+      - name: lockBehavior
+        type: lockBehavior
+        data:
+          description: "Behavior lock requests from this stage should exhibit in relation to other exclusive lock requests"
+
+  ########################################
+  # Trigger types
+  ########################################
+
+  pr:
+    schemas:
+    - structure: scalar
+      constant: none
+      data:
+        pattern: "^none$"
+      transform:
+        enabled: false
+    - structure: sequence
+      itemType: branchFilter
+      transform:
+        branches:
+          include:
+          - ${{ value }}
+    - structure: mapping
+      properties:
+      - name: autoCancel
+        type: boolean
+        data:
+          description: "Whether to cancel running PR builds when a new commit lands in the branch"
+      - name: branches
+        type: includeExcludeFilters
+      - name: paths
+        type: includeExcludeFilters
+      - name: drafts
+        type: boolean
+        data:
+          description: "Whether to start a run when a draft PR is created"
+
+  trigger:
+    schemas:
+    - structure: scalar
+      constant: none
+      data:
+        pattern: "^none$"
+      transform:
+        enabled: false
+    - structure: sequence
+      itemType: branchFilter
+      transform:
+        branches:
+          include:
+          - ${{ value }}
+    - structure: mapping
+      properties:
+      - name: batch
+        type: boolean
+        data:
+          description: "Whether to batch changes per branch"
+      - name: branches
+        type: includeExcludeFilters
+      - name: paths
+        type: includeExcludeFilters
+      - name: tags
+        type: includeExcludeFilters
+
+  includeExcludeFilters:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: include
+        type: branchFilterArray
+      - name: exclude
+        type: branchFilterArray
+
+  includeExcludeStringFilters:
+    schemas:
+    - structure: sequence
+      itemType: nonEmptyString
+      transform:
+        include:
+        - ${{ value }}
+    - structure: mapping
+      properties:
+      - name: include
+        type: sequenceOfNonEmptyString
+      - name: exclude
+        type: sequenceOfNonEmptyString
+
+  branchFilterArray:
+    schemas:
+    - structure: sequence
+      itemType: branchFilter
+
+  branchFilter:
+    schemas:
+    - structure: scalar
+      data:
+        pattern: "^[^\\/~\\^\\: \\[\\]\\\\]+(\\/[^\\/~\\^\\: \\[\\]\\\\]+)*$"
+        description: "branch name or prefix filter"
+
+  ########################################
+  # Template parameter types
+  ########################################
+
+  templateParameters:
+    schemas:
+    - structure: sequence
+      itemType: templateParameter
+    - structure: mapping
+      looseKeyType: nonEmptyString
+      looseValueType: any
+
+  templateParameter:
+    schemas:
+    - structure: mapping
+      firstKey: name
+      properties:
+      - name: name
+        type: nonEmptyString
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name for the parameter"
+      - name: type
+        type: templateParameterType
+      - name: default
+        type: any
+      - name: values
+        type: sequenceOfNonEmptyString
+
+  templateParameterType:
+    schemas:
+    - structure: scalar
+      constant: boolean
+    - structure: scalar
+      constant: container
+    - structure: scalar
+      constant: containerList
+    - structure: scalar
+      constant: deployment
+    - structure: scalar
+      constant: deploymentList
+    - structure: scalar
+      constant: job
+    - structure: scalar
+      constant: jobList
+    - structure: scalar
+      constant: legacyObject
+    - structure: scalar
+      constant: number
+    - structure: scalar
+      constant: object
+    - structure: scalar
+      constant: stage
+    - structure: scalar
+      constant: stageList
+    - structure: scalar
+      constant: step
+    - structure: scalar
+      constant: stepList
+    - structure: scalar
+      constant: string
+
+  pipelineTemplateParameters:
+    schemas:
+    - structure: sequence
+      itemType: pipelineTemplateParameter
+
+  pipelineTemplateParameter:
+    schemas:
+    - structure: mapping
+      firstKey: name
+      properties:
+      - name: name
+        type: nonEmptyString
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name for the parameter"
+      - name: type
+        type: pipelineTemplateParameterType
+      - name: default
+        type: any
+      - name: values
+        type: sequenceOfNonEmptyString
+
+  pipelineTemplateParameterType:
+    schemas:
+    - structure: scalar
+      constant: boolean
+    - structure: scalar
+      constant: container
+    - structure: scalar
+      constant: containerList
+    - structure: scalar
+      constant: deployment
+    - structure: scalar
+      constant: deploymentList
+    - structure: scalar
+      constant: environment
+    - structure: scalar
+      constant: filePath
+    - structure: scalar
+      constant: job
+    - structure: scalar
+      constant: jobList
+    - structure: scalar
+      constant: number
+    - structure: scalar
+      constant: object
+    - structure: scalar
+      constant: pool
+    - structure: scalar
+      constant: secureFile
+    - structure: scalar
+      constant: serviceConnection
+    - structure: scalar
+      constant: stage
+    - structure: scalar
+      constant: stageList
+    - structure: scalar
+      constant: step
+    - structure: scalar
+      constant: stepList
+    - structure: scalar
+      constant: string
+
+  ########################################
+  # Schedule types
+  ########################################
+
+  schedules:
+    schemas:
+    - structure: sequence
+      itemType: schedule
+
+  schedule:
+    schemas:
+    - structure: mapping
+      firstKey: cron
+      properties:
+      - name: cron
+        type: nonEmptyString
+      - name: displayName
+        type: string
+      - name: branches
+        type: includeExcludeFilters
+      - name: batch
+        type: boolean
+      - name: always
+        type: boolean
+
+  ########################################
+  # Resource types
+  ########################################
+
+  resources:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: builds
+        type: buildResources
+        data:
+          description: "List of external build resources"
+      - name: containers
+        type: containerResources
+        data:
+          description: "List of container images"
+      - name: pipelines
+        type: pipelineResources
+      - name: repositories
+        type: repositoryResources
+        data:
+          description: "List of external repositories"
+      - name: webhooks
+        type: webhookResources
+        data:
+          description: "List of webhooks"
+      - name: packages
+        type: packageResources
+        data:
+          description: "List of external packages"
+    - structure: sequence
+      itemType: legacyResource
+      transform:
+        repositories:
+        - ${{ each item in value }}:
+          - repository: ${{ item.repo }}
+            ${{ each pair in item }}:
+              ${{ if ne(pair.key, 'repo') }}:
+                ${{ pair.key }}: ${{ pair.value }}
+
+  buildResources:
+    schemas:
+    - structure: sequence
+      itemType: buildResource
+
+  buildResource:
+    schemas:
+    - structure: mapping
+      firstKey: build
+      properties:                  # Well-known properties
+      - name: build
+        type: referenceName
+        data:
+          description: Alias or name of build artifact
+          required: true
+      - name: type
+        type: nonEmptyString
+        data:
+          description: Name of the artifact type
+          required: true
+      - name: connection
+        type: nonEmptyString
+        data:
+          description: Name of the connection. This connection will be used for all the communication related to this artifact.
+          required: true
+      - name: source
+        type: nonEmptyString
+        data:
+          description: Name of the source definition/build/job
+          required: true
+      - name: version
+        type: string_allowExpressions
+      - name: branch
+        type: string_allowExpressions
+      - name: trigger
+        type: buildResourceTrigger
+        data:
+          description: When the artifact mentioned in this build resource completes a build, its allowed to trigger this pipeline.
+  
+  buildResourceTrigger:
+    schemas:
+    - structure: scalar
+      constant: none
+      transform:
+        enabled: false
+    - structure: scalar
+      constant: true
+      transform:
+        enabled: true
+
+  packageResources:
+    schemas:
+    - structure: sequence
+      itemType: packageResource  
+
+  packageResource:
+    schemas:
+    - structure: mapping
+      firstKey: package
+      properties:                  # Well-known properties
+      - name: package
+        type: referenceName
+        data:
+          description: Alias of package artifact
+          required: true
+      - name: type
+        type: nonEmptyString
+        data:
+          description: Type of the package. Ex - NuGet, NPM etc.
+          required: true
+      - name: connection
+        type: nonEmptyString
+        data:
+          description: Name of the connection. This connection will be used for all the communication related to this artifact.
+          required: true
+      - name: name
+        type: nonEmptyString
+        data:
+          description: Name of the package
+          required: true
+      - name: version
+        type: string_allowExpressions
+      - name: tag
+        type: string_allowExpressions
+      - name: trigger
+        type: packageResourceTrigger
+        data:
+          description: Trigger a new pipeline run when a new version of this package is available.
+
+  packageResourceTrigger:
+    schemas:
+    - structure: scalar
+      constant: none
+      transform:
+        enabled: false
+    - structure: scalar
+      constant: true
+      transform:
+        enabled: true
+
+  containerResources:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: sequence
+      itemType: containerResource
+
+  containerResource:
+    schemas:
+    - structure: mapping
+      firstKey: container
+      inherits: containerBase
+      properties:                   # Well-known properties
+      - name: container
+        type: referenceName
+        data:
+          description: ID for the container
+          required: true
+      - name: type
+        type: containerArtifactType
+      - name: trigger
+        type: containerResourceTrigger
+      looseKeyType: nonEmptyString  # Non-well-known properties
+      looseValueType: any
+
+  containerArtifactType:
+    schemas:
+    - structure: scalar
+      constant: ACR
+      ignoreCase: true
+      transform: AzureContainerRepository
+    - structure: scalar
+      requireNonEmpty: true
+
+  containerResourceTrigger:
+    schemas:
+    - structure: scalar
+      constant: none
+      transform:
+        enabled: false
+    - structure: scalar
+      constant: true
+      transform:
+        enabled: true
+    - structure: mapping
+      properties:
+      - name: enabled
+        type: boolean
+      - name: tags
+        type: includeExcludeStringFilters
+
+  pipelineResources:
+    schemas:
+    - structure: sequence
+      itemType: pipelineResource
+
+  pipelineResource:
+    schemas:
+    - structure: mapping
+      firstKey: pipeline
+      properties:                 # Well-known properties
+      - name: pipeline
+        type: referenceName
+        data:
+          description: ID of the pipeline resource
+          required: true
+      - name: project
+        type: nonEmptyString
+      - name: source
+        type: nonEmptyString
+      - name: version
+        type: string_allowExpressions
+      - name: branch
+        type: string_allowExpressions
+      - name: tags
+        type: sequenceOfNonEmptyString
+      - name: trigger
+        type: pipelineResourceTrigger
+
+  pipelineResourceTrigger:
+    schemas:
+    - structure: scalar
+      constant: none
+      transform:
+        enabled: false
+    - structure: scalar
+      constant: true
+      transform:
+        enabled: true
+    - structure: mapping
+      properties:
+      - name: enabled
+        type: boolean
+      - name: branches
+        type: triggerBranchFilter
+      - name: stages
+        type: sequenceOfNonEmptyString
+      - name: tags
+        type: sequenceOfNonEmptyString
+
+  triggerBranchFilter:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: include
+        type: branchFilterArray
+      - name: exclude
+        type: branchFilterArray
+    - structure: sequence
+      itemType: branchFilter
+      transform:
+        include:
+        - ${{ value }}
+
+  repositoryResources:
+    schemas:
+    - structure: sequence
+      itemType: repositoryResource
+
+  repositoryResource:
+    # events:
+    #   onMappingEnd: onRepositoryResourceMappingEnd
+    schemas:
+    - structure: mapping
+      firstKey: repository
+      properties:                   # Well-known properties
+      - name: repository
+        type: referenceName
+        data:
+          description: ID of the external repository
+          required: true
+      - name: endpoint
+        type: nonEmptyString
+        data:
+          description: "ID of the service endpoint connecting to this repository"
+      - name: trigger
+        type: trigger
+      - name: checkoutOptions
+        type: repositoryCheckoutOptions
+        data:
+          deprecationMessage: "This location is deprecated, `checkoutOptions` should be a peer of the `repository` keyword."
+      - name: ref
+        type: string_allowExpressions
+      looseKeyType: nonEmptyString  # Any other properties
+      looseValueType: any
+
+  repositoryCheckoutOptions:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: clean
+        type: string
+        data:
+          description: "Scorch the repo before fetching?"
+          enum: "true,false"
+      - name: fetchDepth
+        type: string
+        data:
+          description: "Depth of Git graph to fetch"
+      - name: fetchTags
+        type: string
+        data:
+          description: "Fetch tags?"
+      - name: lfs
+        type: string
+        data:
+          description: "Fetch and checkout Git LFS objects?"
+      - name: submodules
+        type: string
+        data:
+          description: "Fetch and checkout submodules?"
+      - name: persistCredentials
+        type: string
+        data:
+          description: "Keep credentials available for later use?"
+
+  legacyResource:
+    schemas:
+    - structure: mapping
+      firstKey: repo
+      properties:
+      - name: repo
+        type: legacyRepoResourceAlias
+      - name: clean
+        type: string
+        data:
+          description: "Scorch the repo before fetching?"
+          enum: "true,false"
+      - name: fetchDepth
+        type: string
+        data:
+          description: "Depth of Git graph to fetch"
+      - name: lfs
+        type: string
+        data:
+          description: "Fetch and checkout Git LFS objects?"
+
+  legacyRepoResourceAlias:
+    schemas:
+    - structure: scalar
+      constant: self
+
+  webhookResources:
+    schemas:
+    - structure: sequence
+      itemType: webhookResource 
+
+  webhookResource:
+    schemas:
+    - structure: mapping
+      firstKey: webhook
+      properties:
+      - name: webhook
+        type: referenceName
+        data:
+          description: Name of the webhook
+          required: true
+      - name: connection
+        type: nonEmptyString
+        data:
+          description: Name of the connection. In case of offline webhook this will be the type of Incoming Webhook otherwise it will be the type of the webhook extension.
+          required: true
+      - name: type
+        type: nonEmptyString
+        data:
+          description: Name of the webhook extension. leave this empty if its offline webhook.
+          required: false
+      - name: filters
+        type: webhookFilters
+        data:
+          description: List of trigger filters.
+
+  webhookFilters:
+    schemas:
+    - structure: sequence
+      itemType: webhookFilter
+
+  webhookFilter:
+     schemas: 
+     - structure: mapping
+       firstKey: path
+       properties:
+       - name: path
+         type: nonEmptyString
+         data:
+           description: json path to select data from event payload
+           required: true
+       - name: value
+         type: nonEmptyString
+         data:
+           description: Expected value for the filter to match
+           required: true
+
+  ########################################
+  # Variable types
+  ########################################
+
+  variablesTemplate:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+      - name: variables
+        type: variables
+      transform:
+      - ${{ if value.variables }}:
+        - ${{ value.variables }}
+
+  variables:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: mapping
+      looseKeyType: nonEmptyString
+      looseValueType: string
+      transform:
+      - ${{ each pair in value }}:
+        - name: ${{ pair.key }}
+          value: ${{ pair.value }}
+    - structure: sequence
+      itemType: variable
+
+  variable:
+    schemas:
+    - structure: mapping
+      firstKey: name
+      properties:
+      - name: name
+        type: nonEmptyString
+      - name: value
+        type: string
+      - name: readonly
+        type: boolean
+    - structure: mapping
+      firstKey: group
+      properties:
+      - name: group
+        type: nonEmptyString
+    - structure: mapping
+      firstKey: template
+      properties:
+      - name: template
+        type: nonEmptyString
+      - name: parameters
+        type: mapping
+      load: variablesTemplateReference
+
+  ########################################
+  # Stage types
+  ########################################
+
+  stagesTemplate:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+      - name: stages
+        type: stages
+      transform:
+      - ${{ if value.stages }}:
+        - ${{ value.stages }}
+
+  stages:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: sequence
+      itemType: stage
+
+  stage:
+    schemas:
+    - structure: mapping
+      firstKey: stage
+      properties:
+      - name: stage
+        type: string
+        data:
+          description: "ID of the stage"
+      # todo: add stage group property
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name for the stage"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where jobs in this stage will run unless otherwise specified"    
+      - name: dependsOn
+        type: jobDependsOn
+        data:
+          description: "Any stages which must complete before this one"
+      - name: condition
+        type: string
+        data:
+          description: "Evaluate this condition expression to determine whether to run this stage"
+      - name: variables
+        type: variables
+        data:
+          description: "Stage-specific variables"
+      - name: jobs
+        type: jobs
+        data:
+          description: "Jobs which make up the stage"
+      - name: lockBehavior
+        type: lockBehavior
+        data:
+          description: "Behavior lock requests from this stage should exhibit in relation to other exclusive lock requests"
+      - name: templateContext
+        type: templateContext
+    - structure: mapping
+      firstKey: template
+      properties:
+      - name: template
+        type: nonEmptyString
+        data:
+          description: "Reference to a template for this stage"
+      - name: parameters
+        type: mapping
+        data:
+          description: "Parameters used in a stage template"
+      load: stagesTemplateReference
+
+  lockBehavior:
+    schemas:
+    - structure: scalar
+      constant: sequential
+    - structure: scalar
+      constant: runLatest
+
+  ########################################
+  # Extends types
+  ########################################
+
+  extendsParameters:
+    schemas:
+    - structure: sequence
+      itemType: templateParameter
+
+  extendsTemplate:
+    schemas:
+    - structure: mapping
+      inherits: extendsTemplateBase
+      properties:
+      - name: stages
+        type: stages
+    - structure: mapping
+      inherits: extendsTemplateBase
+      properties:
+      - name: jobs
+        type: jobs
+    - structure: mapping
+      inherits: extendsTemplateBase
+      properties:
+      - name: steps
+        type: steps
+    - structure: mapping
+      properties:
+      - name: trigger
+        type: trigger
+      - name: resources
+        type: resources
+      - name: parameters
+        type: extendsParameters
+      - name: extends
+        type: extends
+      transform:
+        ${{ if value.extends.variables }}:
+          variables: ${{ value.extends.variables }}
+        ${{ if value.extends.resources }}:
+          resources: ${{ value.extends.resources }}
+        ${{ if value.extends.stages }}:
+          stages: ${{ value.extends.stages }}
+        ${{ if value.extends.jobs }}:
+          jobs: ${{ value.extends.jobs }}
+        ${{ if value.extends.steps }}:
+          steps: ${{ value.extends.steps }}
+
+  extendsTemplateBase:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: trigger
+        type: trigger
+      - name: resources
+        type: resources
+      - name: parameters
+        type: extendsParameters
+      - name: variables
+        type: variables
+
+  parametersTemplate:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+        data:
+          description: "Step-specific parameters"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+          required: true
+      transform:
+        - ${{ if value.steps }}:
+          - ${{ value.steps }}
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+        data:
+          description: "Parameters used in a job template"
+      - name: jobs
+        type: jobs
+        data:
+          description: "Jobs which make up the pipeline"
+      transform:
+      - ${{ if value.jobs }}:
+        - ${{ value.jobs }}
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+      - name: stages
+        type: stages
+      transform:
+      - ${{ if value.stages }}:
+        - ${{ value.stages }}
+    - structure: mapping
+      properties:
+      - name: resources
+        type: resources 
+      - name: parameters
+        type: templateParameters
+      - name: extends
+        type: extends
+        data:
+          description: "Extends a template"
+          required: true
+      transform:
+      - ${{ if value.extends.steps }}:
+        - ${{ value.extends.steps }}
+
+  extends:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: mapping
+      properties:
+      - name: template
+        type: nonEmptyString
+      - name: parameters
+        type: mapping
+        data:
+          description: "Parameters used in the extend"
+      load: extendsTemplateReference
+
+  ########################################
+  # Job types
+  ########################################
+
+  jobsTemplate:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+        data:
+          description: "Parameters used in a job template"
+      - name: jobs
+        type: jobs
+        data:
+          description: "Jobs which make up the pipeline"
+      transform:
+      - ${{ if value.jobs }}:
+        - ${{ value.jobs }}
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+        data:
+          description: "Parameters used in a phase template"
+      - name: phases
+        type: phases
+        data:
+          description: "Phases which make up the pipeline"
+          deprecationMessage: "This option is deprecated, use `jobs` instead"
+      transform:
+      - ${{ if value.phases }}:
+        - ${{ value.phases }}
+
+  jobs:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: sequence
+      itemType: job
+
+  job:
+    schemas:
+    - structure: mapping
+      firstKey: job
+      properties:
+      - name: job
+        type: referenceName
+        data:
+          description: ID of the job
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name for the job"
+      - name: dependsOn
+        type: jobDependsOn
+        data:
+          description: "Any jobs which must complete before this one"
+      - name: condition
+        type: string
+        data:
+          description: "Evaluate this condition expression to determine whether to run this job"
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: timeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for this job to complete before the server kills it"
+      - name: cancelTimeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for the job to cancel before forcibly terminating it"
+      - name: variables
+        type: variables
+        data:
+          description: "Job-specific variables"
+      - name: strategy
+        type: jobStrategy
+        data:
+          description: "Execution strategy for this job"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where this job will run"
+      - name: container
+        type: jobContainer
+        data:
+          description: "Container resource name"
+      - name: services
+        type: jobServices
+      - name: workspace
+        type: jobWorkspace
+      - name: uses
+        type: explicitResources
+        data:
+          description: "Any resources required by this job that are not already referenced"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: templateContext
+        type: templateContext
+    - structure: mapping
+      firstKey: deployment
+      properties:
+      - name: deployment
+        type: string
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name for the deployment"
+      - name: dependsOn
+        type: jobDependsOn
+        data:
+          description: "Any jobs which must complete before this one"
+      - name: condition
+        type: string
+        data:
+          description: "Evaluate this condition expression to determine whether to run this deployment"
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: timeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for this job to complete before the server kills it"
+      - name: cancelTimeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for the job to cancel before forcibly terminating it"
+      - name: variables
+        type: variables
+        data:
+          description: "Deployment-specific variables"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where this job will run"
+      - name: environment
+        type: deploymentEnvironment
+      - name: strategy
+        type: deploymentStrategy
+        data:
+          description: "Execution strategy for this deployment"
+      - name: workspace
+        type: jobWorkspace
+        data:
+          description: "What to clean up before the job runs"
+      - name: uses
+        type: explicitResources
+        data:
+          description: "Any resources required by this job that are not already referenced"
+      - name: container
+        type: jobContainer
+        data:
+          description: "Container resource name"
+      - name: services
+        type: jobServices
+        data:
+          description: "Container resources to run as a service container"
+      - name: templateContext
+        type: templateContext
+    - structure: mapping
+      firstKey: template
+      properties:
+      - name: template
+        type: nonEmptyString
+        data:
+          description: "Reference to a template for this deployment"
+      - name: parameters
+        type: mapping
+        data:
+          description: "Parameters used in a deployment template"
+      load: jobsTemplateReference
+
+  explicitResources:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: repositories
+        type: sequenceOfNonEmptyString
+        data:
+          description: "Repository references"
+      - name: pools
+        type: sequenceOfNonEmptyString
+        data:
+          description: "Pool references"
+
+  pool:
+    data:
+      description: "Pool details"
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+      transform:
+        name: ${{ value }}
+    - structure: mapping
+      properties:
+      - name: name
+        type: nonEmptyString
+        data:
+          description: "Name of a pool"
+      - name: demands
+        type: poolDemands
+        data:
+          description: "List of demands (for a private pool)"
+      looseKeyType: nonEmptyString
+      looseValueType: any
+
+  poolDemands:
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+      transform:
+      - ${{ value }}
+    - structure: sequence
+      itemType: nonEmptyString
+
+  jobContainer:
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+      transform:
+        alias: ${{ value }}
+    - structure: mapping
+      properties:
+      - name: alias
+        type: string
+        data:
+          description: "The alias of the container resource"
+    - structure: mapping
+      inherits: containerBase
+
+  containerBase:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: endpoint
+        type: string_allowExpressions
+        data:
+          description: "ID of the service endpoint connecting to a private container registry"
+      - name: env
+        type: mappingOfStringString # todo: figure out how to specify this is ordinal, not ordinalIgnoreCase
+        data:
+          description: "Variables to map into the container's environment"
+      - name: image
+        type: string
+        data:
+          description: "Container image tag"
+          examples: "ubuntu:16.04,windows:1803"
+          required: true
+      - name: mapDockerSocket
+        type: boolean
+        data:
+          description: "Set this flag to false to force the agent not to setup the /var/run/docker.sock volume on container jobs"
+      - name: options
+        type: string_allowExpressions
+        data:
+          description: "Options to pass into container host"
+      - name: ports
+        type: sequenceOfString_allowExpressions
+      - name: volumes
+        type: sequenceOfString_allowExpressions
+      - name: mountReadOnly
+        type: readOnlyMounts
+
+  readOnlyMounts:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: work
+        type: boolean
+        data:
+          description: "Mount the work directory as readonly"
+      - name: externals
+        type: boolean
+        data:
+          description: "Mount the externals directory as readonly"
+      - name: tools
+        type: boolean
+        data:
+          description: "Mount the tools directory as readonly"
+      - name: tasks
+        type: boolean
+        data:
+          description: "Mount the tasks directory as readonly"
+
+  jobServices:
+    schemas:
+    - structure: mapping
+      looseKeyType: nonEmptyString
+      looseValueType: jobContainer
+
+  jobWorkspace:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: clean
+        type: string
+        data:
+          description: "Which parts of the workspace should be scorched before fetching"
+          enum: "outputs,resources,all"
+
+  jobStrategy:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: matrix
+        type: jobMatrix
+      - name: maxParallel
+        type: nonEmptyString
+        data:
+          description: "Maximum number of jobs running in parallel"
+    - structure: mapping
+      properties:
+      - name: parallel
+        type: nonEmptyString
+        data:
+          description: "Run the job this many times"
+
+  jobMatrix:
+    schemas:
+    - structure: mapping
+      looseKeyType: nonEmptyString
+      looseValueType: mappingOfStringString # how to specify ordinal ignore case? specify non empty keys?
+      data:
+        minProperties: 1
+        patternProperties:
+          ^[A-Za-z0-9_]+$: matrixProperties
+    - structure: scalar
+      requireNonEmpty: true
+
+  matrixProperties:
+    schemas:
+    - structure: mapping
+      looseKeyType: any
+      looseValueType: any
+      data:
+        description: "Variable-value pair to pass in this matrix instance"
+
+  ########################################
+  # Deployment Provider Job
+  ########################################
+  deploymentEnvironment:
+    data:
+      description: "Environment details"
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+      transform:
+        name: ${{ value }}
+    - structure: mapping
+      properties:
+      - name: name
+        type: nonEmptyString
+        data:
+          description: "Name of environment"
+      - name: resourceName
+        type: nonEmptyString
+        data:
+          description: "Name of resource"
+      - name: resourceId
+        type: nonEmptyString
+        data:
+          description: "Id of resource"
+      - name: resourceType
+        type: nonEmptyString
+        data:
+          description: "Type of environment resource"
+      - name: tags
+        type: nonEmptyString
+        data:
+          description: "List of tag filters"
+
+  ########################################
+  # Deployment Job Strategy
+  ########################################
+
+  deploymentStrategy:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: runOnce
+        type: runOnceDeploymentStrategy
+        data:
+          description: "RunOnce Deployment strategy"
+    - structure: mapping
+      properties:
+      - name: rolling
+        type: rollingDeploymentStrategy
+        data:
+          description: "Rolling Deployment strategy"
+    - structure: mapping
+      properties:
+      - name: canary
+        type: canaryDeploymentStrategy
+        data:
+          description: "Canary Deployment strategy"
+
+  preDeployHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where pre deploy steps will run"
+
+  deployHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where deploy steps will run"
+          
+  routeTrafficHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where route traffic steps will run"
+          
+  postRouteTrafficHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where post route traffic steps will run"
+
+  onSuccessOrFailureHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: failure
+        type: onFailureHook
+        data:
+          description: "Runs on failure of any step"
+      - name: success
+        type: onSuccessHook
+        data:
+          description: "Runs on success of all of the steps" 
+
+  onFailureHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where post on failure steps will run"
+
+  onSuccessHook:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      - name: pool
+        type: pool
+        data:
+          description: "Pool where on success steps will run"
+
+  runOnceDeploymentStrategy:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: preDeploy
+        type: preDeployHook
+        data:
+          description: "Pre deploy hook for runOnce deployment strategy"
+      - name: deploy
+        type: deployHook
+        data:
+          description: "Deploy hook for runOnce deployment strategy"
+      - name: routeTraffic
+        type: routeTrafficHook
+        data:
+          description: "Route traffic hook for runOnce deployment strategy"
+      - name: postRouteTraffic
+        type: postRouteTrafficHook
+        data:
+          description: "Post route traffic hook for runOnce deployment strategy"
+      - name: on
+        type: onSuccessOrFailureHook
+        data:
+          description: "On success or failure hook for runOnce deployment strategy"
+
+  rollingDeploymentStrategy:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: maxParallel
+        type: nonEmptyString
+        data:
+          description: "Maximum number of jobs running in parallel"
+      - name: preDeploy
+        type: preDeployHook
+        data:
+          description: "Pre deploy hook for rolling deployment strategy"
+      - name: deploy
+        type: deployHook
+        data:
+          description: "Deploy hook for rolling deployment strategy"
+      - name: routeTraffic
+        type: routeTrafficHook
+        data:
+          description: "Route traffic hook for rolling deployment strategy"
+      - name: postRouteTraffic
+        type: postRouteTrafficHook
+        data:
+          description: "Post route traffic hook for rolling deployment strategy"
+      - name: on
+        type: onSuccessOrFailureHook
+        data:
+          description: "On success or failure hook for rolling deployment strategy"
+
+  canaryDeploymentStrategy:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: increments
+        type: canaryDeploymentIncrements
+        data:
+          description: "Maximum batch size for deployment"
+      - name: preDeploy
+        type: preDeployHook
+        data:
+          description: "Pre deploy hook for canary deployment strategy"
+      - name: deploy
+        type: deployHook
+        data:
+          description: "Deploy hook for canary deployment strategy"
+      - name: routeTraffic
+        type: routeTrafficHook
+        data:
+          description: "Route traffic hook for canary deployment strategy"
+      - name: postRouteTraffic
+        type: postRouteTrafficHook
+        data:
+          description: "Post route traffic hook for canary deployment strategy"
+      - name: on
+        type: onSuccessOrFailureHook
+        data:
+          description: "On success or failure hook for canary deployment strategy"
+
+  canaryDeploymentIncrements:
+    schemas:
+    - structure: sequence
+      itemType: nonEmptyString
+
+  ########################################
+  # Phase types (legacy)
+  ########################################
+
+  phases:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: sequence
+      itemType: phase
+      data:
+        deprecationMessage: "This option is deprecated, use `jobs` instead"
+
+  phase:
+    data:
+      deprecationMessage: "This option is deprecated, use `job` (inside `jobs`) instead"
+    schemas:
+    - structure: mapping
+      firstKey: phase
+      properties:
+      - name: phase
+        type: referenceName
+        data:
+          description: ID of the phase
+      - name: dependsOn
+        type: jobDependsOn
+        data:
+          description: "Any phases which must complete before this one"
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name of the phase"
+      - name: condition
+        type: string
+        data:
+          description: "Evaluate this condition expression to determine whether to run this phase"
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: queue
+        type: phaseQueueTarget
+        data:
+          description: "Queue where this phase will run"
+          deprecationMessage: "This option is deprecated, use pool instead"
+      - name: variables
+        type: variables
+        data:
+          description: "Phase-specific variables"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run in this phase"
+      transform:
+        job: ${{ value.phase }}
+        ${{ each pair in value }}:
+          ${{ if in(pair.key, 'displayName', 'dependsOn', 'condition', 'continueOnError', 'variables', 'steps') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+          # todo: switch to elif
+          ${{ if eq(pair.key, 'queue') }}:
+            ${{ insert }}: ${{ transform('phaseQueueTargetToJobProperties', value.queue) }}
+    - structure: mapping
+      firstKey: phase
+      properties:
+      - name: phase
+        type: referenceName
+        data:
+          description: ID of the phase
+      - name: dependsOn
+        type: jobDependsOn
+        data:
+          description: "Any phases which must complete before this one"
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name of the phase"
+      - name: condition
+        type: string
+        data:
+          description: "Evaluate this condition expression to determine whether to run this phase"
+      - name: continueOnError
+        type: jobContinueOnError
+        data:
+          description: "Continue running even on failure?"
+      - name: server
+        type: phaseServerTarget
+        data:
+          description: "True if this is an agent-less phase (runs on server)"
+          deprecationMessage: "This option is deprecated, use pool:server instead"
+      - name: variables
+        type: variables
+        data:
+          description: "Phase-specific variables"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run in this phase"
+      transform:
+        job: ${{ value.phase }}
+        ${{ each pair in value }}:
+          ${{ if in(pair.key, 'displayName', 'dependsOn', 'condition', 'continueOnError', 'variables', 'steps') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+          # todo: switch to elif
+          ${{ if eq(pair.key, 'server') }}:
+            ${{ insert }}: ${{ transform('phaseServerTargetToJobProperties', value.server) }}
+    - structure: mapping
+      firstKey: template
+      properties:
+      - name: template
+        type: nonEmptyString
+        data:
+          description: "Reference to a template for this phase"
+      - name: parameters
+        type: mapping
+        data:
+          description: "Parameters used in a phase template"
+      load: jobsTemplateReference
+
+  phaseQueueTarget:
+    data:
+      description: "Queue details"
+      deprecationMessage: "This option is deprecated, use `pool` under `jobs` instead"
+    schemas:
+    - structure: scalar
+      transform:
+        name: ${{ value }}
+    - structure: mapping
+      properties:
+      - name: cancelTimeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for the phase to cancel before forcibly terminating it"
+      - name: container
+        type: nonEmptyString
+        data:
+          description: "Container resource name"
+      - name: demands
+        type: phaseTargetDemands
+        data:
+          description: "List of demands (for a private queue)"
+      - name: matrix
+        type: phaseTargetMatrix
+      - name: name
+        type: string
+        data:
+          description: "Name of a queue"
+      - name: parallel
+        type: nonEmptyString
+        data:
+          description: "Maximum number of parallel agent executions"
+      - name: timeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait before cancelling the phase"
+      - name: workspace
+        type: phaseTargetWorkspace
+
+  phaseServerTarget:
+    schemas:
+    - structure: scalar
+      transform: { }
+    - structure: mapping
+      properties:
+      - name: cancelTimeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for the job to cancel before forcibly terminating it"
+      - name: matrix
+        type: phaseTargetMatrix
+      - name: parallel
+        type: nonEmptyString
+        data:
+          description: "Maximum number of parallel agent executions"
+      - name: timeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait before cancelling the job"
+
+  phaseTargetDemands:
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+      transform:
+      - ${{ value }}
+    - structure: sequence
+      itemType: nonEmptyString
+
+  phaseTargetWorkspace:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: clean
+        type: string
+        data:
+          description: "Scorch the repo before fetching?"
+          enum: "outputs,resources,all"
+
+  phaseTargetMatrix:
+    schemas:
+    - structure: mapping
+      looseKeyType: nonEmptyString
+      looseValueType: mappingOfStringString # how to specify ordinal ignore case? specify non empty keys?
+    - structure: scalar
+      requireNonEmpty: true
+    data:
+      minProperties: 1
+      patternProperties:
+        ^[A-Za-z0-9_]+$: matrixProperties
+      description: "List of permutations of variable values to run"
+
+  ########################################
+  # Step types
+  ########################################
+
+  stepsTemplate:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: parameters
+        type: templateParameters
+        data:
+          description: "Step-specific parameters"
+      - name: steps
+        type: steps
+        data:
+          description: "A list of steps to run"
+      transform:
+      - ${{ if value.steps }}:
+        - ${{ value.steps }}
+
+  steps:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: sequence
+      itemType: step
+
+  step:
+    schemas:
+    - structure: mapping
+      firstKey: task
+      inherits: taskBase
+      properties:
+      - name: task
+        type: nonEmptyString
+        data:
+          description: "Task to run"
+      - name: inputs
+        type: mappingOfStringString
+        data:
+          description: "Task-specific inputs"
+    - structure: mapping
+      firstKey: script
+      inherits: taskBase
+      properties:
+      - name: script
+        type: string
+        data:
+          description: "An inline script"
+          required: true
+      - name: failOnStderr
+        type: string
+        data:
+          description: "Fail the task if output is sent to Stderr?"
+      - name: workingDirectory
+        type: string
+        data:
+          description: "Start the script with this working directory"
+      transform:
+        task: CmdLine@2
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          script: ${{ value.script }}
+          ${{ if value.failOnStderr }}:
+            failOnStderr: ${{ value.failOnStderr }}
+          ${{ if value.workingDirectory }}:
+            workingDirectory: ${{ value.workingDirectory }}
+    - structure: mapping
+      firstKey: powershell
+      inherits: taskBase
+      properties:
+      - name: powershell
+        type: string
+        data:
+          description: "Inline PowerShell or reference to a PowerShell file"
+          required: true
+      - name: errorActionPreference
+        type: string
+      - name: failOnStderr
+        type: string
+        data:
+          description: "Fail the task if output is sent to Stderr?"
+      - name: ignoreLASTEXITCODE
+        type: string
+        data:
+          description: "Check the final exit code of the script to determine whether the step succeeded?"
+      - name: workingDirectory
+        type: string
+        data:
+          description: "Start the script with this working directory"
+      transform:
+        task: PowerShell@2
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          targetType: inline
+          script: ${{ value.powershell }}
+          ${{ each pair in value }}:
+            ${{ if in(pair.key, 'errorActionPreference', 'failOnStderr', 'ignoreLASTEXITCODE', 'workingDirectory') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+    - structure: mapping
+      firstKey: pwsh
+      inherits: taskBase
+      properties:
+      - name: pwsh
+        type: string
+        data:
+          description: "Inline PowerShell or reference to a PowerShell file"
+          required: true
+      - name: errorActionPreference
+        type: string
+      - name: failOnStderr
+        type: string
+        data:
+          description: "Fail the task if output is sent to Stderr?"
+      - name: ignoreLASTEXITCODE
+        type: string
+        data:
+          description: "Check the final exit code of the script to determine whether the step succeeded?"
+      - name: workingDirectory
+        type: string
+        data:
+          description: "Start the script with this working directory"
+      transform:
+        task: PowerShell@2
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          targetType: inline
+          script: ${{ value.pwsh }}
+          pwsh: true
+          ${{ each pair in value }}:
+            ${{ if in(pair.key, 'errorActionPreference', 'failOnStderr', 'ignoreLASTEXITCODE', 'workingDirectory') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+    - structure: mapping
+      firstKey: bash
+      inherits: taskBase
+      properties:
+      - name: bash
+        type: string
+        data:
+          description: "An inline script"
+          required: true
+      - name: failOnStderr
+        type: string
+        data:
+          description: "Fail the task if output is sent to Stderr?"
+      - name: workingDirectory
+        type: string
+        data:
+          description: "Start the script with this working directory"
+      transform:
+        task: Bash@3
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          targetType: inline
+          script: ${{ value.bash }}
+          ${{ if value.failOnStderr }}:
+            failOnStderr: ${{ value.failOnStderr }}
+          ${{ if value.workingDirectory }}:
+            workingDirectory: ${{ value.workingDirectory }}
+    - structure: mapping
+      firstKey: checkout
+      inherits: taskBase
+      properties:
+      - name: checkout
+        type: string
+        data:
+          description: "Alias of the repository resource to check out or 'none'"
+      - name: clean
+        type: string
+        data:
+          description: "Scorch the repo before fetching?"
+          enum: "true,false"
+      - name: fetchDepth
+        type: string
+        data:
+          description: "Depth of Git graph to fetch"
+      - name: fetchTags
+        type: string
+        data:
+          description: "Fetch tags?"
+      - name: lfs
+        type: string
+        data:
+          description: "Fetch Git-LFS objects?"
+      - name: persistCredentials
+        type: string
+        data:
+          description: "Keep credentials available for later use?"
+      - name: submodules
+        type: string
+        data:
+          description: "Check out Git submodules?"
+      - name: path
+        type: string
+        data:
+          description: "Path of the repository to check out"
+      transform:
+        task: 6d15af64-176c-496d-b583-fd2ae21d4df4@1
+        ${{ if eq(value.checkout, 'none') }}:
+          condition: false
+          ${{ each pair in transform('stepToTaskBaseProperties', value) }}:
+            ${{ if ne(pair.key, 'condition') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+        # todo: switch to else
+        ${{ if ne(value.checkout, 'none') }}:
+          ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          repository: ${{ value.checkout }}
+          ${{ each pair in value }}:
+            ${{ if in(pair.key, 'clean', 'fetchDepth', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+    - structure: mapping
+      firstKey: download
+      inherits: taskBase
+      properties:
+      - name: download
+        type: nonEmptyString
+        data:
+          description: Reference to the pipeline
+          required: true
+      - name: artifact
+        type: nonEmptyString
+        data:
+          description: Name of the artifact to download
+      - name: patterns
+        type: nonEmptyString
+        data:
+          description: Pattern to download files from artifact
+      transform:
+        task: 30f35852-3f7e-4c0c-9a88-e127b4f97211@1
+        ${{ if eq(value.download, 'none') }}:
+          condition: false
+          ${{ each pair in transform('stepToTaskBaseProperties', value) }}:
+            ${{ if ne(pair.key, 'condition') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+        # todo: switch to else
+        ${{ if ne(value.download, 'none') }}:
+          ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          alias: ${{ value.download }}
+          ${{ each pair in value }}:
+            ${{ if in(pair.key, 'artifact', 'patterns') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+    - structure: mapping
+      firstKey: downloadBuild
+      inherits: taskBase
+      properties:
+      - name: downloadBuild
+        type: nonEmptyString
+        data:
+          description: ID for the build resource
+      - name: artifact
+        data:
+          description: Name of the artifact to download
+        type: string
+      - name: path
+        type: string
+        data:
+          description: Path to download the artifact into
+      - name: patterns
+        type: string
+        data:
+          description: Downloads the files which matches the patterns
+      - name: inputs
+        type: mappingOfStringString
+        data:
+          description: "Inputs for the task"
+      transform:
+        downloadBuild: ${{ value.downloadBuild }}
+        ${{ if eq(value.downloadBuild, 'none') }}:
+          condition: false
+          ${{ each pair in transform('stepToTaskBaseProperties', value) }}:
+            ${{ if ne(pair.key, 'condition') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+        # todo: switch to else
+        ${{ if ne(value.downloadBuild, 'none') }}:
+          ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          alias: ${{ value.downloadBuild }}
+          ${{ each pair in value }}:
+            ${{ if in(pair.key, 'artifact', 'path', 'patterns') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+          ${{ each pair in value.inputs }}:
+            ${{ if in(pair.key, 'artifact', 'path', 'patterns') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+    - structure: mapping
+      firstKey: getPackage
+      inherits: taskBase
+      properties:
+      - name: getPackage
+        type: nonEmptyString
+        data:
+          description: ID for the package resource
+      - name: path
+        type: string
+        data:
+          description: Path to download the package into
+      transform:
+        getPackage: ${{ value.getPackage }}
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          alias: ${{ value.getPackage }}
+          ${{ each pair in value }}:
+            ${{ if in(pair.key, 'path') }}:
+              ${{ pair.key }}: ${{ pair.value }}
+    - structure: mapping
+      firstKey: upload
+      inherits: taskBase
+      properties:
+      - name: upload
+        type: string
+        data:
+          deprecationMessage: "This option is deprecated, use `publish` instead"
+      - name: artifact
+        type: string
+      transform:
+        task: ecdc45f6-832d-4ad9-b52b-ee49e94659be@0
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          targetPath: ${{ value.upload }}
+          ${{ if value.artifact }}:
+            artifactName: ${{ value.artifact }}
+    - structure: mapping
+      firstKey: publish
+      inherits: taskBase
+      properties:
+      - name: publish
+        type: string
+      - name: artifact
+        type: string
+      transform:
+        task: ecdc45f6-832d-4ad9-b52b-ee49e94659be@1
+        ${{ insert }}: ${{ transform('stepToTaskBaseProperties', value) }}
+        inputs:
+          path: ${{ value.publish }}
+          ${{ if value.artifact }}:
+            artifactName: ${{ value.artifact }}
+    - structure: mapping
+      firstKey: template
+      properties:
+      - name: template
+        type: nonEmptyString
+        data:
+          description: "Reference to a template for this step"
+      - name: parameters
+        type: mapping
+        data:
+          description: "Parameters used in a step template"
+      load: stepsTemplateReference
+    - structure: mapping
+      firstKey: reviewApp
+      inherits: taskBase
+      properties:
+      - name: reviewApp
+        type: string
+      transform:
+        task: ReviewApp@0
+        inputs:
+          resourceName: ${{ value.reviewApp }}
+
+  stepTarget:
+    data:
+      description: "Step target"
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+      transform:
+        container: ${{ value }}
+    - structure: mapping
+      properties:
+      - name: container
+        type: nonEmptyString
+        data:
+          description: "Container to target (or 'host' for host machine)"
+      - name: commands
+        type: string
+        data:
+          description: "Set of allowed logging commands ('any' or 'restricted')"
+          enum: "any,restricted"
+      - name: settableVariables
+        type: variableRestrictions
+        data:
+          description: "Restrictions on which variables that can be set"
+
+  variableRestrictions:
+    schemas:
+    - structure: scalar
+      constant: none
+      ignoreCase: true
+      transform: []
+    - structure: sequence
+      itemType: nonEmptyString
+
+  jobDecoratorSteps:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: steps
+        type: tasks
+        data:
+          description: "A list of steps to run in this job"
+
+  tasks:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: sequence
+      itemType: task
+
+  task:
+    schemas:
+    - structure: mapping
+      firstKey: task
+      inherits: taskBase
+      properties:
+      - name: task
+        type: nonEmptyString
+        data:
+          description: "Name of the task to run"
+      - name: inputs
+        type: mappingOfStringString
+        data:
+          description: "Inputs for the task"
+
+  taskBase:
+    schemas:
+    - structure: mapping
+      properties:
+      - name: condition
+        type: string
+        data:
+          description: "Evaluate this condition expression to determine whether to run this task"
+      - name: continueOnError
+        type: boolean
+        data:
+          description: "Continue running even on failure?"
+      - name: displayName
+        type: string
+        data:
+          description: "Human-readable name for the task"
+      - name: target
+        type: stepTarget
+        data:
+          description: "Environment in which to run this task"
+      - name: enabled
+        type: boolean
+        data:
+          description: "Run this task when the job runs?"
+      - name: env
+        type: mappingOfStringString
+        data:
+          description: "Variables to map into the process's environment"
+      - name: name
+        type: referenceName
+        data:
+          description: ID of the step
+      - name: timeoutInMinutes
+        type: nonEmptyString
+        data:
+          description: "Time to wait for this task to complete before the server kills it"
+      - name: retryCountOnTaskFailure
+        type: string
+        data:
+          description: "Number of retries if the task fails"
+
+  ########################################
+  # Common pipeline types
+  ########################################
+
+  jobContinueOnError:
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+
+  jobDependsOn:
+    schemas:
+    - structure: scalar
+      transform:
+      - ${{ if value }}:
+        - ${{ value }}
+    - structure: sequence
+      itemType: string
+
+  referenceName:
+    schemas:
+    - structure: scalar
+      data:
+        pattern: ^[-_A-Za-z0-9]*$
+
+  templateContext:
+    schemas:
+    - structure: mapping
+      looseKeyType: nonEmptyString
+      looseValueType: any
+
+  ########################################
+  # General types
+  ########################################
+
+  boolean:
+    schemas:
+    - structure: scalar
+      constant: true
+      ignoreCase: true
+    - structure: scalar
+      constant: y
+      ignoreCase: true
+      transform: true
+    - structure: scalar
+      constant: yes
+      ignoreCase: true
+      transform: true
+    - structure: scalar
+      constant: on
+      ignoreCase: true
+      transform: true
+    - structure: scalar
+      constant: false
+      ignoreCase: true
+    - structure: scalar
+      constant: n
+      ignoreCase: true
+      transform: false
+    - structure: scalar
+      constant: no
+      ignoreCase: true
+      transform: false
+    - structure: scalar
+      constant: off
+      ignoreCase: true
+      transform: false
+
+  string_allowExpressions:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: scalar
+
+  nonEmptyString:
+    schemas:
+    - structure: scalar
+      requireNonEmpty: true
+
+  sequenceOfNonEmptyString:
+    schemas:
+    - structure: sequence
+      itemType: nonEmptyString
+
+  sequenceOfString_allowExpressions:
+    schemas:
+    - structure: sequence
+      itemType: string_allowExpressions
+
+  mappingOfStringString:
+    schemas:
+    - structure: mapping
+      looseKeyType: string
+      looseValueType: string
+
+  any_allowExpressions:
+    allowExpressionsInSubTree: true
+    schemas:
+    - structure: scalar
+    - structure: sequence
+      itemType: any
+    - structure: mapping
+      looseKeyType: string
+      looseValueType: any
+
+transforms:
+
+  ########################################
+  # Phase transforms types
+  ########################################
+
+  phaseQueueTargetToJobProperties:
+    ${{ insert }}: ${{ transform('phaseTargetToJobProperties', arg0) }}
+    ${{ if or(arg0.name, arg0.demands) }}:
+      pool:
+        ${{ if arg0.name }}:
+          name: ${{ arg0.name }}
+        ${{ if arg0.demands }}:
+          demands: ${{ arg0.demands }}
+    ${{ if arg0.container }}:
+      container:
+        alias: ${{ arg0.container }}
+    ${{ if arg0.workspace }}:
+      workspace:
+        ${{ arg0.workspace }}
+
+  phaseServerTargetToJobProperties:
+    ${{ insert }}: ${{ transform('phaseTargetToJobProperties', arg0) }}
+    pool:
+      name: server
+
+  phaseTargetToJobProperties:
+    ${{ if arg0.timeoutInMinutes }}:
+      timeoutInMinutes: ${{ arg0.timeoutInMinutes }}
+    ${{ if arg0.cancelTimeoutInMinutes }}:
+      cancelTimeoutInMinutes: ${{ arg0.cancelTimeoutInMinutes }}
+    ${{ if arg0.matrix }}:
+      strategy:
+        matrix: ${{ arg0.matrix }}
+        ${{ if arg0.parallel }}:
+          maxParallel: ${{ arg0.parallel }}
+    # todo: switch to elif
+    ${{ if and(not(arg0.matrix), arg0.parallel) }}:
+      strategy:
+        parallel: ${{ arg0.parallel }}
+
+  ########################################
+  # Step transforms
+  ########################################
+
+  stepToTaskBaseProperties:
+    ${{ each pair in arg0 }}:
+      ${{ if in(pair.key, 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure') }}:
+        ${{ pair.key }}: ${{ pair.value }}

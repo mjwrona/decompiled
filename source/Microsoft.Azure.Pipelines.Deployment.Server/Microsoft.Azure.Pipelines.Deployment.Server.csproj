@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.Azure.Pipelines.Deployment.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8D26877-CDA9-42B4-BE09-BF48B139D066}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Pipelines.Deployment.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Pipelines.Deployment</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.DevOps.ServiceEndpoints.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Deployment.Sdk.Server">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Deployment.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.Deployment.WebApi">
+      <HintPath>lib\Microsoft.Azure.Pipelines.Deployment.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Pipelines.Yaml" />
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.Common" />
+    <Reference Include="Microsoft.VisualStudio.ExternalProviders.GitHub.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceEndpoints.WebApi" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="CustomSqlError.cs" />
+    <Compile Include="TriggerPipelineForArtifactEventJobCustomCodes.cs" />
+    <Compile Include="DeploymentResources.cs" />
+    <Compile Include="Utilities\ArtifactTriggerHelper.cs" />
+    <Compile Include="Utilities\CustomArtifactFilter.cs" />
+    <Compile Include="Utilities\PipelineArtifactFilter.cs" />
+    <Compile Include="Utilities\PipelineWebHookExtensionHelper.cs" />
+    <Compile Include="Utilities\PipelineWebHookHelper.cs" />
+    <Compile Include="Utilities\PipelineWebHookNotificationUtilities.cs" />
+    <Compile Include="Utilities\PipelineWebHookPublisherPropertyNames.cs" />
+    <Compile Include="Utilities\DownloadTaskTraceabilityError.cs" />
+    <Compile Include="Utilities\ArtifactTraceabilityHelper.cs" />
+    <Compile Include="Utilities\UniqueResourceIdentiferHelper.cs" />
+    <Compile Include="Services\ArtifactMetadataService.cs" />
+    <Compile Include="Services\BaseMetadataDetailsService.cs" />
+    <Compile Include="Services\IBaseMetadataDetailsService.cs" />
+    <Compile Include="Services\ArtifactProvenanceService.cs" />
+    <Compile Include="Services\IPipelineTriggerIssuesService.cs" />
+    <Compile Include="Services\IPipelineTriggerMaterializationService.cs" />
+    <Compile Include="Services\MetadataDetailsExtensions.cs" />
+    <Compile Include="Services\PipelineRunTraceabilitySnapshotService.cs" />
+    <Compile Include="Services\PipelineTriggerIssuesService.cs" />
+    <Compile Include="Services\PipelineTriggerMaterializationService.cs" />
+    <Compile Include="Services\PlatformPipelineWebHookNotificationService.cs" />
+    <Compile Include="Services\VulnerabilityDetailsService.cs" />
+    <Compile Include="Services\DeploymentDetailsService.cs" />
+    <Compile Include="Services\AttestationDetailsService.cs" />
+    <Compile Include="Services\IPipelineTriggerService.cs" />
+    <Compile Include="Services\IPipelineWebHookPublisherService.cs" />
+    <Compile Include="Services\PipelineTriggerService.cs" />
+    <Compile Include="Services\PipelineWebHookPublisherService.cs" />
+    <Compile Include="Services\PlatformArtifactYamlTriggerService.cs" />
+    <Compile Include="Services\PlatformArtifactYamlTriggerServiceTracer.cs" />
+    <Compile Include="Services\IArtifactMetadataService.cs" />
+    <Compile Include="Services\ArtifactTraceabilityService.cs" />
+    <Compile Include="Services\ImageDetailsExtensionsV1Beta.cs" />
+    <Compile Include="Services\ImageDetailsService.cs" />
+    <Compile Include="Services\IImageDetailsService.cs" />
+    <Compile Include="Services\IImageDetailsRepositoryService.cs" />
+    <Compile Include="Services\TeamFoundationFileServiceExtensions.cs" />
+    <Compile Include="Services\ArtifactMetadataHelper.cs" />
+    <Compile Include="Services\TraceConstants.cs" />
+    <Compile Include="Services\CustomerIntelligenceHelper.cs" />
+    <Compile Include="Model\PipelineTriggerInfo.cs" />
+    <Compile Include="Model\PipelineTriggerIssues.cs" />
+    <Compile Include="Model\PipelineTriggerMaterializationRef.cs" />
+    <Compile Include="Model\PipelineWebHookPublisher.cs" />
+    <Compile Include="Model\PipelineWebHookSubscription.cs" />
+    <Compile Include="Model\NoteKind.cs" />
+    <Compile Include="Model\ArtifactDefinitionReference.cs" />
+    <Compile Include="Model\Grafeas.cs" />
+    <Compile Include="Model\PipelineDefinitionTrigger.cs" />
+    <Compile Include="Extensions\ArtifactProvenanceExtension.cs" />
+    <Compile Include="Extensions\PipelineTriggerIssuesExtension.cs" />
+    <Compile Include="Extensions\PipelineWebHookExtension.cs" />
+    <Compile Include="Extensions\PipelineWebHookNotificationJob.cs" />
+    <Compile Include="Extensions\TriggerPipelineForArtifactEventJob.cs" />
+    <Compile Include="Extensions\PipelineTriggerExtension.cs" />
+    <Compile Include="DataAccess\ArtifactMetaDataSqlResourceComponent3.cs" />
+    <Compile Include="DataAccess\ArtifactMetaDataSqlResourceComponent2.cs" />
+    <Compile Include="DataAccess\ArtifactMetaDataSqlResourceComponent.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent8.cs" />
+    <Compile Include="DataAccess\PipelineRunTraceabilitySnapshotDataBinder.cs" />
+    <Compile Include="DataAccess\ArtifactVersionRepoInfo.cs" />
+    <Compile Include="DataAccess\SubArtifactDataRow.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityDataRow.cs" />
+    <Compile Include="DataAccess\ArtifactVersionRepoInfoBinder.cs" />
+    <Compile Include="DataAccess\SubArtifactVersionBinder.cs" />
+    <Compile Include="DataAccess\DownloadTaskTraceabilityErrorBinder.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityDataRowBinder.cs" />
+    <Compile Include="DataAccess\CDPipelineInfoBinder.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent.cs" />
+    <Compile Include="DataAccess\DatabaseConstants.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent2.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent3.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent4.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent5.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent6.cs" />
+    <Compile Include="DataAccess\ArtifactTraceabilityComponent7.cs" />
+    <Compile Include="DataAccess\CollectionPipelineDefinitionTriggerBinder.cs" />
+    <Compile Include="DataAccess\CollectionPipelineDefinitionTriggerBinder2.cs" />
+    <Compile Include="DataAccess\DeploymentSqlComponentBase.cs" />
+    <Compile Include="DataAccess\NoteDataBinder.cs" />
+    <Compile Include="DataAccess\NoteData.cs" />
+    <Compile Include="DataAccess\PipelineRunTraceabilitySnapshotComponent.cs" />
+    <Compile Include="DataAccess\PipelineTriggerIssuesBinder.cs" />
+    <Compile Include="DataAccess\PipelineTriggerIssuesSqlComponent.cs" />
+    <Compile Include="DataAccess\PipelineTriggerIssuesComponentExtention.cs" />
+    <Compile Include="DataAccess\DbTriggerConstants.cs" />
+    <Compile Include="DataAccess\PipelineTriggerMaterializationBinder.cs" />
+    <Compile Include="DataAccess\PipelineTriggerMaterializationSqlComponent.cs" />
+    <Compile Include="DataAccess\PipelineTriggerMaterializationRefComponentExtentio.cs" />
+    <Compile Include="DataAccess\DbTriggerMaterializationConstants.cs" />
+    <Compile Include="DataAccess\ResourceIdDataBinder.cs" />
+    <Compile Include="DataAccess\OccurrenceDataBinder.cs" />
+    <Compile Include="DataAccess\OccurrenceData.cs" />
+    <Compile Include="DataAccess\PipelineWebHookBinder.cs" />
+    <Compile Include="DataAccess\PipelineWebHookPublisherBinder.cs" />
+    <Compile Include="DataAccess\PipelineWebHookPublisherSqlComponent.cs" />
+    <Compile Include="DataAccess\PipelineWebHookSqlComponent.cs" />
+    <Compile Include="DataAccess\PipelineWebHookSqlComponent2.cs" />
+    <Compile Include="DataAccess\PipelineWebHookSqlComponent3.cs" />
+    <Compile Include="DataAccess\PipelineWebHookSubscriptionsBinder.cs" />
+    <Compile Include="DataAccess\PipelineWebHookSubscriptionsBinder2.cs" />
+    <Compile Include="DataAccess\PipelineDefinitionTriggerBinder.cs" />
+    <Compile Include="DataAccess\PipelineDefinitionTriggerBinder2.cs" />
+    <Compile Include="DataAccess\PipelineTriggerSqlComponent.cs" />
+    <Compile Include="DataAccess\PipelineTriggerSqlComponent2.cs" />
+    <Compile Include="DataAccess\PipelineTriggerComponentExtention.cs" />
+    <Compile Include="DataAccess\PipelineTriggerComponentExtention2.cs" />
+    <Compile Include="DataAccess\DbConstants.cs" />
+    <Compile Include="Controllers\DeploymentDetailsApiController.cs" />
+    <Compile Include="Controllers\ArtifactProvenanceApiController.cs" />
+    <Compile Include="Controllers\PipelineTriggerController.cs" />
+    <Compile Include="Controllers\VulnerabilityDetailsApiController.cs" />
+    <Compile Include="Controllers\AttestationDetailsApiController.cs" />
+    <Compile Include="Controllers\ImageDetailsApiController.cs" />
+    <Compile Include="Controllers\ImageDetails2ApiController.cs" />
+    <Compile Include="Controllers\DeploymentProjectApiController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

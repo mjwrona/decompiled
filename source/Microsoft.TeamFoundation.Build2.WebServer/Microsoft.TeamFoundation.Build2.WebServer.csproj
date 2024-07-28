@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Build2.WebServer.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56A901EE-281B-4CE4-A0F3-3A3C808CE790}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Build2.WebServer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Build2.WebServer</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Routes">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.Routes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApiConverters">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.WebApiConverters.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.Xaml">
+      <HintPath>lib\Microsoft.TeamFoundation.Build2.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Orchestration.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.Orchestration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ServiceHooks.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ServiceHooks.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildChangesContinuationToken.cs" />
+    <Compile Include="BuildsContinuationToken.cs" />
+    <Compile Include="BuildDataExtensions.cs" />
+    <Compile Include="BuildBadgeController.cs" />
+    <Compile Include="BuildTagsController.cs" />
+    <Compile Include="BuildDefinitionRevisions5Controller.cs" />
+    <Compile Include="BuildDefinitionsToYamlController.cs" />
+    <Compile Include="BuildMetrics5Controller.cs" />
+    <Compile Include="BuildOptionDefinitions5Controller.cs" />
+    <Compile Include="BuildSettings5Controller.cs" />
+    <Compile Include="BuildSourcesController.cs" />
+    <Compile Include="BuildArtifacts5r5Controller.cs" />
+    <Compile Include="BuildArtifacts5r4Controller.cs" />
+    <Compile Include="BuildArtifacts5Controller.cs" />
+    <Compile Include="BuildLogs5Controller.cs" />
+    <Compile Include="Folders5Controller.cs" />
+    <Compile Include="BuildRetentionSettings1Controller.cs" />
+    <Compile Include="BuildStagesController.cs" />
+    <Compile Include="BuildGeneralSettingsController.cs" />
+    <Compile Include="Builds6r6Controller.cs" />
+    <Compile Include="Builds6Controller.cs" />
+    <Compile Include="Builds7Controller.cs" />
+    <Compile Include="RetentionHistory1Controller.cs" />
+    <Compile Include="RunRetentionLease1Controller.cs" />
+    <Compile Include="BuildLeasesController.cs" />
+    <Compile Include="RunRetentionLease2Controller.cs" />
+    <Compile Include="PullRequestsController.cs" />
+    <Compile Include="IBuildServiceExtensions.cs" />
+    <Compile Include="ChangeConstants.cs" />
+    <Compile Include="AgentPoolQueueExtensions.cs" />
+    <Compile Include="BuildArtifactsController.cs" />
+    <Compile Include="BuildArtifacts2Controller.cs" />
+    <Compile Include="BuildCompatApiController.cs" />
+    <Compile Include="BuildLogs3Controller.cs" />
+    <Compile Include="BuildWorkItems3Controller.cs" />
+    <Compile Include="BuildArtifacts4Controller.cs" />
+    <Compile Include="PathContentsController.cs" />
+    <Compile Include="FileContentsController.cs" />
+    <Compile Include="RepositoryBranchController.cs" />
+    <Compile Include="RepositoryWebhookController.cs" />
+    <Compile Include="SourceRepositoryController.cs" />
+    <Compile Include="Folders4Controller.cs" />
+    <Compile Include="BuildControllersController.cs" />
+    <Compile Include="BuildDefinitions2Controller.cs" />
+    <Compile Include="BuildDeploymentsController.cs" />
+    <Compile Include="BuildLogs2Controller.cs" />
+    <Compile Include="BuildLogsController.cs" />
+    <Compile Include="BuildQueues2Controller.cs" />
+    <Compile Include="BuildReportController.cs" />
+    <Compile Include="Builds2r3Controller.cs" />
+    <Compile Include="Builds2Controller.cs" />
+    <Compile Include="BuildWorkItemsController.cs" />
+    <Compile Include="BuildAgentUsageController.cs" />
+    <Compile Include="BuildApiController.cs" />
+    <Compile Include="BuildArtifacts3Controller.cs" />
+    <Compile Include="BuildBadge5Controller.cs" />
+    <Compile Include="BuildDefinitionBadgeController.cs" />
+    <Compile Include="BuildDefinitionRevisions2Controller.cs" />
+    <Compile Include="BuildDefinitions3r5Controller.cs" />
+    <Compile Include="BuildDefinitions3r4Controller.cs" />
+    <Compile Include="BuildDefinitions3r3Controller.cs" />
+    <Compile Include="BuildDefinitions3Controller.cs" />
+    <Compile Include="BuildDefinitions4_1Controller.cs" />
+    <Compile Include="BuildDefinitions4Controller.cs" />
+    <Compile Include="BuildDefinitions5r7Controller.cs" />
+    <Compile Include="BuildDefinitions5Controller.cs" />
+    <Compile Include="BuildDefinitionTemplates2Controller.cs" />
+    <Compile Include="BuildDefinitionTemplates4Controller.cs" />
+    <Compile Include="BuildDefinitionTemplatesController.cs" />
+    <Compile Include="BuildInputValuesQueryController.cs" />
+    <Compile Include="BuildLogs4Controller.cs" />
+    <Compile Include="BuildMetrics2Controller.cs" />
+    <Compile Include="BuildMetricsController.cs" />
+    <Compile Include="BuildOptionDefinitions2Controller.cs" />
+    <Compile Include="BuildPropertiesController.cs" />
+    <Compile Include="BuildReport3Controller.cs" />
+    <Compile Include="Builds3r3Controller.cs" />
+    <Compile Include="Builds3Controller.cs" />
+    <Compile Include="Builds4r4Controller.cs" />
+    <Compile Include="Builds4Controller.cs" />
+    <Compile Include="Builds5r5Controller.cs" />
+    <Compile Include="Builds5Controller.cs" />
+    <Compile Include="BuildSettingsController.cs" />
+    <Compile Include="BuildSources5Controller.cs" />
+    <Compile Include="BuildTags3r1Controller.cs" />
+    <Compile Include="BuildTags5Controller.cs" />
+    <Compile Include="BuildWorkItems4Controller.cs" />
+    <Compile Include="BuildWorkItems5Controller.cs" />
+    <Compile Include="Folders3Controller.cs" />
+    <Compile Include="CheckWellFormedProjectAttribute.cs" />
+    <Compile Include="SourceProviderController.cs" />
+    <Compile Include="DefinitionsContinuationToken.cs" />
+    <Compile Include="SecuredTagList.cs" />
+    <Compile Include="TraceConstants.cs" />
+    <Compile Include="BuildTags6Controller.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Controllers\BuildAttachmentsController.cs" />
+    <Compile Include="Controllers\BuildAttachments5Controller.cs" />
+    <Compile Include="Controllers\DefinitionResourcesController.cs" />
+    <Compile Include="Controllers\LatestBuildController.cs" />
+    <Compile Include="Controllers\BuildProjectAuthorizedResourcesController.cs" />
+    <Compile Include="Controllers\StatusBadgeController.cs" />
+    <Compile Include="Controllers\BuildChangesController.cs" />
+    <Compile Include="Controllers\BuildChanges3Controller.cs" />
+    <Compile Include="Controllers\BuildChanges4Controller.cs" />
+    <Compile Include="Controllers\BuildChanges5Controller.cs" />
+    <Compile Include="Controllers\BuildTimelines4Controller.cs" />
+    <Compile Include="Controllers\BuildTimelinesController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

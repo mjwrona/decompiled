@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66822FC7-C0B7-4A39-B0F7-20750D882940}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Search.Shared.Platform.Primitives.Telemetry</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Search.Platform">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Search.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CIName.cs" />
+    <Compile Include="IDiagnosticContext.cs" />
+    <Compile Include="ITracerCICorrelationDetails.cs" />
+    <Compile Include="SearchTelemetryEvents.cs" />
+    <Compile Include="SearchIndexerTelemetryEvents.cs" />
+    <Compile Include="SearchQueryTelemetryEvents.cs" />
+    <Compile Include="TraceLayer.cs" />
+    <Compile Include="TraceMetaData.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="KpiName.cs" />
+    <Compile Include="Tracer.cs" />
+    <Compile Include="TracerCICorrelationDataConstants.cs" />
+    <Compile Include="TracerCICorrelationForOrganizationDetails.cs" />
+    <Compile Include="TracerCICorrelationForCollectionDetails.cs" />
+    <Compile Include="TracerCICorrelationForDeploymentDetails.cs" />
+    <Compile Include="TracerCICorrelationForProjectDetails.cs" />
+    <Compile Include="TracerCICorrelationForRepositoryDetails.cs" />
+    <Compile Include="TracerCICorrelationForScopedIndexingUnitDetails.cs" />
+    <Compile Include="TracerCICorrelationForTemporaryIndexingUnitDetails.cs" />
+    <Compile Include="TracerIndexingUnitData.cs" />
+    <Compile Include="TraceArea.cs" />
+    <Compile Include="SearchEventId.cs" />
+    <Compile Include="Implementations\DebugDiagnosticContext.cs" />
+    <Compile Include="Implementations\TfsDiagnosticContext.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

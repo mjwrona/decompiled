@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72764452-1038-455A-8CD4-3715807FB973}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.WorkItemTracking.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.WorkItemTracking.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WorkItemFieldDictionaryConverter.cs" />
+    <Compile Include="ValueArrayConverter.cs" />
+    <Compile Include="RuleValidationException.cs" />
+    <Compile Include="WorkItemTrackingHttpClientBase.cs" />
+    <Compile Include="DualIntentSecuredObject.cs" />
+    <Compile Include="ArtifactQueryDualIntentSecuredObject.cs" />
+    <Compile Include="QueryDualIntentSecuredObject.cs" />
+    <Compile Include="WitConstants.cs" />
+    <Compile Include="WorkItemTrackingHttpClient.cs" />
+    <Compile Include="WorkItemTrackingHttpClientCompatBase.cs" />
+    <Compile Include="Models\GitHubConnectionModel.cs" />
+    <Compile Include="Models\GitHubConnectionRepoModel.cs" />
+    <Compile Include="Models\GitHubConnectionRepoOperation.cs" />
+    <Compile Include="Models\GitHubConnectionReposBatchRequest.cs" />
+    <Compile Include="Models\WorkItemFieldAllowedValues.cs" />
+    <Compile Include="Models\ProjectScopedSecuredSetting.cs" />
+    <Compile Include="Models\WorkItemDeleteBatch.cs" />
+    <Compile Include="Models\WorkItemDeleteBatchRequest.cs" />
+    <Compile Include="Models\AccountMyWorkResult.cs" />
+    <Compile Include="Models\AccountWorkWorkItemModel.cs" />
+    <Compile Include="Models\QueryOption.cs" />
+    <Compile Include="Models\AccountRecentActivityWorkItemModelBase.cs" />
+    <Compile Include="Models\AccountRecentActivityWorkItemModel.cs" />
+    <Compile Include="Models\AccountRecentActivityWorkItemModel2.cs" />
+    <Compile Include="Models\WorkItemRecentActivityType.cs" />
+    <Compile Include="Models\AccountRecentMentionWorkItemModel.cs" />
+    <Compile Include="Models\CommentSortOrder.cs" />
+    <Compile Include="Models\WorkItemComment.cs" />
+    <Compile Include="Models\WorkItemComments.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\CommentList.cs" />
+    <Compile Include="Models\CommentCreate.cs" />
+    <Compile Include="Models\CommentExpandOptions.cs" />
+    <Compile Include="Models\CommentFormat.cs" />
+    <Compile Include="Models\CommentMention.cs" />
+    <Compile Include="Models\CommentReaction.cs" />
+    <Compile Include="Models\CommentReactionType.cs" />
+    <Compile Include="Models\CommentUpdate.cs" />
+    <Compile Include="Models\CommentVersion.cs" />
+    <Compile Include="Models\WorkItemCommentVersionRef.cs" />
+    <Compile Include="Models\WorkItemHistory.cs" />
+    <Compile Include="Models\IdentityReference.cs" />
+    <Compile Include="Models\ArtifactUriQuery.cs" />
+    <Compile Include="Models\ArtifactUriQueryResult.cs" />
+    <Compile Include="Models\AttachmentReference.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\LinkChangeType.cs" />
+    <Compile Include="Models\WorkArtifactLink.cs" />
+    <Compile Include="Models\WorkItemRelation.cs" />
+    <Compile Include="Models\WorkItemRelationType.cs" />
+    <Compile Include="Models\WorkItemRelationUpdates.cs" />
+    <Compile Include="Models\WorkItemTrackingReference.cs" />
+    <Compile Include="Models\RemoteStatus.cs" />
+    <Compile Include="Models\RemoteLinkChangeType.cs" />
+    <Compile Include="Models\RemoteWorkItemLinkUpdate.cs" />
+    <Compile Include="Models\RemoteWorkItemLinkUpdateResult.cs" />
+    <Compile Include="Models\FieldDependentRule.cs" />
+    <Compile Include="Models\FieldStatusFlags.cs" />
+    <Compile Include="Models\FieldType.cs" />
+    <Compile Include="Models\FieldUsage.cs" />
+    <Compile Include="Models\GetFieldsExpand.cs" />
+    <Compile Include="Models\ProjectWorkItemStateColors.cs" />
+    <Compile Include="Models\ProvisioningActionType.cs" />
+    <Compile Include="Models\ProvisioningResult.cs" />
+    <Compile Include="Models\TemplateType.cs" />
+    <Compile Include="Models\TreeNodeStructureType.cs" />
+    <Compile Include="Models\TreeStructureGroup.cs" />
+    <Compile Include="Models\WorkItemClassificationNode.cs" />
+    <Compile Include="Models\WorkItemField.cs" />
+    <Compile Include="Models\WorkItemFieldOperation.cs" />
+    <Compile Include="Models\WorkItemFieldReference.cs" />
+    <Compile Include="Models\WorkItemIcon.cs" />
+    <Compile Include="Models\WorkItemStateColor.cs" />
+    <Compile Include="Models\WorkItemStateTransition.cs" />
+    <Compile Include="Models\WorkItemType.cs" />
+    <Compile Include="Models\WorkItemTypeCategory.cs" />
+    <Compile Include="Models\WorkItemTypeColor.cs" />
+    <Compile Include="Models\WorkItemTypeColorAndIcon.cs" />
+    <Compile Include="Models\WorkItemTypeFieldInstance.cs" />
+    <Compile Include="Models\WorkItemTypeFieldInstanceBase.cs" />
+    <Compile Include="Models\WorkItemTypeFieldsExpandLevel.cs" />
+    <Compile Include="Models\WorkItemTypeFieldWithReferences.cs" />
+    <Compile Include="Models\WorkItemTypeReference.cs" />
+    <Compile Include="Models\WorkItemTypeStateColors.cs" />
+    <Compile Include="Models\WorkItemTypeTemplate.cs" />
+    <Compile Include="Models\WorkItemTypeTemplateUpdateModel.cs" />
+    <Compile Include="Models\ProjectReference.cs" />
+    <Compile Include="Models\ProcessIdModel.cs" />
+    <Compile Include="Models\ProcessMigrationResultModel.cs" />
+    <Compile Include="Models\QueryType.cs" />
+    <Compile Include="Models\QueryResultType.cs" />
+    <Compile Include="Models\LinkQueryMode.cs" />
+    <Compile Include="Models\QueryRecursionOption.cs" />
+    <Compile Include="Models\QueryHierarchyItemsResult.cs" />
+    <Compile Include="Models\QueryHierarchyItem.cs" />
+    <Compile Include="Models\WorkItemQueryResult.cs" />
+    <Compile Include="Models\WorkItemLink.cs" />
+    <Compile Include="Models\WorkItemQuerySortColumn.cs" />
+    <Compile Include="Models\ExtendedHierarchyItem.cs" />
+    <Compile Include="Models\QueryBatchGetRequest.cs" />
+    <Compile Include="Models\QueryErrorPolicy.cs" />
+    <Compile Include="Models\QueryExpand.cs" />
+    <Compile Include="Models\Wiql.cs" />
+    <Compile Include="Models\WorkItemQueryClause.cs" />
+    <Compile Include="Models\WorkItemDelete.cs" />
+    <Compile Include="Models\WorkItemDeleteReference.cs" />
+    <Compile Include="Models\WorkItemDeleteShallowReference.cs" />
+    <Compile Include="Models\WorkItemDeleteUpdate.cs" />
+    <Compile Include="Models\ReportingRevisionsExpand.cs" />
+    <Compile Include="Models\ReportingWorkItemLink.cs" />
+    <Compile Include="Models\ReportingWorkItemLinksBatch.cs" />
+    <Compile Include="Models\ReportingWorkItemRevisionsBatch.cs" />
+    <Compile Include="Models\ReportingWorkItemRevisionsFilter.cs" />
+    <Compile Include="Models\StreamedBatch`1.cs" />
+    <Compile Include="Models\TemporaryQueryRequestModel.cs" />
+    <Compile Include="Models\TemporaryQueryResponseModel.cs" />
+    <Compile Include="Models\FieldsToEvaluate.cs" />
+    <Compile Include="Models\EmailRecipients.cs" />
+    <Compile Include="Models\MailMessage.cs" />
+    <Compile Include="Models\SendMailBody.cs" />
+    <Compile Include="Models\WorkItemBatchGetRequest.cs" />
+    <Compile Include="Models\WitBatchRequest.cs" />
+    <Compile Include="Models\WitBatchResponse.cs" />
+    <Compile Include="Models\WorkItem.cs" />
+    <Compile Include="Models\WorkItemErrorPolicy.cs" />
+    <Compile Include="Models\WorkItemExpand.cs" />
+    <Compile Include="Models\WorkItemFieldUpdate.cs" />
+    <Compile Include="Models\WorkItemNextStateOnTransition.cs" />
+    <Compile Include="Models\WorkItemReference.cs" />
+    <Compile Include="Models\WorkItemRevisionReference.cs" />
+    <Compile Include="Models\WorkItemTemplate.cs" />
+    <Compile Include="Models\WorkItemTemplateReference.cs" />
+    <Compile Include="Models\WorkItemUpdate.cs" />
+    <Compile Include="Models\WorkItemUpdate2.cs" />
+    <Compile Include="Models\WorkItemTrackingResource.cs" />
+    <Compile Include="Models\WorkItemTrackingResourceReference.cs" />
+    <Compile Include="Models\WorkItemTagDefinition.cs" />
+    <Compile Include="Models\ExternalDeployment.cs" />
+    <Compile Include="Models\ExternalEnvironment.cs" />
+    <Compile Include="Models\ExternalPipeline.cs" />
+    <Compile Include="Models\WorkItemField2.cs" />
+    <Compile Include="Models\Metadata\ClassificationNodesErrorPolicy.cs" />
+    <Compile Include="Models\Metadata\UpdateWorkItemField.cs" />
+    <Compile Include="Models\Metadata\FieldUpdate.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

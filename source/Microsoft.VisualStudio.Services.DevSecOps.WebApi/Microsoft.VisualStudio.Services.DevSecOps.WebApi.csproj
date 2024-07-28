@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.DevSecOps.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0F5BE4C-08EE-4BD3-B340-D79F2EF0E855}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.DevSecOps.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.DevSecOps.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\VisualStudio\Services\DevSecOps\Constants.cs" />
+    <Compile Include="BatchScanOptions.cs" />
+    <Compile Include="RulesetType.cs" />
+    <Compile Include="ContainerType.cs" />
+    <Compile Include="ScanConfiguration.cs" />
+    <Compile Include="ContainerMetadata.cs" />
+    <Compile Include="StreamResult.cs" />
+    <Compile Include="ContainerResult.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="RunDetails.cs" />
+    <Compile Include="ScanContext.cs" />
+    <Compile Include="ScanType.cs" />
+    <Compile Include="BatchScanResult.cs" />
+    <Compile Include="ScanError.cs" />
+    <Compile Include="ScanTarget.cs" />
+    <Compile Include="ScanResult.cs" />
+    <Compile Include="SourceContext.cs" />
+    <Compile Include="Violation.cs" />
+    <Compile Include="ViolationState.cs" />
+    <Compile Include="DevSecOpsHttpClient.cs" />
+    <Compile Include="RuleConfidenceLevel.cs" />
+    <Compile Include="ScanServiceException.cs" />
+    <Compile Include="SecretsScanTimeoutException.cs" />
+    <Compile Include="DevSecOpsHttpClientBase.cs" />
+    <Compile Include="DevSecOpsWebApiResources.cs" />
+    <Compile Include="Contracts\ContainerAttributeMetadata.cs" />
+    <Compile Include="Contracts\SecretsValidationBatchRequest.cs" />
+    <Compile Include="Contracts\SecretsValidationBatchResponse.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

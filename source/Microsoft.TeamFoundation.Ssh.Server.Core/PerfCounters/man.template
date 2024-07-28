@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{0DD08585-82AA-4BD5-947B-C0181CD37BFB}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.Ssh.Server.Core.dll" providerName="MicrosoftTeamFoundationSshServerCore" providerType="userMode" symbol="MicrosoftTeamFoundationSshServerCore" callback="custom">
+        <counterSet guid="{A3A070A6-DD2D-47D8-B2E2-6C3B9B5F183D}" name="TFS Services:Ssh Server" description="Ssh Server Stats" instances="globalAggregate" symbol="SshServerStats" uri="Microsoft.TeamFoundation.Ssh" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Bytes Written To Client/Sec" description="Rate in bytes at which data is being written to all ssh clients." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Ssh.BytesWrittenToClientPerSec" aggregate="sum" />
+          <counter id="2" name="Bytes Read From Client/Sec" description="Rate in bytes at which data is being read from all ssh clients." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.Ssh.BytesReadFromClientPerSec" aggregate="sum" />
+          <counter id="3" name="Active Connections" description="The current number of active SSH connections." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.Ssh.ActiveConnections" />
+          <!--
+  The next two counters are linked - the output of ID 4 is 100*X/B. We set its X's (ID 4) value to
+  the number of used bytes of memory, and we set B's (ID 5) to the total physical memory on the machine.
+  B (ID 5) won't change unless the machine reboots, so we can save it off once and don't have to read it
+  explicitly. When we read the counter, the formula is applied and we get the amount of memory used as a
+  percentage.
+  -->
+          <counter id="4" baseID="5" name="Private Bytes %" description="(private memory size of SSH process)/(total physical memory on machine) expressed as a percentage" type="perf_large_raw_fraction" detailLevel="standard" uri="Microsoft.TeamFoundation.Ssh.PrivateBytesPercent" />
+          <counter id="5" name="Private Bytes % (Base)" description="Base of (private memory size of SSH process)/(total physical memory on machine) expressed as a percentage" type="perf_large_raw_base" detailLevel="standard" uri="Microsoft.TeamFoundation.Ssh.PrivateBytesPercentBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

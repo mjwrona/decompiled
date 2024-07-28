@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Comments.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA510AFA-35CA-453C-8D47-0EAEEDEF60F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Comments.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Comments.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.MarkdownRenderer.Sdk" />
+    <Reference Include="Microsoft.TeamFoundation.Mention.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Mention.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Social.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Social.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Social.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Social.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlErrorCodes.cs" />
+    <Compile Include="CommentAttachment.cs" />
+    <Compile Include="CommentAttachmentService.cs" />
+    <Compile Include="CommentServiceBase.cs" />
+    <Compile Include="CommentToAttachment.cs" />
+    <Compile Include="CommentMentionContext.cs" />
+    <Compile Include="CommentReactionService.cs" />
+    <Compile Include="CommentReportingService.cs" />
+    <Compile Include="CommentState.cs" />
+    <Compile Include="CommentAttachmentNotFoundException.cs" />
+    <Compile Include="CommentProviderNotRegisteredException.cs" />
+    <Compile Include="CommentThreadingNotSupportedException.cs" />
+    <Compile Include="ArtifactInfo.cs" />
+    <Compile Include="ICommentAttachmentService.cs" />
+    <Compile Include="ICommentReactionService.cs" />
+    <Compile Include="ICommentReportingService.cs" />
+    <Compile Include="ICommentSecuredObjectContainer.cs" />
+    <Compile Include="CommentDeleteException.cs" />
+    <Compile Include="CommentUpdateException.cs" />
+    <Compile Include="CommentVersionNotFoundException.cs" />
+    <Compile Include="CommentNotFoundException.cs" />
+    <Compile Include="GetCommentVersion.cs" />
+    <Compile Include="ProcessComment.cs" />
+    <Compile Include="ICommentProvider.cs" />
+    <Compile Include="AddComment.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="CommentFormat.cs" />
+    <Compile Include="CommentService.cs" />
+    <Compile Include="CommentsList.cs" />
+    <Compile Include="CommentTracePoints.cs" />
+    <Compile Include="CommentVersion.cs" />
+    <Compile Include="CommentComponent.cs" />
+    <Compile Include="CommentComponent2.cs" />
+    <Compile Include="CommentComponent3.cs" />
+    <Compile Include="CommentComponent4.cs" />
+    <Compile Include="CommentComponent5.cs" />
+    <Compile Include="DeleteComment.cs" />
+    <Compile Include="ExpandOptions.cs" />
+    <Compile Include="IComment.cs" />
+    <Compile Include="ICommentService.cs" />
+    <Compile Include="IRenderedText.cs" />
+    <Compile Include="IChangedBy.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="SortOrder.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="UpdateComment.cs" />
+    <Compile Include="CommentReaction.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="PlugIns\CommentSocialEngagementProvider.cs" />
+    <Compile Include="Exceptions\InvalidArtifactIdException.cs" />
+    <Compile Include="Events\CommentEventType.cs" />
+    <Compile Include="Events\CommentEvent.cs" />
+    <Compile Include="Events\CommentReactionChangedEvent.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

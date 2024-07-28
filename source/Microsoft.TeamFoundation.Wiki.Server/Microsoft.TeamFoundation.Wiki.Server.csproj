@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.TeamFoundation.Wiki.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00C65702-6D00-451E-8447-4E7320780E47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Wiki.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Wiki.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Comments.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Comments.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server" />
+    <Reference Include="Microsoft.TeamFoundation.Policy.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Policy.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebServer" />
+    <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Social.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Social.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PageViewCacheService.cs" />
+    <Compile Include="PageViewKey.cs" />
+    <Compile Include="PageViewValue.cs" />
+    <Compile Include="WikiCustomSqlError.cs" />
+    <Compile Include="PageView.cs" />
+    <Compile Include="WikiComponent.cs" />
+    <Compile Include="GitPath.cs" />
+    <Compile Include="VersionedPageContent.cs" />
+    <Compile Include="WikiPageChangeEvent.cs" />
+    <Compile Include="CommitDetails.cs" />
+    <Compile Include="WikiPagePath.cs" />
+    <Compile Include="WikiVersionWaterMark.cs" />
+    <Compile Include="WikiAttachmentChange.cs" />
+    <Compile Include="WikiChangeBase.cs" />
+    <Compile Include="WikiChangeType.cs" />
+    <Compile Include="IWikiOneTimeJobData.cs" />
+    <Compile Include="WikiPageChange.cs" />
+    <Compile Include="WikiVersionPublishedJobData.cs" />
+    <Compile Include="WikiVersionsUnpublishedJobData.cs" />
+    <Compile Include="WikiRenamedPage.cs" />
+    <Compile Include="WikiPageWithId.cs" />
+    <Compile Include="WikiPageIdInfo.cs" />
+    <Compile Include="ETaggedPageActionPerformer.cs" />
+    <Compile Include="WikiAncestorPageNotFoundException.cs" />
+    <Compile Include="ScopeNotSupportedException.cs" />
+    <Compile Include="WikiPermissionException.cs" />
+    <Compile Include="WikiIllegalCharacterPathException.cs" />
+    <Compile Include="WikiPageContentUnavailableException.cs" />
+    <Compile Include="WikiPageRenameSourceNotFoundException.cs" />
+    <Compile Include="WikiPageHasConflictsException.cs" />
+    <Compile Include="WikiCreateAttachmentFailedException.cs" />
+    <Compile Include="WikiPageOperationFailedException.cs" />
+    <Compile Include="WikiOperationNotSupportedException.cs" />
+    <Compile Include="IWikiPushOneTimeJob.cs" />
+    <Compile Include="WikiJobHandler.cs" />
+    <Compile Include="GitChangesProvider.cs" />
+    <Compile Include="IWikiPageMetaDataDeletionProvider.cs" />
+    <Compile Include="WikiCommentProvider.cs" />
+    <Compile Include="WikiPageMetaDataDeletionProviderBase.cs" />
+    <Compile Include="WikiPageViewDeletionProvider.cs" />
+    <Compile Include="WikiPageViewStatsProvider.cs" />
+    <Compile Include="IWikiPageViewStatsProvider.cs" />
+    <Compile Include="WikiPagesOrderReader.cs" />
+    <Compile Include="IWikiPagesOrderReader.cs" />
+    <Compile Include="IWikiPagesOrderProvider.cs" />
+    <Compile Include="WikiPagesOrderProvider.cs" />
+    <Compile Include="AttachmentsGitChangesProvider.cs" />
+    <Compile Include="WikiMetadataChangesProvider.cs" />
+    <Compile Include="WikiPageChangesProvider.cs" />
+    <Compile Include="IGitChangesProvider`1.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="IWikiPushJobDetailsService.cs" />
+    <Compile Include="WikiPushJobDetailsService.cs" />
+    <Compile Include="ArtifactsVisitHelper.cs" />
+    <Compile Include="GitVersionDescriptorComparer.cs" />
+    <Compile Include="NotificationUtil.cs" />
+    <Compile Include="RegistryHelper.cs" />
+    <Compile Include="PageHelper.cs" />
+    <Compile Include="StopWatchHelper.cs" />
+    <Compile Include="TelemetryUtil.cs" />
+    <Compile Include="ValidationUtils.cs" />
+    <Compile Include="WikiExtensions.cs" />
+    <Compile Include="PathHelper.cs" />
+    <Compile Include="ProjectPropertiesHelper.cs" />
+    <Compile Include="WikiPageIdHelper.cs" />
+    <Compile Include="WikiPageUrlBuilder.cs" />
+    <Compile Include="WikiPushJobUtil.cs" />
+    <Compile Include="WikiUrlHelper.cs" />
+    <Compile Include="WikiGitHelper.cs" />
+    <Compile Include="WikiV2Helper.cs" />
+    <Compile Include="WikiV1Helper.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="SpecialChars.cs" />
+    <Compile Include="SpecialCharEncodings.cs" />
+    <Compile Include="PathConstants.cs" />
+    <Compile Include="UrlConstants.cs" />
+    <Compile Include="DraftVersionsConstants.cs" />
+    <Compile Include="FormatConstants.cs" />
+    <Compile Include="TraceArea.cs" />
+    <Compile Include="WikiTraceInfo.cs" />
+    <Compile Include="Counters.cs" />
+    <Compile Include="TraceLayer.cs" />
+    <Compile Include="WikiFeatureAvailabilityFlags.cs" />
+    <Compile Include="WikiActivityType.cs" />
+    <Compile Include="MetadataContants.cs" />
+    <Compile Include="SizeThresholdConstants.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="WikiJobs.cs" />
+    <Compile Include="WikiArtifactKinds.cs" />
+    <Compile Include="WikiPageViewsConstants.cs" />
+    <Compile Include="WikiPagesBatchConstants.cs" />
+    <Compile Include="WikiPageNotFoundException.cs" />
+    <Compile Include="WikiPageAlreadyExistsException.cs" />
+    <Compile Include="WikiAlreadyExistsException.cs" />
+    <Compile Include="WikiRenameConflictException.cs" />
+    <Compile Include="WikiInvalidNameException.cs" />
+    <Compile Include="WikiInvalidVersionType.cs" />
+    <Compile Include="WikiNotFoundException.cs" />
+    <Compile Include="IWikiPagesProvider.cs" />
+    <Compile Include="WikiPagesProvider.cs" />
+    <Compile Include="Utils\WikiPageCommentUrlBuilder.cs" />
+    <Compile Include="Providers\IWikiPageIdDetailsProvider.cs" />
+    <Compile Include="Providers\IWikiPageMetadataProvider.cs" />
+    <Compile Include="Providers\WikiPageIdDetailsProvider.cs" />
+    <Compile Include="Providers\WikiPageIdProvider.cs" />
+    <Compile Include="Providers\WikiPageMetadataProvider.cs" />
+    <Compile Include="Providers\WikiPageCommentDeletionProvider.cs" />
+    <Compile Include="Providers\WikiPageFollowDeletionProvider.cs" />
+    <Compile Include="Providers\WikiPushWaterMarkProvider.cs" />
+    <Compile Include="Exceptions\PushNotFoundException.cs" />
+    <Compile Include="Exceptions\PushNotLatestException.cs" />
+    <Compile Include="Contracts\AggregatedPageViews.cs" />
+    <Compile Include="Contracts\PageViewEvent.cs" />
+    <Compile Include="Contracts\PageViewsMetaData.cs" />
+    <Compile Include="Contracts\WikiActivityType.cs" />
+    <Compile Include="Contracts\WikiPageIdDetails.cs" />
+    <Compile Include="Contracts\WikiPushJobData.cs" />
+    <Compile Include="Contracts\WikiPageChangeInfo.cs" />
+    <Compile Include="Contracts\WikiPageChangeInfoAndCommits.cs" />
+    <Compile Include="Builders\IWikiPageMetadataBuilder.cs" />
+    <Compile Include="Builders\WikiPageViewStatsBuilder.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

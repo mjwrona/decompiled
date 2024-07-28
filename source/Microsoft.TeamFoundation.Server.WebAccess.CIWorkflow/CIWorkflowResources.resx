@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FieldLabel" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="SchedulesHeading" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="ARIALabelCITrigger" xml:space="preserve">
+    <value>Continuous integration trigger</value>
+  </data>
+  <data name="GatedCheckIn" xml:space="preserve">
+    <value>Gated Check-in</value>
+  </data>
+  <data name="BuildPropertiesDescription" xml:space="preserve">
+    <value>Define general build pipeline settings</value>
+  </data>
+  <data name="CommentsRadioButtonExternal" xml:space="preserve">
+    <value>Only on pull requests from non-team members</value>
+  </data>
+  <data name="ForksCheckBoxText" xml:space="preserve">
+    <value>Build pull requests from forks of this repository</value>
+  </data>
+  <data name="RetentionCleanupOption_FileShare" xml:space="preserve">
+    <value>File share</value>
+  </data>
+  <data name="NewServiceConnection" xml:space="preserve">
+    <value>New service connection</value>
+  </data>
+  <data name="BuildSelectFolderDescription" xml:space="preserve">
+    <value>Select a build folder to place the current pipeline into</value>
+  </data>
+  <data name="StatusBadgeTitle" xml:space="preserve">
+    <value>Status badge</value>
+  </data>
+  <data name="RetentionCleanupOption_Symbols" xml:space="preserve">
+    <value>Symbols</value>
+  </data>
+  <data name="OptionsTabItemTitle" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="DefaultBranchLabelForDefinitions" xml:space="preserve">
+    <value>Default branch for manual and scheduled builds</value>
+  </data>
+  <data name="TfvcSourcesTabItemTitle" xml:space="preserve">
+    <value>TFVC</value>
+  </data>
+  <data name="NoMatchingBranch" xml:space="preserve">
+    <value>No matching branch</value>
+  </data>
+  <data name="TriggeringBuild" xml:space="preserve">
+    <value>Triggering build</value>
+  </data>
+  <data name="BuildRepositoryCleanOptionsAllBuildDirLabel" xml:space="preserve">
+    <value>All build directories</value>
+  </data>
+  <data name="FetchTagsHelpMarkdown" xml:space="preserve">
+    <value>When selected, downloads tags. [More Information](https://go.microsoft.com/fwlink/?LinkId=829603 )</value>
+  </data>
+  <data name="SvnBranchHelpText" xml:space="preserve">
+    <value>Specify trunk, or a branch root folder, or a tag root folder.  E.g. branches/releases/v14.0</value>
+  </data>
+  <data name="NoTFVCMappingError" xml:space="preserve">
+    <value>You must add at least one mapping.</value>
+  </data>
+  <data name="AddTrigger" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="YamlNoErrorsMessage" xml:space="preserve">
+    <value>Your YAML file is ready to go.</value>
+  </data>
+  <data name="CITriggerSubheading" xml:space="preserve">
+    <value>Build every change to matching branches</value>
+  </data>
+  <data name="ARIALabelRetentionLeftPane" xml:space="preserve">
+    <value>Retention policies left pane</value>
+  </data>
+  <data name="ARIALabelSITrigger" xml:space="preserve">
+    <value>Scheduled integration trigger</value>
+  </data>
+  <data name="PredefinedVariables" xml:space="preserve">
+    <value>Predefined variables</value>
+  </data>
+  <data name="YamlParseWarningsHeaderText" xml:space="preserve">
+    <value>Validation errors:</value>
+  </data>
+  <data name="DefaultAgentPoolDescription" xml:space="preserve">
+    <value>The default agent pool will be used if no pool is specified in the YAML file.  To use a different pool update the YAML file.</value>
+  </data>
+  <data name="NoMatchingRepository" xml:space="preserve">
+    <value>No matching repository</value>
+  </data>
+  <data name="BuildProcessDescription" xml:space="preserve">
+    <value>Change the pipeline name and set values for your pipeline parameters in this view</value>
+  </data>
+  <data name="AddWorkItemNewFieldDescription" xml:space="preserve">
+    <value>Add new field</value>
+  </data>
+  <data name="CIGettingStartedDescriptionLineSecond" xml:space="preserve">
+    <value>Don’t worry if it’s not an exact match; </value>
+  </data>
+  <data name="CIGettingStartedGetSourcesDescriptionLineOne" xml:space="preserve">
+    <value>Tell us where your sources are.</value>
+  </data>
+  <data name="ForksAllowFullAccessTokenText" xml:space="preserve">
+    <value>Make fork builds have the same permissions as regular builds</value>
+  </data>
+  <data name="StatusBadgeBranchExampleUrlLabel" xml:space="preserve">
+    <value>Image URL for specific branch</value>
+  </data>
+  <data name="ARIALabelOptions" xml:space="preserve">
+    <value>Build pipeline options</value>
+  </data>
+  <data name="ForksSecurityLinkText" xml:space="preserve">
+    <value>Important security considerations</value>
+  </data>
+  <data name="AddScheduleTriggerLabel" xml:space="preserve">
+    <value>Add scheduled trigger</value>
+  </data>
+  <data name="HistoryText" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="ShelvesetLabel" xml:space="preserve">
+    <value>Shelveset name</value>
+  </data>
+  <data name="GitCleanHelpLink" xml:space="preserve">
+    <value>[More Information](https://go.microsoft.com/fwlink/?LinkId=829603 )</value>
+  </data>
+  <data name="VisitSite" xml:space="preserve">
+    <value>Visit {0}</value>
+  </data>
+  <data name="RetentionCleanupOption_BuildRecord" xml:space="preserve">
+    <value>Build record</value>
+  </data>
+  <data name="YamlSchemaReference" xml:space="preserve">
+    <value>YAML schema reference</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="QueueStatusOptionsFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="DeleteScheduleTrigger" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DraftPublished" xml:space="preserve">
+    <value>Draft published</value>
+  </data>
+  <data name="CopyToClipboardText" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="ContinueButtonText" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="TriggersEditorRightPane" xml:space="preserve">
+    <value>Trigger Details</value>
+  </data>
+  <data name="OldRetentionModelDeprecated" xml:space="preserve">
+    <value>The per-definition retention model has been deprecated. After removing these non-default policies, your definition will be managed by the</value>
+  </data>
+  <data name="CheckoutSubmoduleAllNestedLabel" xml:space="preserve">
+    <value>Any nested submodules within</value>
+  </data>
+  <data name="SkipSyncSourcesHelpMarkdown" xml:space="preserve">
+    <value>When selected, configure local working directory but skip sync sources. [More Information](https://go.microsoft.com/fwlink/?LinkId=829603 )</value>
+  </data>
+  <data name="RetentionMinimumToKeepWithBranchesInfo" xml:space="preserve">
+    <value>The minimum number of successful builds to keep for this retention rule. Each branch will have at least these many builds saved at all times.</value>
+  </data>
+  <data name="TasksTabItemTitle" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="SaveAsDraftComment" xml:space="preserve">
+    <value>Draft created</value>
+  </data>
+  <data name="Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TfGitSourcesTabItemHostedTitle" xml:space="preserve">
+    <value>Azure Repos Git</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="QueueBuildDialogTitle" xml:space="preserve">
+    <value>Queue build for {0}</value>
+  </data>
+  <data name="BuildNumberFormatLabel" xml:space="preserve">
+    <value>Build number format</value>
+  </data>
+  <data name="ProcessText" xml:space="preserve">
+    <value>Pipeline</value>
+  </data>
+  <data name="AuthorizedConnectionText" xml:space="preserve">
+    <value>Authorized using connection: </value>
+  </data>
+  <data name="GatedCheckInSubheading" xml:space="preserve">
+    <value>Accept check-ins only if the submitted changes merge and build successfully</value>
+  </data>
+  <data name="SaveAndQueueBuild" xml:space="preserve">
+    <value>Save &amp; queue</value>
+  </data>
+  <data name="DescriptionLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="RepositoriesText" xml:space="preserve">
+    <value>Repositories</value>
+  </data>
+  <data name="AgentQueue" xml:space="preserve">
+    <value>Agent pool</value>
+  </data>
+  <data name="TagSourcesCalloutMoreInfo" xml:space="preserve">
+    <value>[Learn more](https://aka.ms/ci-tagsources)</value>
+  </data>
+  <data name="BadgeEnabledHelpMarkDown" xml:space="preserve">
+    <value>Allows showing a build status image on an external website.</value>
+  </data>
+  <data name="GitCleanHelpMarkdown" xml:space="preserve">
+    <value>When 'Clean' is set to 'True', perform clean operation based on clean options setting.  - 'Sources': Undo pending changes and scorch current workspace under $(build.sourcesdirectory). If any errors occurred, it will delete the workspace and the entire source folder.  - 'Sources and output directory':  In addition to 'Sources', delete and recreate $(build.binariesdirectory).  - 'Sources directory': Delete and recreate $(build.sourcesdirectory).  - 'All build directories':  Delete and recreate $(agent.builddirectory).  If any errors occurred, it will delete the workspace and the entire source folder.</value>
+  </data>
+  <data name="DefaultProjectFolderName" xml:space="preserve">
+    <value>{0} (default project folder)</value>
+  </data>
+  <data name="BuildJobDetailsDescription" xml:space="preserve">
+    <value>Define build job authorization and timeout settings</value>
+  </data>
+  <data name="DefaultBuildCompletionTitle" xml:space="preserve">
+    <value>Specify build pipeline</value>
+  </data>
+  <data name="OverridingCronSchedules" xml:space="preserve">
+    <value>This pipeline will not use any schedules defined in the YAML file. To use schedules from the YAML file, delete all scheduled triggers from the user interface.</value>
+  </data>
+  <data name="TypeLabel" xml:space="preserve">
+    <value>Resource type</value>
+  </data>
+  <data name="RunContinuousIntegration" xml:space="preserve">
+    <value>Run continuous integration triggers for committed changes</value>
+  </data>
+  <data name="TagText" xml:space="preserve">
+    <value>tag</value>
+  </data>
+  <data name="GitCheckoutSubmodulesHelpMarkdown" xml:space="preserve">
+    <value>The build pipeline will check out your Git submodules if they are in the same repository or in a public repository. [More information](https://go.microsoft.com/fwlink/?LinkId=829603 )</value>
+  </data>
+  <data name="RetentionCleanupOptionsText" xml:space="preserve">
+    <value>When cleaning up builds, delete the following:</value>
+  </data>
+  <data name="RetentionItemOverviewDescriptionDayFormat" xml:space="preserve">
+    <value>Keep for {0} day,</value>
+  </data>
+  <data name="BuildNumberFormatHelpText" xml:space="preserve">
+    <value>Define the format to give meaningful names to completed builds. Leave it blank to give builds a unique integer as name. [More Information](https://go.microsoft.com/fwlink/?LinkId=761520 )</value>
+  </data>
+  <data name="CommentsText" xml:space="preserve">
+    <value>Run only for comments</value>
+  </data>
+  <data name="BranchFilters" xml:space="preserve">
+    <value>Branch filters</value>
+  </data>
+  <data name="AddPolicyButtonAriaDescription" xml:space="preserve">
+    <value>Add new policy</value>
+  </data>
+  <data name="ARIALabelBuildDefinitionOptionsBuildProps" xml:space="preserve">
+    <value>Build pipeline options for build properties</value>
+  </data>
+  <data name="BuildCompletionEnabled" xml:space="preserve">
+    <value>Monitoring build</value>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="BuildRepositoryCleanOptionsSourcesLabel" xml:space="preserve">
+    <value>Sources</value>
+  </data>
+  <data name="MarkDownJobCancelTimeout" xml:space="preserve">
+    <value>Specifies the maximum waiting time for a build job to respond to a cancellation request before being terminated by the server.</value>
+  </data>
+  <data name="CIGettingStartedGetSourcesHeader" xml:space="preserve">
+    <value>Select your repository</value>
+  </data>
+  <data name="TagSourcesText" xml:space="preserve">
+    <value>Tag sources</value>
+  </data>
+  <data name="SourcesConnectionNameFormat" xml:space="preserve">
+    <value>{0} connection {1}</value>
+  </data>
+  <data name="RetentionDeleteTestResultsInfo" xml:space="preserve">
+    <value>Delete test runs, results and attachments when a build is deleted. Manual test results are kept.</value>
+  </data>
+  <data name="RepositoryDisabledMessage" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="SelectBuildDefinitionTemplateText" xml:space="preserve">
+    <value>Select a build pipeline template</value>
+  </data>
+  <data name="IncludeText" xml:space="preserve">
+    <value>Include</value>
+  </data>
+  <data name="RestoreTriggerWebhookButtonDescription" xml:space="preserve">
+    <value>Restore the repository’s webhooks for this trigger</value>
+  </data>
+  <data name="BuildQueuedTextPrefix" xml:space="preserve">
+    <value>Build </value>
+  </data>
+  <data name="DefaultBranch" xml:space="preserve">
+    <value>Default branch or tag</value>
+  </data>
+  <data name="RetentionMinimumToKeep" xml:space="preserve">
+    <value>Minimum to keep</value>
+  </data>
+  <data name="YamlDiscoveryScanning" xml:space="preserve">
+    <value>Scanning...</value>
+  </data>
+  <data name="SITriggerText" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="SomeSettingsNeedAttention" xml:space="preserve">
+    <value>Some settings need attention</value>
+  </data>
+  <data name="RetentionCleanupOption_TestResults" xml:space="preserve">
+    <value>Automated test results</value>
+  </data>
+  <data name="OnSuccessText" xml:space="preserve">
+    <value>On success</value>
+  </data>
+  <data name="StatusBadgeMarkdownLinkLabel" xml:space="preserve">
+    <value>Markdown link</value>
+  </data>
+  <data name="ForksText" xml:space="preserve">
+    <value>Forks</value>
+  </data>
+  <data name="ARIALabelEditorToolbar" xml:space="preserve">
+    <value>Build pipeline editor toolbar</value>
+  </data>
+  <data name="ARIALabelAddPathFilter" xml:space="preserve">
+    <value>Add path filter</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="GatedCheckInHeading" xml:space="preserve">
+    <value>Gated check-in</value>
+  </data>
+  <data name="BuildQueuedTextSuffix" xml:space="preserve">
+    <value> has been queued.</value>
+  </data>
+  <data name="InvalidSource" xml:space="preserve">
+    <value>Invalid source</value>
+  </data>
+  <data name="NoScheduleDaySelected" xml:space="preserve">
+    <value>No day selected</value>
+  </data>
+  <data name="BuildDefinitionName" xml:space="preserve">
+    <value>Build pipeline name</value>
+  </data>
+  <data name="BuildDefinitionText" xml:space="preserve">
+    <value>Build pipeline</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="QueueWithWarningsButtonText" xml:space="preserve">
+    <value>Queue anyway</value>
+  </data>
+  <data name="OverrideSettingsSourceContinuousIntegration" xml:space="preserve">
+    <value>Override the YAML continuous integration trigger from here</value>
+  </data>
+  <data name="EditYamlFileButtonText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="RepositoryWebhookMissingDescription" xml:space="preserve">
+    <value>The remote repository’s webhooks are missing or incorrect.</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Repository</value>
+  </data>
+  <data name="DeleteRowButtonAreaLabel" xml:space="preserve">
+    <value>Delete row</value>
+  </data>
+  <data name="IgnoreExternals" xml:space="preserve">
+    <value>Ignore externals</value>
+  </data>
+  <data name="SvnNoMappingInfo" xml:space="preserve">
+    <value>The entire repository will be built without any mappings.</value>
+  </data>
+  <data name="ARIALabelTasks" xml:space="preserve">
+    <value>Build pipeline tasks</value>
+  </data>
+  <data name="RetentionItemOverviewInValidText" xml:space="preserve">
+    <value>This contains some invalid settings.</value>
+  </data>
+  <data name="TriggersText" xml:space="preserve">
+    <value>Triggers</value>
+  </data>
+  <data name="ContinuousIntegrationHeading" xml:space="preserve">
+    <value>Continuous integration</value>
+  </data>
+  <data name="KeyboardShortcutSaveBuildDefinitionDescription" xml:space="preserve">
+    <value>Save build pipeline</value>
+  </data>
+  <data name="SubversionTabItemTitle" xml:space="preserve">
+    <value>Subversion</value>
+  </data>
+  <data name="AddBuildCompletionTriggerLabel" xml:space="preserve">
+    <value>Add build completion trigger</value>
+  </data>
+  <data name="RepositoryEnabledMessage" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="BuildPermissionWarning" xml:space="preserve">
+    <value>To get sources from a different team project, you must ensure the {0} build service account has proper permissions.</value>
+  </data>
+  <data name="SchedulesLabel" xml:space="preserve">
+    <value>Schedules</value>
+  </data>
+  <data name="FetchTagsLabel" xml:space="preserve">
+    <value>Sync tags</value>
+  </data>
+  <data name="GitLfsSupportLabel" xml:space="preserve">
+    <value>Checkout files from LFS</value>
+  </data>
+  <data name="ViewAsYamlDescription" xml:space="preserve">
+    <value>Click to view YAML snippet for this task</value>
+  </data>
+  <data name="ARIALabelRetentionRightPane" xml:space="preserve">
+    <value>Retention policy settings right pane</value>
+  </data>
+  <data name="LoadAllRepositories" xml:space="preserve">
+    <value>Load all repositories</value>
+  </data>
+  <data name="BuildPickFolderLabel" xml:space="preserve">
+    <value>Choose folder...</value>
+  </data>
+  <data name="ARIALabelResourcesTable" xml:space="preserve">
+    <value>Resources table</value>
+  </data>
+  <data name="Infinity" xml:space="preserve">
+    <value>Infinity</value>
+  </data>
+  <data name="BuildProcessText" xml:space="preserve">
+    <value>Build pipeline</value>
+  </data>
+  <data name="GitLfsSupportHelpMarkDown" xml:space="preserve">
+    <value>When selected, the build agent will be prepared for fetching and checking out Git LFS tracked files. [More Information](https://go.microsoft.com/fwlink/?LinkId=829603 )</value>
+  </data>
+  <data name="PathFilters" xml:space="preserve">
+    <value>Path filters</value>
+  </data>
+  <data name="DefaultEmptyTemplateBuildDefinitionNameFormat" xml:space="preserve">
+    <value>{0}-CI</value>
+  </data>
+  <data name="CIYAMLChoice" xml:space="preserve">
+    <value>Settings source</value>
+  </data>
+  <data name="BitbucketTabItemTitle" xml:space="preserve">
+    <value>Bitbucket Cloud</value>
+  </data>
+  <data name="TfvcCleanHelpMarkdown" xml:space="preserve">
+    <value>When 'Clean' is set to 'True', perform clean operation based on clean options setting.  - 'Sources': Undo pending changes and scorch current workspace under $(build.sourcesdirectory). If any errors occurred, it will delete the workspace and the entire source folder.  - 'Sources and output directory':  In addition to 'Sources', delete and recreate $(build.binariesdirectory).  - 'Sources directory': Delete and recreate $(build.sourcesdirectory).  - 'All build directories':  Delete and recreate $(agent.builddirectory).  If any errors occurred, it will delete the workspace and the entire source folder.</value>
+  </data>
+  <data name="BuildSelectFolderLabel" xml:space="preserve">
+    <value>Select folder</value>
+  </data>
+  <data name="SettingUpTrigger" xml:space="preserve">
+    <value>Setting up trigger</value>
+  </data>
+  <data name="ReportBuildStatusText" xml:space="preserve">
+    <value>Report build status</value>
+  </data>
+  <data name="SummaryButtonText" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="QueuingButtonText" xml:space="preserve">
+    <value>Queuing...</value>
+  </data>
+  <data name="ARIALabelAddBranchFilter" xml:space="preserve">
+    <value>Add branch filter</value>
+  </data>
+  <data name="ARIALabelBuildDefinitionOptionsDemandsView" xml:space="preserve">
+    <value>Build pipeline options for demands </value>
+  </data>
+  <data name="RetentionItemOverviewDescriptionBuildsFormat" xml:space="preserve">
+    <value>{0} good builds</value>
+  </data>
+  <data name="CleanLabel" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="RetentionTabLeftPaneSubText" xml:space="preserve">
+    <value>Policies are evaluated in order, applying the first matching policy to each build. The default rule at the bottom matches all builds.</value>
+  </data>
+  <data name="SelectAPathLabel" xml:space="preserve">
+    <value>Select a path...</value>
+  </data>
+  <data name="TagSourcesCalloutLabel" xml:space="preserve">
+    <value>Tag sources</value>
+  </data>
+  <data name="LocalPathLabel" xml:space="preserve">
+    <value>Local path under $(build.sourcesDirectory)</value>
+  </data>
+  <data name="GitHubEnterpriseTabItemTitle" xml:space="preserve">
+    <value>GitHub Enterprise Server</value>
+  </data>
+  <data name="RetentionCleanupOption_SourceLabel" xml:space="preserve">
+    <value>Source label</value>
+  </data>
+  <data name="FilterRepositories" xml:space="preserve">
+    <value>Filter repositories...</value>
+  </data>
+  <data name="EnableCIYAML" xml:space="preserve">
+    <value>Enable continuous integration</value>
+  </data>
+  <data name="CloakText" xml:space="preserve">
+    <value>Cloak</value>
+  </data>
+  <data name="SaveCommentLabel" xml:space="preserve">
+    <value>Save comment</value>
+  </data>
+  <data name="CommentsCheckboxNewText" xml:space="preserve">
+    <value>Require a team member's comment before building a pull request</value>
+  </data>
+  <data name="TfvcCleanHelpLink" xml:space="preserve">
+    <value>[More Information](https://go.microsoft.com/fwlink/?LinkId=747838 )</value>
+  </data>
+  <data name="ARIALabelBuildDefinitionOptionsAgents" xml:space="preserve">
+    <value>Build pipeline options for agents</value>
+  </data>
+  <data name="GetSoucesPagePanelLabel" xml:space="preserve">
+    <value>Select a source</value>
+  </data>
+  <data name="AddMapping" xml:space="preserve">
+    <value>Add mapping</value>
+  </data>
+  <data name="ARIALabelEditorGettingStarted" xml:space="preserve">
+    <value>Build pipeline editor - getting started</value>
+  </data>
+  <data name="SvnCleanHelpMarkdown" xml:space="preserve">
+    <value>When 'Clean' set to 'True', perform clean operation based on clean options setting.  - 'Sources': Delete entire source folder at $(build.sourcesdirectory).  - 'Sources and output directory':  In addition to 'Sources', delete and recreate $(build.binariesdirectory)  - 'All build directories': Delete and recreate $(agent.builddirectory).</value>
+  </data>
+  <data name="OthersGroup" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="BuildJobCancelTimeout" xml:space="preserve">
+    <value>Build job cancel timeout in minutes</value>
+  </data>
+  <data name="BuildDefinitions" xml:space="preserve">
+    <value>Build pipelines</value>
+  </data>
+  <data name="ARIALabelRetention" xml:space="preserve">
+    <value>Build pipeline retention</value>
+  </data>
+  <data name="NoScheduleError" xml:space="preserve">
+    <value>You must add at least one schedule. Otherwise, disable this option.</value>
+  </data>
+  <data name="FeaturedGroup" xml:space="preserve">
+    <value>Featured</value>
+  </data>
+  <data name="DayTimePickerLabel" xml:space="preserve">
+    <value>When to build</value>
+  </data>
+  <data name="ConfirmDiscardText" xml:space="preserve">
+    <value>All unsaved changes to this pipeline will be lost. Are you sure you want to discard your changes to this pipeline?</value>
+  </data>
+  <data name="CITriggerText" xml:space="preserve">
+    <value>Continuous Integration</value>
+  </data>
+  <data name="CITriggersRepositorySubheading" xml:space="preserve">
+    <value>Build when any branch changes</value>
+  </data>
+  <data name="ServerPathText" xml:space="preserve">
+    <value>Server path</value>
+  </data>
+  <data name="PausedDefinitionDescription" xml:space="preserve">
+    <value>queue new builds but do not start</value>
+  </data>
+  <data name="RestoreTriggerWebhookButtonText" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="FilterBranches" xml:space="preserve">
+    <value>Filter branches...</value>
+  </data>
+  <data name="SavingButtonText" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="SaveAndQueueBuildDialogTitle" xml:space="preserve">
+    <value>Save build pipeline and queue</value>
+  </data>
+  <data name="ShallowFetchLabel" xml:space="preserve">
+    <value>Shallow fetch</value>
+  </data>
+  <data name="BuildFolderNameInvalid" xml:space="preserve">
+    <value>'/',':','*','?','"','&lt;','&gt;','|','%','+' are not allowed. The name cannot end with a '.'.</value>
+  </data>
+  <data name="ARIALabelEditorTabs" xml:space="preserve">
+    <value>Build pipeline editor tabs</value>
+  </data>
+  <data name="DuplicateMappingError" xml:space="preserve">
+    <value>Duplicate entry is not allowed.</value>
+  </data>
+  <data name="SecurityText" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="AllRepositories" xml:space="preserve">
+    <value>Showing all repositories</value>
+  </data>
+  <data name="TriggerBatchChangesCheckbox" xml:space="preserve">
+    <value>Batch changes while a build is in progress</value>
+  </data>
+  <data name="InvalidMappingValue" xml:space="preserve">
+    <value>Invalid value.</value>
+  </data>
+  <data name="InvalidAuthScopeErrorMessage" xml:space="preserve">
+    <value>To get sources from a different team project, on the Options tab you must set the build job authorization scope to ‘Project collection’ and ensure that the 'Limit job authorization scope to current project' pipeline setting is disabled.</value>
+  </data>
+  <data name="TagSourcesFormatText" xml:space="preserve">
+    <value>Tag format</value>
+  </data>
+  <data name="DefaultRepositoryLabel" xml:space="preserve">
+    <value>Default repository</value>
+  </data>
+  <data name="BuildRepositoryCleanOptionsSourcesAndOutputDirLabel" xml:space="preserve">
+    <value>Sources and output directory</value>
+  </data>
+  <data name="NewBuildDefinitionText" xml:space="preserve">
+    <value>New build pipeline</value>
+  </data>
+  <data name="NoBuildCompletionTriggersSubheading" xml:space="preserve">
+    <value>Build when another build completes</value>
+  </data>
+  <data name="PublishDraft" xml:space="preserve">
+    <value>Publish draft</value>
+  </data>
+  <data name="SkipSyncSourcesLabel" xml:space="preserve">
+    <value>Don't sync sources</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="BuildJobAuthorizationScope" xml:space="preserve">
+    <value>Build job authorization scope</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="StatusBadgeImageAltText" xml:space="preserve">
+    <value>Example status badge for this pipeline.</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="Depth" xml:space="preserve">
+    <value>Depth</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="ARIALabelGatedCITrigger" xml:space="preserve">
+    <value>TFVC Gated Checkin trigger</value>
+  </data>
+  <data name="OnlyOldRetentionModelProjectLinkText" xml:space="preserve">
+    <value>go to the project settings to configure</value>
+  </data>
+  <data name="DefaultAgentPoolMarkdown" xml:space="preserve">
+    <value>[More information](https://aka.ms/azdevops_yaml_pools)</value>
+  </data>
+  <data name="SourceVersionInfo" xml:space="preserve">
+    <value>Specify a source version to build. For example, LSelfTest will build label SelfTest. C8 will build Changeset 8.</value>
+  </data>
+  <data name="SourceVersionText" xml:space="preserve">
+    <value>Source version</value>
+  </data>
+  <data name="DraftConfirmationSubText" xml:space="preserve">
+    <value>A draft already exists for this build pipeline. Would you like to replace it?</value>
+  </data>
+  <data name="EnablePRYaml" xml:space="preserve">
+    <value>Enable pull request validation</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="EditMaximumRetentionPolicy" xml:space="preserve">
+    <value>Edit maximum retention policy for</value>
+  </data>
+  <data name="PullRequestTriggerSubheading" xml:space="preserve">
+    <value>Build pull requests</value>
+  </data>
+  <data name="EnableContinuousIntegration" xml:space="preserve">
+    <value>Enable continuous integration</value>
+  </data>
+  <data name="WorkItemFieldSpacesErrorIconTooltip" xml:space="preserve">
+    <value>Field name cannot contain spaces</value>
+  </data>
+  <data name="OnlyOldRetentionModelRedirect" xml:space="preserve">
+    <value>Pipelines retention has been streamlined. Please </value>
+  </data>
+  <data name="YamlGitHubFileContentTitle" xml:space="preserve">
+    <value>using</value>
+  </data>
+  <data name="ReportBuildStatusDescription" xml:space="preserve">
+    <value>Displays a badge on the source repository to indicate whether the build succeeded or failed.</value>
+  </data>
+  <data name="LabelText" xml:space="preserve">
+    <value>label</value>
+  </data>
+  <data name="InvalidBuildDefinitionIdError" xml:space="preserve">
+    <value>The build pipeline ID {0} is not valid</value>
+  </data>
+  <data name="CheckoutSubmoduleTopLevelOnlyLabel" xml:space="preserve">
+    <value>Top level submodules only</value>
+  </data>
+  <data name="BuildJobText" xml:space="preserve">
+    <value>Build job</value>
+  </data>
+  <data name="YamlResourcesSectionTitle" xml:space="preserve">
+    <value>Authorized resources</value>
+  </data>
+  <data name="TypeText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="RefreshYamlFileButtonText" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ScheduleOnlyWithChangesLabel" xml:space="preserve">
+    <value>Only schedule builds if the source or pipeline has changed</value>
+  </data>
+  <data name="RestoreTriggerWebhookErrorTextPrefix" xml:space="preserve">
+    <value>An error occurred while restoring the trigger’s webhook: </value>
+  </data>
+  <data name="CIGettingStartedGetSourcesDescriptionLineThird" xml:space="preserve">
+    <value>You can customize how to get these sources from the repository later.</value>
+  </data>
+  <data name="QueueStatusLabel" xml:space="preserve">
+    <value>The new build request is processing</value>
+  </data>
+  <data name="RetentionTabLeftPaneHeading" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="RetentionItemOverviewDescriptionDaysFormat" xml:space="preserve">
+    <value>Keep for {0} days,</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="ImportDefaultNameSuffix" xml:space="preserve">
+    <value>-import</value>
+  </data>
+  <data name="NoScheduleSelected" xml:space="preserve">
+    <value>No schedule selected...</value>
+  </data>
+  <data name="YamlPathCallOutMarkdown" xml:space="preserve">
+    <value>Special YAML path [more information](https://go.microsoft.com/fwlink/?linkid=852344).</value>
+  </data>
+  <data name="EnablePullRequestValidation" xml:space="preserve">
+    <value>Enable pull request validation</value>
+  </data>
+  <data name="AddBranchFilterButtonDescription" xml:space="preserve">
+    <value>Add a new branch filter</value>
+  </data>
+  <data name="ResourcesErrorMessageHeader" xml:space="preserve">
+    <value>Resources error message</value>
+  </data>
+  <data name="DisabledDefinitionDescription" xml:space="preserve">
+    <value>do not queue new builds</value>
+  </data>
+  <data name="AddExternalGitConnection" xml:space="preserve">
+    <value>Add a connection to get sources from remote Git repositories.</value>
+  </data>
+  <data name="NeverText" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="MaxConcurrentBuildText" xml:space="preserve">
+    <value>Maximum number of parallel builds per branch</value>
+  </data>
+  <data name="EnterRepositoryOrBrowse" xml:space="preserve">
+    <value>Enter 'organization/repository' or click '...' to browse</value>
+  </data>
+  <data name="ResourceDeleteColumnHeader" xml:space="preserve">
+    <value>Delete resource</value>
+  </data>
+  <data name="WorkItemFieldEmptyErrorIconTooltip" xml:space="preserve">
+    <value>Field name is required</value>
+  </data>
+  <data name="CommentsRadioButtonAll" xml:space="preserve">
+    <value>On all pull requests</value>
+  </data>
+  <data name="AlwaysText" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="ExternalGitTabItemTitle" xml:space="preserve">
+    <value>Other Git</value>
+  </data>
+  <data name="TeamProject" xml:space="preserve">
+    <value>Team project</value>
+  </data>
+  <data name="NamePlaceHolder" xml:space="preserve">
+    <value>Enter a name</value>
+  </data>
+  <data name="RetentionMinimumToKeepWithoutBranchesInfo" xml:space="preserve">
+    <value>The minimum number of successful builds to keep for this retention rule.</value>
+  </data>
+  <data name="SubmoduleCheckoutRecursiveLevelLabel" xml:space="preserve">
+    <value>Recursion level</value>
+  </data>
+  <data name="ManageOnExternal" xml:space="preserve">
+    <value>Manage on {0}</value>
+  </data>
+  <data name="TriggerStatusText" xml:space="preserve">
+    <value>Trigger status</value>
+  </data>
+  <data name="WorkspaceMappings" xml:space="preserve">
+    <value>Workspace mappings</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value> Learn more</value>
+  </data>
+  <data name="ARIALabelBuildDefinitionOptionsMultiConfig" xml:space="preserve">
+    <value>Build pipeline options for multi configuration</value>
+  </data>
+  <data name="TriggersEditorLeftPane" xml:space="preserve">
+    <value>Triggers List</value>
+  </data>
+  <data name="ARIALabelCopyBadgeURL" xml:space="preserve">
+    <value>Copy badge URL</value>
+  </data>
+  <data name="ForksAllowSecretsText" xml:space="preserve">
+    <value>Make secrets available to builds of forks</value>
+  </data>
+  <data name="OldRetentionModelDeprecatedLinkText" xml:space="preserve">
+    <value>project retention settings</value>
+  </data>
+  <data name="SaveAsDraft" xml:space="preserve">
+    <value>Save as draft</value>
+  </data>
+  <data name="UseWorkspaceMapping" xml:space="preserve">
+    <value>Use workspace mapping for filters</value>
+  </data>
+  <data name="ARIALabelPullRequestTrigger" xml:space="preserve">
+    <value>Pull request trigger</value>
+  </data>
+  <data name="DeletePathFilterDescription" xml:space="preserve">
+    <value>Delete the path filter</value>
+  </data>
+  <data name="OverrideSettingsSourcePullRequest" xml:space="preserve">
+    <value>Override the YAML pull request trigger from here</value>
+  </data>
+  <data name="ConfirmSave" xml:space="preserve">
+    <value>Confirm save</value>
+  </data>
+  <data name="NoRepositoriesFound" xml:space="preserve">
+    <value>No repositories found</value>
+  </data>
+  <data name="TagSourcesFormatCalloutLabel" xml:space="preserve">
+    <value>Tag format</value>
+  </data>
+  <data name="DeleteFilterDescription" xml:space="preserve">
+    <value>Delete the branch filter</value>
+  </data>
+  <data name="PullRequestTriggerText" xml:space="preserve">
+    <value>Pull request</value>
+  </data>
+  <data name="CommentsRadioButtonNonContributors" xml:space="preserve">
+    <value>Only on pull requests from non-team members and non-contributors</value>
+  </data>
+  <data name="SaveAsDraftReplaceComment" xml:space="preserve">
+    <value>Draft replaced</value>
+  </data>
+  <data name="LabelSourcesFormat" xml:space="preserve">
+    <value>Label format</value>
+  </data>
+  <data name="ARIALabelEditorGettingStartedTemplates" xml:space="preserve">
+    <value>Build pipeline editor - templates catalog</value>
+  </data>
+  <data name="RestoreTriggerWebhookButtonBusyText" xml:space="preserve">
+    <value>Restoring</value>
+  </data>
+  <data name="DisablePRYAML" xml:space="preserve">
+    <value>Disable pull request validation</value>
+  </data>
+  <data name="SIDescriptionText" xml:space="preserve">
+    <value>Build matching branches for each schedule</value>
+  </data>
+  <data name="CIGettingStartedDescriptionLineOne" xml:space="preserve">
+    <value>Choose a template that builds your kind of app.</value>
+  </data>
+  <data name="RetentionModelExtended_2" xml:space="preserve">
+    <value> in order to configure retention. If you continue to add or edit the retention policies per pipeline, please be aware that they will be removed soon.</value>
+  </data>
+  <data name="RetentionModelExtended_1" xml:space="preserve">
+    <value>Configuring retention policies per pipeline is deprecated. You should use the</value>
+  </data>
+  <data name="BuildCompletionHeading" xml:space="preserve">
+    <value>Build completion</value>
+  </data>
+  <data name="BuildDefinitionNavigateAwayWhenDirtyMessage" xml:space="preserve">
+    <value>You have unsaved changes. Select OK to leave or Cancel to keep editing the pipeline.</value>
+  </data>
+  <data name="Authorize" xml:space="preserve">
+    <value>Authorize</value>
+  </data>
+  <data name="DeletePolicyAriaDescription" xml:space="preserve">
+    <value>Delete policy</value>
+  </data>
+  <data name="AddNewTimeButtonDescription" xml:space="preserve">
+    <value>Add new time</value>
+  </data>
+  <data name="DefaultAgentPool" xml:space="preserve">
+    <value>Default agent pool for YAML</value>
+  </data>
+  <data name="ExcludeText" xml:space="preserve">
+    <value>Exclude</value>
+  </data>
+  <data name="DefaultAgentPoolAzurePipelinesWarning" xml:space="preserve">
+    <value>The vmImage must be specified in the YAML file when using this Microsoft-hosted pool.</value>
+  </data>
+  <data name="YourRepositories" xml:space="preserve">
+    <value>Showing your repositories</value>
+  </data>
+  <data name="PipelineTriggerSettingDisabledText" xml:space="preserve">
+    <value>This setting cannot be changed as it is enforced at the organization or project level.</value>
+  </data>
+  <data name="BuildDefinitionSaveDialogTitle" xml:space="preserve">
+    <value>Save build pipeline</value>
+  </data>
+  <data name="GetSourcesText" xml:space="preserve">
+    <value>Get sources</value>
+  </data>
+  <data name="LabelSourcesFormatInvalidMessage" xml:space="preserve">
+    <value>'&lt;','&gt;','"','|' are not allowed.</value>
+  </data>
+  <data name="NoSchedulesSubheading" xml:space="preserve">
+    <value>No builds scheduled</value>
+  </data>
+  <data name="OutdatedServiceConnectionName" xml:space="preserve">
+    <value>{0} (outdated)</value>
+  </data>
+  <data name="DeleteBuildCompletionTrigger" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BuildStatus" xml:space="preserve">
+    <value>Build status</value>
+  </data>
+  <data name="LongBuildNameErrorMessage" xml:space="preserve">
+    <value>Path length should not be more than 400 characters.</value>
+  </data>
+  <data name="PublicProjectCannotUsePrivateRepoError" xml:space="preserve">
+    <value>Since this build is public, select a repository from within this project.</value>
+  </data>
+  <data name="ARIALabelProcessEditorRightPane" xml:space="preserve">
+    <value>Process editor details - right pane</value>
+  </data>
+  <data name="YamlPathLabel" xml:space="preserve">
+    <value>YAML file path</value>
+  </data>
+  <data name="CannotBeEmptyText" xml:space="preserve">
+    <value>Cannot be empty.</value>
+  </data>
+  <data name="SubversionMappingHelpText" xml:space="preserve">
+    <value>Repository mappings allow restricting the number of files checked out from the Subversion server. Each mapping consists of two relative paths. The server path is relative to the repository URL specified in the Connection above.  Use the build variable build.sourceBranch in the path according to your repository layout convention. E.g.  $(build.sourceBranch)/project/folder1/folder2 or project/$(build.sourceBranch)/folder1/folder2.  The local path is relative to the root of the local Subversion workspace created for the build.</value>
+  </data>
+  <data name="ARIADescriptionCopyBadgeURL" xml:space="preserve">
+    <value>Copy the badge URL to clipboard</value>
+  </data>
+  <data name="CheckSubmodulesText" xml:space="preserve">
+    <value>Checkout submodules</value>
+  </data>
+  <data name="GitShallowHelpMarkdown" xml:space="preserve">
+    <value>When selected, limit fetching to the specified number of commits from the tip of each remote branch history. You can specify the number of commits to fetch in Fetch depth option. [More Information](https://go.microsoft.com/fwlink/?LinkId=829603 )</value>
+  </data>
+  <data name="MessageBarPausedDefinitionText" xml:space="preserve">
+    <value>This build pipeline is paused. Builds queued will not start until it is resumed.</value>
+  </data>
+  <data name="NumberFieldErrorMessage" xml:space="preserve">
+    <value>You must specify an integer from {0} to {1}.</value>
+  </data>
+  <data name="BuildPropertiesTitle" xml:space="preserve">
+    <value>Build properties</value>
+  </data>
+  <data name="Children" xml:space="preserve">
+    <value>Children</value>
+  </data>
+  <data name="TagSourcesFormatCalloutDescription" xml:space="preserve">
+    <value>{0} could be a combination of user-defined or pre-defined variables that have a scope of "All".  For example: '$(Build.DefinitionName)_$(Build.DefinitionVersion)_$(Build.BuildId)_$(Build.BuildNumber)_$(My.Variable)'</value>
+  </data>
+  <data name="EnableGatedCheckIn" xml:space="preserve">
+    <value>Enable gated check-in</value>
+  </data>
+  <data name="Maximum" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="SaveBuildDefinitionSuccessMessage" xml:space="preserve">
+    <value>Build pipeline successfully saved.</value>
+  </data>
+  <data name="Mapping" xml:space="preserve">
+    <value>Mapping</value>
+  </data>
+  <data name="RetentionDaysToKeepLabel" xml:space="preserve">
+    <value>Days to keep</value>
+  </data>
+  <data name="MapText" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="SelectSources" xml:space="preserve">
+    <value>Select sources to build</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="RetentionTabItemTitle" xml:space="preserve">
+    <value>Retention</value>
+  </data>
+  <data name="DeleteWorkItemEmptyFieldTooltip" xml:space="preserve">
+    <value>Delete field</value>
+  </data>
+  <data name="DisableCIYAML" xml:space="preserve">
+    <value>Disable continuous integration</value>
+  </data>
+  <data name="AddSubversionConnection" xml:space="preserve">
+    <value>Add a connection to get sources from Subversion repositories.</value>
+  </data>
+  <data name="CommentsCheckBoxText" xml:space="preserve">
+    <value>Only trigger builds for collaborators' pull request comments</value>
+  </data>
+  <data name="DefaultBuildDefinitionNameFormat" xml:space="preserve">
+    <value>{0}-{1}-CI</value>
+  </data>
+  <data name="AddBranchFilterError" xml:space="preserve">
+    <value>You must add at least one branch filter.</value>
+  </data>
+  <data name="ClonePipelineNameSuffix" xml:space="preserve">
+    <value>-clone</value>
+  </data>
+  <data name="CleanSourcesHelpMarkDown" xml:space="preserve">
+    <value>You can perform different kinds of cleaning of the working directory of your private agent before the build is run.</value>
+  </data>
+  <data name="PathSpecificationText" xml:space="preserve">
+    <value>Path specification</value>
+  </data>
+  <data name="PathFilter" xml:space="preserve">
+    <value>Path filter</value>
+  </data>
+  <data name="MissingSourceError" xml:space="preserve">
+    <value>Please define a source in the Tasks tab, under Get sources.</value>
+  </data>
+  <data name="Process_MenuViewAsYaml" xml:space="preserve">
+    <value>View YAML</value>
+  </data>
+  <data name="CIGettingStartedHeader" xml:space="preserve">
+    <value>Choose a template</value>
+  </data>
+  <data name="ARIALabelBuildDefinitionOptionsStatusBadgeVisualization" xml:space="preserve">
+    <value>Status badge</value>
+  </data>
+  <data name="BuildJobTimeout" xml:space="preserve">
+    <value>Build job timeout in minutes</value>
+  </data>
+  <data name="TfvcMappingRequiredErrorMessage" xml:space="preserve">
+    <value>This value is required. Duplicate entry is not allowed.</value>
+  </data>
+  <data name="GitHubTabItemTitle" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="YamlText" xml:space="preserve">
+    <value>YAML</value>
+  </data>
+  <data name="LabelSourcesText" xml:space="preserve">
+    <value>Label sources</value>
+  </data>
+  <data name="ImportErrorContent" xml:space="preserve">
+    <value>Either exported JSON is not valid or it is not compatible with current product. Please export again and try importing again.</value>
+  </data>
+  <data name="DiscardChangesText" xml:space="preserve">
+    <value>Discard</value>
+  </data>
+  <data name="AddPathFilterButtonDescription" xml:space="preserve">
+    <value>Add a new path filter</value>
+  </data>
+  <data name="NoBranchesFound" xml:space="preserve">
+    <value>No branches found</value>
+  </data>
+  <data name="ConfirmDiscardDialogText" xml:space="preserve">
+    <value>Confirm discard</value>
+  </data>
+  <data name="ARIALabelProcessEditorLeftPane" xml:space="preserve">
+    <value>Process editor overview - left pane </value>
+  </data>
+  <data name="SaveDraftAndQueueBuild" xml:space="preserve">
+    <value>Save draft &amp; queue</value>
+  </data>
+  <data name="RetentionItemOverviewDescriptionBuildFormat" xml:space="preserve">
+    <value>{0} good build</value>
+  </data>
+  <data name="SelectRepository" xml:space="preserve">
+    <value>Select a repository</value>
+  </data>
+  <data name="ImportErrorYaml" xml:space="preserve">
+    <value>Import is not supported for YAML build pipelines.</value>
+  </data>
+  <data name="SaveDefinitionCommentLabel" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="TemplatesListTitle" xml:space="preserve">
+    <value>Select a template</value>
+  </data>
+  <data name="PullRequestHeading" xml:space="preserve">
+    <value>Pull request validation</value>
+  </data>
+  <data name="MarkDownJobTimeout" xml:space="preserve">
+    <value>Specifies the maximum time a build job is allowed to execute on an agent before being canceled by the server.
+
+An empty or zero value indicates an infinite timeout.</value>
+  </data>
+  <data name="PipelineNotFound" xml:space="preserve">
+    <value>This pipeline was not found.</value>
+  </data>
+  <data name="QueueButtonText" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="ResourceNameRequiredMessage" xml:space="preserve">
+    <value>Resource name is required</value>
+  </data>
+  <data name="CIGettingStartedDescriptionLineThird" xml:space="preserve">
+    <value>you can add and customize the tasks later.</value>
+  </data>
+  <data name="YamlDiscoveryUseDesigner" xml:space="preserve">
+    <value>Or use the designer</value>
+  </data>
+  <data name="BuildRepositoryCleanOptionsSourcesDirLabel" xml:space="preserve">
+    <value>Sources directory</value>
+  </data>
+  <data name="DeleteWorkItemFieldTooltip" xml:space="preserve">
+    <value>Delete field '{0}'</value>
+  </data>
+  <data name="MarkDownJobScopeAuthorization" xml:space="preserve">
+    <value>Specifies the authorization scope for a build job.
+
+Project collection should be used when access to multiple team projects is required.
+
+Current project should be used when isolation to a particular team project is required.</value>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>Copied to clipboard</value>
+  </data>
+  <data name="SettingsRequired" xml:space="preserve">
+    <value>This setting is required.</value>
+  </data>
+  <data name="EnabledDefinitionDescription" xml:space="preserve">
+    <value>queue and start builds when eligible agent(s) available</value>
+  </data>
+  <data name="SaveDraft" xml:space="preserve">
+    <value>Save draft</value>
+  </data>
+  <data name="TagSourcesCalloutDescription" xml:space="preserve">
+    <value>On every build or every successful build, {0} your source code files to identify which version of each file is included in the completed build.</value>
+  </data>
+  <data name="StatusBadgeUrlLabel" xml:space="preserve">
+    <value>Image URL</value>
+  </data>
+  <data name="ARIALabelTriggersTab" xml:space="preserve">
+    <value>Build pipeline triggers</value>
+  </data>
+  <data name="RepositoryNotSupportedForFileContent" xml:space="preserve">
+    <value>File content cannot be fetched from repository: {0}</value>
+  </data>
+  <data name="DefaultPhaseNameFormat" xml:space="preserve">
+    <value>Agent job {0}</value>
+  </data>
+  <data name="BlockSelectRepoForXLaunchBuild" xml:space="preserve">
+    <value>This pipeline was created by an external integration. Its repository cannot be changed.</value>
+  </data>
+  <data name="AddLabel" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="BadgeEnabledLabel" xml:space="preserve">
+    <value>Badge enabled</value>
+  </data>
+  <data name="PollingIntervalLabel" xml:space="preserve">
+    <value>Polling interval (seconds)</value>
+  </data>
+  <data name="BranchSpecificationText" xml:space="preserve">
+    <value>Branch specification</value>
+  </data>
+  <data name="SelectBranch" xml:space="preserve">
+    <value>Select a branch</value>
+  </data>
+  <data name="PullRequestTriggerRepositorySubheading" xml:space="preserve">
+    <value>Build pull requests against matching branches</value>
+  </data>
+  <data name="ResourceTypeRequiredMessage" xml:space="preserve">
+    <value>Resource type is required</value>
+  </data>
+  <data name="ARIALabelBuildDefinitionEditor" xml:space="preserve">
+    <value>Build pipeline editor - main body</value>
+  </data>
+  <data name="CommentsSectionTitle" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="AutoBuildLinkingBranchControlHeader" xml:space="preserve">
+    <value>Only link to work added to specific branches</value>
+  </data>
+  <data name="ValueLabel" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="YamlDiscoveryUseConfigAsCode" xml:space="preserve">
+    <value>Use config as code</value>
+  </data>
+  <data name="PositiveNumberTextFieldValidationErrorMessage" xml:space="preserve">
+    <value>The value should be a positive number.</value>
+  </data>
+  <data name="DeleteResourceToolTip" xml:space="preserve">
+    <value>Delete {0} resource</value>
+  </data>
+  <data name="YamlErrorsTitle" xml:space="preserve">
+    <value>There are problems with your YAML file. Correct the problems and refresh the file.</value>
+  </data>
+  <data name="RepositoryNotMonitoringMessage" xml:space="preserve">
+    <value>not monitoring</value>
+  </data>
+  <data name="ARIALabelCleanOptions" xml:space="preserve">
+    <value>Clean options</value>
+  </data>
+  <data name="AddPathFilterError" xml:space="preserve">
+    <value>You must add at least one path filter.</value>
+  </data>
+  <data name="BuildRepositoryCleanOptionsLabel" xml:space="preserve">
+    <value>Clean options</value>
+  </data>
+</root>

@@ -1,0 +1,110 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.Cloud.Metrics.Client.Configuration.IMetricConfigurationManager
+// Assembly: Microsoft.Cloud.Metrics.Client, Version=2.2023.705.2051, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+// MVID: 06B39E1C-7DF0-4BC1-AFBA-9AD635E73CB0
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.Cloud.Metrics.Client.dll
+
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace Microsoft.Cloud.Metrics.Client.Configuration
+{
+  public interface IMetricConfigurationManager
+  {
+    Task<IMetricConfiguration> GetAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      string metricName);
+
+    Task<IReadOnlyList<IMetricConfiguration>> GetMultipleAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      bool returnEmptyConfig = false);
+
+    Task<IReadOnlyList<IMetricConfiguration>> GetMultipleAsync(
+      IMonitoringAccount monitoringAccount,
+      bool returnEmptyConfig = false);
+
+    Task SaveAsync(
+      IMonitoringAccount monitoringAccount,
+      IMetricConfiguration metricConfiguration,
+      bool skipVersionCheck = false);
+
+    Task DeleteAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      string metricName);
+
+    Task<IReadOnlyList<IConfigurationUpdateResult>> SyncAllAsync(
+      IMonitoringAccount monitoringAccount,
+      bool skipVersionCheck = false);
+
+    Task<IReadOnlyList<IConfigurationUpdateResult>> SyncAllAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      bool skipVersionCheck = false);
+
+    Task<IReadOnlyList<ConfigurationUpdateResultList>> SyncAllAsyncV2(
+      IMonitoringAccount monitoringAccount,
+      bool skipVersionCheck = false);
+
+    Task<IReadOnlyList<ConfigurationUpdateResultList>> SyncAllAsyncV2(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      bool skipVersionCheck = false);
+
+    Task<ConfigurationUpdateResultList> SyncConfigurationAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      string metricName,
+      bool skipVersionCheck = false);
+
+    Task<OperationStatus> DownloadMetricConfigurationAsync(
+      string destinationFolder,
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace = null,
+      string metricName = null,
+      Regex metricNameRegex = null,
+      bool foldersOnNamespacesLevel = false,
+      bool downloadDefaultMetricConfig = false,
+      int maxFileNameProducedLength = 256);
+
+    Task<OperationStatus> ReplaceAccountNameInMetricConfigurationFilesAsync(
+      string sourceFolder,
+      IMonitoringAccount monitoringAccount,
+      string replaceAccountNameWith,
+      Regex metricNameRegex = null);
+
+    Task<OperationStatus> ReplaceNamespaceInMetricConfigurationFilesAsync(
+      string sourceFolder,
+      IMonitoringAccount monitoringAccount,
+      string replaceNamespaceWith,
+      Regex metricNameRegex = null);
+
+    Task<OperationStatus> UploadMetricConfigurationAsync(
+      string sourceFolder,
+      IMonitoringAccount monitoringAccount,
+      bool force = false);
+
+    Task<OperationStatus> ApplyTemplateMetricConfigurationAsync(
+      string templateFilePath,
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace = null,
+      string metricName = null,
+      Regex metricNameRegex = null,
+      bool force = false,
+      bool whatIf = false);
+
+    Task<IReadOnlyList<ConfigurationUpdateResultList>> SyncAllMetricsAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace = null,
+      bool skipVersionCheck = false);
+
+    Task<ConfigurationUpdateResultList> SyncMetricConfigurationAsync(
+      IMonitoringAccount monitoringAccount,
+      string metricNamespace,
+      string metricName,
+      bool skipVersionCheck = false);
+  }
+}

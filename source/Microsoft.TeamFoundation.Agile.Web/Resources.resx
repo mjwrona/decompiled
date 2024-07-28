@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmptyBoardId" xml:space="preserve">
+    <value>Board ID cannot be empty.</value>
+  </data>
+  <data name="MarkerColorValueOutOfRange" xml:space="preserve">
+    <value>VS403289: Marker color must be a 6 digit HEX color.</value>
+  </data>
+  <data name="PlanPermissionEditMessage" xml:space="preserve">
+    <value>You do not have sufficient permissions to configure this plan. The plan creator or project administrator can provide access.</value>
+  </data>
+  <data name="CardCustomization_DuplicateCards" xml:space="preserve">
+    <value>Card type '{0}' is present more than once.</value>
+  </data>
+  <data name="DTLCriteriaMissingField" xml:space="preserve">
+    <value>Required field(s) missing at index {0}.</value>
+  </data>
+  <data name="CardCustomization_MaxAdditionalFieldsExceeded" xml:space="preserve">
+    <value>Number of additional fields exceeds the maximum limit of '{0}' for card type '{1}'.</value>
+  </data>
+  <data name="CardRules_WIQLGroups" xml:space="preserve">
+    <value>Card Rule currently do not support groups and nesting.</value>
+  </data>
+  <data name="CardCustomization_NoCardsFound" xml:space="preserve">
+    <value>No card type present in the card settings.</value>
+  </data>
+  <data name="PlanPermissionDeleteMessage" xml:space="preserve">
+    <value>You do not have permission to delete this plan. Please refresh the page.</value>
+  </data>
+  <data name="MarkerIncorrectFormat" xml:space="preserve">
+    <value>VS403293: Markers are in the incorrect format.</value>
+  </data>
+  <data name="CardRules_RuleNameExceedsLimit" xml:space="preserve">
+    <value>Some of the card rule names have more than {0} characters.</value>
+  </data>
+  <data name="UnexpandedTeamLimitExceededMessage" xml:space="preserve">
+    <value>VS403167: You must provide a set of unexpanded teams less than {0}.</value>
+  </data>
+  <data name="PlanNameContainsInvalidCharacters" xml:space="preserve">
+    <value>Plan name contains invalid characters. For more information about valid naming conventions for projects, see the topic "Naming Restrictions for Azure DevOps Server" on the Microsoft Web site: https://go.microsoft.com/fwlink/?LinkId=77936</value>
+  </data>
+  <data name="UnexpectedNode" xml:space="preserve">
+    <value>Unexpected node: {0}</value>
+  </data>
+  <data name="CardRuleAttribute_InvalidSettings" xml:space="preserve">
+    <value>Invalid settings for card rule '{0}'. {1}</value>
+  </data>
+  <data name="NoIterationsForTeam" xml:space="preserve">
+    <value>VS403266: There are no iterations with dates for this team.</value>
+  </data>
+  <data name="PlanNameTooLongMessage" xml:space="preserve">
+    <value>Plan name must be less than {0} characters.</value>
+  </data>
+  <data name="CardRuleAttribute_MissingValue" xml:space="preserve">
+    <value>Setting value not provided.</value>
+  </data>
+  <data name="ExceededMaximumNumberOfMarkers" xml:space="preserve">
+    <value>VS403287: Number of markers must be less than {0}.</value>
+  </data>
+  <data name="CardCustomization_InvalidCardType" xml:space="preserve">
+    <value>Card type '{0}' does not exist on this board.</value>
+  </data>
+  <data name="CardCustomization_CardKeyCannotBeNull" xml:space="preserve">
+    <value>Card property keys cannot be null.</value>
+  </data>
+  <data name="DTLCriteriaNotSupportedFieldValue" xml:space="preserve">
+    <value>{0} is not a supported value for {1}.</value>
+  </data>
+  <data name="PlanDescriptionTooLongMessage" xml:space="preserve">
+    <value>Plan description must be less than {0} characters.</value>
+  </data>
+  <data name="IterationOverlap" xml:space="preserve">
+    <value>VS403170: Iteration dates overlap with another iteration.</value>
+  </data>
+  <data name="CardRules_InvalidLogicalOperator" xml:space="preserve">
+    <value>'{0}' is not a supported logical operator for card rules.</value>
+  </data>
+  <data name="CardRuleAttribute_InvalidRowIdAttribute" xml:space="preserve">
+    <value>Invalid rowId attribute on swimlane rule: {0}</value>
+  </data>
+  <data name="MissingGroupingLast" xml:space="preserve">
+    <value>Missing grouping in last row.</value>
+  </data>
+  <data name="CardCustomization_SettingsNULL" xml:space="preserve">
+    <value>Card settings cannot be NULL.</value>
+  </data>
+  <data name="CardRule_NoAttributesSupplied" xml:space="preserve">
+    <value>Card rule '{0}' does not have settings.</value>
+  </data>
+  <data name="MaximumTeamFieldCountExceeded" xml:space="preserve">
+    <value>VS403173: Maximum number of team fields was exceeded.</value>
+  </data>
+  <data name="MissingGroupingFirst" xml:space="preserve">
+    <value>Missing grouping in first row.</value>
+  </data>
+  <data name="DTLCriteriaNotSupportedField" xml:space="preserve">
+    <value>{0} is not a supported field.</value>
+  </data>
+  <data name="MarkerLabelValueOutOfRange" xml:space="preserve">
+    <value>VS403288: Marker label cannot be empty and must be less than {0} characters.</value>
+  </data>
+  <data name="MissingTeamFieldValue" xml:space="preserve">
+    <value>VS403265: You have not selected any areas for your team.</value>
+  </data>
+  <data name="MissingTimelineDateMessage" xml:space="preserve">
+    <value>VS403163: You must provide both a start date and end date for a timeline, or leave them both null.</value>
+  </data>
+  <data name="CardCustomization_DuplicateFields" xml:space="preserve">
+    <value>Field identifier '{0}' is present more than once for card type '{1}'.</value>
+  </data>
+  <data name="CardCustomization_RequiredFieldMissing" xml:space="preserve">
+    <value>Field identifier '{0}' is required but missing from '{1}' card type.</value>
+  </data>
+  <data name="DTLCriteriaInvalidLogicalOperator" xml:space="preserve">
+    <value>{0} is not a supported operator.</value>
+  </data>
+  <data name="CardRules_InvalidField" xml:space="preserve">
+    <value>'{0}' is not a valid field for card rules.</value>
+  </data>
+  <data name="CardCustomization_InvalidFieldType" xml:space="preserve">
+    <value>Field identifier '{0}' does not exist or is invalid for '{1}' card type.</value>
+  </data>
+  <data name="TeamMissingOrAccessDenied" xml:space="preserve">
+    <value>VS403168: Team does not exist or you do not have permissions to view it.</value>
+  </data>
+  <data name="MissingGroupingIndices" xml:space="preserve">
+    <value>Missing grouping indices.</value>
+  </data>
+  <data name="CardRules_InvalidOperator" xml:space="preserve">
+    <value>'{0}' is not a supported operator for '{1}' type in  card rules.</value>
+  </data>
+  <data name="CardRules_InvalidType" xml:space="preserve">
+    <value>Rule type '{0}' is not a valid type.</value>
+  </data>
+  <data name="CardRules_MaxLimitForConditions" xml:space="preserve">
+    <value>Maximum number of allowed conditions in a rules is '{0}'.</value>
+  </data>
+  <data name="CardCustomization_UnknownBoardId" xml:space="preserve">
+    <value>Board with ID '{0}' could not be found for this team.</value>
+  </data>
+  <data name="DTLCriteriaWIQLGroups" xml:space="preserve">
+    <value>Groups and nesting are not supported for Delivery Timeline criteria.</value>
+  </data>
+  <data name="CardRuleAttribute_MissingName" xml:space="preserve">
+    <value>Setting name not provided.</value>
+  </data>
+  <data name="DateRangeExceedLimitMessage" xml:space="preserve">
+    <value>VS403164: You must provide a date range that is greater than zero and less than {0} days.</value>
+  </data>
+  <data name="UnableToProcessValueNode" xml:space="preserve">
+    <value>This Work Item Query value node could not be processed. Please review the syntax: {0}</value>
+  </data>
+  <data name="CardRules_UnSupportedType" xml:space="preserve">
+    <value>'{0}' type is not a supported type for card rules.</value>
+  </data>
+  <data name="CardRules_MeMacroNotSupported" xml:space="preserve">
+    <value>@Me macro is not allowed in swimlane rules</value>
+  </data>
+  <data name="CardRules_DuplicateName" xml:space="preserve">
+    <value>Card Rule Name '{0}' is present more than once.</value>
+  </data>
+  <data name="CardRules_EmptyOrNullWiql" xml:space="preserve">
+    <value>WIQL field must not be present for tag color</value>
+  </data>
+  <data name="QueryEditorInvalidOperatorForSpecialValue" xml:space="preserve">
+    <value>TF207009: The special value {0} can only be used with the equals ({1}) operator.</value>
+  </data>
+  <data name="MaximumExpandedTeamCountExceeded" xml:space="preserve">
+    <value>VS403169: Maximum number of teams was exceeded.</value>
+  </data>
+  <data name="FilterCriteriaTooLongMessage" xml:space="preserve">
+    <value>Filter must be less than {0} characters.</value>
+  </data>
+  <data name="CardCustomization_FieldIdentifierMissing" xml:space="preserve">
+    <value>A field identifier is missing or empty inside '{0}' card type.</value>
+  </data>
+  <data name="CardRuleAttribute_SettingValueExceedsLimit" xml:space="preserve">
+    <value>Setting value has more than {0} characters.</value>
+  </data>
+  <data name="CardRules_MaxLimitForNumberOfRules" xml:space="preserve">
+    <value>Maximum number of allowed rules is '{0}'.</value>
+  </data>
+  <data name="DTLCriteriaMaxLimitForConditions" xml:space="preserve">
+    <value>You can add up to {0} conditions.</value>
+  </data>
+  <data name="BacklogInError" xml:space="preserve">
+    <value>Backlog level does not exist or is not accessible.</value>
+  </data>
+  <data name="DTLCriteriaInvalidField" xml:space="preserve">
+    <value>{0} is not a valid field.</value>
+  </data>
+  <data name="CardRules_RuleNameNullOrEmpty" xml:space="preserve">
+    <value>Some of the card rule names are empty.</value>
+  </data>
+  <data name="CanNotGroup" xml:space="preserve">
+    <value>Cannot group these clauses.</value>
+  </data>
+  <data name="CardRuleAttribute_SettingNameExceedsLimit" xml:space="preserve">
+    <value>Setting name has more than {0} characters.</value>
+  </data>
+  <data name="CardCustomization_CardValueCannotBeNull" xml:space="preserve">
+    <value>Card property for key '{0}' cannot have a value of null.</value>
+  </data>
+  <data name="DTLCriteriaInvalidOperator" xml:space="preserve">
+    <value>{0} is not a supported operator for {1}.</value>
+  </data>
+  <data name="CardCustomization_BadBoardType" xml:space="preserve">
+    <value>Invalid board type. Only KANBAN and TASKBOARD are supported.</value>
+  </data>
+  <data name="QueryFilterInvalidMacro" xml:space="preserve">
+    <value>TF20036: The macro '{0}' is not recognized. Available macros include @Me, @Project, @Today and @CurrentIteration. </value>
+  </data>
+</root>

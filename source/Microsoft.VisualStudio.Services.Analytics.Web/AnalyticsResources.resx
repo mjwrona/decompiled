@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GenericServerError" xml:space="preserve">
+    <value>VS403623: Something went wrong. Please refresh the page and try again.</value>
+  </data>
+  <data name="GenericErrorMessage" xml:space="preserve">
+    <value>VS403624: Something went wrong: {0}</value>
+  </data>
+  <data name="ViewPanel_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Summary_WorkItems_Header" xml:space="preserve">
+    <value>Work items</value>
+  </data>
+  <data name="DirectoryView_DeleteDialogSubText" xml:space="preserve">
+    <value>If you delete the '{0}' view, it will be removed for all users. Are you sure you want to continue?</value>
+  </data>
+  <data name="History_None" xml:space="preserve">
+    <value>Current only</value>
+  </data>
+  <data name="History_Date" xml:space="preserve">
+    <value>Date range</value>
+  </data>
+  <data name="GeneralSection_SectionInfoLinkText" xml:space="preserve">
+    <value>creating an Analytics view?</value>
+  </data>
+  <data name="DescriptionColumn" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="General_Description_Placeholder" xml:space="preserve">
+    <value>Enter brief description</value>
+  </data>
+  <data name="DirectoryView_GroupHeaderName" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="LastModifiedByRow_LastAddedLocaleDateText" xml:space="preserve">
+    <value>{0} added on {1}</value>
+  </data>
+  <data name="TitleDialogLabel" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="History_Rolling" xml:space="preserve">
+    <value>Rolling period in days</value>
+  </data>
+  <data name="VerifyViewButtonAriaDescription" xml:space="preserve">
+    <value>Verify your analytics view.</value>
+  </data>
+  <data name="SharingSection_InfoLinkAriaDescription" xml:space="preserve">
+    <value>More information on sharing Analytics views.</value>
+  </data>
+  <data name="History_All" xml:space="preserve">
+    <value>All history</value>
+  </data>
+  <data name="Day_Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Panel_NewViewHeader" xml:space="preserve">
+    <value>New view</value>
+  </data>
+  <data name="History_Date_Range_For_Summary_Template" xml:space="preserve">
+    <value>Date range - from {0} to {1}</value>
+  </data>
+  <data name="VerifyingSpinnerText" xml:space="preserve">
+    <value>This might take a minute...</value>
+  </data>
+  <data name="VerifiedAnalyticsViewValid" xml:space="preserve">
+    <value>Your analytics view was verified to be valid.</value>
+  </data>
+  <data name="DirectoryView_HubIsMoving" xml:space="preserve">
+    <value>This page is moving.</value>
+  </data>
+  <data name="VerifyAnalyticsViewPrimaryText" xml:space="preserve">
+    <value>We recommend that you verify your analytics view. This will validate your data so that you can use it in Power BI.</value>
+  </data>
+  <data name="Summary_History_Header" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="DeleteDialog_DeleteViewAriaDescription" xml:space="preserve">
+    <value>Delete view</value>
+  </data>
+  <data name="GeneralNavLabel" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="EditPanel_Header" xml:space="preserve">
+    <value>Manage {0}</value>
+  </data>
+  <data name="WorkItems_TeamsOrAreaPaths_TeamsOption" xml:space="preserve">
+    <value>Filter by team</value>
+  </data>
+  <data name="VerificationTimeLessThanOneMinute" xml:space="preserve">
+    <value>less than a minute</value>
+  </data>
+  <data name="DirectoryView_MyViews" xml:space="preserve">
+    <value>My Views</value>
+  </data>
+  <data name="Directory_AddViewButton" xml:space="preserve">
+    <value>New view</value>
+  </data>
+  <data name="ExpectedANumberValue" xml:space="preserve">
+    <value>* Please provide a number.</value>
+  </data>
+  <data name="DetailPanelSaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Granularity_Description" xml:space="preserve">
+    <value>Set individual rows to show data for a daily, weekly, or monthly period.</value>
+  </data>
+  <data name="DirectoryView_DeleteDialogTitle" xml:space="preserve">
+    <value>Delete view</value>
+  </data>
+  <data name="AllPivot_ZeroData_PrimaryText" xml:space="preserve">
+    <value>You haven’t created any views yet</value>
+  </data>
+  <data name="VerificationEstimatedLoadTime" xml:space="preserve">
+    <value>Estimated load time: {0}</value>
+  </data>
+  <data name="Granularity_Daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="VerificationTimeLessThanFiveMinutes" xml:space="preserve">
+    <value>less than 5 minutes</value>
+  </data>
+  <data name="VerificationTimeFiveMinutes" xml:space="preserve">
+    <value>5 minutes</value>
+  </data>
+  <data name="General_NoSharedViewsPermissionsWarning" xml:space="preserve">
+    <value>You can only create private views. You don't have permissions to create a shared view.</value>
+  </data>
+  <data name="FieldCriteriaNotAnAllowedValue" xml:space="preserve">
+    <value>* Please choose one of the allowed values from the list.</value>
+  </data>
+  <data name="WorkItems_TooMuchDataWarning" xml:space="preserve">
+    <value>This view may contain too much data. Add filters to reduce the output.</value>
+  </data>
+  <data name="VerificationTimeTwoHours" xml:space="preserve">
+    <value>2 hours</value>
+  </data>
+  <data name="DirectoryView_SharedViews" xml:space="preserve">
+    <value>Shared Views</value>
+  </data>
+  <data name="VerificationFailedPrimaryText" xml:space="preserve">
+    <value>VS403622: Sorry, there was a problem verifying your analytics view. Please try again: {0}</value>
+  </data>
+  <data name="Granularity_Header" xml:space="preserve">
+    <value>Granularity</value>
+  </data>
+  <data name="History_TooMuchDataWarning" xml:space="preserve">
+    <value>This view may contain too much data. Add filters to reduce the output.</value>
+  </data>
+  <data name="AllTeams" xml:space="preserve">
+    <value>All teams</value>
+  </data>
+  <data name="VerificationNavLabel" xml:space="preserve">
+    <value>Verification</value>
+  </data>
+  <data name="Sharing_SharedView" xml:space="preserve">
+    <value>Shared view</value>
+  </data>
+  <data name="WorkItemsNavLabel" xml:space="preserve">
+    <value>Work items</value>
+  </data>
+  <data name="AreaPathDoesntExist" xml:space="preserve">
+    <value>* Invalid area path.</value>
+  </data>
+  <data name="General_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="VerificationTimeFortyFiveMinutes" xml:space="preserve">
+    <value>45 minutes</value>
+  </data>
+  <data name="DirectoryViewFavoritesPivotName" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="DirectoryView_DeleteDialogPrimaryButtonText" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Summary_Teams_Header" xml:space="preserve">
+    <value>Teams</value>
+  </data>
+  <data name="WorkItems_TeamsOrAreaPaths_Description" xml:space="preserve">
+    <value>Filter the data that appears in this view by team or area path.</value>
+  </data>
+  <data name="VerificationFailedTryAgainButtonText" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="General_Description_Error_Too_Long" xml:space="preserve">
+    <value>View description must be less than 256 characters.</value>
+  </data>
+  <data name="NoLongerExists" xml:space="preserve">
+    <value>(no longer exists)</value>
+  </data>
+  <data name="General_Name_Placeholder" xml:space="preserve">
+    <value>Enter Name</value>
+  </data>
+  <data name="PrivateView_TooltipHeader" xml:space="preserve">
+    <value>Private view:</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="VerificationSection_LearnMoreLink" xml:space="preserve">
+    <value>Learn more about the Azure DevOps data connector</value>
+  </data>
+  <data name="History_IgnoreOldCompletedItemsForNoOrAllHistory" xml:space="preserve">
+    <value>Exclude work items that were completed before</value>
+  </data>
+  <data name="VerificationEstimatedRows" xml:space="preserve">
+    <value>Estimated rows: {0}</value>
+  </data>
+  <data name="Day_Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="VerificationFailedTryAgainButtonAriaDescription" xml:space="preserve">
+    <value>Try verifying your analytics view again.</value>
+  </data>
+  <data name="DirectoryViewGroupHeader_Expand" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="ViewPanel_EditAriaLabel" xml:space="preserve">
+    <value>Edit this view.</value>
+  </data>
+  <data name="DirectoryView_SearchWatermark" xml:space="preserve">
+    <value>Filter views</value>
+  </data>
+  <data name="NoResultsFound" xml:space="preserve">
+    <value>No results found.</value>
+  </data>
+  <data name="VerificationTimeThreeHours" xml:space="preserve">
+    <value>3 hours</value>
+  </data>
+  <data name="Overview_Header" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Sharing_PrivateView" xml:space="preserve">
+    <value>Private view</value>
+  </data>
+  <data name="AriaDescriptionDetailPanelSaveButton" xml:space="preserve">
+    <value>Save your Analytics view</value>
+  </data>
+  <data name="VerificationTimeThirtyMinutes" xml:space="preserve">
+    <value>30 minutes</value>
+  </data>
+  <data name="CancelVerificationButtonText" xml:space="preserve">
+    <value>Cancel verification</value>
+  </data>
+  <data name="Day_Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="DirectoryView_FirstTimeInfoPreviewBanner_Warn" xml:space="preserve">
+    <value>This feature is in preview.</value>
+  </data>
+  <data name="HistoryNavLabel" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Granularity_Weekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="DirectoryView_FilterResultsMessage" xml:space="preserve">
+    <value>{0} views displayed.</value>
+  </data>
+  <data name="LastModifiedByRow_LastAddedFriendlyText" xml:space="preserve">
+    <value>{0} added {1}</value>
+  </data>
+  <data name="AriaDescriptionDetailPanelContinueButton" xml:space="preserve">
+    <value>Continue to the next section.</value>
+  </data>
+  <data name="FieldOptions_CustomChoice_Description" xml:space="preserve">
+    <value>Add, update, or remove optional fields in the view.</value>
+  </data>
+  <data name="History_Rolling_For_Summary_Template" xml:space="preserve">
+    <value>Rolling period of {0} days</value>
+  </data>
+  <data name="AxFaultIn_ZeroData_PrimaryText" xml:space="preserve">
+    <value>Preparing your data...</value>
+  </data>
+  <data name="Granularity_Monthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AnalyticsViews_Title" xml:space="preserve">
+    <value>Analytics views (Boards only)</value>
+  </data>
+  <data name="Rolling_Header" xml:space="preserve">
+    <value>Rolling period (days)</value>
+  </data>
+  <data name="SharedViewCreateDisabledWarning" xml:space="preserve">
+    <value>You don't have permission to share views.</value>
+  </data>
+  <data name="General_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="VerificationSucceededAnnouncement" xml:space="preserve">
+    <value>Verification successful. {0}</value>
+  </data>
+  <data name="Day_Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="DirectoryViewGroupHeader_Collapse" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="DirectoryView_HubIsMovingInfoBannerMessageFormat" xml:space="preserve">
+    <value>{0} In the next release of Azure DevOps, Analytics Views will no longer be in preview and will be a fully supported feature. With this change, it will be moved under Boards as “{1}”.</value>
+  </data>
+  <data name="CancelVerificationButtonAriaLabel" xml:space="preserve">
+    <value>Cancel verification of this view.</value>
+  </data>
+  <data name="DirectoryViewAllPivotName" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="VerificationTimeFivePlusHours" xml:space="preserve">
+    <value>5 hours or more</value>
+  </data>
+  <data name="ViewContextMenu_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="History_Header" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="WorkItemTypesPickerDescription" xml:space="preserve">
+    <value>Filter the data that appears in this view by backlogs and work items.</value>
+  </data>
+  <data name="FieldOptions_AriaLabel" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="LastModifiedByRow_LastUpdatedFriendlyText" xml:space="preserve">
+    <value>{0} updated {1}</value>
+  </data>
+  <data name="History_Section_Description" xml:space="preserve">
+    <value>Define how far back in time the view should go.</value>
+  </data>
+  <data name="MustProvideAName" xml:space="preserve">
+    <value>You must provide a name.</value>
+  </data>
+  <data name="DateRangePicker_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="DismissMessageBarAriaLabel" xml:space="preserve">
+    <value>Dismiss message bar</value>
+  </data>
+  <data name="WorkItemTypeDoesNotExist" xml:space="preserve">
+    <value>* Invalid work item type.</value>
+  </data>
+  <data name="VerificationTimeTenMinutes" xml:space="preserve">
+    <value>10 minutes</value>
+  </data>
+  <data name="QuoteFormat" xml:space="preserve">
+    <value>'{0}'</value>
+  </data>
+  <data name="BacklogDoesNotExist" xml:space="preserve">
+    <value>* Invalid backlog.</value>
+  </data>
+  <data name="DetailPanel_CloseButtonAriaLabel" xml:space="preserve">
+    <value>Close view</value>
+  </data>
+  <data name="FieldOptions_Header" xml:space="preserve">
+    <value>Field options</value>
+  </data>
+  <data name="VerificationTimeOneHour" xml:space="preserve">
+    <value>an hour</value>
+  </data>
+  <data name="FieldsNavLabel" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="FavoritePivot_ZeroData_ActionText" xml:space="preserve">
+    <value>Learn more about Favorites</value>
+  </data>
+  <data name="History_IgnoreOldCompletedItemsForRange" xml:space="preserve">
+    <value>Exclude work items that were completed before the start date</value>
+  </data>
+  <data name="Day_Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="CommonFields_Header" xml:space="preserve">
+    <value>Common fields</value>
+  </data>
+  <data name="VerifyViewButtonText" xml:space="preserve">
+    <value>Verify view</value>
+  </data>
+  <data name="Day_Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="FieldOptions_CustomChoice" xml:space="preserve">
+    <value>Customize the field selection</value>
+  </data>
+  <data name="Summary_AreaPaths_Header" xml:space="preserve">
+    <value>Area paths</value>
+  </data>
+  <data name="VerifyingAriaLabel" xml:space="preserve">
+    <value>Verifying the analytics view might take a minute...</value>
+  </data>
+  <data name="VerificationTimeFourHours" xml:space="preserve">
+    <value>4 hours</value>
+  </data>
+  <data name="Sharing_Header" xml:space="preserve">
+    <value>Sharing</value>
+  </data>
+  <data name="DateRangePicker_To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Summary_LastResults_Header" xml:space="preserve">
+    <value>Last results</value>
+  </data>
+  <data name="DirectoryView_FirstTimeInfoBannerMessageFormat" xml:space="preserve">
+    <value>Analytics views let you create filtered views of simple Boards data for Power BI reporting. For help on reporting in Power BI {0}.</value>
+  </data>
+  <data name="SharedView_TooltipDescription" xml:space="preserve">
+    <value>All users on your project can see this view</value>
+  </data>
+  <data name="DayOfTheWeekAriaLabel" xml:space="preserve">
+    <value>Day of the Week</value>
+  </data>
+  <data name="AddWITTypeButtonText" xml:space="preserve">
+    <value>Add backlog or work item type</value>
+  </data>
+  <data name="Summary_Fields_Header" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="DirectoryView_FirstTimeInfoBannerMessageLinkLabel" xml:space="preserve">
+    <value>Click here for help on analytics views for Power BI</value>
+  </data>
+  <data name="WorkItems_TeamsOrAreaPaths_AreaPathOption" xml:space="preserve">
+    <value>Filter by area path</value>
+  </data>
+  <data name="VerificationTimeTwentyMinutes" xml:space="preserve">
+    <value>20 minutes</value>
+  </data>
+  <data name="Sharing_PrivateView_Description" xml:space="preserve">
+    <value>You're the only one who can see this view and use it in Power BI.</value>
+  </data>
+  <data name="AllPivot_ZeroData_SecondaryText" xml:space="preserve">
+    <value>Select 'New view' in the command bar to get started.</value>
+  </data>
+  <data name="DirectoryView_FirstTimeInfoBannerMessageLinkText" xml:space="preserve">
+    <value>click here</value>
+  </data>
+  <data name="DetailPanelContinueButtonText" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="DirectoryView_DeleteDialogSecondaryButtonText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="AriaDescriptionDetailPanelCancelButton" xml:space="preserve">
+    <value>Cancel the current operation</value>
+  </data>
+  <data name="VerificationSucceededPrimaryText" xml:space="preserve">
+    <value>Your analytics view has been verified and is ready to use with Power BI.</value>
+  </data>
+  <data name="SharedView_TooltipHeader" xml:space="preserve">
+    <value>Shared view:</value>
+  </data>
+  <data name="TeamMissingErrorMessage" xml:space="preserve">
+    <value>* Invalid team selection.</value>
+  </data>
+  <data name="VerificationTimeHourAndAHalf" xml:space="preserve">
+    <value>an hour and a half</value>
+  </data>
+  <data name="MetadataCard_AllBacklogsAndWorkItems" xml:space="preserve">
+    <value>All backlogs and work item types</value>
+  </data>
+  <data name="MustChooseATeamErrorMessage" xml:space="preserve">
+    <value>* Choose one or more teams from the project.</value>
+  </data>
+  <data name="History_IgnoreOldCompletedItemsForRolling" xml:space="preserve">
+    <value>Exclude work items that were completed before the rolling period</value>
+  </data>
+  <data name="DetailPanelCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ProjectMissingErrorMessage" xml:space="preserve">
+    <value>* Invalid Project Selection.</value>
+  </data>
+  <data name="FavoritePivot_ZeroData_PrimaryText" xml:space="preserve">
+    <value>Your favorite views are just a click away.</value>
+  </data>
+  <data name="DateRangePicker_ToPresent" xml:space="preserve">
+    <value>to present</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="PrivateView_TooltipDescription" xml:space="preserve">
+    <value>Only you can see this view</value>
+  </data>
+  <data name="ExpectedAnIntegerValue" xml:space="preserve">
+    <value>* Please provide an integer value.</value>
+  </data>
+  <data name="Sharing_SharedView_Description" xml:space="preserve">
+    <value>All users on your project can see this view and use it in Power BI.</value>
+  </data>
+  <data name="Fields_Header" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="ViewContextMenu_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ViewContextMenu_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Day_Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="GeneralSection_SectionInfoText" xml:space="preserve">
+    <value>Need help </value>
+  </data>
+  <data name="LastModifiedByRow_LastUpdatedLocaleDateText" xml:space="preserve">
+    <value>{0} updated on {1}</value>
+  </data>
+  <data name="ViewPanel_ViewId" xml:space="preserve">
+    <value>View ID:</value>
+  </data>
+  <data name="FieldCriteriaFieldErrorMessage" xml:space="preserve">
+    <value>* Invalid Field Criteria. This field is not available with the current work item and history configuration.</value>
+  </data>
+  <data name="AxFaultIn_ZeroData_AxViewsDocLink" xml:space="preserve">
+    <value>How do I use analytics views?</value>
+  </data>
+  <data name="DirectoryView_FirstTimeInfoPreviewBanner" xml:space="preserve">
+    <value>Analytics views are data sets that are exposed to Power BI. You can use views to create reports based on your Azure DevOps data.</value>
+  </data>
+  <data name="EditDisabledWarning" xml:space="preserve">
+    <value>You don't have permission to edit this view.</value>
+  </data>
+  <data name="AxFaultIn_ZeroData_SecondaryText" xml:space="preserve">
+    <value>Analytics is getting your data ready for reporting. This process can take some time. Please also ensure you visit Boards before you try again.</value>
+  </data>
+  <data name="HistorySection_GranularityInfoLinkAriaDescription" xml:space="preserve">
+    <value>More information on trend granularity.</value>
+  </data>
+  <data name="Summary_FilterCriteria_Header" xml:space="preserve">
+    <value>Filter criteria</value>
+  </data>
+  <data name="FieldSelectionErrorMessage" xml:space="preserve">
+    <value>* Invalid Field Selection. This field is already in use or not available with the current work item and history configuration.</value>
+  </data>
+  <data name="DeleteDialog_CancelDeleteAriaDescription" xml:space="preserve">
+    <value>Cancel delete</value>
+  </data>
+  <data name="History_Date_Range_To_Present_For_Summary_Template" xml:space="preserve">
+    <value>Date range - from {0} to present</value>
+  </data>
+  <data name="FieldOptions_CommonChoice_Description" xml:space="preserve">
+    <value>Include baseline fields for reporting as well as project custom fields.</value>
+  </data>
+  <data name="LastVerifiedPrimaryText" xml:space="preserve">
+    <value>Last verified on {0} at {1}.</value>
+  </data>
+  <data name="LastModifiedByColumn" xml:space="preserve">
+    <value>Last modified by</value>
+  </data>
+  <data name="HistorySection_StartDateLaterThanEndDate" xml:space="preserve">
+    <value>Selected date is not within the valid range</value>
+  </data>
+  <data name="HistorySection_InvalidRollingPeriod" xml:space="preserve">
+    <value>Please enter a number.</value>
+  </data>
+  <data name="WorkItems_TeamsOrAreaPaths_Title" xml:space="preserve">
+    <value>Teams or area paths</value>
+  </data>
+  <data name="DirectoryView_FirstTimeInfoPreviewBannerLink" xml:space="preserve">
+    <value>How do I use analytics views?</value>
+  </data>
+  <data name="AnalyticsViews_PreviewTitle" xml:space="preserve">
+    <value>Analytics views</value>
+  </data>
+  <data name="FavoritePivot_ZeroData_SecondaryText" xml:space="preserve">
+    <value>Use the {0} to favorite views, so they appear here.</value>
+  </data>
+  <data name="VerificationDisabled" xml:space="preserve">
+    <value>Verification is currently disabled.</value>
+  </data>
+  <data name="VerificationFailureAnnouncement" xml:space="preserve">
+    <value>Verification failed.</value>
+  </data>
+  <data name="ViewContextMenu_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="HistorySection_HistoryInfoLinkAriaDescription" xml:space="preserve">
+    <value>More information on history.</value>
+  </data>
+  <data name="FieldOptions_CommonChoice" xml:space="preserve">
+    <value>Automatically include common fields (recommended)</value>
+  </data>
+</root>

@@ -1,0 +1,25 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Configuration.ServerMessageEventArgs
+// Assembly: Microsoft.VisualStudio.Services.Configuration, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: 3AB461A1-8255-4EAB-B12B-E1D379571DC1
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Configuration.dll
+
+using Microsoft.VisualStudio.Services.Common;
+using System;
+using System.Data.SqlClient;
+
+namespace Microsoft.VisualStudio.Services.Configuration
+{
+  public class ServerMessageEventArgs : EventArgs
+  {
+    private readonly SqlError m_error;
+
+    public ServerMessageEventArgs(SqlError error)
+    {
+      ArgumentUtility.CheckForNull<SqlError>(error, nameof (error));
+      this.m_error = error;
+    }
+
+    public SqlError Error => this.m_error;
+  }
+}

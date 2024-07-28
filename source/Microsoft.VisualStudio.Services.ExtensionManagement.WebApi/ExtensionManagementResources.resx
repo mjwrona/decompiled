@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContributionIdRequiredInElementException" xml:space="preserve">
+    <value>Contribution elements MUST supply the contributionId through the "id" attribute. {0}</value>
+  </data>
+  <data name="ContributionTypeUndefinedError" xml:space="preserve">
+    <value>The contribution type {0} referenced by contribution point {1} is not defined.</value>
+  </data>
+  <data name="CharacterLimitExceeded" xml:space="preserve">
+    <value>The character limit was exceeded for the parameter '{0}'. Maximum character limit is {1}.</value>
+  </data>
+  <data name="ExtensionDemandErrorFormat" xml:space="preserve">
+    <value>- {0}</value>
+  </data>
+  <data name="ContributionEmbeddedException" xml:space="preserve">
+    <value>Contributions can't be embedded within contributions. {0}</value>
+  </data>
+  <data name="MaximumDocumentSizeException" xml:space="preserve">
+    <value>Document size cannot be larger than {0}B. Current size: {1}B. </value>
+  </data>
+  <data name="ContributionTypeSchemaValidationError" xml:space="preserve">
+    <value>Contribution Type schema for {0} is invalid. Error: {1}</value>
+  </data>
+  <data name="ExtensionUnauthorizedException" xml:space="preserve">
+    <value>TF1590013: Unauthorized to access extension data for {0}.{1}.</value>
+  </data>
+  <data name="ContributionIdInvalidInElementException" xml:space="preserve">
+    <value>The contribution with id="{0}" couldn't be found. {1}</value>
+  </data>
+  <data name="AppNamespaceExistsException" xml:space="preserve">
+    <value>TF1590004: An extension with namespace {0} already exists.</value>
+  </data>
+  <data name="ContributionTypeNotFoundError" xml:space="preserve">
+    <value>The contribution type {0} was not found on extension {1}.</value>
+  </data>
+  <data name="AppNotFoundForNamespaceException" xml:space="preserve">
+    <value>TF1590002: Extension for namespace {0} and version {1} not found.</value>
+  </data>
+  <data name="ContributionRendererNotDefinedException" xml:space="preserve">
+    <value>The contribution with type="{0}" doesn't have a template renderer available. {1}</value>
+  </data>
+  <data name="DocumentDoesNotExistException" xml:space="preserve">
+    <value>TF1590005: Document with id {0} does not exist in collection {1} for {2} = {3}</value>
+  </data>
+  <data name="ContributionTypeOwnerNotFoundError" xml:space="preserve">
+    <value>The extension {0} for the contribution type {1} was not found.</value>
+  </data>
+  <data name="InstalledAppNotFoundForAppIdException" xml:space="preserve">
+    <value>TF1590003: No app with id {0} is installed in this organization.</value>
+  </data>
+  <data name="ContributionPointNotFoundError" xml:space="preserve">
+    <value>The contribution point {0} was not found on extension {1}.</value>
+  </data>
+  <data name="AppPublishAccessException" xml:space="preserve">
+    <value>TF1590001: User {0} does not have permission to publish extensions in this store</value>
+  </data>
+  <data name="DocumentAlreadyExistsException" xml:space="preserve">
+    <value>TF1590004: Document with id {0} already exists in collection {1} for {2} = {3}</value>
+  </data>
+  <data name="ExtensionAlreadyInstalledException" xml:space="preserve">
+    <value>TF1590010: Extension {0} is already installed in this organization.</value>
+  </data>
+  <data name="ExtensionDemandsNotSupportedWithoutReasonException" xml:space="preserve">
+    <value>Unable to install extension due errors checking its demands.</value>
+  </data>
+  <data name="InvalidDocumentVersionException" xml:space="preserve">
+    <value>TF1590007: Document version with id {0} in collection {1} for {2} = {3} does not match current value</value>
+  </data>
+  <data name="ContributionElementTypeException" xml:space="preserve">
+    <value>The supplied template element for contribution type "{0}" is "{1}", MUST implement the IContributionElement interface.</value>
+  </data>
+  <data name="AppNotFoundForStoreException" xml:space="preserve">
+    <value>TF1590002: Extension for store {0} and target {1} with id {2} not found.</value>
+  </data>
+  <data name="ValueCannotBeNullException" xml:space="preserve">
+    <value>The {0} value cannot be null.</value>
+  </data>
+  <data name="InvalidInstallationTargetException" xml:space="preserve">
+    <value>TF1590011: InstallationTargets {0} are not valid for extension {1}</value>
+  </data>
+  <data name="DocumentCollectionDoesNotExistException" xml:space="preserve">
+    <value>TF1590006: Collection with name {0} does not exist for scope {1} = {2}</value>
+  </data>
+  <data name="TokenMissingHostAuthorizationClaimException" xml:space="preserve">
+    <value>TF1590015: Token missing claim for host authorization id.</value>
+  </data>
+  <data name="ExtensionRequestAlreadyExistsException" xml:space="preserve">
+    <value>TF1590012: A request for this extension has already been made.</value>
+  </data>
+  <data name="ContributionPointOwnerNotFoundError" xml:space="preserve">
+    <value>The extension {0} for the contribution point {1} was not found.</value>
+  </data>
+  <data name="ExtensionNotLoaded" xml:space="preserve">
+    <value>TF1590016: Unable to load extension with id: {0}  Reason: {1}</value>
+  </data>
+  <data name="AppManifestValidationException" xml:space="preserve">
+    <value>TF1590005: Extension Manifest is invalid. Error(s): {0}</value>
+  </data>
+  <data name="AppNotFoundForAppIdException" xml:space="preserve">
+    <value>TF1590002: App for id {0} and version {1} not found.</value>
+  </data>
+  <data name="CollectionDoesNotExistException" xml:space="preserve">
+    <value>TF1590006: Collection with name {0} does not exist for scope {1} = {2}</value>
+  </data>
+  <data name="ContributionValidationError" xml:space="preserve">
+    <value>The contribution with index {0} to the contribution point {1} is not in a valid format. It should validate against the schema for the contribution type {2}. 
+Validation errors: {3}</value>
+  </data>
+  <data name="AppInstallAccessException" xml:space="preserve">
+    <value>TF1590000: User {0} does not have permission to install extensions into organization.</value>
+  </data>
+  <data name="ExtensionDemandsNotSupportedException" xml:space="preserve">
+    <value>Unable to install extension due to:
+{0}</value>
+  </data>
+</root>

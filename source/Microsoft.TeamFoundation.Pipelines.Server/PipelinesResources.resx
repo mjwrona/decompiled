@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MissingYamlTitle" xml:space="preserve">
+    <value>Unable to find '{0}'</value>
+  </data>
+  <data name="GitHubCheckRunOutputBuildSucceededTitle" xml:space="preserve">
+    <value>Build #{0} succeeded</value>
+  </data>
+  <data name="GitHubCheckRunOutputBuildWithFailedTestsTitle" xml:space="preserve">
+    <value>Build #{0} had test failures</value>
+  </data>
+  <data name="GitHubCheckRunOutputDetailsTestSectionHeader" xml:space="preserve">
+    <value>[**Tests**]({0})</value>
+  </data>
+  <data name="UnkownUserName" xml:space="preserve">
+    <value>Unknown user</value>
+  </data>
+  <data name="TestDetailsFailingTestsText" xml:space="preserve">
+    <value>&lt;li&gt; Failed: {0} ({1}, {2} new, {3} recurring) &lt;/li&gt;</value>
+  </data>
+  <data name="InvalidEnvironmentCreateRequest" xml:space="preserve">
+    <value>expecting only one environment instance in a request</value>
+  </data>
+  <data name="AzureRmServiceEndpointCreationFailed" xml:space="preserve">
+    <value>AzureRM service connection creation failed. Error: {0}</value>
+  </data>
+  <data name="AzureSubscriptionCannotBeEmpty" xml:space="preserve">
+    <value>Cannot create an AzureRM service connection because the subscription name is empty.</value>
+  </data>
+  <data name="ResourceNameFormat" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="ExceptionStatusUpdateFailed" xml:space="preserve">
+    <value>Unable to update the status for provider {0}. Details: {1}</value>
+  </data>
+  <data name="JiraAppDescriptorNotFound" xml:space="preserve">
+    <value>Jira app descriptor not found.</value>
+  </data>
+  <data name="ExceptionProjectCreationFailed" xml:space="preserve">
+    <value>Unable to create a pipeline connection. The project {0} could not be created.</value>
+  </data>
+  <data name="BuildNotFound" xml:space="preserve">
+    <value>The requested build {0} could not be found.</value>
+  </data>
+  <data name="TestDetailsTotalTestText" xml:space="preserve">
+    <value>&lt;li&gt; Total: {0} &lt;/li&gt;</value>
+  </data>
+  <data name="BuildFrameworkDetectionFailedNoTreeAnalysis" xml:space="preserve">
+    <value>Build framework detection failed: the source tree analysis did not return a value.</value>
+  </data>
+  <data name="ExceptionPayloadSignatureMismatch" xml:space="preserve">
+    <value>Invalid request: The payload does not match the hash provided.</value>
+  </data>
+  <data name="JiraAppDescriptorShouldNotBeEmpty" xml:space="preserve">
+    <value>Jira app descriptor should not be empty.</value>
+  </data>
+  <data name="ExceptionAgentNoAvailableQueueFound" xml:space="preserve">
+    <value>Unable to create an agent connection. No available agent pools could be found or you do not have permission to access them.</value>
+  </data>
+  <data name="ExceptionIdentityNotFound" xml:space="preserve">
+    <value>Unable to find an active service identity with ID {0} and role {1}. Recreate the pipeline connection to restore this service identity.</value>
+  </data>
+  <data name="NewDefinitionComment" xml:space="preserve">
+    <value>This pipeline was created automatically to process CI events from an external source repository on behalf of {0}.</value>
+  </data>
+  <data name="GitHubCheckRunOutputDetailsResultsHeader" xml:space="preserve">
+    <value>[**Results**]({0})</value>
+  </data>
+  <data name="MissingYamlWithPullRequestDetails" xml:space="preserve">
+    <value>The Azure Pipelines GitHub App is installed and set up for this repository, but an 'azure-pipelines.yml' file that describes how to build your repository cannot be found.  The [pull request]({0}) to add this file may need to be completed. If the pull request has been abandoned, you can create a [new pipeline]({1}) for this repository which will create the file for you. If you no longer want continuous integration set up for this repository, [disable the pipeline]({2}) that created this message.</value>
+  </data>
+  <data name="GitHubCheckRunTestFailedStatus" xml:space="preserve">
+    <value>Test failed</value>
+  </data>
+  <data name="JwtTokenNotPresentInHeaders" xml:space="preserve">
+    <value>JWT should present in the request headers, but was not found.</value>
+  </data>
+  <data name="ExceptionTestServiceNotFound" xml:space="preserve">
+    <value>Unable to access test data. The test service is unavailable.</value>
+  </data>
+  <data name="ExceptionTokenGenerationFailed" xml:space="preserve">
+    <value>Unable to create a token for the provided pipeline connection. The generated token is too large. Reduce the size of the strings in the connection. MaxLength={0}</value>
+  </data>
+  <data name="ExceptionServiceEndpointNotFoundForRepository" xml:space="preserve">
+    <value>No service connection was found for repository {0}.</value>
+  </data>
+  <data name="GitHubCheckRunOutputBuildPartiallySucceededTitle" xml:space="preserve">
+    <value>Build #{0} succeeded with issues</value>
+  </data>
+  <data name="JiraConnectAppConnectAlreadyExist" xml:space="preserve">
+    <value>Already connection configured for the project {0}.</value>
+  </data>
+  <data name="JiraAppInstallationDataNotFound" xml:space="preserve">
+    <value>Jira app installation data not found. Please install the app and try again.</value>
+  </data>
+  <data name="GitHubCheckRunOutputCodeCoverageDetailsCoverageText" xml:space="preserve">
+    <value>&lt;li&gt; {0} of {1} {2} covered ({3}) &lt;/li&gt;</value>
+  </data>
+  <data name="GitHubProviderUserName" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="TestDetailsPassingTestsText" xml:space="preserve">
+    <value>&lt;li&gt; Passed: {0} ({1}) &lt;/li&gt;</value>
+  </data>
+  <data name="GitHubCheckRunOutputBuildFailedTitle" xml:space="preserve">
+    <value>Build #{0} failed</value>
+  </data>
+  <data name="GitHubCheckRunOutputBuildCanceledTitle" xml:space="preserve">
+    <value>Build #{0} was canceled</value>
+  </data>
+  <data name="UnkownItem" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="TemplateNotFound" xml:space="preserve">
+    <value>No template with an identifier of '{0}' could be found</value>
+  </data>
+  <data name="TenantIdsCannotBeDifferent" xml:space="preserve">
+    <value>Cannot create an AzureRM service connection because the logged in user's tenantId {0} is not the same as the selected Azure subscription's tenantId {1}.</value>
+  </data>
+  <data name="ExceptionAgentQueueNotFound" xml:space="preserve">
+    <value>Unable to create an agent connection. The agent pool {0} could not be found or you do not have permission to access it.</value>
+  </data>
+  <data name="MissingYamlSummary" xml:space="preserve">
+    <value>The Azure Pipelines GitHub App is not properly configured for this repository.</value>
+  </data>
+  <data name="GitHubCheckRunOutputDetailsCodeCoverageHeader" xml:space="preserve">
+    <value>[**Code coverage**]({0})</value>
+  </data>
+  <data name="ArtifactNameWithSuffix" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="GitHubCheckRunOutputDefaultTitle" xml:space="preserve">
+    <value>Build #{0} details</value>
+  </data>
+  <data name="TestDetailsFailingTestsPRText" xml:space="preserve">
+    <value>&lt;li&gt; Failed: {0} ({1}) &lt;/li&gt;</value>
+  </data>
+  <data name="NewProjectDescription" xml:space="preserve">
+    <value>This project was created automatically to process CI events from an external source repository on behalf of {0}.</value>
+  </data>
+  <data name="TenantIdCannotBeEmpty" xml:space="preserve">
+    <value>Cannot create an AzureRM service connection because TenantId is empty.</value>
+  </data>
+  <data name="GitHubCheckRunOutputSummary" xml:space="preserve">
+    <value>[{0} errors / {1} warnings]({2})</value>
+  </data>
+  <data name="ExceptionInvalidToken" xml:space="preserve">
+    <value>Unable to process the payload. The token provided in the header is invalid.</value>
+  </data>
+  <data name="GitHubConnectionExceptionCannotCreateBuildRepository" xml:space="preserve">
+    <value>Repository {0} not found. Verify that the GitHub App installation is correct and allows access to the repository.</value>
+  </data>
+  <data name="GitHubAppConnectedToAnotherOrg" xml:space="preserve">
+    <value>This GitHub App installation has already been configured with another Azure DevOps organization. If you want to configure the GitHub App with this Azure DevOps organization, uninstall and reinstall the GitHub App.</value>
+  </data>
+  <data name="FileContentProviderFailed" xml:space="preserve">
+    <value>Unable to retrieve file contents for path '{0}' in {1} repository '{2}' and branch '{3}': {4}</value>
+  </data>
+  <data name="TestDetailsOtherTestsText" xml:space="preserve">
+    <value>&lt;li&gt; Other: {0} ({1}) &lt;/li&gt;</value>
+  </data>
+  <data name="JiraConnectAppConnectionCreateAccessDenied" xml:space="preserve">
+    <value>You should be project administrator to add Jira connection.</value>
+  </data>
+  <data name="ExceptionServiceEndpointNotFound" xml:space="preserve">
+    <value>No service connection was found with ID {0}.</value>
+  </data>
+  <data name="MissingYamlDetails" xml:space="preserve">
+    <value>The Azure Pipelines GitHub App is installed and set up for this repository, but an 'azure-pipelines.yml' file that describes how to build your repository cannot be found. You can create a [new pipeline]({0}) for this repository which will create the file for you. If you no longer want continuous integration set up for this repository, [disable the pipeline]({1}) that created this message.</value>
+  </data>
+</root>

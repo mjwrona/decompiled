@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Cargo.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2DFC30B-DAA0-41E2-8AF0-7590B82A172B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Cargo.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Cargo.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cargo.Client.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cargo.Client.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Cargo.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Cargo.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.BclPolyfills">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.BclPolyfills.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Feed.WebApi.Internal">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Feed.WebApi.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ItemStore.Server.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ItemStore.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.ServiceShared">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.ServiceShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Packaging.Shared.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Packaging.Shared.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>lib\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory">
+      <HintPath>lib\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Tomlyn.Signed">
+      <HintPath>lib\Tomlyn.Signed.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CargoWriteBootstrapper`3.cs" />
+    <Compile Include="CargoSettings.cs" />
+    <Compile Include="CargoIdentityResolver.cs" />
+    <Compile Include="SingleFileProtocolPackagingApiController`3.cs" />
+    <Compile Include="PackagingRegistration.cs" />
+    <Compile Include="Protocol.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Upstreams\CargoManualUpstreamIngestionBootstrapper.cs" />
+    <Compile Include="Upstreams\CargoUpstreamConstants.cs" />
+    <Compile Include="Upstreams\CargoUpstreamFetchingMetadataServiceBootstrapper.cs" />
+    <Compile Include="Upstreams\ThrowNotFoundOnInvalidPackageNameValidator.cs" />
+    <Compile Include="Upstreams\CargoUpstreamMetadataCacheJobQueuerBootstrapper.cs" />
+    <Compile Include="Upstreams\CargoUpstreamMetadataManagerExistingLocalMetadataB.cs" />
+    <Compile Include="Upstreams\CargoUpstreamMetadataManagerFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\CargoUpstreamOnlyMetadataStore.cs" />
+    <Compile Include="Upstreams\DownloadAndIngestCrateFileFromUpstreamHandler.cs" />
+    <Compile Include="Upstreams\IngestPackageIfNotAlreadyIngestedBootstrapper.cs" />
+    <Compile Include="Upstreams\IUpstreamCargoClient.cs" />
+    <Compile Include="Upstreams\CargoUpstreamMetadata.cs" />
+    <Compile Include="Upstreams\LimitedCargoMetadata.cs" />
+    <Compile Include="Upstreams\UpstreamCargoClientFactoryBootstrapper.cs" />
+    <Compile Include="Upstreams\UpstreamCargoClientFactory.cs" />
+    <Compile Include="Upstreams\PublicUpstreamClient\ICargoDashFixer.cs" />
+    <Compile Include="Upstreams\PublicUpstreamClient\CargoDashFixer.cs" />
+    <Compile Include="Upstreams\PublicUpstreamClient\PublicUpstreamCargoClient.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\CrossCollectionUpstreamCargoClient.cs" />
+    <Compile Include="Upstreams\InternalUpstreamClient\SameCollectionUpstreamCargoClient.cs" />
+    <Compile Include="Upload\CargoBlobRefGenerator.cs" />
+    <Compile Include="Upload\CargoPublishHttpHandler.cs" />
+    <Compile Include="Upload\CargoPublishRouteHandler.cs" />
+    <Compile Include="Telemetry\CargoUpdatePackageVersionCiDataHandler.cs" />
+    <Compile Include="PackageMetadata\CargoMetadataEntry.cs" />
+    <Compile Include="PackageMetadata\CargoRawPackageMetadata.cs" />
+    <Compile Include="PackageMetadata\CargoTomlDependency.cs" />
+    <Compile Include="PackageMetadata\CargoTomlDependencyGroup.cs" />
+    <Compile Include="PackageMetadata\CargoTomlManifest.cs" />
+    <Compile Include="PackageMetadata\CargoTomlManifestPackageOrProject.cs" />
+    <Compile Include="PackageMetadata\CargoTomlTarget.cs" />
+    <Compile Include="PackageMetadata\CargoTomlTargetGroup.cs" />
+    <Compile Include="PackageMetadata\ICargoMetadataEntry.cs" />
+    <Compile Include="PackageMetadata\ICargoMetadataEntryWriteable.cs" />
+    <Compile Include="PackageMetadata\IHaveCargoTomlDependencies.cs" />
+    <Compile Include="PackageMetadata\StringOrBool.cs" />
+    <Compile Include="PackageMetadata\TomlHelpers.cs" />
+    <Compile Include="PackageIdentity\CargoPackageIdentity.cs" />
+    <Compile Include="PackageIdentity\CargoPackageName.cs" />
+    <Compile Include="PackageIdentity\CargoPackageVersion.cs" />
+    <Compile Include="PackageIdentity\NameDetails\CargoPackageNameParser.cs" />
+    <Compile Include="PackageIdentity\NameDetails\CargoPackageNameValidator.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoSortableVersionBuilder.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoBuildMetadataLabel.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoMajorMinorPatchLabel.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoPackageVersionFormatter.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoPackageVersionParser.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoPackageVersionValidator.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoPrereleaseLabel.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\CargoVersionLabel`1.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\IVersionLabelSegment.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\NumericVersionLabelSegment.cs" />
+    <Compile Include="PackageIdentity\VersionDetails\StringVersionLabelSegment.cs" />
+    <Compile Include="Operations\CargoOperations.cs" />
+    <Compile Include="Operations\CargoAddOperationData.cs" />
+    <Compile Include="Operations\CargoFeedIndexMetadata.cs" />
+    <Compile Include="Metadata\CargoMetadataHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersion\UpdatePackageVersionValidatingHandlerBootstrapper.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\CargoBatchValidatingOpGeneratingHandlerBootstrappe.cs" />
+    <Compile Include="NonProtocolApis\UpdatePackageVersions\CargoRecycleBinBatchValidatingOpGeneratingHandlerB.cs" />
+    <Compile Include="NonProtocolApis\RestoreToFeed\CargoRestoreToFeedValidatingOpGeneratingHandlerBoo.cs" />
+    <Compile Include="NonProtocolApis\PermanentDelete\CargoPermanentDeleteValidatingOpGeneratingHandler.cs" />
+    <Compile Include="NonProtocolApis\Converters\CargoMetadataEntryToPackageConverter.cs" />
+    <Compile Include="NonProtocolApis\DeletePackageVersion\CargoDeleteOpGeneratorBootstrapper.cs" />
+    <Compile Include="JobManagement\CargoChangeProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="JobManagement\CargoFeedChangeProcessingJobHandlerFactoryBootstra.cs" />
+    <Compile Include="JobManagement\CargoMigrationProcessingJobQueuerBootstrapper.cs" />
+    <Compile Include="Ingestion\CapturedFile.cs" />
+    <Compile Include="Ingestion\CargoPackageMetadataDependency.cs" />
+    <Compile Include="Ingestion\CargoPublishManifest.cs" />
+    <Compile Include="Ingestion\CargoPublishManifestDependency.cs" />
+    <Compile Include="Ingestion\LazySerDesValue`2.cs" />
+    <Compile Include="Ingestion\CargoParsedIngestionParams.cs" />
+    <Compile Include="Ingestion\CargoPackageMetadata.cs" />
+    <Compile Include="Ingestion\CargoIngesterHandlerBootstrapper.cs" />
+    <Compile Include="Ingestion\CargoIngestionInput.cs" />
+    <Compile Include="Ingestion\CargoPackageIngester.cs" />
+    <Compile Include="Ingestion\CargoPackageIngesterBootstrapper.cs" />
+    <Compile Include="Exceptions\CargoExceptionMappings.cs" />
+    <Compile Include="Controllers\CargoApiController.cs" />
+    <Compile Include="Controllers\Proprietary\CargoPackagesBatchController.cs" />
+    <Compile Include="Controllers\Proprietary\CargoRecycleBinController.cs" />
+    <Compile Include="Controllers\Proprietary\CargoRecycleBinPackagesBatchController.cs" />
+    <Compile Include="Controllers\Proprietary\CargoUpstreamingController.cs" />
+    <Compile Include="Controllers\Proprietary\CargoVersionsController.cs" />
+    <Compile Include="Controllers\Cargo\YankUnyank\CargoOkSuccessResult.cs" />
+    <Compile Include="Controllers\Cargo\YankUnyank\AlwaysReturnCargoOkSuccessResultHandler.cs" />
+    <Compile Include="Controllers\Cargo\YankUnyank\CargoUnyankController.cs" />
+    <Compile Include="Controllers\Cargo\YankUnyank\CargoYankController.cs" />
+    <Compile Include="Controllers\Cargo\YankUnyank\CargoYankUnyankControllerHandlerBootstrapper.cs" />
+    <Compile Include="Controllers\Cargo\Upstreams\CargoInternalUpstreamsController.cs" />
+    <Compile Include="Controllers\Cargo\Upstreams\CargoInternalUpstreamsDownloadController.cs" />
+    <Compile Include="Controllers\Cargo\Index\CargoIndexController.cs" />
+    <Compile Include="Controllers\Cargo\Index\CargoIndexVersionRow.cs" />
+    <Compile Include="Controllers\Cargo\Index\CargoIndexDependency.cs" />
+    <Compile Include="Controllers\Cargo\Index\CargoIndexHandler.cs" />
+    <Compile Include="Controllers\Cargo\IndexConfigJson\CargoIndexConfigJson.cs" />
+    <Compile Include="Controllers\Cargo\IndexConfigJson\CargoConfigJsonController.cs" />
+    <Compile Include="Controllers\Cargo\Download\CargoDownloadController.cs" />
+    <Compile Include="Constants\CargoJobConstants.cs" />
+    <Compile Include="CommitLog\CargoCommitLogSerializationConstants.cs" />
+    <Compile Include="CommitLog\CargoCommitLogFacadeBootstrapper.cs" />
+    <Compile Include="CommitLog\CargoCommitLogService.cs" />
+    <Compile Include="CommitLog\CargoItemStore.cs" />
+    <Compile Include="CommitLog\CargoOperationDeserializer.cs" />
+    <Compile Include="CommitLog\CargoOperationSerializer.cs" />
+    <Compile Include="CommitLog\ICargoCommitLogService.cs" />
+    <Compile Include="CommitLog\IUnsafeCargoCommitLogService.cs" />
+    <Compile Include="ChangeProcessing\CargoExceptionMarkFactory.cs" />
+    <Compile Include="CiData\CargoDeletePackageCiDataFacadeHandler.cs" />
+    <Compile Include="CiData\CargoDownloadPackageCiDataFacadeHandler.cs" />
+    <Compile Include="CiData\CargoIngestPackageCiDataFacadeHandler.cs" />
+    <Compile Include="CiData\CargoYankCiDataFacadeHandler.cs" />
+    <Compile Include="Aggregations\AggregationDefinitions.cs" />
+    <Compile Include="Aggregations\CargoAggregationResolver.cs" />
+    <Compile Include="Aggregations\CargoMigrationNames.cs" />
+    <Compile Include="Aggregations\CargoMigrationDefinitionsProviderBootstrapper.cs" />
+    <Compile Include="Aggregations\CargoMigrationKickerJobBootstrapper.cs" />
+    <Compile Include="Aggregations\CargoMigrationJobHandlerFactoryBootstrapper.cs" />
+    <Compile Include="Aggregations\CargoUpgradeAggregationsBootstrapper.cs" />
+    <Compile Include="Aggregations\VersionListWithSize\CargoUpstreamVersionListAggregation.cs" />
+    <Compile Include="Aggregations\StorageIdCache\ICargoPackageMetadataCacheService.cs" />
+    <Compile Include="Aggregations\StorageIdCache\CargoPackageMetadataCacheService.cs" />
+    <Compile Include="Aggregations\StorageIdCache\CargoStorageIdCacheAggregation.cs" />
+    <Compile Include="Aggregations\ProblemPackages\CargoProblemPackagesAggregation.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoByBlobMetadataServiceFactoryBootstrapper.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoMetadataAddOpApplier.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoMetadataDocumentOpApplierFactory.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoMetadataDocumentSerializerFactory.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoMetadataEntryOpApplierFactory.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoPackageMetadataAggregation.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoPackageMetadataAggregationAccessor.cs" />
+    <Compile Include="Aggregations\PackageMetadata\CargoYankChangeMetadataOpApplier`1.cs" />
+    <Compile Include="Aggregations\PackageMetadata\ICargoPackageMetadataAggregationAccessor.cs" />
+    <Compile Include="Aggregations\FeedIndex\CargoCommitHandlerFactory.cs" />
+    <Compile Include="Aggregations\FeedIndex\CargoFeedIndexAggregation.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

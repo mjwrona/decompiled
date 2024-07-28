@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisabledByUser" xml:space="preserve">
+    <value>Disabled (By user)</value>
+  </data>
+  <data name="PreferredEmailText" xml:space="preserve">
+    <value>Preferred email</value>
+  </data>
+  <data name="SubscriptionDisabledWithReasonTooltip" xml:space="preserve">
+    <value>This subscription is disabled: {0}. Click to re-enable.</value>
+  </data>
+  <data name="RequiredFieldErrorMessage" xml:space="preserve">
+    <value>This field is required</value>
+  </data>
+  <data name="UnknownCategory" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="EnabledOnProbation" xml:space="preserve">
+    <value>Enabled (On Probation)</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="AdminNotificationsAction" xml:space="preserve">
+    <value>Administer</value>
+  </data>
+  <data name="UnsavedChangesConfirm" xml:space="preserve">
+    <value>There are unsaved changes that will be lost. Do you want to continue?</value>
+  </data>
+  <data name="NotifiesAllTeamMembersTextFormat" xml:space="preserve">
+    <value>Individual members</value>
+  </data>
+  <data name="SubscriptionUserSettingsChangeError" xml:space="preserve">
+    <value>Failed to opt out or opt in subscription.</value>
+  </data>
+  <data name="OptinAction" xml:space="preserve">
+    <value>Opt in</value>
+  </data>
+  <data name="SubscriptionScopeDescriptionFormat" xml:space="preserve">
+    <value>({0})</value>
+  </data>
+  <data name="ConfirmDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete the selected subscriptions?</value>
+  </data>
+  <data name="DefaultGroupDeliveryToggleLabel" xml:space="preserve">
+    <value>{0}. Press to toggle the delivery option.</value>
+  </data>
+  <data name="NotSetTeamDeliveryPreferenceText" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="SubscriptionDialogSaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="OtherTasksLabel" xml:space="preserve">
+    <value>Other tasks:</value>
+  </data>
+  <data name="NotifiesSomeTeamMembersTextFormat" xml:space="preserve">
+    <value>Individual members by role: {0}</value>
+  </data>
+  <data name="DisabledByAdmin" xml:space="preserve">
+    <value>Disabled (By administrator)</value>
+  </data>
+  <data name="PreferredEmailDeliveryLabel" xml:space="preserve">
+    <value>By default, email notifications will be sent to your preferred email address:</value>
+  </data>
+  <data name="NoPermissionDescription" xml:space="preserve">
+    <value>[Private]</value>
+  </data>
+  <data name="TeamSubscriptionsDescription" xml:space="preserve">
+    <value>Custom subscriptions that keep your team informed about activity relevant to the team or to individual team members.</value>
+  </data>
+  <data name="ContributedSubscriptionText" xml:space="preserve">
+    <value>Out of the box</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CategoryColumnHeaderText" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="SharedSubscriptionsDescription" xml:space="preserve">
+    <value>Subscriptions created by team admins. You can opt out of any subscription targeted for delivery to individual team members.</value>
+  </data>
+  <data name="NoPermissionToCreateTeamSubscription" xml:space="preserve">
+    <value>You do not have permission to create team subscriptions</value>
+  </data>
+  <data name="DeleteThisSubscription" xml:space="preserve">
+    <value>Delete this subscription</value>
+  </data>
+  <data name="SubscriptionDialogOptOutButtonText" xml:space="preserve">
+    <value>Opt out</value>
+  </data>
+  <data name="DescriptionLabelText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PreferredEmailNeedsConfirmationMessage" xml:space="preserve">
+    <value>Your preferred email delivery address is awaiting confirmation.</value>
+  </data>
+  <data name="SubscriberTabSecondaryTitle" xml:space="preserve">
+    <value>Get started by selecting a user or group</value>
+  </data>
+  <data name="SubscriptionIdDescriptionTextFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="SubscriberMeText" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="TypeColumnHeader" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DefaultSubscriptionsDescription" xml:space="preserve">
+    <value>Out of the box subscriptions keep you informed about activity relevant to you in all projects.</value>
+  </data>
+  <data name="AllTeamMembersText" xml:space="preserve">
+    <value>Members of {0}</value>
+  </data>
+  <data name="StateColumnHeaderText" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="OptoutAction" xml:space="preserve">
+    <value>Opt out of</value>
+  </data>
+  <data name="NoOwner" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NoScope" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ClickToDisableThisSubscription" xml:space="preserve">
+    <value>Click to disable this subscription.</value>
+  </data>
+  <data name="ExcludeInitiatorToolTip" xml:space="preserve">
+    <value>If checked, no notification will be delivered to the user that initiated the event, even if that user is one of the selected roles.</value>
+  </data>
+  <data name="DeliveryPreferencesTitle" xml:space="preserve">
+    <value>Configure how to deliver notifications that target {0}</value>
+  </data>
+  <data name="SubscriptionErrorGet" xml:space="preserve">
+    <value>Failed to get subscription</value>
+  </data>
+  <data name="EditSubscriptionDialogTitle" xml:space="preserve">
+    <value>Edit subscription</value>
+  </data>
+  <data name="PersonalSubscriptionsDescription" xml:space="preserve">
+    <value>Manage "out of the box" and team subscriptions relevant to you in this organization. Use custom subscriptions to get notified about other activity.</value>
+  </data>
+  <data name="SubscriptionEnabled" xml:space="preserve">
+    <value>Currently enabled. Notifications from this subscription will be delivered to you.</value>
+  </data>
+  <data name="SubscriptionBlockedFromUnsubscribe" xml:space="preserve">
+    <value>You do not have permission to unsubscribe from this notification subscription.</value>
+  </data>
+  <data name="DeleteAction" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OptInButtonText" xml:space="preserve">
+    <value>Opt in</value>
+  </data>
+  <data name="CategoryHeaderText" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ConfirmOptoutMessage" xml:space="preserve">
+    <value>Are you sure you want {0} to {1} the selected subscription ({2})?</value>
+  </data>
+  <data name="SubscriptionIsAlreadyUnsubscribed" xml:space="preserve">
+    <value>You are already unsubscribed from this notification subscription. If you are still receiving this notification, it is most likely because you are a member of a group that subscribes to this notification.</value>
+  </data>
+  <data name="ModifiedDescriptionText" xml:space="preserve">
+    <value>Modified {0} by </value>
+  </data>
+  <data name="SoapRequiredUriMessage" xml:space="preserve">
+    <value>Must specify a valid SOAP endpoint (URI)</value>
+  </data>
+  <data name="EmailAddressRequiredMessage" xml:space="preserve">
+    <value>Must specify one or more email addresses</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="DescriptionRequiredMessage" xml:space="preserve">
+    <value>Must specify a description for this subscription</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="SubscriptionNoLongerExistsOrNoPermissions" xml:space="preserve">
+    <value>This subscription no longer exists.</value>
+  </data>
+  <data name="TeamProjectLabelText" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="NoDeliveryLabelText" xml:space="preserve">
+    <value>Do not deliver</value>
+  </data>
+  <data name="DeliveryPreferencesPanelHeader" xml:space="preserve">
+    <value>Delivery settings</value>
+  </data>
+  <data name="NotificationReasonLabelText" xml:space="preserve">
+    <value>Notification Reason</value>
+  </data>
+  <data name="TeamSubscriptionsHeader" xml:space="preserve">
+    <value>Team subscriptions</value>
+  </data>
+  <data name="TeamNotificationsPageTitle" xml:space="preserve">
+    <value>Team notifications</value>
+  </data>
+  <data name="DisableThisSubscription" xml:space="preserve">
+    <value>Disable this subscription</value>
+  </data>
+  <data name="ConfirmOptoutTitle" xml:space="preserve">
+    <value>{0} subscription</value>
+  </data>
+  <data name="DiscriptionLabelText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DeletedSubscriptionErrorMessage" xml:space="preserve">
+    <value>This subscription has been deleted.</value>
+  </data>
+  <data name="ViewSubscriptionDialogTitle" xml:space="preserve">
+    <value>Subscription</value>
+  </data>
+  <data name="DeliveryPreferenceIndividualUserWarning" xml:space="preserve">
+    <value>Delivery settings for an individual user can only be changed through the user profile page.</value>
+  </data>
+  <data name="TypeColumnTitle" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SubscriptionIsAlreadyOptedOut" xml:space="preserve">
+    <value>You are already opted out of this notification subscription. If you are still receiving this notification, it is most likely because you are a member of a group that subscribes to this notification.</value>
+  </data>
+  <data name="ViewAction" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="PersonalSubscriptionsHeader" xml:space="preserve">
+    <value>My notification settings</value>
+  </data>
+  <data name="EditThisSubscription" xml:space="preserve">
+    <value>Edit this subscription</value>
+  </data>
+  <data name="SubscriptionTeamOptedIn" xml:space="preserve">
+    <value>Currently opted in. Notifications from this subscription will be delivered to this team.</value>
+  </data>
+  <data name="DefaultGroupDeliveryPreferenceText" xml:space="preserve">
+    <value>Group preference</value>
+  </data>
+  <data name="SpecificScopeFormat" xml:space="preserve">
+    <value>(project {0})</value>
+  </data>
+  <data name="OperatorAnd" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="AllProjectsScopeText" xml:space="preserve">
+    <value>(any project)</value>
+  </data>
+  <data name="SoapOptionText" xml:space="preserve">
+    <value>SOAP</value>
+  </data>
+  <data name="SubscriptionNotFoundDialogTitle" xml:space="preserve">
+    <value>Subscription not found</value>
+  </data>
+  <data name="PreferredEmailDeliveryLabelText" xml:space="preserve">
+    <value>Deliver to email address</value>
+  </data>
+  <data name="DefaultTeamDeliveryPreferenceText" xml:space="preserve">
+    <value>Team preference</value>
+  </data>
+  <data name="TemplateHeaderText" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="SubscriptionDisabledTooltip" xml:space="preserve">
+    <value>This subscription is disabled. Click to re-enable.</value>
+  </data>
+  <data name="UpdatePreferredEmailAction" xml:space="preserve">
+    <value>Update your profile</value>
+  </data>
+  <data name="DefaultSubscriptionTitle" xml:space="preserve">
+    <value>Default subscription</value>
+  </data>
+  <data name="CreateSubscriptionButtonTitle" xml:space="preserve">
+    <value>Create a new subscription</value>
+  </data>
+  <data name="ConfirmDeleteTitle" xml:space="preserve">
+    <value>Delete subscription</value>
+  </data>
+  <data name="DefaultGroupDeliveryLabel" xml:space="preserve">
+    <value>Default delivery option for groups in this project collection (can be set for individual groups in Delivery Settings)</value>
+  </data>
+  <data name="ServiceHooksChannel" xml:space="preserve">
+    <value>ServiceHooks</value>
+  </data>
+  <data name="NotifiedSoapTextFormat" xml:space="preserve">
+    <value>Soap: {0}</value>
+  </data>
+  <data name="UserHubHeaderText" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="SubscriptionTeamDisabled" xml:space="preserve">
+    <value>Currently disabled. No notifications will be sent to the team for this subscription.</value>
+  </data>
+  <data name="SubscriptionDialogNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Channel" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="EmailChannel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailAddressInvalidCharactersMessage" xml:space="preserve">
+    <value>Email address contains unsupported characters</value>
+  </data>
+  <data name="EventType" xml:space="preserve">
+    <value>Event type</value>
+  </data>
+  <data name="GroupSubscriptionText" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="SubscriptionDialogCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="SpecificTeamProjectLabelText" xml:space="preserve">
+    <value>A specific team project</value>
+  </data>
+  <data name="OptoutButtonText" xml:space="preserve">
+    <value>Opt out</value>
+  </data>
+  <data name="NotifiesColumnHeader" xml:space="preserve">
+    <value>Notifies</value>
+  </data>
+  <data name="DeliveryPreferenceAADGroupWarning" xml:space="preserve">
+    <value>Settings for a Microsoft Entra group cannot be changed here.</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="ModifiedByYouText" xml:space="preserve">
+    <value>you</value>
+  </data>
+  <data name="SubscriptionDescriptionId" xml:space="preserve">
+    <value> ({0})</value>
+  </data>
+  <data name="SoapChannelType" xml:space="preserve">
+    <value>Soap</value>
+  </data>
+  <data name="Subscriber" xml:space="preserve">
+    <value>Subscriber</value>
+  </data>
+  <data name="SharedSubscriptionsHeader" xml:space="preserve">
+    <value>Team subscriptions</value>
+  </data>
+  <data name="OperatorOr" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="OptOutBlockedByAdmin" xml:space="preserve">
+    <value>The team administrator has blocked changes for this subscription.</value>
+  </data>
+  <data name="DeliverToLabelText" xml:space="preserve">
+    <value>Deliver to</value>
+  </data>
+  <data name="DisableButtonText" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="InvalidFilterMessage" xml:space="preserve">
+    <value>Must specify a valid filter</value>
+  </data>
+  <data name="SubscriptionTeamEnabled" xml:space="preserve">
+    <value>Currently enabled. Notifications from this subscription will be delivered to this team.</value>
+  </data>
+  <data name="DeliveryOptions" xml:space="preserve">
+    <value>Delivery Options</value>
+  </data>
+  <data name="NoisySubscriptionConfirmationMessage" xml:space="preserve">
+    <value>This subscription might generate too many notifications, are you sure you want to save?</value>
+  </data>
+  <data name="DisableDiagnostics" xml:space="preserve">
+    <value>Disable Diagnostics</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="ChatChannel" xml:space="preserve">
+    <value>Team rooms</value>
+  </data>
+  <data name="SubscriptionDialogFinishButtonText" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="EnableThisSubscription" xml:space="preserve">
+    <value>Enable this subscription</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="MembersByRoleText" xml:space="preserve">
+    <value>Members of {0} by role</value>
+  </data>
+  <data name="SubscriptionTeamOptedOut" xml:space="preserve">
+    <value>Currently opted out. No notifications will be sent to the team for this subscription.</value>
+  </data>
+  <data name="SubscriberLabelText" xml:space="preserve">
+    <value>Subscriber</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="NewSubscriptionDialogTitle" xml:space="preserve">
+    <value>New subscription</value>
+  </data>
+  <data name="SubscriptionDisabled" xml:space="preserve">
+    <value>Currently disabled. No notifications will be sent to you for this subscription.</value>
+  </data>
+  <data name="TopEventInitiators" xml:space="preserve">
+    <value>Top event initiators</value>
+  </data>
+  <data name="TeamProject" xml:space="preserve">
+    <value>Team Project</value>
+  </data>
+  <data name="FailedToQueueEvaluationJobMessage" xml:space="preserve">
+    <value>Failed to queue subscription evaluation job, are you sure you want to save?</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SubscriptionDialogSavingButtonText" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="SubscriptionDialogDeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DescriptionTooLongMessage" xml:space="preserve">
+    <value>Subscription description cannot exceed 200 characters</value>
+  </data>
+  <data name="AllProjects" xml:space="preserve">
+    <value>[all projects]</value>
+  </data>
+  <data name="DeliveryAddressLabelText" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="NotifyMeWhenColumnHeaderText" xml:space="preserve">
+    <value>Notify me when</value>
+  </data>
+  <data name="ClickToEnableThisSubscription" xml:space="preserve">
+    <value>Click to enable this subscription.</value>
+  </data>
+  <data name="UserHubSubHeaderText" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="TeamsPreferredEmailText" xml:space="preserve">
+    <value>Custom email address</value>
+  </data>
+  <data name="UserOrGroup" xml:space="preserve">
+    <value>User or group</value>
+  </data>
+  <data name="EditAction" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="RolesLabelText" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="UnsubscribeMessageTitle" xml:space="preserve">
+    <value>Unsubscribe subscription</value>
+  </data>
+  <data name="SubscriptionOptedOut" xml:space="preserve">
+    <value>Currently opted out. No notifications will be sent to you for this subscription.</value>
+  </data>
+  <data name="DisabledAsDuplicateOfDefault" xml:space="preserve">
+    <value>Disabled (Duplicate of default subscription)</value>
+  </data>
+  <data name="SubscriptionErrorCreate" xml:space="preserve">
+    <value>Failed to create subscription</value>
+  </data>
+  <data name="DefaultGroupDeliveryOffText" xml:space="preserve">
+    <value>Do not deliver</value>
+  </data>
+  <data name="DefaultGroupDeliveryOnText" xml:space="preserve">
+    <value>Deliver to individual members</value>
+  </data>
+  <data name="ManagePersonalAction" xml:space="preserve">
+    <value>Manage your subscriptions</value>
+  </data>
+  <data name="ExcludeInitiatorLabelText" xml:space="preserve">
+    <value>Skip initiator</value>
+  </data>
+  <data name="NewSubscription" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="AllTeamProjectsLabelText" xml:space="preserve">
+    <value>Any team project</value>
+  </data>
+  <data name="SharedSubscriptionScope" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SubscriberEditDeliveryPreferencesFailed" xml:space="preserve">
+    <value>Failed to update delivery preferences for group {0}</value>
+  </data>
+  <data name="ScopeColumnHeaderText" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="SubscriptionErrorDelete" xml:space="preserve">
+    <value>Failed to delete subscription</value>
+  </data>
+  <data name="SubscriptionNoLongerExists" xml:space="preserve">
+    <value>This notification subscription no longer exists.</value>
+  </data>
+  <data name="SubscriptionErrorSave" xml:space="preserve">
+    <value>Failed to save subscription</value>
+  </data>
+  <data name="SubscriptionErrorOpen" xml:space="preserve">
+    <value>Failed to open subscription</value>
+  </data>
+  <data name="OwnerColumnHeaderText" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="UserChannel" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="SubscriptionEvaluationErrorMessage" xml:space="preserve">
+    <value>Failed to evaluate subscription, are you sure you want to save?</value>
+  </data>
+  <data name="NotifiedCustomEmailTextFormat" xml:space="preserve">
+    <value> email: {0}</value>
+  </data>
+  <data name="SettingsErrorTitle" xml:space="preserve">
+    <value>Failed to save setting</value>
+  </data>
+  <data name="RolesRequiredMessage" xml:space="preserve">
+    <value>Must select at least one included role</value>
+  </data>
+  <data name="OtherEmailText" xml:space="preserve">
+    <value>Other email</value>
+  </data>
+  <data name="ToAddress" xml:space="preserve">
+    <value>To Address</value>
+  </data>
+  <data name="NewSubscriptionTitle" xml:space="preserve">
+    <value>Create a new subscription...</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Subscriptions</value>
+  </data>
+  <data name="SubscriptionEvaluationTimeoutMessage" xml:space="preserve">
+    <value>Subscription evaluation timed out. are you sure you want to save?</value>
+  </data>
+  <data name="SharedSubscriptionOptOutConfirmMessage" xml:space="preserve">
+    <value>Are you sure you want to opt out of the subscription: {0}?</value>
+  </data>
+  <data name="DisabledInvalidPathClause" xml:space="preserve">
+    <value>Disabled (Invalid path clause)</value>
+  </data>
+  <data name="PersonalSubscriptionText" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="SubscriptionOpenTooltip" xml:space="preserve">
+    <value>Open subscription: {0}</value>
+  </data>
+  <data name="NoPermissionUnsubscribeMessage" xml:space="preserve">
+    <value>You do not have permission to view or unsubscribe from &lt;a href="{0}"&gt;subscription {1}&lt;/a&gt;. Contact its owner ({2}) or an administrator.</value>
+  </data>
+  <data name="EmailAddressInvalidMessage" xml:space="preserve">
+    <value>Must specify one or more valid email addresses</value>
+  </data>
+  <data name="HelpCommandText" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="SubscriptionOptedIn" xml:space="preserve">
+    <value>Currently opted in. Notifications from this subscription will be delivered to you.</value>
+  </data>
+  <data name="FilterControlLabelText" xml:space="preserve">
+    <value>Filter criteria</value>
+  </data>
+  <data name="UnsubscribeSuccess" xml:space="preserve">
+    <value>You have successfully unsubscribed from this notification subscription. Note that you may still receive notifications if you are a member of a group that subscribes to this notification.</value>
+  </data>
+  <data name="EachMemberDeliveryLabelText" xml:space="preserve">
+    <value>Deliver to individual members</value>
+  </data>
+  <data name="MostActiveSubscriptions" xml:space="preserve">
+    <value>Most active subscriptions</value>
+  </data>
+  <data name="DefaultSubscriptionsTabTitle" xml:space="preserve">
+    <value>Default subscriptions</value>
+  </data>
+  <data name="DeliveryPreferencesButtonText" xml:space="preserve">
+    <value>Edit team delivery preferences</value>
+  </data>
+  <data name="DefaulEmailAddressLabelText" xml:space="preserve">
+    <value>Default email address</value>
+  </data>
+  <data name="OperatorChanges" xml:space="preserve">
+    <value>Changes</value>
+  </data>
+  <data name="SubscriptionDialogPrevButtonText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="NoSubscriptionsLabel" xml:space="preserve">
+    <value>No custom subscriptions found. Create your first one now.</value>
+  </data>
+  <data name="EnableDiagnostics" xml:space="preserve">
+    <value>Enable Diagnostics</value>
+  </data>
+  <data name="SubscribersTabTitle" xml:space="preserve">
+    <value>Subscribers</value>
+  </data>
+  <data name="PersonalSubscriptionDisableConfirmMessage" xml:space="preserve">
+    <value>Are you sure you want to disable the subscription: {0}?</value>
+  </data>
+  <data name="CreateTeamSubscriptionButtonTitle" xml:space="preserve">
+    <value>Create a new team subscription</value>
+  </data>
+</root>

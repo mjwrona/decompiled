@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CannotSpecifyAuthor" xml:space="preserve">
+    <value>An author cannot be specified for this operation.</value>
+  </data>
+  <data name="ReviewerStateOrKindMustBeSetForUpdate" xml:space="preserve">
+    <value>To save an existing reviewer '{0}', either reviewer state or kind must be set.</value>
+  </data>
+  <data name="PropertiesRemovePatchPathCannotBeEmpty" xml:space="preserve">
+    <value>The path of properties in remove patch operation cannot be empty.</value>
+  </data>
+  <data name="CodeReviewOperationFailedException" xml:space="preserve">
+    <value>The code review operation could not be executed.</value>
+  </data>
+  <data name="InvalidReviewerStateId" xml:space="preserve">
+    <value>Reviewer State Id '{0}' of reviewer '{1}' isn't valid.</value>
+  </data>
+  <data name="ExceededMaxAllowedFileSize" xml:space="preserve">
+    <value>The file size of '{0}' bytes exceeds the maximum allowed file size '{1}' bytes.</value>
+  </data>
+  <data name="ReviewCriteriaCannotHaveBothCreateAndUpdateTimestamps" xml:space="preserve">
+    <value>Reviews search criteria cannot include both create and update timestamps.</value>
+  </data>
+  <data name="AttachmentSizeTooLarge" xml:space="preserve">
+    <value>The maximum allowed file size is {0}</value>
+  </data>
+  <data name="CommentAuthorCannotBeUpdated" xml:space="preserve">
+    <value>An author of a comment cannot be updated.</value>
+  </data>
+  <data name="MustAcceptZip" xml:space="preserve">
+    <value>Accept header must be of type: application/zip.</value>
+  </data>
+  <data name="AttachmentAlreadyExists" xml:space="preserve">
+    <value>The attachment with file name '{0}' already exists.</value>
+  </data>
+  <data name="IterationCanNotBeSaved" xml:space="preserve">
+    <value>Review has '{0}' iterations. Only one iteration can be saved while saving a review.</value>
+  </data>
+  <data name="ChangeIdCannotBeSet" xml:space="preserve">
+    <value>ChangeId cannot be set by client. Its set by the server automatically.</value>
+  </data>
+  <data name="InvalidContentRange" xml:space="preserve">
+    <value>The supplied Content-Range header was invalid and the Content-Length header is nonzero. Supply the Content-Range header with the format: 'bytes [begin]-[end]/[total]'</value>
+  </data>
+  <data name="InvalidProvider" xml:space="preserve">
+    <value>The provider for the scope ID '{0}' is invalid. Please ensure the provider has been properly set.</value>
+  </data>
+  <data name="StatusGenreCannotBeUpdated" xml:space="preserve">
+    <value>Status genre cannot be updated.</value>
+  </data>
+  <data name="DuplicateContentHashInContentHashList" xml:space="preserve">
+    <value>Duplicate content hash: "{0}". Duplicate content hashes are not allowed while downloading files for a code review.</value>
+  </data>
+  <data name="CannotShareReviewExceededMaxMessageLength" xml:space="preserve">
+    <value>Notification request message has '{0}' characters and is too long. The maximum message length is '{1}' characters.  </value>
+  </data>
+  <data name="AttachmentMalformed" xml:space="preserve">
+    <value>The code review attachment payload was malformed.</value>
+  </data>
+  <data name="StatusIterationIdNotConsistent" xml:space="preserve">
+    <value>Iteration id is not consistent with status payload.</value>
+  </data>
+  <data name="ReviewWasMalformed" xml:space="preserve">
+    <value>Review was malformed.</value>
+  </data>
+  <data name="ChangeEntriesWithBothSetAndUnSetChangeTrackingIdsException" xml:space="preserve">
+    <value>Iteration with ID '{0}' cannot have changes with both computed valid changeTrackingIds and not computed invalid changeTrackingIds.</value>
+  </data>
+  <data name="FileNotFoundException" xml:space="preserve">
+    <value>A file with the content hash '{0}' was not found, or you do not have permission to access it.</value>
+  </data>
+  <data name="ReviewSettingsSaveInsufficientPermissions" xml:space="preserve">
+    <value>Only team project admins can save or remove settings.</value>
+  </data>
+  <data name="AuthorOrReviewerMustBeSpecifiedWhileSearchingInAccount" xml:space="preserve">
+    <value>An author or reviewer must be provided in search criteria along with review status while searching across multiple projects.</value>
+  </data>
+  <data name="BatchContentInvalid" xml:space="preserve">
+    <value>Unable to retrieve the content from the request.</value>
+  </data>
+  <data name="IterationAlreadyExistsException" xml:space="preserve">
+    <value>The code review iteration with ID '{0}' already exists. Please verify that no other processes have created the iteration before you.</value>
+  </data>
+  <data name="ReviewerCannotVoteWithoutPublishedIterationException" xml:space="preserve">
+    <value>A reviewer cannot be saved when there are no published iterations in a CodeReview with ID  '{0}'.</value>
+  </data>
+  <data name="CommentThreadNotFoundException" xml:space="preserve">
+    <value>The comment thread with ID '{0}' does not exist, or you do not have permission to access it.</value>
+  </data>
+  <data name="CannotCreateOrUpdateReviewWithIsDeletedTrue" xml:space="preserve">
+    <value>Review with IsDeleted property 'true' cannot be created or updated. Use Delete review to delete a review.</value>
+  </data>
+  <data name="CommentWasMalformed" xml:space="preserve">
+    <value>Comment was malformed for comment thread ID '{0}' of review ID '{1}'.</value>
+  </data>
+  <data name="MaxCommentCountException" xml:space="preserve">
+    <value>There can be a maximum of {0} comments on a single discussion thread.</value>
+  </data>
+  <data name="CommentThreadContextCannotBeUpdated" xml:space="preserve">
+    <value>Comment thread context cannot be updated.</value>
+  </data>
+  <data name="DefaultNotificationToolCaption" xml:space="preserve">
+    <value>CR</value>
+  </data>
+  <data name="CannotDeleteIteration" xml:space="preserve">
+    <value>Insufficient permissions to delete an iteration(s).</value>
+  </data>
+  <data name="CommentThreadPropertiesCannotBeUpdated" xml:space="preserve">
+    <value>Comment thread properties cannot be updated.</value>
+  </data>
+  <data name="ReviewSettingsMalformed" xml:space="preserve">
+    <value>The review setting was malformed.</value>
+  </data>
+  <data name="ReviewCriteriaMustBeSpecified" xml:space="preserve">
+    <value>There are no search criteria found. Please valid search criteria.</value>
+  </data>
+  <data name="AttachmentsCannotBeUpdated" xml:space="preserve">
+    <value>Attachments cannot be updated while updating a review or updating an iteration.</value>
+  </data>
+  <data name="CannotVoteForAnotherReviewer" xml:space="preserve">
+    <value>A reviewer cannot vote for others. Reviewer '{0}' cannot change vote to '{1}' for '{2}'</value>
+  </data>
+  <data name="IterationArgumentNullException" xml:space="preserve">
+    <value>The value for '{0}' cannot be null when saving a code review iteration.</value>
+  </data>
+  <data name="CodeReviewNoFilesFoundToUploadInPackageException" xml:space="preserve">
+    <value>Zip package file does not contain any files to upload. Upload a package with at least 1 file.</value>
+  </data>
+  <data name="InvalidAttachmentType" xml:space="preserve">
+    <value>Invalid file type. Allowed extensions are {0}</value>
+  </data>
+  <data name="AttachmentsCannotBeCreated" xml:space="preserve">
+    <value>Attachments cannot be created while creating a review or creating an iteration.</value>
+  </data>
+  <data name="ReviewerSaveFailedUponNullException" xml:space="preserve">
+    <value>The value for '{0}' cannot be null when saving a reviewer.</value>
+  </data>
+  <data name="GzipUnsupportedWithoutLength" xml:space="preserve">
+    <value>Gzip compression is currently unsupported without the 'X-TFS-FileLength' header.</value>
+  </data>
+  <data name="CodeReviewArgumentNullException" xml:space="preserve">
+    <value>The value for '{0}' cannot be null when saving a code review.</value>
+  </data>
+  <data name="ReviewContinuationTokenCouldNotBeParsed" xml:space="preserve">
+    <value>The review continuation token could not be parsed.</value>
+  </data>
+  <data name="CannotSpecifyCreatedDate" xml:space="preserve">
+    <value>A created date cannot be specified for this operation.</value>
+  </data>
+  <data name="IterationCannotBeCreated" xml:space="preserve">
+    <value>Iteration cannot be created with Id other than '1' while creating a review.</value>
+  </data>
+  <data name="FileNotFoundForChangeIdException" xml:space="preserve">
+    <value>'{0}' file for changeId '{1}' was not found, or you do not have permission to access it.</value>
+  </data>
+  <data name="StatusMalformed" xml:space="preserve">
+    <value>The status payload was malformed.</value>
+  </data>
+  <data name="MaxAttachmentCountException" xml:space="preserve">
+    <value>There can be a maximum of {0} attachments.</value>
+  </data>
+  <data name="CannotShareReviewExceededMaxSubjectLength" xml:space="preserve">
+    <value>Notification request subject has '{0}' characters and is too long. The maximum subject length is '{1}' characters.  </value>
+  </data>
+  <data name="InvalidPath" xml:space="preserve">
+    <value>The supplied path '{0}' is invalid for the given review.</value>
+  </data>
+  <data name="MissingProjectId" xml:space="preserve">
+    <value>A project id must be specified to perform review operations.</value>
+  </data>
+  <data name="StatusNameCannotBeUpdated" xml:space="preserve">
+    <value>Status name cannot be updated.</value>
+  </data>
+  <data name="CommentThreadCreateIdException" xml:space="preserve">
+    <value>Comment thread cannot be created. A thread id was provided ({0}).</value>
+  </data>
+  <data name="ChangesWithContentHashNotFoundException" xml:space="preserve">
+    <value>Content hash(s) in changes for review Id '{0}' are not found . Upload files and provide valid content hash.</value>
+  </data>
+  <data name="MismatchedReviewIds" xml:space="preserve">
+    <value>The code review id specified in the URL query '{0}', and the one specified from the payload, '{1}' don't match. Please check the supplied arguments.</value>
+  </data>
+  <data name="StatusesDeleteNotSupported" xml:space="preserve">
+    <value>Deleting statuses is not supported.</value>
+  </data>
+  <data name="InvalidCommentDiscussionId" xml:space="preserve">
+    <value>DiscussionId of a comment must be zero or equal to comment thread discussionId '{0}'.</value>
+  </data>
+  <data name="CodeReviewCannotBeUpdateSinceDiffFileIdWasUnexpected" xml:space="preserve">
+    <value>The code review with ID '{0}' cannot be updated since the expected diff file id was not found.</value>
+  </data>
+  <data name="InvalidPropertiesPatchOperationException" xml:space="preserve">
+    <value>Invalid patch operation. Currently the only supported patch operations are add, replace and remove.</value>
+  </data>
+  <data name="IdentifierValidGuid" xml:space="preserve">
+    <value>The identifier must be a valid guid.</value>
+  </data>
+  <data name="ActionRejectedByPullRequest" xml:space="preserve">
+    <value>The action was rejected because the review is associated with a pull request. See InnerException for more information.</value>
+  </data>
+  <data name="CannotSpecifyUpdatedDate" xml:space="preserve">
+    <value>An updated date cannot be specified for this operation.</value>
+  </data>
+  <data name="IterationsCannotBeUpdated" xml:space="preserve">
+    <value>Iterations cannot be updated while updating a review.</value>
+  </data>
+  <data name="IterationCannotBeUnpublishedException" xml:space="preserve">
+    <value>Iteration with ID '{0}' cannot be unpublished as it was already previously published.</value>
+  </data>
+  <data name="CodeReviewCannotBeUpdatedSinceItsNotActive" xml:space="preserve">
+    <value>The code review with ID '{0}' cannot be updated since its status is not active or creating.</value>
+  </data>
+  <data name="FilesWithContentHashesNotFoundException" xml:space="preserve">
+    <value>Files with the provided content hashes were not found, or you do not have permission to access them.</value>
+  </data>
+  <data name="ReviewCommentThreadWasMalformed" xml:space="preserve">
+    <value>Review comment thread was malformed.</value>
+  </data>
+  <data name="SuppliedAuthorCouldNotBeParsed" xml:space="preserve">
+    <value>Supplied author ID could not be parsed.</value>
+  </data>
+  <data name="ActionRejectedByPolicy" xml:space="preserve">
+    <value>The action was rejected by the current policy. See InnerException for more information.</value>
+  </data>
+  <data name="StatusesCannotBeUpdated" xml:space="preserve">
+    <value>Statuses cannot be updated while updating a review.</value>
+  </data>
+  <data name="CommentFilePathCannotBeNullWhenIsReviewLevelIsFalse" xml:space="preserve">
+    <value>Comment file path cannot be null when thread is not at review level.</value>
+  </data>
+  <data name="EmptyDownloadContentCriteriaNotAllowed" xml:space="preserve">
+    <value>Empty download content criteria is not allowed. Please provide a list of iteration ids or a list of file hashes. </value>
+  </data>
+  <data name="InvalidProject" xml:space="preserve">
+    <value>The project with ID '{0}' is expected to have a valid source control capability. Ensure the scope ID is correct, and that project has been properly created.</value>
+  </data>
+  <data name="UnpublishedIterationAlreadyExistsException" xml:space="preserve">
+    <value>Iteration with ID '{0}' cannot be created, as there's already an unpublished iteration within the review, and aforesaid iteration is not being overwritten or edited.</value>
+  </data>
+  <data name="ProviderAlreadyExists" xml:space="preserve">
+    <value>A provider for the scope ID '{0}' already exists. Provider types are immutable.</value>
+  </data>
+  <data name="CannotSpecifyIterationId" xml:space="preserve">
+    <value>An iteration ID cannot be specified for this operation.</value>
+  </data>
+  <data name="ReviewStatusMustBeSpecified" xml:space="preserve">
+    <value>Review status must be specified in search criteria.</value>
+  </data>
+  <data name="StatusesCannotBeCreated" xml:space="preserve">
+    <value>Statuses cannot be created while creating a review.</value>
+  </data>
+  <data name="InvalidArtifactIdString" xml:space="preserve">
+    <value>Artifact id is invalid.</value>
+  </data>
+  <data name="IterationNotFoundException" xml:space="preserve">
+    <value>The code review iteration with id '{0}' could not be found, or you do not have permission to access it.</value>
+  </data>
+  <data name="InvalidArtifactIdForVisitUpdate" xml:space="preserve">
+    <value>Artifact id '{0}' is invalid.</value>
+  </data>
+  <data name="ViewedStatusNotSupported" xml:space="preserve">
+    <value>Pull Request files viewed status is not supported.</value>
+  </data>
+  <data name="FileWithSameContentHashInPackageException" xml:space="preserve">
+    <value>File with duplicate content hash '{0}' as file name is found.</value>
+  </data>
+  <data name="TooManyVisitsToQueryFor" xml:space="preserve">
+    <value>Visits query has requests for '{0}' artifacts. Max number of visits queries in a request cannot be more than '{1}'.</value>
+  </data>
+  <data name="CannotDeleteReview" xml:space="preserve">
+    <value>Insufficient permissions to delete a reviewer(s).</value>
+  </data>
+  <data name="CannotSpecifyReviewId" xml:space="preserve">
+    <value>A review ID cannot be specified when creating a review.</value>
+  </data>
+  <data name="InvalidIterationId" xml:space="preserve">
+    <value>The code review iteration id '{0}' is invalid. Please check the supplied arguments.</value>
+  </data>
+  <data name="ReviewerIdArgumentNullException" xml:space="preserve">
+    <value>Reviewer Id cannot be null.</value>
+  </data>
+  <data name="CannontFindContentHashAssociatedWithReview" xml:space="preserve">
+    <value>Content hash '{0}' is not associated with review with ID '{1}'.</value>
+  </data>
+  <data name="BaseIterationRequiresIterations" xml:space="preserve">
+    <value>Provide at least one iteration in iterationIds when baseIteration is provided.</value>
+  </data>
+  <data name="IterationMustBeOfUnpublishedTypeException" xml:space="preserve">
+    <value>The new code review iteration with ID '{0}' must be an unpublished iteration.</value>
+  </data>
+  <data name="AttachmentDeleteInvalidAuthor" xml:space="preserve">
+    <value>Attachments can only be deleted by the original author.</value>
+  </data>
+  <data name="DuplicateChangeTrackingIdInChangeList" xml:space="preserve">
+    <value>Changes with duplicate ChangeTrackingId '{0}' are found.</value>
+  </data>
+  <data name="IterationCannotBePublishedException" xml:space="preserve">
+    <value>Iteration with ID '{0}' cannot be published, as there are pending files to upload.</value>
+  </data>
+  <data name="CodeReviewArgumentEmptyException" xml:space="preserve">
+    <value>Argument '{0}' cannot be empty</value>
+  </data>
+  <data name="InvalidReviewers" xml:space="preserve">
+    <value>Reviewer(s) with invalid identities are found. InvalidReviewers: '{0}'</value>
+  </data>
+  <data name="CodeReviewInvalidStatusChangeException" xml:space="preserve">
+    <value>The code review with ID '{0}' cannot be updated to the creating status.</value>
+  </data>
+  <data name="IterationMismatchedIdsException" xml:space="preserve">
+    <value>The provided iteration ID '{0}' by the client doesn't match what the next iteration ID should be on the server: '{1}'. Please verify that no other processes have created the iteration before you.</value>
+  </data>
+  <data name="InvalidFileTargetType" xml:space="preserve">
+    <value>The file target type '{0}' is invalid. Choose from one of the following: '{1}'</value>
+  </data>
+  <data name="CodeReviewContentUploadNotAllowed" xml:space="preserve">
+    <value>Content upload is not allowed for code review '{0}' since the content is provided by the source control extension.</value>
+  </data>
+  <data name="ReviewerIdArgumentValidGuid" xml:space="preserve">
+    <value>Reviewer Id should be a valid guid.</value>
+  </data>
+  <data name="CannotSpecifyAttachmentId" xml:space="preserve">
+    <value>An attachment ID cannot be specified for this operation.</value>
+  </data>
+  <data name="ReviewersCannotBeUpdated" xml:space="preserve">
+    <value>Reviewers cannot be updated while updating a review.</value>
+  </data>
+  <data name="MustSpecifyIterationId" xml:space="preserve">
+    <value>An iteration ID must be specified for this operation.</value>
+  </data>
+  <data name="CannotAddCommentWithoutContent" xml:space="preserve">
+    <value>A comment without any content cannot be added.</value>
+  </data>
+  <data name="ReviewPropertiesCannotBeUpdated" xml:space="preserve">
+    <value>Review properties cannot be updated.</value>
+  </data>
+  <data name="CodeReviewNotFoundException" xml:space="preserve">
+    <value>The code review with ID '{0}' does not exist, or you do not have permission to access it.</value>
+  </data>
+  <data name="StatusNotFoundException" xml:space="preserve">
+    <value>The status with ID '{0}' could not be found in the review with ID '{1}', or iteration with ID '{2}', or you do not have permission to access it.</value>
+  </data>
+  <data name="TooManyStatusRecords" xml:space="preserve">
+    <value>Unable to create new status with name '{0}' for the review with ID '{1}'. Maximum count of statuses per review is {2}.</value>
+  </data>
+  <data name="ChangesAlreadyExistException" xml:space="preserve">
+    <value>Changes already exist for iteration {0}. Create a new iteration to supply additional changes.</value>
+  </data>
+  <data name="IterationUpdateCannotIncludeChangeListException" xml:space="preserve">
+    <value>An iteration with ID '{0}' cannot be updated since it contains a change list. Please create another iteration.</value>
+  </data>
+  <data name="IterationPropertiesCannotBeUpdated" xml:space="preserve">
+    <value>Iteration properties cannot be updated.</value>
+  </data>
+  <data name="MismatchedIterationIds" xml:space="preserve">
+    <value>The code review iteration id specified in the URL query '{0}', and the one specified from the payload, '{1}' don't match. Please check the supplied arguments.</value>
+  </data>
+  <data name="AttachmentNotFoundException" xml:space="preserve">
+    <value>The attachment with ID '{0}' could not be found in the review with ID '{1}', or you do not have permission to access it.</value>
+  </data>
+  <data name="DuplicateReviewersInReviewerList" xml:space="preserve">
+    <value>Reviewer '{0}' can't be saved more than once in a single service request for a code review.</value>
+  </data>
+  <data name="PropertiesReplacePatchPathCannotBeEmpty" xml:space="preserve">
+    <value>The path of properties in replace patch operation cannot be empty.</value>
+  </data>
+  <data name="DataspaceStateError" xml:space="preserve">
+    <value>The dataspace '{0}' is in an invalid state. Please try the operation again later.</value>
+  </data>
+  <data name="ReviewerCannotBeAssociatedWithUnpublishedIterationException" xml:space="preserve">
+    <value>A reviewer cannot be associated with an unpublished iterationId for a CodeReview with ID '{0}'.</value>
+  </data>
+  <data name="IterationMalformed" xml:space="preserve">
+    <value>The code review iteration payload was malformed.</value>
+  </data>
+  <data name="CannotSpecifyCompletedDate" xml:space="preserve">
+    <value>A completed date cannot be specified for this operation.</value>
+  </data>
+  <data name="CommentDeleteInvalidAuthor" xml:space="preserve">
+    <value>Only the comment author and project admins can delete a comment.</value>
+  </data>
+  <data name="CannotShareReviewExceededMaxReceivers" xml:space="preserve">
+    <value>Notification request has '{0}' receivers. Max number of receivers in a notification cannot be more than '{1}'.  </value>
+  </data>
+  <data name="ViewedStatusCountLimitReached" xml:space="preserve">
+    <value>You reached the limit on the number of files that can be marked as reviewed in a Pull Request.</value>
+  </data>
+  <data name="AttachmentCannotBeCreatedBeforeFileUploadException" xml:space="preserve">
+    <value>Attachment cannot be created in the review with ID '{0}' since the file has not been uploaded. </value>
+  </data>
+</root>

@@ -1,0 +1,26 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.BlobStore.Server.Common.BlobReferenceDetailInfo
+// Assembly: Microsoft.VisualStudio.Services.BlobStore.Server.Common, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: CB48D0BF-32A2-483C-A1D4-2F10DEBB3D56
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.BlobStore.Server.Common.dll
+
+using BuildXL.Cache.ContentStore.Hashing;
+using Microsoft.VisualStudio.Services.BlobStore.Common;
+using System;
+using System.Collections.Generic;
+
+namespace Microsoft.VisualStudio.Services.BlobStore.Server.Common
+{
+  public class BlobReferenceDetailInfo
+  {
+    public BlobIdentifier BlobId { get; set; }
+
+    public BlobReferenceState StoredReferenceState { get; set; }
+
+    public DateTimeOffset? BlobAddedTime { get; set; }
+
+    public long? BlobLength { get; set; }
+
+    public List<BlobReference> References { get; set; } = new List<BlobReference>();
+  }
+}

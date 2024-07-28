@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.Server.WebAccess.VersionControl.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7B46CDE-56C9-4D75-A4E1-7A9ABD422B2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.Server.WebAccess.VersionControl</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.Server.WebAccess.VersionControl</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Git.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Git.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Core">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.SignalR">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.SignalR.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.Types">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Platform">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.Presentation">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Server.WebAccess.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebServer">
+      <HintPath>lib\Microsoft.TeamFoundation.SourceControl.WebServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WebPlatform.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.WebPlatform.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebPlatform.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>lib\System.Web.WebPages.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ViewDataConstants.cs" />
+    <Compile Include="BranchResources.cs" />
+    <Compile Include="ApiVersionControlController.cs" />
+    <Compile Include="GitController.cs" />
+    <Compile Include="VersionControlAreaController.cs" />
+    <Compile Include="CodeController.cs" />
+    <Compile Include="VersionControlController.cs" />
+    <Compile Include="VersionControlExtensions.cs" />
+    <Compile Include="FavoriteItemModel.cs" />
+    <Compile Include="VersionControlAdminViewModel.cs" />
+    <Compile Include="VersionControlRepositoryOption.cs" />
+    <Compile Include="DiffViewerOrientation.cs" />
+    <Compile Include="DiffViewerImageMode.cs" />
+    <Compile Include="ChangeExplorerGridDisplayMode.cs" />
+    <Compile Include="ChangeExplorerGridCommentsMode.cs" />
+    <Compile Include="CodeReviewCreateMode.cs" />
+    <Compile Include="CodeReviewLandingPageMode.cs" />
+    <Compile Include="MergeOptionsDeleteSourceCheckboxMode.cs" />
+    <Compile Include="MergeOptionsTransitionWorkItemsCheckboxMode.cs" />
+    <Compile Include="MergeOptionsSquashMergeCheckboxMode.cs" />
+    <Compile Include="PullRequestActivityOrder.cs" />
+    <Compile Include="PullRequestActivityDescriptionExpanded.cs" />
+    <Compile Include="VersionControlUserPreferences.cs" />
+    <Compile Include="EditorPreferences.cs" />
+    <Compile Include="VersionControlViewModel.cs" />
+    <Compile Include="VersionControlConstants.cs" />
+    <Compile Include="VersionControlOptionsKeys.cs" />
+    <Compile Include="VersionControlRepositoryType.cs" />
+    <Compile Include="VersionControlRepositoryInfo.cs" />
+    <Compile Include="TfsRepositoryInfo.cs" />
+    <Compile Include="GitRepositoryInfo.cs" />
+    <Compile Include="DefaultRepositoryInformation.cs" />
+    <Compile Include="VersionControlRepositoryInfoFactory.cs" />
+    <Compile Include="ImportDialogResources.cs" />
+    <Compile Include="ImportStatusResources.cs" />
+    <Compile Include="VCNavigationResources.cs" />
+    <Compile Include="VCResources.cs" />
+    <Compile Include="VCServerResources.cs" />
+    <Compile Include="VersionControlAreaRegistration.cs" />
+    <Compile Include="Helpers\FileContentHelper.cs" />
+    <Compile Include="Helpers\GitSshHelper.cs" />
+    <Compile Include="Helpers\ProtocolHandlerLinkHelper.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scenarios\Branches\BranchResources.resx" />
+    <EmbeddedResource Include="Scenarios\Import\ImportDialog\ImportDialogResources.resx" />
+    <EmbeddedResource Include="Scenarios\Import\ImportStatus\ImportStatusResources.resx" />
+    <EmbeddedResource Include="VCNavigationResources.resx" />
+    <EmbeddedResource Include="VCResources.resx" />
+    <EmbeddedResource Include="VCServerResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

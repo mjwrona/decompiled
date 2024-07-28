@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events" xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd">
+  <instrumentation>
+    <counters xmlns="http://schemas.microsoft.com/win/2005/12/counters" xmlns:auto-ns1="http://schemas.microsoft.com/win/2004/08/events" schemaVersion="1.1">
+      <provider providerGuid="{4E99888D-5F70-4152-A766-4279E38C2E17}" applicationIdentity="@RESOURCE_ASSEMBLY_PATH@\Microsoft.TeamFoundation.CodeSense.Server.Shared.dll" providerName="MicrosoftTeamFoundationCodeSenseServerShared" providerType="userMode" symbol="MicrosoftTeamFoundationCodeSenseServerShared" callback="custom">
+        <counterSet guid="{C11FE868-601F-4F79-9D9D-502822F2EDA3}" name="TFS CodeSense Service" description="TFS CodeSense Service Counters." instances="globalAggregate" symbol="CodeSensePerfCounters" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters" xmlns="http://schemas.microsoft.com/win/2005/12/counters">
+          <counter id="1" name="Code Elements Processed/Sec" description="Number of code elements processed per second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.CodeElementsProcessedPerSecond" />
+          <counter id="2" name="Files Processed/Sec" description="Number of files processed per second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.FilesProcessedPerSecond" />
+          <counter id="3" name="Changesets Processed/Sec" description="Number of changesets processed per second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.ChangesetsProcessedPerSecond" />
+          <counter id="4" name="Slices Aggregated/Sec" description="Number of slices aggregated per second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.SlicesAggregatedPerSecond" />
+          <counter id="5" name="Files Skipped/Sec" description="Number of files skipped per second." type="perf_counter_counter" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.FilesSkippedPerSecond" />
+          <counter id="6" baseID="8" name="Code Elements Processed/File" description="Number of code elements processed per file." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.CodeElementsProcessedPerFile" />
+          <counter id="7" name="Total Code Elements Processed" description="Total number of code elements processed." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.TotalCodeElementsProcessed" />
+          <counter id="8" name="Files Processed Base" description="Number of files processed." type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.FilesProcessedBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="9" name="Changesets Processed Base" description="Number of changesets processed." type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.ChangesetsProcessedBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="10" baseID="9" name="Files Processed/Changeset" description="Number of code files processed per changeset." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.FilesProcessedPerChangeset" />
+          <counter id="11" baseID="9" name="Code Elements Processed/Changeset" description="Number of code elements processed per changeset." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.CodeElementsProcessedPerChangeset" />
+          <counter id="12" baseID="9" name="Processing Time/Changeset" description="Processing time per changeset." type="perf_average_timer" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.ProcessingTimePerChangeset" />
+          <counter id="13" baseID="14" name="Bytes/Aggregate Written" description="Bytes per aggregate written." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.BytesPerAggregateWritten" />
+          <counter id="14" name="Aggregates Written Base" description="Aggregates written." type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.AggregatesWrittenBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="15" name="Current Changeset ID" description="Changeset ID currently being processed." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.CurrentChangesetId" />
+          <counter id="16" baseID="9" name="Work Items/Changeset" description="Number of workitems associated with a changeset." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.WorkItemsPerChangeset" />
+          <counter id="17" baseID="18" name="Permissions Checked/File Read" description="Permissions checked per file read in endpoint." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.PermissionsCheckedPerFileRead" />
+          <counter id="18" name="Permissioned Files Read Base" description="Permissioned files read in endpoint." type="perf_average_base" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.PermissionedFilesReadBase">
+            <counterAttributes>
+              <counterAttribute name="noDisplay" />
+            </counterAttributes>
+          </counter>
+          <counter id="19" baseID="18" name="Restricted Data Stripped/Files Read" description="Ratio of files with restricted data stripped out to total files read in endpoint." type="perf_average_bulk" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.RestrictedDataStrippedToFilesRead" />
+          <counter id="21" name="Deleted AreaIds Encountered" description="The total count of deleted area IDs encountered during indexing." type="perf_counter_rawcount" detailLevel="standard" uri="Microsoft.TeamFoundation.CodeSense.Server.Shared.PerformanceCounters.DeletedAreaIds" />
+        </counterSet>
+      </provider>
+    </counters>
+  </instrumentation>
+</instrumentationManifest>

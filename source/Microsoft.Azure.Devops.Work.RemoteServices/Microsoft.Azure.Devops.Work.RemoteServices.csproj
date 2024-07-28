@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.Azure.Devops.Work.RemoteServices.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C217E7FF-CCBC-4893-9255-B7AA50B46182}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Azure.Devops.Work.RemoteServices</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Azure.Devops.Work.RemoteServices</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IWiqlConverterRemotableService.cs" />
+    <Compile Include="IWorkItemArtifactUriQueryRemotableService.cs" />
+    <Compile Include="UpdateWitRequest.cs" />
+    <Compile Include="CreateWitRequest.cs" />
+    <Compile Include="WiqlConverterFrameworkService.cs" />
+    <Compile Include="WorkHelper.cs" />
+    <Compile Include="WorkItemArtifactUriQueryFrameworkService.cs" />
+    <Compile Include="WorkItemFieldsFrameworkService.cs" />
+    <Compile Include="IWiqlRemotableService.cs" />
+    <Compile Include="IWorkItemFieldsRemotableService.cs" />
+    <Compile Include="IWorkItemTypeCategoryRemotableService.cs" />
+    <Compile Include="WiqlFrameworkService.cs" />
+    <Compile Include="WorkItemQueryFrameworkService.cs" />
+    <Compile Include="IWorkItemQueryRemotableService.cs" />
+    <Compile Include="WorkItemTypeCategoryFrameworkService.cs" />
+    <Compile Include="WorkItemTypeFrameworkService.cs" />
+    <Compile Include="IWorkItemTypeRemotableService.cs" />
+    <Compile Include="IWorkItemRemotableService.cs" />
+    <Compile Include="WorkItemFrameworkService.cs" />
+    <Compile Include="IClassificationNodesRemotableService.cs" />
+    <Compile Include="ClassificationNodesFrameworkService.cs" />
+    <Compile Include="IWorkItemTypeRulesRemotableService.cs" />
+    <Compile Include="WorkItemTypeRulesFrameworkService.cs" />
+    <Compile Include="AttributeConstants.cs" />
+    <Compile Include="LinkTypeConstants.cs" />
+    <Compile Include="WorkItemTrackingRemoteTraceAreas.cs" />
+    <Compile Include="WorkItemTrackingRemoteTraceLayers.cs" />
+    <Compile Include="WorkItemTrackingRemoteTracePoints.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

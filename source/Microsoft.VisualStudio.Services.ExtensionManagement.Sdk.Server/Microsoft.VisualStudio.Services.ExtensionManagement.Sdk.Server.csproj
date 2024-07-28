@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B30477A5-57A2-482A-A264-133458A7BDF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.Types.Server" />
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContributionClaimService.cs" />
+    <Compile Include="EvaluatedCondition.cs" />
+    <Compile Include="EvaluatedRelationship.cs" />
+    <Compile Include="ContributionDiagnostics.cs" />
+    <Compile Include="ContributionHierarchy.cs" />
+    <Compile Include="ContribtuionLookupService.cs" />
+    <Compile Include="ContributionNode.cs" />
+    <Compile Include="ContributionProviderService.cs" />
+    <Compile Include="ContributionServerMethods.cs" />
+    <Compile Include="ExtensionManifestContributionProvider.cs" />
+    <Compile Include="IAssetProvider.cs" />
+    <Compile Include="IContributionClaimService.cs" />
+    <Compile Include="IContributionProviderService.cs" />
+    <Compile Include="IContributionValidator.cs" />
+    <Compile Include="HandlebarContributionTemplate.cs" />
+    <Compile Include="IContributionTemplate.cs" />
+    <Compile Include="IDataProviderScope.cs" />
+    <Compile Include="DefaultDataProviderScope.cs" />
+    <Compile Include="IDataProviderScopeProvider.cs" />
+    <Compile Include="IExtensionDataProviderScopeService.cs" />
+    <Compile Include="ExtensionDataProviderScopeService.cs" />
+    <Compile Include="ExtensionDataProviderScopeExtensions.cs" />
+    <Compile Include="IExtensionDataProviderService.cs" />
+    <Compile Include="ExtensionDataProviderService.cs" />
+    <Compile Include="DataProviderSerializationUtil.cs" />
+    <Compile Include="ExtensionDataProviderTypesService.cs" />
+    <Compile Include="IDemandResolver.cs" />
+    <Compile Include="DemandResult.cs" />
+    <Compile Include="DemandResolverBase.cs" />
+    <Compile Include="ExtensionDemandResolverBase.cs" />
+    <Compile Include="ContributionDemandResolverBase.cs" />
+    <Compile Include="ContributionTypeDemandResolverBase.cs" />
+    <Compile Include="IExtensionDemandsResolutionService.cs" />
+    <Compile Include="ExtensionDemandsResolutionService.cs" />
+    <Compile Include="DemandsResolutionType.cs" />
+    <Compile Include="Demand.cs" />
+    <Compile Include="DemandsResolutionStatus.cs" />
+    <Compile Include="ExtensionDemandsResolutionResult.cs" />
+    <Compile Include="DemandIssueType.cs" />
+    <Compile Include="DemandIssue.cs" />
+    <Compile Include="ExtensionEventCallbackResult.cs" />
+    <Compile Include="ExtensionEventTarget.cs" />
+    <Compile Include="ExtensionEventCallbackData.cs" />
+    <Compile Include="ExtensionOperation.cs" />
+    <Compile Include="InstalledExtensionMessageChangeType.cs" />
+    <Compile Include="InstalledExtensionMessage2.cs" />
+    <Compile Include="ExtensionNotAvailableException.cs" />
+    <Compile Include="ExtensionNotLicensedException.cs" />
+    <Compile Include="ExtensionRetrievalException.cs" />
+    <Compile Include="ProviderNotFoundException.cs" />
+    <Compile Include="AssetProviderNotFoundException.cs" />
+    <Compile Include="ContributionAssetException.cs" />
+    <Compile Include="ContributionAssetNotFoundException.cs" />
+    <Compile Include="ContributionTemplateTypeInvalidException.cs" />
+    <Compile Include="ContributionFilter.cs" />
+    <Compile Include="ContributionFilter`1.cs" />
+    <Compile Include="IContributionFilter.cs" />
+    <Compile Include="EvaluatedConstraint.cs" />
+    <Compile Include="ContributionFilterPluginService.cs" />
+    <Compile Include="ContributionConstraintSet.cs" />
+    <Compile Include="ParsedContributionConstraint.cs" />
+    <Compile Include="ContributionService.cs" />
+    <Compile Include="ContributionQueryCallback.cs" />
+    <Compile Include="ContributionData.cs" />
+    <Compile Include="IContributionProvider.cs" />
+    <Compile Include="IContributionSource.cs" />
+    <Compile Include="IContributionService.cs" />
+    <Compile Include="IContributionServiceWithData.cs" />
+    <Compile Include="ConstraintEvaluationOptions.cs" />
+    <Compile Include="IContributionFilterService.cs" />
+    <Compile Include="InvalidMustacheTemplateContextException.cs" />
+    <Compile Include="PlatformMustacheExtensions.cs" />
+    <Compile Include="IExtensionDataProvider.cs" />
+    <Compile Include="IRemotePropertyProvider.cs" />
+    <Compile Include="DataProviderConstants.cs" />
+    <Compile Include="ExtensionManagementSdkSqlNotificationClasses.cs" />
+    <Compile Include="GalleryFeatureFlags.cs" />
+    <Compile Include="ExtensionManagementSdkFeatureFlags.cs" />
+    <Compile Include="ExtensionManagementRegistry.cs" />
+    <Compile Include="ContributionSourcePriority.cs" />
+    <Compile Include="ExtensionSdkServerConstants.cs" />
+    <Compile Include="AssetLocationIdentifiers.cs" />
+    <Compile Include="DemandExtensionAttribute.cs" />
+    <Compile Include="IDemandExtensionService.cs" />
+    <Compile Include="DemandExtensionService.cs" />
+    <Compile Include="ExtensionAssetDetails.cs" />
+    <Compile Include="ExtensionScopes.cs" />
+    <Compile Include="ExtensionPackageUtil.cs" />
+    <Compile Include="FrameworkExtensionService.cs" />
+    <Compile Include="IExtensionLicensingService.cs" />
+    <Compile Include="ExtensionLicensingService.cs" />
+    <Compile Include="IExtensionService.cs" />
+    <Compile Include="IInstalledExtensionFallbackService.cs" />
+    <Compile Include="IInstalledExtensionManager.cs" />
+    <Compile Include="InstalledExtensionUpdate.cs" />
+    <Compile Include="ProcessedInstalledExtension.cs" />
+    <Compile Include="InstalledExtensionFile.cs" />
+    <Compile Include="FileServiceContributionProvider.cs" />
+    <Compile Include="IFileServiceContributionSource.cs" />
+    <Compile Include="IFileServiceExtensionsService.cs" />
+    <Compile Include="FileSystemContributionProvider.cs" />
+    <Compile Include="FileExtensionAssetDetails.cs" />
+    <Compile Include="LocalExtensionService.cs" />
+    <Compile Include="ILocalExtensionsService.cs" />
+    <Compile Include="InstalledExtensionFallbackService.cs" />
+    <Compile Include="InstalledExtensionManager.cs" />
+    <Compile Include="ILocalExtensionStoragePlugin.cs" />
+    <Compile Include="FileServiceExtensionsService.cs" />
+    <Compile Include="IVersionDiscoveryService.cs" />
+    <Compile Include="VersionDiscoveryService.cs" />
+    <Compile Include="LocalExtensionProviderRegistry.cs" />
+    <Compile Include="LocalExtensionSettingsRegistry.cs" />
+    <Compile Include="LocalExtensionRegistry.cs" />
+    <Compile Include="LocalExtensionInstallException.cs" />
+    <Compile Include="LocalExtensionUtil.cs" />
+    <Compile Include="LocalContributionDetails.cs" />
+    <Compile Include="LocalExtensionProvider.cs" />
+    <Compile Include="LocalExtension.cs" />
+    <Compile Include="IFileSystemExtensionsService.cs" />
+    <Compile Include="FileSystemExtensionsService.cs" />
+    <Compile Include="IContributionPropertyProviderService.cs" />
+    <Compile Include="ContributionPropertyProviderService.cs" />
+    <Compile Include="ContributionPropertyProviderResult.cs" />
+    <Compile Include="IContributionPropertyProvider.cs" />
+    <Compile Include="PropertyProviderConstants.cs" />
+    <Compile Include="ContributionPropertyProviderTypesService.cs" />
+    <Compile Include="ExtensionAssetDownloadState.cs" />
+    <Compile Include="IExtensionAssetProxyService.cs" />
+    <Compile Include="ExtensionAssetProxyService.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="ContributionNodeQueryController.cs" />
+    <Compile Include="PublicDataProviderRequestRestrictionsAttribute.cs" />
+    <Compile Include="DataProvidersQueryController.cs" />
+    <Compile Include="InstalledExtenionsController.cs" />
+    <Compile Include="VersionDiscoveryController.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="ExtMgmtResources.cs" />
+    <Compile Include="WebApi\ExtensionAssetController.cs" />
+    <Compile Include="FeatureManagement\ExperimentFeature.cs" />
+    <Compile Include="FeatureManagement\ExperimentService.cs" />
+    <Compile Include="FeatureManagement\IExperimentService.cs" />
+    <Compile Include="FeatureManagement\IContributedFeatureStateChangedListener.cs" />
+    <Compile Include="FeatureManagement\ContributedFeatureService.cs" />
+    <Compile Include="FeatureManagement\ParsedFeatureRule.cs" />
+    <Compile Include="FeatureManagement\CachedContributedFeature.cs" />
+    <Compile Include="FeatureManagement\ContributedFeatureValuePlugin.cs" />
+    <Compile Include="FeatureManagement\ContributedFeatureValuePlugin`1.cs" />
+    <Compile Include="FeatureManagement\IContributedFeatureValuePlugin.cs" />
+    <Compile Include="FeatureManagement\IContributedFeatureService.cs" />
+    <Compile Include="FeatureManagement\ContributedFeatureController.cs" />
+    <Compile Include="FeatureManagement\ContributedFeatureStateQueryController.cs" />
+    <Compile Include="FeatureManagement\ContributedFeatureStateController.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionFrameworkResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

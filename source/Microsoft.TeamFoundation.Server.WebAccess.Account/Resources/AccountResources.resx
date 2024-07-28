@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SSH_RevokeKey" xml:space="preserve">
+    <value>The public key &lt;span id='pat-delete-name' class='token-name bold'&gt;$tokenName ($keyFingerprint)&lt;/span&gt; will be removed.&lt;br /&gt;&lt;br /&gt;You will be unable to connect via SSH with this public key any longer. You may add this key back at any time.</value>
+  </data>
+  <data name="TokenActionsColumnTitle" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ProfileEmailConfirmationSubHeader" xml:space="preserve">
+    <value>Thanks for verifying your email address. Azure DevOps Services Alerts will now use:</value>
+  </data>
+  <data name="TokenGenerateButton" xml:space="preserve">
+    <value>Create Token</value>
+  </data>
+  <data name="SSH_DataMustNotBeBlank" xml:space="preserve">
+    <value>Data field must contain a valid key value</value>
+  </data>
+  <data name="CreateProjectInfoCMMIHelp" xml:space="preserve">
+    <value>Choose &lt;strong&gt;CMMI&lt;/strong&gt; when your team follows more formal project methods that require a framework for process improvement and an auditable record of decisions.</value>
+  </data>
+  <data name="TokenListPageHeader" xml:space="preserve">
+    <value>Personal access tokens can be used instead of a password to allow applications outside the browser access to the resources stored in your organization.</value>
+  </data>
+  <data name="TokenAllTenantAccounts" xml:space="preserve">
+    <value>All accessible [{0}] organizations</value>
+  </data>
+  <data name="SSH_IndexPageTitle" xml:space="preserve">
+    <value>SSH public keys</value>
+  </data>
+  <data name="SSH_TokenRemoveText" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="TokenHaveTokenNoticeHtml" xml:space="preserve">
+    <value>Your tokens are like passwords. Keep them secret.</value>
+  </data>
+  <data name="TokenAddPageTitle" xml:space="preserve">
+    <value>Create a personal access token</value>
+  </data>
+  <data name="OAuthRevokeAllAccessTitle" xml:space="preserve">
+    <value>Revoke All Access</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="SSH_KeyFormDescription" xml:space="preserve">
+    <value>Contribute to a Git repository without typing a username and password every time.</value>
+  </data>
+  <data name="CreateProjectInfoTitle" xml:space="preserve">
+    <value>Need help deciding?</value>
+  </data>
+  <data name="SSH_KeyStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="CreateProjectInfoProjectNameHelp" xml:space="preserve">
+    <value>Give your team project a name like 'calculator', or 'team awesome'.</value>
+  </data>
+  <data name="OAuthRevokeFailure" xml:space="preserve">
+    <value>Failed to revoke authorizations, please try again later.</value>
+  </data>
+  <data name="CreateProjectInfoAgileHelp" xml:space="preserve">
+    <value>Use &lt;strong&gt;Agile&lt;/strong&gt; if your team tracks development and test activities separately, or wants to compare estimated and completed hours to actuals.</value>
+  </data>
+  <data name="OAuthRevokeAuthorization" xml:space="preserve">
+    <value>This will revoke access for application {0}. &lt;br /&gt;&lt;br /&gt;&lt;span class='permanent-action-warning bold'&gt;This action cannot be undone.&lt;/span&gt;</value>
+  </data>
+  <data name="NoPersonalAccessTokens" xml:space="preserve">
+    <value>You have not created any personal access tokens.</value>
+  </data>
+  <data name="TokenExpirationLabel" xml:space="preserve">
+    <value>Expires In</value>
+  </data>
+  <data name="SSH_KeyInvalid" xml:space="preserve">
+    <value>Revoked</value>
+  </data>
+  <data name="TokenStatusRevoked" xml:space="preserve">
+    <value>Revoked</value>
+  </data>
+  <data name="OAuthRevokeAllAuthorizations" xml:space="preserve">
+    <value>This will revoke access for &lt;span class='red-notice'&gt;ALL AUTHORIZED APPS.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class='permanent-action-warning bold'&gt;This action cannot be undone!&lt;/span&gt;</value>
+  </data>
+  <data name="TokenAllAccountsSelection" xml:space="preserve">
+    <value>All accessible organizations</value>
+  </data>
+  <data name="CreateProjectTitle" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
+  <data name="TokenDescriptionColumnTitle" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TokenRegenerateLinkText" xml:space="preserve">
+    <value>Regenerate</value>
+  </data>
+  <data name="TokenOneTimeDisplayWarning" xml:space="preserve">
+    <value>Make sure you copy the token now. We don't store it and you won't be able to see it again.</value>
+  </data>
+  <data name="SSH_KeysFailedToLoad" xml:space="preserve">
+    <value>Failed to load keys</value>
+  </data>
+  <data name="RevokeAllTokensSuccess" xml:space="preserve">
+    <value>Successfully revoked all personal access tokens.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="TokenAllScopesSelection" xml:space="preserve">
+    <value>All scopes</value>
+  </data>
+  <data name="PersonalAccessToken" xml:space="preserve">
+    <value>Personal Access Token</value>
+  </data>
+  <data name="SSH_KeyFingerprint" xml:space="preserve">
+    <value>Fingerprint</value>
+  </data>
+  <data name="OAuthScopesColumnTitle" xml:space="preserve">
+    <value>Scopes</value>
+  </data>
+  <data name="TokenStatusColumn" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="CreateProjectCancelLink" xml:space="preserve">
+    <value>Not now, maybe later</value>
+  </data>
+  <data name="SSH_DuplicateKeyAdd" xml:space="preserve">
+    <value>The key you are attempting to add is already in use</value>
+  </data>
+  <data name="TokenRevokeFailure" xml:space="preserve">
+    <value>Failed to revoke personal access token, please try again later.</value>
+  </data>
+  <data name="TokenGenerationFailed" xml:space="preserve">
+    <value>Generating the personal access token failed, please try again later. If the problem persists please contact customer support.</value>
+  </data>
+  <data name="OAuthExpirationColumnTitle" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="UserProfilePreferences" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="SSH_ServerFingerprintMessageOnPrem" xml:space="preserve">
+    <value>{0}Compare the server fingerprint when you connect via Git to ensure you've connected to the intended Azure DevOps Server instance.</value>
+  </data>
+  <data name="UserProfileRedirectError" xml:space="preserve">
+    <value>Unable to redirect to your profile, please try again later.</value>
+  </data>
+  <data name="TokenRevokeAllHtmlMessage" xml:space="preserve">
+    <value>All personal access tokens will be revoked. &lt;br /&gt;&lt;br /&gt;Any application using your personal access tokens will be unable to connect to Visual Studio Services.&lt;br /&gt;&lt;br /&gt;&lt;span class='permanent-action-warning bold'&gt;This action cannot be undone.&lt;/span&gt;</value>
+  </data>
+  <data name="TokenCopyActionFailure" xml:space="preserve">
+    <value>Failed to get secret, please try again later.</value>
+  </data>
+  <data name="SPS_ACCOUNT_LEVEL_COOKIE_MISSING" xml:space="preserve">
+    <value>SPSACCOUNTLEVELCOOKIEMISSING</value>
+  </data>
+  <data name="TokenGenerationFailedDueToLifespan" xml:space="preserve">
+    <value>Lifespan of 30 days for a PAT is not allowed. The PAT has not been created. To resolve the issue, configure the maximum lifespan for new PATs to allow at least 30 days. Learn more at https://go.microsoft.com/fwlink/?linkid=2245128</value>
+  </data>
+  <data name="CreateProjectInfoGitHelp" xml:space="preserve">
+    <value>&lt;strong&gt;Git&lt;/strong&gt; is the most lightweight Version Control to use. Local changes are shared with other developers by pushing and pulling changes through a remote, shared repository.</value>
+  </data>
+  <data name="TokenRevokeText" xml:space="preserve">
+    <value>Revoke</value>
+  </data>
+  <data name="SearchUsers" xml:space="preserve">
+    <value>Search users</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="CreatingYourAccount" xml:space="preserve">
+    <value>Creating Your Organization ...</value>
+  </data>
+  <data name="TokenExpirationDateLabel" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="TokenDescriptionLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TokenShowRevokedPATs" xml:space="preserve">
+    <value>Show Revoked Tokens</value>
+  </data>
+  <data name="ProfileEmailConfirmationHeader" xml:space="preserve">
+    <value>Email Address Confirmation</value>
+  </data>
+  <data name="DialogSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="TokenRevokeHtmlMessage" xml:space="preserve">
+    <value>The personal access token &lt;span id='pat-delete-name' class='token-name bold'&gt;$tokenName&lt;/span&gt; will be revoked. &lt;br /&gt;&lt;br /&gt;Any application using this token will be unable to connect to Visual Studio Services.&lt;br /&gt;&lt;br /&gt;&lt;span class='permanent-action-warning bold'&gt;This action cannot be undone.&lt;/span&gt;</value>
+  </data>
+  <data name="OAuthProviderColumnTitle" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="InvalidTokenExperiationDate" xml:space="preserve">
+    <value>Expiration date is not valid</value>
+  </data>
+  <data name="UserProfileConfirmationPending" xml:space="preserve">
+    <value>Confirmation pending</value>
+  </data>
+  <data name="TokenAccountSelectionLabel" xml:space="preserve">
+    <value>Organizations</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please Wait</value>
+  </data>
+  <data name="SSH_KeySaveFailed" xml:space="preserve">
+    <value>Saving the key value failed.</value>
+  </data>
+  <data name="ControlIdentityProviderStaySignedIn" xml:space="preserve">
+    <value>Stay signed in to Azure DevOps</value>
+  </data>
+  <data name="SSH_ServerFingerprintMessage" xml:space="preserve">
+    <value>{0}Compare the server fingerprint when you connect via Git to ensure you've connected to Azure DevOps.</value>
+  </data>
+  <data name="UserProfileInformationChangePicture" xml:space="preserve">
+    <value>Change picture</value>
+  </data>
+  <data name="SSH_DescriptionLearnMoreUrl" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=715524&amp;clcid=0x409</value>
+  </data>
+  <data name="TokenGenerateFormHeaderText" xml:space="preserve">
+    <value>Applications that work outside the browser may require access to your projects. Generate personal access tokens for applications that require a username and password.</value>
+  </data>
+  <data name="PatGridShowMoreLink" xml:space="preserve">
+    <value>Show More</value>
+  </data>
+  <data name="InvalidGuidMessage" xml:space="preserve">
+    <value>Parameter Id is not a valid Guid</value>
+  </data>
+  <data name="TokenHideRevokedPATs" xml:space="preserve">
+    <value>Hide Revoked Tokens</value>
+  </data>
+  <data name="Set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="TokenListPageTitle" xml:space="preserve">
+    <value>Personal access tokens</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="TokenSelectedScopeSelection" xml:space="preserve">
+    <value>Selected scopes</value>
+  </data>
+  <data name="PasswordNotStrong" xml:space="preserve">
+    <value>Password does not meet strength requirements. Passwords must be between 8 and 32 characters long, and must include 3 or more of the following: numbers, uppercase letters, lowercase letters, and special symbols.</value>
+  </data>
+  <data name="SSH_NoKeys" xml:space="preserve">
+    <value>You haven't added any SSH public keys that can access your organization. To get started, &lt;a href="https://go.microsoft.com/fwlink/?LinkID=715525&amp;clcid=0x409"&gt;generate an SSH key&lt;/a&gt;.</value>
+  </data>
+  <data name="CopyPersonalAccessToken" xml:space="preserve">
+    <value>Copy Personal Access Token</value>
+  </data>
+  <data name="TokenDescriptionTooShort" xml:space="preserve">
+    <value>Description cannot be empty</value>
+  </data>
+  <data name="TokenAddMenuItemText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UnderMaintenanceError" xml:space="preserve">
+    <value>The service is under temporary maintenance, but please check the &lt;a href="https://go.microsoft.com/fwlink/?LinkId=223676"&gt;service status&lt;/a&gt; page and try again soon.</value>
+  </data>
+  <data name="PageSignInMessage" xml:space="preserve">
+    <value>The organization or page you are trying to access requires you to sign-in. Please select your identity provider to continue.</value>
+  </data>
+  <data name="TokenHeaderLearnMore" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="UseProfileUsernameSecondary" xml:space="preserve">
+    <value>Secondary username must contain only letters and numbers.</value>
+  </data>
+  <data name="SSH_KeyFormTitle" xml:space="preserve">
+    <value>Add an SSH public key</value>
+  </data>
+  <data name="SSH_PublicKeysDisabled" xml:space="preserve">
+    <value>SSH keys are disabled on this organization.</value>
+  </data>
+  <data name="SSH_RevokeDialogTitle" xml:space="preserve">
+    <value>Remove Public Key</value>
+  </data>
+  <data name="OAuthIssueDateColumnTitle" xml:space="preserve">
+    <value>Issue Date</value>
+  </data>
+  <data name="HideDescription" xml:space="preserve">
+    <value>Hide description</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="TokenCopyText" xml:space="preserve">
+    <value>Copy Token</value>
+  </data>
+  <data name="TextAlmostThere" xml:space="preserve">
+    <value>Almost there! Get ready ....</value>
+  </data>
+  <data name="UserProfileInformation" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="PageSignInTitle" xml:space="preserve">
+    <value>Sign in to Azure DevOps Services</value>
+  </data>
+  <data name="TokenRegenerateFailure" xml:space="preserve">
+    <value>Failed to regenerate the personal access token, please try again later.</value>
+  </data>
+  <data name="OAuthNoAuthorizationsMessageText" xml:space="preserve">
+    <value>You have not granted access to any OAuth-compliant third-party applications.</value>
+  </data>
+  <data name="SSH_InvalidKeyFormat" xml:space="preserve">
+    <value>Invalid public key format</value>
+  </data>
+  <data name="GetTokensDataFailedMessage" xml:space="preserve">
+    <value>Failed to retrieve personal access token, please try again later.</value>
+  </data>
+  <data name="CreateProjectInfoTFVCHelp" xml:space="preserve">
+    <value>Use &lt;strong&gt;Team Foundation Version Control&lt;/strong&gt; if you want a centralized server repository to track and version files. Local changes are always checked in the central server.</value>
+  </data>
+  <data name="EditPATTooltip" xml:space="preserve">
+    <value>Edit personal access token</value>
+  </data>
+  <data name="OAuthApplicationColumnTitle" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="UserProfilePreferencesSaveFailed" xml:space="preserve">
+    <value>Failed to save profile preferences, please try again later.</value>
+  </data>
+  <data name="RevokeAllTokensFailure" xml:space="preserve">
+    <value>Failed to revoke personal access tokens, please try again later.</value>
+  </data>
+  <data name="UserProfileInformationSaveFailed" xml:space="preserve">
+    <value>Failed to save settings, please try again later.</value>
+  </data>
+  <data name="TokenNoScopeSelectedMessage" xml:space="preserve">
+    <value>No scopes have been selected. Please select at least one scope or switch to 'All scopes'</value>
+  </data>
+  <data name="CreatingYourProject" xml:space="preserve">
+    <value>Create a new team project ...</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="SSH_Fingerprint" xml:space="preserve">
+    <value>&lt;b&gt;Server {0} fingerprint &lt;/b&gt; {1} ({2}) &lt;br&gt;</value>
+  </data>
+  <data name="OAuthLoadingAuthorizationsFailed" xml:space="preserve">
+    <value>Could not load your OAuth authorizations. Please try again later.</value>
+  </data>
+  <data name="TokenRevokeSuccess" xml:space="preserve">
+    <value>Successfully revoked personal access token.</value>
+  </data>
+  <data name="SSH_DataLabel" xml:space="preserve">
+    <value>Key Data</value>
+  </data>
+  <data name="SSH_KeyAdded" xml:space="preserve">
+    <value>Added</value>
+  </data>
+  <data name="TokenRevokeAllMenuItemText" xml:space="preserve">
+    <value>Revoke All</value>
+  </data>
+  <data name="SSH_KeyValid" xml:space="preserve">
+    <value>Valid</value>
+  </data>
+  <data name="DefaultProjectNameMyFirstProject" xml:space="preserve">
+    <value>MyFirstProject</value>
+  </data>
+  <data name="CreateProjectInfoScrumHelp" xml:space="preserve">
+    <value>Use &lt;strong&gt;Scrum&lt;/strong&gt; if your team practices Scrum or wants to minimize their planning and tracking overhead.</value>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="TokenRegenerateDialogTitle" xml:space="preserve">
+    <value>Regenerate personal access token</value>
+  </data>
+  <data name="SSH_AddMenuItem" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="FailedToLoadProviderForAccountCreate" xml:space="preserve">
+    <value>TF400664: Sorry, we were unable to retrieve a configured identity provider for you to use when creating an account.  If the problem persists, check your web browser security settings.  You may need to add {0} to your trusted zones.</value>
+  </data>
+  <data name="CreateProjectInfoFooter" xml:space="preserve">
+    <value>Still not sure what options to choose? Find out which &lt;a href="https://go.microsoft.com/fwlink/?LinkId=528870" target="_blank"&gt;process template&lt;/a&gt; and &lt;a href="https://go.microsoft.com/fwlink/?LinkId=528871" target="_blank"&gt;version control&lt;/a&gt; you should use.</value>
+  </data>
+  <data name="TokenAuthorizedScopesLabel" xml:space="preserve">
+    <value>Authorized Scopes</value>
+  </data>
+  <data name="OAuthPageTitle" xml:space="preserve">
+    <value>OAuth authorizations</value>
+  </data>
+  <data name="OAuthPageHeaderText" xml:space="preserve">
+    <value>List of OAuth-compliant third-party applications that you have given permissions to access Azure DevOps resources.</value>
+  </data>
+  <data name="OAuthRevokeAccessTitle" xml:space="preserve">
+    <value>Revoke Access</value>
+  </data>
+  <data name="ProgressPleaseWait" xml:space="preserve">
+    <value>Please wait ...</value>
+  </data>
+  <data name="DialogCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SSH_KeyDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TokenRegenerateHtmlMessage" xml:space="preserve">
+    <value>The personal access token &lt;span id='pat-regenerate-name' class='token-name bold'&gt;$tokenName&lt;/span&gt; will be regenerated. &lt;br /&gt;&lt;br /&gt;Any application using this token must be reauthenticated using the newly generated secret. &lt;br /&gt;&lt;br /&gt;&lt;span class='permanent-action-warning bold'&gt;This action cannot be undone!&lt;/span&gt;</value>
+  </data>
+  <data name="SSH_PrivateKeyUpload" xml:space="preserve">
+    <value>The key you attempted to save appears to be a private key. Private keys are secrets and should not be disclosed. We recommend you create a new SSH key pair and check that you are adding the public key. Public keys normally start with 'ssh-rsa'.</value>
+  </data>
+  <data name="UserProfileRedirectInformation" xml:space="preserve">
+    <value>My Information</value>
+  </data>
+  <data name="TokenExpirationColumnTitle" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="ProfileEmailConfirmationError" xml:space="preserve">
+    <value>We encountered an error trying to finalize the verification of your email address. If you feel you have reached this page in error please sign out of the service and try again. Error details:</value>
+  </data>
+  <data name="TokenRevokeDialogTitle" xml:space="preserve">
+    <value>Revoke personal access token</value>
+  </data>
+  <data name="UnderMaintenanceError_Pcw" xml:space="preserve">
+    <value>Team Project creation is currently disabled because the server is under temporary maintenance. Please check the &lt;a href="https://go.microsoft.com/fwlink/?LinkId=223676"&gt;service status&lt;/a&gt; page and try again soon.</value>
+  </data>
+</root>

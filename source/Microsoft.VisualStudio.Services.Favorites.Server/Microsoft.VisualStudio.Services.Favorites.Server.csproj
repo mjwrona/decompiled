@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Favorites.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE28F72A-FE09-4549-820B-33A1369102CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Favorites.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Favorites.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Favorites.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Favorites.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ServiceAvailabilityHelper.cs" />
+    <Compile Include="ITeamFavoritesPermissionsProvider.cs" />
+    <Compile Include="IClientFavoriteProviderService.cs" />
+    <Compile Include="ClientFavoriteProviderService.cs" />
+    <Compile Include="FavoritesSharedDataProviderSecuredList.cs" />
+    <Compile Include="FavoriteAccessMode.cs" />
+    <Compile Include="OwnerScope.cs" />
+    <Compile Include="FavoriteMigrationState.cs" />
+    <Compile Include="Telemetry.cs" />
+    <Compile Include="TelemetryLayers.cs" />
+    <Compile Include="TracePoints.cs" />
+    <Compile Include="FavoriteController.cs" />
+    <Compile Include="FavoriteProviderController.cs" />
+    <Compile Include="IStoreFavorites.cs" />
+    <Compile Include="IAdministerFavorites.cs" />
+    <Compile Include="IExtendFavoriteStorage.cs" />
+    <Compile Include="IFavoriteProviderService.cs" />
+    <Compile Include="FavoriteProviderService.cs" />
+    <Compile Include="FavoriteFilter.cs" />
+    <Compile Include="QueuedFavoriteEdit.cs" />
+    <Compile Include="FavoriteMetadataSnapshot.cs" />
+    <Compile Include="IFavoriteMetadataEngine.cs" />
+    <Compile Include="FavoriteMetadataEngine.cs" />
+    <Compile Include="IFavoriteService.cs" />
+    <Compile Include="IFavoritesBackPropagator.cs" />
+    <Compile Include="FavoriteService.cs" />
+    <Compile Include="IMetadataProvider.cs" />
+    <Compile Include="IScopeProvider.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="CoreRes.cs" />
+    <Compile Include="DataAccess\FavoriteBinder.cs" />
+    <Compile Include="DataAccess\FavoriteSqlError.cs" />
+    <Compile Include="DataAccess\FavoriteSqlResourceComponent.cs" />
+    <Compile Include="DataAccess\FavoriteSqlResourceComponent2.cs" />
+    <Compile Include="Service\FavoritesPermissionHelper.cs" />
+    <Compile Include="Service\DefaultFavoriteStorage.cs" />
+    <Compile Include="Service\FavoritesStorageAdapter.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

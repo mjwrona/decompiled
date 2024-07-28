@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FieldLabel" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ProcessGridDescriptionColumnDescription" xml:space="preserve">
+    <value>Description of the process</value>
+  </data>
+  <data name="DeleteRuleButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="NewWorkItemTypeButtonText" xml:space="preserve">
+    <value>New work item type</value>
+  </data>
+  <data name="MaxConditionsAddedWarning" xml:space="preserve">
+    <value>You can only add up to {0} conditions to a rule</value>
+  </data>
+  <data name="UpgradeSummmaryDescription" xml:space="preserve">
+    <value>You are about to create an inherited copy of your existing XML process. There are differences between these process models.</value>
+  </data>
+  <data name="TheseAreYourNextSteps" xml:space="preserve">
+    <value>These are your next steps</value>
+  </data>
+  <data name="SelectCondition" xml:space="preserve">
+    <value>Select a condition</value>
+  </data>
+  <data name="DeleteProcessButtonText" xml:space="preserve">
+    <value>Delete process</value>
+  </data>
+  <data name="DeleteWorkItemTypeDialogTitle" xml:space="preserve">
+    <value>Delete work item type</value>
+  </data>
+  <data name="CollapseRowLabel" xml:space="preserve">
+    <value>Collapse row</value>
+  </data>
+  <data name="InheritedProcessDialogDescription" xml:space="preserve">
+    <value>Inherited processes store your customization but still retain the characteristics of the system process they inherit from.</value>
+  </data>
+  <data name="InheritedProcessText" xml:space="preserve">
+    <value>Inherited process</value>
+  </data>
+  <data name="MigrateOobPanelStep2Link1" xml:space="preserve">
+    <value>Edit the target process</value>
+  </data>
+  <data name="MigrateOobPanelStep2Link2" xml:space="preserve">
+    <value>View step-by-step instructions and a video</value>
+  </data>
+  <data name="SetCurrentUserOption" xml:space="preserve">
+    <value>set to current user</value>
+  </data>
+  <data name="MigrateYourHostedXmlProjectFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkId=874479</value>
+  </data>
+  <data name="RulesConditionsWorkItemIsCreated" xml:space="preserve">
+    <value>A work item is created ...</value>
+  </data>
+  <data name="RulesZeroDayShowSystemRules" xml:space="preserve">
+    <value>View system rules</value>
+  </data>
+  <data name="GridNameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="RulesConditionsFieldChanged" xml:space="preserve">
+    <value>A change was made to the value of ...</value>
+  </data>
+  <data name="FriendlyRuleWhenNotChangedCondition" xml:space="preserve">
+    <value>when {0} has not changed</value>
+  </data>
+  <data name="RulesNotCloned" xml:space="preserve">
+    <value>Work item rules are not cloned</value>
+  </data>
+  <data name="YouDontHaveAccessToProjects" xml:space="preserve">
+    <value>You don’t have access to any of the {0} projects which use the process '{1}'</value>
+  </data>
+  <data name="MakeReadOnlyRuleText" xml:space="preserve">
+    <value>Make a field read-only</value>
+  </data>
+  <data name="MigrateOobPanelDropdownLabel" xml:space="preserve">
+    <value>Select a target process</value>
+  </data>
+  <data name="ConditionsSectionLabel" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="Boolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="RulesConditionsStateChangedTo" xml:space="preserve">
+    <value>A work item state changes to ...</value>
+  </data>
+  <data name="WorkItemStatesCloned" xml:space="preserve">
+    <value>Work item states will be cloned</value>
+  </data>
+  <data name="FailedToLaunchCustomizationWizard" xml:space="preserve">
+    <value>Cannot launch process customization wizard, invalid work item reference name or process name.</value>
+  </data>
+  <data name="EditProcessDialogTitle" xml:space="preserve">
+    <value>Edit process</value>
+  </data>
+  <data name="RuleValidationMessage_Empty" xml:space="preserve">
+    <value>Value cannot be empty</value>
+  </data>
+  <data name="InvalidActionType" xml:space="preserve">
+    <value>{0} is not a valid action type.</value>
+  </data>
+  <data name="OnPremCustomProcessDefaultPrefix" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="MigrateOobPanelDescription" xml:space="preserve">
+    <value>Change the process used by the project to another process.</value>
+  </data>
+  <data name="AddActionsTooltip" xml:space="preserve">
+    <value>Actions define the change to apply to a work item field. You may configure up to 10 actions per rule. Start by selecting an action from the dropdown menu.</value>
+  </data>
+  <data name="FriendlyRuleMakeRequiredAction" xml:space="preserve">
+    <value>make {0} required</value>
+  </data>
+  <data name="ContinueButtonText" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="CreateInheritedProcess" xml:space="preserve">
+    <value>Create an inherited process</value>
+  </data>
+  <data name="CreateNewProjectProcessTextboxLabel" xml:space="preserve">
+    <value>Enter the name for the new process for {0}</value>
+  </data>
+  <data name="FriendlyRuleMiddleConditionFormat" xml:space="preserve">
+    <value>, {0}</value>
+  </data>
+  <data name="EnableWorkItemTypeContextMenuText" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="InvalidConditionType" xml:space="preserve">
+    <value>{0} is not a valid condition type.</value>
+  </data>
+  <data name="RulesActionsSetDefaultValue" xml:space="preserve">
+    <value>Set the default value of ... to ...</value>
+  </data>
+  <data name="CreateProcessButtonText" xml:space="preserve">
+    <value>Create process</value>
+  </data>
+  <data name="IconColorPickerLabel" xml:space="preserve">
+    <value>Icon color</value>
+  </data>
+  <data name="UpgradeProcessPanelLearnMoreLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=874476</value>
+  </data>
+  <data name="FieldDropdownPlaceholder" xml:space="preserve">
+    <value>Select a field</value>
+  </data>
+  <data name="XmlProcessText" xml:space="preserve">
+    <value>XML process</value>
+  </data>
+  <data name="FriendlyRuleWhenCurrentUserIsNotMemberOfGroup" xml:space="preserve">
+    <value>When current user is not member of group</value>
+  </data>
+  <data name="QuickSaveRule" xml:space="preserve">
+    <value>Save rule</value>
+  </data>
+  <data name="HeaderCustomizationNotCloned" xml:space="preserve">
+    <value>Header customization will not be cloned</value>
+  </data>
+  <data name="RulesActionsSetCurrentTime" xml:space="preserve">
+    <value>Use the current time to set the value of ...</value>
+  </data>
+  <data name="DynamicInputDropdownPlaceholder" xml:space="preserve">
+    <value>Select a value</value>
+  </data>
+  <data name="DeleteProcessPermissionError" xml:space="preserve">
+    <value>You do not have permission to delete a process. Please contact your collection administrator for the appropriate permission(s)</value>
+  </data>
+  <data name="FriendlyRuleWhenStateIsNot" xml:space="preserve">
+    <value>when a work item state is not '{0}'</value>
+  </data>
+  <data name="WhenStateChangedFromText" xml:space="preserve">
+    <value>When state is changed from ... to ...</value>
+  </data>
+  <data name="StateCondition" xml:space="preserve">
+    <value>State Condition</value>
+  </data>
+  <data name="ConfirmUnsavedChanges" xml:space="preserve">
+    <value>Changes you made may not be saved. Close and lose changes?</value>
+  </data>
+  <data name="CloneProcessDialogTitle" xml:space="preserve">
+    <value>Copy process</value>
+  </data>
+  <data name="DeleteRule" xml:space="preserve">
+    <value>Delete Rule</value>
+  </data>
+  <data name="EditWorkItemTypeDialogTitle" xml:space="preserve">
+    <value>Edit work item type</value>
+  </data>
+  <data name="RuleNameContainsInvalidCharacters" xml:space="preserve">
+    <value>Rule name contains invalid characters.</value>
+  </data>
+  <data name="EditWorkItemTypePermissionError" xml:space="preserve">
+    <value>You do not have permission to edit a work item type. Please contact your collection administrator for the appropriate permission(s).</value>
+  </data>
+  <data name="UploadProcessButtonText" xml:space="preserve">
+    <value>Upload process template</value>
+  </data>
+  <data name="ActionsHeader" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="RulesConditionsValueDefined" xml:space="preserve">
+    <value>A value is defined for ...</value>
+  </data>
+  <data name="RemoveActionLabel" xml:space="preserve">
+    <value>Remove action</value>
+  </data>
+  <data name="ChooseProcessDialogTitle" xml:space="preserve">
+    <value>Choose a process for {0}</value>
+  </data>
+  <data name="DeleteWorkItemTypeLabel" xml:space="preserve">
+    <value>Please type the name of the work item type to confirm:</value>
+  </data>
+  <data name="ColorPickerLabel" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="NoProjectsWarning" xml:space="preserve">
+    <value>There are currently no projects available to change to the &lt;span class="format-break-all"&gt;{0}&lt;/span&gt; process.</value>
+  </data>
+  <data name="StateDropdownPlaceholder" xml:space="preserve">
+    <value>Select a state</value>
+  </data>
+  <data name="AllProcessesText" xml:space="preserve">
+    <value>All processes</value>
+  </data>
+  <data name="PickActionTypeLabel" xml:space="preserve">
+    <value>What should the rule do to this field?</value>
+  </data>
+  <data name="WhenStateChangedText" xml:space="preserve">
+    <value>When state is changed to ...</value>
+  </data>
+  <data name="WizardNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="MigrateProjectsDescriptionText" xml:space="preserve">
+    <value>Change team projects to use the &lt;strong class="format-break-all"&gt;{0}&lt;/strong&gt; process.</value>
+  </data>
+  <data name="DeleteProcessTemplateWarningText" xml:space="preserve">
+    <value>Are you &lt;strong&gt;ABSOLUTELY&lt;/strong&gt; sure? This action &lt;strong&gt;CANNOT&lt;/strong&gt; be undone. This will permanently delete the process template &lt;strong class="format-break-all"&gt;'{0}'&lt;/strong&gt;.</value>
+  </data>
+  <data name="WizardPreviousButtonText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="PicklistString" xml:space="preserve">
+    <value>Picklist (string)</value>
+  </data>
+  <data name="RulesActionsSetValueOf" xml:space="preserve">
+    <value>Set the value of ...</value>
+  </data>
+  <data name="MigrateProjectFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=616873</value>
+  </data>
+  <data name="RuleDefinitionLabel" xml:space="preserve">
+    <value>Rule Definition</value>
+  </data>
+  <data name="CloneProcessPermissionError" xml:space="preserve">
+    <value>You do not have permission to clone a process. Please contact your collection administrator for the appropriate permission(s)</value>
+  </data>
+  <data name="MigrateXmlProjectToInheritedFwLinkText" xml:space="preserve">
+    <value>Learn more about changing the process of an XML project.</value>
+  </data>
+  <data name="ProjectMoveSuccessful" xml:space="preserve">
+    <value>Project move successful!</value>
+  </data>
+  <data name="StateDropdownLabel" xml:space="preserve">
+    <value>Select a state</value>
+  </data>
+  <data name="CloneProcessDialogDescription" xml:space="preserve">
+    <value>Copy an existing inherited process to enable customizations over an existing model.</value>
+  </data>
+  <data name="ClearValueRuleText" xml:space="preserve">
+    <value>Clear the value of a field</value>
+  </data>
+  <data name="WorkItemTypeColorComboAriaLabel" xml:space="preserve">
+    <value>Select work item type color</value>
+  </data>
+  <data name="ConditionCannotBeEmpty" xml:space="preserve">
+    <value>Condition type cannot be empty</value>
+  </data>
+  <data name="RulesConditionsStateNotChanged" xml:space="preserve">
+    <value>A work item state is not changed ... </value>
+  </data>
+  <data name="ProcessNavBreadCrumb" xml:space="preserve">
+    <value>Process navigation breadcrumb</value>
+  </data>
+  <data name="FriendlyRuleFormat" xml:space="preserve">
+    <value>{0} {1}.</value>
+  </data>
+  <data name="MigrateOobPanelStep3ContentHeader" xml:space="preserve">
+    <value>Steps to manually update your work items and board settings:</value>
+  </data>
+  <data name="ToText" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="PickAnActionGridLabel" xml:space="preserve">
+    <value>What should the rule do?</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Date/Time</value>
+  </data>
+  <data name="MigrateOobPanelStep3Update1" xml:space="preserve">
+    <value>Update the column to state mapping for each Team Kanban Board.</value>
+  </data>
+  <data name="MigrateOobPanelStep3Update2" xml:space="preserve">
+    <value>Update existing work items using the right work item types set by the target process.</value>
+  </data>
+  <data name="MigrateOobPanelStep3Update3" xml:space="preserve">
+    <value>Update existing work items using the correct state model in the target process.</value>
+  </data>
+  <data name="PickAConditionTypeGridLabel" xml:space="preserve">
+    <value>When should the rule run?</value>
+  </data>
+  <data name="GridDescriptionColumn" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ThenText" xml:space="preserve">
+    <value>Then</value>
+  </data>
+  <data name="EditProcessPermissionError" xml:space="preserve">
+    <value>You do not have permission to edit a process. Please contact your collection administrator for the appropriate permission(s)</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Text field (single line)</value>
+  </data>
+  <data name="ActionCannotBeEmpty" xml:space="preserve">
+    <value>Action type cannot be empty</value>
+  </data>
+  <data name="AddConditionButtonText" xml:space="preserve">
+    <value>New condition</value>
+  </data>
+  <data name="ProjectsGrid" xml:space="preserve">
+    <value>Projects grid</value>
+  </data>
+  <data name="RulesConditionsValueNotDefined" xml:space="preserve">
+    <value>No value is defined for ...</value>
+  </data>
+  <data name="SystemProcessTag" xml:space="preserve">
+    <value>  [system process]</value>
+  </data>
+  <data name="DisableProcessContextMenuText" xml:space="preserve">
+    <value>Disable process</value>
+  </data>
+  <data name="SetCurrentTimeRuleText" xml:space="preserve">
+    <value>set {0} to current time</value>
+  </data>
+  <data name="WorkItemTypesCloned" xml:space="preserve">
+    <value>Work item types will be cloned</value>
+  </data>
+  <data name="RequireValueRuleText" xml:space="preserve">
+    <value>Require a value for a field</value>
+  </data>
+  <data name="SaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MigrateProjectsDialogTitle" xml:space="preserve">
+    <value>Change process</value>
+  </data>
+  <data name="DeleteProcessContextMenuText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RulesGrid" xml:space="preserve">
+    <value>Rules grid</value>
+  </data>
+  <data name="FriendlyRuleWhenWasCondition" xml:space="preserve">
+    <value>when {0} was '{1}'</value>
+  </data>
+  <data name="ConditionsAreRequired" xml:space="preserve">
+    <value>Conditions cannot be empty</value>
+  </data>
+  <data name="PicklistDouble" xml:space="preserve">
+    <value>Picklist (double)</value>
+  </data>
+  <data name="DeleteWorkItemTypePermissionError" xml:space="preserve">
+    <value>You do not have permission to delete a work item type. Please contact your collection administrator for the appropriate permission(s).</value>
+  </data>
+  <data name="MigrateYourHostedXmlProjectLinkText" xml:space="preserve">
+    <value>Migrate your Hosted XML project(s) to the inherited process</value>
+  </data>
+  <data name="ClearValueOption" xml:space="preserve">
+    <value>clear the value</value>
+  </data>
+  <data name="DynamicInputTextPlaceholder" xml:space="preserve">
+    <value>Input value</value>
+  </data>
+  <data name="MigrateProjectsWarningText" xml:space="preserve">
+    <value>Changing team projects to a system process will cause customizations to be lost. This action is reversible and no data will be lost.</value>
+  </data>
+  <data name="SecurityMenuItem" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="CopyProcessCompleted" xml:space="preserve">
+    <value>Copy process completed successfully</value>
+  </data>
+  <data name="WarningBlockDescription" xml:space="preserve">
+    <value>Warning: Please read the following carefully before proceeding!</value>
+  </data>
+  <data name="DeleteProcessLabel" xml:space="preserve">
+    <value>Please type the name of the process to confirm:</value>
+  </data>
+  <data name="StatesTabDescription" xml:space="preserve">
+    <value>For each work item type, you can customize the workflow to support your team's process. From this page you can add and remove custom states as well as hide inherited states ({0}).</value>
+  </data>
+  <data name="DeleteWorkItemTypeContextMenuText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CopyProcessInProgress" xml:space="preserve">
+    <value>Copy process is in progress</value>
+  </data>
+  <data name="UnsavedChangesMessagePrompt" xml:space="preserve">
+    <value>You currently have unsaved changes. Are you sure you want to leave the page?</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="RuleNameWhitespaceError" xml:space="preserve">
+    <value>Rule name must contain at least one non-whitespace character.</value>
+  </data>
+  <data name="WhenNotChangedConditionText" xml:space="preserve">
+    <value>When {0} is not changed</value>
+  </data>
+  <data name="WhenChangedConditionText" xml:space="preserve">
+    <value>When {0} is changed</value>
+  </data>
+  <data name="ConditionSectionSubHeader" xml:space="preserve">
+    <value>Run the rule when it matches all of these conditions.</value>
+  </data>
+  <data name="DeleteFieldContextMenuText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RulesGridFieldNameHeader" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="WorkItemTypesGrid" xml:space="preserve">
+    <value>Work item types grid</value>
+  </data>
+  <data name="DisableCheckbox" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="SystemProcessesTitle" xml:space="preserve">
+    <value>System processes </value>
+  </data>
+  <data name="CreateProcessDialogTitle" xml:space="preserve">
+    <value>Create inherited process from </value>
+  </data>
+  <data name="FieldRuleModelValidationExceptionCopyMessage" xml:space="preserve">
+    <value>{0} Try validating rules for these values.</value>
+  </data>
+  <data name="RemoveConditionLabel" xml:space="preserve">
+    <value>Remove condition</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>Identity</value>
+  </data>
+  <data name="DeleteProcessTemplateLabel" xml:space="preserve">
+    <value>Please type the name of the process template to confirm:</value>
+  </data>
+  <data name="CustomWorkItemTypesLearnMoreLinkText" xml:space="preserve">
+    <value>Learn more about custom work item types</value>
+  </data>
+  <data name="DeleteProcessDialogTitle" xml:space="preserve">
+    <value>Delete process</value>
+  </data>
+  <data name="RulesFwLinkText" xml:space="preserve">
+    <value>how to define custom rules</value>
+  </data>
+  <data name="SelectParentProcess" xml:space="preserve">
+    <value>Select a parent process</value>
+  </data>
+  <data name="MigrateToDisabledProjectWarning" xml:space="preserve">
+    <value>The process {0} is disabled. You cannot change projects to use disabled processes. Enable this process to allow projects to use it.</value>
+  </data>
+  <data name="ActionDetailsPickFieldLabel" xml:space="preserve">
+    <value>Field to act on</value>
+  </data>
+  <data name="NewTeamProjectContextMenuText" xml:space="preserve">
+    <value>New team project</value>
+  </data>
+  <data name="StatesMustBeDefinedForTransitionRules" xml:space="preserve">
+    <value>States must be defined for transition rules</value>
+  </data>
+  <data name="DisableWorkItemTypeContextMenuText" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="FriendlyRuleWhenCondition" xml:space="preserve">
+    <value>when {0} has value equal to '{1}'</value>
+  </data>
+  <data name="FieldsFilterPlaceholder" xml:space="preserve">
+    <value>Filter by field name</value>
+  </data>
+  <data name="RulesConditionsValueNotEquals" xml:space="preserve">
+    <value>The value of ... (not equals)</value>
+  </data>
+  <data name="RulesConditionsFieldNotChanged" xml:space="preserve">
+    <value>No change was made to the value of ...</value>
+  </data>
+  <data name="RulesActionCopyTo" xml:space="preserve">
+    <value>Copy the value from ...</value>
+  </data>
+  <data name="ProcessNameTextFieldLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FriendlyRuleCopyFromFieldAction" xml:space="preserve">
+    <value>copy value from {1} to {0}</value>
+  </data>
+  <data name="DynamicInputEmptyValidationError" xml:space="preserve">
+    <value>Value cannot be empty</value>
+  </data>
+  <data name="ProcessGridNameColumnDescription" xml:space="preserve">
+    <value>Process Name</value>
+  </data>
+  <data name="DescriptionTextFieldLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="SelectedProjectsGrid" xml:space="preserve">
+    <value>Selected projects to migrate grid</value>
+  </data>
+  <data name="CollectionFieldsGrid" xml:space="preserve">
+    <value>Collection fields grid</value>
+  </data>
+  <data name="Decimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="ImportProcessButtonText" xml:space="preserve">
+    <value>Import process</value>
+  </data>
+  <data name="WhenNotConditionText" xml:space="preserve">
+    <value>When {0} is not equal to {1}</value>
+  </data>
+  <data name="SelectProjectCheckboxLabel" xml:space="preserve">
+    <value>{0} [{1}]</value>
+  </data>
+  <data name="MigrateOobPanelStep2Content" xml:space="preserve">
+    <value>Please fix the issues below on the target process and click Retry</value>
+  </data>
+  <data name="ProcessesFwLinkOnPrem" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=80608</value>
+  </data>
+  <data name="InheritedProcessesTitle" xml:space="preserve">
+    <value>Inherited processes </value>
+  </data>
+  <data name="MigrateOobPanelHeader" xml:space="preserve">
+    <value>Change the project process</value>
+  </data>
+  <data name="RuleNameRequiredError" xml:space="preserve">
+    <value>A rule needs to have a name.</value>
+  </data>
+  <data name="NewWorkItemRule" xml:space="preserve">
+    <value>New work item rule</value>
+  </data>
+  <data name="SystemProcessText" xml:space="preserve">
+    <value>System process</value>
+  </data>
+  <data name="FriendlyRuleWhenCurrentUserIsMemberOfGroup" xml:space="preserve">
+    <value>When current user is member of group</value>
+  </data>
+  <data name="CreateRuleDescription" xml:space="preserve">
+    <value>Automate the behavior of a work item.</value>
+  </data>
+  <data name="PicklistInteger" xml:space="preserve">
+    <value>Picklist (integer)</value>
+  </data>
+  <data name="RulesActionMakeRequired" xml:space="preserve">
+    <value>Make required ...</value>
+  </data>
+  <data name="FieldCondition" xml:space="preserve">
+    <value>Field Condition</value>
+  </data>
+  <data name="RequireConditionsMessage" xml:space="preserve">
+    <value>One or more conditions is required for this action.</value>
+  </data>
+  <data name="EnteredTextIsIncorrect" xml:space="preserve">
+    <value>Entered text is incorrect</value>
+  </data>
+  <data name="FriendlyRuleValueNotDefined" xml:space="preserve">
+    <value>when no value is defined for {0}</value>
+  </data>
+  <data name="CloseButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="SystemProcessCannotEditMessageWithoutLinkPart" xml:space="preserve">
+    <value>System processes cannot be customized. To add customization </value>
+  </data>
+  <data name="FriendlyRuleSetDefaultValueAction" xml:space="preserve">
+    <value>set '{1}' as default value for {0}</value>
+  </data>
+  <data name="FriendlyRuleSetDefaultFromUserAction" xml:space="preserve">
+    <value>set current user as default value for {0}</value>
+  </data>
+  <data name="DeleteFieldLabel" xml:space="preserve">
+    <value>Please type the name of the work item field to confirm:</value>
+  </data>
+  <data name="WhenValueLabel" xml:space="preserve">
+    <value>With value equal to:</value>
+  </data>
+  <data name="FriendlyRuleSetDefaultFromClockAction" xml:space="preserve">
+    <value>set current time as default value for {0}</value>
+  </data>
+  <data name="TreePath" xml:space="preserve">
+    <value>Tree path</value>
+  </data>
+  <data name="WhenStateIsConditionText" xml:space="preserve">
+    <value>When state is ...</value>
+  </data>
+  <data name="CreateProcessPermissionError" xml:space="preserve">
+    <value>You do not have permission to create a process. Please contact your collection administrator for the appropriate permission(s)</value>
+  </data>
+  <data name="ProcessNameAndTagFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="XMLProcessCannotEditMessage" xml:space="preserve">
+    <value>To update your hosted XML process, &lt;a href="{0}"&gt;import&lt;/a&gt; the updated process template.</value>
+  </data>
+  <data name="LockWorkItemFieldDialogWarning" xml:space="preserve">
+    <value>Locking this field means the field cannot be edited in any process. Are you sure you want to continue?</value>
+  </data>
+  <data name="WorkItemFieldsCloned" xml:space="preserve">
+    <value>Work item fields will be cloned</value>
+  </data>
+  <data name="FieldDropdownFieldNotValid" xml:space="preserve">
+    <value>{0} is not a valid field.</value>
+  </data>
+  <data name="FriendlyRuleSetDefaultFromFieldAction" xml:space="preserve">
+    <value>set value of {1} as default value for {0}</value>
+  </data>
+  <data name="RulesActionHideField" xml:space="preserve">
+    <value>Hide the field ...</value>
+  </data>
+  <data name="FriendlyRuleAlwaysCondition" xml:space="preserve">
+    <value>Always {0}.</value>
+  </data>
+  <data name="SetAsDefaultProcessContextMenuText" xml:space="preserve">
+    <value>Set as default process</value>
+  </data>
+  <data name="AvailableProjectsHeader" xml:space="preserve">
+    <value>Available projects</value>
+  </data>
+  <data name="SetCurrentTimeOption" xml:space="preserve">
+    <value>set to current time</value>
+  </data>
+  <data name="CopyProcessFailed" xml:space="preserve">
+    <value>Copy process failed</value>
+  </data>
+  <data name="ProcessesFilterPlaceholder" xml:space="preserve">
+    <value>Filter by process name</value>
+  </data>
+  <data name="SetLockOnWorkItemFieldDialogTitle" xml:space="preserve">
+    <value>Set lock on work item field</value>
+  </data>
+  <data name="ActionsAreRequired" xml:space="preserve">
+    <value>Actions cannot be empty</value>
+  </data>
+  <data name="WorkItemTypeFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkId=809088</value>
+  </data>
+  <data name="ProcessNameTextFieldPlaceholder" xml:space="preserve">
+    <value>Process name (required)</value>
+  </data>
+  <data name="StateTransitionBetweenText" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="RulesGridRuleDefinitionHeader" xml:space="preserve">
+    <value>Rule definition</value>
+  </data>
+  <data name="SystemRule" xml:space="preserve">
+    <value>System rule</value>
+  </data>
+  <data name="UpgradeCompleteSummary" xml:space="preserve">
+    <value>The Hosted XML process '{0}' is successfully cloned to the inherited process '{1}'.</value>
+  </data>
+  <data name="SelectProcessDropdownLabel" xml:space="preserve">
+    <value>Select an existing process for {0}</value>
+  </data>
+  <data name="CreateWorkItemTypePermissionError" xml:space="preserve">
+    <value>You do not have permission to create a work item type. Please contact your collection administrator for the appropriate permission(s).</value>
+  </data>
+  <data name="MakeReadOnlyOption" xml:space="preserve">
+    <value>make read only</value>
+  </data>
+  <data name="DeleteProcessTemplateDialogTitle" xml:space="preserve">
+    <value>Delete process template</value>
+  </data>
+  <data name="DeleteFieldButtonText" xml:space="preserve">
+    <value>Delete work item field</value>
+  </data>
+  <data name="VerifyCustomizations" xml:space="preserve">
+    <value>Verify the customizations you made</value>
+  </data>
+  <data name="SelectAnActionLabel" xml:space="preserve">
+    <value>Select an action</value>
+  </data>
+  <data name="SetCurrentUserRuleText" xml:space="preserve">
+    <value>set {0} to current user</value>
+  </data>
+  <data name="RulesInvalidIdentity" xml:space="preserve">
+    <value>Please enter a valid identity.</value>
+  </data>
+  <data name="GridTypeColumn" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="RulesActionMakeReadOnly" xml:space="preserve">
+    <value>Make read-only ...</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="EditWorkItemTypeContextMenuText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="SomeProcesssAreDisabledText" xml:space="preserve">
+    <value>The dropdown disables those processes which don't contain all the work item types defined in the project.</value>
+  </data>
+  <data name="DeleteConditionMenuItem" xml:space="preserve">
+    <value>Delete Condition</value>
+  </data>
+  <data name="RulesConditionsStateIsNot" xml:space="preserve">
+    <value>A work item state is not ...</value>
+  </data>
+  <data name="WorkflowRestrictionNotCloned" xml:space="preserve">
+    <value>Workflow restriction will not be cloned</value>
+  </data>
+  <data name="WizardFinishButtonText" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="FriendlyRuleValueDefined" xml:space="preserve">
+    <value>when a value is defined for {0}</value>
+  </data>
+  <data name="MigrateOobPanelStep3Warning" xml:space="preserve">
+    <value>Warning! You must update your work items and board settings or they will appear broken.</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="AndText" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="AlwaysText" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="FriendlyRuleWhenNotCondition" xml:space="preserve">
+    <value>when {0} has value not equal to '{1}'</value>
+  </data>
+  <data name="NewProcessNameTemplate" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="StatesFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkId=800035</value>
+  </data>
+  <data name="CustomizationWizardFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=845107</value>
+  </data>
+  <data name="FriendlyRuleMakeReadOnlyAction" xml:space="preserve">
+    <value>make {0} read-only</value>
+  </data>
+  <data name="FriendlyRuleWhenWorkItemIsCreatedCondition" xml:space="preserve">
+    <value>when a work item is created</value>
+  </data>
+  <data name="RuleSummaryNameLabel" xml:space="preserve">
+    <value>Give a name to your rule</value>
+  </data>
+  <data name="UseExistingProcessLinkText" xml:space="preserve">
+    <value>Use an existing process for {0}</value>
+  </data>
+  <data name="DeleteWorkItemTypeButtonText" xml:space="preserve">
+    <value>Delete work item type</value>
+  </data>
+  <data name="UnsavedRuleText" xml:space="preserve">
+    <value>[Unsaved]</value>
+  </data>
+  <data name="UpgradeCompletedTitle" xml:space="preserve">
+    <value>Clone completed</value>
+  </data>
+  <data name="RulesZeroDayTitle" xml:space="preserve">
+    <value>Get started by creating a custom rule</value>
+  </data>
+  <data name="MigrateXmlProjectToInheritedFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=874479</value>
+  </data>
+  <data name="FriendlyRuleCopyFromClockAction" xml:space="preserve">
+    <value>set {0} to current time</value>
+  </data>
+  <data name="CreateNewLinkText" xml:space="preserve">
+    <value>Create a new inherited process for {0}</value>
+  </data>
+  <data name="ProcessGridTeamProjectsColumn" xml:space="preserve">
+    <value>Team projects</value>
+  </data>
+  <data name="DeleteRuleDialogTitle" xml:space="preserve">
+    <value>Delete rule</value>
+  </data>
+  <data name="CreateWorkItemTypeDialogTitle" xml:space="preserve">
+    <value>Create new work item type</value>
+  </data>
+  <data name="FriendlyRuleWhenStateChangedToCondition" xml:space="preserve">
+    <value>when state changes to '{0}'</value>
+  </data>
+  <data name="SelectProject" xml:space="preserve">
+    <value>Select a project</value>
+  </data>
+  <data name="DynamicInputNotDecimalError" xml:space="preserve">
+    <value>Value is not a decimal</value>
+  </data>
+  <data name="FriendlyRuleLastConditionFormat" xml:space="preserve">
+    <value> and {0}</value>
+  </data>
+  <data name="RulesActionClear" xml:space="preserve">
+    <value>Clear the value of ...</value>
+  </data>
+  <data name="EditProcessContextMenuText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="DeleteWorkItemTypeConfirmation" xml:space="preserve">
+    <value>This will delete the work item type &lt;strong class="format-break-all"&gt;'{0}'&lt;/strong&gt;. This can only succeed when no work items of this type exist. If you have work items of this type and wish to delete the type, you must delete them manually before deleting the type.</value>
+  </data>
+  <data name="DeleteFieldDialogTitle" xml:space="preserve">
+    <value>Delete work item field</value>
+  </data>
+  <data name="ProcessHeading" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="MigrateOobPanelStep3CompleteDescription" xml:space="preserve">
+    <value>This project is now using the {0} process.</value>
+  </data>
+  <data name="DeleteCollectionLevelFieldPermissionError" xml:space="preserve">
+    <value>You don’t have 'Delete field from organization' permissions. Please contact your collection administrator to grant this permission for enabling this action.</value>
+  </data>
+  <data name="UpgradeProcessToInherited" xml:space="preserve">
+    <value>Clone process to inherited</value>
+  </data>
+  <data name="DeleteRulePermissionError" xml:space="preserve">
+    <value>You do not have permission to delete a rule. Please contact your collection administrator for the appropriate permission(s).</value>
+  </data>
+  <data name="HyphenCopy" xml:space="preserve">
+    <value>{0} - Copy</value>
+  </data>
+  <data name="EnableProcessContextMenuText" xml:space="preserve">
+    <value>Enable process</value>
+  </data>
+  <data name="InheritedStatesText" xml:space="preserve">
+    <value>Inherited states</value>
+  </data>
+  <data name="NewWorkItemTypeFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=800030</value>
+  </data>
+  <data name="WhenConditionText" xml:space="preserve">
+    <value>When {0} is equal to {1}</value>
+  </data>
+  <data name="ExpandRowLabel" xml:space="preserve">
+    <value>Expand row</value>
+  </data>
+  <data name="ChooseProcessDialogDescription" xml:space="preserve">
+    <value>There are existing inherited processes that your project can use to stay consistent with the customizations of other projects. You can also create a new inherited process for this project.</value>
+  </data>
+  <data name="WhenFieldLabel" xml:space="preserve">
+    <value>The field:</value>
+  </data>
+  <data name="ProcessDescriptionTextFieldLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>{0} is not a valid value.</value>
+  </data>
+  <data name="InvalidState" xml:space="preserve">
+    <value>{0} is not a valid state.</value>
+  </data>
+  <data name="DisableRule" xml:space="preserve">
+    <value>Disable Rule</value>
+  </data>
+  <data name="DisabledTag" xml:space="preserve">
+    <value>(disabled)</value>
+  </data>
+  <data name="YouCanAccessSubsetProjects" xml:space="preserve">
+    <value>You have access to {1} of the {0} projects which use the process '{2}'</value>
+  </data>
+  <data name="NewWorkItemRuleSubText" xml:space="preserve">
+    <value>A rule allows you to specify actions on work item fields to automate their behavior. By defining conditions, you can control when the system applies these changes to the fields.</value>
+  </data>
+  <data name="CreateRuleFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?linkid=852346</value>
+  </data>
+  <data name="InvalidField" xml:space="preserve">
+    <value>{0} is not a valid field.</value>
+  </data>
+  <data name="NewActionButtonText" xml:space="preserve">
+    <value>New action</value>
+  </data>
+  <data name="RulesZeroDayAltText" xml:space="preserve">
+    <value>Custom rules</value>
+  </data>
+  <data name="RemoveButtonText" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>Text field (multi-line)</value>
+  </data>
+  <data name="ProcessesFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=800030</value>
+  </data>
+  <data name="EnableRule" xml:space="preserve">
+    <value>Enable Rule</value>
+  </data>
+  <data name="InheritedProcessLearnMoreLinkText" xml:space="preserve">
+    <value>Learn more about inherited processes</value>
+  </data>
+  <data name="CreateProcessDialogDescription" xml:space="preserve">
+    <value>Create a new inherited process to enable customizations.</value>
+  </data>
+  <data name="DynamicInputValueTooLongError" xml:space="preserve">
+    <value>Value exceeds {0} character limit</value>
+  </data>
+  <data name="RequireValueOption" xml:space="preserve">
+    <value>require a value</value>
+  </data>
+  <data name="NameTextFieldLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GenericFieldText" xml:space="preserve">
+    <value>a field</value>
+  </data>
+  <data name="CreateProcessContextMenuText" xml:space="preserve">
+    <value>Create inherited process</value>
+  </data>
+  <data name="TargetProcessLabel" xml:space="preserve">
+    <value>Target process</value>
+  </data>
+  <data name="CreateInheritedProcessFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkID=616873</value>
+  </data>
+  <data name="DeleteRuleLabel" xml:space="preserve">
+    <value>Please enter the field this rule is on, '{0}', to confirm</value>
+  </data>
+  <data name="AvailableProjectsGrid" xml:space="preserve">
+    <value>Available projects to migrate grid</value>
+  </data>
+  <data name="ProcessGridProjectCountColumnDescription" xml:space="preserve">
+    <value>Number of team projects using this process</value>
+  </data>
+  <data name="SelectProcessDropdownPlaceholder" xml:space="preserve">
+    <value>Select target process</value>
+  </data>
+  <data name="RulesZeroDayCTAText" xml:space="preserve">
+    <value>New rule</value>
+  </data>
+  <data name="PreviousStateLabel" xml:space="preserve">
+    <value>Previous State</value>
+  </data>
+  <data name="CreateButtonText" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="GridRefNameColumn" xml:space="preserve">
+    <value>Reference Name</value>
+  </data>
+  <data name="ProcessesGrid" xml:space="preserve">
+    <value>Processes grid</value>
+  </data>
+  <data name="FriendlyRuleCopyFromUserAction" xml:space="preserve">
+    <value>set {0} to current user</value>
+  </data>
+  <data name="RulesConditionsStateChangedFromAndTo" xml:space="preserve">
+    <value>A work item state changes from ...</value>
+  </data>
+  <data name="FriendlyRuleWhenStateIs" xml:space="preserve">
+    <value>when a work item state is '{0}'</value>
+  </data>
+  <data name="AddConditionsTooltip" xml:space="preserve">
+    <value>The system applies a rule when all rule conditions are met. You may configure up to 2 conditions per rule. Start by selecting a condition from the dropdown menu.</value>
+  </data>
+  <data name="NoCustomFieldsMessage" xml:space="preserve">
+    <value>New rules are only supported for custom fields. Add some fields to your work item type to create a new rule.</value>
+  </data>
+  <data name="SelectedProjectsHeader" xml:space="preserve">
+    <value>Projects that will change process</value>
+  </data>
+  <data name="IconPickerLabel" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="DescribeYourProcess" xml:space="preserve">
+    <value>Describe your process...</value>
+  </data>
+  <data name="ActionStepPickFieldLabel" xml:space="preserve">
+    <value>What field should the rule apply to?</value>
+  </data>
+  <data name="ProjectMoveFailed" xml:space="preserve">
+    <value>Project move failed.</value>
+  </data>
+  <data name="FriendlyRuleWhenStateChangedFromAndToCondition" xml:space="preserve">
+    <value>when state changes from '{0}' to '{1}'</value>
+  </data>
+  <data name="PostUpgradeCustomizations" xml:space="preserve">
+    <value>Post-clone customizations you may need to make manually</value>
+  </data>
+  <data name="RulesActionsCurrentUser" xml:space="preserve">
+    <value>Use the current user to set the value of ...</value>
+  </data>
+  <data name="VerifyCustomizationsFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkId=875118</value>
+  </data>
+  <data name="RuleLearnMoreLinkText" xml:space="preserve">
+    <value>Learn more about work item rules</value>
+  </data>
+  <data name="ConditionsSectionHeader" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="DeleteRuleConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete this rule? This will permanently delete the rule</value>
+  </data>
+  <data name="RulesZeroDaySubtitle" xml:space="preserve">
+    <value>Learn more about {0} on a work item</value>
+  </data>
+  <data name="ExportProcessMenuItem" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FriendlyRuleCopyValueAction" xml:space="preserve">
+    <value>set value of {0} to '{1}'</value>
+  </data>
+  <data name="ProcessPermissionDialogTitle" xml:space="preserve">
+    <value>Permissions for {0}</value>
+  </data>
+  <data name="FriendlyRuleWhenChangedCondition" xml:space="preserve">
+    <value>when {0} has changed</value>
+  </data>
+  <data name="Integer" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+  <data name="ProcessProjectPageLoadAnnouncement" xml:space="preserve">
+    <value>Projects page for process {0}</value>
+  </data>
+  <data name="WhenNotValueLabel" xml:space="preserve">
+    <value>With value not equal to:</value>
+  </data>
+  <data name="CreateRuleDialogTitle" xml:space="preserve">
+    <value>Create rule</value>
+  </data>
+  <data name="RuleNameTextFieldAriaLabel" xml:space="preserve">
+    <value>Enter rule name.</value>
+  </data>
+  <data name="PostUpgradeCustomizationsFwLink" xml:space="preserve">
+    <value>https://go.microsoft.com/fwlink/?LinkId=2002500</value>
+  </data>
+  <data name="SystemProcessCannotEditMessageLinkPart" xml:space="preserve">
+    <value>create an inherited process.</value>
+  </data>
+  <data name="RulesConditionsStateMovedFrom" xml:space="preserve">
+    <value>A work item state moved from ...</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="DynamicInputNotIntegerError" xml:space="preserve">
+    <value>Value is not an integer</value>
+  </data>
+  <data name="EnteredTextIsCorrect" xml:space="preserve">
+    <value>Entered text is correct</value>
+  </data>
+  <data name="TargetStateLabel" xml:space="preserve">
+    <value>TargetState</value>
+  </data>
+  <data name="CloneProcessButtonText" xml:space="preserve">
+    <value>Copy process</value>
+  </data>
+  <data name="RulesConditionsStateIs" xml:space="preserve">
+    <value>A work item state is ...</value>
+  </data>
+  <data name="DropDownSeparatorTo" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="RulesPageKeyboardShortcutGroup" xml:space="preserve">
+    <value>Shortcuts for rules page</value>
+  </data>
+  <data name="DeleteProcessWarningText" xml:space="preserve">
+    <value>Are you &lt;strong&gt;ABSOLUTELY&lt;/strong&gt; sure? This action &lt;strong&gt;CANNOT&lt;/strong&gt; be undone. This will permanently delete the process &lt;strong class="format-break-all"&gt;'{0}'&lt;/strong&gt;.</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="ProcessDescription" xml:space="preserve">
+    <value>Processes are shared between projects so that enterprises can align to a common taxonomy and set of characteristics for work items.</value>
+  </data>
+  <data name="DisabledRuleName" xml:space="preserve">
+    <value>{0} (Disabled)</value>
+  </data>
+  <data name="RuleValidationMessage_InvalidCharacters" xml:space="preserve">
+    <value>Value contains invalid characters</value>
+  </data>
+  <data name="ChangeToInheritedProcessDescription" xml:space="preserve">
+    <value>Change the process used by the team project from a Hosted XML to an inherited process.</value>
+  </data>
+  <data name="NewConditionButtonText" xml:space="preserve">
+    <value>New condition</value>
+  </data>
+  <data name="RulesConditionsCurrentUserIsMemberOfGroup" xml:space="preserve">
+    <value>Current user is member of group ...</value>
+  </data>
+  <data name="ConfirmationTextCorrect" xml:space="preserve">
+    <value>Confirmation text is correct</value>
+  </data>
+  <data name="MigrateOobPanelWarning" xml:space="preserve">
+    <value>Warning! After changing the process you must manually update your work items and board settings or they will appear broken. We will remind you at the end of the third step.</value>
+  </data>
+  <data name="ChangeXMLProcessToInheritedMenuItem" xml:space="preserve">
+    <value>Change process</value>
+  </data>
+  <data name="RulesConditionsCurrentUserIsNotMemberOfGroup" xml:space="preserve">
+    <value>Current user is not member of group ...</value>
+  </data>
+  <data name="UpgradeToInheritancePanelTitle" xml:space="preserve">
+    <value>Clone from XML to inheritance</value>
+  </data>
+  <data name="DeleteFieldConfirmation" xml:space="preserve">
+    <value>Are you &lt;strong&gt;ABSOLUTELY&lt;/strong&gt; sure? This action &lt;strong&gt;CANNOT&lt;/strong&gt; be undone. This will permanently delete the work item field &lt;strong class="format-break-all"&gt;'{0}'&lt;/strong&gt; and remove it from all work item types using it.</value>
+  </data>
+  <data name="WorkItemTypesPlaceholder" xml:space="preserve">
+    <value>Filter by work item type name</value>
+  </data>
+  <data name="UnlockWorkItemFieldDialogWarning" xml:space="preserve">
+    <value>Unlocking this field means the field can be edited in any process. Are you sure you want to continue?</value>
+  </data>
+  <data name="WhenText" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="RulesConditionsValueEquals" xml:space="preserve">
+    <value>The value of ... (equals)</value>
+  </data>
+  <data name="HypenInherited" xml:space="preserve">
+    <value>{0} - Inherited</value>
+  </data>
+  <data name="CloneProcessContextMenuText" xml:space="preserve">
+    <value>Create copy of process</value>
+  </data>
+  <data name="ValueLabel" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="RulesActionDisallowValue" xml:space="preserve">
+    <value>Restrict the transition to state ...</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="UnableToFindProject" xml:space="preserve">
+    <value>Unable to find project with ID {0}</value>
+  </data>
+  <data name="NewRuleName" xml:space="preserve">
+    <value>New rule</value>
+  </data>
+  <data name="SelectTargetProcess" xml:space="preserve">
+    <value>Select target process</value>
+  </data>
+  <data name="DefaultTag" xml:space="preserve">
+    <value>(default)</value>
+  </data>
+  <data name="RuleValidationMessage_TooLong" xml:space="preserve">
+    <value>Value cannot have greater than {0} characters</value>
+  </data>
+</root>

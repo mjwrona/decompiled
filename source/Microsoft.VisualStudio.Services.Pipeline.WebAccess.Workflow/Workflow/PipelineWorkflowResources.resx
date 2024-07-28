@@ -1,0 +1,4297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DeploymentStatusViewRequestedForTitle" xml:space="preserve">
+    <value>Requested for</value>
+  </data>
+  <data name="RepositoryMismatchMessage" xml:space="preserve">
+    <value>The current release and &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; are from different repositories. This difference cannot be calculated.</value>
+  </data>
+  <data name="NoRetentionText" xml:space="preserve">
+    <value>There are no stages found for this release pipeline. Add a stage from the pipeline view before setting its retention policy.</value>
+  </data>
+  <data name="CurrentlyDeployed" xml:space="preserve">
+    <value>Currently deployed</value>
+  </data>
+  <data name="OverallApprovalsNotDeployed" xml:space="preserve">
+    <value>Deployment not started</value>
+  </data>
+  <data name="SaveReleaseMessage" xml:space="preserve">
+    <value>Do you want to save all changes to this release? Note that your changes apply only to this release, not the original release pipeline.</value>
+  </data>
+  <data name="CompletedPhasesHeader" xml:space="preserve">
+    <value>Jobs 1-{0}</value>
+  </data>
+  <data name="ReassigningInProgress" xml:space="preserve">
+    <value>Reassigning...</value>
+  </data>
+  <data name="RenameFolderContextualMenuText" xml:space="preserve">
+    <value>Rename folder</value>
+  </data>
+  <data name="CommitsArtifactLatestArtifactComparisonHeaderInfoText" xml:space="preserve">
+    <value>This list shows the difference in commits between this artifact and the previously-deployed artifact for this stage. If the current artifact pre-dates this release’s artifact, then the difference denotes the list of commits (negative) that will be rolled back when this artifact is deployed to this stage.</value>
+  </data>
+  <data name="ReleaseDescriptionText" xml:space="preserve">
+    <value>Release description</value>
+  </data>
+  <data name="DSWFailingSince" xml:space="preserve">
+    <value>Failing since</value>
+  </data>
+  <data name="ReleaseCanvasRightPane" xml:space="preserve">
+    <value>Release progress - right pane</value>
+  </data>
+  <data name="GeneralText" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="DeploymentType" xml:space="preserve">
+    <value>Deployment type</value>
+  </data>
+  <data name="ARIALabelSaveAsTemplate" xml:space="preserve">
+    <value>Save stage as template</value>
+  </data>
+  <data name="ApprovalPolicyInfo_TimeoutWithinHours" xml:space="preserve">
+    <value>{0} hours</value>
+  </data>
+  <data name="ReleaseNameFormatInfo" xml:space="preserve">
+    <value>Format mask that has been used to generate the release name.​ [More Information](https://go.microsoft.com/fwlink/?linkid=852585 )</value>
+  </data>
+  <data name="DeploymentStatusWidgetReleaseDefinitionNameToolTip" xml:space="preserve">
+    <value>Release pipeline: {0}</value>
+  </data>
+  <data name="EnvironmentStatusReason_CanceledDuringExecutionFormat" xml:space="preserve">
+    <value>Canceled by</value>
+  </data>
+  <data name="ReleaseHelpApprovalsTabLabel" xml:space="preserve">
+    <value>Pre- and post-deployment approvals and gates</value>
+  </data>
+  <data name="PullRequestDeploymentNoTriggerWarning" xml:space="preserve">
+    <value>This release definition is currently not configured to trigger pull request based releases. To configure, toggle on a pull request trigger in at least one of the added artifacts.</value>
+  </data>
+  <data name="DSWTooltipBuildStatus" xml:space="preserve">
+    <value>Build Status</value>
+  </data>
+  <data name="TimelineStatus_QueuedForPipelineDescription" xml:space="preserve">
+    <value>Waiting for running jobs to finish {0}</value>
+  </data>
+  <data name="PreEnvironmentTriggerConditionHelpText" xml:space="preserve">
+    <value>After all the selected stages are successfully deployed to, deployment to this stage will start. To deploy after selected stages are partially successful also, enable the trigger for "partially successful".</value>
+  </data>
+  <data name="ArtifactFilters" xml:space="preserve">
+    <value>Artifact filters</value>
+  </data>
+  <data name="DeployEnvironment" xml:space="preserve">
+    <value>Deploy stage</value>
+  </data>
+  <data name="PublishDeploymentNoEnvironmentsSelected" xml:space="preserve">
+    <value>You must select at least one stage</value>
+  </data>
+  <data name="AutoRedeployTriggerNewTargetWithTags" xml:space="preserve">
+    <value>New target with required tags is available</value>
+  </data>
+  <data name="SelectedArtifactsDescription" xml:space="preserve">
+    <value>{0} artifact's default version is {1} and {2}</value>
+  </data>
+  <data name="FolderRenamed" xml:space="preserve">
+    <value>Folder '{0}' has been renamed to '{1}'.</value>
+  </data>
+  <data name="DeployText" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="SelectDefinitionText" xml:space="preserve">
+    <value>Select a pipeline to view details</value>
+  </data>
+  <data name="OptionsTabItemTitle" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="AccessDeniedTooltip" xml:space="preserve">
+    <value>You don't have permission to perform operation '{0}'</value>
+  </data>
+  <data name="EnvironmentRankWarning" xml:space="preserve">
+    <value>The stage order in releases will display the same order as shown in this pipeline. This order might be different from previous releases.</value>
+  </data>
+  <data name="EnvironmentDeleted" xml:space="preserve">
+    <value>Stage deleted</value>
+  </data>
+  <data name="CancelDeploymentHeading" xml:space="preserve">
+    <value>Cancel the deployment</value>
+  </data>
+  <data name="GatesFailedTooltipFormat" xml:space="preserve">
+    <value>{0} gates failed</value>
+  </data>
+  <data name="GatesPendingText" xml:space="preserve">
+    <value>Not started</value>
+  </data>
+  <data name="AttemptNumberText" xml:space="preserve">
+    <value>Attempt {0}</value>
+  </data>
+  <data name="Timeline_NowAtNode_LoadingFailText" xml:space="preserve">
+    <value>Failed to fetch current deployment details.</value>
+  </data>
+  <data name="ArtifactsDisplayMessage" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. The last successful version of &lt;b&gt;{0} &lt;/b&gt;</value>
+  </data>
+  <data name="DeploymentGroupsIndicatorSucceededText" xml:space="preserve">
+    <value>SUCCEEDED</value>
+  </data>
+  <data name="EnvironmentDefaultNameText" xml:space="preserve">
+    <value>Stage {0}</value>
+  </data>
+  <data name="MoveUpText" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="NoLinkedArtifactsMessage" xml:space="preserve">
+    <value>No artifact sources are linked to this release pipeline. Link artifacts from the pipeline tab.</value>
+  </data>
+  <data name="AssociatedChangesText" xml:space="preserve">
+    <value>Associated changes</value>
+  </data>
+  <data name="ContinuousIntegrationTriggerHeaderText" xml:space="preserve">
+    <value>Continuous deployment</value>
+  </data>
+  <data name="RejectingButton" xml:space="preserve">
+    <value>Rejecting...</value>
+  </data>
+  <data name="EditApprovalsPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to manage approvers for this stage. Changes made will not be saved. Contact your release manager to grant permissions.</value>
+  </data>
+  <data name="CommitsCount" xml:space="preserve">
+    <value>({0} commits)</value>
+  </data>
+  <data name="NextText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="ApprovalOrderTypeAllUserSequentialOrderTitle" xml:space="preserve">
+    <value>In sequence</value>
+  </data>
+  <data name="TriggerForPartiallySucceededHelpText" xml:space="preserve">
+    <value>Enable this option to start deployment even if the selected stages are partially successful.</value>
+  </data>
+  <data name="ArtifactTriggerDisabledMessageForGitHub" xml:space="preserve">
+    <value>Enabling the trigger will create a new release every time a Git push occurs to the selected repository.</value>
+  </data>
+  <data name="WaitingOnManualInterventionCreatedOnText" xml:space="preserve">
+    <value>Waiting on manual intervention {0}</value>
+  </data>
+  <data name="EnvironmentTriggerChoiceGroupHelpText" xml:space="preserve">
+    <value>Set the trigger that will start the deployment to this stage automatically. Select "Release" to deploy to the stage every time a new release is created. Use the "Stage" option to deploy after deployments to selected stages are successful. To allow only manual deployments, select "Manual".&lt;br&gt;[Learn more](https://go.microsoft.com/fwlink/?linkid=852929)</value>
+  </data>
+  <data name="PreDeploymentGatesFailed" xml:space="preserve">
+    <value>Pre-deployment gates failed</value>
+  </data>
+  <data name="EnvironmentErrorsAndWarnings" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="ReleaseEnvironmentsCancellationMessage" xml:space="preserve">
+    <value>Currently scheduled deployments to this environment from previous releases would be canceled</value>
+  </data>
+  <data name="DefinitionScheduleTriggerDescription" xml:space="preserve">
+    <value>Define schedules to trigger releases</value>
+  </data>
+  <data name="PublishDeploymentStatusToWorkItemsHelpText" xml:space="preserve">
+    <value>When the stage completes, creates a deployment summary of all work items linked to the associated changes.</value>
+  </data>
+  <data name="EnvironmentStatusReason_WaitingForAgent" xml:space="preserve">
+    <value>Waiting for an agent</value>
+  </data>
+  <data name="ArtifactTriggerDescriptionForGitHub" xml:space="preserve">
+    <value>GitHub: {0}</value>
+  </data>
+  <data name="CannotModifyVariableGroupScope" xml:space="preserve">
+    <value>You do not have edit permissions on this stage to modify the scope of the variable group.</value>
+  </data>
+  <data name="MinimumSuccessDurationHelp" xml:space="preserve">
+    <value>All gates must continuously be successful for this duration. 0 means deployment will proceed when all gates succeed in the same evaluation cycle.</value>
+  </data>
+  <data name="ArtifactTriggerDisabledMessageForBuild" xml:space="preserve">
+    <value>Enabling the trigger will create a new release every time a new build is available.</value>
+  </data>
+  <data name="WaitingToStartEvaluation" xml:space="preserve">
+    <value>Waiting to start evaluation</value>
+  </data>
+  <data name="AbandonReleaseDialogContentText" xml:space="preserve">
+    <value>Abandoning a release would render it unusable. No deployment can be made using this release again. Do you want to proceed?</value>
+  </data>
+  <data name="ArtifactSourceTypeShowLess" xml:space="preserve">
+    <value>Show less</value>
+  </data>
+  <data name="ArtifactSourceTypeShowMore" xml:space="preserve">
+    <value>{0} more artifact types</value>
+  </data>
+  <data name="ZoomInEnvironments" xml:space="preserve">
+    <value>Zoom in stages</value>
+  </data>
+  <data name="DefinitionImportInvalidJson" xml:space="preserve">
+    <value>Either exported JSON is not valid or it is not compatible with current product. Please export again and try importing again.</value>
+  </data>
+  <data name="RollbackDeployMessage" xml:space="preserve">
+    <value>Rolling back changes - You are deploying an older release. This might remove some work items and commits</value>
+  </data>
+  <data name="BranchFilterAnyBranchText" xml:space="preserve">
+    <value>Any branch</value>
+  </data>
+  <data name="ReleaseNameFormatHelpText" xml:space="preserve">
+    <value>Set the format for the default name of releases from this release pipeline. Use pre-defined variables to generate unique release names. [More information](https://go.microsoft.com/fwlink/?linkid=852585 )</value>
+  </data>
+  <data name="GatesSuccessfulConditionText" xml:space="preserve">
+    <value>All gates must be successful for one evaluation before the timeout of {0}</value>
+  </data>
+  <data name="ActiveTabNoFavoritesText" xml:space="preserve">
+    <value>No favorites yet</value>
+  </data>
+  <data name="RetentionReleaseCountText" xml:space="preserve">
+    <value>minimum of {0} deployed releases</value>
+  </data>
+  <data name="ConfirmDiscardTitle" xml:space="preserve">
+    <value>Confirm discard</value>
+  </data>
+  <data name="TimelineDescriptionGatesFailedTimeoutPrefix" xml:space="preserve">
+    <value>{0} gates failed</value>
+  </data>
+  <data name="DSWDeploymentSuccess" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Searching...</value>
+  </data>
+  <data name="EditVariablesPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to modify variables for this stage. Changes will not be saved. </value>
+  </data>
+  <data name="ArtifactTriggerToggleHelpTextForBuild" xml:space="preserve">
+    <value>Creates a release every time a new build is available.</value>
+  </data>
+  <data name="EnvironmentStatusReason_TaskFailedReasonFormat" xml:space="preserve">
+    <value>{0} task failed</value>
+  </data>
+  <data name="FeaturedCategory" xml:space="preserve">
+    <value>Featured</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_TagFilterConditionFormat" xml:space="preserve">
+    <value>{0}: Regex {1}</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Stage</value>
+  </data>
+  <data name="DSWLastDeployed" xml:space="preserve">
+    <value>Latest deployed</value>
+  </data>
+  <data name="EnvironmentsLabelInfoText" xml:space="preserve">
+    <value>Select the stages</value>
+  </data>
+  <data name="UnsupportedRepositoryMessage" xml:space="preserve">
+    <value>The releases cannot be compared. Only releases of repository types TfsGit, TFVC and GitHub can be compared.</value>
+  </data>
+  <data name="TagFilterHelpTextForAzureContainerRegistry" xml:space="preserve">
+    <value>A release will be triggered only if the Azure Container Registry push tag matches the regular expression specified in the Tag input.
+If no tag filter is specified, release will always be triggered.&lt;br&gt;
+Examples:&lt;br&gt;
+^latest$ - will trigger the release only if the tag is &amp;quot;latest&amp;quot;
+v1&amp;#92;.[0-9] - will trigger the release for tags like &amp;quot;v1.23&amp;quot;, &amp;quot;beta-v1.3-test&amp;quot; etc.
+[More information](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)</value>
+  </data>
+  <data name="BuildInfoAriaLabel" xml:space="preserve">
+    <value>The build number is {0}</value>
+  </data>
+  <data name="EnvironmentStatusRejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="AddEnvironmentDescription" xml:space="preserve">
+    <value>Add a stage</value>
+  </data>
+  <data name="SucceededText" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="TriggerChoiceGroupLabel" xml:space="preserve">
+    <value>Select trigger</value>
+  </data>
+  <data name="ReleaseHelpApproversTabDescription" xml:space="preserve">
+    <value>Approvers and gates process can be monitored from the pipeline. Approvers and gates details are available with a single click on the environment's approval and gates icon.</value>
+  </data>
+  <data name="WaitingManualInterventionDuration" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="AriaLabelGatesStabilizationTimeUnit" xml:space="preserve">
+    <value>The time unit for specifying a delay before evaluation</value>
+  </data>
+  <data name="ApprovalTypeCalloutText" xml:space="preserve">
+    <value>Choose automatic if you do not need any users to approve the deployment. Alternately, select specific users or groups to approve deployments to this stage.</value>
+  </data>
+  <data name="WorkitemsCount" xml:space="preserve">
+    <value>({0} work items)</value>
+  </data>
+  <data name="NoReleasesFoundSecondaryText" xml:space="preserve">
+    <value>You can create a new release manually or {0} to create it automatically</value>
+  </data>
+  <data name="LatestFromBranchWithTags" xml:space="preserve">
+    <value>Latest from branch: {0}; with tags: {1}</value>
+  </data>
+  <data name="LatestFromAllBranchesAndNoTagsFilter" xml:space="preserve">
+    <value>Latest from any branch</value>
+  </data>
+  <data name="LastReleaseColumnData" xml:space="preserve">
+    <value>{0} at {1}</value>
+  </data>
+  <data name="VersionBranchCombinationText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="ReleaseHelpDeploymentLogs" xml:space="preserve">
+    <value>deployments and logs</value>
+  </data>
+  <data name="TestResultsAriaLabel" xml:space="preserve">
+    <value>The test pass percentage is {0}</value>
+  </data>
+  <data name="ApprovalCompletedText" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="CreateReleaseEnvironmentCanvasAriaLabel" xml:space="preserve">
+    <value>Create a release stage canvas</value>
+  </data>
+  <data name="TimeoutText" xml:space="preserve">
+    <value>Timeout in {0}</value>
+  </data>
+  <data name="DeploymentAriaLabel" xml:space="preserve">
+    <value>Deployment status for build {0} and stage {1} is {2}. </value>
+  </data>
+  <data name="ReleaseHelpLogsTabDescription" xml:space="preserve">
+    <value>The pipeline shows live updates for in-progress deployments, highlighting completed tasks for agent phases and - in the case of deployment group - target deployments. Single click access to a simplified view of the logs, with the focus on current action and failures.</value>
+  </data>
+  <data name="ReleaseReportingInvalidReport" xml:space="preserve">
+    <value>Invalid report</value>
+  </data>
+  <data name="BranchFilterRequired" xml:space="preserve">
+    <value>Specify branch filter</value>
+  </data>
+  <data name="AbandonDialogEnvironmentsInProgress" xml:space="preserve">
+    <value>Abandoning is not allowed when deployments are in-progress in any stage. Cancel stage(s) {0} and try again.</value>
+  </data>
+  <data name="NoCommitsMessage" xml:space="preserve">
+    <value>There is no difference in commits between the current release and &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt;.</value>
+  </data>
+  <data name="AriaLabelGatesTimeoutUnit" xml:space="preserve">
+    <value>The time unit for specifying the timeout after which gates fail</value>
+  </data>
+  <data name="TargetNameLabel" xml:space="preserve">
+    <value>Target:</value>
+  </data>
+  <data name="ReassignedStatusFallbackText" xml:space="preserve">
+    <value>Reassigned</value>
+  </data>
+  <data name="ReleaseDefinitionFolderDeleted" xml:space="preserve">
+    <value>Folder {0} and associated subfolders and pipelines have been deleted.</value>
+  </data>
+  <data name="SkippedText" xml:space="preserve">
+    <value>Skipped</value>
+  </data>
+  <data name="CreateFolderContextualMenuOptionText" xml:space="preserve">
+    <value>New folder</value>
+  </data>
+  <data name="NoOfParallelDeployementLabel" xml:space="preserve">
+    <value>Number of parallel deployments</value>
+  </data>
+  <data name="TimelineDescriptionRejectedPrefix" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="ArtifactsDisplayMessageLatestWithBranchAndNoTags" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. The latest successful build of &lt;b&gt;{0}&lt;/b&gt; from branch &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="DeleteFolderConfirmationMessage" xml:space="preserve">
+    <value>Are you sure you want to delete folder {0} and all its associated pipelines?</value>
+  </data>
+  <data name="ReleaseIdInvalidError" xml:space="preserve">
+    <value>Release ID should be greater than 0.</value>
+  </data>
+  <data name="EnvironmentStatusReason_CanceledBeforeExecutionFormat" xml:space="preserve">
+    <value>Canceled by</value>
+  </data>
+  <data name="CopyToClipboardText" xml:space="preserve">
+    <value>Copy to the clipboard</value>
+  </data>
+  <data name="ApprovalPolicyInfo_InAnyOrder" xml:space="preserve">
+    <value>in &lt;strong&gt;any order&lt;/strong&gt;</value>
+  </data>
+  <data name="ViewBuildTooltip" xml:space="preserve">
+    <value>View build</value>
+  </data>
+  <data name="PrevText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="PullRequestTriggerEnvironmentCallout" xml:space="preserve">
+    <value>These are the stages where pull request based releases will be deployed. You can enable/disable a stage for pull request based deployments in the pre-deployment conditions of that stage.</value>
+  </data>
+  <data name="CurrentlyDeployedToggleOnAriaLabel" xml:space="preserve">
+    <value>Show only the releases that are currently deployed or queued for deployment to stages in this pipeline.</value>
+  </data>
+  <data name="ArtifactTriggerBranchFiltersHelpTextForGit" xml:space="preserve">
+    <value>A release will be triggered only if the Git push contains a commit on the specified branch. For example, selecting "master" will trigger a release for a Git push which contains one or more commits to the master branch. To trigger a release for any commit to branches under features/, enter "features/\*". To trigger a release for commits to all branches, enter "\*". Note that all specified filters will be OR'ed. For example, an artifact matching at least one filter condition would be sufficient to trigger a release.</value>
+  </data>
+  <data name="UndeleteReleaseDialogTitleText" xml:space="preserve">
+    <value>Undelete a release</value>
+  </data>
+  <data name="ApprovalTimeoutToolTipText" xml:space="preserve">
+    <value>Specify the maximum time that an approval is allowed to be pending before it is automatically rejected. A maximum timeout of 365 days is allowed.</value>
+  </data>
+  <data name="ReleaseApprovalDatePickerAriaLabel" xml:space="preserve">
+    <value>Date picker</value>
+  </data>
+  <data name="DeploymentCanceledByText" xml:space="preserve">
+    <value>Deployment was canceled by {0} {1}</value>
+  </data>
+  <data name="SetupTriggersLinkText" xml:space="preserve">
+    <value>setup triggers </value>
+  </data>
+  <data name="DeploymentStatusText" xml:space="preserve">
+    <value>Deployment status</value>
+  </data>
+  <data name="WaitingForServerLogsText" xml:space="preserve">
+    <value>Waiting for console output from the server...</value>
+  </data>
+  <data name="SecondsSuffix" xml:space="preserve">
+    <value>{0}s</value>
+  </data>
+  <data name="DefinitionMismatchMessage" xml:space="preserve">
+    <value>&lt;div&gt;The current release is getting deployed from &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; while &lt;a href="{2}" target="_blank" rel="noopener noreferrer"&gt;{3}&lt;/a&gt; is from &lt;a href="{4}" target="_blank" rel="noopener noreferrer"&gt;{5}&lt;/a&gt; . This difference cannot be calculated.&lt;/div&gt;</value>
+  </data>
+  <data name="DeleteEnvironmentPermissionDialogSubtext" xml:space="preserve">
+    <value>You do not have permissions to delete this stage. Contact your administrator to grant permissions.</value>
+  </data>
+  <data name="ReleaseHelpWorkitems" xml:space="preserve">
+    <value>and workitems</value>
+  </data>
+  <data name="DSWTooltipBuild" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="BuildDefinitionLabel" xml:space="preserve">
+    <value>Build pipeline:</value>
+  </data>
+  <data name="DeploymentOptionTypeAllPhaseWithFailedTargetsTitle" xml:space="preserve">
+    <value>All jobs and deployment group targets that are either in failed, cancelled or skipped state</value>
+  </data>
+  <data name="SelectEnvironmentDescription" xml:space="preserve">
+    <value>Select the stages to which to deploy</value>
+  </data>
+  <data name="ArtifactsDisplayMessageLatest" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. The latest successful build of &lt;b&gt;{0} &lt;/b&gt;</value>
+  </data>
+  <data name="EnvironmentAdded" xml:space="preserve">
+    <value>Stage added</value>
+  </data>
+  <data name="JobStateGatesFailed" xml:space="preserve">
+    <value>Gates failed</value>
+  </data>
+  <data name="PhaseWarningsLabel" xml:space="preserve">
+    <value>Click here to view warnings</value>
+  </data>
+  <data name="TasksTabItemTitle" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="NavigationCommandHubLabel" xml:space="preserve">
+    <value>Navigation and commands</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Build branch</value>
+  </data>
+  <data name="TasksText" xml:space="preserve">
+    <value>tasks</value>
+  </data>
+  <data name="EnvironmentOwner" xml:space="preserve">
+    <value>Stage owner</value>
+  </data>
+  <data name="TimelineContent_Queue_NLatestText" xml:space="preserve">
+    <value>Deployment queue settings for this stage are configured to deploy {0} releases in parallel. For subsequently queued deployments, the latest will be deployed and all the others will be canceled.</value>
+  </data>
+  <data name="EnvironmentListMenuText" xml:space="preserve">
+    <value>Stage list menu</value>
+  </data>
+  <data name="ByText" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="EnvironmentsText" xml:space="preserve">
+    <value>Stages</value>
+  </data>
+  <data name="EnvironmentStatusReason_TaskCanceledReasonFormat" xml:space="preserve">
+    <value>{0} task was canceled</value>
+  </data>
+  <data name="WorkItemsForFirstReleaseMessage" xml:space="preserve">
+    <value>The list of work items that will be deployed as a part of this release.</value>
+  </data>
+  <data name="DeleteEnvironmentPermissionDialogTitle" xml:space="preserve">
+    <value>Cannot delete this stage</value>
+  </data>
+  <data name="ForPrepositionForTimestamp" xml:space="preserve">
+    <value>for {0}</value>
+  </data>
+  <data name="AbandonedText" xml:space="preserve">
+    <value>Abandoned</value>
+  </data>
+  <data name="DeploymentGroupsSkippedOfflineSingularText" xml:space="preserve">
+    <value>{0} target skipped</value>
+  </data>
+  <data name="ReleaseGateLogSampleNameFormat" xml:space="preserve">
+    <value>Sample at {0} - {1}</value>
+  </data>
+  <data name="GateNextSample" xml:space="preserve">
+    <value>Next sample</value>
+  </data>
+  <data name="ARIALabelLogsLeftPane" xml:space="preserve">
+    <value>Pipeline logs view left pane</value>
+  </data>
+  <data name="EnvironmentStatusReason_PreApprovalRejectedFormat" xml:space="preserve">
+    <value>Pre-deployment approval rejected by </value>
+  </data>
+  <data name="NewFolderCreated" xml:space="preserve">
+    <value>Folder '{0}' has been created.</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="AvailableArtifactsDisplayMessage" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="TimelineHeaderApprovalRejected" xml:space="preserve">
+    <value>{0} approval rejected</value>
+  </data>
+  <data name="TimelineHeaderApprovalPending" xml:space="preserve">
+    <value>{0} approval pending</value>
+  </data>
+  <data name="ReportBadgeHelpText" xml:space="preserve">
+    <value>Enables showing deployment status badges for selected stages in external repositories</value>
+  </data>
+  <data name="JiraSoftwareCloudAccountText" xml:space="preserve">
+    <value>Jira software cloud account</value>
+  </data>
+  <data name="ReleaseHelpPipeline" xml:space="preserve">
+    <value>Pipeline, artifacts,</value>
+  </data>
+  <data name="NoPermissionForEditReleaseApprovals" xml:space="preserve">
+    <value>You don’t have permission to manage the approvers for this stage</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_ArtifactNameFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="EvaluatingGatesTooltip" xml:space="preserve">
+    <value>Evaluating gates</value>
+  </data>
+  <data name="DemandsNotMetForDeployPhase" xml:space="preserve">
+    <value>There is a problem with deploy job '{0}'. No agents could be found that match the following demands (pool: '{1}'): {2}.</value>
+  </data>
+  <data name="ARIALabelConditionType" xml:space="preserve">
+    <value>Pick Include or Exclude ConditionType</value>
+  </data>
+  <data name="QueueReleasePermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to create release for this pipeline. Contact your administrator to grant permissions.</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>{0} seconds</value>
+  </data>
+  <data name="ReleaseTriggerNotScheduled" xml:space="preserve">
+    <value>Schedule not set</value>
+  </data>
+  <data name="DeploymentGroupLogsFilterChangedText" xml:space="preserve">
+    <value>Filter has changed, filtered list has {0} items.</value>
+  </data>
+  <data name="Workitems" xml:space="preserve">
+    <value>Work Items</value>
+  </data>
+  <data name="OverallApprovalsRejected" xml:space="preserve">
+    <value>Rejected on {0}</value>
+  </data>
+  <data name="ReleasePropertiesNodeLabel" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="UnmaterializedIdentitiesErrorMessage" xml:space="preserve">
+    <value>Failed to add {0} as a local user.</value>
+  </data>
+  <data name="GatesStabilizationTimeLabel" xml:space="preserve">
+    <value>The delay before evaluation</value>
+  </data>
+  <data name="IdText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="CreateReleasePanelArtifactAccordionLabel" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="DeleteTagFilter" xml:space="preserve">
+    <value>Delete tag filter</value>
+  </data>
+  <data name="AutoSaveFailedText" xml:space="preserve">
+    <value>This setting could not be saved.</value>
+  </data>
+  <data name="Timeline_NowAtNode_LoadingText" xml:space="preserve">
+    <value>Loading current deployment details</value>
+  </data>
+  <data name="ScheduledTriggerHeaderText" xml:space="preserve">
+    <value>Scheduled trigger</value>
+  </data>
+  <data name="SpecifySemiColonSeparateListOfArtifact" xml:space="preserve">
+    <value>Specify a semicolon-separated list of artifacts.</value>
+  </data>
+  <data name="ViewStatusText" xml:space="preserve">
+    <value>View status</value>
+  </data>
+  <data name="ArtifactTriggerCreateReleaseOnBuildTaggingCheckboxLabel" xml:space="preserve">
+    <value>Create a release when tags are added to an existing build</value>
+  </data>
+  <data name="TimelineHeaderManualTriggerPending" xml:space="preserve">
+    <value>Manual trigger pending</value>
+  </data>
+  <data name="HelpDialogDescriptionFormat" xml:space="preserve">
+    <value>{0} tab item. {1} of {2}. {3}</value>
+  </data>
+  <data name="JoinNames" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="DeployRelease" xml:space="preserve">
+    <value>Deploy release</value>
+  </data>
+  <data name="DefinitionImportInvalidJsonAlertTitle" xml:space="preserve">
+    <value>Json error</value>
+  </data>
+  <data name="ResumeRejectText" xml:space="preserve">
+    <value>Resume / Reject</value>
+  </data>
+  <data name="DaysSuffix" xml:space="preserve">
+    <value>{0}d</value>
+  </data>
+  <data name="TimelineStatus_QueuedForPipeline" xml:space="preserve">
+    <value>Queued for pipeline</value>
+  </data>
+  <data name="RetentionDaysEmptyValueErrorMessage" xml:space="preserve">
+    <value>This setting is required. You must specify a number between 1 and {0}.</value>
+  </data>
+  <data name="ApprovalOnBehalfOf" xml:space="preserve">
+    <value>{0} on behalf of {1}</value>
+  </data>
+  <data name="ResolveDuplicateEnvironmentNameFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="DownloadAllLogsText" xml:space="preserve">
+    <value>Download all logs</value>
+  </data>
+  <data name="OkText" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="VariablesTabItemTitle" xml:space="preserve">
+    <value>Variables</value>
+  </data>
+  <data name="AutoApprovalCheckboxMoreInfo" xml:space="preserve">
+    <value>This policy applies if the same approver is set for this stage and the previous one. It enables the approver to skip approval for this stage if they have approved the previous one. Approval becomes pending for the other approvers set on this stage.&lt;br&gt;This setting does not apply when a deployment to this stage is manually triggered.</value>
+  </data>
+  <data name="ByColumnText" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="ArtifactsText" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="RequiredInputErrorMessage" xml:space="preserve">
+    <value>This setting is required.</value>
+  </data>
+  <data name="ProjectsTitle" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="CreateReleasePanelVariablesAccordionDescription" xml:space="preserve">
+    <value>Edit value for the variables to be overridden during release creation.</value>
+  </data>
+  <data name="DuplicateEnvironmentNameInfoMessage" xml:space="preserve">
+    <value>The stage was automatically renamed because '{0}' already exists</value>
+  </data>
+  <data name="TimelineContent_Deployment_Agent_FractionTaskSucceededText" xml:space="preserve">
+    <value>{0} task(s) succeeded</value>
+  </data>
+  <data name="Artifact" xml:space="preserve">
+    <value>Artifact</value>
+  </data>
+  <data name="TimelineContent_Deployment_DG_InProgressPendingText" xml:space="preserve">
+    <value>{0} target(s) in progress, {1} pending</value>
+  </data>
+  <data name="TimelineHeaderDeploymentSucceeded" xml:space="preserve">
+    <value>Deployment succeeded</value>
+  </data>
+  <data name="TimelineHeaderDeploymentCanceled" xml:space="preserve">
+    <value>Deployment canceled</value>
+  </data>
+  <data name="TimelineDescriptionAutomaticTrigger" xml:space="preserve">
+    <value>Deployment will start after the successful deployment to {0}</value>
+  </data>
+  <data name="AutoSaveFailedRetryButtonAriaLabel" xml:space="preserve">
+    <value>Retry save</value>
+  </data>
+  <data name="DSWTooltipRelease" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="TimelineHeaderManualTrigger" xml:space="preserve">
+    <value>Manual trigger</value>
+  </data>
+  <data name="DeletePullRequestBranchFilterAriaDescription" xml:space="preserve">
+    <value>Delete the pull request filter.</value>
+  </data>
+  <data name="FromYouText" xml:space="preserve">
+    <value>you</value>
+  </data>
+  <data name="ReleaseSummaryPanelTriggerHeader" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="TimelineHeaderDeploymentInProgress" xml:space="preserve">
+    <value>Deployment in progress</value>
+  </data>
+  <data name="NoEnvironmentsText" xml:space="preserve">
+    <value>There are no stages found for this release pipeline. Add a stage from the pipeline view before adding tasks to it.</value>
+  </data>
+  <data name="BadgeLabelText" xml:space="preserve">
+    <value>Enable the deployment status badge</value>
+  </data>
+  <data name="PostDeploymentApprovalPoliciesInfoMessage" xml:space="preserve">
+    <value>Changes to policies are applicable for pre-deployment approvals also.</value>
+  </data>
+  <data name="HourSuffix" xml:space="preserve">
+    <value>{0}h</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_BranchOrTagsConditionFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="TimelineDescriptionGatesFailedPrefix" xml:space="preserve">
+    <value>{0} gates failed</value>
+  </data>
+  <data name="PreDeploymentApprovalPoliciesInfoMessage" xml:space="preserve">
+    <value>Changes to policies are applicable for post-deployment approvals also.</value>
+  </data>
+  <data name="ConfirmDiscardReleaseText" xml:space="preserve">
+    <value>All unsaved changes to this release will be lost. Are you sure you want to discard your changes to this release?</value>
+  </data>
+  <data name="ArtifactConditionsNotMetText" xml:space="preserve">
+    <value>Artifact conditions not met</value>
+  </data>
+  <data name="EnvironmentPropertiesSubHeader" xml:space="preserve">
+    <value>Name and owners of the stage</value>
+  </data>
+  <data name="AllReleaseDefinitions" xml:space="preserve">
+    <value>Release pipelines</value>
+  </data>
+  <data name="EnvironmentBadgeText" xml:space="preserve">
+    <value>badge</value>
+  </data>
+  <data name="EnvironmentsLabelText" xml:space="preserve">
+    <value>Stages</value>
+  </data>
+  <data name="ReleaseHelpLearnNewTabLabel" xml:space="preserve">
+    <value>Learn what's new</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_SubText" xml:space="preserve">
+    <value>cannot be deployed as the stage trigger condition(s) are set to</value>
+  </data>
+  <data name="DraftText" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="DswNoBuildsMessage" xml:space="preserve">
+    <value>You do not have any builds for this build pipeline.</value>
+  </data>
+  <data name="DeleteReleaseDialogTitleText" xml:space="preserve">
+    <value>Delete {0}</value>
+  </data>
+  <data name="AddTagFilter" xml:space="preserve">
+    <value>Add tag filter</value>
+  </data>
+  <data name="ReleaseDefinitionHasBeenUpdated" xml:space="preserve">
+    <value>Release pipeline '{0}' has been updated.</value>
+  </data>
+  <data name="ReleaseOldView" xml:space="preserve">
+    <value>Release (old view)</value>
+  </data>
+  <data name="ApprovalPoliciesHeading" xml:space="preserve">
+    <value>Approval policies</value>
+  </data>
+  <data name="LinkedReleaseDefinitions" xml:space="preserve">
+    <value>Linked release pipelines</value>
+  </data>
+  <data name="DSWViewSelectorLabel" xml:space="preserve">
+    <value>Deployment status and associated color:</value>
+  </data>
+  <data name="ViewApproval" xml:space="preserve">
+    <value>View approval</value>
+  </data>
+  <data name="DefinitionsPathColumnHeader" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="ArtifactTypeFieldBranchDeletedErrorMessage" xml:space="preserve">
+    <value>Field '{0}' must have valid values. Select another branch as the default.</value>
+  </data>
+  <data name="ARIALabelReleaseHelpRightPane" xml:space="preserve">
+    <value>Release view help dialog right pane</value>
+  </data>
+  <data name="EnvironmentStatus_PreApprovalPendingOn" xml:space="preserve">
+    <value>Pre-deployment approval pending on </value>
+  </data>
+  <data name="ReleaseHelpEnvironments" xml:space="preserve">
+    <value>and stages</value>
+  </data>
+  <data name="PendingYourApprovalSubtext" xml:space="preserve">
+    <value>Pending your approval</value>
+  </data>
+  <data name="ReportingAnalyzeFor15Days" xml:space="preserve">
+    <value>15 days</value>
+  </data>
+  <data name="ReportingAnalyzeFilterDefaultText" xml:space="preserve">
+    <value>Select days</value>
+  </data>
+  <data name="ReleaseDefinitionName" xml:space="preserve">
+    <value>Release pipeline name</value>
+  </data>
+  <data name="TimelineHeaderGatesPending" xml:space="preserve">
+    <value>{0} gates pending</value>
+  </data>
+  <data name="ApprovalTimeoutErrorMessage" xml:space="preserve">
+    <value>You must specify an integer from {0} to {1} for the timeout in {2}.</value>
+  </data>
+  <data name="AutoRedeployTriggerLastSuccessfulDeployAction" xml:space="preserve">
+    <value>Redeploy the last successful deployment</value>
+  </data>
+  <data name="NewSampleSingular" xml:space="preserve">
+    <value>1 new sample</value>
+  </data>
+  <data name="Timeline_PRTrigger_EnableOnCurrentAndPreviousEnvironmentsText" xml:space="preserve">
+    <value>Trigger must be enabled on this and all preceding stages to let pull request based releases to get deployed</value>
+  </data>
+  <data name="ApprovalPolicyInfo_TimeoutBy" xml:space="preserve">
+    <value>and will timeout by &lt;strong&gt;{0}&lt;/strong&gt;</value>
+  </data>
+  <data name="ToBeDeployed" xml:space="preserve">
+    <value>To be deployed</value>
+  </data>
+  <data name="JiraConnectionPlaceholderText" xml:space="preserve">
+    <value>Select JIRA service connection</value>
+  </data>
+  <data name="NotNowText" xml:space="preserve">
+    <value>Not Now</value>
+  </data>
+  <data name="EnvironmentStatusManualInterventionPending" xml:space="preserve">
+    <value>manual intervention</value>
+  </data>
+  <data name="IdentityRevalidationCheckboxMoreInfo" xml:space="preserve">
+    <value>This policy lets you enforce multi-factor authentication in the release approval flow. If this policy is checked it will prompt approvers to re-signin before approving. This feature is only available in Azure DevOps Services for Microsoft Entra backed accounts only. If your organization's active directory enforces multi-factor authentication, then this experience will also take you through it.</value>
+  </data>
+  <data name="ReleaseDefinitionHasBeenDeleted" xml:space="preserve">
+    <value>Release pipeline '{0}' and associated releases have been deleted.</value>
+  </data>
+  <data name="SelectAllEnvironments" xml:space="preserve">
+    <value>Select all stages</value>
+  </data>
+  <data name="ArtifactDownloadOptions" xml:space="preserve">
+    <value>Artifact download</value>
+  </data>
+  <data name="ReleaseSummaryContinuousIntegrationNodeText" xml:space="preserve">
+    <value>Continuous deployment requested for</value>
+  </data>
+  <data name="SinglePhaseSingleIssueLabel" xml:space="preserve">
+    <value>There is 1 issue in job {0}</value>
+  </data>
+  <data name="ARIALabelEnvironmentApproversSelection" xml:space="preserve">
+    <value>Select approvers</value>
+  </data>
+  <data name="ReportingEnvironmentMedian" xml:space="preserve">
+    <value>minutes / Median</value>
+  </data>
+  <data name="WaitingOnTaskNameTooltipFormat" xml:space="preserve">
+    <value>Waiting on {0}</value>
+  </data>
+  <data name="DeploymentOptionTypeAllPhaseTitle" xml:space="preserve">
+    <value>All jobs and all deployment group targets</value>
+  </data>
+  <data name="NoEnvironmentsToDeploy" xml:space="preserve">
+    <value>There are no stages to deploy</value>
+  </data>
+  <data name="ArtifactTypeDeletedOrUnauthoriedMessage" xml:space="preserve">
+    <value>Field '{0}' should have valid values. Artifact inputs have either been deleted or you do not have permissions to view them.</value>
+  </data>
+  <data name="EditReleaseDisabledMessage" xml:space="preserve">
+    <value>You cannot edit an abandoned release</value>
+  </data>
+  <data name="PostDeploymentGatesFailed" xml:space="preserve">
+    <value>Post-deployment gates failed</value>
+  </data>
+  <data name="DeploymentFailedMultipleEnvironments" xml:space="preserve">
+    <value>Deployment failed on the following stages</value>
+  </data>
+  <data name="ArtifactSourceIsNotAccessibleText" xml:space="preserve">
+    <value>source is not accessible</value>
+  </data>
+  <data name="ReleaseSummaryNodeNoArtifactsText" xml:space="preserve">
+    <value>No artifacts</value>
+  </data>
+  <data name="SelectApproverInputText" xml:space="preserve">
+    <value>Search users and groups</value>
+  </data>
+  <data name="ForceDeleteReleaseDefinition" xml:space="preserve">
+    <value>Automatically cancel any in-progress release deployments</value>
+  </data>
+  <data name="DeploymentStatusWidgetEnvironmentName" xml:space="preserve">
+    <value>Stage name: {0}</value>
+  </data>
+  <data name="ActiveReleasesFilterTitle" xml:space="preserve">
+    <value>Filter Releases</value>
+  </data>
+  <data name="NoneText" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="TimelineContent_Queue_NInSequenceText" xml:space="preserve">
+    <value>Deployment queue settings for this stage are configured to deploy {0} releases in parallel. Subsequently queued deployments will be  started in order.</value>
+  </data>
+  <data name="MultiArtifactTypeDisplayNameFormat" xml:space="preserve">
+    <value>Multi {0}</value>
+  </data>
+  <data name="ReportingAnalyzeFor30Days" xml:space="preserve">
+    <value>30 days</value>
+  </data>
+  <data name="DSWRuleGreaterThanFirstRuleError" xml:space="preserve">
+    <value>This rule value should be less than the first rule value.</value>
+  </data>
+  <data name="DeploymentTypeTesting" xml:space="preserve">
+    <value>Testing</value>
+  </data>
+  <data name="CreateNewReleaseText" xml:space="preserve">
+    <value>Create new release</value>
+  </data>
+  <data name="ApprovalDeferDeploymentTitle" xml:space="preserve">
+    <value>Defer deployment for later</value>
+  </data>
+  <data name="CreateReleasePanelDeploymentTriggerDescription" xml:space="preserve">
+    <value>Click on a stage to change its trigger from automated to manual.</value>
+  </data>
+  <data name="NoMachineFound" xml:space="preserve">
+    <value>No machine found in given deployment group.</value>
+  </data>
+  <data name="DswBDPickerToolTip" xml:space="preserve">
+    <value>The build pipeline for which the widget will show the deployment and test status.</value>
+  </data>
+  <data name="PreviousReleases" xml:space="preserve">
+    <value>Previous releases</value>
+  </data>
+  <data name="TimelineDescriptionDeploymentCanceledPrefix" xml:space="preserve">
+    <value>Deployment canceled</value>
+  </data>
+  <data name="GettingStartedWithRelease" xml:space="preserve">
+    <value>Getting started with release pipelines</value>
+  </data>
+  <data name="ActiveReleasesNameAbandonedStatusText" xml:space="preserve">
+    <value>(abandoned)</value>
+  </data>
+  <data name="CurrentDeployedReleaseText" xml:space="preserve">
+    <value>Currently deployed</value>
+  </data>
+  <data name="TagFilterForDockerHub" xml:space="preserve">
+    <value>Tag Filter</value>
+  </data>
+  <data name="AriaLabelEnvironmentApprovalTimeoutValue" xml:space="preserve">
+    <value>Timeout in {0}</value>
+  </data>
+  <data name="DeploymentGatesAndSamples" xml:space="preserve">
+    <value>Deployment gates \ samples</value>
+  </data>
+  <data name="DeleteEmptyBranchFilter" xml:space="preserve">
+    <value>Delete the empty branch filter</value>
+  </data>
+  <data name="JobStateGatesSucceeded" xml:space="preserve">
+    <value>Gates succeeded</value>
+  </data>
+  <data name="ReleaseCreatedOn" xml:space="preserve">
+    <value>Created On</value>
+  </data>
+  <data name="ReleaseCreatedBy" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="EnvironmentStatusReason_QueuedForDeployment" xml:space="preserve">
+    <value>Waiting in the deployment queue</value>
+  </data>
+  <data name="ReleaseSummaryContinuousIntegrationText" xml:space="preserve">
+    <value>Triggered by</value>
+  </data>
+  <data name="ImportRdMenuItemText" xml:space="preserve">
+    <value>Import a pipeline</value>
+  </data>
+  <data name="OverallApprovalsCancelled" xml:space="preserve">
+    <value>Canceled on {0}</value>
+  </data>
+  <data name="AddToDashboard_FailureMessage" xml:space="preserve">
+    <value>{0} was not successfully added to the {1} dashboard.</value>
+  </data>
+  <data name="ARIADescriptionEnvironmentCanvas" xml:space="preserve">
+    <value>Use arrow keys to navigate between the stages and press enter to navigate between the links in the particular stage</value>
+  </data>
+  <data name="ApproversAccordionDescriptionText" xml:space="preserve">
+    <value>Select the users who can approve or reject deployments to this stage</value>
+  </data>
+  <data name="TimelineQueueInfoButtonAriaLabel" xml:space="preserve">
+    <value>More information about deployment queue settings</value>
+  </data>
+  <data name="EnvironmentDescriptionLinkTitle" xml:space="preserve">
+    <value>Click here to view stage logs</value>
+  </data>
+  <data name="FailedGatesMessage" xml:space="preserve">
+    <value>gates failed</value>
+  </data>
+  <data name="CanceledTimestampFormat" xml:space="preserve">
+    <value>Canceled at {0}</value>
+  </data>
+  <data name="DeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DSWTestRangeCoverageError" xml:space="preserve">
+    <value>The complete test percent range is not covered. Keep one of the following percent values the same as this rule.</value>
+  </data>
+  <data name="CloneEnvironmentNameFormat" xml:space="preserve">
+    <value>Copy of {0}</value>
+  </data>
+  <data name="StatusFilterText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SamplingIntervalHelp" xml:space="preserve">
+    <value>The duration after which the gates are re-evaluated. This must be greater than the longest typical response time of the configured gates to allow all responses to be received in each evaluation.</value>
+  </data>
+  <data name="TimelineDescriptionDeploymentDeferred" xml:space="preserve">
+    <value>Deployment deferred to {0}</value>
+  </data>
+  <data name="SettableAtReleaseTime" xml:space="preserve">
+    <value>Settable at release time</value>
+  </data>
+  <data name="TimelineStatus_QueuedForAgentDescription" xml:space="preserve">
+    <value>Queued on &lt;b&gt;{0}&lt;/b&gt;  {1}</value>
+  </data>
+  <data name="SelectedAllArtifactsText" xml:space="preserve">
+    <value>Selected all artifacts</value>
+  </data>
+  <data name="ScheduledTriggerAfterReleaseText" xml:space="preserve">
+    <value>Scheduled after release creation</value>
+  </data>
+  <data name="DSWTooltipTestsPassed" xml:space="preserve">
+    <value>Tests Passed</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="ActiveReleasesMenuItemButtonAriaLabel" xml:space="preserve">
+    <value>Release menu items</value>
+  </data>
+  <data name="ArtifactSourceUrlFormat" xml:space="preserve">
+    <value>Artifact source url for the artifact {0}</value>
+  </data>
+  <data name="EnvironmentStatusReason_QueuedForDeploymentWithLink" xml:space="preserve">
+    <value>Waiting in the deployment queue. &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;View queue&lt;/a&gt;</value>
+  </data>
+  <data name="DeploymentNotStartedText" xml:space="preserve">
+    <value>Not yet started</value>
+  </data>
+  <data name="CancelCommentPlacehodler" xml:space="preserve">
+    <value>Enter a comment</value>
+  </data>
+  <data name="PrimaryArtifact" xml:space="preserve">
+    <value>Primary artifact</value>
+  </data>
+  <data name="SecondsSingular" xml:space="preserve">
+    <value>1 second</value>
+  </data>
+  <data name="EnvironmentStatusPartiallySucceeded" xml:space="preserve">
+    <value>Partially succeeded</value>
+  </data>
+  <data name="SkippedAllArtifactsText" xml:space="preserve">
+    <value>{0} artifact's default version is {1} and selected zero artifacts</value>
+  </data>
+  <data name="DeploymentGroupsProgressTargetText" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="ApprovalPolicyInfo_TimeoutWithinDays" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="TimelineHeaderDeploymentPendingIntervention" xml:space="preserve">
+    <value>Deployment pending intervention</value>
+  </data>
+  <data name="DSWTooltipEnvironment" xml:space="preserve">
+    <value>Stage</value>
+  </data>
+  <data name="ReleaseCanvasLeftPane" xml:space="preserve">
+    <value>Release progress - left pane</value>
+  </data>
+  <data name="ReferenceNameText" xml:space="preserve">
+    <value>Reference name</value>
+  </data>
+  <data name="ReleaseApprovalReassignButtonText" xml:space="preserve">
+    <value>Reassign</value>
+  </data>
+  <data name="ReportingMTTR" xml:space="preserve">
+    <value>Mean time to recover (MTTR)</value>
+  </data>
+  <data name="DeploymentNotCompletedText" xml:space="preserve">
+    <value>Not yet completed</value>
+  </data>
+  <data name="ARIALabelEditorToolbar" xml:space="preserve">
+    <value>Release pipeline editor toolbar</value>
+  </data>
+  <data name="RetentionReleaseCountTitle" xml:space="preserve">
+    <value>Minimum releases to keep</value>
+  </data>
+  <data name="SelectProjectText" xml:space="preserve">
+    <value>Select a Project</value>
+  </data>
+  <data name="DSWClickToViewDeploymentTootlipMessage" xml:space="preserve">
+    <value>Click or press enter to view details of this deployment</value>
+  </data>
+  <data name="ReleaseSummaryContinuousIntegrationForWord" xml:space="preserve">
+    <value>for</value>
+  </data>
+  <data name="LatestReleaseColumnHeader" xml:space="preserve">
+    <value>Last released by</value>
+  </data>
+  <data name="DeploymentStatusStartedTitle" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="TimelineHeaderScheduledTrigger" xml:space="preserve">
+    <value>Scheduled trigger</value>
+  </data>
+  <data name="DefinitionScheduleToggleHelpText" xml:space="preserve">
+    <value>Create a new release at the specified times</value>
+  </data>
+  <data name="DoneText" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="RenameDefinitionContextualMenuText" xml:space="preserve">
+    <value>Rename pipeline</value>
+  </data>
+  <data name="WorkitemCount" xml:space="preserve">
+    <value>({0} work item)</value>
+  </data>
+  <data name="SelectedArtifactsTotalCountText" xml:space="preserve">
+    <value>Selected {0}/{1} artifact(s)</value>
+  </data>
+  <data name="BranchFiltersGit" xml:space="preserve">
+    <value>Branch filters</value>
+  </data>
+  <data name="MultiPhaseSingleIssueLabel" xml:space="preserve">
+    <value>There is 1 issue from job {0} to job {1}</value>
+  </data>
+  <data name="ActiveReleaseDescriptionHeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ReleaseHelpContributionsTabDescription" xml:space="preserve">
+    <value>View rich test results in context of each environment, including the results from other extensions that contribute to the process.</value>
+  </data>
+  <data name="ActiveDefinitionsTabTitle" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="PullRequestDeploymentEnabledAriaLabel" xml:space="preserve">
+    <value>Pull request deployment is enabled.</value>
+  </data>
+  <data name="ReleaseSummaryTagsLabel" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="GeneratedGateDescription" xml:space="preserve">
+    <value>{0} ({1}: {2})</value>
+  </data>
+  <data name="GatesPhaseAddString" xml:space="preserve">
+    <value>Add a gates job</value>
+  </data>
+  <data name="PullRequestTriggerLabel" xml:space="preserve">
+    <value>Pull request trigger</value>
+  </data>
+  <data name="SaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="HelpDialogAnnouncement" xml:space="preserve">
+    <value>Use Tab and arrow keys to navigate to all sections</value>
+  </data>
+  <data name="SingleErrorText" xml:space="preserve">
+    <value>{0} error</value>
+  </data>
+  <data name="ReleaseApprovalMinutesSelectorAriaLabel" xml:space="preserve">
+    <value>Select minutes</value>
+  </data>
+  <data name="UnlimitedParallelDeploymentLabel" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
+  <data name="EnvironmentNodeDescriptionWithMoreThanOnePhasesAndOneOrZeroTask" xml:space="preserve">
+    <value>{0} jobs, {1} task</value>
+  </data>
+  <data name="EnvironmentPropertiesSummary" xml:space="preserve">
+    <value>Owned by {0}</value>
+  </data>
+  <data name="QueueSettingsAccordionHeading" xml:space="preserve">
+    <value>Deployment queue settings</value>
+  </data>
+  <data name="MaterializationInProgressMessage" xml:space="preserve">
+    <value>Adding the Active Directory identity as a local user is in progress...</value>
+  </data>
+  <data name="LoadingFetchWorkItems" xml:space="preserve">
+    <value>Fetching work items...</value>
+  </data>
+  <data name="InProgressTaskDetailInfo" xml:space="preserve">
+    <value>Running job &lt;b&gt;{0}&lt;/b&gt; : &lt;b&gt;{1}&lt;/b&gt;  {2}</value>
+  </data>
+  <data name="EnvironmentAutoRedeployTriggerDescription" xml:space="preserve">
+    <value>Configure the events that trigger automated redeployment.</value>
+  </data>
+  <data name="DeploymentGroupsIndicatorPassedText" xml:space="preserve">
+    <value>{0}% PASSED</value>
+  </data>
+  <data name="CommitsForFirstReleaseMessage" xml:space="preserve">
+    <value>List of commits that will be deployed as a part of this release.</value>
+  </data>
+  <data name="FailedGatesText" xml:space="preserve">
+    <value>Failed gates</value>
+  </data>
+  <data name="GatesPhaseTitle" xml:space="preserve">
+    <value>Gates job</value>
+  </data>
+  <data name="MoreGateActionsEllipsesButtonAriaLabel" xml:space="preserve">
+    <value>More gate operations</value>
+  </data>
+  <data name="TimelineDescriptionApprovalPendingOnMultipleSinceFormat" xml:space="preserve">
+    <value>On {0} {1} (+{2}) since {3}</value>
+  </data>
+  <data name="ArtifactIconTooltip" xml:space="preserve">
+    <value>The artifact that triggered this release</value>
+  </data>
+  <data name="ArtifactTriggerDescriptionForBuild" xml:space="preserve">
+    <value>Build: {0}</value>
+  </data>
+  <data name="ApprovalApproved" xml:space="preserve">
+    <value>Approved on {0}</value>
+  </data>
+  <data name="ErrorsInPhase" xml:space="preserve">
+    <value>{0} errors in job</value>
+  </data>
+  <data name="DeploymentWidgetTestsDurationToolTipDuration" xml:space="preserve">
+    <value>Test duration: {0}</value>
+  </data>
+  <data name="DeploymentStatusViewQueuedTitle" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="ArtifactTriggerDescriptionForPackageManagement" xml:space="preserve">
+    <value>Package: {0}</value>
+  </data>
+  <data name="GatesNextSampleTimeText" xml:space="preserve">
+    <value>Next sample in {0}</value>
+  </data>
+  <data name="AriaLabelMinimumSuccessDurationValue" xml:space="preserve">
+    <value>The minimum duration for steady results after a successful gates evaluation is {0}</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="RenameRdContextualMenuText" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="PreDeploymentApproversHeading" xml:space="preserve">
+    <value>Pre-deployment approvals</value>
+  </data>
+  <data name="AutoApprovalCheckboxLabel" xml:space="preserve">
+    <value>Skip approval if the same approver approved the previous stage</value>
+  </data>
+  <data name="SaveAsTemplateDialogHeading" xml:space="preserve">
+    <value>Save stage as a template</value>
+  </data>
+  <data name="RetentionDaysToRetainInfoText" xml:space="preserve">
+    <value>Set the number of days to retain a release deployed to this stage. Any release can be retained for at least 1 day and a maximum of {0} days.
+[Learn more about release retention]({1})</value>
+  </data>
+  <data name="EnvironmentPostDeploymentApprovalsHeading" xml:space="preserve">
+    <value>Post-deployment approvals</value>
+  </data>
+  <data name="ReleaseReportingPanelMessage" xml:space="preserve">
+    <value>Analyze various performance indicators that give insight into agility, stability, and quality of the selected release pipeline.</value>
+  </data>
+  <data name="NoAgentQueueFound" xml:space="preserve">
+    <value>There is a problem with deploy job '{0}'. No agent pool was found with ID {1}.</value>
+  </data>
+  <data name="FolderDoesNotExist" xml:space="preserve">
+    <value>The specified folder does not exist</value>
+  </data>
+  <data name="CommitsComparedToMessageText" xml:space="preserve">
+    <value>&lt;div&gt;Commits are compared to &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; deployment &lt;/div&gt;</value>
+  </data>
+  <data name="InValidIdentityErrorMessage" xml:space="preserve">
+    <value>Enter a valid identity.</value>
+  </data>
+  <data name="FolderNameContainsInvalidCharacterError" xml:space="preserve">
+    <value>Folder name cannot contain the following characters: /\&lt;&gt;&amp;*?"|:</value>
+  </data>
+  <data name="PreviousDeploymentText" xml:space="preserve">
+    <value>(Previous deployment)</value>
+  </data>
+  <data name="TimelineDescriptionDeploymentStartedPrefix" xml:space="preserve">
+    <value>Deployment started</value>
+  </data>
+  <data name="ForceDeleteReleaseDefinitionTooltip" xml:space="preserve">
+    <value>Selecting this option marks all in-progress, queued, or pending release deployments for cancelation and proceeds with the release pipeline deletion.</value>
+  </data>
+  <data name="DefaultArtifactLatestText" xml:space="preserve">
+    <value>Latest</value>
+  </data>
+  <data name="WaitingSinceText" xml:space="preserve">
+    <value>Waiting since</value>
+  </data>
+  <data name="PullRequestDeployment" xml:space="preserve">
+    <value>Pull request deployment</value>
+  </data>
+  <data name="FetchingQueueInfo" xml:space="preserve">
+    <value>Retrieving queue information...</value>
+  </data>
+  <data name="EnvironmentPoliciesAccordionText" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="JobRejectedStatus" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="EnvironmentInProgressMessage" xml:space="preserve">
+    <value>Cannot edit as the deployment process is currently in-progress</value>
+  </data>
+  <data name="AriaLabelGatesTimeoutValue" xml:space="preserve">
+    <value>The timeout after which gates fail is {0}</value>
+  </data>
+  <data name="OpenReleaseInNewTabMenuItemText" xml:space="preserve">
+    <value>Open in new tab</value>
+  </data>
+  <data name="NoPermissionForEditReleaseEnvironment" xml:space="preserve">
+    <value>You don’t have permission to edit this release stage</value>
+  </data>
+  <data name="ScheduledTriggerAfterEnvironmentsText" xml:space="preserve">
+    <value>Scheduled after {0} stages</value>
+  </data>
+  <data name="RetentionTabARIALabel" xml:space="preserve">
+    <value>Release pipeline retention</value>
+  </data>
+  <data name="NewEnvironmentDefinitionText" xml:space="preserve">
+    <value>New stage definition</value>
+  </data>
+  <data name="ReleaseHelpPipelineTabLabel" xml:space="preserve">
+    <value>Pipeline, artifacts, and stages</value>
+  </data>
+  <data name="ReportingEnvironmentSuccessfulDeployment" xml:space="preserve">
+    <value>Successful</value>
+  </data>
+  <data name="NewEnvironmentLabel" xml:space="preserve">
+    <value>New stage</value>
+  </data>
+  <data name="RdSecurityTabTitle" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="DelayTimeSamplesText" xml:space="preserve">
+    <value>Delay time samples</value>
+  </data>
+  <data name="DSWTestRuleEmptyError" xml:space="preserve">
+    <value>This can't be empty.</value>
+  </data>
+  <data name="SavingReleaseText" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="MessageBarOverflowButtonAriaLabel" xml:space="preserve">
+    <value>See more</value>
+  </data>
+  <data name="DeleteBranchFilterForArtifactFilter" xml:space="preserve">
+    <value>Delete branch filter</value>
+  </data>
+  <data name="DeploymentAuthorizationRequiredFor" xml:space="preserve">
+    <value>You would be asked to sign in to Azure subscription(s) {0} before the deployment starts.</value>
+  </data>
+  <data name="ReassignApproverComponentTitle" xml:space="preserve">
+    <value>Reassign approver</value>
+  </data>
+  <data name="DisabledText" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="DSWErrorMessageForBDFetchFailure" xml:space="preserve">
+    <value>We couldn't find any build pipelines. Try refreshing.</value>
+  </data>
+  <data name="MultiPhaseMultipleErrorsLabel" xml:space="preserve">
+    <value>There are {0} from job {1} to job {2}</value>
+  </data>
+  <data name="EditEnvironmentGatesPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to manage gates for this stage. Changes made will not be saved. Contact your release manager to grant permissions.</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="GatesMinimumSuccessDurationErrorMessage" xml:space="preserve">
+    <value>Value must be less than the timeout.</value>
+  </data>
+  <data name="ArtifactNodeAriaLabel" xml:space="preserve">
+    <value>{0} artifact</value>
+  </data>
+  <data name="GatesCollapsibleDescriptionText" xml:space="preserve">
+    <value>Define gates to evaluate before or after the deployment.</value>
+  </data>
+  <data name="MinutesSingular" xml:space="preserve">
+    <value>1 minute</value>
+  </data>
+  <data name="SingularErrorInPhase" xml:space="preserve">
+    <value>1 error in job</value>
+  </data>
+  <data name="RedeployAction" xml:space="preserve">
+    <value>Redeploy</value>
+  </data>
+  <data name="ParallelDeploymentCountLabel" xml:space="preserve">
+    <value>Maximum number of parallel deployments</value>
+  </data>
+  <data name="GatesTimeoutTime" xml:space="preserve">
+    <value>Timeout in {0}</value>
+  </data>
+  <data name="GatesTimeoutHelp" xml:space="preserve">
+    <value>The maximum evaluation period for gates. The deployment will be rejected if the timeout is reached before gates succeed.</value>
+  </data>
+  <data name="IgnoreGateHeading" xml:space="preserve">
+    <value>Ignore gate</value>
+  </data>
+  <data name="SaveAsTemplate" xml:space="preserve">
+    <value>Save as template</value>
+  </data>
+  <data name="DSWViewPickerInfoProp" xml:space="preserve">
+    <value>Select Deployment Status to see deployment status states and associated tile colors. Or, select Test Pass Rate to add rules to change the color of the status tile based on the test pass percentage. Rules are applied in the order shown. In case of conflicting rules, those lower in the list are used.</value>
+  </data>
+  <data name="ApprovalPolicyInfo_TimeoutWithin" xml:space="preserve">
+    <value>within &lt;strong&gt;{0}&lt;/strong&gt;</value>
+  </data>
+  <data name="DemandsWarning" xml:space="preserve">
+    <value>There are no agents that satisfy the job’s demands</value>
+  </data>
+  <data name="TagFilterRequired" xml:space="preserve">
+    <value>Specify a tag filter.</value>
+  </data>
+  <data name="NoJiraEndpointInfo" xml:space="preserve">
+    <value>Install Azure Pipelines for Jira app in JIRA Software cloud and add organization to create a connection.</value>
+  </data>
+  <data name="TriggerAndArtifactsProperties" xml:space="preserve">
+    <value>Release trigger and artifacts properties section</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="ManualTriggerTabName" xml:space="preserve">
+    <value>Manual only</value>
+  </data>
+  <data name="NoWorkItemsMessage" xml:space="preserve">
+    <value>There is no difference in work items between the current release and &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt;.</value>
+  </data>
+  <data name="ActiveDefinitionsFilterBarItemPlaceholderText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="LogsTabItemTitle" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="RejectionCompletedText" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="ArtifactComparisonHeaderText" xml:space="preserve">
+    <value>Difference in {0}</value>
+  </data>
+  <data name="PendingApprovalMultipleEnvironments" xml:space="preserve">
+    <value>Pending approval on {0}, {1} and {2} more stage(s).</value>
+  </data>
+  <data name="EnvironmentStatusGates" xml:space="preserve">
+    <value>Processing gates</value>
+  </data>
+  <data name="ResumingButton" xml:space="preserve">
+    <value>Resuming...</value>
+  </data>
+  <data name="JobApprovalPendingStatus" xml:space="preserve">
+    <value>Approval pending</value>
+  </data>
+  <data name="MultipleErrorsText" xml:space="preserve">
+    <value>{0} errors</value>
+  </data>
+  <data name="ManualInterventionRejectedOnTimeout" xml:space="preserve">
+    <value>&lt;strong&gt;{0}&lt;/strong&gt; timed out</value>
+  </data>
+  <data name="RetentionDaysCountText" xml:space="preserve">
+    <value>Keep for {0} days,</value>
+  </data>
+  <data name="EnvironmentStatusReason_ApprovalPendingFormat" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="EnvironmentStatusReason_ManualInterventionPendingReasonFormat" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="ActiveDefinitionsRightPaneARIALabel" xml:space="preserve">
+    <value>Active pipelines right pane</value>
+  </data>
+  <data name="SearchBoxAriaLabelText" xml:space="preserve">
+    <value>searchBoxLabel</value>
+  </data>
+  <data name="EnvironmentDescriptionLinkTooltip" xml:space="preserve">
+    <value>View stage tasks</value>
+  </data>
+  <data name="BuildSelectiveArtifactsMessage" xml:space="preserve">
+    <value>Following are the artifacts published in the latest version of the build.</value>
+  </data>
+  <data name="GatesPhaseHelpMarkdown" xml:space="preserve">
+    <value>Link to the documentation</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="ReleasesText" xml:space="preserve">
+    <value>Releases</value>
+  </data>
+  <data name="NoArtifacts" xml:space="preserve">
+    <value>No artifacts added.</value>
+  </data>
+  <data name="EditTasksText" xml:space="preserve">
+    <value>Edit tasks</value>
+  </data>
+  <data name="ReleaseConditionsNavigationLabel" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="DeleteDefinitionDialogTitle" xml:space="preserve">
+    <value>Delete release pipeline</value>
+  </data>
+  <data name="RejectionInProgressText" xml:space="preserve">
+    <value>Rejecting</value>
+  </data>
+  <data name="DeploymentGroupsIndicatorFailedText" xml:space="preserve">
+    <value>FAILED</value>
+  </data>
+  <data name="AriaLabelMinimumSuccessDurationUnit" xml:space="preserve">
+    <value>The time unit for specifying a minimum duration for steady results after a successful gates evaluation</value>
+  </data>
+  <data name="DSWTooltipTestRunDuration" xml:space="preserve">
+    <value>Test Run Duration</value>
+  </data>
+  <data name="ARIALabelCreateTemplate" xml:space="preserve">
+    <value>Create the template</value>
+  </data>
+  <data name="PullRequestDeploymentDisabledEnvironmentsWarningMessage" xml:space="preserve">
+    <value>Pull request based releases can never reach this stage. Enable pull request deployment in {0} stages to complete the flow.</value>
+  </data>
+  <data name="RetentionRetainArtifactDescription" xml:space="preserve">
+    <value>Retain the build for all releases deployed to this stage</value>
+  </data>
+  <data name="ReleaseGateLogSampleFullFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="EnvironmentStatusCanceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="AllDefinitionsText" xml:space="preserve">
+    <value>All pipelines</value>
+  </data>
+  <data name="WorkItemsArtifactLatestArtifactComparisonHeaderInfoText" xml:space="preserve">
+    <value>This list shows the difference in work items between this artifact and the previously-deployed artifact for this stage. If the current artifacts pre-date this release’s artifacts, then the difference denotes the list of work items (negative) that will be rolled back when this artifact is deployed to this stage.</value>
+  </data>
+  <data name="AbandonReleaseConfirmationMessageFormat" xml:space="preserve">
+    <value>Release '{0}' has been abandoned</value>
+  </data>
+  <data name="AddNewTimeDescription" xml:space="preserve">
+    <value>Add a new time</value>
+  </data>
+  <data name="GatesFailedCountText" xml:space="preserve">
+    <value>{0} gates failed in the latest sample {1}</value>
+  </data>
+  <data name="ReleaseSummaryManualTriggeredText" xml:space="preserve">
+    <value>Manually triggered by</value>
+  </data>
+  <data name="FailedText" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="ReassignmentCompletedText" xml:space="preserve">
+    <value>Reassigned</value>
+  </data>
+  <data name="WorkItemsLatestArtifactComparisonComparedToMessageText" xml:space="preserve">
+    <value>&lt;div&gt;Work items are compared to the &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; deployment (currently on this stage).&lt;/div&gt;</value>
+  </data>
+  <data name="TimelineContent_Deployment_Agent_TaskSucceededSkippedText" xml:space="preserve">
+    <value>{0} task(s) succeeded, {1} task(s) skipped</value>
+  </data>
+  <data name="ApprovalsDeferredAndApproved" xml:space="preserve">
+    <value>Approved and deployment deferred to {0}</value>
+  </data>
+  <data name="DeleteEnvironmentWarningMessage" xml:space="preserve">
+    <value>You are about to delete the '{0}' stage and all its settings. This action cannot be reversed.</value>
+  </data>
+  <data name="ActiveReleasesNameDraftStatusText" xml:space="preserve">
+    <value>(draft)</value>
+  </data>
+  <data name="ViewAttemptsAriaLabel" xml:space="preserve">
+    <value>View attempts</value>
+  </data>
+  <data name="DSWTestRatePickerInfoProp" xml:space="preserve">
+    <value>Add rules to change the color of the status tile based on the test pass percentage. Rules are applied in the order shown. In case of conflicting rules, those lower in the list are used.</value>
+  </data>
+  <data name="DSWErrorMessageForEnvironmentFetchFailure" xml:space="preserve">
+    <value>We couldn't find any release pipelines associated with build pipeline {0}. Try refreshing.</value>
+  </data>
+  <data name="BuildArtifactsNotAccessibleMessage" xml:space="preserve">
+    <value>There is no build available or the source is not accessible. You can select all artifacts or specify the list of artifacts to be downloaded below.</value>
+  </data>
+  <data name="SecurityDialogPermissionText" xml:space="preserve">
+    <value>Permissions for {0}</value>
+  </data>
+  <data name="ArtifactVersionSelectErrorMessageDefault" xml:space="preserve">
+    <value>No version has been selected for this artifact source.</value>
+  </data>
+  <data name="JobReassignedStatus" xml:space="preserve">
+    <value>Reassigned</value>
+  </data>
+  <data name="TargetBranchFilters" xml:space="preserve">
+    <value>Target Branch Filters</value>
+  </data>
+  <data name="ReportingEnvironmentTotalDeployment" xml:space="preserve">
+    <value>Total deployments</value>
+  </data>
+  <data name="AriaLabelEnvironmentApprovalTimeoutUnit" xml:space="preserve">
+    <value>The time unit for specifying a timeout</value>
+  </data>
+  <data name="CheckButtonLabel" xml:space="preserve">
+    <value>Select the row</value>
+  </data>
+  <data name="MultipleIssuesFormat" xml:space="preserve">
+    <value>{0} issues</value>
+  </data>
+  <data name="DeploymentFailedMultipleEnvironmentsFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="ReleaseWorkItemComparisonWithUnSupportedArtifactTypeException" xml:space="preserve">
+    <value>The work item view is not supported for artifact type {0}.</value>
+  </data>
+  <data name="EmptyDefinitionNameError" xml:space="preserve">
+    <value>The pipeline name cannot be empty</value>
+  </data>
+  <data name="EnvironmentStatusReason_PostApprovalRejectedFormat" xml:space="preserve">
+    <value>Post-deployment approval rejected by</value>
+  </data>
+  <data name="DefinitionDeployPhasesCannotBeEmptyErrorText" xml:space="preserve">
+    <value>The stage '{0}' should have at least one job.</value>
+  </data>
+  <data name="NewArtifactFilter" xml:space="preserve">
+    <value>New artifact filter</value>
+  </data>
+  <data name="ReleasePickerDialogTitle" xml:space="preserve">
+    <value>Select a release</value>
+  </data>
+  <data name="TimelineDescriptionManualTrigger" xml:space="preserve">
+    <value>Waiting for manual trigger to start deployment</value>
+  </data>
+  <data name="GatesTimeoutLabel" xml:space="preserve">
+    <value>The timeout after which gates fail</value>
+  </data>
+  <data name="TimelineContent_Queue_OneInSequenceText" xml:space="preserve">
+    <value>Deployment queue settings for this stage are configured to deploy one release at a time.</value>
+  </data>
+  <data name="AutoRedeployTriggerActionLabel" xml:space="preserve">
+    <value>Select action</value>
+  </data>
+  <data name="ManualInterventionPendingFormat" xml:space="preserve">
+    <value>{0} pending.</value>
+  </data>
+  <data name="ApprovalRejected" xml:space="preserve">
+    <value>Rejected on {0}</value>
+  </data>
+  <data name="AlreadyApproved" xml:space="preserve">
+    <value>Already approved</value>
+  </data>
+  <data name="ManualApprovalTypeText" xml:space="preserve">
+    <value>Specific users</value>
+  </data>
+  <data name="InvalidIdForBuildArtifactErrorMessage" xml:space="preserve">
+    <value>The version provided for the build artifact source '{0}' is invalid. In case the version provided is not in the list of available versions, provide a valid build ID or build number.</value>
+  </data>
+  <data name="CreateReleaseToggledManualEnvironmentNodeDescription" xml:space="preserve">
+    <value>The trigger changed to manual</value>
+  </data>
+  <data name="MoreInformationPullRequestTriggersFiltersAriaLabel" xml:space="preserve">
+    <value>More information about branch filters in pull request triggers</value>
+  </data>
+  <data name="BranchText" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="CreateReleaseAutomatedEnvironmentNodeDescription" xml:space="preserve">
+    <value>Automated trigger</value>
+  </data>
+  <data name="CanvasReleaseApprovalButtonTitleText" xml:space="preserve">
+    <value>Approve or reject the deployment</value>
+  </data>
+  <data name="RetentionSettingsFooterText" xml:space="preserve">
+    <value>View or manage &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;retention policy defaults.&lt;/a&gt; </value>
+  </data>
+  <data name="VersionPickerTooltip" xml:space="preserve">
+    <value>Advanced selector</value>
+  </data>
+  <data name="PendingApprovalText" xml:space="preserve">
+    <value>Approval pending</value>
+  </data>
+  <data name="NoArtifactsMessageForBuild" xml:space="preserve">
+    <value>No version is available for &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; or the latest version has no artifacts to publish. This might fail deployment. Please check the source pipeline.</value>
+  </data>
+  <data name="DeleteFolderContextualMenuText" xml:space="preserve">
+    <value>Delete folder</value>
+  </data>
+  <data name="EnvironmentStatusApprovalPending" xml:space="preserve">
+    <value>Pending approval</value>
+  </data>
+  <data name="EnvironmentExecutionPolicyChangedWarningText" xml:space="preserve">
+    <value>Changes made to queue settings will be effective immediately. All currently queued deployments to this stage will be processed based on new settings.</value>
+  </data>
+  <data name="ViewReleaseMenuItemText" xml:space="preserve">
+    <value>View release</value>
+  </data>
+  <data name="PreEnvironmentNameLabel" xml:space="preserve">
+    <value>Stages</value>
+  </data>
+  <data name="GatesNotStartedNoGatesSubtext" xml:space="preserve">
+    <value>Deployment will proceed after a delay of {0}</value>
+  </data>
+  <data name="SelectedArtifactAliasSummary" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="CommaSeperatorForJoin" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="DefinitionImportDialogTitle" xml:space="preserve">
+    <value>Import release pipeline</value>
+  </data>
+  <data name="ApprovalPolicyInfo_TimeoutWithinMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="ArtifactTypeFieldDeletedErrorMessage" xml:space="preserve">
+    <value>Field '{0}' should have valid values. If the source build pipeline doesn't exist anymore, delete this artifact from the release pipeline</value>
+  </data>
+  <data name="DefaultBranchFilter" xml:space="preserve">
+    <value>Default branch in build pipeline</value>
+  </data>
+  <data name="Timeline_PRTrigger_Enabled" xml:space="preserve">
+    <value>Pull request deployment trigger enabled</value>
+  </data>
+  <data name="EnvironmentStatusNotDeployed" xml:space="preserve">
+    <value>Not deployed</value>
+  </data>
+  <data name="PullRequestDeploymentsDependentEnvironmentsWarning" xml:space="preserve">
+    <value>Not enabling pull request deployment for this stage may prevent pull request based releases from reaching subsequent stages: {0}</value>
+  </data>
+  <data name="ReleaseRetainedMessageFormat" xml:space="preserve">
+    <value>Release '{0}' is set to be retained indefinitely</value>
+  </data>
+  <data name="TimelineDescriptionGatesSucceededPrefix" xml:space="preserve">
+    <value>All gates succeeded</value>
+  </data>
+  <data name="ApprovalOverrideHeader" xml:space="preserve">
+    <value>Override approver</value>
+  </data>
+  <data name="EnvironmentStatusReason_WaitingOnQueueFormat" xml:space="preserve">
+    <value>Waiting in {0} queue</value>
+  </data>
+  <data name="ApprovalTypeLabel" xml:space="preserve">
+    <value>Approval type</value>
+  </data>
+  <data name="EnvironmentStatusUndefined" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="ArtifactAliasHasInvalidCharacters" xml:space="preserve">
+    <value>Artifact alias '{0}' is invalid. It cannot contain these characters: \ / : * ? " &lt; &gt; and |. Specify a different name and try again.</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_HeaderBranchFormat" xml:space="preserve">
+    <value>{0} from {1}</value>
+  </data>
+  <data name="MinutesSuffix" xml:space="preserve">
+    <value>{0}m</value>
+  </data>
+  <data name="DeployAction" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="ViewQueue" xml:space="preserve">
+    <value>View queue</value>
+  </data>
+  <data name="FolderDialogNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ViewTasks" xml:space="preserve">
+    <value>View Tasks</value>
+  </data>
+  <data name="NoEnvironmentsToApprove" xml:space="preserve">
+    <value>There are no stages to approve</value>
+  </data>
+  <data name="IgnoreGateDescription" xml:space="preserve">
+    <value>Ignored gates are not considered for the current deployment. Are you sure you want to ignore the gate '{0}'?</value>
+  </data>
+  <data name="WorkItemId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="TryAgainText" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="TimelineHeaderDeploymentFailed" xml:space="preserve">
+    <value>Deployment failed</value>
+  </data>
+  <data name="ExportRdContextualMenuText" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="EnvironmentNodeAriaLabel" xml:space="preserve">
+    <value>{0} stage</value>
+  </data>
+  <data name="AgentLogStepFinishingMarker" xml:space="preserve">
+    <value>Finishing: </value>
+  </data>
+  <data name="GatesEvaluationSubtext" xml:space="preserve">
+    <value>Waiting for all gates to succeed within the same sample interval</value>
+  </data>
+  <data name="TargetLinkDescription" xml:space="preserve">
+    <value>Link to get more details about target</value>
+  </data>
+  <data name="InvalidRetentionSettings" xml:space="preserve">
+    <value>Invalid retention settings.</value>
+  </data>
+  <data name="EditDefinitionPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to modify this release pipeline. Changes made will not be saved. Contact your release manager to grant permissions.</value>
+  </data>
+  <data name="NotStartedText" xml:space="preserve">
+    <value>Not started</value>
+  </data>
+  <data name="ArtifactTriggerToggleHelpTextForGitHub" xml:space="preserve">
+    <value>Creates a release every time a Git push occurs to the selected repository.</value>
+  </data>
+  <data name="SortBySlowestFirst" xml:space="preserve">
+    <value>Slowest first</value>
+  </data>
+  <data name="TimelineDescriptionDeploymentScheduledPrefix" xml:space="preserve">
+    <value>The deployment is scheduled to start</value>
+  </data>
+  <data name="DSWTestPassRateLabel" xml:space="preserve">
+    <value>Specify a test pass rate and associated color:</value>
+  </data>
+  <data name="WaitingOnText" xml:space="preserve">
+    <value>Waiting on</value>
+  </data>
+  <data name="DefaultArtifactLatestFromBranch" xml:space="preserve">
+    <value>Latest from the default branch</value>
+  </data>
+  <data name="PostEnvironmentDeploymentSelectionErrorMessage" xml:space="preserve">
+    <value>No stage was selected.</value>
+  </data>
+  <data name="DSWLastColumnTooltip" xml:space="preserve">
+    <value>&lt;span&gt;Determines the type of data displayed in the last column of the widget.&lt;/span&gt;&lt;br/&gt;
+      &lt;span&gt;Latest deployed: Shows the deployment corresponding to the latest build that was deployed on the stage.&lt;/span&gt;&lt;br/&gt;
+      &lt;span&gt;Failing since: Shows the deployment corresponding to the first build that caused deployments to fail on the stage.&lt;/span&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="ViewRdCommandBarItemText" xml:space="preserve">
+    <value>View pipeline</value>
+  </data>
+  <data name="ActiveDefinitionsRecentSectionHeader" xml:space="preserve">
+    <value>Recent</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Select a template</value>
+  </data>
+  <data name="EmptyFolderPathError" xml:space="preserve">
+    <value>The folder selection cannot be empty</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeDeploy" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EnvironmentStatusCanceling" xml:space="preserve">
+    <value>Canceling...</value>
+  </data>
+  <data name="NewSamplePlural" xml:space="preserve">
+    <value>{0} new samples</value>
+  </data>
+  <data name="EnvironmentNodeDescriptionWithOneOrZeroPhaseAndOneOrZeroTask" xml:space="preserve">
+    <value>{0} job, {1} task</value>
+  </data>
+  <data name="HistoryTabItemTitle" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="ActiveDefinitionsExpandButtonTooltip" xml:space="preserve">
+    <value>Hide release pipelines</value>
+  </data>
+  <data name="FilteredDefinitionsAnnounceMessage" xml:space="preserve">
+    <value>{0} pipelines found</value>
+  </data>
+  <data name="DeployOptionRadioLabel" xml:space="preserve">
+    <value>Redeploy to</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="ReportEnvironmentDeploymentStatusHelpText" xml:space="preserve">
+    <value>Displays a badge in the source repository to indicate whether the deployment to these stages succeeded or failed.</value>
+  </data>
+  <data name="DeploymentGroupMachineLabel" xml:space="preserve">
+    <value>{0} of {1} targets. Target name : {2}. Status : {3}.</value>
+  </data>
+  <data name="ConcurrentDeploymentCountError" xml:space="preserve">
+    <value>You must specify an integer from 1 to 1,000,000,000.</value>
+  </data>
+  <data name="ApprovalGatesSectionHeading" xml:space="preserve">
+    <value>Deployment gates</value>
+  </data>
+  <data name="ActiveReleasesContextualMenuAriaLabel" xml:space="preserve">
+    <value>Contextual menu for current release</value>
+  </data>
+  <data name="ReleaseHelpCalloutIncompletePrimaryText" xml:space="preserve">
+    <value>No problem. If you change your mind…</value>
+  </data>
+  <data name="ArtifactSourceText" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Discard" xml:space="preserve">
+    <value>Discard</value>
+  </data>
+  <data name="ApproveRejectText" xml:space="preserve">
+    <value>Approve/Reject</value>
+  </data>
+  <data name="AutoTriggerAfterEnvironmentText" xml:space="preserve">
+    <value>Automated after {0} stage</value>
+  </data>
+  <data name="IdentityRevalidationRequiredLabel" xml:space="preserve">
+    <value>Revalidate identity of approver before completing the approval.</value>
+  </data>
+  <data name="EnterRepositoryOrSearch" xml:space="preserve">
+    <value>Enter repository full name i.e. 'organization/repository' OR click '...' to search</value>
+  </data>
+  <data name="JobStateCanceling" xml:space="preserve">
+    <value>Canceling</value>
+  </data>
+  <data name="ArtifactsDisplayMessageSelectDuringReleaseCreation" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. Select the version when you create a release. For automatically triggered releases, the latest version will be chosen.</value>
+  </data>
+  <data name="ReleaseStartedTextSuffix" xml:space="preserve">
+    <value> has been started</value>
+  </data>
+  <data name="PipelineEditorRightPane" xml:space="preserve">
+    <value>Pipeline editor - right pane</value>
+  </data>
+  <data name="XOutOfY" xml:space="preserve">
+    <value>{0}/{1}</value>
+  </data>
+  <data name="AutoRedeployTriggerEventsLabel" xml:space="preserve">
+    <value>Select events</value>
+  </data>
+  <data name="DSWLastColumnSelectorLabel" xml:space="preserve">
+    <value>Last column</value>
+  </data>
+  <data name="ApprovalOrderLabel" xml:space="preserve">
+    <value>Approval order</value>
+  </data>
+  <data name="DeferredDateShouldBeInFutureText" xml:space="preserve">
+    <value>The specified date for deferring the deployment is in the past. The date should be in the future.</value>
+  </data>
+  <data name="DeployOnLatestText" xml:space="preserve">
+    <value>Deploy latest and cancel the others</value>
+  </data>
+  <data name="RetainReleaseMenuItemText" xml:space="preserve">
+    <value>Retain indefinitely</value>
+  </data>
+  <data name="ColorGreen" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="EditEnvironmentAutoRedeployTriggerPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to manage gates for this stage. Changes made will not be saved. Contact your release manager to grant permissions.</value>
+  </data>
+  <data name="DeploymentTypeDevelopment" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="PostDeployApprovalSubText" xml:space="preserve">
+    <value>Post-deployment approval pending</value>
+  </data>
+  <data name="CommitsRollbackMessageFormatString" xml:space="preserve">
+    <value>({0} {1} rolled back commits)</value>
+  </data>
+  <data name="CancelDeploymentDescription" xml:space="preserve">
+    <value>Are you sure you want to cancel the deployment to '{0}'?</value>
+  </data>
+  <data name="ReleaseHelpWhatsNewTitle" xml:space="preserve">
+    <value>We’ve made big improvements to the release summary page!</value>
+  </data>
+  <data name="ArtifactVersionDisplayFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="GatesStabilizationRemainingTimeNoGates" xml:space="preserve">
+    <value>{0} remaining</value>
+  </data>
+  <data name="ApproveMultiple" xml:space="preserve">
+    <value>Approve multiple</value>
+  </data>
+  <data name="ScheduleHelpText" xml:space="preserve">
+    <value>Trigger a new deployment to this stage at a specified time</value>
+  </data>
+  <data name="DSWDeploymentView" xml:space="preserve">
+    <value>Deployment Status</value>
+  </data>
+  <data name="ARIALabelCloseSaveTemplateDialog" xml:space="preserve">
+    <value>Cancel template creation</value>
+  </data>
+  <data name="ApprovalOrderTypeAllUserAnyOrderTitle" xml:space="preserve">
+    <value>Any order</value>
+  </data>
+  <data name="EnvironmentDeploymentDeferredToText" xml:space="preserve">
+    <value>Deployment will start on {0}</value>
+  </data>
+  <data name="TimelineDescriptionApprovedPrefix" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="PullRequestTriggerEnabledText" xml:space="preserve">
+    <value>The pull request trigger is enabled.</value>
+  </data>
+  <data name="MinuteDropdownLabel" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="DSWSelectBuildDefinition" xml:space="preserve">
+    <value>Select a build pipeline.</value>
+  </data>
+  <data name="ReleasePickerDialogDescription" xml:space="preserve">
+    <value>Select a release that was previously deployed to this stage</value>
+  </data>
+  <data name="NoApproversErrorMessage" xml:space="preserve">
+    <value>Enter at least one approver.</value>
+  </data>
+  <data name="EnvironmentPreDeploymentApprovalsHeading" xml:space="preserve">
+    <value>Pre-deployment approvals</value>
+  </data>
+  <data name="ReleaseNameFormatInvalidErrorMessage" xml:space="preserve">
+    <value>Names of releases from this pipeline will not be unique.  Use pre-defined variables to generate unique release names.</value>
+  </data>
+  <data name="AddArtifact" xml:space="preserve">
+    <value>Add an artifact</value>
+  </data>
+  <data name="TagsChangedReleaseStatus" xml:space="preserve">
+    <value>Updated tags</value>
+  </data>
+  <data name="DSWNoLastDeployment" xml:space="preserve">
+    <value>No build has been deployed on this release pipeline stage yet.</value>
+  </data>
+  <data name="DeleteReleaseMenuItemText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="TimeIndicator" xml:space="preserve">
+    <value>at {0}</value>
+  </data>
+  <data name="DeploymentStatusWidgetTestsToolTip" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="DeploymentGatesText" xml:space="preserve">
+    <value>Deployment gates</value>
+  </data>
+  <data name="TimelineDescriptionAutomaticTriggerEnvironmentFormatMany" xml:space="preserve">
+    <value>{0} (+{1})</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="CreateReleasePanelHeaderLabel" xml:space="preserve">
+    <value>Create a new release</value>
+  </data>
+  <data name="JenkinsArtifactsNotAccessibleMessage" xml:space="preserve">
+    <value>There is no job available or the source is not accessible. You can select all artifacts or specify the list of artifacts to be downloaded below.</value>
+  </data>
+  <data name="NewHubZeroDaySecondaryText" xml:space="preserve">
+    <value>Automate your release process in a few easy steps with a new pipeline</value>
+  </data>
+  <data name="SelectApproversHelpText" xml:space="preserve">
+    <value>By default, all users must approve the deployment (in any order). If a group is added, one user in the group must approve the deployment.</value>
+  </data>
+  <data name="DSWDeploymentStatusPickerInfoProp" xml:space="preserve">
+    <value>Following are the deployment status states and associated tile colors.</value>
+  </data>
+  <data name="PreDeploymentApproval" xml:space="preserve">
+    <value>Pre-deployment approval</value>
+  </data>
+  <data name="ApprovalPolicyInfo_InSequence" xml:space="preserve">
+    <value>in &lt;strong&gt; sequence &lt;/strong&gt;</value>
+  </data>
+  <data name="ReassignHistoryTitleText" xml:space="preserve">
+    <value>Reassign history</value>
+  </data>
+  <data name="GatesLogsDelayBeforeEvaluation" xml:space="preserve">
+    <value>Delay before evaluation: {0}</value>
+  </data>
+  <data name="GatesDetailedInfoFormat" xml:space="preserve">
+    <value>{0}. {1}</value>
+  </data>
+  <data name="DeploymentStatusViewStatusTitle" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StartReleaseMenuItemText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="GatesNoSamplesYet" xml:space="preserve">
+    <value>No samples have yet arrived</value>
+  </data>
+  <data name="ARIALabelEditorTabs" xml:space="preserve">
+    <value>Editor tabs options</value>
+  </data>
+  <data name="TimelineDescriptionRanForFormat" xml:space="preserve">
+    <value>Ran for {0}</value>
+  </data>
+  <data name="CreateDefinitionContextualMenuOptionText" xml:space="preserve">
+    <value>New pipeline</value>
+  </data>
+  <data name="CancelAction" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RejectAction" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="TimelineDescriptionOnFormat" xml:space="preserve">
+    <value>{0} on {1}</value>
+  </data>
+  <data name="CommitsArtifactHeaderInfoText" xml:space="preserve">
+    <value>Lists the commit difference between the artifacts of this release and the previously deployed release for this stage. If the current release deployed an older artifact, then the difference lists negative commits i.e., the changes that were rolled back from this stage.</value>
+  </data>
+  <data name="TimelineContent_Queue_InfoText" xml:space="preserve">
+    <value>Deployments to a stage can be in parallel wherein multiple releases can be deployed at the same time or in order where releases get deployed one after another. This can be configured as part of the deployment queue settings for a stage.</value>
+  </data>
+  <data name="ArtifactTriggerToggleHelpTextForAzureContainerRepository" xml:space="preserve">
+    <value>Creates a release every time an image is pushed to the selected repository.</value>
+  </data>
+  <data name="ArtifactsDisplayMessageLatestWithAllBranchAndAllTags" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. The latest successful build of &lt;b&gt;{0} &lt;/b&gt;</value>
+  </data>
+  <data name="ViewApprovalsTooltipFormat" xml:space="preserve">
+    <value>View {0} approvals</value>
+  </data>
+  <data name="ARIALabelEnvironmentApprovalOrderSection" xml:space="preserve">
+    <value>Select approval order</value>
+  </data>
+  <data name="SamplingIntervalLabel" xml:space="preserve">
+    <value>The time between re-evaluation of gates</value>
+  </data>
+  <data name="GatesTimeErrorText" xml:space="preserve">
+    <value>The value must be less than the timeout.</value>
+  </data>
+  <data name="ApprovalSkipped" xml:space="preserve">
+    <value>Skipped on {0}</value>
+  </data>
+  <data name="NoMachineFoundWithGivenTags" xml:space="preserve">
+    <value>No machine found in given deployment group with tags {0}.</value>
+  </data>
+  <data name="ReassignedStatusText" xml:space="preserve">
+    <value>Reassigned on {0}</value>
+  </data>
+  <data name="DeleteReleaseDialogContentText" xml:space="preserve">
+    <value>You are about to delete a release. Do you want to proceed?</value>
+  </data>
+  <data name="EnvironmentSelected" xml:space="preserve">
+    <value>This stage is selected.</value>
+  </data>
+  <data name="ArtifactTriggerToggleHelpTextForDockerHub" xml:space="preserve">
+    <value>Creates a release every time a Docker push occurs to the selected repository.</value>
+  </data>
+  <data name="SecurityText" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="SelectApproversPlaceHolderText" xml:space="preserve">
+    <value>Search users and groups for approvers</value>
+  </data>
+  <data name="ArtifactPropertiesAriaLabel" xml:space="preserve">
+    <value>Artifact properties</value>
+  </data>
+  <data name="CustomSelectiveArtifactsMessage" xml:space="preserve">
+    <value>Selective artifacts are not supported for the {0} artifact type. You can select all artifacts or none.</value>
+  </data>
+  <data name="ApprovalCancelled" xml:space="preserve">
+    <value>Canceled on {0}</value>
+  </data>
+  <data name="EditReleaseWarning" xml:space="preserve">
+    <value>&lt;div&gt; &lt;b&gt;You can edit approvals, tasks, and variables of this release. &lt;/b&gt; Edits will be saved only to this release. To make changes to the pipeline, &lt;a href="{0}" class="{1}" target="_blank" rel="noopener noreferrer" aria-label="Edit the release pipeline"&gt;edit the release pipeline&lt;/a&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="CreateDefinitionCommandBarMenuOptionText" xml:space="preserve">
+    <value>Release pipeline</value>
+  </data>
+  <data name="ArtifactsToBePublishedMessage" xml:space="preserve">
+    <value>published the following artifacts: &lt;b&gt;&lt;em&gt;{0}&lt;/em&gt;&lt;/b&gt;.</value>
+  </data>
+  <data name="OnPrepositionForTimestamp" xml:space="preserve">
+    <value>on {0}</value>
+  </data>
+  <data name="CloneText" xml:space="preserve">
+    <value>Clone</value>
+  </data>
+  <data name="CreateReleasePanelArtifactAccordionDescription" xml:space="preserve">
+    <value>Select the version for the artifact sources for this release</value>
+  </data>
+  <data name="MultipleEnvironments" xml:space="preserve">
+    <value>Multiple stages</value>
+  </data>
+  <data name="EnvironmentNameLengthValidationError" xml:space="preserve">
+    <value>The stage name cannot exceed 256 characters. Specify a shorter name and try again.</value>
+  </data>
+  <data name="ReleaseApprovalHoursSelectorAriaLabel" xml:space="preserve">
+    <value>Select hours</value>
+  </data>
+  <data name="ApprovalPending" xml:space="preserve">
+    <value>Pending {0}</value>
+  </data>
+  <data name="GatesLabel" xml:space="preserve">
+    <value>Gates</value>
+  </data>
+  <data name="ReleaseCreatorCannotBeApproverCheckboxLabel" xml:space="preserve">
+    <value>The user requesting a release or deployment should not approve it</value>
+  </data>
+  <data name="ArtifactsDisplayMessageLatestWithBranchAndTags" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. The latest successful build of &lt;b&gt;{0}&lt;/b&gt; from branch &lt;b&gt;{1}&lt;/b&gt; with tags &lt;b&gt;{2}&lt;/b&gt;</value>
+  </data>
+  <data name="DefinitionCloneSuffix" xml:space="preserve">
+    <value>{0} - Copy</value>
+  </data>
+  <data name="TimelineDescription_AssociatedChanges" xml:space="preserve">
+    <value>View {0} and {1}</value>
+  </data>
+  <data name="DeploymentAuthorizationRequired" xml:space="preserve">
+    <value>You would be asked to sign in to the Azure subscription(s) before the deployment starts.</value>
+  </data>
+  <data name="DeploymentTypeUnmapped" xml:space="preserve">
+    <value>Unmapped</value>
+  </data>
+  <data name="NoAssociatedCommitsMessage" xml:space="preserve">
+    <value>No associated changes found.</value>
+  </data>
+  <data name="OldDeploymentStatus" xml:space="preserve">
+    <value>{0} on {1}</value>
+  </data>
+  <data name="SimpleYouText" xml:space="preserve">
+    <value>you</value>
+  </data>
+  <data name="AutomaticApprovalTypeText" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="UndeleteReleaseDialogContentText" xml:space="preserve">
+    <value>You are about to undelete the release '{0}'</value>
+  </data>
+  <data name="ArtifactVersionUrlFormat" xml:space="preserve">
+    <value>Artifact version url for the artifact {0}</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="GatesCollapsibleHeadingText" xml:space="preserve">
+    <value>Gates</value>
+  </data>
+  <data name="EnvironmentStatusReason_InProgressReason" xml:space="preserve">
+    <value>running tasks...</value>
+  </data>
+  <data name="ToBeApproved" xml:space="preserve">
+    <value>Next pending on</value>
+  </data>
+  <data name="NoEnvironmentsPipelineTabText" xml:space="preserve">
+    <value>You cannot save a release pipeline that contains zero stages.</value>
+  </data>
+  <data name="TimelineDescriptionDeploymentTriggeredPrefix" xml:space="preserve">
+    <value>Deployment triggered</value>
+  </data>
+  <data name="ReportingTestPassRate" xml:space="preserve">
+    <value>Test pass rate</value>
+  </data>
+  <data name="SpecificParallelDeploymentLabel" xml:space="preserve">
+    <value>Specific</value>
+  </data>
+  <data name="DeleteRdCommandBarMenuOptionText" xml:space="preserve">
+    <value>Delete pipeline</value>
+  </data>
+  <data name="NoArtifactFiltersText" xml:space="preserve">
+    <value>No filters added.</value>
+  </data>
+  <data name="ReleaseDefinitionsTitle" xml:space="preserve">
+    <value>Release pipelines</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>{0} hours</value>
+  </data>
+  <data name="CannotCreateRDNoPermissionsMessage" xml:space="preserve">
+    <value>You do not have sufficient permissions on this project to create a release pipeline. Contact your release administrator for permissions.</value>
+  </data>
+  <data name="EditReleaseVariablesPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to edit this stage or this stage is in-progress</value>
+  </data>
+  <data name="ARIALabelReleaseDefinitionEditorMainView" xml:space="preserve">
+    <value>Release pipeline editor</value>
+  </data>
+  <data name="DeploymentGroupsProgressSuccessfulText" xml:space="preserve">
+    <value>Successful</value>
+  </data>
+  <data name="ApprovalPolicyInfoText_InSequence" xml:space="preserve">
+    <value>Approval must be done {0} {1}.</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeUndelete" xml:space="preserve">
+    <value>Undo delete</value>
+  </data>
+  <data name="GatesCanceled" xml:space="preserve">
+    <value>Gates canceled</value>
+  </data>
+  <data name="ViewLogsTooltip" xml:space="preserve">
+    <value>View logs</value>
+  </data>
+  <data name="ReleaseGateLogSampleNameFailedFormat" xml:space="preserve">
+    <value>{0}/{1} gates Failed</value>
+  </data>
+  <data name="EnvironmentPoliciesAccordionDescription" xml:space="preserve">
+    <value>Deployment policies for this stage</value>
+  </data>
+  <data name="DeploymentTriggerOptionAriaLabelText" xml:space="preserve">
+    <value>Deployment trigger options for stage {0}</value>
+  </data>
+  <data name="PendingApprovalOneEnvironment" xml:space="preserve">
+    <value>Pending approval on {0} stage.</value>
+  </data>
+  <data name="MinePanelTitle" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="EnvironmentStatusDeferred" xml:space="preserve">
+    <value>Deferred</value>
+  </data>
+  <data name="NoSupportedArtifacts" xml:space="preserve">
+    <value>No filters available for the linked artifacts</value>
+  </data>
+  <data name="ArtifactSourceAlias" xml:space="preserve">
+    <value>Source alias</value>
+  </data>
+  <data name="LoadingFetchingCommits" xml:space="preserve">
+    <value>Fetching commits...</value>
+  </data>
+  <data name="ToggleBetweenOverviewAndDetails" xml:space="preserve">
+    <value>Toggle focus from and to details panel</value>
+  </data>
+  <data name="TriggersHeading" xml:space="preserve">
+    <value>Triggers</value>
+  </data>
+  <data name="CommitCount" xml:space="preserve">
+    <value>({0} commit)</value>
+  </data>
+  <data name="ArtifactTagPickerInputAriaLabel" xml:space="preserve">
+    <value>Artifact tag picker input</value>
+  </data>
+  <data name="EnvironmentPostDeploymentConditionsHeading" xml:space="preserve">
+    <value>Post-deployment conditions</value>
+  </data>
+  <data name="DeleteDefinitionConfirmationMessage" xml:space="preserve">
+    <value>Are you sure you want to delete release pipeline '{0}' and all its associated releases?</value>
+  </data>
+  <data name="ApprovalPolicyInfoText" xml:space="preserve">
+    <value>After the deployment starts, all approvers must approve {0} within a timeout of {1}</value>
+  </data>
+  <data name="DeploymentStatusWidgetReleaseToolTip" xml:space="preserve">
+    <value>Release: {0}</value>
+  </data>
+  <data name="NoItemsMatchYourFilterText" xml:space="preserve">
+    <value>No items match your filter</value>
+  </data>
+  <data name="PhaseHeaderDisplayText" xml:space="preserve">
+    <value>Job {0}/{1}</value>
+  </data>
+  <data name="ParallelDeploymentTypeCalloutText" xml:space="preserve">
+    <value>Deployment on a stage can be in parallel wherein multiple releases can be deployed at the same time or in order where releases get deployed one after another. Specify '1' for deployments to go one after another (sequential).</value>
+  </data>
+  <data name="RefreshText" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="GatesStabilizationRemainingTime" xml:space="preserve">
+    <value>Gates evaluation will begin in {0}</value>
+  </data>
+  <data name="GatesPhaseTypeDescription" xml:space="preserve">
+    <value>A job is a logical grouping of tasks that defines the runtime target on which the tasks will execute. A gates job executes all the gates in parallel.</value>
+  </data>
+  <data name="ScheduleOnlyWithChangesLabel" xml:space="preserve">
+    <value>Only schedule releases if the source or pipeline has changed</value>
+  </data>
+  <data name="CreateDraftReleaseMenuOptionText" xml:space="preserve">
+    <value>Create a draft release</value>
+  </data>
+  <data name="GatesSucceededNoGatesText" xml:space="preserve">
+    <value>Delay before evaluation completed at {0}</value>
+  </data>
+  <data name="CreateFolderText" xml:space="preserve">
+    <value>New folder</value>
+  </data>
+  <data name="EnvironmentPickListPlaceholderText" xml:space="preserve">
+    <value>Select Stage</value>
+  </data>
+  <data name="ReassignIdentityPickerNotValid" xml:space="preserve">
+    <value>You cannot reassign to the original approver</value>
+  </data>
+  <data name="DeleteArtifactConfirmationMessage" xml:space="preserve">
+    <value>Are you sure that you want to unlink the artifact '{0}' from this release pipeline? Unlinking this artifact can cause some task configurations to become invalid.</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_TagFilterFormat" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ReleaseHelpWithApprovals" xml:space="preserve">
+    <value>approvals and gates</value>
+  </data>
+  <data name="AutoTriggerAfterEnvironmentsText" xml:space="preserve">
+    <value>Automated after {0} stages</value>
+  </data>
+  <data name="ArtifactComparisonCollapsedHeaderDescription" xml:space="preserve">
+    <value>Showing changes compared to </value>
+  </data>
+  <data name="DeploymentStatusWidgetDeploymentStatusToolTip" xml:space="preserve">
+    <value>Deployment status: {0}</value>
+  </data>
+  <data name="WindowTitleFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="CreateReleasePanelArtifactErrorIconAriaLabel" xml:space="preserve">
+    <value>Artifact error message.</value>
+  </data>
+  <data name="ArtifactTriggerBranchFiltersHelpTextForGitHub" xml:space="preserve">
+    <value>A release will be triggered only if the GitHub push contains a commit to the specified branch. For example, selecting "master" will trigger a release for a GitHub push which contains one or more commits to the master branch. To trigger a release for any commit to all the branches under features/, enter "features/\*". To trigger a release for commits to all branches, enter "\*". Note that all filters specified will be OR'ed. For example, an artifact matching at least one filter condition would be sufficient to trigger a release.</value>
+  </data>
+  <data name="EnvironmentsDeploymentTriggerListAriaLabel" xml:space="preserve">
+    <value>List of stages and their deployment trigger</value>
+  </data>
+  <data name="ColorRed" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="IgnoreGateViewButtonName" xml:space="preserve">
+    <value>Ignore gate</value>
+  </data>
+  <data name="EnvironmentPropertiesAriaLabel" xml:space="preserve">
+    <value>Stage properties</value>
+  </data>
+  <data name="DefinitionFilterBarItemPlaceholderText" xml:space="preserve">
+    <value>Filter by pipeline</value>
+  </data>
+  <data name="ResumeManualInterventionTooltip" xml:space="preserve">
+    <value>Resume or reject manual intervention</value>
+  </data>
+  <data name="CurrentlyDeployedStatus" xml:space="preserve">
+    <value>Currently deployed status</value>
+  </data>
+  <data name="CurrentlyApproving" xml:space="preserve">
+    <value>Approving as self/group</value>
+  </data>
+  <data name="PendingApprovalTwoEnvironments" xml:space="preserve">
+    <value>Pending approval on {0} and {1} stages.</value>
+  </data>
+  <data name="DeploymentRejectedByText" xml:space="preserve">
+    <value>Deployment rejected by {0} {1}</value>
+  </data>
+  <data name="PostDeploymentGatesCollapsibleDescriptionText" xml:space="preserve">
+    <value>Define gates to evaluate after the deployment.</value>
+  </data>
+  <data name="EnvironmentNodeDescriptionWithOneOrZeroPhaseAndMoreThanOneTasks" xml:space="preserve">
+    <value>{0} job, {1} tasks</value>
+  </data>
+  <data name="ErrorFetchignApprovalData" xml:space="preserve">
+    <value>There was an error in retrieving approvals data</value>
+  </data>
+  <data name="ApprovalBeforeGates" xml:space="preserve">
+    <value>Before gates, ask for approvals</value>
+  </data>
+  <data name="PostDeploymentText" xml:space="preserve">
+    <value>Post-deployment</value>
+  </data>
+  <data name="ActiveDefinitionsCollapseButtonTooltip" xml:space="preserve">
+    <value>Show release pipelines</value>
+  </data>
+  <data name="SelectedAttemptNumberText" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="ActiveReleasesSearchPlaceholderText" xml:space="preserve">
+    <value>Search for release</value>
+  </data>
+  <data name="CreateReleaseEnvironmentDropdownHelpText" xml:space="preserve">
+    <value>For this release, select the stages for which you want to change the trigger from automated to manual. A manual deployment will be required for these stages.</value>
+  </data>
+  <data name="DeploymentStatusCompletedTitle" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="PublishDeploymentStatusToWorkItems" xml:space="preserve">
+    <value>Report deployment status to Boards</value>
+  </data>
+  <data name="NoSamplesYet" xml:space="preserve">
+    <value>No samples yet</value>
+  </data>
+  <data name="EnvironmentName" xml:space="preserve">
+    <value>Stage name</value>
+  </data>
+  <data name="ReassignSelectApproverText" xml:space="preserve">
+    <value>Select approver</value>
+  </data>
+  <data name="ReleaseDefinitionHasBeenMoved" xml:space="preserve">
+    <value>Release pipeline '{0}' has been moved to folder '{1}'.</value>
+  </data>
+  <data name="ReportingAnalyzeFor7Days" xml:space="preserve">
+    <value>7 days</value>
+  </data>
+  <data name="DSWBuildStatusCompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="CustomBranchFilter" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="ReleaseReportingDeploymentFrequency" xml:space="preserve">
+    <value>Deployment frequency</value>
+  </data>
+  <data name="SingleWarningText" xml:space="preserve">
+    <value>{0} warning</value>
+  </data>
+  <data name="CreateReleaseManualEnvironmentNodeDescription" xml:space="preserve">
+    <value>Manual trigger</value>
+  </data>
+  <data name="GatesFailedDescription" xml:space="preserve">
+    <value>Gates did not meet the criteria of succeeding at once before the timeout of {0}.</value>
+  </data>
+  <data name="UndeleteReleaseConfirmationMessageFormat" xml:space="preserve">
+    <value>Release '{0}' has been undeleted</value>
+  </data>
+  <data name="TimelineContent_Deployment_TaskRunningText" xml:space="preserve">
+    <value>Running task {0}</value>
+  </data>
+  <data name="CommitRollbackMessageFormatString" xml:space="preserve">
+    <value>({0} {1} rolled back commit)</value>
+  </data>
+  <data name="ColorBlue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="ColorGrey" xml:space="preserve">
+    <value>Grey</value>
+  </data>
+  <data name="EditRdContextualMenuText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ActiveReleasesAnalyticsTitle" xml:space="preserve">
+    <value>View analytics</value>
+  </data>
+  <data name="LatestFromBranch" xml:space="preserve">
+    <value>Latest from branch: {0}</value>
+  </data>
+  <data name="CurrentlyDeployedStatusInfo" xml:space="preserve">
+    <value>Currently deployed status information</value>
+  </data>
+  <data name="SummaryTabTitle" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Exclude</value>
+  </data>
+  <data name="EnvironmentStatusReason_InProgressReasonFormat" xml:space="preserve">
+    <value>running task {0}</value>
+  </data>
+  <data name="ReleaseHelpCommitsTabDescription" xml:space="preserve">
+    <value>Click on environment to see the commits and workitems that get deployed to the environment with each new release.</value>
+  </data>
+  <data name="MoreInformationPullRequestDeploymentAriaLabel" xml:space="preserve">
+    <value>More information about pull request based deployments.</value>
+  </data>
+  <data name="RetentionDaysToRetainDescription" xml:space="preserve">
+    <value>Set the number of days to retain a release deployed to this stage.</value>
+  </data>
+  <data name="ApproveNowAction" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ReleaseHelpLogsTabLabel" xml:space="preserve">
+    <value>In-progress deployments and logs</value>
+  </data>
+  <data name="SelectArtifacts" xml:space="preserve">
+    <value>Select artifacts</value>
+  </data>
+  <data name="ArtifactTriggerDisabledMessageForGit" xml:space="preserve">
+    <value>Enabling the trigger will create a new release every time a Git push happens to the selected repository.</value>
+  </data>
+  <data name="AllReleases" xml:space="preserve">
+    <value>All releases</value>
+  </data>
+  <data name="Timeline_PRTrigger_EnableOnCurrentEnvironmentText" xml:space="preserve">
+    <value>Trigger must be enabled on this stage to let pull request based releases to get deployed.</value>
+  </data>
+  <data name="DswBranchPickerToolTip" xml:space="preserve">
+    <value>&lt;span&gt;Choose 'Default branch in build pipeline' option to see builds corresponding to the default branch associated with the build pipeline.&lt;/span&gt;&lt;br/&gt;
+&lt;span&gt;Choose 'Custom' option to see builds corresponding to a particular branch of your choice.&lt;/span&gt;</value>
+  </data>
+  <data name="LoadingReleases" xml:space="preserve">
+    <value>Loading releases...</value>
+  </data>
+  <data name="CurrentlyDeployedToggleOffAriaLabel" xml:space="preserve">
+    <value>Show all releases for this pipeline</value>
+  </data>
+  <data name="InProgressPhaseProgressBarLinkTitlePlural" xml:space="preserve">
+    <value>{0}/{1} tasks have completed for {2} of {3}.</value>
+  </data>
+  <data name="PullRequestDeploymentHelpText" xml:space="preserve">
+    <value>Enabling this will allow pull request based releases to be deployed to this stage. Keep it disabled if this is a critical or production stage.</value>
+  </data>
+  <data name="GatesLatestText" xml:space="preserve">
+    <value>(latest)</value>
+  </data>
+  <data name="EnvironmentTemplateSelectorTitle" xml:space="preserve">
+    <value>Select a template</value>
+  </data>
+  <data name="EnabledText" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="GatesStabilizationTimeHelp" xml:space="preserve">
+    <value>The time before the added gates are evaluated for the first time. If no gates are added, then the deployment will wait for the duration before proceeding.</value>
+  </data>
+  <data name="ContinuousDeliveryAcronym" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_TagsListFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="BranchFilter" xml:space="preserve">
+    <value>Branch filter</value>
+  </data>
+  <data name="BranchFiltersGitHub" xml:space="preserve">
+    <value>Branch Filters</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeApprove" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeStart" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="CloneSelectedEnvironment" xml:space="preserve">
+    <value>Clone stage</value>
+  </data>
+  <data name="CloseText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="DeploymentStatusWidgetBuildToolTip" xml:space="preserve">
+    <value>Build: {0}</value>
+  </data>
+  <data name="TimelineDescriptionAutomaticTriggerEnvironmentFormat1" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ImportRdCommandBarMenuItemText" xml:space="preserve">
+    <value>Import a pipeline</value>
+  </data>
+  <data name="OverallApprovalsPending" xml:space="preserve">
+    <value>Approval pending {0}</value>
+  </data>
+  <data name="ARIALabelCopyBadgeURL" xml:space="preserve">
+    <value>Copy badge URL</value>
+  </data>
+  <data name="PendingIntervention" xml:space="preserve">
+    <value>Pending intervention</value>
+  </data>
+  <data name="RetentionLeftPaneARIALabel" xml:space="preserve">
+    <value>Retention policies left pane</value>
+  </data>
+  <data name="CancelButtonTooltip" xml:space="preserve">
+    <value>Cancel the deployment</value>
+  </data>
+  <data name="TagFilterHelpTextForDockerHub" xml:space="preserve">
+    <value>A release will be triggered only if the Docker Hub push tag matches the regular expression specified in the Tag input.
+If no tag filter is specified, release will always be triggered.&lt;br&gt;
+Examples:&lt;br&gt;
+^latest$ - will trigger the release only if the tag is &amp;quot;latest&amp;quot;
+v1&amp;#92;.[0-9] - will trigger the release for tags like &amp;quot;v1.23&amp;quot;, &amp;quot;beta-v1.3-test&amp;quot; etc.
+[More information](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)</value>
+  </data>
+  <data name="EnvironmentNodeDescriptionWithMoreThanOnePhasesAndMoreThanOneTasks" xml:space="preserve">
+    <value>{0} jobs, {1} tasks</value>
+  </data>
+  <data name="ArtifactVersionsOptionAriaLabelText" xml:space="preserve">
+    <value>Artifact versions for source {0}</value>
+  </data>
+  <data name="AgentOfflineOrDisabled" xml:space="preserve">
+    <value>There is a problem with deploy job '{0}'. There are agents that are capable of running the release, but they are offline or disabled. If the agent is configured to run as a service, ensure that the 'Azure Pipelines Agent (&lt;agent name&gt;)' service is running.</value>
+  </data>
+  <data name="AbandonReleaseDialogTitleText" xml:space="preserve">
+    <value>Abandon {0}</value>
+  </data>
+  <data name="NextSampleTimeSubtextAriaLabel" xml:space="preserve">
+    <value>{0} to next sample</value>
+  </data>
+  <data name="Timeline_AllDeploymentsText" xml:space="preserve">
+    <value>all deployments</value>
+  </data>
+  <data name="ArtifactsDisplayMessageSpecificVersion" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. &lt;b&gt;{0}&lt;/b&gt; version &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="PostDeploymentApproval" xml:space="preserve">
+    <value>Post-deployment approval</value>
+  </data>
+  <data name="ReleaseGateLogSampleNameSucceededFormat" xml:space="preserve">
+    <value>{0}/{0} gates Succeeded</value>
+  </data>
+  <data name="GatesDelayInProgress" xml:space="preserve">
+    <value>Delay before evaluation is in progress</value>
+  </data>
+  <data name="ToPrepositionForTimestamp" xml:space="preserve">
+    <value>to {0}</value>
+  </data>
+  <data name="ReleaseSummaryScheduleTriggeredText" xml:space="preserve">
+    <value>Scheduled release</value>
+  </data>
+  <data name="RollbackWarning" xml:space="preserve">
+    <value>Rolling back changes - You are deploying an older release. This might remove some work items and commits</value>
+  </data>
+  <data name="AgentLogStepStartingMarker" xml:space="preserve">
+    <value>Starting: </value>
+  </data>
+  <data name="WaitingForAgentLogsText" xml:space="preserve">
+    <value>Waiting for console output from an agent...</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Artifacts" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="ARIALabelEnvironmentAutoApproveCheckbox" xml:space="preserve">
+    <value>Automatically approve auto triggered deployment checkbox</value>
+  </data>
+  <data name="InvalidEnvironmentErrorMessage" xml:space="preserve">
+    <value>Stage with ID {0} does not exist. Specify a valid ID and try again.</value>
+  </data>
+  <data name="ArtifactsDisplayMessageLatestWithNoBranchAndTags" xml:space="preserve">
+    <value>The artifacts published by each version will be available for deployment in release pipelines. The latest successful build of &lt;b&gt;{0}&lt;/b&gt; with tags &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="EnvironmentStatusReason_RejectedFormat" xml:space="preserve">
+    <value>Rejected by</value>
+  </data>
+  <data name="MarkAsPrimary" xml:space="preserve">
+    <value>Mark as primary</value>
+  </data>
+  <data name="RenameFolderDialogTitle" xml:space="preserve">
+    <value>Rename folder</value>
+  </data>
+  <data name="ReleaseHelpWhatsNew" xml:space="preserve">
+    <value>What's new...</value>
+  </data>
+  <data name="DeleteReleaseConfirmationMessageFormat" xml:space="preserve">
+    <value>Release '{0}' has been deleted</value>
+  </data>
+  <data name="RetentionReleaseCountInfoText" xml:space="preserve">
+    <value>Set the minimum number of releases to keep for this stage. This number cannot exceed {0} releases.
+[Learn more about minimum releases to keep]({1})</value>
+  </data>
+  <data name="ApprovalGatesSectionHelpText" xml:space="preserve">
+    <value>Add gates that evaluate health parameters. They are periodically re-evaluated in parallel. When all gates succeed for the success criteria duration, the deployment will proceed. If this does not occur before the timeout period, the deployment is rejected.</value>
+  </data>
+  <data name="TimelineHeaderAutomaticTriggerPending" xml:space="preserve">
+    <value>Automatic trigger pending</value>
+  </data>
+  <data name="EnvironmentPreDeploymentApproversHeading" xml:space="preserve">
+    <value>Pre-deployment approvers</value>
+  </data>
+  <data name="DeleteFolderDialogTitle" xml:space="preserve">
+    <value>Delete folder</value>
+  </data>
+  <data name="ARIALabelCloseTheDialog" xml:space="preserve">
+    <value>Close the dialog</value>
+  </data>
+  <data name="YouText" xml:space="preserve">
+    <value>you</value>
+  </data>
+  <data name="FolderPickerLabel" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="PullRequestTriggerFollowingEnvironmentsEnabledMessage" xml:space="preserve">
+    <value>The following stages are enabled: {0}</value>
+  </data>
+  <data name="FirstTimeDeployment" xml:space="preserve">
+    <value>(Deploying for the first time)</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_BranchAndTagsConditionFormat" xml:space="preserve">
+    <value>{0} {1} and {2}</value>
+  </data>
+  <data name="SortByStartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="DeploymentGroupsIndicatorPendingText" xml:space="preserve">
+    <value>PENDING</value>
+  </data>
+  <data name="PullRequestTriggerDisabledText" xml:space="preserve">
+    <value>The pull Request trigger is disabled.</value>
+  </data>
+  <data name="UserActionTextFormat" xml:space="preserve">
+    <value>You can {0}</value>
+  </data>
+  <data name="ApprovalOrderTypeAnyUserTitle" xml:space="preserve">
+    <value>Any one user</value>
+  </data>
+  <data name="SelectedArtifactTypeSummary" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DeploymentGroupLabel" xml:space="preserve">
+    <value>Deployment group:</value>
+  </data>
+  <data name="ReleaseDefinitionDescriptionHelpText" xml:space="preserve">
+    <value>Describe the purpose of this release pipeline</value>
+  </data>
+  <data name="PullRequestTriggerEnabledEnvironmentsMessage" xml:space="preserve">
+    <value>stages are enabled for pull request deployments. You can enable a stage for pull request based deployments in the pre-deployment conditions of that stage.</value>
+  </data>
+  <data name="LogsDeploymentIssuesFormat" xml:space="preserve">
+    <value>Issues ({0})</value>
+  </data>
+  <data name="ViewMachineLogs" xml:space="preserve">
+    <value>View machine logs</value>
+  </data>
+  <data name="TimelineContent_ArtifactCondition_BranchNameFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="TriggersAccordionDescriptionText" xml:space="preserve">
+    <value>Define the trigger that will start deployment to this stage</value>
+  </data>
+  <data name="ReleaseNameFormat" xml:space="preserve">
+    <value>Release name format</value>
+  </data>
+  <data name="WorkItemsArtifactHeaderInfoText" xml:space="preserve">
+    <value>Lists the work item difference between this release and the previously deployed release for this stage. If the current release deployed an older artifact, then the difference lists negative work items i.e., the changes that were rolled back from this stage.</value>
+  </data>
+  <data name="IdentityPickerFilterBarItemAriaLabel" xml:space="preserve">
+    <value>Fiter active releases by created-by</value>
+  </data>
+  <data name="CreateReleasePanelStartReleaseLabel" xml:space="preserve">
+    <value>Start release</value>
+  </data>
+  <data name="DeploymentGroupsSkippedOfflinePluralText" xml:space="preserve">
+    <value>{0} targets skipped</value>
+  </data>
+  <data name="TimeRemaining" xml:space="preserve">
+    <value>Evaluation to start in {0}</value>
+  </data>
+  <data name="DeleteRdContextualMenuText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="TriggerForPartiallySucceeded" xml:space="preserve">
+    <value>Trigger even when the selected stages partially succeed</value>
+  </data>
+  <data name="GatesTimeErrorMessage" xml:space="preserve">
+    <value>You must specify an integer from {0} to {1} in {2}.</value>
+  </data>
+  <data name="ArtifactTriggerDescriptionForDockerHub" xml:space="preserve">
+    <value>Docker Hub: {0}</value>
+  </data>
+  <data name="RequiredInputWithOption" xml:space="preserve">
+    <value>This setting is required. You may select an option from dropdown or type and search.</value>
+  </data>
+  <data name="ReleaseTags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="ReleaseText" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="TimelineContent_Deployment_TaskFailedText" xml:space="preserve">
+    <value>{0} failed</value>
+  </data>
+  <data name="InProgressText" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="ViewGatesTooltipFormat" xml:space="preserve">
+    <value>View {0} gates</value>
+  </data>
+  <data name="NoPrimaryArtifactToCompareFoundMessage" xml:space="preserve">
+    <value>Cannot find the primary artifact in release {0}.</value>
+  </data>
+  <data name="AutoTriggerAfterReleaseText" xml:space="preserve">
+    <value>Automated after release creation</value>
+  </data>
+  <data name="AddToDashboard_SuccessMessage" xml:space="preserve">
+    <value>{0} has been successfully added to the {1} dashboard.</value>
+  </data>
+  <data name="BuildDefinition" xml:space="preserve">
+    <value>Build pipeline</value>
+  </data>
+  <data name="DefinitionAnalysisHeader" xml:space="preserve">
+    <value>Analysis</value>
+  </data>
+  <data name="ManualTriggerText" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GatesIgnoredText" xml:space="preserve">
+    <value>Ignored</value>
+  </data>
+  <data name="DeploymentStatusViewTriggerTitle" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="DeploymentGroupsProgressRunningText" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="DeploymentTypeStaging" xml:space="preserve">
+    <value>Staging</value>
+  </data>
+  <data name="PreDeploymentGatesCollapsibleDescriptionText" xml:space="preserve">
+    <value>Define gates to evaluate before the deployment.</value>
+  </data>
+  <data name="FolderNameAlreadyExistsError" xml:space="preserve">
+    <value>A folder with this name already exists in the specified folder</value>
+  </data>
+  <data name="TimelineDescriptionAutomaticTriggerConditionsNotMet" xml:space="preserve">
+    <value>Deployment will not start automatically as the following artifact condition(s) are not met</value>
+  </data>
+  <data name="RetentionAssocitedArtifactsCheckboxLabel" xml:space="preserve">
+    <value>Retain associated artifacts</value>
+  </data>
+  <data name="SpecifyListOfArtifacts" xml:space="preserve">
+    <value>Specify the list of artifacts</value>
+  </data>
+  <data name="ReleaseTriggerScheduled" xml:space="preserve">
+    <value>Schedule set</value>
+  </data>
+  <data name="GatesOrderForExecutionOfApprovalHelp" xml:space="preserve">
+    <value>Manual approvals can be asked for before or after the evaluation of gates.</value>
+  </data>
+  <data name="RetentionDoNotKeepArtifactsText" xml:space="preserve">
+    <value>and do not keep artifacts.</value>
+  </data>
+  <data name="EnvironmentPostApprovalGatesHeading" xml:space="preserve">
+    <value>Post-deployment gates</value>
+  </data>
+  <data name="AutoSaveInProgressText" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="TimelineHeaderDeploymentCanceling" xml:space="preserve">
+    <value>Deployment canceling</value>
+  </data>
+  <data name="CurrentlyDeployedToggleOnText" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="RetentionRetainArtifactInfoText" xml:space="preserve">
+    <value>Retain the build for all releases deployed to this stage.
+[Learn more about artifact retention]({0})</value>
+  </data>
+  <data name="DemandsWarningHeaderInfo" xml:space="preserve">
+    <value>Demands warning information</value>
+  </data>
+  <data name="NoRecentDefinitions" xml:space="preserve">
+    <value>There are no additional release pipelines in this section</value>
+  </data>
+  <data name="CreateReleaseDefinitionText" xml:space="preserve">
+    <value>New release pipeline</value>
+  </data>
+  <data name="DeploymentStatusViewRequestedByTitle" xml:space="preserve">
+    <value>Requested by</value>
+  </data>
+  <data name="ReleaseSummaryPullRequestTriggeredText" xml:space="preserve">
+    <value>Triggered by</value>
+  </data>
+  <data name="ReleaseApprovalOverrideButtonText" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="GatesPhaseTimeError" xml:space="preserve">
+    <value>The value should be between {0} and {1} minutes.</value>
+  </data>
+  <data name="CommitsArtifactHeaderWithNoRollbackInfoText" xml:space="preserve">
+    <value>This list shows the difference in commits between this release and the previously-deployed release for this stage.</value>
+  </data>
+  <data name="NoReleasesMatchYourFilterText" xml:space="preserve">
+    <value>No releases match your filter</value>
+  </data>
+  <data name="ReportingDeploymentDuration" xml:space="preserve">
+    <value>Deployment duration</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ReleaseToCompareAgainstText" xml:space="preserve">
+    <value>Last deployed</value>
+  </data>
+  <data name="MoveRdContextualMenuText" xml:space="preserve">
+    <value>Move pipeline</value>
+  </data>
+  <data name="TimelineDescriptionWithSuffixFormat" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="HourDropdownLabel" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="EnvironmentSummary" xml:space="preserve">
+    <value>Stage summary</value>
+  </data>
+  <data name="DSWEnvironmentsHeader" xml:space="preserve">
+    <value>Stages\Builds</value>
+  </data>
+  <data name="ViewApprovalsAndGatesTooltipFormat" xml:space="preserve">
+    <value>View {0} approvals and gates</value>
+  </data>
+  <data name="ArtifactTriggerDisabledMessageForDockerHub" xml:space="preserve">
+    <value>Enabling the trigger will create a new release every time a Docker push occurs in the selected repository.</value>
+  </data>
+  <data name="LatestWithTags" xml:space="preserve">
+    <value>Latest with tags: {0}</value>
+  </data>
+  <data name="RetainIndefinitelyIconTooltip" xml:space="preserve">
+    <value>Retained indefinitely</value>
+  </data>
+  <data name="DescriptionChangedReleaseStatus" xml:space="preserve">
+    <value>Updated description</value>
+  </data>
+  <data name="ReleaseProgressBreadcrumbs" xml:space="preserve">
+    <value>Release progress breadcrumbs</value>
+  </data>
+  <data name="RetentionReleaseCountInvalidValueErrorMessage" xml:space="preserve">
+    <value>The specified value is invalid. You must specify a number between 1 and {0}.</value>
+  </data>
+  <data name="ArtifactTagInputAriaLabel" xml:space="preserve">
+    <value>Artifact trigger condition tag input.</value>
+  </data>
+  <data name="SelectApproveEnvironmentDescription" xml:space="preserve">
+    <value>Select the stages you want to approve</value>
+  </data>
+  <data name="IntegrateJiraWorkItemsPlaceHolder" xml:space="preserve">
+    <value>Select Jira account to integrate with</value>
+  </data>
+  <data name="ButtonText" xml:space="preserve">
+    <value>button</value>
+  </data>
+  <data name="ReleaseHelpWhatsNewSummary" xml:space="preserve">
+    <value>We’ve made it much easier to see exactly what’s happening with all of your releases. Now you have a detailed summary of the release pipeline, plus one-click drill-down access to more details such as artifacts, stages, approvals, tests, and logs. Quickly see the work items, commits, test results, and much more.</value>
+  </data>
+  <data name="ReassignIdentityFromInvalidScope" xml:space="preserve">
+    <value>The user is not in a valid scope that allows reassignment</value>
+  </data>
+  <data name="ReleasesHubApprovalPanelHeader" xml:space="preserve">
+    <value>Approve or reject</value>
+  </data>
+  <data name="EnvironmentStatusSucceeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="ReleaseCommitsComparisonWithUnSupportedArtifactTypeException" xml:space="preserve">
+    <value>The commits view is not supported for artifact type {0}.</value>
+  </data>
+  <data name="WorkItemsComparedToMessageText" xml:space="preserve">
+    <value>&lt;div&gt;Works items are compared to &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; deployment &lt;/div&gt;</value>
+  </data>
+  <data name="ViewReleasesText" xml:space="preserve">
+    <value>View releases</value>
+  </data>
+  <data name="ConjunctionForArtifactsDisplayMessage" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="ApprovalInProgressText" xml:space="preserve">
+    <value>Approving</value>
+  </data>
+  <data name="JobApprovedStatus" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="FolderWillBeCreatedMessage" xml:space="preserve">
+    <value>Folder does not exist. Folder with the given path will be created on save</value>
+  </data>
+  <data name="SaveAsTemplateDialogVariableInfoText" xml:space="preserve">
+    <value>Any secret variable in the stage won't be saved as part of the template.</value>
+  </data>
+  <data name="DeploymentCanceledBy" xml:space="preserve">
+    <value>Deployment was canceled by {0}</value>
+  </data>
+  <data name="ArtifactTriggerDisabledMessageForAzureContainerRepository" xml:space="preserve">
+    <value>Enabling the trigger will create a new release every time an image is pushed to the selected repository.</value>
+  </data>
+  <data name="SelectedArtifactsCountText" xml:space="preserve">
+    <value>Selected {0} artifact(s)</value>
+  </data>
+  <data name="NoWorkItemsFound" xml:space="preserve">
+    <value>No associated work items were found.</value>
+  </data>
+  <data name="DeploymentDurationText" xml:space="preserve">
+    <value>Deployment duration:</value>
+  </data>
+  <data name="DSWSelectReleaseDefinitionEnv" xml:space="preserve">
+    <value>Select at least one stage.</value>
+  </data>
+  <data name="ARIALabelEnvironmentSecurity" xml:space="preserve">
+    <value>Open stage security dialog</value>
+  </data>
+  <data name="PartiallySucceededText" xml:space="preserve">
+    <value>Partially succeeded</value>
+  </data>
+  <data name="TimelineDescriptionByOnFormat" xml:space="preserve">
+    <value>{0} by {1} {2} on {3}</value>
+  </data>
+  <data name="ReleaseHelpContributions" xml:space="preserve">
+    <value>&amp; other extensions</value>
+  </data>
+  <data name="AllCapsOkText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="EditInOldEditorText" xml:space="preserve">
+    <value>Edit (old editor)</value>
+  </data>
+  <data name="ReassignmentInProgressText" xml:space="preserve">
+    <value>Reassigning</value>
+  </data>
+  <data name="ArtifactTriggerDescriptionForGit" xml:space="preserve">
+    <value>Git: {0}</value>
+  </data>
+  <data name="EnvironmentTriggerCircularDependencyError" xml:space="preserve">
+    <value>There is circular dependency with the specified stage trigger condition.</value>
+  </data>
+  <data name="ActiveReleaseCreatedHeaderText" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="DaysSingular" xml:space="preserve">
+    <value>1 day</value>
+  </data>
+  <data name="EnvironmentStatusReason_WaitingOnQueueFormatWithLink" xml:space="preserve">
+    <value>Waiting in the {0} queue. &lt;a href="{1}" target="_blank" rel="noopener noreferrer"&gt;View queue&lt;/a&gt;</value>
+  </data>
+  <data name="ReleaseHelpTests" xml:space="preserve">
+    <value>Test results</value>
+  </data>
+  <data name="ReleaseDefinitionImportedMessage" xml:space="preserve">
+    <value>The following properties in the release pipeline are not imported: agent pools, deployment groups, deployment group tags, approvals, variable groups, and values of secret variables.</value>
+  </data>
+  <data name="ReleaseHistoryChangeTypeAbandon" xml:space="preserve">
+    <value>Abandon</value>
+  </data>
+  <data name="DeploymentOptionSectionDescription" xml:space="preserve">
+    <value>Define deployment overrides</value>
+  </data>
+  <data name="TimelineDescription_NowAtNode" xml:space="preserve">
+    <value>View {0}</value>
+  </data>
+  <data name="ReleaseHelpLearn" xml:space="preserve">
+    <value>Learn</value>
+  </data>
+  <data name="SucceededGatesMessage" xml:space="preserve">
+    <value>gates succeeded</value>
+  </data>
+  <data name="MoveEnvironmentDescription" xml:space="preserve">
+    <value>Move stage up or down</value>
+  </data>
+  <data name="ReleaseHelpGates" xml:space="preserve">
+    <value>Pre and post-deployment</value>
+  </data>
+  <data name="CDTrigger" xml:space="preserve">
+    <value>Continuous deployment trigger</value>
+  </data>
+  <data name="QueueSettingsAccordionDescription" xml:space="preserve">
+    <value>Define behavior when multiple releases are queued for deployment</value>
+  </data>
+  <data name="EditReleaseInfoBar" xml:space="preserve">
+    <value>&lt;div&gt; &lt;b&gt;You can edit approvals, tasks, and variables by clicking on Edit release. &lt;/b&gt; Edits will be saved only to this release. &lt;/div&gt;</value>
+  </data>
+  <data name="OverallApprovalsApproved" xml:space="preserve">
+    <value>Approved on {0}</value>
+  </data>
+  <data name="PhaseHeaderText" xml:space="preserve">
+    <value>Job {0}</value>
+  </data>
+  <data name="SourceBranchMismatchMessage" xml:space="preserve">
+    <value>The current release is deploying from the {0} branch while &lt;a href="{1}" target="_blank" rel="noopener noreferrer"&gt;{2}&lt;/a&gt; is from the {3} branch. This difference cannot be calculated.</value>
+  </data>
+  <data name="EnvironmentStatusReason_PartiallySucceededReasonFormat" xml:space="preserve">
+    <value>{0} {1} failed</value>
+  </data>
+  <data name="ReleaseHelpCalloutCompletePrimaryText" xml:space="preserve">
+    <value>All set. Get started now…</value>
+  </data>
+  <data name="ApprovalIdentityRevalidationInfoMessage" xml:space="preserve">
+    <value>An approval policy for this environment requires you to sign in and revalidate your identity when you approve deployment.</value>
+  </data>
+  <data name="ReleaseSummaryPanelNoArtifactsText" xml:space="preserve">
+    <value>No artifact is associated with this release.</value>
+  </data>
+  <data name="RetryButton" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="GateSuccessCriteriaText" xml:space="preserve">
+    <value>{0} gates succeeding since {1}</value>
+  </data>
+  <data name="EnvironmentStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="BuildVersionLabel" xml:space="preserve">
+    <value>Build version:</value>
+  </data>
+  <data name="DeploymentPropertiesLabel" xml:space="preserve">
+    <value>Deployment process</value>
+  </data>
+  <data name="ReleaseHelpInprogress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="DeploymentStatusWidgetBuildStatusToolTip" xml:space="preserve">
+    <value>Build status: {0}</value>
+  </data>
+  <data name="GatesSucceededText" xml:space="preserve">
+    <value>All gates succeeded at {0}</value>
+  </data>
+  <data name="MaterializeIdentitiesExceptionMessage" xml:space="preserve">
+    <value>Failed to add the identity as a local user due to exception: {0}</value>
+  </data>
+  <data name="TagFilterAriaLabel" xml:space="preserve">
+    <value>Regular expression tag filter</value>
+  </data>
+  <data name="ReportingEnvironmentFailedDeployment" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="AriaLabelGatesSamplingIntervalTimeUnit" xml:space="preserve">
+    <value>The time unit for specifying the time between re-evaluation of gates</value>
+  </data>
+  <data name="DeploymentGroupsIndicatorInProgressText" xml:space="preserve">
+    <value>IN-PROGRESS</value>
+  </data>
+  <data name="TimelineHeaderApprovalSucceeded" xml:space="preserve">
+    <value>{0} approval succeeded</value>
+  </data>
+  <data name="PipelineEditorLeftPane" xml:space="preserve">
+    <value>Pipeline editor - left pane</value>
+  </data>
+  <data name="EmptyFolderNameError" xml:space="preserve">
+    <value>Folder name cannot be empty</value>
+  </data>
+  <data name="OthersCategory" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="FirstRunGuideForReleaseProgressHelpText" xml:space="preserve">
+    <value>First run guide for release progress help</value>
+  </data>
+  <data name="AllDefinitionsFolderColumnHeader" xml:space="preserve">
+    <value>Folder / Release pipelines</value>
+  </data>
+  <data name="ReleaseCreatedTextSuffix" xml:space="preserve">
+    <value> has been created</value>
+  </data>
+  <data name="DeleteBranchFilter" xml:space="preserve">
+    <value>Delete branch filter {0}</value>
+  </data>
+  <data name="EnvironmentPreApprovalGatesHeading" xml:space="preserve">
+    <value>Pre-deployment gates</value>
+  </data>
+  <data name="StopRetainingReleaseMenuItemText" xml:space="preserve">
+    <value>Stop retaining indefinitely</value>
+  </data>
+  <data name="DemandsWarningHeader" xml:space="preserve">
+    <value>Demands warning</value>
+  </data>
+  <data name="RetentionKeepArtifactsText" xml:space="preserve">
+    <value>and keep artifacts.</value>
+  </data>
+  <data name="ARIADescriptionCopyBadgeURL" xml:space="preserve">
+    <value>Copy the badge URL to the clipboard</value>
+  </data>
+  <data name="RedeployManuallyActionText" xml:space="preserve">
+    <value>redeploy manually</value>
+  </data>
+  <data name="EnvironmentStatus_PostApprovalPendingOn" xml:space="preserve">
+    <value>Post-deployment approval pending on</value>
+  </data>
+  <data name="ManualTriggerHeaderText" xml:space="preserve">
+    <value>Manually triggered</value>
+  </data>
+  <data name="ReleaseCreatedTextPrefix" xml:space="preserve">
+    <value>Release </value>
+  </data>
+  <data name="TimelineContent_Queue_OneLatestText" xml:space="preserve">
+    <value>Deployment queue settings for this stage are configured to deploy one release at a time. When multiple releases are queued, the latest will be deployed and all the others will be canceled.</value>
+  </data>
+  <data name="GatesSamplingIntervalTimeErrorMessage" xml:space="preserve">
+    <value>The value must be less than the timeout.</value>
+  </data>
+  <data name="SourceAliasCannotBeEmpty" xml:space="preserve">
+    <value>The source alias cannot be empty.</value>
+  </data>
+  <data name="ApprovalsAfterSuccessfulGates" xml:space="preserve">
+    <value>On successful gates, ask for approvals</value>
+  </data>
+  <data name="TimelineHeaderAutomaticTrigger" xml:space="preserve">
+    <value>Automatic trigger</value>
+  </data>
+  <data name="Resumed" xml:space="preserve">
+    <value>Resumed</value>
+  </data>
+  <data name="EnvironmentDescriptionAriaLabel" xml:space="preserve">
+    <value>Stage has {0}. Click the button to view stage jobs and tasks.</value>
+  </data>
+  <data name="EnvironmentColumnHeaderLabel" xml:space="preserve">
+    <value>Stage</value>
+  </data>
+  <data name="TimelineHeaderScheduledTriggerPending" xml:space="preserve">
+    <value>Scheduled trigger pending</value>
+  </data>
+  <data name="EditRdCommandBarMenuText" xml:space="preserve">
+    <value>Edit pipeline</value>
+  </data>
+  <data name="EnvironmentNameValidationError" xml:space="preserve">
+    <value>Stage name can't be empty.</value>
+  </data>
+  <data name="Instructions" xml:space="preserve">
+    <value>Instructions</value>
+  </data>
+  <data name="ListOfChangesGoingText" xml:space="preserve">
+    <value>List of {0} going between</value>
+  </data>
+  <data name="DSWDeploymentPartialSuccess" xml:space="preserve">
+    <value>Partial Success</value>
+  </data>
+  <data name="ManualInterventionNoPermissionsMessageText" xml:space="preserve">
+    <value>You do not have permissions to resume. Contact release administrator to manage deployments.</value>
+  </data>
+  <data name="DSWSelectBranch" xml:space="preserve">
+    <value>Select a branch.</value>
+  </data>
+  <data name="DiscardingReleaseText" xml:space="preserve">
+    <value>Discarding...</value>
+  </data>
+  <data name="ActiveReleaseEnvironmentsHeaderText" xml:space="preserve">
+    <value>Stages</value>
+  </data>
+  <data name="SortOrder" xml:space="preserve">
+    <value>Sort order</value>
+  </data>
+  <data name="DSWEnvironmentsSelectionOverflow" xml:space="preserve">
+    <value>Current widget size only supports {0} stages.</value>
+  </data>
+  <data name="PullRequestToggleHelpText" xml:space="preserve">
+    <value>Creates a release every time a new version of the selected artifact is available as part of a pull request workflow</value>
+  </data>
+  <data name="CommitsLatestArtifactComparisonComparedToMessageText" xml:space="preserve">
+    <value>&lt;div&gt;Commits are compared to the &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt; deployment (currently on this stage).&lt;/div&gt;</value>
+  </data>
+  <data name="TimeAndDateFormat" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="GatesOrderForExecutionOfApprovalLabel" xml:space="preserve">
+    <value>Gates and approvals</value>
+  </data>
+  <data name="AutoLinkWorkItemsHelpText" xml:space="preserve">
+    <value>When the stage completes, create links to all work items linked to associated changes.</value>
+  </data>
+  <data name="ActiveDefinitionsCollapsedLeftPaneLabel" xml:space="preserve">
+    <value>Mine and recent pipelines</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="RetentionTabItemTitle" xml:space="preserve">
+    <value>Retention</value>
+  </data>
+  <data name="TimelineDescriptionByMultipleOnFormat" xml:space="preserve">
+    <value>{0} by {1} {2} (+{3}) on {4}</value>
+  </data>
+  <data name="GatesSucceededTooltipFormat" xml:space="preserve">
+    <value>{0} gates succeeded</value>
+  </data>
+  <data name="DSWTooltipDeploymentDuration" xml:space="preserve">
+    <value>Deployment Duration</value>
+  </data>
+  <data name="MoreArtifacts" xml:space="preserve">
+    <value>{0} more</value>
+  </data>
+  <data name="ImportDefinitionError" xml:space="preserve">
+    <value>Something went wrong. Try importing again.</value>
+  </data>
+  <data name="NewHubZeroDayPrimaryText" xml:space="preserve">
+    <value>No release pipelines found</value>
+  </data>
+  <data name="MoveDownText" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="CanceledText" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="RevalidateIdentityUnexpected" xml:space="preserve">
+    <value>Revalidating the identity of the approver before completing the approval setting on stage(s) {0} is not expected in bulk approval. Approve individually or remove the setting and try again.</value>
+  </data>
+  <data name="DeployOptionsLabel" xml:space="preserve">
+    <value>Subsequent releases</value>
+  </data>
+  <data name="ReleaseComparisonWithIncompatibleArtifactType" xml:space="preserve">
+    <value>The current release has artifact {0} of type "{1}" while &lt;a href="{2}" target="_blank" rel="noopener noreferrer"&gt;{3}&lt;/a&gt; has artifact {4} of type "{5}". This difference cannot be calculated.</value>
+  </data>
+  <data name="TimelineHeaderGatesProcessing" xml:space="preserve">
+    <value>{0} gates processing</value>
+  </data>
+  <data name="CommaSeparator" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="RejectedDate" xml:space="preserve">
+    <value>Rejected at {0}</value>
+  </data>
+  <data name="TriggerColumnHeaderLabel" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="ResumedDate" xml:space="preserve">
+    <value>Resumed at {0}</value>
+  </data>
+  <data name="TimelineQueueContentText" xml:space="preserve">
+    <value>&lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;View&lt;/a&gt; currently queued deployments.</value>
+  </data>
+  <data name="ScheduledTriggerAfterEnvironmentText" xml:space="preserve">
+    <value>Scheduled after {0} stage</value>
+  </data>
+  <data name="ReleaseHelpCommits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
+  <data name="ReleaseStatus" xml:space="preserve">
+    <value>Release status</value>
+  </data>
+  <data name="DeployInSequenceText" xml:space="preserve">
+    <value>Deploy all in sequence</value>
+  </data>
+  <data name="EnvironmentStatusReason_ManualInterventionRejectedFormat" xml:space="preserve">
+    <value>Rejected by</value>
+  </data>
+  <data name="PendingApprovalTooltip" xml:space="preserve">
+    <value>Pending approval</value>
+  </data>
+  <data name="ReleaseHelpPipelineTabDescription" xml:space="preserve">
+    <value>Quickly visualize details of your release such as triggers, requestor, artifacts, tags and more. Environments are modeled to show their status, including detailed progress and final outcome. Logs are just one click away.</value>
+  </data>
+  <data name="GateDefinitionsMenuDropdown" xml:space="preserve">
+    <value>Gate definitions list menu</value>
+  </data>
+  <data name="DeploymentGroupLogsHeader" xml:space="preserve">
+    <value>Logs for deployment group</value>
+  </data>
+  <data name="DeploymentsTriggerPivotLabelText" xml:space="preserve">
+    <value>Deployment trigger</value>
+  </data>
+  <data name="ConditionsSucceededTooltipFormat" xml:space="preserve">
+    <value>{0} conditions succeeded</value>
+  </data>
+  <data name="RetentionOneDayCountText" xml:space="preserve">
+    <value>Keep for {0} day,</value>
+  </data>
+  <data name="PostEnvironmentDeploymentTriggerTabName" xml:space="preserve">
+    <value>After stage</value>
+  </data>
+  <data name="DeployManuallyActionText" xml:space="preserve">
+    <value>deploy manually</value>
+  </data>
+  <data name="TimelineHeaderApprovalCanceled" xml:space="preserve">
+    <value>{0} approval canceled</value>
+  </data>
+  <data name="WorkItemState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="NextGateSampleIn" xml:space="preserve">
+    <value>Next in {0}</value>
+  </data>
+  <data name="WorkItemTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="DeploymentWidgetTestsToolTip" xml:space="preserve">
+    <value>Tests: {0} of {1} passed</value>
+  </data>
+  <data name="RetentionReleaseCountEmptyValueErrorMessage" xml:space="preserve">
+    <value>This setting is required. You must specify a number between 1 and {0}.</value>
+  </data>
+  <data name="ReleaseSummaryPullRequestTriggerNodeText" xml:space="preserve">
+    <value>Pull request deployment requested for</value>
+  </data>
+  <data name="SummaryTabCommandsMenuBarAriaLabel" xml:space="preserve">
+    <value>Summary menu</value>
+  </data>
+  <data name="GatesCanceledTooltipFormat" xml:space="preserve">
+    <value>{0} gates canceled</value>
+  </data>
+  <data name="DSWTestPassRate" xml:space="preserve">
+    <value>Test Pass Rate</value>
+  </data>
+  <data name="AllDefinitionsTabTitle" xml:space="preserve">
+    <value>All pipelines</value>
+  </data>
+  <data name="ArtifactTriggerDisabledMessageForPackageManagement" xml:space="preserve">
+    <value>Enabling the trigger will create a new release every time a new version of the selected package is published.</value>
+  </data>
+  <data name="ApproversLabel" xml:space="preserve">
+    <value>Approvers</value>
+  </data>
+  <data name="GateTimeoutOf" xml:space="preserve">
+    <value>Timeout of {0}</value>
+  </data>
+  <data name="CreateReleasePanelVariablesSectionInfoText" xml:space="preserve">
+    <value>Shows a list of pipeline variables that are marked as 'Settable at release time' in the release pipeline. Note that variables are not shown if scoped to stages for which you do not have edit permissions.</value>
+  </data>
+  <data name="GateResultAriaLabel" xml:space="preserve">
+    <value>{0} {1} at {2}</value>
+  </data>
+  <data name="RetentionDaysInvalidValueErrorMessage" xml:space="preserve">
+    <value>The specified value is invalid. You must specify a number between 1 and {0}.</value>
+  </data>
+  <data name="DefinitionScheduleTriggerHeading" xml:space="preserve">
+    <value>Scheduled release trigger</value>
+  </data>
+  <data name="CompareText" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="NoCurrentlyDeployedSubText" xml:space="preserve">
+    <value>No deployments have been made for this pipeline. Toggle 'Currenly deployed' to view all releases, or create a new release.</value>
+  </data>
+  <data name="RetentionRightPaneARIALabel" xml:space="preserve">
+    <value>Retention policies right pane</value>
+  </data>
+  <data name="ApprovalButtonTooltip" xml:space="preserve">
+    <value>View approval</value>
+  </data>
+  <data name="TargetBranch" xml:space="preserve">
+    <value>Target Branch</value>
+  </data>
+  <data name="NoDeploymentText" xml:space="preserve">
+    <value>No deployments yet</value>
+  </data>
+  <data name="ArtifactTriggerAdditionalOptionsHeader" xml:space="preserve">
+    <value>Additional options</value>
+  </data>
+  <data name="AbandonReleaseMenuItemText" xml:space="preserve">
+    <value>Abandon</value>
+  </data>
+  <data name="ApprovalPendingDescription_byAnyOne" xml:space="preserve">
+    <value>Waiting for &lt;strong&gt;any one&lt;/strong&gt; of the approvers to approve.</value>
+  </data>
+  <data name="SameSourceVersionMessage" xml:space="preserve">
+    <value>There is no difference in commits between the current release and &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;{1}&lt;/a&gt;. Both releases have the same artifact version.</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="ViewRdContextualMenuText" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="CurrentlyDeployedOnEnvironment" xml:space="preserve">
+    <value>Currently deployed</value>
+  </data>
+  <data name="ArtifactTypeInvalidFieldsErrorMessage" xml:space="preserve">
+    <value>Field '{0}' should have valid values.</value>
+  </data>
+  <data name="ReassignApproverCloseButtonAriaText" xml:space="preserve">
+    <value>Close reassign approver dialog box</value>
+  </data>
+  <data name="PostReleaseTriggerTabName" xml:space="preserve">
+    <value>After release</value>
+  </data>
+  <data name="SourceType" xml:space="preserve">
+    <value>Source type</value>
+  </data>
+  <data name="DefaultVersionDescription" xml:space="preserve">
+    <value>The default version will be deployed when new releases are created. The version can be changed for manually created releases at the time of release creation.</value>
+  </data>
+  <data name="BadgeUrlInfoMessageText" xml:space="preserve">
+    <value>Badge URLs for stage(s) {0} will be available only after you save the release pipeline</value>
+  </data>
+  <data name="DswEnvironmentPickerToolTip" xml:space="preserve">
+    <value>Release pipelines linked to the selected build pipeline, for which stage status will be shown. Create release pipelines in the Releases tab.</value>
+  </data>
+  <data name="PhaseRefNameDescription" xml:space="preserve">
+    <value>Any changes to the reference name will require updates to downstream tasks that uses this reference name, a valid reference name can only contain 'a-z', 'A-Z', '0-9' and '_' and must not start with a number.</value>
+  </data>
+  <data name="WorkItemsRollbackMessageFormatString" xml:space="preserve">
+    <value>({0} {1} rolled back work items)</value>
+  </data>
+  <data name="LogsTabJobNameFormat" xml:space="preserve">
+    <value>{0} ({1}) </value>
+  </data>
+  <data name="FilterByKeywordsText" xml:space="preserve">
+    <value>Filter by keywords</value>
+  </data>
+  <data name="DiscardButtonText" xml:space="preserve">
+    <value>Discard</value>
+  </data>
+  <data name="EditEnvironmentPermissionMessage" xml:space="preserve">
+    <value>You do not have permissions to modify this stage. Changes made will not be saved. Contact your release manager to grant permissions.</value>
+  </data>
+  <data name="CreateFolderDialogTitle" xml:space="preserve">
+    <value>New folder</value>
+  </data>
+  <data name="ReleaseHelpCalloutSecondaryText" xml:space="preserve">
+    <value>You can relaunch the {0} dialog by clicking the Help button.</value>
+  </data>
+  <data name="EvaluationOptionsLabelText" xml:space="preserve">
+    <value>Evaluation options</value>
+  </data>
+  <data name="PreDeployApprovalSubText" xml:space="preserve">
+    <value>Pre-deployment approval pending</value>
+  </data>
+  <data name="AttemptPropertiesLabel" xml:space="preserve">
+    <value>Deployment attempt #{0}</value>
+  </data>
+  <data name="TriggersBuildDefDeletedError" xml:space="preserve">
+    <value>Artifact source (build pipeline) might be invalid. It might have been deleted or you do not have permissions to view it.</value>
+  </data>
+  <data name="ArtifactTriggerBranchFiltersHelpTextForBuild" xml:space="preserve">
+    <value>&lt;li&gt;A release will be triggered only for a build that is from one of the branches selected here. For example, selecting "master" will trigger a release for every build from the master branch. To trigger a release for any build under features/, enter "features/*". To trigger a release for all builds, just enter "*". Note that all the filters specified here will be OR'ed, i.e., artifact matching at least one filter condition would be sufficient to trigger a release. TFVC Build Artifacts do not support branch based triggers, you can use tags to use triggers for TFVC Build Artifacts.&lt;/li&gt;
+&lt;li&gt;Instead of selecting a branch, you can also enter a variable which contains the branch name. For example, if variable $(currentReleaseBranch) contains the value "releases/M23" then you can enter this variable in the branch field. A release will be triggered if the build is from "releases/M23". Variables from variable groups can be used across multiple release pipelines.&lt;/li&gt;
+&lt;li&gt;You may also optionally specify tags here. A release will be triggered only if a new build, tagged with the keywords specified here, is available. If you include multiple tags in the same line, they are AND-ed while evaluating the trigger condition, whereas if you include tags in separate lines, they are OR-ed. Excluding tags is not supported.&lt;/li&gt;
+&lt;li&gt;You can also add filter that takes the value from build pipeline's default branch. This is the branch that is configured in the build pipeline of the linked artifact.&lt;/li&gt;.</value>
+  </data>
+  <data name="RetentionSingleReleaseCountText" xml:space="preserve">
+    <value>minimum of {0} deployed release</value>
+  </data>
+  <data name="AddGateDescription" xml:space="preserve">
+    <value>Add gate</value>
+  </data>
+  <data name="NewReleaseDefinitionNameText" xml:space="preserve">
+    <value>New release pipeline</value>
+  </data>
+  <data name="BranchVersionPickerText" xml:space="preserve">
+    <value>Branch version picker</value>
+  </data>
+  <data name="DeferredInfo" xml:space="preserve">
+    <value>Deferred information</value>
+  </data>
+  <data name="MoreInformationTriggerAriaLabel" xml:space="preserve">
+    <value>More information about selecting triggers in pre-deployment stage conditions</value>
+  </data>
+  <data name="NoArtifactsDisplayMessage" xml:space="preserve">
+    <value>No version is available for &lt;b&gt;{0}&lt;/b&gt; or the latest version has no artifacts to publish. Please check the source pipeline.</value>
+  </data>
+  <data name="ApprovingButton" xml:space="preserve">
+    <value>Approving...</value>
+  </data>
+  <data name="ReportEnvironmentDeploymentStatus" xml:space="preserve">
+    <value>Report deployment status to the repository host</value>
+  </data>
+  <data name="EnvironmentStatusReason_WaitingForPipeline" xml:space="preserve">
+    <value>Waiting for a job</value>
+  </data>
+  <data name="MoveText" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="ByYouText" xml:space="preserve">
+    <value>you</value>
+  </data>
+  <data name="GatesFailedText" xml:space="preserve">
+    <value>Gates evaluation failed at {0}</value>
+  </data>
+  <data name="ToolbarOverflowAriaLabel" xml:space="preserve">
+    <value>More actions</value>
+  </data>
+  <data name="GatePreviousSample" xml:space="preserve">
+    <value>Previous sample</value>
+  </data>
+  <data name="DeploymentTypeProduction" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="ApprovalPendingInfo" xml:space="preserve">
+    <value>Approval pending </value>
+  </data>
+  <data name="ClosePanelText" xml:space="preserve">
+    <value>Close panel</value>
+  </data>
+  <data name="ApprovalRejectedTooltipFormat" xml:space="preserve">
+    <value>{0} approval was rejected</value>
+  </data>
+  <data name="BuildDefinitionBranch" xml:space="preserve">
+    <value>The build pipeline's default branch</value>
+  </data>
+  <data name="OpenReleaseMenuItemText" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="RetentionDaysCountTitle" xml:space="preserve">
+    <value>Days to retain a release</value>
+  </data>
+  <data name="DeploymentStatusAttemptNumberTitle" xml:space="preserve">
+    <value>Attempt #</value>
+  </data>
+  <data name="ManualInterventionTimeoutPolicyForReject" xml:space="preserve">
+    <value>The deployment will be rejected on timeout.</value>
+  </data>
+  <data name="ManualInterventionTimeoutPolicyForResume" xml:space="preserve">
+    <value>The deployment will be resumed on timeout.</value>
+  </data>
+  <data name="EnvironmentAutoRedeployTriggerHeading" xml:space="preserve">
+    <value>Auto-redeploy trigger</value>
+  </data>
+  <data name="TimelineDescriptionApprovalPendingOnSinceFormat" xml:space="preserve">
+    <value>On {0} {1} since {2}</value>
+  </data>
+  <data name="FolderDialogNamePlaceholder" xml:space="preserve">
+    <value>Enter a name</value>
+  </data>
+  <data name="EvaluationTimeSamplesText" xml:space="preserve">
+    <value>Evaluation time samples</value>
+  </data>
+  <data name="MoreInformationArtifactTriggersFiltersAriaLabel" xml:space="preserve">
+    <value>More information about branch filters for continuous deployment trigger in artifacts</value>
+  </data>
+  <data name="DefinitionNameAlreadyExistsError" xml:space="preserve">
+    <value>A pipeline with this name already exists</value>
+  </data>
+  <data name="ReportingDeploymentFrequency" xml:space="preserve">
+    <value>Deployment frequency</value>
+  </data>
+  <data name="Include" xml:space="preserve">
+    <value>Include</value>
+  </data>
+  <data name="ViewLogsButtonText" xml:space="preserve">
+    <value>View logs</value>
+  </data>
+  <data name="ApprovalsAfterGates" xml:space="preserve">
+    <value>Ignore gates outcome and ask for approvals</value>
+  </data>
+  <data name="ARIALabelLogsRightPane" xml:space="preserve">
+    <value>Pipeline logs view right pane</value>
+  </data>
+  <data name="JobStateGatesPartiallySucceeded" xml:space="preserve">
+    <value>Gates partially succeeded</value>
+  </data>
+  <data name="AddBranchFilter" xml:space="preserve">
+    <value>Add branch filter</value>
+  </data>
+  <data name="ReleaseHelpContributionsTabLabel" xml:space="preserve">
+    <value>Test results &amp; other extensions</value>
+  </data>
+  <data name="Timeline_NowAtNode_NoPreviousDeploymentText" xml:space="preserve">
+    <value>No previous deployment</value>
+  </data>
+  <data name="PendingApprovalSubtext" xml:space="preserve">
+    <value>Pending approval</value>
+  </data>
+  <data name="TimelineHeaderDeploymentPartiallySucceeded" xml:space="preserve">
+    <value>Deployment partially succeeded</value>
+  </data>
+  <data name="AutoRedeployTriggerAttemptText" xml:space="preserve">
+    <value>Post-deployment auto redeploy condition</value>
+  </data>
+  <data name="ApprovalPolicyInfo_ByAnyone" xml:space="preserve">
+    <value>After the deployment starts, &lt;strong&gt; any one &lt;/strong&gt; of the approvers must approve within a timeout of {0}</value>
+  </data>
+  <data name="MinimumSuccessDurationLabel" xml:space="preserve">
+    <value>Minimum duration for steady results after a successful gates evaluation</value>
+  </data>
+  <data name="ApprovalOverrideCancelButtonAriaText" xml:space="preserve">
+    <value>Cancel override</value>
+  </data>
+  <data name="CreateReleasePanelVariablesAccordionLabel" xml:space="preserve">
+    <value>Variables</value>
+  </data>
+  <data name="PhaseErrorsLabel" xml:space="preserve">
+    <value>Click here to view errors</value>
+  </data>
+  <data name="ArtifactTriggerToggleHelpTextForGit" xml:space="preserve">
+    <value>Creates a release every time a Git push occurs in the selected repository.</value>
+  </data>
+  <data name="DSWTooltipAbortedRuns" xml:space="preserve">
+    <value>Aborted Runs</value>
+  </data>
+  <data name="CreateReleaseMenuOptionText" xml:space="preserve">
+    <value>Create release</value>
+  </data>
+  <data name="OutputVariablesGroupLabel" xml:space="preserve">
+    <value>Output Variables</value>
+  </data>
+  <data name="DeleteArtifact" xml:space="preserve">
+    <value>Delete artifact</value>
+  </data>
+  <data name="BuildDefinitionBranchPlaceholderFormat" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ActiveDefinitionsLeftPaneARIALabel" xml:space="preserve">
+    <value>Active pipelines left pane</value>
+  </data>
+  <data name="DSWTooltipNotApplicable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Timeline_PRTrigger_Disabled" xml:space="preserve">
+    <value>Pull request deployment trigger disabled</value>
+  </data>
+  <data name="EnvironmentApprovalTimeoutLabel" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="LogsTabNotDeployedEnvironmentText" xml:space="preserve">
+    <value>Deployment of {0} to {1} has not yet started.</value>
+  </data>
+  <data name="ArtifactTriggerDescriptionForAzureContainerRepository" xml:space="preserve">
+    <value>Azure Container Repository: {0}</value>
+  </data>
+  <data name="MoreInformationFiltersAriaLabel" xml:space="preserve">
+    <value>More information about artifact filters</value>
+  </data>
+  <data name="CanvasErrorsAndWarningsFormat" xml:space="preserve">
+    <value>&lt;strong&gt;{0}, {1}&lt;/strong&gt;</value>
+  </data>
+  <data name="DeleteEnvironmentText" xml:space="preserve">
+    <value>Delete stage</value>
+  </data>
+  <data name="IntegrateJiraWorkItems" xml:space="preserve">
+    <value>Report deployment status to Jira</value>
+  </data>
+  <data name="TagsLabel" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="AddArtifactSourceTrigger" xml:space="preserve">
+    <value>Add an artifact source trigger</value>
+  </data>
+  <data name="InvalidDefinitionIdError" xml:space="preserve">
+    <value>The pipeline ID {0} is not valid</value>
+  </data>
+  <data name="PullRequestTriggerDescription" xml:space="preserve">
+    <value>Enabling this will create a release every time a selected artifact is available as part of a pull request workflow</value>
+  </data>
+  <data name="RetentionReleasesToKeepDescription" xml:space="preserve">
+    <value>Set the minimum number of releases to keep for this stage.</value>
+  </data>
+  <data name="ArtifactVersionSeperator" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="IntegrationsText" xml:space="preserve">
+    <value>Integrations</value>
+  </data>
+  <data name="DeploymentSubStatusViewStatusTitle" xml:space="preserve">
+    <value>Sub-status</value>
+  </data>
+  <data name="NoReleasesFoundPrimaryText" xml:space="preserve">
+    <value>No releases found</value>
+  </data>
+  <data name="StageDeploymentFailed" xml:space="preserve">
+    <value>Deployment to this stage fails</value>
+  </data>
+  <data name="DSWDeploymentInProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="NoJiraEndpointDropdownErrorMessage" xml:space="preserve">
+    <value>This setting is required. Install Azure Pipelines for Jira app in JIRA Software cloud and add organization to create a connection.</value>
+  </data>
+  <data name="DuplicateAlias" xml:space="preserve">
+    <value>The source alias '{0}' is already linked to the release pipeline, please provide another alias.</value>
+  </data>
+  <data name="MultipleWarningsText" xml:space="preserve">
+    <value>{0} warnings</value>
+  </data>
+  <data name="PullRequestAddBranchFilterAriaDescription" xml:space="preserve">
+    <value>Add pull request target branch filters.</value>
+  </data>
+  <data name="SelectAllArtifactsLabel" xml:space="preserve">
+    <value>Select all artifacts</value>
+  </data>
+  <data name="MoreInformationScheduleAriaLabel" xml:space="preserve">
+    <value>More information about schedule based conditions</value>
+  </data>
+  <data name="DeploymentStatusWidgetEnvironmentNameToolTip" xml:space="preserve">
+    <value>Stage: {0}</value>
+  </data>
+  <data name="TimelineHeader_NowAtNode" xml:space="preserve">
+    <value>Now at {0}</value>
+  </data>
+  <data name="EnvironmentStatusInProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="PreDeploymentText" xml:space="preserve">
+    <value>Pre-deployment</value>
+  </data>
+  <data name="SingleIssueFormat" xml:space="preserve">
+    <value>{0} issue</value>
+  </data>
+  <data name="DSWDeploymentNotDeployed" xml:space="preserve">
+    <value>Not Deployed</value>
+  </data>
+  <data name="SelectEnvironment" xml:space="preserve">
+    <value>Select stage</value>
+  </data>
+  <data name="ReleaseProgressHelpDialogTitle" xml:space="preserve">
+    <value>Release view help dialog</value>
+  </data>
+  <data name="TimelineStatus_QueuedForAgent" xml:space="preserve">
+    <value>Queued for agent</value>
+  </data>
+  <data name="JenkinsSelectiveArtifactsMessage" xml:space="preserve">
+    <value>Following are the artifacts published in the latest version of the job.</value>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>Copied to the clipboard</value>
+  </data>
+  <data name="KeyboardShortcutSaveReleaseDefinitionDescription" xml:space="preserve">
+    <value>Save the release pipeline</value>
+  </data>
+  <data name="TagFilterForAzureContainerRegistry" xml:space="preserve">
+    <value>Tag Filter</value>
+  </data>
+  <data name="AddArtifactFilterAriaLabel" xml:space="preserve">
+    <value>Add artifact filter</value>
+  </data>
+  <data name="SettingsRequired" xml:space="preserve">
+    <value>This setting is required.</value>
+  </data>
+  <data name="DeploymentAttemptAriaLabel" xml:space="preserve">
+    <value>{0} {1}. Use right arrow key to view attempts.</value>
+  </data>
+  <data name="PullRequestTriggerTargetBranchCallout" xml:space="preserve">
+    <value>&lt;li&gt;Target branch is the branch for which a pull request is raised. A release will be triggered only if the build is generated from a pull request raised for these branches. To specify multiple target branches, use wildcard character “*” (E.g. "features/*"). You may also optionally specify tags.  Once triggered, the status of the release will be posted back to the corresponding code repository.&lt;/li&gt;</value>
+  </data>
+  <data name="SortByFastestFirst" xml:space="preserve">
+    <value>Fastest first</value>
+  </data>
+  <data name="DatePickerLabel" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="GateIgnoredAt" xml:space="preserve">
+    <value>Gate ignored at {0}</value>
+  </data>
+  <data name="AddToDashboardContextualMenuText" xml:space="preserve">
+    <value>Add to dashboard</value>
+  </data>
+  <data name="AriaLabelGatesStabilizationTimeValue" xml:space="preserve">
+    <value>The delay before evaluation is {0}</value>
+  </data>
+  <data name="ReleaseNotRetainedMessageFormat" xml:space="preserve">
+    <value>Release '{0}' is no longer set to be retained indefinitely</value>
+  </data>
+  <data name="InvalidReportContributionIdFormat" xml:space="preserve">
+    <value>Selected contribution id for report "{0}" is not a valid release report contribution id</value>
+  </data>
+  <data name="NoDefinitionsMatchYourFilterText" xml:space="preserve">
+    <value>No pipelines match your search</value>
+  </data>
+  <data name="Deploying" xml:space="preserve">
+    <value>Deploying</value>
+  </data>
+  <data name="ActiveReleasesMenuItemButtonAriaDescription" xml:space="preserve">
+    <value>Menu items for this release</value>
+  </data>
+  <data name="SinglePhaseMutlipleErrorsLable" xml:space="preserve">
+    <value>There are {0} in job {1}</value>
+  </data>
+  <data name="ApprovalPendingDescription" xml:space="preserve">
+    <value>Waiting for all approvers to approve {0}.</value>
+  </data>
+  <data name="ArtifactAliasChangedWarningMessage" xml:space="preserve">
+    <value>Changing an artifact source alias can break task inputs and scripts where it is used as a variable.</value>
+  </data>
+  <data name="ReleaseHelpCommitsTabLabel" xml:space="preserve">
+    <value>Commits and workitems</value>
+  </data>
+  <data name="ZoomOutEnvironments" xml:space="preserve">
+    <value>Zoom out stages</value>
+  </data>
+  <data name="EnvironmentStatus_Canceled" xml:space="preserve">
+    <value>Deployment was canceled by</value>
+  </data>
+  <data name="ArtifactFiltersHelpText" xml:space="preserve">
+    <value>Select artifact condition(s) to trigger a new deployment. A release will be deployed to this stage only if all artifact conditions match.</value>
+  </data>
+  <data name="ManualInterventionnoPermissionMessage" xml:space="preserve">
+    <value>You need the right permissions to approve this manual intervention. &lt;a href="{0}" target="_blank" rel="noopener noreferrer"&gt;Learn more&lt;/a&gt;</value>
+  </data>
+  <data name="WhatsNew" xml:space="preserve">
+    <value>What's New</value>
+  </data>
+  <data name="DeploymentGroupsProgressFailedText" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="AbandonText" xml:space="preserve">
+    <value>Abandon</value>
+  </data>
+  <data name="DeploymentProcessText" xml:space="preserve">
+    <value>Deployment process</value>
+  </data>
+  <data name="ActiveReleaseHiddenEnvironmentCount" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DefaultArtifactSpecifyAtReleaseCreation" xml:space="preserve">
+    <value>Specify at the time of release creation</value>
+  </data>
+  <data name="ReleasePropertiesCanvasDescription" xml:space="preserve">
+    <value>Press enter and use arrow keys to access the links within the canvas</value>
+  </data>
+  <data name="HoursSingular" xml:space="preserve">
+    <value>1 hour</value>
+  </data>
+  <data name="ReassignApproverButtonText" xml:space="preserve">
+    <value>Reassign</value>
+  </data>
+  <data name="InvalidParmetersMessage" xml:space="preserve">
+    <value>Invalid parameters</value>
+  </data>
+  <data name="MoveDefinitionFolderDialogTitle" xml:space="preserve">
+    <value>Move pipeline</value>
+  </data>
+  <data name="ARIALabelReleaseHelpLeftPane" xml:space="preserve">
+    <value>Release view help dialog left pane</value>
+  </data>
+  <data name="WaitingForMIText" xml:space="preserve">
+    <value>Waiting for manual intervention for {0}</value>
+  </data>
+  <data name="PullRequestDeploymentDisabledAriaLabel" xml:space="preserve">
+    <value>Pull request deployment is disabled.</value>
+  </data>
+  <data name="BranchFiltersBuild" xml:space="preserve">
+    <value>Build branch filters</value>
+  </data>
+  <data name="DSWViewSelectorHeaderLabel" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="JobApprovedAutomaticallyStatus" xml:space="preserve">
+    <value>Approved automatically</value>
+  </data>
+  <data name="DemandsWarningFullText" xml:space="preserve">
+    <value>{0}: {1} </value>
+  </data>
+  <data name="WorkItemRollbackMessageFormatString" xml:space="preserve">
+    <value>({0} {1} rolled back work item)</value>
+  </data>
+  <data name="BranchLabel" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="TimelineStatus_QueuedForDeployment" xml:space="preserve">
+    <value>Queued for deployment</value>
+  </data>
+  <data name="PullRequestTriggerHeaderText" xml:space="preserve">
+    <value>Pull request deployment</value>
+  </data>
+  <data name="CurrentlyDeployedToggleOffText" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="NextSampleTimeSubtext" xml:space="preserve">
+    <value>to next sample</value>
+  </data>
+  <data name="ForText" xml:space="preserve">
+    <value>for</value>
+  </data>
+  <data name="ArtifactTriggerToggleHelpTextForPackageManagement" xml:space="preserve">
+    <value>Creates a release every time a new version of the selected package is published.</value>
+  </data>
+  <data name="CreateReleasePanelDeploymentTriggerLabel" xml:space="preserve">
+    <value>Pipeline</value>
+  </data>
+  <data name="DeployMultiple" xml:space="preserve">
+    <value>Deploy multiple</value>
+  </data>
+  <data name="IntegrateJiraWorkItemsHelpText" xml:space="preserve">
+    <value>Include Jira issues in work items and create links to all issues on stage completion.</value>
+  </data>
+  <data name="NewHubZeroDayCreateDefinitionButtonText" xml:space="preserve">
+    <value>New pipeline</value>
+  </data>
+  <data name="WorkItemType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EnvironmentStatusQueued" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="PreDeploymentConditions" xml:space="preserve">
+    <value>Pre-deployment conditions</value>
+  </data>
+  <data name="EditReleaseText" xml:space="preserve">
+    <value>Edit release</value>
+  </data>
+  <data name="InProgressPhaseProgressBarLinkTitleSingular" xml:space="preserve">
+    <value>{0}/{1} tasks have completed for {2} of {3}.</value>
+  </data>
+  <data name="EnvironmentStatusScheduled" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="NewReleaseDefinitionTabTitle" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ScheduleLable" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="DSWTooltipDeploymentStatus" xml:space="preserve">
+    <value>Deployment Status</value>
+  </data>
+  <data name="PendingManualIntervention" xml:space="preserve">
+    <value>Pending manual intervention</value>
+  </data>
+  <data name="ArtifactTriggerAdditionalOptionsHelpText" xml:space="preserve">
+    <value>Create a release when tags are added to an existing build. Upon enabling this option, a release is created when tags are added to an existing build that has not been released. This could lead to deployment of an older build to the stages.</value>
+  </data>
+  <data name="ReleaseApprovalOverrideButtonDescriptionText" xml:space="preserve">
+    <value>Click here to override the approval pending on {0}</value>
+  </data>
+  <data name="SelectArtifactsFormat" xml:space="preserve">
+    <value>Select artifacts for {0}</value>
+  </data>
+  <data name="BranchOrTagFilterRequired" xml:space="preserve">
+    <value>Specify branch or tag filters.</value>
+  </data>
+  <data name="WidgetAddedSuccessfullyMessage" xml:space="preserve">
+    <value>The widget '{0}' has been added successfully</value>
+  </data>
+  <data name="EnvironmentPreDeploymentConditionHeading" xml:space="preserve">
+    <value>Pre-deployment conditions</value>
+  </data>
+  <data name="RetentionPolicyHeaderText" xml:space="preserve">
+    <value>Settings for {0}</value>
+  </data>
+  <data name="ArtifactAliasLengthValidationError" xml:space="preserve">
+    <value>The artifact alias cannot exceed 256 characters. Specify a shorter name.</value>
+  </data>
+  <data name="Multiplier" xml:space="preserve">
+    <value>Multiplier: </value>
+  </data>
+  <data name="ApprovedTooltipFormat" xml:space="preserve">
+    <value>{0} is approved</value>
+  </data>
+  <data name="Waiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="UndeleteReleaseMenuItemText" xml:space="preserve">
+    <value>Undelete</value>
+  </data>
+  <data name="AriaLabelGatesSamplingIntervalTimeValue" xml:space="preserve">
+    <value>The time between re-evaluation of gates is {0}</value>
+  </data>
+  <data name="AutoLinkWorkItems" xml:space="preserve">
+    <value>Report deployment status to Work</value>
+  </data>
+  <data name="PostDeploymentApproversHeading" xml:space="preserve">
+    <value>Post-deployment approvals</value>
+  </data>
+  <data name="ColorOrange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="CanvasTabTitle" xml:space="preserve">
+    <value>Pipeline</value>
+  </data>
+  <data name="DSWDeploymentFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="SourceAliasDescription" xml:space="preserve">
+    <value>This is an identifier (typically a short name) that uniquely identifies an artifact linked to a release pipeline. It cannot contain the characters: \\ / : * " ? &lt; &gt; or | </value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>task</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Build tags</value>
+  </data>
+  <data name="XOfY" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="EnvironmentInfoAriaLabel" xml:space="preserve">
+    <value>The release pipeline is {0}. The stage is {1}. </value>
+  </data>
+  <data name="PoliciesNotEnabledNote" xml:space="preserve">
+    <value>Policies are applicable when a manual approver is set.</value>
+  </data>
+  <data name="DeleteReleaseDialogEnvironmentsInProgress" xml:space="preserve">
+    <value>Deleting is not allowed when deployments are in-progress in any stage. Cancel stage(s) {0} and try again.</value>
+  </data>
+  <data name="EmptySearchResultMessage" xml:space="preserve">
+    <value>No matching release pipelines found </value>
+  </data>
+  <data name="CreateReleaseEnvironmentDropdownLabel" xml:space="preserve">
+    <value>Stages for a trigger change from automated to manual.</value>
+  </data>
+  <data name="DeploymentGroupsProgressTargetsText" xml:space="preserve">
+    <value>Targets</value>
+  </data>
+  <data name="CommitsArtifactLatestArtifactComparisonWithNoRollbackHeaderInfoText" xml:space="preserve">
+    <value>This list shows the difference in commits between this artifact and the previously-deployed artifact for this stage.</value>
+  </data>
+  <data name="ReleaseReportingDeploymentDuration" xml:space="preserve">
+    <value>Deployment duration</value>
+  </data>
+  <data name="NotValidReleaseApprover" xml:space="preserve">
+    <value>As per the approval settings on this stage, you cannot approve or reject deployment to stage '{0}' because you created this release or deployment. Please reassign this approval.</value>
+  </data>
+  <data name="NoReleaseText" xml:space="preserve">
+    <value>No release triggered</value>
+  </data>
+  <data name="DeploymentOptionSectionHeading" xml:space="preserve">
+    <value>Deployment Option</value>
+  </data>
+</root>

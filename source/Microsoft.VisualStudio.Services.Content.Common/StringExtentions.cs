@@ -1,0 +1,45 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Microsoft.VisualStudio.Services.Content.Common.StringExtentions
+// Assembly: Microsoft.VisualStudio.Services.Content.Common, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+// MVID: DC45E7D4-4445-41B3-8FA2-C13CD848D0F1
+// Assembly location: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Content.Common.dll
+
+using System;
+
+namespace Microsoft.VisualStudio.Services.Content.Common
+{
+  public static class StringExtentions
+  {
+    public static bool IsGreaterThan(
+      this string firstString,
+      string secondString,
+      StringComparison comparisonType)
+    {
+      return string.Compare(firstString, secondString, comparisonType) > 0;
+    }
+
+    public static bool IsGreaterThanOrEqualTo(
+      this string firstString,
+      string secondString,
+      StringComparison comparisonType)
+    {
+      return string.Compare(firstString, secondString, comparisonType) >= 0;
+    }
+
+    public static bool IsLessThan(
+      this string firstString,
+      string secondString,
+      StringComparison comparisonType)
+    {
+      return string.Compare(firstString, secondString, comparisonType) < 0;
+    }
+
+    public static bool IsLessThanOrEqualTo(
+      this string firstString,
+      string secondString,
+      StringComparison comparisonType)
+    {
+      return string.Compare(firstString, secondString, comparisonType) <= 0;
+    }
+  }
+}

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F79E434-61F7-45CB-9792-7737BE5C79A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.TeamFoundation.DistributedTask.Orchestration.Tasks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.TeamFoundation.DistributedTask</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.WebApi">
+      <HintPath>lib\Microsoft.TeamFoundation.DistributedTask.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Orchestration">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Orchestration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pipelines\Tasks\PipelineActivityShardKey.cs" />
+    <Compile Include="Pipelines\Tasks\RunCheckpointInput.cs" />
+    <Compile Include="Pipelines\Tasks\RunCheckpoint2.cs" />
+    <Compile Include="Pipelines\Tasks\RunCheckpoint.cs" />
+    <Compile Include="Pipelines\Tasks\ICheckpointController.cs" />
+    <Compile Include="Pipelines\Tasks\IProviderPhaseController.cs" />
+    <Compile Include="Pipelines\Tasks\OrchestrationUtilities.cs" />
+    <Compile Include="Pipelines\Tasks\AgentJobRequestExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\AgentRequestData.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentJobDetails.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentMachineState.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentMachineStateExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentPoolState.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentPoolStateExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentPoolStatus.cs" />
+    <Compile Include="Pipelines\Tasks\DeploymentPoolStatusExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\GraphDependencies.cs" />
+    <Compile Include="Pipelines\Tasks\IAgentPoolManager.cs" />
+    <Compile Include="Pipelines\Tasks\IConditionEvaluator.cs" />
+    <Compile Include="Pipelines\Tasks\IDeploymentPoolManager.cs" />
+    <Compile Include="Pipelines\Tasks\IGraphNode.cs" />
+    <Compile Include="Pipelines\Tasks\IGraph`1.cs" />
+    <Compile Include="Pipelines\Tasks\IGraphController.cs" />
+    <Compile Include="Pipelines\Tasks\IJobController.cs" />
+    <Compile Include="Pipelines\Tasks\IPhaseController.cs" />
+    <Compile Include="Pipelines\Tasks\IPipelineLogger.cs" />
+    <Compile Include="Pipelines\Tasks\IServerJobLogger.cs" />
+    <Compile Include="Pipelines\Tasks\IServerJobManager.cs" />
+    <Compile Include="Pipelines\Tasks\IServerTaskConditionEvaluator.cs" />
+    <Compile Include="Pipelines\Tasks\IServerTaskController.cs" />
+    <Compile Include="Pipelines\Tasks\IStageConditionEvaluator.cs" />
+    <Compile Include="Pipelines\Tasks\JobAssignedEventData.cs" />
+    <Compile Include="Pipelines\Tasks\JobError.cs" />
+    <Compile Include="Pipelines\Tasks\JobEventExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\JobExecutionState.cs" />
+    <Compile Include="Pipelines\Tasks\JobParameters.cs" />
+    <Compile Include="Pipelines\Tasks\OrchestrationContextExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\PhaseConditionContext.cs" />
+    <Compile Include="Pipelines\Tasks\PhaseExecutionState.cs" />
+    <Compile Include="Pipelines\Tasks\PhaseTargetExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\PipelineOperation.cs" />
+    <Compile Include="Pipelines\Tasks\PipelineExecutionState.cs" />
+    <Compile Include="Pipelines\Tasks\PipelineProcessExtensions.cs" />
+    <Compile Include="Pipelines\Tasks\RunJob`1.cs" />
+    <Compile Include="Pipelines\Tasks\RunAgentJob.cs" />
+    <Compile Include="Pipelines\Tasks\RunAgentJobInput.cs" />
+    <Compile Include="Pipelines\Tasks\RunAgentPhase.cs" />
+    <Compile Include="Pipelines\Tasks\RunProviderPhase.cs" />
+    <Compile Include="Pipelines\Tasks\RunDeploymentPhase.cs" />
+    <Compile Include="Pipelines\Tasks\RunGraph`3.cs" />
+    <Compile Include="Pipelines\Tasks\RunGraphInput`2.cs" />
+    <Compile Include="Pipelines\Tasks\RunPhase.cs" />
+    <Compile Include="Pipelines\Tasks\RunPhaseInput.cs" />
+    <Compile Include="Pipelines\Tasks\RunPipeline.cs" />
+    <Compile Include="Pipelines\Tasks\RunPipeline1.cs" />
+    <Compile Include="Pipelines\Tasks\RunPipelineInput.cs" />
+    <Compile Include="Pipelines\Tasks\RunServerJob.cs" />
+    <Compile Include="Pipelines\Tasks\RunServerJob1.cs" />
+    <Compile Include="Pipelines\Tasks\RunServerJobInput.cs" />
+    <Compile Include="Pipelines\Tasks\RunServerPhase.cs" />
+    <Compile Include="Pipelines\Tasks\RunServerTask.cs" />
+    <Compile Include="Pipelines\Tasks\RunServerTaskInput.cs" />
+    <Compile Include="Pipelines\Tasks\RunStage.cs" />
+    <Compile Include="Pipelines\Tasks\RunStageInput.cs" />
+    <Compile Include="Pipelines\Tasks\ServerTaskReference.cs" />
+    <Compile Include="Pipelines\Tasks\ServerTaskResult.cs" />
+    <Compile Include="Pipelines\Tasks\SimpleJsonConverter`1.cs" />
+    <Compile Include="Pipelines\Tasks\StageConditionContext.cs" />
+    <Compile Include="Pipelines\Tasks\StageExecutionState.cs" />
+    <Compile Include="Pipelines\Tasks\TaskConditionContext.cs" />
+    <Compile Include="Pipelines\Tasks\TaskError.cs" />
+    <Compile Include="Pipelines\Tasks\TaskExecutionState.cs" />
+    <Compile Include="Pipelines\Tasks\TaskParameters.cs" />
+    <Compile Include="Orchestration\Tasks\AbandonJobResult.cs" />
+    <Compile Include="Orchestration\Tasks\AbandonJobResultConverter.cs" />
+    <Compile Include="Orchestration\Tasks\CanceledEvent.cs" />
+    <Compile Include="Orchestration\Tasks\ExternalVariablesDownloadEvent.cs" />
+    <Compile Include="Orchestration\Tasks\ExternalVariablesJobInput.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension2.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension3.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension4.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension5.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension6.cs" />
+    <Compile Include="Orchestration\Tasks\IAgentPoolExtension7.cs" />
+    <Compile Include="Orchestration\Tasks\IJobControlExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IJobControlExtension3.cs" />
+    <Compile Include="Orchestration\Tasks\IPlanControlExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IPlanTrackingExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IPlanTrackingExtension3.cs" />
+    <Compile Include="Orchestration\Tasks\IServerExecutionControlExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IServerJobHandlerExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IServerJobTrackingExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IServerJobTrackingExtension2.cs" />
+    <Compile Include="Orchestration\Tasks\IServerJobTrackingExtension3.cs" />
+    <Compile Include="Orchestration\Tasks\IServerTaskHandlerExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IServerTaskHandlerExtension2.cs" />
+    <Compile Include="Orchestration\Tasks\IServerTaskTrackingExtension.cs" />
+    <Compile Include="Orchestration\Tasks\IRunPlanInput.cs" />
+    <Compile Include="Orchestration\Tasks\RunJobInput.cs" />
+    <Compile Include="Orchestration\Tasks\RunJobInputConverter.cs" />
+    <Compile Include="Orchestration\Tasks\RunJobInput3.cs" />
+    <Compile Include="Orchestration\Tasks\RunJobInput4.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlanInput.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlanInputConverter.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlanInput3.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJobInput.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJobInput2.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerTaskInput.cs" />
+    <Compile Include="Orchestration\Tasks\TaskOrchestrationJobAttempt.cs" />
+    <Compile Include="Orchestration\Tasks\JobEvents.cs" />
+    <Compile Include="Orchestration\Tasks\TaskEvents.cs" />
+    <Compile Include="Orchestration\Tasks\JobResult.cs" />
+    <Compile Include="Orchestration\Tasks\OrchestrationContextExtensions.cs" />
+    <Compile Include="Orchestration\Tasks\PlanEvents.cs" />
+    <Compile Include="Orchestration\Tasks\RetryEvent.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob2.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob3.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob4.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob5.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob6.cs" />
+    <Compile Include="Orchestration\Tasks\RunAgentJob7.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan10.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan12.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan11.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan3.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan4.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan5.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan6.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan7.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan8.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlan9.cs" />
+    <Compile Include="Orchestration\Tasks\RunPlanBase`1.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJob.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJob2.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJob3.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJob4.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJob6.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerJob5.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerTasksInParallelJob1.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerTask.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerTask2.cs" />
+    <Compile Include="Orchestration\Tasks\RunServerTask3.cs" />
+    <Compile Include="Orchestration\Tasks\RunState.cs" />
+    <Compile Include="Orchestration\Tasks\ServerJobResponseConverter.cs" />
+    <Compile Include="Orchestration\Tasks\ServerTaskExtensions.cs" />
+    <Compile Include="Orchestration\Tasks\TaskAgentExtensions.cs" />
+    <Compile Include="Orchestration\Tasks\TaskEventConfigExtension.cs" />
+    <Compile Include="Orchestration\Tasks\TaskOrchestrationCreator.cs" />
+    <Compile Include="Orchestration\Tasks\VariableExpansionHandler.cs" />
+    <Compile Include="Orchestration\Tasks\TaskOrchestrationConstant.cs" />
+    <Compile Include="Orchestration\Tasks\Resources.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

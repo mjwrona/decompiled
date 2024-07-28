@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GitPullRequestStatusUpdated" xml:space="preserve">
+    <value>Status updated</value>
+  </data>
+  <data name="FieldNameId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="FieldNamePolicyOverrideComment" xml:space="preserve">
+    <value>Policy override comment</value>
+  </data>
+  <data name="FieldNamePRAuthor" xml:space="preserve">
+    <value>Pull Request Author</value>
+  </data>
+  <data name="TemplateNameAllCodeReviews" xml:space="preserve">
+    <value>A code review in this project changes</value>
+  </data>
+  <data name="TemplateNameResourceChange" xml:space="preserve">
+    <value>A build controller or agent's status changes</value>
+  </data>
+  <data name="CodeReviewActionDiscussion" xml:space="preserve">
+    <value>Discussion</value>
+  </data>
+  <data name="GitPullRequestVoteApprovedWithComments" xml:space="preserve">
+    <value>Approved with suggestions</value>
+  </data>
+  <data name="FindAlertsForUserLabel" xml:space="preserve">
+    <value>Find alerts for a specific user</value>
+  </data>
+  <data name="BuildStatusSucceeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="BuildTestStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="TemplateNameCheckinAny" xml:space="preserve">
+    <value>Any checkin occurs in this team project</value>
+  </data>
+  <data name="GitPullRequestReviewerUpdate" xml:space="preserve">
+    <value>Reviewer added or removed</value>
+  </data>
+  <data name="FieldNameFileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="FieldNameFilePath" xml:space="preserve">
+    <value>File path</value>
+  </data>
+  <data name="TemplateNameGitPushInThisProject" xml:space="preserve">
+    <value>A commit is pushed to this team project</value>
+  </data>
+  <data name="FieldNameReviewContextType" xml:space="preserve">
+    <value>Review context type</value>
+  </data>
+  <data name="FieldNameTestStatus" xml:space="preserve">
+    <value>Test status</value>
+  </data>
+  <data name="FieldNameBuildNumber" xml:space="preserve">
+    <value>Build number</value>
+  </data>
+  <data name="ChatSubscriptionTemplates" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;SubscriptionTemplates&gt;
+
+    &lt;!-- TemplateName is a resource key which gets localize, BasicTemplateTag is a unique name that will not get localized --&gt;
+
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="ChatRoomTemplateWorkItemChangedByMember" BasicTemplateTag="ChatRoomTemplateWorkItemChangedByMember"&gt;
+    &lt;Expression&gt;("CoreFields/StringFields/Field[ReferenceName='System.State']/NewValue" &amp;lt;&amp;gt; "CoreFields/StringFields/Field[ReferenceName='System.State']/OldValue" OR "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/NewValue" &amp;lt;&amp;gt; "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/OldValue") AND "CoreFields/StringFields/Field[ReferenceName='System.AreaPath']/NewValue" under '{0}' AND "CoreFields/StringFields/Field[ReferenceName='System.ChangedBy']/NewValue" dynamic '%ChatRoomMember%'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="ChatRoomTemplateCheckinByMember" BasicTemplateTag="ChatRoomTemplateCheckinByMember"&gt;
+    &lt;Expression&gt;"TeamProject" = '{0}' AND "Owner" dynamic '%ChatRoomMember%'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CodeReviewChangedEvent" TemplateName="ChatRoomTemplateCodeReviewRequestedByMember"  BasicTemplateTag="ChatRoomTemplateCodeReviewRequestedByMember"&gt;
+    &lt;Expression&gt;"SourceWorkItem/Revision" = 1 AND "Action" = 'Requested' AND 'SourceWorkItem/AreaPath' under '{0}' AND "ReviewContext/@Owner" dynamic '%ChatRoomMember%'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" TemplateName="ChatRoomTemplateBuildCompletedByMember"  BasicTemplateTag="ChatRoomTemplateBuildCompletedByMember"&gt;
+    &lt;Expression&gt;"tb1:Definition/@Uri" = '{0}' AND 'customExpression:string-join("tb1:Requests/tb1:QueuedBuild/@RequestedFor", ";")' dynamic '%ChatRoomMember%'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt; 
+  &lt;SubscriptionTemplate EventType="GitPushEvent" TemplateName="ChatRoomTemplateGitPushByMember" BasicTemplateTag="ChatRoomTemplateGitPushByMember"&gt;
+    &lt;Expression&gt;"PushNotification/RepositoryId" = '{0}' AND "PushNotification/AuthenticatedUserName" dynamic '%ChatRoomMember%'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" TemplateName="ChatRoomTemplateGitPullRequestByMember" BasicTemplateTag="ChatRoomTemplateGitPullRequestByMember"&gt;
+    &lt;Expression&gt;"RepositoryId" = '{0}' AND "EventTriggeredBy" dynamic '%ChatRoomMember%' AND EventTrigger &amp;lt;&amp;gt; 'PushNotification' AND EventTrigger &amp;lt;&amp;gt; 'ReviewersUpdateNotification'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+
+  &lt;!-- These server as the base templates which get customized/formatted client side --&gt;
+  &lt;SubscriptionTemplate EventType="CodeReviewChangedEvent" TemplateName="ChatRoomTemplateCodeReviewAreaPathTemplate" BasicTemplateTag="ChatRoomTemplateCodeReviewAreaPathTemplate"&gt;
+    &lt;Expression&gt;"SourceWorkItem/Revision" = 1 AND "Action" = 'Requested' AND 'SourceWorkItem/AreaPath' under '{0}'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="ChatRoomTemplateWorkItemAreaPathTemplate" BasicTemplateTag="ChatRoomTemplateWorkItemAreaPathTemplate"&gt;
+    &lt;Expression&gt;("CoreFields/StringFields/Field[ReferenceName='System.State']/NewValue" &amp;lt;&amp;gt; "CoreFields/StringFields/Field[ReferenceName='System.State']/OldValue" OR "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/NewValue" &amp;lt;&amp;gt; "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/OldValue") AND "CoreFields/StringFields/Field[ReferenceName='System.AreaPath']/NewValue" under '{0}'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;  
+
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="ChatRoomTemplateCheckInProjectTemplate" BasicTemplateTag="ChatRoomTemplateCheckInProjectTemplate"&gt;
+    &lt;Expression&gt;"TeamProject" = '{0}'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" TemplateName="ChatRoomTemplateBuildNameTemplate"  BasicTemplateTag="ChatRoomTemplateBuildNameTemplate"&gt;
+    &lt;Expression&gt;"tb1:Definition/@Uri" = '{0}'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;  
+
+  &lt;SubscriptionTemplate EventType="GitPushEvent" TemplateName="ChatRoomTemplateGitPushTemplate" BasicTemplateTag="ChatRoomTemplateGitPushTemplate"&gt;
+    &lt;Expression&gt;"PushNotification/RepositoryId" = '{0}'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" TemplateName="ChatRoomTemplateGitPullRequestTemplate" BasicTemplateTag="ChatRoomTemplateGitPullRequestTemplate"&gt;
+    &lt;Expression&gt;"RepositoryId" = '{0}' AND EventTrigger &amp;lt;&amp;gt; 'PushNotification' AND EventTrigger &amp;lt;&amp;gt; 'ReviewersUpdateNotification'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+&lt;/SubscriptionTemplates&gt;
+</value>
+  </data>
+  <data name="TemplateNameCheckinFolderName" xml:space="preserve">
+    <value>A file is checked in under a folder with a specific name</value>
+  </data>
+  <data name="FieldNameCommentDeleted" xml:space="preserve">
+    <value>Deleted comment</value>
+  </data>
+  <data name="TemplateNameMyCheckins" xml:space="preserve">
+    <value>A checkin is submitted by me</value>
+  </data>
+  <data name="BuildResourceStatusOffline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="DefaultSubscriptionNameCheckIn" xml:space="preserve">
+    <value>Anything is checked in</value>
+  </data>
+  <data name="TemplateNameWorkItemRestored" xml:space="preserve">
+    <value>A work item is restored</value>
+  </data>
+  <data name="AlertResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="TemplateNameChangedWorkItem" xml:space="preserve">
+    <value>A work item in this team project is changed</value>
+  </data>
+  <data name="BuildController" xml:space="preserve">
+    <value>Build controller</value>
+  </data>
+  <data name="BasicSubscriptionTemplates" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;SubscriptionTemplates&gt;
+
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="DefaultSubscriptionNameWorkItems"&gt;
+    &lt;Expression&gt;"PortfolioProject" = '@Project' AND ("CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/OldValue" = '@@MyDisplayName@@' OR "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/NewValue" = '@@MyDisplayName@@') AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="DefaultSubscriptionNameCheckIn"&gt;
+    &lt;Expression&gt;"TeamProject" = '@Project'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPushEvent" TemplateName="DefaultSubscriptionNameGitPush"&gt;
+    &lt;Expression&gt;"PushNotification/TeamProjectUri" = '@ProjectUri'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" TemplateName="DefaultSubscriptionNameGitPullRequest"&gt;
+    &lt;Expression&gt;"CreatedBy" = '@@MyDisplayName@@' OR "Reviewers/GitPullRequestReviewer[count(//GitPullRequestReviewer[@Name = '@@MyDisplayName@@']) &gt; 0]" &amp;lt;&amp;gt; null&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" TemplateName="DefaultSubscriptionNameBuildAny"&gt;
+    &lt;Expression&gt;"tb1:Build/@TeamProject" = '@Project'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" TemplateName="DefaultSubscriptionNameBuildMy" BasicTemplateTag="MyBuildCompletedEvent"&gt;
+    &lt;Expression&gt;"tb1:Build/@TeamProject" = '@Project' AND ("tb1:Requests[count(tb1:QueuedBuild[@RequestedForDisplayName = '@@MyDisplayName@@']) &gt; 0]" &amp;lt;&amp;gt; null)&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildStatusChangeEvent" TemplateName="DefaultSubscriptionNameBuildQuality"&gt;
+    &lt;Expression&gt;"TeamProject" = '@Project' AND "StatusChange[FieldName='Quality']/OldValue" &amp;lt;&amp;gt; "StatusChange[FieldName='Quality']/NewValue"&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CodeReviewChangedEvent" TemplateName="DefaultSubscriptionNameCodeReview"&gt;
+    &lt;Expression&gt;"SourceWorkItem/TeamProject" = '@Project' AND "ChangedBy" &amp;lt;&amp;gt; '@@MyDisplayName@@' AND ("RequestedBy" = '@@MyDisplayName@@' OR "Reviewers[count(Reviewer[@Name = '@@MyDisplayName@@']) &gt; 0]" &amp;lt;&amp;gt; null)&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  
+&lt;/SubscriptionTemplates&gt;</value>
+  </data>
+  <data name="FieldNameAssociatedWorkItem" xml:space="preserve">
+    <value>Associated Work Item</value>
+  </data>
+  <data name="WitAdapterPreviousAssigneeFieldName" xml:space="preserve">
+    <value>Previous Assignee</value>
+  </data>
+  <data name="FieldNameBranch" xml:space="preserve">
+    <value>Branches updated</value>
+  </data>
+  <data name="GitPullRequestVote" xml:space="preserve">
+    <value>Reviewer voted</value>
+  </data>
+  <data name="BuildStatusStopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="TemplateNameGitPullRequestsInThisProject" xml:space="preserve">
+    <value>A pull request is created or updated in this team project</value>
+  </data>
+  <data name="TeamScope" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="AlertsPageTitle" xml:space="preserve">
+    <value>My alerts</value>
+  </data>
+  <data name="FieldNameAuthoredBy" xml:space="preserve">
+    <value>Authored by</value>
+  </data>
+  <data name="FieldNameFolder" xml:space="preserve">
+    <value>Folder path</value>
+  </data>
+  <data name="FieldNameLogLocation" xml:space="preserve">
+    <value>Log location</value>
+  </data>
+  <data name="CodeReviewDeclined" xml:space="preserve">
+    <value>Declined</value>
+  </data>
+  <data name="TemplateNameAnyChangeToWorkItemsICreated" xml:space="preserve">
+    <value>A change is made to a work item that I created</value>
+  </data>
+  <data name="TemplateNameMyGitPullRequests" xml:space="preserve">
+    <value>A pull request I have participated in is created or updated</value>
+  </data>
+  <data name="FieldNameChangedBy" xml:space="preserve">
+    <value>Changed by</value>
+  </data>
+  <data name="FieldNameStartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="TemplateNameMyTeamGitPullRequests" xml:space="preserve">
+    <value>A pull request is created or updated for my team</value>
+  </data>
+  <data name="BuildCompilationStatusUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="FieldNameTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ErrorAlertNameTooLong" xml:space="preserve">
+    <value>The alert name specified is too long. Alert names cannot exceed 255 characters.</value>
+  </data>
+  <data name="CodeReviewAccepted" xml:space="preserve">
+    <value>Accepted</value>
+  </data>
+  <data name="UnsubscribeErrorFormat" xml:space="preserve">
+    <value>Failed to unsubscribe from alert {0}: {1}</value>
+  </data>
+  <data name="FieldValueNotDeleted" xml:space="preserve">
+    <value>Not Deleted</value>
+  </data>
+  <data name="CodeReviewActionRequested" xml:space="preserve">
+    <value>Requested</value>
+  </data>
+  <data name="FieldValueDeleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="TemplateNameBuildCompletes" xml:space="preserve">
+    <value>A build completes</value>
+  </data>
+  <data name="FieldNameCommittedBy" xml:space="preserve">
+    <value>Committed by</value>
+  </data>
+  <data name="FieldNameCodeUnderReview" xml:space="preserve">
+    <value>Code under review</value>
+  </data>
+  <data name="FieldNamePRTargetBranchName" xml:space="preserve">
+    <value>Target branch name</value>
+  </data>
+  <data name="FieldNamePRCreatedByTfId" xml:space="preserve">
+    <value>Created by TfId</value>
+  </data>
+  <data name="FieldNameStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TemplateNameSpecificWorkItem" xml:space="preserve">
+    <value>A specific work item is changed</value>
+  </data>
+  <data name="AlertScheduleColumn" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="CustomSubscriptionTemplates" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;SubscriptionTemplates&gt;
+
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameWorkItemAssignedToMe"&gt;
+    &lt;Expression&gt;"PortfolioProject" = '@@MyProjectName@@' AND ("CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/OldValue" &amp;lt;&amp;gt; '@@MyDisplayName@@' AND "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/NewValue" = '@@MyDisplayName@@') AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameAnyChangeToWorkItemsICreated"&gt;
+    &lt;Expression&gt;"PortfolioProject" = '@@MyProjectName@@' AND "CoreFields/StringFields/Field[ReferenceName='System.CreatedBy']/NewValue" = '@@MyDisplayName@@' AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameNewWorkItems"&gt;
+    &lt;Expression&gt;"PortfolioProject" = '@@MyProjectName@@' AND "CoreFields/StringFields/Field[ReferenceName='System.State']/OldValue" = '' AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameChangedWorkItem"&gt;
+    &lt;Expression&gt;"PortfolioProject" = '@@MyProjectName@@' AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameMyWorkItemChanged"&gt;
+    &lt;Expression&gt;"PortfolioProject" = '@@MyProjectName@@' AND ("CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/OldValue" = '@@MyDisplayName@@' OR "CoreFields/StringFields/Field[ReferenceName='System.AssignedTo']/NewValue" = '@@MyDisplayName@@') AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameSpecificWorkItem"&gt;
+    &lt;Expression&gt;"CoreFields/IntegerFields/Field[ReferenceName='System.Id']/NewValue" = '' AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameWorkItemUnderAreaPath"&gt;
+    &lt;Expression&gt;"CoreFields/IntegerFields/Field[ReferenceName='System.AreaPath']/NewValue" under '@Project' AND "CoreFields/StringFields/Field[ReferenceName='System.AuthorizedAs']/NewValue" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameWorkItemDeleted"&gt;
+    &lt;Expression&gt;"CoreFields/IntegerFields/Field[ReferenceName='System.AreaPath']/NewValue" under '@Project' AND ("CoreFields/BooleanFields/Field[ReferenceName='System.IsDeleted']/OldValue" &amp;lt;&amp;gt; "True" AND "CoreFields/BooleanFields/Field[ReferenceName='System.IsDeleted']/NewValue" = "True") &lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameWorkItemRestored"&gt;
+    &lt;Expression&gt;"CoreFields/IntegerFields/Field[ReferenceName='System.AreaPath']/NewValue" under '@Project' AND ("CoreFields/BooleanFields/Field[ReferenceName='System.IsDeleted']/OldValue" &amp;lt;&amp;gt; "False" AND "CoreFields/BooleanFields/Field[ReferenceName='System.IsDeleted']/NewValue" = "False")&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="WorkItemChangedEvent" TemplateName="TemplateNameWorkItemProjectMoved"&gt;
+    &lt;Expression&gt;("CoreFields/StringFields/Field[ReferenceName='System.TeamProject']/OldValue" = '@@MyProjectName@@' AND "CoreFields/StringFields/Field[ReferenceName='System.TeamProject']/NewValue" &amp;lt;&amp;gt; '@@MyProjectName@@')&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  
+  &lt;SubscriptionTemplate EventType="CheckinEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameCheckinUnderPath"&gt;
+    &lt;Expression&gt;'ServerItem' under '$/'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="TemplateNameCheckinFolderName"&gt;
+    &lt;Expression&gt;'Folder' = ''&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="TemplateNameCheckinFileExtension"&gt;
+    &lt;Expression&gt;"TeamProject" = '@@MyProjectName@@' AND "FileExtension" = '.dll'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="TemplateNameCheckinPolicyOverride"&gt;
+    &lt;Expression&gt;"TeamProject" = '@@MyProjectName@@' AND "PolicyOverrideComment" &amp;lt;&amp;gt; ''&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="TemplateNameMyCheckins"&gt;
+    &lt;Expression&gt;"TeamProject" = '@@MyProjectName@@' AND "Committer" = '@@MyUniqueName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CheckinEvent" TemplateName="TemplateNameCheckinAny"&gt;
+    &lt;Expression&gt;"TeamProject" = '@@MyProjectName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+  &lt;SubscriptionTemplate EventType="GitPushEvent" ShowInQuickAlerts="False" TemplateName="TemplateNameGitAuthoredByMe"&gt;
+    &lt;Expression&gt;'PushNotification/TeamProjectUri' = '@ProjectUri' AND 'PushNotification/RefUpdateResults/GitPushRefUpdate/CommitDetails/GitPushCommitData/Author[contains(text(), "@@MyDisplayName@@")]' &amp;lt;&amp;gt; null&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPushEvent" ShowInQuickAlerts="False" TemplateName="TemplateNameGitPushedByMe"&gt;
+    &lt;Expression&gt;'PushNotification/TeamProjectUri' = '@ProjectUri' AND 'PushNotification/UserDisplayName' = '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPushEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameGitPushInThisProject"&gt;
+    &lt;Expression&gt;"PushNotification/TeamProjectUri" = '@ProjectUri'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPushEvent" ShowInQuickAlerts="False" TemplateName="TemplateNameGitPushRepository"&gt;
+    &lt;Expression&gt;'PushNotification/TeamProjectUri' = '@ProjectUri' AND 'PushNotification/RepositoryName' = '@Project'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" ShowInQuickAlerts="False" TemplateName="TemplateNameGitPullRequestsInThisProject"&gt;
+    &lt;Expression&gt;"TeamProjectUri" = '@ProjectUri'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" ShowInQuickAlerts="False" TemplateName="TemplateNameGitPullRequestsInThisRepository"&gt;
+    &lt;Expression&gt;'TeamProjectUri' = '@ProjectUri' AND 'RepositoryName' = '@Project'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameMyGitPullRequests"&gt;
+    &lt;Expression&gt;"CreatedBy" = '@@MyDisplayName@@' OR "Reviewers/GitPullRequestReviewer[count(//GitPullRequestReviewer[@Name = '@@MyDisplayName@@']) &gt; 0]" &amp;lt;&amp;gt; null&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="GitPullRequestEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameMyTeamGitPullRequests"&gt;
+    &lt;Expression&gt;"Reviewers/GitPullRequestReviewer[count(//GitPullRequestReviewer[@Name = '##MyTeamName##']) &gt; 0]" &amp;lt;&amp;gt; null&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" TemplateName="TemplateNameBuildCompletes"&gt;
+    &lt;Expression&gt;"tb1:Build/@TeamProject" = '@@MyProjectName@@' AND "tb1:Definition/@FullPath" = ''&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameBuildFails"&gt;
+    &lt;Expression&gt;"tb1:Build/@TeamProject" = '@@MyProjectName@@' AND "tb1:Build/@Status" = 'Failed'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildCompletedEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameMyBuild"&gt;
+    &lt;Expression&gt;"tb1:Build/@TeamProject" = '@@MyProjectName@@' AND ("tb1:Requests[count(tb1:QueuedBuild[@RequestedForDisplayName = '@@MyDisplayName@@']) &gt; 0]" &amp;lt;&amp;gt; null)&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildResourceChangedEvent" TemplateName="TemplateNameResourceChange"&gt;
+    &lt;Expression&gt;"PropertyChanges/PropertyChange[@Name='Status']/tb1:NewValue" &amp;lt;&amp;gt; "PropertyChanges/PropertyChange[@Name='Status']/tb1:OldValue"&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="BuildStatusChangeEvent" TemplateName="TemplateNameQualityChange"&gt;
+    &lt;Expression&gt;"TeamProject" = '@@MyProjectName@@' AND "StatusChange[FieldName='Quality']/OldValue" &amp;lt;&amp;gt; "StatusChange[FieldName='Quality']/NewValue"&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+
+  &lt;SubscriptionTemplate EventType="CodeReviewChangedEvent" ShowInQuickAlerts="True" TemplateName="TemplateNameMyCodeReviewChanges"&gt;
+    &lt;Expression&gt;"ChangedBy" &amp;lt;&amp;gt; '@@MyDisplayName@@' AND ("RequestedBy" = '@@MyDisplayName@@' OR "Reviewers[count(Reviewer[@Name = '@@MyDisplayName@@']) &gt; 0]" &amp;lt;&amp;gt; null)&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  &lt;SubscriptionTemplate EventType="CodeReviewChangedEvent" TemplateName="TemplateNameAllCodeReviews"&gt;
+    &lt;Expression&gt;"SourceWorkItem/TeamProject" = '@@MyProjectName@@' AND "ChangedBy" &amp;lt;&amp;gt; '@@MyDisplayName@@'&lt;/Expression&gt;
+  &lt;/SubscriptionTemplate&gt;
+  
+  &lt;/SubscriptionTemplates&gt;</value>
+  </data>
+  <data name="FieldNameCompilationStatus" xml:space="preserve">
+    <value>Compilation status</value>
+  </data>
+  <data name="CodeReviewReviewerStatusNotStarted" xml:space="preserve">
+    <value>Not started</value>
+  </data>
+  <data name="FieldNamePRCreatedBy" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="GitPullRequestResetAllVotes" xml:space="preserve">
+    <value>All votes reset - deprecated use "Votes reset"</value>
+  </data>
+  <data name="BuildReasonBuildCompletion" xml:space="preserve">
+    <value>Dependency build</value>
+  </data>
+  <data name="GitPullRequestVoteNotReady" xml:space="preserve">
+    <value>Waiting for author</value>
+  </data>
+  <data name="FieldNameTargetBranch" xml:space="preserve">
+    <value>Target Branch</value>
+  </data>
+  <data name="AlertCategoriesPivotTitle" xml:space="preserve">
+    <value>Alert categories</value>
+  </data>
+  <data name="GitPullRequestVoteRejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="GitPullRequestVoteApproved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="DefaultSubscriptionNameGitPush" xml:space="preserve">
+    <value>A commit is pushed to this team project</value>
+  </data>
+  <data name="OperatorNotContains" xml:space="preserve">
+    <value>Does not contain</value>
+  </data>
+  <data name="OperatorNotEqualTo" xml:space="preserve">
+    <value>&lt;&gt;</value>
+  </data>
+  <data name="FieldNameStatusCode" xml:space="preserve">
+    <value>Status code</value>
+  </data>
+  <data name="FieldNameMentionedUsers" xml:space="preserve">
+    <value>Mentioned Users</value>
+  </data>
+  <data name="WitAdapterCurrentAssigneeFieldName" xml:space="preserve">
+    <value>Current Assignee</value>
+  </data>
+  <data name="BuildResourceStatusUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="FieldNameLastChangedBy" xml:space="preserve">
+    <value>Last changed by</value>
+  </data>
+  <data name="FieldNameLastChangedOn" xml:space="preserve">
+    <value>Last changed on</value>
+  </data>
+  <data name="ErrorIdentityCouldNotBeFoundFormat" xml:space="preserve">
+    <value>TF400662: No Azure DevOps identity could be found that matched the intended subscriber with id "{0}"</value>
+  </data>
+  <data name="TemplateNameGitPushedByMe" xml:space="preserve">
+    <value>A commit is pushed by me</value>
+  </data>
+  <data name="BuildReasonScheduled" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="BuildTestStatusSucceeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="DefaultSubscriptionNameBuildQuality" xml:space="preserve">
+    <value>A build quality changes</value>
+  </data>
+  <data name="CodeReviewReviewerStatusAdded" xml:space="preserve">
+    <value>Added</value>
+  </data>
+  <data name="GitPullRequestTitleDescriptionUpdated" xml:space="preserve">
+    <value>Title or description updated</value>
+  </data>
+  <data name="ErrorNoEventsPermissionOnChatRoom" xml:space="preserve">
+    <value>Access denied. User '{0}' must have permission to manage alerts on the room</value>
+  </data>
+  <data name="BuildReasonBatchedCI" xml:space="preserve">
+    <value>Batched continuous integration</value>
+  </data>
+  <data name="FieldNameReviewedItemFileName" xml:space="preserve">
+    <value>Reviewed item file name</value>
+  </data>
+  <data name="FieldValuePRBypassedPoliciesFalse" xml:space="preserve">
+    <value>Policies were not bypassed (requirements met)</value>
+  </data>
+  <data name="OperatorLike" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="InvalidXPathExpressionMessageFormat" xml:space="preserve">
+    <value>Could not parse the xpath expression for the alert. Please verify your filter conditions. Details: {0}</value>
+  </data>
+  <data name="FieldNameRepositoryName" xml:space="preserve">
+    <value>Repository name</value>
+  </data>
+  <data name="OperatorGTE" xml:space="preserve">
+    <value>&gt;=</value>
+  </data>
+  <data name="OperatorLTE" xml:space="preserve">
+    <value>&lt;=</value>
+  </data>
+  <data name="DefaultSubscriptionNameWorkItems" xml:space="preserve">
+    <value>My work items are changed by others</value>
+  </data>
+  <data name="CodeReviewContextTypeChangeset" xml:space="preserve">
+    <value>Changeset</value>
+  </data>
+  <data name="GitPullRequestVoteNoVote" xml:space="preserve">
+    <value>No vote</value>
+  </data>
+  <data name="FieldNameControllerName" xml:space="preserve">
+    <value>Controller name</value>
+  </data>
+  <data name="ProjectMacroDisplayString" xml:space="preserve">
+    <value>[Current Project]</value>
+  </data>
+  <data name="BuildResourceStatusAvailable" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="TemplateNameCheckinPolicyOverride" xml:space="preserve">
+    <value>A checkin occurs with a policy overridden</value>
+  </data>
+  <data name="BuildTestStatusUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="GitPullRequestMergeCompleted" xml:space="preserve">
+    <value>Merge completed</value>
+  </data>
+  <data name="FieldNameCodeReviewAction" xml:space="preserve">
+    <value>Review action</value>
+  </data>
+  <data name="FieldNameCommentAgeInMinutes" xml:space="preserve">
+    <value>Comment age (minutes)</value>
+  </data>
+  <data name="GitPullRequestStatusNotSet" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="AlertEditorScheduleLabel" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="CodeReviewActionCompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="FieldNamePRSourceBranchName" xml:space="preserve">
+    <value>Source branch name</value>
+  </data>
+  <data name="TemplateNameGitPushUnderFolder" xml:space="preserve">
+    <value>A pushed commit changes items under a specified folder</value>
+  </data>
+  <data name="FieldNameVote" xml:space="preserve">
+    <value>Vote</value>
+  </data>
+  <data name="BuildReasonCheckInShelveset" xml:space="preserve">
+    <value>Check in shelveset</value>
+  </data>
+  <data name="CodeReviewActionReviewerAdded" xml:space="preserve">
+    <value>Reviewer added</value>
+  </data>
+  <data name="FieldNameChangedTime" xml:space="preserve">
+    <value>Changed time</value>
+  </data>
+  <data name="OperatorChangesTo" xml:space="preserve">
+    <value>Changes to</value>
+  </data>
+  <data name="CodeReviewReviewerStatusRemoved" xml:space="preserve">
+    <value>Removed</value>
+  </data>
+  <data name="BuildStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="OperatorGT" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="OperatorLT" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="FieldNameSourceGetVersion" xml:space="preserve">
+    <value>Source get version</value>
+  </data>
+  <data name="FieldNameCommenters" xml:space="preserve">
+    <value>Thread participants</value>
+  </data>
+  <data name="OperatorNotUnder" xml:space="preserve">
+    <value>Not under</value>
+  </data>
+  <data name="GitPullRequestStatusActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="FieldValuePRBypassedPoliciesTrue" xml:space="preserve">
+    <value>Policies were bypassed</value>
+  </data>
+  <data name="FieldNameWorkItemId" xml:space="preserve">
+    <value>Work item id</value>
+  </data>
+  <data name="FieldNameFileExtension" xml:space="preserve">
+    <value>File extension</value>
+  </data>
+  <data name="FieldValuePRDraftTrue" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="AdministratorActionsHeader" xml:space="preserve">
+    <value>Administrator actions</value>
+  </data>
+  <data name="FieldNamePRDraft" xml:space="preserve">
+    <value>Draft state</value>
+  </data>
+  <data name="TemplateNameMyWorkItemChanged" xml:space="preserve">
+    <value>A change is made to a work item that is assigned to me</value>
+  </data>
+  <data name="BuildReasonManual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="GitPullRequestStatusAbandoned" xml:space="preserve">
+    <value>Abandoned</value>
+  </data>
+  <data name="DefaultSubscriptionNameGitPullRequestComment" xml:space="preserve">
+    <value>A comment is left on a pull request</value>
+  </data>
+  <data name="FieldNameMyReviewStatus" xml:space="preserve">
+    <value>My review status</value>
+  </data>
+  <data name="TemplateNameMyCodeReviewChanges" xml:space="preserve">
+    <value>A code review I am working on changes</value>
+  </data>
+  <data name="TemplateNameGitPushBranch" xml:space="preserve">
+    <value>A commit is pushed to a specified branch</value>
+  </data>
+  <data name="FieldNameDropLocation" xml:space="preserve">
+    <value>Drop location</value>
+  </data>
+  <data name="FieldValuePRDraftFalse" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="GitPullRequestAutoCompleteFailed" xml:space="preserve">
+    <value>Auto-complete failed</value>
+  </data>
+  <data name="DefaultSubscriptionNameBuildMy" xml:space="preserve">
+    <value>My build completes</value>
+  </data>
+  <data name="FieldNameQuality" xml:space="preserve">
+    <value>Quality</value>
+  </data>
+  <data name="CodeReviewActionAbandoned" xml:space="preserve">
+    <value>Abandoned</value>
+  </data>
+  <data name="CodeReviewActionReviewerRemoved" xml:space="preserve">
+    <value>Reviewer removed</value>
+  </data>
+  <data name="TemplateNameWorkItemAssignedToMe" xml:space="preserve">
+    <value>A work item is assigned to me</value>
+  </data>
+  <data name="GitPullRequestCreated" xml:space="preserve">
+    <value>Pull request created</value>
+  </data>
+  <data name="FieldNameClosingComment" xml:space="preserve">
+    <value>Closing comment</value>
+  </data>
+  <data name="TemplateNameNewWorkItems" xml:space="preserve">
+    <value>A new work item is created in this team project</value>
+  </data>
+  <data name="TemplateNameCheckinFileExtension" xml:space="preserve">
+    <value>A file with a specific file extension is checked in</value>
+  </data>
+  <data name="BuildStatusPartiallySucceeded" xml:space="preserve">
+    <value>Partially succeeded</value>
+  </data>
+  <data name="OperatorMatch" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="FieldNameReviewers" xml:space="preserve">
+    <value>Reviewers</value>
+  </data>
+  <data name="TemplateNameWorkItemUnderAreaPath" xml:space="preserve">
+    <value>A work item under a specified area path changes</value>
+  </data>
+  <data name="TemplateNameMyBuild" xml:space="preserve">
+    <value>My build completes</value>
+  </data>
+  <data name="FieldNameGitPullRequestStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="GitPullRequestResetMultipleVotes" xml:space="preserve">
+    <value>Votes reset</value>
+  </data>
+  <data name="BuildCompilationStatusSucceeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="FieldNameResourceName" xml:space="preserve">
+    <value>Resource name</value>
+  </data>
+  <data name="FieldNameResourceType" xml:space="preserve">
+    <value>Resource type</value>
+  </data>
+  <data name="BuildReasonValidatePullRequestorShelveset" xml:space="preserve">
+    <value>Pull request or shelveset validation</value>
+  </data>
+  <data name="GitPullRequestStatusCompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="CollectionScope" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="FieldNameComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="GetPullRequestLabels" xml:space="preserve">
+    <value>Labels changed</value>
+  </data>
+  <data name="GitPullRequestAutoCompleteUpdate" xml:space="preserve">
+    <value>Auto-complete set or cancelled</value>
+  </data>
+  <data name="ScopeLabel" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="TemplateNameWorkItemProjectMoved" xml:space="preserve">
+    <value>A work item is moved from this team project</value>
+  </data>
+  <data name="FieldNameRequestedBy" xml:space="preserve">
+    <value>Requested by</value>
+  </data>
+  <data name="OperatorDynamic" xml:space="preserve">
+    <value>Dynamic</value>
+  </data>
+  <data name="DefaultSubscriptionNameGitPullRequest" xml:space="preserve">
+    <value>A pull request I have participated in is created or updated</value>
+  </data>
+  <data name="TemplateNameGitAuthoredByMe" xml:space="preserve">
+    <value>A commit authored by me is pushed</value>
+  </data>
+  <data name="AlertEditorDialogSaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="OperatorChangesFrom" xml:space="preserve">
+    <value>Changes from</value>
+  </data>
+  <data name="TemplateNameBuildFails" xml:space="preserve">
+    <value>A build fails</value>
+  </data>
+  <data name="AlertEditorDialogTitleFormat" xml:space="preserve">
+    <value>{0} alert - {1}</value>
+  </data>
+  <data name="FieldNameReviewOwner" xml:space="preserve">
+    <value>Review owner</value>
+  </data>
+  <data name="FieldNameCommitter" xml:space="preserve">
+    <value>Committer</value>
+  </data>
+  <data name="FieldNameCommenter" xml:space="preserve">
+    <value>Commenter</value>
+  </data>
+  <data name="FieldNameBuildReason" xml:space="preserve">
+    <value>Build reason</value>
+  </data>
+  <data name="DefaultSubscriptionNameCodeReview" xml:space="preserve">
+    <value>A code review I am working on changes</value>
+  </data>
+  <data name="FieldNameEventTriggerName" xml:space="preserve">
+    <value>Event type</value>
+  </data>
+  <data name="FieldNameKeepForever" xml:space="preserve">
+    <value>Keep forever</value>
+  </data>
+  <data name="FieldNameRequestedFor" xml:space="preserve">
+    <value>Requested for</value>
+  </data>
+  <data name="MyScope" xml:space="preserve">
+    <value>My</value>
+  </data>
+  <data name="FieldNameConfigurationFolderUri" xml:space="preserve">
+    <value>Configuration folder uri</value>
+  </data>
+  <data name="BuildReasonScheduledForced" xml:space="preserve">
+    <value>Scheduled (forced)</value>
+  </data>
+  <data name="FieldNameReviewedItemParentPath" xml:space="preserve">
+    <value>Reviewed item parent path</value>
+  </data>
+  <data name="GitPullRequestNewIteration" xml:space="preserve">
+    <value>Update pushed</value>
+  </data>
+  <data name="TemplateNameWorkItemDeleted" xml:space="preserve">
+    <value>A work item is deleted</value>
+  </data>
+  <data name="BuildCompilationStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="BuildAgent" xml:space="preserve">
+    <value>Build agent</value>
+  </data>
+  <data name="TemplateNameQualityChange" xml:space="preserve">
+    <value>A build quality is changed</value>
+  </data>
+  <data name="DefaultSubscriptionNameBuildAny" xml:space="preserve">
+    <value>Any build completes</value>
+  </data>
+  <data name="CodeReviewReviewed" xml:space="preserve">
+    <value>Reviewed</value>
+  </data>
+  <data name="FieldNamePRBypassedPolicies" xml:space="preserve">
+    <value>Policy Bypass</value>
+  </data>
+  <data name="FieldNameServerItem" xml:space="preserve">
+    <value>Server item</value>
+  </data>
+  <data name="TemplateNameGitPullRequestsInThisRepository" xml:space="preserve">
+    <value>A pull request is created or updated in a specified repository</value>
+  </data>
+  <data name="TemplateNameGitPushRepository" xml:space="preserve">
+    <value>A commit is pushed to a specified repository</value>
+  </data>
+  <data name="FieldNamePRReviewers" xml:space="preserve">
+    <value>Reviewers</value>
+  </data>
+  <data name="MeMacroDisplayString" xml:space="preserve">
+    <value>[Me]</value>
+  </data>
+  <data name="ErrorNoManageGroupPermission" xml:space="preserve">
+    <value>TF400439: Access denied. User '{0}' must have Manage Group permission for Group '{1}' in order to create, edit, or delete group alerts.</value>
+  </data>
+  <data name="TemplateNameCheckinUnderPath" xml:space="preserve">
+    <value>A file is checked in under a specified path</value>
+  </data>
+  <data name="AffectedFolders" xml:space="preserve">
+    <value>Changes in folder</value>
+  </data>
+  <data name="FieldNameStatusMessage" xml:space="preserve">
+    <value>Status message</value>
+  </data>
+  <data name="FieldNamePushedBy" xml:space="preserve">
+    <value>Pushed by</value>
+  </data>
+  <data name="FieldNameFinishTime" xml:space="preserve">
+    <value>Finish time</value>
+  </data>
+  <data name="BuildReasonIndividualCI" xml:space="preserve">
+    <value>Individual continuous integration</value>
+  </data>
+  <data name="CodeReviewContextTypeShelveset" xml:space="preserve">
+    <value>Shelveset</value>
+  </data>
+</root>

@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuildNumberInvalidTermination" xml:space="preserve">
+    <value>TF209038: The build number '{0}' ends with a character which is not allowed. Characters which are not allowed include '.' and ' '.</value>
+  </data>
+  <data name="DuplicateBuildType" xml:space="preserve">
+    <value>TF42013: The build pipeline {0} already exists.</value>
+  </data>
+  <data name="BuildRequestFromInvalidMachine" xml:space="preserve">
+    <value>TF42053: The build machine is not configured to build for server {0}. The build machine is configured for one Azure DevOps Server only. To change the Azure DevOps Server for the build machine, update the AllowedTeamServer key in the file TFSBuildService.exe.config and restart the service.</value>
+  </data>
+  <data name="InvalidPathContainsWildcards" xml:space="preserve">
+    <value>TF209018: The path {0} contains characters that are not allowed. Characters that are not allowed include '?' and '*'.</value>
+  </data>
+  <data name="CollectionBuildAdministratorsGroupName" xml:space="preserve">
+    <value>Project Collection Build Administrators</value>
+  </data>
+  <data name="ServerPathNotSupported" xml:space="preserve">
+    <value>TF400641: The path '{0}' cannot be used because the Azure DevOps Server you are connected to does not support source control drop locations; you must use a UNC path instead.</value>
+  </data>
+  <data name="PlatformFlavorFormatText" xml:space="preserve">
+    <value>{0}/{1}</value>
+  </data>
+  <data name="BuildDeletionResultDropLocationFailureWithAccount" xml:space="preserve">
+    <value>TF215018: warning: {0} failed to delete drop location {1} for build {2}: {3}</value>
+  </data>
+  <data name="BuildTagGroup_Definition" xml:space="preserve">
+    <value>Pipeline</value>
+  </data>
+  <data name="Reason_CheckinShelveset" xml:space="preserve">
+    <value>Check In Shelveset</value>
+  </data>
+  <data name="Status_Available" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="Status_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ServiceAccountUnauthorized" xml:space="preserve">
+    <value>TF209009: The account {1} is not authorized to communicate with Azure DevOps Server {0}. Verify that the account is a member of the Build Services security group for the appropriate team project on the Azure DevOps Server and that the account's password has not expired.</value>
+  </data>
+  <data name="Status_NotStarted" xml:space="preserve">
+    <value>Not Started</value>
+  </data>
+  <data name="EnlistmentEmptyTag" xml:space="preserve">
+    <value>TF42022: The workspace {0} does not have any working folder mappings. Verify the working folder mappings of selected workspace and try again.</value>
+  </data>
+  <data name="CheckinPluginSubscriptionException" xml:space="preserve">
+    <value>TF217002: {0}: Azure DevOps Build encountered this error while establishing subscriptions for {1}.</value>
+  </data>
+  <data name="Error_InvalidOperationFailure" xml:space="preserve">
+    <value>TF209013: Failed to retrieve data from the server. Verify the network connection and try again.</value>
+  </data>
+  <data name="BuildInProgress" xml:space="preserve">
+    <value>A build is already in progress for team project {0}.</value>
+  </data>
+  <data name="DeleteOptions_DropLocation" xml:space="preserve">
+    <value>Drop</value>
+  </data>
+  <data name="InvalidBuildFileContainerId" xml:space="preserve">
+    <value>The path {0} must specify a valid container ID.</value>
+  </data>
+  <data name="UnexpectedTFServerException" xml:space="preserve">
+    <value>TF209026: An unexpected error occurred on the Azure DevOps Server {0}: {1}.</value>
+  </data>
+  <data name="CheckinPluginInitializationException" xml:space="preserve">
+    <value>TF217001: {0}: Azure DevOps Build encountered this error while initializing {1}.</value>
+  </data>
+  <data name="MissingServiceHostName" xml:space="preserve">
+    <value>TF209054: You must specify a name for the build service host.</value>
+  </data>
+  <data name="InvalidControllerNameReservedName" xml:space="preserve">
+    <value>TF209043: The build controller name {0} is not valid. Build controller names cannot be NTFS reserved names.</value>
+  </data>
+  <data name="InvalidInputAtIndex" xml:space="preserve">
+    <value>TF42071: The input argument '{0}' has invalid input at index '{1}' (Detail Message: {2}).</value>
+  </data>
+  <data name="PermissionDenied" xml:space="preserve">
+    <value>TF209022: Access denied. You need the {0} permission to perform this action.
+    For more information, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="InvalidInputParameterNull" xml:space="preserve">
+    <value>TF42073: The value cannot be null (Parameter name: {0})</value>
+  </data>
+  <data name="RetentionPolicy_KeepAll" xml:space="preserve">
+    <value>Keep All</value>
+  </data>
+  <data name="DefinitionQueueStatus_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="BuildDeletionResultLabelFailureWithAccount" xml:space="preserve">
+    <value>TF209036: warning: {0} failed to delete label {1} for build {2}: {3}</value>
+  </data>
+  <data name="InvalidDefinitionNameTooLong" xml:space="preserve">
+    <value>TF209033: The build pipeline name {0} is too long. The maximum length for a build pipeline name is {1} characters.</value>
+  </data>
+  <data name="Reason_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="InvalidAgentNameInvalidTermination" xml:space="preserve">
+    <value>TF209032: The build agent name {0} is not valid. Build agent names cannot end in the following characters: ' ', '.'.</value>
+  </data>
+  <data name="InvalidBuildDirectoryForDrive" xml:space="preserve">
+    <value>TF42050: Invalid build directory: {0}. The build directory cannot be a UNC path, relative path or drive name. Specify the full path to a local folder on the build machine. The folder will be created if it does not exist.</value>
+  </data>
+  <data name="BuildServicesGroupDescription" xml:space="preserve">
+    <value>Members of this group should include the service accounts used by the build services set up for this project collection.</value>
+  </data>
+  <data name="CannotStartBuildForUnavailableController" xml:space="preserve">
+    <value>TF209058: You cannot perform the "Start Now" action on queued build {0} because its build controller ({1}) is disabled or unavailable.</value>
+  </data>
+  <data name="Reason_IndividualCI" xml:space="preserve">
+    <value>Individual Continuous Integration</value>
+  </data>
+  <data name="DeleteOptions_Label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="GatedCheckinSingleDefinition" xml:space="preserve">
+    <value>Your check-in has been placed into shelveset {0} and submitted for validation by build pipeline {1}.</value>
+  </data>
+  <data name="InvalidInputNull" xml:space="preserve">
+    <value>TF42072: The value cannot be null</value>
+  </data>
+  <data name="START_BUILD" xml:space="preserve">
+    <value>'Start a build'</value>
+  </data>
+  <data name="UnableToSetAcl" xml:space="preserve">
+    <value>TF42058: The build process was not able to set access control on {0}. Grant the user account running the build process full rights on this directory. Set proper access control on this directory to ensure access only to authorized users. Details: {1}</value>
+  </data>
+  <data name="Status_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="ConnectionLostError" xml:space="preserve">
+    <value>TF42017: Unable to create the build pipeline specified because the connection to the server timed out. Wait for few minutes and try again. If the problem persists, contact your network administrator.</value>
+  </data>
+  <data name="VSNotFound" xml:space="preserve">
+    <value>TF209027: Failed to locate all the required Azure DevOps Build components. Reinstalling the Azure DevOps Build application may fix this problem.</value>
+  </data>
+  <data name="StopBuildsPermission" xml:space="preserve">
+    <value>Stop builds</value>
+  </data>
+  <data name="MissingBuildType" xml:space="preserve">
+    <value>TF209006: You must specify a build pipeline.</value>
+  </data>
+  <data name="SyncCompletedState" xml:space="preserve">
+    <value>Sync Completed</value>
+  </data>
+  <data name="InvalidDefinitionNameReservedName" xml:space="preserve">
+    <value>TF209034: The build pipeline name {0} is not valid. Build pipeline names cannot be NTFS reserved names.</value>
+  </data>
+  <data name="Error_NetFailure" xml:space="preserve">
+    <value>TF209014: Failed to retrieve data from the server. Verify the network connection and try again. The network error is: {0}.</value>
+  </data>
+  <data name="DropLocationAlreadyExists" xml:space="preserve">
+    <value>TF42049: The drop location {0} already exists. Specify a different drop location and try again.</value>
+  </data>
+  <data name="DeleteOptions_TestResults" xml:space="preserve">
+    <value>Test Results</value>
+  </data>
+  <data name="QueueBuildsPermission" xml:space="preserve">
+    <value>Queue builds</value>
+  </data>
+  <data name="ADMINISTER_BUILD" xml:space="preserve">
+    <value>'Administer a Build'</value>
+  </data>
+  <data name="MissingAgentName" xml:space="preserve">
+    <value>TF215053: You must specify a name for the build agent.</value>
+  </data>
+  <data name="RetainIndefinitelyPermission" xml:space="preserve">
+    <value>Retain indefinitely</value>
+  </data>
+  <data name="BuildDeletionResultTestFailure" xml:space="preserve">
+    <value>TF215017: error: Build {0} could not be deleted because an error occurred while test results were being deleted: {1}</value>
+  </data>
+  <data name="InvalidControllerStatus" xml:space="preserve">
+    <value>TF209056: Incorrect controller status: {0}.</value>
+  </data>
+  <data name="InvalidAccount" xml:space="preserve">
+    <value>{0} is not a valid account.</value>
+  </data>
+  <data name="QueuePriority_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="ViewBuildResourcesPermission" xml:space="preserve">
+    <value>View build resources</value>
+  </data>
+  <data name="StartedTestingState" xml:space="preserve">
+    <value>Testing Started</value>
+  </data>
+  <data name="InvalidAgentNameTooLong" xml:space="preserve">
+    <value>TF209030: The build agent name {0} is too long. The maximum length of a build agent name is {1} characters.</value>
+  </data>
+  <data name="Reason_ValidateShelveset" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="StartedCompilationState" xml:space="preserve">
+    <value>Compilation Started</value>
+  </data>
+  <data name="Status_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="BuildInitializingState" xml:space="preserve">
+    <value>Build Initializing</value>
+  </data>
+  <data name="CheckinComment" xml:space="preserve">
+    <value>Created new build pipeline</value>
+  </data>
+  <data name="InvalidPropertyValueException" xml:space="preserve">
+    <value>The value '{0}' for property {1} cannot be converted to type {2}.</value>
+  </data>
+  <data name="ViewBuildsPermission" xml:space="preserve">
+    <value>View builds</value>
+  </data>
+  <data name="ErrorInSyncingConfigFilesTag" xml:space="preserve">
+    <value>TF42030: Failed to synchronize build pipeline files. Verify the network connection and try again.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="BuildQualityUnexamined" xml:space="preserve">
+    <value>Unexamined</value>
+  </data>
+  <data name="InvalidUncPath" xml:space="preserve">
+    <value>TF42069: The path '{0}' is not a valid UNC path. A UNC path must be of the format \\server\share.</value>
+  </data>
+  <data name="ErrorInCheckInTag" xml:space="preserve">
+    <value>TF42025: The wizard could not check the build pipeline files into source control. Verify the network connection and try again.</value>
+  </data>
+  <data name="BuildParameterDeserializationException" xml:space="preserve">
+    <value>TF401070: Could not deserialize the JSON string provided. Details:
+{0}</value>
+  </data>
+  <data name="BuildParameterElementNotFoundException" xml:space="preserve">
+    <value>TF401071: Could not find the element within the process parameter. Details:
+{0}</value>
+  </data>
+  <data name="FixFrameworkInstall" xml:space="preserve">
+    <value>TF209017: Re-install the .NET Framework on the build agent computer and try again.</value>
+  </data>
+  <data name="InvalidControllerNameInvalidTermination" xml:space="preserve">
+    <value>TF209044: The build controller name {0} is not valid. Build controller names cannot end in the following characters: ' ', '.'.</value>
+  </data>
+  <data name="InvalidServiceHostNameTooLong" xml:space="preserve">
+    <value>TF209046: The build service host name {0} is too long. The maximum length of a build service host name is {1} characters.</value>
+  </data>
+  <data name="TaskBuildStepException" xml:space="preserve">
+    <value>The {0} task failed to add or update a build step: {1}.</value>
+  </data>
+  <data name="EditPipelineQueueConfigurationPermission" xml:space="preserve">
+    <value>Edit pipeline queue configuration</value>
+  </data>
+  <data name="DestroyBuildsPermission" xml:space="preserve">
+    <value>Destroy builds</value>
+  </data>
+  <data name="UseBuildResourcesPermission" xml:space="preserve">
+    <value>Use build resources</value>
+  </data>
+  <data name="QueuePriority_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Status_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="GatedCheckinMultipleDefinitionWithShelveset" xml:space="preserve">
+    <value>Your check-in could not be completed because it affects the following gated build pipelines.
+  {0}
+To complete your check-in you will need to queue a build of the shelveset {1}.</value>
+  </data>
+  <data name="SourceControlDoesNotExist" xml:space="preserve">
+    <value>TF209023: Either source control has not been configured for this team project or you do not have permission to access it. Configure source control and try again or contact your Azure DevOps Server administrator to obtain the required permissions.</value>
+  </data>
+  <data name="Status_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="InvalidUriToolId" xml:space="preserve">
+    <value>Invalid artifact URI specified for {0}. The artifact identifier '{1}' should be an integer.</value>
+  </data>
+  <data name="PortfolioProjectDoesNotExistTag" xml:space="preserve">
+    <value>TF42039: Team project {0} does not exist.</value>
+  </data>
+  <data name="EDIT_BUILD_STATUS" xml:space="preserve">
+    <value>'Edit Build Quality'</value>
+  </data>
+  <data name="TaskCannotAddBuildStep" xml:space="preserve">
+    <value>The {0} task cannot add a build step because its BuildUri property is not set.</value>
+  </data>
+  <data name="BuildDeletionResultSymbolsFailure" xml:space="preserve">
+    <value>TF209037: warning: Failed to delete symbols for build {0}: {1}</value>
+  </data>
+  <data name="InvalidPathReservedName" xml:space="preserve">
+    <value>TF42068: '{0}' is a reserved name and may not be included in a path.</value>
+  </data>
+  <data name="BuildExeNotFound" xml:space="preserve">
+    <value>TF42020: The {0} executable file at {1} was not found. {2}</value>
+  </data>
+  <data name="UPDATE_BUILD" xml:space="preserve">
+    <value>'Write to build operational store'</value>
+  </data>
+  <data name="QueuePriority_BelowNormal" xml:space="preserve">
+    <value>Below Normal</value>
+  </data>
+  <data name="DeleteOptions_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="InvalidPathVolumeRequired" xml:space="preserve">
+    <value>TF42066: The path '{0}' is not valid. Specify a volume and try again.</value>
+  </data>
+  <data name="BuildStoppedBy" xml:space="preserve">
+    <value>Build stopped by {0}</value>
+  </data>
+  <data name="InvalidDefinitionNameInvalidTermination" xml:space="preserve">
+    <value>TF209035: The build pipeline name {0} is not valid. Build pipeline names cannot end in the following characters: ' ', '.'.</value>
+  </data>
+  <data name="Status_PartiallySucceeded" xml:space="preserve">
+    <value>Partially Succeeded</value>
+  </data>
+  <data name="RetentionPolicy_KeepLatestN_Format" xml:space="preserve">
+    <value>Keep {0} Latest</value>
+  </data>
+  <data name="Reason_Triggered" xml:space="preserve">
+    <value>Triggered and Manual</value>
+  </data>
+  <data name="MergeConflictTag" xml:space="preserve">
+    <value>The files on your machine are out of date. Getting the latest files. Do you want to continue?</value>
+  </data>
+  <data name="Reason_ScheduleForced" xml:space="preserve">
+    <value>Scheduled (Forced)</value>
+  </data>
+  <data name="ProcessTemplateDeleted" xml:space="preserve">
+    <value>TF215100: The build pipeline refers to a process template that no longer exists.</value>
+  </data>
+  <data name="InvalidShelvesetOwner" xml:space="preserve">
+    <value>TF209051: The shelveset owner '{1}' is not valid (parameter '{0}').</value>
+  </data>
+  <data name="QueuePriority_AboveNormal" xml:space="preserve">
+    <value>Above Normal</value>
+  </data>
+  <data name="DeleteOptions_Symbols" xml:space="preserve">
+    <value>Symbols</value>
+  </data>
+  <data name="ViewBuildDefinitionPermission" xml:space="preserve">
+    <value>View build pipeline</value>
+  </data>
+  <data name="DeleteBuildDefinitionPermission" xml:space="preserve">
+    <value>Delete build pipeline</value>
+  </data>
+  <data name="ErrorOpeningWizardTag" xml:space="preserve">
+    <value>TF42024: Failed to start the wizard. The workspace {0} is preventing the wizard from creating temporary workspace required for this operation. Change the folder mapping of the workspace to some other local folder.</value>
+  </data>
+  <data name="InvalidPathTeamProjectRequired" xml:space="preserve">
+    <value>TF209020: The path {0} must specify a team project.</value>
+  </data>
+  <data name="DefinitionTrigger_Schedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="InvalidDropLocation" xml:space="preserve">
+    <value>TF42054: Invalid drop location: {0}. The drop location must be a UNC path or a valid TFS server path under a team project.</value>
+  </data>
+  <data name="EditBuildQualityPermission" xml:space="preserve">
+    <value>Edit build quality</value>
+  </data>
+  <data name="InvalidShelvesetName" xml:space="preserve">
+    <value>TF209050: The shelveset name '{1}' is not valid (parameter '{0}').</value>
+  </data>
+  <data name="Status_V1_Succeeded" xml:space="preserve">
+    <value>Successfully Completed</value>
+  </data>
+  <data name="ManagePipelinePoliciesPermission" xml:space="preserve">
+    <value>Manage pipeline policies</value>
+  </data>
+  <data name="EditBuildDefinitionPermission" xml:space="preserve">
+    <value>Edit build pipeline</value>
+  </data>
+  <data name="FailedToStartBuild" xml:space="preserve">
+    <value>TF209040: The build could not be started. An unknown error occurred.</value>
+  </data>
+  <data name="Reason_Schedule" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="InvalidServiceHostNameInvalidCharacters" xml:space="preserve">
+    <value>TF209045: The build service host name {0} contains characters that you cannot use. Characters that you cannot use include '&lt;', '&gt;', '|', '*', ':', '\', '/', '"', '?', '@'.</value>
+  </data>
+  <data name="QueuePriority_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="MissingShelvesetOwner" xml:space="preserve">
+    <value>TF209052: You must specify a shelveset owner (parameter '{0}').</value>
+  </data>
+  <data name="InvalidBuildType" xml:space="preserve">
+    <value>TF42006: The build service could not get the project file for build pipeline {0}. Ensure the project file exists and the build service account {1} is a member of the Build Services group for the team project.</value>
+  </data>
+  <data name="Status_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="InvalidPlatformFlavorInvalidCharacters" xml:space="preserve">
+    <value>TF42067: The configuration '{0}' contains characters which are not allowed. Characters which are not allowed include '&lt;', '&gt;', '|', '*', ':', '&amp;', '\', '/', '"', '%', '?', and '#'.</value>
+  </data>
+  <data name="InvalidDefinitionNameInvalidCharacters" xml:space="preserve">
+    <value>TF215075: The pipeline name {0} contains characters that you cannot use. Characters that you cannot use include '&lt;', '&gt;', '|', '*', ':', '\', '/', '"', '?', '@', '$' and '='.</value>
+  </data>
+  <data name="DefinitionTrigger_GatedCheckIn" xml:space="preserve">
+    <value>Gated Check-in</value>
+  </data>
+  <data name="InvalidBuildTypeFileFormat" xml:space="preserve">
+    <value>TF42015: The build pipeline file TfsBuild.proj for build pipeline {0} could not be read. The format of the file is invalid, or the build service account does not have permissions to read the file.</value>
+  </data>
+  <data name="InvalidBuildRequest" xml:space="preserve">
+    <value>TF42057: The Azure DevOps Server {0} denies sending a build request.</value>
+  </data>
+  <data name="TestCompletedState" xml:space="preserve">
+    <value>Testing Completed</value>
+  </data>
+  <data name="ProcessTemplateDeletedWithServerPath" xml:space="preserve">
+    <value>TF215101: The build pipeline refers to a process template at '{0}', which no longer exists.</value>
+  </data>
+  <data name="InvalidSharedResourceName" xml:space="preserve">
+    <value>TF209049: The resource name '{1}' is not valid (parameter '{0}').</value>
+  </data>
+  <data name="InvalidUriNotAbsolute" xml:space="preserve">
+    <value>TF209021: The URI {0} must be an absolute URI.</value>
+  </data>
+  <data name="FinishedCompilationState" xml:space="preserve">
+    <value>Compilation Completed</value>
+  </data>
+  <data name="ExceedMaxLength" xml:space="preserve">
+    <value>{0}: exceeds the maximum allowed length</value>
+  </data>
+  <data name="BuildDeletionResultDropLocationFailure" xml:space="preserve">
+    <value>TF215018: warning: Failed to delete drop location {0} for build {1}: {2}</value>
+  </data>
+  <data name="Status_Initializing" xml:space="preserve">
+    <value>Initializing</value>
+  </data>
+  <data name="InvalidLogLocation" xml:space="preserve">
+    <value>TF42051: Invalid log location: {0}. The log location must be a UNC path or a URI.</value>
+  </data>
+  <data name="Status_Queued" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="CannotCreateDropLocation" xml:space="preserve">
+    <value>TF209011: Could not create drop location {0}: {1}.</value>
+  </data>
+  <data name="DefinitionTrigger_None" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="DeleteBuildsPermission" xml:space="preserve">
+    <value>Delete builds </value>
+  </data>
+  <data name="BuildAdministratorsGroupDescription" xml:space="preserve">
+    <value>Members of this group should include accounts for people who should be able to administer the build resources.</value>
+  </data>
+  <data name="ResponseFileReadException" xml:space="preserve">
+    <value>TF209007: Error reading TfsBuild.rsp: {0}.</value>
+  </data>
+  <data name="DefinitionQueueStatus_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="CheckinPermissionDenied" xml:space="preserve">
+    <value>TF209012: Access denied. You need the {0} permission in {1} to create a build pipeline. 
+    For more information, contact your Azure DevOps Server administrator.</value>
+  </data>
+  <data name="ColumnDeleteOptionsHeaderText" xml:space="preserve">
+    <value>What to Delete</value>
+  </data>
+  <data name="InvalidServiceHostNameReservedName" xml:space="preserve">
+    <value>TF209047: The build service host name {0} is not valid. Build service host names cannot be NTFS reserved names.</value>
+  </data>
+  <data name="Status_Unavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="ErrorInGettingVsmdiFilesTag" xml:space="preserve">
+    <value>TF42023: Failed to get test metadata (.vsmdi) file for the selected workspace {0}. Verify that the workspace contains one or more test metadata files.</value>
+  </data>
+  <data name="DeleteOptions_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="AdministerBuildPermissionsPermission" xml:space="preserve">
+    <value>Administer build permissions</value>
+  </data>
+  <data name="DefinitionTrigger_ContinuousIntegration" xml:space="preserve">
+    <value>Continuous Integration</value>
+  </data>
+  <data name="MissingBuildMachine" xml:space="preserve">
+    <value>TF209004: You must specify a computer name.</value>
+  </data>
+  <data name="Status_Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="GatedCheckinMultipleDefinition" xml:space="preserve">
+    <value>Your check-in could not be completed because it affects the following gated build pipelines.
+  {0}
+To complete your check-in you will need to shelve your changes and queue a build of that shelveset.</value>
+  </data>
+  <data name="GENERIC_READ" xml:space="preserve">
+    <value>'View project-level information'</value>
+  </data>
+  <data name="InvalidInputParameterOutOfRange" xml:space="preserve">
+    <value>TF42074: The value '{0}' is out of the range of valid values (Parameter name: {1})</value>
+  </data>
+  <data name="MissingBuildDirectory" xml:space="preserve">
+    <value>TF209003: You must specify a build directory.</value>
+  </data>
+  <data name="CannotStartBuildForActiveDefinition" xml:space="preserve">
+    <value>TF209057: You cannot perform the "Start Now" action on queued build {0} because its build pipeline ({1}) is not paused or disabled.</value>
+  </data>
+  <data name="InvalidBuildDir" xml:space="preserve">
+    <value>TF42033: The build directory must be a valid local path on the build machine (for example, C:\build).</value>
+  </data>
+  <data name="ManageBuildQualitiesPermission" xml:space="preserve">
+    <value>Manage build qualities</value>
+  </data>
+  <data name="DefinitionQueueStatus_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="ColumnRetentionPolicyHeaderText" xml:space="preserve">
+    <value>Retention Policy</value>
+  </data>
+  <data name="FolderOpenErrorMissingPath" xml:space="preserve">
+    <value>The path to the folder is empty.</value>
+  </data>
+  <data name="Status_InProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="Status_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Reason_UserCreated" xml:space="preserve">
+    <value>User Created</value>
+  </data>
+  <data name="MissingControllerName" xml:space="preserve">
+    <value>TF209053: You must specify a name for the build controller.</value>
+  </data>
+  <data name="Status_Unreachable" xml:space="preserve">
+    <value>Unreachable</value>
+  </data>
+  <data name="BuildTagGroup_Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="BuildTagGroup_Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="CannotStartBuildControllerOverloaded" xml:space="preserve">
+    <value>TF209059: You cannot perform the "Start Now" action on queued build {0} because its build controller ({1}) is running its specified maximum number of parallel builds.</value>
+  </data>
+  <data name="InvalidAgentStatus" xml:space="preserve">
+    <value>TF209055: Incorrect agent status: {0}.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>TF42048: The input argument {0} is required but missing.</value>
+  </data>
+  <data name="InvalidContractVersion" xml:space="preserve">
+    <value>The contract version {0} is not valid.</value>
+  </data>
+  <data name="DefinitionTrigger_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="DefinitionTrigger_BatchedContinuousIntegration" xml:space="preserve">
+    <value>Rolling Builds</value>
+  </data>
+  <data name="Reason_Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="RetentionPolicy_KeepLatest" xml:space="preserve">
+    <value>Keep Latest Only</value>
+  </data>
+  <data name="CannotStartBuildGatedInProgress" xml:space="preserve">
+    <value>TF209059: You cannot perform the "Start Now" action on queued build {0} because its build controller ({1}) is already running a gated build for the same build pipeline.</value>
+  </data>
+  <data name="AdministerBuildResourcePermissionsPermission" xml:space="preserve">
+    <value>Administer build resource permissions</value>
+  </data>
+  <data name="GatedCheckinSingleDefinitionFromShelveset" xml:space="preserve">
+    <value>Your shelveset has been submitted for validation by build pipeline {0}.</value>
+  </data>
+  <data name="ThreadPoolFailure" xml:space="preserve">
+    <value>TF209024: Unexpected failure on the build agent computer: unable to queue ThreadPool request. Restarting the computer may fix this problem.</value>
+  </data>
+  <data name="BuildTypeNotFound" xml:space="preserve">
+    <value>TF41001: Team project {1} does not have a build pipeline {0}.</value>
+  </data>
+  <data name="ManageBuildResourcesPermission" xml:space="preserve">
+    <value>Manage build resources</value>
+  </data>
+  <data name="BuildContainerPathNotSupported" xml:space="preserve">
+    <value>TF400955: The path '{0}' cannot be used because the Azure DevOps Server you are connected to does not support file container drop locations; you must use a UNC path instead.</value>
+  </data>
+  <data name="Status_Succeeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="ManageBuildQueuePermission" xml:space="preserve">
+    <value>Manage build queue</value>
+  </data>
+  <data name="Status_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Status_Stopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="InvalidControllerNameInvalidCharacters" xml:space="preserve">
+    <value>TF209041: The controller name {0} contains characters that you cannot use. Characters that you cannot use include '&lt;', '&gt;', '|', '*', ':', '\', '/', '"', '?'.</value>
+  </data>
+  <data name="InvalidDropDir" xml:space="preserve">
+    <value>TF42034: The drop location {0} is invalid. The drop location must be a valid UNC path (for example, \\server\share).</value>
+  </data>
+  <data name="BuildDeletionResultLabelFailure" xml:space="preserve">
+    <value>TF209036: warning: Failed to delete label {0} for build {1}: {2}</value>
+  </data>
+  <data name="ResponseFileWriteException" xml:space="preserve">
+    <value>TF209008: Error writing to TfsBuild.rsp: {0}.</value>
+  </data>
+  <data name="Error_TFSFailure" xml:space="preserve">
+    <value>TF209015: Failed to retrieve data from the server. Verify that Azure DevOps Server is accessible via the network and try again.</value>
+  </data>
+  <data name="Reason_BatchedCI" xml:space="preserve">
+    <value>Batched Continuous Integration</value>
+  </data>
+  <data name="InvalidAgentNameInvalidCharacters" xml:space="preserve">
+    <value>TF209029: The agent name {0} contains characters that you cannot use. Characters that you cannot use include '&lt;', '&gt;', '|', '*', ':', '\', '/', '"', '?'.</value>
+  </data>
+  <data name="Error_UnauthorizedAccess" xml:space="preserve">
+    <value>TF209016: Access denied. You are not authorized to perform this action. 
+    For more information, contact the Azure DevOps Server administrator.</value>
+  </data>
+  <data name="TemplateVersionNotSupported" xml:space="preserve">
+    <value>The build controller used for this build does not support the version of the template file used by the build pipeline. The version of the template file is {0}. The maximum supported version for this build controller is {1}. This build controller must be upgraded to build this version of the template file.</value>
+  </data>
+  <data name="DefinitionTrigger_BatchedGatedCheckIn" xml:space="preserve">
+    <value>Gated Check-in (batched)</value>
+  </data>
+  <data name="InvalidBuildTypeFile" xml:space="preserve">
+    <value>TF42075: The build pipeline file TfsBuild.proj for build pipeline {0} could not be loaded. 
+Error: {1}</value>
+  </data>
+  <data name="RootBuildDirectory" xml:space="preserve">
+    <value>TF42077: Invalid build directory: {0}. The build directory cannot be a drive name.</value>
+  </data>
+  <data name="MissingDefinitionName" xml:space="preserve">
+    <value>TF215058: You must specify a name for the build pipeline.</value>
+  </data>
+  <data name="ErrorInGettingSolutionNamesTag" xml:space="preserve">
+    <value>TF42027: Team Build could not get the solution files for the team project. Verify that the {0} workspace mapping is correct and it contains one or more solution files.</value>
+  </data>
+  <data name="MissingBuildNumber" xml:space="preserve">
+    <value>TF209005: You must specify a build number.</value>
+  </data>
+  <data name="BuildStepNotFoundException" xml:space="preserve">
+    <value>TF209028: The BuildStep task could not find a build step with ID {0} (Detail Message: {1}).</value>
+  </data>
+  <data name="InvalidPathMustContainRoot" xml:space="preserve">
+    <value>TF209019: The path {0} must begin with a '\'.</value>
+  </data>
+  <data name="SyncState" xml:space="preserve">
+    <value>Getting Sources</value>
+  </data>
+  <data name="FileSystemCannotSetAcls" xml:space="preserve">
+    <value>TF42052: The file system on the build machine does not support access control lists. Specify build directory on a file system that supports access control lists like NTFS.</value>
+  </data>
+  <data name="Reason_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="NonCanonicalBuildDirectory" xml:space="preserve">
+    <value>TF42076: Invalid build directory: {0}. The build directory must be in its canonical form.</value>
+  </data>
+  <data name="UpdateBuildInformationPermission" xml:space="preserve">
+    <value>Update build information</value>
+  </data>
+  <data name="RetentionPolicy_KeepNone" xml:space="preserve">
+    <value>Keep None</value>
+  </data>
+  <data name="OverrideBuildCheckInPermission" xml:space="preserve">
+    <value>Override check-in validation by build</value>
+  </data>
+  <data name="GatedCheckinOverrideDenied" xml:space="preserve">
+    <value>Access Denied: User {0} needs {1} permission for the following build pipeline(s).
+  {2}</value>
+  </data>
+  <data name="ErrorWorkspaceAlreadyExistsTag" xml:space="preserve">
+    <value>TF42026: Failed to start the wizard. The temporary workspace {0} needed for this operation already exists. Delete this workspace and try again.</value>
+  </data>
+  <data name="InvalidBuildFileContainerRoot" xml:space="preserve">
+    <value>The path {0} must begin with '#/'.</value>
+  </data>
+  <data name="DefinitionTrigger_ScheduleForced" xml:space="preserve">
+    <value>Schedule (forced)</value>
+  </data>
+  <data name="Status_Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="FolderOpenError" xml:space="preserve">
+    <value>TF42004: Team Build failed to open folder {0}. {1}</value>
+  </data>
+  <data name="InvalidBuildTypeNoDownload" xml:space="preserve">
+    <value>TF42018: The DoNotDownloadBuildType flag in configuration file of TFSBuildService.exe is set to true but {0} does not exist. Set the DoNotDownloadBuildType flag to false and restart the service or ensure that the file exists.</value>
+  </data>
+  <data name="BuildNumberInvalidChars" xml:space="preserve">
+    <value>TF209010: The build number {0} contains invalid character(s) or is too long. The maximum length of a build number is 64 characters. Characters which are not allowed include '"', '/', ':', '&lt;', '&gt;' , '\', '|', '?', '@', and '*'.</value>
+  </data>
+  <data name="InvalidControllerNameTooLong" xml:space="preserve">
+    <value>TF209042: The build controller name {0} is too long. The maximum length of a build controller name is {1} characters.</value>
+  </data>
+  <data name="BuildReasonNotSupported" xml:space="preserve">
+    <value>TF209039: The build process template for the build pipeline does not support the reason {0} for which this build was queued.  The supported build reasons for the build process template include {1}.  If you believe that the build process template does support the build reason, you can update the value of the SupportedReasons property in file {2}.</value>
+  </data>
+  <data name="CollectionBuildServicesGroupName" xml:space="preserve">
+    <value>Project Collection Build Service Accounts</value>
+  </data>
+  <data name="ArtifactTypeMisMatch" xml:space="preserve">
+    <value>TF209002: Invalid artifact URI specified. The expected URI type is {0}, and received type {1}.</value>
+  </data>
+  <data name="InvalidServiceHostNameInvalidTermination" xml:space="preserve">
+    <value>TF209048: The build service host name {0} is not valid. Build service host names cannot end in the following characters: ' ', '.'.</value>
+  </data>
+  <data name="InvalidAgentNameReservedName" xml:space="preserve">
+    <value>TF209031: The build agent name {0} is not valid. Build agent names cannot be NTFS reserved names.</value>
+  </data>
+  <data name="DeleteOptions_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Status_Postponed" xml:space="preserve">
+    <value>Postponed</value>
+  </data>
+  <data name="UnableToSetPermissionsOnDropDir" xml:space="preserve">
+    <value>TF209025: The build process is unable to set the permissions on the drop directory {0} (Detail Message: {1}). Make sure that the build service account has proper permissions on the build drop directory and try again.</value>
+  </data>
+</root>

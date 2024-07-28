@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.BlobStore.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{273C7D3A-036D-4C1A-A038-B8EEA0A22FDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.BlobStore.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.BlobStore.WebApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuildXL.Cache.ContentStore.Hashing">
+      <HintPath>lib\BuildXL.Cache.ContentStore.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.BlobStore.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.BlobStore.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Content.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Content.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Dataflow">
+      <HintPath>lib\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlobConstants.cs" />
+    <Compile Include="BlobStore2HttpClient.cs" />
+    <Compile Include="BlobStoreHttpClientFactory.cs" />
+    <Compile Include="BlobToFileMapping.cs" />
+    <Compile Include="BlobToFileMappingHelper.cs" />
+    <Compile Include="BlobToUriMapping.cs" />
+    <Compile Include="IClientSettingsHttpClient.cs" />
+    <Compile Include="ClientSettingsHttpClient.cs" />
+    <Compile Include="ClientToolsHttpClient.cs" />
+    <Compile Include="ClientToolsHttpClientBase.cs" />
+    <Compile Include="DedupIdBatch.cs" />
+    <Compile Include="DedupCopyHttpClient.cs" />
+    <Compile Include="DedupManifestArtifactClient.cs" />
+    <Compile Include="PublishResult.cs" />
+    <Compile Include="DedupManifestArtifactHelper.cs" />
+    <Compile Include="DedupStoreClient.cs" />
+    <Compile Include="DedupStoreClientContext.cs" />
+    <Compile Include="ChunkValidationLevel.cs" />
+    <Compile Include="DedupStoreClientContextConverter.cs" />
+    <Compile Include="DedupStoreClientWithDataport.cs" />
+    <Compile Include="DedupStoreHttpClient.cs" />
+    <Compile Include="RequestHandler.cs" />
+    <Compile Include="DisposingStreamWrapper.cs" />
+    <Compile Include="DomainBlobstoreHttpClient.cs" />
+    <Compile Include="DomainDedupStoreHttpClient.cs" />
+    <Compile Include="DedupBlobMultipartHttpClient.cs" />
+    <Compile Include="DomainHttpClientWrapper.cs" />
+    <Compile Include="DomainBlobHttpClientWrapper.cs" />
+    <Compile Include="HostDomainClient.cs" />
+    <Compile Include="HostDomainHttpClient.cs" />
+    <Compile Include="DedupStoreHttpClientFactory.cs" />
+    <Compile Include="DownloadDedupManifestArtifactOptions.cs" />
+    <Compile Include="BlobExceptionMapping.cs" />
+    <Compile Include="BlobNotFoundException.cs" />
+    <Compile Include="BlobServiceException.cs" />
+    <Compile Include="BlobUploadException.cs" />
+    <Compile Include="DedupExceptionMapping.cs" />
+    <Compile Include="DedupInconsistentAttributeException.cs" />
+    <Compile Include="DedupNotFoundException.cs" />
+    <Compile Include="InvalidSessionOperationException.cs" />
+    <Compile Include="InvalidPartsRangeException.cs" />
+    <Compile Include="SessionOrPartNotFoundException.cs" />
+    <Compile Include="UnauthorizedBlobstoreRequestException.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IBlobStoreHttpClient.cs" />
+    <Compile Include="IBlobStoreHttpClientExtensions.cs" />
+    <Compile Include="IDomainBlobStoreHttpClient.cs" />
+    <Compile Include="IDedupCopyHttpClient.cs" />
+    <Compile Include="IDedupManifestArtifactClient.cs" />
+    <Compile Include="IDedupStoreClient.cs" />
+    <Compile Include="IDedupUploadSession.cs" />
+    <Compile Include="CheckIfUploadNeededResult.cs" />
+    <Compile Include="IDedupStoreClientWithDataport.cs" />
+    <Compile Include="GetDedupAsyncFunc.cs" />
+    <Compile Include="MaybeCached.cs" />
+    <Compile Include="MaybeCached`1.cs" />
+    <Compile Include="IDedupStoreHttpClient.cs" />
+    <Compile Include="PutNodeResponse.cs" />
+    <Compile Include="TryReferenceNodeResponse.cs" />
+    <Compile Include="DedupNodeNotFound.cs" />
+    <Compile Include="DedupNodeChildrenNeedAction.cs" />
+    <Compile Include="DedupNodeChildrenNotEnoughKeepUntil.cs" />
+    <Compile Include="DedupNodeUpdated.cs" />
+    <Compile Include="ChildNodeState.cs" />
+    <Compile Include="DedupDownloadInfoBase.cs" />
+    <Compile Include="DedupDownloadInfo.cs" />
+    <Compile Include="ChunkDedupDownloadInfo.cs" />
+    <Compile Include="IDomainDedupStoreHttpClient.cs" />
+    <Compile Include="IDedupBlobMultipartHttpClient.cs" />
+    <Compile Include="IHostDomainClient.cs" />
+    <Compile Include="IHostDomainHttpClient.cs" />
+    <Compile Include="LockSet`1.cs" />
+    <Compile Include="Manifest.cs" />
+    <Compile Include="ManifestItem.cs" />
+    <Compile Include="DedupInfo.cs" />
+    <Compile Include="ManifestReference.cs" />
+    <Compile Include="ManifestItemType.cs" />
+    <Compile Include="MinimatchHelper.cs" />
+    <Compile Include="ProxyConstants.cs" />
+    <Compile Include="ProxyRouteConstructs.cs" />
+    <Compile Include="ProxyUriHelper.cs" />
+    <Compile Include="ResourceIds.cs" />
+    <Compile Include="RuntimeIdentifierHelper.cs" />
+    <Compile Include="SemaphoreSlimToken.cs" />
+    <Compile Include="SemaphoreSlimExtensions.cs" />
+    <Compile Include="ValueUnit.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Exceptions\UnknownDatabaseErrorOcurredException.cs" />
+    <Compile Include="Exceptions\BlobMappingsMissingFilesException.cs" />
+    <Compile Include="Exceptions\ClientToolNotFoundException.cs" />
+    <Compile Include="Exceptions\ContentLengthMissingException.cs" />
+    <Compile Include="Exceptions\ContentLengthTooLargeException.cs" />
+    <Compile Include="Exceptions\DedupUnsupportedException.cs" />
+    <Compile Include="Exceptions\InvalidBlobTypeException.cs" />
+    <Compile Include="Exceptions\InvalidLocalDirectoryException.cs" />
+    <Compile Include="Exceptions\InvalidPathException.cs" />
+    <Compile Include="Exceptions\HostDomainExceptionMapping.cs" />
+    <Compile Include="Contracts\ApplicationInsightsInfo.cs" />
+    <Compile Include="Contracts\Blob.cs" />
+    <Compile Include="Contracts\BlobBatch.cs" />
+    <Compile Include="Contracts\BlobMappings.cs" />
+    <Compile Include="Contracts\ClientSettingsInfo.cs" />
+    <Compile Include="Contracts\Client.cs" />
+    <Compile Include="Contracts\ClientPlatformInfo.cs" />
+    <Compile Include="Contracts\OSInfo.cs" />
+    <Compile Include="Contracts\ClientTool.cs" />
+    <Compile Include="Contracts\RuntimeIdentifier.cs" />
+    <Compile Include="Contracts\ClientToolReleaseInfo.cs" />
+    <Compile Include="Contracts\DedupCopyBatch.cs" />
+    <Compile Include="Contracts\ProjectDomainRequest.cs" />
+    <Compile Include="Contracts\ReferenceStatus.cs" />
+    <Compile Include="Contracts\ReferenceKind.cs" />
+    <Compile Include="Contracts\Reference.cs" />
+    <Compile Include="Contracts\JsonReferenceConverter.cs" />
+    <Compile Include="Contracts\KeepUntilDateTimeConverter.cs" />
+    <Compile Include="Contracts\KeepUntilReference.cs" />
+    <Compile Include="Contracts\IdReference.cs" />
+    <Compile Include="Contracts\ReferenceFactory.cs" />
+    <Compile Include="Contracts\ReferenceBatch.cs" />
+    <Compile Include="Contracts\Session.cs" />
+    <Compile Include="Contracts\SessionState.cs" />
+    <Compile Include="Contracts\Part.cs" />
+    <Compile Include="Contracts\ArtifactsUsage\ArtifactsUsageBreakdown.cs" />
+    <Compile Include="Contracts\ArtifactsUsage\StorageUsage.cs" />
+    <Compile Include="Contracts\ArtifactsUsage\FeedUsage.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

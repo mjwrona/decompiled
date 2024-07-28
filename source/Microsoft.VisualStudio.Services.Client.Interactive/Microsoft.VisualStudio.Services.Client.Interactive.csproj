@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.Client.Interactive.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AB80F7A-16E6-4552-8522-BF77BEFBC436}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Client.Interactive</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Client</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>lib\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>lib\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VSAccountProviderParameters.cs" />
+    <Compile Include="VssAadVSAccountProviderTokenProvider.cs" />
+    <Compile Include="VssAuthenticationHelper.cs" />
+    <Compile Include="DefaultServiceImplementationAttribute.cs" />
+    <Compile Include="SessionOp.cs" />
+    <Compile Include="ClientNativeMethods.cs" />
+    <Compile Include="CookieUtility.cs" />
+    <Compile Include="CredentialStorageConstants.cs" />
+    <Compile Include="CredentialStorageUtility.cs" />
+    <Compile Include="VssAadCredential.cs" />
+    <Compile Include="VssAadToken.cs" />
+    <Compile Include="VssAadTokenProvider.cs" />
+    <Compile Include="VssAadVSAccountProviderToken.cs" />
+    <Compile Include="VssAzureIdentityCredential.cs" />
+    <Compile Include="VssAzureIdentityTokenProvider.cs" />
+    <Compile Include="VssClientCredentials.cs" />
+    <Compile Include="VssClientCredentialStorage.cs" />
+    <Compile Include="VssFederatedCredential.cs" />
+    <Compile Include="VssFederatedToken.cs" />
+    <Compile Include="VssFederatedTokenProvider.cs" />
+    <Compile Include="VssOAuthCredential.cs" />
+    <Compile Include="VssOAuthTokenType.cs" />
+    <Compile Include="VssOAuthToken.cs" />
+    <Compile Include="VssOAuthTokenContainer.cs" />
+    <Compile Include="VssOAuthTokenProvider.cs" />
+    <Compile Include="VssAadSettings.cs" />
+    <Compile Include="VssClaimsConstants.cs" />
+    <Compile Include="HttpClientFactoryWithUserAgent.cs" />
+    <Compile Include="GeneratedVersionInfo.cs" />
+    <Compile Include="ClientResources.cs" />
+    <Compile Include="Internal\AdminConstants.cs" />
+    <Compile Include="Keychain\SessionCounterManager.cs" />
+    <Compile Include="Keychain\SessionTokenStorage.cs" />
+    <Compile Include="Keychain\SessionToken.cs" />
+    <Compile Include="Keychain\SessionTokenDescriptor.cs" />
+    <Compile Include="Keychain\SessionTokenPair.cs" />
+    <Compile Include="Keychain\Logging\AccountManagementLoggingAuthType.cs" />
+    <Compile Include="Keychain\Logging\AccountManagementLoggingEventNames.cs" />
+    <Compile Include="Keychain\Logging\AccountManagementLoggingEventProperties.cs" />
+    <Compile Include="Keychain\Logging\AccountManagementLoggingSource.cs" />
+    <Compile Include="Keychain\Logging\DiagnosticsLoggingMessageSeverity.cs" />
+    <Compile Include="Keychain\Logging\DiagnosticsLogging.cs" />
+    <Compile Include="Keychain\VSProvider\AadProviderConfiguration.cs" />
+    <Compile Include="Keychain\VSProvider\IAadProviderConfiguration.cs" />
+    <Compile Include="AccountManagement\AccountManager.cs" />
+    <Compile Include="AccountManagement\AccountRegistryWatcher.cs" />
+    <Compile Include="AccountManagement\RegistryChangeNotificationFilter.cs" />
+    <Compile Include="AccountManagement\RegistryAccessMask.cs" />
+    <Compile Include="AccountManagement\RegistryAccountStore.cs" />
+    <Compile Include="AccountManagement\SignInHelper.cs" />
+    <Compile Include="AccountManagement\AccountExtensions.cs" />
+    <Compile Include="AccountManagement\VSAccountProvider.cs" />
+    <Compile Include="AccountManagement\AccountInitializationData.cs" />
+    <Compile Include="AccountManagement\Account.cs" />
+    <Compile Include="AccountManagement\AccountKeyComparer.cs" />
+    <Compile Include="AccountManagement\AccountDisplayInfoNoLogoComparer.cs" />
+    <Compile Include="AccountManagement\AccountMemberComparer.cs" />
+    <Compile Include="AccountManagement\AccountDisplayInfo.cs" />
+    <Compile Include="AccountManagement\AccountKey.cs" />
+    <Compile Include="AccountManagement\AccountManagementUtilities.cs" />
+    <Compile Include="AccountManagement\AccountStorageException.cs" />
+    <Compile Include="AccountManagement\AccountStoreChangedEventArgs.cs" />
+    <Compile Include="AccountManagement\AccountCache.cs" />
+    <Compile Include="AccountManagement\AccountCacheConfiguration.cs" />
+    <Compile Include="AccountManagement\AccountCacheItem.cs" />
+    <Compile Include="AccountManagement\IAccountCache.cs" />
+    <Compile Include="AccountManagement\IAccountCacheConfiguration.cs" />
+    <Compile Include="AccountManagement\IAccountCacheItem.cs" />
+    <Compile Include="AccountManagement\PartialCacheItem.cs" />
+    <Compile Include="AccountManagement\IAccountManager.cs" />
+    <Compile Include="AccountManagement\IAccountProvider.cs" />
+    <Compile Include="AccountManagement\IAccountStore.cs" />
+    <Compile Include="AccountManagement\IVSAccountProviderShim.cs" />
+    <Compile Include="AccountManagement\PublicClientApplicationExtensions.cs" />
+    <Compile Include="AccountManagement\AccountProviderExtensions.cs" />
+    <Compile Include="AccountManagement\AccountsProcessedEventArgs.cs" />
+    <Compile Include="AccountManagement\ScopeInfo.cs" />
+    <Compile Include="AccountManagement\TenantInformation.cs" />
+    <Compile Include="AccountManagement\VSAccountProviderConstants.cs" />
+    <Compile Include="AccountManagement\Logging\AggregateLogger.cs" />
+    <Compile Include="AccountManagement\Logging\ILogger.cs" />
+    <Compile Include="Controls\BrowserEmulationVersion.cs" />
+    <Compile Include="Controls\BrowserVersion.cs" />
+    <Compile Include="Controls\BrowserFlowException.cs" />
+    <Compile Include="Controls\BrowserFlowLayer.cs" />
+    <Compile Include="Controls\ComBrowserHandler.cs" />
+    <Compile Include="Controls\HtmlContextMenuEventHandler.cs" />
+    <Compile Include="Controls\HtmlContextMenuEventArgs.cs" />
+    <Compile Include="Controls\NavigationFailedEventHandler.cs" />
+    <Compile Include="Controls\NavigationFailedEventArgs.cs" />
+    <Compile Include="Controls\CustomNavigationEventHandler.cs" />
+    <Compile Include="Controls\CustomNavigationEventArgs.cs" />
+    <Compile Include="Controls\DpiHelper.cs" />
+    <Compile Include="Controls\DialogHost.cs" />
+    <Compile Include="Controls\InvokeDialogFunc.cs" />
+    <Compile Include="Controls\IDialogHost.cs" />
+    <Compile Include="Controls\VssCredentialPromptContext.cs" />
+    <Compile Include="Controls\VssCredentialPrompts.cs" />
+    <Compile Include="Controls\VssFederatedCredentialPrompt.cs" />
+    <Compile Include="Controls\InteractiveAuthenticationEvent.cs" />
+    <Compile Include="Controls\VssFederatedSignInWindow.cs" />
+    <Compile Include="Controls\ClientTokenData.cs" />
+    <Compile Include="Controls\TokenData.cs" />
+    <Compile Include="Controls\JavascriptNotifyInterop.cs" />
+    <Compile Include="Controls\WindowsCredentialPrompt.cs" />
+    <Compile Include="Controls\AccountPicker\AccountPickerResources.cs" />
+    <Compile Include="Controls\AccountPicker\CachedAccount.cs" />
+    <Compile Include="Controls\AccountPicker\IAccountPickerItem.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="Controls\AccountPickerAccountPickerWindow.xaml.cs">
+      <DependentUpon>accountpickeraccountpickerwindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControlsBrowserWindow.xaml.cs">
+      <DependentUpon>controlsbrowserwindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\AccountPicker\AccountPickerResources.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="controls\accountpicker\accountpickerwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\browserwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

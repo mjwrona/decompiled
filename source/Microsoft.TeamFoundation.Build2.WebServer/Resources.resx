@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DefinitionNotFound" xml:space="preserve">
+    <value>Build pipeline {0} was not found.</value>
+  </data>
+  <data name="BuildQueueMustNotBeSpecifiedForXamlBuild" xml:space="preserve">
+    <value>An agent pool must not be supplied when queueing a build of type XAML.</value>
+  </data>
+  <data name="BuildStatusTextInProgress" xml:space="preserve">
+    <value>Build Started</value>
+  </data>
+  <data name="InvalidInputForGetChangesAndWorkItemsBetweenBuilds" xml:space="preserve">
+    <value>fromBuildId or toBuildId is null. Supply a valid value and try again.</value>
+  </data>
+  <data name="RestApiInvalidLogLocation" xml:space="preserve">
+    <value>This API is only applicable to logs stored in the file container.</value>
+  </data>
+  <data name="DefinitionDisabled" xml:space="preserve">
+    <value>Build pipeline {0} is disabled for project {1}.</value>
+  </data>
+  <data name="BodyMustBeEmptyForRetry" xml:space="preserve">
+    <value>The request body must be empty when the retry parameter is specified.</value>
+  </data>
+  <data name="BuildStatusTextCancelling" xml:space="preserve">
+    <value>Build Cancelling...</value>
+  </data>
+  <data name="YamlFilenameRequiresIncludeAllPropertiese" xml:space="preserve">
+    <value>A YAML filename cannot be used if the includeAllProperties property is specified as false.</value>
+  </data>
+  <data name="CouldNotRetrieveSourceVersionDisplayUrl" xml:space="preserve">
+    <value>Could not retrieve web URL for source version {1} associated with build {0}.</value>
+  </data>
+  <data name="DefinitionMissingRepositoryInfo" xml:space="preserve">
+    <value>Build pipeline {0} does not contain any repository information.</value>
+  </data>
+  <data name="ArtifactTypeNotSupported" xml:space="preserve">
+    <value>The artifact type {0} is not supported.</value>
+  </data>
+  <data name="BuiltAfterFilterNotSupportedForDefinitionIds" xml:space="preserve">
+    <value>Built after filter is not supported when pipeline IDs are specified.</value>
+  </data>
+  <data name="WrongProjectSpecifiedForDefinition" xml:space="preserve">
+    <value>The request specifies project ID {0} but the supplied pipeline specifies project ID {1}.</value>
+  </data>
+  <data name="NotSupportedOnXamlBuildDefinition" xml:space="preserve">
+    <value>This operation is not supported for XAML build pipelines.</value>
+  </data>
+  <data name="BuildQueryOrderOnlyFinishTimeIsSupported" xml:space="preserve">
+    <value>The query order {0} is not support in the current version of API. Use api-version greater than 4.1 instead.</value>
+  </data>
+  <data name="DefinitionContinuationTokenNoQueryOrder" xml:space="preserve">
+    <value>Continuation token timestamp without query order is ambiguous.</value>
+  </data>
+  <data name="BuildDurationTextInProgress" xml:space="preserve">
+    <value>Running for {0} ({1})</value>
+  </data>
+  <data name="ArtifactNotFoundForBuild" xml:space="preserve">
+    <value>Artifact {0} was not found for build {1}.</value>
+  </data>
+  <data name="WrongProjectSpecifiedForBuild" xml:space="preserve">
+    <value>The request specifies project ID {0} but the supplied build specifies project ID {1}.</value>
+  </data>
+  <data name="YamlFilenameRequiresYamlProcessType" xml:space="preserve">
+    <value>A YAML filename cannot be used if the pipeline type is specified as anything other than YAML.</value>
+  </data>
+  <data name="BuildNotFound" xml:space="preserve">
+    <value>The requested build {0} could not be found.</value>
+  </data>
+  <data name="BuildResultTextCanceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="KeepForeverObsolete" xml:space="preserve">
+    <value>The KeepForever flag has been deprecated in favor of retention leases. To get or set if a build is retained, check for or create an appropriate retention lease.</value>
+  </data>
+  <data name="BuildHasNoRepository" xml:space="preserve">
+    <value>The build {0} does not have any associated repository information.</value>
+  </data>
+  <data name="BuildStatusTextNotStarted" xml:space="preserve">
+    <value>Build Not started</value>
+  </data>
+  <data name="BuildControllerMustNotBeSpecifiedForBuild" xml:space="preserve">
+    <value>A controller must not be supplied when queueing a build of type Build.</value>
+  </data>
+  <data name="BuildResultTextPartiallySucceeded" xml:space="preserve">
+    <value>Partially succeeded</value>
+  </data>
+  <data name="InvalidBuildIdsQuery" xml:space="preserve">
+    <value>The buildIds filter may not be used with other filter parameters.</value>
+  </data>
+  <data name="MissingRequestContent" xml:space="preserve">
+    <value>This request expects an object in the request body, but nothing was supplied.</value>
+  </data>
+  <data name="RepositoryInfoNotSupportedForDefinitionIds" xml:space="preserve">
+    <value>Repository query is not supported when pipeline IDs are specified.</value>
+  </data>
+  <data name="InvalidRequestContent" xml:space="preserve">
+    <value>This request expects an object in the request body, but the supplied data could not be deserialized.</value>
+  </data>
+  <data name="WrongProjectSpecifiedForFolder" xml:space="preserve">
+    <value>The request specifies project ID {0} but the supplied folder specifies project ID {1}.</value>
+  </data>
+  <data name="DefinitionTypeNotSupported" xml:space="preserve">
+    <value>Pipeline type {0} is not supported.</value>
+  </data>
+  <data name="CompletedBuildNotFound" xml:space="preserve">
+    <value>No completed builds were found for pipeline {0}.</value>
+  </data>
+  <data name="UseDTQueueAPIs" xml:space="preserve">
+    <value>Use Queue APIs from DistributedTask client.</value>
+  </data>
+  <data name="InvalidResourceTypeName" xml:space="preserve">
+    <value>Invalid resource type name "{0}".</value>
+  </data>
+  <data name="TimelineNotFound" xml:space="preserve">
+    <value>Timeline {0} was not found.</value>
+  </data>
+  <data name="DefinitionNotDesigner" xml:space="preserve">
+    <value>Build pipeline {0} is not designer.</value>
+  </data>
+  <data name="ProjectIsNotWellFormed" xml:space="preserve">
+    <value>The project is still being created.  Please wait for the operation to complete and try again.</value>
+  </data>
+  <data name="BuildControllerNotFound" xml:space="preserve">
+    <value>Controller {0} was not found.</value>
+  </data>
+  <data name="ProjectRequired" xml:space="preserve">
+    <value>No project was specified.</value>
+  </data>
+  <data name="WrongIdSpecifiedForDefinition" xml:space="preserve">
+    <value>The request specifies pipeline ID {0} but the supplied pipeline has ID {1}.</value>
+  </data>
+  <data name="BuildStatusTextCompleted" xml:space="preserve">
+    <value>Build {0}</value>
+  </data>
+  <data name="ArtifactInvalidFileId" xml:space="preserve">
+    <value>File ID {0} is not valid for artifact {1}.</value>
+  </data>
+  <data name="InvalidStatusResultFilterCombination" xml:space="preserve">
+    <value>The status filter {0} is not valid when combined with the result filter {1}.</value>
+  </data>
+  <data name="BuildResultTextFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="WrongIdSpecifiedForBuild" xml:space="preserve">
+    <value>The request specifies build ID {0} but the supplied build has ID {1}.</value>
+  </data>
+  <data name="InvalidContinuationToken" xml:space="preserve">
+    <value>The continuation token is invalid.</value>
+  </data>
+  <data name="BodyMustBeEmptyForRebuild" xml:space="preserve">
+    <value>The request body must be empty if queueing a build with sourceBuildId.</value>
+  </data>
+  <data name="BuildLogNotFound" xml:space="preserve">
+    <value>Log not found for build {0}.</value>
+  </data>
+  <data name="BuildStatusTextPostPoned" xml:space="preserve">
+    <value>Build Postponed</value>
+  </data>
+  <data name="BuildRequestValidationFailed" xml:space="preserve">
+    <value>Could not queue the build because there were validation errors or warnings.</value>
+  </data>
+  <data name="BuildResultTextSucceeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="AmbigiousBuiltAfterFilter" xml:space="preserve">
+    <value>Both built after and not built after cannot be specified.</value>
+  </data>
+  <data name="RangeHeaderNotAllowed" xml:space="preserve">
+    <value>Content-Range is not accepted as a part of the request.</value>
+  </data>
+  <data name="ReportStreamNotSupported" xml:space="preserve">
+    <value>Requested stream {0} is not supported for reports.</value>
+  </data>
+  <data name="InvalidStatusQueryOrderFilterCombination" xml:space="preserve">
+    <value>The status filter {0} is not valid when combined with the query order filter {1}.</value>
+  </data>
+  <data name="RepositoryTypeMissing" xml:space="preserve">
+    <value>Repository type is missing/invalid.</value>
+  </data>
+  <data name="BuildResultTextUnknown" xml:space="preserve">
+    <value>Status Unknown</value>
+  </data>
+  <data name="QueueNotFound" xml:space="preserve">
+    <value>Agent pool {0} was not found.</value>
+  </data>
+  <data name="InvalidStatusFilterFinishTimeCombination" xml:space="preserve">
+    <value>The status filter {0} is not valid when a minimum or maximum finish time is specified.</value>
+  </data>
+  <data name="RebuildMustBePRBuild" xml:space="preserve">
+    <value>The source build must be a pull request build if queueing with sourceBuildId</value>
+  </data>
+  <data name="KeyVaultVariableGroupsNotSupported" xml:space="preserve">
+    <value>Key-vault variable groups are not yet supported in build. Please remove variable group '{0}'.</value>
+  </data>
+  <data name="ContinuationTokenNotSupportedForDefinitionIds" xml:space="preserve">
+    <value>Continuation token is not supported when pipeline IDs are specified.</value>
+  </data>
+  <data name="DefinitionTemplateNotFound1" xml:space="preserve">
+    <value>Pipeline template {0} was not found.</value>
+  </data>
+  <data name="DefinitionTemplateNotFound" xml:space="preserve">
+    <value>Pipeline template {0} was not found.</value>
+  </data>
+  <data name="RequestPropertyInvalid" xml:space="preserve">
+    <value>The request property {0} with value {1} is not valid.</value>
+  </data>
+  <data name="UseDeleteVerbToDeleteDefinition" xml:space="preserve">
+    <value>Use the HTTP Delete verb to delete build pipelines.</value>
+  </data>
+  <data name="RetryNotSupported" xml:space="preserve">
+    <value>The retry operation is not supported for API version {0}. Use API version {1} or higher.</value>
+  </data>
+  <data name="BuildRepositoryTypeNotSupported" xml:space="preserve">
+    <value>The repository type {0} is not supported.</value>
+  </data>
+  <data name="BranchNotFound" xml:space="preserve">
+    <value>Branch name '{0}' was not found in the repository '{1}'</value>
+  </data>
+  <data name="RestApiToBeDeprecated" xml:space="preserve">
+    <value>This API is being tested for whether it can be deprecated in the future.</value>
+  </data>
+  <data name="BuildDurationTextCompleted" xml:space="preserve">
+    <value>Ran for {0} ({1}), completed {2} ago</value>
+  </data>
+</root>

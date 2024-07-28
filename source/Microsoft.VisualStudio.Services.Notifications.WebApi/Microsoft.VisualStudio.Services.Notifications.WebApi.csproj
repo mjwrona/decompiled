@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Plugins\Microsoft.VisualStudio.Services.Notifications.WebApi.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4B50048-8E0D-4F61-A179-1E75676324EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.Notifications.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.Notifications</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Services.Common" />
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\NotificationLookup.cs" />
+    <Compile Include="Common\NotificationLookupQueryType.cs" />
+    <Compile Include="Common\DeliveryType.cs" />
+    <Compile Include="Common\DeliverySchedule.cs" />
+    <Compile Include="Common\DeliveryPreference.cs" />
+    <Compile Include="Common\NotificationsCustomerIntelligenceConstants.cs" />
+    <Compile Include="Common\NotificationClientConstants.cs" />
+    <Compile Include="WebApi\NotificationCommonViewData.cs" />
+    <Compile Include="WebApi\NotificationSubscriptionsViewData.cs" />
+    <Compile Include="WebApi\SubscriptionStatisticViewData.cs" />
+    <Compile Include="WebApi\SubscriptionTraceDiagnosticLog.cs" />
+    <Compile Include="WebApi\SubscriptionTraceEventProcessingLog.cs" />
+    <Compile Include="WebApi\ProcessedEvent.cs" />
+    <Compile Include="WebApi\SubscriptionEvaluation.cs" />
+    <Compile Include="WebApi\SubscriptionEvaluationClause.cs" />
+    <Compile Include="WebApi\GeneratedNotification.cs" />
+    <Compile Include="WebApi\ProcessingDiagnosticIdentity.cs" />
+    <Compile Include="WebApi\ProcessingIdentities.cs" />
+    <Compile Include="WebApi\SubscriptionTraceNotificationDeliveryLog.cs" />
+    <Compile Include="WebApi\NotificationBacklogStatus.cs" />
+    <Compile Include="WebApi\EventBacklogStatus.cs" />
+    <Compile Include="WebApi\NotificationEventBacklogStatus.cs" />
+    <Compile Include="WebApi\NotificationJobDiagnosticLog.cs" />
+    <Compile Include="WebApi\EventProcessingLog.cs" />
+    <Compile Include="WebApi\EventBatch.cs" />
+    <Compile Include="WebApi\MatcherResult.cs" />
+    <Compile Include="WebApi\NotificationDeliveryLog.cs" />
+    <Compile Include="WebApi\NotificationBatch.cs" />
+    <Compile Include="WebApi\DiagnosticNotification.cs" />
+    <Compile Include="WebApi\DiagnosticRecipient.cs" />
+    <Compile Include="WebApi\INotificationDiagnosticLog.cs" />
+    <Compile Include="WebApi\NotificationDiagnosticLog.cs" />
+    <Compile Include="WebApi\NotificationDiagnosticLogMessage.cs" />
+    <Compile Include="WebApi\DiagnosticIdentity.cs" />
+    <Compile Include="WebApi\InvalidDiagnosticLog.cs" />
+    <Compile Include="WebApi\NotificationDiagnosticLogConverter.cs" />
+    <Compile Include="WebApi\EventTransformResult.cs" />
+    <Compile Include="WebApi\EventTransformRequest.cs" />
+    <Compile Include="WebApi\NotificationEventField.cs" />
+    <Compile Include="WebApi\NotificationEventFieldType.cs" />
+    <Compile Include="WebApi\SubscriptionFieldType.cs" />
+    <Compile Include="WebApi\NotificationEventFieldOperator.cs" />
+    <Compile Include="WebApi\NotificationEventPublisher.cs" />
+    <Compile Include="WebApi\SubscriptionManagement.cs" />
+    <Compile Include="WebApi\EventPublisherQueryFlags.cs" />
+    <Compile Include="WebApi\NotificationEventRole.cs" />
+    <Compile Include="WebApi\NotificationEventType.cs" />
+    <Compile Include="WebApi\EventTypeQueryFlags.cs" />
+    <Compile Include="WebApi\NotificationEventTypeCategory.cs" />
+    <Compile Include="WebApi\FieldValuesQuery.cs" />
+    <Compile Include="WebApi\FieldInputValues.cs" />
+    <Compile Include="WebApi\OperatorConstraint.cs" />
+    <Compile Include="WebApi\ValueDefinition.cs" />
+    <Compile Include="WebApi\NotificationOperation.cs" />
+    <Compile Include="WebApi\BatchNotificationOperation.cs" />
+    <Compile Include="WebApi\NotificationQueryCondition.cs" />
+    <Compile Include="WebApi\NotificationReasonType.cs" />
+    <Compile Include="WebApi\NotificationReason.cs" />
+    <Compile Include="WebApi\ActorNotificationReason.cs" />
+    <Compile Include="WebApi\NotificationAdminSettings.cs" />
+    <Compile Include="WebApi\NotificationAdminSettingsUpdateParameters.cs" />
+    <Compile Include="WebApi\DefaultGroupDeliveryPreference.cs" />
+    <Compile Include="WebApi\ArtifactFilter.cs" />
+    <Compile Include="WebApi\ExpressionFilter.cs" />
+    <Compile Include="WebApi\NotificationStatisticType.cs" />
+    <Compile Include="WebApi\NotificationStatistic.cs" />
+    <Compile Include="WebApi\NotificationStatisticsQuery.cs" />
+    <Compile Include="WebApi\NotificationStatisticsQueryConditions.cs" />
+    <Compile Include="WebApi\NotificationSubscription.cs" />
+    <Compile Include="WebApi\NotificationSubscriptionCreateParameters.cs" />
+    <Compile Include="WebApi\NotificationSubscriptionUpdateParameters.cs" />
+    <Compile Include="WebApi\SubscriptionStatus.cs" />
+    <Compile Include="WebApi\SubscriptionUserSettings.cs" />
+    <Compile Include="WebApi\SubscriptionAdminSettings.cs" />
+    <Compile Include="WebApi\SubscriptionFlags.cs" />
+    <Compile Include="WebApi\SubscriptionScope.cs" />
+    <Compile Include="WebApi\SubscriptionPermissions.cs" />
+    <Compile Include="WebApi\NotificationSubscriptionTemplate.cs" />
+    <Compile Include="WebApi\SubscriptionTemplateType.cs" />
+    <Compile Include="WebApi\SubscriptionTemplateQueryFlags.cs" />
+    <Compile Include="WebApi\RoleBasedFilter.cs" />
+    <Compile Include="WebApi\ActorFilter.cs" />
+    <Compile Include="WebApi\BlockFilter.cs" />
+    <Compile Include="WebApi\ISubscriptionChannel.cs" />
+    <Compile Include="WebApi\UnsupportedSubscriptionChannel.cs" />
+    <Compile Include="WebApi\SubscriptionChannelWithAddress.cs" />
+    <Compile Include="WebApi\UserSubscriptionChannel.cs" />
+    <Compile Include="WebApi\UserSystemSubscriptionChannel.cs" />
+    <Compile Include="WebApi\EmailHtmlSubscriptionChannel.cs" />
+    <Compile Include="WebApi\EmailPlaintextSubscriptionChannel.cs" />
+    <Compile Include="WebApi\SoapSubscriptionChannel.cs" />
+    <Compile Include="WebApi\ServiceHooksSubscriptionChannel.cs" />
+    <Compile Include="WebApi\ServiceBusSubscriptionChannel.cs" />
+    <Compile Include="WebApi\GroupSubscriptionChannel.cs" />
+    <Compile Include="WebApi\MessageQueueSubscriptionChannel.cs" />
+    <Compile Include="WebApi\BlockSubscriptionChannel.cs" />
+    <Compile Include="WebApi\SubscriptionChannelConverter.cs" />
+    <Compile Include="WebApi\SubscriptionChannel.cs" />
+    <Compile Include="WebApi\SubscriptionChannelMapping.cs" />
+    <Compile Include="WebApi\SubscriptionDiagnostics.cs" />
+    <Compile Include="WebApi\SubscriptionTracing.cs" />
+    <Compile Include="WebApi\UpdateSubscripitonDiagnosticsParameters.cs" />
+    <Compile Include="WebApi\UpdateSubscripitonTracingParameters.cs" />
+    <Compile Include="WebApi\SubscriptionEvaluationRequest.cs" />
+    <Compile Include="WebApi\SubscriptionEvaluationResult.cs" />
+    <Compile Include="WebApi\EventsEvaluationResult.cs" />
+    <Compile Include="WebApi\NotificationsEvaluationResult.cs" />
+    <Compile Include="WebApi\EvaluationOperationStatus.cs" />
+    <Compile Include="WebApi\SubscriptionEvaluationSettings.cs" />
+    <Compile Include="WebApi\ISubscriptionFilter.cs" />
+    <Compile Include="WebApi\BaseSubscriptionFilter.cs" />
+    <Compile Include="WebApi\UnsupportedFilter.cs" />
+    <Compile Include="WebApi\TypeStringLookupConverter.cs" />
+    <Compile Include="WebApi\SubscriptionFilterConverter.cs" />
+    <Compile Include="WebApi\ExpressionFilterClause.cs" />
+    <Compile Include="WebApi\ExpressionFilterGroup.cs" />
+    <Compile Include="WebApi\ExpressionFilterModel.cs" />
+    <Compile Include="WebApi\SubscriptionQuery.cs" />
+    <Compile Include="WebApi\SubscriptionQueryCondition.cs" />
+    <Compile Include="WebApi\SubscriptionQueryFlags.cs" />
+    <Compile Include="WebApi\NotificationSubscriber.cs" />
+    <Compile Include="WebApi\NotificationSubscriberUpdateParameters.cs" />
+    <Compile Include="WebApi\NotificationSubscriberDeliveryPreference.cs" />
+    <Compile Include="WebApi\SubscriberFlags.cs" />
+    <Compile Include="WebApi\NotificationEventTypeNotAllowedException.cs" />
+    <Compile Include="WebApi\NotificationEventTypeNotFoundException.cs" />
+    <Compile Include="WebApi\NotificationEventTypeNotSupportedScopeException.cs" />
+    <Compile Include="WebApi\NotificationEventTypeNotSupportedFormatException.cs" />
+    <Compile Include="WebApi\NotificationSubscriptionChannelNotAllowedException.cs" />
+    <Compile Include="WebApi\InvalidNotificationSubscriptionQueryException.cs" />
+    <Compile Include="WebApi\SubscriptionOptOutBlocked.cs" />
+    <Compile Include="WebApi\SubscriptionOptOutNotSupported.cs" />
+    <Compile Include="WebApi\InvalidQueryFlagException.cs" />
+    <Compile Include="WebApi\BlockFilterUpdateNotAllowedException.cs" />
+    <Compile Include="WebApi\UnsupportedDeliveryPreference.cs" />
+    <Compile Include="WebApi\RemoteAdminSettingsException.cs" />
+    <Compile Include="WebApi\FieldException.cs" />
+    <Compile Include="WebApi\NotificationApiConstants.cs" />
+    <Compile Include="WebApi\FieldFilterType.cs" />
+    <Compile Include="WebApi\PathSubscriptionExpression.cs" />
+    <Compile Include="WebApi\JsonPathSubscriptionExpression.cs" />
+    <Compile Include="WebApi\XPathSubscriptionExpression.cs" />
+    <Compile Include="WebApi\SubscriptionFilterOperators.cs" />
+    <Compile Include="WebApi\Token.cs" />
+    <Compile Include="WebApi\ConstantToken.cs" />
+    <Compile Include="WebApi\XPathToken.cs" />
+    <Compile Include="WebApi\JsonPathToken.cs" />
+    <Compile Include="WebApi\GeneratedVersionInfo.cs" />
+    <Compile Include="WebApi\NotificationsWebApiResources.cs" />
+    <Compile Include="WebApi\Clients\NotificationHttpClient.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NotificationsWebApiResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

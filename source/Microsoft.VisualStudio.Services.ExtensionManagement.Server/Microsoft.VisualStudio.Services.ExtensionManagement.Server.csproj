@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files\Azure DevOps Server 2022\Application Tier\Web Services\bin\Microsoft.VisualStudio.Services.ExtensionManagement.Server.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7808AFBD-CA13-47D3-97E3-64EC560C29B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.VisualStudio.Services.ExtensionManagement.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>19.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.VisualStudio.Services.ExtensionManagement</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>lib\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>lib\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.Sdk.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.ExtensionManagement.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.ExtensionManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.Types.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.Types.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Gallery.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Gallery.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Notifications.Server">
+      <HintPath>lib\Microsoft.VisualStudio.Services.Notifications.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
+      <HintPath>lib\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http">
+      <HintPath>lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtensionAuditLogService.cs" />
+    <Compile Include="IExtensionAuditLogService.cs" />
+    <Compile Include="ExtensionResources.cs" />
+    <Compile Include="Server\IAccountTokenService.cs" />
+    <Compile Include="Server\AccountTokenService.cs" />
+    <Compile Include="Server\IKeyManagementService.cs" />
+    <Compile Include="Server\KeyManagementService.cs" />
+    <Compile Include="Server\AcquisitionService.cs" />
+    <Compile Include="Server\AlreadyInstalledDisallowReason.cs" />
+    <Compile Include="Server\GetOfferSubscriptionNotAvailableDisallowReason.cs" />
+    <Compile Include="Server\GetTrialNotPossibleDisallowReason.cs" />
+    <Compile Include="Server\GetBuyNotPossibleDisallowReason.cs" />
+    <Compile Include="Server\AlreadyRequestedDisallowReason.cs" />
+    <Compile Include="Server\UserDoesNotHavePermissionToInstallDisallowReason.cs" />
+    <Compile Include="Server\UserDoesNotHavePermissionToBuyResourceDisallowReas.cs" />
+    <Compile Include="Server\UserCanNotRequestDisallowReason.cs" />
+    <Compile Include="Server\UnresolvedDemandDisallowReason.cs" />
+    <Compile Include="Server\ExtensionNotAvailableInRegionDisallowReason.cs" />
+    <Compile Include="Server\ExtensionAlreadyUnderTrialDisallowReason.cs" />
+    <Compile Include="Server\NoPublicOfferPlansDisallowReason.cs" />
+    <Compile Include="Server\TrialDisallowedExtensionAlreadyPurchasedDisallowRe.cs" />
+    <Compile Include="Server\BillingNotStartedDisallowReason.cs" />
+    <Compile Include="Server\OperationNotAllowedForResourceTypeExtension.cs" />
+    <Compile Include="Server\ExtensionTrialExpiredDisallowReason.cs" />
+    <Compile Include="Server\ServiceConstants.cs" />
+    <Compile Include="Server\ExtensionManagementCustomerIntelligenceArea.cs" />
+    <Compile Include="Server\ExtensionManagementCustomerIntelligenceFeature.cs" />
+    <Compile Include="Server\ExtensionManagementFeatureFlags.cs" />
+    <Compile Include="Server\ExtensionManagementSecurity.cs" />
+    <Compile Include="Server\ExtensionManagementPermissions.cs" />
+    <Compile Include="Server\ExtensionManagementConstants.cs" />
+    <Compile Include="Server\ExtensionManagementJobs.cs" />
+    <Compile Include="Server\CustomerIntelligenceActions.cs" />
+    <Compile Include="Server\ExtensionManagementRegistryConstants.cs" />
+    <Compile Include="Server\AcquisitionServiceConstants.cs" />
+    <Compile Include="Server\ExtensionDataConstants.cs" />
+    <Compile Include="Server\ExtensionManagementPropertyServiceConstants.cs" />
+    <Compile Include="Server\KeyManagementConstants.cs" />
+    <Compile Include="Server\EventManagementSecurity.cs" />
+    <Compile Include="Server\EventManagementPermissions.cs" />
+    <Compile Include="Server\IBuiltinExtensionService.cs" />
+    <Compile Include="Server\BuiltinExtensionService.cs" />
+    <Compile Include="Server\ExtensionEventHttpClient.cs" />
+    <Compile Include="Server\ExtensionPoliciesService.cs" />
+    <Compile Include="Server\IExtensionPoliciesService.cs" />
+    <Compile Include="Server\ExtensionVersionHttpClient.cs" />
+    <Compile Include="Server\IExtensionHostAuthorizationService.cs" />
+    <Compile Include="Server\ExtensionHostAuthorizationService.cs" />
+    <Compile Include="Server\ExtensionDataService.cs" />
+    <Compile Include="Server\ExtensionDataDocument.cs" />
+    <Compile Include="Server\ContributionManifestService.cs" />
+    <Compile Include="Server\IContributionManifestService.cs" />
+    <Compile Include="Server\IManifestStorageService.cs" />
+    <Compile Include="Server\ManifestStorageService.cs" />
+    <Compile Include="Server\BaseManifestStorageData.cs" />
+    <Compile Include="Server\ManifestStorageData.cs" />
+    <Compile Include="Server\InstalledExtensionService.cs" />
+    <Compile Include="Server\PostInstallArgs.cs" />
+    <Compile Include="Server\PublishedExtensionWithState.cs" />
+    <Compile Include="Server\IInstalledExtensionService.cs" />
+    <Compile Include="Server\ISupportedExtensionService.cs" />
+    <Compile Include="Server\IExtensionEventCallbackService.cs" />
+    <Compile Include="Server\ExtensionEventCallbackService.cs" />
+    <Compile Include="Server\PlatformExtensionService.cs" />
+    <Compile Include="Server\SupportedExtensionService.cs" />
+    <Compile Include="Server\CustomSqlError.cs" />
+    <Compile Include="Server\ExtensionRequestService.cs" />
+    <Compile Include="Server\IExtensionRequestService.cs" />
+    <Compile Include="Server\ExtensionManagementSqlNotificationClasses.cs" />
+    <Compile Include="Server\TokenController.cs" />
+    <Compile Include="Server\ExtensionAuditLogController.cs" />
+    <Compile Include="Server\ExtensionAuthorizationsController.cs" />
+    <Compile Include="Server\ExtensionDataCollectionQueryController.cs" />
+    <Compile Include="Server\ExtensionDataController.cs" />
+    <Compile Include="Server\ExtensionManagementAcquisitionRequestsController.cs" />
+    <Compile Include="Server\ExtensionManagementAcquisitionOptionsController.cs" />
+    <Compile Include="Server\ExtensionPoliciesController.cs" />
+    <Compile Include="Server\InstalledExtensionQueryController.cs" />
+    <Compile Include="Server\ExtensionStatesController.cs" />
+    <Compile Include="Server\InstalledExtensionsByNameController.cs" />
+    <Compile Include="Server\InstalledExtensionsController.cs" />
+    <Compile Include="Server\ExtensionRequestsController.cs" />
+    <Compile Include="Server\Telemetry\EmsTelemetryHelper.cs" />
+    <Compile Include="Server\Components\ExtensionDataComponent.cs" />
+    <Compile Include="Server\Components\ExtensionDataComponent2.cs" />
+    <Compile Include="Server\Components\ExtensionDataComponent3.cs" />
+    <Compile Include="Server\Components\ExtensionDataColumns.cs" />
+    <Compile Include="Server\Components\ExtensionRequestComponent.cs" />
+    <Compile Include="Server\Components\ExtensionRequestComponent2.cs" />
+    <Compile Include="Server\Components\ExtensionRequestComponent3.cs" />
+    <Compile Include="Server\Components\ExtensionRequestTableExtensions.cs" />
+    <Compile Include="Server\Components\RequestedExtensionColumns.cs" />
+    <Compile Include="Server\Components\ExtensionRequestColumns.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent2.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent3.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent4.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent5.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent6.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent7.cs" />
+    <Compile Include="Server\Components\InstalledExtensionComponent8.cs" />
+    <Compile Include="Server\Components\InstalledExtensionColumns.cs" />
+    <Compile Include="Server\Components\InstalledExtensionColumns2.cs" />
+    <Compile Include="Server\Components\ExtensionUpdateOutput.cs" />
+    <Compile Include="Server\Components\ExtensionUpdateOutputColumns.cs" />
+    <Compile Include="Server\Components\InstalledExtensionTableExtensions.cs" />
+    <Compile Include="Components\ExtensionAuditLogComponent.cs" />
+    <Compile Include="Components\ExtensionAuditLogColumns.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
